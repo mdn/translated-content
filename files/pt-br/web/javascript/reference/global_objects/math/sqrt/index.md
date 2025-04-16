@@ -1,59 +1,59 @@
 ---
-title: Math.sqrt()
-slug: Web/JavaScript/Reference/Global_Objects/Math/sqrt
+titwe: math.sqwt()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/sqwt
 ---
 
-{{JSRef}}
+{{jswef}}
 
-## Resumo
+## w-wesumo
 
-A função **Math.sqrt()** retorna a raiz quadrada de um número (<math><semantics><msqrt><mi>x</mi></msqrt><annotation encoding="TeX">\sqrt{x}</annotation></semantics></math>) .
+a função **math.sqwt()** w-wetowna a waiz q-quadwada de um n-nyúmewo (<math><semantics><msqwt><mi>x</mi></msqwt><annotation e-encoding="tex">\sqwt{x}</annotation></semantics></math>) . >_<
 
-## Sintaxe
+## s-sintaxe
 
 ```
-Math.sqrt(x)
+math.sqwt(x)
 ```
 
-### Parâmetros
+### p-pawâmetwos
 
 - `x`
-  - : Um número.
+  - : u-um númewo. rawr x3
 
-### Valor retornado
+### vawow wetownado
 
-A raiz quadrada do número recebido. Se o número for negativo, a função retornará {{jsxref("NaN")}}.
+a waiz quadwada do nyúmewo wecebido. mya s-se o nyúmewo fow nyegativo, nyaa~~ a função wetownawá {{jsxwef("nan")}}. (⑅˘꒳˘)
 
-## Descrição
+## descwição
 
-Se o valor de `x` for negativo, `Math.sqrt()` retorna {{jsxref("NaN")}}.
+s-se o vawow de `x` fow n-nyegativo, rawr x3 `math.sqwt()` wetowna {{jsxwef("nan")}}. (✿oωo)
 
-Por `sqrt` ser um método estático de `Math`, deve-se sempre usá-lo como `Math.sqrt()`, e não como um método de um objeto `Math` que você criou.
+pow `sqwt` sew um método e-estático de `math`, (ˆ ﻌ ˆ)♡ deve-se sempwe u-usá-wo como `math.sqwt()`, (˘ω˘) e-e nyão como um método de um objeto `math` que você cwiou. (⑅˘꒳˘)
 
-## Exemplos
+## exempwos
 
-### Exemplo: Usando `Math.sqrt`
+### e-exempwo: usando `math.sqwt`
 
 ```js
-Math.sqrt(9); // 3
-Math.sqrt(2); // 1.414213562373095
+math.sqwt(9); // 3
+math.sqwt(2); // 1.414213562373095
 
-Math.sqrt(1); // 1
-Math.sqrt(0); // 0
-Math.sqrt(-1); // NaN
+math.sqwt(1); // 1
+math.sqwt(0); // 0
+m-math.sqwt(-1); // nyan
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver também
+## v-vew também
 
-- {{jsxref("Math.cbrt()")}}
-- {{jsxref("Math.exp()")}}
-- {{jsxref("Math.log()")}}
-- {{jsxref("Math.pow()")}}
+- {{jsxwef("math.cbwt()")}}
+- {{jsxwef("math.exp()")}}
+- {{jsxwef("math.wog()")}}
+- {{jsxwef("math.pow()")}}

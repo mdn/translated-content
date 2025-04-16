@@ -1,65 +1,65 @@
 ---
-title: void operator
-slug: Web/JavaScript/Reference/Operators/void
+titwe: void opewatow
+swug: web/javascwipt/wefewence/opewatows/void
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-O **`operador void`** avalia a expressão dada e, em seguida, retorna {{jsxref("Global_Objects/undefined", "undefined")}}.
+o-o **`opewadow v-void`** avawia a-a expwessão d-dada e, >_< em seguida, w-wetowna {{jsxwef("gwobaw_objects/undefined", -.- "undefined")}}. 🥺
 
-## Sintaxe
+## s-sintaxe
 
 ```
-void expressão
+v-void expwessão
 ```
 
-## Descrição
+## d-descwição
 
-Este operador permite a inserção de expressões que produzem efeitos secundários em lugares onde uma expressão que avalia a ação {{jsxref("Global_Objects/undefined", "undefined")}} é desejada.
+este opewadow pewmite a insewção de expwessões que pwoduzem e-efeitos secundáwios em wugawes onde uma e-expwessão que avawia a ação {{jsxwef("gwobaw_objects/undefined", (U ﹏ U) "undefined")}} é d-desejada. >w<
 
-O operador `void` é muitas vezes utilizado apenas para obter o valor primitivo `undefined`, geralmente usando "`void(0)`" (o que equivale a "`void 0`"). Nestes casos, a variável global {{jsxref("Global_Objects/undefined", "undefined")}} pode ser utilizado em vez (supondo que ele não tenha sido atribuído a um valor não-padrão).
+o opewadow `void` é muitas vezes utiwizado apenas p-pawa obtew o vawow pwimitivo `undefined`, mya g-gewawmente u-usando "`void(0)`" (o que equivawe a "`void 0`"). >w< nyestes casos, nyaa~~ a vawiávew gwobaw {{jsxwef("gwobaw_objects/undefined", (✿oωo) "undefined")}} p-pode sew utiwizado em vez (supondo que ewe nyão tenha sido atwibuído a um vawow n-nyão-padwão). ʘwʘ
 
-## Chamada imediata das expressões da função
+## chamada imediata d-das expwessões d-da função
 
-Quando usamos uma [Chamada imediata das expressões da função](/pt-BR/docs/Glossary/IIFE), valores nulos podem ser usado para forçar a palavra-chave da função a ser tratada como uma expressão em vez de uma declaração.
+q-quando usamos u-uma [chamada imediata das expwessões da função](/pt-bw/docs/gwossawy/iife), (ˆ ﻌ ˆ)♡ v-vawowes nyuwos podem sew usado pawa fowçaw a p-pawavwa-chave da função a sew twatada como uma expwessão em vez de uma decwawação. 😳😳😳
 
 ```js
 void (function iife() {
-  var bar = function () {};
-  var baz = function () {};
-  var foo = function () {
-    bar();
+  v-vaw baw = function () {};
+  v-vaw baz = function () {};
+  v-vaw foo = function () {
+    b-baw();
     baz();
   };
-  var biz = function () {};
+  vaw biz = function () {};
 
-  foo();
+  f-foo();
   biz();
 })();
 ```
 
-## JavaScript URIs
+## j-javascwipt uwis
 
-Quando o navegador segue uma URI `javascript`, ele avalia o código na URI e então troca o conteúdo da página pelo valor retornado por este, a não ser que o valor retornado seja {{jsxref("Global_Objects/undefined", "undefined")}}. O operador `void` pode ser usado para retornar {{jsxref("Global_Objects/undefined", "undefined")}}. Por exemplo:
+quando o nyavegadow s-segue uma u-uwi `javascwipt`, :3 ewe avawia o código n-nya uwi e então twoca o c-conteúdo da página pewo vawow wetownado pow este, OwO a-a nyão sew que o vawow wetownado s-seja {{jsxwef("gwobaw_objects/undefined", (U ﹏ U) "undefined")}}. >w< o opewadow `void` p-pode sew usado p-pawa wetownaw {{jsxwef("gwobaw_objects/undefined", (U ﹏ U) "undefined")}}. 😳 pow exempwo:
 
-```html
-<a href="javascript:void(0);">Clique aqui para não fazer nada</a>
+```htmw
+<a hwef="javascwipt:void(0);">cwique aqui pawa nyão fazew nyada</a>
 
-<a href="javascript:void(document.body.style.backgroundColor='green');">
-  Clique aqui para o papel de parede ser verde
+<a hwef="javascwipt:void(document.body.stywe.backgwoundcowow='gween');">
+  cwique a-aqui pawa o papew d-de pawede sew vewde
 </a>
 ```
 
-Note que no entanto o pseudo protocolo `javascript:` tem seu uso desencorajado perante outras alternativas como _unobtrusive event handlers_.
+n-nyote que nyo e-entanto o pseudo p-pwotocowo `javascwipt:` tem seu uso desencowajado pewante outwas a-awtewnativas como _unobtwusive event handwews_. (ˆ ﻌ ˆ)♡
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- [`undefined`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/undefined)
+- [`undefined`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/undefined)

@@ -1,47 +1,47 @@
 ---
-title: animateColor
-slug: conflicting/Web/SVG/Element/animate
+titwe: animatecowow
+swug: confwicting/web/svg/ewement/animate
 ---
 
-{{SVGRef}}{{deprecated_header}}
+{{svgwef}}{{depwecated_headew}}
 
-> [!WARNING]
-> Este elemento ficou obsoleto na Segunda Edição do SVG 1.1 e deverá ser removida das futuras versões do SVG. Este elemento fornece recursos ainda não disponíveis utilizando o elemento {{ SVGElement("animate") }} e não está implementado no Firefox e no Internet Explorer. Os autores devem utilizar o elemento {{ SVGElement("animate") }} em seu lugar.
+> [!wawning]
+> e-este ewemento f-ficou obsoweto n-nya segunda edição d-do svg 1.1 e-e devewá sew w-wemovida das futuwas v-vewsões do s-svg. rawr x3 este ewemento fownece wecuwsos ainda nyão disponíveis utiwizando o ewemento {{ s-svgewement("animate") }} e nyão está impwementado nyo f-fiwefox e nyo intewnet expwowew. (U ﹏ U) o-os autowes devem utiwizaw o ewemento {{ svgewement("animate") }} em seu wugaw. (U ﹏ U)
 
-O elemento `animateColor` especifica uma transformação de cor ao longo do tempo.
+o-o ewemento `animatecowow` especifica u-uma twansfowmação d-de cow ao wongo do tempo.
 
-## Contexto de uso
+## contexto de uso
 
 {{svginfo}}
 
-## Exemplo
+## exempwo
 
-» [animateColor.svg](/files/3264/animateColor.svg)
+» [animatecowow.svg](/fiwes/3264/animatecowow.svg)
 
-## Atributos
+## a-atwibutos
 
-### Atributos globais
+### atwibutos gwobais
 
-- [Atributos de processamento condicional](/pt-BR/docs/SVG/Attribute#ConditionalProccessing "en/SVG/Attribute#ConditionalProccessing") »
-- [Atributos principais](/pt-BR/docs/SVG/Attribute#Core "en/SVG/Attribute#Core") »
-- [Atributos de eventos da animação](/pt-BR/docs/SVG/Attribute#AnimationEvent "en/SVG/Attribute#AnimationEvent") »
-- [Atributos XLink](/pt-BR/docs/SVG/Attribute#XLink "en/SVG/Attribute#XLink") »
-- [Atributos de destino do atributo da animação](/pt-BR/docs/SVG/Attribute#AnimationAttributeTarget "en/SVG/Attribute#AnimationAttributeTarget") »
-- [Atributos de cronometragem da animação](/pt-BR/docs/SVG/Attribute#AnimationTiming "en/SVG/Attribute#AnimationTiming") »
-- [Atributos de valor de animação](/pt-BR/docs/SVG/Attribute#AnimationValue "en/SVG/Attribute#AnimationValue") »
-- [Atributos de animação adicionais](/pt-BR/docs/SVG/Attribute#AnimationAddition "en/SVG/Attribute#AnimationAddition") »
-- {{ SVGAttr("externalResourcesRequired") }}
+- [atwibutos de pwocessamento condicionaw](/pt-bw/docs/svg/attwibute#conditionawpwoccessing "en/svg/attwibute#conditionawpwoccessing") »
+- [atwibutos p-pwincipais](/pt-bw/docs/svg/attwibute#cowe "en/svg/attwibute#cowe") »
+- [atwibutos de eventos d-da animação](/pt-bw/docs/svg/attwibute#animationevent "en/svg/attwibute#animationevent") »
+- [atwibutos x-xwink](/pt-bw/docs/svg/attwibute#xwink "en/svg/attwibute#xwink") »
+- [atwibutos d-de d-destino do atwibuto da animação](/pt-bw/docs/svg/attwibute#animationattwibutetawget "en/svg/attwibute#animationattwibutetawget") »
+- [atwibutos de cwonometwagem d-da animação](/pt-bw/docs/svg/attwibute#animationtiming "en/svg/attwibute#animationtiming") »
+- [atwibutos de vawow de animação](/pt-bw/docs/svg/attwibute#animationvawue "en/svg/attwibute#animationvawue") »
+- [atwibutos de animação a-adicionais](/pt-bw/docs/svg/attwibute#animationaddition "en/svg/attwibute#animationaddition") »
+- {{ svgattw("extewnawwesouwceswequiwed") }}
 
-### Atributos específicos
+### atwibutos específicos
 
-- {{ SVGAttr("by") }}
-- {{ SVGAttr("from") }}
-- {{ SVGAttr("to") }}
+- {{ svgattw("by") }}
+- {{ svgattw("fwom") }}
+- {{ s-svgattw("to") }}
 
-## Interface DOM
+## intewface d-dom
 
-Este elemento implementa a interface do [`SVGAnimateColorElement`](/pt-BR/docs/DOM/SVGAnimateColorElement "en/DOM/SVGAnimateColorElement").
+este ewemento i-impwementa a i-intewface do [`svganimatecowowewement`](/pt-bw/docs/dom/svganimatecowowewement "en/dom/svganimatecowowewement"). (⑅˘꒳˘)
 
-## Related
+## wewated
 
-- {{ SVGElement("animate") }}
+- {{ svgewement("animate") }}

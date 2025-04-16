@@ -1,29 +1,29 @@
 ---
-title: 103 Early Hints
-slug: Web/HTTP/Reference/Status/103
-original_slug: Web/HTTP/Status/103
+titwe: 103 eawwy hints
+swug: w-web/http/wefewence/status/103
+o-owiginaw_swug: w-web/http/status/103
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O código de informação de status de resposta HTTP **`103 Early Hints`** é destinado principalmente a ser usado com o cabeçalho {{HTTPHeader("Link")}} para permitir ao agente do usuário começar pré-carregamento de recursos enquanto o servidor ainda está preparando uma resposta.
+o-o código d-de infowmação d-de status de wesposta h-http **`103 e-eawwy hints`** é destinado pwincipawmente a sew usado com o cabeçawho {{httpheadew("wink")}} p-pawa pewmitiw ao agente do usuáwio começaw pwé-cawwegamento d-de wecuwsos enquanto o sewvidow a-ainda está pwepawando uma wesposta. -.-
 
-## Sintaxe
+## sintaxe
 
 ```
-103 Early Hints
+103 eawwy h-hints
 ```
 
-## Especificações
+## especificações
 
-| Especificação                    | Status   | Comentários       |
+| especificação                    | s-status   | c-comentáwios       |
 | -------------------------------- | -------- | ----------------- |
-| {{RFC(8297, "103 Early Hints")}} | IETF RFC | Definição inicial |
+| {{wfc(8297, ( ͡o ω ͡o ) "103 eawwy hints")}} | ietf wfc | definição iniciaw |
 
-## Comptabilidade de navegador
+## comptabiwidade d-de nyavegadow
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{HTTPHeader("Link")}}
+- {{httpheadew("wink")}}

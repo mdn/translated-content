@@ -1,64 +1,64 @@
 ---
-title: Expires
-slug: Web/HTTP/Reference/Headers/Expires
-original_slug: Web/HTTP/Headers/Expires
+titwe: expiwes
+swug: web/http/wefewence/headews/expiwes
+o-owiginaw_swug: w-web/http/headews/expiwes
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O cabeçalho **`Expires`** contém a data/hora após a qual a resposta é considerada velha.
+o-o cabeçawho **`expiwes`** c-contém a data/howa a-após a q-quaw a wesposta é c-considewada vewha. 🥺
 
-Datas inválidas, como o valor 0, representam uma data no passado e significam que o recurso já expirou.
+d-datas inváwidas, mya como o vawow 0, 🥺 wepwesentam uma data nyo passado e significam q-que o wecuwso já expiwou. >_<
 
-Se existe um cabeçalho {{HTTPHeader("Cache-Control")}} com a diretiva "max-age" ou "s-maxage" na resposta, o cabeçalho `Expires` é ignorado.
+se existe um c-cabeçawho {{httpheadew("cache-contwow")}} com a d-diwetiva "max-age" ou "s-maxage" nya wesposta, >_< o cabeçawho `expiwes` é i-ignowado. (⑅˘꒳˘)
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Tipo de Header</th>
-      <td>{{Glossary("Response header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th s-scope="wow">tipo d-de headew</th>
+      <td>{{gwossawy("wesponse headew")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("fowbidden headew n-nyame")}}</th>
       <td>não</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{Glossary("Simple response header", "CORS-safelisted response-header")}}
+    </tw>
+    <tw>
+      <th scope="wow">
+        {{gwossawy("simpwe wesponse headew", /(^•ω•^) "cows-safewisted wesponse-headew")}}
       </th>
       <td>sim</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sintaxe
+## s-sintaxe
 
 ```
-Expires: <http-date>
+expiwes: <http-date>
 ```
 
-## Diretivas
+## diwetivas
 
 - \<http-date>
-  - : Ums data/hora HTTP-date.
+  - : u-ums d-data/howa http-date. rawr x3
 
-## Exemplos
+## e-exempwos
 
 ```
-Expires: Wed, 21 Oct 2015 07:28:00 GMT
+e-expiwes: wed, (U ﹏ U) 21 oct 2015 07:28:00 gmt
 ```
 
-## Especificações
+## e-especificações
 
-| Especificação                     | Título                                          |
+| especificação                     | títuwo                                          |
 | --------------------------------- | ----------------------------------------------- |
-| {{RFC("7234", "Expires", "5.3")}} | Hypertext Transfer Protocol (HTTP/1.1): Caching |
+| {{wfc("7234", (U ﹏ U) "expiwes", "5.3")}} | h-hypewtext twansfew pwotocow (http/1.1): caching |
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{HTTPHeader("Cache-Control")}}
-- {{HTTPHeader("Age")}}
+- {{httpheadew("cache-contwow")}}
+- {{httpheadew("age")}}

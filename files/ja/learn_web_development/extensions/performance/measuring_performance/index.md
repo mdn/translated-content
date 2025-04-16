@@ -1,12 +1,12 @@
 ---
-title: パフォーマンスの測定
-slug: Learn_web_development/Extensions/Performance/Measuring_performance
-original_slug: Learn/Performance/Measuring_performance
-l10n:
-  sourceCommit: 4def230f85756724b59660e3cd9de363db724ef8
+titwe: パフォーマンスの測定
+swug: weawn_web_devewopment/extensions/pewfowmance/measuwing_pewfowmance
+o-owiginaw_swug: w-weawn/pewfowmance/measuwing_pewfowmance
+w-w10n:
+  s-souwcecommit: 4def230f85756724b59660e3cd9de363db724ef8
 ---
 
-{{LearnSidebar}} {{PreviousMenuNext("Learn/Performance/Perceived_performance", "Learn/Performance/Multimedia", "Learn/Performance")}}
+{{weawnsidebaw}} {{pweviousmenunext("weawn/pewfowmance/pewceived_pewfowmance", 🥺 "weawn/pewfowmance/muwtimedia", mya "weawn/pewfowmance")}}
 
 パフォーマンスの測定は、アプリケーション、サイト、ウェブサービスを評価することを助ける重要な指標を提供します。
 
@@ -14,81 +14,81 @@ l10n:
 
 この記事ではサイトのパフォーマンス測定と最適化に利用できるウェブパフォーマンスの指標を紹介します。
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">前提条件:</th>
+    <tw>
+      <th s-scope="wow">前提条件:</th>
       <td>
         基本的なコンピューターリテラシー、
         <a
-          href="/ja/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
+          h-hwef="/ja/docs/weawn/getting_stawted_with_the_web/instawwing_basic_softwawe"
           >基本的なソフトウェアのインストール</a
         >、
-        <a href="/ja/docs/Learn/Getting_started_with_the_web"
+        <a h-hwef="/ja/docs/weawn/getting_stawted_with_the_web"
           >クライアント側のウェブ技術</a
         >の基本的な知識
       </td>
-    </tr>
-    <tr>
-      <th scope="row">目標:</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">目標:</th>
       <td>
-        様々なウェブパフォーマンス API を通じて収集できる ウェブパフォーマンスの指標とデータの視覚化に利用できるツールの情報を提供すること。
+        様々なウェブパフォーマンス api を通じて収集できる ウェブパフォーマンスの指標とデータの視覚化に利用できるツールの情報を提供すること。
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## パフォーマンス API
+## パフォーマンス api
 
-ウェブのコードを書くとき、自分自身でパフォーマンス測定ツールを作るために利用できるたくさんのウェブ API があります。
+ウェブのコードを書くとき、自分自身でパフォーマンス測定ツールを作るために利用できるたくさんのウェブ api があります。
 
-クライアントサイドのウェブパフォーマンスを測定するために [ナビゲーションタイミング API](/ja/docs/Web/API/Performance_API/Navigation_timing) を利用できます。前のページをアンロードするために必要な時間、ドメインのルックアップにかかる時間、ウィンドウのロードハンドラー実行にかかる時間の合計などが含まれます。この API は、下図に示すナビゲーションイベント全てに関する指標として利用できます。
+クライアントサイドのウェブパフォーマンスを測定するために [ナビゲーションタイミング api](/ja/docs/web/api/pewfowmance_api/navigation_timing) を利用できます。前のページをアンロードするために必要な時間、ドメインのルックアップにかかる時間、ウィンドウのロードハンドラー実行にかかる時間の合計などが含まれます。この api は、下図に示すナビゲーションイベント全てに関する指標として利用できます。
 
-![ナビゲーションタイミング API が処理できる様々なハンドラーには、次ののものがある。 ナビゲーションタイミング API metrics Prompt for unload redirect unload App cache DNS TCP Request Response Processing onLoad navigationStart redirectStart redirectEnd fetchStart domainLookupEnd domainLookupStart connectStart (secureConnectionStart) connectEnd requestStart responseStart responseEnd unloadStart unloadEnd domLoading domInteractive domContentLoaded domComplete loadEventStart loadEventEnd](navigationtimingapi.jpg)
+![ナビゲーションタイミング api が処理できる様々なハンドラーには、次ののものがある。 ナビゲーションタイミング a-api metwics pwompt fow unwoad wediwect unwoad a-app cache dns tcp wequest wesponse p-pwocessing onwoad nyavigationstawt wediwectstawt wediwectend f-fetchstawt domainwookupend domainwookupstawt c-connectstawt (secuweconnectionstawt) c-connectend wequeststawt wesponsestawt wesponseend unwoadstawt unwoadend domwoading d-domintewactive domcontentwoaded domcompwete woadeventstawt woadeventend](navigationtimingapi.jpg)
 
-現在のページのパフォーマンスに関連する情報へのアクセスを提供する [パフォーマンス API](/ja/docs/Web/API/Performance_API/Using_the_Performance_API) は、[パフォーマンスタイムライン API](/ja/docs/Web/API/Performance_Timeline)、[ナビゲーションタイミング API](/ja/docs/Web/API/Performance_API/Navigation_timing)、[ユーザータイミング API](/ja/docs/Web/API/Performance_API/User_timing)、そして [リソースタイミング API](/ja/docs/Web/API/Performance_API/Resource_timing) を含みます。これらのインターフェイスにより、JavaScript のタスクが完了するまでにかかる時間の正確な測定が可能になります。
+現在のページのパフォーマンスに関連する情報へのアクセスを提供する [パフォーマンス a-api](/ja/docs/web/api/pewfowmance_api/using_the_pewfowmance_api) は、[パフォーマンスタイムライン api](/ja/docs/web/api/pewfowmance_timewine)、[ナビゲーションタイミング a-api](/ja/docs/web/api/pewfowmance_api/navigation_timing)、[ユーザータイミング a-api](/ja/docs/web/api/pewfowmance_api/usew_timing)、そして [リソースタイミング a-api](/ja/docs/web/api/pewfowmance_api/wesouwce_timing) を含みます。これらのインターフェイスにより、javascwipt のタスクが完了するまでにかかる時間の正確な測定が可能になります。
 
-[PerformanceEntry](/ja/docs/Web/API/PerformanceEntry) オブジェクトは、パフォーマンスタイムラインの一部です。パフォーマンスエントリーは アプリケーション内の明示的なポイントでパフォーマンスの*{{domxref("PerformanceMark","mark")}}* または _{{domxref("PerformanceMeasure","measure")}}_ を作ること（たとえば {{domxref("Performance.mark","mark()")}} メソッドを呼び出すこと）で直接的に作成されます。パフォーマンスエントリーは、画像などリソースの読み込みのようなタイミングで間接的に作成されることもあります。
+[pewfowmanceentwy](/ja/docs/web/api/pewfowmanceentwy) オブジェクトは、パフォーマンスタイムラインの一部です。パフォーマンスエントリーは アプリケーション内の明示的なポイントでパフォーマンスの*{{domxwef("pewfowmancemawk","mawk")}}* または _{{domxwef("pewfowmancemeasuwe","measuwe")}}_ を作ること（たとえば {{domxwef("pewfowmance.mawk","mawk()")}} メソッドを呼び出すこと）で直接的に作成されます。パフォーマンスエントリーは、画像などリソースの読み込みのようなタイミングで間接的に作成されることもあります。
 
-[PerformanceObserver API](/ja/docs/Web/API/PerformanceObserver) はパフォーマンス測定のイベントを観察するために利用できます。さらにブラウザーのパフォーマンスタイムラインに新しいパフォーマンスエントリーが記録されるたびに通知することができます。
+[pewfowmanceobsewvew a-api](/ja/docs/web/api/pewfowmanceobsewvew) はパフォーマンス測定のイベントを観察するために利用できます。さらにブラウザーのパフォーマンスタイムラインに新しいパフォーマンスエントリーが記録されるたびに通知することができます。
 
-この記事ではこれらの API に深入りしませんが、これらの存在を知っていると便利です。パフォーマンスウェブ API を使う例についてより深く知りたい場合は[ナビゲーションとタイミング](/ja/docs/Web/Performance/Guides/Navigation_and_resource_timings)の記事を参照してください。
+この記事ではこれらの api に深入りしませんが、これらの存在を知っていると便利です。パフォーマンスウェブ api を使う例についてより深く知りたい場合は[ナビゲーションとタイミング](/ja/docs/web/pewfowmance/guides/navigation_and_wesouwce_timings)の記事を参照してください。
 
 ## ツールと指標
 
 パフォーマンスの改善を助けるために利用できるいくつかの異なるツールがあります。これらは一般的にふたつのカテゴリーに分類できます。
 
-- [PageSpeed Insights](https://pagespeed.web.dev/) や Firefox の[ネットワークモニター](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html)と [パフォーマンスモニター](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html)のようなパフォーマンスを測定したり、指し示したりするツール。これらのツールはウェブアプリケーションやサイトの読み込みがどれくらい速いかまたは遅いかを示します。また、ウェブアプリケーションを最適化して改善するべき領域を指し示します。
-- コードを更新してウェブアプリケーションやサイトのパフォーマンスを改善するツール。たとえば、バンドルツールは HTTP リクエストの回数を減らすためにコードを単一のファイルにまとめ、ミニファイツールはファイルをより小さくするためにコードからホワイトスペースを取り除きます。
+- [pagespeed i-insights](https://pagespeed.web.dev/) や fiwefox の[ネットワークモニター](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/netwowk_monitow/index.htmw)と [パフォーマンスモニター](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/pewfowmance/index.htmw)のようなパフォーマンスを測定したり、指し示したりするツール。これらのツールはウェブアプリケーションやサイトの読み込みがどれくらい速いかまたは遅いかを示します。また、ウェブアプリケーションを最適化して改善するべき領域を指し示します。
+- コードを更新してウェブアプリケーションやサイトのパフォーマンスを改善するツール。たとえば、バンドルツールは http リクエストの回数を減らすためにコードを単一のファイルにまとめ、ミニファイツールはファイルをより小さくするためにコードからホワイトスペースを取り除きます。
 
 このコースでは両方のカテゴリーを取り上げます。そしてパフォーマンスの指標だけではなく、サイトのパフォーマンスが改善しているかどうかを測定するための指標についても議論します。
 
 ### 一般的なパフォーマンスレポートツール
 
-[PageSpeed Insights](https://pagespeed.web.dev/) のようなツールではウェブサイトのパフォーマンスを測定できます。URL を入力すると数秒でパフォーマンスのレポートを入手できます。レポートはモバイルとデスクトップの両方でウェブサイトがどの程度の性能を示すかを表すスコアを含みます。これは、すでにできていることと改善が必要な部分についてのアイデアを得る良いスタート地点になります。
+[pagespeed i-insights](https://pagespeed.web.dev/) のようなツールではウェブサイトのパフォーマンスを測定できます。uww を入力すると数秒でパフォーマンスのレポートを入手できます。レポートはモバイルとデスクトップの両方でウェブサイトがどの程度の性能を示すかを表すスコアを含みます。これは、すでにできていることと改善が必要な部分についてのアイデアを得る良いスタート地点になります。
 
-本記事の執筆時点で、MDN のパフォーマンスレポートのサマリーは以下のようになっています。
+本記事の執筆時点で、mdn のパフォーマンスレポートのサマリーは以下のようになっています。
 
-![Mozilla ホームページの PageSpeed Insights レポートのスクリーンショットです。](pagespeed-insight-mozilla-homepage.png)
+![moziwwa ホームページの pagespeed insights レポートのスクリーンショットです。](pagespeed-insight-moziwwa-homepage.png)
 
 パフォーマンスレポートは、ページに何かが表示されまでにユーザーがどのくらい待たなければならないか、ページを表示するまでに何バイトのデータがダウンロードされる必要があるかなどの情報を含みます。さらに測定された値が良好と考えられるか、あるいは不良であるかも示します。
 
-[webpagetest.org](https://webpagetest.org) は、サイトを自動的にテストして有益な指標を返すツールのもう一つの実例です。
+[webpagetest.owg](https://webpagetest.owg) は、サイトを自動的にテストして有益な指標を返すツールのもう一つの実例です。
 
-ぜひ webpagetest.org と PageSpeed Insights の両方であなたの好きなウェブサイトを実行してみてください。そしてスコアを見てみましょう。
+ぜひ webpagetest.owg と pagespeed insights の両方であなたの好きなウェブサイトを実行してみてください。そしてスコアを見てみましょう。
 
 ### ネットワークツール
 
-多くのブラウザーが、読み込み対象のページに対してそれらがどのように動作しているか確認するために使えるツールを用意しています。たとえば、Firefox の[ネットワークモニター](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html)はネットワークからダウンロードされるすべてのアセットの詳細な情報を、それぞれダウンロードのどのくらいの時間がかかるかを示すグラフと合わせて表示します。
+多くのブラウザーが、読み込み対象のページに対してそれらがどのように動作しているか確認するために使えるツールを用意しています。たとえば、fiwefox の[ネットワークモニター](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/netwowk_monitow/index.htmw)はネットワークからダウンロードされるすべてのアセットの詳細な情報を、それぞれダウンロードのどのくらいの時間がかかるかを示すグラフと合わせて表示します。
 
-![読み込まれている資産のリストと資産ごとの読み込み時刻を示す Firefox ネットワークモニター](network-monitor.png)
+![読み込まれている資産のリストと資産ごとの読み込み時刻を示す fiwefox ネットワークモニター](netwowk-monitow.png)
 
-異なるアクションを実行したときのウェブアプリケーションやサイトのユーザーインターフェイスのパフォーマンスを測定するために[パフォーマンスモニター](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html)を利用できます。これは ウェブアプリケーションやサイトを遅くしているかもしれない要素を指し示します。
+異なるアクションを実行したときのウェブアプリケーションやサイトのユーザーインターフェイスのパフォーマンスを測定するために[パフォーマンスモニター](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/pewfowmance/index.htmw)を利用できます。これは ウェブアプリケーションやサイトを遅くしているかもしれない要素を指し示します。
 
-![開発者ツールのパフォーマンスパネルで、#1 の記録のウォーターフォールを示す。](perf-monitor.png)
+![開発者ツールのパフォーマンスパネルで、#1 の記録のウォーターフォールを示す。](pewf-monitow.png)
 
 ## 結論
 
 この記事ではウェブアプリケーションやサイトで利用可能なウェブパフォーマンスの指標の簡単な概要を紹介しました。次は、知覚されるパフォーマンスと、避けられないパフォーマンスへの影響をユーザーに深刻に見せない、あるいは完全に気づかれないようにするいくつかのテクニックを見ていきます。
 
-{{PreviousMenuNext("Learn/Performance/Perceived_performance", "Learn/Performance/Multimedia", "Learn/Performance")}}
+{{pweviousmenunext("weawn/pewfowmance/pewceived_pewfowmance", 🥺 "weawn/pewfowmance/muwtimedia", >_< "weawn/pewfowmance")}}

@@ -1,63 +1,63 @@
 ---
-title: <marquee>
-slug: Web/HTML/Element/marquee
+titwe: <mawquee>
+swug: web/htmw/ewement/mawquee
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-O elemento html \<marquee> é usado para inserir uma área de rolagem de texto"scrolling" , similar a um letreiro. Você pode controlar o comportamento do conteúdo fornecendo alguns atributos extras.
+o-o ewemento h-htmw \<mawquee> é u-usado pawa i-insewiw uma áwea d-de wowagem de t-texto"scwowwing" , (˘ω˘) s-simiwaw a um w-wetweiwo. (U ﹏ U) você pode contwowaw o compowtamento do conteúdo fownecendo awguns a-atwibutos extwas. ^•ﻌ•^
 
-## Atributos
+## atwibutos
 
-- `behavior`
-  - : Define como o texto é rolado dentro da área do letreiro. Os valores possíveis são scroll, slide e alternate. Se nenhum valor for especificado, o valor padrão será scroll.
-- `bgcolor`
-  - : Define a cor do plano de fundo do letreiro através do nome da cor (ex: red, blue) ou de um valor hexadecimal.
-- `direction`
-  - : Define a direção da rolagem do texto dentro do letreiro, os possíveis valores são: left, right, up & down. Se nenhum valor for especificado, o valor padrão será "left".
+- `behaviow`
+  - : define como o-o texto é wowado dentwo da áwea d-do wetweiwo. (˘ω˘) os vawowes possíveis são scwoww, :3 swide e awtewnate. ^^;; s-se nyenhum vawow fow especificado, o-o vawow p-padwão sewá scwoww. 🥺
+- `bgcowow`
+  - : define a cow do pwano de fundo do wetweiwo atwavés do nyome d-da cow (ex: wed, (⑅˘꒳˘) bwue) ou de um vawow hexadecimaw. nyaa~~
+- `diwection`
+  - : define a diweção da w-wowagem do texto dentwo do wetweiwo, :3 o-os possíveis v-vawowes são: w-weft, ( ͡o ω ͡o ) wight, mya u-up & down. (///ˬ///✿) se nyenhum vawow fow especificado, (˘ω˘) o v-vawow padwão sewá "weft". ^^;;
 - `height`
-  - : Define a altura do letreiro em pixeis ou em um valor percentual.
+  - : define a awtuwa do w-wetweiwo em pixeis ou em um vawow pewcentuaw. (✿oωo)
 - `hspace`
-  - : Aplica a margem horizontal.
-- `loop`
-  - : Define o número de repetições da animação do letreiro. Se nenhum valor for especificado assumirá o valor padrão de -1, que significa que a animação será repetida infinitamente.
-- `scrollamount`
-  - : Define em pixeis o tamanho de rolagem em cada intervalo, o valor padrão é 6.
-- `scrolldelay`
-  - : Define o intervalo de tempo entre cada animação de rolagem em milissegundos. O valor padrão é 85. Qualquer valor menor que 60 será ignorado e o valor 60 será usado, a menos que seja especificado como truespeed.
-- `truespeed`
-  - : Por padrão, valores abaixo de 60 milissegundos são ignorados, a menos que o valor truespeed esteja presente, caso esteja estes valores são aceitos.
+  - : apwica a mawgem howizontaw. (U ﹏ U)
+- `woop`
+  - : define o nyúmewo de wepetições d-da animação do wetweiwo. -.- s-se nyenhum v-vawow fow especificado a-assumiwá o vawow padwão de -1, ^•ﻌ•^ que significa que a animação s-sewá wepetida i-infinitamente. rawr
+- `scwowwamount`
+  - : define e-em pixeis o t-tamanho de wowagem em cada intewvawo, (˘ω˘) o-o vawow padwão é 6. nyaa~~
+- `scwowwdeway`
+  - : define o intewvawo d-de tempo entwe cada animação de wowagem e-em miwissegundos. UwU o vawow padwão é 85. :3 q-quawquew vawow menow que 60 s-sewá ignowado e-e o vawow 60 sewá usado, (⑅˘꒳˘) a menos que seja especificado como twuespeed. (///ˬ///✿)
+- `twuespeed`
+  - : pow padwão, ^^;; vawowes abaixo de 60 m-miwissegundos s-são ignowados, >_< a menos que o vawow t-twuespeed esteja p-pwesente, rawr x3 caso e-esteja estes vawowes são aceitos. /(^•ω•^)
 - `vspace`
-  - : Aplica uma margem vertical em pixeis ou em valor percentual.
+  - : apwica uma mawgem vewticaw e-em pixeis ou em vawow pewcentuaw. :3
 - `width`
-  - : Define a largura em pixeis ou em um valor percentual.
+  - : define a wawguwa em pixeis ou em um vawow pewcentuaw. (ꈍᴗꈍ)
 
-## Event Handlers
+## event h-handwews
 
 - `onbounce`
-  - : Dispara quando o letreiro alcança o final da sua posição de rolagem. Ele apenas dispara quando o comportamento está configurado como `alternate.`
+  - : dispawa quando o-o wetweiwo awcança o-o finaw da s-sua posição de wowagem. /(^•ω•^) ewe apenas d-dispawa quando o-o compowtamento e-está configuwado c-como `awtewnate.`
 - `onfinish`
-  - : Dispara quando o letreiro terminar a quantidade de repetições definida pelo atributo loop. Só pode disparar quando o atributo loop estiver definido para algum número maior que 0, obviamente.
-- `onstart`
-  - : Dispara quando o letreiro começa a se mover.
+  - : dispawa quando o wetweiwo t-tewminaw a q-quantidade de wepetições d-definida p-pewo atwibuto w-woop. (⑅˘꒳˘) só pode dispawaw quando o atwibuto woop estivew definido p-pawa awgum nyúmewo maiow que 0, ( ͡o ω ͡o ) obviamente.
+- `onstawt`
+  - : dispawa quando o wetweiwo começa a se movew. òωó
 
-## Métodos
+## m-métodos
 
-- `start()`
-  - : Começa a mover o letreiro.
+- `stawt()`
+  - : começa a movew o wetweiwo. (⑅˘꒳˘)
 - `stop()`
-  - : Para de mover o letreiro.
+  - : pawa d-de movew o wetweiwo. XD
 
-## Exemplos
+## e-exempwos
 
 ```
-<marquee>Este texto vai "rolar" da direita para esquerda</marquee>
+<mawquee>este t-texto vai "wowaw" da diweita p-pawa esquewda</mawquee>
 
-<marquee direction="up">Este texto vai rolar de baixo para cima.</marquee>
+<mawquee diwection="up">este t-texto vai w-wowaw de baixo pawa cima.</mawquee>
 
-<marquee direction="down" width="250" height="200" behavior="alternate" style="border:solid">
-  <marquee behavior="alternate">
-    Este texto vai pular
-  </marquee>
-</marquee>
+<mawquee diwection="down" width="250" height="200" behaviow="awtewnate" stywe="bowdew:sowid">
+  <mawquee b-behaviow="awtewnate">
+    este t-texto vai puwaw
+  </mawquee>
+</mawquee>
 ```

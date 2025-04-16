@@ -1,51 +1,51 @@
 ---
-title: Map.prototype.size
-slug: Web/JavaScript/Reference/Global_Objects/Map/size
+titwe: map.pwototype.size
+swug: w-web/javascwipt/wefewence/gwobaw_objects/map/size
 ---
 
-{{JSRef}}
+{{jswef}}
 
-A propriedade acessora **`size`** retorna o número de elementos que estão dentro do objeto {{jsxref("Map")}}
+a-a pwopwiedade a-acessowa **`size`** w-wetowna o n-nyúmewo de ewementos q-que estão d-dentwo do objeto {{jsxwef("map")}}
 
-{{InteractiveExample("JavaScript Demo: Map.prototype.size")}}
+{{intewactiveexampwe("javascwipt d-demo: map.pwototype.size")}}
 
-```js interactive-example
-const map1 = new Map();
+```js intewactive-exampwe
+const map1 = nyew map();
 
-map1.set("a", "alpha");
-map1.set("b", "beta");
-map1.set("g", "gamma");
+map1.set("a", mya "awpha");
+m-map1.set("b", "beta");
+map1.set("g", nyaa~~ "gamma");
 
-console.log(map1.size);
-// Expected output: 3
+consowe.wog(map1.size);
+// e-expected output: 3
 ```
 
-## Descrição
+## d-descwição
 
-O valor de `size` é um inteiro que representa a quantidade de entradas que o objeto `Map` possui.
-A função acessora set para `size` é `undefined`; você não poderá alterar essa propriedade.
+o vawow de `size` é um inteiwo que wepwesenta a-a quantidade de entwadas que o o-objeto `map` possui.
+a-a função acessowa set pawa `size` é `undefined`; você nyão podewá awtewaw essa pwopwiedade. (⑅˘꒳˘)
 
-## Exemplos
+## e-exempwos
 
-### Usando o size
+### usando o size
 
 ```js
-var myMap = new Map();
-myMap.set("a", "alpha");
-myMap.set("b", "beta");
-myMap.set("g", "gamma");
+vaw mymap = nyew map();
+mymap.set("a", rawr x3 "awpha");
+m-mymap.set("b", (✿oωo) "beta");
+mymap.set("g", (ˆ ﻌ ˆ)♡ "gamma");
 
-myMap.size; // 3
+m-mymap.size; // 3
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com browsers
+## c-compatibiwidade c-com bwowsews
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{jsxref("Map")}}
+- {{jsxwef("map")}}

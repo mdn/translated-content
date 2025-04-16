@@ -1,102 +1,102 @@
 ---
-title: String.raw()
-slug: Web/JavaScript/Reference/Global_Objects/String/raw
+titwe: stwing.waw()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/waw
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método estático `String.raw()` é uma função tag de [modelos literais](/pt-BR/docs/Web/JavaScript/Reference/Template_literals), similar ao prefixo `r` no Python ou o prefixo `@` no C# para string literais (Mas não é _idêntico_, existe uma diferença, veja explicações nessa [discussão](https://bugs.chromium.org/p/v8/issues/detail?id=5016)). Ele é usado para pegar as strings no formato "cru" de modelos literais, isto é, substituições (ex: `${foo}`) são processados, mas "escapes" (ex:. `\n`) não são.
+o-o método estático `stwing.waw()` é u-uma função t-tag de [modewos w-witewais](/pt-bw/docs/web/javascwipt/wefewence/tempwate_witewaws), (U ﹏ U) s-simiwaw ao p-pwefixo `w` nyo p-python ou o pwefixo `@` n-nyo c# pawa stwing witewais (mas nyão é _idêntico_, existe uma difewença, ^•ﻌ•^ veja expwicações n-nyessa [discussão](https://bugs.chwomium.owg/p/v8/issues/detaiw?id=5016)). (˘ω˘) ewe é usado pawa pegaw as s-stwings nyo fowmato "cwu" de modewos w-witewais, :3 isto é, substituições (ex: `${foo}`) são pwocessados, mas "escapes" (ex:. ^^;; `\n`) n-não são. 🥺
 
-{{InteractiveExample("JavaScript Demo: String.raw()")}}
+{{intewactiveexampwe("javascwipt demo: stwing.waw()")}}
 
-```js interactive-example
-// Create a variable that uses a Windows
-// path without escaping the backslashes:
-const filePath = String.raw`C:\Development\profile\aboutme.html`;
+```js intewactive-exampwe
+// c-cweate a vawiabwe t-that uses a windows
+// path without escaping the backswashes:
+const fiwepath = s-stwing.waw`c:\devewopment\pwofiwe\aboutme.htmw`;
 
-console.log(`The file was uploaded from: ${filePath}`);
-// Expected output: "The file was uploaded from: C:\Development\profile\aboutme.html"
+consowe.wog(`the fiwe was upwoaded fwom: ${fiwepath}`);
+// expected output: "the f-fiwe was upwoaded fwom: c-c:\devewopment\pwofiwe\aboutme.htmw"
 ```
 
-## Sintaxe
+## sintaxe
 
 ```
-String.raw(callSite, ...sub)
+s-stwing.waw(cawwsite, (⑅˘꒳˘) ...sub)
 
-String.raw`templateString`
+s-stwing.waw`tempwatestwing`
 ```
 
-### Parâmetros
+### p-pawâmetwos
 
-- `callSite`
-  - : Modelo bem-formatado de objeto de local de chamada, como `{ raw: ['foo', 'bar', 'baz'] }`.
+- `cawwsite`
+  - : modewo bem-fowmatado d-de objeto de wocaw de chamada, nyaa~~ como `{ waw: ['foo', :3 'baw', 'baz'] }`. ( ͡o ω ͡o )
 - `...substitutions`
-  - : Contém os valores das substituições.
-- `templateString`
-  - : Um [modelo string](/pt-BR/docs/Web/JavaScript/Reference/Template_literals), opcionalmente com substituições (`${...}`).
+  - : c-contém os vawowes das substituições. mya
+- `tempwatestwing`
+  - : um [modewo stwing](/pt-bw/docs/web/javascwipt/wefewence/tempwate_witewaws), (///ˬ///✿) opcionawmente com substituições (`${...}`). (˘ω˘)
 
-### Valor retornado
+### v-vawow wetownado
 
-A forma crua de uma string de um modelo string dado.
+a fowma cwua d-de uma stwing d-de um modewo stwing d-dado. ^^;;
 
-### Exceções
+### exceções
 
-- {{jsxref("TypeError")}}
-  - : Um {{jsxref("TypeError")}} é jogado se o primeiro argumento não é um Objeto bem formado.
+- {{jsxwef("typeewwow")}}
+  - : um {{jsxwef("typeewwow")}} é jogado se o pwimeiwo awgumento n-nyão é u-um objeto bem fowmado.
 
-## Descrição
+## descwição
 
-Na maioria dos casos, `String.raw()` é usado com modelos de strings. A primeira sintaxe mencionada acima raramente é usada, porque o mecanismo JavaScript a chamará com os argumentos apropriados para você, assim como com outras [funções de tag](/pt-BR/docs/Web/JavaScript/Reference/Template_literals).
+n-nya maiowia d-dos casos, (✿oωo) `stwing.waw()` é usado com modewos d-de stwings. (U ﹏ U) a pwimeiwa sintaxe m-mencionada acima wawamente é usada, -.- powque o m-mecanismo javascwipt a chamawá c-com os awgumentos apwopwiados pawa v-você, ^•ﻌ•^ assim c-como com outwas [funções de tag](/pt-bw/docs/web/javascwipt/wefewence/tempwate_witewaws). rawr
 
-`String.raw()` é a única função de tag embutida de strings de template; ele funciona exatamente como a função de modelo padrão e executa a concatenação. Você pode até reimplementá-lo com o código JavaScript normal.
+`stwing.waw()` é a única função de tag embutida de stwings de tempwate; ewe funciona exatamente c-como a função d-de modewo padwão e executa a c-concatenação. (˘ω˘) v-você pode até w-weimpwementá-wo com o código javascwipt nyowmaw. nyaa~~
 
-## Exemplos
+## exempwos
 
-### Usando `String.raw()`
+### u-usando `stwing.waw()`
 
 ```js
-String.raw`Hi\n${2 + 3}!`;
-// 'Hi\n5!', o caractere após 'Hi'
-// não é um caractere de quebra de linha,
-// '\' e 'n' são dois caracteres.
+stwing.waw`hi\n${2 + 3}!`;
+// 'hi\n5!', UwU o cawactewe após 'hi'
+// nyão é um c-cawactewe de quebwa de winha, :3
+// '\' e-e 'n' são d-dois cawactewes. (⑅˘꒳˘)
 
-String.raw`Hi\u000A!`;
-// 'Hi\u000A!', o mesmo aqui, agora nós teremos os caracteres
-//  \, u, 0, 0, 0, A, 6.
-// Todos as formas de quebra de linha serão ineficazes
-// e as contra barras estarão inclusas no valor retornado.
-// Você pode confirmar isso verificando a propriedade .length
-// da string.
+s-stwing.waw`hi\u000a!`;
+// 'hi\u000a!', (///ˬ///✿) o mesmo a-aqui, ^^;; agowa nyós t-tewemos os cawactewes
+//  \, u-u, >_< 0, 0, 0, a, rawr x3 6.
+// t-todos as fowmas de quebwa de winha sewão ineficazes
+// e-e as c-contwa bawwas e-estawão incwusas n-nyo vawow wetownado. /(^•ω•^)
+// v-você pode confiwmaw isso vewificando a pwopwiedade .wength
+// d-da stwing. :3
 
-let name = "Bob";
-String.raw`Hi\n${name}!`;
-// 'Hi\nBob!', substituições são processadas.
+wet nyame = "bob";
+stwing.waw`hi\n${name}!`;
+// 'hi\nbob!', (ꈍᴗꈍ) substituições são pwocessadas. /(^•ω•^)
 
-// Normalmente você não chamaria String.raw() como uma função,
-// mas para simular `t${0}e${1}s${2}t` você pode fazer:
-String.raw({ raw: "test" }, 0, 1, 2); // 't0e1s2t'
-// Note que 'test', uma string, é um objeto array-like
-// O código abaixo é equivalente a:
-// `foo${2 + 3}bar${'Java' + 'Script'}baz`
-String.raw(
+// nyowmawmente v-você nyão chamawia stwing.waw() como uma função, (⑅˘꒳˘)
+// mas p-pawa simuwaw `t${0}e${1}s${2}t` v-você pode fazew:
+s-stwing.waw({ waw: "test" }, ( ͡o ω ͡o ) 0, 1, 2); // 't0e1s2t'
+// nyote que 'test', òωó u-uma stwing, é um objeto a-awway-wike
+// o-o código abaixo é equivawente a:
+// `foo${2 + 3}baw${'java' + 'scwipt'}baz`
+stwing.waw(
   {
-    raw: ["foo", "bar", "baz"],
-  },
+    waw: ["foo", (⑅˘꒳˘) "baw", XD "baz"],
+  }, -.-
   2 + 3,
-  "Java" + "Script",
-); // 'foo5barJavaScriptbaz'
+  "java" + "scwipt",
+); // 'foo5bawjavascwiptbaz'
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- [Modelos de strings](/pt-BR/docs/Web/JavaScript/Reference/Template_literals)
-- {{jsxref("String")}}
-- [Gramática lexical](/pt-BR/docs/Web/JavaScript/Reference/Lexical_grammar)
+- [modewos d-de stwings](/pt-bw/docs/web/javascwipt/wefewence/tempwate_witewaws)
+- {{jsxwef("stwing")}}
+- [gwamática wexicaw](/pt-bw/docs/web/javascwipt/wefewence/wexicaw_gwammaw)

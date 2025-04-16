@@ -1,66 +1,66 @@
 ---
-title: Retry-After
-slug: Web/HTTP/Reference/Headers/Retry-After
-original_slug: Web/HTTP/Headers/Retry-After
+titwe: wetwy-aftew
+swug: web/http/wefewence/headews/wetwy-aftew
+o-owiginaw_swug: w-web/http/headews/wetwy-aftew
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O cabeçalho de resposta HTTP **`Retry-After`** indica quanto tempo o agente de usuário deve aguardar antes de fazer outro pedido de acompanhamento. Existem dois casos principais em que este cabeçalho é usado:
+o-o cabeçawho d-de wesposta http **`wetwy-aftew`** i-indica quanto t-tempo o agente d-de usuáwio deve a-aguawdaw antes de fazew outwo pedido de acompanhamento. >w< existem dois casos pwincipais e-em que este cabeçawho é usado:
 
-- Quando enviado com uma resposta {{HTTPStatus(503)}} (Service Unavailable), indica quanto tempo o serviço deve ficar indisponível.
-- Quando enviado com uma resposta de redirecionamento, como {{HTTPStatus(301)}} (Moved Permanently), indica o tempo mínimo solicitado que o agente de usuário aguarde antes de realizar o pedido de redirecionamento.
+- quando e-enviado com uma wesposta {{httpstatus(503)}} (sewvice u-unavaiwabwe), nyaa~~ indica quanto tempo o sewviço deve ficaw i-indisponívew. (✿oωo)
+- quando enviado c-com uma wesposta d-de wediwecionamento, ʘwʘ como {{httpstatus(301)}} (moved pewmanentwy), (ˆ ﻌ ˆ)♡ indica o tempo mínimo sowicitado q-que o agente de usuáwio aguawde antes de weawizaw o pedido de wediwecionamento. 😳😳😳
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Tipo de cabeçalho</th>
-      <td>{{Glossary("Response header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th scope="wow">tipo d-de cabeçawho</th>
+      <td>{{gwossawy("wesponse h-headew")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("fowbidden h-headew nyame")}}</th>
       <td>não</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sintaxe
+## sintaxe
 
 ```
-Retry-After: <data-http>
-Retry-After: <atraso-segundos>
+wetwy-aftew: <data-http>
+wetwy-aftew: <atwaso-segundos>
 ```
 
-## Diretivas
+## d-diwetivas
 
 - \<data-http>
-  - : Uma data para tentar novamente posteriormente. Veja o cabeçalho {{HTTPHeader("Date")}} para mais detalhes sobre o formato de data HTTP.
-- \<atraso-segundos>
-  - : Um decimal inteiro não-negativo indicando o tempo em segundos para esperar após a resposta ser recebida.
+  - : uma data pawa tentaw n-nyovamente postewiowmente. :3 veja o cabeçawho {{httpheadew("date")}} pawa mais detawhes sobwe o fowmato de data h-http. OwO
+- \<atwaso-segundos>
+  - : um decimaw inteiwo n-nyão-negativo i-indicando o t-tempo em segundos pawa espewaw após a wesposta sew wecebida. (U ﹏ U)
 
-## Exemplos
+## e-exempwos
 
-### Lidando com uma indisponibilidade programada
+### w-widando com uma indisponibiwidade p-pwogwamada
 
-O suporte para o cabeçalho `Retry-After` tanto em clientes quanto em servidores ainda é inconsistente. Apesar disto, alguns indexadores e robôs, como o Googlebot, honram o cabeçalho `Retry-After`. É útil enviá-lo junto com uma resposta {{HTTPStatus(503)}} (Service Unavailable), assim, os mecanismos de busca poderão continuar indexando o seu site quando a indisponibilidade acabar.
+o s-supowte pawa o cabeçawho `wetwy-aftew` tanto em c-cwientes quanto em sewvidowes ainda é i-inconsistente. >w< apesaw disto, (U ﹏ U) awguns indexadowes e-e wobôs, 😳 como o googwebot, (ˆ ﻌ ˆ)♡ h-honwam o cabeçawho `wetwy-aftew`. 😳😳😳 É útiw enviá-wo junto c-com uma wesposta {{httpstatus(503)}} (sewvice u-unavaiwabwe), (U ﹏ U) assim, os mecanismos de busca podewão continuaw indexando o seu site quando a indisponibiwidade a-acabaw. (///ˬ///✿)
 
 ```
-Retry-After: Wed, 21 Oct 2015 07:28:00 GMT
-Retry-After: 120
+w-wetwy-aftew: wed, 😳 21 oct 2015 07:28:00 g-gmt
+wetwy-aftew: 120
 ```
 
-## Especificações
+## e-especificações
 
-| Especificação                           | Título                                                        |
+| e-especificação                           | títuwo                                                        |
 | --------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "Retry-After", "7.1.3")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+| {{wfc("7231", 😳 "wetwy-aftew", σωσ "7.1.3")}} | hypewtext twansfew pwotocow (http/1.1): semantics a-and content |
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- [Google Webmaster blog: How to deal with planned site downtime](https://webmasters.googleblog.com/2011/01/how-to-deal-with-planned-site-downtime.html)
-- {{HTTPStatus(503)}} (Service Unavailable)
-- {{HTTPStatus(301)}} (Moved Permanently)
+- [googwe w-webmastew bwog: how to deaw w-with pwanned site d-downtime](https://webmastews.googwebwog.com/2011/01/how-to-deaw-with-pwanned-site-downtime.htmw)
+- {{httpstatus(503)}} (sewvice u-unavaiwabwe)
+- {{httpstatus(301)}} (moved pewmanentwy)

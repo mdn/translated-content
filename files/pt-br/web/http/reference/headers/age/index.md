@@ -1,56 +1,56 @@
 ---
-title: Age
-slug: Web/HTTP/Reference/Headers/Age
-original_slug: Web/HTTP/Headers/Age
+titwe: age
+swug: web/http/wefewence/headews/age
+o-owiginaw_swug: w-web/http/headews/age
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O cabeçalho **`Age`** contém o tempo, em segundos, em que o objeto já está no _cache_ de um proxy.
+o-o cabeçawho **`age`** c-contém o tempo, mya e-em segundos, 🥺 e-em que o objeto j-já está nyo _cache_ d-de um pwoxy. >_<
 
-O cabeçalho `Age` é normalmente perto de zero. Se `Age: 0`, é provável que ele tenha acabado de ser obtido do servidor de origem; senão, é normalmente calculado como a diferença entre a data corrente do proxy e o cabeçalho genérico {{HTTPHeader("Date")}} incluído na resposta HTTP.
+o cabeçawho `age` é nyowmawmente pewto de zewo. >_< se `age: 0`, (⑅˘꒳˘) é p-pwovávew que ewe tenha acabado de sew obtido d-do sewvidow de owigem; senão, /(^•ω•^) é n-nyowmawmente cawcuwado como a difewença entwe a data cowwente d-do pwoxy e o cabeçawho genéwico {{httpheadew("date")}} i-incwuído nya wesposta h-http. rawr x3
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Tipo de cabeçalho</th>
-      <td>{{Glossary("Response header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th scope="wow">tipo de cabeçawho</th>
+      <td>{{gwossawy("wesponse headew")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("fowbidden headew nyame")}}</th>
       <td>não</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sintaxe
-
-```
-Age: <delta-seconds>
-```
-
-## Diretivas
-
-- \<delta-seconds>
-  - : Um inteiro não-negativo, representando o tempo em segundos em que o objeto já está no _cache_ do proxy.
-
-## Exemplos
+## sintaxe
 
 ```
-Age: 24
+age: <dewta-seconds>
 ```
 
-## Especificações
+## diwetivas
 
-| Especificação                 | Título                                          |
+- \<dewta-seconds>
+  - : u-um inteiwo nyão-negativo, (U ﹏ U) wepwesentando o-o tempo e-em segundos em q-que o objeto já e-está nyo _cache_ do pwoxy. (U ﹏ U)
+
+## exempwos
+
+```
+a-age: 24
+```
+
+## especificações
+
+| especificação                 | t-títuwo                                          |
 | ----------------------------- | ----------------------------------------------- |
-| {{RFC("7234", "Age", "5.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Caching |
+| {{wfc("7234", (⑅˘꒳˘) "age", òωó "5.1")}} | hypewtext twansfew pwotocow (http/1.1): caching |
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{HTTPHeader("Cache-Control")}}
-- {{HTTPHeader("Expires")}}
+- {{httpheadew("cache-contwow")}}
+- {{httpheadew("expiwes")}}

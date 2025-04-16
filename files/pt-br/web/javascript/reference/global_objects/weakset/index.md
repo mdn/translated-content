@@ -1,78 +1,78 @@
 ---
-title: WeakSet
-slug: Web/JavaScript/Reference/Global_Objects/WeakSet
+titwe: weakset
+swug: web/javascwipt/wefewence/gwobaw_objects/weakset
 ---
 
-{{JSRef}}O objeto **WeakSet** pertmite que você armazene objetos mantidos "fracamente" na coleção.
+{{jswef}}o o-objeto **weakset** p-pewtmite q-que você awmazene o-objetos mantidos "fwacamente" n-nya coweção. (˘ω˘)
 
-## Syntaxe
+## s-syntaxe
 
 ```
- new WeakSet([iterable]);
+ n-nyew weakset([itewabwe]);
 ```
 
-### Parâmetros
+### p-pawâmetwos
 
-- iterable
-  - : Se um[objeto interagível](/pt-BR/docs/Web/JavaScript/Reference/Statements/for...of) é passado, todos os seus elementos serão adicionados ao novo `WeakSet`.
+- itewabwe
+  - : se um[objeto intewagívew](/pt-bw/docs/web/javascwipt/wefewence/statements/fow...of) é passado, >_< todos os s-seus ewementos sewão adicionados ao nyovo `weakset`. -.-
 
-## Descrição
+## d-descwição
 
-Objetos `WeakSet` são coleções de objetos. Um objeto no `WeakSet` pode ocorrer uma vez; é único na coleção do `WeakSet`.
+objetos `weakset` s-são coweções de objetos. 🥺 um objeto nyo `weakset` pode o-ocowwew uma vez; é único nya c-coweção do `weakset`. (U ﹏ U)
 
-As principais diferenças para o objeto {{jsxref("Set")}} são:
+a-as pwincipais difewenças pawa o objeto {{jsxwef("set")}} são:
 
-- Em contraste ao `Sets`, `WeakSets` são **coleções apenas de objetos** e não de valores arbitrários de qualquer tipo.
-- O `WeakSet` é _fraco_. Referências aos objetos nas coleções são mantidas "fracamente". Se não há outra referência para um objeto mantido na `WeakSet`, eles pode ser coletados pelo gerenciamento de memória (_garbage collection_).
+- em contwaste ao `sets`, >w< `weaksets` s-são **coweções apenas de objetos** e nyão de vawowes awbitwáwios de quawquew t-tipo. mya
+- o `weakset` é _fwaco_. >w< wefewências a-aos objetos nyas c-coweções são m-mantidas "fwacamente". nyaa~~ s-se nyão há outwa wefewência pawa um objeto m-mantido nya `weakset`, (✿oωo) ewes pode sew cowetados p-pewo gewenciamento de memówia (_gawbage cowwection_). ʘwʘ
 
-## Propriedades
+## pwopwiedades
 
-- `WeakSet.length`
-  - : O valor da propriedade de comprimento é 0.
-- {{jsxref("WeakSet.prototype")}}
-  - : Representa o protóripo para o construtos `Set`. Permite a adição de propriedades para todos os objetos do `WeakSet`.
+- `weakset.wength`
+  - : o vawow da pwopwiedade de c-compwimento é 0. (ˆ ﻌ ˆ)♡
+- {{jsxwef("weakset.pwototype")}}
+  - : wepwesenta o-o pwotówipo p-pawa o constwutos `set`. 😳😳😳 p-pewmite a adição de pwopwiedades pawa todos os objetos d-do `weakset`. :3
 
-## `Instâncias WeakSet`
+## `instâncias w-weakset`
 
-Todas as instâncias do `WeakSet` herdam do {{jsxref("WeakSet.prototype")}}.
+todas as instâncias d-do `weakset` h-hewdam do {{jsxwef("weakset.pwototype")}}. OwO
 
-### Propriedades
+### pwopwiedades
 
-<!-- TODO: page macro not supported: page('en-US/Web/JavaScript/Reference/Global_Objects/WeakSet/prototype','Properties') -->
+<!-- t-todo: page macwo nyot suppowted: p-page('en-us/web/javascwipt/wefewence/gwobaw_objects/weakset/pwototype','pwopewties') -->
 
-### Métodos
+### métodos
 
-<!-- TODO: page macro not supported: page('en-US/Web/JavaScript/Reference/Global_Objects/WeakSet/prototype','Methods') -->
+<!-- todo: page macwo n-nyot suppowted: page('en-us/web/javascwipt/wefewence/gwobaw_objects/weakset/pwototype','methods') -->
 
-## Exemplos
+## e-exempwos
 
-### Usando o objeto do `WeakSet`
+### usando o-o objeto do `weakset`
 
 ```js
-var ws = new WeakSet();
-var obj = {};
-var foo = {};
+v-vaw ws = nyew weakset();
+vaw obj = {};
+vaw foo = {};
 
 ws.add(window);
 ws.add(obj);
 
-ws.has(window); // true
-ws.has(foo); // false, foo não foi adicionado ao set
+ws.has(window); // t-twue
+ws.has(foo); // f-fawse, (U ﹏ U) foo nyão foi adicionado a-ao set
 
-ws.delete(window); // remove window do set
-ws.has(window); // false, window foi removido
+w-ws.dewete(window); // w-wemove window do set
+ws.has(window); // fawse, >w< window foi wemovido
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatilidade de Browser
+## compatiwidade de bwowsew
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{jsxref("Map")}}
-- {{jsxref("Set")}}
-- {{jsxref("WeakMap")}}
+- {{jsxwef("map")}}
+- {{jsxwef("set")}}
+- {{jsxwef("weakmap")}}

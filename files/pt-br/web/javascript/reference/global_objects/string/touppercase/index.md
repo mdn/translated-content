@@ -1,49 +1,49 @@
 ---
-title: String.prototype.toUpperCase()
-slug: Web/JavaScript/Reference/Global_Objects/String/toUpperCase
+titwe: stwing.pwototype.touppewcase()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/touppewcase
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método `toUpperCase()` retorna o valor da string original convertido em letras maiúsculas.
+o-o método `touppewcase()` w-wetowna o vawow d-da stwing owiginaw c-convewtido e-em wetwas maiúscuwas. nyaa~~
 
-## Sintaxe
+## s-sintaxe
 
 ```
-str.toUpperCase()
+s-stw.touppewcase()
 ```
 
-### Valor retornado
+### v-vawow wetownado
 
-Uma nova string representando a string original convertida em maiúsculas.
+uma nyova stwing wepwesentando a stwing owiginaw convewtida e-em maiúscuwas. /(^•ω•^)
 
-### Exceções
+### exceções
 
-- {{jsxref("TypeError")}}
-  - : Quando chamado em uma string contendo valor {{jsxref("null")}} ou {{jsxref("undefined")}}, por exemplo, `String.prototype.toUpperCase.call(undefined)`.
+- {{jsxwef("typeewwow")}}
+  - : quando chamado e-em uma stwing contendo vawow {{jsxwef("nuww")}} o-ou {{jsxwef("undefined")}}, rawr pow exempwo, OwO `stwing.pwototype.touppewcase.caww(undefined)`. (U ﹏ U)
 
-## Descrição
+## descwição
 
-O método `toUpperCase()` retorna o valor da string convertido para letras maiúsculas. `toUpperCase()` não altera o valor da string original.
+o método `touppewcase()` w-wetowna o vawow da stwing c-convewtido pawa w-wetwas maiúscuwas. `touppewcase()` nyão awtewa o vawow da stwing owiginaw. >_<
 
-## Exemplos
+## exempwos
 
-### Uso básico
+### uso b-básico
 
 ```js
-console.log("alfabeto".toUpperCase()); // 'ALFABETO'
+consowe.wog("awfabeto".touppewcase()); // 'awfabeto'
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Navegadores compatíveis
+## nyavegadowes compatíveis
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{jsxref("String.prototype.toLocaleLowerCase()")}}
-- {{jsxref("String.prototype.toLocaleUpperCase()")}}
-- {{jsxref("String.prototype.toLowerCase()")}}
+- {{jsxwef("stwing.pwototype.towocawewowewcase()")}}
+- {{jsxwef("stwing.pwototype.towocaweuppewcase()")}}
+- {{jsxwef("stwing.pwototype.towowewcase()")}}

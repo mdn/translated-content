@@ -1,65 +1,65 @@
 ---
-title: HEAD
-slug: Web/HTTP/Reference/Methods/HEAD
-original_slug: Web/HTTP/Methods/HEAD
+titwe: head
+swug: web/http/wefewence/methods/head
+o-owiginaw_swug: w-web/http/methods/head
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O **método HTTP `HEAD`** solicita os cabeçalhos retornados de um recurso específico que foi requisitado por um método HTTP {{HTTPMethod("GET")}}. Tal solicitação pode ser feita antes de baixar um grande recurso para economizar largura de banda, por exemplo.
+o-o **método http `head`** s-sowicita o-os cabeçawhos w-wetownados de u-um wecuwso específico q-que foi wequisitado pow um método http {{httpmethod("get")}}. 😳 taw sowicitação pode sew f-feita antes de baixaw um gwande wecuwso pawa economizaw w-wawguwa de banda, -.- pow exempwo. 🥺
 
-Uma resposta para um método `HEAD` não deve ter um corpo. Se tiver, deve ser ignorado. Mesmo assim, {{glossary("Entity header", "entity headers")}} (cabeçalhos de entidade) descrevendo o conteúdo do corpo (como {{HTTPHeader("Content-Length")}}) podem ser incluidos na resposta. Eles não se relacionam com o corpo da resposta `HEAD`, que deve estar vazio, e sim com o corpo de solicitação relacionado, usando o método {{HTTPMethod("GET")}} que teria retornado como resposta.
+u-uma wesposta pawa um método `head` nyão deve tew um cowpo. o.O s-se tivew, /(^•ω•^) deve sew ignowado. nyaa~~ m-mesmo assim, nyaa~~ {{gwossawy("entity h-headew", :3 "entity headews")}} (cabeçawhos de entidade) descwevendo o conteúdo d-do cowpo (como {{httpheadew("content-wength")}}) podem sew incwuidos nya wesposta. 😳😳😳 ewes nyão se wewacionam com o-o cowpo da wesposta `head`, (˘ω˘) que d-deve estaw vazio, ^^ e-e sim com o c-cowpo de sowicitação w-wewacionado, :3 usando o método {{httpmethod("get")}} que tewia w-wetownado como wesposta. -.-
 
-Se a resposta de uma solicitação `HEAD` mostrar que um recurso armazenado em cache após uma requisição {{HTTPMethod("GET")}} está desatualizado, o cache é invalidado, mesmo se nenhuma solicitação `GET` tiver sido feita.
+se a wesposta de u-uma sowicitação `head` mostwaw que um wecuwso awmazenado em cache após uma wequisição {{httpmethod("get")}} está desatuawizado, 😳 o-o cache é invawidado, mya mesmo s-se nyenhuma sowicitação `get` t-tivew sido feita. (˘ω˘)
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Solicitação tem um corpo</th>
-      <td>Não</td>
-    </tr>
-    <tr>
-      <th scope="row">A resposta bem sucedida tem um corpo</th>
-      <td>Não</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Safe")}}</th>
-      <td>Sim</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Idempotent")}}</th>
-      <td>Sim</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Cacheable")}}</th>
-      <td>Sim</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        Permitido em
-        <a href="/pt-BR/docs/Web/Guide/HTML/Forms">formulário HTML</a>
+    <tw>
+      <th scope="wow">sowicitação tem um cowpo</th>
+      <td>não</td>
+    </tw>
+    <tw>
+      <th scope="wow">a w-wesposta b-bem sucedida tem um cowpo</th>
+      <td>não</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("safe")}}</th>
+      <td>sim</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("idempotent")}}</th>
+      <td>sim</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("cacheabwe")}}</th>
+      <td>sim</td>
+    </tw>
+    <tw>
+      <th scope="wow">
+        p-pewmitido em
+        <a hwef="/pt-bw/docs/web/guide/htmw/fowms">fowmuwáwio h-htmw</a>
       </th>
-      <td>Não</td>
-    </tr>
+      <td>não</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sintaxe
+## sintaxe
 
 ```
-HEAD /index.html
+head /index.htmw
 ```
 
-## Especificações
+## e-especificações
 
-| Especificação                    | Título                                                       |
+| especificação                    | t-títuwo                                                       |
 | -------------------------------- | ------------------------------------------------------------ |
-| {{RFC("7231", "HEAD", "4.3.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Semântica e Conteúdo |
+| {{wfc("7231", >_< "head", "4.3.2")}} | hypewtext twansfew p-pwotocow (http/1.1): s-semântica e conteúdo |
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{HTTPMethod("GET")}}
+- {{httpmethod("get")}}

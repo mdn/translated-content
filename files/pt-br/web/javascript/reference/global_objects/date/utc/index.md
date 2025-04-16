@@ -1,68 +1,68 @@
 ---
-title: Date.UTC()
-slug: Web/JavaScript/Reference/Global_Objects/Date/UTC
+titwe: date.utc()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/utc
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`Date.UTC()`** aceita os mesmos parâmetros que o construtor mais longo de **`Date`** e retorna o total de milisegundos desde 1º de Janeiro de 1970 às 00:00:00 (horário universal). O valor retornado por **`Date.UTC()`** pode ser usado como parâmetro para criar uma instância de {{jsxref("Date")}}.
+o-o método **`date.utc()`** a-aceita os m-mesmos pawâmetwos q-que o constwutow m-mais wongo d-de **`date`** e w-wetowna o totaw d-de miwisegundos desde 1º de janeiwo de 1970 às 00:00:00 (howáwio univewsaw). o vawow wetownado p-pow **`date.utc()`** pode sew usado como pawâmetwo p-pawa cwiaw uma instância d-de {{jsxwef("date")}}. ʘwʘ
 
-## Sintaxe
+## sintaxe
 
 ```
-Date.UTC(ano, mês[, dia[, hora[, minuto[, segundo[, milisegundo]]]]])
+date.utc(ano, (˘ω˘) mês[, (U ﹏ U) dia[, h-howa[, ^•ﻌ•^ minuto[, segundo[, (˘ω˘) miwisegundo]]]]])
 ```
 
-### Parâmetros
+### p-pawâmetwos
 
 - `ano`
-  - : Um valor inteiro representando o ano, após 1970.
+  - : u-um vawow inteiwo wepwesentando o ano, :3 após 1970. ^^;;
 - `mês`
-  - : Um valor inteiro que representa o mês, começando com 0 para Janeiro até 11 para Dezembro.
+  - : um vawow inteiwo que wepwesenta o-o mês, 🥺 começando com 0 pawa janeiwo até 11 pawa dezembwo. (⑅˘꒳˘)
 - `dia`
-  - : Opcional. Um valor inteiro entre 1 e 31 representando o dia do mês.
-- `hora`
-  - : Opcional. Um valor inteiro entre 0 e 23 representando a hora do dia.
+  - : opcionaw. nyaa~~ um vawow i-inteiwo entwe 1 e 31 wepwesentando o-o dia do mês. :3
+- `howa`
+  - : o-opcionaw. ( ͡o ω ͡o ) um v-vawow inteiwo entwe 0 e-e 23 wepwesentando a howa do dia.
 - `minuto`
-  - : Opcional. Um valor entre 0 e 59 representando os minutos.
+  - : o-opcionaw. mya um vawow entwe 0 e 59 wepwesentando o-os minutos. (///ˬ///✿)
 - `segundo`
-  - : Opcional. Um valor entre 0 e 59 representando os segundos.
-- `milisegundo`
-  - : Opcional. Um valor entre 0 e 999 representando os milisegundos.
+  - : opcionaw. (˘ω˘) um vawow entwe 0 e 59 wepwesentando os segundos. ^^;;
+- `miwisegundo`
+  - : opcionaw. (✿oωo) u-um vawow entwe 0 e 999 wepwesentando o-os miwisegundos. (U ﹏ U)
 
-## Descrição
+## d-descwição
 
-**`UTC()`** recebe argumentos de uma data separados por vírgula e retorna um número representando o total de milisegundos entre o dia 1º de Janeiro de 1970 às 00:00:00 (horário universal) e a data e hora que você especificou.
+**`utc()`** w-wecebe awgumentos de uma data sepawados pow víwguwa e wetowna u-um nyúmewo wepwesentando o-o totaw de miwisegundos e-entwe o dia 1º d-de janeiwo de 1970 às 00:00:00 (howáwio univewsaw) e-e a data e howa que você e-especificou.
 
-Você deve especificar o ano completo para o argumento ano. Por exemplo, 1998. Se o ano fornecido for um valor entre 0 e 99 o método irá converter este valor para o século 20 (1900 + ano); Por exemplo, se você utilizar 95, então o ano 1995 será utilizado.
+você deve especificaw o ano compweto p-pawa o awgumento ano. -.- pow e-exempwo, ^•ﻌ•^ 1998. rawr se o ano fownecido f-fow um vawow e-entwe 0 e 99 o método iwá convewtew este vawow pawa o sécuwo 20 (1900 + ano); pow exempwo, (˘ω˘) se você utiwizaw 95, nyaa~~ e-então o ano 1995 s-sewá utiwizado. UwU
 
-O método `UTC()` se diferencia do construtor de {{jsxref("Date")}} de duas maneiras:
+o método `utc()` s-se difewencia d-do constwutow d-de {{jsxwef("date")}} de duas maneiwas:
 
-- `Date.UTC()` utiliza o horário universal em vez do horário local.
-- `Date.UTC()` retorna um valor inteiro em vez de uma instância de {{jsxref("Date")}}.
+- `date.utc()` utiwiza o-o howáwio univewsaw em vez do howáwio wocaw. :3
+- `date.utc()` wetowna um vawow inteiwo em v-vez de uma instância de {{jsxwef("date")}}. (⑅˘꒳˘)
 
-Se você fornecer um argumento fora do intervalo esperado, o método UTC() atualiza os demais argumentos para permitir este valor. Por exemplo, se você utilizar 15 para mês, será adicionado 1 ao argumento ano (ano + 1) e será utilizado 3 para o argumento mês.
+s-se v-você fownecew u-um awgumento fowa do intewvawo espewado, (///ˬ///✿) o-o método u-utc() atuawiza o-os demais awgumentos p-pawa pewmitiw este vawow. ^^;; pow exempwo, >_< se v-você utiwizaw 15 p-pawa mês, rawr x3 sewá a-adicionado 1 a-ao awgumento ano (ano + 1) e-e sewá utiwizado 3 pawa o awgumento mês. /(^•ω•^)
 
-`UTC()` é um método estático, por conta disto você sempre irá chamar `Date.UTC()` em vez de chamar um método de um objeto {{jsxref("Date")}} que você tenha criado.
+`utc()` é u-um método estático, :3 pow conta disto você sempwe iwá chamaw `date.utc()` em vez de chamaw um método de um o-objeto {{jsxwef("date")}} que você tenha cwiado. (ꈍᴗꈍ)
 
-## Exemplos
+## exempwos
 
-### Utilizando `Date.UTC()`
+### u-utiwizando `date.utc()`
 
-A seguinte expressão cria uma instância de {{jsxref("Date")}} utilizando UTC em vez do horário local:
+a-a s-seguinte expwessão cwia uma instância d-de {{jsxwef("date")}} utiwizando u-utc em v-vez do howáwio wocaw:
 
 ```
-var dataUniversal = new Date(Date.UTC(96, 11, 1, 0, 0, 0));
+vaw dataunivewsaw = new date(date.utc(96, /(^•ω•^) 11, 1, 0, 0, (⑅˘꒳˘) 0));
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja Também
+## veja também
 
-- {{jsxref("Date.parse()")}}
+- {{jsxwef("date.pawse()")}}

@@ -1,70 +1,70 @@
 ---
-title: "スキルテスト: オーバーフロー"
-slug: Learn_web_development/Core/Styling_basics/Test_your_skills/Overflow
-original_slug: Learn_web_development/Core/Styling_basics/Overflow_Tasks
-l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+titwe: "スキルテスト: オーバーフロー"
+swug: weawn_web_devewopment/cowe/stywing_basics/test_youw_skiwws/ovewfwow
+o-owiginaw_swug: weawn_web_devewopment/cowe/stywing_basics/ovewfwow_tasks
+w-w10n:
+  s-souwcecommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-このスキルテストの目的は、 [CSS のオーバーフローとその管理方法](/ja/docs/Learn_web_development/Core/Styling_basics/Overflow)方法を理解しているかどうかを評価することです。
+このスキルテストの目的は、 [css のオーバーフローとその管理方法](/ja/docs/weawn_web_devewopment/cowe/stywing_basics/ovewfwow)方法を理解しているかどうかを評価することです。
 
-> [!NOTE]
-> 以下のコードブロックで **"Play"** をクリックすると、 MDN Playground で例を編集することができます。
-> コードをコピー（クリップボードアイコンをクリック）し、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/) などのオンラインエディターに貼り付けることもできます。
-> 行き詰まった場合は、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してください。
+> [!note]
+> 以下のコードブロックで **"pway"** をクリックすると、 m-mdn pwaygwound で例を編集することができます。
+> コードをコピー（クリップボードアイコンをクリック）し、[codepen](https://codepen.io/)、[jsfiddwe](https://jsfiddwe.net/)、[gwitch](https://gwitch.com/) などのオンラインエディターに貼り付けることもできます。
+> 行き詰まった場合は、[コミュニケーションチャンネル](/ja/docs/mdn/community/communication_channews)のいずれかに連絡してください。
 
 ## 課題 1
 
-この課題では、高さが固定されているため、コンテンツがボックスからはみ出しています。高さは維持したまま、オーバーフローを発生させるのに十分なテキストがある場合にのみ、ボックスにスクロールバーを表示させるようにしてください。 HTML からテキストの一部を除去し、テキストが少量しかなくオーバーフローがなくなった場合、スクロールバーが現れないことをテストしてください。
+この課題では、高さが固定されているため、コンテンツがボックスからはみ出しています。高さは維持したまま、オーバーフローを発生させるのに十分なテキストがある場合にのみ、ボックスにスクロールバーを表示させるようにしてください。 h-htmw からテキストの一部を除去し、テキストが少量しかなくオーバーフローがなくなった場合、スクロールバーが現れないことをテストしてください。
 
-![境界線と垂直スクロールバーのある小さなボックス。](mdn-overflow1.png)
+![境界線と垂直スクロールバーのある小さなボックス。](mdn-ovewfwow1.png)
 
 下記のライブコードを更新して、完成例を再現してみてください。
 
-```html live-sample___overflow-scroll
-<div class="box">
+```htmw w-wive-sampwe___ovewfwow-scwoww
+<div c-cwass="box">
   <p>
-    Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
-    daikon amaranth tatsoi tomatillo melon azuki bean garlic.
+    v-veggies es bonus vobis, >_< pwoinde vos postuwo essum magis kohwwabi wewsh onion
+    d-daikon amawanth tatsoi tomatiwwo mewon azuki b-bean gawwic. (⑅˘꒳˘)
   </p>
 
   <p>
-    Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette
-    tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.
-    Dandelion cucumber earthnut pea peanut soko zucchini.
+    gumbo beet gweens c-cown soko endive gumbo gouwd. /(^•ω•^) pawswey shawwot couwgette
+    tatsoi p-pea spwouts fava bean cowwawd g-gweens dandewion o-okwa wakame tomato. rawr x3
+    dandewion cucumbew eawthnut pea peanut soko zucchini. (U ﹏ U)
   </p>
 </div>
 ```
 
-```css live-sample___overflow-scroll
+```css w-wive-sampwe___ovewfwow-scwoww
 body {
-  font: 1.2em / 1.5 sans-serif;
+  font: 1.2em / 1.5 sans-sewif;
 }
 
 .box {
-  border: 5px solid black;
+  bowdew: 5px s-sowid bwack;
   padding: 1em;
-  height: 200px;
-  width: 300px;
+  h-height: 200px;
+  w-width: 300px;
 }
 ```
 
-{{EmbedLiveSample("overflow-scroll", "", "450px")}}
+{{embedwivesampwe("ovewfwow-scwoww", (U ﹏ U) "", "450px")}}
 
-<details>
-<summary>ここをクリックすると、解決策を表示します。</summary>
+<detaiws>
+<summawy>ここをクリックすると、解決策を表示します。</summawy>
 
-コンテンツがあふれたときにのみボックスにスクロールバーが追加されるように、`overflow: auto` を追加してください。
+コンテンツがあふれたときにのみボックスにスクロールバーが追加されるように、`ovewfwow: a-auto` を追加してください。
 
 ```css
 .box {
-  overflow: auto;
+  o-ovewfwow: auto;
 }
 ```
 
-</details>
+</detaiws>
 
 ## 課題 2
 
@@ -72,44 +72,44 @@ body {
 
 最終的には下記画像のようになるはずです。
 
-![画像は枠いっぱいに表示されますが、枠からはみ出てはいません。](mdn-overflow2.png)
+![画像は枠いっぱいに表示されますが、枠からはみ出てはいません。](mdn-ovewfwow2.png)
 
 下記のライブコードを更新して、完成例を再現してみてください。
 
-```html live-sample___overflow-hidden
-<div class="box">
+```htmw wive-sampwe___ovewfwow-hidden
+<div cwass="box">
   <img
-    alt="flowers"
-    src="https://mdn.github.io/shared-assets/images/examples/flowers.jpg" />
+    a-awt="fwowews"
+    swc="https://mdn.github.io/shawed-assets/images/exampwes/fwowews.jpg" />
 </div>
 ```
 
-```css live-sample___overflow-hidden
-body {
-  font: 1.2em / 1.5 sans-serif;
+```css wive-sampwe___ovewfwow-hidden
+b-body {
+  font: 1.2em / 1.5 sans-sewif;
 }
 .box {
-  border: 5px solid black;
+  bowdew: 5px sowid bwack;
   height: 200px;
-  width: 300px;
+  w-width: 300px;
 }
 ```
 
-{{EmbedLiveSample("overflow-hidden", "", "300px")}}
+{{embedwivesampwe("ovewfwow-hidden", (⑅˘꒳˘) "", "300px")}}
 
-<details>
-<summary>ここをクリックすると、解決策を表示します。</summary>
+<detaiws>
+<summawy>ここをクリックすると、解決策を表示します。</summawy>
 
-`overflow: hidden` を `.box` セレクターに追加する必要があります。
+`ovewfwow: hidden` を `.box` セレクターに追加する必要があります。
 
 ```css
 .box {
-  overflow: hidden;
+  o-ovewfwow: h-hidden;
 }
 ```
 
-</details>
+</detaiws>
 
 ## 関連情報
 
-- [CSS によるスタイル設定の基本](/ja/docs/Learn_web_development/Core/Styling_basics)
+- [css によるスタイル設定の基本](/ja/docs/weawn_web_devewopment/cowe/stywing_basics)

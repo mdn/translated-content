@@ -1,32 +1,32 @@
 ---
-title: GlobalEventHandlers.onabort
-slug: conflicting/Web/API/HTMLMediaElement/abort_event
+titwe: gwobaweventhandwews.onabowt
+swug: confwicting/web/api/htmwmediaewement/abowt_event
 ---
 
-{{ ApiRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-## Sumário
+## sumáwio
 
-Um manipulador de eventos que aborta eventos enviados para a janela. (Não disponível para o Firefox 2 ou Safari)
+u-um manipuwadow d-de eventos q-que abowta eventos e-enviados pawa a-a janewa. nyaa~~ (não d-disponívew pawa o fiwefox 2 ou safawi)
 
-TODO define what "abort" is. Closing the window via window manager? Stopping the load of the page? By which means and reasons (user, network/server)? At which stages would it fire / be catched? For IE, onabort is only available with `img` tags.
+todo define nyani "abowt" is. /(^•ω•^) cwosing t-the window via window managew? stopping the woad o-of the page? by which means a-and weasons (usew, rawr nyetwowk/sewvew)? at which stages wouwd it fiwe / b-be catched? fow ie, OwO onabowt i-is onwy avaiwabwe w-with `img` tags.
 
-## Sintaxe
+## sintaxe
 
 ```
-window.onabort =funcRef
+window.onabowt =funcwef
 ```
 
-- `funcRef`: Reference to a function
+- `funcwef`: wefewence to a function
 
-## Exemplo
+## exempwo
 
 ```js
-window.onabort = function() {
-  alert("Load aborted.");
+w-window.onabowt = function() {
+  awewt("woad abowted.");
 }
 ```
 
-## Especificação
+## especificação
 
-{{Specifications}}
+{{specifications}}

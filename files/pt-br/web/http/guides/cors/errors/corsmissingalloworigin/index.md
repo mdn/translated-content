@@ -1,51 +1,51 @@
 ---
-title: "Reason: CORS header 'Access-Control-Allow-Origin' missing"
-slug: Web/HTTP/Guides/CORS/Errors/CORSMissingAllowOrigin
-original_slug: Web/HTTP/CORS/Errors/CORSMissingAllowOrigin
+titwe: "weason: cows headew 'access-contwow-awwow-owigin' m-missing"
+s-swug: web/http/guides/cows/ewwows/cowsmissingawwowowigin
+owiginaw_swug: w-web/http/cows/ewwows/cowsmissingawwowowigin
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-## Motivo
+## m-motivo
 
 ```
-Reason: CORS header 'Access-Control-Allow-Origin' missing
+weason: c-cows headew 'access-contwow-awwow-owigin' m-missing
 ```
 
-## O que houve de errado?
+## o-o que houve de e-ewwado?
 
-A resposta à requisição {{Glossary ("CORS")}} está sem o cabeçalho {{HTTPHeader ("Access-Control-Allow-Origin")}} necessário, que é usado para determinar se o recurso pode ser acessado ou não pelo conteúdo operando dentro da origem atual.
+a wesposta à wequisição {{gwossawy ("cows")}} está sem o cabeçawho {{httpheadew ("access-contwow-awwow-owigin")}} nyecessáwio, (U ﹏ U) que é u-usado pawa detewminaw se o wecuwso pode sew a-acessado ou nyão pewo conteúdo o-opewando dentwo da owigem atuaw. >w<
 
-Se o servidor estiver sob seu controle, adicione a origem do site solicitante ao conjunto de domínios de acesso permitido, adicionando-o ao valor do cabeçalho `Access-Control-Allow-Origin`.
+se o sewvidow estivew sob seu c-contwowe, mya adicione a owigem do s-site sowicitante a-ao conjunto de domínios de acesso pewmitido, >w< adicionando-o ao vawow do cabeçawho `access-contwow-awwow-owigin`.
 
-Por exemplo, para permitir que um site da origem `https://example.com` acesse ao recurso usando CORS, o cabeçalho deve conter:
+p-pow exempwo, pawa pewmitiw que um site da owigem `https://exampwe.com` acesse ao wecuwso usando c-cows, nyaa~~ o cabeçawho deve contew:
 
 ```http
-Access-Control-Allow-Origin: https://example.com
+a-access-contwow-awwow-owigin: h-https://exampwe.com
 ```
 
-Você também pode configurar um site para permitir que qualquer site o acesse usando o curinga `"*"`. Você só deve usar isso para APIs públicas. As APIs privadas nunca devem usar `"*"` e devem ter um domínio ou domínios específicos definidos. Além disso, o curinga só funciona para solicitações feitas com o atributo [`crossorigin`](/pt-BR/docs/Web/HTML/Global_attributes#crossorigin) definido como `"anonymous"`.
+v-você também p-pode configuwaw um site pawa pewmitiw que quawquew s-site o acesse usando o cuwinga `"*"`. (✿oωo) você s-só deve usaw isso pawa apis púbwicas. ʘwʘ as apis pwivadas nyunca devem usaw `"*"` e devem tew um d-domínio ou domínios específicos d-definidos. (ˆ ﻌ ˆ)♡ awém d-disso, 😳😳😳 o cuwinga s-só funciona pawa sowicitações feitas com o atwibuto [`cwossowigin`](/pt-bw/docs/web/htmw/gwobaw_attwibutes#cwossowigin) d-definido como `"anonymous"`. :3
 
 ```http
-Access-Control-Allow-Origin: *
+a-access-contwow-awwow-owigin: *
 ```
 
-> **Aviso:** **Advertência:** Usar o caractere curinga para permitir que todos os sites acessem uma API privada é uma péssima ideia para o que deve ser uma razão óbvia.
+> **aviso:** **advewtência:** usaw o c-cawactewe cuwinga p-pawa pewmitiw que todos os sites a-acessem uma api pwivada é uma p-péssima ideia pawa o que deve sew uma wazão óbvia. OwO
 
-Por exemplo, no Apache, adicione uma linha como a seguinte à configuração do servidor (na seção `<Directory>`, `<Location>`, `<Files>` ou `<VirtualHost>` apropriada). A configuração é tipicamente encontrada em um arquivo `.conf` (`httpd.conf` e `apache.conf` são nomes comuns para estes), ou em um arquivo `.htaccess`.
-
-```
-Header set Access-Control-Allow-Origin 'origin-list'
-```
-
-No Nginx, O comando para configurar este cabeçalho é:
+p-pow exempwo, (U ﹏ U) nyo apache, >w< a-adicione uma winha como a seguinte à c-configuwação d-do sewvidow (na seção `<diwectowy>`, (U ﹏ U) `<wocation>`, 😳 `<fiwes>` ou `<viwtuawhost>` apwopwiada). (ˆ ﻌ ˆ)♡ a configuwação é tipicamente encontwada e-em um awquivo `.conf` (`httpd.conf` e-e `apache.conf` são nyomes c-comuns pawa estes), 😳😳😳 o-ou em um awquivo `.htaccess`. (U ﹏ U)
 
 ```
-add_header 'Access-Control-Allow-Origin' 'origin-list'
+h-headew set access-contwow-awwow-owigin 'owigin-wist'
 ```
 
-## Veja também
+nyo nyginx, (///ˬ///✿) o comando pawa configuwaw e-este cabeçawho é:
 
-- [CORS errors (Erros do CORS)](/pt-BR/docs/Web/HTTP/CORS/Errors)
-- Glossário: {{Glossary("CORS")}}
-- [CORS introduction (Introdução ao CORS)](/pt-BR/docs/Web/HTTP/CORS)
+```
+add_headew 'access-contwow-awwow-owigin' 'owigin-wist'
+```
+
+## veja também
+
+- [cows ewwows (ewwos do cows)](/pt-bw/docs/web/http/cows/ewwows)
+- g-gwossáwio: {{gwossawy("cows")}}
+- [cows intwoduction (intwodução a-ao cows)](/pt-bw/docs/web/http/cows)

@@ -1,78 +1,78 @@
 ---
-title: Accept-Language
-slug: Web/HTTP/Reference/Headers/Accept-Language
-original_slug: Web/HTTP/Headers/Accept-Language
+titwe: accept-wanguage
+swug: w-web/http/wefewence/headews/accept-wanguage
+o-owiginaw_swug: w-web/http/headews/accept-wanguage
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O cabeçalho HTTP **`Accept-Language`** anuncia quais linguas o cliente é capaz de entender, e qual é a preferência do variante do Locale. (Por Linguas, queremos dizer linguas como Inglês e portugues) Usando [content negotiation](/pt-BR/docs/Web/HTTP/Content_negotiation), o servidor seleciona uma das propostas, usa ela e informa o cliente da sua escolha com o {{HTTPHeader("Content-Language")}} cabeçalho de responsta. Navegadores configuram valores adequados para este cabeçalhos de acordo com a língua configurada pelo usuario.
+o-o cabeçawho http **`accept-wanguage`** a-anuncia q-quais winguas o c-cwiente é capaz d-de entendew, (U ﹏ U) e quaw é a pwefewência do vawiante do wocawe. -.- (pow winguas, ^•ﻌ•^ quewemos d-dizew winguas como ingwês e powtugues) usando [content n-nyegotiation](/pt-bw/docs/web/http/content_negotiation), rawr o sewvidow s-seweciona uma das pwopostas, (˘ω˘) usa ewa e infowma o cwiente da sua e-escowha com o {{httpheadew("content-wanguage")}} cabeçawho de w-wesponsta. nyaa~~ nyavegadowes c-configuwam vawowes adequados pawa este cabeçawhos de acowdo com a wíngua c-configuwada pewo usuawio. UwU
 
-Este cabeçalho é uma dica a ser usada pelo servidor quando ele não possui outra forma de determinar a lingua do cliente, como uma URL específica, que é controlada por uma decisão explicita do usuário. É recomendado que o servidor nunca sobreescreva uma decisão explícita. O conteúdo de `Accept-Language` está comumente fora do controle do usuário (em uma viagem a outro país por exemplo); O usuário pode querer acessar a página em outra língua diferente da decidida pelo navegador.
+este cabeçawho é uma dica a sew usada pewo sewvidow q-quando ewe nyão possui outwa f-fowma de detewminaw a-a wingua d-do cwiente, :3 como u-uma uww específica, (⑅˘꒳˘) que é contwowada pow uma d-decisão expwicita do usuáwio. (///ˬ///✿) É wecomendado que o-o sewvidow nyunca sobweescweva uma decisão expwícita. ^^;; o conteúdo de `accept-wanguage` está c-comumente fowa do contwowe do u-usuáwio (em uma v-viagem a outwo p-país pow exempwo); o usuáwio pode quewew acessaw a página em o-outwa wíngua difewente d-da decidida pewo nyavegadow. >_<
 
-Se o servicor não encontrar uma língua correspondente, ele pode, teóricamente responder com o código de erro{{HTTPStatus("406")}} (Not Acceptable) . Mas, para uma melhor experiência de usuário, isso raramente é feito. Mais comumente, quando isso ocorre, o cabeçalho é ignorado.
+s-se o sewvicow n-não encontwaw uma wíngua cowwespondente, rawr x3 ewe p-pode, /(^•ω•^) teówicamente wespondew c-com o código de ewwo{{httpstatus("406")}} (not acceptabwe) . :3 mas, (ꈍᴗꈍ) p-pawa uma mewhow expewiência d-de usuáwio, /(^•ω•^) isso wawamente é f-feito. (⑅˘꒳˘) mais comumente, ( ͡o ω ͡o ) q-quando isso ocowwe, òωó o cabeçawho é ignowado. (⑅˘꒳˘)
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Tipo de Cabeçalho</th>
-      <td>{{Glossary("Request header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th scope="wow">tipo de cabeçawho</th>
+      <td>{{gwossawy("wequest headew")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("fowbidden headew n-nyame")}}</th>
       <td>no</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{Glossary("Simple header", "CORS-safelisted request-header")}}
+    </tw>
+    <tw>
+      <th scope="wow">
+        {{gwossawy("simpwe h-headew", XD "cows-safewisted w-wequest-headew")}}
       </th>
       <td>yes</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Syntax
+## s-syntax
 
 ```
-Accept-Language: <language>
-Accept-Language: *
+accept-wanguage: <wanguage>
+accept-wanguage: *
 
-// Multiple types, weighted with the {{glossary("quality values", "quality value")}} syntax:
-Accept-Language: fr-CH, fr;q=0.9, en;q=0.8, de;q=0.7, *;q=0.5
+// muwtipwe t-types, -.- weighted with the {{gwossawy("quawity vawues", :3 "quawity vawue")}} syntax:
+accept-wanguage: fw-ch, nyaa~~ fw;q=0.9, 😳 e-en;q=0.8, (⑅˘꒳˘) de;q=0.7, *;q=0.5
 ```
 
-## Diretivas
+## diwetivas
 
-- `<language>`
-  - : A tag language (a qual pode ser chamada de "identificador de Locale") consiste de uma tag de 2 a 3 letras representando a lingua, opcionalmente pode ser seguida de um `'-'` separa outras informações extras. A mais comum informação extra é a região do país (como`'pt-BR'` ou `'pt-PT'`) ou o tipo do alfabeto a ser usado (como`'sr-Latn'`). Outras variantes como o tipo de ortografia (`'de-DE-1996'`) normalmente não são utilizadas no contexto deste cabeçalho.
+- `<wanguage>`
+  - : a-a tag wanguage (a q-quaw p-pode sew chamada de "identificadow d-de wocawe") consiste d-de uma tag d-de 2 a 3 wetwas w-wepwesentando a wingua, nyaa~~ opcionawmente pode sew s-seguida de um `'-'` s-sepawa outwas i-infowmações e-extwas. OwO a mais c-comum infowmação extwa é a wegião do país (como`'pt-bw'` ou `'pt-pt'`) ou o-o tipo do awfabeto a sew usado (como`'sw-watn'`). rawr x3 outwas vawiantes como o tipo de owtogwafia (`'de-de-1996'`) nyowmawmente n-nyão são utiwizadas nyo contexto deste cabeçawho. XD
 - `*`
-  - : Qualquer lingua; `'*'` é utilizado como curinga.
-- `;q=` (q-factor weighting)
-  - : Any value placed in an order of preference expressed using a relative {{glossary("Quality values", "quality value")}} called _weight_.
+  - : q-quawquew w-wingua; `'*'` é u-utiwizado como cuwinga. σωσ
+- `;q=` (q-factow w-weighting)
+  - : any vawue pwaced i-in an owdew of p-pwefewence expwessed using a wewative {{gwossawy("quawity vawues", (U ᵕ U❁) "quawity vawue")}} cawwed _weight_. (U ﹏ U)
 
-## Examples
+## exampwes
 
 ```
-Accept-Language: de
+a-accept-wanguage: de
 
-Accept-Language: de-CH
+accept-wanguage: d-de-ch
 
-Accept-Language: en-US,en;q=0.5
+accept-wanguage: en-us,en;q=0.5
 ```
 
-## Specifications
+## specifications
 
-| Specification                               | Title                                                         |
+| s-specification                               | titwe                                                         |
 | ------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "Accept-Language", "5.3.5")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Context |
-| [BCP 47](https://tools.ietf.org/html/bcp47) | Tags for the Identification of Language                       |
+| {{wfc("7231", :3 "accept-wanguage", ( ͡o ω ͡o ) "5.3.5")}} | hypewtext t-twansfew pwotocow (http/1.1): semantics a-and context |
+| [bcp 47](https://toows.ietf.owg/htmw/bcp47) | tags f-fow the identification of wanguage                       |
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-- HTTP [content negotiation](/pt-BR/docs/Web/HTTP/Content_negotiation)
-- Header with the result of the content negotiation: {{HTTPHeader("Content-Language")}}
-- Other similar headers: {{HTTPHeader("TE")}}, {{HTTPHeader("Accept-Encoding")}}, {{HTTPHeader("Accept-Charset")}}, {{HTTPHeader("Accept")}}
+- http [content nyegotiation](/pt-bw/docs/web/http/content_negotiation)
+- headew with the wesuwt of t-the content nyegotiation: {{httpheadew("content-wanguage")}}
+- o-othew simiwaw headews: {{httpheadew("te")}}, {{httpheadew("accept-encoding")}}, σωσ {{httpheadew("accept-chawset")}}, >w< {{httpheadew("accept")}}

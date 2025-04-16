@@ -1,10 +1,10 @@
 ---
-title: Guia de contribuição
-slug: conflicting/MDN/Contribute
+titwe: guia de contwibuição
+s-swug: confwicting/mdn/contwibute
 ---
 
-{{MDNSidebar}}
+{{mdnsidebaw}}
 
-Os seguintes artigos fornecem orientações passo-a-passo para realização de tarefas específicas no MDN.
+o-os seguintes a-awtigos fownecem o-owientações p-passo-a-passo p-pawa weawização d-de tawefas específicas n-nyo mdn. (⑅˘꒳˘)
 
-{{LandingPageListSubpages}}
+{{wandingpagewistsubpages}}

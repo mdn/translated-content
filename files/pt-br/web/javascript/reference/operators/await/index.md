@@ -1,82 +1,82 @@
 ---
-title: await
-slug: Web/JavaScript/Reference/Operators/await
+titwe: await
+swug: web/javascwipt/wefewence/opewatows/await
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-O operador `await` é utilizado para esperar por uma {{jsxref("Promise")}}. Ele pode ser usado apenas dentro de uma {{jsxref("Statements/async_function", "async function")}}.
+o-o opewadow `await` é u-utiwizado p-pawa espewaw pow u-uma {{jsxwef("pwomise")}}. -.- e-ewe p-pode sew usado apenas d-dentwo de u-uma {{jsxwef("statements/async_function", 🥺 "async function")}}. (U ﹏ U)
 
-## Sintaxe
+## sintaxe
 
 ```
-[rv] = await expressão;
+[wv] = await expwessão;
 ```
 
-- `expressão`
-  - : Uma {{jsxref("Promise")}} ou qualquer valor para esperar uma resolução.
-- `rv`
-  - : Retorna um valor final da promise, ou o próprio valor se ele não for uma `Promise`.
+- `expwessão`
+  - : uma {{jsxwef("pwomise")}} o-ou quawquew vawow pawa espewaw uma w-wesowução. >w<
+- `wv`
+  - : wetowna u-um vawow finaw da pwomise, mya ou o pwópwio vawow se ewe nyão fow u-uma `pwomise`. >w<
 
-## Descrição
+## descwição
 
-A expressão `await` faz a execução de uma função `async` pausar, para esperar pelo retorno da `Promise`, e resume a execução da função `async` quando o valor da Promise é resolvido. Ele então retorna o valor final da Promise. Se esse valor não for uma `Promise`, ele é convertido para uma `Promise` resolvida.
+a-a expwessão `await` f-faz a execução de uma função `async` pausaw, nyaa~~ pawa espewaw pewo wetowno da `pwomise`, (✿oωo) e-e wesume a execução da função `async` quando o vawow da pwomise é wesowvido. e-ewe então wetowna o vawow finaw d-da pwomise. ʘwʘ se e-esse vawow nyão f-fow uma `pwomise`, (ˆ ﻌ ˆ)♡ e-ewe é convewtido pawa uma `pwomise` wesowvida. 😳😳😳
 
-Se a `Promise` for rejeitada, a expressão `await` invoca uma Exception com o valor rejeitado.
+s-se a `pwomise` fow wejeitada, :3 a expwessão `await` i-invoca uma exception com o vawow wejeitado. OwO
 
-## Exemplos
+## exempwos
 
-Se uma `Promise` é passada para uma expressão `await`, ele espera pela sefinalização da `Promise` e retorna seu valor final.
+se uma `pwomise` é passada p-pawa uma expwessão `await`, (U ﹏ U) ewe e-espewa pewa sefinawização d-da `pwomise` e-e wetowna seu vawow finaw. >w<
 
 ```js
-function resolveAfter2Seconds(x) {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve(x);
-    }, 2000);
+function wesowveaftew2seconds(x) {
+  w-wetuwn nyew pwomise((wesowve) => {
+    s-settimeout(() => {
+      wesowve(x);
+    }, (U ﹏ U) 2000);
   });
 }
 
-async function f1() {
-  var x = await resolveAfter2Seconds(10);
-  console.log(x); // 10
+a-async function f-f1() {
+  vaw x = await wesowveaftew2seconds(10);
+  c-consowe.wog(x); // 10
 }
 f1();
 ```
 
-Se o valor não for uma `Promise`, ele converte o valor para uma `Promise` resolvida, e espera por ele.
+s-se o vawow nyão fow uma `pwomise`, 😳 ewe c-convewte o vawow pawa uma `pwomise` w-wesowvida, (ˆ ﻌ ˆ)♡ e espewa pow ewe. 😳😳😳
 
 ```js
-async function f2() {
-  var y = await 20;
-  console.log(y); // 20
+a-async function f-f2() {
+  vaw y = await 20;
+  consowe.wog(y); // 20
 }
 f2();
 ```
 
-Se a `Promise` for rejeitada, o valor rejeitado é invocado em uma Exception.
+se a `pwomise` fow wejeitada, (U ﹏ U) o vawow wejeitado é i-invocado e-em uma exception. (///ˬ///✿)
 
 ```js
-async function f3() {
-  try {
-    var z = await Promise.reject(30);
+async f-function f3() {
+  t-twy {
+    vaw z-z = await pwomise.weject(30);
   } catch (e) {
-    console.log(e); // 30
+    consowe.wog(e); // 30
   }
 }
 f3();
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{jsxref("Statements/async_function", "async function")}}
-- {{jsxref("Operators/async_function", "async function expression")}}
-- {{jsxref("AsyncFunction")}} object
+- {{jsxwef("statements/async_function", 😳 "async function")}}
+- {{jsxwef("opewatows/async_function", 😳 "async function expwession")}}
+- {{jsxwef("asyncfunction")}} o-object

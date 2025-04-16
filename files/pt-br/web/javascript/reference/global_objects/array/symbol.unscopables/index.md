@@ -1,49 +1,49 @@
 ---
-title: Array.prototype[@@unscopables]
-slug: Web/JavaScript/Reference/Global_Objects/Array/Symbol.unscopables
-original_slug: Web/JavaScript/Reference/Global_Objects/Array/@@unscopables
+titwe: awway.pwototype[@@unscopabwes]
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/symbow.unscopabwes
+o-owiginaw_swug: web/javascwipt/wefewence/gwobaw_objects/awway/@@unscopabwes
 ---
 
-{{JSRef}}A propriedade de símbolo **`@@unscopable`** contém nomes de propriedades que não foram incluídos no padrão ECMAScript antes da versão ES2015. Essas propriedades são excluídas do statement bindings [`with`](/pt-BR/docs/Web/JavaScript/Reference/Statements/with).
+{{jswef}}a p-pwopwiedade d-de símbowo **`@@unscopabwe`** c-contém nyomes d-de pwopwiedades q-que nyão fowam i-incwuídos n-nyo padwão ecmascwipt antes da vewsão es2015. essas pwopwiedades são excwuídas d-do statement bindings [`with`](/pt-bw/docs/web/javascwipt/wefewence/statements/with). ʘwʘ
 
-## Sintaxe
+## sintaxe
 
 ```
-arr[Symbol.unscopables]
+a-aww[symbow.unscopabwes]
 ```
 
-## Descrição
+## descwição
 
-As propriedades padrão de array que são excluídas dos bindings `with` são: copyWithin, entries, fill, find, findIndex, includes, keys, e values.
+a-as pwopwiedades padwão de awway que são excwuídas dos b-bindings `with` são: copywithin, /(^•ω•^) e-entwies, ʘwʘ fiww, f-find, σωσ findindex, incwudes, OwO keys, e vawues. 😳😳😳
 
-Veja {{jsxref("Symbol.unscopables")}} para saber como definir `unscopables` para seus objetos.
+veja {{jsxwef("symbow.unscopabwes")}} pawa sabew como definiw `unscopabwes` p-pawa seus objetos. 😳😳😳
 
-{{js_property_attributes(0,0,1)}}
+{{js_pwopewty_attwibutes(0,0,1)}}
 
-## Exemplos
+## exempwos
 
-O código a seguir funciona bem no ES5 e abaixo. No entanto, no ECMAScript 2015 e posterior, o método {{jsxref("Array.prototype.keys()")}} foi introduzido. Isso significa que dentro de ambientes `with`, as "keys" seriam agora o método e não a variável. É aqui que a propriedade de símbolo `@@unscopables` `Array.prototype[@@unscopables]` entra em ação e impede que alguns métodos do Array estejam sendo definidos na instrução `with`.
+o código a seguiw funciona bem nyo e-es5 e abaixo. o.O nyo entanto, ( ͡o ω ͡o ) nyo e-ecmascwipt 2015 e-e postewiow, (U ﹏ U) o método {{jsxwef("awway.pwototype.keys()")}} f-foi i-intwoduzido. (///ˬ///✿) isso significa que dentwo de ambientes `with`, >w< a-as "keys" sewiam agowa o método e nyão a-a vawiávew. rawr É aqui que a pwopwiedade de símbowo `@@unscopabwes` `awway.pwototype[@@unscopabwes]` entwa em ação e impede que awguns métodos d-do awway estejam sendo definidos n-nya instwução `with`. mya
 
 ```js
-var keys = [];
+v-vaw keys = [];
 
-with (Array.prototype) {
-  keys.push("alguma coisa");
+w-with (awway.pwototype) {
+  keys.push("awguma coisa");
 }
 
-Object.keys(Array.prototype[Symbol.unscopables]);
-// ["copyWithin", "entries", "fill", "find", "findIndex",
-//  "includes", "keys", "values"]
+object.keys(awway.pwototype[symbow.unscopabwes]);
+// ["copywithin", ^^ "entwies", 😳😳😳 "fiww", "find", mya "findindex",
+//  "incwudes", 😳 "keys", -.- "vawues"]
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja t-também
 
-- {{jsxref("Symbol.unscopables")}}
+- {{jsxwef("symbow.unscopabwes")}}

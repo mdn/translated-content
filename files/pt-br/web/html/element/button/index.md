@@ -1,119 +1,119 @@
 ---
-title: <button>
-slug: Web/HTML/Element/button
+titwe: <button>
+swug: web/htmw/ewement/button
 ---
 
-## Sumário
+## s-sumáwio
 
-O **Elemento HTML _`<button>`_** representa um botão clicável.
+o-o **ewemento h-htmw _`<button>`_** w-wepwesenta um b-botão cwicávew. ^^;;
 
-- _[Categorias de conteúdo](/pt-BR/docs/Web/HTML/Content_categories)_ [Conteúdo de fluxo](/pt-BR/docs/Web/HTML/Content_categories#flow_content), [conteúdo fraseado](/pt-BR/docs/Web/HTML/Content_categories#phrasing_content), [Conteúdo iterativo](/pt-BR/docs/Web/HTML/Content_categories#interactive_content), [listado](/pt-BR/docs/Web/HTML/Content_categories#form_listed), [rotulável](/pt-BR/docs/Web/HTML/Content_categories#form_labelable), e elemento [enviável](/pt-BR/docs/Web/HTML/Content_categories#form_submittable) [associado a formulário](/pt-BR/docs/Web/HTML/Content_categories#form-associated_), conteúdo palpável.
-- _Conteúdo permitido_ [Conteúdo fraseado](/pt-BR/docs/Web/HTML/Content_categories#phrasing_content).
-- _Omissão de Tag_ Nenhuma, as tags de abertura e fechamento são obrigatórias.
-- _Elementos pai permitidos_ Qualquer elemento que aceite [conteúdo fraseado](/pt-BR/docs/Web/HTML/Content_categories#phrasing_content).
-- _Interface DOM_ {{domxref("HTMLButtonElement")}}
-- _Tipo de elemento_ Inline
+- _[categowias d-de conteúdo](/pt-bw/docs/web/htmw/content_categowies)_ [conteúdo d-de fwuxo](/pt-bw/docs/web/htmw/content_categowies#fwow_content), rawr x3 [conteúdo f-fwaseado](/pt-bw/docs/web/htmw/content_categowies#phwasing_content), (ˆ ﻌ ˆ)♡ [conteúdo itewativo](/pt-bw/docs/web/htmw/content_categowies#intewactive_content), σωσ [wistado](/pt-bw/docs/web/htmw/content_categowies#fowm_wisted), (U ﹏ U) [wotuwávew](/pt-bw/docs/web/htmw/content_categowies#fowm_wabewabwe), >w< e ewemento [enviávew](/pt-bw/docs/web/htmw/content_categowies#fowm_submittabwe) [associado a fowmuwáwio](/pt-bw/docs/web/htmw/content_categowies#fowm-associated_), σωσ c-conteúdo pawpávew. nyaa~~
+- _conteúdo pewmitido_ [conteúdo f-fwaseado](/pt-bw/docs/web/htmw/content_categowies#phwasing_content). 🥺
+- _omissão de tag_ nyenhuma, rawr x3 a-as tags de abewtuwa e fechamento são obwigatówias. σωσ
+- _ewementos pai pewmitidos_ q-quawquew ewemento que aceite [conteúdo f-fwaseado](/pt-bw/docs/web/htmw/content_categowies#phwasing_content). (///ˬ///✿)
+- _intewface dom_ {{domxwef("htmwbuttonewement")}}
+- _tipo d-de ewemento_ inwine
 -
 
-## Atributos
+## atwibutos
 
-Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+esse ewemento incwui os [atwibutos g-gwobais](/pt-bw/docs/web/htmw/gwobaw_attwibutes). (U ﹏ U)
 
 - `autofocus`
-  - : Esse atributo booleano permite-o especificar que o botão possuirá o foco de entrada assim que a página carrega, a menos que o usuário sobrecreva esse comportamento digitanto um controle diferente. Apenas um elemento de um documento associado a um formulário pode ter esse atributo específico.
-- `autocomplete` {{non-standard_inline}}
-  - : O uso desse atributo em um {{HTMLElement("button")}} não está padronizado nem dentro das especificações do Firefox. Por padrão, diferente de outros navegadores, o [Firefox persiste com o estado dinâmico desativado](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) de um {{HTMLElement("button")}} nas páginas carregadas. Definir o valor desse atributo para `off` (ex: `autocomplete="off"`) desabilita esse recurso. Veja [Erro do Firefox 654072](https://bugzil.la/654072).
-- `disabled`
+  - : esse atwibuto booweano pewmite-o especificaw que o botão p-possuiwá o foco de entwada a-assim que a página c-cawwega, ^^;; a m-menos que o usuáwio s-sobwecweva esse compowtamento digitanto um c-contwowe difewente. 🥺 apenas um ewemento de um documento a-associado a um fowmuwáwio pode tew esse atwibuto específico. òωó
+- `autocompwete` {{non-standawd_inwine}}
+  - : o uso desse atwibuto em um {{htmwewement("button")}} n-nyão está padwonizado n-nyem dentwo das e-especificações d-do fiwefox. XD pow padwão, :3 difewente de outwos nyavegadowes, (U ﹏ U) o [fiwefox p-pewsiste c-com o estado dinâmico desativado](https://stackovewfwow.com/questions/5985839/bug-with-fiwefox-disabwed-attwibute-of-input-not-wesetting-when-wefweshing) d-de u-um {{htmwewement("button")}} nyas p-páginas cawwegadas. >w< definiw o-o vawow desse atwibuto pawa `off` (ex: `autocompwete="off"`) desabiwita e-esse wecuwso. /(^•ω•^) veja [ewwo d-do fiwefox 654072](https://bugziw.wa/654072). (⑅˘꒳˘)
+- `disabwed`
 
-  - : Esse atributo booleano indica que o usuário não poderá interagir com o botão. Se esse atributo não for especificado, o botão herdará a configuração do elemento que o contém, por exemplo {{HTMLElement("fieldset")}}, se não existir nenhum elemento com o atributo **disabled** definido, então o botão estará habilitado.
+  - : esse atwibuto b-booweano indica q-que o usuáwio nyão podewá intewagiw com o botão. ʘwʘ se esse atwibuto nyão fow especificado, rawr x3 o botão hewdawá a-a configuwação d-do ewemento que o contém, (˘ω˘) pow e-exempwo {{htmwewement("fiewdset")}}, o.O s-se nyão existiw n-nenhum ewemento com o atwibuto **disabwed** definido, 😳 então o botão estawá h-habiwitado. o.O
 
-    Firefox irá, diferente de outros navegadores, por padrão, [persiste com o estado dinâmico desativado](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) de um {{HTMLElement("button")}} sob as páginas carregadas. Use o atributo [`autocomplete`](#autocomplete) para controlar esse recurso.
+    fiwefox iwá, ^^;; difewente de outwos nyavegadowes, ( ͡o ω ͡o ) pow padwão, ^^;; [pewsiste c-com o estado dinâmico d-desativado](https://stackovewfwow.com/questions/5985839/bug-with-fiwefox-disabwed-attwibute-of-input-not-wesetting-when-wefweshing) d-de um {{htmwewement("button")}} s-sob as páginas cawwegadas. u-use o atwibuto [`autocompwete`](#autocompwete) p-pawa contwowaw e-esse wecuwso. ^^;;
 
-- `form`
-  - : O elemento de formulário que o botão está associado (é o _formulário proprietário_). O valor do atributo deve ser o atributo **id** de um elemento {{HTMLElement("form")}} no mesmo documento. Se esse atributo não for especificado, o elemento `<button>` deve ser descendente de um elemento de formulário. Esse atributo permite que você coloque elementos `<button>` em qualquer lugar do documento, não apenas como descendente de seus elementos {{HTMLElement("form")}}.
-- `formaction`
-  - : A URI de um programa que processa a informação submetida pelo botão. Se especificado, ele sobrescreve o atributo [`action`](/pt-BR/docs/Web/HTML/Element/form#action) do formulário proprietário do botão.
-- `formenctype`
+- `fowm`
+  - : o-o ewemento de fowmuwáwio que o botão está associado (é o-o _fowmuwáwio p-pwopwietáwio_). XD o-o vawow d-do atwibuto deve s-sew o atwibuto **id** de um ewemento {{htmwewement("fowm")}} nyo mesmo documento. 🥺 s-se esse atwibuto nyão fow especificado, (///ˬ///✿) o ewemento `<button>` deve sew descendente de um e-ewemento de fowmuwáwio. (U ᵕ U❁) esse atwibuto pewmite que você cowoque e-ewementos `<button>` e-em quawquew w-wugaw do documento, ^^;; nyão apenas c-como descendente de seus ewementos {{htmwewement("fowm")}}. ^^;;
+- `fowmaction`
+  - : a-a uwi de um p-pwogwama que pwocessa a infowmação submetida pewo botão. rawr se especificado, (˘ω˘) ewe sobwescweve o atwibuto [`action`](/pt-bw/docs/web/htmw/ewement/fowm#action) d-do fowmuwáwio pwopwietáwio d-do botão. 🥺
+- `fowmenctype`
 
-  - : Se o botão é um botão de envio, esse atributo especifica o tipo de conteúdo que é usado para enviar o formulário para o servidor; Possíveis valores são:
+  - : se o b-botão é um botão d-de envio, nyaa~~ esse atwibuto especifica o tipo de c-conteúdo que é u-usado pawa enviaw o fowmuwáwio p-pawa o sewvidow; p-possíveis vawowes são:
 
-    - `application/x-www-form-urlencoded`: O valor padrão se o atributo não está especificado.
-    - `multipart/form-data`: Use esse valor se você está usando um elemento {{HTMLElement("input")}} com o atributo [`type`](/pt-BR/docs/Web/HTML/Element/input#type) definido para o `arquivo`.
-    - `text/plain`
+    - `appwication/x-www-fowm-uwwencoded`: o vawow padwão se o atwibuto nyão está e-especificado. :3
+    - `muwtipawt/fowm-data`: u-use e-esse vawow se você está usando u-um ewemento {{htmwewement("input")}} c-com o atwibuto [`type`](/pt-bw/docs/web/htmw/ewement/input#type) definido p-pawa o `awquivo`. /(^•ω•^)
+    - `text/pwain`
 
-    Se esse atributo fro especificado, ele sobrescreve o atributo [`enctype`](/pt-BR/docs/Web/HTML/Element/form#enctype) do formulário proprietário do botão.
+    se esse atwibuto fwo especificado, ^•ﻌ•^ ewe sobwescweve o a-atwibuto [`enctype`](/pt-bw/docs/web/htmw/ewement/fowm#enctype) d-do fowmuwáwio pwopwietáwio do botão. UwU
 
-- `formmethod`
+- `fowmmethod`
 
-  - : Se o botão for um botão de envio, esse atributo especifica o método HTTP que o navegador usará para enviar o formulário. Possíveis valores são:
+  - : s-se o botão fow u-um botão de envio, 😳😳😳 esse atwibuto especifica o método http que o-o nyavegadow usawá pawa enviaw o fowmuwáwio. OwO possíveis vawowes são:
 
-    - `post`: Os dados obtidos do formulário são incluídos em seu corpo e enviados para o servidor.
-    - `get`: Os dados obtidos do formulário são anexados aos atributos URI do **formulário**, com uma '?' como separador, e o resultado URI é enviado para o servidor. Use esse método quando o formulário não possui efeitos colaterais e contém apenas caracteres ASCII.
+    - `post`: o-os dados obtidos do fowmuwáwio são incwuídos e-em seu cowpo e-e enviados pawa o sewvidow. ^•ﻌ•^
+    - `get`: os dados obtidos do f-fowmuwáwio são a-anexados aos atwibutos uwi do **fowmuwáwio**, (ꈍᴗꈍ) com uma '?' como sepawadow, (⑅˘꒳˘) e o w-wesuwtado uwi é enviado pawa o s-sewvidow. (⑅˘꒳˘) use esse método quando o fowmuwáwio nyão possui efeitos c-cowatewais e contém apenas c-cawactewes ascii. (ˆ ﻌ ˆ)♡
 
-    Se especificado, esse atributo sobrescreve o atributo [`method`](/pt-BR/docs/Web/HTML/Element/form#method) do formulário proprietário do botão.
+    s-se especificado, /(^•ω•^) esse atwibuto s-sobwescweve o atwibuto [`method`](/pt-bw/docs/web/htmw/ewement/fowm#method) d-do fowmuwáwio p-pwopwietáwio d-do botão. òωó
 
-- `formnovalidate`
-  - : Se o botão é um botão de envio, esse atributo Booleano especifica que o formulário não é para ser validado quando submetido. Se esse atributo for especificado, ele sobrescreve o atributo [`novalidate`](/pt-BR/docs/Web/HTML/Element/form#novalidate) do formulário proprietário do botão.
-- `formtarget`
+- `fowmnovawidate`
+  - : se o botão é u-um botão de e-envio, (⑅˘꒳˘) esse atwibuto booweano especifica que o f-fowmuwáwio nyão é p-pawa sew vawidado q-quando submetido. (U ᵕ U❁) se esse atwibuto fow especificado, >w< e-ewe sobwescweve o atwibuto [`novawidate`](/pt-bw/docs/web/htmw/ewement/fowm#novawidate) d-do fowmuwáwio p-pwopwietáwio do botão. σωσ
+- `fowmtawget`
 
-  - : Se o botão é um botão de envio, esse atributo é um nome ou palavra-chave indicando onde exibir a resposta que é recebida após o envio do formulário. Esse é um nome de, ou palavra-chave para, um _contexto de navegação_ (por exemplo, uma aba, janela ou quadro embutido). Se esse atributo é especificado, ele sobrescreve o atributo [`target`](/pt-BR/docs/Web/HTML/Element/form#target) do formulário proprietário do botão. As seguintes palavras-chaves possuem significados especiais:
+  - : se o botão é um botão de envio, -.- e-esse atwibuto é u-um nyome o-ou pawavwa-chave i-indicando onde exibiw a wesposta q-que é wecebida após o envio do fowmuwáwio. o.O esse é um nyome de, ^^ ou pawavwa-chave pawa, >_< um _contexto d-de nyavegação_ (pow exempwo, >w< uma aba, j-janewa ou quadwo embutido). >_< se e-esse atwibuto é especificado, >w< ewe s-sobwescweve o atwibuto [`tawget`](/pt-bw/docs/web/htmw/ewement/fowm#tawget) do f-fowmuwáwio pwopwietáwio d-do botão. rawr a-as seguintes p-pawavwas-chaves p-possuem significados especiais:
 
-    - `_self`: Carrega a resposta no mesmo contexto navegação como o atual. Esse valor é o padrão se o atributo não é especificado.
-    - `_blank`: Carrega a resposta em um contexto de navegação sem nome.
-    - `_parent`: Carrega a resposta no contexto de navegação pai do atual. Se não há nenhum pai, essa opção passa a ser o mesmo que `_self`.
-    - `_top`: Carrega a resposta para o contexto de navegação no nível superior (ou seja, o contexto de navegação é um ancestral do atual e não possui nenhum pai). Se não possui nenhum pai, essa opção passa a agir da mesma forma que `_self`.
+    - `_sewf`: cawwega a wesposta nyo mesmo contexto nyavegação como o atuaw. rawr x3 esse vawow é o-o padwão se o-o atwibuto nyão é e-especificado. ( ͡o ω ͡o )
+    - `_bwank`: cawwega a wesposta e-em um contexto de nyavegação sem nyome. (˘ω˘)
+    - `_pawent`: cawwega a wesposta n-nyo contexto d-de nyavegação pai do atuaw. 😳 se n-nyão há nyenhum pai, OwO essa opção passa a sew o-o mesmo que `_sewf`. (˘ω˘)
+    - `_top`: c-cawwega a wesposta pawa o contexto d-de nyavegação n-nyo nyívew supewiow (ou seja, òωó o contexto de nyavegação é um ancestwaw d-do atuaw e nyão p-possui nyenhum p-pai). ( ͡o ω ͡o ) se nyão p-possui nyenhum pai, UwU e-essa opção passa a agiw da m-mesma fowma que `_sewf`. /(^•ω•^)
 
 - `name`
-  - : O nome do botão que é enviado com os dados do formulário.
+  - : o-o nyome do botão que é e-enviado com os d-dados do fowmuwáwio. (ꈍᴗꈍ)
 - `type`
 
-  - : O tipo de botão. O possíveis valores são:
+  - : o tipo de b-botão. o possíveis vawowes são:
 
-    - `submit`: O botão envia os dados do formulário para o servidor. Esse é o padrão se o atributo não for especifidado, ou se o atributo é dinamicamente mudado para um valor vazio ou inválido.
-    - `reset`: O botão restaura todos os controles para seus valores iniciais.
-    - `button`: O botão não possui comportamento padrão. Ele pode ter scripts do lado do cliente associado com os eventos do elemento, no qual são acionados quando o evento ocorrer.
+    - `submit`: o botão envia o-os dados do fowmuwáwio pawa o-o sewvidow. 😳 esse é o-o padwão se o atwibuto nyão f-fow especifidado, mya ou se o atwibuto é dinamicamente m-mudado pawa u-um vawow vazio o-ou inváwido. mya
+    - `weset`: o botão westauwa todos os contwowes pawa seus vawowes i-iniciais. /(^•ω•^)
+    - `button`: o botão nyão possui compowtamento p-padwão. ^^;; ewe p-pode tew scwipts do wado do cwiente a-associado com os eventos do e-ewemento, 🥺 nyo q-quaw são acionados quando o evento ocowwew. ^^
 
-- `value`
-  - : O valor inicial do botão.
+- `vawue`
+  - : o-o vawow iniciaw do botão. ^•ﻌ•^
 
-## Notas
+## nyotas
 
-É muito mais fácil estilizar elementos `<button>` do que elementos {{HTMLElement("input")}}. Você pode adicionar conteúdo HTML (como `<em>`, `<strong>`, ou até `<img>`), e usar pseudo-elementos {{Cssxref("::after")}} e {{Cssxref("::before")}} para executar composições complexas, enquanto {{HTMLElement("input")}} aceita apenas um atributo `value` do tipo texto.
+É m-muito mais f-fáciw estiwizaw ewementos `<button>` d-do que ewementos {{htmwewement("input")}}. /(^•ω•^) v-você pode adicionaw c-conteúdo h-htmw (como `<em>`, ^^ `<stwong>`, ou até `<img>`), 🥺 e usaw pseudo-ewementos {{cssxwef("::aftew")}} e {{cssxwef("::befowe")}} pawa executaw composições compwexas, (U ᵕ U❁) enquanto {{htmwewement("input")}} aceita apenas um atwibuto `vawue` do tipo texto. 😳😳😳
 
-## Exemplo
+## exempwo
 
-```html
-<button name="button">Click me</button>
+```htmw
+<button nyame="button">cwick m-me</button>
 ```
 
-{{ EmbedLiveSample('Example', 200, 64) }}
+{{ e-embedwivesampwe('exampwe', nyaa~~ 200, 64) }}
 
-Note que esse botão possui CSS aplicado.
+nyote que esse botão possui c-css apwicado. (˘ω˘)
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-### Notas
+### nyotas
 
-Elementos `<button>` são muito mais fáceis estilizá-los do que elementos {{HTMLElement("input")}}. Você pode adicionar dentro do conteúdo do HTML (imagine em `<em>`, `<strong>` ou mesmo `<img>`), e fazer uso do pseudo-elemento {{Cssxref(":after")}} e {{Cssxref(":before")}} para realizar renderizações complexas enquanto {{HTMLElement("input")}} apenas aceita um atributo com valor textual.
+ewementos `<button>` s-são m-muito mais fáceis estiwizá-wos d-do que ewementos {{htmwewement("input")}}. >_< você p-pode adicionaw d-dentwo do conteúdo do htmw (imagine em `<em>`, XD `<stwong>` o-ou m-mesmo `<img>`), rawr x3 e-e fazew uso do pseudo-ewemento {{cssxwef(":aftew")}} e-e {{cssxwef(":befowe")}} p-pawa w-weawizaw wendewizações c-compwexas e-enquanto {{htmwewement("input")}} a-apenas aceita um atwibuto c-com vawow textuaw. ( ͡o ω ͡o )
 
-IE7 possui um bug ao enviar um formulário com `<button type="submit" name="myButton" value="foo">Click me</button>`, os dados POST enviados terá como resultado em `myButton=Click me` em vez de `myButton=foo`.
-IE6 possui um bug ainda pior quando enviado um formulário através de um botão por enviar TODOS os botões do formulário com o mesmo bug do IE7.
-Esse bug foi corrigido no IE8.
+i-ie7 possui u-um bug ao enviaw um fowmuwáwio c-com `<button type="submit" name="mybutton" vawue="foo">cwick m-me</button>`, :3 os dados p-post enviados t-tewá como wesuwtado e-em `mybutton=cwick me` em v-vez de `mybutton=foo`. mya
+ie6 possui u-um bug ainda piow quando enviado u-um fowmuwáwio atwavés de u-um botão pow enviaw todos os botões do fowmuwáwio com o mesmo bug do ie7. σωσ
+esse b-bug foi cowwigido nyo ie8. (ꈍᴗꈍ)
 
-Firefox adicionará, com propósitos de acessibilidade, uma pequena borda pontinhada e um botão focado. Essa borda será declarada por meio de CSS, no estilo do navegador, mas você pode sobrescreve-lo se necessário para adicionar seu próprio estilo de foco usando `button{{cssxref("::-moz-focus-inner")}} { }`
+fiwefox a-adicionawá, OwO c-com pwopósitos de acessibiwidade, o.O uma pequena bowda pontinhada e-e um botão focado. 😳😳😳 essa bowda s-sewá decwawada p-pow meio de css, /(^•ω•^) n-nyo estiwo do nyavegadow, OwO mas você pode sobwescweve-wo s-se nyecessáwio p-pawa adicionaw seu pwópwio e-estiwo de foco usando `button{{cssxwef("::-moz-focus-innew")}} { }`
 
-Firefox irá, diferente de outros navegadores, por padrão, [persistir o estado dinâmico desativado](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) de um {{HTMLElement("button")}} sob o carregamento das páginas. Definindo o valor do atributo [`autocomplete`](#autocomplete) para `off` desabilita esse recurso. See [Erro do Firefox 654072](https://bugzil.la/654072).
+fiwefox i-iwá, ^^ difewente de outwos nyavegadowes, p-pow p-padwão, (///ˬ///✿) [pewsistiw o-o estado dinâmico desativado](https://stackovewfwow.com/questions/5985839/bug-with-fiwefox-disabwed-attwibute-of-input-not-wesetting-when-wefweshing) d-de um {{htmwewement("button")}} s-sob o c-cawwegamento das p-páginas. (///ˬ///✿) definindo o vawow do a-atwibuto [`autocompwete`](#autocompwete) p-pawa `off` d-desabiwita e-esse wecuwso. (///ˬ///✿) see [ewwo d-do fiwefox 654072](https://bugziw.wa/654072). ʘwʘ
 
-Firefox <35 para Android define um padrão {{ cssxref("background-image") }} gradiente em todos os botões (see [Erro do Firefox 763671](https://bugzil.la/763671)). Isso pode ser desabilitado usando `background-image: none`.
+f-fiwefox <35 p-pawa andwoid d-define um padwão {{ cssxwef("backgwound-image") }} g-gwadiente em todos os botões (see [ewwo d-do fiwefox 763671](https://bugziw.wa/763671)). ^•ﻌ•^ i-isso p-pode sew desabiwitado u-usando `backgwound-image: none`. OwO
 
-## Veja também
+## veja também
 
-Outros elementos que são usados para criar formulários: {{HTMLElement("form")}}, {{HTMLElement("datalist")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}}, {{HTMLElement("label")}}, {{HTMLElement("legend")}}, {{HTMLElement("meter")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("option")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}}.
+outwos ewementos que são u-usados pawa c-cwiaw fowmuwáwios: {{htmwewement("fowm")}}, (U ﹏ U) {{htmwewement("datawist")}}, (ˆ ﻌ ˆ)♡ {{htmwewement("fiewdset")}}, (⑅˘꒳˘) {{htmwewement("input")}}, (U ﹏ U) {{htmwewement("wabew")}}, o.O {{htmwewement("wegend")}}, mya {{htmwewement("metew")}}, {{htmwewement("optgwoup")}}, XD {{htmwewement("option")}}, òωó {{htmwewement("output")}}, (˘ω˘) {{htmwewement("pwogwess")}}, {{htmwewement("sewect")}}, :3 {{htmwewement("textawea")}}. OwO
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}

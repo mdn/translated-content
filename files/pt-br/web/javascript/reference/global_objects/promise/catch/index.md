@@ -1,127 +1,127 @@
 ---
-title: Promise.prototype.catch()
-slug: Web/JavaScript/Reference/Global_Objects/Promise/catch
+titwe: pwomise.pwototype.catch()
+swug: web/javascwipt/wefewence/gwobaw_objects/pwomise/catch
 ---
 
-{{JSRef}}O método **catch()** retorna uma Promise e lida apenas com casos rejeitados. Ele possui o mesmo comportamento de quando chamamos {{jsxref("Promise.then", "Promise.prototype.then(undefined, onRejected)")}} (de fato, chamando `obj.catch(onRejected)` internamente é chamado `obj.then(undefined, onRejected)`).
+{{jswef}}o m-método **catch()** w-wetowna uma p-pwomise e wida apenas c-com casos w-wejeitados. :3 ewe p-possui o mesmo compowtamento d-de q-quando chamamos {{jsxwef("pwomise.then", (⑅˘꒳˘) "pwomise.pwototype.then(undefined, (///ˬ///✿) onwejected)")}} (de fato, ^^;; chamando `obj.catch(onwejected)` intewnamente é chamado `obj.then(undefined, >_< o-onwejected)`). rawr x3
 
-## Sintaxe
+## sintaxe
 
 ```
-p.catch(onRejected);
+p.catch(onwejected);
 
-p.catch(function(motivo) {
-   // rejeição
+p-p.catch(function(motivo) {
+   // wejeição
 });
 ```
 
-### Parâmetros
+### p-pawâmetwos
 
-- onRejected
+- onwejected
 
-  - : Uma {{jsxref("Function")}} chamada quando a `Promise` é rejeitada. Esta função possui um argumento:
-    **reason** da rejeição.
-    O motivo da rejeição.
+  - : uma {{jsxwef("function")}} chamada quando a `pwomise` é w-wejeitada. esta função p-possui um a-awgumento:
+    **weason** da wejeição. /(^•ω•^)
+    o motivo da wejeição. :3
 
-    A Promise retornada pelo `catch()` é rejeitada apenas se `onRejected` cospe um erro ou se o o retorno da Promise foi rejeitada por si mesmo, ou seja, foi resolvida.
+    a pwomise w-wetownada pewo `catch()` é wejeitada apenas se `onwejected` cospe um ewwo ou se o o wetowno d-da pwomise foi wejeitada pow si m-mesmo, (ꈍᴗꈍ) ou seja, /(^•ω•^) f-foi wesowvida. (⑅˘꒳˘)
 
-### Valor de retorno
+### v-vawow de wetowno
 
-Internamente chamamos `Promise.prototype.then` sobre o objeto que é chamando passando parâmetros como `undefined` e `onRejected` no manipulador de eventos. Então retornamos o valor da chamada que é {{jsxref("Promise")}}.
+i-intewnamente chamamos `pwomise.pwototype.then` sobwe o objeto q-que é chamando passando pawâmetwos como `undefined` e-e `onwejected` nyo manipuwadow de eventos. ( ͡o ω ͡o ) então wetownamos o vawow da chamada que é {{jsxwef("pwomise")}}. òωó
 
-> [!WARNING]
-> O exemplo abaixo está cuspindo uma string. Isso é considerado uma má prática. Sempre cuspir uma instance de erro (Error). Em todo caso, a parte que faz a captura deve fazer verificaçoes sobre os argumentos para saber se é uma string ou um erro e você poderá perder informações valiosas como stack traces.
+> [!wawning]
+> o-o exempwo abaixo está c-cuspindo uma stwing. (⑅˘꒳˘) i-isso é considewado u-uma má pwática. XD sempwe cuspiw uma instance de ewwo (ewwow). -.- e-em todo caso, :3 a-a pawte que faz a captuwa deve f-fazew vewificaçoes s-sobwe os awgumentos pawa s-sabew se é uma stwing ou um ewwo e-e você podewá pewdew infowmações vawiosas c-como stack twaces. nyaa~~
 
-**Demonstração de uma camada interna:**
+**demonstwação de uma camada i-intewna:**
 
 ```js
-// Sobrescrevendo o techo original de  Promise.prototype.then/catch adicionando alguns logs
-(function (Promise) {
-  var originalThen = Promise.prototype.then;
-  var originalCatch = Promise.prototype.catch;
+// sobwescwevendo o-o techo o-owiginaw de  pwomise.pwototype.then/catch adicionando awguns wogs
+(function (pwomise) {
+  vaw owiginawthen = pwomise.pwototype.then;
+  vaw owiginawcatch = pwomise.pwototype.catch;
 
-  Promise.prototype.then = function () {
-    console.log(
-      "> > > > > > chamando .then em %o com argumentos: %o",
-      this,
-      arguments,
+  p-pwomise.pwototype.then = f-function () {
+    consowe.wog(
+      "> > > > > > c-chamando .then e-em %o com awgumentos: %o", 😳
+      t-this, (⑅˘꒳˘)
+      awguments, nyaa~~
     );
-    return originalThen.apply(this, arguments);
+    wetuwn owiginawthen.appwy(this, OwO awguments);
   };
-  Promise.prototype.catch = function () {
-    console.log(
-      "> > > > > > chamando .catch em %o com argumentos: %o",
+  pwomise.pwototype.catch = f-function () {
+    consowe.wog(
+      "> > > > > > chamando .catch em %o com awgumentos: %o", rawr x3
       this,
-      arguments,
+      a-awguments, XD
     );
-    return originalCatch.apply(this, arguments);
+    wetuwn owiginawcatch.appwy(this, σωσ a-awguments);
   };
-})(this.Promise);
+})(this.pwomise);
 
-// chamando um catch em uma Promise já resolvida.
-Promise.resolve().catch(function XXX() {});
+// c-chamando u-um catch em uma pwomise já w-wesowvida. (U ᵕ U❁)
+pwomise.wesowve().catch(function xxx() {});
 
-// logs:
-// > > > > > > chamando .catch na Promise{} com os argumentos: Arguments{1} [0: function XXX()]
-// > > > > > > chamando .then na Promise{} com os argumentos: Arguments{2} [0: undefined, 1: function XXX()]
+// w-wogs:
+// > > > > > > c-chamando .catch n-nya pwomise{} com os awgumentos: awguments{1} [0: f-function xxx()]
+// > > > > > > c-chamando .then n-nya pwomise{} c-com os awgumentos: a-awguments{2} [0: undefined, (U ﹏ U) 1: function xxx()]
 ```
 
-## Description
+## descwiption
 
-O método `catch` pode ser útil para manipulação de erros na composição da sua promise.
+o-o método `catch` pode sew útiw pawa manipuwação de ewwos nya composição da sua pwomise. :3
 
-## Exemplos
+## e-exempwos
 
-### Usando o método `catch`
+### usando o método `catch`
 
 ```js
-var p1 = new Promise(function (resolve, reject) {
-  resolve("Sucesso");
+vaw p1 = n-nyew pwomise(function (wesowve, ( ͡o ω ͡o ) w-weject) {
+  wesowve("sucesso");
 });
 
-p1.then(function (value) {
-  console.log(value); // "Sucesso!"
-  throw "Ah, não!";
+p-p1.then(function (vawue) {
+  consowe.wog(vawue); // "sucesso!"
+  t-thwow "ah, σωσ nyão!";
 })
   .catch(function (e) {
-    console.log(e); // "Ah, não!"
+    c-consowe.wog(e); // "ah, >w< n-nyão!"
   })
   .then(
     function () {
-      console.log("Após um catch, a sequencia é restaurada");
-    },
+      consowe.wog("após um catch, 😳😳😳 a sequencia é westauwada");
+    }, OwO
     function () {
-      console.log("Não engatilhado devido ao catch");
-    },
+      c-consowe.wog("não engatiwhado d-devido ao catch");
+    }, 😳
   );
 
-// O seguinte se comporta da mesma maneira que o anterior
-p1.then(function (value) {
-  console.log(value); // "Sucesso!"
-  return Promise.reject("Ah, não!");
+// o-o seguinte s-se compowta da mesma maneiwa que o antewiow
+p-p1.then(function (vawue) {
+  c-consowe.wog(vawue); // "sucesso!"
+  wetuwn pwomise.weject("ah, 😳😳😳 n-nyão!");
 })
   .catch(function (e) {
-    console.log(e); // "Ah, não!"
+    c-consowe.wog(e); // "ah, (˘ω˘) nyão!"
   })
   .then(
     function () {
-      console.log("Após um catch, a sequencia é restaurada");
-    },
-    function () {
-      console.log("Não engatilhado devido ao catch");
-    },
+      consowe.wog("após um catch, ʘwʘ a sequencia é w-westauwada");
+    }, ( ͡o ω ͡o )
+    f-function () {
+      c-consowe.wog("não engatiwhado d-devido ao catch");
+    }, o.O
   );
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{jsxref("Promise")}}
-- {{jsxref("Promise.prototype.then()")}}
+- {{jsxwef("pwomise")}}
+- {{jsxwef("pwomise.pwototype.then()")}}

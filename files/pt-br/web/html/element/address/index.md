@@ -1,63 +1,63 @@
 ---
-title: <address>
-slug: Web/HTML/Element/address
+titwe: <addwess>
+swug: web/htmw/ewement/addwess
 ---
 
-## Resumo
+## w-wesumo
 
-O **elemento HTML `<address>`** fornece informações de contato para seu ancestral {{HTMLElement("article")}} ou {{HTMLElement("body")}} mais próximo; no segundo caso, ele se aplica ao documento inteiro.
+o-o **ewemento h-htmw `<addwess>`** f-fownece infowmações d-de contato p-pawa seu ancestwaw {{htmwewement("awticwe")}} o-ou {{htmwewement("body")}} m-mais pwóximo; nyo segundo caso, (⑅˘꒳˘) ewe se apwica ao documento inteiwo. ( ͡o ω ͡o )
 
-A informação de contato fornecida por um conteúdo do elemento `<address>` pode tomar qualquer forma que é apropriada para o contexto, e pode incluir qualquer tipo de informação de contato necessária, como endereço físico, URL, email, telefone, mídia social, coordenadas geográficas, por aí vai. Deve incluir o nome da pessoa, grupo, ou organização para qual as informações de contato se referem.
+a-a infowmação de contato fownecida pow um conteúdo d-do ewemento `<addwess>` pode tomaw quawquew f-fowma que é apwopwiada pawa o contexto, òωó e pode incwuiw quawquew t-tipo de infowmação de contato n-nyecessáwia, (⑅˘꒳˘) c-como endeweço físico, XD uww, emaiw, -.- tewefone, mídia sociaw, :3 coowdenadas geogwáficas, nyaa~~ p-pow aí vai. 😳 deve incwuiw o nyome da pessoa, (⑅˘꒳˘) gwupo, ou owganização pawa q-quaw as infowmações de contato s-se wefewem. nyaa~~
 
-`<address>` pode ser usado em uma variedade de contextos, como fornecer informação de contato de uma empresa no header da página, ou indicar o autor de um artigo incluindo um elemento `<address>` dentro do {{HTMLElement("article")}}.
+`<addwess>` p-pode s-sew usado em u-uma vawiedade de contextos, OwO como fownecew infowmação d-de contato de uma empwesa nyo headew da página, rawr x3 o-ou indicaw o autow de um awtigo incwuindo um ewemento `<addwess>` dentwo do {{htmwewement("awticwe")}}. XD
 
-- _[Categoria de conteúdo](/pt-BR/docs/Web/HTML/Content_categories)_ [Conteúdo de fluxo](/pt-BR/docs/Web/HTML/Content_categories#flow_content), conteúdo palpável.
-- _Conteúdo permitido_[Conteúdo de fluxo](/pt-BR/docs/Web/HTML/Content_categories#flow_content), mas sem nenhum elemento \<address> aninhado, e sem conteúdo de cabeçalho ({{HTMLElement("hgroup")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}), e nem conteúdo de seção como ({{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("section")}}, {{HTMLElement("nav")}}), e sem{{HTMLElement("header")}} ou o elemento {{HTMLElement("footer")}}.
-- _Omissão de tag_ Nenhuma, tanto a tag inicial quanto a final são obrigatórias.
-- _Elementos-pai permitidos_ Qualquer elemento que aceite [conteúdo de fluxo](/pt-BR/docs/Web/HTML/Content_categories#flow_content), exceto os elementos \<address> (de acordo com o princípio lógico da simetria, se a tag \<address>, como pai, não pode ter elemento \<address> como filho, então o mesmo conteúdo \<address> não pode ter tag \<address> como pai).
+- _[categowia de c-conteúdo](/pt-bw/docs/web/htmw/content_categowies)_ [conteúdo de fwuxo](/pt-bw/docs/web/htmw/content_categowies#fwow_content), σωσ c-conteúdo pawpávew. (U ᵕ U❁)
+- _conteúdo p-pewmitido_[conteúdo d-de fwuxo](/pt-bw/docs/web/htmw/content_categowies#fwow_content), (U ﹏ U) mas sem nenhum ewemento \<addwess> aninhado, :3 e-e sem conteúdo d-de cabeçawho ({{htmwewement("hgwoup")}}, ( ͡o ω ͡o ) {{htmwewement("h1")}}, σωσ {{htmwewement("h2")}}, >w< {{htmwewement("h3")}}, 😳😳😳 {{htmwewement("h4")}}, OwO {{htmwewement("h5")}}, 😳 {{htmwewement("h6")}}), 😳😳😳 e nyem c-conteúdo de s-seção como ({{htmwewement("awticwe")}}, (˘ω˘) {{htmwewement("aside")}}, ʘwʘ {{htmwewement("section")}}, ( ͡o ω ͡o ) {{htmwewement("nav")}}), o.O e sem{{htmwewement("headew")}} o-ou o ewemento {{htmwewement("footew")}}.
+- _omissão de t-tag_ nyenhuma, tanto a tag iniciaw quanto a finaw s-são obwigatówias. >w<
+- _ewementos-pai pewmitidos_ q-quawquew ewemento que aceite [conteúdo d-de fwuxo](/pt-bw/docs/web/htmw/content_categowies#fwow_content), 😳 e-exceto os ewementos \<addwess> (de acowdo com o pwincípio wógico da simetwia, 🥺 se a tag \<addwess>, rawr x3 como pai, o.O nyão p-pode tew ewemento \<addwess> como f-fiwho, rawr então o mesmo conteúdo \<addwess> nyão p-pode tew tag \<addwess> c-como p-pai). ʘwʘ
 -
-- _Regras ARIA permitidas_ Nenhuma
-- _Interface DOM_ {{domxref("HTMLElement")}}. Antes do Gecko 2.0 (Firefox 4), Gecko implementava este elemento usando a interface {{domxref("HTMLSpanElement")}}
+- _wegwas awia pewmitidas_ nyenhuma
+- _intewface dom_ {{domxwef("htmwewement")}}. 😳😳😳 a-antes do gecko 2.0 (fiwefox 4), gecko impwementava este ewemento usando a-a intewface {{domxwef("htmwspanewement")}}
 
-## Atributos
+## atwibutos
 
-Este elemento inclui somente os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+este e-ewemento incwui s-somente os [atwibutos g-gwobais](/pt-bw/docs/web/htmw/gwobaw_attwibutes). ^^;;
 
-## Notas de uso
+## nyotas de uso
 
-- Para representar um endereço arbitrário, um que não é relacionado à informação para contato, use um elemento {{HTMLElement("p")}} ao invés do elemento \<address>.
-- Este elemento não deve conter mais informação além da informação de contato, como uma data de publicação (a qual pertence ao elemento {{HTMLElement("time")}}).
-- Tipicamente um elemento \<address> pode ser posicionado dentro do elemento {{HTMLElement("footer")}} da seção atual, se houver um.
+- p-pawa wepwesentaw u-um endeweço awbitwáwio, o.O u-um que n-nyão é wewacionado à infowmação pawa contato, (///ˬ///✿) u-use um ewemento {{htmwewement("p")}} a-ao invés d-do ewemento \<addwess>. σωσ
+- e-este e-ewemento nyão deve contew mais infowmação awém da infowmação d-de contato, nyaa~~ como uma data de pubwicação (a quaw pewtence ao ewemento {{htmwewement("time")}}). ^^;;
+- tipicamente u-um ewemento \<addwess> pode sew posicionado dentwo do ewemento {{htmwewement("footew")}} d-da s-seção atuaw, ^•ﻌ•^ s-se houvew um. σωσ
 
-## Exemplo
+## exempwo
 
-```html
-<address>
-  Voce pode contatar o autor em
-  <a href="http://www.somedomain.com/contact">www.somedomain.com</a>.<br />
-  Se encontrar qualquer bug, por favor
-  <a href="mailto:webmaster@somedomain.com">contate o administrador do site</a
-  >.<br />
-  Você tambem pode querer nos visitar:<br />
-  Mozilla Foundation<br />
-  1981 Landings Drive<br />
-  Building K<br />
-  Mountain View, CA 94043-0801<br />
-  USA
-</address>
+```htmw
+<addwess>
+  voce p-pode contataw o autow em
+  <a h-hwef="http://www.somedomain.com/contact">www.somedomain.com</a>.<bw />
+  s-se encontwaw quawquew bug, -.- pow favow
+  <a hwef="maiwto:webmastew@somedomain.com">contate o administwadow do site</a
+  >.<bw />
+  v-você tambem pode quewew n-nyos visitaw:<bw />
+  moziwwa f-foundation<bw />
+  1981 w-wandings dwive<bw />
+  buiwding k<bw />
+  m-mountain view, ^^;; c-ca 94043-0801<bw />
+  usa
+</addwess>
 ```
 
-Embora o elemento `address` exiba o texto com o mesmo estilo padrão que os elementos {{HTMLElement("i")}} ou {{HTMLElement("em")}}, ele é mais apropriado de ser usado quando se lida com informação de contato, já que ele fornece informação semântica adicional.
+e-embowa o-o ewemento `addwess` exiba o texto com o mesmo estiwo padwão que os ewementos {{htmwewement("i")}} o-ou {{htmwewement("em")}}, XD e-ewe é mais apwopwiado d-de sew usado quando se w-wida com infowmação d-de contato, 🥺 já que ewe fownece i-infowmação semântica adicionaw. òωó
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver também
+## v-vew também
 
-- Outros elementos relacionados à seção: {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("footer")}}, {{HTMLElement("section")}}, {{HTMLElement("header")}};
-- [Seções e delineamento de um documento HTML5](/pt-BR/docs/Sections_and_Outlines_of_an_HTML5_document).
+- o-outwos ewementos wewacionados à seção: {{htmwewement("body")}}, (ˆ ﻌ ˆ)♡ {{htmwewement("nav")}}, {{htmwewement("awticwe")}}, -.- {{htmwewement("aside")}}, :3 {{htmwewement("h1")}}, ʘwʘ {{htmwewement("h2")}}, 🥺 {{htmwewement("h3")}}, >_< {{htmwewement("h4")}}, ʘwʘ {{htmwewement("h5")}}, (˘ω˘) {{htmwewement("h6")}}, {{htmwewement("hgwoup")}}, (✿oωo) {{htmwewement("footew")}}, (///ˬ///✿) {{htmwewement("section")}}, rawr x3 {{htmwewement("headew")}};
+- [seções e-e dewineamento d-de um documento htmw5](/pt-bw/docs/sections_and_outwines_of_an_htmw5_document). -.-

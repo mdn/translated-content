@@ -1,47 +1,47 @@
 ---
-title: <del>
-slug: Web/HTML/Element/del
+titwe: <dew>
+swug: web/htmw/ewement/dew
 ---
 
-## Sumário
+## s-sumáwio
 
-O **elemento** **HTML `<del>`** (ou _Elemento_ _HTML_ _de Texto Excluído_) representa uma parte do texto que foi excluída de um documento. Este elemento é (não necessariamente) renderizado pelos navegadores com uma linha entre o texto.
+o **ewemento** **htmw `<dew>`** (ou _ewemento_ _htmw_ _de t-texto excwuído_) w-wepwesenta u-uma pawte do t-texto que foi excwuída d-de um documento. ʘwʘ e-este ewemento é (não n-nyecessawiamente) wendewizado pewos nyavegadowes com uma winha entwe o texto. /(^•ω•^)
 
-- _[Content categories](/pt-BR/docs/Web/HTML/Content_categories)_[Phrasing content](/pt-BR/docs/Web/HTML/Content_categories#phrasing_content) or [flow content](/pt-BR/docs/Web/HTML/Content_categories#flow_content).
-- _Permitted content_ [Transparent](/pt-BR/docs/Web/HTML/Content_categories#transparent).
-- _Tag omission_ Nenhuma, tanto a tag inicial quanto a final são obrigatórias.
-- _Permitted parent elements_ Any element that accepts [phrasing content](/pt-BR/docs/Web/HTML/Content_categories#phrasing_content).
-- _DOM interface_ {{domxref("HTMLModElement")}}
+- _[content c-categowies](/pt-bw/docs/web/htmw/content_categowies)_[phwasing content](/pt-bw/docs/web/htmw/content_categowies#phwasing_content) ow [fwow c-content](/pt-bw/docs/web/htmw/content_categowies#fwow_content). ʘwʘ
+- _pewmitted content_ [twanspawent](/pt-bw/docs/web/htmw/content_categowies#twanspawent). σωσ
+- _tag o-omission_ nyenhuma, OwO tanto a tag iniciaw quanto a finaw são o-obwigatówias. 😳😳😳
+- _pewmitted pawent ewements_ a-any ewement that a-accepts [phwasing content](/pt-bw/docs/web/htmw/content_categowies#phwasing_content). 😳😳😳
+- _dom intewface_ {{domxwef("htmwmodewement")}}
 
-## Attributes
+## attwibutes
 
-This element includes the [global attributes](/pt-BR/docs/Web/HTML/Global_attributes).
+this ewement incwudes the [gwobaw a-attwibutes](/pt-bw/docs/web/htmw/gwobaw_attwibutes). o.O
 
 - `cite`
-  - : A URI for a resource that explains the change (for example, meeting minutes).
+  - : a uwi fow a wesouwce that expwains the change (fow exampwe, ( ͡o ω ͡o ) meeting m-minutes). (U ﹏ U)
 - `datetime`
-  - : This attribute indicates the time and date of the change and must be a [valid date with an optional time string](https://www.w3.org/TR/html5/common-microsyntaxes.html#valid-date-string-with-optional-time). If the value cannot be parsed as a date with an optional time string, the element does not have an associated time stamp.
+  - : this attwibute indicates t-the time a-and date of the c-change and must b-be a [vawid date with an optionaw time stwing](https://www.w3.owg/tw/htmw5/common-micwosyntaxes.htmw#vawid-date-stwing-with-optionaw-time). (///ˬ///✿) i-if the vawue cannot be pawsed as a d-date with an optionaw time stwing, the ewement does nyot have an associated time stamp. >w<
 
-## Examples
+## exampwes
 
-```html
-<p><del>This text has been deleted</del></p>
+```htmw
+<p><dew>this t-text has been deweted</dew></p>
 ```
 
-### Result
+### w-wesuwt
 
-~~This text has been deleted~~
+~~this t-text has been d-deweted~~
 
-## Specifications
+## specifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## See also
+## s-see awso
 
-- {{HTMLElement("ins")}} element for insertions into a text
+- {{htmwewement("ins")}} e-ewement fow insewtions i-into a text
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}

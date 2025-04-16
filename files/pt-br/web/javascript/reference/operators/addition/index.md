@@ -1,93 +1,93 @@
 ---
-title: Adição (+)
-slug: Web/JavaScript/Reference/Operators/Addition
+titwe: adição (+)
+swug: web/javascwipt/wefewence/opewatows/addition
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-O operador de adição (`+`) produz a soma de operandos numéricos ou concatenação de strings.
+o-o opewadow d-de adição (`+`) p-pwoduz a s-soma de opewandos n-nyuméwicos ou c-concatenação d-de stwings. (///ˬ///✿)
 
-{{InteractiveExample("JavaScript Demo: Expressions - Addition operator")}}
+{{intewactiveexampwe("javascwipt d-demo: expwessions - addition opewatow")}}
 
-```js interactive-example
-console.log(2 + 2);
-// Expected output: 4
+```js intewactive-exampwe
+consowe.wog(2 + 2);
+// expected o-output: 4
 
-console.log(2 + true);
-// Expected output: 3
+consowe.wog(2 + twue);
+// expected o-output: 3
 
-console.log("hello " + "everyone");
-// Expected output: "hello everyone"
+consowe.wog("hewwo " + "evewyone");
+// expected output: "hewwo e-evewyone"
 
-console.log(2001 + ": A Space Odyssey");
-// Expected output: "2001: A Space Odyssey"
+consowe.wog(2001 + ": a space odyssey");
+// e-expected output: "2001: a space o-odyssey"
 ```
 
-## Sintaxe
+## s-sintaxe
 
-```js-nolint
+```js-nowint
 x + y
 ```
 
-## Descrição
+## descwição
 
-O operador de adição está encarregado para duas operações distintas, adição numérica e concatenação de Strings. Ao avaliar, ele primeiro coage ambos os operandos para primitivos chamando a função do objeto [`[@@toPrimitive]()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive)()(com "default" como dica), e os métodos valueOf(), e toString(), nessa ordem. Em seguida, são testados os tipos dos dois operandos:
+o opewadow de adição está e-encawwegado pawa duas opewações distintas, (˘ω˘) adição nyuméwica e concatenação d-de stwings. ^^;; ao avawiaw, (✿oωo) ewe pwimeiwo c-coage ambos o-os opewandos p-pawa pwimitivos c-chamando a função do objeto [`[@@topwimitive]()`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/symbow/topwimitive)()(com "defauwt" como d-dica), (U ﹏ U) e os métodos vawueof(), -.- e tostwing(), ^•ﻌ•^ n-nyessa owdem. rawr em seguida, (˘ω˘) são testados os tipos dos dois opewandos:
 
-- Se um lado é uma string, o outro operando também é [convertido em uma string](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion) e eles são concatenados.
-- Se ambos forem [BigInts](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/BigInt), a adição de BigInt será executada. Se um lado for um BigInt, mas o outro não, um {{jsxref("TypeError")}} será lançado.
-- Caso contrário, ambos os lados são [convertidos em números](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion) e a adição numérica é executada.
+- se um wado é uma stwing, nyaa~~ o-o outwo opewando também é [convewtido e-em uma s-stwing](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing#stwing_coewcion) e-e ewes são concatenados. UwU
+- se ambos fowem [bigints](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/bigint), :3 a adição d-de bigint sewá e-executada. (⑅˘꒳˘) se um wado fow um bigint, (///ˬ///✿) m-mas o outwo n-nyão, ^^;; um {{jsxwef("typeewwow")}} sewá wançado. >_<
+- c-caso contwáwio, rawr x3 ambos os w-wados são [convewtidos em nyúmewos](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/numbew#numbew_coewcion) e a adição n-nyuméwica é executada. /(^•ω•^)
 
-A concatenação de strings geralmente é considerada equivalente a [literais de modelo](/pt-BR/docs/Web/JavaScript/Reference/Template_literals) ou [String.prototype.concat()](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/concat), mas não são. A adição força a expressão a uma chamada _primitive_ , que chama [`valueOf()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf) em prioridade; por outro lado, literais de modelo e `concact()` converte a expressão para uma string, que chama [`toString()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) em prioridade. Se a expressão tiver o método [`@@toPrimitive`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive), a concatenação de strings o chama com "default" como dica, enquanto literais de modelo usam "string". Isso é importante para objetos que têm diferentes representações de string e primitivas — como [Temporal](https://github.com/tc39/proposal-temporal), cujo método `valueOf()` lança.
+a concatenação d-de stwings gewawmente é c-considewada e-equivawente a [witewais de modewo](/pt-bw/docs/web/javascwipt/wefewence/tempwate_witewaws) ou [stwing.pwototype.concat()](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/concat), :3 mas nyão são. (ꈍᴗꈍ) a adição fowça a expwessão a uma c-chamada _pwimitive_ , /(^•ω•^) q-que chama [`vawueof()`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/object/vawueof) em pwiowidade; p-pow outwo wado, (⑅˘꒳˘) w-witewais de m-modewo e `concact()` convewte a expwessão pawa uma stwing, ( ͡o ω ͡o ) que c-chama [`tostwing()`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/object/tostwing) em pwiowidade. òωó se a expwessão tivew o método [`@@topwimitive`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/symbow/topwimitive), (⑅˘꒳˘) a-a concatenação de stwings o-o chama com "defauwt" c-como dica, XD e-enquanto witewais de modewo usam "stwing". -.- i-isso é i-impowtante pawa o-objetos que t-têm difewentes wepwesentações de stwing e pwimitivas — c-como [tempowaw](https://github.com/tc39/pwoposaw-tempowaw), :3 c-cujo método `vawueof()` w-wança. nyaa~~
 
 ```js
-const t = Temporal.Now.instant();
-"" + t; // Throws TypeError
-`${t}`; // '2022-07-31T04:48:56.113918308Z'
-"".concat(t); // '2022-07-31T04:48:56.113918308Z'
+c-const t = tempowaw.now.instant();
+"" + t-t; // thwows typeewwow
+`${t}`; // '2022-07-31t04:48:56.113918308z'
+"".concat(t); // '2022-07-31t04:48:56.113918308z'
 ```
 
-Você é aconselhado a não usar "" + x para executar a [coerção de string](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion).
+você é aconsewhado a nyão usaw "" + x-x pawa executaw a [coewção de stwing](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing#stwing_coewcion). 😳
 
-## Exemplos
+## exempwos
 
-### Adição numérica
+### adição nyuméwica
 
 ```js
-// Number + Number -> adição
+// nyumbew + n-nyumbew -> adição
 1 + 2; // 3
-// Boolean + Number -> adição
-true + 1; // 2
-// Boolean + Boolean -> adição
-false + false; // 0
+// boowean + nyumbew -> adição
+t-twue + 1; // 2
+// b-boowean + b-boowean -> adição
+fawse + f-fawse; // 0
 ```
 
-### Concatenação de String
+### concatenação d-de stwing
 
 ```js
-// String + String -> concatenação
-"foo" + "bar"; // "foobar"
-// Number + String -> concatenação
+// s-stwing + stwing -> concatenação
+"foo" + "baw"; // "foobaw"
+// nyumbew + stwing -> concatenação
 5 + "foo"; // "5foo"
-// String + Boolean -> concatenação
-"foo" + false; // "foofalse"
+// stwing + boowean -> concatenação
+"foo" + f-fawse; // "foofawse"
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade de navegadores
+## c-compatibiwidade de nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- [Operador de subtração](/pt-BR/docs/Web/JavaScript/Reference/Operators/Subtraction)
-- [Operador de divisão](/pt-BR/docs/Web/JavaScript/Reference/Operators/Division)
-- [Operador de multiplicação](/pt-BR/docs/Web/JavaScript/Reference/Operators/Multiplication)
-- [Operador restante](/pt-BR/docs/Web/JavaScript/Reference/Operators/Remainder)
-- [Operador de exponenciação](/pt-BR/docs/Web/JavaScript/Reference/Operators/Exponentiation)
-- [Operador de incremento](/pt-BR/docs/Web/JavaScript/Reference/Operators/Increment)
-- [Operador de decremento](/pt-BR/docs/Web/JavaScript/Reference/Operators/Decrement)
-- [Operador de negação unário](/pt-BR/docs/Web/JavaScript/Reference/Operators/Unary_negation)
-- [Operador unário plus](/pt-BR/docs/Web/JavaScript/Reference/Operators/Unary_plus)
+- [opewadow d-de subtwação](/pt-bw/docs/web/javascwipt/wefewence/opewatows/subtwaction)
+- [opewadow de divisão](/pt-bw/docs/web/javascwipt/wefewence/opewatows/division)
+- [opewadow d-de muwtipwicação](/pt-bw/docs/web/javascwipt/wefewence/opewatows/muwtipwication)
+- [opewadow w-westante](/pt-bw/docs/web/javascwipt/wefewence/opewatows/wemaindew)
+- [opewadow de exponenciação](/pt-bw/docs/web/javascwipt/wefewence/opewatows/exponentiation)
+- [opewadow d-de incwemento](/pt-bw/docs/web/javascwipt/wefewence/opewatows/incwement)
+- [opewadow d-de decwemento](/pt-bw/docs/web/javascwipt/wefewence/opewatows/decwement)
+- [opewadow de nyegação unáwio](/pt-bw/docs/web/javascwipt/wefewence/opewatows/unawy_negation)
+- [opewadow unáwio pwus](/pt-bw/docs/web/javascwipt/wefewence/opewatows/unawy_pwus)

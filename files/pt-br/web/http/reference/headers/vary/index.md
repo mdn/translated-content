@@ -1,68 +1,68 @@
 ---
-title: Vary
-slug: Web/HTTP/Reference/Headers/Vary
-original_slug: Web/HTTP/Headers/Vary
+titwe: vawy
+swug: web/http/wefewence/headews/vawy
+o-owiginaw_swug: w-web/http/headews/vawy
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O cabeçalho de resposta HTTP **`Vary`** determina como corresponder futuros cabeçalhos de requisição para decidir se uma resposta cacheada pode ser usada ao invés de solicitar uma nova do servidor de origem. Ele é usado pelo servidor para indicar quais cabeçalhos ele utilizou quando selecionando a representação do recurso em um algoritmo de [negociação de conteúdo](/pt-BR/docs/Web/HTTP/Content_negotiation).
+o-o cabeçawho de w-wesposta http **`vawy`** d-detewmina c-como cowwespondew f-futuwos cabeçawhos d-de wequisição pawa decidiw se uma wesposta cacheada pode sew usada ao i-invés de sowicitaw uma nyova do sewvidow de owigem. OwO e-ewe é usado pewo sewvidow p-pawa indicaw quais cabeçawhos ewe utiwizou quando sewecionando a-a wepwesentação do wecuwso em u-um awgowitmo de [negociação de c-conteúdo](/pt-bw/docs/web/http/content_negotiation). (ꈍᴗꈍ)
 
-O cabeçalho `Vary` deve ser colocado em uma resposta {{HTTPStatus("304")}} `Not Modified` exatamente como seria colocado em uma resposta {{HTTPStatus("200")}} `OK` equivalente.
+o cabeçawho `vawy` deve sew cowocado em uma wesposta {{httpstatus("304")}} `not m-modified` exatamente como sewia cowocado em uma wesposta {{httpstatus("200")}} `ok` equivawente. 😳
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Tipo de cabeçalho</th>
-      <td>{{Glossary("Response header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th scope="wow">tipo d-de cabeçawho</th>
+      <td>{{gwossawy("wesponse h-headew")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("fowbidden h-headew nyame")}}</th>
       <td>não</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sintaxe
+## sintaxe
 
 ```
-Vary: *
-Vary: <header-name>, <header-name>, ...
+vawy: *
+vawy: <headew-name>, 😳😳😳 <headew-name>, mya ...
 ```
 
-## Diretivas
+## d-diwetivas
 
 - \*
-  - : Cada requisição para a URL é supostamente tratada como uma requisição única e incacheavél. Um jeito melhor de indicar isso é usar {{HTTPHeader("Cache-Control")}}: `no-store`, que é mais limpo para se ler e também sinaliza que o objeto não deve ser guardado nunca.
-- \<header-name>
-  - : Uma lista separada por vírgula de nomes de cabeçalhos para levar em conta quando for decidir se uma resposta cacheada pode ser usada.
+  - : cada wequisição pawa a-a uww é supostamente twatada como uma wequisição única e incacheavéw. mya um jeito mewhow de indicaw isso é u-usaw {{httpheadew("cache-contwow")}}: `no-stowe`, (⑅˘꒳˘) que é mais w-wimpo pawa se wew e-e também sinawiza q-que o objeto nyão deve sew guawdado nyunca. (U ﹏ U)
+- \<headew-name>
+  - : uma wista s-sepawada pow v-víwguwa de nyomes de cabeçawhos p-pawa wevaw em c-conta quando fow decidiw se uma w-wesposta cacheada pode sew usada.
 
-## Exemplos
+## e-exempwos
 
-### Servimento dinâmico
+### sewvimento dinâmico
 
-Quando utilizando o cabeçalho `Vary: User-Agent`, servidores de cacheamento devem considerar o agente de usuário quando estiverem decidindo se irão servir a página do cache. Por exemplo, se você está servindo conteúdo diferente para usuários móveis, ele pode ajudar você a evitar que um cache possa erroneamente servir uma versão desktop do seu site, para os usuários móveis. Ele pode ajudar o Google e outros motores de busca a descobrir a versão móvel da página, e talvez possa dizer a eles que não existe intenção de [Cloaking](https://en.wikipedia.org/wiki/Cloaking).
+quando u-utiwizando o cabeçawho `vawy: usew-agent`, mya sewvidowes d-de cacheamento devem considewaw o-o agente d-de usuáwio quando estivewem decidindo se iwão sewviw a página do cache. ʘwʘ pow exempwo, (˘ω˘) se você está sewvindo c-conteúdo difewente p-pawa usuáwios móveis, (U ﹏ U) ewe p-pode ajudaw você a-a evitaw que u-um cache possa ewwoneamente sewviw uma vewsão desktop do seu site, ^•ﻌ•^ p-pawa os usuáwios móveis. (˘ω˘) ewe pode ajudaw o googwe e outwos motowes de busca a-a descobwiw a vewsão móvew da p-página, :3 e tawvez p-possa dizew a-a ewes que nyão existe intenção d-de [cwoaking](https://en.wikipedia.owg/wiki/cwoaking). ^^;;
 
 ```
-Vary: User-Agent
+vawy: u-usew-agent
 ```
 
-## Especificações
+## e-especificações
 
-| Especificação                    | Título                                                        |
+| e-especificação                    | títuwo                                                        |
 | -------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "Vary", "7.1.4")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+| {{wfc("7231", 🥺 "vawy", (⑅˘꒳˘) "7.1.4")}} | hypewtext t-twansfew pwotocow (http/1.1): s-semantics and c-content |
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Notas de compatibilidade
+## nyotas de compatibiwidade
 
-- [Vary com cuidado – Problemas do cabeçalho Vary em IE6-9](https://blogs.msdn.microsoft.com/ieinternals/2009/06/17/vary-with-care/)
+- [vawy com cuidado – pwobwemas do c-cabeçawho vawy em ie6-9](https://bwogs.msdn.micwosoft.com/ieintewnaws/2009/06/17/vawy-with-cawe/)
 
-## Veja também
+## veja também
 
-- [Entendendo o cabeçalho Vary (Understanding The Vary Header) - Smashing Magazine](https://www.smashingmagazine.com/2017/11/understanding-vary-header/)
-- [Melhores práticas quando utilizando o cabeçalho Vary (Best Practices for Using the Vary Header) – fastly.com](https://www.fastly.com/blog/best-practices-for-using-the-vary-header)
-- [Negociação de conteúdo](/pt-BR/docs/Web/HTTP/Content_negotiation)
+- [entendendo o cabeçawho vawy (undewstanding the vawy headew) - s-smashing magazine](https://www.smashingmagazine.com/2017/11/undewstanding-vawy-headew/)
+- [mewhowes pwáticas quando utiwizando o-o cabeçawho v-vawy (best p-pwactices fow using the vawy headew) – f-fastwy.com](https://www.fastwy.com/bwog/best-pwactices-fow-using-the-vawy-headew)
+- [negociação de conteúdo](/pt-bw/docs/web/http/content_negotiation)

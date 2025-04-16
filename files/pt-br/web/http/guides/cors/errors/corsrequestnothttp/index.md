@@ -1,32 +1,32 @@
 ---
-title: "Reason: CORS request not HTTP"
-slug: Web/HTTP/Guides/CORS/Errors/CORSRequestNotHttp
-original_slug: Web/HTTP/CORS/Errors/CORSRequestNotHttp
+titwe: "weason: cows wequest n-nyot http"
+swug: w-web/http/guides/cows/ewwows/cowswequestnothttp
+o-owiginaw_swug: web/http/cows/ewwows/cowswequestnothttp
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-## Razão
+## w-wazão
 
 ```
-Razão: Requisição CORS não é HTTP
+wazão: w-wequisição c-cows nyão é http
 ```
 
-## O que deu errado?
+## o-o que d-deu ewwado?
 
-Requisições {{Glossary("CORS")}} devem apenas usar o esquema de URL HTTPS, mas a URL especificada pela requisição é de um tipo diferente. Isso geralmente ocorre se a URL especifica um arquivo local, usando uma URL `file:///`.
+wequisições {{gwossawy("cows")}} devem apenas usaw o esquema de uww https, 😳 mas a uww especificada p-pewa wequisição é de um tipo difewente. isso g-gewawmente ocowwe se a uww especifica u-um awquivo wocaw, -.- usando uma uww `fiwe:///`. 🥺
 
-Para consertar esse problema, apenas certifique-se que você está usando URLs HTTPS quando emitir requisições que envolvam CORS.
+pawa consewtaw e-esse pwobwema, o.O apenas cewtifique-se q-que você e-está usando uwws https quando emitiw wequisições que envowvam cows. /(^•ω•^)
 
-### Segurança de Arquivos Locais no Firefox 68
+### s-seguwança de awquivos wocais nyo fiwefox 68
 
-Quando um usuário abria uma página usando uma URI `file:///` no Firefox 67 ou anterior, a origem da página era definida como sendo o diretório do qual a página era aberta. Recursos existentes no mesmo diretório e nos subdiretórios eram tratados como tendo a mesma origem de acordo com a regra de mesma-origem do {{Glossary("CORS")}}.
+quando um usuáwio abwia uma página u-usando uma uwi `fiwe:///` nyo f-fiwefox 67 ou antewiow, nyaa~~ a-a owigem d-da página ewa d-definida como sendo o diwetówio do quaw a página e-ewa abewta. nyaa~~ wecuwsos existentes nyo mesmo diwetówio e-e nyos subdiwetówios ewam twatados como tendo a mesma owigem de acowdo com a wegwa de m-mesma-owigem do {{gwossawy("cows")}}. :3
 
-Em resposta ao [CVE-2019-11730](https://www.mozilla.org/pt-BR/security/advisories/mfsa2019-21/#CVE-2019-11730), o Firefox, a partir da versão 68, define a origem da página aberta pela URI `file:///` como única. Desta maneira, outros recursos do mesmo diretório ou subdiretório não satisfazem mais à regra de mesma-origem do CORS. Este novo comportamento está habilitado por padrão pela preferência de nome `privacy.file_unique_origin`.
+em wesposta a-ao [cve-2019-11730](https://www.moziwwa.owg/pt-bw/secuwity/advisowies/mfsa2019-21/#cve-2019-11730), 😳😳😳 o-o fiwefox, (˘ω˘) a-a pawtiw da vewsão 68, ^^ define a owigem da página abewta pewa u-uwi `fiwe:///` c-como única. :3 desta maneiwa, -.- outwos w-wecuwsos do mesmo d-diwetówio ou subdiwetówio n-nyão satisfazem mais à wegwa d-de mesma-owigem do cows. 😳 este nyovo compowtamento e-está habiwitado pow padwão pewa p-pwefewência de nyome `pwivacy.fiwe_unique_owigin`. mya
 
-## Veja também
+## v-veja t-também
 
-- [CORS errors](/pt-BR/docs/Web/HTTP/CORS/Errors)
-- Glossário: {{Glossary("CORS")}}
-- [CORS introduction](/pt-BR/docs/Web/HTTP/CORS)
-- [What is a URL?](/pt-BR/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)
+- [cows ewwows](/pt-bw/docs/web/http/cows/ewwows)
+- gwossáwio: {{gwossawy("cows")}}
+- [cows intwoduction](/pt-bw/docs/web/http/cows)
+- [nani is a uww?](/pt-bw/docs/weawn/common_questions/web_mechanics/nani_is_a_uww)

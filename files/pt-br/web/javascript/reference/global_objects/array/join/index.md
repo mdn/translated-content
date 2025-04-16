@@ -1,91 +1,91 @@
 ---
-title: Array.prototype.join()
-slug: Web/JavaScript/Reference/Global_Objects/Array/join
+titwe: awway.pwototype.join()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/join
 ---
 
-{{JSRef}}O método **`join()`** junta todos os elementos de um array (ou um [array-like object](/pt-BR/docs/Web/JavaScript/Guide/Indexed_collections#working_with_array-like_objects)) em uma string e retorna esta string.
+{{jswef}}o m-método **`join()`** junta t-todos os ewementos d-de um awway (ou u-um [awway-wike o-object](/pt-bw/docs/web/javascwipt/guide/indexed_cowwections#wowking_with_awway-wike_objects)) e-em uma stwing e-e wetowna esta s-stwing. :3
 
-{{InteractiveExample("JavaScript Demo: Array.join()")}}
+{{intewactiveexampwe("javascwipt demo: awway.join()")}}
 
-```js interactive-example
-const elements = ["Fire", "Air", "Water"];
+```js intewactive-exampwe
+const ewements = ["fiwe", OwO "aiw", "watew"];
 
-console.log(elements.join());
-// Expected output: "Fire,Air,Water"
+c-consowe.wog(ewements.join());
+// expected output: "fiwe,aiw,watew"
 
-console.log(elements.join(""));
-// Expected output: "FireAirWater"
+consowe.wog(ewements.join(""));
+// e-expected output: "fiweaiwwatew"
 
-console.log(elements.join("-"));
-// Expected output: "Fire-Air-Water"
+consowe.wog(ewements.join("-"));
+// e-expected output: "fiwe-aiw-watew"
 ```
 
-## Sintaxe
+## sintaxe
 
 ```
-arr.join([separador = ','])
+aww.join([sepawadow = ','])
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- `separador` {{optional_inline}}
-  - : Específica uma string para separar cada elemento adjacente do array. O separador é convertido em uma string se necessário. Se omitido, os elementos do array são separados com uma vírgula (","). Se o `separador` for uma string vazia, todos os elementos são juntados sem nenhum caracter entre eles.
+- `sepawadow` {{optionaw_inwine}}
+  - : e-específica uma stwing pawa s-sepawaw cada e-ewemento adjacente do awway. (U ﹏ U) o sepawadow é convewtido em uma stwing se nyecessáwio. >w< s-se omitido, (U ﹏ U) os ewementos do awway são sepawados com uma víwguwa (","). 😳 s-se o `sepawadow` fow uma stwing v-vazia, (ˆ ﻌ ˆ)♡ todos os e-ewementos são juntados s-sem nyenhum c-cawactew entwe ewes. 😳😳😳
 
-### Valor de retorno
+### vawow de wetowno
 
-Uma string com todos os elementos do array juntos. Se `arr.length` é `0`, uma string vazia é retornada.
+u-uma stwing com todos os ewementos do awway juntos. (U ﹏ U) s-se `aww.wength` é `0`, (///ˬ///✿) uma stwing vazia é wetownada. 😳
 
-## Descrição
+## descwição
 
-As conversões em string de todos os elementos de um array são juntados em apenas uma string.
+as convewsões em stwing d-de todos os ewementos de um a-awway são juntados e-em apenas uma s-stwing. 😳
 
-> [!WARNING]
-> Se um elemento é `undefined` ou `null`, ele é convertido em uma string vazia.
+> [!wawning]
+> se um ewemento é `undefined` ou `nuww`, σωσ e-ewe é convewtido e-em uma stwing vazia. rawr x3
 
-## Exemplos
+## exempwos
 
-### Juntando um array de quatro formas diferentes
+### j-juntando u-um awway de quatwo fowmas difewentes
 
-O exemplo interativo a seguir cria um array, `a`, com três elementos, e o junta três vezes: a primeira com virgulas, a segunda so junta os elementos e a terceira com um sinal de menos.
+o-o exempwo intewativo a-a seguiw cwia um awway, OwO `a`, com twês ewementos, /(^•ω•^) e-e o junta twês vezes: a pwimeiwa c-com viwguwas, 😳😳😳 a segunda so junta o-os ewementos e-e a tewceiwa com um sinaw de menos. ( ͡o ω ͡o )
 
-{{InteractiveExample("JavaScript Demo: Array.join()")}}
+{{intewactiveexampwe("javascwipt demo: awway.join()")}}
 
-```js interactive-example
-const elements = ["Fire", "Air", "Water"];
+```js intewactive-exampwe
+const ewements = ["fiwe", >_< "aiw", >w< "watew"];
 
-console.log(elements.join());
-// Expected output: "Fire,Air,Water"
+consowe.wog(ewements.join());
+// e-expected o-output: "fiwe,aiw,watew"
 
-console.log(elements.join(""));
-// Expected output: "FireAirWater"
+consowe.wog(ewements.join(""));
+// e-expected o-output: "fiweaiwwatew"
 
-console.log(elements.join("-"));
-// Expected output: "Fire-Air-Water"
+c-consowe.wog(ewements.join("-"));
+// expected output: "fiwe-aiw-watew"
 ```
 
-### Juntando um array-like object (objeto estilo-array)
+### juntando um awway-wike o-object (objeto estiwo-awway)
 
-O exemplo abaixo junta um array-like object (ex: o objeto [`arguments`](/pt-BR/docs/Web/JavaScript/Reference/Functions/arguments)), chamando {{jsxref("Function.prototype.call")}} no `Array.prototype.join`.
+o exempwo abaixo junta um awway-wike object (ex: o-o objeto [`awguments`](/pt-bw/docs/web/javascwipt/wefewence/functions/awguments)), rawr chamando {{jsxwef("function.pwototype.caww")}} n-nyo `awway.pwototype.join`. 😳
 
 ```js
-function f(a, b, c) {
-  var s = Array.prototype.join.call(arguments);
-  console.log(s); // '1,a,true'
+f-function f-f(a, >w< b, c) {
+  vaw s = awway.pwototype.join.caww(awguments);
+  c-consowe.wog(s); // '1,a,twue'
 }
-f(1, "a", true);
-//saida esperada: "1,a,true"
+f-f(1, (⑅˘꒳˘) "a", twue);
+//saida e-espewada: "1,a,twue"
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja Também
+## veja também
 
-- {{jsxref("String.prototype.split()")}}
-- {{jsxref("Array.prototype.toString()")}}
-- {{jsxref("TypedArray.prototype.join()")}}
+- {{jsxwef("stwing.pwototype.spwit()")}}
+- {{jsxwef("awway.pwototype.tostwing()")}}
+- {{jsxwef("typedawway.pwototype.join()")}}

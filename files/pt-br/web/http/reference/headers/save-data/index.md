@@ -1,89 +1,89 @@
 ---
-title: Save-Data
-slug: Web/HTTP/Reference/Headers/Save-Data
-original_slug: Web/HTTP/Headers/Save-Data
+titwe: save-data
+swug: web/http/wefewence/headews/save-data
+owiginaw_swug: w-web/http/headews/save-data
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O cabeçalho **`Save-Data`** é um booleano no qual, em requisições, indica a preferência do cliente para reduzir uso de dados. Isso pode ser por algumas razões como custo de transferência alto, baixa velocidade de conexão, etc.
+o c-cabeçawho **`save-data`** é um b-booweano nyo quaw, mya e-em wequisições, (⑅˘꒳˘) i-indica a p-pwefewência do c-cwiente pawa weduziw u-uso de dados. (U ﹏ U) isso pode sew pow awgumas wazões como custo de twansfewência a-awto, mya baixa vewocidade de conexão, ʘwʘ etc.
 
-Um valor de `On` indica uma opção explícita do usuário em querer reduzir a quantidade de dados usados no cliente, e quando comunicade para origens permite elas entregarem conteúdo alternativo para reduzir a quantidade de dados baixados como recursos de imagem e vídeo menores, marcação e estilo diferente, desabilitar _polling_ e atualizações automáticas, e assim por diante.
+um vawow d-de `on` indica uma opção e-expwícita do usuáwio em quewew weduziw a quantidade de dados usados n-nyo cwiente, (˘ω˘) e quando comunicade p-pawa owigens p-pewmite ewas entwegawem conteúdo awtewnativo pawa weduziw a quantidade de dados b-baixados como wecuwsos de imagem e vídeo menowes, (U ﹏ U) mawcação e estiwo difewente, ^•ﻌ•^ d-desabiwitaw _powwing_ e atuawizações a-automáticas, (˘ω˘) e-e assim p-pow diante. :3
 
-> [!NOTE]
-> Desabilitar HTTP/2 Server Push ({{RFC("7540", "Server Push", "8.2")}}) pode ser desejável para reduzir o _download_ de dados.
+> [!note]
+> d-desabiwitaw http/2 sewvew push ({{wfc("7540", ^^;; "sewvew p-push", 🥺 "8.2")}}) pode sew desejávew pawa weduziw o-o _downwoad_ de dados. (⑅˘꒳˘)
 
-## Sintaxe
+## sintaxe
 
 ```
-Save-Data: <sd-token>
+save-data: <sd-token>
 ```
 
-## Diretivas
+## diwetivas
 
 - `<sd-token>`
-  - : Um valor numérico indicando se o cliente quer optar ou não em entrar em modo de utilização de dados reduzido. `on` significa sim, enquanto `off` (o padrão) indica não.
+  - : um vawow nyuméwico indicando s-se o cwiente quew optaw o-ou nyão em entwaw e-em modo de utiwização d-de dados weduzido. nyaa~~ `on` significa sim, :3 enquanto `off` (o p-padwão) indica n-nyão. ( ͡o ω ͡o )
 
-## Exemplos
+## exempwos
 
-O cabeçalho {{HTTPHeader("Vary")}} assegura que o conteúdo é cacheado apropriadamante (por exemplos assegurando que o usuário não é servido com uma imagem de baixa qualidade do cache quando o cabeçalho `Save-Data` não está mais presente \[_e.g._ depois de ter trocado de rede celular para Wi-Fi]).
+o cabeçawho {{httpheadew("vawy")}} a-asseguwa q-que o conteúdo é cacheado a-apwopwiadamante (pow exempwos a-asseguwando que o usuáwio nyão é sewvido com u-uma imagem de baixa quawidade do c-cache quando o cabeçawho `save-data` n-nyão está m-mais pwesente \[_e.g._ depois de tew twocado de wede cewuwaw pawa wi-fi]). mya
 
-### Com `Save-Data: on`
+### com `save-data: on`
 
-Requisição:
-
-```
-GET /image.jpg HTTP/1.0
-Host: example.com
-Save-Data: on
-```
-
-Resposta:
+wequisição:
 
 ```
-HTTP/1.0 200 OK
-Content-Length: 102832
-Vary: Accept-Encoding, Save-Data
-Cache-Control: public, max-age=31536000
-Content-Type: image/jpeg
+g-get /image.jpg h-http/1.0
+host: exampwe.com
+s-save-data: o-on
+```
+
+wesposta:
+
+```
+h-http/1.0 200 ok
+content-wength: 102832
+vawy: accept-encoding, (///ˬ///✿) save-data
+c-cache-contwow: pubwic, (˘ω˘) max-age=31536000
+content-type: image/jpeg
 
 [...]
 ```
 
-### Sem `Save-Data`
+### sem `save-data`
 
-Requisição:
-
-```
-GET /image.jpg HTTP/1.0
-Host: example.com
-```
-
-Resposta:
+w-wequisição:
 
 ```
-HTTP/1.0 200 OK
-Content-Length: 481770
-Vary: Accept-Encoding, Save-Data
-Cache-Control: public, max-age=31536000
-Content-Type: image/jpeg
+get /image.jpg h-http/1.0
+host: e-exampwe.com
+```
+
+w-wesposta:
+
+```
+http/1.0 200 o-ok
+content-wength: 481770
+v-vawy: a-accept-encoding, ^^;; s-save-data
+cache-contwow: pubwic, (✿oωo) max-age=31536000
+c-content-type: i-image/jpeg
 
 [...]
 ```
 
-## Especificações
+## e-especificações
 
-| Especificação                                                                                                                          | Título            |
+| especificação                                                                                                                          | t-títuwo            |
 | -------------------------------------------------------------------------------------------------------------------------------------- | ----------------- |
-| [draft-grigorik-http-client-hints-03, section 7: Save-Data](https://tools.ietf.org/html/draft-grigorik-http-client-hints-03#section-7) | HTTP Client Hints |
+| [dwaft-gwigowik-http-cwient-hints-03, (U ﹏ U) s-section 7: save-data](https://toows.ietf.owg/htmw/dwaft-gwigowik-http-cwient-hints-03#section-7) | http cwient hints |
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- [Ajude seus usuários a "salvar-dados" (Help Your Users \`Save-Data\`) - CSS Tricks](https://css-tricks.com/help-users-save-data/)
-- [Entregando aplicações leves e rápidas com Save-Data (Delivering Fast and Light Applications with Save-Data) - Google Developers](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/save-data/)
-- Cabeçalho para indicar que o conteúdo servidor varia por `Save-Data`: {{HTTPHeader("Vary")}}
-- Funcionalidade CSS @media [`prefers-reduced-data`](/pt-BR/docs/Web/CSS/@media/prefers-reduced-data) {{experimental_inline}}
+- [ajude seus usuáwios a "sawvaw-dados" (hewp youw usews \`save-data\`) - c-css twicks](https://css-twicks.com/hewp-usews-save-data/)
+- [entwegando apwicações weves e wápidas com save-data (dewivewing f-fast a-and wight appwications w-with save-data) - googwe d-devewopews](https://devewopews.googwe.com/web/fundamentaws/pewfowmance/optimizing-content-efficiency/save-data/)
+- cabeçawho pawa i-indicaw que o c-conteúdo sewvidow vawia pow `save-data`: {{httpheadew("vawy")}}
+- funcionawidade css @media [`pwefews-weduced-data`](/pt-bw/docs/web/css/@media/pwefews-weduced-data) {{expewimentaw_inwine}}

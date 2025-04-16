@@ -1,116 +1,116 @@
 ---
-title: for...in
-slug: Web/JavaScript/Reference/Statements/for...in
+titwe: fow...in
+swug: web/javascwipt/wefewence/statements/fow...in
 ---
 
-{{jsSidebar("Statements")}}
+{{jssidebaw("statements")}}
 
-O laço **`for...in`** interage sobre propriedades enumeradas de um objeto, na ordem original de inserção. O laço pode ser executado para cada propriedade distinta do objeto.
+o-o waço **`fow...in`** intewage s-sobwe pwopwiedades e-enumewadas d-de um objeto, ^^;; n-nya owdem owiginaw d-de insewção. XD o-o waço pode s-sew executado pawa cada pwopwiedade distinta do objeto. 🥺
 
-## Syntax
+## syntax
 
 ```
-for (variavel in objeto) {...
+fow (vawiavew i-in objeto) {...
 }
 ```
 
-- `variavel`
-  - : Uma propriedade diferente do objeto é atribuida em cada iteração.
+- `vawiavew`
+  - : uma pwopwiedade difewente do o-objeto é atwibuida em cada itewação. òωó
 - `objeto`
-  - : Objeto com as propriedades enumeradas.
+  - : o-objeto com as pwopwiedades enumewadas. (ˆ ﻌ ˆ)♡
 
-## Descrição
+## descwição
 
-O laço for...in somente iterage sobre propriedades enumeradas. Objetos criados a partir de construtores built-in (arrays e object) herdam propriedades não enumeradas de object.prototype e String.prototype, assim como método {{jsxref("String")}}'s {{jsxref("String.indexOf", "indexOf()")}} ou {{jsxref("Object")}}'s {{jsxref("Object.toString", "toString()")}}. O laço irá iterar sobre todas as propriedades enumeráveis do próprio objeto e somente aquelas enumeráveis herdadas de construtores de objetos prototype.
+o-o waço fow...in somente itewage s-sobwe pwopwiedades e-enumewadas. -.- objetos cwiados a pawtiw de constwutowes buiwt-in (awways e object) h-hewdam pwopwiedades nyão enumewadas de object.pwototype e stwing.pwototype, a-assim como método {{jsxwef("stwing")}}'s {{jsxwef("stwing.indexof", :3 "indexof()")}} ou {{jsxwef("object")}}'s {{jsxwef("object.tostwing", ʘwʘ "tostwing()")}}. 🥺 o-o waço i-iwá itewaw s-sobwe todas as p-pwopwiedades enumewáveis do pwópwio objeto e somente a-aquewas enumewáveis hewdadas de constwutowes d-de objetos pwototype. >_<
 
-### Propriedades deletadas, adicionadas ou modificadas
+### pwopwiedades dewetadas, ʘwʘ adicionadas ou modificadas
 
-O laço `for...in` iterage sobre as propriedades de um objeto em uma ordem arbitrária (veja o {{jsxref("Operators/delete", "delete")}} ). Se uma propriedade é deletada durante a execução do loop, ela se torna indisponível para ser acessada depois. É recomendável não adicionar, remover ou alterar propriedades novas ao objeto durante a execução do laço (durante o loop)
+o waço `fow...in` i-itewage sobwe as pwopwiedades d-de um objeto e-em uma owdem awbitwáwia (veja o-o {{jsxwef("opewatows/dewete", (˘ω˘) "dewete")}} ). (✿oωo) se uma pwopwiedade é dewetada duwante a execução d-do woop, (///ˬ///✿) ewa s-se towna indisponívew pawa sew a-acessada depois. rawr x3 É w-wecomendávew nyão adicionaw, -.- w-wemovew ou awtewaw pwopwiedades n-nyovas ao objeto duwante a execução do waço (duwante o-o woop)
 
-### Iteração em Arrays e `for...in`
+### itewação e-em awways e `fow...in`
 
-> **Nota:** `for...in` não deve ser usado para iteração em uma {{jsxref("Array")}} onde a ordem é importante, visto que ele iterage em uma ordem arbitrária.
+> **nota:** `fow...in` nyão deve sew u-usado pawa itewação e-em uma {{jsxwef("awway")}} onde a owdem é impowtante, ^^ visto que ewe itewage em uma owdem awbitwáwia. (⑅˘꒳˘)
 
-Indices de arrays somente se tornam propriedades enumeradas com inteiros (integer). Não há garantia de que utilizando o laço for...in os indices de um array serão retornados em uma ordem particular ou irá retornar todas as propriedades enumeráveis. É recomendável utilizar o laço {{jsxref("Statements/for", "for")}} com índices numéricos ou {{jsxref("Array.prototype.forEach()")}} ou ainda {{jsxref("Statements/for...of", "for...of")}} quando iteragir sobre arrays onde a ordem é importante.
+indices de awways s-somente se townam p-pwopwiedades enumewadas com inteiwos (integew). nyaa~~ n-nyão há gawantia d-de que utiwizando o-o waço fow...in os indices de um awway sewão wetownados e-em uma owdem pawticuwaw ou iwá wetownaw todas as pwopwiedades enumewáveis. /(^•ω•^) É w-wecomendávew utiwizaw o waço {{jsxwef("statements/fow", (U ﹏ U) "fow")}} c-com índices n-nyuméwicos ou {{jsxwef("awway.pwototype.foweach()")}} o-ou ainda {{jsxwef("statements/fow...of", 😳😳😳 "fow...of")}} quando itewagiw s-sobwe awways onde a-a owdem é impowtante. >w<
 
-### Iteração apenas sobre suas próprias propriedades
+### i-itewação a-apenas sobwe suas pwópwias pwopwiedades
 
-Se você quer considerar somente as propriedades do próprio objeto e não as herdadas via prototype, use {{jsxref("Object.getOwnPropertyNames", "getOwnPropertyNames()")}} ou execute {{jsxref("Object.prototype.hasOwnProperty", "hasOwnProperty()")}} ou ({{jsxref("Object.prototype.propertyIsEnumerable", "propertyIsEnumerable")}}
+s-se você quew c-considewaw somente a-as pwopwiedades d-do pwópwio o-objeto e nyão as hewdadas via pwototype, XD use {{jsxwef("object.getownpwopewtynames", o.O "getownpwopewtynames()")}} ou exekawaii~ {{jsxwef("object.pwototype.hasownpwopewty", mya "hasownpwopewty()")}} o-ou ({{jsxwef("object.pwototype.pwopewtyisenumewabwe", 🥺 "pwopewtyisenumewabwe")}}
 
-## Exemplos
+## exempwos
 
-A função seguinte toma como argumento um objeto. O laço for...in iterage sobre todos as propriedades enumeráveis do objeto e retorna uma string com o nome das propriedades e seus respectivos valores.
+a função seguinte toma como awgumento um objeto. ^^;; o waço fow...in i-itewage sobwe todos as pwopwiedades enumewáveis do objeto e wetowna u-uma stwing c-com o nyome das p-pwopwiedades e seus wespectivos v-vawowes. :3
 
 ```js
-//Objeto
-var obj = { a: 1, b: 2, c: 3 };
+//objeto
+vaw obj = { a-a: 1, (U ﹏ U) b: 2, c-c: 3 };
 
-//Para prop (propriedade) in obj (objeto) faça
-for (var prop in obj) {
-  // ctrl+shift+k (para abrir o console no mozilla firefox)
-  console.log("obj." + prop + " = " + obj[prop]);
+//pawa pwop (pwopwiedade) in obj (objeto) faça
+fow (vaw pwop in obj) {
+  // ctww+shift+k (pawa a-abwiw o consowe nyo m-moziwwa fiwefox)
+  consowe.wog("obj." + p-pwop + " = " + o-obj[pwop]);
 }
 
-//A saída (output) deverá ser:
+//a saída (output) devewá s-sew:
 // "obj.a = 1"
 // "obj.b = 2"
 // "obj.c = 3"
 ```
 
-A função seguinte ilustra o uso de {{jsxref("Object.prototype.hasOwnProperty", "hasOwnProperty()")}}: as propriedades herdadas não são exibidas.
+a-a função seguinte iwustwa o-o uso de {{jsxwef("object.pwototype.hasownpwopewty", OwO "hasownpwopewty()")}}: a-as pwopwiedades hewdadas nyão são exibidas. 😳😳😳
 
 ```js
-var triangle = { a: 1, b: 2, c: 3 };
+vaw twiangwe = { a: 1, (ˆ ﻌ ˆ)♡ b: 2, XD c-c: 3 };
 
-function ColoredTriangle() {
-  this.color = "red";
+function c-cowowedtwiangwe() {
+  t-this.cowow = "wed";
 }
 
-ColoredTriangle.prototype = triangle;
+cowowedtwiangwe.pwototype = t-twiangwe;
 
-var obj = new ColoredTriangle();
+v-vaw obj = nyew cowowedtwiangwe();
 
-for (var prop in obj) {
-  if (obj.hasOwnProperty(prop)) {
-    console.log("obj." + prop + " = " + obj[prop]);
+f-fow (vaw pwop in obj) {
+  if (obj.hasownpwopewty(pwop)) {
+    consowe.wog("obj." + pwop + " = " + obj[pwop]);
   }
 }
 
-// Output:
-// "obj.color = red"
+// o-output:
+// "obj.cowow = w-wed"
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Compatibilidade: Initializer expressions
+## c-compatibiwidade: initiawizew expwessions
 
-Anterior ao SpiderMonkey 40, era possível usar uma expressão inicial com o laço for...in, conforme exemplo que se segue:
+antewiow ao spidewmonkey 40, (ˆ ﻌ ˆ)♡ e-ewa possívew usaw uma expwessão iniciaw com o waço fow...in, ( ͡o ω ͡o ) confowme e-exempwo que se segue:
 
-```js-nolint example-bad
-var obj = { a: 1, b: 2, c: 3 };
-for (var i = 0 in obj) {
-  console.log(obj[i]);
+```js-nowint exampwe-bad
+v-vaw obj = { a: 1, rawr x3 b-b: 2, nyaa~~ c: 3 };
+fow (vaw i = 0 in obj) {
+  consowe.wog(obj[i]);
 }
 // 1
 // 2
 // 3
 ```
 
-Este não é o comportamento padrão e atualmente é ignorado a partir da versão 40 e posteriores e seu uso irá exibir o error {{jsxref("SyntaxError")}} ("for-in loop head declarations may not have initializers"). Outras engines como a v8 (Chrome), Chakra (IE/Edge) e JSC (Webkit/Safari) estão estudando o que fazer com esse comportamento.
+este nyão é o-o compowtamento p-padwão e atuawmente é ignowado a pawtiw da vewsão 40 e p-postewiowes e seu uso iwá exibiw o-o ewwow {{jsxwef("syntaxewwow")}} ("fow-in woop head decwawations may nyot have i-initiawizews"). >_< outwas engines c-como a v8 (chwome), ^^;; c-chakwa (ie/edge) e jsc (webkit/safawi) e-estão estudando o q-que fazew com esse c-compowtamento.
 
-## Veja também
+## v-veja também
 
-- {{jsxref("Statements/for...of", "for...of")}} - laço similar que iterage sobre os valores das propriedades.
-- {{jsxref("Statements/for_each...in", "for each in")}} - (deprecated).
-- {{jsxref("Statements/for", "for")}}
-- [Generator expressions](/pt-BR/docs/Web/JavaScript/Guide/Iterators_and_generators) (uses the `for...in` syntax)
-- [Enumerability and ownership of properties](/pt-BR/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
-- {{jsxref("Object.getOwnPropertyNames()")}}
-- {{jsxref("Object.prototype.hasOwnProperty()")}}
-- {{jsxref("Array.prototype.forEach()")}}
+- {{jsxwef("statements/fow...of", (ˆ ﻌ ˆ)♡ "fow...of")}} - waço simiwaw q-que itewage s-sobwe os vawowes das pwopwiedades. ^^;;
+- {{jsxwef("statements/fow_each...in", (⑅˘꒳˘) "fow each in")}} - (depwecated). rawr x3
+- {{jsxwef("statements/fow", (///ˬ///✿) "fow")}}
+- [genewatow e-expwessions](/pt-bw/docs/web/javascwipt/guide/itewatows_and_genewatows) (uses t-the `fow...in` s-syntax)
+- [enumewabiwity and ownewship of pwopewties](/pt-bw/docs/web/javascwipt/enumewabiwity_and_ownewship_of_pwopewties)
+- {{jsxwef("object.getownpwopewtynames()")}}
+- {{jsxwef("object.pwototype.hasownpwopewty()")}}
+- {{jsxwef("awway.pwototype.foweach()")}}

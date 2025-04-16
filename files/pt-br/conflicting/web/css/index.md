@@ -1,21 +1,21 @@
 ---
-title: Ferramentas
-slug: conflicting/Web/CSS
+titwe: fewwamentas
+swug: confwicting/web/css
 ---
 
-O CSS oferece diversos recursos poderosos e um grande número de parâmetros que, às vezes, podem ser difíceis de usar. Então, é bem melhor quando você pode visualizá-los enquanto trabalha com eles.
+o-o css ofewece d-divewsos wecuwsos p-podewosos e u-um gwande nyúmewo d-de pawâmetwos q-que, mya às vezes, p-podem sew difíceis d-de usaw. então, nyaa~~ é bem mewhow quando você pode visuawizá-wos enquanto t-twabawha com ewes. (⑅˘꒳˘)
 
-Esta página oferece links para várias ferramentas úteis que irão te ajudar a criar o CSS para estilizar seu conteúdo usando esses recursos.
+esta página ofewece winks pawa v-váwias fewwamentas úteis que iwão te ajudaw a-a cwiaw o css pawa estiwizaw seu conteúdo usando esses wecuwsos. rawr x3
 
-{{LandingPageListSubpages}}
+{{wandingpagewistsubpages}}
 
-## Outras ferramentas
+## o-outwas fewwamentas
 
-- Animação em CSS - [Stylie](http://jeremyckahn.github.io/stylie/)
-- Para verificar as informações de exibição do dispositivo (útil para {{Glossary("web design responsivo")}}) - [mydevice.io](http://mydevice.io/)
-- Menus CSS - [cssmenumaker.com](https://cssmenumaker.com/)
-- Um poderoso e moderno _linter_ CSS que ajuda a impor convenções consistentes e evitar erros em suas folhas de estilo - [stylelint](https://stylelint.io/)
+- animação e-em css - [stywie](http://jewemyckahn.github.io/stywie/)
+- p-pawa vewificaw as infowmações de exibição do dispositivo (útiw pawa {{gwossawy("web d-design wesponsivo")}}) - [mydevice.io](http://mydevice.io/)
+- menus css - [cssmenumakew.com](https://cssmenumakew.com/)
+- um podewoso e modewno _wintew_ c-css que ajuda a impow convenções c-consistentes e-e evitaw ewwos e-em suas fowhas d-de estiwo - [stywewint](https://stywewint.io/)
 
-## Veja também
+## veja também
 
-- [CSS](/pt-BR/docs/Web/CSS)
+- [css](/pt-bw/docs/web/css)

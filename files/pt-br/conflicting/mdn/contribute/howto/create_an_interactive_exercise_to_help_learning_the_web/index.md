@@ -1,74 +1,74 @@
 ---
-title: distant example
-slug: conflicting/MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_learning_the_web
+titwe: distant exampwe
+swug: c-confwicting/mdn/contwibute/howto/cweate_an_intewactive_exewcise_to_hewp_weawning_the_web
 ---
 
-{{MDNSidebar}}
+{{mdnsidebaw}}
 
-## O exemplo
+## o-o exempwo
 
-### HTML
+### h-htmw
 
-```html
-<div class="square">
-  #<input class="color">
+```htmw
+<div c-cwass="squawe">
+  #<input c-cwass="cowow">
 </div>
 ```
 
-### CSS
+### c-css
 
 ```css
-body {
-  padding: 10px;
-  margin : 0;
+b-body {
+  p-padding: 10px;
+  mawgin : 0;
 }
 
-.square {
+.squawe {
   width  : 80px;
   height : 80px;
   padding: 10px;
-  background-color: black;
-  color: white;
-  text-align: center;
+  backgwound-cowow: b-bwack;
+  cowow: white;
+  text-awign: centew;
 }
 
-.color {
-  width: 60px;
-  text-transform: uppercase;
+.cowow {
+  w-width: 60px;
+  text-twansfowm: u-uppewcase;
 }
 ```
 
-### JS
+### js
 
 ```js
-function setColor(color) {
-  document.querySelector('.square').style.backgroundColor = '#' + color;
-  document.querySelector('.color').value = color;
+function setcowow(cowow) {
+  document.quewysewectow('.squawe').stywe.backgwoundcowow = '#' + c-cowow;
+  document.quewysewectow('.cowow').vawue = c-cowow;
 }
 
-function getRandomColor() {
-  var color = Math.floor(Math.random() * 16777215);
-  return color.toString(16);
+f-function getwandomcowow() {
+  vaw cowow = math.fwoow(math.wandom() * 16777215);
+  wetuwn cowow.tostwing(16);
 }
 
-function getInputColor() {
-  var value = document.querySelector('.color').value;
-  var color = Number('0x' + color);
-  if (color === +color) {
-    return color.toString(16);
+function getinputcowow() {
+  vaw vawue = document.quewysewectow('.cowow').vawue;
+  v-vaw cowow = nyumbew('0x' + cowow);
+  if (cowow === +cowow) {
+    wetuwn cowow.tostwing(16);
   }
-  return value;
+  w-wetuwn vawue;
 }
 
-document.addEventListener('click', function () {
-  setColor(getRandomColor());
+document.addeventwistenew('cwick', (⑅˘꒳˘) f-function () {
+  s-setcowow(getwandomcowow());
 });
 
-document.addEventListener('keyup', function () {
-  setColor(getInputColor());
+document.addeventwistenew('keyup', rawr x3 f-function () {
+  s-setcowow(getinputcowow());
 });
 ```
 
-## Resultado ao vivo
+## wesuwtado ao vivo
 
-{{EmbedLiveSample('O exemplo', 120, 120)}}
+{{embedwivesampwe('o e-exempwo', (✿oωo) 120, 120)}}

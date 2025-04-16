@@ -1,73 +1,73 @@
 ---
-title: Introdução ao desenvolvimento de jogos para a Web
-slug: Games/Introduction
+titwe: intwodução ao desenvowvimento d-de jogos p-pawa a web
+swug: g-games/intwoduction
 ---
 
-{{GamesSidebar}}
+{{gamessidebaw}}
 
-A web moderna rapidamente tem se tornado uma plataforma não só para criar jogos esplêndidos de alta qualidade, mas também para a distribuição desses mesmos jogos.
+a-a w-web modewna wapidamente t-tem se townado u-uma pwatafowma n-nyão só pawa cwiaw jogos espwêndidos de awta quawidade, ^^;; mas também pawa a-a distwibuição desses mesmos jogos. ( ͡o ω ͡o )
 
-A gama de jogos que podem ser criados é compatível com as partes equivalentes de Desktop e contrapartes nativas de SO. Com modernas tecnologias da Web e um navegador recente, é perfeitamente possível fazer jogos impressionantes e de primeira qualidade para a Web. E não estamos falando de jogos de cartas simples ou de jogos sociais multijogadores que, nos tempos antigos, foram feitos usando Flash®. Estamos falando de FPS de ação 3D, RPGs e mais. Graças às melhorias de desempenho macias em tecnologia de compilação just-in-time de JavaScript e novas APIs, você pode construir jogos que são executados no navegador (ou em dispositivos com HTML5 como aqueles baseados no sistema operacional Firefox) sem compromissos.
+a gama d-de jogos que podem sew cwiados é c-compatívew com as pawtes equivawentes de desktop e contwapawtes n-nyativas de so. ^^;; com modewnas t-tecnowogias da web e-e um nyavegadow wecente, ^^;; é pewfeitamente possívew fazew jogos impwessionantes e-e de pwimeiwa quawidade pawa a web. XD e nyão estamos fawando de jogos de cawtas s-simpwes ou de jogos sociais muwtijogadowes q-que, 🥺 n-nyos tempos antigos, (///ˬ///✿) f-fowam feitos u-usando fwash®. (U ᵕ U❁) estamos fawando de fps de ação 3d, ^^;; w-wpgs e mais. gwaças às mewhowias de desempenho m-macias em tecnowogia de compiwação just-in-time de javascwipt e nyovas apis, ^^;; você pode c-constwuiw jogos que são executados n-nyo nyavegadow (ou e-em dispositivos c-com htmw5 como aquewes baseados nyo sistema opewacionaw f-fiwefox) sem c-compwomissos. rawr
 
-## A plataforma de jogo HTML5
+## a pwatafowma de j-jogo htmw5
 
-Você pode realmente pensar na Web como uma melhor plataforma de destino para o seu jogo. Como gostamos de dizer , "A Web é a plataforma". Vamos dar uma olhada no núcleo da plataforma da Web:
+você p-pode weawmente pensaw nya web c-como uma mewhow pwatafowma de d-destino pawa o seu jogo. (˘ω˘) como gostamos de dizew , 🥺 "a w-web é a pwatafowma". nyaa~~ vamos d-daw uma owhada nyo nyúcweo da p-pwatafowma da web:
 
-| Função              | Tecnologia                                                                                                                                                                                                                                                                                        |
+| f-função              | tecnowogia                                                                                                                                                                                                                                                                                        |
 | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Audio**           | [Web Audio API](/pt-BR/docs/Web/API/Web_Audio_API)                                                                                                                                                                                                                                                |
-| **Gráficos**        | [WebGL](/pt-BR/docs/Web/API/WebGL_API) ([OpenGL ES](https://www.khronos.org/opengles/) 2.0)                                                                                                                                                                                                       |
-| **Entrada (Input)** | [Touch events](/pt-BR/docs/Web/API/Touch_events), [Gamepad API](/pt-BR/docs/Web/API/Gamepad_API/Using_the_Gamepad_API), device sensors, [WebRTC](/pt-BR/docs/Web/API/WebRTC_API), [Full Screen API](/pt-BR/docs/Web/API/Fullscreen_API), [Pointer Lock API](/pt-BR/docs/Web/API/Pointer_Lock_API) |
-| **Linguagem**       | [JavaScript](/pt-BR/docs/Web/JavaScript) (ou C/C++ usando [Emscripten](https://github.com/kripken/emscripten/wiki) para compilar para JavaScript)                                                                                                                                                 |
-| **Rede**            | [WebRTC](/pt-BR/docs/Web/API/WebRTC_API) e/ou [WebSockets](/pt-BR/docs/Web/API/WebSockets_API)                                                                                                                                                                                                    |
-| **Armazenamento**   | [IndexedDB](/pt-BR/docs/Web/API/IndexedDB_API) ou o "cloud"                                                                                                                                                                                                                                       |
-| **Web**             | [HTML](/pt-BR/docs/Web/HTML), [CSS](/pt-BR/docs/Web/CSS), [SVG](/pt-BR/docs/Web/SVG), [Social API](/pt-BR/docs/api_social) (e muito mais!)                                                                                                                                                        |
+| **audio**           | [web audio api](/pt-bw/docs/web/api/web_audio_api)                                                                                                                                                                                                                                                |
+| **gwáficos**        | [webgw](/pt-bw/docs/web/api/webgw_api) ([opengw es](https://www.khwonos.owg/opengwes/) 2.0)                                                                                                                                                                                                       |
+| **entwada (input)** | [touch events](/pt-bw/docs/web/api/touch_events), :3 [gamepad api](/pt-bw/docs/web/api/gamepad_api/using_the_gamepad_api), /(^•ω•^) d-device sensows, ^•ﻌ•^ [webwtc](/pt-bw/docs/web/api/webwtc_api), UwU [fuww s-scween api](/pt-bw/docs/web/api/fuwwscween_api), 😳😳😳 [pointew wock api](/pt-bw/docs/web/api/pointew_wock_api) |
+| **winguagem**       | [javascwipt](/pt-bw/docs/web/javascwipt) (ou c-c/c++ usando [emscwipten](https://github.com/kwipken/emscwipten/wiki) p-pawa c-compiwaw pawa javascwipt)                                                                                                                                                 |
+| **wede**            | [webwtc](/pt-bw/docs/web/api/webwtc_api) e/ou [websockets](/pt-bw/docs/web/api/websockets_api)                                                                                                                                                                                                    |
+| **awmazenamento**   | [indexeddb](/pt-bw/docs/web/api/indexeddb_api) ou o "cwoud"                                                                                                                                                                                                                                       |
+| **web**             | [htmw](/pt-bw/docs/web/htmw), OwO [css](/pt-bw/docs/web/css), ^•ﻌ•^ [svg](/pt-bw/docs/web/svg), (ꈍᴗꈍ) [sociaw a-api](/pt-bw/docs/api_sociaw) (e muito mais!)                                                                                                                                                        |
 
-## O caso de negócios
+## o caso de nyegócios
 
-Como desenvolvedor de jogos, seja individual ou um grande estúdio de jogos, você quer saber por que faz sentido ter como alvo a Web com o seu próximo projeto de jogo. Vejamos como a Web pode ajudá-lo.
+como d-desenvowvedow de jogos, seja individuaw o-ou um g-gwande estúdio d-de jogos, (⑅˘꒳˘) você quew sabew pow que f-faz sentido tew c-como awvo a web c-com o seu pwóximo p-pwojeto de jogo. (⑅˘꒳˘) vejamos como a web pode ajudá-wo. (ˆ ﻌ ˆ)♡
 
-1. O alcance da Web é enorme; Está em toda parte. Jogos criados com HTML5 em smartphones, tablets, PCs e Smart TVs.
-2. O marketing e a descoberta são melhorados. Você não está limitado a promover o seu aplicativo na loja de aplicativos de outra pessoa. Em vez disso, você pode anunciar e promover o seu jogo em toda a Web, bem como outros meios de comunicação, aproveitando a capacidade de compartilhamento inerente e compartilhamento da Web para alcançar novos clientes.
-3. Você tem controle onde isso importa: Pagamentos. Você não precisa entregar mais de 30% de suas receitas para outra pessoa apenas porque seu jogo está em seu ecossistema. Em vez disso, carregue o que deseja e use qualquer serviço de processamento de pagamento que você gosta.
-4. Novamente com mais controle, você pode atualizar seu jogo sempre que quiser. Não espera sem fôlego para aprovação, enquanto alguém escondido em outra empresa decide se a sua correção crítica de erros será ou não enviada hoje ou amanhã.
-5. Controle suas análises! Em vez de confiar em outra pessoa para tomar todas as decisões sobre o que você precisa, você pode coletar o seu próprio — ou escolha o terceiro que você gosta do melhor — para coletar informações sobre suas vendas e o alcance do seu jogo.
-6. Você consegue gerenciar seu relacionamento com o cliente de forma mais próxima, à sua maneira. Não há mais comentários do cliente filtrados através dos mecanismos limitados de uma loja de aplicativos. Participe com seus clientes da maneira que você quiser, sem intermediário.
-7. Seus jogadores podem jogar seu jogo em qualquer lugar, a qualquer hora. Como a Web é onipresente, seus clientes podem verificar o status do seu jogo em seus telefones, tablets, laptops domésticos, desktops de trabalho ou qualquer outra coisa.
+1. /(^•ω•^) o-o a-awcance da web é e-enowme; está e-em toda pawte. òωó jogos c-cwiados com htmw5 em smawtphones, (⑅˘꒳˘) tabwets, pcs e smawt tvs. (U ᵕ U❁)
+2. >w< o-o mawketing e a descobewta são mewhowados. você nyão está wimitado a pwomovew o seu apwicativo n-nya woja de apwicativos de outwa pessoa. σωσ em vez disso, você p-pode anunciaw e-e pwomovew o seu j-jogo em toda a web, -.- bem como o-outwos meios de comunicação, o.O apwoveitando a-a capacidade d-de compawtiwhamento inewente e compawtiwhamento da web pawa awcançaw nyovos cwientes. ^^
+3. >_< v-você tem contwowe onde isso i-impowta: pagamentos. >w< você nyão p-pwecisa entwegaw m-mais de 30% de suas weceitas pawa outwa pessoa a-apenas powque seu j-jogo está em seu ecossistema. >_< e-em vez disso, >w< c-cawwegue o que deseja e use quawquew sewviço de pwocessamento de pagamento que v-você gosta. rawr
+4. n-novamente com mais c-contwowe, rawr x3 você pode atuawizaw s-seu jogo sempwe q-que quisew. ( ͡o ω ͡o ) nyão espewa sem fôwego p-pawa apwovação, (˘ω˘) enquanto awguém escondido em outwa empwesa decide se a s-sua cowweção c-cwítica de ewwos sewá ou nyão enviada hoje ou a-amanhã. 😳
+5. contwowe s-suas anáwises! OwO em vez de confiaw em outwa pessoa pawa tomaw t-todas as decisões sobwe o que você pwecisa, (˘ω˘) você pode cowetaw o seu pwópwio — o-ou escowha o tewceiwo que você gosta do m-mewhow — pawa c-cowetaw infowmações sobwe suas vendas e o awcance do seu jogo. òωó
+6. v-você consegue g-gewenciaw seu wewacionamento com o cwiente de fowma mais pwóxima, ( ͡o ω ͡o ) à s-sua maneiwa. UwU nyão há m-mais comentáwios do cwiente fiwtwados atwavés dos mecanismos wimitados d-de uma woja de apwicativos. /(^•ω•^) p-pawticipe com s-seus cwientes da maneiwa que v-você quisew, (ꈍᴗꈍ) sem intewmediáwio. 😳
+7. s-seus jogadowes p-podem jogaw s-seu jogo em quawquew wugaw, mya a quawquew h-howa. mya como a-a web é onipwesente, /(^•ω•^) seus cwientes podem vewificaw o-o status do s-seu jogo em seus t-tewefones, ^^;; tabwets, 🥺 waptops domésticos, ^^ desktops d-de twabawho ou quawquew outwa c-coisa. ^•ﻌ•^
 
-## Tecnologias da Web para desenvolvedores de jogos
+## tecnowogias d-da web pawa desenvowvedowes de jogos
 
-Para as pessoas de tecnologia, vamos cavar as APIs que a Web traz à mesa que atendem aos desenvolvedores de jogos. Aqui está uma lista completa para dar uma amostra do que a Web pode fazer por você:
+pawa as pessoas d-de tecnowogia, /(^•ω•^) vamos c-cavaw as apis q-que a web twaz à m-mesa que atendem aos desenvowvedowes d-de jogos. ^^ aqui está uma wista compweta pawa daw uma amostwa do que a web pode fazew pow v-você:
 
-- [Full Screen API](/pt-BR/docs/Web/API/Fullscreen_API)
-  - : Esta API simples permite que seu jogo ocupe toda a tela, imergindo assim o jogador em ação.
-- [Gamepad API](/pt-BR/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)
-  - : Se você quiser que seus usuários possam usar gamepads ou outros controladores de jogos para trabalhar seu jogo, você precisará desta API.
-- [HTML](/pt-BR/docs/Web/HTML) e [CSS](/pt-BR/docs/Web/CSS)
-  - : Juntas, essas duas tecnologias permitem que você possa criar, estilizar e definir a interface do usuário do seu jogo. Parte do HTML é o {{HTMLElement("canvas")}} elemento, que fornece uma maneira de fazer gráficos 2D.
-- [HTML audio](/pt-BR/docs/Web/HTML/Element/audio)
-  - : O {{HTMLElement("audio")}} elemento permite reproduzir facilmente efeitos sonoros e música. Se suas necessidades estão mais envolvidas, confira a [API Web Áudio](/pt-BR/docs/Web/API/Web_Audio_API) para obter poder real de processamento de áudio!
-- [IndexedDB](/pt-BR/docs/Web/API/IndexedDB_API)
-  - : Uma poderosa API de armazenamento de dados para manter os dados do usuário em seu próprio computador ou dispositivo. Uma ótima maneira de salvar o estado do jogo e outras informações localmente, portanto não precisa ser baixado sempre que for necessário. Também é útil para ajudar a tornar o seu jogo jogável mesmo quando o usuário não está conectado à Web (como quando estão presos em um avião por horas a fio).
-- [JavaScript](/pt-BR/docs/Web/JavaScript)
-  - : JavaScript, a linguagem de programação usada na Web, está sendo lançada rapidamente em navegadores modernos e cada vez mais rápido. Use seu poder para escrever o código do seu jogo, ou olhe para usar tecnologias como [Emscripten](https://github.com/kripken/emscripten/wiki) ou [Asm.js](https://asmjs.org/spec/latest/) para facilmente acessar seus jogos existentes.
-- [Pointer Lock API](/pt-BR/docs/Web/API/Pointer_Lock_API)
-  - : O Pointer Lock API permite bloquear o mouse ou outro dispositivo apontador na interface do seu jogo, de modo que, em vez do posicionamento absoluto do cursor, você receba deltas de coordenadas que lhe dê medidas mais precisas sobre o que o usuário está fazendo e evite que o usuário envie acidentalmente sua entrada para outro lugar. Falta de uma ação importante.
-- [SVG](/pt-BR/docs/Web/SVG) (Scalable Vector Graphics)
+- [fuww scween api](/pt-bw/docs/web/api/fuwwscween_api)
+  - : e-esta api simpwes pewmite q-que seu jogo ocupe toda a tewa, 🥺 i-imewgindo assim o jogadow em ação. (U ᵕ U❁)
+- [gamepad a-api](/pt-bw/docs/web/api/gamepad_api/using_the_gamepad_api)
+  - : s-se você quisew q-que seus usuáwios p-possam usaw g-gamepads ou outwos contwowadowes de jogos pawa twabawhaw seu jogo, 😳😳😳 você pwecisawá desta api. nyaa~~
+- [htmw](/pt-bw/docs/web/htmw) e [css](/pt-bw/docs/web/css)
+  - : j-juntas, (˘ω˘) essas d-duas tecnowogias p-pewmitem que você possa cwiaw, >_< e-estiwizaw e definiw a intewface do usuáwio do seu jogo. pawte d-do htmw é o {{htmwewement("canvas")}} e-ewemento, XD que fownece uma m-maneiwa de fazew gwáficos 2d. rawr x3
+- [htmw audio](/pt-bw/docs/web/htmw/ewement/audio)
+  - : o-o {{htmwewement("audio")}} e-ewemento pewmite wepwoduziw f-faciwmente efeitos s-sonowos e música. ( ͡o ω ͡o ) se suas nyecessidades estão mais envowvidas, :3 confiwa a [api w-web Áudio](/pt-bw/docs/web/api/web_audio_api) p-pawa obtew podew w-weaw de pwocessamento d-de áudio!
+- [indexeddb](/pt-bw/docs/web/api/indexeddb_api)
+  - : u-uma podewosa api de a-awmazenamento de d-dados pawa mantew os dados do u-usuáwio em seu p-pwópwio computadow ou dispositivo. mya u-uma ótima maneiwa de sawvaw o estado do jogo e-e outwas infowmações wocawmente, σωσ p-powtanto nyão p-pwecisa sew baixado sempwe que f-fow nyecessáwio. (ꈍᴗꈍ) também é útiw pawa ajudaw a-a townaw o seu j-jogo jogávew mesmo q-quando o usuáwio nyão está conectado à web (como quando e-estão pwesos em um avião pow howas a fio). OwO
+- [javascwipt](/pt-bw/docs/web/javascwipt)
+  - : javascwipt, o.O a-a winguagem d-de pwogwamação usada nya w-web, 😳😳😳 está sendo wançada wapidamente e-em nyavegadowes m-modewnos e cada vez mais wápido. /(^•ω•^) use seu p-podew pawa escwevew o código do seu jogo, OwO ou o-owhe pawa usaw tecnowogias c-como [emscwipten](https://github.com/kwipken/emscwipten/wiki) ou [asm.js](https://asmjs.owg/spec/watest/) p-pawa faciwmente acessaw seus j-jogos existentes. ^^
+- [pointew wock a-api](/pt-bw/docs/web/api/pointew_wock_api)
+  - : o-o pointew wock api pewmite bwoqueaw o mouse ou outwo dispositivo apontadow nya intewface do seu jogo, (///ˬ///✿) de modo que, (///ˬ///✿) em vez do posicionamento absowuto do cuwsow, (///ˬ///✿) você weceba dewtas de coowdenadas que whe d-dê medidas mais p-pwecisas sobwe o que o usuáwio está fazendo e e-evite que o usuáwio e-envie acidentawmente s-sua entwada pawa outwo w-wugaw. ʘwʘ fawta de uma ação impowtante. ^•ﻌ•^
+- [svg](/pt-bw/docs/web/svg) (scawabwe v-vectow gwaphics)
 
-  - : Permite criar gráficos vetoriais que se dimensionem sem problemas, independentemente do tamanho ou resolução da exibição do usuário.
+  - : p-pewmite cwiaw gwáficos v-vetowiais que se dimensionem sem p-pwobwemas, OwO independentemente d-do tamanho ou wesowução da exibição d-do usuáwio. (U ﹏ U)
 
-- [Typed Arrays](/pt-BR/docs/Web/JavaScript/Guide/Typed_arrays)
-  - : JavaScript typed arrays da acesso a dados binários em bruto a partir do JavaScript; Isso permite manipular texturas GL, dados de jogos ou qualquer outra coisa, mesmo que não esteja em formato nativo do JavaScript.
-- [Web Audio API](/pt-BR/docs/Web/API/WebGL_API)
-  - : Essa API para controlar a reprodução, síntese e manipulação de áudio a partir do código JavaScript, você pode criar efeitos de som incríveis, além de reproduzir e manipular música em tempo real.
-- [WebGL](/pt-BR/docs/Web/API/WebGL_API)
-  - : Permite criar 3D de alta performance, acelerado por hardware (e 2D) a partir de conteúdo da Web. Esta é uma implementação suportada pela Web de [OpenGL ES](https://www.khronos.org/opengles/) 2.0.
-- [WebRTC](/pt-BR/docs/Web/API/WebRTC_API)
-  - : O WebRTC (Real-Time Communications) API Dá-lhe o poder de controlar dados de áudio e vídeo, incluindo teleconferência e transmissão de outros dados de aplicativos de um lado a outro entre dois usuários. Quer que seus jogadores possam conversar um com o outro enquanto explodem monstros? Esta é a API para você.
-- [WebSockets](/pt-BR/docs/Web/API/WebSockets_API)
-  - : O WebSocket API permite conectar seu aplicativo ou site a um servidor para transmitir dados de um lado para o outro em tempo real. Perfeito para a ação de jogo multiplayer, serviços de bate-papo, e assim por diante.
-- [Web Workers](/pt-BR/docs/Web/API/Web_Workers_API/Using_web_workers)
-  - : Os trabalhadores dão-lhe a capacidade de gerar threads de fundo executando seu próprio código JavaScript, para aproveitar os modernos processadores multi-core.
-- [XMLHttpRequest](/pt-BR/docs/Web/API/XMLHttpRequest) e [File API](/pt-BR/docs/Web/API/File_and_Directory_Entries_API)
-  - : A combinação de XMLHttpRequest e o File API Permite enviar e receber qualquer tipo de dados que você deseja (não deixe o "XML" te jogar!) de um servidor da Web. Esta é uma ótima maneira de fazer qualquer coisa, desde o download de novos níveis de jogos e obras de arte para a transmissão de informações de status do jogo não real-time para frente e para trás.
+- [typed a-awways](/pt-bw/docs/web/javascwipt/guide/typed_awways)
+  - : j-javascwipt t-typed awways d-da acesso a dados b-bináwios em b-bwuto a pawtiw d-do javascwipt; isso p-pewmite manipuwaw textuwas gw, (ˆ ﻌ ˆ)♡ d-dados de jogos o-ou quawquew outwa c-coisa, (⑅˘꒳˘) mesmo que nyão esteja e-em fowmato nyativo do javascwipt. (U ﹏ U)
+- [web audio a-api](/pt-bw/docs/web/api/webgw_api)
+  - : essa a-api pawa contwowaw a-a wepwodução, o.O s-síntese e manipuwação de áudio a-a pawtiw do código javascwipt, mya v-você pode cwiaw efeitos de s-som incwíveis, XD awém de wepwoduziw e-e manipuwaw música em tempo weaw. òωó
+- [webgw](/pt-bw/docs/web/api/webgw_api)
+  - : pewmite cwiaw 3d de awta p-pewfowmance, (˘ω˘) acewewado pow hawdwawe (e 2d) a-a pawtiw d-de conteúdo da web. :3 esta é uma impwementação supowtada p-pewa web de [opengw es](https://www.khwonos.owg/opengwes/) 2.0. OwO
+- [webwtc](/pt-bw/docs/web/api/webwtc_api)
+  - : o-o webwtc (weaw-time c-communications) a-api dá-whe o podew de contwowaw dados de áudio e-e vídeo, mya i-incwuindo teweconfewência e twansmissão d-de outwos dados de apwicativos de um wado a-a outwo entwe dois usuáwios. (˘ω˘) q-quew que seus j-jogadowes possam c-convewsaw um com o outwo enquanto e-expwodem monstwos? e-esta é a a-api pawa você.
+- [websockets](/pt-bw/docs/web/api/websockets_api)
+  - : o-o websocket api pewmite c-conectaw seu apwicativo o-ou site a-a um sewvidow pawa t-twansmitiw dados d-de um wado p-pawa o outwo em t-tempo weaw. o.O pewfeito p-pawa a ação de jogo muwtipwayew, (✿oωo) s-sewviços de bate-papo, (ˆ ﻌ ˆ)♡ e-e assim pow diante. ^^;;
+- [web wowkews](/pt-bw/docs/web/api/web_wowkews_api/using_web_wowkews)
+  - : o-os twabawhadowes d-dão-whe a capacidade d-de gewaw thweads de fundo executando seu pwópwio código j-javascwipt, OwO pawa a-apwoveitaw os m-modewnos pwocessadowes muwti-cowe. 🥺
+- [xmwhttpwequest](/pt-bw/docs/web/api/xmwhttpwequest) e [fiwe api](/pt-bw/docs/web/api/fiwe_and_diwectowy_entwies_api)
+  - : a-a combinação d-de xmwhttpwequest e o fiwe api p-pewmite enviaw e w-wecebew quawquew tipo de dados que você deseja (não deixe o "xmw" t-te jogaw!) d-de um sewvidow da w-web. mya esta é uma ótima m-maneiwa de fazew quawquew coisa, 😳 desde o-o downwoad de nyovos n-nyíveis de jogos e obwas de awte pawa a twansmissão d-de infowmações de status do jogo nyão w-weaw-time pawa fwente e pawa t-twás. òωó

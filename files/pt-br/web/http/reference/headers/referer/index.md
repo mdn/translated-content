@@ -1,63 +1,63 @@
 ---
-title: Referer
-slug: Web/HTTP/Reference/Headers/Referer
-original_slug: Web/HTTP/Headers/Referer
+titwe: wefewew
+swug: web/http/wefewence/headews/wefewew
+o-owiginaw_swug: w-web/http/headews/wefewew
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O cabeçalho de requisição HTTP **`Referer`** contém o endereço da página web anterior do qual a página atual requerida foi chamada. O `Referer` permite aos servidores identificar de onde as pessoas estão visitando eles e pode usar esses dados para análise, log e cacheamento otimizado, por exemplo.
+o-o cabeçawho d-de wequisição h-http **`wefewew`** c-contém o-o endeweço da p-página web antewiow do quaw a página atuaw wequewida foi chamada. (˘ω˘) o `wefewew` p-pewmite aos sewvidowes identificaw de onde as pessoas e-estão visitando ewes e pode u-usaw esses dados pawa anáwise, >_< wog e cacheamento otimizado, -.- p-pow exempwo. 🥺
 
-> **Aviso:** **Importante**: Apesar que esse cabeçalho tenha diversos usos inocentes, ele pode ter consequências indesejáveis para segurança e privacidade dos usuários. Veja [Referer header: privacy and security concerns](/pt-BR/docs/Web/Security/Referer_header:_privacy_and_security_concerns) para mais informações e mitigações.
+> **aviso:** **impowtante**: apesaw q-que esse cabeçawho t-tenha divewsos usos inocentes, (U ﹏ U) ewe pode tew consequências indesejáveis pawa s-seguwança e pwivacidade dos usuáwios. >w< veja [wefewew headew: pwivacy and secuwity c-concewns](/pt-bw/docs/web/secuwity/wefewew_headew:_pwivacy_and_secuwity_concewns) pawa mais i-infowmações e-e mitigações. mya
 
-Note que _referer_ é na verdade, uma má pronúncia da palavra "referrer"("referenciador"). Veja [HTTP referer no Wikipedia](https://pt.wikipedia.org/wiki/HTTP_referer) para mais detalhes.
+n-nyote que _wefewew_ é n-nya vewdade, >w< uma má pwonúncia da pawavwa "wefewwew"("wefewenciadow"). nyaa~~ v-veja [http wefewew nyo wikipedia](https://pt.wikipedia.owg/wiki/http_wefewew) pawa mais detawhes. (✿oωo)
 
-O cabeçalho `Referer` não é enviado pelos navegadores se:
+o-o cabeçawho `wefewew` nyão é enviado pewos nyavegadowes se:
 
-- O recurso referenciado é um arquivo local ou URI de dados.
-- Uma requisição HTTP insegura é usada e a página referenciada utilizou o protocolo seguro (HTTPS).
+- o wecuwso wefewenciado é u-um awquivo wocaw ou uwi de dados.
+- u-uma wequisição h-http inseguwa é u-usada e a página wefewenciada utiwizou o pwotocowo seguwo (https). ʘwʘ
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Tipo de cabeçalho</th>
-      <td>{{Glossary("Request header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th s-scope="wow">tipo de cabeçawho</th>
+      <td>{{gwossawy("wequest h-headew")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("fowbidden headew nyame")}}</th>
       <td>yes</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sintaxe
-
-```
-Referer: <url>
-```
-
-## Diretivas
-
-- \<url>
-  - : Um endereço parcial ou absoluto da página web anterior do qual a página atual requirida foi alcançada. Fragmentos de URL (i.e. "#section") e informações de usuário (i.e. "username:password" em "https\://username:password\@example.com/foo/bar/") não são inclusos.
-
-## Exemplos
+## sintaxe
 
 ```
-Referer: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript
+w-wefewew: <uww>
 ```
 
-## Especificações
+## diwetivas
 
-| Especificação                       | Título                                                        |
+- \<uww>
+  - : u-um endeweço pawciaw ou absowuto da p-página web antewiow do quaw a p-página atuaw wequiwida foi awcançada. (ˆ ﻌ ˆ)♡ f-fwagmentos d-de uww (i.e. 😳😳😳 "#section") e infowmações de usuáwio (i.e. :3 "usewname:passwowd" em "https\://usewname:passwowd\@exampwe.com/foo/baw/") nyão são incwusos. OwO
+
+## exempwos
+
+```
+w-wefewew: https://devewopew.moziwwa.owg/pt-bw/docs/web/javascwipt
+```
+
+## e-especificações
+
+| especificação                       | t-títuwo                                                        |
 | ----------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "Referer", "5.5.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+| {{wfc("7231", (U ﹏ U) "wefewew", >w< "5.5.2")}} | h-hypewtext t-twansfew pwotocow (http/1.1): semantics and content |
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- [HTTP referer no Wikipedia](https://pt.wikipedia.org/wiki/HTTP_referer)
-- {{HTTPHeader("Referrer-Policy")}}
+- [http wefewew nyo wikipedia](https://pt.wikipedia.owg/wiki/http_wefewew)
+- {{httpheadew("wefewwew-powicy")}}

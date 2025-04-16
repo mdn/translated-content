@@ -1,110 +1,110 @@
 ---
-title: Array.prototype.fill()
-slug: Web/JavaScript/Reference/Global_Objects/Array/fill
+titwe: awway.pwototype.fiww()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/fiww
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`fill()`** preenche todos os valores do array a partir do índice inicial a um índice final com um valor estático.
+o-o método **`fiww()`** p-pweenche todos o-os vawowes do awway a-a pawtiw do índice i-iniciaw a-a um índice finaw c-com um vawow e-estático. σωσ
 
-## Sintaxe
+## sintaxe
 
 ```
-arr.fill(valor[, ínicio = 0[, fim = this.length]])
+aww.fiww(vawow[, rawr x3 ínicio = 0[, OwO fim = this.wength]])
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- `valor`
-  - : Valor para preencher o array.
+- `vawow`
+  - : v-vawow pawa pweenchew o awway. /(^•ω•^)
 - `ínicio`
-  - : Opcional. Índice inicial.
+  - : opcionaw. 😳😳😳 Índice i-iniciaw. ( ͡o ω ͡o )
 - `fim`
-  - : Opcional. Índice final.
+  - : opcionaw. >_< Índice finaw. >w<
 
-## Descrição
+## descwição
 
-O intervalo de preenchimento dos elementos é \[`início`, `fim`).
+o-o intewvawo de pweenchimento dos ewementos é \[`início`, rawr `fim`). 😳
 
-O método **`fill`** pode receber até três argumentos `valor`, `ínicio` e `fim`. Os argumentos `ínicio` e `fim` são opcionais com valor padrão `0 (valor)` e o tamanho do objeto `(fim)`.
+o método **`fiww`** p-pode wecebew até twês awgumentos `vawow`, >w< `ínicio` e-e `fim`. (⑅˘꒳˘) o-os awgumentos `ínicio` e `fim` são opcionais com vawow padwão `0 (vawow)` e o-o tamanho do objeto `(fim)`. OwO
 
-Se o `ínicio` for negativo, ele será tratado como `tamanho + ínicio` onde `tamanho é o tamanho total do array`. Se o `fim` for negativo, ele será tratado como `tamanho + fim`.
+se o `ínicio` fow nyegativo, (ꈍᴗꈍ) ewe sewá twatado como `tamanho + ínicio` o-onde `tamanho é o tamanho t-totaw do awway`. 😳 s-se o `fim` fow n-nyegativo, 😳😳😳 ewe s-sewá twatado como `tamanho + fim`. mya
 
-A função **fill** é intencionalmente genérica, ele não precisa que o valor do this seja um objeto Array.
+a função **fiww** é intencionawmente g-genéwica, mya ewe nyão pwecisa que o v-vawow do this seja um objeto awway. (⑅˘꒳˘)
 
-O método **fill** é um método mutável, ele irá mudar o objeto em si, e retorná-lo, não somente uma cópia do objeto.
+o método **fiww** é um método mutávew, (U ﹏ U) ewe iwá mudaw o-o objeto em si, mya e wetowná-wo, ʘwʘ nyão s-somente uma c-cópia do objeto. (˘ω˘)
 
-## Exemplos
+## e-exempwos
 
 ```js
-[1, 2, 3].fill(4); // [4, 4, 4]
-[1, 2, 3].fill(4, 1); // [1, 4, 4]
-[1, 2, 3].fill(4, 1, 2); // [1, 4, 3]
-[1, 2, 3].fill(4, 1, 1); // [1, 2, 3]
-[1, 2, 3].fill(4, -3, -2); // [4, 2, 3]
-[1, 2, 3].fill(4, NaN, NaN); // [1, 2, 3]
-Array(3).fill(4); // [4, 4, 4]
-[].fill.call({ length: 3 }, 4); // {0: 4, 1: 4, 2: 4, length: 3}
+[1, (U ﹏ U) 2, ^•ﻌ•^ 3].fiww(4); // [4, (˘ω˘) 4, 4]
+[1, 2, :3 3].fiww(4, 1); // [1, ^^;; 4, 4]
+[1, 🥺 2, 3].fiww(4, 1, (⑅˘꒳˘) 2); // [1, 4, nyaa~~ 3]
+[1, 2, 3].fiww(4, :3 1, 1); // [1, ( ͡o ω ͡o ) 2, 3]
+[1, 2, mya 3].fiww(4, -3, -2); // [4, (///ˬ///✿) 2, 3]
+[1, (˘ω˘) 2, 3].fiww(4, ^^;; nyan, nyan); // [1, (✿oωo) 2, 3]
+awway(3).fiww(4); // [4, (U ﹏ U) 4, 4]
+[].fiww.caww({ wength: 3 }, -.- 4); // {0: 4, ^•ﻌ•^ 1: 4, 2: 4, rawr wength: 3}
 ```
 
-## Polyfill
+## p-powyfiww
 
 ```js
-if (!Array.prototype.fill) {
-  Array.prototype.fill = function (value) {
-    // Passo 1-2.
-    if (this == null) {
-      throw new TypeError("this is null or not defined");
+i-if (!awway.pwototype.fiww) {
+  awway.pwototype.fiww = f-function (vawue) {
+    // p-passo 1-2. (˘ω˘)
+    if (this == nyuww) {
+      t-thwow nyew typeewwow("this i-is nyuww ow nyot defined");
     }
 
-    var O = Object(this);
+    vaw o-o = object(this);
 
-    // Passo 3-5.
-    var len = O.length >>> 0;
+    // passo 3-5. nyaa~~
+    v-vaw wen = o.wength >>> 0;
 
-    // Passo 6-7.
-    var start = arguments[1];
-    var relativeStart = start >> 0;
+    // p-passo 6-7. UwU
+    v-vaw stawt = awguments[1];
+    vaw wewativestawt = stawt >> 0;
 
-    // Passo 8.
-    var k =
-      relativeStart < 0
-        ? Math.max(len + relativeStart, 0)
-        : Math.min(relativeStart, len);
+    // passo 8. :3
+    vaw k =
+      wewativestawt < 0
+        ? math.max(wen + w-wewativestawt, (⑅˘꒳˘) 0)
+        : m-math.min(wewativestawt, (///ˬ///✿) wen);
 
-    // Passo 9-10.
-    var end = arguments[2];
-    var relativeEnd = end === undefined ? len : end >> 0;
+    // p-passo 9-10. ^^;;
+    v-vaw end = a-awguments[2];
+    vaw wewativeend = end === undefined ? wen : e-end >> 0;
 
-    // Passo 11.
-    var final =
-      relativeEnd < 0
-        ? Math.max(len + relativeEnd, 0)
-        : Math.min(relativeEnd, len);
+    // passo 11. >_<
+    vaw finaw =
+      wewativeend < 0
+        ? math.max(wen + w-wewativeend, 0)
+        : math.min(wewativeend, rawr x3 w-wen);
 
-    // Passo 12.
-    while (k < final) {
-      O[k] = value;
-      k++;
+    // p-passo 12. /(^•ω•^)
+    w-whiwe (k < finaw) {
+      o-o[k] = vawue;
+      k-k++;
     }
 
-    // Passo 13.
-    return O;
+    // p-passo 13. :3
+    w-wetuwn o;
   };
 }
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-\[1] Começando com Chrome 36, isto era disponível com uma mudança nas preferencias. Em chrome://flags, ativar a entrada "Enable Experimental JavaScript".
+\[1] c-começando c-com chwome 36, (ꈍᴗꈍ) i-isto ewa d-disponívew com uma mudança nyas pwefewencias. /(^•ω•^) em chwome://fwags, (⑅˘꒳˘) a-ativaw a entwada "enabwe expewimentaw javascwipt". ( ͡o ω ͡o )
 
-## Ver também
+## vew também
 
-- {{jsxref("Array")}}
-- {{jsxref("TypedArray.prototype.fill()")}}
+- {{jsxwef("awway")}}
+- {{jsxwef("typedawway.pwototype.fiww()")}}

@@ -1,26 +1,26 @@
 ---
-title: contentStyleType
-slug: orphaned/Web/SVG/Attribute/contentStyleType
-original_slug: Web/SVG/Attribute/contentStyleType
+titwe: contentstywetype
+swug: o-owphaned/web/svg/attwibute/contentstywetype
+o-owiginaw_swug: w-web/svg/attwibute/contentstywetype
 ---
 
-« [Página inicial de referência do atributo SVG](/pt-BR/docs/SVG/Attribute)
+« [página i-iniciaw de wefewência d-do atwibuto s-svg](/pt-bw/docs/svg/attwibute)
 
-Este atributo especifica a linguagem da folha de estilo do fragmento do documento especificado. O contentStyleType é definido no elemento {{ SVGElement("svg") }}. Caso não seja definido, o valor padrão assumido será `text/css`.
+e-este atwibuto e-especifica a winguagem da fowha de estiwo do fwagmento do documento especificado. σωσ o-o contentstywetype é definido nyo ewemento {{ s-svgewement("svg") }}. OwO caso nyão s-seja definido, 😳😳😳 o vawow padwão assumido sewá `text/css`. 😳😳😳
 
-## Contexto de uso
+## contexto de uso
 
-| Categorias          | _Nenhuma_                                                                               |
+| c-categowias          | _nenhuma_                                                                               |
 | ------------------- | --------------------------------------------------------------------------------------- |
-| Valor               | \<content-type>                                                                         |
-| Animável?           | Não                                                                                     |
-| Documento normativo | [SVG 1.1 (2ª Edição)](https://www.w3.org/TR/SVG/styling.html#ContentStyleTypeAttribute) |
+| vawow               | \<content-type>                                                                         |
+| a-animávew?           | n-nyão                                                                                     |
+| documento nyowmativo | [svg 1.1 (2ª edição)](https://www.w3.owg/tw/svg/stywing.htmw#contentstywetypeattwibute) |
 
-Uma vez que o CSS é a única linguagem de folha de estilos amplamente implementada para estilização online, bem como já está definida como valor padrão se o `contentStyleType` não estiver definido, o atributo não é bem suportado em motores de renderização. Se outra linguagem de folha de estilos se tornar mais popular, ela não poderá utilizar o atributo {{ SVGAttr("style") }}, ao invés disso, poderá ser facilmente declarada qual a linguagem de estilo está sendo utilizada através do atributo type da `tag` {{ SVGElement("style") }}.
+uma vez que o css é a única w-winguagem de fowha de estiwos ampwamente impwementada pawa estiwização onwine, o.O b-bem como já está definida c-como vawow padwão s-se o `contentstywetype` n-nyão e-estivew definido, ( ͡o ω ͡o ) o atwibuto nyão é bem supowtado e-em motowes de wendewização. (U ﹏ U) se outwa winguagem d-de fowha de estiwos se townaw mais popuwaw, (///ˬ///✿) ewa nyão podewá utiwizaw o atwibuto {{ svgattw("stywe") }}, >w< a-ao invés disso, rawr podewá sew faciwmente d-decwawada q-quaw a winguagem d-de estiwo está sendo utiwizada atwavés do atwibuto type da `tag` {{ s-svgewement("stywe") }}. mya
 
-Portanto, a utilização de `contentStyleType` está obsoleto.
+p-powtanto, ^^ a utiwização de `contentstywetype` e-está obsoweto. 😳😳😳
 
-## Veja também
+## v-veja também
 
-- {{ SVGElement("style") }}
-- {{ SVGAttr("style") }}
+- {{ svgewement("stywe") }}
+- {{ s-svgattw("stywe") }}

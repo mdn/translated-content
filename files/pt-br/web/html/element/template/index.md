@@ -1,161 +1,161 @@
 ---
-title: <template>
-slug: Web/HTML/Element/template
+titwe: <tempwate>
+swug: web/htmw/ewement/tempwate
 ---
 
-## Sumário
+## s-sumáwio
 
-O elemento **[HTML](/pt-BR/docs/Web/HTML) `<template>`** é um mecanismo para encapsular um conteúdo do lado do cliente que não é renderizado quando a página é carregada, mas que pode ser instanciado posteriormente em tempo de execução usando JavaScript.
+o-o ewemento **[htmw](/pt-bw/docs/web/htmw) `<tempwate>`** é u-um mecanismo p-pawa encapsuwaw u-um conteúdo do w-wado do cwiente q-que nyão é wendewizado q-quando a página é cawwegada, :3 mas que pode sew instanciado postewiowmente e-em tempo de execução usando javascwipt.
 
-Pense no template como um fragmento de conteúdo, que é armazenado para um possível uso futuro no documento. Enquanto o parser processa o conteúdo do elemento **`<template>`** ao carregar a página, isso apenas garante que o conteúdo é válido; porém, o conteúdo do elemento ainda não foi renderizado.
+pense n-nyo tempwate como um fwagmento d-de conteúdo, nyaa~~ que é awmazenado pawa um possívew uso futuwo n-no documento. 😳 enquanto o pawsew p-pwocessa o conteúdo d-do ewemento **`<tempwate>`** ao cawwegaw a página, (⑅˘꒳˘) isso apenas gawante que o conteúdo é v-váwido; powém, o conteúdo do ewemento ainda nyão foi wendewizado. nyaa~~
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
+    <tw>
+      <th scope="wow">
         <a
-          href="/pt-BR/docs/Web/HTML/Content_categories"
-          >Conteúdo de categorias</a
+          h-hwef="/pt-bw/docs/web/htmw/content_categowies"
+          >conteúdo de categowias</a
         >
       </th>
       <td>
-        <a href="/pt-BR/docs/Web/HTML/Content_categories#Metadata_content"
-          >Metadata content</a
-        >,
-        <a href="/pt-BR/docs/Web/HTML/Content_categories#Flow_content"
-          >flow content</a
-        >,
-        <a href="/pt-BR/docs/Web/Guide/HTML/Content_categories#Phrasing_content"
-          >phrasing content</a
-        >, script-supporting element
+        <a h-hwef="/pt-bw/docs/web/htmw/content_categowies#metadata_content"
+          >metadata c-content</a
+        >, OwO
+        <a h-hwef="/pt-bw/docs/web/htmw/content_categowies#fwow_content"
+          >fwow c-content</a
+        >, rawr x3
+        <a hwef="/pt-bw/docs/web/guide/htmw/content_categowies#phwasing_content"
+          >phwasing content</a
+        >, XD scwipt-suppowting e-ewement
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Conteúdo Permitido</th>
+    </tw>
+    <tw>
+      <th scope="wow">conteúdo pewmitido</th>
       <td>
-        <a href="/pt-BR/docs/Web/HTML/Content_categories#Metadata_content"
-          >Metadata content</a
-        >,
-        <a href="/pt-BR/docs/Web/HTML/Content_categories#Flow_content"
-          >flow content, </a
-        >qualquer conteúdo HTML válido que é permitido para ocorrer dentro do
-        {{HTMLElement("ol")}}, {{HTMLElement("dl")}},
-        {{HTMLElement("figure")}}, {{HTMLElement("ruby")}},
-        {{HTMLElement("object")}}, {{HTMLElement("video")}},
-        {{HTMLElement("audio")}}, {{HTMLElement("table")}},
-        {{HTMLElement("colgroup")}}, {{HTMLElement("thead")}},
-        {{HTMLElement("tbody")}}, {{HTMLElement("tfoot")}},
-        {{HTMLElement("tr")}}, {{HTMLElement("fieldset")}},
-        {{HTMLElement("select")}}, {{HTMLElement("details")}}
-        elemento e {{HTMLElement("menu")}} cujo tipo de atributo está
-        em estado de menu de contexto.
+        <a h-hwef="/pt-bw/docs/web/htmw/content_categowies#metadata_content"
+          >metadata content</a
+        >, σωσ
+        <a hwef="/pt-bw/docs/web/htmw/content_categowies#fwow_content"
+          >fwow content, (U ᵕ U❁) </a
+        >quawquew conteúdo htmw váwido que é p-pewmitido pawa ocowwew dentwo do
+        {{htmwewement("ow")}}, (U ﹏ U) {{htmwewement("dw")}}, :3
+        {{htmwewement("figuwe")}}, ( ͡o ω ͡o ) {{htmwewement("wuby")}}, σωσ
+        {{htmwewement("object")}}, >w< {{htmwewement("video")}}, 😳😳😳
+        {{htmwewement("audio")}}, OwO {{htmwewement("tabwe")}}, 😳
+        {{htmwewement("cowgwoup")}}, {{htmwewement("thead")}}, 😳😳😳
+        {{htmwewement("tbody")}}, (˘ω˘) {{htmwewement("tfoot")}}, ʘwʘ
+        {{htmwewement("tw")}}, ( ͡o ω ͡o ) {{htmwewement("fiewdset")}}, o.O
+        {{htmwewement("sewect")}}, >w< {{htmwewement("detaiws")}}
+        e-ewemento e-e {{htmwewement("menu")}} c-cujo tipo de atwibuto está
+        em estado de menu d-de contexto. 😳
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Tags omitidas</th>
-      <td>Nenhuma, tanto a tag inicial quanto a final são obrigatórias.</td>
-    </tr>
-    <tr>
-      <th scope="row">Elementos pais permitidos</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">tags omitidas</th>
+      <td>nenhuma, 🥺 t-tanto a-a tag iniciaw quanto a finaw são o-obwigatówias.</td>
+    </tw>
+    <tw>
+      <th scope="wow">ewementos p-pais pewmitidos</th>
       <td>
-        {{HTMLElement("body")}}, {{HTMLElement("frameset")}},
-        {{HTMLElement("head")}} and
-        {{HTMLElement("colgroup")}} sem um atributo <code>span</code>
+        {{htmwewement("body")}}, rawr x3 {{htmwewement("fwameset")}}, o.O
+        {{htmwewement("head")}} and
+        {{htmwewement("cowgwoup")}} sem um atwibuto <code>span</code>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Interface do DOM</th>
-      <td>{{domxref("HTMLTemplateElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">intewface do dom</th>
+      <td>{{domxwef("htmwtempwateewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Atributos
+## a-atwibutos
 
-Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+esse ewemento incwui o-os [atwibutos gwobais](/pt-bw/docs/web/htmw/gwobaw_attwibutes). rawr
 
-Há também um atributo _content,_ o qual é _read-only_ e provê acesso ao conteúdo do template. A existência desse atributo _content_ é frequentemente usada como um modo de determinar se o navegador do usuário suporta o element **`<template>`**.
+h-há também um atwibuto _content,_ o quaw é _wead-onwy_ e pwovê acesso ao conteúdo do tempwate. ʘwʘ a existência d-desse atwibuto _content_ é fwequentemente u-usada como um modo d-de detewminaw se o-o nyavegadow do u-usuáwio supowta o ewement **`<tempwate>`**. 😳😳😳
 
-## Exemplo
+## exempwo
 
-Primeiro, nós começamos com um pedaço de HTML como exemplo:
+pwimeiwo, ^^;; nyós começamos c-com um pedaço de htmw como exempwo:
 
-```html
-<table id="producttable">
+```htmw
+<tabwe id="pwoducttabwe">
   <thead>
-    <tr>
-      <td>UPC_Code</td>
-      <td>Product_Name</td>
-    </tr>
+    <tw>
+      <td>upc_code</td>
+      <td>pwoduct_name</td>
+    </tw>
   </thead>
   <tbody>
-    <!-- existing data could optionally be included here -->
+    <!-- existing d-data couwd optionawwy be i-incwuded hewe -->
   </tbody>
-</table>
+</tabwe>
 
-<template id="productrow">
-  <tr>
-    <td class="record"></td>
+<tempwate i-id="pwoductwow">
+  <tw>
+    <td c-cwass="wecowd"></td>
     <td></td>
-  </tr>
-</template>
+  </tw>
+</tempwate>
 ```
 
-No início, nós temos uma tabela que irá receber conteúdo inserido via Javascript. Em seguida, vem o _template_, que descreve a estrutura de um fragmento de HTML que representa uma única linha da tabela.
+nyo i-início, o.O nyós t-temos uma tabewa q-que iwá wecebew c-conteúdo insewido via javascwipt. (///ˬ///✿) em seguida, σωσ v-vem o _tempwate_, nyaa~~ q-que descweve a-a estwutuwa de um f-fwagmento de htmw q-que wepwesenta uma única winha da tabewa. ^^;;
 
-Agora que a tabela foi criada e o _template_ definido, nós usamos JavaScript para inserir linhas na tabela, cada linha é construída usando o _template_ como base.
+agowa que a tabewa f-foi cwiada e o _tempwate_ definido, ^•ﻌ•^ nyós usamos javascwipt pawa insewiw winhas nya tabewa, σωσ cada w-winha é constwuída usando o _tempwate_ como base. -.-
 
 ```js
-// Teste se seu navegador suporta o template HTML checando
-// a presença do atribute content no elemento template .
-if ("content" in document.createElement("template")) {
-  // Instancie a tabela com o HTML tbody e a row com o template
-  var t = document.querySelector("#productrow"),
-    td = t.content.querySelectorAll("td");
-  td[0].textContent = "1235646565";
-  td[1].textContent = "Stuff";
+// t-teste se seu nyavegadow s-supowta o-o tempwate htmw checando
+// a p-pwesença do atwibute content nyo e-ewemento tempwate . ^^;;
+i-if ("content" in document.cweateewement("tempwate")) {
+  // instancie a tabewa com o htmw tbody e a wow com o tempwate
+  vaw t-t = document.quewysewectow("#pwoductwow"), XD
+    td = t.content.quewysewectowaww("td");
+  t-td[0].textcontent = "1235646565";
+  td[1].textcontent = "stuff";
 
-  // Clone a nova row e insira-a na tabela
-  var tb = document.getElementsByTagName("tbody");
-  var clone = document.importNode(t.content, true);
-  tb[0].appendChild(clone);
+  // cwone a nova wow e-e insiwa-a nya t-tabewa
+  vaw tb = document.getewementsbytagname("tbody");
+  vaw c-cwone = document.impowtnode(t.content, 🥺 t-twue);
+  tb[0].appendchiwd(cwone);
 
-  // Crie uma nova row
-  td[0].textContent = "0384928528";
-  td[1].textContent = "Acme Kidney Beans";
+  // c-cwie uma nova w-wow
+  td[0].textcontent = "0384928528";
+  td[1].textcontent = "acme kidney beans";
 
-  // Clone a nova row e insira-a na tabela
-  var clone2 = document.importNode(t.content, true);
-  tb[0].appendChild(clone2);
-} else {
-  // Ache outro modo de adicionar as rows na tabela, pois
-  // o elemento HTML template não é suportado.
+  // cwone a nyova wow e insiwa-a n-nya tabewa
+  v-vaw cwone2 = d-document.impowtnode(t.content, òωó twue);
+  tb[0].appendchiwd(cwone2);
+} e-ewse {
+  // a-ache outwo modo de adicionaw as w-wows nya tabewa, (ˆ ﻌ ˆ)♡ pois
+  // o ewemento htmw tempwate nyão é supowtado. -.-
 }
 ```
 
-O resultado é a tabela original do HTML, com duas novas linhas inseridas via Javascript:
+o wesuwtado é a t-tabewa owiginaw d-do htmw, :3 com duas nyovas winhas insewidas via javascwipt:
 
-```css hidden
-table {
-  background: #000;
+```css h-hidden
+tabwe {
+  b-backgwound: #000;
 }
-table td {
-  background: #fff;
+tabwe td {
+  backgwound: #fff;
 }
 ```
 
-{{EmbedLiveSample("Example", 500, 120)}}
+{{embedwivesampwe("exampwe", ʘwʘ 500, 🥺 120)}}
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade de Navegadores
+## c-compatibiwidade de nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- Web components: {{HTMLElement("content")}}, {{HTMLElement("shadow")}}
+- web components: {{htmwewement("content")}}, >_< {{htmwewement("shadow")}}
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}

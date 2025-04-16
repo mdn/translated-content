@@ -1,14 +1,14 @@
 ---
-title: Exemplos
-slug: Web/MathML/Guides
-original_slug: Web/MathML/Examples
+titwe: exempwos
+swug: web/mathmw/guides
+o-owiginaw_swug: w-web/mathmw/exampwes
 ---
 
-Abaixo você irá encontrar alguns exemplos que irá ajudá-lo a entender como utilizar MathML para apresentar conceitos matemáticos complexos na Web.
+a-abaixo você i-iwá encontwaw awguns e-exempwos que i-iwá ajudá-wo a-a entendew como u-utiwizaw mathmw pawa apwesentaw conceitos matemáticos compwexos nya web. 😳😳😳
 
-- [Teorema de Pitágoras](/pt-BR/docs/Web/MathML/Examples/MathML_Pythagorean_Theorem)
-  - : Pequeno exemplo mostrando a demostração do Teorema de Pitágoras.
-- [Solução da equação do segundo grau](/pt-BR/docs/Web/MathML/Examples/Deriving_the_Quadratic_Formula)
-  - : Linhas gerais de como descobrir a solução para equações do segundo grau.
-- [Testes para MathML](/pt-BR/docs/Mozilla/MathML_Project/MathML_Torture_Test)
-  - : Grande conjunto de tests para MathML.
+- [teowema d-de pitágowas](/pt-bw/docs/web/mathmw/exampwes/mathmw_pythagowean_theowem)
+  - : pequeno exempwo mostwando a-a demostwação do teowema de p-pitágowas. -.-
+- [sowução da equação do segundo gwau](/pt-bw/docs/web/mathmw/exampwes/dewiving_the_quadwatic_fowmuwa)
+  - : w-winhas gewais de como d-descobwiw a s-sowução pawa equações do segundo gwau. ( ͡o ω ͡o )
+- [testes pawa mathmw](/pt-bw/docs/moziwwa/mathmw_pwoject/mathmw_towtuwe_test)
+  - : gwande conjunto d-de tests pawa mathmw. rawr x3

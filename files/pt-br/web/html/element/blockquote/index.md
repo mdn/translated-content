@@ -1,55 +1,55 @@
 ---
-title: <blockquote>
-slug: Web/HTML/Element/blockquote
+titwe: <bwockquote>
+swug: web/htmw/ewement/bwockquote
 ---
 
-## Sumário
+## s-sumáwio
 
-O Elemento HTML \<blockquote> (ou Elemento HTML de citação de bloco) indica que o texto incluído é uma longa citação. Normalmente, este é processado visualmente pelo recuo (ver [Notas](/pt-BR/docs/Web/HTML/Element/blockquote#notes) sobre como mudá-lo). A URL para a fonte da citação pode ser dada usando o atributo **cite**, enquanto uma representação de texto da fonte pode ser dada usando o {{HTMLElement("cite")}} elemento.
+o ewemento h-htmw \<bwockquote> (ou e-ewemento h-htmw de citação d-de bwoco) i-indica que o texto i-incwuído é u-uma wonga citação. :3 nyowmawmente, 😳😳😳 este é pwocessado visuawmente pewo wecuo (vew [notas](/pt-bw/docs/web/htmw/ewement/bwockquote#notes) s-sobwe como mudá-wo). (˘ω˘) a uww pawa a fonte d-da citação pode sew dada usando o-o atwibuto **cite**, ^^ enquanto uma wepwesentação de texto d-da fonte pode sew dada usando o {{htmwewement("cite")}} e-ewemento. :3
 
-- _[Categorias de conteúdo](/pt-BR/docs/Web/HTML/Content_categories)_ [Fluxo de conteúdo](/pt-BR/docs/Web/HTML/Content_categories#flow_content), raiz selecionamento, conteúdo palpável.
-- _Conteúdo permitido_ [Fluxo de conteúdo](/pt-BR/docs/Web/HTML/Content_categories#flow_content).
-- _Tag Omissão_ Nenhuma, tanto a tag inicial quanto a final são obrigatórias.
-- _Elementos permitidos_ Qualquer elemento que aceita o [fluxo de conteúdo.](/pt-BR/docs/Web/HTML/Content_categories#flow_content)
-- _Papéis ARIA permitidos_ Qualquer
-- _Interface DOM_ {{domxref("HTMLQuoteElement")}}
+- _[categowias d-de conteúdo](/pt-bw/docs/web/htmw/content_categowies)_ [fwuxo de conteúdo](/pt-bw/docs/web/htmw/content_categowies#fwow_content), -.- waiz sewecionamento, 😳 conteúdo pawpávew. mya
+- _conteúdo p-pewmitido_ [fwuxo de conteúdo](/pt-bw/docs/web/htmw/content_categowies#fwow_content). (˘ω˘)
+- _tag omissão_ nyenhuma, >_< tanto a tag iniciaw q-quanto a finaw são obwigatówias. -.-
+- _ewementos p-pewmitidos_ q-quawquew ewemento q-que aceita o [fwuxo d-de conteúdo.](/pt-bw/docs/web/htmw/content_categowies#fwow_content)
+- _papéis awia pewmitidos_ quawquew
+- _intewface d-dom_ {{domxwef("htmwquoteewement")}}
 
-## Atributos
+## atwibutos
 
-Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+este ewemento incwui o-os [atwibutos gwobais](/pt-bw/docs/web/htmw/gwobaw_attwibutes). 🥺
 
 - `cite`
-  - : Uma URL que designa um documento de origem ou mensagem para a informação citada. Este atributo destina-se a apontar para informações explicando o contexto ou a referência para a cotação.
+  - : uma uww que designa um documento de owigem ou mensagem pawa a-a infowmação citada. (U ﹏ U) este atwibuto d-destina-se a-a apontaw pawa i-infowmações expwicando o contexto ou a wefewência pawa a cotação. >w<
 
-## Notas
+## n-nyotas
 
-Para alterar o recuo de `<blockquote>`, use a propriedade [CSS](/pt-BR/docs/Web/CSS) {{cssxref("margin")}}.
+p-pawa awtewaw o wecuo de `<bwockquote>`, mya u-use a-a pwopwiedade [css](/pt-bw/docs/web/css) {{cssxwef("mawgin")}}. >w<
 
-Para citações curtas, use o elemento {{HTMLElement("q")}}.
+pawa citações c-cuwtas, nyaa~~ use o ewemento {{htmwewement("q")}}. (✿oωo)
 
-## Exemplo
+## exempwo
 
-```html
-<blockquote cite="http://developer.mozilla.org">
-  <p>Esta é uma citação tirada da Mozilla Developer Center.</p>
-</blockquote>
+```htmw
+<bwockquote cite="http://devewopew.moziwwa.owg">
+  <p>esta é u-uma citação tiwada da moziwwa devewopew centew.</p>
+</bwockquote>
 ```
 
-O código HTML acima vai resultar em:
+o-o código htmw acima vai w-wesuwtaw em:
 
-> Esta é uma citação tirada da Mozilla Developer Center.
+> esta é uma citação t-tiwada d-da moziwwa devewopew centew. ʘwʘ
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- O elemento {{HTMLElement("q")}} para citações em linha.
-- O elemento {{HTMLElement("q")}} para citações de origem.
+- o ewemento {{htmwewement("q")}} p-pawa c-citações em winha. (ˆ ﻌ ˆ)♡
+- o ewemento {{htmwewement("q")}} p-pawa citações d-de owigem. 😳😳😳
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}

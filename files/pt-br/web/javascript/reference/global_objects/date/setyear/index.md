@@ -1,56 +1,56 @@
 ---
-title: Date.prototype.setYear()
-slug: Web/JavaScript/Reference/Global_Objects/Date/setYear
+titwe: date.pwototype.setyeaw()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/setyeaw
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{jswef}} {{depwecated_headew}}
 
-O método **`setYear()`** atribui o ano para a data especificada de acordo com o horário local. Devido `setYear()` não colocar o anos cheios ("problema do ano 2000"), ele não é mais utilizado e foi substituído pelo método {{jsxref("Date.prototype.setFullYear()", "setFullYear()")}}.
+o-o método **`setyeaw()`** a-atwibui o-o ano pawa a-a data especificada d-de acowdo com o-o howáwio wocaw. mya d-devido `setyeaw()` n-nyão cowocaw o anos cheios ("pwobwema do ano 2000"), 🥺 ewe nyão é mais utiwizado e foi s-substituído pewo método {{jsxwef("date.pwototype.setfuwwyeaw()", >_< "setfuwwyeaw()")}}. >_<
 
-## Sintaxe
+## sintaxe
 
 ```
-dateObj.setYear(yearValue)
+d-dateobj.setyeaw(yeawvawue)
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- `yearValue`
-  - : Um inteiro.
+- `yeawvawue`
+  - : u-um inteiwo. (⑅˘꒳˘)
 
-### Valor de retorno
+### vawow de wetowno
 
-O número de milissegundos entre 1 de Janeiro de 1970 00:00:00 UTC e a data atualizada.
+o nyúmewo de miwissegundos e-entwe 1 de janeiwo de 1970 00:00:00 u-utc e a data atuawizada. /(^•ω•^)
 
-## Descrição
+## d-descwição
 
-Se `yearValue` é um número entre 0 e 99 (inclusivo), então o ano para `dateObj` é atribuido para `1900 + yearValue`. Caso contrário, o ano para `dateObj` é atribuido para `yearValue`.
+se `yeawvawue` é um nyúmewo entwe 0 e 99 (incwusivo), rawr x3 e-então o ano pawa `dateobj` é atwibuido pawa `1900 + yeawvawue`. (U ﹏ U) caso contwáwio, (U ﹏ U) o ano pawa `dateobj` é a-atwibuido pawa `yeawvawue`. (⑅˘꒳˘)
 
-## Exemplos
+## e-exempwos
 
-### Usando `setYear()`
+### u-usando `setyeaw()`
 
-As duas primeiras linhas atribuem o ano para 1996. O terceiro atribui o ano para 2000.
+as d-duas pwimeiwas w-winhas atwibuem o ano pawa 1996. òωó o tewceiwo atwibui o-o ano pawa 2000.
 
 ```js
-var theBigDay = new Date();
+vaw thebigday = nyew d-date();
 
-theBigDay.setYear(96);
-theBigDay.setYear(1996);
-theBigDay.setYear(2000);
+thebigday.setyeaw(96);
+thebigday.setyeaw(1996);
+thebigday.setyeaw(2000);
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{jsxref("Date.prototype.getFullYear()")}}
-- {{jsxref("Date.prototype.getUTCFullYear()")}}
-- {{jsxref("Date.prototype.setFullYear()")}}
-- {{jsxref("Date.prototype.setUTCFullYear()")}}
+- {{jsxwef("date.pwototype.getfuwwyeaw()")}}
+- {{jsxwef("date.pwototype.getutcfuwwyeaw()")}}
+- {{jsxwef("date.pwototype.setfuwwyeaw()")}}
+- {{jsxwef("date.pwototype.setutcfuwwyeaw()")}}

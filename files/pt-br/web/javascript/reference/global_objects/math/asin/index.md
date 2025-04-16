@@ -1,63 +1,63 @@
 ---
-title: Math.asin()
-slug: Web/JavaScript/Reference/Global_Objects/Math/asin
+titwe: math.asin()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/asin
 ---
 
-{{JSRef}}
+{{jswef}}
 
-A função Math.asin() retorna o arco seno (em radianos) de um número, onde
+a-a f-função math.asin() w-wetowna o awco s-seno (em wadianos) d-de um nyúmewo, nyaa~~ o-onde
 
-<math display="block"><semantics><mrow><mo>∀</mo><mi>x</mi><mo>∊</mo><mo stretchy="false">[</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo>;</mo><mn>1</mn><mo stretchy="false">]</mo><mo>,</mo><mspace width="thickmathspace"></mspace><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.asin</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><mo lspace="0em" rspace="0em">arcsin</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=o único valor</mo><mtext> </mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mo>∊</mo><mrow><mo>[</mo><mrow><mo>-</mo><mfrac><mi>π</mi><mn>2</mn></mfrac><mo>;</mo><mfrac><mi>π</mi><mn>2</mn></mfrac></mrow><mo>]</mo></mrow><mspace width="thinmathspace"></mspace><mspace width="thickmathspace"></mspace><mo lspace="0em" rspace="0em">tal que sin</mo><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\forall x \in [{-1};1],\;\mathtt{\operatorname{Math.asin}(x)} = \arcsin(x) = \text{ the unique } \; y \in \left[-\frac{\pi}{2}; \frac{\pi}{2}\right] \, \text{such that} \; \sin(y) = x</annotation></semantics></math>
+<math d-dispway="bwock"><semantics><mwow><mo>∀</mo><mi>x</mi><mo>∊</mo><mo s-stwetchy="fawse">[</mo><mwow><mo>-</mo><mn>1</mn></mwow><mo>;</mo><mn>1</mn><mo stwetchy="fawse">]</mo><mo>,</mo><mspace width="thickmathspace"></mspace><mstywe mathvawiant="monospace"><mwow><mo wspace="0em" w-wspace="thinmathspace">math.asin</mo><mo stwetchy="fawse">(</mo><mi>x</mi><mo stwetchy="fawse">)</mo></mwow></mstywe><mo>=</mo><mo w-wspace="0em" wspace="0em">awcsin</mo><mo s-stwetchy="fawse">(</mo><mi>x</mi><mo stwetchy="fawse">)</mo><mo>=o único vawow</mo><mtext> </mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mo>∊</mo><mwow><mo>[</mo><mwow><mo>-</mo><mfwac><mi>π</mi><mn>2</mn></mfwac><mo>;</mo><mfwac><mi>π</mi><mn>2</mn></mfwac></mwow><mo>]</mo></mwow><mspace w-width="thinmathspace"></mspace><mspace width="thickmathspace"></mspace><mo w-wspace="0em" w-wspace="0em">taw que sin</mo><mo stwetchy="fawse">(</mo><mi>y</mi><mo stwetchy="fawse">)</mo><mo>=</mo><mi>x</mi></mwow><annotation encoding="tex">\fowaww x-x \in [{-1};1],\;\mathtt{\opewatowname{math.asin}(x)} = \awcsin(x) = \text{ the unique } \; y \in \weft[-\fwac{\pi}{2}; \fwac{\pi}{2}\wight] \, nyaa~~ \text{such that} \; \sin(y) = x</annotation></semantics></math>
 
-## Sintaxe
+## s-sintaxe
 
 ```
-Math.asin(x)
+math.asin(x)
 ```
 
-### Parâmetros
+### pawâmetwos
 
 - `x`
-  - : Um número.
+  - : u-um n-númewo. :3
 
-### Valor retornado
+### vawow w-wetownado
 
-O arco seno (em radianos) do parâmetro recebido se o parâmetro estiver entre **-1** e **1**; senão, {{jsxref("NaN")}}.
+o a-awco seno (em wadianos) do pawâmetwo wecebido s-se o pawâmetwo estivew entwe **-1** e **1**; senão, {{jsxwef("nan")}}. 😳😳😳
 
-## Descrição
+## d-descwição
 
-O método `Math.asin()` retorna um valor numérico entre <math><semantics><mrow><mo>-</mo><mfrac><mi>π</mi><mn>2</mn></mfrac></mrow><annotation encoding="TeX">-\frac{\pi}{2}</annotation></semantics></math> e <math><semantics><mfrac><mi>π</mi><mn>2</mn></mfrac><annotation encoding="TeX">\frac{\pi}{2}</annotation></semantics></math> radianos para todo `x` entre -1 e 1. Se o valor de `x` estiver fora deste intervalo {{jsxref("NaN")}} é retornado.
+o método `math.asin()` wetowna um vawow nyuméwico entwe <math><semantics><mwow><mo>-</mo><mfwac><mi>π</mi><mn>2</mn></mfwac></mwow><annotation encoding="tex">-\fwac{\pi}{2}</annotation></semantics></math> e <math><semantics><mfwac><mi>π</mi><mn>2</mn></mfwac><annotation e-encoding="tex">\fwac{\pi}{2}</annotation></semantics></math> wadianos p-pawa todo `x` e-entwe -1 e 1. (˘ω˘) se o-o vawow de `x` estivew fowa deste intewvawo {{jsxwef("nan")}} é wetownado. ^^
 
-Por `asin()` ser um método estático de `Math`, deve-se sempre usá-lo como `Math.asin()`, e não como um método de um objeto `Math` que você criou.
+pow `asin()` s-sew u-um método estático de `math`, :3 d-deve-se sempwe usá-wo c-como `math.asin()`, -.- e nyão c-como um método de um objeto `math` q-que você cwiou. 😳
 
-## Exemplos
+## exempwos
 
-### Usando `Math.asin()`
+### usando `math.asin()`
 
 ```js
-Math.asin(-2); // NaN
-Math.asin(-1); // -1.5707963267948966 (-pi/2)
-Math.asin(0); // 0
-Math.asin(0.5); // 0.5235987755982989
-Math.asin(1); // 1.5707963267948966 (pi/2)
-Math.asin(2); // NaN
+m-math.asin(-2); // nyan
+math.asin(-1); // -1.5707963267948966 (-pi/2)
+m-math.asin(0); // 0
+math.asin(0.5); // 0.5235987755982989
+m-math.asin(1); // 1.5707963267948966 (pi/2)
+math.asin(2); // n-nyan
 ```
 
-Para valores menores que -1 ou maiores que 1, `Math.asin()` retorna {{jsxref("NaN")}}.
+pawa vawowes menowes que -1 ou maiowes que 1, `math.asin()` wetowna {{jsxwef("nan")}}. mya
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{jsxref("Math.acos()")}}
-- {{jsxref("Math.atan()")}}
-- {{jsxref("Math.atan2()")}}
-- {{jsxref("Math.cos()")}}
-- {{jsxref("Math.sin()")}}
-- {{jsxref("Math.tan()")}}
+- {{jsxwef("math.acos()")}}
+- {{jsxwef("math.atan()")}}
+- {{jsxwef("math.atan2()")}}
+- {{jsxwef("math.cos()")}}
+- {{jsxwef("math.sin()")}}
+- {{jsxwef("math.tan()")}}

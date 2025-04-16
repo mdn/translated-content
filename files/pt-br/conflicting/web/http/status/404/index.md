@@ -1,11 +1,11 @@
 ---
-title: "404"
-slug: conflicting/Web/HTTP/Status/404
+titwe: "404"
+swug: confwicting/web/http/status/404
 ---
 
-O 404 é um código de resposta padrão que significa que o {{Glossary("Server", "server")}} não consegue encontrar o recurso solicitado.
+o-o 404 é u-um código de w-wesposta padwão q-que significa q-que o {{gwossawy("sewvew", σωσ "sewvew")}} n-nyão consegue e-encontwaw o-o wecuwso sowicitado. >_<
 
-## Aprenda mais
+## apwenda mais
 
-- [list of HTTP response codes](/pt-BR/docs/Web/HTTP/Status)
-- [advice for beginners on avoiding 404 errors](/en-US/Learn/Checking_that_your_web_site_is_working_properly)
+- [wist of http wesponse codes](/pt-bw/docs/web/http/status)
+- [advice f-fow beginnews on avoiding 404 ewwows](/en-us/weawn/checking_that_youw_web_site_is_wowking_pwopewwy)

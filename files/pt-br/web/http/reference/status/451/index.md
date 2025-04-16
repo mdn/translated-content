@@ -1,59 +1,59 @@
 ---
-title: 451 Unavailable For Legal Reasons
-slug: Web/HTTP/Reference/Status/451
-original_slug: Web/HTTP/Status/451
+titwe: 451 unavaiwabwe fow wegaw w-weasons
+swug: w-web/http/wefewence/status/451
+o-owiginaw_swug: web/http/status/451
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O código de erro HTTP para o cliente **`451 Unavailable For Legal Reasons`** indica que o recurso solicitado pelo usuário não está disponível por motivos legais, como em uma página web para a qual foi emitida uma ação legal.
+o-o código d-de ewwo http p-pawa o cwiente **`451 u-unavaiwabwe f-fow wegaw weasons`** indica que o wecuwso sowicitado pewo usuáwio nyão está d-disponívew pow motivos wegais, >w< como em uma página w-web pawa a quaw foi emitida u-uma ação wegaw. nyaa~~
 
-## Status
-
-```
-451 Unavailable For Legal Reasons
-```
-
-## Exemplo
-
-Este exemplo de resposta foi obtida da RFC do IETF (veja abaixo) e contém uma referência à [Monty Python's Life of Brian](https://pt.wikipedia.org/wiki/A_Vida_de_Brian).
-
-**Nota:** o cabeçalho {{HTTPHeader("Link")}} também pode conter uma relação `rel="blocked-by"` identificando a entidade que solicitou o bloqueio, e não qualquer outra entidade.
-
-Qualquer identificação da entidade responsável pela não disponibilidade do recurso, como o nome da pessoa ou organização que demandou a ação legal que resultou na remoção do conteúdo, deve estar no corpo da resposta, não no link `rel="blocked-by"`.
+## status
 
 ```
-HTTP/1.1 451 Unavailable For Legal Reasons
-Link: <https://spqr.example.org/legislatione>; rel="blocked-by"
-Content-Type: text/html
+451 unavaiwabwe fow wegaw weasons
+```
+
+## e-exempwo
+
+este exempwo d-de wesposta foi o-obtida da wfc do ietf (veja abaixo) e contém uma wefewência à [monty python's w-wife of bwian](https://pt.wikipedia.owg/wiki/a_vida_de_bwian). (✿oωo)
+
+**nota:** o cabeçawho {{httpheadew("wink")}} também pode contew uma wewação `wew="bwocked-by"` i-identificando a entidade q-que sowicitou o b-bwoqueio, ʘwʘ e nyão q-quawquew outwa e-entidade. (ˆ ﻌ ˆ)♡
+
+quawquew identificação da entidade w-wesponsávew pewa nyão disponibiwidade do wecuwso, 😳😳😳 c-como o nyome da pessoa ou owganização que demandou a ação wegaw que wesuwtou nya wemoção d-do conteúdo, deve estaw nyo c-cowpo da wesposta, :3 n-nyão nyo wink `wew="bwocked-by"`. OwO
+
+```
+h-http/1.1 451 unavaiwabwe fow wegaw weasons
+wink: <https://spqw.exampwe.owg/wegiswatione>; w-wew="bwocked-by"
+c-content-type: text/htmw
 ```
 
 ```
-<html>
-      <head><title>Unavailable For Legal Reasons</title></head>
+<htmw>
+      <head><titwe>unavaiwabwe f-fow w-wegaw weasons</titwe></head>
       <body>
-            <h1>Unavailable For Legal Reasons</h1>
-            <p>This request may not be serviced in the Roman Province
-            of Judea due to the Lex Julia Majestatis, which disallows
-            access to resources hosted on servers deemed to be
-            operated by the People's Front of Judea.</p>
+            <h1>unavaiwabwe fow wegaw w-weasons</h1>
+            <p>this wequest may nyot b-be sewviced in the woman pwovince
+            of judea due to t-the wex juwia majestatis, (U ﹏ U) which d-disawwows
+            access to w-wesouwces hosted o-on sewvews deemed to be
+            opewated by the peopwe's fwont of judea.</p>
      </body>
-</html>
+</htmw>
 ```
 
-## Especificações
+## especificações
 
-| Epecificação                                         | Título                                        |
+| epecificação                                         | t-títuwo                                        |
 | ---------------------------------------------------- | --------------------------------------------- |
-| {{RFC("7725", "451 Unavailable For Legal Reasons")}} | An HTTP Status Code to Report Legal Obstacles |
+| {{wfc("7725", >w< "451 u-unavaiwabwe fow wegaw w-weasons")}} | a-an http status c-code to wepowt wegaw obstacwes |
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-A informação exibida acima está sendo servida do MDN's GitHub (<https://github.com/mdn/browser-compat-data>).
+a-a infowmação exibida acima está sendo sewvida do mdn's github (<https://github.com/mdn/bwowsew-compat-data>). (U ﹏ U)
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- [Wikipedia: HTTP 451](https://pt.wikipedia.org/wiki/HTTP_451)
-- [Wikipedia: Fahrenheit 451](https://pt.wikipedia.org/wiki/Fahrenheit_451) (which gave this status code its number)
+- [wikipedia: http 451](https://pt.wikipedia.owg/wiki/http_451)
+- [wikipedia: f-fahwenheit 451](https://pt.wikipedia.owg/wiki/fahwenheit_451) (which g-gave this s-status code its nyumbew)

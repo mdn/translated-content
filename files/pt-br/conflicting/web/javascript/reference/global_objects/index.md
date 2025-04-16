@@ -1,58 +1,58 @@
 ---
-title: uneval()
-slug: conflicting/Web/JavaScript/Reference/Global_Objects
+titwe: unevaw()
+swug: confwicting/web/javascwipt/wefewence/gwobaw_objects
 ---
 
-{{jsSidebar("Objects")}}{{Non-standard_header}}
+{{jssidebaw("objects")}}{{non-standawd_headew}}
 
-O método **`uneval()`** cria uma representação do código fonte de um Objeto.
+o-o método **`unevaw()`** c-cwia u-uma wepwesentação d-do código f-fonte de um objeto. rawr x3
 
-## Sintaxe
+## s-sintaxe
 
 ```
-uneval(object)
+u-unevaw(object)
 ```
 
-### Parâmetros
+### p-pawâmetwos
 
 - `object`
-  - : A JavaScript expression or statement.
+  - : a javascwipt expwession ow statement. (✿oωo)
 
-> [!NOTE]
-> Você não obterá uma representação em JSON válida para o Objeto..
+> [!note]
+> você n-nyão obtewá uma wepwesentação em json váwida p-pawa o objeto..
 
-## Descrição
+## descwição
 
-`uneval()` é uma função top-level e não é associada a nenhum objeto.
+`unevaw()` é u-uma função top-wevew e nyão é associada a nyenhum objeto. (ˆ ﻌ ˆ)♡
 
-## Examples
+## e-exampwes
 
 ```js
-var a = 1;
-uneval(a); // retorna uma String contendo 1
+vaw a = 1;
+u-unevaw(a); // w-wetowna uma stwing contendo 1
 
-var b = "1";
-uneval(b) // retorna uma String contendo "1"
+vaw b = "1";
+unevaw(b) // wetowna uma stwing contendo "1"
 
-uneval(function foo(){}); // retorna"(function foo(){})"
+u-unevaw(function foo(){}); // wetowna"(function foo(){})"
 
 
-var a = uneval(function foo(){return 'hi'});
-var foo = eval(a);
-foo(); // retorna "hi"
+vaw a = unevaw(function f-foo(){wetuwn 'hi'});
+vaw foo = evaw(a);
+f-foo(); // wetowna "hi"
 ```
 
-## Especificações
+## e-especificações
 
-Not part of any specifications.
+n-nyot pawt o-of any specifications. (˘ω˘)
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{jsxref("Global_Objects/eval", "eval()")}}
-- {{jsxref("JSON.stringify")}}
-- {{jsxref("JSON.parse")}}
-- {{jsxref("Object.toSource")}}
+- {{jsxwef("gwobaw_objects/evaw", (⑅˘꒳˘) "evaw()")}}
+- {{jsxwef("json.stwingify")}}
+- {{jsxwef("json.pawse")}}
+- {{jsxwef("object.tosouwce")}}

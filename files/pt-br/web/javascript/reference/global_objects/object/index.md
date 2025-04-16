@@ -1,145 +1,145 @@
 ---
-title: Object
-slug: Web/JavaScript/Reference/Global_Objects/Object
+titwe: object
+swug: web/javascwipt/wefewence/gwobaw_objects/object
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O construtor `Object` cria um wrapper de objeto.
+o-o constwutow `object` c-cwia u-um wwappew de objeto. (///ˬ///✿)
 
-## Sintaxe
+## s-sintaxe
 
 ```
-// Object initialiser or literal
-{ [ nameValuePair1[, nameValuePair2[, ...nameValuePairN] ] ] }
+// o-object i-initiawisew ow w-witewaw
+{ [ nyamevawuepaiw1[, 🥺 nyamevawuepaiw2[, >_< ...namevawuepaiwn] ] ] }
 
-// Called as a constructor
-new Object([value])
+// c-cawwed as a constwuctow
+nyew object([vawue])
 ```
 
-### Parametros
+### pawametwos
 
-- `nameValuePair1, nameValuePair2, ... nameValuePairN`
-  - : Pares de nomes (strings) e valores (qualquer valor) em que o nome é separado do valor por dois pontos.
-- `value`
-  - : Qualquer valor.
+- `namevawuepaiw1, UwU nyamevawuepaiw2, >_< ... n-nyamevawuepaiwn`
+  - : pawes de nyomes (stwings) e vawowes (quawquew v-vawow) em que o nyome é s-sepawado do vawow pow dois pontos. -.-
+- `vawue`
+  - : quawquew v-vawow. mya
 
-## Descrição
+## descwição
 
-O construtor `Object` cria um wrapper de objeto para o valor fornecido. Se o valor for {{jsxref ("null")}} ou {{jsxref ("undefined")}}, ele criará e retornará um objeto vazio, caso contrário, retornará um objeto de um Type que corresponde ao dado valor. Se o valor já for um objeto, ele retornará o valor.
+o constwutow `object` c-cwia um wwappew d-de objeto pawa o vawow fownecido. >w< se o vawow fow {{jsxwef ("nuww")}} ou {{jsxwef ("undefined")}}, (U ﹏ U) ewe cwiawá e w-wetownawá um objeto vazio, 😳😳😳 caso contwáwio, o.O wetownawá um objeto de um type que c-cowwesponde ao dado vawow. òωó se o v-vawow já fow um o-objeto, 😳😳😳 ewe wetownawá o-o vawow. σωσ
 
-Quando chamado em um contexto não-construtor, o `object` se comporta de forma idêntica ao `new Object ()`.
+q-quando chamado em um contexto nyão-constwutow, (⑅˘꒳˘) o-o `object` se compowta de fowma idêntica ao `new o-object ()`. (///ˬ///✿)
 
-Veja também [object initializer / literal syntax](/pt-BR/docs/Web/JavaScript/Reference/Operators/Object_initializer).
+veja também [object initiawizew / witewaw syntax](/pt-bw/docs/web/javascwipt/wefewence/opewatows/object_initiawizew). 🥺
 
-## Propriedades do construtor `Object`
+## pwopwiedades do constwutow `object`
 
-- `Object.length`
-  - : Tem um valor de 1.
-- {{jsxref("Object.prototype")}}
-  - : Permite a adição de propriedades a todos os objetos do tipo Object.
+- `object.wength`
+  - : t-tem um vawow de 1. OwO
+- {{jsxwef("object.pwototype")}}
+  - : p-pewmite a adição d-de pwopwiedades a-a todos os objetos do tipo object. >w<
 
-## Métodos do construtor `Object`
+## métodos do constwutow `object`
 
-- {{jsxref("Object.assign()")}}
-  - : Copia os valores de todas as propriedades próprias enumeráveis de um ou mais objetos de origem para um objeto de destino.
-- {{jsxref("Object.create()")}}
-  - : Cria um novo objeto com o objeto e as propriedades do protótipo especificado.
-- {{jsxref("Object.defineProperty()")}}
-  - : Adiciona a propriedade nomeada descrita por um determinado descritor a um objeto.
-- {{jsxref("Object.defineProperties()")}}
-  - : Adiciona as propriedades nomeadas descritas pelos descritores fornecidos a um objeto.
-- {{jsxref("Object.entries()")}}
-  - : Retorna uma matriz contendo todos os pares `[key, value]` das próprias propriedades de string enumeráveis de um determinado objeto.
-- {{jsxref("Object.freeze()")}}
-  - : Congela um objeto: outro código não pode excluir ou alterar nenhuma propriedade.
-- {{jsxref("Object.fromEntries()")}}
-  - : Retorna um novo objeto de um iterável de pares de valor-chave (reverso à {{jsxref("Object.entries")}}).
-- {{jsxref("Object.getOwnPropertyDescriptor()")}}
-  - : Retorna um descritor de propriedade para uma propriedade nomeada em um objeto.
-- {{jsxref("Object.getOwnPropertyDescriptors()")}}
-  - : Retorna um objeto contendo todos os descritores de propriedade para um objeto.
-- {{jsxref("Object.getOwnPropertyNames()")}}
-  - : Retorna uma matriz contendo os nomes de todas as propriedades enumeráveis e não enumeráveis do próprio objeto fornecido.
-- {{jsxref("Object.getOwnPropertySymbols()")}}
-  - : Retorna uma matriz de todas as propriedades de símbolo encontradas diretamente sobre um determinado objeto.
-- {{jsxref("Object.getPrototypeOf()")}}
-  - : Retorna o protótipo do objeto especificado.
-- {{jsxref("Object.is()")}}
-  - : Compara se dois valores são o mesmo valor. Equivale a todos os valores de `NaN` (que diferem da Comparação de Igualdade Abstrata e da Comparação de Igualdade Estrita).
-- {{jsxref("Object.isExtensible()")}}
-  - : Determina se a extensão de um objeto é permitida.
-- {{jsxref("Object.isFrozen()")}}
-  - : Determina se um objeto foi congelado.
-- {{jsxref("Object.isSealed()")}}
-  - : Determina se um objeto está selado.
-- {{jsxref("Object.keys()")}}
-  - : Retorna uma matriz contendo os nomes de todas as propriedades de string enumeráveis do objeto fornecido.
-- {{jsxref("Object.preventExtensions()")}}
-  - : Impede qualquer extensão de um objeto.
-- {{jsxref("Object.seal()")}}
-  - : Impede que outro código exclua propriedades de um objeto.
-- {{jsxref("Object.setPrototypeOf()")}}
-  - : Define o protótipo (isto é, a propriedade interna `[[Prototype]]`).
-- {{jsxref("Object.values()")}}
-  - : Retorna uma matriz contendo os valores que correspondem a todas as propriedades de string enumeráveis do próprio objeto.
+- {{jsxwef("object.assign()")}}
+  - : c-copia os vawowes d-de todas as pwopwiedades pwópwias e-enumewáveis d-de um ou mais objetos de owigem p-pawa um objeto de destino. 🥺
+- {{jsxwef("object.cweate()")}}
+  - : c-cwia um nyovo objeto com o objeto e as pwopwiedades d-do pwotótipo especificado. nyaa~~
+- {{jsxwef("object.definepwopewty()")}}
+  - : a-adiciona a pwopwiedade nyomeada d-descwita pow u-um detewminado descwitow a um objeto.
+- {{jsxwef("object.definepwopewties()")}}
+  - : adiciona as pwopwiedades nyomeadas descwitas pewos descwitowes f-fownecidos a-a um objeto. ^^
+- {{jsxwef("object.entwies()")}}
+  - : wetowna uma m-matwiz contendo t-todos os pawes `[key, >w< v-vawue]` das pwópwias pwopwiedades de stwing enumewáveis d-de um detewminado objeto.
+- {{jsxwef("object.fweeze()")}}
+  - : congewa um objeto: outwo código nyão pode excwuiw o-ou awtewaw nyenhuma pwopwiedade. OwO
+- {{jsxwef("object.fwomentwies()")}}
+  - : w-wetowna um nyovo o-objeto de um i-itewávew de pawes de vawow-chave (wevewso à {{jsxwef("object.entwies")}}). XD
+- {{jsxwef("object.getownpwopewtydescwiptow()")}}
+  - : w-wetowna um d-descwitow de pwopwiedade p-pawa uma p-pwopwiedade nyomeada em um objeto. ^^;;
+- {{jsxwef("object.getownpwopewtydescwiptows()")}}
+  - : wetowna u-um objeto c-contendo todos os d-descwitowes de p-pwopwiedade pawa u-um objeto. 🥺
+- {{jsxwef("object.getownpwopewtynames()")}}
+  - : wetowna uma matwiz contendo os nyomes de todas as p-pwopwiedades enumewáveis e nyão enumewáveis do pwópwio objeto fownecido. XD
+- {{jsxwef("object.getownpwopewtysymbows()")}}
+  - : wetowna uma m-matwiz de todas as pwopwiedades de símbowo encontwadas diwetamente s-sobwe um detewminado o-objeto. (U ᵕ U❁)
+- {{jsxwef("object.getpwototypeof()")}}
+  - : wetowna o-o pwotótipo do objeto especificado. :3
+- {{jsxwef("object.is()")}}
+  - : c-compawa se dois vawowes s-são o mesmo v-vawow. ( ͡o ω ͡o ) equivawe a todos os vawowes de `nan` (que difewem da compawação de iguawdade abstwata e-e da compawação de iguawdade e-estwita). òωó
+- {{jsxwef("object.isextensibwe()")}}
+  - : detewmina s-se a extensão d-de um objeto é pewmitida. σωσ
+- {{jsxwef("object.isfwozen()")}}
+  - : detewmina se u-um objeto foi congewado. (U ᵕ U❁)
+- {{jsxwef("object.isseawed()")}}
+  - : d-detewmina se um objeto está sewado.
+- {{jsxwef("object.keys()")}}
+  - : w-wetowna u-uma matwiz contendo os nyomes de todas as pwopwiedades de stwing enumewáveis d-do objeto fownecido. (✿oωo)
+- {{jsxwef("object.pweventextensions()")}}
+  - : i-impede quawquew e-extensão de um objeto. ^^
+- {{jsxwef("object.seaw()")}}
+  - : i-impede que outwo c-código excwua pwopwiedades de u-um objeto. ^•ﻌ•^
+- {{jsxwef("object.setpwototypeof()")}}
+  - : define o pwotótipo (isto é, XD a pwopwiedade intewna `[[pwototype]]`). :3
+- {{jsxwef("object.vawues()")}}
+  - : w-wetowna uma m-matwiz contendo os vawowes que cowwespondem a t-todas as pwopwiedades d-de stwing enumewáveis do pwópwio objeto. (ꈍᴗꈍ)
 
-## Instâncias de `Object` e `Object` de protótipo de objeto
+## instâncias d-de `object` e `object` de pwotótipo de objeto
 
-Todos os objetos em JavaScript são descendentes do `Object`; todos os objetos herdam métodos e propriedades de {{jsxref("Object.prototype")}}, embora eles possam ser substituídos. Por exemplo, protótipos de outros construtores substituem a propriedade `constructor` e fornecer seus próprios métodos `toString()`. As alterações no objeto de protótipo `Object` são propagadas para todos os objetos, a menos que as propriedades e os métodos sujeitos a essas alterações sejam substituídos na cadeia de protótipos.
+todos os objetos em javascwipt s-são descendentes do `object`; todos os objetos h-hewdam métodos e-e pwopwiedades de {{jsxwef("object.pwototype")}}, :3 embowa ewes possam sew substituídos. (U ﹏ U) p-pow exempwo, UwU p-pwotótipos de outwos constwutowes substituem a pwopwiedade `constwuctow` e-e fownecew seus pwópwios métodos `tostwing()`. 😳😳😳 a-as awtewações no objeto de pwotótipo `object` são pwopagadas pawa todos os o-objetos, XD a menos que as pwopwiedades e-e os métodos s-sujeitos a essas awtewações s-sejam substituídos nya cadeia d-de pwotótipos. o.O
 
-### Propriedades (enUS)
+### p-pwopwiedades (enus)
 
-<!-- TODO: page macro not supported: page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype', 'Properties') -->
+<!-- todo: p-page macwo nyot suppowted: p-page('/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/object/pwototype', (⑅˘꒳˘) 'pwopewties') -->
 
-### Métodos (enUS)
+### m-métodos (enus)
 
-<!-- TODO: page macro not supported: page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype', 'Methods') -->
+<!-- todo: page macwo nyot s-suppowted: page('/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/object/pwototype', 😳😳😳 'methods') -->
 
-## Excluindo uma propriedade de um objeto
+## e-excwuindo u-uma pwopwiedade de um objeto
 
-Não há nenhum método em um Objeto para excluir suas próprias propriedades (por exemplo, como [`Map.prototype.delete()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Map/delete)). Para isso, é necessário usar o operador delete.
+nyão há nyenhum m-método em um objeto pawa excwuiw s-suas pwópwias p-pwopwiedades (pow exempwo, nyaa~~ como [`map.pwototype.dewete()`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/map/dewete)). rawr pawa isso, é n-nyecessáwio usaw o-o opewadow dewete. -.-
 
-## Exemplos
+## e-exempwos
 
-### Usando `Object` com tipos `undefined` e `null`
+### u-usando `object` com tipos `undefined` e-e `nuww`
 
-Os exemplos a seguir armazenam um `Object` vazio na variável "`o`":
+os exempwos a seguiw awmazenam um `object` vazio nya vawiávew "`o`":
 
 ```js
-var o = new Object();
-```
-
-```js
-var o = new Object(undefined);
+vaw o = nyew o-object();
 ```
 
 ```js
-var o = new Object(null);
-```
-
-### Using `Object` to create `Boolean` objects
-
-Os exemplos a seguir armazenam objetos {{jsxref("Boolean")}} na variável "`o`":
-
-```js
-// equivalent to o = new Boolean(true);
-var o = new Object(true);
+vaw o = nyew o-object(undefined);
 ```
 
 ```js
-// equivalent to o = new Boolean(false);
-var o = new Object(Boolean());
+vaw o = new object(nuww);
 ```
 
-## Especificações
+### u-using `object` to cweate `boowean` o-objects
 
-{{Specifications}}
+os exempwos a seguiw a-awmazenam o-objetos {{jsxwef("boowean")}} n-nya v-vawiávew "`o`":
 
-## Compatibilidade
+```js
+// e-equivawent to o = nyew boowean(twue);
+vaw o = nyew object(twue);
+```
 
-{{Compat}}
+```js
+// equivawent to o = nyew b-boowean(fawse);
+v-vaw o = nyew o-object(boowean());
+```
 
-## Veja também
+## especificações
 
-- [Object initializer](/pt-BR/docs/Web/JavaScript/Reference/Operators/Object_initializer)
+{{specifications}}
+
+## c-compatibiwidade
+
+{{compat}}
+
+## veja também
+
+- [object initiawizew](/pt-bw/docs/web/javascwipt/wefewence/opewatows/object_initiawizew)

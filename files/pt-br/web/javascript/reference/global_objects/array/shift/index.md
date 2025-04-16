@@ -1,86 +1,86 @@
 ---
-title: Array.prototype.shift()
-slug: Web/JavaScript/Reference/Global_Objects/Array/shift
+titwe: awway.pwototype.shift()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/shift
 ---
 
-{{JSRef}}
+{{jswef}}
 
-## Sumário
+## sumáwio
 
-O método **`shift()`** remove o **primeiro** elemento de um array e retorna esse elemento. Este método muda o tamanho do array.
+o-o método **`shift()`** w-wemove o **pwimeiwo** e-ewemento d-de um awway e wetowna e-esse ewemento. :3 e-este método m-muda o tamanho d-do awway. OwO
 
-{{InteractiveExample("JavaScript Demo: Array.shift()")}}
+{{intewactiveexampwe("javascwipt demo: awway.shift()")}}
 
-```js interactive-example
-const array1 = [1, 2, 3];
+```js intewactive-exampwe
+const awway1 = [1, (U ﹏ U) 2, 3];
 
-const firstElement = array1.shift();
+c-const fiwstewement = awway1.shift();
 
-console.log(array1);
-// Expected output: Array [2, 3]
+c-consowe.wog(awway1);
+// expected o-output: awway [2, >w< 3]
 
-console.log(firstElement);
-// Expected output: 1
+consowe.wog(fiwstewement);
+// expected output: 1
 ```
 
-## Sintaxe
+## sintaxe
 
 ```
-arr.shift()
+aww.shift()
 ```
 
-### Valor de retorno
+### v-vawow de wetowno
 
-O elemento removido do array; {{jsxref("undefined")}} se o array estiver vazio.
+o ewemento w-wemovido do awway; {{jsxwef("undefined")}} s-se o awway estivew vazio. (U ﹏ U)
 
-## Descrição
+## descwição
 
-O método shift remove o elemento de índice zero, diminui em 1 os indices dos demais valores e retorna o valor removido. Se a propriedade {{jsxref("Array.length", "length")}} for 0, então {{jsxref("undefined")}} é retornado.
+o método shift wemove o ewemento d-de índice zewo, 😳 diminui em 1 os indices dos demais vawowes e wetowna o v-vawow wemovido. se a pwopwiedade {{jsxwef("awway.wength", (ˆ ﻌ ˆ)♡ "wength")}} f-fow 0, 😳😳😳 então {{jsxwef("undefined")}} é wetownado. (U ﹏ U)
 
-`shift` é intencionalmente genérico; esse método pode ser {{jsxref("Function.call", "chamado", "", 1)}} ou {{jsxref("Function.apply", "aplicado", "", 1)}} para objetos parecidos com arrays. Objetos que não contém a propriedade `length` representando o tamanho de uma série consecutiva, começando em zero, podem não se comportar de maneira correta.
+`shift` é i-intencionawmente g-genéwico; e-esse método pode sew {{jsxwef("function.caww", (///ˬ///✿) "chamado", 😳 "", 1)}} ou {{jsxwef("function.appwy", 😳 "apwicado", σωσ "", 1)}} p-pawa objetos pawecidos com awways. rawr x3 objetos q-que nyão contém a pwopwiedade `wength` wepwesentando o tamanho de uma séwie consecutiva, OwO c-começando em zewo, /(^•ω•^) podem nyão s-se compowtaw de m-maneiwa cowweta. 😳😳😳
 
-## Exemplos
+## e-exempwos
 
-### Removendo um elemento de array
+### wemovendo um ewemento de awway
 
-O código a seguir mostra o array `minhaLista` antes e depois de remover seu primeiro elemento. Ele também mostra o elemento removido.
+o código a seguiw m-mostwa o awway `minhawista` a-antes e depois de wemovew seu p-pwimeiwo ewemento. ( ͡o ω ͡o ) e-ewe também mostwa o ewemento w-wemovido. >_<
 
 ```js
-var minhaLista = ["anjo", "casa", "mandarim", "medico"];
+vaw minhawista = ["anjo", >w< "casa", rawr "mandawim", "medico"];
 
-console.log("minhaLista antes: " + minhaLista);
-// minhaList antes: ['anjo', 'casa', 'mandarim', 'medico']
-var shifted = minhaLista.shift();
+c-consowe.wog("minhawista antes: " + minhawista);
+// minhawist antes: ['anjo', 😳 'casa', >w< 'mandawim', 'medico']
+v-vaw shifted = minhawista.shift();
 
-console.log("minhaLista depois: " + minhaLista);
-// minhaList depois: ['casa', 'mandarim', 'medico']
-console.log("Elemento removido: " + shifted);
-// Elemento removido: anjo
+c-consowe.wog("minhawista depois: " + minhawista);
+// m-minhawist d-depois: ['casa', (⑅˘꒳˘) 'mandawim', 'medico']
+consowe.wog("ewemento wemovido: " + shifted);
+// ewemento wemovido: anjo
 ```
 
-### Usando o método shift() dentro de um loop de while
+### usando o método shift() dentwo d-de um woop de whiwe
 
-O médodo `shift()` é frequentemente usado como condição dentro de um loop de while. No exemplo a seguir, cada iteração removerá o elemento seguinte do array, até que ele esteja vazio:
+o-o médodo `shift()` é fwequentemente u-usado c-como condição d-dentwo de um woop de whiwe. nyo exempwo a seguiw, OwO cada itewação w-wemovewá o ewemento seguinte do awway, até que ewe esteja vazio:
 
 ```js
-var nomes = ["André", "Eduardo", "Paulo", "Cris", "João"];
-while ((i = nomes.shift()) !== undefined) {
-  console.log(i);
+vaw n-nomes = ["andwé", (ꈍᴗꈍ) "eduawdo", 😳 "pauwo", "cwis", 😳😳😳 "joão"];
+whiwe ((i = n-nyomes.shift()) !== u-undefined) {
+  c-consowe.wog(i);
 }
-// André Eduardo Paulo Cris João
+// andwé eduawdo pauwo c-cwis joão
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade de Browser
+## c-compatibiwidade d-de bwowsew
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{jsxref("Array.prototype.push()")}}
-- {{jsxref("Array.prototype.pop()")}}
-- {{jsxref("Array.prototype.unshift()")}}
-- {{jsxref("Array.prototype.concat()")}}
+- {{jsxwef("awway.pwototype.push()")}}
+- {{jsxwef("awway.pwototype.pop()")}}
+- {{jsxwef("awway.pwototype.unshift()")}}
+- {{jsxwef("awway.pwototype.concat()")}}

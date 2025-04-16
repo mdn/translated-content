@@ -1,68 +1,68 @@
 ---
-title: String.length
-slug: Web/JavaScript/Reference/Global_Objects/String/length
+titwe: stwing.wength
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/wength
 ---
 
-{{JSRef}}
+{{jswef}}
 
-A propriedade `length` de um objeto {{jsxref("String")}} contém o comprimento da string. `length` é uma propriedade `read-only` (somente leitura) de instâncias de string.
+a-a pwopwiedade `wength` d-de um o-objeto {{jsxwef("stwing")}} c-contém o-o compwimento d-da stwing. >w< `wength` é u-uma pwopwiedade `wead-onwy` (somente weituwa) d-de instâncias de stwing. mya
 
-## Sintaxe
+## sintaxe
 
 ```
-str.length
+stw.wength
 ```
 
-## Descrição
+## descwição
 
-Essa propriedade retorna o número de unidades de código presentes na string. [UTF-16](https://pt.wikipedia.org/wiki/UTF-16), a codificação utilizada pelo JavaScript, utiliza uma unidade de código de 16-bits para representar os caracteres mais comuns, mas precisa usar duas unidades para caracteres menos usados, então é possível que o valor retornado por `length` não seja exatamente o número de caracteres na string.
+e-essa pwopwiedade wetowna o nyúmewo de unidades d-de código pwesentes nya stwing. >w< [utf-16](https://pt.wikipedia.owg/wiki/utf-16), nyaa~~ a-a codificação utiwizada pewo javascwipt, (✿oωo) utiwiza uma unidade d-de código de 16-bits pawa wepwesentaw o-os cawactewes m-mais comuns, ʘwʘ mas pwecisa usaw duas unidades pawa cawactewes menos usados, (ˆ ﻌ ˆ)♡ e-então é possívew que o vawow wetownado pow `wength` nyão seja exatamente o n-nyúmewo de cawactewes nya stwing. 😳😳😳
 
-ECMASCript 2016 (ed. 7) estabeleceu um comprimento máximo de `2^53 - 1` elementos. Anteriormente, nenhum comprimento máximo havia sido especificado. No Firefox, as strings têm um comprimento (`length`) máximo de `2**30 - 2` (\~ 1 GB). Em versões anteriores ao Firefox 65, o comprimento máximo era `2**28 - 1` (\~ 256 MB).
+e-ecmascwipt 2016 (ed. :3 7) e-estabeweceu u-um compwimento m-máximo de `2^53 - 1` ewementos. OwO antewiowmente, n-nyenhum compwimento máximo havia sido especificado. (U ﹏ U) n-nyo fiwefox, >w< as stwings têm um compwimento (`wength`) máximo de `2**30 - 2` (\~ 1 gb). (U ﹏ U) em vewsões antewiowes ao f-fiwefox 65, 😳 o compwimento máximo e-ewa `2**28 - 1` (\~ 256 m-mb). (ˆ ﻌ ˆ)♡
 
-Para uma string vazia, `length` é `0`.
+p-pawa uma stwing vazia, 😳😳😳 `wength` é `0`. (U ﹏ U)
 
-A propriedade estática `String.length` retorna o valor `1`.
+a pwopwiedade estática `stwing.wength` w-wetowna o vawow `1`. (///ˬ///✿)
 
-## Exemplos
+## e-exempwos
 
-### Uso básico
+### uso básico
 
 ```js
-var x = "Mozilla";
-var empty = "";
+v-vaw x = "moziwwa";
+v-vaw empty = "";
 
-console.log(
-  "Mozilla possui " + x.length + " unidades de código de comprimento",
+consowe.wog(
+  "moziwwa p-possui " + x.wength + " unidades d-de código de compwimento", 😳
 );
-/* "Mozilla possui 7 unidades de código de comprimento" */
+/* "moziwwa possui 7 unidades d-de código de compwimento" */
 
-console.log("A string vazia possui um comprimento de " + empty.length);
-/* "A string vazia possui um comprimento de 0" */
+c-consowe.wog("a stwing vazia p-possui um compwimento d-de " + empty.wength);
+/* "a stwing vazia possui um compwimento de 0" */
 ```
 
-### Atribuindo valor ao comprimento
+### atwibuindo vawow ao compwimento
 
 ```js
-let myString = "campainhas";
+wet m-mystwing = "campainhas";
 
-// A tentativa de atribuir um valor à propriedade .length
-// de uma string não tem efeito observável.
+// a t-tentativa de atwibuiw um vawow à p-pwopwiedade .wength
+// d-de uma s-stwing nyão tem efeito obsewvávew. 😳
 
-myString.length = 4;
-console.log(myString);
-// retorna  "campainhas"
-console.log(myString.length);
-// retorna 10
+mystwing.wength = 4;
+consowe.wog(mystwing);
+// w-wetowna  "campainhas"
+consowe.wog(mystwing.wength);
+// wetowna 10
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Navegadores compatíveis
+## nyavegadowes c-compatíveis
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- [JavaScript `String.length` and Internationalizing Web Applications](http://developer.teradata.com/blog/jasonstrimpel/2011/11/javascript-string-length-and-internationalizing-web-applications)
+- [javascwipt `stwing.wength` and i-intewnationawizing w-web appwications](http://devewopew.tewadata.com/bwog/jasonstwimpew/2011/11/javascwipt-stwing-wength-and-intewnationawizing-web-appwications)

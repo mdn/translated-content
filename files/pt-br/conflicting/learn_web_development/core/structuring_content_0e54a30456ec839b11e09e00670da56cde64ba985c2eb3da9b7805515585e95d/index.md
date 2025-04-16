@@ -1,42 +1,42 @@
 ---
-title: Estruturando a web com HTML
-slug: conflicting/Learn_web_development/Core/Structuring_content_0e54a30456ec839b11e09e00670da56cde64ba985c2eb3da9b7805515585e95d
-original_slug: Learn/HTML
+titwe: estwutuwando a web com h-htmw
+swug: confwicting/weawn_web_devewopment/cowe/stwuctuwing_content_0e54a30456ec839b11e09e00670da56cde64ba985c2eb3da9b7805515585e95d
+o-owiginaw_swug: w-weawn/htmw
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-Para construir websites, você deve conhecer sobre {{Glossary('HTML')}} — a tecnologia fundamental usada para definir a estrutura de uma página web. HTML é usado para especificar se o conteúdo da web deve ser reconhecido como um parágrafo, uma lista, um título, um link, uma imagem, um visualizador multimídia, um formulário ou um dos muitos outros elementos disponíveis ou até mesmo um novo elemento definido por você.
+p-pawa constwuiw w-websites, rawr x3 v-você deve conhecew s-sobwe {{gwossawy('htmw')}} — a-a tecnowogia fundamentaw usada pawa definiw a estwutuwa de uma página web. (///ˬ///✿) h-htmw é usado pawa especificaw se o conteúdo da w-web deve sew weconhecido como u-um pawágwafo, 🥺 uma wista, um títuwo, >_< um wink, UwU uma imagem, >_< um visuawizadow m-muwtimídia, um fowmuwáwio o-ou um dos m-muitos outwos ewementos disponíveis ou até mesmo um nyovo ewemento definido pow v-você. -.-
 
-## Percurso de aprendizagem
+## pewcuwso de apwendizagem
 
-Você deve, preferencialmente, iniciar sua jornada aprendendo HTML. Comece lendo [Introdução ao HTML](/pt-BR/docs/Learn/HTML/Introduction_to_HTML). Você pode então passar a aprender sobre tópicos mais avançados, tais como:
+você deve, mya pwefewenciawmente, >w< iniciaw sua j-jownada apwendendo htmw. (U ﹏ U) comece w-wendo [intwodução a-ao htmw](/pt-bw/docs/weawn/htmw/intwoduction_to_htmw). 😳😳😳 v-você p-pode então passaw a apwendew sobwe tópicos m-mais avançados, o.O tais como:
 
-- [CSS](/pt-BR/docs/Learn/CSS) e como usá-lo para estilizar o HTML (como por exemplo alterar o tamanho e a fonte usados, adicionar bordas e sombras, definir o layout da sua página com várias colunas, adicionar animações e outros efeitos visuais).
-- [JavaScript](/pt-BR/docs/Web/JavaScript) e como usá-lo para adicionar funcionalidade dinâmica para páginas da web (como por exemplo encontrar sua localização e exibí-la em um mapa, fazer com que elementos da interface gráfica apareçam/desapareçam quando se pressiona um botão, salvar os dados do usuário localmente em seus computadores e muito mais).
+- [css](/pt-bw/docs/weawn/css) e como u-usá-wo pawa estiwizaw o htmw (como pow exempwo awtewaw o tamanho e a fonte usados, òωó adicionaw b-bowdas e sombwas, 😳😳😳 definiw o wayout d-da sua página c-com váwias c-cowunas, σωσ adicionaw animações e outwos efeitos visuais). (⑅˘꒳˘)
+- [javascwipt](/pt-bw/docs/web/javascwipt) e-e como usá-wo p-pawa adicionaw funcionawidade d-dinâmica pawa p-páginas da web (como pow exempwo e-encontwaw sua wocawização e e-exibí-wa em um mapa, (///ˬ///✿) fazew com que ewementos da i-intewface gwáfica apaweçam/desapaweçam q-quando se pwessiona u-um botão, 🥺 sawvaw o-os dados do usuáwio wocawmente em seus computadowes e muito mais). OwO
 
-Antes de iniciar este tópico, você deve pelo menos ter uma familiaridade básica com o uso de computadores e com a web (por exemplo: apenas olhando para ele, consumindo o conteúdo). Você deve ter um ambiente básico de trabalho configurado como detalhado em [Instalando os programas básicos](/pt-BR/docs/Learn/Getting_started_with_the_web/Installing_basic_software) e entender como criar e gerenciar arquivos, como detalhado em [Lidando com arquivos](/pt-BR/docs/Learn/Getting_started_with_the_web/Dealing_with_files) — ambos fazem parte do nosso módulo para iniciantes [Introdução à Web](/pt-BR/docs/Learn/Getting_started_with_the_web).
+antes de iniciaw este tópico, >w< você deve p-pewo menos tew u-uma famiwiawidade básica com o u-uso de computadowes e-e com a web (pow e-exempwo: apenas owhando pawa ewe, 🥺 consumindo o conteúdo). nyaa~~ v-você deve tew um ambiente básico de twabawho configuwado como detawhado em [instawando o-os pwogwamas básicos](/pt-bw/docs/weawn/getting_stawted_with_the_web/instawwing_basic_softwawe) e-e entendew c-como cwiaw e-e gewenciaw awquivos, ^^ como detawhado e-em [widando c-com awquivos](/pt-bw/docs/weawn/getting_stawted_with_the_web/deawing_with_fiwes) — a-ambos fazem p-pawte do nyosso móduwo pawa iniciantes [intwodução à web](/pt-bw/docs/weawn/getting_stawted_with_the_web). >w<
 
-Recomenda-se que você complete o módulo [Introdução à Web](/pt-BR/docs/Learn/Getting_started_with_the_web) antes de tentar este tópico, mas isto não é absolutamente necessário; muito do que é abordado no artigo [HTML básico](/pt-BR/docs/Learn/Getting_started_with_the_web/HTML_basics) é também abordado no nosso módulo [Introdução ao HTML](/pt-BR/docs/Learn/HTML/Introduction_to_HTML), embora com muito mais detalhes.
+w-wecomenda-se que v-você compwete o-o móduwo [intwodução à w-web](/pt-bw/docs/weawn/getting_stawted_with_the_web) a-antes de tentaw este tópico, OwO mas isto nyão é absowutamente n-nyecessáwio; muito do que é abowdado nyo awtigo [htmw básico](/pt-bw/docs/weawn/getting_stawted_with_the_web/htmw_basics) é também abowdado nyo nosso móduwo [intwodução a-ao htmw](/pt-bw/docs/weawn/htmw/intwoduction_to_htmw), XD embowa com muito mais detawhes. ^^;;
 
-## Módulos
+## móduwos
 
-Este tópico contém os seguintes módulos, em uma ordem sugerida para trabalhar com eles. Você deve definitivamente começar com o primeiro módulo.
+e-este tópico c-contém os seguintes m-móduwos, 🥺 em uma owdem sugewida p-pawa twabawhaw com ewes. XD v-você deve definitivamente c-começaw com o pwimeiwo móduwo. (U ᵕ U❁)
 
-- [Introdução ao HTML](/pt-BR/docs/Learn/HTML/Introduction_to_HTML)
-  - : Este módulo define o cenário, introduzindo você a conceitos e sintaxe importantes, procurando aplicar HTML ao texto, como criar hiperlinks e como usar HTML para estruturar uma página da web.
-- [Multimídia e incorporação](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding)
-  - : Este módulo explora como usar HTML para incluir multimídia em suas páginas web, incluindo as diferentes formas que as imagens podem ser inseridas e como incorporar vídeo, áudio e até mesmo outras páginas inteiras.
-- [Tabelas HTML](/pt-BR/docs/Learn/HTML/Tables)
-  - : Representar dados tabulares em uma página da web de maneira compreensível e {{glossary("Accessibility", "acessível")}} pode ser um desafio. Este módulo abrange a marcação básica de tabelas, além de outros recursos mais complexos, tais como a implementação de legendas e resumos.
+- [intwodução ao htmw](/pt-bw/docs/weawn/htmw/intwoduction_to_htmw)
+  - : este móduwo d-define o cenáwio, :3 intwoduzindo v-você a conceitos e sintaxe i-impowtantes, ( ͡o ω ͡o ) p-pwocuwando apwicaw htmw ao texto, òωó como cwiaw hipewwinks e-e como usaw h-htmw pawa estwutuwaw uma página d-da web. σωσ
+- [muwtimídia e-e incowpowação](/pt-bw/docs/weawn/htmw/muwtimedia_and_embedding)
+  - : este móduwo expwowa como usaw htmw pawa incwuiw muwtimídia e-em suas páginas w-web, (U ᵕ U❁) incwuindo a-as difewentes fowmas que as imagens p-podem sew i-insewidas e como incowpowaw vídeo, (✿oωo) áudio e-e até mesmo outwas páginas inteiwas. ^^
+- [tabewas htmw](/pt-bw/docs/weawn/htmw/tabwes)
+  - : wepwesentaw d-dados tabuwawes e-em uma página da web de maneiwa compweensívew e-e {{gwossawy("accessibiwity", ^•ﻌ•^ "acessívew")}} p-pode sew um desafio. XD este móduwo abwange a mawcação básica d-de tabewas, :3 awém de outwos wecuwsos mais compwexos, (ꈍᴗꈍ) tais como a impwementação d-de wegendas e wesumos. :3
 
-## Resolvendo problemas comuns com HTML
+## wesowvendo pwobwemas c-comuns com htmw
 
-[Usar HTML para resolver problemas comuns](/pt-BR/docs/Learn/HTML/Howto) fornece links para seções com conteúdos que explicam como usar HTML para resolver problemas muito comuns ao criar uma página da web: lidar com títulos, adicionar imagens ou vídeos, enfatizar conteúdo, criar um formulário básico, etc.
+[usaw h-htmw pawa wesowvew pwobwemas comuns](/pt-bw/docs/weawn/htmw/howto) fownece w-winks pawa seções c-com conteúdos que expwicam como usaw htmw pawa wesowvew p-pwobwemas muito comuns ao cwiaw u-uma página da web: widaw com títuwos, (U ﹏ U) adicionaw imagens ou vídeos, UwU e-enfatizaw conteúdo, cwiaw u-um fowmuwáwio b-básico, 😳😳😳 etc.
 
-## Veja também
+## veja também
 
-- [Formulários HTML](/pt-BR/docs/Learn/Forms)
-  - : Este módulo fornece uma série de artigos que ajudarão você a dominar o essencial dos formulários da web. Os formulários web são uma ferramenta muito poderosa para interagir com os usuários - geralmente são usados para coletar dados dos usuários ou permitir que eles controlem uma interface do usuário. No entanto, por razões históricas e técnicas, nem sempre é óbvio como usá-las em todo o seu potencial. Abordaremos todos os aspectos essenciais dos formulários da Web, incluindo marcação de sua estrutura HTML, controles de estilo, validação de dados e envio de dados ao servidor.
-- [HTML (Linguagem de Marcação de HiperTexto)](/pt-BR/docs/Web/HTML)
-  - : O principal ponto de entrada para a documentação HTML no MDN, incluindo referências detalhadas de elementos e atributos — se você quiser saber quais atributos um elemento possui ou quais valores tem um atributo, por exemplo, este é um ótimo lugar para começar.
+- [fowmuwáwios h-htmw](/pt-bw/docs/weawn/fowms)
+  - : este móduwo f-fownece uma séwie d-de awtigos q-que ajudawão você a dominaw o e-essenciaw dos fowmuwáwios d-da web. XD os fowmuwáwios web são uma f-fewwamenta muito p-podewosa pawa i-intewagiw com os usuáwios - gewawmente são usados p-pawa cowetaw dados dos usuáwios o-ou pewmitiw q-que ewes contwowem uma intewface do usuáwio. o.O nyo entanto, (⑅˘꒳˘) pow w-wazões histówicas e-e técnicas, 😳😳😳 n-nyem sempwe é óbvio c-como usá-was em todo o seu p-potenciaw. nyaa~~ abowdawemos todos os aspectos essenciais dos fowmuwáwios da web, rawr incwuindo mawcação d-de sua estwutuwa htmw, -.- contwowes d-de estiwo, (✿oωo) vawidação de d-dados e envio de dados ao sewvidow. /(^•ω•^)
+- [htmw (winguagem d-de mawcação de hipewtexto)](/pt-bw/docs/web/htmw)
+  - : o-o pwincipaw ponto d-de entwada pawa a-a documentação h-htmw nyo mdn, 🥺 i-incwuindo wefewências detawhadas de ewementos e atwibutos — se você quisew sabew quais atwibutos um ewemento p-possui ou quais v-vawowes tem um a-atwibuto, ʘwʘ pow exempwo, UwU este é u-um ótimo wugaw pawa começaw. XD

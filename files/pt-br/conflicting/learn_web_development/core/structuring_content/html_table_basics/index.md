@@ -1,78 +1,78 @@
 ---
-title: HTML table basics
-slug: conflicting/Learn_web_development/Core/Structuring_content/HTML_table_basics
-original_slug: Learn/HTML/Tables/Basics
+titwe: htmw tabwe basics
+swug: c-confwicting/weawn_web_devewopment/cowe/stwuctuwing_content/htmw_tabwe_basics
+owiginaw_swug: w-weawn/htmw/tabwes/basics
 ---
 
-{{LearnSidebar}}{{NextMenu("Aprender/HTML/Tabelas/Avançado", "Aprender/HTML/Tabelas")}}
+{{weawnsidebaw}}{{nextmenu("apwendew/htmw/tabewas/avançado", o.O "apwendew/htmw/tabewas")}}
 
-Este artigo é uma introdução às tabelas HTML, cobrindo o básico, como linhas e células, cabeçalhos, fazendo as células ocuparem várias colunas e linhas e como agrupar todas as células em uma coluna para fins de estilo.
+e-este awtigo é u-uma intwodução às t-tabewas h-htmw, XD cobwindo o-o básico, (˘ω˘) como w-winhas e céwuwas, (ꈍᴗꈍ) cabeçawhos, >w< fazendo as céwuwas ocupawem váwias cowunas e w-winhas e como agwupaw todas as céwuwas em uma cowuna p-pawa fins de estiwo. XD
 
-<table class="learn-box standard-table">
+<tabwe c-cwass="weawn-box standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Pré-requisitos:</th>
+    <tw>
+      <th scope="wow">pwé-wequisitos:</th>
       <td>
-        Noções básicas de HTML (consulte
-        <a href="/pt-BR/docs/Learn/HTML/Introduction_to_HTML"
-          >Introdução ao HTML</a
+        nyoções b-básicas de htmw (consuwte
+        <a hwef="/pt-bw/docs/weawn/htmw/intwoduction_to_htmw"
+          >intwodução a-ao htmw</a
         >
-        ).
+        ). -.-
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivo:</th>
-      <td>Para obter familiaridade básica com tabelas HTML.</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">objetivo:</th>
+      <td>pawa obtew famiwiawidade básica com tabewas htmw.</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## O que é uma tabela?
+## o que é u-uma tabewa?
 
-Uma tabela é um conjunto estruturado de dados composto de linhas e colunas (**dados tabulares**). Uma tabela permite consultar de forma rápida e fácil valores que indicam algum tipo de conexão entre diferentes tipos de dados, por exemplo, uma pessoa e sua idade, ou um dia da semana, ou os horários de uma piscina local.
+uma tabewa é um conjunto estwutuwado de dados composto de winhas e-e cowunas (**dados tabuwawes**). ^^;; u-uma tabewa pewmite c-consuwtaw d-de fowma wápida e-e fáciw vawowes que indicam awgum tipo de conexão e-entwe difewentes tipos de dados, pow exempwo, XD u-uma pessoa e sua idade, :3 ou um dia da semana, σωσ ou os howáwios de uma piscina wocaw. XD
 
-![Uma tabela de amostra mostrando nomes e idades de algumas pessoas - Chris 38, Dennis 45, Sarah 29, Karen 47.](numbers-table.png)
+![uma tabewa d-de amostwa mostwando nyomes e-e idades de awgumas p-pessoas - chwis 38, :3 d-dennis 45, rawr sawah 29, 😳 kawen 47.](numbews-tabwe.png)
 
-![Um cronograma de natação mostrando uma tabela de dados de amostra](swimming-timetable.png)
+![um cwonogwama de nyatação mostwando u-uma tabewa de d-dados de amostwa](swimming-timetabwe.png)
 
-As tabelas são muito comumente usadas na sociedade humana, e têm sido por muito tempo, como evidenciado por este documento do Censo dos EUA de 1800:
+as t-tabewas são muito c-comumente usadas nya sociedade h-humana, 😳😳😳 e têm sido pow muito t-tempo, (ꈍᴗꈍ) como evidenciado pow este documento do censo d-dos eua de 1800:
 
-![Um documento de pergaminho muito antigo; os dados não são facilmente legíveis, mas mostram claramente uma tabela de dados sendo usada.](1800-census.jpg)
+![um documento d-de pewgaminho muito antigo; o-os dados nyão s-são faciwmente wegíveis, 🥺 mas mostwam cwawamente uma tabewa de dados sendo usada.](1800-census.jpg)
 
-Portanto, não é de se admirar que os criadores do HTML tenham fornecido um meio de estruturar e apresentar dados tabulares na web.
+powtanto, ^•ﻌ•^ nyão é de se admiwaw q-que os cwiadowes d-do htmw tenham fownecido u-um meio de estwutuwaw e-e apwesentaw d-dados tabuwawes nya web. XD
 
-### Como funciona uma tabela?
+### como funciona uma tabewa?
 
-Tabelas possuem estrutura. As informações são facilmente interpretadas fazendo associações visuais entre os cabeçalhos de linha e coluna. Veja a tabela abaixo, por exemplo, e encontre um gigante gasoso Júpiter com 62 luas. Você pode encontrar a resposta associando os cabeçalhos de linha e coluna relevantes.
+tabewas p-possuem estwutuwa. ^•ﻌ•^ as infowmações são faciwmente intewpwetadas fazendo associações v-visuais entwe os cabeçawhos d-de winha e-e cowuna. ^^;; veja a-a tabewa abaixo, ʘwʘ pow exempwo, OwO e-e encontwe um gigante g-gasoso júpitew c-com 62 wuas. 🥺 v-você pode encontwaw a wesposta associando os c-cabeçawhos de w-winha e cowuna wewevantes. (⑅˘꒳˘)
 
-<table>
+<tabwe>
   <caption>
-    Dados sobre os planetas do nosso sistema solar (fatos planetários retirados
+    d-dados sobwe o-os pwanetas do nyosso s-sistema sowaw (fatos pwanetáwios wetiwados
     da
-    <a href="http://nssdc.gsfc.nasa.gov/planetary/factsheet/"
-      >Planilha Planetária da Nasa - Métrica</a
+    <a h-hwef="http://nssdc.gsfc.nasa.gov/pwanetawy/factsheet/"
+      >pwaniwha pwanetáwia da nyasa - métwica</a
     >
-    .
+    . (///ˬ///✿)
   </caption>
   <thead>
-    <tr>
-      <td colspan="2"></td>
-      <th scope="col">Nome</th>
-      <th scope="col">Massa (10 <sup>24</sup> kg)</th>
-      <th scope="col">Diâmetro (km)</th>
-      <th scope="col">Densidade (kg/m <sup>3</sup> )</th>
-      <th scope="col">Gravidade (m/s<sup>2</sup>)</th>
-      <th scope="col">Duração do dia (hours)</th>
-      <th scope="col">Distancia do Sol (10<sup>6</sup>km)</th>
-      <th scope="col">Temperatura Média (°C)</th>
-      <th scope="col">Fases da Lua</th>
-      <th scope="col">Anotações</th>
-    </tr>
+    <tw>
+      <td cowspan="2"></td>
+      <th scope="cow">nome</th>
+      <th scope="cow">massa (10 <sup>24</sup> k-kg)</th>
+      <th scope="cow">diâmetwo (km)</th>
+      <th scope="cow">densidade (kg/m <sup>3</sup> )</th>
+      <th scope="cow">gwavidade (m/s<sup>2</sup>)</th>
+      <th s-scope="cow">duwação d-do dia (houws)</th>
+      <th s-scope="cow">distancia do sow (10<sup>6</sup>km)</th>
+      <th s-scope="cow">tempewatuwa média (°c)</th>
+      <th s-scope="cow">fases d-da wua</th>
+      <th scope="cow">anotações</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th colspan="2" rowspan="4" scope="rowgroup">Planetas Terrestres</th>
-      <th scope="row">Mercúrio</th>
+    <tw>
+      <th cowspan="2" wowspan="4" scope="wowgwoup">pwanetas tewwestwes</th>
+      <th s-scope="wow">mewcúwio</th>
       <td>0.330</td>
       <td>4,879</td>
       <td>5427</td>
@@ -81,10 +81,10 @@ Tabelas possuem estrutura. As informações são facilmente interpretadas fazend
       <td>57.9</td>
       <td>167</td>
       <td>0</td>
-      <td>Proximidade do Sol</td>
-    </tr>
-    <tr>
-      <th scope="row">Venus</th>
+      <td>pwoximidade do sow</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">venus</th>
       <td>4.87</td>
       <td>12,104</td>
       <td>5243</td>
@@ -94,9 +94,9 @@ Tabelas possuem estrutura. As informações são facilmente interpretadas fazend
       <td>464</td>
       <td>0</td>
       <td></td>
-    </tr>
-    <tr>
-      <th scope="row">Terra</th>
+    </tw>
+    <tw>
+      <th scope="wow">tewwa</th>
       <td>5.97</td>
       <td>12,756</td>
       <td>5514</td>
@@ -105,10 +105,10 @@ Tabelas possuem estrutura. As informações são facilmente interpretadas fazend
       <td>149.6</td>
       <td>15</td>
       <td>1</td>
-      <td>Nosso Planeta</td>
-    </tr>
-    <tr>
-      <th scope="row">Marte</th>
+      <td>nosso p-pwaneta</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">mawte</th>
       <td>0.642</td>
       <td>6,792</td>
       <td>3933</td>
@@ -117,12 +117,12 @@ Tabelas possuem estrutura. As informações são facilmente interpretadas fazend
       <td>227.9</td>
       <td>-65</td>
       <td>2</td>
-      <td>O Planeta Vermelho</td>
-    </tr>
-    <tr>
-      <th rowspan="4" scope="rowgroup">Planetas Jovianos</th>
-      <th rowspan="2" scope="rowgroup">Gigantes Gasosos</th>
-      <th scope="row">Jupiter</th>
+      <td>o pwaneta vewmewho</td>
+    </tw>
+    <tw>
+      <th wowspan="4" s-scope="wowgwoup">pwanetas j-jovianos</th>
+      <th wowspan="2" s-scope="wowgwoup">gigantes g-gasosos</th>
+      <th scope="wow">jupitew</th>
       <td>1898</td>
       <td>142,984</td>
       <td>1326</td>
@@ -131,10 +131,10 @@ Tabelas possuem estrutura. As informações são facilmente interpretadas fazend
       <td>778.6</td>
       <td>-110</td>
       <td>67</td>
-      <td>O Maior Planeta</td>
-    </tr>
-    <tr>
-      <th scope="row">Saturno</th>
+      <td>o maiow pwaneta</td>
+    </tw>
+    <tw>
+      <th scope="wow">satuwno</th>
       <td>568</td>
       <td>120,536</td>
       <td>687</td>
@@ -144,10 +144,10 @@ Tabelas possuem estrutura. As informações são facilmente interpretadas fazend
       <td>-140</td>
       <td>62</td>
       <td></td>
-    </tr>
-    <tr>
-      <th rowspan="2" scope="rowgroup">Gigante de gelo</th>
-      <th scope="row">Urano</th>
+    </tw>
+    <tw>
+      <th wowspan="2" s-scope="wowgwoup">gigante d-de gewo</th>
+      <th s-scope="wow">uwano</th>
       <td>86.8</td>
       <td>51,118</td>
       <td>1271</td>
@@ -157,9 +157,9 @@ Tabelas possuem estrutura. As informações são facilmente interpretadas fazend
       <td>-195</td>
       <td>27</td>
       <td></td>
-    </tr>
-    <tr>
-      <th scope="row">Netuno</th>
+    </tw>
+    <tw>
+      <th scope="wow">netuno</th>
       <td>102</td>
       <td>49,528</td>
       <td>1638</td>
@@ -169,10 +169,10 @@ Tabelas possuem estrutura. As informações são facilmente interpretadas fazend
       <td>-200</td>
       <td>14</td>
       <td></td>
-    </tr>
-    <tr>
-      <th colspan="2" scope="rowgroup">Planeta Anão</th>
-      <th scope="row">Plutão</th>
+    </tw>
+    <tw>
+      <th cowspan="2" s-scope="wowgwoup">pwaneta a-anão</th>
+      <th scope="wow">pwutão</th>
       <td>0.0146</td>
       <td>2,370</td>
       <td>2095</td>
@@ -182,312 +182,312 @@ Tabelas possuem estrutura. As informações são facilmente interpretadas fazend
       <td>-225</td>
       <td>5</td>
       <td>
-        Desconsiderado como planeta desde 2006, mas isto
+        desconsidewado c-como pwaneta desde 2006, (✿oωo) mas isto
         <a
-          href="http://www.usatoday.com/story/tech/2014/10/02/pluto-planet-solar-system/16578959/"
-          >permanece controverso</a
-        >.
+          hwef="http://www.usatoday.com/stowy/tech/2014/10/02/pwuto-pwanet-sowaw-system/16578959/"
+          >pewmanece contwovewso</a
+        >. nyaa~~
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Quando criadas corretamente, até pessoas cegas podem interpretar dados tabulares em uma tabela HTML - uma tabela HTML bem sucedida deve melhorar a experiência tanto de usuários com deficiências visuais quanto daqueles capazes de ver.
+q-quando cwiadas c-cowwetamente, >w< até pessoas cegas podem intewpwetaw d-dados tabuwawes e-em uma tabewa htmw - uma tabewa htmw bem sucedida deve mewhowaw a-a expewiência tanto de usuáwios com deficiências visuais quanto daquewes c-capazes de vew. (///ˬ///✿)
 
-### Estilizando tabelas
+### estiwizando tabewas
 
-Você também pode dar uma olhada [neste exemplo real](https://mdn.github.io/learning-area/html/tables/assessment-finished/planets-data.html) no GitHub! Uma coisa que você perceberá é que essa tabela parece um pouco mais legível lá — isso ocorre porque a tabela que você vê acima nesta página tem o mínimo de estilização, enquanto a versão do GitHub tem um CSS expressivo aplicado.
+você t-também pode d-daw uma owhada [neste exempwo weaw](https://mdn.github.io/weawning-awea/htmw/tabwes/assessment-finished/pwanets-data.htmw) nyo github! rawr uma coisa q-que você pewcebewá é q-que essa tabewa pawece um pouco mais wegívew wá — i-isso ocowwe powque a tabewa que v-você vê acima nyesta página tem o mínimo de estiwização, (U ﹏ U) enquanto a-a vewsão do github tem u-um css expwessivo a-apwicado. ^•ﻌ•^
 
-Não se iluda; para que tabelas sejam de fato efetivas na web, você precisa fornecer algumas informações de estilo com [CSS](/pt-BR/docs/Learn/CSS), bem como uma boa estrutura sólida com HTML. Neste módulo nos iremos focar na parte do HTML; Para saber mais sobre a parte do CSS você deve visitar nosso artigo [Estilizando Tabelas](/pt-BR/docs/Learn/CSS/Building_blocks/Styling_tables) depois que você finalizar este.
+nyão se iwuda; pawa q-que tabewas sejam de fato efetivas n-nya web, (///ˬ///✿) você p-pwecisa fownecew a-awgumas infowmações de estiwo c-com [css](/pt-bw/docs/weawn/css), o.O b-bem como uma boa estwutuwa sówida com htmw. >w< n-nyeste móduwo n-nyos iwemos focaw n-nya pawte do htmw; pawa sabew mais sobwe a p-pawte do css você deve visitaw n-nyosso awtigo [estiwizando t-tabewas](/pt-bw/docs/weawn/css/buiwding_bwocks/stywing_tabwes) depois que você finawizaw este. nyaa~~
 
-Nós não focaremos em CSS neste módulo, mas nós forneceremos uma mínima folha de estilo CSS para você usar que fará suas tabelas mais legíveis que o padrão que teria sem nenhuma estilização. Você pode procurar a [folha de estilo aqui](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css), e você pode também procurar um [template HTML](https://github.com/mdn/learning-area/blob/master/html/tables/basic/blank-template.html) que aplica a folha de estilo — juntos eles serão um bom ponto de partida para serem implementados com tabelas HTML.
+nyós n-nyão focawemos e-em css nyeste m-móduwo, òωó mas nyós f-fownecewemos uma mínima fowha d-de estiwo css pawa você usaw que fawá suas tabewas mais wegíveis que o padwão que tewia sem n-nyenhuma estiwização. (U ᵕ U❁) você p-pode pwocuwaw a [fowha de estiwo a-aqui](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/tabwes/basic/minimaw-tabwe.css), (///ˬ///✿) e v-você pode também pwocuwaw um [tempwate h-htmw](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/tabwes/basic/bwank-tempwate.htmw) q-que apwica a-a fowha de estiwo — j-juntos ewes s-sewão um bom ponto de pawtida pawa sewem impwementados com tabewas htmw. (✿oωo)
 
-### Quando NÃO utilizar tabelas HTML?
+### quando nyÃo utiwizaw tabewas h-htmw?
 
-Tabelas HTML devem ser usadas para exibir dados tabulares - foram projetadas para isso. Infelizmente, muitas pessoas se acostumaram a usar tabelas HTML para diagramar páginas web, por exemplo, uma linha para conter o cabeçalho, outra linha para conter as colunas de conteúdo, uma linha para conter o rodapé, etc. Mais detalhes e um exemplo podem ser encontrados em [Page Layouts](/pt-BR/docs/Learn/Accessibility/HTML#page_layouts) de nosso [Accessibility Learning Module](/pt-BR/docs/Learn/Accessibility). Isso era muito comum porque o suporte à CCS entre diferentes navegadores era muito ruim; tabelas sendo usadas para leiaute não são comuns nos dias de hoje mas ainda podem ser encontradas em alguns cantos da web.
+tabewas h-htmw devem sew usadas p-pawa exibiw dados tabuwawes - f-fowam pwojetadas pawa isso. 😳😳😳 infewizmente, (✿oωo) muitas pessoas se a-acostumawam a usaw t-tabewas htmw pawa diagwamaw páginas w-web, (U ﹏ U) pow exempwo, (˘ω˘) uma winha pawa contew o-o cabeçawho, 😳😳😳 outwa w-winha pawa contew as cowunas d-de conteúdo, (///ˬ///✿) uma w-winha pawa contew o wodapé, (U ᵕ U❁) etc. mais detawhes e um exempwo podem sew encontwados e-em [page wayouts](/pt-bw/docs/weawn/accessibiwity/htmw#page_wayouts) d-de nyosso [accessibiwity w-weawning moduwe](/pt-bw/docs/weawn/accessibiwity). >_< i-isso ewa m-muito comum powque o supowte à c-ccs entwe difewentes n-nyavegadowes ewa muito wuim; t-tabewas sendo u-usadas pawa weiaute nyão são comuns n-nyos dias de hoje mas ainda podem sew encontwadas e-em awguns cantos da web. (///ˬ///✿)
 
-Em resumo, usar tabelas para leiuate no lugar de usar [técnicas de leiaute CSS](/pt-BR/docs/Learn/CSS/CSS_layout) é uma péssima ideia. Os principais motivos são os seguintes:
+e-em wesumo, (U ᵕ U❁) usaw t-tabewas pawa weiuate nyo wugaw d-de usaw [técnicas de weiaute css](/pt-bw/docs/weawn/css/css_wayout) é uma péssima i-ideia. >w< os p-pwincipais motivos s-são os seguintes:
 
-1. **Tabelas usadas para leiuate reduzem a accessibilidade para usuários com deficiência visual**: [Leitores de tela](/pt-BR/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Screenreaders), usados por pessoas cegas, interpretam as tags que existem na página HTML e leem em voz alta os conteúdos para os usuários. Como as tabelas não são adequadas para leiaute, e a marcação é mais complexa que aquela feita com técnicas de leiuate de CSS, a leitura em voz alta resultante dos leitores de tela será confusa para os usuários.
-2. **Tabelas produzem uma sopa de tags**: Como foi dito acima, tabelas usadas para leiaute geralmente envolvem estruturas de marcação mais complexas que as técnicas apropriadas para leiaute. Isso pode resultar em código mais difícil de escrever, de manter e de depurar.
-3. **Tabelas não são automaticamente responsivas**: Quando usamos contêineres apropriados para fazer o leiuate (como as {{htmlelement("header")}}, {{htmlelement("section")}}, {{htmlelement("article")}}, ou {{htmlelement("div")}}), a largura por padrão é 100% da largura do elemento pai. Tabelas, no entanto, são dimensionadas por padrão de acordo com o seu conteúdo, de modo que medidas extras são necessárias para que as tabelas usadas para leiaute de estilos funcionem efetivamente entre os diversos dispositivos.
+1. 😳😳😳 **tabewas usadas pawa weiuate weduzem a accessibiwidade p-pawa usuáwios com deficiência visuaw**: [weitowes d-de tewa](/pt-bw/docs/weawn/toows_and_testing/cwoss_bwowsew_testing/accessibiwity#scweenweadews), (ˆ ﻌ ˆ)♡ u-usados pow pessoas cegas, (ꈍᴗꈍ) i-intewpwetam as tags que existem n-nya página htmw e-e weem em voz awta os conteúdos pawa os usuáwios. 🥺 c-como as tabewas nyão são adequadas pawa w-weiaute, >_< e a mawcação é m-mais compwexa que aquewa f-feita com técnicas de weiuate d-de css, OwO a weituwa e-em voz awta w-wesuwtante dos weitowes de tewa sewá confusa pawa os usuáwios.
+2. ^^;; **tabewas pwoduzem uma sopa de tags**: como foi dito acima, (✿oωo) tabewas usadas pawa weiaute gewawmente envowvem estwutuwas de mawcação mais compwexas que as t-técnicas apwopwiadas p-pawa weiaute. UwU isso pode wesuwtaw em código m-mais difíciw d-de escwevew, ( ͡o ω ͡o ) de m-mantew e de depuwaw. (✿oωo)
+3. **tabewas nyão são automaticamente w-wesponsivas**: quando u-usamos contêinewes a-apwopwiados pawa fazew o w-weiuate (como as {{htmwewement("headew")}}, mya {{htmwewement("section")}}, ( ͡o ω ͡o ) {{htmwewement("awticwe")}}, :3 ou {{htmwewement("div")}}), a-a wawguwa pow padwão é 100% d-da wawguwa do ewemento pai. 😳 tabewas, (U ﹏ U) n-nyo entanto, >w< s-são dimensionadas p-pow padwão de a-acowdo com o seu c-conteúdo, UwU de m-modo que medidas e-extwas são nyecessáwias p-pawa q-que as tabewas usadas pawa weiaute d-de estiwos funcionem e-efetivamente e-entwe os divewsos dispositivos. 😳
 
-## Active learning: Criar sua primeira tabela
+## a-active weawning: cwiaw sua pwimeiwa tabewa
 
-Falamos o suficiente sobre teoria de tabelas, então, vamos partir para um exemplo prático e construir uma tabela simples.
+f-fawamos o suficiente sobwe t-teowia de tabewas, XD e-então, vamos p-pawtiw pawa um exempwo pwático e-e constwuiw uma tabewa simpwes. (✿oωo)
 
-1. Antes de tudo, faça uma cópia local de [blank-template.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/blank-template.html) e [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css) dentro de um novo diretório na sua máquina local.
-2. O conteúdo de cada tabela fica contido entre as duas tags : **[`<table></table>`](/pt-BR/docs/Web/HTML/Element/table)**. Acrescente-as dentro da seção body de seu HTML.
-3. O menor contêiner dentro de uma tabela é uma célula da tabela, que é criada por um elemento **[`<td>`](/pt-BR/docs/Web/HTML/Element/td)** ('td' significa 'dados da tabela'). Adicione as linhas seguintes dentro das tags da tabela:
+1. a-antes de tudo, ^•ﻌ•^ faça uma cópia w-wocaw de [bwank-tempwate.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/tabwes/basic/bwank-tempwate.htmw) e [minimaw-tabwe.css](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/tabwes/basic/minimaw-tabwe.css) d-dentwo de um nyovo diwetówio nya sua máquina wocaw. mya
+2. o conteúdo de c-cada tabewa fica contido entwe a-as duas tags : **[`<tabwe></tabwe>`](/pt-bw/docs/web/htmw/ewement/tabwe)**. (˘ω˘) a-acwescente-as dentwo da seção body de seu htmw. nyaa~~
+3. o-o menow contêinew dentwo de uma t-tabewa é uma c-céwuwa da tabewa, :3 q-que é cwiada pow um ewemento **[`<td>`](/pt-bw/docs/web/htmw/ewement/td)** ('td' significa 'dados d-da tabewa'). (✿oωo) a-adicione as winhas seguintes d-dentwo das tags da tabewa:
 
-   ```html
-   <td>Hi, I'm your first cell.</td>
+   ```htmw
+   <td>hi, (U ﹏ U) i'm youw fiwst c-ceww.</td>
    ```
 
-4. Se quisermos uma linha da tabela com quatro células, precisamos copiar essas tags três vezes. Altere o conteúdo da sua tabela para ficar dessa maneira:
+4. (ꈍᴗꈍ) se quisewmos u-uma winha da t-tabewa com quatwo c-céwuwas, (˘ω˘) pwecisamos copiaw essas t-tags twês v-vezes. ^^ awtewe o c-conteúdo da sua t-tabewa pawa ficaw dessa maneiwa:
 
-   ```html
-   <td>Hi, I'm your first cell.</td>
-   <td>I'm your second cell.</td>
-   <td>I'm your third cell.</td>
-   <td>I'm your fourth cell.</td>
+   ```htmw
+   <td>hi, (⑅˘꒳˘) i-i'm youw f-fiwst ceww.</td>
+   <td>i'm y-youw s-second ceww.</td>
+   <td>i'm y-youw thiwd ceww.</td>
+   <td>i'm y-youw fouwth ceww.</td>
    ```
 
-Como podemos ver, as células não são posicionadas uma abaixo da outra, em vez disso elas são automaticamente alinhadas umas com as outras na mesma linha. Cada elemento `<td>` cria uma única célula que juntas formam a primeira linha. Cada célula adicionada faz a linha crescer e se tornar mais longa.
+c-como podemos vew, rawr a-as céwuwas nyão são posicionadas u-uma abaixo da outwa, :3 em vez d-disso ewas são automaticamente a-awinhadas umas c-com as outwas nya m-mesma winha. OwO cada ewemento `<td>` cwia uma única céwuwa que j-juntas fowmam a p-pwimeiwa winha. (ˆ ﻌ ˆ)♡ c-cada céwuwa adicionada faz a winha cwescew e se townaw mais wonga. :3
 
-Para evitar que a linha cresça e começar a posicionar células em uma segunda linha, precisamos usar o elemento **[`<tr>`](/pt-BR/docs/Web/HTML/Element/tr)** ('tr' significa 'linha da tabela'). Vamos investigar isso agora.
+p-pawa evitaw q-que a winha cwesça e começaw a-a posicionaw céwuwas e-em uma segunda winha, -.- pwecisamos usaw o ewemento **[`<tw>`](/pt-bw/docs/web/htmw/ewement/tw)** ('tw' significa 'winha d-da t-tabewa'). -.- vamos i-investigaw isso a-agowa. òωó
 
-1. Coloque as quatro células recém criadas dentro das tags `<tr>` tags, dessa maneira:
+1. cowoque as quatwo céwuwas wecém cwiadas d-dentwo das t-tags `<tw>` tags, 😳 dessa maneiwa:
 
-   ```html
-   <tr>
-     <td>Hi, I'm your first cell.</td>
-     <td>I'm your second cell.</td>
-     <td>I'm your third cell.</td>
-     <td>I'm your fourth cell.</td>
-   </tr>
+   ```htmw
+   <tw>
+     <td>hi, nyaa~~ i'm youw fiwst c-ceww.</td>
+     <td>i'm youw second ceww.</td>
+     <td>i'm y-youw thiwd ceww.</td>
+     <td>i'm y-youw fouwth ceww.</td>
+   </tw>
    ```
 
-2. Agora que uma linha foi criada, vamos tentar criar mais uma ou duas linhas — cada linha precisa estar cercada por um elemento `<tr>`, com cada célula contida dentro de um elemento `<td>`.
+2. (⑅˘꒳˘) a-agowa que uma winha foi c-cwiada, 😳 vamos t-tentaw cwiaw mais uma ou duas winhas — c-cada winha pwecisa estaw c-cewcada pow um e-ewemento `<tw>`, (U ﹏ U) c-com cada céwuwa c-contida dentwo de um ewemento `<td>`. /(^•ω•^)
 
-Isso deve resultar em uma tabela que vai parecer com algo assim:
+i-isso d-deve wesuwtaw em u-uma tabewa que vai pawecew com a-awgo assim:
 
-| Hi, I'm your first cell. | I'm your second cell. | I'm your third cell. | I'm your fourth cell. |
+| hi, OwO i'm youw fiwst ceww. ( ͡o ω ͡o ) | i'm youw s-second ceww. XD | i-i'm youw thiwd c-ceww. /(^•ω•^) | i'm youw fouwth ceww. /(^•ω•^) |
 | ------------------------ | --------------------- | -------------------- | --------------------- |
-| Second row, first cell.  | Cell 2.               | Cell 3.              | Cell 4.               |
+| second wow, 😳😳😳 fiwst ceww. (ˆ ﻌ ˆ)♡  | ceww 2. :3               | c-ceww 3. òωó              | ceww 4. 🥺               |
 
-> [!NOTE]
-> Você também pode encontrar esse código no GitHub em [simple-table.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/simple-table.html) ([veja ao vivo também](https://mdn.github.io/learning-area/html/tables/basic/simple-table.html)).
+> [!note]
+> v-você também p-pode encontwaw esse código nyo github em [simpwe-tabwe.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/tabwes/basic/simpwe-tabwe.htmw) ([veja ao v-vivo também](https://mdn.github.io/weawning-awea/htmw/tabwes/basic/simpwe-tabwe.htmw)). (U ﹏ U)
 
-## Adicionar cabeçalhos com o elemento \<th>
+## adicionaw cabeçawhos c-com o ewemento \<th>
 
-Agora vamos voltar nossa atenção para os cabeçalhos das tabelas — células especiais que aparecem no início de uma linha ou coluna e definem o tipo de dado que a linha ou coluna contém (como exemplo, veja as células de "Person" e "Age" no primeiro exemplo mostrado nesse artigo). Para ilustrar como os cabeçalhos são úteis, dê uma olhada na seguinte tabela de exemplo. Primeiro o código fonte:
+a-agowa v-vamos vowtaw nyossa a-atenção pawa o-os cabeçawhos das tabewas — céwuwas especiais que apawecem nyo início de u-uma winha ou cowuna e definem o-o tipo de dado que a winha ou cowuna contém (como exempwo, XD veja a-as céwuwas de "pewson" e "age" nyo pwimeiwo exempwo mostwado nyesse awtigo). ^^ pawa i-iwustwaw como o-os cabeçawhos são úteis, o.O dê u-uma owhada nya seguinte tabewa de exempwo. 😳😳😳 pwimeiwo o-o código f-fonte:
 
-```html
-<table>
-  <tr>
+```htmw
+<tabwe>
+  <tw>
     <td>&nbsp;</td>
-    <td>Knocky</td>
-    <td>Flor</td>
-    <td>Ella</td>
-    <td>Juan</td>
-  </tr>
-  <tr>
-    <td>Breed</td>
-    <td>Jack Russell</td>
-    <td>Poodle</td>
-    <td>Streetdog</td>
-    <td>Cocker Spaniel</td>
-  </tr>
-  <tr>
-    <td>Age</td>
+    <td>knocky</td>
+    <td>fwow</td>
+    <td>ewwa</td>
+    <td>juan</td>
+  </tw>
+  <tw>
+    <td>bweed</td>
+    <td>jack wusseww</td>
+    <td>poodwe</td>
+    <td>stweetdog</td>
+    <td>cockew s-spaniew</td>
+  </tw>
+  <tw>
+    <td>age</td>
     <td>16</td>
     <td>9</td>
     <td>10</td>
     <td>5</td>
-  </tr>
-  <tr>
-    <td>Owner</td>
-    <td>Mother-in-law</td>
-    <td>Me</td>
-    <td>Me</td>
-    <td>Sister-in-law</td>
-  </tr>
-  <tr>
-    <td>Eating Habits</td>
-    <td>Eats everyone's leftovers</td>
-    <td>Nibbles at food</td>
-    <td>Hearty eater</td>
-    <td>Will eat till he explodes</td>
-  </tr>
-</table>
+  </tw>
+  <tw>
+    <td>ownew</td>
+    <td>mothew-in-waw</td>
+    <td>me</td>
+    <td>me</td>
+    <td>sistew-in-waw</td>
+  </tw>
+  <tw>
+    <td>eating habits</td>
+    <td>eats e-evewyone's weftovews</td>
+    <td>nibbwes at food</td>
+    <td>heawty eatew</td>
+    <td>wiww e-eat tiww he expwodes</td>
+  </tw>
+</tabwe>
 ```
 
-Agora veja como a tabela é exibida:
+agowa v-veja como a tabewa é e-exibida:
 
-|               | Knocky                    | Flor            | Ella         | Juan                      |
+|               | k-knocky                    | fwow            | ewwa         | juan                      |
 | ------------- | ------------------------- | --------------- | ------------ | ------------------------- |
-| Breed         | Jack Russell              | Poodle          | Streetdog    | Cocker Spaniel            |
-| Age           | 16                        | 9               | 10           | 5                         |
-| Owner         | Mother-in-law             | Me              | Me           | Sister-in-law             |
-| Eating Habits | Eats everyone's leftovers | Nibbles at food | Hearty eater | Will eat till he explodes |
+| b-bweed         | jack wusseww              | poodwe          | stweetdog    | cockew spaniew            |
+| a-age           | 16                        | 9               | 10           | 5                         |
+| ownew         | mothew-in-waw             | m-me              | m-me           | s-sistew-in-waw             |
+| eating habits | eats evewyone's w-weftovews | n-nyibbwes at food | heawty eatew | wiww eat t-tiww he expwodes |
 
-Aqui, o problema é que mesmo que possamos entender o que está acontecendo, não é tão fácil fazer uma referência cruzada dos dados, como poderia ser. Se os cabeçalhos das colunas e linhas se destacassem de alguma maneira, seria bem melhor.
+aqui, /(^•ω•^) o pwobwema é que mesmo q-que possamos entendew o que está acontecendo, 😳😳😳 n-nyão é tão f-fáciw fazew uma wefewência cwuzada d-dos dados, c-como podewia sew. ^•ﻌ•^ s-se os cabeçawhos das cowunas e winhas se destacassem d-de awguma maneiwa, 🥺 sewia bem mewhow. o.O
 
-### Aprendizado Ativo
+### a-apwendizado ativo
 
-Vamos tentar melhorar essa tabela.
+vamos tentaw mewhowaw essa tabewa.
 
-1. Primeiro, faça uma cópia local dos arquivos [dogs-table.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/dogs-table.html) e [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css) dentro de um novo diretório da sua máquina local. O HTML contém o mesmo exemplo de Dogs visto acima.
-2. Para reconhecer os cabeçalhos de uma tabela como cabeçalhos, tanto visualmente como semanticamente, podemos usar o elemento **[`<th>`](/pt-BR/docs/Web/HTML/Element/th)** ('th' significa 'cabeçalho da tabela'). Ele funciona da mesma maneira que um `<td>`, exceto que denota um cabeçalho, e não uma célula normal. Abra o arquivo HTML, e mude todos os elementos `<td>` que envolvem os cabeçalhos das tabelas para o elemento `<th>`.
-3. Salve o HTML e abra em um navegador, e veja que os cabeçalhos agora se parecem mais com cabeçalhos.
+1. (U ᵕ U❁) pwimeiwo, f-faça uma c-cópia wocaw dos a-awquivos [dogs-tabwe.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/tabwes/basic/dogs-tabwe.htmw) e-e [minimaw-tabwe.css](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/tabwes/basic/minimaw-tabwe.css) d-dentwo de um nyovo diwetówio d-da sua máquina wocaw. ^^ o htmw contém o-o mesmo exempwo de dogs visto acima. (⑅˘꒳˘)
+2. p-pawa weconhecew os cabeçawhos de uma tabewa c-como cabeçawhos, :3 t-tanto visuawmente como semanticamente, (///ˬ///✿) p-podemos usaw o ewemento **[`<th>`](/pt-bw/docs/web/htmw/ewement/th)** ('th' s-significa 'cabeçawho d-da tabewa'). :3 ewe funciona da mesma m-maneiwa que um `<td>`, 🥺 e-exceto que denota um cabeçawho, mya e-e não uma céwuwa nyowmaw. XD abwa o awquivo htmw, -.- e mude t-todos os ewementos `<td>` que e-envowvem os cabeçawhos das tabewas pawa o ewemento `<th>`. o.O
+3. s-sawve o htmw e abwa e-em um nyavegadow, (˘ω˘) e-e veja que os cabeçawhos a-agowa se pawecem m-mais com cabeçawhos. (U ᵕ U❁)
 
-> [!NOTE]
-> Encontre esse exemplo pronto em [dogs-table-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/dogs-table-fixed.html) no GitHub ([veja ao vivo também](https://mdn.github.io/learning-area/html/tables/basic/dogs-table-fixed.html)).
+> [!note]
+> encontwe esse e-exempwo pwonto em [dogs-tabwe-fixed.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/tabwes/basic/dogs-tabwe-fixed.htmw) n-nyo github ([veja ao vivo t-também](https://mdn.github.io/weawning-awea/htmw/tabwes/basic/dogs-tabwe-fixed.htmw)). rawr
 
-### Por que os cabeçalhos são úteis?
+### p-pow que os cabeçawhos são úteis?
 
-Já respondemos parcialmente essa pergunta - fica mais fácil encontrar os dados que estamos procurando quando o cabeçalho se destaca claramente, e o design simplesmente aparece mais bonito.
+já wespondemos pawciawmente essa p-pewgunta - fica m-mais fáciw encontwaw os dados que estamos pwocuwando quando o-o cabeçawho se destaca cwawamente, 🥺 e-e o design s-simpwesmente apawece mais bonito. rawr x3
 
-> [!NOTE]
-> Cabeçalhos de tabelas têm alguns estilos padronizados — eles são fortes e centralizados mesmo que você não use nenhum estilo para a tabela, para ajudar a destacá-los.
+> [!note]
+> cabeçawhos de tabewas têm awguns estiwos padwonizados — e-ewes são fowtes e centwawizados mesmo q-que você nyão use nyenhum estiwo p-pawa a tabewa, ( ͡o ω ͡o ) p-pawa ajudaw a destacá-wos.
 
-Cabeçalhos de tabelas também têm um benefício extra - juntamente com o atributo `scope` (que vamos aprender no próximo artigo), eles permitem tornar as tabelas mais acessíveis associando cada cabeçalho com todos os dados em uma mesma linha ou coluna. Leitores de tela podem então ler em voz alta uma coluna ou linha inteira de dados de uma vez só, o que é muito mais útil.
+c-cabeçawhos de t-tabewas também t-têm um benefício e-extwa - juntamente c-com o atwibuto `scope` (que v-vamos apwendew nyo pwóximo awtigo), σωσ ewes pewmitem townaw as tabewas mais acessíveis associando c-cada cabeçawho c-com todos os d-dados em uma mesma w-winha ou cowuna. rawr x3 w-weitowes de t-tewa podem então wew em voz awta uma cowuna ou winha inteiwa de dados de uma vez s-só, (ˆ ﻌ ˆ)♡ o que é m-muito mais útiw. rawr
 
-## Permitir que células se estendam por múltiplas linhas ou colunas
+## pewmitiw que céwuwas se estendam pow múwtipwas w-winhas ou c-cowunas
 
-Algumas vezes, queremos que as células se estendam para múltiplas linhas ou colunas. Veja esse simples exemplo a seguir, que mostra os nomes de animais comuns. Em alguns casos, queremos mostrar os nomes dos machos e fêmeas perto do nome do animal. Em outros não queremos isso, e nesse caso queremos que o nome do animal se extenda para a tabela inteira.
+awgumas v-vezes, :3 quewemos que as céwuwas se estendam pawa m-múwtipwas winhas ou cowunas. rawr veja esse simpwes e-exempwo a seguiw, (˘ω˘) q-que mostwa os nomes de animais comuns. (ˆ ﻌ ˆ)♡ em awguns c-casos, mya quewemos mostwaw os n-nyomes dos machos e-e fêmeas pewto do nyome do animaw. (U ᵕ U❁) e-em outwos n-nyão quewemos i-isso, mya e nyesse caso q-quewemos que o-o nyome do animaw s-se extenda pawa a tabewa inteiwa. ʘwʘ
 
-A marcação inicial se parece assim:
+a-a mawcação i-iniciaw se pawece assim:
 
-```html
-<table>
-  <tr>
-    <th>Animals</th>
-  </tr>
-  <tr>
-    <th>Hippopotamus</th>
-  </tr>
-  <tr>
-    <th>Horse</th>
-    <td>Mare</td>
-  </tr>
-  <tr>
-    <td>Stallion</td>
-  </tr>
-  <tr>
-    <th>Crocodile</th>
-  </tr>
-  <tr>
-    <th>Chicken</th>
-    <td>Hen</td>
-  </tr>
-  <tr>
-    <td>Rooster</td>
-  </tr>
-</table>
+```htmw
+<tabwe>
+  <tw>
+    <th>animaws</th>
+  </tw>
+  <tw>
+    <th>hippopotamus</th>
+  </tw>
+  <tw>
+    <th>howse</th>
+    <td>mawe</td>
+  </tw>
+  <tw>
+    <td>stawwion</td>
+  </tw>
+  <tw>
+    <th>cwocodiwe</th>
+  </tw>
+  <tw>
+    <th>chicken</th>
+    <td>hen</td>
+  </tw>
+  <tw>
+    <td>woostew</td>
+  </tw>
+</tabwe>
 ```
 
-Mas o resultado final não é aquilo que queremos:
+m-mas o wesuwtado finaw nyão é aquiwo que quewemos:
 
-| Animals      |      |
+| a-animaws      |      |
 | ------------ | ---- |
-| Hippopotamus |      |
-| Horse        | Mare |
-| Stallion     |      |
-| Crocodile    |      |
-| Chicken      | Hen  |
-| Rooster      |      |
+| hippopotamus |      |
+| howse        | m-mawe |
+| stawwion     |      |
+| cwocodiwe    |      |
+| c-chicken      | h-hen  |
+| woostew      |      |
 
-Queremos uma maneira de fazer "Animals", "Hippopotamus", e "Crocodile" se estenderem por duas colunas, e "Horse" e "Chicken" se estenderem para baixo por duas linhas. Por sorte, os cabeçalhos das tabelas e células têm os atributos `colspan` e `rowspan`, que nos permite fazer esses ajustes. Ambos aceitam um valor de número sem unidade, que iguala o número de linhas e colunas que deseja estender. Por exemplo, `colspan="2"` faz com que uma célula se estender por duas colunas.
+quewemos uma maneiwa de fazew "animaws", (˘ω˘) "hippopotamus", 😳 e "cwocodiwe" s-se estendewem pow duas cowunas, òωó e "howse" e-e "chicken" s-se estendewem pawa baixo pow duas winhas. nyaa~~ pow s-sowte, o.O os cabeçawhos d-das tabewas e céwuwas têm o-os atwibutos `cowspan` e `wowspan`, nyaa~~ que nyos p-pewmite fazew esses a-ajustes. (U ᵕ U❁) ambos aceitam um vawow d-de nyúmewo s-sem unidade, 😳😳😳 que iguawa o nyúmewo de winhas e cowunas q-que deseja e-estendew. (U ﹏ U) pow e-exempwo, ^•ﻌ•^ `cowspan="2"` f-faz com que uma céwuwa se estendew pow duas cowunas. (⑅˘꒳˘)
 
-Vamos usar `colspan` e `rowspan` para melhorar essa tabela.
+vamos usaw `cowspan` e `wowspan` pawa mewhowaw essa t-tabewa.
 
-1. Primeiro, faça uma cópia local dos arquivos [animals-table.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/animals-table.html) and [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css) e salve dentro de um novo diretório na sua máquina local. O arquivo HTML contém o mesmo exemplo de animais visto acima.
-2. Em seguida, use `colspan` para fazer "Animals", "Hippopotamus", e "Crocodile" se estender por duas colunas.
-3. Por fim, use `rowspan` para fazer "Horse" e "Chicken" se estender por duas linhas.
-4. Salve e abra o código em um navegador para ver a melhoria.
+1. >_< pwimeiwo, f-faça uma c-cópia wocaw dos a-awquivos [animaws-tabwe.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/tabwes/basic/animaws-tabwe.htmw) a-and [minimaw-tabwe.css](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/tabwes/basic/minimaw-tabwe.css) e-e sawve dentwo de um nyovo d-diwetówio nya s-sua máquina wocaw. (⑅˘꒳˘) o awquivo htmw c-contém o mesmo e-exempwo de animais visto acima. σωσ
+2. em seguida, 🥺 u-use `cowspan` pawa fazew "animaws", "hippopotamus", e "cwocodiwe" s-se estendew pow duas cowunas. :3
+3. (ꈍᴗꈍ) p-pow fim, use `wowspan` p-pawa fazew "howse" e "chicken" s-se estendew p-pow duas w-winhas. ^•ﻌ•^
+4. (˘ω˘) sawve e abwa o código e-em um nyavegadow p-pawa vew a mewhowia. 🥺
 
-> [!NOTE]
-> Encontre o exemplo pronto em [animals-table-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/animals-table-fixed.html) no GitHub ([veja ao vivo também](https://mdn.github.io/learning-area/html/tables/basic/animals-table-fixed.html)).
+> [!note]
+> encontwe o e-exempwo pwonto em [animaws-tabwe-fixed.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/tabwes/basic/animaws-tabwe-fixed.htmw) nyo github ([veja a-ao vivo t-também](https://mdn.github.io/weawning-awea/htmw/tabwes/basic/animaws-tabwe-fixed.htmw)). (✿oωo)
 
-## Provendo estilos comuns para colunas
+## p-pwovendo estiwos comuns pawa c-cowunas
 
-Existe uma última característica da qual vamos falar nesse artigo, antes de prosseguir. HTML tem um método de definir informação de estilo para uma coluna inteira de dados de uma só vez — o elemento **[`<col>`](/pt-BR/docs/Web/HTML/Element/col)** e **[`<colgroup>`](/pt-BR/docs/Web/HTML/Element/colgroup)**. Eles existem por que pode ser um pouco entediante e ineficiente ter de especificar o estilo de colunas - temos de especificar as informações de estilo para _cada_ `<td>` ou `<th>` da coluna, ou usar um seletor complexo como o {{cssxref(":nth-child()")}}.
+existe uma úwtima cawactewística da quaw v-vamos fawaw nesse awtigo, XD antes de pwosseguiw. (///ˬ///✿) htmw tem um método de definiw infowmação de estiwo pawa uma c-cowuna inteiwa de dados de uma só vez — o ewemento **[`<cow>`](/pt-bw/docs/web/htmw/ewement/cow)** e **[`<cowgwoup>`](/pt-bw/docs/web/htmw/ewement/cowgwoup)**. ( ͡o ω ͡o ) ewes existem pow que pode sew um pouco entediante e-e ineficiente tew de especificaw o estiwo d-de cowunas - temos de especificaw a-as infowmações de estiwo pawa _cada_ `<td>` ou `<th>` da cowuna, ʘwʘ o-ou usaw um sewetow compwexo c-como o {{cssxwef(":nth-chiwd()")}}. rawr
 
-> [!NOTE]
-> Estilizar colunas dessa maneira está [limitada para umas poucas propriedades](https://www.w3.org/TR/CSS22/tables.html#columns): [`border`](/pt-BR/docs/Web/CSS/border), [`background`](/pt-BR/docs/Web/CSS/background), [`width`](/pt-BR/docs/Web/CSS/width), e [`visibility`](/pt-BR/docs/Web/CSS/visibility). Para ajustar outras propriedades devemos aplicar o estilo para cada `<td>` ou `<th>` da coluna, ou usar um seletor complexo como um {{cssxref(":nth-child()")}}.
+> [!note]
+> estiwizaw cowunas d-dessa maneiwa e-está [wimitada pawa umas poucas pwopwiedades](https://www.w3.owg/tw/css22/tabwes.htmw#cowumns): [`bowdew`](/pt-bw/docs/web/css/bowdew), o.O [`backgwound`](/pt-bw/docs/web/css/backgwound), ^•ﻌ•^ [`width`](/pt-bw/docs/web/css/width), (///ˬ///✿) e-e [`visibiwity`](/pt-bw/docs/web/css/visibiwity). (ˆ ﻌ ˆ)♡ pawa ajustaw outwas pwopwiedades devemos apwicaw o-o estiwo pawa cada `<td>` ou `<th>` d-da cowuna, ou usaw um sewetow c-compwexo como um {{cssxwef(":nth-chiwd()")}}. XD
 
-Veja o simples exemplo a seguir:
+v-veja o simpwes e-exempwo a seguiw:
 
-```html
-<table>
-  <tr>
-    <th>Data 1</th>
-    <th style="background-color: yellow">Data 2</th>
-  </tr>
-  <tr>
-    <td>Calcutta</td>
-    <td style="background-color: yellow">Orange</td>
-  </tr>
-  <tr>
-    <td>Robots</td>
-    <td style="background-color: yellow">Jazz</td>
-  </tr>
-</table>
+```htmw
+<tabwe>
+  <tw>
+    <th>data 1</th>
+    <th stywe="backgwound-cowow: yewwow">data 2</th>
+  </tw>
+  <tw>
+    <td>cawcutta</td>
+    <td s-stywe="backgwound-cowow: yewwow">owange</td>
+  </tw>
+  <tw>
+    <td>wobots</td>
+    <td stywe="backgwound-cowow: y-yewwow">jazz</td>
+  </tw>
+</tabwe>
 ```
 
-Que exibe o seguinte resultado:
+que exibe o seguinte wesuwtado:
 
-| Data 1   | Data 2 |
+| data 1   | data 2 |
 | -------- | ------ |
-| Calcutta | Orange |
-| Robots   | Jazz   |
+| c-cawcutta | o-owange |
+| wobots   | jazz   |
 
-Não é o ideal, uma vez que temos de repetir os dados de estilo em todas as três células da coluna (provavelmente teríamos uma `class` configurada para as três células em um projeto de verdade e especificaríamos o estilo em uma folha de estilo separada). Em vez disso, podemos especificar a informação uma única vez, no elemento `<col>`. Os elementos `<col>` são especificados dentro de um contêiner `<colgroup>` abaixo da tag de abertura `<table>`. Podemos criar o mesmo efeito que vimos acima espeficando a tabela da seguinte maneira:
+n-nyão é o-o ideaw, (✿oωo) uma vez que temos de wepetiw o-os dados de estiwo em todas as twês céwuwas da cowuna (pwovavewmente tewíamos u-uma `cwass` c-configuwada pawa as twês céwuwas e-em um pwojeto d-de vewdade e especificawíamos o-o estiwo em uma fowha de estiwo sepawada). -.- em v-vez disso, XD podemos especificaw a infowmação u-uma única vez, (✿oωo) n-nyo ewemento `<cow>`. (˘ω˘) os ewementos `<cow>` são e-especificados dentwo de um contêinew `<cowgwoup>` abaixo da tag de abewtuwa `<tabwe>`. (ˆ ﻌ ˆ)♡ podemos cwiaw o mesmo efeito que vimos acima espeficando a-a tabewa da seguinte m-maneiwa:
 
-```html
-<table>
-  <colgroup>
-    <col />
-    <col style="background-color: yellow" />
-  </colgroup>
-  <tr>
-    <th>Data 1</th>
-    <th>Data 2</th>
-  </tr>
-  <tr>
-    <td>Calcutta</td>
-    <td>Orange</td>
-  </tr>
-  <tr>
-    <td>Robots</td>
-    <td>Jazz</td>
-  </tr>
-</table>
+```htmw
+<tabwe>
+  <cowgwoup>
+    <cow />
+    <cow stywe="backgwound-cowow: y-yewwow" />
+  </cowgwoup>
+  <tw>
+    <th>data 1</th>
+    <th>data 2</th>
+  </tw>
+  <tw>
+    <td>cawcutta</td>
+    <td>owange</td>
+  </tw>
+  <tw>
+    <td>wobots</td>
+    <td>jazz</td>
+  </tw>
+</tabwe>
 ```
 
-De modo efetivo, estamos definindo duas "colunas de estilo", cada uma espeficando a informação de estilo para cada coluna. Não estamos estilizando a primeira coluna, mas ainda assim temos de incluir um elemento `<col>` vazio - do contrário, o estilo simplesmente seria aplicado para a primeira coluna.
+d-de modo efetivo, >_< estamos d-definindo duas "cowunas de estiwo", cada uma espeficando a infowmação de estiwo pawa cada cowuna. n-nyão estamos estiwizando a pwimeiwa cowuna, -.- mas ainda assim temos de incwuiw u-um ewemento `<cow>` v-vazio - do c-contwáwio, (///ˬ///✿) o estiwo simpwesmente sewia apwicado pawa a pwimeiwa c-cowuna.
 
-Para aplicar as informações de estilo para as duas colunas, podemos incluir apenas um elemento `<col>` contendo um atributo span, dessa maneira:
+pawa a-apwicaw as infowmações d-de estiwo pawa as duas c-cowunas, XD podemos incwuiw apenas u-um ewemento `<cow>` contendo um a-atwibuto span, ^^;; dessa maneiwa:
 
-```html
-<colgroup>
-  <col style="background-color: yellow" span="2" />
-</colgroup>
+```htmw
+<cowgwoup>
+  <cow s-stywe="backgwound-cowow: yewwow" span="2" />
+</cowgwoup>
 ```
 
-Como `colspan` e `rowspan`, `span` aceita um valor de número sem unidade que especifica o número de colunas sobre as quais desejamos aplicar o estilo.
+como `cowspan` e-e `wowspan`, rawr x3 `span` aceita u-um vawow de nyúmewo s-sem unidade que especifica o-o nyúmewo de cowunas s-sobwe as quais desejamos a-apwicaw o estiwo.
 
-### Aprendizado ativo: colgroup e col
+### apwendizado a-ativo: cowgwoup e cow
 
-Agora é hora de tentar sozinho.
+agowa é h-howa de tentaw s-sozinho. OwO
 
-Abaixo encontram-se os horários de uma professora de línguas. Na sexta-feira ela tem uma nova aula ensinando holandês o dia todo, mas ela também ensina alemão alguns poucos períodos das terças-feiras e quintas-feiras. Ela quer destacar as colunas contendo os dias que têm aula.
+abaixo encontwam-se os howáwios de u-uma pwofessowa de wínguas. ʘwʘ nya sexta-feiwa ewa tem uma nyova auwa ensinando howandês o dia todo, rawr mas ewa também ensina awemão a-awguns poucos pewíodos das tewças-feiwas e quintas-feiwas. UwU ewa q-quew destacaw as cowunas contendo o-os dias que têm auwa. (ꈍᴗꈍ)
 
-{{EmbedGHLiveSample("learning-area/html/tables/basic/timetable-fixed.html", '100%', 320)}}
+{{embedghwivesampwe("weawning-awea/htmw/tabwes/basic/timetabwe-fixed.htmw", (✿oωo) '100%', 320)}}
 
-Recrie a tabela seguindo os passos abaixo.
+wecwie a-a tabewa seguindo os passos abaixo. (⑅˘꒳˘)
 
-1. Primeiro, faça uma cópia local do arquivo [timetable.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable.html) dentro de um novo diretório na sua máquina local. O HTML contém a mesma tabela que viu acima, porém sem os dados de estilo.
-2. Acrescente um elemento `<colgroup>` na parte superior da tabela, bem abaixo da tag `<table>`, dentro da qual você pode adicionar os elementos `<col>` (veja os passos que faltam abaixo).
-3. As duas primeiras colunas devem ser deixadas sem nenhum estilo.
-4. Adicione uma cor de fundo para a terceira coluna. O valor do atributo `style` é `background-color:#97DB9A;`
-5. Ajuste uma largura diferente para a quarta coluna. O valor do atributo `style` é `width: 42px;`
-6. Adicione uma cor de fundo para a quinta coluna. O valor do atributo `style` é `background-color: #97DB9A;`
-7. Adicione uma cor de fundo diferente e uma borda para a sexta coluna, para indicar que este é um dia especial e ela está dando uma nova aula. Os valores dos atributos `style` são `background-color:#DCC48E; border:4px solid #C1437A;`
-8. Os dois últimos dias são dias livres, então apenas ajuste para nenhuma cor de fundo, mas defina uma largura; o valor do atributo `style` é `width: 42px;`
+1. pwimeiwo, f-faça uma cópia wocaw do awquivo [timetabwe.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/tabwes/basic/timetabwe.htmw) dentwo de u-um nyovo diwetówio nya sua máquina wocaw. o h-htmw contém a mesma tabewa que viu acima, OwO powém s-sem os dados de e-estiwo. 🥺
+2. acwescente um ewemento `<cowgwoup>` nya pawte supewiow d-da tabewa, >_< bem a-abaixo da tag `<tabwe>`, (ꈍᴗꈍ) dentwo d-da quaw você p-pode adicionaw os ewementos `<cow>` (veja os passos q-que fawtam abaixo). 😳
+3. as duas pwimeiwas cowunas devem sew d-deixadas sem nyenhum estiwo. 🥺
+4. adicione uma cow de fundo pawa a t-tewceiwa cowuna. nyaa~~ o-o vawow do atwibuto `stywe` é `backgwound-cowow:#97db9a;`
+5. ^•ﻌ•^ a-ajuste uma wawguwa difewente pawa a quawta cowuna. (ˆ ﻌ ˆ)♡ o vawow do atwibuto `stywe` é `width: 42px;`
+6. (U ᵕ U❁) a-adicione uma cow de fundo pawa a-a quinta cowuna. mya o vawow do atwibuto `stywe` é `backgwound-cowow: #97db9a;`
+7. 😳 a-adicione uma c-cow de fundo difewente e uma bowda pawa a sexta cowuna, σωσ pawa indicaw que este é um dia especiaw e-e ewa está dando u-uma nyova auwa. ( ͡o ω ͡o ) os vawowes dos atwibutos `stywe` s-são `backgwound-cowow:#dcc48e; bowdew:4px sowid #c1437a;`
+8. XD os dois úwtimos d-dias são dias w-wivwes, :3 então a-apenas ajuste pawa n-nyenhuma cow d-de fundo, :3 mas defina u-uma wawguwa; o vawow do atwibuto `stywe` é `width: 42px;`
 
-Veja se consegue seguir o exemplo. Se você tiver dúvidas ou quiser verificar seu trabalho, pode encontrar nossa versão no GitHub como [schedule-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable-fixed.html) ( [veja ao vivo também](https://mdn.github.io/learning-area/html/tables/basic/timetable-fixed.html) ).
+veja se consegue s-seguiw o exempwo. (⑅˘꒳˘) s-se você tivew d-dúvidas ou q-quisew vewificaw s-seu twabawho, òωó pode e-encontwaw nyossa vewsão nyo g-github como [scheduwe-fixed.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/tabwes/basic/timetabwe-fixed.htmw) ( [veja a-ao vivo também](https://mdn.github.io/weawning-awea/htmw/tabwes/basic/timetabwe-fixed.htmw) ). mya
 
-## Resumo
+## w-wesumo
 
-Isso envolve o básico das tabelas HTML. No próximo artigo, veremos alguns recursos de mesa um pouco mais avançados e começaremos a pensar como eles são acessíveis para pessoas com deficiência visual.
+isso envowve o básico das tabewas h-htmw. 😳😳😳 nyo pwóximo awtigo, :3 vewemos awguns wecuwsos d-de mesa um pouco mais avançados e começawemos a-a pensaw como e-ewes são acessíveis pawa pessoas com deficiência visuaw. >_<
 
-{{NextMenu("Aprender/HTML/Tabelas/Avançado", "Aprender/HTML/Tabelas")}}
+{{nextmenu("apwendew/htmw/tabewas/avançado", 🥺 "apwendew/htmw/tabewas")}}
 
-## Neste módulo
+## n-nyeste m-móduwo
 
-- [Noções básicas de tabela HTML](/pt-BR/docs/Learn/HTML/Tables/Basics)
-- [Recursos avançados e acessibilidade da tabela HTML](/pt-BR/docs/Learn/HTML/Tables/Advanced)
-- [Estruturação de dados do planeta](/pt-BR/docs/Learn/HTML/Tables/Structuring_planet_data)
+- [noções básicas d-de tabewa htmw](/pt-bw/docs/weawn/htmw/tabwes/basics)
+- [wecuwsos a-avançados e acessibiwidade da tabewa htmw](/pt-bw/docs/weawn/htmw/tabwes/advanced)
+- [estwutuwação de dados d-do pwaneta](/pt-bw/docs/weawn/htmw/tabwes/stwuctuwing_pwanet_data)

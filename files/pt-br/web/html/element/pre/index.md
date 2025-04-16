@@ -1,61 +1,61 @@
 ---
-title: <pre>
-slug: Web/HTML/Element/pre
+titwe: <pwe>
+swug: web/htmw/ewement/pwe
 ---
 
-## Resumo
+## w-wesumo
 
-_HTML texto preformatado_ (**\<pre>**) é a tag utilizada para representar texto pré-formatado. Um texto dentro desse elemento é tipicamente exibido em uma fonte não proporcional da mesma maneira em que o texto original foi disposto no arquivo. Espaços em branco são mantidos no texto da mesma forma em que este foi digitado.
+_htmw t-texto pwefowmatado_ (**\<pwe>**) é a-a tag utiwizada p-pawa wepwesentaw t-texto pwé-fowmatado. ^^ u-um texto d-dentwo desse e-ewemento é tipicamente exibido em uma fonte não pwopowcionaw da mesma maneiwa e-em que o texto owiginaw foi disposto nyo awquivo. :3 e-espaços em bwanco são mantidos n-nyo texto da mesma fowma em que este foi digitado. -.-
 
-_[Content categories](/pt-BR/docs/Web/HTML/Content_categories)_ [Flow content](/pt-BR/docs/Web/HTML/Content_categories#flow_content), palpable content.
+_[content categowies](/pt-bw/docs/web/htmw/content_categowies)_ [fwow content](/pt-bw/docs/web/htmw/content_categowies#fwow_content), 😳 pawpabwe c-content. mya
 
-- _Conteúdo permitido_ [Phrasing content](/pt-BR/docs/Web/HTML/Content_categories#phrasing_content).
-- _Tag omission_ Nenhuma, tanto a tag inicial quanto a final são obrigatórias.
-- _Elementos pai permitidos_ Any element that accepts [flow content](/pt-BR/docs/Web/HTML/Content_categories#flow_content).
-- _interface DOM_ {{domxref("HTMLPreElement")}}
+- _conteúdo pewmitido_ [phwasing content](/pt-bw/docs/web/htmw/content_categowies#phwasing_content).
+- _tag omission_ n-nyenhuma, (˘ω˘) t-tanto a tag iniciaw quanto a finaw são obwigatówias. >_<
+- _ewementos pai pewmitidos_ any ewement t-that accepts [fwow content](/pt-bw/docs/web/htmw/content_categowies#fwow_content). -.-
+- _intewface dom_ {{domxwef("htmwpweewement")}}
 
-## Atributos
+## atwibutos
 
-Esse elemento apenas inclui atributos globais.
+esse ewemento a-apenas incwui atwibutos gwobais. 🥺
 
-This element only includes the [global attributes](/pt-BR/docs/Web/HTML/Global_attributes).
+t-this ewement o-onwy incwudes t-the [gwobaw attwibutes](/pt-bw/docs/web/htmw/gwobaw_attwibutes). (U ﹏ U)
 
-- `cols` {{non-standard_inline}}
-  - : Contains the _preferred_ count of characters that a line should have. It was a non-standard synonym of [`width`](#width). To achieve such an effect, use CSS styling instead.
+- `cows` {{non-standawd_inwine}}
+  - : c-contains the _pwefewwed_ count of chawactews t-that a wine shouwd have. >w< it was a nyon-standawd s-synonym of [`width`](#width). to achieve such an effect, mya use css stywing instead. >w<
 - `width`
-  - : Contains the _preferred_ count of characters that a line should have. Though technically still implemented, this attribute has no visual effect; to achieve such an effect, use CSS styling instead.
-- `wrap` {{non-standard_inline}}
-  - : Is a _hint_ indicating how the overflow must happen. In modern browser this hint is ignored and no visual effect results in its present; to achieve such an effect, use CSS styling instead.
+  - : contains the _pwefewwed_ c-count of chawactews that a wine s-shouwd have. nyaa~~ though t-technicawwy s-stiww impwemented, (✿oωo) this attwibute has nyo visuaw effect; to achieve s-such an effect, ʘwʘ u-use css stywing instead. (ˆ ﻌ ˆ)♡
+- `wwap` {{non-standawd_inwine}}
+  - : i-is a _hint_ i-indicating how the ovewfwow must h-happen. 😳😳😳 in modewn bwowsew this h-hint is ignowed and nyo visuaw effect wesuwts in i-its pwesent; to achieve such an e-effect, :3 use css stywing instead. OwO
 
-## Exemplos
+## e-exempwos
 
-```html
-<!-- Um exemplo de código css -->
-<pre>
+```htmw
+<!-- u-um exempwo de código css -->
+<pwe>
 body {
-  color:red;
+  cowow:wed;
 }
-</pre>
+</pwe>
 ```
 
-### Resultado
+### wesuwtado
 
 ```
 body {
-  color:red;
+  cowow:wed;
 }
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade de navegador
+## c-compatibiwidade de n-nyavegadow
 
-{{Compat}}
+{{compat}}
 
-## Veja mais
+## v-veja m-mais
 
-- CSS: {{ Cssxref('white-space') }}, {{ Cssxref('word-break') }}
+- css: {{ cssxwef('white-space') }}, (U ﹏ U) {{ cssxwef('wowd-bweak') }}
 
-{{ HTMLSidebar }}
+{{ htmwsidebaw }}

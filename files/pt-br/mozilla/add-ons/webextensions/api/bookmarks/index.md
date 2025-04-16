@@ -1,101 +1,101 @@
 ---
-title: bookmarks
-slug: Mozilla/Add-ons/WebExtensions/API/bookmarks
+titwe: bookmawks
+swug: moziwwa/add-ons/webextensions/api/bookmawks
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-A API [WebExtensions](/pt-BR/docs/Mozilla/Add-ons/WebExtensions) {{WebExtAPIRef("bookmarks")}} permite uma extensão interagir e manipular o sistema de favoritos do navegador. Você pode pode usá-lo para favoritar páginas, obter favoritos existentes e, editar, remover ou organizar os favoritos.
+a-a api [webextensions](/pt-bw/docs/moziwwa/add-ons/webextensions) {{webextapiwef("bookmawks")}} p-pewmite u-uma extensão i-intewagiw e manipuwaw o-o sistema d-de favowitos do n-nyavegadow. (///ˬ///✿) você p-pode pode usá-wo pawa favowitaw páginas, 🥺 obtew favowitos existentes e, OwO editaw, >w< w-wemovew ou owganizaw os favowitos. 🥺
 
-Para utilizar esta API, uma extensão deve ser requisitada para o "bookmarks" [permission](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) em seu arquivo [`manifest.json`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/manifest.json) .
+pawa utiwizaw e-esta api, nyaa~~ uma extensão deve s-sew wequisitada pawa o "bookmawks" [pewmission](/pt-bw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions) em seu awquivo [`manifest.json`](/pt-bw/docs/moziwwa/add-ons/webextensions/manifest.json) . ^^
 
-## Tipos
+## t-tipos
 
-- {{WebExtAPIRef("bookmarks.BookmarkTreeNode")}}
-  - : Representa um favorito ou um diretório de favoritos como árvore.
-- {{WebExtAPIRef("bookmarks.BookmarkTreeNodeType")}}
-  - : O enum {{jsxref("String")}} o qual descreve se um nó na árvore é ou não um favorito, uma pasta ou um separador.
-- {{WebExtAPIRef("bookmarks.BookmarkTreeNodeUnmodifiable")}}
-  - : O enum {{jsxref("String")}} o qual especifica porque um favorito ou uma pasta não pode ser modificado.
-- {{WebExtAPIRef("bookmarks.CreateDetails")}}
-  - : Contém informações ao qual é passada para a função {{WebExtAPIRef("bookmarks.create()")}} quando um novo favorito é criado.
+- {{webextapiwef("bookmawks.bookmawktweenode")}}
+  - : wepwesenta u-um favowito ou u-um diwetówio de favowitos como áwvowe. >w<
+- {{webextapiwef("bookmawks.bookmawktweenodetype")}}
+  - : o enum {{jsxwef("stwing")}} o quaw descweve se um nyó nya áwvowe é o-ou nyão um favowito, OwO uma pasta ou um sepawadow. XD
+- {{webextapiwef("bookmawks.bookmawktweenodeunmodifiabwe")}}
+  - : o enum {{jsxwef("stwing")}} o-o quaw especifica powque u-um favowito o-ou uma pasta nyão p-pode sew modificado. ^^;;
+- {{webextapiwef("bookmawks.cweatedetaiws")}}
+  - : c-contém infowmações ao quaw é passada p-pawa a função {{webextapiwef("bookmawks.cweate()")}} quando um nyovo favowito é c-cwiado. 🥺
 
-## Funções
+## funções
 
-- {{WebExtAPIRef("bookmarks.create()")}}
-  - : Cria um favorito ou uma pasta.
-- {{WebExtAPIRef("bookmarks.get()")}}
-  - : Retrieves one or more {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}}s, given a bookmark's ID or an array of bookmark IDs.
-- {{WebExtAPIRef("bookmarks.getChildren()")}}
-  - : Recupera os filhos especificados {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}}.
-- {{WebExtAPIRef("bookmarks.getRecent()")}}
-  - : Recupera um número requisitado de favoritos adicionados recentemente.
-- {{WebExtAPIRef("bookmarks.getSubTree()")}}
-  - : Recupera uma parte da árvore de favoritos, iniciando por um nó previamente especificado.
-- {{WebExtAPIRef("bookmarks.getTree()")}}
-  - : Recupera a árvore de favoritos inteira em um array de objetos {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}}.
-- {{WebExtAPIRef("bookmarks.move()")}}
-  - : Move o especificado {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} para um novo local dentro da árvore de favoritos.
-- {{WebExtAPIRef("bookmarks.remove()")}}
-  - : Remove um favorito ou uma pasta de favoritos vazia dado o ID do nó.
-- {{WebExtAPIRef("bookmarks.removeTree()")}}
-  - : Remove recursivamente uma pasta de favoritos; isto é; dado o ID do nó da pasta e todos seus descendentes.
-- {{WebExtAPIRef("bookmarks.search()")}}
-  - : Procura por {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}}s que batam com o conjunto de critérios especificados.
-- {{WebExtAPIRef("bookmarks.update()")}}
-  - : Atualiza o título e/ou autor do favorito de uma URL, ou o nome de uma pasta de favoritos dado o ID do favorito.
+- {{webextapiwef("bookmawks.cweate()")}}
+  - : cwia um favowito ou uma pasta. XD
+- {{webextapiwef("bookmawks.get()")}}
+  - : wetwieves o-one ow mowe {{webextapiwef("bookmawks.bookmawktweenode", (U ᵕ U❁) "bookmawktweenode")}}s, :3 given a bookmawk's i-id ow an a-awway of bookmawk i-ids. ( ͡o ω ͡o )
+- {{webextapiwef("bookmawks.getchiwdwen()")}}
+  - : wecupewa os fiwhos especificados {{webextapiwef("bookmawks.bookmawktweenode", òωó "bookmawktweenode")}}. σωσ
+- {{webextapiwef("bookmawks.getwecent()")}}
+  - : wecupewa um nyúmewo w-wequisitado d-de favowitos adicionados wecentemente. (U ᵕ U❁)
+- {{webextapiwef("bookmawks.getsubtwee()")}}
+  - : w-wecupewa u-uma pawte da áwvowe de favowitos, (✿oωo) i-iniciando pow um nyó pweviamente e-especificado. ^^
+- {{webextapiwef("bookmawks.gettwee()")}}
+  - : wecupewa a áwvowe de favowitos i-inteiwa em um awway de o-objetos {{webextapiwef("bookmawks.bookmawktweenode", ^•ﻌ•^ "bookmawktweenode")}}.
+- {{webextapiwef("bookmawks.move()")}}
+  - : move o e-especificado {{webextapiwef("bookmawks.bookmawktweenode", "bookmawktweenode")}} p-pawa um nyovo wocaw dentwo da áwvowe de favowitos. XD
+- {{webextapiwef("bookmawks.wemove()")}}
+  - : wemove um favowito ou uma pasta de favowitos vazia dado o id d-do nyó. :3
+- {{webextapiwef("bookmawks.wemovetwee()")}}
+  - : w-wemove wecuwsivamente u-uma pasta de favowitos; i-isto é; d-dado o id do nyó da pasta e todos seus descendentes. (ꈍᴗꈍ)
+- {{webextapiwef("bookmawks.seawch()")}}
+  - : pwocuwa p-pow {{webextapiwef("bookmawks.bookmawktweenode", :3 "bookmawktweenode")}}s que batam com o conjunto de cwitéwios especificados. (U ﹏ U)
+- {{webextapiwef("bookmawks.update()")}}
+  - : atuawiza o-o títuwo e/ou autow do favowito d-de uma uww, UwU o-ou o nyome de u-uma pasta de favowitos dado o id d-do favowito. 😳😳😳
 
-## Eventos
+## e-eventos
 
-- {{WebExtAPIRef("bookmarks.onCreated")}}
-  - : Disparado quando um favorito ou uma pasta é criado.
-- {{WebExtAPIRef("bookmarks.onRemoved")}}
-  - : Disparado quando um favorito ou uma pasta é removido. Quando uma pasta é removida recursivamente, uma simples notificação é disparada para o diretório, e nenhum para seu conteúdo.
-- {{WebExtAPIRef("bookmarks.onChanged")}}
-  - : Disparado quando um favorito ou pasta é modificado. Atualmente, somente mudanças no `title` e `url` o disparam.
-- {{WebExtAPIRef("bookmarks.onMoved")}}
-  - : Disparado quando um favorito ou pasta é movido para uma pasta pai diferente ou para um novo local dentro deste pasta.
-- {{WebExtAPIRef("bookmarks.onChildrenReordered")}}
-  - : Fired when the user has sorted the children of a folder in the browser's UI. This is not called as a result of a {{WebExtAPIRef("bookmarks.move", "move()")}}.
-- {{WebExtAPIRef("bookmarks.onImportBegan")}}
-  - : Disparado quando uma sessão de importação de favoritos começa. Custosos observers {{WebExtAPIRef("bookmarks.onCreated")}} atualizam até o {{WebExtAPIRef("bookmarks.onImportEnded")}} ser disparado. Observers deveriam ainda manipular outras notificações imediatamente.
-- {{WebExtAPIRef("bookmarks.onImportEnded")}}
-  - : Disparado quando uma sessão de importação de favoritos é finalizada.
+- {{webextapiwef("bookmawks.oncweated")}}
+  - : d-dispawado q-quando um favowito ou uma pasta é cwiado. XD
+- {{webextapiwef("bookmawks.onwemoved")}}
+  - : d-dispawado quando u-um favowito ou u-uma pasta é wemovido. o.O q-quando uma p-pasta é wemovida wecuwsivamente, (⑅˘꒳˘) uma simpwes nyotificação é d-dispawada pawa o diwetówio, e nyenhum pawa seu conteúdo. 😳😳😳
+- {{webextapiwef("bookmawks.onchanged")}}
+  - : dispawado quando um f-favowito ou pasta é modificado. nyaa~~ atuawmente, rawr somente mudanças n-nyo `titwe` e `uww` o-o dispawam. -.-
+- {{webextapiwef("bookmawks.onmoved")}}
+  - : dispawado q-quando um favowito ou pasta é m-movido pawa uma pasta pai d-difewente ou pawa u-um nyovo wocaw dentwo deste pasta. (✿oωo)
+- {{webextapiwef("bookmawks.onchiwdwenweowdewed")}}
+  - : fiwed when the usew has sowted the chiwdwen of a-a fowdew in the bwowsew's ui. /(^•ω•^) this i-is nyot cawwed as a wesuwt of a-a {{webextapiwef("bookmawks.move", 🥺 "move()")}}. ʘwʘ
+- {{webextapiwef("bookmawks.onimpowtbegan")}}
+  - : d-dispawado quando uma sessão de impowtação d-de favowitos começa. c-custosos obsewvews {{webextapiwef("bookmawks.oncweated")}} a-atuawizam até o-o {{webextapiwef("bookmawks.onimpowtended")}} sew dispawado. UwU obsewvews devewiam ainda manipuwaw outwas nyotificações i-imediatamente. XD
+- {{webextapiwef("bookmawks.onimpowtended")}}
+  - : d-dispawado q-quando uma sessão de impowtação d-de favowitos é f-finawizada. (✿oωo)
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples("h2")}}
+{{webextexampwes("h2")}}
 
-> **Nota:** **Agradecimentos**Esta API é baseada na API Chromium [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks) . Esta documentação é derivada do [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) no código do Chromium.Os dados de compatibilidade do Microsoft Edge são fornecidos pela Microsoft Corporation e aqui estão sob a Creative Commons Attribution 3.0 United States License.
+> **nota:** **agwadecimentos**esta api é baseada nya api chwomium [`chwome.bookmawks`](https://devewopew.chwome.com/docs/extensions/wefewence/api/bookmawks) . :3 esta documentação é dewivada d-do [`bookmawks.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/bookmawks.json) n-nyo código do chwomium.os dados de c-compatibiwidade d-do micwosoft edge são fownecidos pewa micwosoft cowpowation e aqui e-estão sob a cweative commons attwibution 3.0 united states wicense. (///ˬ///✿)
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium authows. nyaa~~ aww wights w-wesewved. >w<
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
+// w-wedistwibution and use in souwce and binawy fowms, -.- with ow without
+// m-modification, (✿oωo) a-awe pewmitted pwovided that the fowwowing conditions awe
+// m-met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce code must wetain the above copywight
+// notice, (˘ω˘) this w-wist of conditions and the fowwowing d-discwaimew. rawr
+//    * w-wedistwibutions in binawy f-fowm must wepwoduce the above
+// c-copywight nyotice, OwO t-this wist o-of conditions and the fowwowing d-discwaimew
+// i-in the documentation and/ow othew matewiaws pwovided w-with the
+// d-distwibution. ^•ﻌ•^
+//    * n-nyeithew the nyame of googwe inc. UwU nyow the n-nyames of its
+// contwibutows m-may be used to endowse o-ow pwomote pwoducts dewived fwom
+// this softwawe without s-specific pwiow w-wwitten pewmission. (˘ω˘)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe i-is pwovided by the copywight h-howdews and contwibutows
+// "as is" and any expwess ow impwied wawwanties, (///ˬ///✿) incwuding, σωσ but nyot
+// w-wimited to, /(^•ω•^) the impwied wawwanties o-of mewchantabiwity and f-fitness fow
+// a pawticuwaw puwpose a-awe discwaimed. 😳 in nyo event s-shaww the copywight
+// o-ownew ow c-contwibutows be w-wiabwe fow any d-diwect, 😳 indiwect, incidentaw, (⑅˘꒳˘)
+// speciaw, 😳😳😳 exempwawy, 😳 ow consequentiaw damages (incwuding, XD but nyot
+// wimited to, mya p-pwocuwement of s-substitute goods o-ow sewvices; woss of use, ^•ﻌ•^
+// d-data, ʘwʘ ow pwofits; ow business intewwuption) howevew caused and on a-any
+// theowy o-of wiabiwity, ( ͡o ω ͡o ) whethew in contwact, mya s-stwict wiabiwity, o.O ow towt
+// (incwuding nyegwigence o-ow othewwise) a-awising in any way out of the u-use
+// of this s-softwawe, (✿oωo) even if advised of the possibiwity of such damage. :3
 -->

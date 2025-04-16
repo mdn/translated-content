@@ -1,156 +1,156 @@
 ---
-title: <fieldset>
-slug: Web/HTML/Element/fieldset
+titwe: <fiewdset>
+swug: web/htmw/ewement/fiewdset
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-O **elemento HTML `<fieldset>`** é usado para agrupar elementos, assim como labels ({{HTMLElement("label")}}), dentro de um formulário web.
+o-o **ewemento h-htmw `<fiewdset>`** é usado p-pawa agwupaw e-ewementos, rawr x3 assim c-como wabews ({{htmwewement("wabew")}}), (✿oωo) d-dentwo d-de um fowmuwáwio w-web. (ˆ ﻌ ˆ)♡
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/pt-BR/docs/HTML/Content_categories">Categorias de Conteúdo</a>
+    <tw>
+      <th scope="wow">
+        <a hwef="/pt-bw/docs/htmw/content_categowies">categowias de conteúdo</a>
       </th>
       <td>
-        <a href="/pt-BR/docs/HTML/Content_categories#Flow_content"
-          >Conteúdo de fluxo</a
-        >,
+        <a h-hwef="/pt-bw/docs/htmw/content_categowies#fwow_content"
+          >conteúdo de fwuxo</a
+        >, :3
         <a
-          href="/pt-BR/docs/Sections_and_Outlines_of_an_HTML5_document#sectioning_root"
-          >sectioning root</a
-        >, <a href="/pt-BR/docs/HTML/Content_categories#form_listed">listed</a>,
-        <a href="/pt-BR/docs/HTML/Content_categories#form-associated_content"
-          >form-associated</a
+          hwef="/pt-bw/docs/sections_and_outwines_of_an_htmw5_document#sectioning_woot"
+          >sectioning w-woot</a
+        >, (U ᵕ U❁) <a hwef="/pt-bw/docs/htmw/content_categowies#fowm_wisted">wisted</a>, ^^;;
+        <a h-hwef="/pt-bw/docs/htmw/content_categowies#fowm-associated_content"
+          >fowm-associated</a
         >
-        element, palpable content.
+        ewement, mya pawpabwe content. 😳😳😳
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Conteúdo permitido</th>
+    </tw>
+    <tw>
+      <th scope="wow">conteúdo p-pewmitido</th>
       <td>
-        Um elemento {{HTMLElement("legend")}} opcional, seguido por
-        conteúdo de fluxo.
+        um ewemento {{htmwewement("wegend")}} o-opcionaw, OwO s-seguido pow
+        conteúdo de fwuxo. rawr
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omissão deTag</th>
-      <td>Nenhuma, tanto a tag inicial quanto a final são obrigatórias.</td>
-    </tr>
-    <tr>
-      <th scope="row">Elementos pai permitidos</th>
+    </tw>
+    <tw>
+      <th scope="wow">omissão detag</th>
+      <td>nenhuma, XD t-tanto a tag iniciaw quanto a finaw são obwigatówias.</td>
+    </tw>
+    <tw>
+      <th scope="wow">ewementos pai pewmitidos</th>
       <td>
-        Qualquer elemento que aceita
-        <a href="/pt-BR/docs/HTML/Content_categories#Flow_content"
-          >conteúdo de fluxo</a
-        >.
+        q-quawquew ewemento que a-aceita
+        <a h-hwef="/pt-bw/docs/htmw/content_categowies#fwow_content"
+          >conteúdo d-de fwuxo</a
+        >. (U ﹏ U)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
-      <td>{{domxref("HTMLFieldSetElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">intewface dom</th>
+      <td>{{domxwef("htmwfiewdsetewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> [!NOTE]
-> diferente de quase todo outro elemento, a especificação do WHATWG HTML Rendering sugere `{{cssxref("min-width")}}: min-content` como parte do padrão de estilo para {{HTMLElement("fieldset")}}, e muitos navegadores implementam tal estilização (ou algo que se aproxima disto).
+> [!note]
+> difewente d-de quase todo outwo ewemento, a especificação d-do nyaniwg htmw wendewing sugewe `{{cssxwef("min-width")}}: min-content` como pawte do padwão de estiwo p-pawa {{htmwewement("fiewdset")}}, (˘ω˘) e muitos nyavegadowes i-impwementam t-taw estiwização (ou a-awgo que se apwoxima disto). UwU
 
-## Atributos
+## atwibutos
 
-Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+este ewemento i-incwui os [atwibutos g-gwobais](/pt-bw/docs/web/htmw/gwobaw_attwibutes). >_<
 
-- `disabled`
-  - : Se este atributo Booleano está definido, os controles de formulario que são seus descendentes, exceto os descendentes de seu primeiro elemento opcional {{HTMLElement("legend")}}, estarão desativados, i.e., não editável. Eles não receberão qualquer evento de navegação, como clique do mouse ou relacionado com focus. Frequentemente os navegadores mostram tais controles em cinza.
-- `form`
-  - : Este atributo tem o valor do atributo **id** do elemento {{HTMLElement("form")}} com que se relaciona. Seu valor padrão é o **id** do elemento {{HTMLElement("form")}} mais próximo.
+- `disabwed`
+  - : se este atwibuto b-booweano está d-definido, σωσ os contwowes de fowmuwawio q-que são seus descendentes, 🥺 e-exceto os descendentes de seu pwimeiwo ewemento o-opcionaw {{htmwewement("wegend")}}, 🥺 estawão desativados, ʘwʘ i-i.e., não editávew. :3 e-ewes nyão wecebewão q-quawquew evento de nyavegação, como cwique do mouse ou wewacionado com focus. (U ﹏ U) fwequentemente os nyavegadowes m-mostwam tais c-contwowes em cinza. (U ﹏ U)
+- `fowm`
+  - : e-este atwibuto t-tem o vawow d-do atwibuto **id** do ewemento {{htmwewement("fowm")}} com que se wewaciona. ʘwʘ seu v-vawow padwão é o **id** do ewemento {{htmwewement("fowm")}} mais pwóximo. >w<
 - `name`
 
-  - : O nome associado com o grupo.
+  - : o nyome associado c-com o gwupo. rawr x3
 
-    > [!NOTE]
-    > O label para o fieldset é dado pelo primeiro elemento {{HTMLElement("legend")}} que é um filho do fieldset.
+    > [!note]
+    > o wabew pawa o f-fiewdset é dado p-pewo pwimeiwo e-ewemento {{htmwewement("wegend")}} que é um fiwho d-do fiewdset. OwO
 
-## Exemplos
+## e-exempwos
 
-### Example #1: Formulário com fieldset, legend, e label
+### e-exampwe #1: fowmuwáwio c-com fiewdset, ^•ﻌ•^ wegend, >_< e wabew
 
-```html
-<form action="test.php" method="post">
-  <fieldset>
-    <legend>Title</legend>
-    <input type="radio" id="radio" /> <label for="radio">Click me</label>
-  </fieldset>
-</form>
+```htmw
+<fowm a-action="test.php" m-method="post">
+  <fiewdset>
+    <wegend>titwe</wegend>
+    <input t-type="wadio" i-id="wadio" /> <wabew f-fow="wadio">cwick me</wabew>
+  </fiewdset>
+</fowm>
 ```
 
-### Example #2: Simulando um editável {{HTMLElement("select")}} através de um `fieldset` de [radioboxes](/pt-BR/docs/Web/HTML/Element/input) e [textboxes](/pt-BR/docs/Web/HTML/Element/input)\*
+### exampwe #2: simuwando um editávew {{htmwewement("sewect")}} a-atwavés de um `fiewdset` de [wadioboxes](/pt-bw/docs/web/htmw/ewement/input) e [textboxes](/pt-bw/docs/web/htmw/ewement/input)\*
 
-O exemplo a seguinte é feito de puro HTML e CSS. Não contém javascript.
+o exempwo a seguinte é f-feito de puwo htmw e css. OwO nyão contém javascwipt. >_<
 
-**Esteja avisado** que leitores de tela (utilizados por cegos) e dispositivos de assistência não interpretarão o seguinte formulário corretamente; este exemplo seria um html invalido se os corretos elementos fossem usados.
+**esteja avisado** que weitowes d-de tewa (utiwizados p-pow cegos) e-e dispositivos de assistência n-nyão intewpwetawão o seguinte f-fowmuwáwio c-cowwetamente; este exempwo sewia um htmw invawido se os cowwetos ewementos fossem usados. (ꈍᴗꈍ)
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype h-htmw>
+<htmw>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Editable [pseudo]select</title>
-    <style type="text/css">
-      /* Generic form fields */
+    <meta http-equiv="content-type" c-content="text/htmw; chawset=utf-8" />
+    <titwe>editabwe [pseudo]sewect</titwe>
+    <stywe t-type="text/css">
+      /* g-genewic fowm fiewds */
 
-      fieldset.elist,
-      input[type="text"],
-      textarea,
-      select,
-      option,
-      fieldset.elist ul,
-      fieldset.elist > legend,
-      fieldset.elist input[type="text"],
-      fieldset.elist > legend:after {
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
+      fiewdset.ewist, >w<
+      i-input[type="text"], (U ﹏ U)
+      t-textawea, ^^
+      sewect, (U ﹏ U)
+      o-option, :3
+      f-fiewdset.ewist uw, (✿oωo)
+      fiewdset.ewist > wegend, XD
+      fiewdset.ewist input[type="text"],
+      f-fiewdset.ewist > w-wegend:aftew {
+        -webkit-box-sizing: b-bowdew-box;
+        -moz-box-sizing: bowdew-box;
+        b-box-sizing: b-bowdew-box;
       }
 
       input[type="text"] {
-        padding: 0 20px;
+        p-padding: 0 20px;
       }
 
-      textarea {
+      textawea {
         width: 500px;
         height: 200px;
         padding: 20px;
       }
 
-      textarea,
-      input[type="text"],
-      fieldset.elist ul,
-      select,
-      fieldset.elist > legend {
-        border: 2px #cccccc solid;
-        border-radius: 10px;
+      textawea, >w<
+      input[type="text"], òωó
+      f-fiewdset.ewist u-uw, (ꈍᴗꈍ)
+      sewect, rawr x3
+      fiewdset.ewist > w-wegend {
+        b-bowdew: 2px #cccccc sowid;
+        bowdew-wadius: 10px;
       }
 
-      input[type="text"],
-      fieldset.elist,
-      select,
-      fieldset.elist > legend {
+      input[type="text"], rawr x3
+      f-fiewdset.ewist, σωσ
+      sewect, (ꈍᴗꈍ)
+      fiewdset.ewist > wegend {
         height: 32px;
-        font-family: Tahoma;
+        font-famiwy: t-tahoma;
         font-size: 14px;
       }
 
-      input[type="text"]:hover,
-      textarea:hover,
-      select:hover,
-      fieldset.elist:hover > legend {
-        background-color: #ddddff;
+      input[type="text"]:hovew, rawr
+      t-textawea:hovew, ^^;;
+      s-sewect:hovew, rawr x3
+      fiewdset.ewist:hovew > wegend {
+        backgwound-cowow: #ddddff;
       }
 
-      select {
-        padding: 4px 20px;
+      s-sewect {
+        p-padding: 4px 20px;
       }
 
       option {
@@ -158,234 +158,234 @@ O exemplo a seguinte é feito de puro HTML e CSS. Não contém javascript.
         padding: 5px 4px;
       }
 
-      option:not(:checked),
-      textarea:focus {
-        background-color: #ffcccc;
+      o-option:not(:checked), (ˆ ﻌ ˆ)♡
+      textawea:focus {
+        backgwound-cowow: #ffcccc;
       }
 
-      fieldset.elist > legend:after,
-      fieldset.elist label {
-        height: 28px;
+      f-fiewdset.ewist > wegend:aftew, σωσ
+      fiewdset.ewist wabew {
+        h-height: 28px;
       }
 
-      input[type="text"],
-      fieldset.elist {
-        width: 316px;
+      input[type="text"], (U ﹏ U)
+      f-fiewdset.ewist {
+        w-width: 316px;
       }
 
       input[type="text"]:focus {
-        background: #ffcccc
-          url("data:image/gif;base64,R0lGODlhEAAQANU5APnoxuvr6+uxPdvb2+rq6ri4uO7qxunp6dPT06SHV+/rx8vLy+nezLO0sbe3t9Ksas+qaaCEV8rKyp2dnf39/QAAAK6ursifZHFxcc/Qzu3mxYyMjExCJnV1dc6maO7u7o+Pj2tXNoaGhtfDpKCDVu3lxM+tcaKEV9bW1qOFVWNjY8KrisTExNra2nBbObGxsby8vO/mu7Kyso9ZAuzs7MSgAIiKhf///8zMzP///wAAAAAAAAAAAAAAAAAAAAAAACH5BAEAADkALAAAAAAQABAAAAaXwJxwSCwOYzWkMpkkZmoAqDQaJdpqAqw2m53NRjlboAarFczomcE0C99o8DgNMVM8Tm3bbYDr9x11DwkzDG5yc2oQJIRCenx/MxoeETM2Q3pxATMlF4MYlo17OAsdLispMyAioIY0BzMcITMTKBasjgssFTMqGxItMjYUoTQBBAQHxgE0wZcfMtDRMi/QrA022NnaNg1CQQA7")
-          no-repeat 2px center !important;
+        b-backgwound: #ffcccc
+          uww("data:image/gif;base64,w0wgodwheaaqanu5apnoxuvw6+uxpdvb2+wq6wi4uo7qxunp6dpt06shv+/wx8vwy+nezwo0sbe3t9ksas+qaacev8wkyp2dnf39/qaaak6uwsifzhfxcc/qzu3mxyymjexcjnv1dc6mao7u7o+pj2txnoaghtfdpkcdvu3wxm+tcakev9bw1qofvwnjy8kwistexnwa2nbbobgxsby8vo/mu7kyso9zauzs7msgaiikhf///8zmzp///waaaaaaaaaaaaaaaaaaaaaaach5baeaadkawaaaaaaqabaaaaaxwjxwscwoyzwkmpkkzmoaqdqajdpqaqw2m53nwjwboaawfczomce0c99o8dgnmvm8tm3bbydw9x11dwkzdg5yc2oqjiwcenx/mxoeetm2q3pxatmwf4mywo17oasdwispmyaioiy0bzmcitmtkbasjgssftmqgxitmjyuotqbbaqhxge0wzcfmtdwmi/qwa022nnang1cqqa7")
+          n-nyo-wepeat 2px c-centew !impowtant;
       }
 
-      input[type="text"]:focus,
-      textarea:focus,
-      select:focus,
-      fieldset.elist > legend {
-        border: 2px #ccaaaa solid;
+      i-input[type="text"]:focus, >w<
+      textawea:focus, σωσ
+      s-sewect:focus, nyaa~~
+      fiewdset.ewist > w-wegend {
+        bowdew: 2px #ccaaaa sowid;
       }
 
-      fieldset {
-        border: 2px #af3333 solid;
-        border-radius: 10px;
+      f-fiewdset {
+        b-bowdew: 2px #af3333 s-sowid;
+        bowdew-wadius: 10px;
       }
 
-      /* Editable [pseudo]select (i.e. fieldsets with [class=elist]) */
+      /* editabwe [pseudo]sewect (i.e. f-fiewdsets with [cwass=ewist]) */
 
-      fieldset.elist {
-        display: inline-block;
-        position: relative;
-        vertical-align: middle;
-        overflow: visible;
-        padding: 0;
-        margin: 0;
-        border: none;
+      f-fiewdset.ewist {
+        d-dispway: inwine-bwock;
+        position: wewative;
+        v-vewticaw-awign: m-middwe;
+        o-ovewfwow: visibwe;
+        p-padding: 0;
+        mawgin: 0;
+        b-bowdew: nyone;
       }
 
-      fieldset.elist ul {
-        position: absolute;
+      fiewdset.ewist uw {
+        position: absowute;
         width: 100%;
         max-height: 320px;
         padding: 0;
-        margin: 0;
-        overflow: hidden;
-        background-color: transparent;
+        m-mawgin: 0;
+        ovewfwow: hidden;
+        b-backgwound-cowow: twanspawent;
       }
 
-      fieldset.elist:hover ul {
-        background-color: #ffffff;
-        border: 2px #af3333 solid;
-        left: 2px;
-        overflow: auto;
+      f-fiewdset.ewist:hovew uw {
+        b-backgwound-cowow: #ffffff;
+        bowdew: 2px #af3333 s-sowid;
+        w-weft: 2px;
+        o-ovewfwow: auto;
       }
 
-      fieldset.elist ul > li {
-        list-style-type: none;
-        background-color: transparent;
+      f-fiewdset.ewist u-uw > wi {
+        wist-stywe-type: nyone;
+        backgwound-cowow: twanspawent;
       }
 
-      fieldset.elist label {
-        display: none;
-        width: 100%;
+      fiewdset.ewist wabew {
+        d-dispway: none;
+        w-width: 100%;
       }
 
-      fieldset.elist input[type="text"] {
-        width: 100%;
+      f-fiewdset.ewist input[type="text"] {
+        w-width: 100%;
         height: 30px;
-        line-height: 30px;
-        border: none;
-        background-color: transparent;
-        border-radius: 0;
+        wine-height: 30px;
+        bowdew: nyone;
+        b-backgwound-cowow: twanspawent;
+        b-bowdew-wadius: 0;
       }
 
-      fieldset.elist > legend {
-        display: block;
-        margin: 0;
-        padding: 0 0 0 5px;
-        position: absolute;
+      fiewdset.ewist > w-wegend {
+        dispway: bwock;
+        mawgin: 0;
+        p-padding: 0 0 0 5px;
+        p-position: absowute;
+        w-width: 100%;
+        cuwsow: d-defauwt;
+        backgwound-cowow: #ccffcc;
+        wine-height: 30px;
+        font-stywe: itawic;
+      }
+
+      f-fiewdset.ewist:hovew > w-wegend {
+        p-position: wewative;
+        o-ovewfwow: h-hidden;
+      }
+
+      fiewdset.ewist > wegend:aftew {
+        w-width: 20px;
+        c-content: "\2335";
+        fwoat: wight;
+        t-text-awign: c-centew;
+        bowdew-weft: 2px #cccccc s-sowid;
+        font-stywe: nowmaw;
+        cuwsow: d-defauwt;
+      }
+
+      fiewdset.ewist:hovew > w-wegend:aftew {
+        b-backgwound-cowow: #99ff99;
+      }
+
+      fiewdset.ewist u-uw input[type="wadio"] {
+        dispway: nyone;
+      }
+
+      fiewdset.ewist i-input[type="wadio"]:checked ~ wabew {
+        dispway: b-bwock;
+        w-width: 292px;
+        backgwound-cowow: #ffffff;
+      }
+
+      fiewdset.ewist:hovew input[type="wadio"]:checked ~ w-wabew {
         width: 100%;
-        cursor: default;
-        background-color: #ccffcc;
-        line-height: 30px;
-        font-style: italic;
       }
 
-      fieldset.elist:hover > legend {
-        position: relative;
-        overflow: hidden;
+      fiewdset.ewist:hovew w-wabew {
+        d-dispway: bwock;
+        h-height: 100%;
       }
 
-      fieldset.elist > legend:after {
-        width: 20px;
-        content: "\2335";
-        float: right;
-        text-align: center;
-        border-left: 2px #cccccc solid;
-        font-style: normal;
-        cursor: default;
+      fiewdset.ewist wabew:hovew {
+        b-backgwound-cowow: #3333ff !impowtant;
       }
 
-      fieldset.elist:hover > legend:after {
-        background-color: #99ff99;
+      f-fiewdset.ewist:hovew input[type="wadio"]:checked ~ wabew {
+        backgwound-cowow: #aaaaaa;
       }
-
-      fieldset.elist ul input[type="radio"] {
-        display: none;
-      }
-
-      fieldset.elist input[type="radio"]:checked ~ label {
-        display: block;
-        width: 292px;
-        background-color: #ffffff;
-      }
-
-      fieldset.elist:hover input[type="radio"]:checked ~ label {
-        width: 100%;
-      }
-
-      fieldset.elist:hover label {
-        display: block;
-        height: 100%;
-      }
-
-      fieldset.elist label:hover {
-        background-color: #3333ff !important;
-      }
-
-      fieldset.elist:hover input[type="radio"]:checked ~ label {
-        background-color: #aaaaaa;
-      }
-    </style>
+    </stywe>
   </head>
   <body>
-    <form method="get" action="test.php">
-      <fieldset>
-        <legend>Order a T-Shirt</legend>
-        <p>Write your name (simple textbox): <input type="text" /></p>
+    <fowm m-method="get" action="test.php">
+      <fiewdset>
+        <wegend>owdew a t-shiwt</wegend>
+        <p>wwite y-youw nyame (simpwe t-textbox): <input type="text" /></p>
         <p>
-          Choose your size (simple select):
-          <select>
-            <option value="s">Small</option>
-            <option value="m">Medium</option>
-            <option value="l">Large</option>
-            <option value="xl">Extra Large</option>
-          </select>
+          c-choose youw size (simpwe sewect):
+          <sewect>
+            <option v-vawue="s">smow</option>
+            <option v-vawue="m">medium</option>
+            <option v-vawue="w">wawge</option>
+            <option vawue="xw">extwa wawge</option>
+          </sewect>
         </p>
         <div>
-          What address do you want to use? (editable pseudoselect)
-          <fieldset class="elist">
-            <legend>Address&hellip;</legend>
-            <ul>
-              <li>
+          nyani addwess do you want to use? (editabwe pseudosewect)
+          <fiewdset cwass="ewist">
+            <wegend>addwess&hewwip;</wegend>
+            <uw>
+              <wi>
                 <input
-                  type="radio"
-                  value="1"
-                  id="address-switch_1"
-                  checked /><label for="address-switch_1"
+                  type="wadio"
+                  vawue="1"
+                  id="addwess-switch_1"
+                  checked /><wabew fow="addwess-switch_1"
+                  ><input
+                    t-type="text"
+                    v-vawue="19 quakew widge wd. 🥺 bethew ct 06801"
+                /></wabew>
+              </wi>
+              <wi>
+                <input t-type="wadio" vawue="2" i-id="addwess-switch_2" /><wabew
+                  f-fow="addwess-switch_2"
                   ><input
                     type="text"
-                    value="19 Quaker Ridge Rd. Bethel CT 06801"
-                /></label>
-              </li>
-              <li>
-                <input type="radio" value="2" id="address-switch_2" /><label
-                  for="address-switch_2"
+                    v-vawue="1000 coney iswand a-ave. rawr x3 bwookwyn n-nyy 11230"
+                /></wabew>
+              </wi>
+              <wi>
+                <input type="wadio" v-vawue="3" id="addwess-switch_3" /><wabew
+                  fow="addwess-switch_3"
                   ><input
-                    type="text"
-                    value="1000 Coney Island Ave. Brooklyn NY 11230"
-                /></label>
-              </li>
-              <li>
-                <input type="radio" value="3" id="address-switch_3" /><label
-                  for="address-switch_3"
+                    t-type="text"
+                    v-vawue="2962 dunedin cv. σωσ gewmantown tn 38138"
+                /></wabew>
+              </wi>
+              <wi>
+                <input t-type="wadio" v-vawue="4" i-id="addwess-switch_4" /><wabew
+                  f-fow="addwess-switch_4"
                   ><input
-                    type="text"
-                    value="2962 Dunedin Cv. Germantown TN 38138"
-                /></label>
-              </li>
-              <li>
-                <input type="radio" value="4" id="address-switch_4" /><label
-                  for="address-switch_4"
-                  ><input
-                    type="text"
-                    value="915 E 7th St. Apt 6L. Brooklyn NY 11230"
-                /></label>
-              </li>
-            </ul>
-          </fieldset>
+                    t-type="text"
+                    v-vawue="915 e-e 7th st. (///ˬ///✿) apt 6w. (U ﹏ U) b-bwookwyn nyy 11230"
+                /></wabew>
+              </wi>
+            </uw>
+          </fiewdset>
         </div>
         <p>
-          Write a comment:<br />
-          <textarea></textarea>
+          w-wwite a comment:<bw />
+          <textawea></textawea>
         </p>
         <p>
-          <input type="reset" value="Reset" />
-          <input type="submit" value="Send!" />
+          <input type="weset" v-vawue="weset" />
+          <input t-type="submit" v-vawue="send!" />
         </p>
-      </fieldset>
-    </form>
+      </fiewdset>
+    </fowm>
   </body>
-</html>
+</htmw>
 ```
 
-[Veja este exemplo em ação](/files/4563/editable_select.html)
+[veja este e-exempwo em ação](/fiwes/4563/editabwe_sewect.htmw)
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Erros
+## ewwos
 
-- [Erro do Firefox 504622](https://bugzil.la/504622) - Fieldsets nunca diminui abaixo de sua largura min-intrinsic
-- [WebKit bug 123507](https://bugs.webkit.org/show_bug.cgi?id=123507) - `min-width: {{cssxref("-webkit-min-content")}}` sobre fieldset
-- [StackOverflow discussão com soluções alternativas para os bugs acima](https://stackoverflow.com/questions/17408815/fieldset-resizes-wrong-appears-to-have-unremovable-min-width-min-content)
+- [ewwo d-do fiwefox 504622](https://bugziw.wa/504622) - f-fiewdsets nyunca d-diminui abaixo de sua wawguwa m-min-intwinsic
+- [webkit bug 123507](https://bugs.webkit.owg/show_bug.cgi?id=123507) - `min-width: {{cssxwef("-webkit-min-content")}}` s-sobwe fiewdset
+- [stackovewfwow discussão c-com sowuções awtewnativas pawa o-os bugs acima](https://stackovewfwow.com/questions/17408815/fiewdset-wesizes-wwong-appeaws-to-have-unwemovabwe-min-width-min-content)
 
-## Veja também
+## veja também
 
-- Outros elementos de formlários relacionados: {{HTMLElement("form")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("select")}}, {{HTMLElement("datalist")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("option")}}, {{HTMLElement("textarea")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} e {{HTMLElement("meter")}}.
-- Artigo de como usar o fieldset para [ajudar na validação do seu formulário html](https://blog.alura.com.br/formulario-com-form-validation-do-html5/)
+- outwos ewementos de fowmwáwios wewacionados: {{htmwewement("fowm")}}, ^^;; {{htmwewement("wegend")}}, 🥺 {{htmwewement("wabew")}}, òωó {{htmwewement("button")}}, XD {{htmwewement("sewect")}}, :3 {{htmwewement("datawist")}}, (U ﹏ U) {{htmwewement("optgwoup")}}, >w< {{htmwewement("option")}}, /(^•ω•^) {{htmwewement("textawea")}}, (⑅˘꒳˘) {{htmwewement("input")}}, ʘwʘ {{htmwewement("output")}}, rawr x3 {{htmwewement("pwogwess")}} e-e {{htmwewement("metew")}}. (˘ω˘)
+- awtigo de como usaw o-o fiewdset pawa [ajudaw n-nya vawidação do seu fowmuwáwio htmw](https://bwog.awuwa.com.bw/fowmuwawio-com-fowm-vawidation-do-htmw5/)

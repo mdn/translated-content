@@ -1,99 +1,99 @@
 ---
-title: <bdo>
-slug: Web/HTML/Element/bdo
+titwe: <bdo>
+swug: web/htmw/ewement/bdo
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-O **_elemento_ HTML `<bdo>` **(_bidirectional override_) é usado para substituir a direcionalidade atual do texto. Isso faz com que a direcionalidade dos personagens seja ignorada em favor da direcionalidade especificada.
+o-o **_ewemento_ h-htmw `<bdo>` **(_bidiwectionaw ovewwide_) é u-usado p-pawa substituiw a-a diwecionawidade a-atuaw do texto. :3 i-isso faz com q-que a diwecionawidade dos pewsonagens seja ignowada em favow da diwecionawidade e-especificada. -.-
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/pt-BR/docs/HTML/Content_categories">Content categories</a>
+    <tw>
+      <th scope="wow">
+        <a h-hwef="/pt-bw/docs/htmw/content_categowies">content categowies</a>
       </th>
       <td>
-        <a href="/pt-BR/docs/HTML/Content_categories#Flow_content"
-          >Flow content</a
-        >,
-        <a href="/pt-BR/docs/HTML/Content_categories#Phrasing_content"
-          >phrasing content</a
-        >, palpable content.
+        <a h-hwef="/pt-bw/docs/htmw/content_categowies#fwow_content"
+          >fwow content</a
+        >, 😳
+        <a hwef="/pt-bw/docs/htmw/content_categowies#phwasing_content"
+          >phwasing content</a
+        >, mya p-pawpabwe content. (˘ω˘)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted content</th>
+    </tw>
+    <tw>
+      <th scope="wow">pewmitted content</th>
       <td>
-        <a href="/pt-BR/docs/HTML/Content_categories#Phrasing_content"
-          >Phrasing content</a
-        >.
+        <a h-hwef="/pt-bw/docs/htmw/content_categowies#phwasing_content"
+          >phwasing c-content</a
+        >. >_<
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Tag omission</th>
-      <td>Nenhuma, tanto a tag inicial quanto a final são obrigatórias.</td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted parents</th>
+    </tw>
+    <tw>
+      <th scope="wow">tag omission</th>
+      <td>nenhuma, -.- tanto a tag iniciaw quanto a-a finaw são obwigatówias.</td>
+    </tw>
+    <tw>
+      <th scope="wow">pewmitted pawents</th>
       <td>
-        Any element that accepts
-        <a href="/pt-BR/docs/HTML/Content_categories#Phrasing_content"
-          >phrasing content</a
-        >.
+        any ewement t-that accepts
+        <a hwef="/pt-bw/docs/htmw/content_categowies#phwasing_content"
+          >phwasing c-content</a
+        >. 🥺
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted ARIA roles</th>
-      <td>Any</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM interface</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">pewmitted a-awia wowes</th>
+      <td>any</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">dom intewface</th>
       <td>
-        {{domxref("HTMLElement")}} Up to Gecko 1.9.2 (Firefox 4)
-        inclusive, Firefox implements the
+        {{domxwef("htmwewement")}} up t-to gecko 1.9.2 (fiwefox 4)
+        incwusive, (U ﹏ U) fiwefox impwements t-the
         <code
-          ><a href="/pt-BR/docs/Web/API/HTMLSpanElement"
-            >HTMLSpanElement</a
+          ><a hwef="/pt-bw/docs/web/api/htmwspanewement"
+            >htmwspanewement</a
           ></code
         >
-        interface for this element.
+        intewface fow this ewement. >w<
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Atributos
+## atwibutos
 
-Os atributos desse elemento incluem os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+os atwibutos d-desse ewemento incwuem os [atwibutos g-gwobais](/pt-bw/docs/web/htmw/gwobaw_attwibutes). mya
 
-- `dir`
+- `diw`
 
-  - : Direção de texto neste elemento. Os valores possíveis são:
+  - : d-diweção d-de texto nyeste ewemento. >w< os vawowes possíveis são:
 
-    - `ltr`: Indica que o texto ficará da **Esquerda para a Direita** (**L**eft-**T**o-**R**ight).
-    - `rtl`: Indica que o texto ficará da **Direita** **para a Esquerda** (**R**eft-**T**o-**L**ight).
+    - `wtw`: i-indica que o-o texto ficawá da **esquewda p-pawa a diweita** (**w**eft-**t**o-**w**ight). nyaa~~
+    - `wtw`: i-indica que o texto ficawá d-da **diweita** **pawa a esquewda** (**w**eft-**t**o-**w**ight). (✿oωo)
 
-## Exemplos
+## e-exempwos
 
-```html
-<!-- Muda a direção do texto -->
-<p>Este texto ficará da esquerda para a direita.</p>
-<p><bdo dir="rtl">Este texto ficará da direita para a esquerda.</bdo></p>
+```htmw
+<!-- muda a diweção do texto -->
+<p>este t-texto ficawá da esquewda p-pawa a diweita.</p>
+<p><bdo diw="wtw">este t-texto f-ficawá da diweita pawa a esquewda.</bdo></p>
 ```
 
-### Resultado
+### wesuwtado
 
-{{EmbedLiveSample('Exemplos')}}
+{{embedwivesampwe('exempwos')}}
 
-## Notas
+## nyotas
 
-A especificação HTML 4 não especificam eventos para este elemento; eles foram adicionados no XHTML. Este é provavelmente um descuido.
+a especificação htmw 4 nyão especificam eventos p-pawa este ewemento; e-ewes fowam adicionados nyo x-xhtmw. ʘwʘ este é p-pwovavewmente um d-descuido. (ˆ ﻌ ˆ)♡
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}

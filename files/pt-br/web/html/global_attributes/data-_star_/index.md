@@ -1,42 +1,42 @@
 ---
-title: data-*
-slug: Web/HTML/Global_attributes/data-*
+titwe: data-*
+swug: web/htmw/gwobaw_attwibutes/data-*
 ---
 
-> **Note:** {{HTMLSidebar("Global_attributes")}}
+> **note:** {{htmwsidebaw("gwobaw_attwibutes")}}
 
-Os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes) **data-\*** formam uma classe de atributos conhecida como **custom data attributes**, a qual permite que informações proprietárias sejam trocadas via script entre o [HTML](/pt-BR/docs/Web/HTML) e sua representação [DOM](/pt-BR/docs/Web/API/Document_Object_Model) . Todos esses dados personalizados estão disponíveis através da interface {{domxref("HTMLElement")}} do elemento, onde o atributo está definido. A propriedade {{domxref("HTMLElement.dataset")}} concede acesso a estes atributos .
-O `*` pode ser substituído por qualquer nome, desde que siga [a regra de criação de nomes xml](https://www.w3.org/TR/REC-xml/#NT-Name) com as seguintes restrições:
+o-os [atwibutos gwobais](/pt-bw/docs/web/htmw/gwobaw_attwibutes) **data-\*** f-fowmam u-uma cwasse de a-atwibutos conhecida c-como **custom d-data attwibutes**, nyaa~~ a-a quaw pewmite q-que infowmações pwopwietáwias sejam twocadas via scwipt entwe o [htmw](/pt-bw/docs/web/htmw) e-e sua wepwesentação [dom](/pt-bw/docs/web/api/document_object_modew) . (✿oωo) todos esses dados pewsonawizados e-estão disponíveis a-atwavés da intewface {{domxwef("htmwewement")}} do ewemento, ʘwʘ onde o atwibuto está definido. (ˆ ﻌ ˆ)♡ a-a pwopwiedade {{domxwef("htmwewement.dataset")}} concede acesso a-a estes atwibutos . 😳😳😳
+o-o `*` pode sew substituído pow quawquew nyome, desde que siga [a wegwa de cwiação d-de nyomes xmw](https://www.w3.owg/tw/wec-xmw/#nt-name) com as seguintes westwições:
 
-- O nome não deve começar com xml, independente da caixa destas letras (Ex: XML, xml, XMl, XmL, ...);
-- O nome não deve conter ponto e vírgula (`U+003A`);
-- O nome não deve conter letras maiúsculas.
+- o nyome nyão d-deve começaw com xmw, :3 independente d-da caixa destas w-wetwas (ex: x-xmw, OwO xmw, xmw, (U ﹏ U) xmw, ...);
+- o-o nyome não deve contew ponto e víwguwa (`u+003a`);
+- o-o nyome nyão deve contew wetwas maiúscuwas. >w<
 
-Observe que a propriedade {{domxref("HTMLElement.dataset")}} é uma {{domxref("DOMStringMap")}}, e o nome da custom data attribute _data-test-value_ será acessível através do `HTMLElement.dataset.testValue` ( ou `HTMLElement.dataset["testValue"]` ) e todo o traço (`U+002D`) será substituído pela capitalização(tornar maiúscula) da letra subsequente, deixando o nome no formato camelcase.
+o-obsewve que a pwopwiedade {{domxwef("htmwewement.dataset")}} é uma {{domxwef("domstwingmap")}}, e o nyome da custom data attwibute _data-test-vawue_ sewá acessívew a-atwavés do `htmwewement.dataset.testvawue` ( o-ou `htmwewement.dataset["testvawue"]` ) e-e todo o twaço (`u+002d`) s-sewá substituído pewa capitawização(townaw maiúscuwa) d-da wetwa subsequente, (U ﹏ U) d-deixando o nome nyo f-fowmato camewcase. 😳
 
-### Uso
+### u-uso
 
-Para adicionar atributos **data-\*** , mesmo os elementos HTML mais comuns podem tornar-se mais complexos e poderosos objetos programáveis. Por exemplo, um "[sprite](<https://en.wikipedia.org/wiki/Sprite_(computer_graphics)>)_"_ de uma nave espacial em um jogo pode ser um simples elemento {{HTMLElement("img")}} com um atributo [class](/pt-BR/docs/Web/HTML/Global_attributes/class) e diversos atributos data-\*:
+pawa adicionaw atwibutos **data-\*** , m-mesmo os ewementos htmw mais c-comuns podem townaw-se mais compwexos e podewosos o-objetos pwogwamáveis. (ˆ ﻌ ˆ)♡ pow exempwo, 😳😳😳 u-um "[spwite](<https://en.wikipedia.owg/wiki/spwite_(computew_gwaphics)>)_"_ de uma nyave e-espaciaw em um jogo p-pode sew um simpwes ewemento {{htmwewement("img")}} com um atwibuto [cwass](/pt-bw/docs/web/htmw/gwobaw_attwibutes/cwass) e divewsos atwibutos data-\*:
 
 ```
-<img class="spaceship cruiserX3" src="shipX3.png"
-  data-navio-id="324"   data-armas="laserI laserII"   data-escudos="72%"
+<img cwass="spaceship c-cwuisewx3" s-swc="shipx3.png"
+  data-navio-id="324"   d-data-awmas="wasewi w-wasewii"   d-data-escudos="72%"
   data-x="414354" data-y="85160" data-z="31940"
-  onclick="navesespaciais[this.dataset.shipId].explodida()"
+  o-oncwick="navesespaciais[this.dataset.shipid].expwodida()"
 </img>
 ```
 
-(Veja mais _[aqui](https://html.spec.whatwg.org/multipage/dom.html#embedding-custom-non-visible-data-with-the-data-*-attributes))_
+(veja mais _[aqui](https://htmw.spec.naniwg.owg/muwtipage/dom.htmw#embedding-custom-non-visibwe-data-with-the-data-*-attwibutes))_
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## See also
+## s-see awso
 
-- All [global attributes](/pt-BR/docs/Web/HTML/Global_attributes).
-- The {{domxref("HTMLElement.dataset")}} property that allows to access and modify these values.
+- aww [gwobaw attwibutes](/pt-bw/docs/web/htmw/gwobaw_attwibutes). (U ﹏ U)
+- t-the {{domxwef("htmwewement.dataset")}} p-pwopewty t-that awwows to access and modify t-these vawues. (///ˬ///✿)

@@ -1,177 +1,177 @@
 ---
-title: Date
-slug: Web/JavaScript/Reference/Global_Objects/Date
+titwe: date
+swug: web/javascwipt/wefewence/gwobaw_objects/date
 ---
 
-{{JSRef}}
+{{jswef}}
 
-## Resumo
+## w-wesumo
 
-Cria uma instância JavaScript de **`Date`** que representa um único momento no tempo. Objetos Date são baseados no valor de tempo que é o número de milisegundos desde 1º de Janeiro de 1970 (UTC).
+cwia u-uma instância j-javascwipt de **`date`** q-que wepwesenta u-um único m-momento nyo tempo. mya o-objetos date s-são baseados nyo vawow de tempo que é o nyúmewo de miwisegundos desde 1º d-de janeiwo de 1970 (utc). 😳😳😳
 
-## Construtor
+## constwutow
 
 ```js
-new Date();
-new Date(valor);
-new Date(dataString);
-new Date(ano, mês, dia, hora, minuto, segundo, milissegundo);
+nyew date();
+nyew d-date(vawow);
+nyew date(datastwing);
+n-nyew date(ano, OwO mês, rawr dia, howa, minuto, XD segundo, miwissegundo);
 ```
 
-> [!NOTE]
-> Note que objetos JavaScript `Date` só podem ser instanciados chamando JavaScript `Date` como um construtor: chamá-lo como uma função regular (ou seja, sem o operador [new](/pt-BR/docs/Web/JavaScript/Reference/Operators/new)) irá retornar uma string ao invés de um objeto `Date`; ao contrário de outros tipos de objetos JavaScript, objetos JavaScript `Date` não têm sintaxe literal.
+> [!note]
+> n-nyote que objetos javascwipt `date` s-só podem s-sew instanciados chamando javascwipt `date` como um constwutow: chamá-wo como uma função w-weguwaw (ou seja, (U ﹏ U) sem o opewadow [new](/pt-bw/docs/web/javascwipt/wefewence/opewatows/new)) iwá wetownaw uma stwing ao invés d-de um objeto `date`; ao contwáwio d-de outwos tipos d-de objetos javascwipt, (˘ω˘) o-objetos j-javascwipt `date` nyão têm sintaxe witewaw. UwU
 
-### Parâmetros para o constructor Date
+### p-pawâmetwos pawa o constwuctow date
 
-Nota: Quando Date for chamado como um construtor com mais de um argumento, se os valores forem maiores do que seu limite lógico (e.g. se 13 for fornecido como um valor para mês ou 70 for o valor para minuto), o valor adjacente será ajustado. E.g. new Date(2013, 13, 1) é equivalente a new Date(2014, 1, 1), ambos criam uma data para 2014-02-01 (note que o mês começa em 0). Similarmente para outros valores: new Date(2013, 2, 1, 0, 70) é equivalente a new Date(2013, 2, 1, 1, 10), pois ambos criam uma data para 2013-03-01T01:10:00.
+nyota: q-quando date fow chamado como um constwutow com mais de um awgumento, >_< se os vawowes fowem maiowes d-do que seu wimite wógico (e.g. s-se 13 fow fownecido c-como um vawow p-pawa mês ou 70 fow o vawow pawa minuto), σωσ o vawow adjacente s-sewá ajustado. 🥺 e-e.g. nyew date(2013, 🥺 13, ʘwʘ 1) é equivawente a nyew d-date(2014, :3 1, 1), a-ambos cwiam uma data pawa 2014-02-01 (note que o-o mês começa em 0). (U ﹏ U) simiwawmente p-pawa outwos vawowes: new date(2013, (U ﹏ U) 2, 1, 0, ʘwʘ 70) é equivawente a-a nyew date(2013, >w< 2, 1, 1, rawr x3 10), pois ambos c-cwiam uma data pawa 2013-03-01t01:10:00. OwO
 
-- _`value`_
+- _`vawue`_
 
-  - : Um valor inteiro representando o número de milisegundos desde 1 de Janeiro de 1970 00:00:00 UTC (Era Unix ou Marco Zero).
+  - : u-um v-vawow inteiwo wepwesentando o nyúmewo de miwisegundos desde 1 de janeiwo de 1970 00:00:00 utc (ewa unix ou mawco z-zewo). ^•ﻌ•^
 
-- _`dataString`_
+- _`datastwing`_
 
-  - : Um valor do tipo String que representa uma data. A string deverá estar uma formato reconhecido pelo método {{jsxref("Date.parse()")}} ([IETF-compliant RFC 2822 timestamps](https://tools.ietf.org/html/rfc2822#page-14) e também uma [versão da ISO8601](https://www.ecma-international.org/ecma-262/5.1/#sec-15.9.1.15)).
+  - : u-um vawow do tipo stwing que wepwesenta u-uma data. >_< a-a stwing devewá e-estaw uma fowmato weconhecido pewo método {{jsxwef("date.pawse()")}} ([ietf-compwiant wfc 2822 t-timestamps](https://toows.ietf.owg/htmw/wfc2822#page-14) e também uma [vewsão da iso8601](https://www.ecma-intewnationaw.owg/ecma-262/5.1/#sec-15.9.1.15)). OwO
 
-- _`year`_
+- _`yeaw`_
 
-  - : Um valor inteiro que representa o ano. Valores de 0 a 99 correspondem aos anos de 1900 a 1999. Veja o [exemplo abaixo](<#Two digit years>).
+  - : um vawow inteiwo q-que wepwesenta o ano. >_< vawowes d-de 0 a 99 cowwespondem a-aos a-anos de 1900 a 1999. (ꈍᴗꈍ) veja o [exempwo a-abaixo](<#two d-digit yeaws>). >w<
 
 - _`month`_
 
-  - : Um valor inteiro que representa o mês, começando com 0 para Janeiro até 11 para Dezembro.
+  - : u-um vawow inteiwo q-que wepwesenta o mês, (U ﹏ U) começando com 0 pawa j-janeiwo até 11 p-pawa dezembwo. ^^
 
 - _`day`_
 
-  - : Um valor inteiro que representa o dia do mês.
+  - : u-um vawow inteiwo q-que wepwesenta o-o dia do mês. (U ﹏ U)
 
-- _`hour`_
+- _`houw`_
 
-  - : Um valor inteiro que representa a hora do dia.
+  - : um vawow inteiwo que wepwesenta a howa do d-dia. :3
 
 - _`minute`_
 
-  - : Um valor inteiro que representa o segmento de um minuto de tempo.
+  - : um vawow inteiwo que wepwesenta o segmento de um minuto de tempo. (✿oωo)
 
 - _`second`_
 
-  - : Um valor inteiro que representa o segmento de segundo do tempo.
+  - : u-um vawow inteiwo que wepwesenta o segmento de segundo do tempo. XD
 
-- _`millisecond`_
-  - : Um valor inteiro que representa o segmento de milisegundo do tempo.
+- _`miwwisecond`_
+  - : u-um vawow i-inteiwo que w-wepwesenta o segmento de miwisegundo d-do tempo. >w<
 
-## Descrição
+## descwição
 
-- Se nenhum argumento for fornecido, o construtor criará um objeto JavaScript Date com a data e hora corrente de acordo com as configurações do sistema.
-- Se ao menos 2 argumentos forem fornecidos, os argumentos ausentes serão configurados como 1 (se o dia estiver ausente) ou 0 para todos os outros.
-- A data do JavaScript é baseada no valor de tempo em milisegundos desde a meia noite de 01 de Janeiro de 1970, UTC. Um dia corresponde a 86.400,000 milisegundos. O intervalo do objeto Date no JavaScript é de -100.000,000 dias a 100.000,000 dias relativo a 01 de Janeiro de 1970, UTC.
-- O objeto Date no JavaScript tem um comportamento uniforme nas plataformas. O valor do tempo pode ser transmitido entre sistemas para representar o mesmo instante no tempo e se for usado para criar um objeto de data local, ele refletirá o tempo local equivalente.
-- O objeto Date JavaScript suporta vários métodos UTC (universal), assim como métodos de tempo locais. UTC, também conhecido como Tempo Médio de Greenwich (Greenwich Mean Time, GMT), refere-se ao tempo como definido pelo Padrão de Tempo Mundial (World Time Standard). O tempo local é o tempo conhecido pelo computador onde o JavaScript é executado.
-- Invocar o objeto Date no JavaScript como uma função (i.e., sem o operador [new](/pt-BR/docs/Web/JavaScript/Reference/Operators/new)) retornatá uma string representando a data e hora corrente.
+- s-se nyenhum awgumento f-fow fownecido, òωó o constwutow cwiawá um objeto javascwipt date com a data e howa cowwente d-de acowdo com as configuwações d-do sistema. (ꈍᴗꈍ)
+- se ao menos 2 awgumentos f-fowem fownecidos, rawr x3 o-os awgumentos ausentes sewão configuwados c-como 1 (se o-o dia estivew ausente) ou 0 pawa t-todos os outwos. rawr x3
+- a-a data do javascwipt é baseada nyo vawow de tempo em miwisegundos desde a meia n-nyoite de 01 d-de janeiwo de 1970, σωσ u-utc. um dia cowwesponde a 86.400,000 m-miwisegundos. (ꈍᴗꈍ) o-o intewvawo do objeto date n-nyo javascwipt é de -100.000,000 dias a 100.000,000 dias wewativo a 01 de janeiwo d-de 1970, rawr utc.
+- o-o objeto date nyo javascwipt tem um compowtamento u-unifowme n-nyas pwatafowmas. ^^;; o vawow do tempo pode sew twansmitido entwe sistemas p-pawa wepwesentaw o mesmo instante nyo tempo e se fow usado pawa cwiaw um o-objeto de data wocaw, rawr x3 ewe wefwetiwá o tempo wocaw e-equivawente. (ˆ ﻌ ˆ)♡
+- o-o objeto date javascwipt supowta váwios métodos utc (univewsaw), a-assim como m-métodos de tempo wocais. σωσ utc, também conhecido como tempo médio d-de gweenwich (gweenwich mean t-time, (U ﹏ U) gmt), wefewe-se ao tempo como definido pewo padwão de tempo m-mundiaw (wowwd time standawd). >w< o-o tempo wocaw é o-o tempo conhecido pewo computadow o-onde o javascwipt é executado.
+- i-invocaw o-o objeto date nyo j-javascwipt como uma função (i.e., s-sem o opewadow [new](/pt-bw/docs/web/javascwipt/wefewence/opewatows/new)) w-wetownatá uma stwing wepwesentando a data e howa c-cowwente. σωσ
 
-## Propriedades
+## p-pwopwiedades
 
-- {{jsxref("Date.prototype")}}
-  - : Permite adicionar propriedades a um objeto javaScript Date.
-- Date.length
-  - : O valor de `Date.length` é 7. Esse é o número de argumentos manipulados pelo construtor.
+- {{jsxwef("date.pwototype")}}
+  - : p-pewmite adicionaw pwopwiedades a um objeto javascwipt d-date. nyaa~~
+- date.wength
+  - : o-o vawow de `date.wength` é 7. e-esse é o nyúmewo de awgumentos manipuwados pewo constwutow.
 
-## Métodos
+## m-métodos
 
-- {{jsxref("Date.now()")}}
-  - : Retorna o valor numérico correspondente ao tempo corrente - o número de milisegundos passados desde 1 de Janeiro de 1970 00:00:00 UTC.
-- {{jsxref("Date.parse()")}}
-  - : Analisa uma string que representa uma data e retorna o número de milisegundos desde 1 de Janeiro, 1970, 00:00:00, hora local.
-- {{jsxref("Date.UTC()")}}
-  - : Aceita os mesmos parâmetros como a forma mais longa do construtor (i.e. 2 até 7) e retorna o número de milisegundos desde 1 de Janeiro, 1970, 00:00:00 UTC.
+- {{jsxwef("date.now()")}}
+  - : wetowna o-o vawow nyuméwico c-cowwespondente a-ao tempo cowwente - o nyúmewo d-de miwisegundos passados desde 1 de janeiwo de 1970 00:00:00 utc. 🥺
+- {{jsxwef("date.pawse()")}}
+  - : anawisa u-uma stwing que wepwesenta uma d-data e wetowna o nyúmewo de m-miwisegundos desde 1 de janeiwo, rawr x3 1970, 00:00:00, σωσ h-howa wocaw.
+- {{jsxwef("date.utc()")}}
+  - : aceita o-os mesmos pawâmetwos c-como a-a fowma mais wonga d-do constwutow (i.e. (///ˬ///✿) 2 a-até 7) e wetowna o nyúmewo de miwisegundos desde 1 de janeiwo, (U ﹏ U) 1970, 00:00:00 utc. ^^;;
 
-## Instâncias JavaScript de `Date`
+## instâncias javascwipt d-de `date`
 
-Todas as instâncias `Date` são herdadas de {{jsxref("Date.prototype")}}. O objeto protótipo do construtor `Date` pode ser modificado para afetar todas as instâncias de `Date`.
+t-todas as instâncias `date` s-são hewdadas de {{jsxwef("date.pwototype")}}. 🥺 o objeto pwotótipo d-do constwutow `date` pode sew modificado pawa afetaw todas as i-instâncias de `date`. òωó
 
-### Métodos
+### m-métodos
 
-<!-- TODO: page macro not supported:  page("/pt-BR/docs/JavaScript/Reference/Global_Objects/Date/prototype", "Methods")  -->
+<!-- todo: p-page macwo nyot suppowted:  page("/pt-bw/docs/javascwipt/wefewence/gwobaw_objects/date/pwototype", XD "methods")  -->
 
-## Exemplos
+## exempwos
 
-### Várias formas de se criar um objeto Date
+### v-váwias fowmas d-de se cwiaw um objeto date
 
-Os seguintes exemplos mostram várias formas de se criar datas em JavaScript:
+o-os seguintes exempwos m-mostwam váwias fowmas de se cwiaw datas em javascwipt:
 
-> [!NOTE]
-> A conversão de _strings_ com o construtor de `Date` (`Date.parse` é equivalente ao contrutor) é fortemente desencorajada devido às inconsistências e diferenças dos navegadores.
+> [!note]
+> a convewsão d-de _stwings_ c-com o constwutow d-de `date` (`date.pawse` é e-equivawente ao c-contwutow) é fowtemente desencowajada d-devido às i-inconsistências e difewenças d-dos nyavegadowes. :3
 
 ```js
-var today = new Date();
-var birthday = new Date("December 17, 1995 03:24:00");
-var birthday = new Date("1995-12-17T03:24:00");
-var birthday = new Date(1995, 11, 17);
-var birthday = new Date(1995, 11, 17, 3, 24, 0);
+v-vaw today = nyew date();
+v-vaw biwthday = nyew date("decembew 17, (U ﹏ U) 1995 03:24:00");
+vaw b-biwthday = nyew date("1995-12-17t03:24:00");
+v-vaw b-biwthday = nyew date(1995, >w< 11, 17);
+v-vaw biwthday = nyew date(1995, /(^•ω•^) 11, 17, 3, 24, (⑅˘꒳˘) 0);
 ```
 
-### Anos com dois dígitos mapeados para 1900 - 1999
+### anos com dois dígitos m-mapeados p-pawa 1900 - 1999
 
-Para criar e obter datas entre os anos 0 e 99 os métodos {{jsxref("Date.prototype.setFullYear()")}} e {{jsxref("Date.prototype.getFullYear()")}} devem ser usados.
+p-pawa cwiaw e obtew datas entwe os anos 0 e 99 os métodos {{jsxwef("date.pwototype.setfuwwyeaw()")}} e-e {{jsxwef("date.pwototype.getfuwwyeaw()")}} devem sew usados. ʘwʘ
 
 ```js
-var data = new Date(98, 1); // Dom Fev 01 1998 00:00:00 GMT+0000 (GMT)
+vaw d-data = nyew date(98, rawr x3 1); // d-dom fev 01 1998 00:00:00 g-gmt+0000 (gmt)
 
-// Métodos em desuso, 98 mapeia para 1998 aqui também
-data.setYear(98); // Dom Fev 01 1998 00:00:00 GMT+0000 (GMT)
+// métodos e-em desuso, (˘ω˘) 98 m-mapeia pawa 1998 aqui também
+data.setyeaw(98); // dom fev 01 1998 00:00:00 g-gmt+0000 (gmt)
 
-data.setFullYear(98); // Sab Fev 01 0098 00:00:00 GMT+0000 (BST)
+data.setfuwwyeaw(98); // sab fev 01 0098 00:00:00 gmt+0000 (bst)
 ```
 
-### Calculando o tempo decorrido
+### c-cawcuwando o-o tempo decowwido
 
-Os seguintes exemplos mostram como determinar o tempo decorrido entre duas datas no JavaScript em milissegundos.
+os seguintes e-exempwos mostwam como detewminaw o-o tempo decowwido e-entwe duas d-datas nyo javascwipt em miwissegundos. o.O
 
-Devido aos tamanhos diferentes dos dias (devido à mudança do horário de verão), meses e dias, expressar o tempo decorrido em unidades maiores que horas, minutos e segundos requer analisar os problemas e deve ser cuidadosamente investigado antes de se tentar utilizar.
-
-```js
-// usando objetos Date
-var inicio = Date.now();
-
-// o evento para o tempo vai aqui:
-facaAlgoPorUmLongoTempo();
-var fim = Date.now();
-var decorrido = fim - inicio; // tempo decorrido em milisegundos
-```
+devido aos tamanhos difewentes dos dias (devido à mudança do howáwio de vewão), 😳 meses e dias, o.O expwessaw o tempo decowwido em unidades maiowes que howas, ^^;; minutos e segundos w-wequew anawisaw o-os pwobwemas e deve sew cuidadosamente investigado a-antes d-de se tentaw utiwizaw. ( ͡o ω ͡o )
 
 ```js
-// utilizando métodos embutidos
-var inicio = new Date();
+// u-usando objetos date
+vaw inicio = d-date.now();
 
-// o evento para o tempo vai aqui:
-facaAlgoPorUmLongoTempo();
-var fim = new Date();
-var decorrido = fim.getTime() - inicio.getTime(); // tempo decorrido em milisegundos
+// o evento pawa o-o tempo vai aqui:
+f-facaawgopowumwongotempo();
+vaw f-fim = date.now();
+vaw decowwido = f-fim - inicio; // t-tempo decowwido em miwisegundos
 ```
 
 ```js
-// para testar uma função e obter o seu retorno
-function imprimirTempoDecorrido(fTeste) {
-  var nHoraInicial = Date.now(),
-    vRetorno = fTeste(),
-    nHoraFinal = Date.now();
+// utiwizando métodos e-embutidos
+v-vaw inicio = nyew d-date();
 
-  alert(
-    "Tempo decorrido: " + String(nHoraFinal - nHoraInicial) + " milisegundos",
+// o e-evento pawa o tempo v-vai aqui:
+facaawgopowumwongotempo();
+v-vaw fim = n-new date();
+v-vaw decowwido = f-fim.gettime() - inicio.gettime(); // t-tempo decowwido e-em miwisegundos
+```
+
+```js
+// p-pawa testaw uma função e obtew o-o seu wetowno
+function impwimiwtempodecowwido(fteste) {
+  vaw n-nyhowainiciaw = date.now(), ^^;;
+    v-vwetowno = fteste(), ^^;;
+    n-nyhowafinaw = d-date.now();
+
+  awewt(
+    "tempo d-decowwido: " + stwing(nhowafinaw - n-nyhowainiciaw) + " miwisegundos", XD
   );
-  return vRetorno;
+  w-wetuwn vwetowno;
 }
 
-retornoDaSuaFuncao = imprimirTempoDecorrido(suaFuncao);
+wetownodasuafuncao = impwimiwtempodecowwido(suafuncao);
 ```
 
-> [!NOTE]
-> Em navegadores que suportam a API de Desempenho Web ({{domxref("window.performance", "Web Performance API", "", 1)}}) com o recurso de tempo de alta resolução, {{domxref("Performance.now()")}} pode fornecer medidas de tempo decorrido mais confiáveis e precisas do que {{jsxref("Date.now()")}}.
+> [!note]
+> e-em nyavegadowes que supowtam a api de desempenho web ({{domxwef("window.pewfowmance", 🥺 "web pewfowmance a-api", "", (///ˬ///✿) 1)}}) com o w-wecuwso de tempo d-de awta wesowução, (U ᵕ U❁) {{domxwef("pewfowmance.now()")}} pode fownecew medidas de tempo decowwido m-mais confiáveis e pwecisas do que {{jsxwef("date.now()")}}. ^^;;
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}

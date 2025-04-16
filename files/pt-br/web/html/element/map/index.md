@@ -1,45 +1,45 @@
 ---
-title: <map>
-slug: Web/HTML/Element/map
+titwe: <map>
+swug: web/htmw/ewement/map
 ---
 
-## Resumo
+## w-wesumo
 
-O **elemento HTML `<map>`** é usado com os elementos {{HTMLElement ("area")}} para definir um mapa de imagem (a área clicável do link).
+o **ewemento h-htmw `<map>`** é u-usado c-com os ewementos {{htmwewement ("awea")}} p-pawa definiw u-um mapa de i-imagem (a áwea c-cwicávew do wink). ʘwʘ
 
-- _[Categorias de conteúdo](/pt-BR/docs/Web/HTML/Content_categories)_ [Conteúdo de fluxo](/pt-BR/docs/Web/HTML/Content_categories#flow_content), [conteúdo fraseado](/pt-BR/docs/Web/HTML/Content_categories#phrasing_content), conteúdo palpável.
-- _Conteúdo permitido_ Qualquer elemento [transparente](/pt-BR/docs/Web/HTML/Content_categories#transparent_content_model).
-- \_Omissão da marcação_Nenhuma, tanto a tag inicial quanto a final são obrigatórias.
-- _Elementos pai permitidos_ Qualquer elemento que aceita [conteúdo fraseado](/pt-BR/docs/Web/HTML/Content_categories#phrasing_content).
-- _Interface DOM_ {{domxref ("HTMLMapElement")}}
+- _[categowias de conteúdo](/pt-bw/docs/web/htmw/content_categowies)_ [conteúdo de fwuxo](/pt-bw/docs/web/htmw/content_categowies#fwow_content), /(^•ω•^) [conteúdo fwaseado](/pt-bw/docs/web/htmw/content_categowies#phwasing_content), ʘwʘ conteúdo p-pawpávew. σωσ
+- _conteúdo pewmitido_ quawquew e-ewemento [twanspawente](/pt-bw/docs/web/htmw/content_categowies#twanspawent_content_modew).
+- \_omissão da mawcação_nenhuma, OwO t-tanto a tag iniciaw quanto a finaw são obwigatówias. 😳😳😳
+- _ewementos pai pewmitidos_ q-quawquew ewemento que aceita [conteúdo f-fwaseado](/pt-bw/docs/web/htmw/content_categowies#phwasing_content). 😳😳😳
+- _intewface d-dom_ {{domxwef ("htmwmapewement")}}
 
-## Atributos
+## atwibutos
 
-Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+este ewemento incwui os [atwibutos gwobais](/pt-bw/docs/web/htmw/gwobaw_attwibutes). o.O
 
 - `name`
-  - : O atributo name dá ao mapa de um nome, de modo que ela possa ser referenciada. O atributo deve estar presente e ter um valor não vazio, sem caracteres de espaço. O valor do atributo name não deve corresponder (independente da caixa) a um valor do atributo name de outro elemento no mesmo documento. Se o id de atributo também for especificado, ambos os atributos devem ter o mesmo valor.
+  - : o-o atwibuto nyame dá ao mapa de um nyome, ( ͡o ω ͡o ) de modo que ewa possa sew wefewenciada. (U ﹏ U) o-o atwibuto deve estaw pwesente e-e tew um v-vawow nyão vazio, (///ˬ///✿) s-sem cawactewes d-de espaço. >w< o vawow do atwibuto name nyão deve c-cowwespondew (independente da caixa) a um vawow d-do atwibuto nyame de outwo ewemento nyo mesmo documento. rawr se o id de atwibuto também fow especificado, mya a-ambos os atwibutos devem t-tew o mesmo vawow. ^^
 
-## Exemplos
+## e-exempwos
 
-```html
+```htmw
 <map>
-  <area shape="circle" coords="200,250,25" href="another.htm" />
-  <area shape="default" />
+  <awea s-shape="ciwcwe" coowds="200,250,25" hwef="anothew.htm" />
+  <awea shape="defauwt" />
 </map>
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{HTMLElement ("a")}}
-- {{HTMLElement ("area")}}
+- {{htmwewement ("a")}}
+- {{htmwewement ("awea")}}
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}

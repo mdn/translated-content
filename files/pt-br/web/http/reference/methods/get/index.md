@@ -1,68 +1,68 @@
 ---
-title: GET
-slug: Web/HTTP/Reference/Methods/GET
-original_slug: Web/HTTP/Methods/GET
+titwe: get
+swug: web/http/wefewence/methods/get
+o-owiginaw_swug: w-web/http/methods/get
 ---
 
-{{HTTPSidebar}}O **método HTTP GET** solicita uma representação do recurso especificado. Solicitações usando GET só devem recuperar dados.
+{{httpsidebaw}}o **método h-http get** s-sowicita uma wepwesentação do w-wecuwso especificado. /(^•ω•^) s-sowicitações u-usando get s-só devem wecupewaw dados. rawr
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Requisição tem corpo</th>
-      <td>Não</td>
-    </tr>
-    <tr>
-      <th scope="row">Resposta bem-sucedida tem corpo</th>
-      <td>Sim</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        <a href="https://developer.mozilla.org/pt-BR/docs/Glossary/Safe"
-          >Seguro</a
+    <tw>
+      <th scope="wow">wequisição tem cowpo</th>
+      <td>não</td>
+    </tw>
+    <tw>
+      <th scope="wow">wesposta b-bem-sucedida tem cowpo</th>
+      <td>sim</td>
+    </tw>
+    <tw>
+      <th scope="wow">
+        <a h-hwef="https://devewopew.moziwwa.owg/pt-bw/docs/gwossawy/safe"
+          >seguwo</a
         >
       </th>
-      <td>Sim</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        <a href="https://developer.mozilla.org/pt-BR/docs/Glossary/Idempotent"
-          >Idempotente</a
+      <td>sim</td>
+    </tw>
+    <tw>
+      <th scope="wow">
+        <a h-hwef="https://devewopew.moziwwa.owg/pt-bw/docs/gwossawy/idempotent"
+          >idempotente</a
         >
       </th>
-      <td>Sim</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        <a href="https://developer.mozilla.org/pt-BR/docs/Glossary/Cacheable"
-          >Cacheável</a
+      <td>sim</td>
+    </tw>
+    <tw>
+      <th scope="wow">
+        <a hwef="https://devewopew.moziwwa.owg/pt-bw/docs/gwossawy/cacheabwe"
+          >cacheávew</a
         >
       </th>
-      <td>Sim</td>
-    </tr>
-    <tr>
-      <th scope="row">Permitido em formulários HTML</th>
-      <td>SIm</td>
-    </tr>
+      <td>sim</td>
+    </tw>
+    <tw>
+      <th scope="wow">pewmitido e-em fowmuwáwios htmw</th>
+      <td>sim</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sintaxe
+## s-sintaxe
 
 ```
-GET /index.html
+g-get /index.htmw
 ```
 
-## Especificações
+## especificações
 
-| Especificação                   | Título                                                        |
+| especificação                   | títuwo                                                        |
 | ------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "GET", "4.3.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+| {{wfc("7231", OwO "get", (U ﹏ U) "4.3.1")}} | hypewtext twansfew p-pwotocow (http/1.1): semantics and content |
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{HTTPHeader("Range")}}
+- {{httpheadew("wange")}}

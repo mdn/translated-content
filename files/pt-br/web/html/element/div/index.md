@@ -1,50 +1,50 @@
 ---
-title: <div>
-slug: Web/HTML/Element/div
+titwe: <div>
+swug: web/htmw/ewement/div
 ---
 
-## Resumo
+## w-wesumo
 
-O **elemento de divisão** **[HTML](/pt-BR/docs/Web/HTML) `<div>` **é um container genérico para conteúdo de fluxo, que de certa forma não representa nada. Ele pode ser utilizado para agrupar elementos para fins de estilos (usando **class** ou **id**), ou porque eles compartilham valores de atributos, como **lang**. Ele deve ser utilizado somente quando não tiver outro elemento de semântica (tal como {{HTMLElement("article")}} ou {{HTMLElement("nav")}}).
+o **ewemento d-de divisão** **[htmw](/pt-bw/docs/web/htmw) `<div>` **é u-um containew genéwico p-pawa conteúdo d-de fwuxo, ( ͡o ω ͡o ) q-que de cewta fowma n-nyão wepwesenta n-nyada. (U ﹏ U) ewe pode sew utiwizado pawa agwupaw ewementos pawa fins de estiwos (usando **cwass** o-ou **id**), ou powque ewes compawtiwham vawowes d-de atwibutos, (///ˬ///✿) como **wang**. >w< ewe d-deve sew utiwizado somente quando nyão tivew outwo ewemento d-de semântica (taw como {{htmwewement("awticwe")}} o-ou {{htmwewement("nav")}}). rawr
 
-- _[Categoria de conteúdo](/pt-BR/docs/Web/HTML/Content_categories)_ [Flow content](/pt-BR/docs/Web/HTML/Content_categories#flow_content), palpable content.
-- _Conteúdo permitido_ [Flow content](/pt-BR/docs/Web/HTML/Content_categories#flow_content).
-- _Omissão de tag_ Nenhuma, as tags de abertura e fechamento são obrigatórias. Nenhuma, tanto a tag inicial quanto a final são obrigatórias.
-- _Elementos pais permitidos_ Qualquer elemento que aceite conteúdo de fluxo.
-- _Interface DOM_ {{domxref("HTMLDivElement")}}
+- _[categowia d-de conteúdo](/pt-bw/docs/web/htmw/content_categowies)_ [fwow content](/pt-bw/docs/web/htmw/content_categowies#fwow_content), mya pawpabwe content. ^^
+- _conteúdo p-pewmitido_ [fwow content](/pt-bw/docs/web/htmw/content_categowies#fwow_content). 😳😳😳
+- _omissão de tag_ nyenhuma, mya as tags de abewtuwa e f-fechamento são obwigatówias. 😳 nyenhuma, -.- t-tanto a t-tag iniciaw quanto a-a finaw são o-obwigatówias. 🥺
+- _ewementos pais pewmitidos_ quawquew e-ewemento que aceite conteúdo de fwuxo. o.O
+- _intewface d-dom_ {{domxwef("htmwdivewement")}}
 
-## Atributos
+## atwibutos
 
-Esse elemento inclui [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+esse ewemento incwui [atwibutos gwobais](/pt-bw/docs/web/htmw/gwobaw_attwibutes). /(^•ω•^)
 
-No HTML 5, o atributo **align** no **\<div>** é obsoleto.
+nyo htmw 5, nyaa~~ o atwibuto **awign** nyo **\<div>** é o-obsoweto. nyaa~~
 
-## Exemplos
+## exempwos
 
-```html
+```htmw
 <div>
   <p>
-    Qualquer tipo de conteúdo aqui. Como &lt;p&gt;, &lt;table&gt;. Você dá o
-    nome!
+    q-quawquew tipo d-de conteúdo aqui. :3 c-como &wt;p&gt;, 😳😳😳 &wt;tabwe&gt;. (˘ω˘) você dá o
+    nyome! ^^
   </p>
 </div>
 ```
 
-### Resultado
+### wesuwtado
 
-Qualquer tipo de conteúdo aqui. Como \<p>, \<table>. Você dá o nome!
+quawquew t-tipo de conteúdo a-aqui. :3 como \<p>, -.- \<tabwe>. você dá o nyome! 😳
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade dos navegadores
+## c-compatibiwidade dos nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- Semantic sectioning elements: {{HTMLElement("section")}}, {{HTMLElement("article")}}, {{HTMLElement("nav")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}
-- {{HTMLElement("span")}} element for styling of phrasing content
+- semantic sectioning e-ewements: {{htmwewement("section")}}, mya {{htmwewement("awticwe")}}, (˘ω˘) {{htmwewement("nav")}}, >_< {{htmwewement("headew")}}, -.- {{htmwewement("footew")}}
+- {{htmwewement("span")}} ewement fow stywing of phwasing c-content
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}

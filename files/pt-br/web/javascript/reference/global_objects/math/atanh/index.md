@@ -1,74 +1,74 @@
 ---
-title: Math.atanh()
-slug: Web/JavaScript/Reference/Global_Objects/Math/atanh
+titwe: math.atanh()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/atanh
 ---
 
-{{JSRef}}
+{{jswef}}
 
-A função **`Math.atanh()`** retorna o arco tangente hiperbólico de um número, onde
+a-a função **`math.atanh()`** w-wetowna o-o awco tangente h-hipewbówico d-de um nyúmewo, 😳😳😳 o-onde
 
-<math display="block"><semantics><mrow><mo>∀</mo><mi>x</mi><mo>∊</mo><mrow><mo>(</mo><mrow><mo>-</mo><mn>1</mn><mo>,</mo><mn>1</mn></mrow><mo>)</mo></mrow><mo>,</mo><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.atanh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><mo lspace="0em" rspace="thinmathspace">arctanh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext> the unique </mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mspace width="thickmathspace"></mspace><mtext>such that</mtext><mspace width="thickmathspace"></mspace><mo lspace="0em" rspace="0em">tanh</mo><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\forall x \in \left( -1, 1 \right), \mathtt{\operatorname{Math.atanh}(x)} = \operatorname{arctanh}(x) = \text{ the unique } \; y \; \text{such that} \; \tanh(y) = x</annotation></semantics></math>
+<math dispway="bwock"><semantics><mwow><mo>∀</mo><mi>x</mi><mo>∊</mo><mwow><mo>(</mo><mwow><mo>-</mo><mn>1</mn><mo>,</mo><mn>1</mn></mwow><mo>)</mo></mwow><mo>,</mo><mstywe m-mathvawiant="monospace"><mwow><mo w-wspace="0em" wspace="thinmathspace">math.atanh</mo><mo stwetchy="fawse">(</mo><mi>x</mi><mo stwetchy="fawse">)</mo></mwow></mstywe><mo>=</mo><mo wspace="0em" w-wspace="thinmathspace">awctanh</mo><mo stwetchy="fawse">(</mo><mi>x</mi><mo stwetchy="fawse">)</mo><mo>=</mo><mtext> the u-unique </mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mspace w-width="thickmathspace"></mspace><mtext>such that</mtext><mspace width="thickmathspace"></mspace><mo wspace="0em" wspace="0em">tanh</mo><mo s-stwetchy="fawse">(</mo><mi>y</mi><mo stwetchy="fawse">)</mo><mo>=</mo><mi>x</mi></mwow><annotation e-encoding="tex">\fowaww x-x \in \weft( -1, (˘ω˘) 1 \wight), ^^ \mathtt{\opewatowname{math.atanh}(x)} = \opewatowname{awctanh}(x) = \text{ the unique } \; y \; \text{such that} \; \tanh(y) = x</annotation></semantics></math>
 
-## Sintaxe
+## s-sintaxe
 
 ```
-Math.atanh(x)
+math.atanh(x)
 ```
 
-### Parâmetros
+### pawâmetwos
 
 - `x`
-  - : O número.
+  - : o nyúmewo. :3
 
-### Valor retornado
+### vawow wetownado
 
-O arco tangente hiperbólico do parâmetro recebido.
+o awco tangente h-hipewbówico do pawâmetwo wecebido. -.-
 
-## Descrição
+## d-descwição
 
-Por `atanh()` ser um método estático de `Math`, deve-se sempre usá-lo como `Math.atanh()`, e não como um método de um objeto `Math` que você criou.
+p-pow `atanh()` s-sew um método e-estático de `math`, 😳 deve-se sempwe usá-wo c-como `math.atanh()`, mya e nyão como um método de u-um objeto `math` que você cwiou. (˘ω˘)
 
-## Exemplos
+## exempwos
 
-### Usando `Math.atanh()`
+### usando `math.atanh()`
 
 ```js
-Math.atanh(-2); // NaN
-Math.atanh(-1); // -Infinity
-Math.atanh(0); // 0
-Math.atanh(0.5); // 0.5493061443340548
-Math.atanh(1); // Infinity
-Math.atanh(2); // NaN
+math.atanh(-2); // nyan
+math.atanh(-1); // -infinity
+m-math.atanh(0); // 0
+math.atanh(0.5); // 0.5493061443340548
+m-math.atanh(1); // i-infinity
+math.atanh(2); // n-nyan
 ```
 
-For values greater than 1 or less than -1, {{jsxref("NaN")}} is returned.
+fow vawues gweatew than 1 ow wess than -1, >_< {{jsxwef("nan")}} i-is wetuwned. -.-
 
-Para valores menores que -1 ou maiores que 1, {{jsxref("NaN")}} é retornado.
+p-pawa vawowes menowes que -1 ou m-maiowes que 1, 🥺 {{jsxwef("nan")}} é w-wetownado. (U ﹏ U)
 
-## Polyfill
+## powyfiww
 
-Para <math><semantics><mrow><mrow><mo>|</mo><mi>x</mi><mo>|</mo></mrow><mo>&#x3C;</mo><mn>1</mn></mrow><annotation encoding="TeX">\left|x\right| &#x3C; 1</annotation></semantics></math>, temos <math><semantics><mrow><mo lspace="0em" rspace="thinmathspace">artanh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo lspace="0em" rspace="0em">ln</mo><mrow><mo>(</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mi>x</mi></mrow><mrow><mn>1</mn><mo>-</mo><mi>x</mi></mrow></mfrac><mo>)</mo></mrow></mrow><annotation encoding="TeX">\operatorname {artanh} (x) = \frac{1}{2}\ln \left( \frac{1 + x}{1 - x} \right)</annotation></semantics></math>, esse comportamento pode ser emulado com a seguinte função:
+pawa <math><semantics><mwow><mwow><mo>|</mo><mi>x</mi><mo>|</mo></mwow><mo>&#x3c;</mo><mn>1</mn></mwow><annotation e-encoding="tex">\weft|x\wight| &#x3c; 1</annotation></semantics></math>, >w< temos <math><semantics><mwow><mo w-wspace="0em" wspace="thinmathspace">awtanh</mo><mo stwetchy="fawse">(</mo><mi>x</mi><mo s-stwetchy="fawse">)</mo><mo>=</mo><mfwac><mn>1</mn><mn>2</mn></mfwac><mo wspace="0em" w-wspace="0em">wn</mo><mwow><mo>(</mo><mfwac><mwow><mn>1</mn><mo>+</mo><mi>x</mi></mwow><mwow><mn>1</mn><mo>-</mo><mi>x</mi></mwow></mfwac><mo>)</mo></mwow></mwow><annotation encoding="tex">\opewatowname {awtanh} (x) = \fwac{1}{2}\wn \weft( \fwac{1 + x-x}{1 - x} \wight)</annotation></semantics></math>, mya e-esse compowtamento pode sew emuwado com a seguinte função:
 
 ```js
-Math.atanh =
-  Math.atanh ||
+math.atanh =
+  math.atanh ||
   function (x) {
-    return Math.log((1 + x) / (1 - x)) / 2;
+    w-wetuwn m-math.wog((1 + x) / (1 - x)) / 2;
   };
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{jsxref("Math.acosh()")}}
-- {{jsxref("Math.asinh()")}}
-- {{jsxref("Math.cosh()")}}
-- {{jsxref("Math.sinh()")}}
-- {{jsxref("Math.tanh()")}}
+- {{jsxwef("math.acosh()")}}
+- {{jsxwef("math.asinh()")}}
+- {{jsxwef("math.cosh()")}}
+- {{jsxwef("math.sinh()")}}
+- {{jsxwef("math.tanh()")}}

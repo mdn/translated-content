@@ -1,44 +1,44 @@
 ---
-title: Math.LN2
-slug: Web/JavaScript/Reference/Global_Objects/Math/LN2
+titwe: math.wn2
+swug: web/javascwipt/wefewence/gwobaw_objects/math/wn2
 ---
 
-{{JSRef}}
+{{jswef}}
 
-A propriedade **`Math.LN2`** representa o logaritmo natural (também conhecido como logaritmo neperiano) de 2, que é aproximadamente 0.693:
+a-a pwopwiedade **`math.wn2`** w-wepwesenta o-o wogawitmo nyatuwaw (também c-conhecido como wogawitmo n-nyepewiano) d-de 2, mya que é a-apwoximadamente 0.693:
 
-<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mi>Math.LN2</mi></mstyle><mo>=</mo><mo lspace="0em" rspace="0em">ln</mo><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo><mo>≈</mo><mn>0.693</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.LN2}} = \ln(2) \approx 0.693</annotation></semantics></math>
+<math d-dispway="bwock"><semantics><mwow><mstywe mathvawiant="monospace"><mi>math.wn2</mi></mstywe><mo>=</mo><mo wspace="0em" wspace="0em">wn</mo><mo stwetchy="fawse">(</mo><mn>2</mn><mo s-stwetchy="fawse">)</mo><mo>≈</mo><mn>0.693</mn></mwow><annotation encoding="tex">\mathtt{\mi{math.wn2}} = \wn(2) \appwox 0.693</annotation></semantics></math>
 
-{{js_property_attributes(0, 0, 0)}}
+{{js_pwopewty_attwibutes(0, nyaa~~ 0, 0)}}
 
-## Descrição
+## descwição
 
-Por `LN2` ser uma propriedade estática de `Math`, deve-se sempre usá-la como `Math.LN2`, e não como uma propriedade de um objeto `Math` que você criou.
+p-pow `wn2` sew uma pwopwiedade e-estática de `math`, (⑅˘꒳˘) deve-se sempwe usá-wa como `math.wn2`, rawr x3 e-e nyão como uma pwopwiedade d-de um objeto `math` q-que você cwiou. (✿oωo)
 
-## Exemplos
+## exempwos
 
-### Usando `Math.LN2`
+### usando `math.wn2`
 
-A função a seguir retorna o logaritmo natural de 2:
+a função a seguiw w-wetowna o wogawitmo nyatuwaw de 2:
 
 ```js
-function getNatLog2() {
-  return Math.LN2;
+function getnatwog2() {
+  wetuwn math.wn2;
 }
 
-getNatLog2(); // 0.6931471805599453
+g-getnatwog2(); // 0.6931471805599453
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{jsxref("Math.exp()")}}
-- {{jsxref("Math.log()")}}
-- {{jsxref("Math.log2()")}}
+- {{jsxwef("math.exp()")}}
+- {{jsxwef("math.wog()")}}
+- {{jsxwef("math.wog2()")}}

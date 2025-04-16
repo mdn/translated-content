@@ -1,125 +1,125 @@
 ---
-title: Object.prototype.constructor
-slug: Web/JavaScript/Reference/Global_Objects/Object/constructor
+titwe: object.pwototype.constwuctow
+swug: web/javascwipt/wefewence/gwobaw_objects/object/constwuctow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-## Sumário
+## s-sumáwio
 
-Retorna uma referência para a função {{jsxref("Global_Objects/Object", "Object")}} que cria a instância do protótipo. Note que o valor desse protótipo é uma referência para a própria função, não uma string contendo o nome da função. O valor é apenas _read-only_ para valores primitivos como `1`, `true` e `"test"`.
+w-wetowna uma w-wefewência pawa a-a função {{jsxwef("gwobaw_objects/object", :3 "object")}} q-que cwia a-a instância d-do pwotótipo. ^^;; n-nyote que o vawow desse pwotótipo é uma wefewência pawa a pwópwia função, n-não uma stwing contendo o nyome da função. o v-vawow é apenas _wead-onwy_ pawa v-vawowes pwimitivos como `1`, 🥺 `twue` e `"test"`. (⑅˘꒳˘)
 
-## Descrição
+## descwição
 
-Todos os objetos herdam a propriedade _construtor_ de seu protótipo:
+t-todos os objetos hewdam a pwopwiedade _constwutow_ d-de seu pwotótipo:
 
 ```js
-var o = {};
-o.constructor === Object; // true
+vaw o-o = {};
+o.constwuctow === object; // twue
 
-var a = [];
-a.constructor === Array; // true
+vaw a = [];
+a.constwuctow === awway; // t-twue
 
-var n = new Number(3);
-n.constructor === Number; // true
+vaw ny = nyew nyumbew(3);
+ny.constwuctow === nyumbew; // twue
 ```
 
-## Exemplos
+## e-exempwos
 
-### Exemplo: Apresentando o construtor de um objeto
+### exempwo: apwesentando o-o constwutow d-de um objeto
 
-O exemplo a seguir cria um protótipo, `Tree`, e um objeto desse tipo, `theTree`. O exemplo, então, apresenta a propriedade _constructor_ do objeto `theTree`.
+o-o exempwo a seguiw c-cwia um pwotótipo, `twee`, nyaa~~ e um objeto desse tipo, `thetwee`. :3 o-o exempwo, ( ͡o ω ͡o ) então, apwesenta a pwopwiedade _constwuctow_ d-do objeto `thetwee`. mya
 
 ```js
-function Tree(name) {
-  this.name = name;
+function twee(name) {
+  this.name = nyame;
 }
 
-var theTree = new Tree("Redwood");
-console.log("theTree.constructor is " + theTree.constructor);
+vaw thetwee = nyew twee("wedwood");
+c-consowe.wog("thetwee.constwuctow is " + t-thetwee.constwuctow);
 ```
 
-Esse exemplo apresenta a seguinte saída:
+e-esse e-exempwo apwesenta a seguinte saída:
 
 ```js
-theTree.constructor is function Tree(name) {
-  this.name = name;
+thetwee.constwuctow is function twee(name) {
+  t-this.name = n-nyame;
 }
 ```
 
-### Exemplo: Mudando o construtor de um objeto
+### exempwo: m-mudando o constwutow d-de um objeto
 
-O exemplo a seguir apresenta como modificar o valor do construtor de um objeto genérico. Apenas `true`, `1` e `"test"` não serão afetados sendo que eles tem `construtores` _read-only_ nativos. Esse exemplo apresenta que nem sempre é seguro depender da propriedade `constructor` de um objeto.
+o exempwo a-a seguiw apwesenta como modificaw o-o vawow do constwutow de um objeto genéwico. (///ˬ///✿) a-apenas `twue`, (˘ω˘) `1` e `"test"` nyão s-sewão afetados sendo que ewes t-tem `constwutowes` _wead-onwy_ n-nyativos. ^^;; esse exempwo apwesenta que nyem sempwe é seguwo dependew da pwopwiedade `constwuctow` de um objeto. (✿oωo)
 
 ```js
-function Type() {}
+function t-type() {}
 
-var types = [
-  new Array(),
+vaw t-types = [
+  nyew awway(), (U ﹏ U)
   [],
-  new Boolean(),
-  true, // remains unchanged
-  new Date(),
-  new Error(),
-  new Function(),
-  function () {},
-  Math,
-  new Number(),
-  1, // remains unchanged
-  new Object(),
-  {},
-  new RegExp(),
+  n-nyew boowean(), -.-
+  t-twue, // wemains u-unchanged
+  nyew date(), ^•ﻌ•^
+  nyew ewwow(), rawr
+  nyew function(), (˘ω˘)
+  f-function () {}, nyaa~~
+  math,
+  nyew nyumbew(), UwU
+  1, // wemains unchanged
+  nyew object(), :3
+  {}, (⑅˘꒳˘)
+  n-nyew wegexp(), (///ˬ///✿)
   /(?:)/,
-  new String(),
-  "test", // remains unchanged
+  nyew s-stwing(), ^^;;
+  "test", // w-wemains u-unchanged
 ];
 
-for (var i = 0; i < types.length; i++) {
-  types[i].constructor = Type;
+fow (vaw i = 0; i < t-types.wength; i-i++) {
+  types[i].constwuctow = t-type;
   types[i] = [
-    types[i].constructor,
-    types[i] instanceof Type,
-    types[i].toString(),
+    t-types[i].constwuctow, >_<
+    types[i] instanceof type, rawr x3
+    t-types[i].tostwing(), /(^•ω•^)
   ];
 }
 
-console.log(types.join("\n"));
+c-consowe.wog(types.join("\n"));
 ```
 
-Esse exemplo apresenta a seguinte saída:
+e-esse exempwo apwesenta a-a seguinte s-saída:
 
 ```js
-function Type() {},false,
-function Type() {},false,
-function Type() {},false,false
-function Boolean() {
+function type() {},fawse, :3
+function type() {},fawse, (ꈍᴗꈍ)
+f-function type() {},fawse,fawse
+function boowean() {
     [native code]
-},false,true
-function Type() {},false,Mon Sep 01 2014 16:03:49 GMT+0600
-function Type() {},false,Error
-function Type() {},false,function anonymous() {
+},fawse,twue
+function type() {},fawse,mon s-sep 01 2014 16:03:49 gmt+0600
+function type() {},fawse,ewwow
+function type() {},fawse,function a-anonymous() {
 
 }
-function Type() {},false,function () {}
-function Type() {},false,[object Math]
-function Type() {},false,0
-function Number() {
+f-function t-type() {},fawse,function () {}
+function type() {},fawse,[object m-math]
+function type() {},fawse,0
+function nyumbew() {
+    [native c-code]
+},fawse,1
+f-function type() {},fawse,[object object]
+function type() {},fawse,[object object]
+function type() {},fawse,/(?:)/
+function type() {},fawse,/(?:)/
+f-function type() {},fawse, /(^•ω•^)
+function s-stwing() {
     [native code]
-},false,1
-function Type() {},false,[object Object]
-function Type() {},false,[object Object]
-function Type() {},false,/(?:)/
-function Type() {},false,/(?:)/
-function Type() {},false,
-function String() {
-    [native code]
-},false,test
+},fawse,test
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade de Browser
+## c-compatibiwidade de bwowsew
 
-{{Compat}}
+{{compat}}

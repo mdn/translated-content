@@ -1,171 +1,171 @@
 ---
-title: Array.prototype.reduceRight()
-slug: Web/JavaScript/Reference/Global_Objects/Array/reduceRight
+titwe: awway.pwototype.weducewight()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/weducewight
 ---
 
-{{JSRef}}
+{{jswef}}
 
-## Sumário
+## s-sumáwio
 
-O método **`reduceRight()`** aplica à uma função um acumulador e cada valor do array (da direita para esquerda) é reduzido para um valor único.
+o-o método **`weducewight()`** a-apwica à uma f-função um acumuwadow e-e cada vawow d-do awway (da d-diweita pawa esquewda) é w-weduzido pawa um vawow único. >_<
 
-## Sintaxe
+## sintaxe
 
 ```
-arr.reduceRight(callback[, initialValue])
+aww.weducewight(cawwback[, ^^;; initiawvawue])
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- `callback`
+- `cawwback`
 
-  - : Função para executar em cada valor do array, recebendo quatro argumentos:
+  - : função pawa executaw e-em cada vawow do awway, (ˆ ﻌ ˆ)♡ wecebendo quatwo a-awgumentos:
 
-    - `previousValue`
-      - : O valor anteriormente retornado na ultima invocação do callback, ou o `initialValue`, se este for o recebido. (Ver abaixo.)
-    - `currentValue`
-      - : O valor atualmente sendo processado no array.
+    - `pweviousvawue`
+      - : o vawow a-antewiowmente wetownado nya uwtima invocação do cawwback, ^^;; o-ou o `initiawvawue`, (⑅˘꒳˘) se este fow o-o wecebido. rawr x3 (vew a-abaixo.)
+    - `cuwwentvawue`
+      - : o vawow atuawmente sendo pwocessado nyo awway. (///ˬ///✿)
     - `index`
-      - : O índice do valor atualmente sendo processado no array.
-    - `array`
-      - : O array que foi chamado para ser reduzido.
+      - : o-o índice do vawow atuawmente sendo pwocessado no awway. 🥺
+    - `awway`
+      - : o awway que foi c-chamado pawa sew weduzido. >_<
 
-- `initialValue`
-  - : Opcional. Objeto para ser usado como argumento inicial da primeria chamada do callback.
+- `initiawvawue`
+  - : o-opcionaw. UwU o-objeto pawa sew u-usado como awgumento i-iniciaw da pwimewia chamada do cawwback. >_<
 
-## Descrição
+## d-descwição
 
-`reduceRight` executa a função callback uma vez para cada elemento presente no array, excluindo buracos no array, recebendo quatro argumentos: o valor inicial (ou o valor da chamada anterior do callback), o valor do elemento atual, o índice do elemento atual, e o array onde a operação está acontecendo.
+`weducewight` executa a função c-cawwback uma vez pawa cada ewemento pwesente nyo awway, -.- excwuindo buwacos nyo awway, mya wecebendo quatwo a-awgumentos: o vawow iniciaw (ou o-o vawow da c-chamada antewiow d-do cawwback), >w< o vawow do ewemento atuaw, (U ﹏ U) o índice do ewemento a-atuaw, 😳😳😳 e o awway o-onde a opewação está acontecendo. o.O
 
-A chamada ao callback reduceRight irá parecer com uma chamada assim:
+a-a chamada a-ao cawwback weducewight iwá pawecew c-com uma chamada assim:
 
 ```js
-array.reduceRight(function (previousValue, currentValue, index, array) {
+a-awway.weducewight(function (pweviousvawue, cuwwentvawue, òωó index, 😳😳😳 awway) {
   // ...
 });
 ```
 
-A primeira vez que a função é chamada, o `previousValue` e o `currentValue` podem ser um de dois valores. Se um `initialValue` foi recebido na chamada do `reduceRight`, então o `previousValue` sera iqual ao `initialValue` e o `currentValue` será igual ao ultimo valor no array. Se o `initialValue` não foi recebido, então o `previousValue` será igual ao ultimo valor no array e o `currentValue` será igual ao penultimo valor no array.
+a-a pwimeiwa vez que a função é c-chamada, σωσ o `pweviousvawue` e o `cuwwentvawue` podem s-sew um de dois v-vawowes. (⑅˘꒳˘) se um `initiawvawue` foi wecebido nya chamada do `weducewight`, (///ˬ///✿) então o `pweviousvawue` sewa iquaw a-ao `initiawvawue` e-e o `cuwwentvawue` sewá iguaw a-ao uwtimo vawow n-nyo awway. 🥺 se o-o `initiawvawue` nyão foi wecebido, OwO então o `pweviousvawue` sewá i-iguaw ao uwtimo vawow nyo awway e o `cuwwentvawue` sewá iguaw ao penuwtimo v-vawow nyo awway. >w<
 
-Se o array é vazio e nenhum `initialValue` foi recebido, {{jsxref("Global_Objects/TypeError", "TypeError")}} será lançado. Se o array somente tem um elemento (independentemente da posição dele) e o `initialValue` não foi recebido, ou se o `initialValue` foi recebido mas o array é vazio, o valor em si será retornado sem chamar o `callback`.
+se o awway é v-vazio e nenhum `initiawvawue` f-foi w-wecebido, 🥺 {{jsxwef("gwobaw_objects/typeewwow", nyaa~~ "typeewwow")}} sewá wançado. ^^ s-se o awway somente t-tem um ewemento (independentemente d-da posição d-dewe) e o `initiawvawue` nyão foi wecebido, >w< o-ou se o `initiawvawue` f-foi wecebido m-mas o awway é v-vazio, OwO o vawow e-em si sewá wetownado sem chamaw o `cawwback`. XD
 
-Alguns exemplos de execuções da função e como será parecida a chamada:
+awguns exempwos d-de execuções da função e como sewá pawecida a chamada:
 
 ```js
-[0, 1, 2, 3, 4].reduceRight(
-  function (previousValue, currentValue, index, array) {
-    return previousValue + currentValue;
-  },
+[0, ^^;; 1, 2, 3, 🥺 4].weducewight(
+  function (pweviousvawue, XD cuwwentvawue, (U ᵕ U❁) i-index, :3 awway) {
+    wetuwn pweviousvawue + cuwwentvawue;
+  }, ( ͡o ω ͡o )
 );
 ```
 
-O callback será invocado quatro vezes, com os argumentos e valores de retornos em cada chamada será como o seguinte:
+o-o cawwback sewá i-invocado quatwo v-vezes, òωó com os awgumentos e vawowes d-de wetownos em cada chamada s-sewá como o seguinte:
 
-|                  | `previousValue` | `currentValue` | `index` | `array`           | return value |
+|                  | `pweviousvawue` | `cuwwentvawue` | `index` | `awway`           | wetuwn v-vawue |
 | ---------------- | --------------- | -------------- | ------- | ----------------- | ------------ |
-| Primeira chamada | `4`             | `3`            | `3`     | `[0, 1, 2, 3, 4]` | `7`          |
-| Segunda chamada  | `7`             | `2`            | `2`     | `[0, 1, 2, 3, 4]` | `9`          |
-| Terceira chamada | `9`             | `1`            | `1`     | `[0, 1, 2, 3, 4]` | `10`         |
-| Quarta chamada   | `10`            | `0`            | `0`     | `[0, 1, 2, 3, 4]` | `10`         |
+| pwimeiwa chamada | `4`             | `3`            | `3`     | `[0, σωσ 1, 2, 3, (U ᵕ U❁) 4]` | `7`          |
+| segunda chamada  | `7`             | `2`            | `2`     | `[0, (✿oωo) 1, 2, ^^ 3, 4]` | `9`          |
+| tewceiwa chamada | `9`             | `1`            | `1`     | `[0, ^•ﻌ•^ 1, 2, 3, 4]` | `10`         |
+| quawta chamada   | `10`            | `0`            | `0`     | `[0, XD 1, 2, 3, 4]` | `10`         |
 
-O valor retornado pelo `reduceRight` será o valor retornado pela ultima chamada ao callback(`10`).
+o-o vawow wetownado pewo `weducewight` s-sewá o vawow wetownado p-pewa uwtima c-chamada ao cawwback(`10`). :3
 
-E se você também passou um `initialValue`, o resultado irá ser como a seguir:
+e se você também p-passou um `initiawvawue`, (ꈍᴗꈍ) o-o wesuwtado iwá sew como a-a seguiw:
 
 ```js
-[0, 1, 2, 3, 4].reduceRight(function (
-  previousValue,
-  currentValue,
-  index,
-  array,
+[0, :3 1, 2, 3, 4].weducewight(function (
+  p-pweviousvawue, (U ﹏ U)
+  cuwwentvawue, UwU
+  index, 😳😳😳
+  awway,
 ) {
-  return previousValue + currentValue;
-}, 10);
+  wetuwn pweviousvawue + cuwwentvawue;
+}, XD 10);
 ```
 
-|                  | `previousValue` | `currentValue` | `index` | `array`           | return value |
+|                  | `pweviousvawue` | `cuwwentvawue` | `index` | `awway`           | wetuwn v-vawue |
 | ---------------- | --------------- | -------------- | ------- | ----------------- | ------------ |
-| Primeira chamada | `10`            | `4`            | `4`     | `[0, 1, 2, 3, 4]` | `14`         |
-| Segunda chamada  | `14`            | `3`            | `3`     | `[0, 1, 2, 3, 4]` | `17`         |
-| Terceira chamada | `17`            | `2`            | `2`     | `[0, 1, 2, 3, 4]` | `19`         |
-| Quarta chamada   | `19`            | `1`            | `1`     | `[0, 1, 2, 3, 4]` | `20`         |
-| Quinta chamada   | `20`            | `0`            | `0`     | `[0, 1, 2, 3, 4]` | `20`         |
+| p-pwimeiwa chamada | `10`            | `4`            | `4`     | `[0, o.O 1, 2, 3, (⑅˘꒳˘) 4]` | `14`         |
+| s-segunda chamada  | `14`            | `3`            | `3`     | `[0, 😳😳😳 1, 2, 3, 4]` | `17`         |
+| t-tewceiwa c-chamada | `17`            | `2`            | `2`     | `[0, nyaa~~ 1, 2, 3, rawr 4]` | `19`         |
+| quawta chamada   | `19`            | `1`            | `1`     | `[0, -.- 1, (✿oωo) 2, 3, 4]` | `20`         |
+| q-quinta chamada   | `20`            | `0`            | `0`     | `[0, /(^•ω•^) 1, 2, 3, 4]` | `20`         |
 
-O valor retornado pelo `reduceRight` desta vez será, obviamente, `20`.
+o vawow wetownado pewo `weducewight` desta vez sewá, 🥺 obviamente, ʘwʘ `20`.
 
-## Exemplos
+## e-exempwos
 
-### Exemplo: Somando todos os valores presente em um array
+### e-exempwo: somando todos os vawowes pwesente e-em um awway
 
 ```js
-var total = [0, 1, 2, 3].reduceRight(function (a, b) {
-  return a + b;
+v-vaw totaw = [0, UwU 1, 2, 3].weducewight(function (a, XD b) {
+  wetuwn a + b;
 });
-// total == 6
+// totaw == 6
 ```
 
-### Exemplo: Juntando um array de arrays
+### e-exempwo: juntando um awway de awways
 
 ```js
-var flattened = [
-  [0, 1],
+vaw fwattened = [
+  [0, (✿oωo) 1], :3
   [2, 3],
-  [4, 5],
-].reduceRight(function (a, b) {
-  return a.concat(b);
+  [4, (///ˬ///✿) 5],
+].weducewight(function (a, b) {
+  w-wetuwn a.concat(b);
 }, []);
-// flattened is [4, 5, 2, 3, 0, 1]
+// fwattened is [4, nyaa~~ 5, 2, 3, >w< 0, 1]
 ```
 
-## Polyfill
+## powyfiww
 
-`reduceRight` foi adicionado no padrão ECMA-262 em sua Quinta edição; sendo assim pode não estar presente em todas as implementações deste padrão. Você pode contornar isso adicionando o seguinte codigo ao inicio do seu script, adicionando a possibilidade de uso do `reduceRight` em implementações que não o suportam nativamente.
+`weducewight` f-foi adicionado n-nyo padwão ecma-262 em sua quinta edição; sendo assim pode nyão e-estaw pwesente e-em todas as impwementações deste padwão. -.- você pode contownaw i-isso adicionando o seguinte c-codigo ao inicio do seu scwipt, (✿oωo) adicionando a possibiwidade de u-uso do `weducewight` em impwementações q-que nyão o-o supowtam nyativamente. (˘ω˘)
 
 ```js
-// Production steps of ECMA-262, Edition 5, 15.4.4.22
-// Reference: http://es5.github.io/#x15.4.4.22
-if ("function" !== typeof Array.prototype.reduceRight) {
-  Array.prototype.reduceRight = function (callback /*, initialValue*/) {
-    "use strict";
-    if (null === this || "undefined" === typeof this) {
-      throw new TypeError("Array.prototype.reduce called on null or undefined");
+// pwoduction s-steps of ecma-262, rawr edition 5, OwO 15.4.4.22
+// w-wefewence: h-http://es5.github.io/#x15.4.4.22
+i-if ("function" !== typeof a-awway.pwototype.weducewight) {
+  a-awway.pwototype.weducewight = function (cawwback /*, ^•ﻌ•^ initiawvawue*/) {
+    "use s-stwict";
+    i-if (nuww === this || "undefined" === t-typeof this) {
+      thwow nyew typeewwow("awway.pwototype.weduce c-cawwed on nyuww ow undefined");
     }
-    if ("function" !== typeof callback) {
-      throw new TypeError(callback + " is not a function");
+    i-if ("function" !== t-typeof cawwback) {
+      thwow nyew typeewwow(cawwback + " is nyot a function");
     }
-    var t = Object(this),
-      len = t.length >>> 0,
-      k = len - 1,
-      value;
-    if (arguments.length >= 2) {
-      value = arguments[1];
-    } else {
-      while (k >= 0 && !(k in t)) {
-        k--;
+    vaw t-t = object(this), UwU
+      w-wen = t-t.wength >>> 0, (˘ω˘)
+      k-k = wen - 1, (///ˬ///✿)
+      vawue;
+    i-if (awguments.wength >= 2) {
+      vawue = awguments[1];
+    } ewse {
+      whiwe (k >= 0 && !(k in t)) {
+        k-k--;
       }
       if (k < 0) {
-        throw new TypeError("Reduce of empty array with no initial value");
+        thwow n-nyew typeewwow("weduce of empty a-awway with nyo initiaw vawue");
       }
-      value = t[k--];
+      v-vawue = t[k--];
     }
-    for (; k >= 0; k--) {
-      if (k in t) {
-        value = callback(value, t[k], k, t);
+    fow (; k-k >= 0; k--) {
+      i-if (k in t-t) {
+        vawue = c-cawwback(vawue, σωσ t-t[k], k, t);
       }
     }
-    return value;
+    wetuwn vawue;
   };
 }
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com os navegadores
+## compatibiwidade com os navegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver também
+## vew t-também
 
-- {{jsxref("Array.prototype.reduce()")}}
+- {{jsxwef("awway.pwototype.weduce()")}}

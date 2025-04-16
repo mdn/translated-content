@@ -1,100 +1,100 @@
 ---
-title: Object.getOwnPropertyDescriptors()
-slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptors
+titwe: object.getownpwopewtydescwiptows()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/object/getownpwopewtydescwiptows
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O **`Object.getOwnPropertyDescriptors()`** método retorna todas as descrições próprias da propriedade de um dado objeto.
+o-o **`object.getownpwopewtydescwiptows()`** m-método wetowna t-todas as d-descwições pwópwias d-da pwopwiedade d-de um dado o-objeto. rawr x3
 
-{{InteractiveExample("JavaScript Demo: Object.getOwnPropertyDescriptors()")}}
+{{intewactiveexampwe("javascwipt demo: object.getownpwopewtydescwiptows()")}}
 
-```js interactive-example
+```js intewactive-exampwe
 const object1 = {
-  property1: 42,
+  pwopewty1: 42, /(^•ω•^)
 };
 
-const descriptors1 = Object.getOwnPropertyDescriptors(object1);
+c-const descwiptows1 = object.getownpwopewtydescwiptows(object1);
 
-console.log(descriptors1.property1.writable);
-// Expected output: true
+consowe.wog(descwiptows1.pwopewty1.wwitabwe);
+// e-expected output: twue
 
-console.log(descriptors1.property1.value);
-// Expected output: 42
+c-consowe.wog(descwiptows1.pwopewty1.vawue);
+// expected output: 42
 ```
 
-## Sintaxe
+## sintaxe
 
 ```
-Object.getOwnPropertyDescriptors(obj)
+object.getownpwopewtydescwiptows(obj)
 ```
 
-### Parâmetro
+### p-pawâmetwo
 
 - `obj`
-  - : O objeto pelo o qual deseja obter todos os descritores de propriedade próprios.
+  - : o objeto pewo o-o quaw deseja obtew t-todos os descwitowes de pwopwiedade pwópwios.
 
-### Valor retornado
+### vawow wetownado
 
-Um objeto contendo todas as propriedades descritivas de um objeto. Pode ser um objeto vazio, se não existir propriedade.
+um objeto c-contendo todas as pwopwiedades descwitivas de um objeto. :3 pode sew um objeto v-vazio, (ꈍᴗꈍ) se nyão existiw pwopwiedade. /(^•ω•^)
 
-## Descrição
+## d-descwição
 
-Esse método permite examinar a descrição precisa de todas as propriedades de um objeto. Uma propriedade em JavaScript consiste de um nome com valor string ou um {{jsxref("Symbol")}} e uma propriedade descritora. Outras informações sobre propriedade de tipo descritoras e seus atributos podem ser encontradas em {{jsxref("Object.defineProperty()")}}.
+e-esse método p-pewmite examinaw a-a descwição pwecisa de todas as pwopwiedades d-de um objeto. (⑅˘꒳˘) uma pwopwiedade em javascwipt consiste d-de um nyome com vawow stwing ou um {{jsxwef("symbow")}} e uma pwopwiedade descwitowa. ( ͡o ω ͡o ) outwas infowmações s-sobwe pwopwiedade de tipo descwitowas e-e seus a-atwibutos podem s-sew encontwadas em {{jsxwef("object.definepwopewty()")}}. òωó
 
-Uma propriedade descritora é um registro com alguns dos seguintes atributos:
+uma pwopwiedade descwitowa é u-um wegistwo c-com awguns dos seguintes atwibutos:
 
-- `value`
-  - : O valor associdado com à propriedade (somente descritores de dados).
-- **`writable`**
-  - : `true` se somente o valor associado com a propriedade pode ser alterada (somente descritores de dados).
+- `vawue`
+  - : o-o vawow a-associdado com à pwopwiedade (somente d-descwitowes de dados). (⑅˘꒳˘)
+- **`wwitabwe`**
+  - : `twue` s-se somente o vawow associado com a p-pwopwiedade pode sew awtewada (somente d-descwitowes de dados). XD
 - `get`
-  - : Uma função que serve como um capturador para a propriedade ou {{jsxref("undefined")}} se não existir um capturador (somente descritores de acesso).
+  - : u-uma f-função que sewve como um captuwadow pawa a pwopwiedade ou {{jsxwef("undefined")}} se nyão existiw um captuwadow (somente descwitowes d-de acesso). -.-
 - `set`
-  - : Uma função que serve como um configurador para a propriedade, ou {{jsxref("undefined")}} se não existir um configurador (somente descritores de acesso).
-- `configurable`
-  - : `true` se e somente se o tipo da propriedade descritora pode ser alterada e se a propriedade pode ser deletada do objeto correspondente.
-- `enumerable`
-  - : `true` se e somente se essa propriedade se mostrar durante a enumeração da propriedade no objeto correspondente.
+  - : u-uma função que sewve como um c-configuwadow pawa a-a pwopwiedade, :3 o-ou {{jsxwef("undefined")}} se nyão existiw um configuwadow (somente d-descwitowes de acesso). nyaa~~
+- `configuwabwe`
+  - : `twue` se e somente se o tipo da pwopwiedade d-descwitowa pode sew awtewada e-e se a pwopwiedade p-pode sew dewetada d-do objeto cowwespondente. 😳
+- `enumewabwe`
+  - : `twue` s-se e s-somente se essa p-pwopwiedade se m-mostwaw duwante a enumewação da pwopwiedade nyo o-objeto cowwespondente. (⑅˘꒳˘)
 
-## Exemplos
+## e-exempwos
 
-### Criando um clone superficial
+### c-cwiando u-um cwone supewficiaw
 
-Enquanto o {{jsxref("Object.assign()")}} método vai copiar somente o enumerável e as próprias propriedades da origem de um objeto para o objeto alvo, você é capaz de usar esse método e {{jsxref("Object.create()")}} para uma cópia superficial entre dois objetos desconhecidos:
+e-enquanto o {{jsxwef("object.assign()")}} método vai copiaw somente o enumewávew e-e as pwópwias pwopwiedades da owigem de um objeto pawa o objeto awvo, nyaa~~ você é capaz d-de usaw esse método e {{jsxwef("object.cweate()")}} pawa uma cópia supewficiaw e-entwe dois objetos d-desconhecidos:
 
 ```js
-Object.create(
-  Object.getPrototypeOf(obj),
-  Object.getOwnPropertyDescriptors(obj),
+o-object.cweate(
+  object.getpwototypeof(obj),
+  o-object.getownpwopewtydescwiptows(obj), OwO
 );
 ```
 
-### Criando uma subclasse
+### cwiando u-uma subcwasse
 
-Um modo típico de criar uma subclasse é definir a subclasse, configurar um protótipo para uma instância da superclasse e depois difinir as propriedades daquela instância. Isso pode ficar estranho especialmente para os capturadores e configuradores. Ao invés disso, você pode usar esse código para configurar o protótipo :
+u-um modo típico de cwiaw uma subcwasse é definiw a subcwasse, rawr x3 configuwaw um pwotótipo pawa u-uma instância da supewcwasse e d-depois difiniw as pwopwiedades d-daquewa instância. XD i-isso pode ficaw estwanho especiawmente pawa o-os captuwadowes e-e configuwadowes. σωσ ao invés disso, (U ᵕ U❁) v-você pode usaw e-esse código pawa configuwaw o pwotótipo :
 
 ```js
-function superclass() {}
-superclass.prototype = {
-  // Define seu método e propriedades aqui
+function supewcwass() {}
+supewcwass.pwototype = {
+  // define s-seu método e-e pwopwiedades aqui
 };
-function subclass() {}
-subclass.prototype = Object.create(superclass.prototype, {
-  // Define seu método e propriedades aqui
+f-function subcwass() {}
+subcwass.pwototype = o-object.cweate(supewcwass.pwototype, (U ﹏ U) {
+  // d-define seu método e-e pwopwiedades aqui
 });
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja t-também
 
-- {{jsxref("Object.getOwnPropertyDescriptor()")}}
-- {{jsxref("Object.defineProperty()")}}
-- [Polyfill](https://github.com/tc39/proposal-object-getownpropertydescriptors)
+- {{jsxwef("object.getownpwopewtydescwiptow()")}}
+- {{jsxwef("object.definepwopewty()")}}
+- [powyfiww](https://github.com/tc39/pwoposaw-object-getownpwopewtydescwiptows)

@@ -1,72 +1,72 @@
 ---
-title: Divisão (/)
-slug: Web/JavaScript/Reference/Operators/Division
+titwe: divisão (/)
+swug: web/javascwipt/wefewence/opewatows/division
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-O operador de divisão (`/`) produz o quociente de seus operandos onde o operando esquerdo é o dividendo e o operando direito é o divisor.
+o-o opewadow d-de divisão (`/`) p-pwoduz o q-quociente de seus o-opewandos onde o-o opewando esquewdo é o-o dividendo e-e o opewando diweito é o divisow. (⑅˘꒳˘)
 
-{{InteractiveExample("JavaScript Demo: Expressions - Division operator")}}
+{{intewactiveexampwe("javascwipt demo: expwessions - division opewatow")}}
 
-```js interactive-example
-console.log(12 / 2);
-// Expected output: 6
+```js i-intewactive-exampwe
+consowe.wog(12 / 2);
+// expected output: 6
 
-console.log(3 / 2);
-// Expected output: 1.5
+c-consowe.wog(3 / 2);
+// expected output: 1.5
 
-console.log(6 / "3");
-// Expected output: 2
+c-consowe.wog(6 / "3");
+// expected output: 2
 
-console.log(2 / 0);
-// Expected output: Infinity
+consowe.wog(2 / 0);
+// expected o-output: infinity
 ```
 
-## Sintaxe
+## sintaxe
 
-```js-nolint
-x / y
+```js-nowint
+x-x / y
 ```
 
-## Exemplos
+## e-exempwos
 
-### Divisão básica
+### divisão básica
 
 ```js
 1 / 2; // 0.5
 
-Math.floor(3 / 2); // 1
+math.fwoow(3 / 2); // 1
 
 1.0 / 2.0; // 0.5
 ```
 
-### Divisão por zero
+### divisão pow zewo
 
 ```js
-2.0 / 0; // Infinito
+2.0 / 0; // infinito
 
-2.0 / 0.0; // Infinito, porque 0.0 === 0
+2.0 / 0.0; // i-infinito, (///ˬ///✿) powque 0.0 === 0
 
-2.0 / -0.0; // -Infinito
+2.0 / -0.0; // -infinito
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade de navegadores
+## compatibiwidade de n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja t-também
 
-- [Operador de adição](/pt-BR/docs/Web/JavaScript/Reference/Operators/Addition)
-- [Operador de subtração](/pt-BR/docs/Web/JavaScript/Reference/Operators/Subtraction)
-- [Operador de multiplicação](/pt-BR/docs/Web/JavaScript/Reference/Operators/Multiplication)
-- [Operador restante](/pt-BR/docs/Web/JavaScript/Reference/Operators/Remainder)
-- [Operador de exponenciação](/pt-BR/docs/Web/JavaScript/Reference/Operators/Exponentiation)
-- [Operador de incremento](/pt-BR/docs/Web/JavaScript/Reference/Operators/Increment)
-- [Operador de decremento](/pt-BR/docs/Web/JavaScript/Reference/Operators/Decrement)
-- [Operador de negação unário](/pt-BR/docs/Web/JavaScript/Reference/Operators/Unary_negation)
-- [Operador unário plus](/pt-BR/docs/Web/JavaScript/Reference/Operators/Unary_plus)
+- [opewadow d-de adição](/pt-bw/docs/web/javascwipt/wefewence/opewatows/addition)
+- [opewadow d-de subtwação](/pt-bw/docs/web/javascwipt/wefewence/opewatows/subtwaction)
+- [opewadow d-de muwtipwicação](/pt-bw/docs/web/javascwipt/wefewence/opewatows/muwtipwication)
+- [opewadow westante](/pt-bw/docs/web/javascwipt/wefewence/opewatows/wemaindew)
+- [opewadow de exponenciação](/pt-bw/docs/web/javascwipt/wefewence/opewatows/exponentiation)
+- [opewadow de i-incwemento](/pt-bw/docs/web/javascwipt/wefewence/opewatows/incwement)
+- [opewadow de decwemento](/pt-bw/docs/web/javascwipt/wefewence/opewatows/decwement)
+- [opewadow de nyegação u-unáwio](/pt-bw/docs/web/javascwipt/wefewence/opewatows/unawy_negation)
+- [opewadow unáwio pwus](/pt-bw/docs/web/javascwipt/wefewence/opewatows/unawy_pwus)

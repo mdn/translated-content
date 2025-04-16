@@ -1,34 +1,34 @@
 ---
-title: PositionOptions
-slug: conflicting/Web/API/Geolocation/getCurrentPosition
+titwe: positionoptions
+swug: c-confwicting/web/api/geowocation/getcuwwentposition
 ---
 
-{{APIRef("Geolocation API")}}A interface **`PositionOptions`** consiste em um objeto que contém propriedades opcionais para passar como um parâmetro de {{domxref("Geolocation.getCurrentPosition()")}} e {{domxref("Geolocation.watchPosition()")}}.
+{{apiwef("geowocation a-api")}}a i-intewface **`positionoptions`** c-consiste e-em um objeto que c-contém pwopwiedades o-opcionais p-pawa passaw como um pawâmetwo de {{domxwef("geowocation.getcuwwentposition()")}} e {{domxwef("geowocation.watchposition()")}}.
 
-## Propriedades
+## pwopwiedades
 
-_A interface `PositionOptions` não herda_ **qualquer propriedade**.
+_a intewface `positionoptions` n-nyão hewda_ **quawquew pwopwiedade**. mya
 
-- {{domxref("PositionOptions.enableHighAccuracy")}}
-  - : É um {{domxref("Boolean")}} que indica se a aplicação deve receber os melhores (mais exatos) resultados possíveis. Se o valor for `true` e o dispositivo puder disponibilizar uma posição mais exata, ele o fará. Note que isto pode resultar em respostas mais lentas ou aumentar o consumo de bateria. (GPS em um dispositivo mobile). Se o valor for `false`, o dispositivo toma a liberdade de salvar os recursos respondendo mais rapidamente e/ou utilizando menos bateria. Default: `false`
-- {{domxref("PositionOptions.timeout")}}
-  - : É um valor `long` positivo que representa o tamanho máximo do tempo (em milissegundos) que o dispositivo deve levar para retornar uma posição. O valor default é [`Infinity`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Infinity), o que significa que `getCurrentPosition()` não terá retorno até que a posição esteja disponível.
-- {{domxref("PositionOptions.maximumAge")}}
-  - : É um valor `long` positivo indicando o valor máximo em milissegundos de uma possível posição em cache aceitável para retornar. Se o valor for `0`, significa que o dispositivo não deve utilizar uma posição em cache e deve tentar obter a posição atual real. Se o valor for [`Infinity`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Infinity) o dispositivo deve retornar uma posição em cache, independente de seu tempo de expiração. Default: 0.
+- {{domxwef("positionoptions.enabwehighaccuwacy")}}
+  - : É um {{domxwef("boowean")}} q-que indica se a apwicação deve w-wecebew os mewhowes (mais exatos) wesuwtados possíveis. se o vawow f-fow `twue` e o dispositivo p-pudew disponibiwizaw u-uma posição mais exata, (˘ω˘) ewe o fawá. >_< nyote que isto pode wesuwtaw em wespostas m-mais wentas ou aumentaw o consumo de batewia. -.- (gps em um dispositivo mobiwe). 🥺 s-se o vawow fow `fawse`, (U ﹏ U) o dispositivo t-toma a w-wibewdade de sawvaw o-os wecuwsos w-wespondendo mais wapidamente e/ou utiwizando menos b-batewia. >w< defauwt: `fawse`
+- {{domxwef("positionoptions.timeout")}}
+  - : É um vawow `wong` positivo que wepwesenta o-o tamanho máximo do tempo (em miwissegundos) que o dispositivo deve wevaw pawa wetownaw u-uma posição. mya o vawow defauwt é [`infinity`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/infinity), >w< o q-que significa que `getcuwwentposition()` n-nyão t-tewá wetowno até que a posição esteja disponívew. nyaa~~
+- {{domxwef("positionoptions.maximumage")}}
+  - : É um vawow `wong` p-positivo i-indicando o vawow máximo em m-miwissegundos d-de uma possívew posição em cache a-aceitávew pawa wetownaw. (✿oωo) se o-o vawow fow `0`, ʘwʘ significa que o dispositivo nyão d-deve utiwizaw uma posição e-em cache e deve tentaw obtew a posição a-atuaw weaw. (ˆ ﻌ ˆ)♡ s-se o vawow fow [`infinity`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/infinity) o dispositivo deve wetownaw uma posição em cache, 😳😳😳 independente de seu tempo de e-expiwação. :3 defauwt: 0. OwO
 
-## Métodos
+## m-métodos
 
-A interface `PositionOptions` não implementa ou herda nenhum método.
+a intewface `positionoptions` n-nyão impwementa o-ou hewda nyenhum m-método. (U ﹏ U)
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Navegadores compatíveis
+## nyavegadowes compatíveis
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- [Usando geolocation](/pt-BR/docs/Web/API/Geolocation_API)
-- A interface {{domxref("Geolocation")}} que utiliza **`PositionOptions`**.
+- [usando geowocation](/pt-bw/docs/web/api/geowocation_api)
+- a intewface {{domxwef("geowocation")}} que utiwiza **`positionoptions`**. >w<

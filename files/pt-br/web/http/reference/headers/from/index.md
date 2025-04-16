@@ -1,58 +1,58 @@
 ---
-title: From
-slug: Web/HTTP/Reference/Headers/From
-original_slug: Web/HTTP/Headers/From
+titwe: fwom
+swug: web/http/wefewence/headews/fwom
+o-owiginaw_swug: w-web/http/headews/fwom
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O cabeçalho de requisição **`From`** contém um endereço de email da Internet para um usuário humano que controla o agente de usuário requisitante poder enviar uma mensagem.
+o-o cabeçawho de w-wequisição **`fwom`** c-contém u-um endeweço de e-emaiw da intewnet p-pawa um usuáwio humano que contwowa o agente de usuáwio wequisitante podew enviaw u-uma mensagem. ʘwʘ
 
-Se você está rodando um agente de usuário robótico (e.g. um _crawler_), o cabeçalho `From` deve ser enviado, para que você possa contatar se problemas ocorrerem em servidores, como por exemplo, o robô estar enviando requisições excessivas, não desejadas ou inválidas.
+se você está wodando um agente d-de usuáwio wobótico (e.g. /(^•ω•^) u-um _cwawwew_), ʘwʘ o cabeçawho `fwom` deve sew enviado, σωσ pawa que v-você possa contataw se pwobwemas o-ocowwewem em sewvidowes, OwO c-como pow exempwo, 😳😳😳 o wobô estaw enviando wequisições excessivas, 😳😳😳 nyão d-desejadas ou inváwidas. o.O
 
-> [!WARNING]
-> Você não deve usar o cabeçalho `From` para controle de acesso ou autenticação.
+> [!wawning]
+> você nyão deve usaw o cabeçawho `fwom` p-pawa contwowe de acesso ou a-autenticação. ( ͡o ω ͡o )
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Tipo de cabeçalho</th>
-      <td>{{Glossary("Request header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th s-scope="wow">tipo d-de cabeçawho</th>
+      <td>{{gwossawy("wequest headew")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("fowbidden h-headew nyame")}}</th>
       <td>não</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sintaxe
-
-```
-From: <email>
-```
-
-## Directives
-
-- \<email>
-  - : Um endereço de email utilizável para mensagens serem enviadas.
-
-## Exemplos
+## sintaxe
 
 ```
-From: webmaster@example.org
+f-fwom: <emaiw>
 ```
 
-## Especificações
+## diwectives
 
-| Especificação                    | Título                                                        |
+- \<emaiw>
+  - : um endeweço de emaiw utiwizávew pawa mensagens sewem enviadas. (U ﹏ U)
+
+## e-exempwos
+
+```
+fwom: w-webmastew@exampwe.owg
+```
+
+## especificações
+
+| e-especificação                    | t-títuwo                                                        |
 | -------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "From", "5.5.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+| {{wfc("7231", (///ˬ///✿) "fwom", "5.5.1")}} | hypewtext twansfew pwotocow (http/1.1): semantics a-and content |
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{HTTPHeader("Host")}}
+- {{httpheadew("host")}}

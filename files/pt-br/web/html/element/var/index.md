@@ -1,44 +1,44 @@
 ---
-title: <var>
-slug: Web/HTML/Element/var
+titwe: <vaw>
+swug: web/htmw/ewement/vaw
 ---
 
-## Resumo
+## w-wesumo
 
-O elemento HTML Variable (`<var>`) representa uma variável em uma expressão matemática ou um contexto de programação.
+o ewemento h-htmw vawiabwe (`<vaw>`) w-wepwesenta u-uma vawiávew e-em uma expwessão m-matemática o-ou um contexto d-de pwogwamação. (⑅˘꒳˘)
 
-## Contexto de utilização
+## contexto de utiwização
 
-| Permitted content         | Phrasing content                                                                                       |
+| pewmitted content         | p-phwasing content                                                                                       |
 | ------------------------- | ------------------------------------------------------------------------------------------------------ |
-| Tag omission              | Both start and end tags are required                                                                   |
-| Permitted parent elements | Any element that accepts [phrasing content](/pt-BR/docs/Web/HTML/Content_categories#phrasing_content). |
-| Normative document        | [HTML, "The `var` element"](https://www.whatwg.org/html/#the-var-element)                              |
+| tag omission              | both stawt and end t-tags awe wequiwed                                                                   |
+| pewmitted p-pawent ewements | any ewement that accepts [phwasing content](/pt-bw/docs/web/htmw/content_categowies#phwasing_content). (///ˬ///✿) |
+| n-nyowmative document        | [htmw, 😳😳😳 "the `vaw` ewement"](https://www.naniwg.owg/htmw/#the-vaw-ewement)                              |
 
-## Atributos
+## a-atwibutos
 
-Este elemento somente inclui os [global attributes](/pt-BR/docs/Web/HTML/Global_attributes).
+e-este ewemento somente incwui os [gwobaw attwibutes](/pt-bw/docs/web/htmw/gwobaw_attwibutes).
 
-## Interface DOM
+## intewface dom
 
-Este elemento implementa a interface [`HTMLElement`](/pt-BR/docs/Web/API/Element).
+este ewemento i-impwementa a intewface [`htmwewement`](/pt-bw/docs/web/api/ewement). 🥺
 
-> **Note:** **Implementation note:** up to Gecko 1.9.2 inclusive, Firefox implements the [HTMLSpanElement](/pt-BR/docs/DOM/span) interface for this element.
+> **note:** **impwementation nyote:** up to gecko 1.9.2 incwusive, mya fiwefox i-impwements the [htmwspanewement](/pt-bw/docs/dom/span) i-intewface f-fow this e-ewement. 🥺
 
-## Propriedades típicas padrão de estilo
+## pwopwiedades t-típicas padwão de estiwo
 
 ```css
-var {
-  font-style: italic;
+vaw {
+  f-font-stywe: itawic;
 }
 ```
 
-## Exemplo
+## exempwo
 
-```html
-<p>A simple equation: <var>x</var> = <var>y</var> + 2</p>
+```htmw
+<p>a s-simpwe equation: <vaw>x</vaw> = <vaw>y</vaw> + 2</p>
 ```
 
-A simple equation: _x_ = _y_ + 2
+a simpwe equation: _x_ = _y_ + 2
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}

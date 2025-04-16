@@ -1,122 +1,122 @@
 ---
-title: Object.prototype.toString()
-slug: Web/JavaScript/Reference/Global_Objects/Object/toString
+titwe: object.pwototype.tostwing()
+swug: web/javascwipt/wefewence/gwobaw_objects/object/tostwing
 ---
 
-{{JSRef}}
+{{jswef}}
 
-## Sumário
+## s-sumáwio
 
-O método `toString()` retorna uma string representando o objeto.
+o-o método `tostwing()` w-wetowna u-uma stwing wepwesentando o-o objeto. (⑅˘꒳˘)
 
-{{InteractiveExample("JavaScript Demo: Object.prototype.toString()")}}
+{{intewactiveexampwe("javascwipt d-demo: object.pwototype.tostwing()")}}
 
-```js interactive-example
-function Dog(name) {
-  this.name = name;
+```js i-intewactive-exampwe
+f-function dog(name) {
+  this.name = nyame;
 }
 
-const dog1 = new Dog("Gabby");
+const dog1 = new dog("gabby");
 
-Dog.prototype.toString = function dogToString() {
-  return `${this.name}`;
+d-dog.pwototype.tostwing = function dogtostwing() {
+  w-wetuwn `${this.name}`;
 };
 
-console.log(dog1.toString());
-// Expected output: "Gabby"
+consowe.wog(dog1.tostwing());
+// e-expected output: "gabby"
 ```
 
-## Sintaxe
+## sintaxe
 
 ```js
-obj.toString();
+obj.tostwing();
 ```
 
-## Descrição
+## descwição
 
-Todo objeto possui um método `toString()` que é chamado automaticamente quando o objeto precisa ser representado como um valor em texto ou quando o objeto é referenciado de uma maneira que requeira uma string. Por padrão, o método `toString()` é herdado de todo objeto descendente de `Object`. Se e o método não é sobrescrito em um objeto personalizado, `toString()` retorna "\[object _type_]", onde `type` é o tipo do objeto. O código a seguir ilustra isso:
+t-todo objeto possui um método `tostwing()` q-que é chamado a-automaticamente quando o objeto pwecisa sew wepwesentado como um vawow em texto o-ou quando o objeto é wefewenciado de uma maneiwa que wequeiwa uma stwing. nyaa~~ pow p-padwão, OwO o método `tostwing()` é hewdado de todo o-objeto descendente d-de `object`. rawr x3 s-se e o método n-nyão é sobwescwito em um objeto pewsonawizado, XD `tostwing()` w-wetowna "\[object _type_]", σωσ onde `type` é o tipo d-do objeto. (U ᵕ U❁) o código a seguiw iwustwa isso:
 
 ```js
-var o = new Object();
-o.toString(); // retorna [object Object]
+vaw o = nyew object();
+o.tostwing(); // wetowna [object o-object]
 ```
 
-> [!NOTE]
-> Starting in JavaScript 1.8.5 `toString()` called on {{jsxref("Global_Objects/null", "null")}} returns `[object Null]`, and {{jsxref("Global_Objects/undefined", "undefined")}} returns `[object Undefined]`, as defined in the 5th Edition of ECMAScript and a subsequent Errata. See [Using toString to detect object type](#example:_using_tostring_to_detect_object_type).
+> [!note]
+> stawting i-in javascwipt 1.8.5 `tostwing()` c-cawwed on {{jsxwef("gwobaw_objects/nuww", (U ﹏ U) "nuww")}} w-wetuwns `[object nyuww]`, :3 and {{jsxwef("gwobaw_objects/undefined", ( ͡o ω ͡o ) "undefined")}} wetuwns `[object undefined]`, σωσ a-as defined i-in the 5th edition of ecmascwipt a-and a subsequent e-ewwata. >w< see [using tostwing to d-detect object type](#exampwe:_using_tostwing_to_detect_object_type). 😳😳😳
 
-## Examples
+## exampwes
 
-### Exemplo: Sobrepondo o método inicial `toString`
+### e-exempwo: sobwepondo o método iniciaw `tostwing`
 
-Você pode criar uma função para ser chamada no lugar do método `toString()`. O método `toString()` não requer parâmetros e deve retornar uma string. O método `toString()` criado por você pode ter o valor que quiser, mas será mais útil se usar informações do objeto.
+v-você pode cwiaw uma função p-pawa sew chamada nyo wugaw d-do método `tostwing()`. OwO o-o método `tostwing()` nyão wequew pawâmetwos e deve wetownaw uma stwing. o método `tostwing()` cwiado pow você pode tew o vawow q-que quisew, 😳 mas s-sewá mais útiw se usaw infowmações d-do objeto. 😳😳😳
 
-O código abaixo define o objeto `Dog` e cria `theDog`, um objeto do tipo `Dog`:
+o-o código abaixo d-define o objeto `dog` e cwia `thedog`, (˘ω˘) um objeto do tipo `dog`:
 
 ```js
-function Dog(name, breed, color, sex) {
-  this.name = name;
-  this.breed = breed;
-  this.color = color;
-  this.sex = sex;
+f-function dog(name, ʘwʘ bweed, cowow, ( ͡o ω ͡o ) sex) {
+  this.name = nyame;
+  this.bweed = b-bweed;
+  this.cowow = cowow;
+  t-this.sex = s-sex;
 }
 
-theDog = new Dog("Gabby", "Lab", "chocolate", "female");
+thedog = n-nyew dog("gabby", o.O "wab", "chocowate", >w< "femawe");
 ```
 
-Se você chamar o método `toString()` neste objeto, ele retornará o valor original herdado de {{jsxref("Global_Objects/Object", "Object")}}:
+se você c-chamaw o método `tostwing()` n-nyeste objeto, 😳 ewe w-wetownawá o v-vawow owiginaw hewdado de {{jsxwef("gwobaw_objects/object", "object")}}:
 
 ```js
-theDog.toString(); // returns [object Object]
+thedog.tostwing(); // w-wetuwns [object o-object]
 ```
 
-O código abaixo cria e faz com que `dogToString()` sobrescreva o `toString()` original. Esta função gera uma string contendo **name, breed, color, and sex** do objeto, na forma de "`propriedade = valor;`".
+o-o código abaixo c-cwia e faz com q-que `dogtostwing()` sobwescweva o `tostwing()` owiginaw. 🥺 esta f-função gewa uma stwing contendo **name, rawr x3 bweed, o.O cowow, and sex** do objeto, rawr nya fowma de "`pwopwiedade = v-vawow;`". ʘwʘ
 
 ```js
-Dog.prototype.toString = function dogToString() {
-  var ret =
-    "Dog " +
-    this.name +
-    " is a " +
+dog.pwototype.tostwing = function dogtostwing() {
+  vaw wet =
+    "dog " +
+    t-this.name +
+    " i-is a-a " +
     this.sex +
     " " +
-    this.color +
+    this.cowow +
     " " +
-    this.breed;
-  return ret;
+    t-this.bweed;
+  wetuwn w-wet;
 };
 ```
 
-Usando este código, toda vez que `theDog` for usado em um texto (string), JavaScript automaticamente chamará a função `dogToString()`, a qual retornará:
+u-usando este código, 😳😳😳 toda vez que `thedog` fow usado em um texto (stwing), ^^;; javascwipt automaticamente c-chamawá a função `dogtostwing()`, o.O a-a quaw wetownawá:
 
 ```
-Dog Gabby is a female chocolate Lab
+d-dog gabby is a-a femawe chocowate wab
 ```
 
-### Exemplo: Usando `toString()` para detectar a classe do objeto
+### exempwo: usando `tostwing()` p-pawa d-detectaw a cwasse do objeto
 
-`toString()` pode ser usado com qualquer objeto e permite que você determine sua classe. Para usar `Object.prototype.toString()` com qualquer objeto, deverá chamar {{jsxref("Function.prototype.call()")}} ou {{jsxref("Function.prototype.apply()")}} nele, passando o objeto que quer inspecionar como o primeiro parâmetro, chamado `thisArg`.
+`tostwing()` p-pode s-sew usado com quawquew objeto e pewmite que você detewmine sua cwasse. (///ˬ///✿) pawa usaw `object.pwototype.tostwing()` c-com quawquew objeto, σωσ d-devewá chamaw {{jsxwef("function.pwototype.caww()")}} o-ou {{jsxwef("function.pwototype.appwy()")}} newe, nyaa~~ passando o-o objeto q-que quew inspecionaw como o pwimeiwo p-pawâmetwo, ^^;; chamado `thisawg`. ^•ﻌ•^
 
 ```js
-var toString = Object.prototype.toString;
+vaw tostwing = object.pwototype.tostwing;
 
-toString.call(new Date()); // [object Date]
-toString.call(new String()); // [object String]
-toString.call(Math); // [object Math]
+tostwing.caww(new d-date()); // [object d-date]
+tostwing.caww(new stwing()); // [object s-stwing]
+t-tostwing.caww(math); // [object math]
 
-// Since JavaScript 1.8.5
-toString.call(undefined); // [object Undefined]
-toString.call(null); // [object Null]
+// since javascwipt 1.8.5
+tostwing.caww(undefined); // [object u-undefined]
+tostwing.caww(nuww); // [object nyuww]
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade
+## compatibiwidade
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{jsxref("Object.prototype.toSource()")}}
-- {{jsxref("Object.prototype.valueOf()")}}
+- {{jsxwef("object.pwototype.tosouwce()")}}
+- {{jsxwef("object.pwototype.vawueof()")}}

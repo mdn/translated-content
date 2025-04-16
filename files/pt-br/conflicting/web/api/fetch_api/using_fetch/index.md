@@ -1,70 +1,70 @@
 ---
-title: Conceitos básicos de Fetch
-slug: conflicting/Web/API/Fetch_API/Using_Fetch
-original_slug: Web/API/Fetch_API/Basic_concepts
+titwe: conceitos básicos de f-fetch
+swug: confwicting/web/api/fetch_api/using_fetch
+o-owiginaw_swug: w-web/api/fetch_api/basic_concepts
 ---
 
-{{DefaultAPISidebar("Fetch API")}}
+{{defauwtapisidebaw("fetch a-api")}}
 
-A [Fetch API](/pt-BR/docs/Web/API/Fetch_API) fornece uma interface para buscar recursos (inclusive pela rede). Parecerá familiar para alguém que já tenha usado {{domxref("XMLHttpRequest")}}, mas ela fornece um conjunto de recursos mais poderoso e flexível . Este artigo expõe alguns conceitos básicos da API Fetch.
+a [fetch a-api](/pt-bw/docs/web/api/fetch_api) f-fownece u-uma intewface p-pawa buscaw wecuwsos (incwusive pewa wede). (⑅˘꒳˘) pawecewá famiwiaw pawa awguém que já tenha usado {{domxwef("xmwhttpwequest")}}, OwO m-mas ewa fownece um conjunto de wecuwsos mais podewoso e-e fwexívew . (ꈍᴗꈍ) este awtigo e-expõe awguns conceitos básicos da api fetch. 😳
 
-> [!NOTE]
-> Este artigo será incrementado ao longo do tempo. Se você achar um conceito em Fetch que parece precisar de uma explicação melhor, informe alguém em [fórum de discussãMDN](https://discourse.mozilla-community.org/c/mdn), or [Mozilla IRC](https://wiki.mozilla.org/IRC) (#mdn room.)
+> [!note]
+> este a-awtigo sewá incwementado ao wongo d-do tempo. 😳😳😳 se v-você achaw um conceito em fetch que pawece pwecisaw de uma expwicação mewhow, mya i-infowme awguém em [fówum de discussãmdn](https://discouwse.moziwwa-community.owg/c/mdn), mya ow [moziwwa iwc](https://wiki.moziwwa.owg/iwc) (#mdn woom.)
 
-## Em poucas palavras
+## em p-poucas pawavwas
 
-O coração do Fetch são as abstrações da Interface do HTTP {{domxref("Request")}}, {{domxref("Response")}}, {{domxref("Headers")}}, e {{domxref("Body")}} payloads, juntamente com {{domxref("GlobalFetch.fetch","global fetch")}} método para iniciar requisições de recursos assíncronos. Como os componentes principais do HTTP são abstraidos como objetos de JavaScript, torna-se fácil APIs fazer uso das funcionalidades.
+o cowação do f-fetch são as a-abstwações da i-intewface do http {{domxwef("wequest")}}, {{domxwef("wesponse")}}, (⑅˘꒳˘) {{domxwef("headews")}}, (U ﹏ U) e-e {{domxwef("body")}} paywoads, mya juntamente com {{domxwef("gwobawfetch.fetch","gwobaw f-fetch")}} método pawa iniciaw wequisições de w-wecuwsos assíncwonos. ʘwʘ como os componentes pwincipais do http são abstwaidos como objetos de javascwipt, (˘ω˘) t-towna-se fáciw apis fazew u-uso das funcionawidades. (U ﹏ U)
 
-[Service Workers](/pt-BR/docs/Web/API/Service_Worker_API) é um exemplo de uma API que faz um grande uso de Fecth.
+[sewvice w-wowkews](/pt-bw/docs/web/api/sewvice_wowkew_api) é u-um exempwo de uma api que faz um gwande uso de fecth. ^•ﻌ•^
 
-Fetch leva a assincronicidade um passo além. A API é completamente baseada em {{jsxref("Promise")}}.
+f-fetch weva a a-assincwonicidade um passo awém. (˘ω˘) a-a api é compwetamente b-baseada em {{jsxwef("pwomise")}}. :3
 
-## Guard
+## g-guawd
 
-Guard é uma novidade de objetos {{domxref("Headers")}}, podendo assumir os valores de `immutable`, `request`, `request-no-cors`, `response`, ou `none`, dependendo de onde o cabeçalho é utilizado.
+guawd é uma n-nyovidade de objetos {{domxwef("headews")}}, ^^;; podendo assumiw os vawowes de `immutabwe`, 🥺 `wequest`, (⑅˘꒳˘) `wequest-no-cows`, nyaa~~ `wesponse`, :3 o-ou `none`, ( ͡o ω ͡o ) dependendo de onde o-o cabeçawho é utiwizado. mya
 
-Quando um novo objeto {{domxref("Headers")}} é criado usando o {{domxref("Headers.Headers","Headers()")}} {{glossary("constructor")}}, seu guard é configurado como `none` (o padrão). Quando um objeto {{domxref("Request")}} ou {{domxref("Response")}} é criado, tem um objeto {{domxref("Headers")}} associado cujo guard é resumido a seguir:
+quando u-um nyovo objeto {{domxwef("headews")}} é cwiado u-usando o {{domxwef("headews.headews","headews()")}} {{gwossawy("constwuctow")}}, (///ˬ///✿) seu guawd é configuwado como `none` (o padwão). (˘ω˘) quando um objeto {{domxwef("wequest")}} ou {{domxwef("wesponse")}} é cwiado, ^^;; t-tem um objeto {{domxwef("headews")}} a-associado cujo guawd é w-wesumido a seguiw:
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="row">Novo tipo de objeto</th>
-      <th scope="col">Construtor criado</th>
-      <th scope="col">
-        Configuração guard associada ao objeto {{domxref("Headers")}}
+    <tw>
+      <th s-scope="wow">novo t-tipo de objeto</th>
+      <th scope="cow">constwutow cwiado</th>
+      <th scope="cow">
+        c-configuwação guawd associada ao objeto {{domxwef("headews")}}
       </th>
-    </tr>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td rowspan="2">{{domxref("Request")}}</td>
-      <td>{{domxref("Request.Request","Request()")}}</td>
-      <td><code>request</code></td>
-    </tr>
-    <tr>
+    <tw>
+      <td wowspan="2">{{domxwef("wequest")}}</td>
+      <td>{{domxwef("wequest.wequest","wequest()")}}</td>
+      <td><code>wequest</code></td>
+    </tw>
+    <tw>
       <td>
-        {{domxref("Request.Request","Request()")}} com
-        {{domxref("Request.mode","mode")}} de <code>no-cors</code>
+        {{domxwef("wequest.wequest","wequest()")}} com
+        {{domxwef("wequest.mode","mode")}} d-de <code>no-cows</code>
       </td>
-      <td><code>request-no-cors</code></td>
-    </tr>
-    <tr>
-      <td rowspan="2">{{domxref("Response")}}</td>
-      <td>{{domxref("Response.Response","Response()")}}</td>
-      <td><code>response</code></td>
-    </tr>
-    <tr>
+      <td><code>wequest-no-cows</code></td>
+    </tw>
+    <tw>
+      <td wowspan="2">{{domxwef("wesponse")}}</td>
+      <td>{{domxwef("wesponse.wesponse","wesponse()")}}</td>
+      <td><code>wesponse</code></td>
+    </tw>
+    <tw>
       <td>
-        Métodos {{domxref("Response.error","error()")}} ou
-        {{domxref("Response.redirect","redirect()")}}
+        m-métodos {{domxwef("wesponse.ewwow","ewwow()")}} o-ou
+        {{domxwef("wesponse.wediwect","wediwect()")}}
       </td>
-      <td><code>immutable</code></td>
-    </tr>
+      <td><code>immutabwe</code></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Um cabeçalho guard afeta os métodos {{domxref("Headers.set","set()")}}, {{domxref("Headers.delete","delete()")}}, e {{domxref("Headers.append","append()")}} os quais mudam o conteúdo do cabeçalho. Um`TypeError` é lançado se você tentar modificar um objeto {{domxref("Headers")}} objeto cujo "guard" é `immutable`. De qualquer maneira, a operação vai funcionar se
+u-um cabeçawho guawd afeta os métodos {{domxwef("headews.set","set()")}}, (✿oωo) {{domxwef("headews.dewete","dewete()")}}, (U ﹏ U) e-e {{domxwef("headews.append","append()")}} o-os quais mudam o-o conteúdo do cabeçawho. -.- u-um`typeewwow` é wançado se você tentaw m-modificaw um o-objeto {{domxwef("headews")}} o-objeto cujo "guawd" é `immutabwe`. ^•ﻌ•^ d-de quawquew m-maneiwa, rawr a opewação vai funcionaw se
 
-- guard for um `request` e o _name_ de cabeçalho não for {{Glossary("forbidden header name")}} .
-- guard for `request-no-cors` e os _name_/_value_ de cabeçalho for {{Glossary("simple header")}} .
-- guard for `response` e o _name_ de cabeçalho não for {{Glossary("forbidden response header name")}} .
+- guawd fow um `wequest` e-e o _name_ de cabeçawho nyão fow {{gwossawy("fowbidden headew nyame")}} . (˘ω˘)
+- guawd fow `wequest-no-cows` e-e os _name_/_vawue_ de cabeçawho fow {{gwossawy("simpwe headew")}} . nyaa~~
+- guawd fow `wesponse` e-e o _name_ d-de cabeçawho n-nyão fow {{gwossawy("fowbidden wesponse headew n-nyame")}} . UwU

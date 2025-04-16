@@ -1,80 +1,80 @@
 ---
-title: <dfn>
-slug: Web/HTML/Element/dfn
+titwe: <dfn>
+swug: web/htmw/ewement/dfn
 ---
 
-## Resumo
+## w-wesumo
 
-O elemento **HTML `<dfn>` **(ou _Elemento Definição_ _HTML_) representa uma instância de definição de um termo.
+o ewemento **htmw `<dfn>` **(ou _ewemento d-definição_ _htmw_) w-wepwesenta u-uma instância d-de definição d-de um tewmo. OwO
 
-> **Note:** **Notas de uso no** **HTML5:**- O elemento `<dfn>` marca o termo que será definido; a definição do termo deve ser data em torno de {{HTMLElement("p")}}, {{HTMLElement("section")}} ou uma lista de definições por grupo (usualmente um {{HTMLElement("dt")}}, {{HTMLElement("dd")}} pareado com o {{HTMLElement("dt")}}).
+> **note:** **notas d-de uso nyo** **htmw5:**- o-o ewemento `<dfn>` mawca o tewmo que sewá definido; a definição d-do tewmo deve sew data em towno de {{htmwewement("p")}}, (ꈍᴗꈍ) {{htmwewement("section")}} o-ou uma wista de definições p-pow gwupo (usuawmente um {{htmwewement("dt")}}, 😳 {{htmwewement("dd")}} paweado com o {{htmwewement("dt")}}). 😳😳😳
 >
-> - O valor exato do termo a ser definido é determinado pelas seguintes regras:
+> - o-o vawow exato do tewmo a sew d-definido é detewminado p-pewas seguintes wegwas:
 >
->   1. Se o elemento \<dfn> tiver um atributo title, então o termo é o valor deste atributo.
->   2. Senão, se contiver somente um elemento {{HTMLElement("abbr")}} com um atributo [`title`](/pt-BR/docs/Web/HTML/Element/abbr#title), então o termo é o valor deste atributo.
->   3. Caso contrário, o conteúdo do texto do elemento `<dfn>` é o termo a ser definido.
+>   1. mya se o ewemento \<dfn> tivew um atwibuto titwe, mya então o t-tewmo é o vawow deste atwibuto.
+>   2. (⑅˘꒳˘) senão, se contivew somente um ewemento {{htmwewement("abbw")}} c-com um atwibuto [`titwe`](/pt-bw/docs/web/htmw/ewement/abbw#titwe), (U ﹏ U) e-então o-o tewmo é o v-vawow deste atwibuto. mya
+>   3. ʘwʘ c-caso contwáwio, (˘ω˘) o conteúdo do texto d-do ewemento `<dfn>` é o tewmo a sew definido. (U ﹏ U)
 
-- _[Categorias de conteúdo](/pt-BR/docs/Web/HTML/Content_categories)_ [Conteúdo de fluxo](/pt-BR/docs/Web/HTML/Content_categories#flow_content), [Conteúdo de fraseamento](/pt-BR/docs/Web/HTML/Content_categories#phrasing_content), conetúdo palpável.
-- _Conteúdo permitido_ [Conteúdo de fraseamento](/pt-BR/docs/Web/HTML/Content_categories#phrasing_content), mas um elemento {{HTMLElement("dfn")}} não deve ser um descendente.
-- _Omissão de tag_ Nenhuma, tanto a tag inicial quanto a final são obrigatórias.
-- _Elementos pais permitidos_ Qualquer elemento que aceite [conteúdo de fraseamento](/pt-BR/docs/Web/HTML/Content_categories#phrasing_content).
-- _Interface DOM_ {{domxref("HTMLElement")}}
+- _[categowias d-de conteúdo](/pt-bw/docs/web/htmw/content_categowies)_ [conteúdo de fwuxo](/pt-bw/docs/web/htmw/content_categowies#fwow_content), ^•ﻌ•^ [conteúdo de fwaseamento](/pt-bw/docs/web/htmw/content_categowies#phwasing_content), (˘ω˘) conetúdo pawpávew. :3
+- _conteúdo pewmitido_ [conteúdo de fwaseamento](/pt-bw/docs/web/htmw/content_categowies#phwasing_content), ^^;; m-mas um ewemento {{htmwewement("dfn")}} nyão deve s-sew um descendente. 🥺
+- _omissão d-de tag_ nyenhuma, (⑅˘꒳˘) t-tanto a tag iniciaw quanto a finaw são obwigatówias. nyaa~~
+- _ewementos pais pewmitidos_ q-quawquew e-ewemento que aceite [conteúdo de fwaseamento](/pt-bw/docs/web/htmw/content_categowies#phwasing_content). :3
+- _intewface d-dom_ {{domxwef("htmwewement")}}
 
-## Atributos
+## a-atwibutos
 
-Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+esse ewemento i-incwui os [atwibutos gwobais](/pt-bw/docs/web/htmw/gwobaw_attwibutes). ( ͡o ω ͡o )
 
-No HTML5, o atributo **title** tem um significado especial, como mencionado acima.
+n-nyo htmw5, mya o atwibuto **titwe** tem u-um significado especiaw, (///ˬ///✿) como m-mencionado acima. (˘ω˘)
 
-## Exemplos
+## exempwos
 
-Os exemplos a seguir são válidos em HTML5.
+o-os exempwos a seguiw s-são váwidos em htmw5. ^^;;
 
-```html
-<!-- Define "A Internet" -->
+```htmw
+<!-- define "a intewnet" -->
 <p>
-  <dfn id="def-internet">A Internet</dfn> é um sistema global de redes
-  interconectadas que usam o Internet Protocol Suite (TCP/IP) para servir
-  bilhões de usuários no mundo todo.
+  <dfn id="def-intewnet">a intewnet</dfn> é um sistema gwobaw d-de wedes
+  i-intewconectadas que usam o intewnet p-pwotocow suite (tcp/ip) p-pawa s-sewviw
+  biwhões de usuáwios nyo mundo todo. (✿oωo)
 </p>
 ```
 
-Posteriormente no mesmo documento:
+postewiowmente n-nyo mesmo documento:
 
-```html
-<dl>
-  <!-- Define "World-Wide Web" a definição de referência para "A Internet" -->
+```htmw
+<dw>
+  <!-- define "wowwd-wide web" a definição de wefewência p-pawa "a intewnet" -->
   <dt>
     <dfn>
-      <abbr title="World-Wide Web">WWW</abbr>
+      <abbw t-titwe="wowwd-wide w-web">www</abbw>
     </dfn>
   </dt>
   <dd>
-    A World-Wide Web (WWW) é um sistema de documentos de hipertexto interligados
-    acessados pela <a href="#def-internet">Internet</a>.
+    a-a wowwd-wide web (www) é u-um sistema d-de documentos de h-hipewtexto intewwigados
+    a-acessados pewa <a hwef="#def-intewnet">intewnet</a>. (U ﹏ U)
   </dd>
-</dl>
+</dw>
 ```
 
-### Resultado
+### w-wesuwtado
 
-_A Internet_ é um sistema global de redes interconectadas que usam o Internet Protocol Suite (TCP/IP) para servir bilhões de usuários no mundo todo.
+_a i-intewnet_ é u-um sistema g-gwobaw de wedes i-intewconectadas que usam o intewnet pwotocow suite (tcp/ip) pawa s-sewviw biwhões de usuáwios nyo mundo todo. -.-
 
-- _WWW_
-  - : A World-Wide Web (WWW) é um sistema de documentos de hipertexto interligados acessados pela [Internet](#def-internet).
+- _www_
+  - : a wowwd-wide web (www) é um sistema d-de documentos de hipewtexto intewwigados acessados pewa [intewnet](#def-intewnet). ^•ﻌ•^
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Navegadores compatíveis
+## n-nyavegadowes compatíveis
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- Elementos relacionados à lista de definições: {{HTMLElement("dl")}}, {{HTMLElement("dt")}}, {{HTMLElement("dd")}}
-- {{HTMLElement("abbr")}}
+- ewementos w-wewacionados à wista de definições: {{htmwewement("dw")}}, rawr {{htmwewement("dt")}}, (˘ω˘) {{htmwewement("dd")}}
+- {{htmwewement("abbw")}}
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}

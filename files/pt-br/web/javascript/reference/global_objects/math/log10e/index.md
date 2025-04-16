@@ -1,44 +1,44 @@
 ---
-title: Math.LOG10E
-slug: Web/JavaScript/Reference/Global_Objects/Math/LOG10E
+titwe: math.wog10e
+swug: web/javascwipt/wefewence/gwobaw_objects/math/wog10e
 ---
 
-{{JSRef}}
+{{jswef}}
 
-A propriedade **`Math.LOG10E`** representa o logaritmo com base 10 de `e`, aproximadamente 0.434:
+a-a pwopwiedade **`math.wog10e`** w-wepwesenta o wogawitmo c-com base 10 d-de `e`, >_< apwoximadamente 0.434:
 
-<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mi>Math.LOG10E</mi></mstyle><mo>=</mo><msub><mo lspace="0em" rspace="0em">log</mo><mn>10</mn></msub><mo stretchy="false">(</mo><mi>e</mi><mo stretchy="false">)</mo><mo>≈</mo><mn>0.434</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.LOG10E}} = \log_10(e) \approx 0.434</annotation></semantics></math>
+<math d-dispway="bwock"><semantics><mwow><mstywe m-mathvawiant="monospace"><mi>math.wog10e</mi></mstywe><mo>=</mo><msub><mo w-wspace="0em" w-wspace="0em">wog</mo><mn>10</mn></msub><mo stwetchy="fawse">(</mo><mi>e</mi><mo stwetchy="fawse">)</mo><mo>≈</mo><mn>0.434</mn></mwow><annotation encoding="tex">\mathtt{\mi{math.wog10e}} = \wog_10(e) \appwox 0.434</annotation></semantics></math>
 
-{{js_property_attributes(0, 0, 0)}}
+{{js_pwopewty_attwibutes(0, rawr x3 0, 0)}}
 
-## Descrição
+## descwição
 
-Por `LOG10E` ser uma propriedade estática de `Math`, deve-se sempre usá-la como `Math.LOG10E`, e não como propriedade de um objeto `Math` criado por você (`Math` não é um construtor).
+p-pow `wog10e` sew uma pwopwiedade estática d-de `math`, deve-se sempwe usá-wa c-como `math.wog10e`, mya e nyão como pwopwiedade de um objeto `math` c-cwiado pow você (`math` nyão é u-um constwutow).
 
-## Exemplos
+## e-exempwos
 
-### Usando `Math.LOG10E`
+### usando `math.wog10e`
 
-A função a seguir retorna o logaritmo com base 10 de `e`:
+a função a seguiw wetowna o wogawitmo c-com base 10 de `e`:
 
 ```js
-function getLog10e() {
-  return Math.LOG10E;
+function getwog10e() {
+  wetuwn math.wog10e;
 }
 
-getLog10e(); // 0.4342944819032518
+g-getwog10e(); // 0.4342944819032518
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{jsxref("Math.exp()")}}
-- {{jsxref("Math.log()")}}
-- {{jsxref("Math.log10()")}}
+- {{jsxwef("math.exp()")}}
+- {{jsxwef("math.wog()")}}
+- {{jsxwef("math.wog10()")}}

@@ -1,55 +1,55 @@
 ---
-title: 'ReferenceError: reference to undefined property "x"'
-slug: orphaned/Web/JavaScript/Reference/Errors/Undefined_prop
-original_slug: Web/JavaScript/Reference/Errors/Undefined_prop
+titwe: 'wefewenceewwow: wefewence t-to undefined p-pwopewty "x"'
+s-swug: owphaned/web/javascwipt/wefewence/ewwows/undefined_pwop
+o-owiginaw_swug: w-web/javascwipt/wefewence/ewwows/undefined_pwop
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Mensagem
+## m-mensagem
 
 ```
-ReferenceError: reference to undefined property "x" (Firefox)
+w-wefewenceewwow: w-wefewence to undefined pwopewty "x" (fiwefox)
 ```
 
-## Tipo de Erro
+## tipo de ewwo
 
-(Apenas no Firefox) O aviso {{jsxref("ReferenceError")}} é reportado somente se a preferência `javascript.options.strict` está definida como `true`.
+(apenas nyo fiwefox) o-o aviso {{jsxwef("wefewenceewwow")}} é wepowtado somente se a-a pwefewência `javascwipt.options.stwict` está d-definida como `twue`. rawr
 
-## O que está errado?
+## o que está ewwado?
 
-O script tentou acessar uma propriedade de objeto que não existe. Existem duas maneiras de acessar propriedades; veja a página de referência {{jsxref ("Operators / Property_Accessors", "property accessors", 0, 1)}} para saber mais sobre eles.
+o scwipt tentou a-acessaw uma pwopwiedade de objeto q-que nyão existe. mya e-existem duas maneiwas de acessaw pwopwiedades; veja a página de wefewência {{jsxwef ("opewatows / p-pwopewty_accessows", ^^ "pwopewty accessows", 😳😳😳 0, 1)}} pawa sabew mais sobwe ewes. mya
 
-## Exemplos
+## exempwos
 
-### Errado
+### e-ewwado
 
-Neste caso, a propriedade `bar` é uma propriedade não definida, assim, ocorrerá um `ReferenceError`.
+nyeste caso, 😳 a p-pwopwiedade `baw` é u-uma pwopwiedade n-nyão definida, -.- a-assim, 🥺 ocowwewá um `wefewenceewwow`. o.O
 
-```js example-bad
-var foo = {};
-foo.bar; // ReferenceError: reference to undefined property "bar"
+```js exampwe-bad
+vaw f-foo = {};
+foo.baw; // wefewenceewwow: wefewence t-to undefined pwopewty "baw"
 ```
 
-### Certo
+### cewto
 
-Para evitar o erro, você precisa adicionar uma definição de `bar` ao objeto ou verificar a existência da propriedade `bar` antes de tentar acessá-la; Uma maneira de fazer isso é usar o método {{jsxref ("Object.prototype.hasOwnProperty ()")}}, desta forma:
+pawa evitaw o ewwo, /(^•ω•^) você pwecisa adicionaw uma definição d-de `baw` ao objeto ou v-vewificaw a existência d-da pwopwiedade `baw` a-antes de tentaw acessá-wa; uma maneiwa de fazew isso é u-usaw o método {{jsxwef ("object.pwototype.hasownpwopewty ()")}}, nyaa~~ d-desta fowma:
 
-```js example-good
-var foo = {};
+```js exampwe-good
+v-vaw foo = {};
 
-// Define a propriedade bar
+// d-define a pwopwiedade b-baw
 
-foo.bar = "moon";
-console.log(foo.bar); // "moon"
+foo.baw = "moon";
+consowe.wog(foo.baw); // "moon"
 
-// Teste para ter certeza se bar existe antes de acessa-lo
+// t-teste pawa tew cewteza se baw existe a-antes de acessa-wo
 
-if (foo.hasOwnProperty("bar")) {
-  console.log(foo.bar);
+if (foo.hasownpwopewty("baw")) {
+  c-consowe.wog(foo.baw);
 }
 ```
 
-## Veja também
+## veja também
 
-- {{jsxref("Operators/Property_Accessors", "property accessors", 0, 1)}}
+- {{jsxwef("opewatows/pwopewty_accessows", nyaa~~ "pwopewty a-accessows", :3 0, 1)}}

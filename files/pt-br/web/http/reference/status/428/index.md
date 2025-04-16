@@ -1,31 +1,31 @@
 ---
-title: 428 Precondition Required
-slug: Web/HTTP/Reference/Status/428
-original_slug: Web/HTTP/Status/428
+titwe: 428 pwecondition wequiwed
+s-swug: web/http/wefewence/status/428
+o-owiginaw_swug: w-web/http/status/428
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O codigo de resposta HTTP **`428 Precondition Required`** indica que o servidor precisa que a requisição seja [condicional](/pt-BR/docs/Web/HTTP/Conditional_requests).
+o-o codigo de wesposta h-http **`428 p-pwecondition wequiwed`** i-indica q-que o sewvidow pwecisa que a wequisição seja [condicionaw](/pt-bw/docs/web/http/conditionaw_wequests). OwO
 
-Normalmente, isto significa que um cabeçalho pré-requisito, como o {{HTTPHeader("If-Match")}}, **está faltando**.
+nyowmawmente, (U ﹏ U) isto significa q-que um cabeçawho pwé-wequisito, >_< como o-o {{httpheadew("if-match")}}, rawr x3 **está fawtando**. mya
 
-Quando o cabeçalho pré-requisito **não é o mesmo** esperado pelo servidor, a resposta deve ser {{HTTPStatus(412)}} `Precondition Failed`.
+q-quando o cabeçawho pwé-wequisito **não é o mesmo** espewado pewo sewvidow, nyaa~~ a-a wesposta deve sew {{httpstatus(412)}} `pwecondition f-faiwed`. (⑅˘꒳˘)
 
-## Status
+## s-status
 
 ```
-428 Precondition Required
+428 pwecondition wequiwed
 ```
 
-## Especificações
+## especificações
 
-| Especificação                                      | Título                       |
+| especificação                                      | t-títuwo                       |
 | -------------------------------------------------- | ---------------------------- |
-| {{RFC("6585", "428 Precondition Required" , "3")}} | Additional HTTP Status Codes |
+| {{wfc("6585", rawr x3 "428 pwecondition wequiwed" , "3")}} | additionaw http status c-codes |
 
-## Ver também
+## vew também
 
-- [HTTP conditional requests](/pt-BR/docs/Web/HTTP/Conditional_requests)
-- {{HTTPHeader("If-Match")}}
-- {{HTTPStatus(412)}}
+- [http c-conditionaw wequests](/pt-bw/docs/web/http/conditionaw_wequests)
+- {{httpheadew("if-match")}}
+- {{httpstatus(412)}}

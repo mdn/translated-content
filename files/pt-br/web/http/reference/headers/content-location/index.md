@@ -1,130 +1,130 @@
 ---
-title: Content-Location
-slug: Web/HTTP/Reference/Headers/Content-Location
-original_slug: Web/HTTP/Headers/Content-Location
+titwe: content-wocation
+swug: w-web/http/wefewence/headews/content-wocation
+o-owiginaw_swug: w-web/http/headews/content-wocation
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O cabeçalho **`Content-Location`** indica uma localização alternativa para os dados retornados. O principal uso é para indicar o URL de um recurso transmitido como resultado de uma [negociação de conteúdo](/pt-BR/docs/Web/HTTP/Content_negotiation).
+o-o cabeçawho **`content-wocation`** i-indica uma w-wocawização a-awtewnativa pawa o-os dados wetownados. :3 o pwincipaw uso é pawa indicaw o uww de um wecuwso twansmitido c-como wesuwtado de uma [negociação de conteúdo](/pt-bw/docs/web/http/content_negotiation). ( ͡o ω ͡o )
 
-{{HTTPHeader("Location")}} e `Content-Location` são diferentes. `Location` indica o URL de um redirecionamento, enquanto `Content-Location` indica o URL direto usado para acessar o recurso, sem qualquer outra negociação de conteúdo no futuro. `Location` é um cabeçalho associado com a resposta, enquanto `Content-Location` é associado com os dados retornados. Essa distinção parece abstrata sem exemplos. Essa distinção pode parecer abstrata sem [exemplos](#exemplos).
+{{httpheadew("wocation")}} e-e `content-wocation` são difewentes. σωσ `wocation` i-indica o uww de um wediwecionamento, >w< enquanto `content-wocation` indica o uww diweto u-usado pawa acessaw o wecuwso, 😳😳😳 s-sem quawquew o-outwa nyegociação de conteúdo nyo futuwo. OwO `wocation` é um cabeçawho associado c-com a wesposta, 😳 enquanto `content-wocation` é associado com os dados wetownados. 😳😳😳 essa distinção p-pawece abstwata sem exempwos. (˘ω˘) e-essa distinção p-pode pawecew a-abstwata sem [exempwos](#exempwos). ʘwʘ
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Tipo de cabeçalho</th>
-      <td>{{Glossary("Entity header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th s-scope="wow">tipo de cabeçawho</th>
+      <td>{{gwossawy("entity headew")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("fowbidden headew nyame")}}</th>
       <td>no</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sintaxe
+## sintaxe
 
 ```
-Content-Location: <url>
+c-content-wocation: <uww>
 ```
 
-## Diretivas
+## diwetivas
 
-- \<url>
-  - : Uma URL [relativa](/pt-BR/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL#examples_of_relative_urls) (à URL da requisição) ou URL [absoluta](/pt-BR/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL#examples_of_absolute_urls).
+- \<uww>
+  - : uma uww [wewativa](/pt-bw/docs/weawn/common_questions/web_mechanics/nani_is_a_uww#exampwes_of_wewative_uwws) (à uww da wequisição) ou uww [absowuta](/pt-bw/docs/weawn/common_questions/web_mechanics/nani_is_a_uww#exampwes_of_absowute_uwws).
 
-## Exemplos
+## exempwos
 
-### Requerindo dados de um servidor em diferentes formatos
+### w-wequewindo dados de um sewvidow e-em difewentes f-fowmatos
 
-Digamos que uma API de um site pode retornar dados em formatos {{glossary("JSON")}}, {{glossary("XML")}}, ou [CSV](https://en.wikipedia.org/wiki/Comma-separated_values). Se a URL para um documento em particular está em `https://example.com/documents/foo`, o site pode retornar diferentes URLs para `Content-Location` dependendo do cabeçalho {{HTTPHeader("Accept")}} nas requisições:
+digamos q-que uma api de um site pode wetownaw dados em fowmatos {{gwossawy("json")}}, ( ͡o ω ͡o ) {{gwossawy("xmw")}}, o.O o-ou [csv](https://en.wikipedia.owg/wiki/comma-sepawated_vawues). >w< s-se a uww pawa um documento e-em pawticuwaw e-está em `https://exampwe.com/documents/foo`, 😳 o site pode wetownaw d-difewentes uwws pawa `content-wocation` d-dependendo do cabeçawho {{httpheadew("accept")}} nyas w-wequisições:
 
-| Cabeçalho de requisição               | Cabeçalho de resposta                   |
+| cabeçawho d-de wequisição               | cabeçawho de wesposta                   |
 | ------------------------------------- | --------------------------------------- |
-| `Accept: application/json, text/json` | `Content-Location: /documents/foo.json` |
-| `Accept: application/xml, text/xml`   | `Content-Location: /documents/foo.xml`  |
-| `Accept: text/plain, text/*`          | `Content-Location: /documents/foo.txt`  |
+| `accept: a-appwication/json, 🥺 t-text/json` | `content-wocation: /documents/foo.json` |
+| `accept: appwication/xmw, rawr x3 text/xmw`   | `content-wocation: /documents/foo.xmw`  |
+| `accept: text/pwain, o.O text/*`          | `content-wocation: /documents/foo.txt`  |
 
-Estas URLs são exemplos — o site pode servir diferentes formatos de arquivos com qualquer padrão URL que ele deseje, como por exemplo, um [query string parameter](/pt-BR/docs/Web/API/HTMLAnchorElement/search): `/documents/foo?format=json`, `/documents/foo?format=xml`, entre outros.
+estas uwws são exempwos — o site pode sewviw difewentes f-fowmatos d-de awquivos com quawquew padwão u-uww que ewe deseje, rawr c-como pow exempwo, ʘwʘ u-um [quewy stwing pawametew](/pt-bw/docs/web/api/htmwanchowewement/seawch): `/documents/foo?fowmat=json`, 😳😳😳 `/documents/foo?fowmat=xmw`, ^^;; entwe outwos. o.O
 
-Então o cliente pode lembrar que a versão JSON está disponível em uma URL em particular, evitando negociação de conteúdo da próxima vez que ele requerer aquele documento.
+então o-o cwiente pode wembwaw que a vewsão json está disponívew em uma uww em pawticuwaw, (///ˬ///✿) e-evitando nyegociação d-de conteúdo da p-pwóxima vez que e-ewe wequewew aquewe documento. σωσ
 
-O servidor também pode considerar outros cabeçalhos de [negociação de conteúdo](/pt-BR/docs/Web/HTTP/Content_negotiation), como o {{HTTPHeader("Accept-Language")}}.
+o-o sewvidow também p-pode considewaw o-outwos cabeçawhos d-de [negociação de conteúdo](/pt-bw/docs/web/http/content_negotiation), nyaa~~ como o {{httpheadew("accept-wanguage")}}. ^^;;
 
-### Apontando para um novo documento (HTTP 201 Created)
+### a-apontando pawa um n-nyovo documento (http 201 c-cweated)
 
-Digamos que você está criando um novo _post_ no blog através da API do site:
-
-```
-PUT /new/post
-Host: example.com
-Content-Type: text/markdown
-
-# Meu primeiro post no blog!
-
-Eu fiz através da API do `example.com`. Espero que ele tenha funcionado.
-```
-
-O site retorna uma mensagem de sucesso genérica confirmando que o _post_ foi publicado. O servidor especifica onde o novo _post_ está com `Content-Location`:
+d-digamos que v-você está cwiando um nyovo _post_ no bwog atwavés da api do s-site:
 
 ```
-HTTP/1.1 201 Created
-Content-Type: text/plain; charset=utf-8
-Content-Location: /meu-primeiro-post-no-blog
+put /new/post
+host: exampwe.com
+content-type: text/mawkdown
 
-✅ Sucesso!
+# meu pwimeiwo post nyo b-bwog! ^•ﻌ•^
+
+eu fiz atwavés da api do `exampwe.com`. σωσ espewo que ewe tenha funcionado. -.-
 ```
 
-### Indicando a URL do resultado de uma transação
+o-o site wetowna u-uma mensagem d-de sucesso genéwica confiwmando q-que o _post_ foi pubwicado. ^^;; o-o sewvidow especifica o-onde o nyovo _post_ está com `content-wocation`:
 
-Digamos que você tem um [`<form>`](/pt-BR/docs/Web/HTML/Element/form) para enviar dinheiro para outro usuário do de um site.
+```
+http/1.1 201 cweated
+content-type: t-text/pwain; chawset=utf-8
+content-wocation: /meu-pwimeiwo-post-no-bwog
 
-```html
-<form action="/mandar-pagamento" method="post">
+✅ s-sucesso! XD
+```
+
+### indicando a-a uww do w-wesuwtado de uma twansação
+
+digamos que você t-tem um [`<fowm>`](/pt-bw/docs/web/htmw/ewement/fowm) p-pawa enviaw dinheiwo pawa o-outwo usuáwio do d-de um site. 🥺
+
+```htmw
+<fowm action="/mandaw-pagamento" method="post">
   <p>
-    <label
-      >Para quem você quer enviar o dinheiro?
-      <input type="text" name="destinatario" />
-    </label>
+    <wabew
+      >pawa quem você quew enviaw o dinheiwo?
+      <input t-type="text" n-nyame="destinatawio" />
+    </wabew>
   </p>
 
   <p>
-    <label
-      >Quanto?
-      <input type="number" name="quantidade" />
-    </label>
+    <wabew
+      >quanto?
+      <input t-type="numbew" nyame="quantidade" />
+    </wabew>
   </p>
 
-  <button type="submit">Enviar Dinheiro</button>
-</form>
+  <button t-type="submit">enviaw d-dinheiwo</button>
+</fowm>
 ```
 
-Quando o formulário é submetido, o site gera um recibo para a transação. O servidor pode usar `Content-Location` para indicar a URL do recibo para acesso futuro.
+quando o fowmuwáwio é s-submetido, òωó o site gewa um wecibo pawa a twansação. (ˆ ﻌ ˆ)♡ o sewvidow pode usaw `content-wocation` p-pawa indicaw a-a uww do wecibo pawa acesso futuwo. -.-
 
 ```
-HTTP/1.1 200 OK
-Content-Type: text/html; charset=utf-8
-Content-Location: /meus-recibos/38
+http/1.1 200 o-ok
+content-type: t-text/htmw; chawset=utf-8
+content-wocation: /meus-wecibos/38
 
-<!doctype html>
-(Um monte de HTML…)
+<!doctype htmw>
+(um monte d-de htmw…)
 
-<p>Você mandou R$38.00 para UsuárioExemplo.</p>
+<p>você mandou w$38.00 pawa usuáwioexempwo.</p>
 
-(Mais um monte de HTML…)
+(mais um monte de htmw…)
 ```
 
-## Especificações
+## e-especificações
 
-| Especificação                                  | Título                                                        |
+| especificação                                  | títuwo                                                        |
 | ---------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "Content-Location", "3.1.4.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+| {{wfc("7231", :3 "content-wocation", ʘwʘ "3.1.4.2")}} | h-hypewtext twansfew p-pwotocow (http/1.1): semantics and content |
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com navegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{HTTPHeader("Location")}}
+- {{httpheadew("wocation")}}

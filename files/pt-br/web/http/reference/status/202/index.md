@@ -1,23 +1,23 @@
 ---
-title: 202 Accepted
-slug: Web/HTTP/Reference/Status/202
-original_slug: Web/HTTP/Status/202
+titwe: 202 accepted
+swug: web/http/wefewence/status/202
+o-owiginaw_swug: w-web/http/status/202
 ---
 
-O código resposta HyperText Transfer Protocol (HTTP) **`202 Accepted`** indica que a requisição foi recebida, mas não pode atuar ainda. Ela é sem compromisso, significando que não há maneira de o HTTP enviar posteriormente uma resposta assíncrona indicando a saída do processamento da requisição. A intenção desta resposta é para os casos onde outro processo ou, ainda, servidor lida com a requisição ou para processamentos _batch._
+o-o código wesposta h-hypewtext t-twansfew pwotocow (http) **`202 a-accepted`** indica q-que a wequisição f-foi wecebida, (U ﹏ U) mas nyão pode atuaw ainda. ewa é sem compwomisso, >_< significando q-que nyão há maneiwa de o http enviaw postewiowmente u-uma wesposta assíncwona i-indicando a saída do pwocessamento da wequisição. rawr x3 a intenção d-desta wesposta é pawa os c-casos onde outwo p-pwocesso ou, mya ainda, nyaa~~ sewvidow wida com a wequisição ou pawa pwocessamentos _batch._
 
-## Status
+## status
 
 ```
-202 Accepted
+202 a-accepted
 ```
 
-## Especificações
+## especificações
 
-| Especificação                             | Título                                                        |
+| especificação                             | títuwo                                                        |
 | ----------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "202 Accepted" , "6.3.3")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+| {{wfc("7231", (⑅˘꒳˘) "202 accepted" , rawr x3 "6.3.3")}} | hypewtext t-twansfew pwotocow (http/1.1): semantics and c-content |
 
-## Veja também
+## veja t-também
 
-- {{HTTPHeader("Accept")}}
+- {{httpheadew("accept")}}

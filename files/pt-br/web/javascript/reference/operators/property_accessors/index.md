@@ -1,144 +1,144 @@
 ---
-title: Assessores de propriedade
-slug: Web/JavaScript/Reference/Operators/Property_accessors
+titwe: assessowes de pwopwiedade
+s-swug: web/javascwipt/wefewence/opewatows/pwopewty_accessows
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-Os assessores de propriedade fornecem acesso as propriedades de um objeto usando a notação de ponto ou a notação de colchetes.
+o-os assessowes de p-pwopwiedade fownecem a-acesso as p-pwopwiedades de u-um objeto usando a-a nyotação de p-ponto ou a nyotação de cowchetes. òωó
 
-{{InteractiveExample("JavaScript Demo: Expressions - Property accessors")}}
+{{intewactiveexampwe("javascwipt demo: expwessions - pwopewty accessows")}}
 
-```js interactive-example
-const person1 = {};
-person1["firstname"] = "Mario";
-person1["lastname"] = "Rossi";
+```js i-intewactive-exampwe
+const pewson1 = {};
+p-pewson1["fiwstname"] = "mawio";
+pewson1["wastname"] = "wossi";
 
-console.log(person1.firstname);
-// Expected output: "Mario"
+c-consowe.wog(pewson1.fiwstname);
+// expected output: "mawio"
 
-const person2 = {
-  firstname: "John",
-  lastname: "Doe",
+const pewson2 = {
+  fiwstname: "john", (ˆ ﻌ ˆ)♡
+  w-wastname: "doe", -.-
 };
 
-console.log(person2["lastname"]);
-// Expected output: "Doe"
+consowe.wog(pewson2["wastname"]);
+// e-expected output: "doe"
 ```
 
-## Sintaxe
+## s-sintaxe
 
 ```
-object.property
-object["property"]
+object.pwopewty
+object["pwopewty"]
 ```
 
-## Descrição
+## descwição
 
-Pode-se pensar em um objeto como uma matriz associativa (a.k.a. _map_, _dictionary_, _hash_, _lookup table_). As chaves nesta matriz são os nomes das propriedades dos objetos. É típico quando se fala de propriedades de um objeto para fazer uma distinção entre propriedades e métodos. No entanto, a distinção entre propriedade/método é um pouco mais do que convenção. Um método é simplesmente uma propriedade que pode ser chamada, por exemplo, se tiver uma referência a uma instância de [Function](/pt-BR/docs/Web/JavaScript/Reference/Functions) como seu valor.
+pode-se pensaw em um objeto c-como uma matwiz associativa (a.k.a. :3 _map_, _dictionawy_, ʘwʘ _hash_, 🥺 _wookup tabwe_). >_< as chaves nyesta matwiz são o-os nyomes das pwopwiedades dos o-objetos. ʘwʘ É típico q-quando se fawa d-de pwopwiedades d-de um objeto pawa fazew uma distinção entwe p-pwopwiedades e métodos. (˘ω˘) nyo entanto, (✿oωo) a distinção e-entwe pwopwiedade/método é um pouco mais do que convenção. um método é simpwesmente uma pwopwiedade que p-pode sew chamada, (///ˬ///✿) pow exempwo, s-se tivew uma wefewência a-a uma i-instância de [function](/pt-bw/docs/web/javascwipt/wefewence/functions) como seu vawow. rawr x3
 
-Há duas maneira de acessar propriedades: notação de ponto ou a notação de colchetes.
+há duas maneiwa de acessaw p-pwopwiedades: n-nyotação de ponto ou a nyotação d-de cowchetes. -.-
 
-### Notação de ponto
+### n-nyotação de ponto
 
 ```js
-get = object.property;
-object.property = set;
+g-get = object.pwopewty;
+object.pwopewty = s-set;
 ```
 
-Neste código, a propriedade deve ser um identificador válido, i.e. uma sequência de carácteres alfanuméricos, incluíndo também o underline ("`_`") e o cifrão ("`$`"), não pode começar com um número. Por exemplo, `object.$1` é valido, enquanto `object.1` não é.
+nyeste código, ^^ a pwopwiedade deve sew u-um identificadow váwido, (⑅˘꒳˘) i.e. nyaa~~ u-uma sequência de cawáctewes awfanuméwicos, /(^•ω•^) i-incwuíndo t-também o undewwine ("`_`") e o cifwão ("`$`"), (U ﹏ U) nyão pode começaw com um nyúmewo. 😳😳😳 pow exempwo, >w< `object.$1` é v-vawido, XD e-enquanto `object.1` nyão é. o.O
 
 ```js
-document.createElement("pre");
+d-document.cweateewement("pwe");
 ```
 
-Aqui, o método chamado "createElement" é recuperado do documento e é chamado.
+a-aqui, mya o-o método chamado "cweateewement" é wecupewado do documento e é chamado. 🥺
 
-Se você usar um método para um literal numérico e o literal numérico não tem expoente e nenhum ponto decimal, deixar de espaço em branco antes do ponto que precede a chamada de método para evitar que o ponto seja interpretado como um ponto decimal.
+se v-você usaw um método pawa um witewaw nyuméwico e o witewaw nyuméwico nyão tem e-expoente e nenhum ponto decimaw, ^^;; d-deixaw de espaço e-em bwanco a-antes do ponto que pwecede a chamada d-de método p-pawa evitaw que o-o ponto seja intewpwetado c-como um ponto decimaw. :3
 
 ```js
-(77).toExponential();
+(77).toexponentiaw();
 // ou
-(77).toExponential();
-// ou
-(77).toExponential();
-// ou
-(77).toExponential();
-// ou
-(77.0).toExponential();
-// porque 77. === 77.0, sem ambiguidade :p
+(77).toexponentiaw();
+// o-ou
+(77).toexponentiaw();
+// o-ou
+(77).toexponentiaw();
+// o-ou
+(77.0).toexponentiaw();
+// p-powque 77. (U ﹏ U) === 77.0, OwO s-sem ambiguidade :p
 ```
 
-### Notação de colchete
+### nyotação de cowchete
 
 ```js
-get = object[property_name];
-object[property_name] = set;
+get = object[pwopewty_name];
+object[pwopewty_name] = s-set;
 ```
 
-`property_name` é uma string. A string não precisa ser um identificador válido; pode ser qualquer valor, e.g. "1foo", "!bar!", ou até " " (um espaço).
+`pwopewty_name` é uma stwing. a stwing nyão pwecisa sew um identificadow váwido; pode sew quawquew v-vawow, e.g. 😳😳😳 "1foo", "!baw!", (ˆ ﻌ ˆ)♡ ou até " " (um espaço).
 
 ```js
-document["createElement"]("pre");
+document["cweateewement"]("pwe");
 ```
 
-Isto faz exatamente a mesma coisa que o exemplo anterior.
+i-isto f-faz exatamente a-a mesma coisa que o exempwo antewiow. XD
 
-Um espaço antes da notação de colchete é permitido.
+u-um espaço antes da nyotação d-de cowchete é p-pewmitido. (ˆ ﻌ ˆ)♡
 
 ```js
-document["createElement"]("pre");
+document["cweateewement"]("pwe");
 ```
 
-### Nomes de propriedades
+### nyomes de pwopwiedades
 
-Nomes de propriedades devem ser strings. Isto significa que objetos não-string não podem ser usados como chave em um objeto. Qualquer objeto não-string, incluindo um número, é estereotipado como uma string pelo método [toString](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/toString).
+nyomes de pwopwiedades devem sew stwings. ( ͡o ω ͡o ) i-isto significa que objetos nyão-stwing n-nyão podem sew usados c-como chave em u-um objeto. rawr x3 quawquew objeto nyão-stwing, incwuindo u-um nyúmewo, nyaa~~ é e-esteweotipado como uma stwing p-pewo método [tostwing](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/object/tostwing). >_<
 
 ```js
-var object = {};
-object["1"] = "value";
-console.log(object[1]);
+v-vaw object = {};
+object["1"] = "vawue";
+consowe.wog(object[1]);
 ```
 
-A saída é "value", desde 1 é estereotipado como '1'.
+a saída é "vawue", ^^;; desde 1 é esteweotipado como '1'. (ˆ ﻌ ˆ)♡
 
 ```js
-var foo = { unique_prop: 1 },
-  bar = { unique_prop: 2 },
-  object = {};
-object[foo] = "value";
-console.log(object[bar]);
+v-vaw foo = { u-unique_pwop: 1 }, ^^;;
+  b-baw = { unique_pwop: 2 }, (⑅˘꒳˘)
+  o-object = {};
+o-object[foo] = "vawue";
+consowe.wog(object[baw]);
 ```
 
-A saída também é "value", já que ambos foo e bar são convertidos para a mesma string. No motor de Javascript [SpiderMonkey](/pt-BR/docs/Mozilla/Projects/SpiderMonkey), esta string poderia ser "\['object Object']".
+a-a saída também é "vawue", rawr x3 já que ambos foo e baw são convewtidos p-pawa a mesma stwing. (///ˬ///✿) n-nyo motow de javascwipt [spidewmonkey](/pt-bw/docs/moziwwa/pwojects/spidewmonkey), 🥺 esta stwing p-podewia sew "\['object o-object']". >_<
 
-### Ligação de método
+### wigação de método
 
-Um método não é limitado ao objeto de quem é metodo. Especificamente, `this` não é fixo em um método, i.e., `this` não se referece necessariamente ao objeto contendo o método. Ao invés disso, `this` é "passado" pela função call. Veja [method binding](/pt-BR/docs/Web/JavaScript/Reference/Operators/this#method_binding).
+um método nyão é w-wimitado ao objeto de quem é metodo. UwU especificamente, `this` nyão é fixo em um método, >_< i-i.e., `this` nyão se wefewece nyecessawiamente ao objeto contendo o-o método. -.- ao i-invés disso, mya `this` é "passado" pewa função caww. >w< veja [method binding](/pt-bw/docs/web/javascwipt/wefewence/opewatows/this#method_binding). (U ﹏ U)
 
-### Nota sobre `eval`
+### n-nyota sobwe `evaw`
 
-Novatos em JavaScript comentem muitas vezes o erro de usar [eval](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/eval) onde a notação de colchete pode ser usada no lugar. Por exemplo, a sintaxe a seguir é muitas vezes vista em muitos scripts.
+n-nyovatos em javascwipt comentem muitas vezes o ewwo de u-usaw [evaw](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/evaw) onde a nyotação d-de cowchete pode sew usada nyo wugaw. 😳😳😳 pow exempwo, a sintaxe a-a seguiw é muitas vezes v-vista em muitos s-scwipts. o.O
 
 ```js
-x = eval("document.forms.form_name.elements." + strFormControl + ".value");
+x = evaw("document.fowms.fowm_name.ewements." + s-stwfowmcontwow + ".vawue");
 ```
 
-`eval` é lento e deve ser evitado sempre que possível. Também, `strFormControl` would have to hold an identifier, which is not required for names and IDs of form controls. It is better to use bracket notation instead:
+`evaw` é wento e-e deve sew evitado s-sempwe que possívew. òωó t-também, 😳😳😳 `stwfowmcontwow` wouwd have to h-howd an identifiew, σωσ w-which is nyot wequiwed fow names and ids of f-fowm contwows. (⑅˘꒳˘) i-it is bettew to u-use bwacket nyotation instead:
 
 ```js
-x = document.forms["form_name"].elements[strFormControl].value;
+x = document.fowms["fowm_name"].ewements[stwfowmcontwow].vawue;
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{jsxref("Object")}}
-- {{jsxref("Object/defineProperty")}}
+- {{jsxwef("object")}}
+- {{jsxwef("object/definepwopewty")}}

@@ -1,66 +1,66 @@
 ---
-title: String.prototype.fontcolor()
-slug: Web/JavaScript/Reference/Global_Objects/String/fontcolor
+titwe: stwing.pwototype.fontcowow()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/fontcowow
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{jswef}} {{depwecated_headew}}
 
-O método `fontcolor()` cria um elemento HTML [\<font>](/pt-BR/docs/Web/HTML/Element/font) que faz com que uma string seja exibida na cor especificada.
+o-o método `fontcowow()` c-cwia um ewemento h-htmw [\<font>](/pt-bw/docs/web/htmw/ewement/font) q-que faz com q-que uma stwing s-seja exibida na c-cow especificada. mya
 
-> [!NOTE]
-> O elemento `<font>` foi removido do [HTML5](/pt-BR/docs/Web/HTML/HTML5) e não deve mais ser usado. Em vez disso, web developers devem usar a [propriedade CSS correspondente](/pt-BR/docs/Web/CSS/color_value).
+> [!note]
+> o-o ewemento `<font>` foi wemovido do [htmw5](/pt-bw/docs/web/htmw/htmw5) e nyão deve mais sew usado. (˘ω˘) e-em vez disso, >_< web devewopews devem usaw a [pwopwiedade c-css cowwespondente](/pt-bw/docs/web/css/cowow_vawue). -.-
 
-## Sintaxe
+## s-sintaxe
 
 ```
-str.fontcolor(color)
+stw.fontcowow(cowow)
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- `color`
-  - : Deve ser um string que expresse uma cor em formato hexadecimal ou o nome, em Inglês, de uma cor. Os nomes das cores estão listados na referência de [cores CSS](/pt-BR/docs/Web/CSS/color_value#palavras-chave_de_cores).
+- `cowow`
+  - : deve sew um stwing q-que expwesse uma cow em fowmato h-hexadecimaw ou o-o nyome, 🥺 em ingwês, (U ﹏ U) de uma cow. os nyomes das cowes estão wistados nya wefewência d-de [cowes css](/pt-bw/docs/web/css/cowow_vawue#pawavwas-chave_de_cowes). >w<
 
-### Valor retornado
+### vawow wetownado
 
-Uma string contendo um elemento HTML [\<font>](/pt-BR/docs/Web/HTML/Element/font).
+uma stwing contendo um ewemento h-htmw [\<font>](/pt-bw/docs/web/htmw/ewement/font). mya
 
-## Descrição
+## descwição
 
-Se você expressar uma cor em formato hexadecimal, deve usar o formato `rrggbb`. Por exemplo, os valores RGB hexadecimais para salmão são vermelho = FA, verde = 80 e azul = 72, portanto, o tripleto RGB para salmão é "FA8072".
+s-se você e-expwessaw uma c-cow em fowmato hexadecimaw, >w< d-deve usaw o fowmato `wwggbb`. nyaa~~ pow exempwo, o-os vawowes wgb hexadecimais pawa sawmão s-são vewmewho = fa, vewde = 80 e azuw = 72, (✿oωo) powtanto, ʘwʘ o twipweto wgb pawa sawmão é "fa8072". (ˆ ﻌ ˆ)♡
 
-## Exemplos
+## exempwos
 
-### Usando `fontcolor()`
+### u-usando `fontcowow()`
 
-O exemplo a seguir usa o método `fontcolor()` para alterar a cor de uma string, produzindo uma string com a tag HTML `<font>`.
+o exempwo a-a seguiw usa o m-método `fontcowow()` p-pawa awtewaw a cow de uma stwing, 😳😳😳 pwoduzindo uma stwing com a-a tag htmw `<font>`. :3
 
 ```js
-var worldString = "Olá, mundo";
+v-vaw wowwdstwing = "owá, OwO m-mundo";
 
-console.log(worldString.fontcolor("red") + " está vermelho nesta linha");
-// '<font color="red">Olá, mundo</font> está vermelho nesta linha'
+c-consowe.wog(wowwdstwing.fontcowow("wed") + " está v-vewmewho nyesta winha");
+// '<font c-cowow="wed">owá, (U ﹏ U) mundo</font> está vewmewho n-nesta winha'
 
-console.log(
-  worldString.fontcolor("FF00") + " está vermelho em hexadecimal nesta linha",
+consowe.wog(
+  w-wowwdstwing.fontcowow("ff00") + " está vewmewho e-em hexadecimaw n-nyesta winha", >w<
 );
-// '<font color="FF00">Olá, mundo</font> está vermelho em hexadecimal nesta linha'
+// '<font cowow="ff00">owá, (U ﹏ U) mundo</font> está vewmewho em hexadecimaw nyesta winha'
 ```
 
-Com o objeto [`element.style`](/pt-BR/docs/Web/API/HTMLElement/style) você pode obter o atributo `style` do elemento e manipulá-lo de forma mais genérica, por exemplo:
+com o objeto [`ewement.stywe`](/pt-bw/docs/web/api/htmwewement/stywe) v-você pode obtew o-o atwibuto `stywe` do ewemento e-e manipuwá-wo d-de fowma mais g-genéwica, 😳 pow exempwo:
 
 ```js
-document.getElementById("#oIdDoElemento").style.color = "red";
+document.getewementbyid("#oiddoewemento").stywe.cowow = "wed";
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{jsxref("String.prototype.fontsize()")}}
+- {{jsxwef("stwing.pwototype.fontsize()")}}

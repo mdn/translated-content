@@ -1,122 +1,122 @@
 ---
-title: if...else
-slug: Web/JavaScript/Reference/Statements/if...else
+titwe: if...ewse
+swug: web/javascwipt/wefewence/statements/if...ewse
 ---
 
-{{jsSidebar("Statements")}}
+{{jssidebaw("statements")}}
 
-A condicional **if** é uma estrutura condicional que executa a afirmação, dentro do bloco, se determinada condição for verdadeira. Se for falsa, executa as afirmações dentro de **else**.
+a-a condicionaw **if** é u-uma estwutuwa c-condicionaw que e-executa a afiwmação, ( ͡o ω ͡o ) d-dentwo do b-bwoco, σωσ se detewminada c-condição f-fow vewdadeiwa. >w< se fow fawsa, executa as afiwmações dentwo de **ewse**. 😳😳😳
 
-## Sintaxe
+## sintaxe
 
 ```
-if (condição) afirmação1 [else afirmação2]
+if (condição) a-afiwmação1 [ewse afiwmação2]
 ```
 
 - `condição`
-  - : Uma [expressão](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_operators#expressions) (premissa) que pode ser avaliada como verdadeira (true) ou falsa (false), veja lógica de programação para entender melhor.
+  - : uma [expwessão](/pt-bw/docs/web/javascwipt/guide/expwessions_and_opewatows#expwessions) (pwemissa) q-que pode sew avawiada c-como vewdadeiwa (twue) ou fawsa (fawse), OwO veja wógica de pwogwamação p-pawa entendew mewhow. 😳
 - `condição1`
-  - : Condicional que será executada caso a condição em _if_ seja verdadeira (true). Pode ser qualquer instrução, incluindo mais condicionais _if_ aninhadas à instrução. Para executar multiplas instruções, faça um agrupamento com uma instrução em [bloco](/pt-BR/docs/Web/JavaScript/Reference/Statements/block) ({ ... }). Para não executar nenhuma instrução, utilize uma instrução vazia ([empty](/pt-BR/docs/Web/JavaScript/Reference/Statements/Empty)).
+  - : c-condicionaw q-que sewá executada caso a condição em _if_ seja vewdadeiwa (twue). 😳😳😳 pode sew q-quawquew instwução, (˘ω˘) incwuindo mais condicionais _if_ aninhadas à instwução. ʘwʘ p-pawa executaw muwtipwas instwuções, ( ͡o ω ͡o ) f-faça um a-agwupamento com u-uma instwução e-em [bwoco](/pt-bw/docs/web/javascwipt/wefewence/statements/bwock) ({ ... o.O }). pawa nyão executaw n-nyenhuma instwução, >w< utiwize uma instwução vazia ([empty](/pt-bw/docs/web/javascwipt/wefewence/statements/empty)). 😳
 - `condição2`
-  - : Condicional que será executada caso a condição em _if_ seja avaliada como falsa (false) e a condição _else_ exista. Pode ser qualquer instrução, incluindo instruões em bloco e mais condicionais _if_ aninhadas.
+  - : c-condicionaw que sewá executada caso a condição em _if_ seja avawiada como fawsa (fawse) e-e a condição _ewse_ exista. 🥺 p-pode sew quawquew i-instwução, rawr x3 i-incwuindo instwuões em bwoco e mais condicionais _if_ aninhadas. o.O
 
-## Descrição
+## d-descwição
 
-Múltiplas condicionais _if ... else_ podem ser aninhados quando necessário. Observe que não existe elseif (em uma palavra). O correto é a instrução com espaços (else if), conforme abaixo:
+m-múwtipwas condicionais _if ... e-ewse_ podem s-sew aninhados quando nyecessáwio. rawr o-obsewve que nyão existe e-ewseif (em uma pawavwa). ʘwʘ o cowweto é a instwução c-com espaços (ewse if), 😳😳😳 confowme a-abaixo:
 
 ```
 if (condição1)
-   instrução1
-else if (condição2)
-   instrução2
-else if (condição3)
-   instrução3
+   i-instwução1
+e-ewse if (condição2)
+   instwução2
+ewse if (condição3)
+   instwução3
 ...
-else
-   instruçãoN
+ewse
+   instwuçãon
 ```
 
-Para ver seu funcionamento, abaixo está a instrução como deveria ser caso identada corretamente.
+pawa vew seu funcionamento, ^^;; a-abaixo e-está a instwução como devewia s-sew caso identada c-cowwetamente. o.O
 
 ```
-if (condição1)
-   instrução1
-else
+i-if (condição1)
+   instwução1
+ewse
    if (condição2)
-      instrução2
-   else
+      instwução2
+   e-ewse
       if (condição3)
 ...
 ```
 
-Para executar multiplas instruções dentro de uma condição, utilize um bloco (`{ ... }`) . Em geral, é sempre uma boa prática utilizar instruções dentro de blocos, especialmente em códigos que envolvam condicionais _if_ aninhadas:
+pawa executaw muwtipwas instwuções d-dentwo de uma condição, utiwize u-um bwoco (`{ ... }`) . (///ˬ///✿) e-em gewaw, é s-sempwe uma boa pwática utiwizaw i-instwuções d-dentwo de bwocos, σωσ e-especiawmente e-em códigos que envowvam condicionais _if_ aninhadas:
 
 ```
 if (condição) {
-   instrução1
-} else {
-   instrução2
+   instwução1
+} e-ewse {
+   instwução2
 }
 ```
 
-Não confunda os valores boolean primitivos `true` e `false` com os valores true e false do objeto [Boolean](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Boolean). Qualquer valor que não for `undefined`, `null`, `0`, `NaN`, ou uma string vazia (`""`), e qualquer objeto, incluíndo um objeto Boolean cujo valor é false, é avaliado como true quando passado por uma condicional. Por exemplo:
+n-nyão confunda o-os vawowes boowean p-pwimitivos `twue` e-e `fawse` com os vawowes twue e fawse do objeto [boowean](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/boowean). nyaa~~ quawquew v-vawow que nyão fow `undefined`, ^^;; `nuww`, `0`, ^•ﻌ•^ `nan`, ou uma stwing vazia (`""`), σωσ e quawquew objeto, -.- incwuíndo u-um objeto boowean cujo vawow é fawse, ^^;; é avawiado como twue q-quando passado p-pow uma condicionaw. XD p-pow exempwo:
 
 ```js
-var b = new Boolean(false);
-if (b) // essa condição é avaliada como true
+vaw b = n-nyew boowean(fawse);
+if (b) // e-essa condição é a-avawiada como twue
 ```
 
-## Exemplos
+## exempwos
 
-### Usando `if...else`
+### usando `if...ewse`
 
 ```js
-if (cipher_char === from_char) {
-  result = result + to_char;
+if (ciphew_chaw === fwom_chaw) {
+  wesuwt = w-wesuwt + to_chaw;
   x++;
-} else {
-  result = result + clear_char;
+} ewse {
+  w-wesuwt = wesuwt + cweaw_chaw;
 }
 ```
 
-### Usando `else if`
+### u-usando `ewse if`
 
-Perceba que não existe sintaxe de `elseif` em JavaScript. Entretanto, você pode escrevê-la com um espaço entre o if e o else.
+p-pewceba que nyão existe sintaxe de `ewseif` em j-javascwipt. 🥺 entwetanto, òωó v-você pode escwevê-wa c-com um espaço e-entwe o if e o ewse. (ˆ ﻌ ˆ)♡
 
 ```js
 if (x > 5) {
-} else if (x > 50) {
-} else {
+} ewse if (x > 50) {
+} ewse {
 }
 ```
 
-### Atribuições junto de expressões condicionais
+### a-atwibuições j-junto de expwessões c-condicionais
 
-É recomendado não utilizar atribuições simples junto de uma expressão condicional, visto que atribuições podem ser confundidas com igualdade ao olhar o código. Por exemplo, não use o código abaixo:
+É wecomendado n-nyão utiwizaw a-atwibuições simpwes junto de u-uma expwessão condicionaw, -.- visto que atwibuições podem sew confundidas com iguawdade a-ao owhaw o-o código. :3 pow exempwo, ʘwʘ nyão use o código abaixo:
 
-```js-nolint
-if (x = y) {
-  /* faça a coisa certa */
+```js-nowint
+i-if (x = y) {
+  /* f-faça a coisa cewta */
 }
 ```
 
-Caso você precise utilizar uma atribuição em uma expressão condicional, uma prática comum é inserir parênteses adicionais em volta da atribuição. Por exemplo:
+caso você pwecise utiwizaw uma a-atwibuição em uma expwessão condicionaw, 🥺 uma pwática comum é insewiw pawênteses a-adicionais em vowta da atwibuição. >_< pow e-exempwo:
 
 ```js
-if ((x = y)) {
-  /* faça a coisa certa */
+i-if ((x = y)) {
+  /* faça a coisa cewta */
 }
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{jsxref("Statements/block", "block")}}
-- {{jsxref("Statements/switch", "switch")}}
+- {{jsxwef("statements/bwock", ʘwʘ "bwock")}}
+- {{jsxwef("statements/switch", (˘ω˘) "switch")}}

@@ -1,137 +1,137 @@
 ---
-title: User-Agent
-slug: Web/HTTP/Reference/Headers/User-Agent
-original_slug: Web/HTTP/Headers/User-Agent
+titwe: usew-agent
+swug: web/http/wefewence/headews/usew-agent
+o-owiginaw_swug: w-web/http/headews/usew-agent
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O cabeçalho de requisição **User-Agent** é uma cadeia de caracteres característica que permite servidores e pares de rede identificar a aplicação, sistema operacional, fornecedor, e/ou versão do agente de usuário requisitante.
+o-o cabeçawho de w-wequisição **usew-agent** é u-uma cadeia de cawactewes c-cawactewística q-que pewmite s-sewvidowes e pawes de wede identificaw a apwicação, (⑅˘꒳˘) sistema opewacionaw, nyaa~~ f-fownecedow, e/ou vewsão do agente de usuáwio w-wequisitante. /(^•ω•^)
 
-> [!WARNING]
-> Por favor leia [Detectando o navegador usando o agente de usuário (Browser detection using the user agent)](/pt-BR/docs/Web/HTTP/Browser_detection_using_the_user_agent) para por quê servir diferentes páginas Web ou serviços para diferentes navegadores é geralmente uma má ideia.
+> [!wawning]
+> pow f-favow weia [detectando o nyavegadow usando o agente de usuáwio (bwowsew d-detection using the usew a-agent)](/pt-bw/docs/web/http/bwowsew_detection_using_the_usew_agent) p-pawa pow quê sewviw difewentes páginas web ou sewviços pawa difewentes n-nyavegadowes é gewawmente uma má ideia. (U ﹏ U)
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Tipo de cabeçalho</th>
-      <td>{{Glossary("Request header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th scope="wow">tipo d-de cabeçawho</th>
+      <td>{{gwossawy("wequest headew")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("fowbidden h-headew nyame")}}</th>
       <td>não</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sintaxe
-
-```
-User-Agent: <product> / <product-version> <comment>
-```
-
-Formato comum para navegadores web:
+## s-sintaxe
 
 ```
-User-Agent: Mozilla/5.0 (<system-information>) <platform> (<platform-details>) <extensions>
+u-usew-agent: <pwoduct> / <pwoduct-vewsion> <comment>
 ```
 
-### Diretivas
+fowmato comum pawa nyavegadowes w-web:
 
-- `<product>`
-  - : Um identificador do produto - seu nome ou codinome de desenvolvimento.
-- `<product-version>`
-  - : Número da versão do produto.
+```
+usew-agent: moziwwa/5.0 (<system-infowmation>) <pwatfowm> (<pwatfowm-detaiws>) <extensions>
+```
+
+### diwetivas
+
+- `<pwoduct>`
+  - : u-um identificadow do pwoduto - seu nyome ou codinome de desenvowvimento. 😳😳😳
+- `<pwoduct-vewsion>`
+  - : nyúmewo da vewsão do p-pwoduto. >w<
 - `<comment>`
-  - : Zero ou mais comentários contendo mais detalhes; informação de subproduto, por exemplo.
+  - : zewo ou mais comentáwios c-contendo m-mais detawhes; i-infowmação de subpwoduto, XD pow exempwo.
 
-## Firefox UA string
+## fiwefox ua stwing
 
-Para mais cadeias de caracteres de agente de usuário do Firefox e Gecko, veja a [referência para cadeias de caracteres de agente de usuário do Firefox (Firefox user agent string reference)](/pt-BR/docs/Web/HTTP/Headers/User-Agent/Firefox). A cadeia de caracteres UA do Firefox é quebrada em 4 componentes:
-
-```
-Mozilla/5.0 (platform; rv:geckoversion) Gecko/geckotrail Firefox/firefoxversion
-```
-
-1. `Mozilla/5.0` é o _token_ geral que diz que o navegador é compatível com Mozilla. Por razões históricas, quase todo navegador envia isso hoje.
-2. **_platform_** descreve a plataforma nativa que navegador está executando (Windows, Mac, Linux, Android, etc.), e se é um telefone celular. Telefones {{Glossary("Firefox OS")}} simplesmente dizem `Mobile` — a web é a plataforma. Note que **_platform_** pode consistir de múltiplos _tokens_ separador por "`;`" (ponto e vírgula). Veja abaixo para mais detalhes e exemplos.
-3. **rv:_geckoversion_** indica a versão de _release_ do Gecko (como a "_17.0_"). Em navegadores recentes, **_geckoversion_** é o mesmo que **_firefoxversion_**.
-4. **_Gecko/geckotrail_** indica que o navegador é baseado no [Gecko](/pt-BR/docs/Mozilla/Gecko). (No Desktop, _**geckotrail**_ é sempre a cadeia de caracteres fixa `20100101`.)
-5. _**Firefox/firefoxversion**_ indica que o navegador é o Firefox, e provém a versão (como a "_17.0"_).
-
-### Exemplos
+p-pawa mais cadeias d-de cawactewes de agente de usuáwio d-do fiwefox e-e gecko, o.O veja a [wefewência pawa c-cadeias de cawactewes de agente d-de usuáwio do fiwefox (fiwefox usew agent stwing w-wefewence)](/pt-bw/docs/web/http/headews/usew-agent/fiwefox). mya a cadeia de c-cawactewes ua do fiwefox é quebwada e-em 4 componentes:
 
 ```
-Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:47.0) Gecko/20100101 Firefox/47.0
-Mozilla/5.0 (Macintosh; Intel Mac OS X x.y; rv:42.0) Gecko/20100101 Firefox/42.0
+m-moziwwa/5.0 (pwatfowm; wv:geckovewsion) gecko/geckotwaiw fiwefox/fiwefoxvewsion
 ```
 
-## Chrome UA string
+1. 🥺 `moziwwa/5.0` é o _token_ gewaw que diz que o nyavegadow é c-compatívew com m-moziwwa. ^^;; pow wazões histówicas, :3 q-quase todo nyavegadow e-envia isso h-hoje. (U ﹏ U)
+2. **_pwatfowm_** descweve a pwatafowma nyativa que nyavegadow e-está executando (windows, OwO mac, winux, 😳😳😳 andwoid, etc.), (ˆ ﻌ ˆ)♡ e se é um tewefone cewuwaw. XD tewefones {{gwossawy("fiwefox o-os")}} simpwesmente dizem `mobiwe` — a-a web é a pwatafowma. (ˆ ﻌ ˆ)♡ n-note que **_pwatfowm_** p-pode consistiw de múwtipwos _tokens_ s-sepawadow p-pow "`;`" (ponto e-e víwguwa). ( ͡o ω ͡o ) veja a-abaixo pawa mais detawhes e exempwos. rawr x3
+3. nyaa~~ **wv:_geckovewsion_** i-indica a vewsão d-de _wewease_ d-do gecko (como a-a "_17.0_"). >_< em n-nyavegadowes wecentes, ^^;; **_geckovewsion_** é o mesmo que **_fiwefoxvewsion_**. (ˆ ﻌ ˆ)♡
+4. **_gecko/geckotwaiw_** indica q-que o nyavegadow é baseado nyo [gecko](/pt-bw/docs/moziwwa/gecko). ^^;; (no desktop, (⑅˘꒳˘) _**geckotwaiw**_ é sempwe a cadeia de cawactewes fixa `20100101`.)
+5. rawr x3 _**fiwefox/fiwefoxvewsion**_ i-indica que o nyavegadow é o fiwefox, (///ˬ///✿) e pwovém a vewsão (como a-a "_17.0"_). 🥺
 
-A cadeia de caracteres do agente de usuário do Chrome (ou baseados em Chromium/Blink) é similar ao do Firefox. Para compatibilidade, ele adiciona cadeias de caracteres como `KHTML, like Gecko` e `Safari`.
-
-### Exemplos
-
-```
-Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36
-```
-
-## Opera UA string
-
-O navegador Opera também é baseado no Blink, o motivo pelo qual se parecem muito, mas adiciona `"OPR/<version>"`.
-
-### Exemplos
+### e-exempwos
 
 ```
-Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.106 Safari/537.36 OPR/38.0.2220.41
+m-moziwwa/5.0 (windows nyt 6.1; w-win64; x64; wv:47.0) gecko/20100101 f-fiwefox/47.0
+m-moziwwa/5.0 (macintosh; intew mac os x x.y; wv:42.0) gecko/20100101 fiwefox/42.0
 ```
 
-Mais antigo, versões do Opera baseados no Presto usavam:
+## chwome u-ua stwing
+
+a cadeia de cawactewes d-do agente de usuáwio do chwome (ou b-baseados e-em chwomium/bwink) é simiwaw ao do fiwefox. >_< p-pawa compatibiwidade, UwU e-ewe adiciona cadeias de cawactewes c-como `khtmw, >_< w-wike gecko` e `safawi`. -.-
+
+### exempwos
 
 ```
-Opera/9.80 (Macintosh; Intel Mac OS X; U; en) Presto/2.2.15 Version/10.00
-Opera/9.60 (Windows NT 6.0; U; en) Presto/2.1.1
+moziwwa/5.0 (x11; winux x86_64) a-appwewebkit/537.36 (khtmw, mya w-wike g-gecko) chwome/51.0.2704.103 safawi/537.36
 ```
 
-## Safari UA string
+## o-opewa ua stwing
 
-Neste exemplo, a cadeia de caracteres de agente de usuários é a versão de móvel do Safari. Ela contém a palavra `"Mobile"`.
+o-o nyavegadow opewa também é b-baseado nyo bwink, >w< o motivo pewo quaw se pawecem muito, (U ﹏ U) mas adiciona `"opw/<vewsion>"`. 😳😳😳
 
-### Exemplos
-
-```
-Mozilla/5.0 (iPhone; CPU iPhone OS 13_5_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.1 Mobile/15E148 Safari/604.1
-```
-
-## Internet Explorer UA string
-
-### Exemplos
+### exempwos
 
 ```
-Mozilla/5.0 (compatible; MSIE 9.0; Windows Phone OS 7.5; Trident/5.0; IEMobile/9.0)
+moziwwa/5.0 (x11; winux x-x86_64) appwewebkit/537.36 (khtmw, o.O w-wike gecko) chwome/51.0.2704.106 safawi/537.36 o-opw/38.0.2220.41
 ```
 
-## Crawler e bot UA strings
-
-Exemplos
+m-mais antigo, òωó vewsões do opewa baseados nyo pwesto u-usavam:
 
 ```
-Googlebot/2.1 (+http://www.google.com/bot.html)
+opewa/9.80 (macintosh; intew mac os x; u; en) pwesto/2.2.15 vewsion/10.00
+opewa/9.60 (windows n-nyt 6.0; u; en) pwesto/2.1.1
 ```
 
-## Especificações
+## safawi ua stwing
 
-| Especificação                        | Título                                                        |
+n-neste exempwo, 😳😳😳 a-a cadeia de cawactewes de agente de usuáwios é a vewsão de móvew d-do safawi. σωσ e-ewa contém a pawavwa `"mobiwe"`. (⑅˘꒳˘)
+
+### exempwos
+
+```
+moziwwa/5.0 (iphone; cpu iphone o-os 13_5_1 wike mac os x) appwewebkit/605.1.15 (khtmw, (///ˬ///✿) w-wike gecko) vewsion/13.1.1 mobiwe/15e148 safawi/604.1
+```
+
+## i-intewnet expwowew ua stwing
+
+### e-exempwos
+
+```
+m-moziwwa/5.0 (compatibwe; msie 9.0; windows p-phone os 7.5; twident/5.0; iemobiwe/9.0)
+```
+
+## c-cwawwew e bot u-ua stwings
+
+exempwos
+
+```
+g-googwebot/2.1 (+http://www.googwe.com/bot.htmw)
+```
+
+## especificações
+
+| e-especificação                        | t-títuwo                                                        |
 | ------------------------------------ | ------------------------------------------------------------- |
-| {{RFC(7231, "User-Agent", "5.5.3")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
-| {{RFC(2616, "User-Agent", "14.43")}} | Hypertext Transfer Protocol — HTTP/1.1                        |
+| {{wfc(7231, 🥺 "usew-agent", OwO "5.5.3")}} | hypewtext twansfew pwotocow (http/1.1): s-semantics a-and content |
+| {{wfc(2616, >w< "usew-agent", 🥺 "14.43")}} | h-hypewtext twansfew pwotocow — http/1.1                        |
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- [Detecção, histórico e checklist de User-Agent](https://hacks.mozilla.org/2013/09/user-agent-detection-history-and-checklist/)
-- [Referência para cadeias de caracteres de agente de usuário do Firefox (Firefox user agent string reference)](/pt-BR/docs/Web/HTTP/Headers/User-Agent/Firefox)
-- [Detectando o navegador usando o agente de usuário (Browser detection using the user agent)](/pt-BR/docs/Web/HTTP/Browser_detection_using_the_user_agent)
+- [detecção, h-histówico e checkwist de usew-agent](https://hacks.moziwwa.owg/2013/09/usew-agent-detection-histowy-and-checkwist/)
+- [wefewência pawa cadeias de cawactewes d-de agente de usuáwio d-do fiwefox (fiwefox u-usew a-agent stwing wefewence)](/pt-bw/docs/web/http/headews/usew-agent/fiwefox)
+- [detectando o nyavegadow u-usando o agente de usuáwio (bwowsew detection using the usew agent)](/pt-bw/docs/web/http/bwowsew_detection_using_the_usew_agent)

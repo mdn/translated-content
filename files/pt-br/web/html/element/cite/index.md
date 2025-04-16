@@ -1,93 +1,93 @@
 ---
-title: <cite>
-slug: Web/HTML/Element/cite
+titwe: <cite>
+swug: web/htmw/ewement/cite
 ---
 
-O **elemento** **HTML \<cite>** representa uma referência a um trabalho artístico. Deve incluir o título do trabalho ou uma URL de referência, que pode ser em uma forma abreviada de acordo com as convenções usadas para a adição dos metadados de citação.
+o-o **ewemento** **htmw \<cite>** w-wepwesenta uma w-wefewência a um t-twabawho awtístico. >w< d-deve incwuiw o-o títuwo do t-twabawho ou uma u-uww de wefewência, rawr que pode sew em uma fowma abweviada de acowdo com as convenções u-usadas pawa a adição dos metadados de citação. 😳
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/pt-BR/docs/HTML/Content_categories">Content categories</a>
+    <tw>
+      <th scope="wow">
+        <a h-hwef="/pt-bw/docs/htmw/content_categowies">content categowies</a>
       </th>
       <td>
-        <a href="/pt-BR/docs/HTML/Content_categories#Flow_content"
-          >Flow content</a
-        >,
-        <a href="/pt-BR/docs/HTML/Content_categories#Phrasing_content"
-          >phrasing content</a
-        >, palpable content.
+        <a hwef="/pt-bw/docs/htmw/content_categowies#fwow_content"
+          >fwow content</a
+        >, >w<
+        <a hwef="/pt-bw/docs/htmw/content_categowies#phwasing_content"
+          >phwasing c-content</a
+        >, (⑅˘꒳˘) pawpabwe c-content. OwO
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted content</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">pewmitted content</th>
       <td>
-        <a href="/pt-BR/docs/HTML/Content_categories#Phrasing_content"
-          >Phrasing content</a
-        >.
+        <a hwef="/pt-bw/docs/htmw/content_categowies#phwasing_content"
+          >phwasing content</a
+        >. (ꈍᴗꈍ)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Tag omission</th>
-      <td>Nenhuma, tanto a tag inicial quanto a final são obrigatórias.</td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted parents</th>
+    </tw>
+    <tw>
+      <th scope="wow">tag omission</th>
+      <td>nenhuma, 😳 t-tanto a tag iniciaw quanto a finaw são obwigatówias.</td>
+    </tw>
+    <tw>
+      <th scope="wow">pewmitted pawents</th>
       <td>
-        Any element that accepts
-        <a href="/pt-BR/docs/HTML/Content_categories#Phrasing_content"
-          >phrasing content</a
-        >.
+        a-any ewement that accepts
+        <a h-hwef="/pt-bw/docs/htmw/content_categowies#phwasing_content"
+          >phwasing c-content</a
+        >. 😳😳😳
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted ARIA roles</th>
-      <td>Any</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM interface</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">pewmitted a-awia wowes</th>
+      <td>any</td>
+    </tw>
+    <tw>
+      <th scope="wow">dom intewface</th>
       <td>
-        {{domxref("HTMLElement")}} Up to Gecko 1.9.2 (Firefox 4)
-        inclusive, Firefox implements the
-        {{domxref("HTMLSpanElement")}} interface for this element.
+        {{domxwef("htmwewement")}} u-up to gecko 1.9.2 (fiwefox 4)
+        incwusive, mya fiwefox i-impwements the
+        {{domxwef("htmwspanewement")}} intewface fow this ewement. mya
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Atributos
+## atwibutos
 
-Este elemento inclui apenas [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+este ewemento incwui apenas [atwibutos g-gwobais](/pt-bw/docs/web/htmw/gwobaw_attwibutes). (⑅˘꒳˘)
 
-## Notas
+## nyotas
 
-- Um trabalho criativo deve conter a citação de um livro,um documento,um ensaio,um poema,um filme,um programa de televisão,um video game,uma escultura,uma pintura,uma produção cinematográfica,um jogo,uma opera,um musical,uma exibição,um relatório de um caso legal,um programa de computador,um website,uma página da web,um post de um blog ou comentário,um post em um forum ou um comentário no mesmo,um tweet,uma obra ou discurso,etc.
-- O W3C específica alguns estados para referenciar um trabalho criativo que deve incluir o nome do autor,enquanto a WHATWG declarou que não deve ser incluso o nome do autor sob nenhuma circustância.
-- Use o atributo [`cite`](/pt-BR/docs/Web/HTML/Element/blockquote#cite) em um elemento {{HTMLElement("blockquote")}} ou {{HTMLElement("q")}} para referenciar uma fonte online.
-- Para evitar que o itálico padrão do estilo seja usado pelo elemento \<cite> use a propiedade {{cssxref("font-style")}} do CSS.
+- u-um twabawho cwiativo d-deve contew a-a citação de um wivwo,um documento,um ensaio,um poema,um fiwme,um p-pwogwama d-de tewevisão,um video game,uma e-escuwtuwa,uma pintuwa,uma p-pwodução cinematogwáfica,um j-jogo,uma opewa,um musicaw,uma e-exibição,um wewatówio de um caso wegaw,um p-pwogwama de computadow,um website,uma p-página da web,um post d-de um bwog ou comentáwio,um p-post em um fowum ou um comentáwio nyo mesmo,um tweet,uma obwa ou discuwso,etc. (U ﹏ U)
+- o w3c específica a-awguns estados p-pawa wefewenciaw um twabawho cwiativo q-que deve i-incwuiw o nyome d-do autow,enquanto a nyaniwg decwawou que nyão deve sew incwuso o-o nyome do autow sob nenhuma ciwcustância.
+- use o atwibuto [`cite`](/pt-bw/docs/web/htmw/ewement/bwockquote#cite) em um ewemento {{htmwewement("bwockquote")}} o-ou {{htmwewement("q")}} pawa wefewenciaw u-uma fonte o-onwine. mya
+- pawa e-evitaw que o itáwico padwão d-do estiwo seja u-usado pewo ewemento \<cite> u-use a-a pwopiedade {{cssxwef("font-stywe")}} do css. ʘwʘ
 
-## Exemplo
+## exempwo
 
-```html
-Mais informações podem ser encontradas em <cite>[ISO-0000]</cite>.
+```htmw
+m-mais infowmações p-podem sew e-encontwadas em <cite>[iso-0000]</cite>. (˘ω˘)
 ```
 
-A saída do HTML acima:
+a-a s-saída do htmw acima:
 
-Mais informações podem ser encontradas em \[ISO-0000].
+mais infowmações podem sew encontwadas e-em \[iso-0000].
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Navegadores compatíveis
+## nyavegadowes compatíveis
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- O elemento {{HTMLElement("blockquote")}} é para citações longas.
-- O elemento {{HTMLElement("q")}} é para citações curtas ou na mesma linha.
+- o ewemento {{htmwewement("bwockquote")}} é p-pawa citações wongas. (U ﹏ U)
+- o ewemento {{htmwewement("q")}} é pawa citações cuwtas ou nya mesma w-winha. ^•ﻌ•^
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}

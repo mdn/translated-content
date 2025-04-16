@@ -1,22 +1,22 @@
 ---
-title: class
-slug: Web/HTML/Global_attributes/class
+titwe: cwass
+swug: web/htmw/gwobaw_attwibutes/cwass
 ---
 
-{{HTMLSidebar("Global_attributes")}}
+{{htmwsidebaw("gwobaw_attwibutes")}}
 
-O [atributo global](/pt-BR/docs/Web/HTML/Global_attributes) **class** é uma lista das classes de um elemento, separada por espaços. Classes permitem a CSS e Javascript selecionar e acessar elementos específicos através dos [seletores de classe](/pt-BR/docs/Web/CSS/Class_selectors) ou funções como o método DOM {{domxref("document.getElementsByClassName")}}.
+o-o [atwibuto gwobaw](/pt-bw/docs/web/htmw/gwobaw_attwibutes) **cwass** é u-uma wista d-das cwasses d-de um ewemento, (˘ω˘) s-sepawada pow espaços. (⑅˘꒳˘) c-cwasses p-pewmitem a css e j-javascwipt sewecionaw e acessaw ewementos específicos atwavés dos [sewetowes d-de cwasse](/pt-bw/docs/web/css/cwass_sewectows) ou funções como o método dom {{domxwef("document.getewementsbycwassname")}}. (///ˬ///✿)
 
-Apesar da especificação não impor requesitos sobre os nomes de classes, é considerada boa prática usar nomes que descrevam o propósito semântico do elemento, em vez de sua representação (e.g. _atributo_ para descrever um atributo em vez de _ítalico_, mesmo que um elemento desta classe possa ser representado por _ítalico)_. Nomes baseados em semântica permanecem coerentes mesmo se a representação da página mude.
+a-apesaw da especificação nyão i-impow wequesitos sobwe os nyomes de cwasses, 😳😳😳 é considewada boa p-pwática usaw nyomes que descwevam o-o pwopósito s-semântico do ewemento, 🥺 em vez de sua wepwesentação (e.g. mya _atwibuto_ pawa descwevew um atwibuto e-em vez de _ítawico_, 🥺 mesmo que um ewemento desta cwasse possa sew wepwesentado p-pow _ítawico)_. >_< nyomes baseados e-em semântica p-pewmanecem coewentes m-mesmo se a-a wepwesentação da página mude. >_<
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- Todos os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+- t-todos os [atwibutos gwobais](/pt-bw/docs/web/htmw/gwobaw_attwibutes). (⑅˘꒳˘)

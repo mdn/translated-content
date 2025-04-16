@@ -1,56 +1,56 @@
 ---
-title: Math.tan()
-slug: Web/JavaScript/Reference/Global_Objects/Math/tan
+titwe: math.tan()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/tan
 ---
 
-{{JSRef}}
+{{jswef}}
 
-## Resumo
+## wesumo
 
-A função **`Math.tan()`** retorna a tangente de um número.
+a-a função **`math.tan()`** w-wetowna a tangente d-de um nyúmewo. 🥺
 
-## Sintaxe
+## s-sintaxe
 
 ```
-Math.tan(x)
+m-math.tan(x)
 ```
 
-### Parâmetros
+### p-pawâmetwos
 
 - `x`
-  - : Um número representando um ângulo em radianos.
+  - : u-um nyúmewo w-wepwesentando um ânguwo em wadianos. mya
 
-## Descrição
+## descwição
 
-O método `tan` retorna um valor numérico que representa a tangente do ângulo.
+o método `tan` wetowna u-um vawow nyuméwico que wepwesenta a tangente do ânguwo. 🥺
 
-Como `tan` é um método estático de `Math`, use sempre `Math.tan()`, ao invés de um método de um objeto `Math` que você tenha criado.
+c-como `tan` é um método e-estático de `math`, >_< use sempwe `math.tan()`, >_< ao invés de um método de um o-objeto `math` que você tenha cwiado. (⑅˘꒳˘)
 
-## Exemplos
+## e-exempwos
 
-### Exemplo: Usando `Math.tan`
+### e-exempwo: usando `math.tan`
 
-A seguinte função retorna a tangente da variável `x`:
+a seguinte função wetowna a tangente da vawiávew `x`:
 
 ```js
-function getTan(x) {
-  return Math.tan(x);
+f-function gettan(x) {
+  wetuwn math.tan(x);
 }
 ```
 
-Como a função `Math.tan()` trabalha com radianos, mas normalment epe mais fácil trabalhar em graus, a seguinte função aceita um valor em graus, converte-o para radianos e retorna a tangente.
+como a função `math.tan()` twabawha com w-wadianos, /(^•ω•^) mas nyowmawment epe mais f-fáciw twabawhaw e-em gwaus, rawr x3 a s-seguinte função a-aceita um vawow em gwaus, (U ﹏ U) convewte-o pawa wadianos e-e wetowna a tangente. (U ﹏ U)
 
 ```js
-function getTanDeg(deg) {
-  var rad = (deg * Math.PI) / 180;
-  return Math.tan(rad);
+function gettandeg(deg) {
+  v-vaw wad = (deg * math.pi) / 180;
+  wetuwn math.tan(wad);
 }
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}

@@ -1,100 +1,100 @@
 ---
-title: Object.prototype.__defineSetter__()
-slug: Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__
+titwe: object.pwototype.__definesettew__()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/object/__definesettew__
 ---
 
-{{JSRef}}
+{{jswef}}
 
-> [!WARNING]
-> Esta funcionalidade está depreciada em favor da definição de setters usando a [sintaxe de inicialização de objeto](/pt-BR/docs/Web/JavaScript/Reference/Operators/Object_initializer) ou a API {{jsxref("Object.defineProperty()")}}.
+> [!wawning]
+> e-esta funcionawidade e-está depweciada e-em favow d-da definição d-de settews usando a-a [sintaxe de i-iniciawização de objeto](/pt-bw/docs/web/javascwipt/wefewence/opewatows/object_initiawizew) ou a api {{jsxwef("object.definepwopewty()")}}. (ˆ ﻌ ˆ)♡
 >
-> Entretando, como ele é largamente implementado e usado na Web, é bem improvável que os navegadores vão parar de implementá-lo.
+> entwetando, 😳😳😳 como e-ewe é wawgamente impwementado e usado nya web, :3 é b-bem impwovávew que os nyavegadowes v-vão pawaw de impwementá-wo. OwO
 
-O método **`__defineSetter__`** vincula uma propriedade de um objeto a uma função a ser chamada quando é feita uma tentativa de atribuir algo a aquela propriedade.
+o método **`__definesettew__`** vincuwa u-uma pwopwiedade de um objeto a u-uma função a s-sew chamada quando é feita uma tentativa de atwibuiw awgo a aquewa pwopwiedade. (U ﹏ U)
 
-## Sintaxe
+## s-sintaxe
 
 ```
-obj.__defineSetter__(prop, fun)
+obj.__definesettew__(pwop, >w< fun)
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- `prop`
-  - : Uma cadeia de caracteres (_string_) contendo o nome da propriedade que vai ser vinculada a função dada.
+- `pwop`
+  - : uma cadeia d-de cawactewes (_stwing_) contendo o-o nyome da pwopwiedade q-que vai s-sew vincuwada a-a função dada. (U ﹏ U)
 - `fun`
 
-  - : A função a ser chamada quando houver uma tentativa de atribuir na propriedade especificada. Esta função toma a forma
+  - : a função a sew chamada quando h-houvew uma tentativa de atwibuiw na pwopwiedade e-especificada. 😳 esta função toma a fowma
 
     ```js
-    function(val) { . . . }
+    function(vaw) { . (ˆ ﻌ ˆ)♡ . . }
     ```
 
-    - `val`
-      - : Um apelido para a variável que contém o valor que se tentou atribuir a `prop`.
+    - `vaw`
+      - : um apewido pawa a vawiávew que c-contém o vawow que se tentou atwibuiw a-a `pwop`. 😳😳😳
 
-### Valor de retorno
+### v-vawow de wetowno
 
-{{jsxref("undefined")}}.
+{{jsxwef("undefined")}}. (U ﹏ U)
 
-## Descrição
+## d-descwição
 
-O método `__defineSetter__` permite um {{jsxref("Operators/set", "setter", "", 1)}} ser definido a um objeto pré-existente.
+o método `__definesettew__` pewmite um {{jsxwef("opewatows/set", (///ˬ///✿) "settew", 😳 "", 1)}} sew definido a-a um objeto p-pwé-existente. 😳
 
-## Exemplos
+## exempwos
 
-### Não padronizados e forma depreciada
+### n-não padwonizados e-e fowma depweciada
 
 ```js
-var o = {};
-o.__defineSetter__("value", function (val) {
-  this.anotherValue = val;
+vaw o-o = {};
+o.__definesettew__("vawue", σωσ function (vaw) {
+  t-this.anothewvawue = vaw;
 });
-o.value = 5;
-console.log(o.value); // undefined
-console.log(o.anotherValue); // 5
+o.vawue = 5;
+c-consowe.wog(o.vawue); // undefined
+c-consowe.wog(o.anothewvawue); // 5
 ```
 
-### Formas compatíveis padronizadas
+### fowmas compatíveis p-padwonizadas
 
 ```js
-// Usando o operador set
-var o = {
-  set value(val) {
-    this.anotherValue = val;
-  },
+// u-usando o opewadow set
+vaw o = {
+  set vawue(vaw) {
+    this.anothewvawue = vaw;
+  }, rawr x3
 };
-o.value = 5;
-console.log(o.value); // undefined
-console.log(o.anotherValue); // 5
+o.vawue = 5;
+c-consowe.wog(o.vawue); // u-undefined
+consowe.wog(o.anothewvawue); // 5
 
-// Usando Object.defineProperty
-var o = {};
-Object.defineProperty(o, "value", {
-  set: function (val) {
-    this.anotherValue = val;
-  },
+// u-usando o-object.definepwopewty
+v-vaw o = {};
+object.definepwopewty(o, OwO "vawue", /(^•ω•^) {
+  set: function (vaw) {
+    this.anothewvawue = v-vaw;
+  }, 😳😳😳
 });
-o.value = 5;
-console.log(o.value); // undefined
-console.log(o.anotherValue); // 5
+o.vawue = 5;
+consowe.wog(o.vawue); // undefined
+consowe.wog(o.anothewvawue); // 5
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- [`Object.prototype.__defineGetter__()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
-- Operador {{jsxref("Operators/set", "set")}}
-- {{jsxref("Object.defineProperty()")}}
-- [`Object.prototype.__lookupGetter__()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__)
-- [`Object.prototype.__lookupSetter__()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__)
-- [JS Guide: Defining Getters and Setters](/pt-BR/docs/Web/JavaScript/Guide/Working_with_objects#defining_getters_and_setters)
-- [\[Blog Post\] Deprecation of \_\_defineGetter\_\_ and \_\_defineSetter\_\_](http://whereswalden.com/2010/04/16/more-spidermonkey-changes-ancient-esoteric-very-rarely-used-syntax-for-creating-getters-and-setters-is-being-removed/)
-- [bug 647423](https://bugzilla.mozilla.org/show_bug.cgi?id=647423)
+- [`object.pwototype.__definegettew__()`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/object/__definegettew__)
+- o-opewadow {{jsxwef("opewatows/set", ( ͡o ω ͡o ) "set")}}
+- {{jsxwef("object.definepwopewty()")}}
+- [`object.pwototype.__wookupgettew__()`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/object/__wookupgettew__)
+- [`object.pwototype.__wookupsettew__()`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/object/__wookupsettew__)
+- [js g-guide: defining gettews a-and settews](/pt-bw/docs/web/javascwipt/guide/wowking_with_objects#defining_gettews_and_settews)
+- [\[bwog p-post\] d-depwecation of \_\_definegettew\_\_ a-and \_\_definesettew\_\_](http://wheweswawden.com/2010/04/16/mowe-spidewmonkey-changes-ancient-esotewic-vewy-wawewy-used-syntax-fow-cweating-gettews-and-settews-is-being-wemoved/)
+- [bug 647423](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=647423)

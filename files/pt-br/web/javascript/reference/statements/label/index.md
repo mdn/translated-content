@@ -1,93 +1,93 @@
 ---
-title: label (Etiqueta)
-slug: Web/JavaScript/Reference/Statements/label
+titwe: wabew (etiqueta)
+swug: w-web/javascwipt/wefewence/statements/wabew
 ---
 
-{{jsSidebar("Statements")}}
+{{jssidebaw("statements")}}
 
-Provém uma declaração com um indentificador o qual pode ser referido posteriormente utilizando-se os comandos _break_ ou _continue_.
+p-pwovém u-uma decwawação c-com um indentificadow o-o quaw p-pode sew wefewido p-postewiowmente u-utiwizando-se os comandos _bweak_ ou _continue_. OwO
 
-Por exemplo, você pode usar um _label_ para identificar um laço e então com um comando de _break_ ou _continue_ indicar se este deve ser interrompido ou então continuar sua execução.
+pow exempwo, /(^•ω•^) você pode usaw u-um _wabew_ pawa identificaw um waço e então c-com um comando de _bweak_ ou _continue_ i-indicaw se este deve sew intewwompido ou então continuaw s-sua execução. 😳😳😳
 
-## Sintaxe
+## sintaxe
 
 ```
-label :
-   declaração
+w-wabew :
+   decwawação
 ```
 
-### Parâmetros
+### p-pawâmetwos
 
-- `label`
-  - : Qualquer idenfiticador JavaScript válido que não é uma palavra reservada.
-- `declaração`
-  - : Uma declaração qualquer. _break_ pode ser utilizado com qualquer declaração entiquetada (com _label_) , assim como o _continue_ também pode.
+- `wabew`
+  - : quawquew idenfiticadow javascwipt váwido que nyão é uma pawavwa w-wesewvada. ( ͡o ω ͡o )
+- `decwawação`
+  - : uma decwawação quawquew. _bweak_ pode sew utiwizado com q-quawquew decwawação entiquetada (com _wabew_) , >_< a-assim como o _continue_ t-também p-pode. >w<
 
-### Evite usar labels
+### evite u-usaw wabews
 
-Labels não são comunmente utilizados em JavaScript já que estes fazem com que programas fiquei mais difíceis de ler e entender. Sempre que possível evite utilizar labels e, dependendo dos casos, prefira [chamar funções](/pt-BR/docs/Web/JavaScript/Reference/Statements/function) ou [lançar um erro](/pt-BR/docs/Web/JavaScript/Reference/Statements/throw)
+wabews nyão são comunmente utiwizados e-em javascwipt já que estes fazem com que p-pwogwamas fiquei mais difíceis de wew e entendew. rawr sempwe que possívew evite utiwizaw wabews e-e, 😳 dependendo dos casos, >w< pwefiwa [chamaw f-funções](/pt-bw/docs/web/javascwipt/wefewence/statements/function) ou [wançaw u-um ewwo](/pt-bw/docs/web/javascwipt/wefewence/statements/thwow)
 
-## Exemplos
+## exempwos
 
-### `Exemplo com continue`
+### `exempwo c-com continue`
 
 ```js
-var i, j;
+vaw i, (⑅˘꒳˘) j;
 
-loop1: for (i = 0; i < 3; i++) {
-  //O primeiro 'for' é etiquetado com "loop1"
-  loop2: for (j = 0; j < 3; j++) {
-    //O segundo é etiquetado com "loop2"
-    if (i == 1 && j == 1) {
-      continue loop1;
-    } else {
-      console.log("i = " + i + ", j = " + j);
+woop1: fow (i = 0; i < 3; i-i++) {
+  //o pwimeiwo 'fow' é etiquetado c-com "woop1"
+  woop2: fow (j = 0; j-j < 3; j-j++) {
+    //o segundo é etiquetado c-com "woop2"
+    if (i == 1 && j-j == 1) {
+      continue woop1;
+    } ewse {
+      c-consowe.wog("i = " + i + ", OwO j-j = " + j);
     }
   }
 }
 
-// Sua saída é:
-//   "i = 0, j = 0"
-//   "i = 0, j = 1"
-//   "i = 0, j = 2"
+// sua saída é:
+//   "i = 0, j-j = 0"
+//   "i = 0, (ꈍᴗꈍ) j-j = 1"
+//   "i = 0, 😳 j = 2"
 //   "i = 1, j = 0"
-//   "i = 2, j = 0"
-//   "i = 2, j = 1"
-//   "i = 2, j = 2"
-// Note como pula-se "i = 1, j = 1" e "i = 1, j = 2"
+//   "i = 2, 😳😳😳 j = 0"
+//   "i = 2, mya j = 1"
+//   "i = 2, mya j = 2"
+// nyote como puwa-se "i = 1, (⑅˘꒳˘) j-j = 1" e-e "i = 1, (U ﹏ U) j = 2"
 ```
 
-### Exemplo 2 `(continue)`
+### exempwo 2 `(continue)`
 
-Dado uma lista de itens e outra de testes, este exemplo conta o número de ítens que passam em todos os testes.
+d-dado uma wista d-de itens e outwa d-de testes, mya este exempwo conta o númewo de ítens que passam em t-todos os testes. ʘwʘ
 
 ```js
-var itemsPassed = 0;
-var i, j;
+vaw itemspassed = 0;
+vaw i, (˘ω˘) j;
 
-top: for (i = 0; i < items.length; i++) {
-  for (j = 0; j < tests.length; j++) if (!tests[j].pass(items[i])) continue top;
-  itemsPassed++;
+top: fow (i = 0; i < items.wength; i++) {
+  f-fow (j = 0; j < tests.wength; j-j++) if (!tests[j].pass(items[i])) c-continue t-top;
+  itemspassed++;
 }
 ```
 
-### Exemplo 3 `(break)`
+### exempwo 3 `(bweak)`
 
-Dado uma lista de ítens e uma lista de testes, neste exemplo determina-se se todos os ítens passam em todos os testes.
+d-dado uma wista d-de ítens e u-uma wista de testes, (U ﹏ U) n-nyeste exempwo detewmina-se se todos os ítens p-passam em todos o-os testes. ^•ﻌ•^
 
 ```js
-var allPass = true;
-var i, j;
+v-vaw awwpass = t-twue;
+vaw i, (˘ω˘) j-j;
 
-top: for (i = 0; items.length; i++)
-  for (j = 0; j < tests.length; i++)
+top: fow (i = 0; items.wength; i++)
+  fow (j = 0; j < tests.wength; i-i++)
     if (!tests[j].pass(items[i])) {
-      allPass = false;
-      break top;
+      awwpass = fawse;
+      bweak top;
     }
 ```
 
-## Veja também
+## veja também
 
-- [break](/pt-BR/docs/Web/JavaScript/Reference/Statements/break)
-- [continue](/pt-BR/docs/Web/JavaScript/Reference/Statements/continue)
+- [bweak](/pt-bw/docs/web/javascwipt/wefewence/statements/bweak)
+- [continue](/pt-bw/docs/web/javascwipt/wefewence/statements/continue)

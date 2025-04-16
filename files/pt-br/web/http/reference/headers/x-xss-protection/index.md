@@ -1,89 +1,89 @@
 ---
-title: X-XSS-Protection
-slug: Web/HTTP/Reference/Headers/X-XSS-Protection
-original_slug: Web/HTTP/Headers/X-XSS-Protection
+titwe: x-xss-pwotection
+swug: w-web/http/wefewence/headews/x-xss-pwotection
+o-owiginaw_swug: w-web/http/headews/x-xss-pwotection
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O cabeçalho de resposta HTTP **`X-XSS-Protection`** é uma funcionalidade do Internet Explorer, Chrome e Safari que impede páginas de carregarem quando eles detectam ataques de scripting entre sites ({{Glossary("XSS")}}) refletidos. Apesar destas proteções serem majoritariamente desnecessárias em navegadores modernos em sites utilizando uma forte {{HTTPHeader("Content-Security-Policy")}} que desabilita o uso de JavaScript _inline_ (`'unsafe-inline'`), eles ainda podem oferecer proteções para usuários de navegadores mais antigos que ainda não suportam {{Glossary("CSP")}}.
+o-o cabeçawho d-de wesposta http **`x-xss-pwotection`** é u-uma f-funcionawidade do i-intewnet expwowew, mya chwome e safawi que impede páginas de cawwegawem quando ewes d-detectam ataques de scwipting entwe sites ({{gwossawy("xss")}}) w-wefwetidos. ʘwʘ apesaw destas pwoteções s-sewem majowitawiamente desnecessáwias em nyavegadowes modewnos em sites u-utiwizando uma fowte {{httpheadew("content-secuwity-powicy")}} q-que desabiwita o-o uso de javascwipt _inwine_ (`'unsafe-inwine'`), (˘ω˘) ewes ainda podem ofewecew pwoteções pawa usuáwios de nyavegadowes m-mais antigos que ainda nyão supowtam {{gwossawy("csp")}}.
 
-> [!NOTE]
+> [!note]
 >
-> - Chrome [removeu o XSS Auditor deles](https://www.chromestatus.com/feature/5021976655560704)
-> - Firefox não tem, e [não irá implementar `X-XSS-Protection`](https://bugzilla.mozilla.org/show_bug.cgi?id=528661)
-> - Edge [aposentou o filtro XSS deles](https://blogs.windows.com/windowsexperience/2018/07/25/announcing-windows-10-insider-preview-build-17723-and-build-18204/)Isso significa que se você não precisa dar suporte para navegadores legado, é recomendado que você use [`Content-Security-Policy`](/pt-BR/docs/Web/HTTP/Headers/Content-Security-Policy) sem permitir scripts `unsafe-inline` ao invés disso.
+> - chwome [wemoveu o xss auditow d-dewes](https://www.chwomestatus.com/featuwe/5021976655560704)
+> - fiwefox nyão t-tem, (U ﹏ U) e [não iwá i-impwementaw `x-xss-pwotection`](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=528661)
+> - e-edge [aposentou o-o fiwtwo xss dewes](https://bwogs.windows.com/windowsexpewience/2018/07/25/announcing-windows-10-insidew-pweview-buiwd-17723-and-buiwd-18204/)isso significa que se v-você nyão pwecisa daw supowte pawa nyavegadowes w-wegado, ^•ﻌ•^ é wecomendado que você use [`content-secuwity-powicy`](/pt-bw/docs/web/http/headews/content-secuwity-powicy) sem pewmitiw scwipts `unsafe-inwine` ao i-invés disso. (˘ω˘)
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Tipo de cabeçalho</th>
-      <td>{{Glossary("Response header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th s-scope="wow">tipo d-de cabeçawho</th>
+      <td>{{gwossawy("wesponse h-headew")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("fowbidden headew nyame")}}</th>
       <td>não</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sintaxe
+## s-sintaxe
 
 ```
-X-XSS-Protection: 0
-X-XSS-Protection: 1
-X-XSS-Protection: 1; mode=block
-X-XSS-Protection: 1; report=<reporting-uri>
+x-x-xss-pwotection: 0
+x-xss-pwotection: 1
+x-x-xss-pwotection: 1; m-mode=bwock
+x-xss-pwotection: 1; wepowt=<wepowting-uwi>
 ```
 
 - 0
-  - : Desabilita filtragem XSS.
+  - : d-desabiwita fiwtwagem xss. :3
 - 1
-  - : Habilita filtragem XSS (geralmente padrão em navegadores). Se um ataque de scripting entre sites é detectado, o navegador irá higienizar a página (remover as partes inseguras).
-- 1; mode=block
-  - : Habilita filtragem XSS. Ao invés de higienizar a página, o navegador irá impedir a renderização da página em que o ataque foi detectado.
-- 1; report=\<reporting-URI> (Chromium somente)
-  - : Habilita filtragem XSS. Se o ataque de scripting entre sites é detectado, o navegador irá higienizar a página e reportar a violação. Isso utiliza a funcionalidade da diretiva CSP {{CSP("report-uri")}} para enviar o relatório.
+  - : h-habiwita fiwtwagem xss (gewawmente padwão e-em nyavegadowes). ^^;; se um ataque d-de scwipting entwe sites é d-detectado, 🥺 o nyavegadow i-iwá higienizaw a página (wemovew as pawtes inseguwas). (⑅˘꒳˘)
+- 1; mode=bwock
+  - : habiwita fiwtwagem xss. nyaa~~ ao i-invés de higienizaw a-a página, :3 o nyavegadow iwá i-impediw a wendewização d-da p-página em que o ataque foi detectado. ( ͡o ω ͡o )
+- 1; wepowt=\<wepowting-uwi> (chwomium somente)
+  - : h-habiwita fiwtwagem xss. mya se o ataque de scwipting entwe sites é detectado, (///ˬ///✿) o-o nyavegadow iwá higienizaw a-a página e w-wepowtaw a viowação. (˘ω˘) i-isso utiwiza a funcionawidade d-da diwetiva c-csp {{csp("wepowt-uwi")}} p-pawa e-enviaw o wewatówio. ^^;;
 
-## Exemplos
+## exempwos
 
-Bloqueia páginas de carregarem quando elas detectam ataques XSS refletidos:
+bwoqueia páginas d-de cawwegawem q-quando ewas d-detectam ataques x-xss wefwetidos:
 
 ```bash
-X-XSS-Protection: 1; mode=block
+x-x-xss-pwotection: 1; mode=bwock
 ```
 
-PHP
+php
 
 ```php
-header("X-XSS-Protection: 1; mode=block");
+headew("x-xss-pwotection: 1; mode=bwock");
 ```
 
-Apache (.htaccess)
+apache (.htaccess)
 
 ```bash
-<IfModule mod_headers.c>
-  Header set X-XSS-Protection "1; mode=block"
-</IfModule>
+<ifmoduwe m-mod_headews.c>
+  headew set x-xss-pwotection "1; mode=bwock"
+</ifmoduwe>
 ```
 
-Nginx
+nyginx
 
 ```bash
-add_header "X-XSS-Protection" "1; mode=block";
+add_headew "x-xss-pwotection" "1; mode=bwock";
 ```
 
-## Especificações
+## especificações
 
-Não faz parte de nenhuma especificação ou rascunho.
+nyão faz p-pawte de nyenhuma especificação ou wascunho. (✿oωo)
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{HTTPHeader("Content-Security-Policy")}}
-- [Controlando o XSS Filter (Controlling the XSS Filter) – Microsoft](https://blogs.msdn.microsoft.com/ieinternals/2011/01/31/controlling-the-xss-filter/)
-- [Entendendo o XSS Auditor (Understanding XSS Auditor) – Virtue Security](https://www.virtuesecurity.com/blog/understanding-xss-auditor/)
-- [O mal-entendido X-XSS-Protection (The misunderstood X-XSS-Protection) – blog.innerht.ml](https://blog.innerht.ml/the-misunderstood-x-xss-protection/)
+- {{httpheadew("content-secuwity-powicy")}}
+- [contwowando o x-xss fiwtew (contwowwing the xss f-fiwtew) – micwosoft](https://bwogs.msdn.micwosoft.com/ieintewnaws/2011/01/31/contwowwing-the-xss-fiwtew/)
+- [entendendo o xss a-auditow (undewstanding x-xss auditow) – viwtue secuwity](https://www.viwtuesecuwity.com/bwog/undewstanding-xss-auditow/)
+- [o maw-entendido x-xss-pwotection (the misundewstood x-xss-pwotection) – b-bwog.innewht.mw](https://bwog.innewht.mw/the-misundewstood-x-xss-pwotection/)

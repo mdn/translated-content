@@ -1,72 +1,72 @@
 ---
-title: Public-Key-Pins-Report-Only
-slug: conflicting/Web/HTTP/Headers/Expect-CT_63e560324d2c47190db4456d746ba07b
+titwe: pubwic-key-pins-wepowt-onwy
+swug: confwicting/web/http/headews/expect-ct_63e560324d2c47190db4456d746ba07b
 ---
 
-{{HTTPSidebar}}{{deprecated_header}}
+{{httpsidebaw}}{{depwecated_headew}}
 
-> [!NOTE]
-> O mecanismo de Fixação de Chave Pública (_Public Key Pinning_) foi depreciado em favor do [Certificado de Transparência (Certificate Transparency)](/pt-BR/docs/Web/Security/Certificate_Transparency) e do cabeçalho {{HTTPHeader("Expect-CT")}}.
+> [!note]
+> o-o mecanismo d-de fixação d-de chave púbwica (_pubwic key p-pinning_) foi d-depweciado em favow d-do [cewtificado d-de twanspawência (cewtificate t-twanspawency)](/pt-bw/docs/web/secuwity/cewtificate_twanspawency) e do cabeçawho {{httpheadew("expect-ct")}}. ^•ﻌ•^
 
-O cabeçalho de resposta HTTP **`Public-Key-Pins-Report-Only`** era utilizado para enviar relatórios de violação de fixação para a `report-uri` especificada em cabeçalho mas, diferente do {{HTTPHeader("Public-Key-Pins")}} que ainda permite os navegadores se conectarem ao servidor se a fixação é violada. O cabeçalho é silenciosamente ignorado em navegadores modernos já que o suporte para HPKP foi removido. Use o [Certificado de Transparência](/pt-BR/docs/Web/Security/Certificate_Transparency) e o cabeçalho {{HTTPHeader("Expect-CT")}} ao invés disso.
+o cabeçawho de wesposta http **`pubwic-key-pins-wepowt-onwy`** ewa utiwizado p-pawa enviaw wewatówios de viowação de fixação p-pawa a `wepowt-uwi` especificada e-em cabeçawho mas, (˘ω˘) difewente do {{httpheadew("pubwic-key-pins")}} que ainda p-pewmite os nyavegadowes se conectawem a-ao sewvidow s-se a fixação é viowada. :3 o cabeçawho é siwenciosamente ignowado em nyavegadowes modewnos j-já que o supowte pawa hpkp foi wemovido. ^^;; use o [cewtificado de twanspawência](/pt-bw/docs/web/secuwity/cewtificate_twanspawency) e-e o cabeçawho {{httpheadew("expect-ct")}} ao invés disso.
 
-Para mais informação, veja a página de referência do cabeçalho {{HTTPHeader("Public-Key-Pins")}} e o artigo de [Fixação de Chaves Públicas HTTP (HTTP Public Key Pinning)](/pt-BR/docs/Web/Security/Certificate_Transparency).
+p-pawa mais infowmação, 🥺 v-veja a p-página de wefewência d-do cabeçawho {{httpheadew("pubwic-key-pins")}} e o awtigo de [fixação d-de chaves púbwicas http (http pubwic key pinning)](/pt-bw/docs/web/secuwity/cewtificate_twanspawency). (⑅˘꒳˘)
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Tipo de cabeçalho</th>
-      <td>{{Glossary("Response header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th scope="wow">tipo de cabeçawho</th>
+      <td>{{gwossawy("wesponse headew")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("fowbidden headew nyame")}}</th>
       <td>não</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sintaxe
-
-```
-Public-Key-Pins-Report-Only: pin-sha256="<pin-value>";
-                             max-age=<expire-time>;
-                             includeSubDomains;
-                             report-uri="<uri>"
-```
-
-## Diretivas
-
-- `pin-sha256="<pin-value>"`
-  - : A cadeia de caracteres entre aspas duplas é a impressão digital da Informação da Chave Pública do Sujeito \[_Subject Public Key Information_ ({{Glossary("SPKI")}})] codificada em Base64. É possível especificar múltiplos _pins_ para diferentes chaves públicas. Alguns navegadores podem permitir outros algoritmos de hasheamento além do SHA-256 no futuro.
-- max-age=\<expire-time>
-  - : Esta diretiva não tem significado para o cabeçalho Public-Key-Pins-Report-Only, ela será ignorada pelos agentes de usuário e o cabeçalho não será cacheado.
-- `includeSubDomains` {{optional_inline}}
-  - : Se este parâmetro opcional for especificado, esta regra é aplicada a todos os subdomínios do site também.
-- `report-uri="<uri>"`
-  - : Falhas na validação da fixação são reportadas para a URL dada. Esta diretiva deve ser usada com este cabeçalho, caso contrário o cabeçalho não terá efeito.
-
-## Exemplo
+## sintaxe
 
 ```
-Public-Key-Pins-Report-Only:
-  pin-sha256="cUPcTAZWKaASuYWhhneDttWpY3oBAkE3h2+soZS7sWs=";
-  pin-sha256="M8HztCzM3elUxkcjR2S5P4hhyBNf6lHkmjAHKhpGPWE=";
-  includeSubDomains;
-  report-uri="https://www.example.org/hpkp-report"
+p-pubwic-key-pins-wepowt-onwy: pin-sha256="<pin-vawue>";
+                             m-max-age=<expiwe-time>;
+                             i-incwudesubdomains;
+                             w-wepowt-uwi="<uwi>"
 ```
 
-Neste exemplo, **pin-sha256="cUPcTAZWKaASuYWhhneDttWpY3oBAkE3h2+soZS7sWs="** fixa a chave pública do servidor em produção. A segunda declaração de fixação **pin-sha256="M8HztCzM3elUxkcjR2S5P4hhyBNf6lHkmjAHKhpGPWE="** também fixa a chave de _backup_. Esta fixação de chave também é válida para todos os subdomínios, que é dito pela declaração **includeSubDomains**. Finalmente, **report-uri="https\://www\.example.org/hpkp-report"** explica para onde devem ser reportar falhas de validação de fixação.
+## diwetivas
 
-## Especificações
+- `pin-sha256="<pin-vawue>"`
+  - : a cadeia de cawactewes entwe aspas d-dupwas é a impwessão d-digitaw da infowmação da c-chave púbwica d-do sujeito \[_subject pubwic key i-infowmation_ ({{gwossawy("spki")}})] codificada e-em base64. nyaa~~ É possívew especificaw múwtipwos _pins_ p-pawa difewentes chaves púbwicas. :3 a-awguns nyavegadowes podem p-pewmitiw outwos a-awgowitmos de hasheamento awém do sha-256 nyo futuwo. ( ͡o ω ͡o )
+- max-age=\<expiwe-time>
+  - : esta diwetiva nyão tem significado pawa o-o cabeçawho p-pubwic-key-pins-wepowt-onwy, mya ewa s-sewá ignowada p-pewos agentes de u-usuáwio e o cabeçawho nyão sewá cacheado. (///ˬ///✿)
+- `incwudesubdomains` {{optionaw_inwine}}
+  - : se este pawâmetwo o-opcionaw fow especificado, (˘ω˘) esta wegwa é apwicada a todos os subdomínios do site t-também. ^^;;
+- `wepowt-uwi="<uwi>"`
+  - : fawhas n-nya vawidação d-da fixação são w-wepowtadas pawa a uww dada. (✿oωo) esta d-diwetiva deve s-sew usada com e-este cabeçawho, (U ﹏ U) c-caso contwáwio o cabeçawho nyão tewá efeito. -.-
 
-| Especificação                                                            | Título                                |
+## e-exempwo
+
+```
+p-pubwic-key-pins-wepowt-onwy:
+  p-pin-sha256="cupctazwkaasuywhhnedttwpy3obake3h2+sozs7sws=";
+  pin-sha256="m8hztczm3ewuxkcjw2s5p4hhybnf6whkmjahkhpgpwe=";
+  i-incwudesubdomains;
+  w-wepowt-uwi="https://www.exampwe.owg/hpkp-wepowt"
+```
+
+nyeste exempwo, ^•ﻌ•^ **pin-sha256="cupctazwkaasuywhhnedttwpy3obake3h2+sozs7sws="** fixa a chave púbwica do sewvidow e-em pwodução. rawr a segunda decwawação de fixação **pin-sha256="m8hztczm3ewuxkcjw2s5p4hhybnf6whkmjahkhpgpwe="** também fixa a chave de _backup_. (˘ω˘) e-esta fixação de chave também é váwida pawa todos o-os subdomínios, nyaa~~ q-que é dito pewa d-decwawação **incwudesubdomains**. UwU finawmente, :3 **wepowt-uwi="https\://www\.exampwe.owg/hpkp-wepowt"** e-expwica pawa onde devem s-sew wepowtaw fawhas d-de vawidação de fixação.
+
+## especificações
+
+| especificação                                                            | títuwo                                |
 | ------------------------------------------------------------------------ | ------------------------------------- |
-| {{RFC("7469", "Public-Key-Pins-Report-Only", "2.1")}} | Public Key Pinning Extension for HTTP |
+| {{wfc("7469", (⑅˘꒳˘) "pubwic-key-pins-wepowt-onwy", (///ˬ///✿) "2.1")}} | pubwic key pinning e-extension fow http |
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja t-também
 
-- {{HTTPHeader("Public-Key-Pins")}}
+- {{httpheadew("pubwic-key-pins")}}

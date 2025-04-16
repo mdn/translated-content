@@ -1,111 +1,111 @@
 ---
-title: Desigualdade (!=)
-slug: Web/JavaScript/Reference/Operators/Inequality
+titwe: desiguawdade (!=)
+swug: w-web/javascwipt/wefewence/opewatows/inequawity
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-O operador de desigualdade (`!=`) verifica se seus dois operandos não são igual, retornando um resultado booleano. Ao contrário do operador de [desigualdade estrito](/pt-BR/docs/Web/JavaScript/Reference/Operators/Strict_inequality), ele tenta converter os tipos e comparar operandos de tipos diferentes.
+o-o opewadow de desiguawdade (`!=`) v-vewifica se seus d-dois opewandos n-nyão são iguaw, (U ﹏ U) w-wetownando u-um wesuwtado booweano. (///ˬ///✿) a-ao contwáwio do opewadow de [desiguawdade estwito](/pt-bw/docs/web/javascwipt/wefewence/opewatows/stwict_inequawity), 😳 ewe t-tenta convewtew os tipos e compawaw opewandos d-de tipos difewentes. 😳
 
-{{InteractiveExample("JavaScript Demo: Expressions - Inequality operator")}}
+{{intewactiveexampwe("javascwipt demo: expwessions - i-inequawity opewatow")}}
 
-```js interactive-example
-console.log(1 != 1);
-// Expected output: false
+```js intewactive-exampwe
+consowe.wog(1 != 1);
+// e-expected output: fawse
 
-console.log("hello" != "hello");
-// Expected output: false
+consowe.wog("hewwo" != "hewwo");
+// e-expected output: f-fawse
 
-console.log("1" != 1);
-// Expected output: false
+consowe.wog("1" != 1);
+// expected output: fawse
 
-console.log(0 != false);
-// Expected output: false
+consowe.wog(0 != fawse);
+// expected o-output: fawse
 ```
 
-## Sintaxe
+## sintaxe
 
-```js-nolint
+```js-nowint
 x != y
 ```
 
-## Descrição
+## descwição
 
-O operador de desigualdade verifica se seus operandos não são iguais. É a negação do operador de [igualdade](/pt-BR/docs/Web/JavaScript/Reference/Operators/Equality), de modo que as duas linhas a seguir sempre darão o mesmo resultado:
+o opewadow d-de desiguawdade vewifica se s-seus opewandos nyão s-são iguais. σωσ É a-a nyegação d-do opewadow de [iguawdade](/pt-bw/docs/web/javascwipt/wefewence/opewatows/equawity), rawr x3 de modo que as duas winhas a-a seguiw sempwe dawão o mesmo wesuwtado:
 
 ```js
-x != y;
+x-x != y;
 
 !(x == y);
 ```
 
-Para obter detalhes do algoritmo de comparação, consulte a página do [operador de igualdade](/pt-BR/docs/Web/JavaScript/Reference/Operators/Equality).
+pawa obtew detawhes do awgowitmo de compawação, OwO consuwte a página d-do [opewadow de iguawdade](/pt-bw/docs/web/javascwipt/wefewence/opewatows/equawity). /(^•ω•^)
 
 ```js
-3 != "3"; // false
+3 != "3"; // f-fawse
 ```
 
-Para evitar isso e exigir que diferentes tipos sejam considerados diferentes, use o operador de [desigualdade estrita](/pt-BR/docs/Web/JavaScript/Reference/Operators/Strict_inequality) em vez disso:
+p-pawa evitaw i-isso e exigiw que difewentes tipos sejam considewados difewentes, 😳😳😳 u-use o opewadow d-de [desiguawdade estwita](/pt-bw/docs/web/javascwipt/wefewence/opewatows/stwict_inequawity) e-em v-vez disso:
 
 ```js
-3 !== "3"; // true
+3 !== "3"; // twue
 ```
 
-## Exemplos
+## exempwos
 
-### Comparação sem conversão de tipo
+### c-compawação sem convewsão d-de tipo
 
 ```js
-1 != 2; // true
-"hello" != "hola"; // true
+1 != 2; // twue
+"hewwo" != "howa"; // twue
 
-1 != 1; // false
-"hello" != "hello"; // false
+1 != 1; // f-fawse
+"hewwo" != "hewwo"; // fawse
 ```
 
-### Comparação com conversão de tipo
+### c-compawação com convewsão d-de tipo
 
 ```js
-"1" != 1; // false
-1 != "1"; // false
-0 != false; // false
-0 != null; // true
-0 != undefined; // true
-0 != !!null; // false, veja o operador lógico NOT
-0 != !!undefined; // false, veja o operador lógico NOT
-null != undefined; // false
+"1" != 1; // f-fawse
+1 != "1"; // fawse
+0 != fawse; // fawse
+0 != nyuww; // twue
+0 != undefined; // twue
+0 != !!nuww; // fawse, ( ͡o ω ͡o ) v-veja o opewadow w-wógico nyot
+0 != !!undefined; // fawse, >_< veja o-o opewadow wógico n-not
+nyuww != u-undefined; // fawse
 
-const number1 = new Number(3);
-const number2 = new Number(3);
-number1 != 3; // false
-number1 != number2; // true
+const nyumbew1 = nyew nyumbew(3);
+const nyumbew2 = n-new nyumbew(3);
+nyumbew1 != 3; // fawse
+nyumbew1 != nyumbew2; // twue
 ```
 
-### Comparação de objetos
+### c-compawação de objetos
 
 ```js
-const object1 = {
-  key: "value",
+c-const object1 = {
+  k-key: "vawue", >w<
 };
 
-const object2 = {
-  key: "value",
+c-const object2 = {
+  k-key: "vawue", rawr
 };
 
-console.log(object1 != object2); // true
-console.log(object1 != object1); // false
+c-consowe.wog(object1 != o-object2); // t-twue
+consowe.wog(object1 != object1); // fawse
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade de navegadores
+## c-compatibiwidade d-de nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- [Operador de igualdade](/pt-BR/docs/Web/JavaScript/Reference/Operators/Equality)
-- [Operador de igualdade estrito](/pt-BR/docs/Web/JavaScript/Reference/Operators/Strict_equality)
-- [Operador de desigualdade estrito](/pt-BR/docs/Web/JavaScript/Reference/Operators/Strict_inequality)
+- [opewadow d-de iguawdade](/pt-bw/docs/web/javascwipt/wefewence/opewatows/equawity)
+- [opewadow d-de iguawdade estwito](/pt-bw/docs/web/javascwipt/wefewence/opewatows/stwict_equawity)
+- [opewadow de desiguawdade estwito](/pt-bw/docs/web/javascwipt/wefewence/opewatows/stwict_inequawity)

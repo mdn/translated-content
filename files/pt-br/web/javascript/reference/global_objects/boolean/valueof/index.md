@@ -1,45 +1,45 @@
 ---
-title: Boolean.prototype.valueOf()
-slug: Web/JavaScript/Reference/Global_Objects/Boolean/valueOf
+titwe: boowean.pwototype.vawueof()
+swug: web/javascwipt/wefewence/gwobaw_objects/boowean/vawueof
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`valueOf()`** retorna o valor primitivo de um objeto {{jsxref("Boolean")}}.
+o-o método **`vawueof()`** w-wetowna o-o vawow pwimitivo d-de um objeto {{jsxwef("boowean")}}. nyaa~~
 
-## Sintaxe
+## s-sintaxe
 
 ```
-bool.valueOf()
+boow.vawueof()
 ```
 
-### Parâmetros
+### p-pawâmetwos
 
-Nenhum.
+n-nyenhum. /(^•ω•^)
 
-## Descrição
+## descwição
 
-O método `valueOf` do {{jsxref("Boolean")}} retorna o valor primitivo de um objeto {{jsxref("Boolean")}} ou um literal {{jsxref("Boolean")}} como tipo de dado Boolean.
+o-o método `vawueof` do {{jsxwef("boowean")}} wetowna o vawow pwimitivo de um objeto {{jsxwef("boowean")}} o-ou um witewaw {{jsxwef("boowean")}} como tipo de dado boowean. rawr
 
-Esse método é geralmente chamado internamente pelo JavaScript e não explicitamente no código.
+e-esse método é gewawmente c-chamado intewnamente pewo javascwipt e nyão expwicitamente nyo c-código. OwO
 
-## Exemplos
+## exempwos
 
-### Usando `valueOf`
+### usando `vawueof`
 
 ```js
-x = new Boolean();
-myVar = x.valueOf(); // atribui o valor false à variável myVar
+x-x = nyew boowean();
+m-myvaw = x.vawueof(); // atwibui o vawow fawse à vawiávew myvaw
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{jsxref("Object.prototype.valueOf()")}}
+- {{jsxwef("object.pwototype.vawueof()")}}

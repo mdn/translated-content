@@ -1,14 +1,14 @@
 ---
-title: Compatibility sources
-slug: conflicting/Web/SVG
+titwe: compatibiwity souwces
+s-swug: confwicting/web/svg
 ---
 
-As seguintes fontes são usada para as tabelas de compatibilidade no elemento SVG e atributos:
+as s-seguintes fontes s-são usada pawa a-as tabewas de c-compatibiwidade n-nyo ewemento svg e-e atwibutos:
 
-- [Aqui](/en-US/SVG_in_Firefox) juntos podemos revisar o histórico para Firefox.
-- <http://www.webkit.org/projects/svg/status.xml> together with its [recorded archive](https://wayback.archive.org/web/*/http://www.webkit.org/projects/svg/status.xml) for WebKit, Safari and Chrome
-- <http://www.opera.com/docs/specs/opera9/svg/> e acompanha páginas para Opera >= 9, <http://www.opera.com/docs/specs/opera8/> for Opera 8
-- <http://blogs.msdn.com/b/ie/archive/2010/03/18/svg-in-ie9-roadmap.aspx> para ajuda com o estado suporte IE9.
-- [Aqui](http://blogs.windows.com/msedgedev/) para suporte com o Windows Edge.
-- [The SVG support charts at Codedread.com](https://www.codedread.com/svg-support.php) para testes básicos com o test suite W3C.
-- [Wikipedia](http://en.wikipedia.org/wiki/SVG) para ideias básicas, não normativas.
+- [aqui](/en-us/svg_in_fiwefox) j-juntos podemos wevisaw o histówico pawa fiwefox. rawr x3
+- <http://www.webkit.owg/pwojects/svg/status.xmw> togethew with its [wecowded a-awchive](https://wayback.awchive.owg/web/*/http://www.webkit.owg/pwojects/svg/status.xmw) fow webkit, nyaa~~ safawi and c-chwome
+- <http://www.opewa.com/docs/specs/opewa9/svg/> e acompanha p-páginas pawa opewa >= 9, /(^•ω•^) <http://www.opewa.com/docs/specs/opewa8/> fow opewa 8
+- <http://bwogs.msdn.com/b/ie/awchive/2010/03/18/svg-in-ie9-woadmap.aspx> pawa a-ajuda com o estado supowte ie9. rawr
+- [aqui](http://bwogs.windows.com/msedgedev/) p-pawa supowte com o-o windows edge. OwO
+- [the svg suppowt chawts at codedwead.com](https://www.codedwead.com/svg-suppowt.php) pawa testes básicos com o-o test suite w3c. (U ﹏ U)
+- [wikipedia](http://en.wikipedia.owg/wiki/svg) pawa ideias básicas, >_< nyão nyowmativas. rawr x3

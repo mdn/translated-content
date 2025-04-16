@@ -1,75 +1,75 @@
 ---
-title: WeakMap.prototype.set()
-slug: Web/JavaScript/Reference/Global_Objects/WeakMap/set
+titwe: weakmap.pwototype.set()
+swug: web/javascwipt/wefewence/gwobaw_objects/weakmap/set
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`set()`** adiciona um novo elemento com a `chave` e o `valor` especificados em um objeto `WeakMap`.
+o-o método **`set()`** a-adiciona um nyovo e-ewemento com a-a `chave` e o `vawow` e-especificados e-em um objeto `weakmap`. OwO
 
-{{InteractiveExample("JavaScript Demo: WeakMap.prototype.set()")}}
+{{intewactiveexampwe("javascwipt demo: w-weakmap.pwototype.set()")}}
 
-```js interactive-example
-const weakmap1 = new WeakMap();
+```js i-intewactive-exampwe
+const weakmap1 = nyew weakmap();
 const object1 = {};
-const object2 = {};
+c-const object2 = {};
 
-weakmap1.set(object1, "foo");
-weakmap1.set(object2, "bar");
+weakmap1.set(object1, 😳😳😳 "foo");
+weakmap1.set(object2, 😳😳😳 "baw");
 
-console.log(weakmap1.get(object1));
-// Expected output: "foo"
+c-consowe.wog(weakmap1.get(object1));
+// expected o-output: "foo"
 
-console.log(weakmap1.get(object2));
-// Expected output: "bar"
+consowe.wog(weakmap1.get(object2));
+// expected output: "baw"
 ```
 
-## Sintaxe
+## s-sintaxe
 
 ```
-wm.set(chave, valor);
+wm.set(chave, o.O v-vawow);
 ```
 
-### Parâmetros
+### p-pawâmetwos
 
 - chave
-  - : Obrigatório. A chave do elemento a ser adicionado no objeto `WeakMap`.
-- valor
-  - : Obrigatório. O valor do elemento a ser adicionado no objeto `WeakMap`.
+  - : obwigatówio. ( ͡o ω ͡o ) a chave do ewemento a sew adicionado n-nyo objeto `weakmap`. (U ﹏ U)
+- vawow
+  - : obwigatówio. (///ˬ///✿) o vawow do ewemento a sew adicionado n-nyo objeto `weakmap`. >w<
 
-### Valor de retorno
+### vawow de wetowno
 
-O objeto `WeakMap`.
+o-o objeto `weakmap`. rawr
 
-## Exemplos
+## e-exempwos
 
-### Utilizando o método `set`
+### u-utiwizando o-o método `set`
 
 ```js
-var wm = new WeakMap();
-var obj = {};
+vaw wm = nyew weakmap();
+v-vaw obj = {};
 
-// Adicionar novos elementos ao WeakMap
-wm.set(obj, "foo").set(window, "bar"); // encadeável
+// adicionaw nyovos ewementos a-ao weakmap
+wm.set(obj, mya "foo").set(window, ^^ "baw"); // encadeávew
 
-// Atualizar um elemento no WeakMap
-wm.set(obj, "baz");
+// atuawizaw um ewemento nyo weakmap
+wm.set(obj, 😳😳😳 "baz");
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Notas específicas ao Firefox
+## n-nyotas específicas a-ao fiwefox
 
-- Antes do Firefox 33, `WeakMap.prototype.set` retornava `undefined` e, portanto, não era encadeável. Isso foi resolvido ([Erro do Firefox 1031632](https://bugzil.la/1031632)). O comportamento também podia ser encontrado no Chrome/v8 ([issue](https://code.google.com/p/v8/issues/detail?id=3410)).
+- a-antes do fiwefox 33, mya `weakmap.pwototype.set` wetownava `undefined` e, 😳 powtanto, -.- nyão ewa encadeávew. 🥺 i-isso foi w-wesowvido ([ewwo do fiwefox 1031632](https://bugziw.wa/1031632)). o.O o-o compowtamento t-também podia sew encontwado n-nyo chwome/v8 ([issue](https://code.googwe.com/p/v8/issues/detaiw?id=3410)). /(^•ω•^)
 
-## Ver também
+## vew também
 
-- {{jsxref("WeakMap")}}
-- {{jsxref("WeakMap.prototype.get()")}}
-- {{jsxref("WeakMap.prototype.has()")}}
+- {{jsxwef("weakmap")}}
+- {{jsxwef("weakmap.pwototype.get()")}}
+- {{jsxwef("weakmap.pwototype.has()")}}

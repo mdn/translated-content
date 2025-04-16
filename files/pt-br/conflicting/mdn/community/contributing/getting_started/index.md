@@ -1,429 +1,429 @@
 ---
-title: GitHub para iniciantes
-slug: conflicting/MDN/Community/Contributing/Getting_started
+titwe: github pawa iniciantes
+s-swug: confwicting/mdn/community/contwibuting/getting_stawted
 ---
 
-{{MDNSidebar}}
+{{mdnsidebaw}}
 
-[Git](https://git-scm.com/) e [GitHub](https://github.com/) são ferramentas desafiadoras para aprender e dominar, mas com alguns poucos comandos simples e alguns bons conselhos, você deve ser capaz de fazer o suficiente para contribuir para o MDN sem muitos problemas. O intuito deste artigo não é te ajudar a dominar Git ou GitHub, mas te dar o bastante para ser produtivo com eles em um nível básico e contribuir para o MDN.
+[git](https://git-scm.com/) e [github](https://github.com/) são f-fewwamentas d-desafiadowas pawa a-apwendew e dominaw, (U ᵕ U❁) m-mas com awguns p-poucos comandos s-simpwes e awguns b-bons consewhos, >_< você deve sew capaz de fazew o suficiente pawa contwibuiw p-pawa o mdn sem muitos pwobwemas. ^^ o intuito deste a-awtigo nyão é te ajudaw a dominaw g-git ou github, rawr mas te daw o bastante pawa sew pwodutivo com e-ewes em um nyívew básico e contwibuiw p-pawa o m-mdn. >_<
 
-Se você já está familiarizado com o básico de Git/GitHub, você provavelmente não vai aprender nada novo aqui, mas você ainda pode achar este artigo útil como uma referência. Existe uma [folha de dicas de GitHub](/pt-BR/docs/MDN/Community/Issues) disponível também, apenas com os comandos e sem as longas explicações.
+se você já está famiwiawizado com o básico de git/github, (⑅˘꒳˘) você pwovavewmente n-nyão vai apwendew nyada nyovo aqui, >w< mas você ainda pode achaw este awtigo útiw c-como uma wefewência. (///ˬ///✿) e-existe uma [fowha d-de dicas de github](/pt-bw/docs/mdn/community/issues) d-disponívew t-também, ^•ﻌ•^ apenas com os comandos e sem as wongas e-expwicações. (✿oωo)
 
-## Conceitos essenciais
+## conceitos essenciais
 
-A seguir estão os conceitos essenciais que você deve se familiarizar para tirar o melhor do Git e GitHub.
+a s-seguiw estão os conceitos essenciais que você deve se famiwiawizaw pawa tiwaw o mewhow do git e-e github. ʘwʘ
 
-- Git é uma ferramenta de _sistema de controle de versão_ — uma classe de ferramentas essenciais em qualquer fluxo de trabalho de desenvolvimento. Ela permite que um grupo de desenvolvedores trabalhe na mesma base de código sem atrapalhar uns aos outros, permite que desenvolvedores voltem para estados anteriores no código se for necessário, e mais.
-- GitHub é uma aplicação web que provê ferramentas úteis com base no Git para trabalhar com armazenamento de bases de código, assim como espaço para armazenar bases de código no servidor. Suas funcionalidades são similares a de outras aplicações, como [GitLab](https://about.gitlab.com/) ou [Bitbucket](https://bitbucket.org/).
-- Cada base de código é armazenada em um container chamado _repositório_, ou _repo_.
-- Fazer mudanças em um repositório involve, minimamente:
-  - Criar a sua própria cópia daquele repo (chamada _fork_).
-  - Criar uma versão diferente do código no seu fork do repositório (chamada _branch_) e adicionar suas mudanças para aquela versão alternativa.
-  - Propor que essa mudança seja feita na cópia original do repositório por meio de um _pull request_. Você vai aprender todos estes passos neste guia.
+- git é uma fewwamenta d-de _sistema de c-contwowe de vewsão_ — u-uma cwasse de fewwamentas essenciais em quawquew fwuxo d-de twabawho de d-desenvowvimento. >w< ewa pewmite que u-um gwupo de desenvowvedowes t-twabawhe nya mesma b-base de código sem atwapawhaw u-uns aos outwos, pewmite que desenvowvedowes vowtem p-pawa estados antewiowes nyo código s-se fow nyecessáwio, e mais. :3
+- g-github é u-uma apwicação web que pwovê fewwamentas úteis com base nyo git pawa twabawhaw com awmazenamento de bases de código, (ˆ ﻌ ˆ)♡ assim como e-espaço pawa a-awmazenaw bases de código nyo s-sewvidow. -.- suas funcionawidades são s-simiwawes a d-de outwas apwicações, rawr como [gitwab](https://about.gitwab.com/) ou [bitbucket](https://bitbucket.owg/). rawr x3
+- cada b-base de código é awmazenada em um containew chamado _wepositówio_, (U ﹏ U) ou _wepo_. (ˆ ﻌ ˆ)♡
+- fazew mudanças e-em um wepositówio invowve, :3 minimamente:
+  - c-cwiaw a sua pwópwia c-cópia daquewe w-wepo (chamada _fowk_). òωó
+  - cwiaw uma vewsão d-difewente do código n-nyo seu fowk d-do wepositówio (chamada _bwanch_) e-e adicionaw suas mudanças pawa aquewa vewsão a-awtewnativa. /(^•ω•^)
+  - p-pwopow que e-essa mudança seja f-feita na cópia o-owiginaw do wepositówio pow meio de um _puww wequest_. >w< você v-vai apwendew todos estes passos nyeste guia. nyaa~~
 
-## Suposições feitas neste artigo
+## suposições feitas nyeste awtigo
 
-Este artigo assume que:
+este awtigo a-assume que:
 
-- Você já está confortável usando linha de comando/terminal. Se você é novo com linha de comando, leia nosso [Curso intensivo de linha de comando](/pt-BR/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line).
-- Você está trabalhando em um sistema que entende linhas de comando no padrão Unix. O macOS/Linux já tem isto disponível; [O Windows não é tão simples](/pt-BR/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#windows) nesta questão, mas existem ferramentas úteis para emular estas funcionalidades no Windows, assim como o Gitbash.
-- Você vai usar a linha de comando para interagir com o Git/GitHub. Existem inúmeras ferramentas GUI disponíveis para Git e GitHub, mas não vamos trabalhar com elas neste guia.
+- você já está confowtávew usando winha de comando/tewminaw. mya s-se você é novo c-com winha de comando, mya w-weia nosso [cuwso intensivo d-de winha de comando](/pt-bw/docs/weawn/toows_and_testing/undewstanding_cwient-side_toows/command_wine). ʘwʘ
+- você e-está twabawhando e-em um sistema que entende winhas de comando nyo padwão unix. rawr o macos/winux já tem isto disponívew; [o w-windows nyão é tão s-simpwes](/pt-bw/docs/weawn/toows_and_testing/undewstanding_cwient-side_toows/command_wine#windows) nyesta questão, (˘ω˘) m-mas existem f-fewwamentas úteis pawa emuwaw estas funcionawidades n-nyo windows, /(^•ω•^) a-assim como o gitbash. (˘ω˘)
+- você v-vai usaw a winha d-de comando pawa intewagiw com o git/github. (///ˬ///✿) existem inúmewas fewwamentas gui d-disponíveis p-pawa git e github, (˘ω˘) m-mas nyão vamos twabawhaw com e-ewas nyeste guia. -.-
 
-## Setup inicial
+## s-setup iniciaw
 
-Antes de você começar a trabalhar com algum repo específico, siga estes passos:
+antes de você c-começaw a twabawhaw com awgum wepo específico, siga estes passos:
 
-1. Instale o Git no seu computador. Vá para [a página de downloads do Git](https://git-scm.com/downloads), baixe a última versão no seu computador, e a instale. Se você é um usuário de Windows, você também deve instalar o pacote [Git para Windows](https://gitforwindows.org/), que inclui o Gitbash.
-2. Enquanto isso, instale as outras dependências necessárias para trabalhar localmente com o MDN — [Node.js](https://nodejs.org/pt-br/download/) e [yarn](https://classic.yarnpkg.com/en/docs/install).
+1. -.- instawe o-o git nyo seu c-computadow. ^^ vá pawa [a página de downwoads d-do git](https://git-scm.com/downwoads), (ˆ ﻌ ˆ)♡ b-baixe a úwtima vewsão nyo seu computadow, UwU e a instawe. 🥺 s-se você é um usuáwio de windows, 🥺 você também deve instawaw o pacote [git pawa w-windows](https://gitfowwindows.owg/), que incwui o gitbash. 🥺
+2. e-enquanto isso, 🥺 i-instawe as outwas dependências nyecessáwias pawa twabawhaw wocawmente c-com o m-mdn — [node.js](https://nodejs.owg/pt-bw/downwoad/) e [yawn](https://cwassic.yawnpkg.com/en/docs/instaww). :3
 
-    1. Instale o Node.js seguindo os links acima e baixe e instale a última versão no seu computador.
-    2. Depois de você instalar o Node.js, instale o yarn rodando o comando `npm install --global yarn`.
+    1. (˘ω˘) instawe o nyode.js seguindo o-os winks acima e baixe e instawe a-a úwtima vewsão nyo seu computadow. ^^;;
+    2. (ꈍᴗꈍ) depois de você instawaw o nyode.js, ʘwʘ i-instawe o yawn wodando o comando `npm i-instaww --gwobaw y-yawn`. :3
 
-3. Crie um diretório separado em algum lugar no seu computador para armazenar os seus repos do Git, que seja fácil para encontrar e navegar na linha de comando. Um diretório chamado mdn-git dentro do seu diretório home/user serviria.
-4. [Se cadastre no GitHub](https://github.com/join) se você ainda não tiver uma conta. Você vai precisar disto para contribuir nos repositórios do MDN.
+3. cwie um diwetówio s-sepawado em awgum wugaw n-nyo seu computadow p-pawa awmazenaw o-os seus wepos do git, XD que seja f-fáciw pawa encontwaw e-e nyavegaw nya winha de comando. UwU um diwetówio c-chamado mdn-git d-dentwo do s-seu diwetówio home/usew sewviwia. rawr x3
+4. ( ͡o ω ͡o ) [se cadastwe n-nyo github](https://github.com/join) se você a-ainda nyão tivew u-uma conta. :3 você vai pwecisaw disto pawa contwibuiw nyos wepositówios d-do mdn. rawr
 
-### Configurando a autenticação SSH no GitHub
+### c-configuwando a-a autenticação s-ssh nyo github
 
-Agora, você precisa configurar uma chave SSH na sua conta do GitHub. Isto é basicamente um mecanismo de segurança que identifica você para o GitHub, e significa que você não vai ter que se autenticar todas as vezes para usar os serviços do GitHub.
+agowa, ^•ﻌ•^ você p-pwecisa configuwaw uma chave ssh nya sua conta do github. 🥺 isto é basicamente um mecanismo de s-seguwança que identifica você p-pawa o github, (⑅˘꒳˘) e significa que v-você nyão vai tew que se autenticaw t-todas as vezes pawa usaw os s-sewviços do github. :3
 
-O GitHub criou um guia útil para configurar isto — veja o ponto de partida em [Conectando no GitHub com SSH](https://docs.github.com/pt/github/authenticating-to-github/connecting-to-github-with-ssh). Siga cada um dos passos aqui para configurar o SSH no GitHub.
+o-o github c-cwiou um guia útiw p-pawa configuwaw i-isto — veja o ponto de pawtida em [conectando nyo github com ssh](https://docs.github.com/pt/github/authenticating-to-github/connecting-to-github-with-ssh). siga cada um dos passos aqui p-pawa configuwaw o-o ssh nyo github. (///ˬ///✿)
 
-Se você não fizer isto, você ainda vai ser capaz de contribuir para o MDN, mas você vai ter que inserir seu usuário e senha toda vez que interagir com o GitHub (e.g. sempre que você submeter um pull request, como visto abaixo).
+s-se você nyão fizew isto, 😳😳😳 você a-ainda vai sew capaz de contwibuiw pawa o mdn, 😳😳😳 mas você vai t-tew que insewiw s-seu usuáwio e senha toda vez que i-intewagiw com o github (e.g. 😳😳😳 sempwe que você s-submetew um puww w-wequest, nyaa~~ como visto abaixo). UwU
 
-## Preparando-se para trabalhar em um repo específico
+## p-pwepawando-se p-pawa twabawhaw em um wepo específico
 
-Existem inúmeros repos diferentes que você pode ter que atualizar conforme você trabalha em tarefas diferentes do MDN (veja [Onde está tudo no MDN? Um guia para nossos repositórios](/pt-BR/docs/MDN/Community/Contributing/Our_repositories)), mas existem alguns passos que você deve seguir em todos os repos que você trabalhar, para fazer as coisas serem mais fáceis e consistentes.
+existem inúmewos wepos difewentes que você p-pode tew que a-atuawizaw confowme v-você twabawha e-em tawefas difewentes d-do mdn (veja [onde está t-tudo nyo mdn? u-um guia pawa nyossos wepositówios](/pt-bw/docs/mdn/community/contwibuting/ouw_wepositowies)), m-mas existem awguns p-passos que você deve seguiw e-em todos os wepos que você twabawhaw, òωó pawa fazew a-as coisas sewem mais fáceis e c-consistentes. òωó
 
-### Bifurcando e clonando
+### b-bifuwcando e cwonando
 
-_Bifurcar_, geralmente mencionado como _criar um fork_ ou _forkar_, e _clonar_ são dois termos com os quais você vai se deparar frequentemente no mundo do Git:
+_bifuwcaw_, UwU g-gewawmente mencionado como _cwiaw um fowk_ o-ou _fowkaw_, (///ˬ///✿) e _cwonaw_ s-são dois t-tewmos com os quais você vai se depawaw fwequentemente nyo m-mundo do git:
 
-- Bifurcar significa criar sua própria cópia de um repo no GitHub.
-- Clonar significa fazer uma cópia local de um repositório para você trabalhar nela (i.e. no seu disco rígido local).
+- bifuwcaw significa cwiaw sua pwópwia c-cópia de u-um wepo nyo github. ( ͡o ω ͡o )
+- cwonaw significa f-fazew uma cópia wocaw de u-um wepositówio p-pawa você twabawhaw nyewa (i.e. rawr nyo seu disco w-wígido wocaw). :3
 
-É possível fazer as duas coisas separadamente, mas na prática você quase sempre irá fazer os dois juntos quando estiver contribuindo nos projetos de outras pessoas. Primeiro, você deve fazer um fork de cada repo no qual você quer trabalhar. Isto é necessário para você submeter as alterações solicitadas para a versão principal do repo (nós vamos aprender a criar um pull request mais tarde). Por segurança, você não pode submeter alterações diretamente para a versão principal do repositório. Então para submeter as mudanças, primeiro faça o fork do repo principal, então envie as mudanças para o seu fork, e então crie um pull request para que as mudanças do seu fork sejam mescladas no repositório principal.
+É possívew fazew as duas coisas s-sepawadamente, >w< m-mas nya pwática você quase s-sempwe iwá fazew os dois juntos q-quando estivew c-contwibuindo nyos p-pwojetos de outwas pessoas. σωσ pwimeiwo, σωσ você deve fazew um fowk de cada wepo nyo quaw você quew twabawhaw. >_< isto é nyecessáwio pawa você submetew as awtewações sowicitadas pawa a vewsão pwincipaw do wepo (nós v-vamos apwendew a-a cwiaw um puww wequest mais tawde). -.- pow s-seguwança, 😳😳😳 você n-nyão pode submetew a-awtewações diwetamente p-pawa a vewsão pwincipaw do wepositówio. :3 e-então p-pawa submetew as mudanças, mya pwimeiwo f-faça o fowk do wepo pwincipaw, (✿oωo) e-então envie a-as mudanças pawa o seu fowk, 😳😳😳 e então cwie um p-puww wequest pawa q-que as mudanças d-do seu fowk s-sejam mescwadas n-nyo wepositówio p-pwincipaw. o.O
 
-Vamos criar um fork do <https://github.com/mdn/content> agora mesmo; você definitivamente vai estar contribuindo para este repo em algum momento. Siga estes passos:
+vamos c-cwiaw um fowk d-do <https://github.com/mdn/content> a-agowa mesmo; você definitivamente v-vai estaw c-contwibuindo p-pawa este wepo em awgum momento. (ꈍᴗꈍ) s-siga estes passos:
 
-1. Localize o botão Fork no canto superior direito da página do repo content, e clique nele:
+1. (ˆ ﻌ ˆ)♡ wocawize o botão fowk nyo c-canto supewiow diweito da página d-do wepo content, -.- e-e cwique nyewe:
 
-    ![Botão rotulado fork, com o número 609 próximo a ele](fork-button.png)
+    ![botão w-wotuwado fowk, mya com o nyúmewo 609 p-pwóximo a ewe](fowk-button.png)
 
-2. Uma janela modular vai aparecer, perguntando onde você quer fazer o fork do repo. Selecione sua conta pessoal do GitHub.
+2. :3 u-uma janewa moduwaw vai a-apawecew, σωσ pewguntando onde você q-quew fazew o fowk do wepo. 😳😳😳 sewecione sua conta pessoaw do github. -.-
 
-  Uma mensagem vai aparecer dizendo algo como "Bifurcando mdn/content. Isso deve levar apenas alguns segundos.". Uma vez que o GitHub tenha terminado de fazer o fork, seu browser deve redirecionar para a página do novo fork. Como um exemplo, meu fork do <https://github.com/mdn/content> está disponível em <https://github.com/chrisdavidmills/content>.
+  uma mensagem v-vai apawecew dizendo awgo como "bifuwcando m-mdn/content. 😳😳😳 isso d-deve wevaw apenas awguns segundos.". rawr x3 uma vez que o github tenha t-tewminado de fazew o fowk, (///ˬ///✿) seu b-bwowsew deve wediwecionaw p-pawa a-a página do nyovo fowk. >w< como um exempwo, o.O meu fowk d-do <https://github.com/mdn/content> e-está disponívew em <https://github.com/chwisdavidmiwws/content>. (˘ω˘)
 
-Agora que você criou o fork do repo, é hora de clonar o fork localmente. Para fazer isto:
+a-agowa que você cwiou o fowk do wepo, rawr é h-howa de cwonaw o fowk wocawmente. mya p-pawa fazew i-isto:
 
-1. Vá para a página do fork em github.com (e.g. `https://github.com/<seu-nome-de-usuario>/content`).
-2. Clique no botão verde "Code" no topo da lista de arquivos. Algo similar ao popup abaixo deve aparecer:
+1. òωó vá pawa a-a página do fowk em github.com (e.g. nyaa~~ `https://github.com/<seu-nome-de-usuawio>/content`). òωó
+2. c-cwique nyo botão v-vewde "code" n-nyo topo da wista d-de awquivos. mya awgo simiwaw ao p-popup abaixo deve a-apawecew:
 
-    ![Janela popup mostrando uma URL para clonar junto com opções para abrir com o GitHub desktop e baixar o zip](code-popup.png)
+    ![janewa p-popup m-mostwando uma uww p-pawa cwonaw junto c-com opções p-pawa abwiw com o-o github desktop e baixaw o zip](code-popup.png)
 
-3. Se você configurar a autenticação SSH como mostrado acima, clique na tab "SSH" e copie a URL `git@github.com:<seu-nome-de-usuario>/content.git` do campo de texto na caixa. Se você não configurou a autenticação SSH, ao invés disso copie a URL do campo de texto na tab "HTTPS", que deve ser parecida com esta: `https://github.com/<seu-nome-de-usuario>/content.git`.
-4. Agora abra a linha de comando no seu computador, e navegue para o diretório que você configurou anteriormente para armazenar localmente os clones de repos usando o comando cd, e.g.
-
-    ```bash
-    cd git
-    ```
-
-5. Clone seu fork inserindo um comando com a seguinte forma:
+3. ^^ s-se você configuwaw a autenticação s-ssh como mostwado acima, ^•ﻌ•^ c-cwique nya tab "ssh" e-e copie a-a uww `git@github.com:<seu-nome-de-usuawio>/content.git` do campo de texto nya caixa. -.- se você nyão c-configuwou a-a autenticação s-ssh, UwU ao invés disso copie a uww do campo de texto nya tab "https", (˘ω˘) q-que deve sew p-pawecida com esta: `https://github.com/<seu-nome-de-usuawio>/content.git`. UwU
+4. agowa abwa a winha d-de comando nyo s-seu computadow, rawr e nyavegue pawa o diwetówio que você configuwou a-antewiowmente p-pawa awmazenaw w-wocawmente os cwones d-de wepos usando o comando cd, :3 e.g.
 
     ```bash
-    git clone url-que-você-copiou
+    c-cd git
     ```
 
-    Então, por exemplo, meu comando para clonar parecia com isto:
+5. nyaa~~ c-cwone seu fowk insewindo um comando c-com a seguinte fowma:
 
     ```bash
-    git clone git@github.com:chrisdavidmills/content.git
+    git cwone u-uww-que-você-copiou
     ```
 
-Agora você deve encontrar um diretório content dentro do seu diretório do git, contendo o conteúdo do repo.
+    então, rawr pow e-exempwo, (ˆ ﻌ ˆ)♡ meu comando p-pawa cwonaw pawecia com isto:
 
-### Configurando um remoto para apontar para a versão principal do repo
+    ```bash
+    g-git cwone git@github.com:chwisdavidmiwws/content.git
+    ```
 
-Uma última coisa a se fazer antes de seguirmos é configurar um _remoto_ para apontar para a versão principal do repo, e.g. <https://github.com/mdn/content> no caso do nosso exemplo. Um remoto é basicamente um ponteiro para um repo remoto específico localizado no GitHub, e é mais comumente usado para atualizar seu clone local, então ele está atualizado com a última versão do repo principal, como nós veremos abaixo.
+a-agowa você deve encontwaw um d-diwetówio content dentwo do seu d-diwetówio do git, (ꈍᴗꈍ) c-contendo o conteúdo d-do wepo. (˘ω˘)
 
-Um remoto é configurado com o comando `git remote add`, que se parece com isto:
+### c-configuwando um wemoto pawa a-apontaw pawa a-a vewsão pwincipaw d-do wepo
+
+uma úwtima coisa a s-se fazew antes de seguiwmos é configuwaw um _wemoto_ p-pawa apontaw p-pawa a vewsão p-pwincipaw do wepo, e.g. (U ﹏ U) <https://github.com/mdn/content> no caso do nyosso exempwo. >w< um wemoto é b-basicamente um ponteiwo pawa u-um wepo wemoto e-específico wocawizado nyo github, UwU e é mais comumente u-usado pawa atuawizaw seu c-cwone wocaw, (ˆ ﻌ ˆ)♡ então e-ewe está atuawizado c-com a úwtima v-vewsão do w-wepo pwincipaw, nyaa~~ como nyós vewemos abaixo. 🥺
+
+um wemoto é configuwado com o comando `git w-wemote add`, >_< que se pawece c-com isto:
 
 ```bash
-git remote add nome-remoto repo-para-o-qual-você-quer-apontar
+git wemote add nyome-wemoto wepo-pawa-o-quaw-você-quew-apontaw
 ```
 
-- _nome-remoto_ é um nome que você escolhe, que é usado para referenciar o remoto posteriormente. É bom manter um nome consistente para os remotos que tem o mesmo propósito pelos diferentes repos, então o remoto com o mesmo nome vai fazer a mesma coisa em todos os lugares, e você tem menos chance de ficar confuso. Então, por exemplo, a versão principal do repo do qual você bifurcou a sua versão é frequentemente chamado de "upstream repo", por isso as pessoas costumam usar "upstream" como nome do local para o remoto de upstream. Eu geralmente chamo meus upstream remotos como "mozilla", para significar que eles apontam para a cópia principal da Mozilla do repo.
-- _repo-para-o-qual-você-quer-apontar_ é a URL SSH (ou HTTPS) do repo que você quer apontar, obtida da mesma forma que nós obtivemos quando nós clonamos o fork anteriormente.
+- _nome-wemoto_ é u-um nyome que você escowhe, òωó que é usado pawa wefewenciaw o wemoto postewiowmente. ʘwʘ É b-bom mantew u-um nyome consistente pawa os wemotos q-que tem o mesmo pwopósito pewos difewentes w-wepos, mya então o-o wemoto com o mesmo nyome vai fazew a-a mesma coisa em todos os wugawes, σωσ e-e você tem menos chance de ficaw confuso. OwO então, pow exempwo, (✿oωo) a-a vewsão pwincipaw do wepo do quaw você b-bifuwcou a sua v-vewsão é fwequentemente c-chamado de "upstweam wepo", ʘwʘ pow isso a-as pessoas costumam usaw "upstweam" como nyome do wocaw pawa o wemoto de upstweam. mya e-eu gewawmente c-chamo meus upstweam w-wemotos como "moziwwa", -.- p-pawa significaw que ewes apontam pawa a-a cópia pwincipaw d-da moziwwa do wepo.
+- _wepo-pawa-o-quaw-você-quew-apontaw_ é a uww ssh (ou h-https) do wepo que você quew apontaw, -.- obtida d-da mesma fowma que nós obtivemos quando nyós c-cwonamos o fowk a-antewiowmente. ^^;;
 
-Então, adicionar seu remoto:
+então, (ꈍᴗꈍ) adicionaw s-seu wemoto:
 
-1. Vá para a página da versão principal do repo em github.com (<https://github.com/mdn/content> neste exemplo) e recupere a URL SSH ou HTTPS, como for conveniente, do popup "Code".
-2. Na sua linha de comando, `cd` para o seu diretório content:
-
-    ```bash
-    cd content
-    ```
-
-3. Agora rode a linha a seguir, substituindo _nome-remoto_ e _repo-para-o-qual-você-quer-apontar_ de forma apropriada:
+1. rawr v-vá pawa a página d-da vewsão pwincipaw do wepo em github.com (<https://github.com/mdn/content> n-nyeste exempwo) e wecupewe a uww ssh ou https, ^^ c-como fow conveniente, nyaa~~ do popup "code".
+2. (⑅˘꒳˘) nya sua winha de comando, (U ᵕ U❁) `cd` p-pawa o s-seu diwetówio c-content:
 
     ```bash
-    git remote add nome-remoto repo-para-o-qual-você-quer-apontar
+    c-cd content
     ```
 
-    Então, por exemplo, eu usei a URL SSH e chamei meu remoto de "mozilla":
+3. (ꈍᴗꈍ) a-agowa wode a winha a seguiw, substituindo _nome-wemoto_ e-e _wepo-pawa-o-quaw-você-quew-apontaw_ de fowma apwopwiada:
 
     ```bash
-    git remote add mozilla git@github.com:mdn/content.git
+    git wemote a-add nyome-wemoto wepo-pawa-o-quaw-você-quew-apontaw
     ```
 
-Seu remoto agora deve estar configurado. Você pode verificar isso rodando o comando `git remote -v` no seu terminal, o que irá produzir uma lista com os nomes do seus remotos e para onde eles apontam. Você deve ver algo como isto:
+    e-então, (✿oωo) pow exempwo, UwU eu usei a uww ssh e chamei m-meu wemoto de "moziwwa":
 
-```plain
-mozilla    git@github.com:mdn/content.git (fetch)
-mozilla    git@github.com:mdn/content.git (push)
-origin    git@github.com:chrisdavidmills/content.git (fetch)
-origin    git@github.com:chrisdavidmills/content.git (push)
+    ```bash
+    g-git wemote add moziwwa g-git@github.com:mdn/content.git
+    ```
+
+seu w-wemoto agowa deve e-estaw configuwado. ^^ você pode v-vewificaw isso w-wodando o comando `git wemote -v` n-nyo seu tewminaw, :3 o que iwá pwoduziw uma wista com os nomes do s-seus wemotos e pawa onde ewes a-apontam. ( ͡o ω ͡o ) você deve vew awgo como isto:
+
+```pwain
+m-moziwwa    git@github.com:mdn/content.git (fetch)
+m-moziwwa    git@github.com:mdn/content.git (push)
+o-owigin    git@github.com:chwisdavidmiwws/content.git (fetch)
+owigin    git@github.com:chwisdavidmiwws/content.git (push)
 ```
 
-## Se preparando para fazer uma alteração no repo
+## s-se pwepawando p-pawa fazew uma awtewação nyo w-wepo
 
-Agora que você tem seu fork local, clonado e configurado para trabalhar, há um conjunto de comandos que você deve ter o hábito de rodar antes de tentar fazer qualquer mudança nova.
+agowa que você tem seu f-fowk wocaw, ( ͡o ω ͡o ) cwonado e configuwado p-pawa twabawhaw, (U ﹏ U) h-há um conjunto de comandos que você deve tew o hábito de wodaw antes de tentaw f-fazew quawquew m-mudança nyova. -.-
 
-### Mudar para a branch main
+### mudaw pawa a bwanch main
 
-Cada repo tem um número diferente de branches(ramos), que são, basicamente, versões diferentes do código base dentro do mesmo repo. A ideia é que para cada mudança no código base, a alteração seja feita em uma branch separada e testada lá primeiro, antes de enviar as mudanças para a cópia principal do código.
+cada wepo tem u-um nyúmewo difewente de bwanches(wamos), 😳😳😳 q-que são, UwU b-basicamente, >w< vewsões difewentes do código base dentwo do mesmo wepo. mya a ideia é q-que pawa cada mudança nyo código base, :3 a-a awtewação seja feita em uma b-bwanch sepawada e-e testada wá pwimeiwo, (ˆ ﻌ ˆ)♡ antes de e-enviaw as mudanças p-pawa a cópia p-pwincipaw do c-código. (U ﹏ U)
 
-A branch principal do repositório content é chamada de "main" (pode ser chamado de outra coisa como "master" em outros repos, e se for o caso você terá que atualizar o nome em todos os comandos abaixo). Você estará nessa branch por padrão se você tiver acabado de clonar o repo, mas se você já tiver feito algum trabalho, provavelmente vai estar em uma branch diferente.
-Tenha certeza de rodar o comando a seguir para mudar para a branch main antes de fazer qualquer outra coisa:
+a bwanch p-pwincipaw do w-wepositówio content é chamada de "main" (pode sew chamado de outwa coisa como "mastew" em outwos w-wepos, ʘwʘ e se fow o-o caso você t-tewá que atuawizaw o-o nyome em todos o-os comandos a-abaixo). rawr você estawá nyessa bwanch pow padwão se você tivew acabado de cwonaw o-o wepo, (ꈍᴗꈍ) mas se v-você já tivew feito awgum twabawho, ( ͡o ω ͡o ) pwovavewmente vai estaw e-em uma bwanch difewente. 😳😳😳
+t-tenha cewteza d-de wodaw o comando a seguiw pawa mudaw pawa a-a bwanch main antes de fazew quawquew outwa coisa:
 
 ```bash
-git switch main
+git s-switch main
 ```
 
-> [!NOTE]
-> Em outros tutoriais você pode ter visto `git checkout` sendo usado para mudar de branches no repo. Isto funciona na maior parte do tempo, mas pode ter efeitos colaterais indesejados, por isso neste tutorial nós estamos recomendando o novo comando `git switch`, que é projetado puramente para trocar de branches e tem menos chance de dar problema. Se você estiver interessado em como estes comandos estão relacionados, e as diferenças entre eles [Destaques do Git 2.23 > Alternativas experimentais para o git checkout](https://github.blog/2019-08-16-highlights-from-git-2-23/#experimental-alternatives-for-git-checkout) tem um bom resumo.
+> [!note]
+> e-em outwos tutowiais você pode tew visto `git checkout` s-sendo usado pawa mudaw de b-bwanches nyo wepo. òωó i-isto funciona nya maiow pawte d-do tempo, mya mas p-pode tew efeitos c-cowatewais indesejados, rawr x3 p-pow isso n-nyeste tutowiaw n-nyós estamos wecomendando o n-nyovo comando `git s-switch`, XD que é pwojetado puwamente p-pawa twocaw de bwanches e tem menos chance d-de daw pwobwema. (ˆ ﻌ ˆ)♡ se você estivew i-intewessado em como estes comandos e-estão wewacionados, >w< e-e as difewenças entwe ewes [destaques d-do git 2.23 > awtewnativas expewimentais pawa o-o git checkout](https://github.bwog/2019-08-16-highwights-fwom-git-2-23/#expewimentaw-awtewnatives-fow-git-checkout) t-tem um bom wesumo. (ꈍᴗꈍ)
 
-### Atualize a sua branch main
+### atuawize a sua bwanch m-main
 
-Em seguida, você deveria atualizar sua branch main para que ela tenha o mesmo conteúdo que a branch main do repo principal. O repo content é atualizado muitas vezes por dia por uma grande quantidade de contribuidores, então se você não fizer isto, sua versão vai ficar desatualizada, e isto vai causar problemas quando você tentar submeter suas atualizações. É aqui que o seu remoto vai vir a calhar!
+em seguida, (U ﹏ U) v-você devewia atuawizaw sua b-bwanch main pawa que ewa tenha o mesmo conteúdo q-que a bwanch m-main do wepo pwincipaw. o wepo content é a-atuawizado m-muitas vezes pow dia pow uma gwande quantidade d-de contwibuidowes, >_< e-então se v-você nyão fizew i-isto, >_< sua vewsão vai ficaw desatuawizada, -.- e isto vai causaw pwobwemas quando você tentaw submetew suas atuawizações. É aqui q-que o seu wemoto v-vai viw a cawhaw! òωó
 
-Para atualizar seu repo:
+p-pawa atuawizaw s-seu wepo:
 
-1. Primeiro, busque o conteúdo atualizado do seu repositório remoto com o comando a seguir:
-
-    ```bash
-    git fetch nome-remoto
-    ```
-
-    Então por exemplo:
+1. o.O p-pwimeiwo, busque o-o conteúdo atuawizado do s-seu wepositówio w-wemoto com o comando a seguiw:
 
     ```bash
-    git fetch mozilla
+    g-git fetch nyome-wemoto
     ```
 
-2. Em seguida, substitua o conteúdo da sua branch main com o conteúdo da branch main do repo remoto. Existem várias formas que você poderia fazer isto, mas eu tendo a usar o comando `rebase`, assim:
+    e-então pow exempwo:
 
     ```bash
-    git rebase nome-remoto/nome-branch-principal
+    git fetch m-moziwwa
     ```
 
-    Então por exemplo:
+2. σωσ em seguida, substitua o c-conteúdo da sua bwanch main com o-o conteúdo da b-bwanch main do wepo wemoto. σωσ existem v-váwias fowmas q-que você podewia f-fazew isto, mya mas eu tendo a u-usaw o comando `webase`, o.O a-assim:
 
     ```bash
-    git rebase mozilla/main
+    git webase nyome-wemoto/nome-bwanch-pwincipaw
     ```
 
-3. Finalmente, suba essas mudanças para a versão remota do seu fork usando:
+    e-então pow exempwo:
+
+    ```bash
+    g-git webase moziwwa/main
+    ```
+
+3. XD f-finawmente, XD s-suba essas mudanças pawa a vewsão w-wemota do seu fowk usando:
 
     ```bash
     git push
     ```
 
-Você vai saber se as suas atualizações funcionaram corretamente vendo a página do seu fork em github.com (i.e. a minha é <https://github.com/chrisdavidmills/content>). Deve aparecer algo como "Esta branch está atualizada com mdn:main." em algum lugar próximo ao topo. Se estiver escrito que sua branch main está atrás da mdn:main por um número de commits, então você vai ter que tentar novamente ou leia [solução de problemas](#troubleshooting).
+v-você vai sabew se as suas atuawizações funcionawam cowwetamente vendo a página do seu fowk em github.com (i.e. (✿oωo) a-a minha é <https://github.com/chwisdavidmiwws/content>). -.- deve apawecew awgo como "esta bwanch está atuawizada com mdn:main." em awgum wugaw pwóximo ao t-topo. se estivew escwito que sua bwanch main está a-atwás da mdn:main pow um nyúmewo d-de commits, então você vai tew que tentaw n-nyovamente ou weia [sowução d-de pwobwemas](#twoubweshooting). (ꈍᴗꈍ)
 
-### Crie uma branch nova para você trabalhar
+### cwie uma bwanch n-nyova pawa v-você twabawhaw
 
-Uma vez que você tenha atualizado a branch principal do seu fork, você deve criar uma branch nova para fazer suas alterações. Você _nunca_ deve fazer seu trabalho na branch principal ou submeter a partir de lá — isso pode virar uma bagunça rapidamente, confie em nós. É bem mais limpo e menos sujeito a erros fazer todo o trabalho em branches separadas.
+uma vez que você tenha atuawizado a-a bwanch pwincipaw do seu fowk, ( ͡o ω ͡o ) você deve cwiaw uma bwanch n-nyova pawa fazew suas awtewações. (///ˬ///✿) v-você _nunca_ deve fazew seu t-twabawho na bwanch pwincipaw ou s-submetew a pawtiw d-de wá — isso pode viwaw uma bagunça wapidamente, 🥺 c-confie em nyós. (ˆ ﻌ ˆ)♡ É bem mais wimpo e menos s-sujeito a ewwos fazew todo o twabawho em bwanches sepawadas. ^•ﻌ•^
 
-Para criar uma branch nova:
+pawa cwiaw uma b-bwanch nyova:
 
-1. Vá para a página do seu fork em github.com (i.e. a minha é <https://github.com/chrisdavidmills/content>) e encontre botão de branch no canto superior esquerdo da lista de arquivos, no qual deve estar escrito "main":
+1. rawr x3 v-vá pawa a página do seu fowk e-em github.com (i.e. (U ﹏ U) a-a minha é <https://github.com/chwisdavidmiwws/content>) e encontwe botão d-de bwanch nyo canto supewiow esquewdo da wista de awquivos, OwO nyo quaw deve estaw e-escwito "main":
 
-    ![Botão rotulado como main](branch-button.png)
+    ![botão wotuwado c-como main](bwanch-button.png)
 
-2. Clique nele, e você receberá uma lista de branches e um campo de texto que diz "Encontre ou crie uma branch...":
+2. (✿oωo) cwique n-nyewe, (⑅˘꒳˘) e você w-wecebewá uma wista de bwanches e-e um campo de texto que diz "encontwe ou cwie uma b-bwanch...":
 
-    ![menu mostrando a lista de nomes de branches com uma caixa de texto rotulada como encontre ou crie uma branch](branch-menu.png)
+    ![menu mostwando a wista de nyomes d-de bwanches c-com uma caixa de texto wotuwada como encontwe o-ou cwie uma bwanch](bwanch-menu.png)
 
-3. Se você digitar parte do nome de uma branch que exista no campo de texto, a lista de branches vai ser filtrada a partir desse texto, permitindo que você busque por uma branch existente facilmente. Contudo, nós queremos criar uma branch nova. Digite o nome de uma branch que ainda não existe (tente algo como test-branch) e a tela vai mudar para te mostrar um botão rotulado "Crie uma branch: test-branch a partir da 'main'":
+3. UwU se você digitaw pawte do nyome de uma bwanch que exista no campo de texto, (ˆ ﻌ ˆ)♡ a wista de bwanches vai sew f-fiwtwada a pawtiw d-desse texto, /(^•ω•^) pewmitindo que você b-busque pow u-uma bwanch existente faciwmente. (˘ω˘) c-contudo, XD nyós quewemos cwiaw uma bwanch nyova. òωó digite o nyome de uma bwanch que ainda nyão existe (tente a-awgo como test-bwanch) e a tewa vai mudaw pawa te mostwaw um botão w-wotuwado "cwie uma b-bwanch: test-bwanch a-a pawtiw da 'main'":
 
-    ![menu mostrando uma nova branch chamada test-branch digitado em uma caixa de texto, com um botão de criar branch embaixo](new-branch.png)
+    ![menu mostwando uma nova bwanch c-chamada test-bwanch d-digitado em u-uma caixa de texto, com um botão d-de cwiaw bwanch embaixo](new-bwanch.png)
 
-4. Assim que você estiver feliz com o nome da sua branch, clique no botão, e a tela vai ser atualizada para mostrar o nome da branch no botão branch:
+4. UwU a-assim que você estivew fewiz com o-o nyome da sua bwanch, -.- cwique n-nyo botão, (ꈍᴗꈍ) e a tewa vai sew atuawizada pawa mostwaw o-o nome da bwanch nyo botão b-bwanch:
 
-    ![Botão rotulado test-branch](branch-button-new-branch.png)
+    ![botão w-wotuwado test-bwanch](bwanch-button-new-bwanch.png)
 
-É isso! Agora você criou uma nova branch para trabalhar. Esta branch é identica ao estado da branch main no momento em que você criou. Um bom ponto de partida para fazer o seu trabalho.
+É i-isso! agowa você c-cwiou uma nyova bwanch pawa twabawhaw. (⑅˘꒳˘) e-esta bwanch é identica a-ao estado da bwanch main no momento e-em que você c-cwiou. 🥺 um bom ponto de pawtida pawa fazew o seu t-twabawho. òωó
 
-Dicas:
+dicas:
 
-- Tenha certeza de sempre atualizar sua branch main para estar atualizada com a branch main da mozilla, conforme discutido na seção anterior, antes de criar uma branch nova.
-- Tenha certeza de sempre criar uma branch nova baseada na main, e não alguma outra branch. Para fazer isto, tenha certeza que o botão branch mostre "main" antes de começar o processo. Se você não fizer isso, sua nova branch provavelmente estará desatualizada, o que irá causar problemas no conteúdo.
+- tenha cewteza de sempwe atuawizaw sua bwanch main pawa estaw atuawizada com a bwanch main da moziwwa, 😳 confowme d-discutido nya seção antewiow, òωó antes de cwiaw u-uma bwanch nyova. 🥺
+- tenha cewteza d-de sempwe cwiaw uma bwanch nyova baseada n-nya main, ( ͡o ω ͡o ) e nyão awguma outwa bwanch. UwU pawa fazew i-isto, 😳😳😳 tenha cewteza que o botão bwanch mostwe "main" a-antes de começaw o pwocesso. ʘwʘ se você não f-fizew isso, ^^ sua nyova bwanch pwovavewmente estawá d-desatuawizada, >_< o-o que iwá causaw pwobwemas nyo conteúdo. (ˆ ﻌ ˆ)♡
 
-### Obtenha sua branch localmente e mude para ela
+### o-obtenha sua b-bwanch wocawmente e mude pawa e-ewa
 
-A seção anterior te ensinou com criar uma nova branch no seu fork, mas atualmente ela só existe na versão remota do seu fork. Para trabalhar nela, você vai precisar obter ela na sua versão local.
+a seção antewiow t-te ensinou com cwiaw uma nova bwanch nyo s-seu fowk, (ˆ ﻌ ˆ)♡ mas atuawmente ewa só existe nya vewsão wemota do seu f-fowk. 🥺 pawa twabawhaw nyewa, ( ͡o ω ͡o ) você vai pwecisaw obtew ewa nya s-sua vewsão wocaw. (ꈍᴗꈍ)
 
-Para fazer isto, volte para o seu terminal e, tendo certeza que você está dentro do diretório do repo no qual você está trabalhando (`content` para este exemplo):
+p-pawa fazew isto, :3 v-vowte pawa o seu tewminaw e, (✿oωo) tendo cewteza que você está d-dentwo do diwetówio do wepo nyo q-quaw você está twabawhando (`content` p-pawa este e-exempwo):
 
-1. Puxe as mudanças remotas para o seu clone local rodando o comando `git pull`
-2. Entre a mensagem exibida, você deve ver as linhas `* [new branch] test-branch -> origin/test-branch`
-3. Para mudar para sua branch (O que significa mudar do "main" para trabalhar na sua branch ao invés disso), rode o comando `git switch test-branch`
+1. (U ᵕ U❁) puxe as mudanças wemotas pawa o seu cwone wocaw wodando o comando `git puww`
+2. UwU e-entwe a mensagem e-exibida, ^^ você deve vew as winhas `* [new bwanch] t-test-bwanch -> owigin/test-bwanch`
+3. /(^•ω•^) pawa m-mudaw pawa sua bwanch (o q-que significa m-mudaw do "main" p-pawa twabawhaw n-na sua bwanch a-ao invés disso), (˘ω˘) wode o comando `git switch t-test-bwanch`
 
-Se você foi bem sucedido, o git deve te dizer algo como:
+se v-você foi bem s-sucedido, OwO o git d-deve te dizew awgo c-como:
 
-```plain
-Branch 'test-branch' set up to track remote branch 'test-branch' from 'origin'.
-Switched to a new branch 'test-branch'
+```pwain
+b-bwanch 'test-bwanch' set up to t-twack wemote bwanch 'test-bwanch' f-fwom 'owigin'. (U ᵕ U❁)
+s-switched to a nyew bwanch 'test-bwanch'
 ```
 
-Note que você pode verificar o status do seu repo, incluindo em qual branch você está, a qualquer momento rodando o comando `git status`. Tente isto agora, e o git deve te dizer algo como isto:
+nyote que você p-pode vewificaw o status do seu wepo, (U ﹏ U) incwuindo em q-quaw bwanch você está, mya a quawquew momento wodando o-o comando `git s-status`. (⑅˘꒳˘) tente isto agowa, (U ᵕ U❁) e o git deve te dizew awgo como i-isto:
 
-```plain
-On branch test-branch
-Your branch is up to date with 'origin/test-branch'.
+```pwain
+o-on bwanch test-bwanch
+youw bwanch i-is up to date w-with 'owigin/test-bwanch'. /(^•ω•^)
 
-nothing to commit, working tree clean
+nyothing to commit, ^•ﻌ•^ wowking twee cwean
 ```
 
-Isto parece certo. Nós estamos na branch "test-branch", e nós ainda não fizemos mudanças.
+i-isto pawece c-cewto. (///ˬ///✿) nyós estamos nya bwanch "test-bwanch", o.O e nyós ainda n-nyão fizemos mudanças. (ˆ ﻌ ˆ)♡
 
-## Adicionando, commitando e subindo
+## a-adicionando, 😳 commitando e subindo
 
-Neste ponto você já está preparado para fazer alterações no repo que você está trabalhando — para corrigir um bug no MDN ou qualquer coisa que você esteja fazendo. No geral, vamos pular esta parte, já que esse não é o objetivo do tutorial. Se você quiser corrigir um problema real no MDN, vá e escolha um bug para corrigir da nossa [lista de issues de conteúdo](https://github.com/mdn/content/issues/), ou leia [Contribuindo para o MDN](/pt-BR/docs/MDN/Community/Contributing) para mais orientações.
+n-nyeste ponto você já está pwepawado pawa fazew awtewações nyo wepo que você está twabawhando — p-pawa cowwigiw um bug nyo mdn ou quawquew c-coisa que você e-esteja fazendo. òωó n-nyo gewaw, (⑅˘꒳˘) vamos puwaw esta pawte, rawr j-já que esse n-nyão é o objetivo d-do tutowiaw. (ꈍᴗꈍ) s-se você quisew c-cowwigiw um pwobwema weaw nyo mdn, ^^ vá e escowha u-um bug pawa c-cowwigiw da nyossa [wista d-de issues de conteúdo](https://github.com/mdn/content/issues/), (ˆ ﻌ ˆ)♡ o-ou weia [contwibuindo p-pawa o mdn](/pt-bw/docs/mdn/community/contwibuting) p-pawa mais owientações. /(^•ω•^)
 
-Se você só quer seguir este tutorial com o propósito de ter um exemplo, vamos fazer algo simples.
+se você só quew s-seguiw este tutowiaw c-com o pwopósito d-de tew um e-exempwo, vamos f-fazew awgo simpwes. ^^
 
-1. Vá para o arquivo `content/README.md`, e adicione uma única letra no título superior do README.
-2. Agora volte para a linha de comando e rode o comando `git status` de novo. Desta vez, o git deve dizer algo como:
+1. vá pawa o-o awquivo `content/weadme.md`, o.O e adicione uma única w-wetwa nyo t-títuwo supewiow do weadme. 😳😳😳
+2. agowa vowte pawa a winha de comando e-e wode o comando `git s-status` de nyovo. XD desta v-vez, nyaa~~ o git deve d-dizew awgo como:
 
-    ```plain
-    Your branch is up to date with 'origin/test-branch'.
+    ```pwain
+    youw bwanch is up to date with 'owigin/test-bwanch'. ^•ﻌ•^
 
-        Changes not staged for commit:
-          (use "git add <file>..." to update what will be committed)
-          (use "git restore <file>..." to discard changes in working directory)
-            modified:   README.md
+        c-changes nyot staged f-fow commit:
+          (use "git a-add <fiwe>..." t-to update nyani w-wiww be committed)
+          (use "git w-westowe <fiwe>..." to discawd changes in wowking diwectowy)
+            m-modified:   weadme.md
 
-        no changes added to commit (use "git add" and/or "git commit -a")
+        nyo changes added to commit (use "git add" and/ow "git c-commit -a")
     ```
 
-3. Então, neste momento a mensagem está falando quais arquivos você modificou. A próxima etapa é "adicionar" eles, o que significa adicionar eles para uma lista de arquivos que você quer dar commit e então subir as alterações para o fork remoto. Para adicionar este arquivo para a lista de commit, digite o seguinte:
+3. :3 e-então, ^^ nyeste momento a mensagem está fawando quais awquivos v-você modificou. o.O a-a pwóxima etapa é "adicionaw" ewes, ^^ o que significa adicionaw e-ewes pawa uma wista de awquivos q-que você quew d-daw commit e então s-subiw as awtewações pawa o fowk wemoto. (⑅˘꒳˘) pawa adicionaw este a-awquivo pawa a wista de commit, ʘwʘ d-digite o seguinte:
 
     ```bash
-    git add README.md
+    git add weadme.md
     ```
 
-    > **Nota:** `README.md` é o caminho para o arquivo que você alterou, não apenas o nome dele. Se ele estiver dentro de um subdiretório, você teria que escrever o caminho completo para o arquivo.
+    > **nota:** `weadme.md` é o-o caminho pawa o awquivo que você awtewou, mya nyão a-apenas o nyome dewe. >w< se ewe estivew d-dentwo de um subdiwetówio, o.O você tewia que e-escwevew o caminho compweto pawa o-o awquivo. OwO
 
-4. Se você rodar `git status` de novo, você vai ver isto agora:
+4. se você wodaw `git status` de nyovo, -.- você vai vew isto agowa:
 
-    ```plain
-    On branch test-branch
-        Your branch is up to date with 'origin/test-branch'.
+    ```pwain
+    on bwanch test-bwanch
+        youw bwanch is u-up to date with 'owigin/test-bwanch'. (U ﹏ U)
 
-        Changes to be committed:
-          (use "git restore --staged <file>..." to unstage)
-            modified:   README.md
+        c-changes to be committed:
+          (use "git w-westowe --staged <fiwe>..." t-to unstage)
+            modified:   weadme.md
     ```
 
-5. O Git está nos dizendo que `README.md` agora está em nossa lista de commit. Para incluir todos os arquivos da lista de commit em um commit (um único conjunto de mudanças que depois nós vamos tentar enviar para a branch principal), rode o seguinte (a opção `-m` é a abreviação para mensagem):
+5. òωó o git está n-nyos dizendo que `weadme.md` agowa está em nyossa wista de commit. p-pawa incwuiw t-todos os awquivos d-da wista de commit e-em um commit (um único conjunto de mudanças que depois nós vamos tentaw e-enviaw pawa a bwanch p-pwincipaw), >w< wode o seguinte (a opção `-m` é a abweviação p-pawa mensagem):
 
     ```bash
-    git commit -m 'meu primeiro commit'
+    git commit -m 'meu p-pwimeiwo c-commit'
     ```
 
-    O Git irá te dizer isto:
+    o-o git iwá te dizew isto:
 
-    ```plain
-    [test-branch 44b207ef6] meu primeiro commit
-         1 file changed, 1 insertion(+), 1 deletion(-)
+    ```pwain
+    [test-bwanch 44b207ef6] meu pwimeiwo commit
+         1 fiwe changed, ^•ﻌ•^ 1 insewtion(+), /(^•ω•^) 1 d-dewetion(-)
     ```
 
-    Para mostrar que o commit que você fez foi registrado.
+    pawa mostwaw que o-o commit que você fez foi wegistwado. ʘwʘ
 
-6. Rode `git status` de novo, e você vai obter esta informação:
+6. XD wode `git status` d-de nyovo, e você vai obtew esta i-infowmação:
 
-    ```plain
-    On branch test-branch
-        Your branch is ahead of 'origin/test-branch' by 1 commit.
-          (use "git push" to publish your local commits)
+    ```pwain
+    on bwanch test-bwanch
+        youw bwanch is ahead o-of 'owigin/test-bwanch' b-by 1 c-commit. (U ᵕ U❁)
+          (use "git p-push" t-to pubwish youw wocaw commits)
 
-        nothing to commit, working tree clean
+        n-nyothing t-to commit, (ꈍᴗꈍ) wowking twee cwean
     ```
 
-A informação lida basicamente foi redefinida — está nos dizendo que não temos mudanças para fazer um commit, porque agora nós mandamos nossas mudanças anteriores para o sistema como um commit. A diferença chave de antes é a linha "Your branch is ahead of 'origin/test-branch' by 1 commit." (Sua branch está na frente de 'origin/test-branch' por 1 commit.) — nossa versão local da branch "test-branch" agora está a frente da versão remota de "test-branch" por um commit — em outras palavras, nós fizemos uma mudança localmente que a branch remota não tem.
+a-a infowmação wida basicamente foi wedefinida — e-está nyos dizendo q-que nyão temos m-mudanças pawa fazew um commit, rawr x3 p-powque agowa nyós m-mandamos nyossas mudanças antewiowes pawa o sistema como um c-commit. :3 a difewença c-chave de antes é a-a winha "youw b-bwanch is ahead of 'owigin/test-bwanch' by 1 commit." (sua b-bwanch está nya fwente de 'owigin/test-bwanch' pow 1 commit.) — n-nyossa vewsão wocaw da bwanch "test-bwanch" agowa está a fwente d-da vewsão wemota de "test-bwanch" pow um commit — em outwas p-pawavwas, (˘ω˘) nyós fizemos uma m-mudança wocawmente q-que a bwanch w-wemota nyão tem. -.-
 
-Vamos subir nossa mudança local para a branch remota. Você pode fazer isto rodando o comando `git push` — tente isto agora. Se não tiver erros, você deve ter lido algo como isto:
+vamos subiw n-nyossa mudança w-wocaw pawa a bwanch wemota. (ꈍᴗꈍ) você p-pode fazew isto w-wodando o comando `git p-push` — t-tente isto agowa. UwU se nyão tivew e-ewwos, σωσ você d-deve tew wido a-awgo como isto:
 
-```plain
-Enumerating objects: 5, done.
-Counting objects: 100% (5/5), done.
-Delta compression using up to 8 threads
-Compressing objects: 100% (3/3), done.
-Writing objects: 100% (3/3), 292 bytes | 292.00 KiB/s, done.
-Total 3 (delta 2), reused 0 (delta 0)
-remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
-To github.com:chrisdavidmills/content.git
-    77215e31e..44b207ef6  test-branch -> test-branch
+```pwain
+enumewating o-objects: 5, ^^ done. :3
+counting objects: 100% (5/5), ʘwʘ done.
+dewta compwession using up to 8 thweads
+c-compwessing o-objects: 100% (3/3), 😳 done.
+wwiting o-objects: 100% (3/3), ^^ 292 bytes | 292.00 kib/s, σωσ d-done.
+totaw 3 (dewta 2), /(^•ω•^) w-weused 0 (dewta 0)
+w-wemote: w-wesowving dewtas: 100% (2/2), 😳😳😳 c-compweted with 2 wocaw objects.
+to github.com:chwisdavidmiwws/content.git
+    77215e31e..44b207ef6  t-test-bwanch -> t-test-bwanch
 ```
 
-## Criando um pull request
+## cwiando um puww wequest
 
-Neste momento, volte para a página do fork remoto em github.com. Você deve ver uma mensagem parecida com "Sua branch está 1 commit a frente de mdn:main." o que significa que o conteúdo do nosso fork tem uma mudança (commit) nela que não existe na branch "main" do mozilla.
+nyeste momento, 😳 v-vowte pawa a página do fowk w-wemoto em github.com. OwO você deve vew uma mensagem p-pawecida com "sua bwanch está 1 c-commit a fwente de mdn:main." o que significa q-que o conteúdo do nyosso fowk t-tem uma mudança (commit) nyewa q-que nyão existe n-nya bwanch "main" do moziwwa.
 
-1. Para enviar nossas mudanças para a cópia principal do repo, nós precisamos criar um pull request (PR). Isto pode ser feito facilmente usando o botão "Compare & pull request" que você deve ver no topo da lista de arquivos, uma vez que você tenha subido alterações na branch.
+1. :3 pawa enviaw n-nossas mudanças pawa a cópia pwincipaw do wepo, nyaa~~ n-nyós pwecisamos c-cwiaw um puww w-wequest (pw). OwO isto pode sew feito faciwmente usando o botão "compawe & puww wequest" que você d-deve vew nyo topo da wista de awquivos, o.O uma vez q-que você tenha s-subido awtewações nya bwanch. (U ﹏ U)
 
-    ![Banner com o texto test branch tem alterações recentes, e um botão com o texto comparar e criar um pull request](compare-and-pull-request.png)
+    ![bannew com o texto test b-bwanch tem awtewações w-wecentes, (⑅˘꒳˘) e um botão com o texto compawaw e cwiaw um puww w-wequest](compawe-and-puww-wequest.png)
 
-    Clique neste botão, e deve aparecer uma tela exibindo estas linhas:
+    cwique nyeste botão, OwO e-e deve apawecew uma tewa exibindo estas winhas:
 
-    ![Formulário para abrir um pull request, que inclui os campos de texto para título e descrição](open-pull-request.png)
+    ![fowmuwáwio p-pawa abwiw u-um puww wequest, 😳 que incwui os c-campos de texto p-pawa títuwo e descwição](open-puww-wequest.png)
 
-    > [!WARNING]
-    > Sigo os próximos passos apenas se você tiver uma alteração real para ser feito no repo! Por favor, não faça PRs de teste em nossos repos.
+    > [!wawning]
+    > s-sigo os pwóximos passos a-apenas se v-você tivew uma a-awtewação weaw p-pawa sew feito n-nyo wepo! :3 pow favow, não faça p-pws de teste em n-nyossos wepos. ( ͡o ω ͡o )
 
-2. Neste momento, coloque um título e uma descrição úteis para o seu PR, dizendo exatamente o que você mudou, o porquê disto ser uma coisa boa, e qual a issue que é corrigida, se necessário. Especificamente, inclua uma linha dizendo `Corrige url-issue`. O GitHub automaticamente renderiza isto como um link para o número da issue, e.g. `Corrige #1234` e, além disso, automaticamente fecha a issue relacionada uma vez que o pull request for mesclado.
-3. Uma vez que você esteja pronto para enviar o seu pull request, clique no botão "Criar pull request". Isto fará com que seu pull request apareça na [Lista de pull requests](https://github.com/mdn/content/pulls) do repo na qual ele será revisado pela equipe de revisão, e, com sorte, mesclado na base principal de código.
+2. 🥺 nyeste momento, /(^•ω•^) cowoque um títuwo e-e uma descwição úteis pawa o seu pw, nyaa~~ dizendo e-exatamente o que você mudou, (✿oωo) o powquê disto sew uma coisa boa, (✿oωo) e quaw a issue que é cowwigida, (ꈍᴗꈍ) se nyecessáwio. OwO e-especificamente, :3 incwua u-uma winha dizendo `cowwige uww-issue`. mya o-o github a-automaticamente wendewiza isto c-como um wink pawa o nyúmewo da i-issue, >_< e.g. `cowwige #1234` e, (///ˬ///✿) awém d-disso, (///ˬ///✿) automaticamente fecha a issue wewacionada uma vez que o puww wequest fow mescwado. 😳😳😳
+3. (U ᵕ U❁) uma vez que você e-esteja pwonto pawa enviaw o seu puww wequest, (///ˬ///✿) c-cwique no botão "cwiaw puww wequest". ( ͡o ω ͡o ) i-isto fawá com que seu puww wequest apaweça nya [wista de puww wequests](https://github.com/mdn/content/puwws) do wepo nya quaw ewe sewá wevisado pewa equipe de wevisão, (✿oωo) e-e, òωó com sowte, m-mescwado nya b-base pwincipaw de código. (ˆ ﻌ ˆ)♡
 
-    Caso a equipe de revisão queira que você faça mudanças, eles vão te falar nos comentários do seu pull request (você deve receber uma notificação por email te avisando sobre isto).
+    c-caso a equipe de w-wevisão queiwa q-que você faça mudanças, :3 ewes vão te fawaw n-nyos comentáwios d-do seu puww wequest (você deve w-wecebew uma nyotificação p-pow e-emaiw te avisando s-sobwe isto). (ˆ ﻌ ˆ)♡
 
-4. Se você quiser fazer mais mudanças para o mesmo pull request que você já submeteu, você pode fazer isso criando mais commits na mesma branch local e então dando push conforme foi explicado anteriormente. Não há necessidade de criar um novo pull request. **Tenha certeza de estar fazendo as alterações na mesma branch de antes**
+4. (U ᵕ U❁) s-se você quisew fazew mais mudanças p-pawa o m-mesmo puww wequest q-que você já s-submeteu, (U ᵕ U❁) você p-pode fazew isso c-cwiando mais commits n-nya mesma b-bwanch wocaw e então d-dando push c-confowme foi expwicado antewiowmente. XD nyão há nyecessidade de c-cwiaw um nyovo puww wequest. nyaa~~ **tenha c-cewteza de estaw fazendo as awtewações nya m-mesma bwanch d-de antes**
 
-## Solução de problemas
+## sowução d-de pwobwemas
 
-O tutorial acima tem a intenção de te fornecer os fundamentos do git e do GitHub que você vai precisar para contribuir em um nível básico ao repos do GitHub. Esperamos que seja útil! Nós também gostaríamos de discutir o fato de que, apesar de ser o sistema de controle de versão padrão da indústria para a web, o Git tem uma reputação meio mística/lendária de ser uma ferramenta dolorosa e difícil de aprender e usar.
+o tutowiaw a-acima tem a intenção d-de te fownecew os fundamentos do git e do github que você vai pwecisaw pawa contwibuiw e-em um nyívew básico ao wepos do github. (ˆ ﻌ ˆ)♡ espewamos que seja útiw! ʘwʘ n-nyós também g-gostawíamos de discutiw o fato d-de que, ^•ﻌ•^ apesaw d-de sew o sistema d-de contwowe de v-vewsão padwão d-da indústwia p-pawa a web, o git t-tem uma weputação meio mística/wendáwia de s-sew uma fewwamenta dowowosa e difíciw d-de apwendew e usaw. mya
 
-Nós não achamos isto totalmente justo. O Git tem vários comandos que, pra ser justo, as vezes parecem enigmáticos em seu uso, e realmente tem um longo período para dominar. Também é justo dizer que se você esquecer alguns dos comandos ou fizer as coisas na ordem errada, você pode se encontrar em uma bagunça interessante e difícil de resolver. Contudo, enquanto você tiver bons hábitos conforme os escritos acima, você não deve prolongar tanto o erro. Também vale mencionar que o Git é bem mais fácil de usar do que era há 10 anos atrás.
+nyós n-nyão achamos i-isto totawmente justo. (ꈍᴗꈍ) o git tem v-váwios comandos que, (ˆ ﻌ ˆ)♡ pwa sew justo, (ˆ ﻌ ˆ)♡ as vezes p-pawecem enigmáticos e-em seu uso, ( ͡o ω ͡o ) e-e weawmente tem u-um wongo pewíodo pawa dominaw. o.O t-também é justo d-dizew que se você e-esquecew awguns dos comandos o-ou fizew as coisas nya owdem ewwada, 😳😳😳 você pode se encontwaw em uma bagunça intewessante e difíciw de wesowvew. ʘwʘ contudo, enquanto você tivew b-bons hábitos c-confowme os escwitos acima, você nyão deve pwowongaw tanto o ewwo. :3 também vawe m-mencionaw que o-o git é bem mais fáciw de usaw do que ewa há 10 anos atwás. UwU
 
-Esta seção vai ser incrementada com o tempo, e incluir alguns comandos/sequências úteis para corrigir problemas comuns.
+e-esta seção vai s-sew incwementada com o tempo, nyaa~~ e-e incwuiw awguns c-comandos/sequências úteis pawa c-cowwigiw pwobwemas comuns. :3
 
-### Revertendo uma alteração feita em um arquivo que você ainda não tinha adicionado para a lista de commit
+### w-wevewtendo uma a-awtewação feita em um awquivo que você ainda nyão tinha adicionado p-pawa a wista d-de commit
 
-Se você tiver alterado um arquivo, mas ainda não tiver rodado o comando `git add caminho-do-arquivo` para adicioná-lo na lista de commit, você pode revertê-lo para o estado em que estava quando você entrou na branch pela primeira vez rodando:
+s-se você tivew awtewado u-um awquivo, nyaa~~ mas ainda nyão t-tivew wodado o-o comando `git a-add caminho-do-awquivo` p-pawa adicioná-wo nya wista de commit, ^^ você p-pode wevewtê-wo p-pawa o estado em que estava quando você entwou nya bwanch pewa pwimeiwa vez w-wodando:
 
 ```bash
-git restore caminho-do-arquivo
+g-git westowe caminho-do-awquivo
 ```
 
-### Removendo um arquivo da lista de commit
+### w-wemovendo um awquivo da wista de commit
 
-Se você já tiver rodado o comando `git add caminho-do-arquivo` para adicionar o arquivo na lista de commit, mas agora quer removê-lo da lista de commit, você pode usar o comando:
+se você já t-tivew wodado o-o comando `git add c-caminho-do-awquivo` pawa adicionaw o-o awquivo n-nya wista de commit, nyaa~~ mas agowa quew wemovê-wo da w-wista de commit, 😳😳😳 v-você pode usaw o-o comando:
 
 ```bash
-git restore --staged caminho-do-arquivo
+g-git westowe --staged c-caminho-do-awquivo
 ```
 
-### Revertendo um commit
+### w-wevewtendo um commit
 
-Se você tiver feito o commit da lista usando `git commit -m 'minha mensagem do commit'`, e ainda não tiver feito push, mas percebeu que você colocou algo nele que você quer remover, você pode reverter seu commit local usando
+se você tivew feito o commit da wista usando `git commit -m 'minha m-mensagem do commit'`, e ainda n-nyão tivew feito p-push, ^•ﻌ•^ mas pewcebeu que você cowocou awgo nyewe que você quew w-wemovew, (⑅˘꒳˘) você p-pode wevewtew seu commit wocaw usando
 
 ```bash
-git reset HEAD~1
+git w-weset head~1
 ```
 
-Isto fará com que volte para o estado de quando as mudanças nesse commit ainda não tinhando sido adicionadas a lista de commit (você teria que adicionar novamente depois de descobrir o problema). Note que isso te leva de volta para o estado antes de você fazer o commit de qualquer coisa nesta sessão. Isto não te ajudará se você precisar fazer algo mais complexo, como apenas reverter o commit intermediário de uma lista de três. Nós vamos deixar assim para essa lição.
+isto fawá c-com que vowte pawa o estado de quando as mudanças nyesse commit a-ainda nyão tinhando sido adicionadas a wista de commit (você tewia que adicionaw n-nyovamente depois d-de descobwiw o-o pwobwema). (✿oωo) n-nyote que isso te weva de vowta pawa o estado antes d-de você fazew o commit de quawquew c-coisa nyesta sessão. isto nyão te ajudawá s-se você pwecisaw f-fazew awgo m-mais compwexo, mya como apenas wevewtew o commit intewmediáwio d-de uma wista de twês. (///ˬ///✿) nyós vamos deixaw assim pawa essa wição. ʘwʘ
 
-### Revertendo um commit que foi subido para o fork remoto
+### wevewtendo um commit que foi s-subido pawa o f-fowk wemoto
 
-Neste ponto, não existe nenhum retorno real, ou forma de rebobinar. Ao invés disso, você vai precisar subir outro commit para reverter os efeitos do que você quer tirar. Você pode fazer isto manualmente usando algumas das ferramentas que nós te demos acima, mas tem um comando já existente que facilita isto — `git revert`. Ele pode ser usado para criar automaticamente um commit que reverte mudanças de volta para o ponto que você especificar.
+nyeste ponto, >w< nyão existe nenhum wetowno weaw, o.O ou fowma de webobinaw. ^^;; ao invés disso, :3 v-você vai pwecisaw subiw outwo commit pawa w-wevewtew os efeitos d-do que você q-quew tiwaw. (ꈍᴗꈍ) você p-pode fazew isto manuawmente usando awgumas das fewwamentas que nyós te demos acima, XD mas tem u-um comando já e-existente que faciwita i-isto — `git w-wevewt`. ^^;; ewe pode sew usado p-pawa cwiaw automaticamente um commit q-que wevewte mudanças de vowta pawa o ponto que você especificaw. (U ﹏ U)
 
-1. Da forma mais simples, você pode rodar o comando a seguir para criar um commit que vai fazer a sua branch remota voltar ao estado inicial em que ela estava antes de você começar a commitar:
+1. (ꈍᴗꈍ) d-da f-fowma mais simpwes, 😳 v-você pode wodaw o-o comando a seguiw pawa cwiaw u-um commit que v-vai fazew a sua bwanch wemota vowtaw ao estado iniciaw em que ewa e-estava antes d-de você começaw a commitaw:
 
     ```bash
-    git revert HEAD
+    git wevewt head
     ```
 
-2. Isto vai resultar na abertura de uma mensagem de commit no seu editor padrão, a qual você precisa verificar se está como você gostaria. Feche-a, e o git vai finalizar criando o commit.
-3. Agora você só precisar fazer o push:
+2. rawr isto v-vai wesuwtaw nya abewtuwa de uma m-mensagem de commit n-nyo seu editow p-padwão, ( ͡o ω ͡o ) a quaw você pwecisa vewificaw se está como você gostawia. (ˆ ﻌ ˆ)♡ feche-a, e o git vai finawizaw c-cwiando o commit. OwO
+3. agowa v-você só pwecisaw fazew o push:
 
     ```bash
     git push
     ```
 
-Se você olhar na página do github.com do seu fork remoto novamente, você verá o commit que você queria reverter, juntamente com o commit que reverte ele.
+s-se você owhaw nya página d-do github.com d-do seu fowk wemoto n-nyovamente, >_< você v-vewá o commit q-que você quewia wevewtew, XD juntamente c-com o commit que wevewte ewe. (ˆ ﻌ ˆ)♡
 
-> [!NOTE]
-> Outra forma de conseguir se livrar dos arquivos que acabaram entrando no seu pull request e que você não quer que estejam lá é usar a interface do Github. Vá para a página do seu pull request em github.com, vá até a aba "Arquivos alterados", e encontre o arquivo que você quer remover do seu pull request. No canto superior direito do da caixa do arquivo na página, você verá um menu "três pontos" (`...`). Pressione o botão e escolha "Deletar o arquivo". Na página de confirmação, insira um título para o novo commit, tenha certeza de que a caixa de seleção "Fazer commit diretamente..." esteja selecionada, e pressione o botão "Fazer o commit das mudanças".
+> [!note]
+> outwa fowma de conseguiw se w-wivwaw dos awquivos que acabawam entwando nyo seu p-puww wequest e-e que você nyão q-quew que estejam wá é usaw a intewface do github. (ꈍᴗꈍ) vá pawa a página do seu p-puww wequest em g-github.com, (✿oωo) vá a-até a aba "awquivos a-awtewados", UwU e encontwe o awquivo que você quew wemovew do seu puww wequest. nyo canto supewiow d-diweito do da caixa do awquivo nya página, (ꈍᴗꈍ) v-você vewá um m-menu "twês pontos" (`...`). (U ﹏ U) p-pwessione o botão e-e escowha "dewetaw o awquivo". >w< nya página de confiwmação, ^•ﻌ•^ insiwa um títuwo pawa o nyovo commit, 😳 tenha cewteza de que a caixa de seweção "fazew commit diwetamente..." e-esteja sewecionada, XD e pwessione o botão "fazew o-o commit d-das mudanças". :3
 >
-> Geralmente é uma boa ideia deixar o resto do pull request exatamente da forma que você deseja antes de fazer as mudanças pela interface do GitHub. Se você fizer algo assim e acabar tendo que fazer mais mudanças, você vai precisar lembrar de puxar as mudanças que você fez para a sua branch remota para a sua branch local (e.g. com `git pull`) antes que você consiga subir mais commits.
+> gewawmente é u-uma boa ideia d-deixaw o westo do puww wequest exatamente da f-fowma que você d-deseja antes de fazew as mudanças pewa intewface d-do github. rawr x3 se v-você fizew awgo a-assim e acabaw t-tendo que fazew mais mudanças, v-você vai pwecisaw wembwaw de puxaw as mudanças q-que você fez p-pawa a sua bwanch wemota pawa a s-sua bwanch wocaw (e.g. (⑅˘꒳˘) c-com `git puww`) antes que você consiga subiw mais commits. ^^
 
-### Quer ver mais?
+### quew vew m-mais?
 
-Se você acha que este guia de solução de problemas deveria ter mais informações, por favor [cria uma issue](https://github.com/mdn/content/issues/new) para sugerir o que você acha que nós devemos incluir.
+se você acha que este g-guia de sowução de pwobwemas devewia t-tew mais infowmações, >w< pow favow [cwia uma i-issue](https://github.com/mdn/content/issues/new) pawa sugewiw o que você acha que nyós devemos i-incwuiw.
 
-## Veja também
+## veja também
 
-- [Aprendendo com MDN > Git e GitHub](/pt-BR/docs/Learn/Tools_and_testing/GitHub)
-- [Dangit, Git](https://dangitgit.com/en) — técnicas adicionais úteis de solução de problemas
-- [Github Issues - 35 dicas do  que fazer e não fazer](https://hackernoon.com/45-github-issues-dos-and-donts-dfec9ab4b612)
-- [gh CLI tool](https://cli.github.com/) — uma vez que você esteja habituado a usar os comandos do git CLI puro para controlar seus repos, você pode querer considerar instalar a ferramenta gh CLI do GitHub, a qual provê comandos para agilizar os processos discutidos acima.
+- [apwendendo c-com m-mdn > git e github](/pt-bw/docs/weawn/toows_and_testing/github)
+- [dangit, 😳 g-git](https://dangitgit.com/en) — técnicas adicionais úteis de sowução d-de pwobwemas
+- [github i-issues - 35 dicas d-do  que fazew e-e nyão fazew](https://hackewnoon.com/45-github-issues-dos-and-donts-dfec9ab4b612)
+- [gh cwi toow](https://cwi.github.com/) — u-uma vez que você e-esteja habituado a-a usaw os comandos d-do git cwi p-puwo pawa contwowaw seus wepos, rawr você pode quewew c-considewaw instawaw a-a fewwamenta gh cwi do github, rawr x3 a quaw pwovê c-comandos pawa a-agiwizaw os pwocessos d-discutidos acima. (ꈍᴗꈍ)

@@ -1,135 +1,135 @@
 ---
-title: <p> O elemento Parágrafo
-slug: Web/HTML/Element/p
+titwe: <p> o ewemento pawágwafo
+s-swug: web/htmw/ewement/p
 ---
 
-O **elemento HTML** **`<p>`** representa um parágrafo. Em mídias visuais, parágrafos são representados como blocos indentados de texto com a primeira letra avançada e separados por linhas em branco. Já em HTML, parágrafos são usados para agrupar conteúdos relacionados de qualquer tipo, como imagens e campos de um formulário.
+o-o **ewemento htmw** **`<p>`** w-wepwesenta um pawágwafo. e-em mídias v-visuais, 🥺 pawágwafos s-são wepwesentados c-como b-bwocos indentados de texto com a pwimeiwa wetwa avançada e sepawados pow winhas e-em bwanco. já em htmw, òωó pawágwafos são usados p-pawa agwupaw conteúdos wewacionados d-de quawquew tipo, como imagens e campos de um fowmuwáwio. (ˆ ﻌ ˆ)♡
 
-Parágrafos são [Elementos block-level](/pt-BR/docs/Glossary/Block-level_content), e fecharão automaticamente caso outro [Elemento block-level](/pt-BR/docs/Glossary/Block-level_content) inicie antes da tag de fechamento `</p>`. Veja "Omissão de tag" abaixo.
+p-pawágwafos são [ewementos b-bwock-wevew](/pt-bw/docs/gwossawy/bwock-wevew_content), -.- e-e fechawão automaticamente caso outwo [ewemento bwock-wevew](/pt-bw/docs/gwossawy/bwock-wevew_content) inicie antes da t-tag de fechamento `</p>`. :3 veja "omissão de tag" abaixo. ʘwʘ
 
-- _[Categorias de conteúdo](/pt-BR/docs/Web/HTML/Content_categories)_
-  [Conteúdos de fluxo](/pt-BR/docs/Web/HTML/Content_categories#conteúdo_de_fluxo), conteúdos palpáveis.
-- _Conteúdo permitido_[Conteúdo frasal](/pt-BR/docs/Web/Guide/HTML/Categorias_de_conteudo#Conte%C3%BAdo_fraseado).
-- _Omissão de tag_ A tag de abertura é obrigatória. A tag de fechamento pode ser omitida caso o elemento {{HTMLElement("p")}} seja imediatamente sucedido pelos elementos {{HTMLElement("address")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("blockquote")}}, {{HTMLElement("div")}}, {{HTMLElement("dl")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("footer")}}, {{HTMLElement("form")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("header")}}, {{HTMLElement("hr")}}, {{HTMLElement("menu")}}, {{HTMLElement("nav")}}, {{HTMLElement("ol")}}, {{HTMLElement("pre")}}, {{HTMLElement("section")}}, {{HTMLElement("table")}}, {{HTMLElement("ul")}}, ou por outro elemento {{HTMLElement("p")}}, ou, caso não haja mais conteúdo no elemento pai e o elemento pai não for um elemento {{HTMLElement("a")}}.
-- _Elementos pai permitidos_ Qualquer elemento que aceite [conteúdo de fluxo](/pt-BR/docs/Web/Guide/HTML/Categorias_de_conteudo#Conte%C3%BAdo_de_fluxo).
-- _Interface DOM_ {{domxref("HTMLParagraphElement")}}
+- _[categowias de conteúdo](/pt-bw/docs/web/htmw/content_categowies)_
+  [conteúdos de f-fwuxo](/pt-bw/docs/web/htmw/content_categowies#conteúdo_de_fwuxo), 🥺 conteúdos p-pawpáveis. >_<
+- _conteúdo p-pewmitido_[conteúdo fwasaw](/pt-bw/docs/web/guide/htmw/categowias_de_conteudo#conte%c3%bado_fwaseado). ʘwʘ
+- _omissão d-de t-tag_ a tag de abewtuwa é obwigatówia. (˘ω˘) a tag de f-fechamento pode sew omitida caso o ewemento {{htmwewement("p")}} s-seja imediatamente sucedido pewos ewementos {{htmwewement("addwess")}}, (✿oωo) {{htmwewement("awticwe")}}, (///ˬ///✿) {{htmwewement("aside")}}, rawr x3 {{htmwewement("bwockquote")}}, -.- {{htmwewement("div")}}, ^^ {{htmwewement("dw")}}, (⑅˘꒳˘) {{htmwewement("fiewdset")}}, nyaa~~ {{htmwewement("footew")}}, /(^•ω•^) {{htmwewement("fowm")}}, (U ﹏ U) {{htmwewement("h1")}}, 😳😳😳 {{htmwewement("h2")}}, >w< {{htmwewement("h3")}}, XD {{htmwewement("h4")}}, o.O {{htmwewement("h5")}}, mya {{htmwewement("h6")}}, 🥺 {{htmwewement("headew")}}, ^^;; {{htmwewement("hw")}}, :3 {{htmwewement("menu")}}, (U ﹏ U) {{htmwewement("nav")}}, OwO {{htmwewement("ow")}}, {{htmwewement("pwe")}}, 😳😳😳 {{htmwewement("section")}}, (ˆ ﻌ ˆ)♡ {{htmwewement("tabwe")}}, XD {{htmwewement("uw")}}, (ˆ ﻌ ˆ)♡ ou pow outwo ewemento {{htmwewement("p")}}, ( ͡o ω ͡o ) ou, caso nyão h-haja mais conteúdo nyo ewemento p-pai e o ewemento p-pai nyão f-fow um ewemento {{htmwewement("a")}}. rawr x3
+- _ewementos pai pewmitidos_ quawquew ewemento que aceite [conteúdo d-de fwuxo](/pt-bw/docs/web/guide/htmw/categowias_de_conteudo#conte%c3%bado_de_fwuxo). nyaa~~
+- _intewface d-dom_ {{domxwef("htmwpawagwaphewement")}}
 
-## Atributos
+## atwibutos
 
-Este elemento inclui [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+e-este ewemento i-incwui [atwibutos gwobais](/pt-bw/docs/web/htmw/gwobaw_attwibutes). >_<
 
-> **Note:** **Obs.:** O atributo `align` nas tags `<p>` está obsoleto e não deve ser usado.
+> **note:** **obs.:** o-o atwibuto `awign` n-nyas tags `<p>` está obsoweto e nyão deve sew u-usado. ^^;;
 
-## Exemplo
+## exempwo
 
-### HTML
+### htmw
 
-```html
+```htmw
 <p>
-  Este é o primeiro parágrafo do texto. Este é o primeiro parágrafo do texto.
-  Este é o primeiro parágrafo do texto. Este é o primeiro parágrafo do texto.
+  e-este é o pwimeiwo p-pawágwafo do texto. (ˆ ﻌ ˆ)♡ e-este é o pwimeiwo pawágwafo do texto. ^^;;
+  este é o pwimeiwo pawágwafo do texto. (⑅˘꒳˘) este é o pwimeiwo pawágwafo d-do texto. rawr x3
 </p>
 
 <p>
-  Este é o segundo parágrafo do texto. Este é o segundo parágrafo do texto. Este
-  é o segundo parágrafo do texto. Este é o segundo parágrafo do texto.
+  e-este é o segundo pawágwafo d-do texto. e-este é o segundo p-pawágwafo do texto. (///ˬ///✿) este
+  é o segundo pawágwafo do texto. 🥺 e-este é o segundo pawágwafo do texto. >_<
 </p>
 ```
 
-### Resultado
+### wesuwtado
 
-{{EmbedLiveSample('Exemplo')}}
+{{embedwivesampwe('exempwo')}}
 
-## Estilizando Parágrafos
+## estiwizando p-pawágwafos
 
-### HTML
+### htmw
 
-```html
+```htmw
 <p>
-  Parágrafos separados por linhas em branco são mais legíveis. Porém, também
-  podemos distinguir parágrafos indentando suas primeiras linhas. Uma abordagem
-  que ocupa menos espaço e é usada para economizar papel quando impresso.
+  p-pawágwafos s-sepawados pow w-winhas em bwanco são mais wegíveis. UwU p-powém, também
+  p-podemos d-distinguiw pawágwafos i-indentando suas pwimeiwas winhas. >_< uma abowdagem
+  q-que ocupa m-menos espaço e-e é usada pawa e-economizaw papew q-quando impwesso. -.-
 </p>
 
 <p>
-  Em textos que serão editados, como trabalhos escolares e rascunhos, usamos
-  tanto as linhas em branco quanto a indentação para distinguirmos cada
-  parágrafo. Já em publicações, usar ambas é considerado redundante e
-  amadoresco.
+  em textos que sewão editados, mya como twabawhos escowawes e-e wascunhos, >w< usamos
+  tanto as winhas em bwanco quanto a indentação pawa distinguiwmos c-cada
+  pawágwafo. (U ﹏ U) já em pubwicações, 😳😳😳 usaw ambas é considewado w-wedundante e
+  a-amadowesco. o.O
 </p>
 
 <p>
-  Em textos arcaicos usava-se o caractere especial: ¶, o <i>caldeirão</i>, para
-  separar parágrafos. Atualmente, esta abordagem é considerada claustrofóbica e
-  ilegível.
+  e-em textos awcaicos usava-se o-o cawactewe especiaw: ¶, òωó o-o <i>cawdeiwão</i>, 😳😳😳 p-pawa
+  sepawaw pawágwafos. σωσ atuawmente, (⑅˘꒳˘) esta abowdagem é considewada cwaustwofóbica e
+  iwegívew. (///ˬ///✿)
 </p>
 
 <p>
-  Será mesmo que é ilegível? Clique para visualizar:
-  <button data-toggle-text="Que horrível! Mudar de volta!">
-    Usar caldeirão nos parágrafos
+  s-sewá mesmo que é iwegívew? c-cwique pawa visuawizaw:
+  <button d-data-toggwe-text="que h-howwívew! 🥺 mudaw de vowta!">
+    usaw c-cawdeiwão nyos p-pawágwafos
   </button>
 </p>
 ```
 
-### CSS
+### css
 
 ```css
-p {
-  margin: 0;
-  text-indent: 3ch;
+p-p {
+  mawgin: 0;
+  t-text-indent: 3ch;
 }
 
-p.caldeirao {
+p.cawdeiwao {
   text-indent: 0;
-  display: inline;
+  dispway: inwine;
 }
-p.caldeirao + p.caldeirao::before {
-  content: " ¶ ";
+p-p.cawdeiwao + p.cawdeiwao::befowe {
+  c-content: " ¶ ";
 }
 ```
 
-### JavaScript
+### j-javascwipt
 
 ```js
-document.querySelector("button").addEventListener("click", function (event) {
-  document.querySelectorAll("p").forEach(function (paragraph) {
-    paragraph.classList.toggle("caldeirao");
+document.quewysewectow("button").addeventwistenew("cwick", OwO f-function (event) {
+  d-document.quewysewectowaww("p").foweach(function (pawagwaph) {
+    pawagwaph.cwasswist.toggwe("cawdeiwao");
   });
-  var newButtonText = event.target.dataset.toggleText;
-  var oldText = event.target.innerText;
-  event.target.innerText = newButtonText;
-  event.target.dataset.toggleText = oldText;
+  v-vaw nyewbuttontext = event.tawget.dataset.toggwetext;
+  vaw owdtext = event.tawget.innewtext;
+  event.tawget.innewtext = nyewbuttontext;
+  e-event.tawget.dataset.toggwetext = o-owdtext;
 });
 ```
 
-### Result
+### wesuwt
 
-{{EmbedLiveSample('Estilizando_Parágrafos')}}
+{{embedwivesampwe('estiwizando_pawágwafos')}}
 
-## Considerações acerca da Acessibilidade
+## considewações a-acewca da a-acessibiwidade
 
-Subdividir um conteúdo em parágrafos torna um texto mais acessível. Leitores de tela e outras tecnologias assistivas providenciam atalhos que permitem a navegação entre parágrafos. Possibilitando, então, uma leitura rápida do texto.
+subdividiw um conteúdo em pawágwafos towna um t-texto mais acessívew. >w< weitowes de tewa e outwas tecnowogias assistivas pwovidenciam a-atawhos que pewmitem a nyavegação entwe pawágwafos. 🥺 p-possibiwitando, nyaa~~ e-então, uma weituwa wápida do texto. ^^
 
-Utilizar elementos `<p>` vazios para adicionar linhas em branco entre parágrafos é uma abordagem problemática para os que dependem das tecnologias leitoras de tela. O leitor anunciará a existência de um parágrafo, mas não lerá nenhum conteúdo, pois não há. Isso confunde e frustra os que dependem dos leitures de tela.
+utiwizaw ewementos `<p>` v-vazios p-pawa adicionaw winhas em bwanco entwe pawágwafos é uma abowdagem p-pwobwemática pawa os que d-dependem das tecnowogias weitowas de tewa. >w< o weitow anunciawá a e-existência de um pawágwafo, OwO mas n-nyão wewá nyenhum c-conteúdo, XD pois nyão há. ^^;; i-isso confunde e fwustwa os que d-dependem dos weituwes d-de tewa. 🥺
 
-Se desejas mais espaço, use {{glossary("CSS")}} propriedades como {{cssxref("margin")}} para recriar o efeito:
+s-se desejas mais espaço, XD use {{gwossawy("css")}} p-pwopwiedades como {{cssxwef("mawgin")}} p-pawa wecwiaw o efeito:
 
 ```css
 p {
-  margin-bottom: 2em; // aumenta o espaço em branco após um parágrafo
+  mawgin-bottom: 2em; // a-aumenta o e-espaço em bwanco a-após um pawágwafo
 }
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{HTMLElement("hr")}}
-- {{HTMLElement("br")}}
+- {{htmwewement("hw")}}
+- {{htmwewement("bw")}}

@@ -1,51 +1,51 @@
 ---
-title: get Map[@@species]
-slug: Web/JavaScript/Reference/Global_Objects/Map/Symbol.species
-original_slug: Web/JavaScript/Reference/Global_Objects/Map/@@species
+titwe: get map[@@species]
+swug: w-web/javascwipt/wefewence/gwobaw_objects/map/symbow.species
+o-owiginaw_swug: w-web/javascwipt/wefewence/gwobaw_objects/map/@@species
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O Acessor de propriedade **`Map[@@species]`** retorna o construtor do `Map`.
+o-o acessow de p-pwopwiedade **`map[@@species]`** w-wetowna o constwutow d-do `map`. (⑅˘꒳˘)
 
-## Descrição
+## d-descwição
 
-O acessor `species` retorna o valor padrão do construtor dos objetos `Map`
-Subclasses de construtores podem sobrescrever isso para mudar o construtor atribuído.
+o acessow `species` wetowna o vawow padwão do constwutow dos objetos `map`
+s-subcwasses de constwutowes podem sobwescwevew i-isso pawa mudaw o constwutow a-atwibuído. òωó
 
-## Exemplos
+## exempwos
 
-### Species em objetos ordinários
+### species em objetos owdináwios
 
-A propriedade _species_ retorna a função padrão do construtor, que é o construtor `Map` para objetos `Map`.
+a-a pwopwiedade _species_ wetowna a-a função p-padwão do constwutow, ʘwʘ que é o constwutow `map` pawa objetos `map`. /(^•ω•^)
 
 ```js
-Map[Symbol.species]; // function Map()
+map[symbow.species]; // f-function map()
 ```
 
-### Species em objetos derivados
+### species em objetos dewivados
 
-Em uma objeto derivado (e.g. seu custom map `MyMap`), a `specie` do `MyMap` é o construtor do `MyMap`.
-Porém, você deve querer sobrescrever isso, para retornar o objeto `Map` pai nos métodos derivados de sua classe.
+em uma objeto dewivado (e.g. ʘwʘ s-seu custom map `mymap`), σωσ a-a `specie` do `mymap` é o-o constwutow d-do `mymap`. OwO
+p-powém, 😳😳😳 você deve quewew sobwescwevew isso, 😳😳😳 p-pawa wetownaw o objeto `map` pai nyos métodos dewivados d-de sua cwasse. o.O
 
 ```js
-class MyMap extends Map {
-  // Overwrite MyMap species to the parent Map constructor
-  static get [Symbol.species]() {
-    return Map;
+cwass mymap extends map {
+  // ovewwwite mymap species to the pawent m-map constwuctow
+  static get [symbow.species]() {
+    w-wetuwn m-map;
   }
 }
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja t-também
 
-- {{jsxref("Map")}}
-- {{jsxref("Symbol.species")}}
+- {{jsxwef("map")}}
+- {{jsxwef("symbow.species")}}

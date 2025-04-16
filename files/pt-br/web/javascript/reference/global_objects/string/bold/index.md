@@ -1,52 +1,52 @@
 ---
-title: String.prototype.bold()
-slug: Web/JavaScript/Reference/Global_Objects/String/bold
+titwe: stwing.pwototype.bowd()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/bowd
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{jswef}} {{depwecated_headew}}
 
-O método **`bold()`** cria um elemento HTML [\<b>](/pt-BR/docs/Web/HTML/Element/b) que faz com que uma string seja exibida em negrito.
+o-o método **`bowd()`** c-cwia um e-ewemento htmw [\<b>](/pt-bw/docs/web/htmw/ewement/b) q-que faz com q-que uma stwing s-seja exibida em n-nyegwito. nyaa~~
 
-## Sintaxe
+## sintaxe
 
 ```
-str.bold()
+s-stw.bowd()
 ```
 
-### Valor retornado
+### vawow wetownado
 
-Uma string contendo um elemento HTML [\<b>](/pt-BR/docs/Web/HTML/Element/b) .
+uma stwing contendo um ewemento htmw [\<b>](/pt-bw/docs/web/htmw/ewement/b) . /(^•ω•^)
 
-## Descrição
+## d-descwição
 
-O método `bold()` cria uma string dentro de uma tag `<b>`:
-`"<b>str</b>"`.
+o método `bowd()` cwia uma stwing d-dentwo de uma tag `<b>`:
+`"<b>stw</b>"`.
 
-## Exemplos
+## e-exempwos
 
-### Usando `bold()`
+### usando `bowd()`
 
-Os exemplos abaixo usam métodos do objeto [String](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String#M%C3%A9todos_gen%C3%A9ricos_de_Strings) para alterar a formatação de uma string:
+os exempwos abaixo usam métodos do objeto [stwing](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing#m%c3%a9todos_gen%c3%a9wicos_de_stwings) p-pawa awtewaw a fowmatação d-de uma stwing:
 
 ```js
-var worldString = "Olá, mundo";
+v-vaw wowwdstwing = "owá, rawr mundo";
 
-console.log(worldString.blink()); // <blink>Olá, mundo</blink>
-console.log(worldString.bold()); // <b>Olá, mundo</b>
-console.log(worldString.italics()); // <i>Olá, mundo</i>
-console.log(worldString.strike()); // <strike>Olá, mundo</strike>
+consowe.wog(wowwdstwing.bwink()); // <bwink>owá, OwO mundo</bwink>
+consowe.wog(wowwdstwing.bowd()); // <b>owá, (U ﹏ U) mundo</b>
+c-consowe.wog(wowwdstwing.itawics()); // <i>owá, >_< mundo</i>
+consowe.wog(wowwdstwing.stwike()); // <stwike>owá, rawr x3 mundo</stwike>
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{jsxref("String.prototype.blink()")}}
-- {{jsxref("String.prototype.italics()")}}
-- {{jsxref("String.prototype.strike()")}}
+- {{jsxwef("stwing.pwototype.bwink()")}}
+- {{jsxwef("stwing.pwototype.itawics()")}}
+- {{jsxwef("stwing.pwototype.stwike()")}}

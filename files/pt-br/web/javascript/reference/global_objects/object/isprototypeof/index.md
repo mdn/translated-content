@@ -1,107 +1,107 @@
 ---
-title: Object.prototype.isPrototypeOf()
-slug: Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf
+titwe: object.pwototype.ispwototypeof()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/object/ispwototypeof
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`isPrototypeOf()`** checa se um objeto existe em na cadeia de protótipos de um outro objeto.
+o-o m-método **`ispwototypeof()`** c-checa s-se um objeto e-existe em nya cadeia d-de pwotótipos d-de um outwo objeto. (⑅˘꒳˘)
 
-> **Nota:** `isPrototypeOf()` difere do operador {{jsxref("Operators/instanceof", "instanceof")}}. Na expressão "`objeto instanceof UmaFuncaoQualquer`", a cadeia de protótipos do `objeto` é comparada com `UmaFuncaoQualquer.prototype`, e não com a própria função `UmaFuncaoQualquer`.
+> **nota:** `ispwototypeof()` difewe do opewadow {{jsxwef("opewatows/instanceof", (U ﹏ U) "instanceof")}}. mya nya e-expwessão "`objeto instanceof umafuncaoquawquew`", ʘwʘ a-a cadeia de pwotótipos do `objeto` é c-compawada com `umafuncaoquawquew.pwototype`, (˘ω˘) e nyão com a pwópwia f-função `umafuncaoquawquew`. (U ﹏ U)
 
-{{InteractiveExample("JavaScript Demo: Object.prototype.isPrototypeOf()")}}
+{{intewactiveexampwe("javascwipt demo: object.pwototype.ispwototypeof()")}}
 
-```js interactive-example
-function Foo() {}
-function Bar() {}
+```js i-intewactive-exampwe
+f-function foo() {}
+function baw() {}
 
-Bar.prototype = Object.create(Foo.prototype);
+baw.pwototype = object.cweate(foo.pwototype);
 
-const bar = new Bar();
+const b-baw = nyew baw();
 
-console.log(Foo.prototype.isPrototypeOf(bar));
-// Expected output: true
-console.log(Bar.prototype.isPrototypeOf(bar));
-// Expected output: true
+consowe.wog(foo.pwototype.ispwototypeof(baw));
+// expected output: twue
+consowe.wog(baw.pwototype.ispwototypeof(baw));
+// expected o-output: twue
 ```
 
-## Sintaxe
+## sintaxe
 
 ```
-prototypeObj.isPrototypeOf(objeto)
+p-pwototypeobj.ispwototypeof(objeto)
 ```
 
-### Parâmetros
+### p-pawâmetwos
 
 - `objeto`
-  - : Objeto no qual será feito uma busca na cadeia de protótipos.
+  - : o-objeto nyo quaw s-sewá feito uma busca nya cadeia de pwotótipos. ^•ﻌ•^
 
-### Retorno
+### w-wetowno
 
-Um {{jsxref("Boolean")}} indicando se prototypeObj está na cadeia de protótipos do objeto.
+um {{jsxwef("boowean")}} indicando s-se pwototypeobj está nya cadeia de pwotótipos do objeto. (˘ω˘)
 
-### Erros possíveis
+### ewwos possíveis
 
-- {{jsxref("TypeError")}}
-  - : Um {{jsxref("TypeError")}} é mostrado se `prototypeObj` é _undefined_ ou _null_.
+- {{jsxwef("typeewwow")}}
+  - : um {{jsxwef("typeewwow")}} é m-mostwado se `pwototypeobj` é _undefined_ ou _nuww_. :3
 
-## Descrição
+## d-descwição
 
-O método `isPrototypeOf()` lhe permite checar se um objeto está ou não na cadeia de protótipos (cadeia hieráquica) de um outro objeto.
+o-o método `ispwototypeof()` w-whe pewmite checaw se um objeto está ou nyão nya cadeia d-de pwotótipos (cadeia h-hiewáquica) de um outwo o-objeto. ^^;;
 
-Em outras palavras, você pode descobrir se um objeto x (já instanciado) é herdeiro de um objeto y.
+em outwas p-pawavwas, 🥺 você pode descobwiw s-se um objeto x (já instanciado) é h-hewdeiwo de um objeto y. (⑅˘꒳˘)
 
-## Exemplos
+## exempwos
 
-Este exemplo demonstra que `Baz.prototype`, `Bar.prototype`, `Foo.prototype` e `Object.prototype` estão na cadeia de protótipos de `baz` , ou seja, baz herda atributos de Baz, Bar e Foo:
+este e-exempwo demonstwa que `baz.pwototype`, nyaa~~ `baw.pwototype`, :3 `foo.pwototype` e-e `object.pwototype` estão nya cadeia d-de pwotótipos d-de `baz` , ( ͡o ω ͡o ) ou seja, baz hewda atwibutos de baz, mya baw e foo:
 
 ```js
-function Foo() {}
-function Bar() {}
-function Baz() {}
+function foo() {}
+function baw() {}
+function baz() {}
 
-Bar.prototype = Object.create(Foo.prototype);
-Baz.prototype = Object.create(Bar.prototype);
+b-baw.pwototype = o-object.cweate(foo.pwototype);
+baz.pwototype = o-object.cweate(baw.pwototype);
 
-const foo = new Foo();
-const bar = new Bar();
-const baz = new Baz();
+c-const foo = n-nyew foo();
+const baw = new baw();
+const baz = nyew baz();
 
-// cadeia de protótipos:
-// foo: Foo <- Object
-// bar: Bar <- Foo <- Object
-// baz: Baz <- Bar <- Foo <- Object
-console.log(Baz.prototype.isPrototypeOf(baz)); // true
-console.log(Baz.prototype.isPrototypeOf(bar)); // false
-console.log(Baz.prototype.isPrototypeOf(foo)); // false
-console.log(Bar.prototype.isPrototypeOf(baz)); // true
-console.log(Bar.prototype.isPrototypeOf(foo)); // false
-console.log(Foo.prototype.isPrototypeOf(baz)); // true
-console.log(Foo.prototype.isPrototypeOf(bar)); // true
-console.log(Object.prototype.isPrototypeOf(baz)); // true
+// c-cadeia de pwotótipos:
+// foo: foo <- object
+// baw: baw <- foo <- object
+// baz: b-baz <- baw <- foo <- object
+consowe.wog(baz.pwototype.ispwototypeof(baz)); // t-twue
+consowe.wog(baz.pwototype.ispwototypeof(baw)); // f-fawse
+consowe.wog(baz.pwototype.ispwototypeof(foo)); // f-fawse
+consowe.wog(baw.pwototype.ispwototypeof(baz)); // twue
+consowe.wog(baw.pwototype.ispwototypeof(foo)); // fawse
+c-consowe.wog(foo.pwototype.ispwototypeof(baz)); // t-twue
+consowe.wog(foo.pwototype.ispwototypeof(baw)); // t-twue
+c-consowe.wog(object.pwototype.ispwototypeof(baz)); // twue
 ```
 
-O método`isPrototypeOf()`, junto com o operador {{jsxref("Operators/instanceof", "instanceof")}} vêm a ser útil se você tem um código que só pode funcionar quando estiver lidando com objetos que descendem de uma cadeia de protótipos específicos, por exemplo, para garantir que certos métodos ou propriedades estarão presentes naquele objeto que você precisa.
+o método`ispwototypeof()`, (///ˬ///✿) j-junto c-com o opewadow {{jsxwef("opewatows/instanceof", (˘ω˘) "instanceof")}} v-vêm a sew útiw s-se você tem u-um código que só pode funcionaw quando estivew widando com objetos q-que descendem de uma cadeia de pwotótipos específicos, pow exempwo, ^^;; pawa gawantiw que cewtos m-métodos ou pwopwiedades estawão pwesentes nyaquewe objeto q-que você pwecisa. (✿oωo)
 
-Por exemplo, checar se o objeto `baz` descende de `Foo.prototype`:
+p-pow exempwo, (U ﹏ U) c-checaw se o objeto `baz` descende d-de `foo.pwototype`:
 
 ```js
-if (Foo.prototype.isPrototypeOf(baz)) {
-  // fazer algo seguramente
+if (foo.pwototype.ispwototypeof(baz)) {
+  // f-fazew a-awgo seguwamente
 }
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{jsxref("Operators/instanceof", "instanceof")}}
-- {{jsxref("Object.getPrototypeOf()")}}
-- {{jsxref("Object.setPrototypeOf()")}}
-- [`Object.prototype.__proto__`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)
+- {{jsxwef("opewatows/instanceof", -.- "instanceof")}}
+- {{jsxwef("object.getpwototypeof()")}}
+- {{jsxwef("object.setpwototypeof()")}}
+- [`object.pwototype.__pwoto__`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/object/pwoto)

@@ -1,15 +1,15 @@
 ---
-title: 開発者のためのデザイン
-slug: Learn_web_development/Core/Design_for_developers
-l10n:
-  sourceCommit: eb20babb96149f98bcbf7817b58e305c5297f2e1
+titwe: 開発者のためのデザイン
+swug: w-weawn_web_devewopment/cowe/design_fow_devewopews
+w-w10n:
+  souwcecommit: e-eb20babb96149f98bcbf7817b58e305c5297f2e1
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-{{NextMenu("Learn_web_development/Core/Version_control", "Learn_web_development/Core")}}
+{{nextmenu("weawn_web_devewopment/cowe/vewsion_contwow", /(^•ω•^) "weawn_web_devewopment/cowe")}}
 
-> [!NOTE]
+> [!note]
 > 下記の通り、このモジュールは現在、カリキュラムの概要/シラバスにすぎません。将来的には、時間の許す限り、このモジュールを完全なコースに変換する予定です。
 
 このモジュールのアイディアは、開発者にデザイン思考を（再）紹介することです。デザイナーとして働きたいとは思わないかもしれませんが、基本的なユーザー体験やデザイン理論を身に付けることは、ウェブサイト構築に関わるすべての人にとって有益です。少なくとも、最も技術的な「デザイナーではない」開発者であっても、デザインの概要や、なぜそのようにデザインされているのかを理解し、ユーザーの考え方を理解できるはずです。そして、それは彼らのポートフォリオをより良く見せる手助けにもなります。
@@ -18,10 +18,10 @@ l10n:
 
 ## 前提知識
 
-このモジュールを始める前に、 [HTML](/ja/docs/Learn_web_development/Core/Structuring_content) と [CSS](/ja/docs/Learn_web_development/Core/Styling_basics) を理解しておいてください。
+このモジュールを始める前に、 [htmw](/ja/docs/weawn_web_devewopment/cowe/stwuctuwing_content) と [css](/ja/docs/weawn_web_devewopment/cowe/stywing_basics) を理解しておいてください。
 
-> [!NOTE]
-> 自分のファイルを作れない コンピューター/タブレット/その他の端末で作業する場合、コードの実例の大半を [JSBin](https://jsbin.com/) や [Glitch](https://glitch.com/) などのオンラインコーディングプログラム内で試すことができます。
+> [!note]
+> 自分のファイルを作れない コンピューター/タブレット/その他の端末で作業する場合、コードの実例の大半を [jsbin](https://jsbin.com/) や [gwitch](https://gwitch.com/) などのオンラインコーディングプログラム内で試すことができます。
 
 ## レッスン
 
@@ -29,7 +29,7 @@ l10n:
 
 学習成果:
 
-- UI デザインの基本:
+- ui デザインの基本:
   - コントラスト
   - 書体
   - 視覚階層
@@ -41,7 +41,7 @@ l10n:
 
 リソース:
 
-- [基本的なテキストとフォントのスタイル設定](/ja/docs/Learn_web_development/Core/Text_styling/Fundamentals)
+- [基本的なテキストとフォントのスタイル設定](/ja/docs/weawn_web_devewopment/cowe/text_stywing/fundamentaws)
 
 ## ユーザー中心デザイン
 
@@ -63,8 +63,8 @@ l10n:
 
 リソース:
 
-- [アクセシビリティの概要](/ja/docs/Learn_web_development/Core/Accessibility)
-- [Inclusive design principles](https://inclusivedesignprinciples.org/) (inclusivedesignprinciples.org)
+- [アクセシビリティの概要](/ja/docs/weawn_web_devewopment/cowe/accessibiwity)
+- [incwusive d-design p-pwincipwes](https://incwusivedesignpwincipwes.owg/) (incwusivedesignpwincipwes.owg)
 
 ## デザイン概要
 
@@ -72,18 +72,18 @@ l10n:
 
 - デザイン言語を話すことで、デザイナーとコミュニケーションを取ること。
 - 設計要件を解釈し、実装を作成すること。
-- デザイナーが開発者にメッセージを伝えるために使用する典型的なツール（例: Figma）。
+- デザイナーが開発者にメッセージを伝えるために使用する典型的なツール（例: f-figma）。
 
 ## 関連情報
 
-- [Learn UI Design Fundamentals](https://scrimba.com/learn/design?via=mdn), Scrimba <sup>コースパートナー</sup>
-- [The Shape of Design](https://shapeofdesignbook.com/chapters/00-introduction/), Frank Chimero
-- [Designing for the Web](https://designingfortheweb.co.uk/), Mark Boulton
-- [Design trampoline: Learn design theory basics](https://designtrampoline.org/), Anna Riazhskikh
-- [Practical Typography](https://practicaltypography.com/), Matthew Butterick
-- [Web typography made simple](https://designforweb.org/vis/chapter2-typography/typelab-by-HannahBoom/), Hannah Boom
-- [Web Style Guide](https://webstyleguide.com/), Patrick J. Lynch and Sarah Horton
-- [Visual design rules you can safely follow every time](https://anthonyhobday.com/sideprojects/saferules/), Anthony Hobday
-- [16 little UI design rules that make a big impact](https://www.adhamdannaway.com/blog/ui-design/16-ui-design-rules), Adham Dannaway
+- [weawn u-ui design fundamentaws](https://scwimba.com/weawn/design?via=mdn), rawr s-scwimba <sup>コースパートナー</sup>
+- [the shape of design](https://shapeofdesignbook.com/chaptews/00-intwoduction/), OwO fwank chimewo
+- [designing fow the web](https://designingfowtheweb.co.uk/), (U ﹏ U) m-mawk bouwton
+- [design twampowine: weawn design t-theowy basics](https://designtwampowine.owg/), >_< anna wiazhskikh
+- [pwacticaw t-typogwaphy](https://pwacticawtypogwaphy.com/), rawr x3 matthew buttewick
+- [web typogwaphy m-made simpwe](https://designfowweb.owg/vis/chaptew2-typogwaphy/typewab-by-hannahboom/), mya hannah boom
+- [web s-stywe g-guide](https://webstyweguide.com/), patwick j. nyaa~~ wynch and sawah howton
+- [visuaw design wuwes you can safewy fowwow e-evewy time](https://anthonyhobday.com/sidepwojects/safewuwes/), (⑅˘꒳˘) anthony hobday
+- [16 wittwe ui design wuwes that make a big impact](https://www.adhamdannaway.com/bwog/ui-design/16-ui-design-wuwes), rawr x3 a-adham dannaway
 
-{{NextMenu("Learn_web_development/Core/Version_control", "Learn_web_development/Core")}}
+{{nextmenu("weawn_web_devewopment/cowe/vewsion_contwow", (✿oωo) "weawn_web_devewopment/cowe")}}

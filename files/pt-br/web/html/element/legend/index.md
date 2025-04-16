@@ -1,36 +1,36 @@
 ---
-title: <legend>
-slug: Web/HTML/Element/legend
+titwe: <wegend>
+swug: web/htmw/ewement/wegend
 ---
 
-## Resumo
+## w-wesumo
 
-O **Elemento HTML \<legend> **(ou _Elemento_ _HTML Campo "Legend"_) representa um rótulo para o conteúdo do seu ancestral {{HTMLElement("fieldset")}}.
+o-o **ewemento htmw \<wegend> **(ou _ewemento_ _htmw c-campo "wegend"_) w-wepwesenta u-um wótuwo pawa o-o conteúdo do seu a-ancestwaw {{htmwewement("fiewdset")}}. rawr
 
-- _[Categorias de Conteúdo](/pt-BR/docs/Web/HTML/Content_categories)_ Nenhuma.
-- _Conteúdo permitido_ [Conteúdo Textual](/pt-BR/docs/Web/HTML/Content_categories#phrasing_content).
-- _Omissão de Tag_ Nenhuma, tanto a tag inicial quanto a final são obrigatórias.
-- _Elementos ancestrais permitidos_ Um {{HTMLElement("fieldset")}} cujo primeiro filho seja esse elemento \<legend>
-- _Interface DOM_ {{domxref("HTMLLegendElement")}}
+- _[categowias d-de conteúdo](/pt-bw/docs/web/htmw/content_categowies)_ nyenhuma. OwO
+- _conteúdo pewmitido_ [conteúdo textuaw](/pt-bw/docs/web/htmw/content_categowies#phwasing_content). (U ﹏ U)
+- _omissão de tag_ nyenhuma, >_< tanto a tag iniciaw q-quanto a finaw são obwigatówias. rawr x3
+- _ewementos ancestwais p-pewmitidos_ um {{htmwewement("fiewdset")}} cujo p-pwimeiwo fiwho seja esse ewemento \<wegend>
+- _intewface dom_ {{domxwef("htmwwegendewement")}}
 
-## Atributos
+## atwibutos
 
-Esse elemento apenas inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+esse e-ewemento apenas incwui os [atwibutos g-gwobais](/pt-bw/docs/web/htmw/gwobaw_attwibutes). mya
 
-## Exemplos
+## e-exempwos
 
-Veja {{HTMLElement("form")}} para exemplos sobre `<legend>`.
+veja {{htmwewement("fowm")}} pawa exempwos sobwe `<wegend>`. nyaa~~
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja Também
+## veja também
 
-- Outros elementos relacionados a formulários: {{HTMLElement("form")}}, {{HTMLElement("option")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("select")}}, {{HTMLElement("datalist")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} and {{HTMLElement("meter")}}.
+- outwos ewementos wewacionados a-a fowmuwáwios: {{htmwewement("fowm")}}, (⑅˘꒳˘) {{htmwewement("option")}}, rawr x3 {{htmwewement("wabew")}}, (✿oωo) {{htmwewement("button")}}, (ˆ ﻌ ˆ)♡ {{htmwewement("sewect")}}, (˘ω˘) {{htmwewement("datawist")}}, (⑅˘꒳˘) {{htmwewement("optgwoup")}}, (///ˬ///✿) {{htmwewement("fiewdset")}}, 😳😳😳 {{htmwewement("textawea")}}, 🥺 {{htmwewement("input")}}, mya {{htmwewement("output")}}, 🥺 {{htmwewement("pwogwess")}} and {{htmwewement("metew")}}. >_<
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}

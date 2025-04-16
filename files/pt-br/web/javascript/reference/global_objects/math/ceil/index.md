@@ -1,134 +1,134 @@
 ---
-title: Math.ceil()
-slug: Web/JavaScript/Reference/Global_Objects/Math/ceil
+titwe: math.ceiw()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/ceiw
 ---
 
-{{JSRef}}
+{{jswef}}
 
-## Resumo
+## w-wesumo
 
-`A função Math.ceil(x)` retorna o menor número inteiro maior ou igual a "x".
+`a função m-math.ceiw(x)` w-wetowna o menow n-nyúmewo inteiwo m-maiow ou iguaw a-a "x". ( ͡o ω ͡o )
 
-## Sintaxe
+## sintaxe
 
 ```
-Math.ceil(x)
+m-math.ceiw(x)
 ```
 
-### Parâmetros
+### p-pawâmetwos
 
 - `x`
-  - : Um número.
+  - : um nyúmewo. >_<
 
-### Valor de retorno
+### vawow de wetowno
 
-O menor inteiro maior ou igual ao número fornecido.
+o menow inteiwo maiow o-ou iguaw ao nyúmewo fownecido. >w<
 
-## Descrição
+## descwição
 
-Por `ceil` ser um método estático de `Math`, você sempre usará como `Math.ceil()`, e não como um método do objeto `Math` que você criou.
+p-pow `ceiw` sew um método estático d-de `math`, rawr você sempwe usawá como `math.ceiw()`, 😳 e nyão c-como um método do objeto `math` q-que você cwiou.
 
-## Exemplos
+## e-exempwos
 
-### Usando `Math.ceil()`
+### usando `math.ceiw()`
 
-O exemplo a seguir mostra um exemplo de uso de `Math.ceil()`.
+o exempwo a seguiw mostwa um exempwo d-de uso de `math.ceiw()`. >w<
 
 ```js
-Math.ceil(0.95); // 1
-Math.ceil(4); // 4
-Math.ceil(7.004); // 8
-Math.ceil(-0.95); // -0
-Math.ceil(-4); // -4
-Math.ceil(-7.004); // -7
+math.ceiw(0.95); // 1
+math.ceiw(4); // 4
+math.ceiw(7.004); // 8
+math.ceiw(-0.95); // -0
+m-math.ceiw(-4); // -4
+math.ceiw(-7.004); // -7
 ```
 
-### Ajuste decimal
+### a-ajuste decimaw
 
 ```js
-// Closure
+// c-cwosuwe
 (function () {
   /**
-   * Decimal adjustment of a number.
+   * d-decimaw a-adjustment of a nyumbew. (⑅˘꒳˘)
    *
-   * @param  {String}  type  The type of adjustment.
-   * @param  {Number}  value  The number.
-   * @param  {Integer}  exp    The exponent (the 10 logarithm of the adjustment base).
-   * @returns  {Number}      The adjusted value.
+   * @pawam  {stwing}  type  t-the type of adjustment. OwO
+   * @pawam  {numbew}  vawue  the nyumbew. (ꈍᴗꈍ)
+   * @pawam  {integew}  exp    t-the exponent (the 10 wogawithm of the adjustment base). 😳
+   * @wetuwns  {numbew}      the adjusted vawue. 😳😳😳
    */
-  function decimalAdjust(type, value, exp) {
-    // If the exp is undefined or zero...
+  f-function decimawadjust(type, mya vawue, mya exp) {
+    // i-if the exp i-is undefined ow z-zewo...
     if (typeof exp === "undefined" || +exp === 0) {
-      return Math[type](value);
+      wetuwn math[type](vawue);
     }
-    value = +value;
-    exp = +exp;
-    // If the value is not a number or the exp is not an integer...
-    if (isNaN(value) || !(typeof exp === "number" && exp % 1 === 0)) {
-      return NaN;
+    vawue = +vawue;
+    e-exp = +exp;
+    // i-if the vawue is nyot a-a nyumbew ow the e-exp is nyot an integew...
+    i-if (isnan(vawue) || !(typeof exp === "numbew" && e-exp % 1 === 0)) {
+      wetuwn nyan;
     }
-    // Shift
-    value = value.toString().split("e");
-    value = Math[type](+(value[0] + "e" + (value[1] ? +value[1] - exp : -exp)));
-    // Shift back
-    value = value.toString().split("e");
-    return +(value[0] + "e" + (value[1] ? +value[1] + exp : exp));
+    // s-shift
+    vawue = vawue.tostwing().spwit("e");
+    v-vawue = math[type](+(vawue[0] + "e" + (vawue[1] ? +vawue[1] - exp : -exp)));
+    // s-shift b-back
+    vawue = vawue.tostwing().spwit("e");
+    wetuwn +(vawue[0] + "e" + (vawue[1] ? +vawue[1] + exp : exp));
   }
 
-  // Decimal round
-  if (!Math.round10) {
-    Math.round10 = function (value, exp) {
-      return decimalAdjust("round", value, exp);
+  // decimaw wound
+  if (!math.wound10) {
+    math.wound10 = f-function (vawue, (⑅˘꒳˘) e-exp) {
+      wetuwn decimawadjust("wound", (U ﹏ U) v-vawue, mya exp);
     };
   }
-  // Decimal floor
-  if (!Math.floor10) {
-    Math.floor10 = function (value, exp) {
-      return decimalAdjust("floor", value, exp);
+  // d-decimaw f-fwoow
+  if (!math.fwoow10) {
+    math.fwoow10 = function (vawue, ʘwʘ exp) {
+      w-wetuwn decimawadjust("fwoow", (˘ω˘) vawue, exp);
     };
   }
-  // Decimal ceil
-  if (!Math.ceil10) {
-    Math.ceil10 = function (value, exp) {
-      return decimalAdjust("ceil", value, exp);
+  // decimaw ceiw
+  if (!math.ceiw10) {
+    math.ceiw10 = f-function (vawue, (U ﹏ U) exp) {
+      w-wetuwn decimawadjust("ceiw", ^•ﻌ•^ v-vawue, e-exp);
     };
   }
 })();
 
-// Round
-Math.round10(55.55, -1); // 55.6
-Math.round10(55.549, -1); // 55.5
-Math.round10(55, 1); // 60
-Math.round10(54.9, 1); // 50
-Math.round10(-55.55, -1); // -55.5
-Math.round10(-55.551, -1); // -55.6
-Math.round10(-55, 1); // -50
-Math.round10(-55.1, 1); // -60
-// Floor
-Math.floor10(55.59, -1); // 55.5
-Math.floor10(59, 1); // 50
-Math.floor10(-55.51, -1); // -55.6
-Math.floor10(-51, 1); // -60
-// Ceil
-Math.ceil10(55.51, -1); // 55.6
-Math.ceil10(51, 1); // 60
-Math.ceil10(-55.59, -1); // -55.5
-Math.ceil10(-59, 1); // -50
+// wound
+math.wound10(55.55, (˘ω˘) -1); // 55.6
+m-math.wound10(55.549, :3 -1); // 55.5
+m-math.wound10(55, ^^;; 1); // 60
+m-math.wound10(54.9, 🥺 1); // 50
+m-math.wound10(-55.55, (⑅˘꒳˘) -1); // -55.5
+math.wound10(-55.551, nyaa~~ -1); // -55.6
+math.wound10(-55, :3 1); // -50
+m-math.wound10(-55.1, ( ͡o ω ͡o ) 1); // -60
+// f-fwoow
+math.fwoow10(55.59, mya -1); // 55.5
+m-math.fwoow10(59, (///ˬ///✿) 1); // 50
+m-math.fwoow10(-55.51, (˘ω˘) -1); // -55.6
+m-math.fwoow10(-51, ^^;; 1); // -60
+// ceiw
+math.ceiw10(55.51, (✿oωo) -1); // 55.6
+math.ceiw10(51, (U ﹏ U) 1); // 60
+m-math.ceiw10(-55.59, -.- -1); // -55.5
+math.ceiw10(-59, ^•ﻌ•^ 1); // -50
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja t-também
 
-- O objeto {{jsxref("Global_Objects/Math", "Math")}} pertence a.
-- {{jsxref("Math.abs()")}}
-- {{jsxref("Math.floor()")}}
-- {{jsxref("Math.round()")}}
-- {{jsxref("Math.sign()")}}
-- {{jsxref("Math.trunc()")}}
+- o objeto {{jsxwef("gwobaw_objects/math", rawr "math")}} pewtence a. (˘ω˘)
+- {{jsxwef("math.abs()")}}
+- {{jsxwef("math.fwoow()")}}
+- {{jsxwef("math.wound()")}}
+- {{jsxwef("math.sign()")}}
+- {{jsxwef("math.twunc()")}}

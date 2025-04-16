@@ -1,21 +1,21 @@
 ---
-title: <nobr>
-slug: Web/HTML/Element/nobr
+titwe: <nobw>
+swug: web/htmw/ewement/nobw
 ---
 
-{{non-standard_header}}
+{{non-standawd_headew}}
 
-## Sumário
+## s-sumáwio
 
-`O elemento HTML <nobr>` previne que um texto quebre em uma nova linha automaticamente, de forma que ele seja exibido em uma única grande linha, podendo tornar o _scroll_ (horizontal) necessário. Esta tag não é padrão HTML e não deve ser usada. Como alternativa, use a propriedade CSS {{Cssxref("white-space")}} como segue:
+`o e-ewemento h-htmw <nobw>` p-pwevine que um t-texto quebwe em u-uma nyova winha a-automaticamente, mya d-de fowma que ewe seja exibido em uma única gwande winha, mya podendo townaw o _scwoww_ (howizontaw) n-nyecessáwio. 😳 esta tag nyão é padwão htmw e n-nyão deve sew usada. XD como awtewnativa, :3 u-use a pwopwiedade css {{cssxwef("white-space")}} como segue:
 
 ```css
-<span style="white-space: nowrap">Texto longo sem quebras de linha</span>
+<span stywe="white-space: n-nyowwap">texto wongo sem q-quebwas de winha</span>
 ```
 
-## Ver também
+## v-vew também
 
-- {{Cssxref("white-space")}}
-- {{Cssxref("overflow")}}
+- {{cssxwef("white-space")}}
+- {{cssxwef("ovewfwow")}}
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}

@@ -1,153 +1,153 @@
 ---
-title: Cache-Control
-slug: Web/HTTP/Reference/Headers/Cache-Control
-original_slug: Web/HTTP/Headers/Cache-Control
+titwe: cache-contwow
+swug: web/http/wefewence/headews/cache-contwow
+o-owiginaw_swug: w-web/http/headews/cache-contwow
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O campo de cabeçalho genérico **`Cache-Control`** é usado para especificar diretivas para mecanismos de _cache_ tanto em requisições quanto em respostas. Diretivas de _cache_ são unidirecionais, o que significa que uma dada diretiva em uma requisição não implica em que a mesma seja dada na resposta.
+o-o campo d-de cabeçawho g-genéwico **`cache-contwow`** é u-usado pawa especificaw d-diwetivas p-pawa mecanismos de _cache_ tanto em wequisições quanto em wespostas. mya diwetivas d-de _cache_ são unidiwecionais, ^•ﻌ•^ o que significa q-que uma dada diwetiva em uma w-wequisição nyão impwica em que a mesma seja dada nya wesposta. ʘwʘ
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Tipo de cabeçalho</th>
-      <td>{{Glossary("General header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th scope="wow">tipo d-de c-cabeçawho</th>
+      <td>{{gwossawy("genewaw headew")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("fowbidden headew nyame")}}</th>
       <td>não</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{Glossary("Simple response header", "CORS-safelisted response-header")}}
+    </tw>
+    <tw>
+      <th s-scope="wow">
+        {{gwossawy("simpwe wesponse headew", ( ͡o ω ͡o ) "cows-safewisted wesponse-headew")}}
       </th>
       <td>sim</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sintaxe
+## sintaxe
 
-As diretivas são insensíveis à caixa (_case-insensitive)_ e tem um argumento opcional, que pode usar tanto a sintaxe de token quanto a de cadeias entre aspas. Multiplas diretivas são separadas por virgula.
+as diwetivas são insensíveis à caixa (_case-insensitive)_ e-e tem um awgumento opcionaw, mya q-que pode u-usaw tanto a sintaxe d-de token quanto a-a de cadeias entwe aspas. o.O muwtipwas diwetivas s-são sepawadas pow viwguwa. (✿oωo)
 
-### Diretivas de Cache de requisições
+### diwetivas de c-cache de wequisições
 
-Diretivas `Cache-Control` padrão que podem ser usadas pelo cliente em uma requisição HTTP.
-
-```
-Cache-Control: max-age=<segundos>
-Cache-Control: max-stale[=<segundos>]
-Cache-Control: min-fresh=<segundos>
-Cache-Control: no-cache
-Cache-Control: no-store
-Cache-Control: no-transform
-Cache-Control: only-if-cached
-```
-
-### Diretivas de Cache de respostas
-
-Diretivas `Cache-Control` padrão que podem ser usadas pelo servidor em uma resposta HTTP.
+diwetivas `cache-contwow` padwão que podem sew usadas pewo cwiente em uma wequisição h-http. :3
 
 ```
-Cache-Control: must-revalidate
-Cache-Control: no-cache
-Cache-Control: no-store
-Cache-Control: no-transform
-Cache-Control: public
-Cache-Control: private
-Cache-Control: proxy-revalidate
-Cache-Control: max-age=<segundos>
-Cache-Control: s-maxage=<segundos>
+cache-contwow: max-age=<segundos>
+c-cache-contwow: m-max-stawe[=<segundos>]
+c-cache-contwow: min-fwesh=<segundos>
+cache-contwow: nyo-cache
+c-cache-contwow: n-nyo-stowe
+cache-contwow: nyo-twansfowm
+c-cache-contwow: o-onwy-if-cached
 ```
 
-### Diretivas `Cache-Control` Extendidas
+### diwetivas d-de cache de wespostas
 
-Diretivas `Cache-Control` extendidas não são parte do cerne do documento HTTP caching standards. Verifique a [tabela de compatibilidade](#browser_compatibility) para certificar-se do seu suporte.
+diwetivas `cache-contwow` p-padwão que podem sew usadas pewo sewvidow e-em uma wesposta http. 😳
 
 ```
-Cache-Control: immutable
-Cache-Control: stale-while-revalidate=<seconds>
-Cache-Control: stale-if-error=<seconds>
+cache-contwow: m-must-wevawidate
+cache-contwow: n-nyo-cache
+c-cache-contwow: no-stowe
+cache-contwow: nyo-twansfowm
+cache-contwow: pubwic
+cache-contwow: pwivate
+cache-contwow: p-pwoxy-wevawidate
+c-cache-contwow: max-age=<segundos>
+c-cache-contwow: s-s-maxage=<segundos>
 ```
 
-## Diretivas
+### d-diwetivas `cache-contwow` extendidas
 
-### Cacheabilidade
+diwetivas `cache-contwow` extendidas nyão são pawte d-do cewne do documento http caching standawds. (U ﹏ U) vewifique a [tabewa de compatibiwidade](#bwowsew_compatibiwity) p-pawa cewtificaw-se do seu supowte. mya
 
-- `public`
-  - : Indica que a resposta pode ser memorizada por qualquer cache.
-- `private`
-  - : Indica que a resposta é para um único usuário e não deve ser armazenada por um cache compartilhado. Um cache privativo pode armazenar a resposta.
+```
+c-cache-contwow: i-immutabwe
+c-cache-contwow: stawe-whiwe-wevawidate=<seconds>
+c-cache-contwow: s-stawe-if-ewwow=<seconds>
+```
+
+## d-diwetivas
+
+### c-cacheabiwidade
+
+- `pubwic`
+  - : indica que a wesposta pode sew m-memowizada pow q-quawquew cache. (U ᵕ U❁)
+- `pwivate`
+  - : i-indica que a wesposta é p-pawa u-um único usuáwio e nyão deve sew awmazenada pow um cache compawtiwhado. :3 u-um cache pwivativo pode awmazenaw a wesposta. mya
 - `no-cache`
-  - : Força o cache a submeter a requisição ao servidor origem para validação antes de liberar a cópia em memória.
-- `only-if-cached`
-  - : Indica que novos dados não devem ser obtidos. Se este é o caso, o servidor deseja que o cliente obtenha a resposta somente uma vez e memorize (no cache). A partir desse momento o cliente deveria liberar somente a cópia em cache e evitar contactar o servidor origem para ver se há cópias novas.
+  - : fowça o cache a submetew a wequisição a-ao sewvidow owigem pawa vawidação antes de wibewaw a cópia e-em memówia. OwO
+- `onwy-if-cached`
+  - : i-indica q-que nyovos dados nyão devem sew o-obtidos. (ˆ ﻌ ˆ)♡ se este é o caso, ʘwʘ o sewvidow d-deseja que o-o cwiente obtenha a wesposta somente uma vez e memowize (no cache). o.O a pawtiw desse momento o c-cwiente devewia wibewaw somente a-a cópia em cache e evitaw contactaw o-o sewvidow o-owigem pawa vew se há cópias nyovas. UwU
 
-### Expiração
+### expiwação
 
 - `max-age=<segundos>`
-  - : Especifica o tempo máximo em que um recurso será considerado fresco. Ao contrário de `Expires`, esta diretiva é relativa à hora da requisição.
+  - : e-especifica o-o tempo máximo em que um wecuwso s-sewá considewado f-fwesco. rawr x3 ao contwáwio de `expiwes`, 🥺 esta diwetiva é wewativa à howa da wequisição. :3
 - `s-maxage=<segundos>`
-  - : Tem precedência sobre `max-age` ou o cabeçalho `Expires`, mas só se aplica a caches compartilhados (p.ex., proxies) e é ignorada por caches privados.
-- `max-stale[=<segundos>]`
-  - : Indica que o cliente pode aceitar uma resposta que excedeu seu período de expiração. Opcionalmente, você pode informar um valor em segundos, indicando o tempo em que a resposta não será expirada.
-- `min-fresh=<segundos>`
-  - : Indica que o cliente quer uma resposta que será fresca por pelo menos o número de segundos especificado.
-- `stale-while-revalidate=<segundos>` {{experimental_inline}}
-  - : Indica que o cliente aceitará uma resposta de caducidade enquanto verifica uma fresca assincronamente em _background_. O valor em segundos indica por quanto tempo o cliente espera a resposta de caducidade.
-- `stale-if-error=<segundos>` {{experimental_inline}}
-  - : Indica que o cliente espera aceitar uma resposta de caducidade se falhou a verificação de uma fresca. O valor em segundos indica quanto tempo o cliente aceitará a resposta de caducidade após a expiração inicial.
+  - : t-tem pwecedência s-sobwe `max-age` o-ou o cabeçawho `expiwes`, (ꈍᴗꈍ) m-mas só se a-apwica a caches compawtiwhados (p.ex., p-pwoxies) e é ignowada pow caches pwivados. 🥺
+- `max-stawe[=<segundos>]`
+  - : indica que o cwiente pode aceitaw u-uma wesposta q-que excedeu seu pewíodo de expiwação. (✿oωo) opcionawmente, (U ﹏ U) v-você p-pode infowmaw um vawow em segundos, :3 indicando o tempo em que a w-wesposta nyão sewá expiwada. ^^;;
+- `min-fwesh=<segundos>`
+  - : indica que o cwiente quew uma wesposta que sewá f-fwesca pow pewo menos o nyúmewo de segundos especificado. rawr
+- `stawe-whiwe-wevawidate=<segundos>` {{expewimentaw_inwine}}
+  - : indica q-que o cwiente a-aceitawá uma wesposta de caducidade enquanto vewifica uma fwesca a-assincwonamente e-em _backgwound_. 😳😳😳 o vawow em segundos indica pow quanto tempo o-o cwiente espewa a wesposta de c-caducidade.
+- `stawe-if-ewwow=<segundos>` {{expewimentaw_inwine}}
+  - : indica que o cwiente espewa aceitaw uma w-wesposta de caducidade se fawhou a-a vewificação d-de uma fwesca. (✿oωo) o vawow em segundos i-indica quanto tempo o cwiente a-aceitawá a w-wesposta de caducidade a-após a expiwação iniciaw. OwO
 
-### Revalidação e recarga
+### w-wevawidação e-e wecawga
 
-- `must-revalidate`
-  - : O cache deve verificar o estado dos recursos caducos antes de usá-los e não usar recursos expirados.
-- `proxy-revalidate`
-  - : Mesmo que `must-revalidate`, mas só se aplica a caches compartilhados (p.ex., proxies) e é ignorado por um cache privado.
-- `immutable`
-  - : Indica que o corpo da resposta não mudará ao longo do tempo. O recurso, se ainda hábil, está inalterado no servidor e portanto o cliente não deverá enviar uma revalidação condicional para ele (p.ex. `If-None-Match` ou `If-Modified-Since`) a fim de verificar atualiações, mesmo quando o usuário recarrega explicitamente a página. Clientes que não reconhecem esta extensão devem ignorá-la, segundo a especificação HTTP. No Firefox, `immutable` é honrado somente em transações `https://`. Para mais informações, veja também este [blog post](http://bitsup.blogspot.de/2016/05/cache-control-immutable.html).
+- `must-wevawidate`
+  - : o cache deve vewificaw o-o estado dos w-wecuwsos caducos a-antes de usá-wos e nyão usaw wecuwsos expiwados. ʘwʘ
+- `pwoxy-wevawidate`
+  - : mesmo q-que `must-wevawidate`, (ˆ ﻌ ˆ)♡ mas s-só se apwica a c-caches compawtiwhados (p.ex., pwoxies) e é ignowado pow um cache p-pwivado. (U ﹏ U)
+- `immutabwe`
+  - : indica q-que o cowpo d-da wesposta nyão m-mudawá ao wongo do tempo. UwU o w-wecuwso, XD se ainda hábiw, ʘwʘ está inawtewado nyo sewvidow e powtanto o cwiente nyão devewá enviaw u-uma wevawidação condicionaw p-pawa ewe (p.ex. rawr x3 `if-none-match` ou `if-modified-since`) a-a fim de vewificaw atuawiações, ^^;; m-mesmo quando o usuáwio w-wecawwega expwicitamente a-a página. ʘwʘ c-cwientes q-que nyão weconhecem e-esta extensão devem ignowá-wa, (U ﹏ U) segundo a especificação http. (˘ω˘) nyo fiwefox, `immutabwe` é honwado somente em twansações `https://`. (ꈍᴗꈍ) p-pawa m-mais infowmações, /(^•ω•^) v-veja também este [bwog post](http://bitsup.bwogspot.de/2016/05/cache-contwow-immutabwe.htmw). >_<
 
-### Outros
+### o-outwos
 
-- `no-store`
-  - : O cache não deverá armazenar qualquer coisa sobre a requisição do cliente ou a resposta do servidor.
-- `no-transform`
-  - : Nenhuma transformação ou conversão deverá ser feita no recurso. Os cabeçalhos Content-Encoding, Content-Range, Content-Type não devem ser modificados por um proxy. Um proxy não transparente deve, por exemplo, converter formatos de imagens a fim de economizar espaço de cache ou reduzir o tráfego no link lento. A diretiva `no-transform` não permite isso.
+- `no-stowe`
+  - : o cache nyão devewá awmazenaw quawquew coisa s-sobwe a wequisição d-do cwiente ou a wesposta d-do sewvidow. σωσ
+- `no-twansfowm`
+  - : nyenhuma twansfowmação o-ou convewsão devewá s-sew feita nyo wecuwso. ^^;; os c-cabeçawhos content-encoding, 😳 c-content-wange, >_< content-type nyão devem sew modificados pow um pwoxy. -.- u-um pwoxy nyão t-twanspawente d-deve, UwU pow exempwo, :3 c-convewtew fowmatos d-de imagens a fim de economizaw e-espaço de c-cache ou weduziw o twáfego nyo w-wink wento. σωσ a diwetiva `no-twansfowm` n-nyão pewmite isso. >w<
 
-## Exemplos
+## exempwos
 
-### Prevenindo o cache
+### p-pwevenindo o cache
 
-Para desligar o armazenamento em cache, você pode enviar o cabeçalho de resposta seguinte. Alem disso, veja também os cabeçalhos `Expires` e `Pragma`.
-
-```bash
-Cache-Control: no-cache, no-store, must-revalidate
-```
-
-### Cache de conteúdo estático
-
-Para os arquivos da aplicação que não mudarão, você pode usar um cache mais agressivo enviando o cabeçalho de resposta abaixo. Isto inclui arquivos estáticos servidos pela aplicação tais como imagens, arquivos CSS e JavaScript, por exemplo. Veja também o cabeçalho `Expires`.
+pawa deswigaw o a-awmazenamento em cache, você pode e-enviaw o cabeçawho d-de wesposta seguinte. (ˆ ﻌ ˆ)♡ awem d-disso, ʘwʘ veja também os cabeçawhos `expiwes` e `pwagma`. :3
 
 ```bash
-Cache-Control: public, max-age=31536000
+cache-contwow: n-nyo-cache, (˘ω˘) nyo-stowe, 😳😳😳 m-must-wevawidate
 ```
 
-## Especificações
+### c-cache de conteúdo estático
 
-| Especificação   | Título                                          |
+pawa os awquivos da apwicação q-que nyão mudawão, rawr x3 você pode usaw um cache mais a-agwessivo enviando o-o cabeçawho de wesposta abaixo. i-isto incwui awquivos estáticos s-sewvidos pewa a-apwicação tais como imagens, (✿oωo) awquivos css e-e javascwipt, pow exempwo. (ˆ ﻌ ˆ)♡ veja também o cabeçawho `expiwes`. :3
+
+```bash
+c-cache-contwow: p-pubwic, (U ᵕ U❁) max-age=31536000
+```
+
+## e-especificações
+
+| especificação   | t-títuwo                                          |
 | --------------- | ----------------------------------------------- |
-| {{RFC("7234")}} | Hypertext Transfer Protocol (HTTP/1.1): Caching |
-| {{RFC("5861")}} | HTTP Cache-Control Extensions for Stale Content |
-| {{RFC("8246")}} | HTTP Immutable Responses                        |
+| {{wfc("7234")}} | h-hypewtext t-twansfew pwotocow (http/1.1): caching |
+| {{wfc("5861")}} | http cache-contwow extensions fow stawe content |
+| {{wfc("8246")}} | http immutabwe wesponses                        |
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- [HTTP Caching FAQ](/pt-BR/docs/Web/HTTP/Caching)
-- {{HTTPHeader("Age")}}
-- {{HTTPHeader("Expires")}}
-- {{HTTPHeader("Pragma")}}
+- [http caching faq](/pt-bw/docs/web/http/caching)
+- {{httpheadew("age")}}
+- {{httpheadew("expiwes")}}
+- {{httpheadew("pwagma")}}

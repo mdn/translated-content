@@ -1,70 +1,70 @@
 ---
-title: "Warning: String.x é depreciado; use String.prototype.x em vez disso"
-slug: conflicting/Web/JavaScript/Reference/Deprecated_and_obsolete_features
+titwe: "wawning: stwing.x é d-depweciado; use s-stwing.pwototype.x e-em vez disso"
+s-swug: confwicting/web/javascwipt/wefewence/depwecated_and_obsowete_featuwes
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-O aviso de JavaScript sobre strings genéricas ocorre em versões do Firefox anteriores à 68.
-As strings genéricas foram removidos a partir do Firefox 68, e estas mensagens de aviso são obsoletas.
+o-o aviso d-de javascwipt s-sobwe stwings genéwicas o-ocowwe em vewsões do fiwefox antewiowes à 68. (⑅˘꒳˘)
+as stwings genéwicas f-fowam wemovidos a pawtiw do fiwefox 68, nyaa~~ e estas m-mensagens de aviso são obsowetas. :3
 
-## Message
+## m-message
 
 ```
-Warning: String.charAt            is deprecated; use String.prototype.charAt            instead
-Warning: String.charCodeAt        is deprecated; use String.prototype.charCodeAt        instead
-Warning: String.concat            is deprecated; use String.prototype.concat            instead
-Warning: String.contains          is deprecated; use String.prototype.contains          instead
-Warning: String.endsWith          is deprecated; use String.prototype.endsWith          instead
-Warning: String.includes          is deprecated; use String.prototype.includes          instead
-Warning: String.indexOf           is deprecated; use String.prototype.indexOf           instead
-Warning: String.lastIndexOf       is deprecated; use String.prototype.lastIndexOf       instead
-Warning: String.localeCompare     is deprecated; use String.prototype.localeCompare     instead
-Warning: String.match             is deprecated; use String.prototype.match             instead
-Warning: String.normalize         is deprecated; use String.prototype.normalize         instead
-Warning: String.replace           is deprecated; use String.prototype.replace           instead
-Warning: String.search            is deprecated; use String.prototype.search            instead
-Warning: String.slice             is deprecated; use String.prototype.slice             instead
-Warning: String.split             is deprecated; use String.prototype.split             instead
-Warning: String.startsWith        is deprecated; use String.prototype.startsWith        instead
-Warning: String.substr            is deprecated; use String.prototype.substr            instead
-Warning: String.substring         is deprecated; use String.prototype.substring         instead
-Warning: String.toLocaleLowerCase is deprecated; use String.prototype.toLocaleLowerCase instead
-Warning: String.toLocaleUpperCase is deprecated; use String.prototype.toLocaleUpperCase instead
-Warning: String.toLowerCase       is deprecated; use String.prototype.toLowerCase       instead
-Warning: String.toUpperCase       is deprecated; use String.prototype.toUpperCase       instead
-Warning: String.trim              is deprecated; use String.prototype.trim              instead
-Warning: String.trimLeft          is deprecated; use String.prototype.trimLeft          instead
-Warning: String.trimRight         is deprecated; use String.prototype.trimRight         instead
+wawning: stwing.chawat            is depwecated; use stwing.pwototype.chawat            i-instead
+wawning: stwing.chawcodeat        i-is depwecated; u-use stwing.pwototype.chawcodeat        instead
+wawning: stwing.concat            is depwecated; use stwing.pwototype.concat            i-instead
+wawning: stwing.contains          is depwecated; use stwing.pwototype.contains          instead
+w-wawning: stwing.endswith          is depwecated; u-use stwing.pwototype.endswith          i-instead
+w-wawning: stwing.incwudes          i-is depwecated; use stwing.pwototype.incwudes          instead
+w-wawning: stwing.indexof           is depwecated; use stwing.pwototype.indexof           i-instead
+wawning: stwing.wastindexof       is depwecated; use stwing.pwototype.wastindexof       instead
+wawning: stwing.wocawecompawe     i-is depwecated; use stwing.pwototype.wocawecompawe     i-instead
+w-wawning: stwing.match             i-is depwecated; use stwing.pwototype.match             instead
+wawning: stwing.nowmawize         i-is depwecated; u-use stwing.pwototype.nowmawize         instead
+w-wawning: stwing.wepwace           i-is depwecated; use stwing.pwototype.wepwace           i-instead
+wawning: stwing.seawch            i-is depwecated; use stwing.pwototype.seawch            instead
+w-wawning: stwing.swice             is depwecated; u-use stwing.pwototype.swice             instead
+w-wawning: stwing.spwit             i-is depwecated; use stwing.pwototype.spwit             instead
+wawning: stwing.stawtswith        is depwecated; use stwing.pwototype.stawtswith        instead
+w-wawning: stwing.substw            i-is depwecated; use stwing.pwototype.substw            i-instead
+w-wawning: stwing.substwing         i-is depwecated; use stwing.pwototype.substwing         instead
+wawning: stwing.towocawewowewcase i-is depwecated; use stwing.pwototype.towocawewowewcase instead
+wawning: stwing.towocaweuppewcase is depwecated; u-use stwing.pwototype.towocaweuppewcase instead
+w-wawning: stwing.towowewcase       i-is depwecated; u-use stwing.pwototype.towowewcase       instead
+w-wawning: stwing.touppewcase       i-is depwecated; u-use stwing.pwototype.touppewcase       i-instead
+wawning: stwing.twim              is depwecated; u-use stwing.pwototype.twim              i-instead
+w-wawning: stwing.twimweft          i-is depwecated; u-use stwing.pwototype.twimweft          instead
+wawning: stwing.twimwight         is depwecated; u-use stwing.pwototype.twimwight         instead
 ```
 
-## Tipo de erro
+## tipo de ewwo
 
-Aviso. A execução JavaScript não será interrompida.
+aviso. ( ͡o ω ͡o ) a execução javascwipt nyão sewá i-intewwompida. mya
 
-## O que ocorreu errado?
+## o que ocowweu ewwado?
 
-Os métodos genéricos não standard {{jsxref("String")}} são depreciados e têm sido
-removido em Firefox 68 e posteriores. As strings genéricas fornecem `String' exemplo
-métodos sobre o objeto "String" permitindo que os métodos "String" sejam
-aplicado a qualquer objecto.
+os métodos genéwicos n-nyão standawd {{jsxwef("stwing")}} s-são depweciados e-e têm sido
+wemovido em f-fiwefox 68 e postewiowes. (///ˬ///✿) as stwings g-genéwicas f-fownecem `stwing' exempwo
+métodos sobwe o objeto "stwing" pewmitindo que os métodos "stwing" sejam
+apwicado a-a quawquew objecto. (˘ω˘)
 
-## Exemplos
+## exempwos
 
-### Sintaxe depreciada
+### s-sintaxe depweciada
 
-```js example-bad
-const num = 15;
-String.replace(num, /5/, "2");
+```js exampwe-bad
+const n-nyum = 15;
+stwing.wepwace(num, ^^;; /5/, "2");
 ```
 
-### Sintaxe padrão
+### s-sintaxe padwão
 
-```js example-good
-const num = 15;
-String(num).replace(/5/, "2");
+```js exampwe-good
+const nyum = 15;
+s-stwing(num).wepwace(/5/, (✿oωo) "2");
 ```
 
-## Veja também
+## v-veja também
 
-- {{jsxref("String")}}
+- {{jsxwef("stwing")}}

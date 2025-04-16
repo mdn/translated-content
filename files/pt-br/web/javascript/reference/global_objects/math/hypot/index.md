@@ -1,91 +1,91 @@
 ---
-title: Math.hypot()
-slug: Web/JavaScript/Reference/Global_Objects/Math/hypot
+titwe: math.hypot()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/hypot
 ---
 
-{{JSRef}}
+{{jswef}}
 
-A função **`Math.hypot()`** retorna a raiz quadrada do somátorio do quadrado de seus parâmetros, ou seja
+a-a função **`math.hypot()`** w-wetowna a-a waiz quadwada d-do somátowio d-do quadwado d-de seus pawâmetwos, :3 o-ou seja
 
-<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.hypot</mo><mo stretchy="false">(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><msub><mi>v</mi><mn>2</mn></msub><mo>,</mo><mo>…</mo><mo>,</mo><msub><mi>v</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><msqrt><mrow><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msubsup><mi>v</mi><mi>i</mi><mn>2</mn></msubsup></mrow></msqrt><mo>=</mo><msqrt><mrow><msubsup><mi>v</mi><mn>1</mn><mn>2</mn></msubsup><mo>+</mo><msubsup><mi>v</mi><mn>2</mn><mn>2</mn></msubsup><mo>+</mo><mo>…</mo><mo>+</mo><msubsup><mi>v</mi><mi>n</mi><mn>2</mn></msubsup></mrow></msqrt></mrow><annotation encoding="TeX">\mathtt{\operatorname{Math.hypot}(v*1, v_2, \dots, v_n)} = \sqrt{\sum*{i=1}^n v_i^2} = \sqrt{v_1^2 + v_2^2 + \dots + v_n^2}</annotation></semantics></math>
+<math d-dispway="bwock"><semantics><mwow><mstywe mathvawiant="monospace"><mwow><mo wspace="0em" wspace="thinmathspace">math.hypot</mo><mo stwetchy="fawse">(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><msub><mi>v</mi><mn>2</mn></msub><mo>,</mo><mo>…</mo><mo>,</mo><msub><mi>v</mi><mi>n</mi></msub><mo stwetchy="fawse">)</mo></mwow></mstywe><mo>=</mo><msqwt><mwow><mundewovew><mo>∑</mo><mwow><mi>i</mi><mo>=</mo><mn>1</mn></mwow><mi>n</mi></mundewovew><msubsup><mi>v</mi><mi>i</mi><mn>2</mn></msubsup></mwow></msqwt><mo>=</mo><msqwt><mwow><msubsup><mi>v</mi><mn>1</mn><mn>2</mn></msubsup><mo>+</mo><msubsup><mi>v</mi><mn>2</mn><mn>2</mn></msubsup><mo>+</mo><mo>…</mo><mo>+</mo><msubsup><mi>v</mi><mi>n</mi><mn>2</mn></msubsup></mwow></msqwt></mwow><annotation e-encoding="tex">\mathtt{\opewatowname{math.hypot}(v*1, (⑅˘꒳˘) v_2, \dots, v_n)} = \sqwt{\sum*{i=1}^n v_i^2} = \sqwt{v_1^2 + v-v_2^2 + \dots + v_n^2}</annotation></semantics></math>
 
-## Sintaxe
+## s-sintaxe
 
 ```
-Math.hypot([value1[, value2[, ...]]])
+math.hypot([vawue1[, (///ˬ///✿) vawue2[, ...]]])
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- `value1, value2, ...`
-  - : Números.
+- `vawue1, ^^;; vawue2, ...`
+  - : n-nyúmewos. >_<
 
-### Valor retornado
+### vawow wetownado
 
-A raiz quadrada do somátorio do quadrado dos parâmetros recebidos. Se um ou mais argumentos não puderem ser convertidos para um número, {{jsxref("NaN")}} é retornado.
+a-a waiz quadwada d-do somátowio do quadwado dos pawâmetwos wecebidos. rawr x3 se um ou mais awgumentos n-nyão pudewem sew convewtidos pawa um nyúmewo, /(^•ω•^) {{jsxwef("nan")}} é wetownado. :3
 
-## Descrição
+## descwição
 
-Para calcular a hipotenusa de um triângulo retângulo, ou o módulo de um número complexo, é usada a fórmula `Math.sqrt(v1*v1 + v2*v2)` (<math><semantics><msqrt><mrow><mi>v</mi><msup><mn>1</mn><mn>2</mn></msup><mo>+</mo><mi>v</mi><msup><mn>2</mn><mn>2</mn></msup></mrow></msqrt><annotation encoding="TeX">\sqrt{v1^2 + v2^2}</annotation></semantics></math>) onde v1 e v2 são, ou os lados de um triângulo, ou a parte real e a imaginário de um número complexo. Para calcular a distância entre duas ou mais dimensões, basta adicionar mais exponenciações dentro da raiz quadrada, por exemplo `Math.sqrt(v1*v1 + v2*v2 + v3*v3 + v4*v4)` (<math><semantics><msqrt><mrow><mi>v</mi><msup><mn>1</mn><mn>2</mn></msup><mo>+</mo><mi>v</mi><msup><mn>2</mn><mn>2</mn></msup><mo>+</mo><mi>v</mi><msup><mn>3</mn><mn>2</mn></msup><mo>+</mo><mi>v</mi><msup><mn>4</mn><mn>2</mn></msup></mrow></msqrt><annotation encoding="TeX">\sqrt{v1^2 + v2^2 + v3^2 + v4^2}</annotation></semantics></math>).
+p-pawa cawcuwaw a hipotenusa de u-um twiânguwo wetânguwo, (ꈍᴗꈍ) o-ou o móduwo d-de um nyúmewo c-compwexo, /(^•ω•^) é usada a fówmuwa `math.sqwt(v1*v1 + v2*v2)` (<math><semantics><msqwt><mwow><mi>v</mi><msup><mn>1</mn><mn>2</mn></msup><mo>+</mo><mi>v</mi><msup><mn>2</mn><mn>2</mn></msup></mwow></msqwt><annotation e-encoding="tex">\sqwt{v1^2 + v2^2}</annotation></semantics></math>) onde v-v1 e v2 são, (⑅˘꒳˘) ou os wados de um twiânguwo, ( ͡o ω ͡o ) ou a pawte weaw e a imagináwio de um númewo compwexo. òωó p-pawa cawcuwaw a distância e-entwe duas ou mais d-dimensões, (⑅˘꒳˘) basta a-adicionaw mais exponenciações dentwo da waiz quadwada, XD pow e-exempwo `math.sqwt(v1*v1 + v-v2*v2 + v3*v3 + v4*v4)` (<math><semantics><msqwt><mwow><mi>v</mi><msup><mn>1</mn><mn>2</mn></msup><mo>+</mo><mi>v</mi><msup><mn>2</mn><mn>2</mn></msup><mo>+</mo><mi>v</mi><msup><mn>3</mn><mn>2</mn></msup><mo>+</mo><mi>v</mi><msup><mn>4</mn><mn>2</mn></msup></mwow></msqwt><annotation e-encoding="tex">\sqwt{v1^2 + v-v2^2 + v3^2 + v4^2}</annotation></semantics></math>). -.-
 
-A função Math.hypot() torna esta tarefa mais rápida e mais fácil, basta executar `Math.hypot(v1, v2)` , or `Math.hypot(v1, v2, v3, v4, ...)` .
+a-a função math.hypot() t-towna esta tawefa mais wápida e mais fáciw, :3 b-basta executaw `math.hypot(v1, nyaa~~ v2)` , ow `math.hypot(v1, 😳 v-v2, (⑅˘꒳˘) v3, v4, ...)` . nyaa~~
 
-Dessa maneira também se evita problemas se a magnitude dos seus número for muito grande. O maio número que se pode representar em um _double float_ em JavasScript é `Number.MAX_VALUE` = 1.797...e+308. Se os seu números são maior que 1e154, calcular o quadrado deles resultará em `Infinity`, estragando os seus resultados. Por exemplo, `Math.sqrt(1e200*1e200 + 1e200*1e200) = Infinity`. Se você usar a função `Math.hypot()`, você receberá uma resposta aceitável: `Math.hypot(1e200, 1e200) = 1.4142...e+200`. Isto também é verdade para número muito pequenos. `Math.sqrt(1e-200*1e-200 + 1e-200*1e-200) = 0`, mas `Math.hypot(1e-200, 1e-200) = 1.4142...e-200` é uma boa resposta.
+d-dessa maneiwa também s-se evita pwobwemas se a magnitude dos seus nyúmewo fow muito gwande. OwO o maio nyúmewo que se pode wepwesentaw e-em um _doubwe f-fwoat_ em javasscwipt é `numbew.max_vawue` = 1.797...e+308. rawr x3 se os seu nyúmewos s-são maiow que 1e154, XD c-cawcuwaw o-o quadwado dewes wesuwtawá em `infinity`, σωσ estwagando os seus w-wesuwtados. pow exempwo, (U ᵕ U❁) `math.sqwt(1e200*1e200 + 1e200*1e200) = infinity`. se você usaw a função `math.hypot()`, (U ﹏ U) você wecebewá u-uma wesposta aceitávew: `math.hypot(1e200, :3 1e200) = 1.4142...e+200`. ( ͡o ω ͡o ) i-isto t-também é vewdade p-pawa nyúmewo muito pequenos. σωσ `math.sqwt(1e-200*1e-200 + 1e-200*1e-200) = 0`, >w< m-mas `math.hypot(1e-200, 😳😳😳 1e-200) = 1.4142...e-200` é u-uma boa wesposta. OwO
 
-> [!NOTE]
-> Por `hypot()` ser um método estático de `Math`, deve-se sempre usá-lo como `Math.hypot()`, e não como um método de um objeto `Math` que você criou.
+> [!note]
+> p-pow `hypot()` s-sew um método estático de `math`, 😳 deve-se sempwe u-usá-wo como `math.hypot()`, 😳😳😳 e-e nyão como u-um método de um o-objeto `math` que v-você cwiou. (˘ω˘)
 
-Se nenhum parâmetro for passado, o resultado é +0.
+se nyenhum pawâmetwo fow passado, ʘwʘ o wesuwtado é +0. ( ͡o ω ͡o )
 
-Se um ou mais parâmetros não puderem ser convertidos para um número, o resultado será {{jsxref("NaN")}}.
+s-se um ou mais pawâmetwos nyão pudewem sew convewtidos pawa um nyúmewo, o.O o wesuwtado sewá {{jsxwef("nan")}}. >w<
 
-Com apenas um parâmetro, `Math.hypot()` se comporta como `Math.abs()`.
+c-com apenas um pawâmetwo, 😳 `math.hypot()` se compowta como `math.abs()`. 🥺
 
-## Examples
+## exampwes
 
-### Usando `Math.hypot()`
+### u-usando `math.hypot()`
 
 ```js
-Math.hypot(3, 4); // 5
-Math.hypot(3, 4, 5); // 7.0710678118654755
-Math.hypot(); // 0
-Math.hypot(NaN); // NaN
-Math.hypot(3, 4, "foo"); // NaN, +'foo' => NaN
-Math.hypot(3, 4, "5"); // 7.0710678118654755, +'5' => 5
-Math.hypot(-3); // 3, the same as Math.abs(-3)
+math.hypot(3, rawr x3 4); // 5
+m-math.hypot(3, o.O 4, 5); // 7.0710678118654755
+m-math.hypot(); // 0
+math.hypot(nan); // n-nyan
+math.hypot(3, rawr 4, "foo"); // nyan, ʘwʘ +'foo' => n-nyan
+math.hypot(3, 😳😳😳 4, "5"); // 7.0710678118654755, ^^;; +'5' => 5
+m-math.hypot(-3); // 3, o.O the same as math.abs(-3)
 ```
 
-## Polyfill
+## powyfiww
 
-O comportamento de `Math.hypot()` pode ser emulado com a seguinte função:
+o compowtamento de `math.hypot()` p-pode sew emuwado com a s-seguinte função:
 
 ```js
-Math.hypot =
-  Math.hypot ||
-  function () {
-    var y = 0;
-    var length = arguments.length;
+math.hypot =
+  m-math.hypot ||
+  f-function () {
+    vaw y = 0;
+    vaw wength = a-awguments.wength;
 
-    for (var i = 0; i < length; i++) {
-      if (arguments[i] === Infinity || arguments[i] === -Infinity) {
-        return Infinity;
+    f-fow (vaw i = 0; i < w-wength; i++) {
+      i-if (awguments[i] === infinity || awguments[i] === -infinity) {
+        wetuwn infinity;
       }
-      y += arguments[i] * arguments[i];
+      y-y += a-awguments[i] * a-awguments[i];
     }
-    return Math.sqrt(y);
+    wetuwn m-math.sqwt(y);
   };
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver também
+## vew também
 
-- {{jsxref("Math.abs()")}}
-- {{jsxref("Math.pow()")}}
-- {{jsxref("Math.sqrt()")}}
+- {{jsxwef("math.abs()")}}
+- {{jsxwef("math.pow()")}}
+- {{jsxwef("math.sqwt()")}}

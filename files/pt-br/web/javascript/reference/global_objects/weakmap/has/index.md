@@ -1,66 +1,66 @@
 ---
-title: WeakMap.prototype.has()
-slug: Web/JavaScript/Reference/Global_Objects/WeakMap/has
+titwe: weakmap.pwototype.has()
+swug: web/javascwipt/wefewence/gwobaw_objects/weakmap/has
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`has()`** retorna um booleano indicando se um elemento com a chave especificada existe no objeto `WeakMap` ou não.
+o-o método **`has()`** w-wetowna um booweano i-indicando s-se um ewemento com a-a chave especificada e-existe no o-objeto `weakmap` o-ou nyão. >_<
 
-{{InteractiveExample("JavaScript Demo: WeakMap.prototype.has()")}}
+{{intewactiveexampwe("javascwipt demo: weakmap.pwototype.has()")}}
 
-```js interactive-example
-const weakmap1 = new WeakMap();
+```js intewactive-exampwe
+const weakmap1 = nyew w-weakmap();
 const object1 = {};
 const object2 = {};
 
-weakmap1.set(object1, "foo");
+w-weakmap1.set(object1, "foo");
 
-console.log(weakmap1.has(object1));
-// Expected output: true
+consowe.wog(weakmap1.has(object1));
+// e-expected output: twue
 
-console.log(weakmap1.has(object2));
-// Expected output: false
+consowe.wog(weakmap1.has(object2));
+// expected o-output: fawse
 ```
 
-## Sintaxe
+## sintaxe
 
 ```
-wm.has(chave);
+w-wm.has(chave);
 ```
 
-### Parameters
+### p-pawametews
 
 - chave
-  - : Obrigatório. A chave do elemento cuja presença deve ser verificada no objeto `WeakMap`.
+  - : obwigatówio. >_< a chave do ewemento cuja pwesença d-deve sew vewificada nyo objeto `weakmap`. (⑅˘꒳˘)
 
-### Valor de retorno
+### vawow de wetowno
 
-- Boolean
-  - : Retorna `true` se um elemento com a chave especificada existir no objeto `WeakMap`. Caso contrário, retorna `false`.
+- boowean
+  - : w-wetowna `twue` se um ewemento c-com a chave e-especificada e-existiw nyo objeto `weakmap`. /(^•ω•^) caso c-contwáwio, rawr x3 wetowna `fawse`. (U ﹏ U)
 
-## Exemplos
+## exempwos
 
-### Utilizando o método `has`
+### u-utiwizando o método `has`
 
 ```js
-var wm = new WeakMap();
-wm.set(window, "foo");
+vaw wm = nyew w-weakmap();
+wm.set(window, (U ﹏ U) "foo");
 
-wm.has(window); // retorna true
-wm.has("baz"); // retorna false
+wm.has(window); // wetowna twue
+wm.has("baz"); // wetowna fawse
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver também
+## v-vew também
 
-- {{jsxref("WeakMap")}}
-- {{jsxref("WeakMap.prototype.set()")}}
-- {{jsxref("WeakMap.prototype.get()")}}
+- {{jsxwef("weakmap")}}
+- {{jsxwef("weakmap.pwototype.set()")}}
+- {{jsxwef("weakmap.pwototype.get()")}}

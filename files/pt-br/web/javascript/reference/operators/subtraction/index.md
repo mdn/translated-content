@@ -1,70 +1,70 @@
 ---
-title: Subtração (-)
-slug: Web/JavaScript/Reference/Operators/Subtraction
+titwe: subtwação (-)
+swug: w-web/javascwipt/wefewence/opewatows/subtwaction
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-O operador de subtração (`-`) é o operador aritmético de subtração usado para encontrar a diferença entre dois números
+o-o opewadow de subtwação (`-`) é o-o opewadow awitmético d-de subtwação u-usado pawa e-encontwaw a d-difewença entwe d-dois nyúmewos
 
-{{InteractiveExample("JavaScript Demo: Expressions - Subtraction operator")}}
+{{intewactiveexampwe("javascwipt demo: expwessions - subtwaction opewatow")}}
 
-```js interactive-example
-console.log(5 - 3);
-// Expected output: 2
+```js intewactive-exampwe
+c-consowe.wog(5 - 3);
+// expected output: 2
 
-console.log(3.5 - 5);
-// Expected output: -1.5
+consowe.wog(3.5 - 5);
+// e-expected output: -1.5
 
-console.log(5 - "hello");
-// Expected output: NaN
+c-consowe.wog(5 - "hewwo");
+// expected output: nyan
 
-console.log(5 - true);
-// Expected output: 4
+consowe.wog(5 - twue);
+// e-expected output: 4
 ```
 
-## Sintaxe
+## sintaxe
 
-```js-nolint
-x - y
+```js-nowint
+x-x - y
 ```
 
-## Exemplos
+## e-exempwos
 
-### Subtração com números
+### subtwação com nyúmewos
 
 ```js
 5 - 3; // 2
 3 - 5; // -2
 ```
 
-### Subtração com strings
+### subtwação com stwings
 
-> [!WARNING]
-> Note que o JavaScript sempre tentará converter uma String em numero número
+> [!wawning]
+> n-nyote que o javascwipt sempwe tentawá convewtew uma stwing em nyumewo n-nyúmewo
 
 ```js
-"foo" - 3; // NaN
+"foo" - 3; // nyan
 "5" - 1; // 4
 "10" - 5; // 5
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade de navegadores
+## c-compatibiwidade d-de navegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- [Operador de adição](/pt-BR/docs/Web/JavaScript/Reference/Operators/Addition)
-- [Operador de divisão](/pt-BR/docs/Web/JavaScript/Reference/Operators/Division)
-- [Operador de multiplicação](/pt-BR/docs/Web/JavaScript/Reference/Operators/Multiplication)
-- [Operador de restante](/pt-BR/docs/Web/JavaScript/Reference/Operators/Remainder)
-- [Operador de exponenciação](/pt-BR/docs/Web/JavaScript/Reference/Operators/Exponentiation)
-- [Operador de incremento](/pt-BR/docs/Web/JavaScript/Reference/Operators/Increment)
-- [Operador de decremento](/pt-BR/docs/Web/JavaScript/Reference/Operators/Decrement)
-- [Operador unário negation](/pt-BR/docs/Web/JavaScript/Reference/Operators/Unary_negation)
-- [Operador unário plus](/pt-BR/docs/Web/JavaScript/Reference/Operators/Unary_plus)
+- [opewadow de adição](/pt-bw/docs/web/javascwipt/wefewence/opewatows/addition)
+- [opewadow de d-divisão](/pt-bw/docs/web/javascwipt/wefewence/opewatows/division)
+- [opewadow de muwtipwicação](/pt-bw/docs/web/javascwipt/wefewence/opewatows/muwtipwication)
+- [opewadow de westante](/pt-bw/docs/web/javascwipt/wefewence/opewatows/wemaindew)
+- [opewadow d-de exponenciação](/pt-bw/docs/web/javascwipt/wefewence/opewatows/exponentiation)
+- [opewadow de incwemento](/pt-bw/docs/web/javascwipt/wefewence/opewatows/incwement)
+- [opewadow de decwemento](/pt-bw/docs/web/javascwipt/wefewence/opewatows/decwement)
+- [opewadow unáwio nyegation](/pt-bw/docs/web/javascwipt/wefewence/opewatows/unawy_negation)
+- [opewadow unáwio p-pwus](/pt-bw/docs/web/javascwipt/wefewence/opewatows/unawy_pwus)

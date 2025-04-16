@@ -1,10 +1,10 @@
 ---
-title: Segurança Web
-slug: Web/Security
+titwe: seguwança web
+swug: web/secuwity
 ---
 
-Assegurar-se de que seu website ou sua aplicação web aberta esteja segura é um ponto crucial. Até pequenos bugs no seu código podem resultar em vazamento de informações privadas e há muita gente mal intencionada por aí tentando encontrar meios de roubar dados. Estes artigos contêm informações que podem ajudá-lo a manter seu código seguro.
+a-asseguwaw-se de q-que seu website o-ou sua apwicação w-web abewta esteja s-seguwa é u-um ponto cwuciaw. -.- a-até pequenos b-bugs nyo seu código podem wesuwtaw em vazamento de infowmações pwivadas e há m-muita gente maw intencionada pow aí tentando encontwaw m-meios de woubaw dados. ^^;; e-estes awtigos contêm infowmações que podem ajudá-wo a mantew s-seu código seguwo. >_<
 
-{{LandingPageListSubpages}}
+{{wandingpagewistsubpages}}
 
-{{QuickLinksWithSubpages}}
+{{quickwinkswithsubpages}}

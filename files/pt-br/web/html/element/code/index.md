@@ -1,118 +1,118 @@
 ---
-title: "<code>: O Elemento Inline Code"
-slug: Web/HTML/Element/code
+titwe: "<code>: o ewemento inwine c-code"
+swug: w-web/htmw/ewement/code
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-O **elemento** **HTML `<code>` **apresenta seu conteúdo estilizado de maneira a indicar que o texto é um pequeno fragmento de código. Por padrão, o conteúdo é exibido utilizando a fonte monoespaçada padrão do {{Glossary("user agent", "user agent's")}}.
+o-o **ewemento** **htmw `<code>` **apwesenta s-seu conteúdo e-estiwizado d-de maneiwa a indicaw q-que o texto é u-um pequeno fwagmento de código. (U ﹏ U) pow padwão, (///ˬ///✿) o conteúdo é exibido utiwizando a-a fonte monoespaçada padwão do {{gwossawy("usew a-agent", 😳 "usew agent's")}}. 😳
 
-{{InteractiveExample("HTML Demo: &lt;code&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw d-demo: &wt;code&gt;", σωσ "tabbed-showtew")}}
 
-```html interactive-example
+```htmw intewactive-exampwe
 <p>
-  The <code>push()</code> method adds one or more elements to the end of an
-  array and returns the new length of the array.
+  the <code>push()</code> method adds one o-ow mowe ewements to the end of a-an
+  awway and w-wetuwns the nyew wength of the awway. rawr x3
 </p>
 ```
 
-```css interactive-example
+```css intewactive-exampwe
 code {
-  background-color: #eee;
-  border-radius: 3px;
-  font-family: courier, monospace;
+  backgwound-cowow: #eee;
+  b-bowdew-wadius: 3px;
+  font-famiwy: couwiew, OwO monospace;
   padding: 0 3px;
 }
 ```
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/pt-BR/docs/Web/HTML/Content_categories">Content categories</a>
+    <tw>
+      <th s-scope="wow">
+        <a hwef="/pt-bw/docs/web/htmw/content_categowies">content c-categowies</a>
       </th>
       <td>
-        <a href="/pt-BR/docs/Web/HTML/Content_categories#Flow_content"
-          >Flow content</a
-        >,
-        <a href="/pt-BR/docs/Web/HTML/Content_categories#Phrasing_content"
-          >phrasing content</a
-        >, palpable content.
+        <a h-hwef="/pt-bw/docs/web/htmw/content_categowies#fwow_content"
+          >fwow c-content</a
+        >, /(^•ω•^)
+        <a h-hwef="/pt-bw/docs/web/htmw/content_categowies#phwasing_content"
+          >phwasing content</a
+        >, 😳😳😳 pawpabwe c-content. ( ͡o ω ͡o )
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted content</th>
+    </tw>
+    <tw>
+      <th scope="wow">pewmitted content</th>
       <td>
-        <a href="/pt-BR/docs/Web/HTML/Content_categories#Phrasing_content"
-          >Phrasing content</a
-        >.
+        <a h-hwef="/pt-bw/docs/web/htmw/content_categowies#phwasing_content"
+          >phwasing content</a
+        >. >_<
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Tag omission</th>
-      <td>Nenhuma, tanto a tag inicial quanto a final são obrigatórias.</td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted parents</th>
+    </tw>
+    <tw>
+      <th scope="wow">tag omission</th>
+      <td>nenhuma, >w< tanto a tag iniciaw quanto a-a finaw são obwigatówias.</td>
+    </tw>
+    <tw>
+      <th scope="wow">pewmitted p-pawents</th>
       <td>
-        Any element that accepts
-        <a href="/pt-BR/docs/Web/HTML/Content_categories#Phrasing_content"
-          >phrasing content</a
-        >.
+        a-any ewement t-that accepts
+        <a hwef="/pt-bw/docs/web/htmw/content_categowies#phwasing_content"
+          >phwasing content</a
+        >. rawr
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted ARIA roles</th>
-      <td>Any</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM interface</th>
+    </tw>
+    <tw>
+      <th scope="wow">pewmitted a-awia wowes</th>
+      <td>any</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">dom intewface</th>
       <td>
-        {{domxref("HTMLElement")}} Up to Gecko 1.9.2 (Firefox 4)
-        inclusive, Firefox implements the
-        {{domxref("HTMLSpanElement")}} interface for this element.
+        {{domxwef("htmwewement")}} u-up t-to gecko 1.9.2 (fiwefox 4)
+        incwusive, 😳 fiwefox i-impwements the
+        {{domxwef("htmwspanewement")}} i-intewface fow this ewement. >w<
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Atributos
+## a-atwibutos
 
-Esse elemento inclui apenas os [global attributes](/pt-BR/docs/Web/HTML/Global_attributes).
+esse ewemento i-incwui apenas os [gwobaw attwibutes](/pt-bw/docs/web/htmw/gwobaw_attwibutes). (⑅˘꒳˘)
 
-## Exemplo
+## e-exempwo
 
-Um parágrafo que inlcui `<code>`:
+um pawágwafo q-que inwcui `<code>`:
 
-```html
+```htmw
 <p>
-  A função <code>selectAll()</code> destaca todo o texto no campo de entrada
-  então o usuário pode, por exemplo, copiar ou deletar o texto.
+  a função <code>sewectaww()</code> destaca todo o texto nyo campo de entwada
+  então o usuáwio pode, OwO pow exempwo, (ꈍᴗꈍ) c-copiaw ou dewetaw o-o texto. 😳
 </p>
 ```
 
-A saída gerada por esse trecho HTML se parece com isso:
+a saída g-gewada pow esse t-twecho htmw se pawece c-com isso:
 
-{{EmbedLiveSample("Example", 640, 70)}}
+{{embedwivesampwe("exampwe", 640, 😳😳😳 70)}}
 
-## Notas
+## nyotas
 
-Para representar múltiplas linha de código, envolva o elemento `<code>` dentro do elemento {{HTMLElement("pre")}}. O elemento `<code>` por si só representa somente uma única senteça ou linha de código.
+pawa wepwesentaw múwtipwas w-winha de código, mya envowva o ewemento `<code>` dentwo do ewemento {{htmwewement("pwe")}}. mya o ewemento `<code>` pow s-si só wepwesenta somente uma única s-senteça o-ou winha de código. (⑅˘꒳˘)
 
-Uma regra CSS pode ser definida para o seletor `code` para sobrescrever a fonte padrão do navegador. Preferências definidas pelo usuário podem ter precedência sore o CSS especifciado.
+u-uma wegwa css pode sew definida p-pawa o sewetow `code` p-pawa s-sobwescwevew a f-fonte padwão do nyavegadow. (U ﹏ U) pwefewências definidas p-pewo usuáwio p-podem tew pwecedência s-sowe o c-css especifciado. mya
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{HTMLElement("samp")}}
-- {{HTMLElement("kbd")}}
-- {{HTMLElement("command")}} (deprecated)
-- {{HTMLElement("var")}}
-- {{HTMLElement("pre")}}
+- {{htmwewement("samp")}}
+- {{htmwewement("kbd")}}
+- {{htmwewement("command")}} (depwecated)
+- {{htmwewement("vaw")}}
+- {{htmwewement("pwe")}}

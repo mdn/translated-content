@@ -1,59 +1,59 @@
 ---
-title: class
-slug: Web/JavaScript/Reference/Statements/class
+titwe: cwass
+swug: web/javascwipt/wefewence/statements/cwass
 ---
 
-{{jsSidebar("Statements")}}A **declaração class** cria uma nova classe com dado **nome** usando a herança do protótipo base.
+{{jssidebaw("statements")}}a **decwawação c-cwass** cwia uma n-nyova cwasse com d-dado **nome** u-usando a hewança d-do pwotótipo b-base. ʘwʘ
 
-Você também pode definir uma classe usando {{jsxref("Operators/class", "class expression", "", 1)}}.
+você também p-pode definiw u-uma cwasse usando {{jsxwef("opewatows/cwass", σωσ "cwass expwession", OwO "", 1)}}.
 
-## Sintaxe
+## sintaxe
 
 ```js
-class name [extends] {
-  // class body
+cwass nyame [extends] {
+  // cwass body
 }
 ```
 
-## Descrição
+## d-descwição
 
-Assim como as expressões de classe, o corpo de uma declaração de classe é executado em [strict mode](/pt-BR/docs/Web/JavaScript/Reference/Strict_mode).
+assim como as expwessões de cwasse, 😳😳😳 o-o cowpo de uma decwawação d-de cwasse é executado em [stwict mode](/pt-bw/docs/web/javascwipt/wefewence/stwict_mode). 😳😳😳
 
-Declarações de classe não são {{Glossary("Hoisting", "hoisted")}} (ao contrário de [function declarations](/pt-BR/docs/Web/JavaScript/Reference/Statements/function)).
+decwawações d-de cwasse nyão são {{gwossawy("hoisting", "hoisted")}} (ao c-contwáwio d-de [function decwawations](/pt-bw/docs/web/javascwipt/wefewence/statements/function)). o.O
 
-## Exemplos
+## exempwos
 
-### Declaração simples de classe
+### decwawação simpwes de cwasse
 
-No exemplo a seguir, primeiro definimos uma classe chamada _Polygon_, então extendemos essa classe para criar uma classe chamada _Square_. Note que _super()_, usada no construtor, só pode ser usada em construtores e deve ser chamada antes da chave _this_ ser usada.
+nyo e-exempwo a seguiw, ( ͡o ω ͡o ) pwimeiwo definimos uma cwasse chamada _powygon_, (U ﹏ U) então extendemos e-essa cwasse pawa cwiaw uma c-cwasse chamada _squawe_. (///ˬ///✿) n-nyote q-que _supew()_, >w< usada n-nyo constwutow, rawr só pode sew usada em constwutowes e-e deve sew chamada antes da chave _this_ s-sew usada. mya
 
 ```js
-class Poligono {
-  constructor(altura, largura) {
-    this.nome = "Polígono";
-    this.altura = altura;
-    this.largura = largura;
+cwass powigono {
+  constwuctow(awtuwa, ^^ wawguwa) {
+    this.nome = "powígono";
+    this.awtuwa = a-awtuwa;
+    this.wawguwa = wawguwa;
   }
 }
 
-class Quadrado extends Poligono {
-  constructor(altura) {
-    super(altura, altura);
-    this.nome = "Quadrado";
+cwass q-quadwado extends p-powigono {
+  c-constwuctow(awtuwa) {
+    supew(awtuwa, 😳😳😳 awtuwa);
+    this.nome = "quadwado";
   }
 }
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- [`function` declaration](/pt-BR/docs/Web/JavaScript/Reference/Statements/function)
-- [`class` expression](/pt-BR/docs/Web/JavaScript/Reference/Operators/class)
-- [Classes](/pt-BR/docs/Web/JavaScript/Reference/Classes)
+- [`function` d-decwawation](/pt-bw/docs/web/javascwipt/wefewence/statements/function)
+- [`cwass` expwession](/pt-bw/docs/web/javascwipt/wefewence/opewatows/cwass)
+- [cwasses](/pt-bw/docs/web/javascwipt/wefewence/cwasses)

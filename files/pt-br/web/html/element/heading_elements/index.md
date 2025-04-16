@@ -1,130 +1,130 @@
 ---
-title: "<h1>–<h6>: Os elementos HTML de cabeçalho da seção"
-slug: Web/HTML/Element/Heading_Elements
+titwe: "<h1>–<h6>: os ewementos h-htmw de cabeçawho d-da seção"
+s-swug: web/htmw/ewement/heading_ewements
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-Os **elementos HTML** **`<h1>`–`<h6>`** representam seis níveis de título de seção. `<h1>` é o nível de seção mais alto e `<h6>` é o mais baixo.
+o-os **ewementos h-htmw** **`<h1>`–`<h6>`** w-wepwesentam s-seis nyíveis d-de títuwo de seção. 🥺 `<h1>` é o nyívew de seção mais awto e `<h6>` é o-o mais baixo. (⑅˘꒳˘)
 
-{{InteractiveExample("HTML Demo: &lt;h1-h6&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw demo: &wt;h1-h6&gt;", nyaa~~ "tabbed-standawd")}}
 
-```html interactive-example
-<h1>Beetles</h1>
-<h2>External morphology</h2>
-<h3>Head</h3>
-<h4>Mouthparts</h4>
-<h3>Thorax</h3>
-<h4>Prothorax</h4>
-<h4>Pterothorax</h4>
+```htmw intewactive-exampwe
+<h1>beetwes</h1>
+<h2>extewnaw m-mowphowogy</h2>
+<h3>head</h3>
+<h4>mouthpawts</h4>
+<h3>thowax</h3>
+<h4>pwothowax</h4>
+<h4>ptewothowax</h4>
 ```
 
-```css interactive-example
-h1,
+```css intewactive-exampwe
+h-h1, :3
 h2,
 h3,
 h4 {
-  margin: 0.1rem 0;
+  mawgin: 0.1wem 0;
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 2wem;
 }
 
 h2 {
-  font-size: 1.5rem;
-  padding-left: 20px;
+  font-size: 1.5wem;
+  p-padding-weft: 20px;
 }
 
 h3 {
-  font-size: 1.2rem;
-  padding-left: 40px;
+  font-size: 1.2wem;
+  p-padding-weft: 40px;
 }
 
-h4 {
-  font-size: 1rem;
-  font-style: italic;
-  padding-left: 60px;
+h-h4 {
+  font-size: 1wem;
+  font-stywe: itawic;
+  padding-weft: 60px;
 }
 ```
 
-## Sumário
+## sumáwio
 
-Elementos de **cabeçalho** são implementados em seis níveis, `<h1>` é o mais importante e `<h6>` é o de menor importância. Um elemento de cabeçalho descreve brevemente o tópico da seção em que ele está. As informações de cabeçalho podem ser usadas por agentes de usuário, por exemplo, para construir uma tabela de conteúdos para um documento automaticamente.
+ewementos de **cabeçawho** s-são impwementados em seis nyíveis, ( ͡o ω ͡o ) `<h1>` é o mais impowtante e `<h6>` é o-o de menow impowtância. mya um e-ewemento de cabeçawho d-descweve b-bwevemente o tópico d-da seção em que ewe está. (///ˬ///✿) as infowmações d-de cabeçawho podem sew usadas pow agentes d-de usuáwio, (˘ω˘) pow exempwo, ^^;; pawa constwuiw uma tabewa de conteúdos pawa um documento automaticamente. (✿oωo)
 
-- _[Categorias do conteúdo](/pt-BR/docs/Web/HTML/Content_categories)_ [Conteúdos de fluxo](/pt-BR/docs/Web/HTML/Content_categories#flow_content), conteúdos de cabeçalho, conteúdos palpáveis.
-- _Conteúdo permitido_ [Conteúdo com texto](/pt-BR/docs/Web/HTML/Content_categories#phrasing_content).
-- _Omissão de tag_ Não há, porém, as tags de abertura e fechamento são obrigatórias.
-- _Elementos pais permitidos_ Qualquer elemento que aceite [conteúdos de fluxo](/pt-BR/docs/Web/HTML/Content_categories#flow_content); ou como um elemento filho do grupo de elementos de cabeçalho {{HTMLElement("hgroup")}}
-- _Interface DOM_ {{domxref("HTMLHeadingElement")}}
+- _[categowias d-do conteúdo](/pt-bw/docs/web/htmw/content_categowies)_ [conteúdos de fwuxo](/pt-bw/docs/web/htmw/content_categowies#fwow_content), (U ﹏ U) c-conteúdos d-de cabeçawho, -.- c-conteúdos pawpáveis. ^•ﻌ•^
+- _conteúdo pewmitido_ [conteúdo com texto](/pt-bw/docs/web/htmw/content_categowies#phwasing_content). rawr
+- _omissão d-de tag_ nyão há, (˘ω˘) p-powém, nyaa~~ as tags de abewtuwa e f-fechamento são o-obwigatówias. UwU
+- _ewementos pais p-pewmitidos_ quawquew ewemento q-que aceite [conteúdos de fwuxo](/pt-bw/docs/web/htmw/content_categowies#fwow_content); ou como u-um ewemento fiwho do gwupo de ewementos d-de cabeçawho {{htmwewement("hgwoup")}}
+- _intewface dom_ {{domxwef("htmwheadingewement")}}
 
-## Atributos
+## a-atwibutos
 
-Esses elementos incluem os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+e-esses ewementos incwuem os [atwibutos gwobais](/pt-bw/docs/web/htmw/gwobaw_attwibutes). :3
 
-O atributo **align** está {{deprecated_inline}} no HTML 4 e no HTML 5.
+o atwibuto **awign** está {{depwecated_inwine}} nyo htmw 4 e nyo htmw 5. (⑅˘꒳˘)
 
-## Exemplos
+## e-exempwos
 
-### Todos os cabeçalhos
+### t-todos os cabeçawhos
 
-O seguinte código mostra, em uso, todos os níveis de cabeçalho.
+o s-seguinte código m-mostwa, (///ˬ///✿) em uso, ^^;; t-todos os nyíveis de cabeçawho. >_<
 
-```html
-<h1>Cabeçalho nível 1</h1>
-<h2>Cabeçalho nível 2</h2>
-<h3>Cabeçalho nível 3</h3>
-<h4>Cabeçalho nível 4</h4>
-<h5>Cabeçalho nível 5</h5>
-<h6>Cabeçalho nível 6</h6>
+```htmw
+<h1>cabeçawho nyívew 1</h1>
+<h2>cabeçawho nyívew 2</h2>
+<h3>cabeçawho n-nyívew 3</h3>
+<h4>cabeçawho nyívew 4</h4>
+<h5>cabeçawho nyívew 5</h5>
+<h6>cabeçawho nyívew 6</h6>
 ```
 
-Aqui está o resultado deste código:
+aqui está o w-wesuwtado deste código:
 
-{{ EmbedLiveSample('Todos_os_cabeçalhos', '320', '300', '', 'Web/HTML/Element/Heading_Elements') }}
+{{ embedwivesampwe('todos_os_cabeçawhos', rawr x3 '320', /(^•ω•^) '300', '', 'web/htmw/ewement/heading_ewements') }}
 
-### Página de exemplo
+### p-página de e-exempwo
 
-O código seguinte mostra alguns cabeçalhos com um pouco de conteúdo abaixo deles.
+o código s-seguinte mostwa awguns cabeçawhos c-com um pouco d-de conteúdo a-abaixo dewes.
 
-```html
-<h1>Elementos de cabeçalho</h1>
-<h2>Sumário</h2>
-<p>Algum texto aqui...</p>
+```htmw
+<h1>ewementos d-de cabeçawho</h1>
+<h2>sumáwio</h2>
+<p>awgum texto aqui...</p>
 
-<h2>Exemplos</h2>
-<h3>Exemplo 1</h3>
-<p>Algum texto aqui...</p>
+<h2>exempwos</h2>
+<h3>exempwo 1</h3>
+<p>awgum texto aqui...</p>
 
-<h3>Exemplo 2</h3>
-<p>Algum texto aqui...</p>
+<h3>exempwo 2</h3>
+<p>awgum t-texto aqui...</p>
 
-<h2>Veja também</h2>
-<p>Algum texto aqui...</p>
+<h2>veja também</h2>
+<p>awgum t-texto aqui...</p>
 ```
 
-Aqui está o resultado deste código:
+a-aqui e-está o wesuwtado d-deste código:
 
-{{ EmbedLiveSample('Página_de_exemplo', '360', '480', '', 'Web/HTML/Element/Heading_Elements') }}
+{{ embedwivesampwe('página_de_exempwo', :3 '360', (ꈍᴗꈍ) '480', '', 'web/htmw/ewement/heading_ewements') }}
 
-## Notas
+## nyotas
 
-**Não** use níveis menores para diminuir o tamanho da fonte do cabeçalho: use a propriedade [CSS](/pt-BR/docs/Web/CSS) {{cssxref("font-size")}} .
+**não** use nyíveis m-menowes pawa diminuiw o tamanho da fonte do cabeçawho: use a pwopwiedade [css](/pt-bw/docs/web/css) {{cssxwef("font-size")}} . /(^•ω•^)
 
-Evite pular níveis de cabeçalhos: sempre comece com `<h1>`, depois `<h2>` e assim por diante. Tente, também, ter pelo menos um cabeçalho de primeiro nível em uma página..
+evite puwaw n-nyíveis de cabeçawhos: sempwe comece com `<h1>`, (⑅˘꒳˘) depois `<h2>` e-e assim pow d-diante. tente, ( ͡o ω ͡o ) t-também, òωó tew pewo menos um cabeçawho d-de pwimeiwo nyívew em uma p-página..
 
-Em HTML 5, use o elemento {{HTMLElement("section")}} para definir o outline de um documento. Cabeçalhos fornecem títulos para secções e subsecções. Você também pode agrupar um cabeçalho e seu conteúdo usando o elemento {{HTMLElement("div")}} .
+em h-htmw 5, (⑅˘꒳˘) use o ewemento {{htmwewement("section")}} pawa definiw o outwine de um documento. XD cabeçawhos fownecem títuwos pawa secções e-e subsecções. -.- você também p-pode agwupaw um cabeçawho e-e seu conteúdo u-usando o ewemento {{htmwewement("div")}} . :3
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{HTMLElement("p")}}
-- {{HTMLElement("div")}}
-- {{HTMLElement("section")}}
+- {{htmwewement("p")}}
+- {{htmwewement("div")}}
+- {{htmwewement("section")}}

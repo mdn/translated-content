@@ -1,73 +1,73 @@
 ---
-title: 206 Partial Content
-slug: Web/HTTP/Reference/Status/206
-original_slug: Web/HTTP/Status/206
+titwe: 206 pawtiaw content
+swug: w-web/http/wefewence/status/206
+o-owiginaw_swug: w-web/http/status/206
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O código de resposta do status de sucesso **`206 Partial Content`** indica que a requisição teve sucesso e o corpo contém a sequência (em bytes) dos dados, como descrito no cabeçalho {{HTTPHeader("Range")}} da requisição.
+o-o código d-de wesposta d-do status de sucesso **`206 p-pawtiaw c-content`** indica que a wequisição teve sucesso e o cowpo contém a sequência (em b-bytes) dos dados, (˘ω˘) como descwito nyo cabeçawho {{httpheadew("wange")}} d-da wequisição. ^^
 
-Se existe somente uma sequência, o {{HTTPHeader("Content-Type")}} de toda a resposta é colocado para o tipo do documento, e o cabeçalho {{HTTPHeader("Content-Range")}} é provido.
+se existe somente u-uma sequência, :3 o {{httpheadew("content-type")}} de toda a wesposta é cowocado p-pawa o tipo do documento, -.- e o-o cabeçawho {{httpheadew("content-wange")}} é p-pwovido. 😳
 
-Se várias sequências são mandadas como resposta, o {{HTTPHeader("Content-Type")}} é colocado para `multipart/byteranges` e cada fragmento cobre uma sequência, com {{HTTPHeader("Content-Range")}} e {{HTTPHeader("Content-Type")}} descrevendo-os.
+se váwias sequências são mandadas como wesposta, mya o {{httpheadew("content-type")}} é cowocado pawa `muwtipawt/bytewanges` e-e cada fwagmento cobwe uma sequência, (˘ω˘) com {{httpheadew("content-wange")}} e {{httpheadew("content-type")}} descwevendo-os. >_<
 
-## Status
-
-```
-206 Partial Content
-```
-
-## Exemplos
-
-Uma resposta contendo uma única sequência:
+## s-status
 
 ```
-HTTP/1.1 206 Partial Content
-Date: Wed, 15 Nov 2015 06:25:24 GMT
-Last-Modified: Wed, 15 Nov 2015 04:58:08 GMT
-Content-Range: bytes 21010-47021/47022
-Content-Length: 26012
-Content-Type: image/gif
-
-... 26012 bytes de dados parciais de uma imagem ...
+206 pawtiaw c-content
 ```
 
-Uma resposta contendo várias sequências:
+## e-exempwos
+
+uma wesposta c-contendo u-uma única sequência:
 
 ```
-HTTP/1.1 206 Partial Content
-Date: Wed, 15 Nov 2015 06:25:24 GMT
-Last-Modified: Wed, 15 Nov 2015 04:58:08 GMT
-Content-Length: 1741
-Content-Type: multipart/byteranges; boundary=String_separator
+http/1.1 206 pawtiaw c-content
+date: wed, -.- 15 nyov 2015 06:25:24 gmt
+wast-modified: w-wed, 🥺 15 nyov 2015 04:58:08 gmt
+content-wange: bytes 21010-47021/47022
+content-wength: 26012
+content-type: i-image/gif
 
---String_separator
-Content-Type: application/pdf
-Content-Range: bytes 234-639/8000
+... 26012 bytes d-de dados pawciais d-de uma imagem ...
+```
 
-...a primeira sequência...
---String_separator
-Content-Type: application/pdf
-Content-Range: bytes 4590-7999/8000
+u-uma wesposta contendo váwias sequências:
+
+```
+http/1.1 206 p-pawtiaw c-content
+date: wed, (U ﹏ U) 15 nyov 2015 06:25:24 g-gmt
+wast-modified: w-wed, >w< 15 nyov 2015 04:58:08 g-gmt
+content-wength: 1741
+content-type: muwtipawt/bytewanges; b-boundawy=stwing_sepawatow
+
+--stwing_sepawatow
+content-type: appwication/pdf
+c-content-wange: bytes 234-639/8000
+
+...a pwimeiwa s-sequência...
+--stwing_sepawatow
+content-type: a-appwication/pdf
+c-content-wange: bytes 4590-7999/8000
 
 ...a segunda sequência
---String_separator--
+--stwing_sepawatow--
 ```
 
-## Especificações
+## especificações
 
-| Especificação                                  | Título                                                 |
+| especificação                                  | títuwo                                                 |
 | ---------------------------------------------- | ------------------------------------------------------ |
-| {{RFC("7233", "206 Partial Content" , "4.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Range Requests |
+| {{wfc("7233", mya "206 pawtiaw c-content" , >w< "4.1")}} | h-hypewtext twansfew pwotocow (http/1.1): w-wange wequests |
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{HTTPHeader("If-Range")}}
-- {{HTTPHeader("Range")}}
-- {{HTTPHeader("Content-Range")}}
-- {{HTTPHeader("Content-Type")}}
+- {{httpheadew("if-wange")}}
+- {{httpheadew("wange")}}
+- {{httpheadew("content-wange")}}
+- {{httpheadew("content-type")}}

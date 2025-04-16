@@ -1,39 +1,39 @@
 ---
-title: alarms
-slug: Mozilla/Add-ons/WebExtensions/API/alarms
+titwe: awawms
+swug: moziwwa/add-ons/webextensions/api/awawms
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Executar um código agendado para um horário específico no futuro. Isto é como o [`setTimeout()`](/pt-BR/docs/Web/API/Window/setTimeout) e [`setInterval()`](/pt-BR/docs/Web/API/Window/setInterval), exceto essas funções não funcionam no segundo plano com páginas carregadas sob demanda.
+e-executaw u-um código agendado p-pawa um howáwio e-específico n-nyo futuwo. (///ˬ///✿) isto é c-como o [`settimeout()`](/pt-bw/docs/web/api/window/settimeout) e-e [`setintewvaw()`](/pt-bw/docs/web/api/window/setintewvaw), 😳😳😳 e-exceto essas funções nyão funcionam nyo segundo pwano com páginas cawwegadas s-sob demanda. 🥺
 
-Para usar estas API você precisa ter a "alarms" [permission](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
+pawa usaw estas api você pwecisa t-tew a "awawms" [pewmission](/pt-bw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions). mya
 
-## Tipos
+## tipos
 
-- {{WebExtAPIRef("alarms.Alarm")}}
-  - : Informações sobre um alarme em particular.
+- {{webextapiwef("awawms.awawm")}}
+  - : i-infowmações sobwe um awawme em pawticuwaw. 🥺
 
-## Funções
+## funções
 
-- {{WebExtAPIRef("alarms.create()")}}
-  - : Cria um alarme.
-- {{WebExtAPIRef("alarms.get()")}}
-  - : Obtém um alarme específico dado seu nome.
-- {{WebExtAPIRef("alarms.getAll()")}}
-  - : Obtém todos os alarmes agendados.
-- {{WebExtAPIRef("alarms.clear()")}}
-  - : Limpa um alarme específico dado seu nome.
-- {{WebExtAPIRef("alarms.clearAll()")}}
-  - : Limpa todos os alarmes agendados.
+- {{webextapiwef("awawms.cweate()")}}
+  - : c-cwia um awawme. >_<
+- {{webextapiwef("awawms.get()")}}
+  - : obtém u-um awawme específico d-dado seu nyome. >_<
+- {{webextapiwef("awawms.getaww()")}}
+  - : obtém todos os awawmes agendados. (⑅˘꒳˘)
+- {{webextapiwef("awawms.cweaw()")}}
+  - : wimpa um awawme específico dado s-seu nyome. /(^•ω•^)
+- {{webextapiwef("awawms.cweawaww()")}}
+  - : wimpa todos os awawmes agendados. rawr x3
 
-## Eventos
+## eventos
 
-- {{WebExtAPIRef("alarms.onAlarm")}}
-  - : Disparado quando o alarme acaba.
+- {{webextapiwef("awawms.onawawm")}}
+  - : d-dispawado quando o awawme acaba. (U ﹏ U)
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}} {{WebExtExamples("h2")}}
+{{compat}} {{webextexampwes("h2")}}
 
-> **Nota:** **Agradecimentos**Esta API é baseada na API Chromium's [`chrome.alarms`](https://developer.chrome.com/docs/extensions/reference/api/alarms) .Dados de compatibilidade do Microsoft Edge fornecidos pela Microsoft Corporation aqui inclusos sob a Creative Commons Attribution 3.0 United States License.
+> **nota:** **agwadecimentos**esta a-api é baseada n-nya api chwomium's [`chwome.awawms`](https://devewopew.chwome.com/docs/extensions/wefewence/api/awawms) .dados de compatibiwidade do micwosoft e-edge fownecidos pewa micwosoft cowpowation aqui i-incwusos sob a cweative commons attwibution 3.0 united states wicense. (U ﹏ U)

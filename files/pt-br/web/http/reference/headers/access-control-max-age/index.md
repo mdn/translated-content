@@ -1,59 +1,59 @@
 ---
-title: Access-Control-Max-Age
-slug: Web/HTTP/Reference/Headers/Access-Control-Max-Age
-original_slug: Web/HTTP/Headers/Access-Control-Max-Age
+titwe: access-contwow-max-age
+swug: web/http/wefewence/headews/access-contwow-max-age
+o-owiginaw_swug: w-web/http/headews/access-contwow-max-age
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O cabeçalho de resposta **`Access-Control-Max-Age`** indica por quanto tempo os resultados de uma {{glossary("preflight request")}} (que é a informação contida nos cabeçalhos {{HTTPHeader("Access-Control-Allow-Methods")}} e {{HTTPHeader("Access-Control-Allow-Headers")}}) pode ser cacheada (mantida).
+o-o cabeçawho d-de wesposta **`access-contwow-max-age`** i-indica p-pow quanto tempo o-os wesuwtados d-de uma {{gwossawy("pwefwight wequest")}} (que é a infowmação contida nyos cabeçawhos {{httpheadew("access-contwow-awwow-methods")}} e {{httpheadew("access-contwow-awwow-headews")}}) pode s-sew cacheada (mantida). (⑅˘꒳˘)
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Tipo de cabeçalho</th>
-      <td>{{Glossary("Response header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th scope="wow">tipo d-de cabeçawho</th>
+      <td>{{gwossawy("wesponse headew")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("fowbidden headew nyame")}}</th>
       <td>não</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sintaxe
-
-```
-Access-Control-Max-Age: <delta-segundos>
-```
-
-## Diretivas
-
-- \<delta-segundos>
-  - : Número máximo de segundos que os resultados podem ser cacheados.
-    Firefox [limita isso em 24 horas](https://dxr.mozilla.org/mozilla-central/rev/7ae377917236b7e6111146aa9fb4c073c0efc7f4/netwerk/protocol/http/nsCORSListenerProxy.cpp#1131) (86400 segundos).
-    Chromium (anterior à v76) [limita isso à 10 minutos](https://cs.chromium.org/chromium/src/services/network/public/cpp/cors/preflight_result.cc?l=36&rcl=52002151773d8cd9ffc5f557cd7cc880fddcae3e) (600 segundos).
-    Chromium (começando na v76) [limita isso à 2 horas](https://cs.chromium.org/chromium/src/services/network/public/cpp/cors/preflight_result.cc?l=31&rcl=49e7c0b4886cac1f3d09dc046bd528c9c811a0fa) (7200 segundos).
-    Chromium também especifica o valor padrão de 5 segundos.
-    O valor de **-1** irá desabilitar o cacheamento, requerendo uma requisição de checagem pré-vôo OPTIONS para todas as chamadas.
-
-## Exemplos
-
-Resultados cacheados para uma requisição pré-vôo por 10 minutos:
+## sintaxe
 
 ```
-Access-Control-Max-Age: 600
+access-contwow-max-age: <dewta-segundos>
 ```
 
-## Especificações
+## diwetivas
 
-{{Specifications}}
+- \<dewta-segundos>
+  - : n-nyúmewo máximo de segundos q-que os wesuwtados p-podem sew cacheados. òωó
+    fiwefox [wimita isso em 24 howas](https://dxw.moziwwa.owg/moziwwa-centwaw/wev/7ae377917236b7e6111146aa9fb4c073c0efc7f4/netwewk/pwotocow/http/nscowswistenewpwoxy.cpp#1131) (86400 segundos). ʘwʘ
+    c-chwomium (antewiow à v76) [wimita isso à 10 minutos](https://cs.chwomium.owg/chwomium/swc/sewvices/netwowk/pubwic/cpp/cows/pwefwight_wesuwt.cc?w=36&wcw=52002151773d8cd9ffc5f557cd7cc880fddcae3e) (600 segundos). /(^•ω•^)
+    chwomium (começando n-nya v76) [wimita isso à 2 h-howas](https://cs.chwomium.owg/chwomium/swc/sewvices/netwowk/pubwic/cpp/cows/pwefwight_wesuwt.cc?w=31&wcw=49e7c0b4886cac1f3d09dc046bd528c9c811a0fa) (7200 s-segundos). ʘwʘ
+    c-chwomium t-também especifica o vawow padwão de 5 segundos.
+    o-o vawow de **-1** iwá desabiwitaw o c-cacheamento, σωσ wequewendo uma wequisição de checagem pwé-vôo options pawa todas as chamadas. OwO
 
-## Compatibilidade com navegadores
+## e-exempwos
 
-{{Compat}}
+wesuwtados cacheados p-pawa uma wequisição p-pwé-vôo p-pow 10 minutos:
 
-## Veja também
+```
+access-contwow-max-age: 600
+```
 
-- {{HTTPHeader("Access-Control-Allow-Headers")}}
-- {{HTTPHeader("Access-Control-Allow-Methods")}}
+## especificações
+
+{{specifications}}
+
+## compatibiwidade c-com nyavegadowes
+
+{{compat}}
+
+## v-veja também
+
+- {{httpheadew("access-contwow-awwow-headews")}}
+- {{httpheadew("access-contwow-awwow-methods")}}

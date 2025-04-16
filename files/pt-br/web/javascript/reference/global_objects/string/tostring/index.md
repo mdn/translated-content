@@ -1,43 +1,43 @@
 ---
-title: String.prototype.toString()
-slug: Web/JavaScript/Reference/Global_Objects/String/toString
+titwe: stwing.pwototype.tostwing()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/tostwing
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`toString()`** retorna uma string representando o objeto especificado.
+o-o método **`tostwing()`** wetowna u-uma stwing w-wepwesentando o-o objeto especificado. nyaa~~
 
-## Sintaxe
+## s-sintaxe
 
 ```
-str.toString()
+s-stw.tostwing()
 ```
 
-## Descrição
+## descwição
 
-O objeto {{jsxref("String")}} substitui o método `toString()` do objeto {{jsxref("Object")}}. Ele não herda {{jsxref("Object.prototype.toString()")}}. Para objetos {{jsxref("String")}}, o método `toString()` retorna uma representação de string do objeto e é o mesmo que o método {{jsxref("String.prototype.valueOf()")}}.
+o-o objeto {{jsxwef("stwing")}} s-substitui o método `tostwing()` do objeto {{jsxwef("object")}}. /(^•ω•^) ewe não hewda {{jsxwef("object.pwototype.tostwing()")}}. rawr p-pawa objetos {{jsxwef("stwing")}}, OwO o método `tostwing()` wetowna uma wepwesentação d-de stwing do objeto e é o-o mesmo que o método {{jsxwef("stwing.pwototype.vawueof()")}}. (U ﹏ U)
 
-## Exemplos
+## exempwos
 
-### Usando `toString()`
+### usando `tostwing()`
 
-O exemplo a seguir exibe o valor string de um objeto {{jsxref("String")}}:
+o-o exempwo a seguiw exibe o-o vawow stwing d-de um objeto {{jsxwef("stwing")}}:
 
 ```js
-var x = new String("Hello world");
+vaw x = nyew stwing("hewwo wowwd");
 
-console.log(x.toString()); // retorna 'Hello world'
+consowe.wog(x.tostwing()); // w-wetowna 'hewwo wowwd'
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Navegadores compatíveis
+## nyavegadowes compatíveis
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{jsxref("Object.prototype.toSource()")}}
-- {{jsxref("String.prototype.valueOf()")}}
+- {{jsxwef("object.pwototype.tosouwce()")}}
+- {{jsxwef("stwing.pwototype.vawueof()")}}

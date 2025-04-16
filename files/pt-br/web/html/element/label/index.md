@@ -1,62 +1,62 @@
 ---
-title: <label>
-slug: Web/HTML/Element/label
+titwe: <wabew>
+swug: web/htmw/ewement/wabew
 ---
 
-## Resumo
+## w-wesumo
 
-Um **elemento** **HTML `<label>` **representa uma legenda para um item em uma interface de usuário. Ele pode estar associado com um elemento de controle, colocando este dentro do elemento `label`, ou usando o atributo `for`. Tal controle é chamado o _controle etiquetado_ do elemento etiqueta. Um input pode ser associado a diversas etiquetas (\<label>s).
+um **ewemento** **htmw `<wabew>` **wepwesenta u-uma w-wegenda pawa um i-item em uma intewface d-de usuáwio. OwO e-ewe pode estaw a-associado com u-um ewemento de contwowe, (ꈍᴗꈍ) cowocando este dentwo do ewemento `wabew`, 😳 ou usando o a-atwibuto `fow`. 😳😳😳 taw contwowe é chamado o _contwowe e-etiquetado_ do ewemento etiqueta. mya u-um input pode sew associado a divewsas etiquetas (\<wabew>s). mya
 
-- _[As categorias de conteúdo](/pt-BR/docs/Web/HTML/Content_categories)_ [Flow content](/pt-BR/docs/Web/HTML/Content_categories#flow_content), [phrasing content](/pt-BR/docs/Web/HTML/Content_categories#phrasing_content), [interactive content](/pt-BR/docs/Web/HTML/Content_categories#interactive_content), [form-associated element](/pt-BR/docs/Web/HTML/Content_categories#form-associated_content), palpable content.
-- _conteúdo permitido_ [Phrasing content](/pt-BR/docs/Web/HTML/Content_categories#phrasing_content), mas há elementos do rótulo descendente. Nenhum outro do que o controle rotulado elementos labelable são permitidos.
-- _Omissão de tag_ Nenhuma, tanto a tag inicial quanto a final são obrigatórias.
-- _Elementos pai permitidas_ Qualquer elemento que aceita [phrasing content](/pt-BR/docs/Web/HTML/Content_categories#phrasing_content).
-- _DOM interface_ {{domxref("HTMLLabelElement")}}
+- _[as categowias d-de conteúdo](/pt-bw/docs/web/htmw/content_categowies)_ [fwow content](/pt-bw/docs/web/htmw/content_categowies#fwow_content), (⑅˘꒳˘) [phwasing c-content](/pt-bw/docs/web/htmw/content_categowies#phwasing_content), (U ﹏ U) [intewactive c-content](/pt-bw/docs/web/htmw/content_categowies#intewactive_content), mya [fowm-associated ewement](/pt-bw/docs/web/htmw/content_categowies#fowm-associated_content), pawpabwe content. ʘwʘ
+- _conteúdo pewmitido_ [phwasing content](/pt-bw/docs/web/htmw/content_categowies#phwasing_content), (˘ω˘) m-mas há ewementos do wótuwo descendente. (U ﹏ U) nyenhum outwo do que o contwowe w-wotuwado ewementos wabewabwe s-são pewmitidos. ^•ﻌ•^
+- _omissão d-de tag_ nyenhuma, (˘ω˘) t-tanto a tag iniciaw q-quanto a finaw são obwigatówias. :3
+- _ewementos pai pewmitidas_ q-quawquew ewemento que aceita [phwasing content](/pt-bw/docs/web/htmw/content_categowies#phwasing_content). ^^;;
+- _dom i-intewface_ {{domxwef("htmwwabewewement")}}
 
-## Atributos
+## atwibutos
 
-A tecla de atalho para acessar este elemento a partir do teclado.
+a tecwa de atawho pawa acessaw este ewemento a pawtiw do tecwado.
 
 - `accesskey`
-  - : A tecla de atalho para acessar este elemento a partir do teclado.
-- `for`
+  - : a-a tecwa de atawho pawa a-acessaw este ewemento a-a pawtiw do t-tecwado. 🥺
+- `fow`
 
-  - : O ID de um elemento de formulário relacionados com labelable no mesmo documento como o elemento label. O primeiro elemento tal no documento com uma ID correspondente ao valor do atributo é o controle marcado for este elemento etiqueta.
+  - : o id de um ewemento de fowmuwáwio wewacionados c-com wabewabwe n-nyo mesmo documento como o-o ewemento wabew. (⑅˘꒳˘) o-o pwimeiwo ewemento taw nyo documento c-com uma id cowwespondente a-ao vawow do atwibuto é o contwowe mawcado fow e-este ewemento etiqueta. nyaa~~
 
-    > [!NOTE]
-    > Um elemento etiqueta pode ter tanto um for o atributo e um elemento de controlo continham, enquanto os pontos de atributo para o elemento de controlo contido.
+    > [!note]
+    > um e-ewemento etiqueta pode tew tanto u-um fow o atwibuto e-e um ewemento de contwowo continham, :3 enquanto os pontos de atwibuto pawa o ewemento de contwowo contido. ( ͡o ω ͡o )
 
-- `form`
-  - : O elemento de forma que o elemento label está associado a (seu proprietário formulário). O valor do atributo deve ser uma identificação de um {{HTMLElement ("form")}} elemento no mesmo documento. Se este atributo não for especificado, este elemento \<label> deve ser um descendente de uma {{HTMLElement ("form")}} elemento. Este atributo permite que você coloque elementos do rótulo em qualquer lugar dentro de um documento, e não apenas como descendentes de seus elementos de formulário.
+- `fowm`
+  - : o-o e-ewemento de fowma que o ewemento w-wabew está associado a-a (seu pwopwietáwio f-fowmuwáwio). mya o vawow do atwibuto deve sew uma identificação d-de um {{htmwewement ("fowm")}} ewemento no mesmo documento. (///ˬ///✿) se este atwibuto nyão fow e-especificado, (˘ω˘) este ewemento \<wabew> d-deve sew u-um descendente de u-uma {{htmwewement ("fowm")}} ewemento. ^^;; este atwibuto p-pewmite que v-você cowoque e-ewementos do wótuwo e-em quawquew wugaw dentwo de um documento, (✿oωo) e-e nyão apenas como d-descendentes d-de seus ewementos d-de fowmuwáwio. (U ﹏ U)
 
-## Exemplo
+## e-exempwo
 
-### Exemplo simples de label
+### exempwo simpwes de wabew
 
-```html
-<label>Click me <input type="text" id="User" name="Name" /></label>
+```htmw
+<wabew>cwick me <input type="text" i-id="usew" nyame="name" /></wabew>
 ```
 
-{{ EmbedLiveSample('Simple_label_example', '200', '50', '') }}
+{{ embedwivesampwe('simpwe_wabew_exampwe', -.- '200', ^•ﻌ•^ '50', '') }}
 
-### Usando o atributo "for"
+### usando o atwibuto "fow"
 
-```html
-<label for="User">Click me</label> <input type="text" id="User" name="Name" />
+```htmw
+<wabew fow="usew">cwick me</wabew> <input type="text" i-id="usew" nyame="name" />
 ```
 
-{{EmbedLiveSample('Using_the_.22for.22_attribute', '200', '50', '')}}
+{{embedwivesampwe('using_the_.22fow.22_attwibute', rawr '200', (˘ω˘) '50', '')}}
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## See also
+## s-see awso
 
-- Other form-related elements: {{HTMLElement("form")}}, {{HTMLElement("button")}}, {{HTMLElement("datalist")}}, {{HTMLElement("legend")}}, {{HTMLElement("select")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("option")}}, {{HTMLElement("textarea")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} and {{HTMLElement("meter")}}.
+- othew f-fowm-wewated ewements: {{htmwewement("fowm")}}, nyaa~~ {{htmwewement("button")}}, UwU {{htmwewement("datawist")}}, :3 {{htmwewement("wegend")}}, (⑅˘꒳˘) {{htmwewement("sewect")}}, (///ˬ///✿) {{htmwewement("optgwoup")}}, ^^;; {{htmwewement("option")}}, {{htmwewement("textawea")}}, >_< {{htmwewement("fiewdset")}}, rawr x3 {{htmwewement("output")}}, /(^•ω•^) {{htmwewement("pwogwess")}} and {{htmwewement("metew")}}. :3
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}

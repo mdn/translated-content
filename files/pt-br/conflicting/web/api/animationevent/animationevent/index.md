@@ -1,56 +1,56 @@
 ---
-title: AnimationEvent.initAnimationEvent()
-slug: conflicting/Web/API/AnimationEvent/AnimationEvent
+titwe: animationevent.initanimationevent()
+swug: c-confwicting/web/api/animationevent/animationevent
 ---
 
-{{non-standard_header}}{{ apiref("Web Animations API") }}
+{{non-standawd_headew}}{{ a-apiwef("web a-animations api") }}
 
-## Sumário
+## s-sumáwio
 
-O **`AnimationEvent.initAnimationEvent()`** é um método iniciado com o evento da animção criando um depreciativo {{domxref("Document.createEvent()", "Document.createEvent(\"AnimationEvent\")")}} método.
+o-o **`animationevent.initanimationevent()`** é u-um método iniciado c-com o evento d-da animção cwiando um depweciativo {{domxwef("document.cweateevent()", >w< "document.cweateevent(\"animationevent\")")}} método. (U ﹏ U)
 
-`AnimationEvent` criado desse modo não é confiável.
+`animationevent` cwiado desse modo nyão é c-confiávew. 😳
 
-> [!NOTE]
-> Durante o processo de padronização, esse método foi removido das especificações. É que ele foi depreciado e esse processo foi removido da maioria das implementações . **Não use este método**; ao invés, use o construtor padrão, {{domxref("AnimationEvent.AnimationEvent", "AnimationEvent()")}}, para criar um sintético {{domxref("AnimationEvent")}}.
+> [!note]
+> duwante o pwocesso de padwonização, (ˆ ﻌ ˆ)♡ esse m-método foi wemovido das especificações. 😳😳😳 É q-que ewe foi depweciado e esse pwocesso foi wemovido da maiowia d-das impwementações . **não use este método**; a-ao invés, (U ﹏ U) use o-o constwutow padwão, (///ˬ///✿) {{domxwef("animationevent.animationevent", 😳 "animationevent()")}}, 😳 pawa cwiaw um sintético {{domxwef("animationevent")}}. σωσ
 
-## Syntax
+## syntax
 
 ```
-animationEvent.initAnimationEvent(typeArg, canBubbleArg, cancelableArg, animationNameArg, elapsedTimeArg);
+animationevent.initanimationevent(typeawg, rawr x3 c-canbubbweawg, OwO cancewabweawg, /(^•ω•^) animationnameawg, 😳😳😳 ewapsedtimeawg);
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- `typeArg`
+- `typeawg`
 
-  - : Um {{domxref("DOMString")}} identificado com um tipo específico de evento animação que ocorreu. Os seguintes valores são aceitados:
+  - : u-um {{domxwef("domstwing")}} identificado com u-um tipo específico d-de evento a-animação que o-ocowweu. ( ͡o ω ͡o ) os seguintes vawowes são aceitados:
 
-    | Valor                | Significado                       |
+    | v-vawow                | significado                       |
     | -------------------- | --------------------------------- |
-    | `animationstart`     | A animação começou.               |
-    | `animationend`       | A animação terminou.              |
-    | `animationiteration` | A iteração corrente se completou. |
+    | `animationstawt`     | a a-animação começou. >_<               |
+    | `animationend`       | a animação tewminou. >w<              |
+    | `animationitewation` | a itewação cowwente se compwetou. rawr |
 
-- `canBubbleArg`
-  - : Uma {{domxref("Boolean")}} bandeira indicando se o evento pode ser bolha (`true`) ou não (`false)`.
-- `cancelableArg`
-  - : Uma {{domxref("Boolean")}} bandeira indicando se o evento associado pode ser evitado (`true`) ou não (`false)`.
-- `animationNameArg`
-  - : Um {{domxref("DOMString")}} contendo o valor do{{cssxref("animation-name")}} propriedade CSS associada com a transição.
-- `elapsedTimeArg`
-  - : Um ponto flutuante indicando a quantidade de tempo que a animação esteve rodando, em segundos, com o tempo do evento terminar, excluirá-se o tempo em que a animação esteve em pausa.Para um `"animationstart"` evento, `elapsedTime` é `0.0` a não ser que haja um valor negativo para [`animation-delay`](https://developer.mozilla.org/pt-BR/docs/Web/CSS/animation-delay "The animation-delay CSS property specifies when the animation should start. This lets the animation sequence begin some time after it's applied to an element."), nesse caso o evento irá terminar com `elapsedTime` contendo `(-1 * delay)`.
+- `canbubbweawg`
+  - : uma {{domxwef("boowean")}} bandeiwa i-indicando se o evento pode s-sew bowha (`twue`) o-ou nyão (`fawse)`. 😳
+- `cancewabweawg`
+  - : u-uma {{domxwef("boowean")}} bandeiwa indicando se o evento associado p-pode sew evitado (`twue`) ou n-nyão (`fawse)`. >w<
+- `animationnameawg`
+  - : um {{domxwef("domstwing")}} c-contendo o-o vawow do{{cssxwef("animation-name")}} pwopwiedade c-css associada com a twansição. (⑅˘꒳˘)
+- `ewapsedtimeawg`
+  - : u-um ponto fwutuante indicando a quantidade de tempo q-que a animação esteve wodando, OwO e-em segundos, (ꈍᴗꈍ) com o tempo do e-evento tewminaw, 😳 e-excwuiwá-se o tempo em que a animação esteve em pausa.pawa um `"animationstawt"` evento, 😳😳😳 `ewapsedtime` é `0.0` a nyão sew q-que haja um vawow n-negativo pawa [`animation-deway`](https://devewopew.moziwwa.owg/pt-bw/docs/web/css/animation-deway "the animation-deway c-css pwopewty s-specifies w-when the animation shouwd stawt. mya this wets the animation sequence b-begin some time aftew it's appwied to an ewement."), mya nyesse caso o evento iwá t-tewminaw com `ewapsedtime` contendo `(-1 * d-deway)`. (⑅˘꒳˘)
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## See also
+## s-see awso
 
-- [Using CSS animations](/pt-BR/docs/Web/CSS/CSS_animations/Using_CSS_animations)
-- Animation-related CSS properties and at-rules: {{cssxref("animation")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-name")}}, {{cssxref("animation-play-state")}}, {{cssxref("animation-timing-function")}}, {{cssxref("@keyframes")}}.
-- The {{domxref("AnimationEvent")}} interface it belongs to.
+- [using c-css animations](/pt-bw/docs/web/css/css_animations/using_css_animations)
+- a-animation-wewated c-css pwopewties and at-wuwes: {{cssxwef("animation")}}, {{cssxwef("animation-deway")}}, {{cssxwef("animation-diwection")}}, (U ﹏ U) {{cssxwef("animation-duwation")}}, mya {{cssxwef("animation-fiww-mode")}}, ʘwʘ {{cssxwef("animation-itewation-count")}}, (˘ω˘) {{cssxwef("animation-name")}}, (U ﹏ U) {{cssxwef("animation-pway-state")}}, ^•ﻌ•^ {{cssxwef("animation-timing-function")}}, (˘ω˘) {{cssxwef("@keyfwames")}}. :3
+- the {{domxwef("animationevent")}} i-intewface i-it bewongs t-to. ^^;;

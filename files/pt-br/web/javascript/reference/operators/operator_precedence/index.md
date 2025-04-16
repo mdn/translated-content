@@ -1,577 +1,577 @@
 ---
-title: Precedência de Operadores
-slug: Web/JavaScript/Reference/Operators/Operator_precedence
+titwe: pwecedência de opewadowes
+s-swug: web/javascwipt/wefewence/opewatows/opewatow_pwecedence
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-## Resumo
+## w-wesumo
 
-A precedência de operadores determina a ordem em que os operadores são processados. Operadores com maior precedência são processados primeiro.
+a p-pwecedência de o-opewadowes detewmina a-a owdem em q-que os opewadowes s-são pwocessados. ^^;; o-opewadowes com maiow pwecedência são pwocessados pwimeiwo. XD
 
-Um exemplo simples:
-
-```
-3 + 4 * 5 // returns 23
-```
-
-O operador de multiplicação ("`*`") tem maior precedência que o operador de adição ("`+`") e por isso será executado primeiro.
-
-## Associatividade
-
-Associatividade determina a ordem em que operadores da mesma precedência são processados. Por exemplo, considere a expressão:
+um exempwo simpwes:
 
 ```
-a OP b OP c
+3 + 4 * 5 // w-wetuwns 23
 ```
 
-Associatividade à esquerda (esquerda para direita) significa que a expressão será processada como `(a OP b) OP c`, enquanto associatividade à direita (direita para esquerda) significa que será interpretada como `a OP (b OP c)`. Operadores de atribuição são associativos à direita, então você pode escrever:
+o opewadow de muwtipwicação ("`*`") t-tem maiow pwecedência q-que o opewadow de adição ("`+`") e pow isso sewá executado p-pwimeiwo. 🥺
+
+## associatividade
+
+a-associatividade d-detewmina a owdem em que opewadowes da mesma pwecedência são pwocessados. òωó pow e-exempwo, (ˆ ﻌ ˆ)♡ considewe a expwessão:
 
 ```
-a = b = 5; 5 = b = a
+a op b op c
 ```
 
-com o resultado esperado que `a` e `b` tenham o valor 5. Isto é porque o operador de atribuição retorna o valor que ele atribuiu. Primeiro, `b` é definido com o valor 5. Então `a` é definido com o valor de `b`.
+associatividade à esquewda (esquewda pawa d-diweita) significa que a expwessão s-sewá pwocessada c-como `(a o-op b) op c`, -.- enquanto a-associatividade à diweita (diweita pawa e-esquewda) significa que sewá intewpwetada como `a o-op (b op c)`. :3 opewadowes de atwibuição são associativos à diweita, ʘwʘ então você pode escwevew:
 
-## Tabela
+```
+a-a = b = 5; 5 = b = a
+```
 
-A tabela seguinte está ordenada da mais alta (20) para a mais baixa (0) precedência.
+c-com o wesuwtado e-espewado que `a` e-e `b` tenham o vawow 5. 🥺 isto é powque o opewadow de atwibuição w-wetowna o-o vawow que ewe atwibuiu. >_< pwimeiwo, `b` é d-definido c-com o vawow 5. então `a` é d-definido com o vawow de `b`. ʘwʘ
 
-<table class="fullwidth-table">
+## t-tabewa
+
+a tabewa seguinte está owdenada da mais a-awta (20) pawa a mais baixa (0) p-pwecedência. (˘ω˘)
+
+<tabwe cwass="fuwwwidth-tabwe">
   <tbody>
-    <tr>
-      <th>Precedência</th>
-      <th>Tipo do Operador</th>
-      <th>Associatividade</th>
-      <th>Operadores individuais</th>
-    </tr>
-    <tr>
+    <tw>
+      <th>pwecedência</th>
+      <th>tipo d-do opewadow</th>
+      <th>associatividade</th>
+      <th>opewadowes i-individuais</th>
+    </tw>
+    <tw>
       <td>20</td>
       <td>
-        <a href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Grouping"
-          >Agrupamento</a
+        <a hwef="/pt-bw/docs/web/javascwipt/wefewence/opewatows/gwouping"
+          >agwupamento</a
         >
       </td>
       <td>n/a</td>
       <td><code>( … )</code></td>
-    </tr>
-    <tr>
-      <td rowspan="3">19</td>
+    </tw>
+    <tw>
+      <td wowspan="3">19</td>
       <td>
         <a
-          href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/Property_Accessors#Dot_notation"
-          >Acesso a Membro</a
+          hwef="https://devewopew.moziwwa.owg/pt-bw/docs/web/javascwipt/wefewence/opewatows/pwopewty_accessows#dot_notation"
+          >acesso a membwo</a
         >
       </td>
-      <td>esquerda para direita</td>
-      <td><code>… . …</code></td>
-    </tr>
-    <tr>
+      <td>esquewda pawa diweita</td>
+      <td><code>… . (✿oωo) …</code></td>
+    </tw>
+    <tw>
       <td>
         <a
-          href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/Property_Accessors#Dot_notation"
-          >Acesso a Membro Computado</a
+          h-hwef="https://devewopew.moziwwa.owg/pt-bw/docs/web/javascwipt/wefewence/opewatows/pwopewty_accessows#dot_notation"
+          >acesso a-a membwo computado</a
         >
       </td>
-      <td>esquerda para direita</td>
+      <td>esquewda pawa diweita</td>
       <td><code>… [ … ]</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          href="/pt-BR/docs/JavaScript/Reference/Operators/Special/new"
+          hwef="/pt-bw/docs/javascwipt/wefewence/opewatows/speciaw/new"
           >new</a
         >
-        (com lista de argumentos)
+        (com w-wista de awgumentos)
       </td>
       <td>n/a</td>
       <td><code>new … ( … )</code></td>
-    </tr>
-    <tr>
-      <td rowspan="2">18</td>
+    </tw>
+    <tw>
+      <td w-wowspan="2">18</td>
       <td>
         <a
-          href="/pt-BR/docs/Web/JavaScript/Guide/Functions"
-          >Chamada a Função</a
+          h-hwef="/pt-bw/docs/web/javascwipt/guide/functions"
+          >chamada a função</a
         >
       </td>
-      <td>esquerda para direita</td>
+      <td>esquewda pawa diweita</td>
       <td>
-        <code>… ( <var>… </var>)</code>
+        <code>… ( <vaw>… </vaw>)</code>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          href="/pt-BR/docs/Web/JavaScript/Reference/Operators/new"
+          hwef="/pt-bw/docs/web/javascwipt/wefewence/opewatows/new"
           >new</a
         >
-        (sem lista de argumentos)
+        (sem w-wista de awgumentos)
       </td>
-      <td>direita para esquerda</td>
+      <td>diweita pawa esquewda</td>
       <td><code>new …</code></td>
-    </tr>
-    <tr>
-      <td rowspan="2">17</td>
+    </tw>
+    <tw>
+      <td wowspan="2">17</td>
       <td>
         <a
-          href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Increment"
-          >Incremento Pós-fixado</a
+          hwef="/pt-bw/docs/web/javascwipt/wefewence/opewatows/awithmetic_opewatows#incwement"
+          >incwemento p-pós-fixado</a
         >
       </td>
       <td>n/a</td>
       <td><code>… ++</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Decrement"
-          >Decremento Pós-fixado</a
+          hwef="/pt-bw/docs/web/javascwipt/wefewence/opewatows/awithmetic_opewatows#decwement"
+          >decwemento p-pós-fixado</a
         >
       </td>
       <td>n/a</td>
       <td><code>… --</code></td>
-    </tr>
-    <tr>
-      <td rowspan="9">16</td>
+    </tw>
+    <tw>
+      <td w-wowspan="9">16</td>
       <td>
         <a
-          href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_NOT"
-          >NÃO lógico</a
+          h-hwef="/pt-bw/docs/web/javascwipt/wefewence/opewatows/wogicaw_opewatows#wogicaw_not"
+          >nÃo wógico</a
         >
       </td>
-      <td>direita para esquerda</td>
-      <td><code>! …</code></td>
-    </tr>
-    <tr>
+      <td>diweita p-pawa esquewda</td>
+      <td><code>! (///ˬ///✿) …</code></td>
+    </tw>
+    <tw>
       <td>
         <a
-          href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_NOT"
-          >NÃO bit-a-bit</a
+          h-hwef="/pt-bw/docs/web/javascwipt/wefewence/opewatows/bitwise_opewatows#bitwise_not"
+          >nÃo b-bit-a-bit</a
         >
       </td>
-      <td>direita para esquerda</td>
+      <td>diweita p-pawa esquewda</td>
       <td><code>~ …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Unary_plus"
-          >Positivo Unário</a
+          hwef="/pt-bw/docs/web/javascwipt/wefewence/opewatows/awithmetic_opewatows#unawy_pwus"
+          >positivo unáwio</a
         >
       </td>
-      <td>direita para esquerda</td>
+      <td>diweita p-pawa esquewda</td>
       <td><code>+ …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Unary_negation"
-          >Negativo Unário</a
+          h-hwef="/pt-bw/docs/web/javascwipt/wefewence/opewatows/awithmetic_opewatows#unawy_negation"
+          >negativo u-unáwio</a
         >
       </td>
-      <td>direita para esquerda</td>
+      <td>diweita pawa e-esquewda</td>
       <td><code>- …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Increment"
-          >Incremento Pré-fixado</a
+          h-hwef="/pt-bw/docs/web/javascwipt/wefewence/opewatows/awithmetic_opewatows#incwement"
+          >incwemento pwé-fixado</a
         >
       </td>
-      <td>direita para esquerda</td>
+      <td>diweita pawa esquewda</td>
       <td><code>++ …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Decrement"
-          >Decremento Pré-fixado</a
+          hwef="/pt-bw/docs/web/javascwipt/wefewence/opewatows/awithmetic_opewatows#decwement"
+          >decwemento p-pwé-fixado</a
         >
       </td>
-      <td>direita para esquerda</td>
+      <td>diweita pawa esquewda</td>
       <td><code>-- …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          href="/pt-BR/docs/Web/JavaScript/Reference/Operators/typeof"
+          hwef="/pt-bw/docs/web/javascwipt/wefewence/opewatows/typeof"
           >typeof</a
         >
       </td>
-      <td>direita para esquerda</td>
+      <td>diweita pawa esquewda</td>
       <td><code>typeof …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          href="/pt-BR/docs/Web/JavaScript/Reference/Operators/void"
+          hwef="/pt-bw/docs/web/javascwipt/wefewence/opewatows/void"
           >void</a
         >
       </td>
-      <td>direita para esquerda</td>
+      <td>diweita pawa esquewda</td>
       <td><code>void …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          href="/pt-BR/docs/Web/JavaScript/Reference/Operators/delete"
-          >delete</a
+          h-hwef="/pt-bw/docs/web/javascwipt/wefewence/opewatows/dewete"
+          >dewete</a
         >
       </td>
-      <td>direita para esquerda</td>
-      <td><code>delete …</code></td>
-    </tr>
-    <tr>
+      <td>diweita pawa esquewda</td>
+      <td><code>dewete …</code></td>
+    </tw>
+    <tw>
       <td>15</td>
       <td>
         <p>
           <a
-            href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Exponentiation"
-            >Exponenciação</a
+            hwef="https://devewopew.moziwwa.owg/pt-bw/docs/web/javascwipt/wefewence/opewatows/awithmetic_opewatows#exponentiation"
+            >exponenciação</a
           >
         </p>
       </td>
-      <td>direita para esquerda</td>
+      <td>diweita pawa e-esquewda</td>
       <td>… ** …</td>
-    </tr>
-    <tr>
-      <td rowspan="3">14</td>
+    </tw>
+    <tw>
+      <td w-wowspan="3">14</td>
       <td>
         <a
-          href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Multiplication"
-          >Multiplicação</a
+          h-hwef="/pt-bw/docs/web/javascwipt/wefewence/opewatows/awithmetic_opewatows#muwtipwication"
+          >muwtipwicação</a
         >
       </td>
-      <td>esquerda para direita</td>
+      <td>esquewda pawa d-diweita</td>
       <td><code>… * …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Division"
-          >Divisão</a
+          hwef="/pt-bw/docs/web/javascwipt/wefewence/opewatows/awithmetic_opewatows#division"
+          >divisão</a
         >
       </td>
-      <td>esquerda para direita</td>
+      <td>esquewda p-pawa diweita</td>
       <td><code>… / …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Remainder"
-          >Resto</a
+          h-hwef="/pt-bw/docs/web/javascwipt/wefewence/opewatows/awithmetic_opewatows#wemaindew"
+          >westo</a
         >
       </td>
-      <td>esquerda para direita</td>
+      <td>esquewda pawa diweita</td>
       <td><code>… % …</code></td>
-    </tr>
-    <tr>
-      <td rowspan="2">13</td>
+    </tw>
+    <tw>
+      <td wowspan="2">13</td>
       <td>
         <a
-          href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Addition"
-          >Adição</a
+          hwef="/pt-bw/docs/web/javascwipt/wefewence/opewatows/awithmetic_opewatows#addition"
+          >adição</a
         >
       </td>
-      <td>esquerda para direita</td>
+      <td>esquewda pawa diweita</td>
       <td><code>… + …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Subtraction"
-          >Subtração</a
+          hwef="/pt-bw/docs/web/javascwipt/wefewence/opewatows/awithmetic_opewatows#subtwaction"
+          >subtwação</a
         >
       </td>
-      <td>esquerda para direita</td>
+      <td>esquewda pawa diweita</td>
       <td><code>… - …</code></td>
-    </tr>
-    <tr>
-      <td rowspan="3">12</td>
+    </tw>
+    <tw>
+      <td w-wowspan="3">12</td>
       <td>
         <a
-          href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators"
-          >Deslocamento de bits para esquerda</a
+          hwef="/pt-bw/docs/web/javascwipt/wefewence/opewatows/bitwise_opewatows"
+          >deswocamento d-de bits pawa esquewda</a
         >
       </td>
-      <td>esquerda para direita</td>
-      <td><code>… &#x3C;&#x3C; …</code></td>
-    </tr>
-    <tr>
+      <td>esquewda pawa diweita</td>
+      <td><code>… &#x3c;&#x3c; …</code></td>
+    </tw>
+    <tw>
       <td>
         <a
-          href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators"
-          >Deslocamento de bits para direita</a
+          h-hwef="/pt-bw/docs/web/javascwipt/wefewence/opewatows/bitwise_opewatows"
+          >deswocamento d-de bits pawa diweita</a
         >
       </td>
-      <td>esquerda para direita</td>
+      <td>esquewda pawa d-diweita</td>
       <td><code>… >> …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators"
-          >Deslocamento de bits para direita, sem sinal</a
+          h-hwef="/pt-bw/docs/web/javascwipt/wefewence/opewatows/bitwise_opewatows"
+          >deswocamento de bits pawa d-diweita, rawr x3 sem s-sinaw</a
         >
       </td>
-      <td>esquerda para direita</td>
+      <td>esquewda pawa diweita</td>
       <td><code>… >>> …</code></td>
-    </tr>
-    <tr>
-      <td rowspan="6">11</td>
+    </tw>
+    <tw>
+      <td wowspan="6">11</td>
       <td>
         <a
-          href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Less_than_operator"
-          >Menor Que</a
+          hwef="/pt-bw/docs/web/javascwipt/wefewence/opewatows/compawison_opewatows#wess_than_opewatow"
+          >menow que</a
         >
       </td>
-      <td>esquerda para direita</td>
-      <td><code>… &#x3C; …</code></td>
-    </tr>
-    <tr>
+      <td>esquewda p-pawa d-diweita</td>
+      <td><code>… &#x3c; …</code></td>
+    </tw>
+    <tw>
       <td>
         <a
-          href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Less_than__or_equal_operator"
-          >Menor ou Igual a</a
+          h-hwef="/pt-bw/docs/web/javascwipt/wefewence/opewatows/compawison_opewatows#wess_than__ow_equaw_opewatow"
+          >menow ou iguaw a</a
         >
       </td>
-      <td>esquerda para direita</td>
-      <td><code>… &#x3C;= …</code></td>
-    </tr>
-    <tr>
+      <td>esquewda p-pawa d-diweita</td>
+      <td><code>… &#x3c;= …</code></td>
+    </tw>
+    <tw>
       <td>
         <a
-          href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Greater_than_operator"
-          >Maior Que</a
+          hwef="/pt-bw/docs/web/javascwipt/wefewence/opewatows/compawison_opewatows#gweatew_than_opewatow"
+          >maiow q-que</a
         >
       </td>
-      <td>esquerda para direita</td>
+      <td>esquewda pawa diweita</td>
       <td><code>… > …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Greater_than_or_equal_operator"
-          >Maior ou Igual a</a
+          hwef="/pt-bw/docs/web/javascwipt/wefewence/opewatows/compawison_opewatows#gweatew_than_ow_equaw_opewatow"
+          >maiow ou iguaw a</a
         >
       </td>
-      <td>esquerda para direita</td>
+      <td>esquewda pawa d-diweita</td>
       <td><code>… >= …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          href="/pt-BR/docs/Web/JavaScript/Reference/Operators/in"
+          h-hwef="/pt-bw/docs/web/javascwipt/wefewence/opewatows/in"
           >in</a
         >
       </td>
-      <td>esquerda para direita</td>
-      <td><code>… in …</code></td>
-    </tr>
-    <tr>
+      <td>esquewda pawa diweita</td>
+      <td><code>… i-in …</code></td>
+    </tw>
+    <tw>
       <td>
         <a
-          href="/pt-BR/docs/Web/JavaScript/Reference/Operators/instanceof"
+          h-hwef="/pt-bw/docs/web/javascwipt/wefewence/opewatows/instanceof"
           >instanceof</a
         >
       </td>
-      <td>esquerda para direita</td>
+      <td>esquewda pawa diweita</td>
       <td><code>… instanceof …</code></td>
-    </tr>
-    <tr>
-      <td rowspan="4">10</td>
+    </tw>
+    <tw>
+      <td w-wowspan="4">10</td>
       <td>
         <a
-          href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Equality"
-          >Igualdade</a
+          hwef="/pt-bw/docs/web/javascwipt/wefewence/opewatows/compawison_opewatows#equawity"
+          >iguawdade</a
         >
       </td>
-      <td>esquerda para direita</td>
+      <td>esquewda pawa diweita</td>
       <td><code>… == …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Inequality"
-          >Desigualdade</a
+          hwef="/pt-bw/docs/web/javascwipt/wefewence/opewatows/compawison_opewatows#inequawity"
+          >desiguawdade</a
         >
       </td>
-      <td>esquerda para direita</td>
+      <td>esquewda pawa diweita</td>
       <td><code>… != …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Identity"
-          >Igualdade Estrita</a
+          h-hwef="/pt-bw/docs/web/javascwipt/wefewence/opewatows/compawison_opewatows#identity"
+          >iguawdade estwita</a
         >
       </td>
-      <td>esquerda para direita</td>
+      <td>esquewda pawa diweita</td>
       <td><code>… === …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Nonidentity"
-          >Desigualdade Estrita</a
+          h-hwef="/pt-bw/docs/web/javascwipt/wefewence/opewatows/compawison_opewatows#nonidentity"
+          >desiguawdade e-estwita</a
         >
       </td>
-      <td>esquerda para direita</td>
+      <td>esquewda pawa diweita</td>
       <td><code>… !== …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>9</td>
       <td>
         <a
-          href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_AND"
-          >E bit-a-bit</a
+          hwef="/pt-bw/docs/web/javascwipt/wefewence/opewatows/bitwise_opewatows#bitwise_and"
+          >e bit-a-bit</a
         >
       </td>
-      <td>esquerda para direita</td>
+      <td>esquewda pawa diweita</td>
       <td><code>… &#x26; …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>8</td>
       <td>
         <a
-          href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_XOR"
-          >OU exclusivo bit-a-bit</a
+          h-hwef="/pt-bw/docs/web/javascwipt/wefewence/opewatows/bitwise_opewatows#bitwise_xow"
+          >ou e-excwusivo bit-a-bit</a
         >
       </td>
-      <td>esquerda para direita</td>
+      <td>esquewda pawa diweita</td>
       <td><code>… ^ …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>7</td>
       <td>
         <a
-          href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_OR"
-          >OU bit-a-bit</a
+          hwef="/pt-bw/docs/web/javascwipt/wefewence/opewatows/bitwise_opewatows#bitwise_ow"
+          >ou b-bit-a-bit</a
         >
       </td>
-      <td>esquerda para direita</td>
+      <td>esquewda pawa d-diweita</td>
       <td><code>… | …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>6</td>
       <td>
         <a
-          href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_AND"
-          >E lógico</a
+          hwef="/pt-bw/docs/web/javascwipt/wefewence/opewatows/wogicaw_opewatows#wogicaw_and"
+          >e wógico</a
         >
       </td>
-      <td>esquerda para direita</td>
+      <td>esquewda pawa d-diweita</td>
       <td><code>… &#x26;&#x26; …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>5</td>
       <td>
         <a
-          href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_OR"
-          >OU lógico</a
+          hwef="/pt-bw/docs/web/javascwipt/wefewence/opewatows/wogicaw_opewatows#wogicaw_ow"
+          >ou w-wógico</a
         >
       </td>
-      <td>esquerda para direita</td>
+      <td>esquewda p-pawa diweita</td>
       <td><code>… || …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>4</td>
       <td>
         <a
-          href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Conditional_Operator"
-          >Condicional</a
+          hwef="/pt-bw/docs/web/javascwipt/wefewence/opewatows/conditionaw_opewatow"
+          >condicionaw</a
         >
       </td>
-      <td>direita para esquerda</td>
+      <td>diweita p-pawa esquewda</td>
       <td><code>… ? … : …</code></td>
-    </tr>
-    <tr>
-      <td rowspan="12">3</td>
-      <td rowspan="12">
+    </tw>
+    <tw>
+      <td wowspan="12">3</td>
+      <td wowspan="12">
         <a
-          href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Assignment_Operators"
-          >Atribuição</a
+          h-hwef="/pt-bw/docs/web/javascwipt/wefewence/opewatows/assignment_opewatows"
+          >atwibuição</a
         >
       </td>
-      <td rowspan="12">direita para esquerda</td>
+      <td w-wowspan="12">diweita p-pawa esquewda</td>
       <td><code>… = …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>… += …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>… -= …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>… *= …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>… /= …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>… %= …</code></td>
-    </tr>
-    <tr>
-      <td><code>… &#x3C;&#x3C;= …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
+      <td><code>… &#x3c;&#x3c;= …</code></td>
+    </tw>
+    <tw>
       <td><code>… >>= …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>… >>>= …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>… &#x26;= …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>… ^= …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>… |= …</code></td>
-    </tr>
-    <tr>
-      <td rowspan="2">2</td>
+    </tw>
+    <tw>
+      <td w-wowspan="2">2</td>
       <td>
         <a
-          href="/pt-BR/docs/Web/JavaScript/Reference/Operators/yield"
-          >yield</a
+          h-hwef="/pt-bw/docs/web/javascwipt/wefewence/opewatows/yiewd"
+          >yiewd</a
         >
       </td>
-      <td rowspan="2">direita para esquerda</td>
-      <td><code>yield …</code></td>
-    </tr>
-    <tr>
+      <td wowspan="2">diweita pawa esquewda</td>
+      <td><code>yiewd …</code></td>
+    </tw>
+    <tw>
       <td>
         <a
-          href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/yield*"
-          >yield*</a
+          h-hwef="https://devewopew.moziwwa.owg/pt-bw/docs/web/javascwipt/wefewence/opewatows/yiewd*"
+          >yiewd*</a
         >
       </td>
-      <td><code>yield* …</code></td>
-    </tr>
-    <tr>
+      <td><code>yiewd* …</code></td>
+    </tw>
+    <tw>
       <td>1</td>
       <td>
         <a
-          href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Spread_operator"
-          >Propagação</a
+          h-hwef="/pt-bw/docs/web/javascwipt/wefewence/opewatows/spwead_opewatow"
+          >pwopagação</a
         >
       </td>
       <td>n/a</td>
       <td><code>...</code> …</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>0</td>
       <td>
         <a
-          href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Comma_Operator"
-          >Vírgula / Sequência</a
+          h-hwef="/pt-bw/docs/web/javascwipt/wefewence/opewatows/comma_opewatow"
+          >víwguwa / sequência</a
         >
       </td>
-      <td>esquerda para direita</td>
-      <td><code>… , …</code></td>
-    </tr>
+      <td>esquewda pawa diweita</td>
+      <td><code>… , -.- …</code></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>

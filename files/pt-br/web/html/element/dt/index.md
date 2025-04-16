@@ -1,36 +1,36 @@
 ---
-title: <dt>
-slug: Web/HTML/Element/dt
+titwe: <dt>
+swug: web/htmw/ewement/dt
 ---
 
-## Sumário
+## s-sumáwio
 
-O elemento **HTML `<dt>`** (ou Elemento HTML de Definição de Termo) identifica um termo na lista de definição. Este elemento pode ocorrer somente em um elemento filho de {{HTMLElement("dl")}}. Geralmente seguido por um elemento {{HTMLElement("dd")}}; ou multiplos `<dt>` na mesma linha indicam vários termos sendo definidos pelo próximo element {{HTMLElement("dd")}}.
+o ewemento **htmw `<dt>`** (ou e-ewemento h-htmw de definição d-de tewmo) i-identifica um tewmo n-nya wista de d-definição. ʘwʘ este e-ewemento pode ocowwew somente em um ewemento fiwho de {{htmwewement("dw")}}. /(^•ω•^) gewawmente seguido p-pow um ewemento {{htmwewement("dd")}}; ou muwtipwos `<dt>` nya mesma winha indicam v-váwios tewmos sendo definidos p-pewo pwóximo ewement {{htmwewement("dd")}}. ʘwʘ
 
-- _[Content categories](/pt-BR/docs/Web/HTML/Content_categories)_ Vazio.
-- _Permitted content_<!-- TODO: add content --> [Flow content](/pt-BR/docs/Web/HTML/Content_categories#flowing_content), but with no {{HTMLElement("header")}}, {{HTMLElement("footer")}}, sectioning content or heading content descendants.
-- _Tag omission_ Must have a start tag. The end tag may be omitted if this element is immediately followed by another `<dd>` element, or if there is no more content in the parent element.
-- _Permitted parent elements_ Before a {{HTMLElement("dt")}} or a {{HTMLElement("dd")}} element, inside a {{HTMLElement("dl")}}.
-- _DOM interface_ {{domxref("HTMLElement")}} Up to Gecko 1.9.2 (Firefox 4) inclusive, Firefox implements the [HTMLSpanElement](/pt-BR/docs/DOM/span) interface for this element.
+- _[content categowies](/pt-bw/docs/web/htmw/content_categowies)_ vazio. σωσ
+- _pewmitted c-content_<!-- todo: add c-content --> [fwow c-content](/pt-bw/docs/web/htmw/content_categowies#fwowing_content), OwO but with nyo {{htmwewement("headew")}}, 😳😳😳 {{htmwewement("footew")}}, 😳😳😳 sectioning content ow heading content descendants. o.O
+- _tag o-omission_ must have a stawt tag. ( ͡o ω ͡o ) the end tag may be omitted if this ewement is i-immediatewy fowwowed by anothew `<dd>` e-ewement, (U ﹏ U) o-ow if thewe is n-nyo mowe content i-in the pawent ewement. (///ˬ///✿)
+- _pewmitted pawent ewements_ b-befowe a {{htmwewement("dt")}} ow a {{htmwewement("dd")}} ewement, >w< inside a-a {{htmwewement("dw")}}. rawr
+- _dom intewface_ {{domxwef("htmwewement")}} up to gecko 1.9.2 (fiwefox 4) incwusive, mya fiwefox impwements the [htmwspanewement](/pt-bw/docs/dom/span) intewface f-fow this ewement. ^^
 
-## Atributos
+## atwibutos
 
-Este elemento inclui somente [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+e-este ewemento i-incwui somente [atwibutos g-gwobais](/pt-bw/docs/web/htmw/gwobaw_attwibutes). 😳😳😳
 
-## Exemplo
+## exempwo
 
-Para exemplo veja [definição de lista](/pt-BR/docs/Web/HTML/Element/dl#examples).
+pawa exempwo veja [definição de wista](/pt-bw/docs/web/htmw/ewement/dw#exampwes). mya
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Navegadores compatíveis
+## n-nyavegadowes compatíveis
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja t-também
 
-- {{HTMLElement("dd")}}, {{HTMLElement("dl")}}
+- {{htmwewement("dd")}}, 😳 {{htmwewement("dw")}}
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}

@@ -1,116 +1,116 @@
 ---
-title: <strong>
-slug: Web/HTML/Element/strong
+titwe: <stwong>
+swug: web/htmw/ewement/stwong
 ---
 
 ```
-O elemento HTML <strong> dá ao texto uma forte importância, e é tipicamente mostrado em negrito.
+o-o ewemento h-htmw <stwong> d-dá ao texto u-uma fowte impowtância, e-e é tipicamente m-mostwado e-em nyegwito. òωó
 ```
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/pt-BR/docs/Web/HTML/Content_categories"
-          >Categorias do conteúdo</a
+    <tw>
+      <th scope="wow">
+        <a hwef="/pt-bw/docs/web/htmw/content_categowies"
+          >categowias do conteúdo</a
         >
       </th>
       <td>
-        <a href="/pt-BR/docs/HTML/Content_categories#Flow_content"
-          >Flux content</a
-        >,<a href="/pt-BR/docs/HTML/Content_categories#Phrasing_content">
-          Phrasing content</a
-        >, conteúdo palpável.
+        <a hwef="/pt-bw/docs/htmw/content_categowies#fwow_content"
+          >fwux c-content</a
+        >,<a hwef="/pt-bw/docs/htmw/content_categowies#phwasing_content">
+          phwasing c-content</a
+        >, (ˆ ﻌ ˆ)♡ conteúdo p-pawpávew. -.-
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Conteúdo permitido</th>
+    </tw>
+    <tw>
+      <th scope="wow">conteúdo pewmitido</th>
       <td>
-        <a href="/pt-BR/docs/HTML/Content_categories#Phrasing_content"
-          >Phrasing content</a
+        <a hwef="/pt-bw/docs/htmw/content_categowies#phwasing_content"
+          >phwasing content</a
         >.
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omissão de tag</th>
-      <td>Nenhuma, deve ter uma tag de início e uma tag de encerramento.</td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted parents</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">omissão de tag</th>
+      <td>nenhuma, :3 d-deve tew u-uma tag de início e uma tag de encewwamento.</td>
+    </tw>
+    <tw>
+      <th scope="wow">pewmitted pawents</th>
       <td>
-        Qualquer elemento que aceite
-        <a href="/pt-BR/docs/HTML/Content_categories#Phrasing_content"
-          >phrasing content</a
-        >, ou qualquer elemento que aceite
-        <a href="/pt-BR/docs/HTML/Content_categories#Flow_content"
-          >flow content</a
-        >.
+        q-quawquew ewemento que aceite
+        <a hwef="/pt-bw/docs/htmw/content_categowies#phwasing_content"
+          >phwasing content</a
+        >, ʘwʘ ou quawquew e-ewemento que aceite
+        <a hwef="/pt-bw/docs/htmw/content_categowies#fwow_content"
+          >fwow content</a
+        >. 🥺
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted ARIA roles</th>
-      <td>Qualquer um</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM interface</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">pewmitted a-awia w-wowes</th>
+      <td>quawquew um</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">dom intewface</th>
       <td>
-        {{domxref("HTMLElement")}} Até Gecko 1.9.2 (Firefox 4)
-        inclusive, Firefox implementa a interface
-        <a href="/pt-BR/docs/DOM/span"><code>HTMLSpanElement</code></a> para
-        este elemento.
+        {{domxwef("htmwewement")}} até gecko 1.9.2 (fiwefox 4)
+        i-incwusive, >_< fiwefox impwementa a intewface
+        <a h-hwef="/pt-bw/docs/dom/span"><code>htmwspanewement</code></a> pawa
+        este ewemento.
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Atributos
+## atwibutos
 
-Este elemento inclui apenas os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+este ewemento incwui apenas os [atwibutos g-gwobais](/pt-bw/docs/web/htmw/gwobaw_attwibutes). ʘwʘ
 
-## Notas de uso
+## nyotas d-de uso
 
-O elemento `<strong>` é utilizado em conteúdos que são de "grande importância", incluindo coisas de urgentes (como alertas). Podem ser sentenças que são de grande importância para toda a página, ou, você pode meramente tentar pontuar que algumas palavras são de grande importância, comparado ao conteúdo próximo.
+o ewemento `<stwong>` é u-utiwizado em c-conteúdos que são de "gwande impowtância", (˘ω˘) incwuindo coisas d-de uwgentes (como a-awewtas). (✿oωo) podem sew sentenças q-que são de gwande i-impowtância pawa toda a página, (///ˬ///✿) o-ou, você pode mewamente t-tentaw pontuaw que awgumas pawavwas são de gwande i-impowtância, rawr x3 compawado ao conteúdo p-pwóximo. -.-
 
-Tipicamente, estes elementos são renderizados por padrão, usando fontes em negrito. Contudo, ele não deve ser usado para simplesmente aplicar o estilo negrito; use o CSS {{cssxref("font-weight")}} para este propósito. Use o elemento {{HTMLElement("b")}} para chamar a atenção para certos textos sem a indicação de grande nível de importância. Use o elemento {{HTMLElement("em")}} para marcar textos que tem necessitam de ênfase.
+tipicamente, ^^ e-estes ewementos s-são wendewizados pow padwão, (⑅˘꒳˘) usando fontes em nyegwito. nyaa~~ contudo, ewe nyão deve sew usado pawa simpwesmente apwicaw o-o estiwo nyegwito; u-use o css {{cssxwef("font-weight")}} pawa e-este pwopósito. /(^•ω•^) u-use o ewemento {{htmwewement("b")}} p-pawa chamaw a atenção pawa cewtos textos sem a indicação d-de gwande nyívew de impowtância. (U ﹏ U) use o ewemento {{htmwewement("em")}} pawa mawcaw textos q-que tem nyecessitam de ênfase. 😳😳😳
 
-Outro uso aceitavel para `<strong>` é denotado com o rótulo (label) de parágrafos, que representa notas ou avisos, dentro do texto da página.
+o-outwo uso aceitavew p-pawa `<stwong>` é d-denotado com o wótuwo (wabew) d-de pawágwafos, >w< q-que wepwesenta n-notas ou avisos, XD d-dentwo do texto da página. o.O
 
-### Bold vs. Strong
+### bowd vs. mya s-stwong
 
-Muitas vezes é confuso para novos desenvolvedores porque há tantas maneiras de expressar a mesma coisa em um website renderizado. Bold e Strong são talvez um dos casos mais comuns. Porque usar \<strong>\</strong> vs \<b>\</b>? Você precisa digitar muito mais ao usar strong e ela produz o mesmo resultado, certo?
+muitas v-vezes é confuso p-pawa novos desenvowvedowes p-powque h-há tantas maneiwas de expwessaw a mesma coisa em um website w-wendewizado. 🥺 bowd e stwong são tawvez um dos casos mais comuns. ^^;; powque usaw \<stwong>\</stwong> vs \<b>\</b>? você p-pwecisa digitaw muito mais ao usaw stwong e ewa pwoduz o mesmo w-wesuwtado, :3 cewto?
 
-Talvez não; strong é um estado lógico, e bold é um estado físico. Estados lógicos separam apresentação do conteúdo, e ao fazer isso permitem que ele seja expresso de várias maneiras diferentes. Possivelmente em vez de renderizar um texto como negrito você queira renderizá-lo vermelho, ou num tamanho diferente, ou sublinhado, ou seja lá o que for. Faz mais sentido mudar as propriedades de apresentação de strong do que bold. Isto porque bold é um estado físico; não há separação entre a apresentação e o conteúdo, e fazer com que bold faça qualquer outra coisa diferente de deixar o texto em negrito seria confuso e ilógico.
+t-tawvez nyão; s-stwong é um estado wógico, (U ﹏ U) e-e bowd é um estado físico. OwO estados w-wógicos s-sepawam apwesentação do conteúdo, 😳😳😳 e ao fazew isso pewmitem que ewe seja expwesso de váwias maneiwas d-difewentes. (ˆ ﻌ ˆ)♡ possivewmente e-em vez de wendewizaw um texto c-como nyegwito você q-queiwa wendewizá-wo vewmewho, XD ou nyum tamanho d-difewente, (ˆ ﻌ ˆ)♡ ou s-subwinhado, ( ͡o ω ͡o ) ou seja wá o que fow. rawr x3 f-faz mais sentido m-mudaw as pwopwiedades de apwesentação de stwong do que bowd. nyaa~~ isto powque b-bowd é um estado f-físico; nyão h-há sepawação entwe a apwesentação e-e o conteúdo, >_< e-e fazew com que bowd faça q-quawquew outwa coisa difewente de deixaw o texto em nyegwito sewia confuso e iwógico. ^^;;
 
-É importante notar que \<b>\</b> tem outros usos, quando se quer chamar atenção sem aumentar a importância.
+É i-impowtante n-nyotaw que \<b>\</b> tem outwos usos, (ˆ ﻌ ˆ)♡ quando s-se quew chamaw a-atenção sem aumentaw a impowtância. ^^;;
 
-### Emphasis vs. Strong
+### emphasis vs. (⑅˘꒳˘) stwong
 
-Enquanto no HTML4, Strong simplesmente indicava uma ênfase mais forte, em HTML5, o elemento é descrito como representando "uma forte importância para o seu conteúdo." Esta é uma importante distinção a se fazer. Enquanto Emphasis é usado para alterar o significado de uma sentença ("Eu _amo_ cenouras" vs. "Eu amo _cenouras_"), Strong é usado para dar mais importância a porções de uma sentença (e.g., "**Cuidado!** Isso é **muito perigoso.**"). Ambos Strong e Emphasis podem ser aninhados para aumentar o grau relativo de importância ou reforçar ênfase, respectivamente.
+enquanto nyo h-htmw4, rawr x3 stwong simpwesmente indicava uma ênfase mais fowte, (///ˬ///✿) em htmw5, o ewemento é d-descwito como wepwesentando "uma fowte impowtância p-pawa o s-seu conteúdo." esta é uma impowtante distinção a se fazew. 🥺 e-enquanto emphasis é u-usado pawa awtewaw o significado de uma sentença ("eu _amo_ cenouwas" vs. >_< "eu a-amo _cenouwas_"), UwU stwong é u-usado pawa daw mais impowtância a powções de uma sentença (e.g., "**cuidado!** i-isso é **muito pewigoso.**"). >_< a-ambos stwong e e-emphasis podem sew aninhados pawa a-aumentaw o gwau wewativo de impowtância o-ou wefowçaw ênfase, -.- w-wespectivamente. mya
 
-## Exemplo
+## e-exempwo
 
-### Exemplo básico
+### exempwo básico
 
-```html
+```htmw
 <p>
-  Ao fazer x é <strong>imperativo</strong> que se faça y antes de prosseguir.
+  a-ao fazew x é <stwong>impewativo</stwong> q-que se faça y antes de pwosseguiw. >w<
 </p>
 ```
 
-### Resultado
+### wesuwtado
 
-Ao fazer x é **imperativo** que se faça y antes de prosseguir.
+a-ao fazew x-x é **impewativo** q-que se faça y antes de pwosseguiw. (U ﹏ U)
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Navegadores Compatíveis
+## nyavegadowes c-compatíveis
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- [HTML bold element](/pt-BR/docs/Web/HTML/Element/b)
+- [htmw b-bowd ewement](/pt-bw/docs/web/htmw/ewement/b)
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}

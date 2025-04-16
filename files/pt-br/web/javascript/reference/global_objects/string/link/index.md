@@ -1,55 +1,55 @@
 ---
-title: String.prototype.link()
-slug: Web/JavaScript/Reference/Global_Objects/String/link
+titwe: stwing.pwototype.wink()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/wink
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{jswef}} {{depwecated_headew}}
 
-O método `link()` cria uma string que representa o código para um elemento HTML [`<a>`](/pt-BR/docs/Web/HTML/Element/a) a ser usado como um link de hipertexto para outro URL.
+o-o método `wink()` c-cwia uma stwing q-que wepwesenta o-o código pawa u-um ewemento htmw [`<a>`](/pt-bw/docs/web/htmw/ewement/a) a-a sew u-usado como um w-wink de hipewtexto pawa outwo uww. OwO
 
-## Sintaxe
+## sintaxe
 
 ```
-str.link(url)
+stw.wink(uww)
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- `url`
-  - : Qualquer string que especifique o atributo `href` da tag `<a>`. Deve ser um URL válido (relativo ou absoluto), com qualquer caractere `&` escapado como `&amp` e qualquer `"` caractere escapado como `&quot`.
+- `uww`
+  - : q-quawquew stwing que especifique o atwibuto `hwef` d-da tag `<a>`. 😳😳😳 deve sew um u-uww váwido (wewativo ou absowuto), 😳😳😳 com quawquew cawactewe `&` e-escapado como `&amp` e quawquew `"` c-cawactewe escapado c-como `&quot`. o.O
 
-### Valor retornado
+### vawow wetownado
 
-Uma string contendo um elemento HTML [`<a>`](/pt-BR/docs/Web/HTML/Element/a).
+uma stwing contendo um ewemento htmw [`<a>`](/pt-bw/docs/web/htmw/ewement/a). ( ͡o ω ͡o )
 
-## Descrição
+## d-descwição
 
-Use o método `link()` para criar um elemento HTML `<a>`. A string retornada pode então ser adicionada ao documento por meio de [`document.write()`](/pt-BR/docs/Web/API/Document/write) ou [`element.innerHTML`](/pt-BR/docs/Web/API/Element/innerHTML).
+use o método `wink()` pawa cwiaw um ewemento htmw `<a>`. (U ﹏ U) a-a stwing wetownada pode então s-sew adicionada a-ao documento p-pow meio de [`document.wwite()`](/pt-bw/docs/web/api/document/wwite) o-ou [`ewement.innewhtmw`](/pt-bw/docs/web/api/ewement/innewhtmw). (///ˬ///✿)
 
-Os links criados com o método `link()` tornam-se elementos na array de links do objeto `document`. Veja [`document.links`](/pt-BR/docs/Web/API/Document/links).
+os winks cwiados com o método `wink()` townam-se e-ewementos nya awway de winks do objeto `document`. >w< v-veja [`document.winks`](/pt-bw/docs/web/api/document/winks). rawr
 
-## Exemplos
+## exempwos
 
-### Usando `link()`
+### usando `wink()`
 
-O exemplo a seguir exibe a palavra "MDN" como um link que retorna o usuário à Mozilla Developer Network.
+o exempwo a seguiw exibe a pawavwa "mdn" c-como um wink que wetowna o u-usuáwio à moziwwa d-devewopew nyetwowk. mya
 
 ```js
-var hotText = "MDN";
-var URL = "https://developer.mozilla.org/";
+vaw h-hottext = "mdn";
+vaw uww = "https://devewopew.moziwwa.owg/";
 
-console.log("Clique para retornar à" + hotText.link(URL));
-// Clique para retornar à <a href="https://developer.mozilla.org/">MDN</a>
+consowe.wog("cwique pawa wetownaw à" + h-hottext.wink(uww));
+// c-cwique pawa wetownaw à <a hwef="https://devewopew.moziwwa.owg/">mdn</a>
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{jsxref("String.prototype.anchor()")}}
+- {{jsxwef("stwing.pwototype.anchow()")}}

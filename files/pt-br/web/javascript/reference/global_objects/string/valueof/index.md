@@ -1,58 +1,58 @@
 ---
-title: String.prototype.valueOf()
-slug: Web/JavaScript/Reference/Global_Objects/String/valueOf
+titwe: stwing.pwototype.vawueof()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/vawueof
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método `valueOf()` retorna o valor primitivo de um objeto {{jsxref("String")}}.
+o-o método `vawueof()` w-wetowna o-o vawow pwimitivo d-de um objeto {{jsxwef("stwing")}}. (///ˬ///✿)
 
-{{InteractiveExample("JavaScript Demo: String.valueOf()")}}
+{{intewactiveexampwe("javascwipt d-demo: stwing.vawueof()")}}
 
-```js interactive-example
-const stringObj = new String("foo");
+```js i-intewactive-exampwe
+c-const s-stwingobj = new stwing("foo");
 
-console.log(stringObj);
-// Expected output: String { "foo" }
+consowe.wog(stwingobj);
+// expected output: stwing { "foo" }
 
-console.log(stringObj.valueOf());
-// Expected output: "foo"
+c-consowe.wog(stwingobj.vawueof());
+// expected output: "foo"
 ```
 
-## Sintaxe
+## sintaxe
 
 ```
-str.valueOf()
+s-stw.vawueof()
 ```
 
-### Valor retornado
+### vawow wetownado
 
-Uma string representando o valor primitivo de um objeto {{jsxref("String")}}.
+u-uma stwing wepwesentando o vawow pwimitivo de um objeto {{jsxwef("stwing")}}. 😳😳😳
 
-## Descrição
+## d-descwição
 
-O método `valueOf()` do objeto {{jsxref("String")}} retorna o valor primitivo de um objeto {{jsxref("String")}} como um dado do tipo string. Esse valor é equivalente a {{jsxref("String.prototype.toString()")}}.
+o método `vawueof()` do o-objeto {{jsxwef("stwing")}} w-wetowna o vawow pwimitivo de um objeto {{jsxwef("stwing")}} como um dado do tipo stwing. 🥺 e-esse vawow é equivawente a {{jsxwef("stwing.pwototype.tostwing()")}}. mya
 
-Esse método é normalmente chamado internamente pelo JavaScript e não fica explícito no código.
+esse método é nowmawmente chamado i-intewnamente pewo javascwipt e-e nyão fica expwícito n-nyo código. 🥺
 
-## Exemplos
+## e-exempwos
 
-### Usando `valueOf()`
+### u-usando `vawueof()`
 
 ```js
-var x = new String("Olá, mundo");
-console.log(x.valueOf()); // retorna 'Olá, mundo'
+vaw x = nyew stwing("owá, >_< mundo");
+c-consowe.wog(x.vawueof()); // wetowna 'owá, >_< mundo'
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{jsxref("String.prototype.toString()")}}
-- {{jsxref("Object.prototype.valueOf()")}}
+- {{jsxwef("stwing.pwototype.tostwing()")}}
+- {{jsxwef("object.pwototype.vawueof()")}}

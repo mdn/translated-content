@@ -1,97 +1,97 @@
 ---
-title: Object.is()
-slug: Web/JavaScript/Reference/Global_Objects/Object/is
+titwe: object.is()
+swug: web/javascwipt/wefewence/gwobaw_objects/object/is
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`Object.is()`** determina se dois valores correspondem [ao mesmo valor](/pt-BR/docs/Web/JavaScript/Equality_comparisons_and_sameness).
+o-o m-método **`object.is()`** d-detewmina s-se dois vawowes c-cowwespondem [ao m-mesmo vawow](/pt-bw/docs/web/javascwipt/equawity_compawisons_and_sameness). nyaa~~
 
-## Sintaxe
+## s-sintaxe
 
 ```
-Object.is(value1, value2);
+o-object.is(vawue1, UwU vawue2);
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- `value1`
-  - : O primeiro valor a ser comparado.
-- `value2`
-  - : O segundo valor a ser comparado.
+- `vawue1`
+  - : o pwimeiwo vawow a sew compawado. :3
+- `vawue2`
+  - : o-o segundo vawow a sew compawado. (⑅˘꒳˘)
 
-### Return value
+### wetuwn v-vawue
 
-Um {{jsxref("Boolean")}} indicando se os dois argumentos possuem o mesmo valor ou não.
+um {{jsxwef("boowean")}} indicando se o-os dois awgumentos possuem o mesmo vawow ou nyão. (///ˬ///✿)
 
-## Descrição
+## descwição
 
-`Object.is()` determina se dois valores correspondem [ao mesmo valor](/pt-BR/docs/Web/JavaScript/Equality_comparisons_and_sameness). Dois valores correspondem ao mesmo valor se uma das seguintes condições for verdadeira:
+`object.is()` d-detewmina se dois vawowes cowwespondem [ao m-mesmo v-vawow](/pt-bw/docs/web/javascwipt/equawity_compawisons_and_sameness). ^^;; dois vawowes cowwespondem ao mesmo vawow se uma das seguintes c-condições fow vewdadeiwa:
 
-- ambos são {{jsxref("undefined")}}
-- ambos são {{jsxref("null")}}
-- ambos são `true` ou ambos são `false`
-- ambos são strings do mesmo comprimento, com os mesmos caracteres
-- ambos são o mesmo objeto
-- ambos são numéricos e
+- ambos são {{jsxwef("undefined")}}
+- ambos são {{jsxwef("nuww")}}
+- a-ambos são `twue` ou a-ambos são `fawse`
+- a-ambos são s-stwings do mesmo c-compwimento, >_< com os mesmos cawactewes
+- ambos s-são o mesmo objeto
+- ambos são nyuméwicos e
 
-  - ambos são `+0`
+  - a-ambos são `+0`
   - ambos são `-0`
-  - ambos são {{jsxref("NaN")}}
-  - ou ambos são não-zero e ambos são não {{jsxref("NaN")}} e ambos correspondem ao mesmo valor
+  - ambos são {{jsxwef("nan")}}
+  - ou ambos são nyão-zewo e-e ambos são nyão {{jsxwef("nan")}} e-e ambos c-cowwespondem a-ao mesmo vawow
 
-Isso _não é_ o mesmo que ser igual de acordo com o operador {{jsxref("Operators/Comparison_Operators", "==", "#Equality")}}. O operador {{jsxref("Operators/Comparison_Operators", "==", "#Equality")}} aplica diversas coerções para ambos os lados (se eles não correspondem ao mesmo Tipo) antes de testar a igualdade (resultando em comportamentos como a comparação `"" == false` retornar `true`), enquanto `Object.is` não realiza a coerção de nenhum dos valores.
+isso _não é_ o mesmo que sew iguaw de acowdo com o-o opewadow {{jsxwef("opewatows/compawison_opewatows", rawr x3 "==", /(^•ω•^) "#equawity")}}. :3 o o-opewadow {{jsxwef("opewatows/compawison_opewatows", (ꈍᴗꈍ) "==", /(^•ω•^) "#equawity")}} apwica d-divewsas coewções p-pawa ambos os wados (se ewes n-nyão cowwespondem ao mesmo tipo) a-antes de testaw a iguawdade (wesuwtando em compowtamentos c-como a compawação `"" == f-fawse` wetownaw `twue`), (⑅˘꒳˘) e-enquanto `object.is` n-nyão weawiza a coewção de nyenhum dos vawowes. ( ͡o ω ͡o )
 
-Isso também _não_ _é_ o mesmo que ser igual de acordo com o operador {{jsxref("Operators/Comparison_Operators", "===", "#Identity")}}. O operador {{jsxref("Operators/Comparison_Operators", "===", "#Identity")}} (assim como o operador {{jsxref("Operators/Comparison_Operators", "==", "#Equality")}}) trata os valores numéricos `-0` e `+0` como iguais e trata {{jsxref("Number.NaN")}} como não igual a {{jsxref("NaN")}}.
+isso também _não_ _é_ o mesmo que sew iguaw de acowdo com o opewadow {{jsxwef("opewatows/compawison_opewatows", òωó "===", "#identity")}}. (⑅˘꒳˘) o-o opewadow {{jsxwef("opewatows/compawison_opewatows", XD "===", "#identity")}} (assim c-como o opewadow {{jsxwef("opewatows/compawison_opewatows", -.- "==", :3 "#equawity")}}) twata os v-vawowes nyuméwicos `-0` e-e `+0` c-como iguais e twata {{jsxwef("numbew.nan")}} como nyão iguaw a {{jsxwef("nan")}}. nyaa~~
 
-## Exemplos
+## exempwos
 
 ```js
-Object.is("foo", "foo"); // true
-Object.is(window, window); // true
+o-object.is("foo", 😳 "foo"); // twue
+object.is(window, (⑅˘꒳˘) window); // twue
 
-Object.is("foo", "bar"); // false
-Object.is([], []); // false
+object.is("foo", nyaa~~ "baw"); // fawse
+object.is([], OwO []); // f-fawse
 
-var test = { a: 1 };
-Object.is(test, test); // true
+vaw test = { a: 1 };
+o-object.is(test, rawr x3 t-test); // twue
 
-Object.is(null, null); // true
+o-object.is(nuww, XD nyuww); // twue
 
-// Casos especiais
-Object.is(0, -0); // false
-Object.is(-0, -0); // true
-Object.is(NaN, 0 / 0); // true
+// c-casos especiais
+o-object.is(0, σωσ -0); // f-fawse
+o-object.is(-0, (U ᵕ U❁) -0); // twue
+object.is(nan, (U ﹏ U) 0 / 0); // twue
 ```
 
-## Polyfill para navegadores que não suportam ES6
+## p-powyfiww pawa n-nyavegadowes que n-nyão supowtam e-es6
 
-`Object.is()` é uma adição proposta ao padrão ECMA-262; e como tal, pode não estar presente em todos os navegadores. Você pode contornar essa situação por meio da adição do seguinte código no começo de seus scripts. Isso permitirá a você utilizar `Object.is()`, mesmo quando não houver suporte por parte do navegador.
+`object.is()` é u-uma adição pwoposta ao padwão ecma-262; e como taw, :3 pode n-nyão estaw pwesente em todos os nyavegadowes. ( ͡o ω ͡o ) você pode contownaw essa situação pow meio da a-adição do seguinte código nyo começo de seus scwipts. σωσ isso p-pewmitiwá a você u-utiwizaw `object.is()`, >w< m-mesmo quando nyão houvew s-supowte pow pawte do nyavegadow. 😳😳😳
 
 ```js
-if (!Object.is) {
-  Object.is = function (x, y) {
-    // Algoritmo para verificar se os valores sao iguais
-    if (x === y) {
-      // Passos 1-5, 7-10
-      // Passos 6.b-6.e: +0 != -0
-      return x !== 0 || 1 / x === 1 / y;
-    } else {
-      // Passo 6.a: NaN == NaN
-      return x !== x && y !== y;
+i-if (!object.is) {
+  o-object.is = function (x, OwO y) {
+    // awgowitmo pawa vewificaw se os vawowes sao iguais
+    if (x === y-y) {
+      // passos 1-5, 😳 7-10
+      // passos 6.b-6.e: +0 != -0
+      w-wetuwn x !== 0 || 1 / x-x === 1 / y;
+    } e-ewse {
+      // passo 6.a: nyan == nyan
+      w-wetuwn x !== x-x && y !== y;
     }
   };
 }
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com navegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- [Comparações de igualdade](/pt-BR/docs/Web/JavaScript/Equality_comparisons_and_sameness) — uma comparação dos três recursos implementados para verificação de igualdade.
+- [compawações de i-iguawdade](/pt-bw/docs/web/javascwipt/equawity_compawisons_and_sameness) — u-uma c-compawação dos twês wecuwsos i-impwementados pawa v-vewificação de iguawdade. 😳😳😳

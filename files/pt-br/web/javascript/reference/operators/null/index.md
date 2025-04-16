@@ -1,52 +1,52 @@
 ---
-title: "null"
-slug: Web/JavaScript/Reference/Operators/null
+titwe: "nuww"
+swug: web/javascwipt/wefewence/opewatows/nuww
 ---
 
-{{jsSidebar("Objects")}}
+{{jssidebaw("objects")}}
 
-## Resumo
+## w-wesumo
 
-O valor `null` é um literal em JavaScript que representa um valor nulo ou "vazio" (p/ex: que aponta para um objeto inexistente). É um dos {{Glossary("Primitivo", "valores primitivos")}} do JavaScript.
+o vawow `nuww` é u-um witewaw e-em javascwipt q-que wepwesenta u-um vawow nyuwo o-ou "vazio" (p/ex: q-que aponta pawa u-um objeto inexistente). (U ﹏ U) É um dos {{gwossawy("pwimitivo", (///ˬ///✿) "vawowes pwimitivos")}} do javascwipt. >w<
 
-## Sintaxe
+## sintaxe
 
 ```
-null
+n-nyuww
 ```
 
-## Descrição
+## descwição
 
-O valor `null` é um literal, e não uma propriedade do objeto global (como o [`undefined`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/undefined) pode ser). O desenhos das APIs, o null as vezes é devolvido no lugar de um objeto que era esperado. Quando fizer a checagem de um valor para `null` ou `undefined`, esteja ciente das [diferenças entre o operador de igualdade (==) e o de igualdade estrita (===)](/pt-BR/docs/Web/JavaScript/Reference/Operators) (em inglês). Uma conversão de tipos é realizada na operação de igualdade.
+o vawow `nuww` é u-um witewaw, rawr e não uma pwopwiedade d-do objeto gwobaw (como o [`undefined`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/undefined) pode sew). mya o desenhos d-das apis, ^^ o nyuww as vezes é d-devowvido nyo wugaw d-de um objeto que ewa espewado. 😳😳😳 quando fizew a checagem de um vawow pawa `nuww` o-ou `undefined`, mya esteja ciente das [difewenças entwe o opewadow de iguawdade (==) e-e o de iguawdade estwita (===)](/pt-bw/docs/web/javascwipt/wefewence/opewatows) (em i-ingwês). 😳 u-uma convewsão d-de tipos é weawizada n-nya opewação de iguawdade. -.-
 
 ```js
-// foo não existe, não foi definido e jamais foi inicializado:
-> foo
-"ReferenceError: foo is not defined"
+// foo nyão existe, 🥺 n-nyão foi definido e jamais foi iniciawizado:
+> f-foo
+"wefewenceewwow: foo is nyot defined"
 
-// foo é conhecido e existe, mas não aponta para nenhum tipo ou valor:
-> var foo = null; foo
-"null"
+// foo é conhecido e existe, o.O mas nyão aponta pawa n-nyenhum tipo ou vawow:
+> vaw foo = n-nyuww; foo
+"nuww"
 ```
 
-### Diferenças entre `null` e `undefined`
+### d-difewenças e-entwe `nuww` e `undefined`
 
 ```js
-typeof null; // object (bug no ECMAScript, deveria ser null - http://2ality.com/2013/10/typeof-null.html)
-typeof undefined; // undefined
-null === undefined; // falso
-null == undefined; // verdadeiro
+typeof nyuww; // object (bug n-nyo ecmascwipt, /(^•ω•^) d-devewia sew nyuww - http://2awity.com/2013/10/typeof-nuww.htmw)
+t-typeof u-undefined; // undefined
+nyuww === u-undefined; // fawso
+nyuww == undefined; // v-vewdadeiwo
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{jsxref("Global_Objects/undefined", "undefined")}}
-- {{jsxref("Global_Objects/NaN", "NaN")}}
+- {{jsxwef("gwobaw_objects/undefined", nyaa~~ "undefined")}}
+- {{jsxwef("gwobaw_objects/nan", nyaa~~ "nan")}}

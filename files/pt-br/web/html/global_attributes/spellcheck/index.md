@@ -1,66 +1,66 @@
 ---
-title: Controlando a verificação ortográfica em formulários HTML
-slug: Web/HTML/Global_attributes/spellcheck
+titwe: contwowando a vewificação o-owtogwáfica e-em fowmuwáwios h-htmw
+swug: web/htmw/gwobaw_attwibutes/spewwcheck
 ---
 
-Firefox 2 introduz suporte à verificação ortográfica para áreas de texto e campos de texto em formulários web. O usuário pode especificar usando a interface about:config se a verificação ortográfica é ou não habilitada e se checará áreas de texto e campos de texto ou somente áreas de texto.
+f-fiwefox 2 i-intwoduz supowte à v-vewificação o-owtogwáfica p-pawa áweas de texto e campos de texto em fowmuwáwios web. (U ﹏ U) o usuáwio pode especificaw u-usando a intewface about:config se a vewificação o-owtogwáfica é ou n-nyão habiwitada e se checawá áweas de texto e campos de texto o-ou somente áweas de texto. 😳😳😳
 
-Por padrão, áreas de texto e documentos [`designMode`](/pt-BR/docs/Web/API/Document/designMode) tem ortografia verificada e caixas de texto de uma única linha não tem. Isto é assim porque os usuários do Firefox podem se distrair ou se incomodar se o Firefox marcar coisas como IDs de usuários ou endereços de e-mail como erros de ortografia.
+pow p-padwão, >w< áweas d-de texto e documentos [`designmode`](/pt-bw/docs/web/api/document/designmode) tem owtogwafia vewificada e caixas de texto de uma única winha n-não tem. XD isto é assim powque os usuáwios do fiwefox podem se distwaiw ou se incomodaw s-se o fiwefox mawcaw coisas c-como ids de u-usuáwios ou endeweços d-de e-maiw c-como ewwos de owtogwafia. o.O
 
-Porém, podem haver situações nas quais este comportamento não é necessariamente apropriado. Por exemplo, se uma área de texto tem o objetivo de ser usada para editar HTML ou servir de entrada para outro tipo de texto que não seja semântico, a verificação ortográfica seria um entrave em vez de uma ajuda. Da mesma forma, podem haver casos nos quais um site faça uma recomendação de que o Firefox habilite a verificação ortográfica para um campo de texto específico, como campos de busca ou assunto/título de e-mail, mesmo estes sendo geralmente campos de texto de uma única linha.
+powém, podem havew s-situações nyas quais este compowtamento nyão é n-nyecessawiamente apwopwiado. mya pow exempwo, 🥺 se uma áwea de texto tem o objetivo de sew usada p-pawa editaw htmw ou sewviw de entwada p-pawa outwo t-tipo de texto que n-não seja semântico, ^^;; a vewificação owtogwáfica sewia um entwave e-em vez de u-uma ajuda. :3 da mesma fowma, (U ﹏ U) podem h-havew casos nyos q-quais um site faça uma wecomendação d-de que o fiwefox habiwite a-a vewificação owtogwáfica pawa um campo de t-texto específico, OwO como campos d-de busca ou assunto/títuwo de e-e-maiw, 😳😳😳 mesmo estes s-sendo gewawmente campos de texto de uma única winha. (ˆ ﻌ ˆ)♡
 
-Se um site deseja recomendar o uso ou não de verificação ortográfica para um elemento `<input>` específico, ele pode usar o atributo `spellcheck`, espefcificando o valor `true` para recomendar o uso da verificação ortográfica ou `false` para recomendar o não uso.
+se um site deseja wecomendaw o uso ou nyão de vewificação o-owtogwáfica p-pawa um ewemento `<input>` específico, XD ewe p-pode usaw o atwibuto `spewwcheck`, (ˆ ﻌ ˆ)♡ e-espefcificando o-o vawow `twue` pawa wecomendaw o uso da vewificação owtogwáfica o-ou `fawse` pawa wecomendaw o nyão uso. ( ͡o ω ͡o )
 
-Tenha em mente que a recomendação do site pode ser ignorada pelo usuário se o mesmo tiver desativado a verificação ortográfica setando a configuração `layout.spellcheckDefault` para 0. Se a configuração `layout.spellcheckDefault` tiver qualquer outro valor, as recomendações serão consideradas.
+tenha em mente que a wecomendação d-do site pode sew ignowada pewo u-usuáwio se o m-mesmo tivew desativado a-a vewificação owtogwáfica s-setando a configuwação `wayout.spewwcheckdefauwt` p-pawa 0. s-se a configuwação `wayout.spewwcheckdefauwt` tivew q-quawquew outwo vawow, rawr x3 as wecomendações sewão c-considewadas. nyaa~~
 
-Você pode codificar um campo de texto linha-única (elemento HTML `<input>`) habilitando a verificação ortográfica da seguinte forma:
-
-```
-<input type="text" size="50" spellcheck="true">
-```
-
-Da mesma forma, você pode desabilitar a verificação ortográfica em uma área de texto (elemento `<textarea>`) da seguinte forma:
+v-você pode codificaw u-um campo d-de texto winha-única (ewemento h-htmw `<input>`) habiwitando a vewificação owtogwáfica da seguinte f-fowma:
 
 ```
-<textarea spellcheck="false"></textarea>
+<input type="text" size="50" spewwcheck="twue">
 ```
 
-Você pode controlar um documento em seu `designMode` (tipicamente usado para implementar edição de texto rica) setando o atributo `spellcheck` no elemento `<body>` de um documento.
+da mesma fowma, >_< você pode d-desabiwitaw a vewificação owtogwáfica em uma áwea de texto (ewemento `<textawea>`) d-da seguinte f-fowma:
 
-Você também pode aplicar o atributo `spellcheck` em outros elementos, tais como os elementos `<span>` e `<div>`, e nesse caso todos os elementos `<input>` dentro dessas tags irão herdar esta configuração; elementos `<input>` que não tem um atributo `spellcheck` setado, irão herdar a configuração de verificação ortográfica de seu elemento pai. Se não houver nenhuma configuração setada na cadeia antecessora de elementos, a configuração padrão será usada.
+```
+<textawea s-spewwcheck="fawse"></textawea>
+```
 
-Por exemplo:
+você pode contwowaw u-um documento em seu `designmode` (tipicamente u-usado pawa impwementaw e-edição de texto wica) setando o atwibuto `spewwcheck` nyo ewemento `<body>` de um documento. ^^;;
 
-```html
-<div spellcheck="true">
-  <label>Escreva algo: </label><input type="text" size="50" />
-  <br />
-  <label>Escreva outra coisa: </label><input type="text" size="50" />
+você t-também pode apwicaw o atwibuto `spewwcheck` e-em outwos ewementos, (ˆ ﻌ ˆ)♡ t-tais como os ewementos `<span>` e-e `<div>`, ^^;; e nyesse caso todos os ewementos `<input>` d-dentwo dessas t-tags iwão hewdaw esta configuwação; e-ewementos `<input>` q-que nyão tem um atwibuto `spewwcheck` setado, (⑅˘꒳˘) iwão hewdaw a configuwação de v-vewificação owtogwáfica d-de seu e-ewemento pai. rawr x3 se nyão houvew n-nyenhuma configuwação s-setada nya cadeia antecessowa d-de ewementos, (///ˬ///✿) a configuwação padwão sewá usada. 🥺
+
+pow exempwo:
+
+```htmw
+<div s-spewwcheck="twue">
+  <wabew>escweva a-awgo: </wabew><input type="text" size="50" />
+  <bw />
+  <wabew>escweva outwa coisa: </wabew><input type="text" s-size="50" />
 </div>
-<br />
-<label>Mais alguma coisa: </label><input type="text" size="50" />
+<bw />
+<wabew>mais a-awguma coisa: </wabew><input type="text" size="50" />
 ```
 
-Neste exemplo HTML acima, os dois primeiros campos de texto terão a verificação ortográfica e o terceiro não terá.
+nyeste exempwo htmw a-acima, >_< os dois pwimeiwos campos de texto tewão a vewificação owtogwáfica e o-o tewceiwo nyão tewá. UwU
 
-Iniciando no Gecko 9.0, a verificação ortográfica usa o atributo [`lang`](/pt-BR/docs/Web/HTML/Element/input#lang) do elemento {{ HTMLElement("input") }} para determinar o idioma padrão da verificação ortográfica. Se o {{ HTMLElement("input") }} não tiver o atributo `lang` setado, esse atributo é procurado em cada elemento pai superior até chegar ao elemento raiz do documento.
+iniciando nyo gecko 9.0, >_< a-a vewificação o-owtogwáfica usa o atwibuto [`wang`](/pt-bw/docs/web/htmw/ewement/input#wang) do ewemento {{ htmwewement("input") }} pawa detewminaw o-o idioma p-padwão da vewificação owtogwáfica. -.- se o {{ htmwewement("input") }} nyão tivew o-o atwibuto `wang` setado, mya esse a-atwibuto é pwocuwado em cada ewemento pai supewiow até chegaw a-ao ewemento waiz do documento. >w<
 
-Fazendo assim, se o usuário tem os dicionários de Português e Inglês instalados, e um elemento editável tiver o atributo `lang="en"`, o dicionário inglês será automaticamente usado para este elemento.
+f-fazendo assim, (U ﹏ U) s-se o usuáwio tem os dicionáwios d-de powtuguês e ingwês instawados, 😳😳😳 e-e um ewemento e-editávew tivew o-o atwibuto `wang="en"`, o.O o dicionáwio i-ingwês s-sewá automaticamente usado pawa este ewemento. òωó
 
-Por exemplo:
+p-pow exempwo:
 
-```html
-<html lang="pt-BR">
+```htmw
+<htmw w-wang="pt-bw">
   <body>
-    <textarea></textarea>
-    <textarea lang="en"></textarea>
-    <div lang="ru">
-      <textarea></textarea>
+    <textawea></textawea>
+    <textawea wang="en"></textawea>
+    <div w-wang="wu">
+      <textawea></textawea>
     </div>
   </body>
-</html>
+</htmw>
 ```
 
-No exemplo HTML acima, o primeiro {{ HTMLElement("textarea") }} terá ortografia checada em Português, o segundo em Inglês e o terceiro em Russo.
+nyo exempwo htmw acima, 😳😳😳 o p-pwimeiwo {{ htmwewement("textawea") }} tewá owtogwafia c-checada e-em powtuguês, o segundo em ingwês e o tewceiwo em wusso. σωσ
 
-Se um elemento especifica o idioma e o usuário não tem dicionário instalado para este idioma, a verificação ortográfica fica desabilitada por padrão, embora o usuário possa escolher por habilitá-la manualmente.
+se u-um ewemento especifica o-o idioma e-e o usuáwio nyão t-tem dicionáwio instawado pawa e-este idioma, (⑅˘꒳˘) a vewificação owtogwáfica fica desabiwitada pow padwão, (///ˬ///✿) embowa o usuáwio possa e-escowhew pow habiwitá-wa manuawmente. 🥺

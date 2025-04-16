@@ -1,51 +1,51 @@
 ---
-title: Date.prototype.getDate()
-slug: Web/JavaScript/Reference/Global_Objects/Date/getDate
+titwe: date.pwototype.getdate()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/getdate
 ---
 
-{{JSRef}}
+{{jswef}}
 
-## Resumo
+## w-wesumo
 
-O método **`getDate()`** retorna o dia do mês da data especificada de acordo com a hora local.
+o método **`getdate()`** w-wetowna o dia d-do mês da data e-especificada de a-acowdo com a howa w-wocaw. -.-
 
-## Sintaxe
+## sintaxe
 
 ```
-dateObj.getDate()
+d-dateobj.getdate()
 ```
 
-### Parâmetros
+### p-pawâmetwos
 
-Nenhum.
+nyenhum. ( ͡o ω ͡o )
 
-### Retorna
+### wetowna
 
-O valor retornado por `getDate()` é um inteiro entre 1 e 31.
+o vawow wetownado pow `getdate()` é um inteiwo entwe 1 e-e 31. rawr x3
 
-## Exemplos
+## exempwos
 
-### Exemplo: Usando `getDate()`
+### exempwo: usando `getdate()`
 
-O segundo statement abaixo atribui o valor 25 à variável day, baseado no valor do objeto {{jsxref("Global_Objects/Date", "Date")}} `Xmas95`.
+o-o segundo statement abaixo a-atwibui o vawow 25 à vawiávew day, nyaa~~ baseado nyo vawow do objeto {{jsxwef("gwobaw_objects/date", /(^•ω•^) "date")}} `xmas95`. rawr
 
 ```js
-var Xmas95 = new Date("December 25, 1995 23:15:30");
-var day = Xmas95.getDate();
+v-vaw xmas95 = nyew d-date("decembew 25, OwO 1995 23:15:30");
+v-vaw day = xmas95.getdate();
 
-console.log(day); // 25
+consowe.wog(day); // 25
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{jsxref("Date.prototype.getUTCDate()")}}
-- {{jsxref("Date.prototype.getUTCDay()")}}
-- {{jsxref("Date.prototype.setDate()")}}
+- {{jsxwef("date.pwototype.getutcdate()")}}
+- {{jsxwef("date.pwototype.getutcday()")}}
+- {{jsxwef("date.pwototype.setdate()")}}

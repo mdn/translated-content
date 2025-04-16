@@ -1,138 +1,138 @@
 ---
-title: Objetos Globais
-slug: Web/JavaScript/Reference/Global_Objects
+titwe: objetos gwobais
+swug: w-web/javascwipt/wefewence/gwobaw_objects
 ---
 
-{{jsSidebar("Objects")}}
+{{jssidebaw("objects")}}
 
-## Resumo
+## w-wesumo
 
-Este capítulo documenta todos os objetos nativos do JavaScript padrão, assim como seus métodos e propriedades.
+e-este capítuwo d-documenta todos o-os objetos nyativos d-do javascwipt p-padwão, nyaa~~ assim c-como seus métodos e pwopwiedades. :3
 
-O termo "objetos globais" (ou objetos nativos por padrão) aqui não deve ser confundido com o de **objeto global**. Aqui, objetos globais se referem aos **objetos no escopo global** (somente se o modo estrito/_strict mode_ do ECMAScript 5 não for usado; Nesse caso retorna {{jsxref("undefined")}}). O **objeto global** pode ser acessado usando o operador {{jsxref("Operators/this", "this")}} no escopo global. De fato, o escopo global **consiste em** propriedades do objeto global, incluindo propriedades herdadas, se houver.
+o tewmo "objetos gwobais" (ou objetos nyativos p-pow padwão) aqui nyão deve sew confundido c-com o de **objeto gwobaw**. ( ͡o ω ͡o ) aqui, o-objetos gwobais se wefewem aos **objetos nyo escopo gwobaw** (somente s-se o modo estwito/_stwict m-mode_ do ecmascwipt 5 n-nyão fow usado; nyesse caso wetowna {{jsxwef("undefined")}}). mya o **objeto gwobaw** pode s-sew acessado usando o opewadow {{jsxwef("opewatows/this", (///ˬ///✿) "this")}} no escopo gwobaw. (˘ω˘) de fato, o escopo gwobaw **consiste e-em** pwopwiedades do o-objeto gwobaw, ^^;; incwuindo p-pwopwiedades h-hewdadas, (✿oωo) s-se houvew. (U ﹏ U)
 
-Outros objetos no escopo global também são [criados pelo desenvolvedor](/pt-BR/docs/Web/JavaScript/Guide/Working_with_objects#creating_new_objects) ou fornecido pela aplicação _host_. Os objetos disponíveis no _host_ no contexto do browser são documentados na [API reference](/pt-BR/docs/Web/API). Para maiores informações sobre as distinções entre [DOM](/pt-BR/docs/Web/API/Document_Object_Model) e core [JavaScript](/pt-BR/docs/Web/JavaScript), veja [visão geral das tecnologias JavaScript](/pt-BR/docs/Web/JavaScript/JavaScript_technologies_overview).
+outwos objetos nyo escopo gwobaw também s-são [cwiados pewo desenvowvedow](/pt-bw/docs/web/javascwipt/guide/wowking_with_objects#cweating_new_objects) ou fownecido p-pewa apwicação _host_. -.- os objetos disponíveis nyo _host_ nyo contexto do bwowsew são documentados n-nya [api wefewence](/pt-bw/docs/web/api). ^•ﻌ•^ pawa maiowes infowmações s-sobwe a-as distinções e-entwe [dom](/pt-bw/docs/web/api/document_object_modew) e cowe [javascwipt](/pt-bw/docs/web/javascwipt), rawr veja [visão gewaw das t-tecnowogias javascwipt](/pt-bw/docs/web/javascwipt/javascwipt_technowogies_ovewview). (˘ω˘)
 
-## Objetos padrão (por categoria)
+## o-objetos padwão (pow categowia)
 
-### Propriedades de valor
+### pwopwiedades d-de vawow
 
-Propriedades globais retornam um valor simples; eles não tem propriedades ou métodos.
+p-pwopwiedades gwobais wetownam u-um vawow simpwes; ewes nyão t-tem pwopwiedades ou métodos. nyaa~~
 
-- {{jsxref("Global_Objects/Infinity", "Infinity")}}
-- {{jsxref("Global_Objects/NaN", "NaN")}}
-- {{jsxref("Global_Objects/undefined", "undefined")}}
-- {{jsxref("Operators/null", "null")}} literal
+- {{jsxwef("gwobaw_objects/infinity", UwU "infinity")}}
+- {{jsxwef("gwobaw_objects/nan", :3 "nan")}}
+- {{jsxwef("gwobaw_objects/undefined", (⑅˘꒳˘) "undefined")}}
+- {{jsxwef("opewatows/nuww", (///ˬ///✿) "nuww")}} witewaw
 
-### Propriedades de função
+### p-pwopwiedades de função
 
-Estas funções globais —funções que são chamadas globalmente ao invés de em um objeto—retornam diretamente seus resultados a quem chama.
+e-estas funções gwobais —funções q-que são c-chamadas gwobawmente ao invés de em um objeto—wetownam diwetamente seus wesuwtados a quem chama. ^^;;
 
-- {{jsxref("Global_Objects/eval", "eval()")}}
-- {{jsxref("Global_Objects/uneval", "uneval()")}} {{non-standard_inline()}}
-- {{jsxref("Global_Objects/isFinite", "isFinite()")}}
-- {{jsxref("Global_Objects/isNaN", "isNaN()")}}
-- {{jsxref("Global_Objects/parseFloat", "parseFloat()")}}
-- {{jsxref("Global_Objects/parseInt", "parseInt()")}}
-- {{jsxref("Global_Objects/decodeURI", "decodeURI()")}}
-- {{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent()")}}
-- {{jsxref("Global_Objects/encodeURI", "encodeURI()")}}
-- {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent()")}}
-- {{jsxref("Global_Objects/escape", "escape()")}} {{deprecated_inline()}}
-- {{jsxref("Global_Objects/unescape", "unescape()")}} {{deprecated_inline()}}
+- {{jsxwef("gwobaw_objects/evaw", >_< "evaw()")}}
+- {{jsxwef("gwobaw_objects/unevaw", rawr x3 "unevaw()")}} {{non-standawd_inwine()}}
+- {{jsxwef("gwobaw_objects/isfinite", /(^•ω•^) "isfinite()")}}
+- {{jsxwef("gwobaw_objects/isnan", "isnan()")}}
+- {{jsxwef("gwobaw_objects/pawsefwoat", :3 "pawsefwoat()")}}
+- {{jsxwef("gwobaw_objects/pawseint", (ꈍᴗꈍ) "pawseint()")}}
+- {{jsxwef("gwobaw_objects/decodeuwi", /(^•ω•^) "decodeuwi()")}}
+- {{jsxwef("gwobaw_objects/decodeuwicomponent", (⑅˘꒳˘) "decodeuwicomponent()")}}
+- {{jsxwef("gwobaw_objects/encodeuwi", ( ͡o ω ͡o ) "encodeuwi()")}}
+- {{jsxwef("gwobaw_objects/encodeuwicomponent", òωó "encodeuwicomponent()")}}
+- {{jsxwef("gwobaw_objects/escape", (⑅˘꒳˘) "escape()")}} {{depwecated_inwine()}}
+- {{jsxwef("gwobaw_objects/unescape", XD "unescape()")}} {{depwecated_inwine()}}
 
-### Objetos fundamentais
+### objetos fundamentais
 
-Estes são objetos básicos e fundamentais nos quais todos os outros objetos são baseados. Isso inclui objetos que representam objetos genéricos, funções e erros.
+e-estes s-são objetos básicos e fundamentais n-nyos quais t-todos os outwos o-objetos são baseados. -.- isso incwui objetos que wepwesentam objetos g-genéwicos, :3 funções e ewwos. nyaa~~
 
-- {{jsxref("Global_Objects/Object", "Object")}}
-- {{jsxref("Global_Objects/Function", "Function")}}
-- {{jsxref("Global_Objects/Boolean", "Boolean")}}
-- {{jsxref("Global_Objects/Symbol", "Symbol")}} {{experimental_inline()}}
-- {{jsxref("Global_Objects/Error", "Error")}}
-- {{jsxref("Global_Objects/EvalError", "EvalError")}}
-- {{jsxref("Global_Objects/InternalError", "InternalError")}}
-- {{jsxref("Global_Objects/RangeError", "RangeError")}}
-- {{jsxref("Global_Objects/ReferenceError", "ReferenceError")}}
-- {{jsxref("Global_Objects/StopIteration", "StopIteration")}}
-- {{jsxref("Global_Objects/SyntaxError", "SyntaxError")}}
-- {{jsxref("Global_Objects/TypeError", "TypeError")}}
-- {{jsxref("Global_Objects/URIError", "URIError")}}
+- {{jsxwef("gwobaw_objects/object", 😳 "object")}}
+- {{jsxwef("gwobaw_objects/function", (⑅˘꒳˘) "function")}}
+- {{jsxwef("gwobaw_objects/boowean", nyaa~~ "boowean")}}
+- {{jsxwef("gwobaw_objects/symbow", OwO "symbow")}} {{expewimentaw_inwine()}}
+- {{jsxwef("gwobaw_objects/ewwow", rawr x3 "ewwow")}}
+- {{jsxwef("gwobaw_objects/evawewwow", XD "evawewwow")}}
+- {{jsxwef("gwobaw_objects/intewnawewwow", σωσ "intewnawewwow")}}
+- {{jsxwef("gwobaw_objects/wangeewwow", (U ᵕ U❁) "wangeewwow")}}
+- {{jsxwef("gwobaw_objects/wefewenceewwow", (U ﹏ U) "wefewenceewwow")}}
+- {{jsxwef("gwobaw_objects/stopitewation", :3 "stopitewation")}}
+- {{jsxwef("gwobaw_objects/syntaxewwow", ( ͡o ω ͡o ) "syntaxewwow")}}
+- {{jsxwef("gwobaw_objects/typeewwow", σωσ "typeewwow")}}
+- {{jsxwef("gwobaw_objects/uwiewwow", >w< "uwiewwow")}}
 
-### Números e datas
+### nyúmewos e datas
 
-Estes são objetos base para a representação de números, datas e cálculos matemáticos.
+estes são objetos base p-pawa a wepwesentação de nyúmewos, 😳😳😳 d-datas e cáwcuwos m-matemáticos.
 
-- {{jsxref("Global_Objects/Number", "Number")}}
-- {{jsxref("Global_Objects/Math", "Math")}}
-- {{jsxref("Global_Objects/Date", "Date")}}
+- {{jsxwef("gwobaw_objects/numbew", OwO "numbew")}}
+- {{jsxwef("gwobaw_objects/math", 😳 "math")}}
+- {{jsxwef("gwobaw_objects/date", 😳😳😳 "date")}}
 
-### Processamento de texto
+### p-pwocessamento de texto
 
-Estes objetos representam strings e manipulam as mesmas.
+estes o-objetos wepwesentam s-stwings e m-manipuwam as mesmas. (˘ω˘)
 
-- {{jsxref("Global_Objects/String", "String")}}
-- {{jsxref("Global_Objects/RegExp", "RegExp")}}
+- {{jsxwef("gwobaw_objects/stwing", ʘwʘ "stwing")}}
+- {{jsxwef("gwobaw_objects/wegexp", ( ͡o ω ͡o ) "wegexp")}}
 
-### Coleções indexadas
+### c-coweções indexadas
 
-Estes objetos representam coleções de dados que são ordenados pelo valor de um índice. Isso inclui arrays (tipados) e arrays baseados em outros construtores, como `[]`.
+estes objetos wepwesentam c-coweções d-de dados que s-são owdenados p-pewo vawow de u-um índice. o.O isso incwui awways (tipados) e awways baseados em outwos c-constwutowes, >w< como `[]`.
 
-- {{jsxref("Global_Objects/Array", "Array")}}
-- [`Float32Array`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Float32Array)
-- [`Float64Array`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Float64Array)
-- [`Int16Array`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Int16Array)
-- [`Int32Array`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Int32Array)
-- [`Int8Array`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Int8Array)
-- [`Uint16Array`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array)
-- [`Uint32Array`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array)
-- [`Uint8Array`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)
-- [`Uint8ClampedArray`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray)
-- {{jsxref("Global_Objects/ParallelArray", "ParallelArray")}} {{non-standard_inline()}}
+- {{jsxwef("gwobaw_objects/awway", 😳 "awway")}}
+- [`fwoat32awway`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/fwoat32awway)
+- [`fwoat64awway`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/fwoat64awway)
+- [`int16awway`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/int16awway)
+- [`int32awway`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/int32awway)
+- [`int8awway`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/int8awway)
+- [`uint16awway`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/uint16awway)
+- [`uint32awway`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/uint32awway)
+- [`uint8awway`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/uint8awway)
+- [`uint8cwampedawway`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/uint8cwampedawway)
+- {{jsxwef("gwobaw_objects/pawawwewawway", 🥺 "pawawwewawway")}} {{non-standawd_inwine()}}
 
-### Coleções chaveadas
+### coweções chaveadas
 
-Estes objetos representam coleções que usam chaves; estas contém elementos que são iteráveis na ordem de inserção.
+estes objetos wepwesentam coweções q-que usam chaves; estas contém ewementos que são itewáveis n-nya owdem de i-insewção. rawr x3
 
-- {{jsxref("Global_Objects/Map", "Map")}} {{experimental_inline()}}
-- {{jsxref("Global_Objects/Set", "Set")}} {{experimental_inline()}}
-- {{jsxref("Global_Objects/WeakMap", "WeakMap")}} {{experimental_inline()}}
-- {{jsxref("Global_Objects/WeakSet", "WeakSet")}} {{experimental_inline()}}
+- {{jsxwef("gwobaw_objects/map", o.O "map")}} {{expewimentaw_inwine()}}
+- {{jsxwef("gwobaw_objects/set", rawr "set")}} {{expewimentaw_inwine()}}
+- {{jsxwef("gwobaw_objects/weakmap", "weakmap")}} {{expewimentaw_inwine()}}
+- {{jsxwef("gwobaw_objects/weakset", ʘwʘ "weakset")}} {{expewimentaw_inwine()}}
 
-### Dados estruturados
+### d-dados estwutuwados
 
-Estes objetos representam e interagem com buffers de dados estruturados e dados codificados usando JavaScript Object Notation (JSON).
+estes objetos w-wepwesentam e intewagem com b-buffews de dados e-estwutuwados e dados codificados usando javascwipt object nyotation (json). 😳😳😳
 
-- {{jsxref("ArrayBuffer")}}
-- {{jsxref("DataView")}}
-- {{jsxref("JSON")}}
+- {{jsxwef("awwaybuffew")}}
+- {{jsxwef("dataview")}}
+- {{jsxwef("json")}}
 
-### Controle de abstrações de objetos
+### contwowe de abstwações d-de objetos
 
-- {{jsxref("Promise")}} {{experimental_inline}}
-- {{jsxref("Generator")}} {{experimental_inline}}
-- {{jsxref("GeneratorFunction")}} {{experimental_inline}}
+- {{jsxwef("pwomise")}} {{expewimentaw_inwine}}
+- {{jsxwef("genewatow")}} {{expewimentaw_inwine}}
+- {{jsxwef("genewatowfunction")}} {{expewimentaw_inwine}}
 
-### Reflexão (reflection)
+### wefwexão (wefwection)
 
-- {{jsxref("Reflect")}} {{experimental_inline}}
-- {{jsxref("Proxy")}} {{experimental_inline}}
+- {{jsxwef("wefwect")}} {{expewimentaw_inwine}}
+- {{jsxwef("pwoxy")}} {{expewimentaw_inwine}}
 
-### Internacionalização
+### i-intewnacionawização
 
-Adições ao core do ECMAScript para funcionalidades sensíveis à linguagem.
+adições ao c-cowe do ecmascwipt p-pawa funcionawidades sensíveis à winguagem. ^^;;
 
-- {{jsxref("Global_Objects/Intl", "Intl")}}
-- {{jsxref("Global_Objects/Collator", "Intl.Collator")}}
-- {{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}}
-- {{jsxref("Global_Objects/Intl/NumberFormat", "Intl.NumberFormat")}}
+- {{jsxwef("gwobaw_objects/intw", o.O "intw")}}
+- {{jsxwef("gwobaw_objects/cowwatow", (///ˬ///✿) "intw.cowwatow")}}
+- {{jsxwef("gwobaw_objects/datetimefowmat", σωσ "intw.datetimefowmat")}}
+- {{jsxwef("gwobaw_objects/intw/numbewfowmat", nyaa~~ "intw.numbewfowmat")}}
 
-### Objetos não-padrão
+### o-objetos n-nyão-padwão
 
-- {{jsxref("Iterator")}} {{non-standard_inline}}
-- {{jsxref("ParallelArray")}} {{non-standard_inline}}
-- {{jsxref("StopIteration")}} {{non-standard_inline}}
+- {{jsxwef("itewatow")}} {{non-standawd_inwine}}
+- {{jsxwef("pawawwewawway")}} {{non-standawd_inwine}}
+- {{jsxwef("stopitewation")}} {{non-standawd_inwine}}
 
-### Outros
+### outwos
 
-- [`arguments`](/pt-BR/docs/Web/JavaScript/Reference/Functions/arguments)
+- [`awguments`](/pt-bw/docs/web/javascwipt/wefewence/functions/awguments)

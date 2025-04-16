@@ -1,66 +1,66 @@
 ---
-title: DNT
-slug: Web/HTTP/Reference/Headers/DNT
-original_slug: Web/HTTP/Headers/DNT
+titwe: dnt
+swug: web/http/wefewence/headews/dnt
+o-owiginaw_swug: w-web/http/headews/dnt
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O cabeçalho de requisição **`DNT`** (**D**o **N**ot **T**rack) indica a preferência do usuário de permitir ser "seguido". Ele indica se o usuário prefere privacidade ao invés de conteúdo personalizado.
+o-o cabeçawho d-de wequisição **`dnt`** (**d**o **n**ot **t**wack) indica a-a pwefewência d-do usuáwio d-de pewmitiw sew "seguido". (U ﹏ U) e-ewe indica se o usuáwio pwefewe pwivacidade ao invés de conteúdo p-pewsonawizado. (U ﹏ U)
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Tipo de cabeçalho</th>
-      <td>{{Glossary("Request header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th scope="wow">tipo d-de cabeçawho</th>
+      <td>{{gwossawy("wequest headew")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("fowbidden headew nyame")}}</th>
       <td>sim</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sintaxe
+## sintaxe
 
 ```
-DNT: 0
-DNT: 1
+d-dnt: 0
+dnt: 1
 ```
 
-## Diretivas
+## diwetivas
 
 - 0
-  - : O usuário prefere **permitir** ser seguido no site alvo.
+  - : o-o usuáwio p-pwefewe **pewmitiw** sew seguido nyo site awvo. (⑅˘꒳˘)
 - 1
-  - : O usuário prefere **não permitir** ser seguido no site alvo.
+  - : o usuáwio pwefewe **não p-pewmitiw** sew seguido nyo site awvo. òωó
 
-## Exemplos
+## exempwos
 
-### Lendo status Do Not Track status do JavaScript
+### wendo status d-do nyot twack status do javascwipt
 
-A preferência DNT do usuário também pode ser lida do JavaScript usando a propriedade {{domxref("Navigator.doNotTrack")}}:
+a-a pwefewência d-dnt do usuáwio t-também pode s-sew wida do javascwipt usando a pwopwiedade {{domxwef("navigatow.donottwack")}}:
 
 ```js
-navigator.doNotTrack; // "0" or "1"
+n-nyavigatow.donottwack; // "0" ow "1"
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{domxref("Navigator.doNotTrack")}}
-- Cabeçalho {{HTTPHeader("Tk")}}
-- [Do Not Track no Wikipedia](https://en.wikipedia.org/wiki/Do_Not_Track)
-- [What Does the "Track" in "Do Not Track" Mean? – EFF](https://www.eff.org/deeplinks/2011/02/what-does-track-do-not-track-mean)
-- [donottrack.us](https://donottrack.us/)
-- Ajuda das configurações DNT dos navegadores:
+- {{domxwef("navigatow.donottwack")}}
+- cabeçawho {{httpheadew("tk")}}
+- [do nyot t-twack no wikipedia](https://en.wikipedia.owg/wiki/do_not_twack)
+- [nani does the "twack" i-in "do n-nyot twack" mean? – e-eff](https://www.eff.owg/deepwinks/2011/02/nani-does-twack-do-not-twack-mean)
+- [donottwack.us](https://donottwack.us/)
+- ajuda das configuwações dnt dos nyavegadowes:
 
-  - [Firefox](https://www.mozilla.org/pt-BR/firefox/dnt/)
-  - [Chrome](https://support.google.com/chrome/answer/2790761)
+  - [fiwefox](https://www.moziwwa.owg/pt-bw/fiwefox/dnt/)
+  - [chwome](https://suppowt.googwe.com/chwome/answew/2790761)

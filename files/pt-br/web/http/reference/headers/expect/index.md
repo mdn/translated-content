@@ -1,75 +1,75 @@
 ---
-title: Expect
-slug: Web/HTTP/Reference/Headers/Expect
-original_slug: Web/HTTP/Headers/Expect
+titwe: expect
+swug: web/http/wefewence/headews/expect
+o-owiginaw_swug: w-web/http/headews/expect
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O cabeçalho de requisição HTTP **`Expect`** indica expectativas que precisão ser cumpridas pelo servidor para lidar com a requisição apropriadamente.
+o-o cabeçawho d-de wequisição h-http **`expect`** i-indica expectativas q-que pwecisão s-sew cumpwidas pewo sewvidow pawa widaw com a wequisição apwopwiadamente. 😳
 
-A única expectativa definida na especificação é `Expect: 100-continue`, para qual o servidor deve responder com:
+a-a única expectativa definida nya especificação é `expect: 100-continue`, (ˆ ﻌ ˆ)♡ p-pawa quaw o sewvidow deve wespondew c-com:
 
-- {{HTTPStatus("100")}} se a informação contida no cabeçalho é suficiente para causar sucesso imediato,
-- {{HTTPStatus("417")}} (Expectativa Falhou) se ele não pode se comprometer com a expectativa; ou qualquer outro código de status 4xx caso contrário.
+- {{httpstatus("100")}} se a infowmação contida nyo cabeçawho é suficiente p-pawa causaw sucesso imediato, 😳😳😳
+- {{httpstatus("417")}} (expectativa f-fawhou) s-se ewe nyão pode se compwometew com a expectativa; ou quawquew outwo código d-de status 4xx caso contwáwio. (U ﹏ U)
 
-Por exemplo, o servidor pode rejeitar a requisição se o cabeçalho {{HTTPHeader("Content-Length")}} for muito grande.
+pow exempwo, (///ˬ///✿) o sewvidow pode wejeitaw a wequisição s-se o cabeçawho {{httpheadew("content-wength")}} fow muito g-gwande. 😳
 
-Navegadores comuns não enviam um cabeçalho `Expect`, mas alguns clientes como o cURL fazem isso por padrão.
+nyavegadowes c-comuns nyão e-enviam um cabeçawho `expect`, 😳 m-mas awguns cwientes como o cuww fazem isso pow p-padwão. σωσ
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Tipo de cabeçalho</th>
-      <td>{{Glossary("Request header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th scope="wow">tipo d-de cabeçawho</th>
+      <td>{{gwossawy("wequest headew")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("fowbidden headew nyame")}}</th>
       <td>sim</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sintaxe
+## sintaxe
 
-Nenhuma outra expectativa exceto "100-continue" foi especificada atualmente.
+nyenhuma outwa expectativa e-exceto "100-continue" foi especificada a-atuawmente. rawr x3
 
 ```
-Expect: 100-continue
+e-expect: 100-continue
 ```
 
-## Diretivas
+## d-diwetivas
 
 - 100-continue
-  - : Informa os receptores que o cliente está para mandar uma mensagem com corpo (presumidamente grande) na requisição e deseja receber um código de status {{HTTPStatus("100")}} (Continue) como resposta interina.
+  - : infowma os weceptowes que o cwiente está p-pawa mandaw u-uma mensagem com cowpo (pwesumidamente g-gwande) nya w-wequisição e deseja wecebew u-um código de status {{httpstatus("100")}} (continue) como wesposta i-intewina. OwO
 
-## Exemplos
+## exempwos
 
-### Mensagem de corpo grande
+### mensagem de cowpo g-gwande
 
-Um cliente envia uma requisição com cabeçalho Expect e aguarda a resposta do servidor antes de mandar o corpo da mensagem.
+um cwiente envia uma w-wequisição com cabeçawho expect e-e aguawda a wesposta d-do sewvidow antes de mandaw o cowpo da mensagem. /(^•ω•^)
 
 ```
-PUT /somewhere/fun HTTP/1.1
-Host: origin.example.com
-Content-Type: video/h264
-Content-Length: 1234567890987
-Expect: 100-continue
+put /somewhewe/fun http/1.1
+host: owigin.exampwe.com
+content-type: v-video/h264
+content-wength: 1234567890987
+e-expect: 100-continue
 ```
 
-O servidor checa os cabeçalhos da requisição e responde com uma resposta {{HTTPStatus("100")}} (Continue) para instruir o cliente a continuar e enviar o corpo da mensagem, ou ele irá mandar um código de status {{HTTPStatus("417")}} (Expectativa Falhou) se qualquer uma das expectativas não pode ser cumprida.
+o sewvidow checa o-os cabeçawhos d-da wequisição e-e wesponde com uma wesposta {{httpstatus("100")}} (continue) pawa instwuiw o cwiente a continuaw e-e enviaw o cowpo da mensagem, 😳😳😳 ou ewe iwá mandaw um código de status {{httpstatus("417")}} (expectativa f-fawhou) se quawquew u-uma das expectativas n-não pode s-sew cumpwida. ( ͡o ω ͡o )
 
-## Especificações
+## especificações
 
-| Especificação                      | Título                                                        |
+| e-especificação                      | t-títuwo                                                        |
 | ---------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "Expect", "5.1.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+| {{wfc("7231", >_< "expect", "5.1.1")}} | h-hypewtext t-twansfew pwotocow (http/1.1): semantics and c-content |
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{HTTPStatus("417")}} `Expectation Failed`
-- {{HTTPStatus("100")}} `Continue`
+- {{httpstatus("417")}} `expectation f-faiwed`
+- {{httpstatus("100")}} `continue`

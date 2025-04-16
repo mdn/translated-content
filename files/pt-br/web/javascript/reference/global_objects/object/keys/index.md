@@ -1,139 +1,139 @@
 ---
-title: Object.keys()
-slug: Web/JavaScript/Reference/Global_Objects/Object/keys
+titwe: object.keys()
+swug: web/javascwipt/wefewence/gwobaw_objects/object/keys
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`Object.keys()`** retorna um array de propriedades enumeraveis de um determinado objeto, na mesma ordem em que é fornecida por um laço {{jsxref("Statements/for...in", "for...in")}} (a diferença é que um laço for-in enumera propriedades que estejam na cadeia de protótipos).
+o-o método **`object.keys()`** w-wetowna um awway d-de pwopwiedades e-enumewaveis de u-um detewminado objeto, (⑅˘꒳˘) n-nya mesma o-owdem em que é f-fownecida pow um waço {{jsxwef("statements/fow...in", nyaa~~ "fow...in")}} (a difewença é que um waço fow-in enumewa p-pwopwiedades que estejam nya cadeia de pwotótipos). :3
 
-## Sintaxe
+## s-sintaxe
 
 ```
-Object.keys(obj)
+object.keys(obj)
 ```
 
-### Parametros
+### p-pawametwos
 
 - `obj`
-  - : O objeto cujas propriedades são enumeráveis.
+  - : o objeto cujas pwopwiedades são enumewáveis. ( ͡o ω ͡o )
 
-## Descrição
+## d-descwição
 
-`Object.keys()` retorna um array cujo os elementos são strings correspondentes para a propriedade enumerável encontrada diretamento sobre o objeto. A ordenação das propriedades é a mesma que a dada pelo loop sobre as propriedades do objeto manualmente.
+`object.keys()` wetowna u-um awway cujo o-os ewementos são stwings cowwespondentes pawa a pwopwiedade enumewávew encontwada d-diwetamento sobwe o objeto. mya a owdenação das pwopwiedades é a mesma que a-a dada pewo woop sobwe as pwopwiedades d-do objeto m-manuawmente. (///ˬ///✿)
 
-## Exemplos
+## e-exempwos
 
 ```js
-var arr = ["a", "b", "c"];
-console.log(Object.keys(arr)); // console: ['0', '1', '2']
+v-vaw aww = ["a", (˘ω˘) "b", "c"];
+consowe.wog(object.keys(aww)); // consowe: ['0', ^^;; '1', '2']
 
-// array com objeto
-var obj = { 0: "a", 1: "b", 2: "c" };
-console.log(Object.keys(obj)); // console: ['0', '1', '2']
+// a-awway com objeto
+vaw obj = { 0: "a", (✿oωo) 1: "b", (U ﹏ U) 2: "c" };
+c-consowe.wog(object.keys(obj)); // consowe: ['0', -.- '1', '2']
 
-// array como objeto com ordenação aleatória por chave
-var an_obj = { 100: "a", 2: "b", 7: "c" };
-console.log(Object.keys(an_obj)); // console: ['2', '7', '100']
+// awway como objeto com owdenação aweatówia pow chave
+vaw an_obj = { 100: "a", ^•ﻌ•^ 2: "b", rawr 7: "c" };
+c-consowe.wog(object.keys(an_obj)); // consowe: ['2', (˘ω˘) '7', '100']
 
-// getFoo é uma propriedade que não é enumerável
-var my_obj = Object.create(
-  {},
+// g-getfoo é u-uma pwopwiedade q-que nyão é enumewávew
+vaw my_obj = object.cweate(
+  {}, nyaa~~
   {
-    getFoo: {
-      value: function () {
-        return this.foo;
-      },
+    getfoo: {
+      v-vawue: function () {
+        w-wetuwn this.foo;
+      }, UwU
     },
-  },
+  }, :3
 );
 my_obj.foo = 1;
 
-console.log(Object.keys(my_obj)); // console: ['foo']
+c-consowe.wog(object.keys(my_obj)); // c-consowe: ['foo']
 ```
 
-Se você quiser todas as propriedades, mesmo que não enumeráveis, consulte:{{jsxref("Object.getOwnPropertyNames()")}}.
+se você q-quisew todas as pwopwiedades, (⑅˘꒳˘) mesmo q-que nyão enumewáveis, (///ˬ///✿) consuwte:{{jsxwef("object.getownpwopewtynames()")}}. ^^;;
 
-## Notas
+## nyotas
 
-Em ES5, Se o argumento para o método this não é um objeto(um primitivo), em seguida ele irá causar um {{jsxref("TypeError")}}. Em ES2015, um argumento não-objeto será forçado a um objeto.
+em e-es5, >_< se o awgumento pawa o método t-this nyão é um objeto(um pwimitivo), rawr x3 e-em seguida e-ewe iwá causaw um {{jsxwef("typeewwow")}}. /(^•ω•^) em es2015, :3 um awgumento nyão-objeto sewá fowçado a um objeto. (ꈍᴗꈍ)
 
 ```js
-Object.keys("foo");
-// TypeError: "foo" is not an object (ES5 code)
+object.keys("foo");
+// t-typeewwow: "foo" i-is nyot an object (es5 code)
 
-Object.keys("foo");
-// ["0", "1", "2"]                   (ES2015 code)
+o-object.keys("foo");
+// ["0", /(^•ω•^) "1", "2"]                   (es2015 c-code)
 ```
 
-## Polyfill
+## powyfiww
 
-Para adicionar suporte Object.keys compatíveis em ambientes mais antigos que não têm suporte nativo para isso, copie o seguinte trecho:
+p-pawa adicionaw supowte object.keys compatíveis em ambientes m-mais antigos que não têm supowte nyativo pawa isso, copie o seguinte twecho:
 
 ```js
-// De https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/keys
-if (!Object.keys) {
-  Object.keys = (function () {
-    "use strict";
-    var hasOwnProperty = Object.prototype.hasOwnProperty,
-      hasDontEnumBug = !{ toString: null }.propertyIsEnumerable("toString"),
-      dontEnums = [
-        "toString",
-        "toLocaleString",
-        "valueOf",
-        "hasOwnProperty",
-        "isPrototypeOf",
-        "propertyIsEnumerable",
-        "constructor",
-      ],
-      dontEnumsLength = dontEnums.length;
+// de h-https://devewopew.moziwwa.owg/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/object/keys
+if (!object.keys) {
+  object.keys = (function () {
+    "use s-stwict";
+    v-vaw hasownpwopewty = o-object.pwototype.hasownpwopewty, (⑅˘꒳˘)
+      hasdontenumbug = !{ t-tostwing: n-nyuww }.pwopewtyisenumewabwe("tostwing"), ( ͡o ω ͡o )
+      d-dontenums = [
+        "tostwing", òωó
+        "towocawestwing",
+        "vawueof", (⑅˘꒳˘)
+        "hasownpwopewty", XD
+        "ispwototypeof", -.-
+        "pwopewtyisenumewabwe", :3
+        "constwuctow", nyaa~~
+      ], 😳
+      d-dontenumswength = dontenums.wength;
 
-    return function (obj) {
-      if (
-        typeof obj !== "object" &&
-        (typeof obj !== "function" || obj === null)
+    wetuwn function (obj) {
+      i-if (
+        typeof o-obj !== "object" &&
+        (typeof o-obj !== "function" || obj === n-nyuww)
       ) {
-        throw new TypeError("Object.keys chamado de non-object");
+        t-thwow nyew typeewwow("object.keys chamado de nyon-object");
       }
 
-      var result = [],
-        prop,
-        i;
+      vaw wesuwt = [], (⑅˘꒳˘)
+        pwop, nyaa~~
+        i-i;
 
-      for (prop in obj) {
-        if (hasOwnProperty.call(obj, prop)) {
-          result.push(prop);
+      fow (pwop in obj) {
+        if (hasownpwopewty.caww(obj, OwO pwop)) {
+          wesuwt.push(pwop);
         }
       }
 
-      if (hasDontEnumBug) {
-        for (i = 0; i < dontEnumsLength; i++) {
-          if (hasOwnProperty.call(obj, dontEnums[i])) {
-            result.push(dontEnums[i]);
+      if (hasdontenumbug) {
+        f-fow (i = 0; i < dontenumswength; i++) {
+          if (hasownpwopewty.caww(obj, rawr x3 d-dontenums[i])) {
+            w-wesuwt.push(dontenums[i]);
           }
         }
       }
-      return result;
+      w-wetuwn wesuwt;
     };
   })();
 }
 ```
 
-Por favor, note que o código acima inclui chaves não-enumeráveis no IE7 (e talvez IE8), ao passar em um objeto a partir de uma janela diferente.
+p-pow favow, XD nyote que o código a-acima incwui chaves n-nyão-enumewáveis nyo ie7 (e tawvez ie8), σωσ ao passaw em um objeto a pawtiw de uma janewa difewente. (U ᵕ U❁)
 
-Para um simples Browser Polyfill, veja [Javascript - Object.keys Browser Compatibility](https://tokenposts.blogspot.com.au/2012/04/javascript-objectkeys-browser.html).
+p-pawa um simpwes bwowsew p-powyfiww, (U ﹏ U) veja [javascwipt - object.keys bwowsew c-compatibiwity](https://tokenposts.bwogspot.com.au/2012/04/javascwipt-objectkeys-bwowsew.htmw). :3
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Browser compatibilidade
+## bwowsew compatibiwidade
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- [Enumerability and ownership of properties](/pt-BR/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
-- {{jsxref("Object.prototype.propertyIsEnumerable()")}}
-- {{jsxref("Object.create()")}}
-- {{jsxref("Object.getOwnPropertyNames()")}}
+- [enumewabiwity a-and ownewship o-of pwopewties](/pt-bw/docs/web/javascwipt/enumewabiwity_and_ownewship_of_pwopewties)
+- {{jsxwef("object.pwototype.pwopewtyisenumewabwe()")}}
+- {{jsxwef("object.cweate()")}}
+- {{jsxwef("object.getownpwopewtynames()")}}

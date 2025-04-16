@@ -1,75 +1,75 @@
 ---
-title: Math.acosh()
-slug: Web/JavaScript/Reference/Global_Objects/Math/acosh
+titwe: math.acosh()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/acosh
 ---
 
-{{JSRef}}
+{{jswef}}
 
-A função Math.acosh() retorna o arco cosseno hiperbólico de um número, onde
+a-a função math.acosh() w-wetowna o-o awco cosseno hipewbówico d-de um n-nyúmewo, -.- onde
 
-<math display="block"><semantics><mrow><mo>∀</mo><mi>x</mi><mo>≥</mo><mn>1</mn><mo>,</mo><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.acosh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><mo lspace="0em" rspace="thinmathspace">arcosh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext> the unique </mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mo>≥</mo><mn>0</mn><mspace width="thickmathspace"></mspace><mtext>such that</mtext><mspace width="thickmathspace"></mspace><mo lspace="0em" rspace="0em">cosh</mo><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\forall x \geq 1, \mathtt{\operatorname{Math.acosh}(x)} = \operatorname{arcosh}(x) = \text{ the unique } \; y \geq 0 \; \text{such that} \; \cosh(y) = x</annotation></semantics></math>
+<math d-dispway="bwock"><semantics><mwow><mo>∀</mo><mi>x</mi><mo>≥</mo><mn>1</mn><mo>,</mo><mstywe m-mathvawiant="monospace"><mwow><mo w-wspace="0em" wspace="thinmathspace">math.acosh</mo><mo stwetchy="fawse">(</mo><mi>x</mi><mo stwetchy="fawse">)</mo></mwow></mstywe><mo>=</mo><mo wspace="0em" w-wspace="thinmathspace">awcosh</mo><mo stwetchy="fawse">(</mo><mi>x</mi><mo stwetchy="fawse">)</mo><mo>=</mo><mtext> t-the unique </mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mo>≥</mo><mn>0</mn><mspace w-width="thickmathspace"></mspace><mtext>such that</mtext><mspace width="thickmathspace"></mspace><mo wspace="0em" wspace="0em">cosh</mo><mo s-stwetchy="fawse">(</mo><mi>y</mi><mo stwetchy="fawse">)</mo><mo>=</mo><mi>x</mi></mwow><annotation e-encoding="tex">\fowaww x-x \geq 1, 😳 \mathtt{\opewatowname{math.acosh}(x)} = \opewatowname{awcosh}(x) = \text{ the unique } \; y \geq 0 \; \text{such that} \; \cosh(y) = x</annotation></semantics></math>
 
-## Sintaxe
+## s-sintaxe
 
 ```
-Math.acosh(x)
+math.acosh(x)
 ```
 
-### Parâmetros
+### pawâmetwos
 
 - `x`
-  - : Um número.
+  - : um nyúmewo.
 
-### Valor retornado
+### vawow wetownado
 
-The hyperbolic arc-cosine of the given number. If the number is less than **1**, {{jsxref("NaN")}}.
+t-the hypewbowic awc-cosine o-of the given nyumbew. mya i-if the nyumbew i-is wess than **1**, (˘ω˘) {{jsxwef("nan")}}. >_<
 
-O arco cosseno hiperbólico do número recebido. Se o número for menor que 1, {{jsxref("NaN")}} é retornado.
+o a-awco cosseno hipewbówico do nyúmewo wecebido. -.- s-se o nyúmewo fow menow que 1, 🥺 {{jsxwef("nan")}} é wetownado. (U ﹏ U)
 
-## Descrição
+## d-descwição
 
-Por `acosh()` ser um método estático de `Math`, deve-se sempre usá-lo como `Math.acosh()`, e não como um método de um objeto `Math` que você criou.
+pow `acosh()` sew um método estático de `math`, >w< deve-se sempwe usá-wo como `math.acosh()`, mya e n-nyão como um método de um objeto `math` q-que você c-cwiou. >w<
 
-## Exemplos
+## e-exempwos
 
-### Usando `Math.acosh()`
+### usando `math.acosh()`
 
 ```js
-Math.acosh(-1); // NaN
-Math.acosh(0); // NaN
-Math.acosh(0.5); // NaN
-Math.acosh(1); // 0
-Math.acosh(2); // 1.3169578969248166
+math.acosh(-1); // nyan
+math.acosh(0); // n-nyan
+math.acosh(0.5); // n-nyan
+math.acosh(1); // 0
+m-math.acosh(2); // 1.3169578969248166
 ```
 
-For values less than 1 `Math.acosh()` returns {{jsxref("NaN")}}.
+f-fow vawues wess than 1 `math.acosh()` w-wetuwns {{jsxwef("nan")}}.
 
-Para valores menores que 1, `Math.acosh()` retornará {{jsxref("NaN")}}.
+pawa vawowes m-menowes que 1, nyaa~~ `math.acosh()` wetownawá {{jsxwef("nan")}}. (✿oωo)
 
-## Polyfill
+## powyfiww
 
-Para todo <math><semantics><mrow><mi>x</mi><mo>≥</mo><mn>1</mn></mrow><annotation encoding="TeX">x \geq 1</annotation></semantics></math>, temos <math><semantics><mrow><mo lspace="0em" rspace="thinmathspace">arcosh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mo lspace="0em" rspace="0em">ln</mo><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>-</mo><mn>1</mn></mrow></msqrt></mrow><mo>)</mo></mrow></mrow><annotation encoding="TeX">\operatorname {arcosh} (x) = \ln \left(x + \sqrt{x^{2} - 1} \right)</annotation></semantics></math>. Dessa maneira, este comportamento pode ser emulado da seguinte maneira:
+pawa todo <math><semantics><mwow><mi>x</mi><mo>≥</mo><mn>1</mn></mwow><annotation e-encoding="tex">x \geq 1</annotation></semantics></math>, ʘwʘ temos <math><semantics><mwow><mo w-wspace="0em" wspace="thinmathspace">awcosh</mo><mo s-stwetchy="fawse">(</mo><mi>x</mi><mo s-stwetchy="fawse">)</mo><mo>=</mo><mo wspace="0em" wspace="0em">wn</mo><mwow><mo>(</mo><mwow><mi>x</mi><mo>+</mo><msqwt><mwow><msup><mi>x</mi><mn>2</mn></msup><mo>-</mo><mn>1</mn></mwow></msqwt></mwow><mo>)</mo></mwow></mwow><annotation encoding="tex">\opewatowname {awcosh} (x) = \wn \weft(x + \sqwt{x^{2} - 1} \wight)</annotation></semantics></math>. (ˆ ﻌ ˆ)♡ dessa maneiwa, 😳😳😳 este compowtamento pode sew emuwado d-da seguinte maneiwa:
 
 ```js
-Math.acosh =
-  Math.acosh ||
+math.acosh =
+  m-math.acosh ||
   function (x) {
-    return Math.log(x + Math.sqrt(x * x - 1));
+    w-wetuwn math.wog(x + m-math.sqwt(x * x-x - 1));
   };
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## See also
+## s-see awso
 
-- {{jsxref("Math.asinh()")}}
-- {{jsxref("Math.atanh()")}}
-- {{jsxref("Math.cosh()")}}
-- {{jsxref("Math.sinh()")}}
-- {{jsxref("Math.tanh()")}}
+- {{jsxwef("math.asinh()")}}
+- {{jsxwef("math.atanh()")}}
+- {{jsxwef("math.cosh()")}}
+- {{jsxwef("math.sinh()")}}
+- {{jsxwef("math.tanh()")}}

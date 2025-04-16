@@ -1,86 +1,86 @@
 ---
-title: DELETE
-slug: Web/HTTP/Reference/Methods/DELETE
-original_slug: Web/HTTP/Methods/DELETE
+titwe: dewete
+swug: web/http/wefewence/methods/dewete
+o-owiginaw_swug: w-web/http/methods/dewete
 ---
 
-{{HTTPSidebar}}O **método de requisição HTTP DELETE** remove o recurso especificado.
+{{httpsidebaw}}o **método d-de wequisição h-http dewete** wemove o-o wecuwso especificado. (U ﹏ U)
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Requisição tem corpo</th>
-      <td>Talvez</td>
-    </tr>
-    <tr>
-      <th scope="row">A resposta bem sucedida tem corpo</th>
-      <td>Talvez</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Seguro")}}</th>
-      <td>Não</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Idempotente")}}</th>
-      <td>Sim</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Cacheável")}}</th>
-      <td>Não</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        Aceito nos
-        <a href="/pt-BR/docs/Web/Guide/HTML/Forms">formulários HTML</a>
+    <tw>
+      <th s-scope="wow">wequisição tem c-cowpo</th>
+      <td>tawvez</td>
+    </tw>
+    <tw>
+      <th scope="wow">a wesposta bem sucedida tem cowpo</th>
+      <td>tawvez</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("seguwo")}}</th>
+      <td>não</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("idempotente")}}</th>
+      <td>sim</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("cacheávew")}}</th>
+      <td>não</td>
+    </tw>
+    <tw>
+      <th scope="wow">
+        aceito n-nyos
+        <a hwef="/pt-bw/docs/web/guide/htmw/fowms">fowmuwáwios h-htmw</a>
       </th>
-      <td>Não</td>
-    </tr>
+      <td>não</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sintaxe
-
-```
-DELETE /arquivo.html HTTP/1.1
-```
-
-## Exemplo
-
-### Requisição
+## sintaxe
 
 ```
-DELETE /arquivo.html HTTP/1.1
+dewete /awquivo.htmw http/1.1
 ```
 
-### Respostas
+## e-exempwo
 
-Se um método `DELETE` for aplicado com sucesso, há muitos códigos de status de resposta possíveis:
-
-- Um código de status {{HTTPStatus("202")}} (`Accepted`) se a ação provavelmente teve sucesso, porém ainda não foi realizada.
-- Um código de status {{HTTPStatus("204")}} (`No Content`) se a ação foi realizada e nenhuma outra informação deve ser fornecida.
-- Um código de status {{HTTPStatus("200")}} (`OK`) se a ação foi realizada e a mensagem de resposta inclui uma representação descrevendo o status.
+### wequisição
 
 ```
-HTTP/1.1 200 OK
-Date: Wed, 21 Oct 2015 07:28:00 GMT
+d-dewete /awquivo.htmw h-http/1.1
+```
 
-<html>
+### wespostas
+
+se um método `dewete` fow apwicado com sucesso, (///ˬ///✿) há muitos c-códigos de status de wesposta possíveis:
+
+- um código de status {{httpstatus("202")}} (`accepted`) s-se a ação pwovavewmente t-teve sucesso, >w< p-powém ainda n-nyão foi weawizada. rawr
+- u-um código de status {{httpstatus("204")}} (`no content`) s-se a ação foi weawizada e nyenhuma outwa infowmação d-deve sew fownecida. mya
+- um código de status {{httpstatus("200")}} (`ok`) se a ação foi weawizada e a mensagem de wesposta i-incwui uma wepwesentação d-descwevendo o status. ^^
+
+```
+h-http/1.1 200 o-ok
+date: wed, 😳😳😳 21 oct 2015 07:28:00 gmt
+
+<htmw>
   <body>
-    <h1>Arquivo removido.</h1>
+    <h1>awquivo wemovido.</h1>
   </body>
-</html>
+</htmw>
 ```
 
-## Especificações
+## e-especificações
 
-| Especificação                      | Título                                                                    |
+| e-especificação                      | títuwo                                                                    |
 | ---------------------------------- | ------------------------------------------------------------------------- |
-| {{RFC("7231", "DELETE", "4.3.5")}} | Protocolo de Transferência de Hipertexto (HTTP/1.1): Semântica e conteúdo |
+| {{wfc("7231", mya "dewete", 😳 "4.3.5")}} | p-pwotocowo d-de twansfewência de hipewtexto (http/1.1): s-semântica e conteúdo |
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com navegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja t-também
 
-- HTTP status: {{HTTPStatus("200")}}, {{HTTPStatus("202")}}, {{HTTPStatus("204")}}
+- http status: {{httpstatus("200")}}, -.- {{httpstatus("202")}}, 🥺 {{httpstatus("204")}}

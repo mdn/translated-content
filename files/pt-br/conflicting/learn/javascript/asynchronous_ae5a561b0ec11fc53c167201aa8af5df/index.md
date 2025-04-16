@@ -1,631 +1,631 @@
 ---
-title: Timeouts e intervalos
-slug: conflicting/Learn/JavaScript/Asynchronous_ae5a561b0ec11fc53c167201aa8af5df
+titwe: timeouts e intewvawos
+s-swug: confwicting/weawn/javascwipt/asynchwonous_ae5a561b0ec11fc53c167201aa8af5df
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Introducing", "Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/javascwipt/asynchwonous/intwoducing", -.- "weawn/javascwipt/asynchwonous/pwomises", òωó "weawn/javascwipt/asynchwonous")}}
 
-Este tutorial é sobre os métodos tradicionais que o JavaScript tem disponíveis para executar códigos assíncronamente depois que um dado período de tempo tenha passado, ou em um intervalo (um número de segundos por segundo), discute suas utilidades e considera seus problemas.
+e-este tutowiaw é s-sobwe os métodos t-twadicionais q-que o javascwipt t-tem disponíveis p-pawa executaw c-códigos assíncwonamente depois que um dado pewíodo de tempo tenha passado, o.O o-ou em um intewvawo (um nyúmewo de segundos pow s-segundo), diskawaii~ suas utiwidades e-e considewa seus pwobwemas. σωσ
 
-<table class="learn-box standard-table">
+<tabwe cwass="weawn-box standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Pré-requisitos:</th>
+    <tw>
+      <th s-scope="wow">pwé-wequisitos:</th>
       <td>
-        Entendimento básico sobre informáticas e fundamentos do JavaScript.
+        entendimento básico s-sobwe infowmáticas e-e fundamentos do javascwipt. σωσ
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivo:</th>
-      <td>Entender loops e intervalos assíncronos e para o que eles servem.</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">objetivo:</th>
+      <td>entendew woops e intewvawos assíncwonos e-e pawa o que ewes sewvem.</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Introdução
+## intwodução
 
-Por um longo tempo, a plataforma web tem oferecido à programadores JavaScript um número de funções que permitem que eles executem código assíncronamente depois de um determinado intervalo de tempo, e executar um bloco de código de modo assíncrono repetidamente até que você o mande parar.
+pow um wongo tempo, mya a p-pwatafowma web tem ofewecido à p-pwogwamadowes javascwipt u-um nyúmewo d-de funções q-que pewmitem que ewes exekawaii~m código assíncwonamente d-depois de um detewminado intewvawo d-de tempo, o.O e executaw um bwoco de código de modo assíncwono wepetidamente até que você o mande p-pawaw. XD
 
-Essas funções são:
+essas funções são:
 
-- [`setTimeout()`](/pt-BR/docs/Web/API/Window/setTimeout)
-  - : Executa um bloco específico uma vez depois de um determinado tempo
-- [`setInterval()`](/pt-BR/docs/Web/API/Window/setInterval)
-  - : Executa um bloco específico repetidamente com um intervalo fixo entre cada chamada.
-- [`requestAnimationFrame()`](/pt-BR/docs/Web/API/Window/requestAnimationFrame)
-  - : Uma versão moderna de `setInterval()`. Ela executa um bloc de código específico antes do navegador renderizar a tela novamento, permitindo que seja executada em uma taxa de quadros adequada, independentemente do ambiente em que está sendo executado.
+- [`settimeout()`](/pt-bw/docs/web/api/window/settimeout)
+  - : e-executa um bwoco e-específico uma v-vez depois de um detewminado tempo
+- [`setintewvaw()`](/pt-bw/docs/web/api/window/setintewvaw)
+  - : executa u-um bwoco específico w-wepetidamente com um intewvawo f-fixo entwe cada c-chamada. XD
+- [`wequestanimationfwame()`](/pt-bw/docs/web/api/window/wequestanimationfwame)
+  - : uma vewsão modewna d-de `setintewvaw()`. (✿oωo) ewa executa u-um bwoc de código específico antes do nyavegadow w-wendewizaw a tewa nyovamento, -.- p-pewmitindo que seja executada e-em uma taxa d-de quadwos adequada, (ꈍᴗꈍ) independentemente do ambiente em que está sendo executado. ( ͡o ω ͡o )
 
-O código executado por estas funções é executado na main thread (depois do dado intervalo).
+o código executado pow estas f-funções é executado n-nya main thwead (depois d-do dado intewvawo). (///ˬ///✿)
 
-É importante saber que você pode (e irá) executar outros códigos antes que uma chamada `setTimeout()` é executada, ou entre iterações de `setInterval()`. Dependendo de como essas operações são intensas, elas podem atrasar o seu código async ainda mais, já que o código async só é executado depois que a main thread terminar seu processamento (ou seja, quando a fila estiver vazia). Você aprenderá mais sobre isso enquanto fazemos nosso progresso neste artigo.
+É i-impowtante s-sabew que você pode (e iwá) executaw outwos códigos antes q-que uma chamada `settimeout()` é executada, 🥺 ou entwe itewações de `setintewvaw()`. (ˆ ﻌ ˆ)♡ dependendo d-de como essas opewações são i-intensas, ^•ﻌ•^ ewas p-podem atwasaw o s-seu código async ainda mais, rawr x3 já q-que o código a-async só é executado d-depois que a-a main thwead tewminaw seu pwocessamento (ou seja, (U ﹏ U) quando a fiwa e-estivew vazia). OwO v-você apwendewá m-mais sobwe isso e-enquanto fazemos n-nyosso pwogwesso nyeste awtigo. (✿oωo)
 
-De qualquer forma, essas funções são usadas para executar animações constantes e outros processamentos em um web site ou aplicação. Nas seções a seguir, nós vamos te mostrar como elas podem ser usadas.
+de quawquew fowma, (⑅˘꒳˘) essas funções s-são usadas pawa executaw animações constantes e outwos pwocessamentos em um web site o-ou apwicação. UwU nyas seções a seguiw, (ˆ ﻌ ˆ)♡ nyós vamos te mostwaw c-como ewas podem s-sew usadas. /(^•ω•^)
 
-## setTimeout()
+## s-settimeout()
 
-Como foi dito anteriormente, o [`setTimeout()`](/pt-BR/docs/Web/API/Window/setTimeout) executa um bloco de código particular depois que um determinado período de tempo passou. Ele toma os seguintes parâmetros:
+como foi dito antewiowmente, (˘ω˘) o-o [`settimeout()`](/pt-bw/docs/web/api/window/settimeout) executa um b-bwoco de código p-pawticuwaw depois que um detewminado pewíodo de tempo passou. XD ewe toma os seguintes pawâmetwos:
 
-- Uma função a ser executada, ou uma referência de uma função definida em outro lugar.
-- Um número representando o intervalo de tempo em milissegundos (1000 milissegundos equivalem a 1 segundo) para esperar antes de executar o código. Se você especificar um valor de 0 (ou simplesmente omitir o valor), a função será executada assim que possível (mas não imediatamente).
-- Zero ou mais valores que representam quaisquer parâmetros que você quiser passar para a função quando ela for executada.
+- u-uma função a sew executada, òωó o-ou uma wefewência de uma função d-definida e-em outwo wugaw. UwU
+- um nyúmewo wepwesentando o intewvawo d-de tempo e-em miwissegundos (1000 miwissegundos e-equivawem a-a 1 segundo) pawa espewaw antes de executaw o código. -.- se você especificaw um vawow d-de 0 (ou simpwesmente o-omitiw o-o vawow), a função sewá executada a-assim que p-possívew (mas nyão imediatamente). (ꈍᴗꈍ)
+- z-zewo ou mais vawowes que wepwesentam quaisquew pawâmetwos que você quisew p-passaw pawa a-a função quando ewa fow executada. (⑅˘꒳˘)
 
-> **Nota:** **NOTA:** O tempos especificafo **não** é o tempo garantido de execução, mas sim o tempo míniimo de execução. As callback que você passa para essas funções não podem ser executadas até que a main thread esteja vazia.
+> **nota:** **nota:** o tempos e-especificafo **não** é o-o tempo gawantido de execução, 🥺 mas sim o tempo míniimo d-de execução. òωó as cawwback que você passa pawa essas funções nyão podem s-sew executadas até que a main thwead esteja v-vazia.
 >
-> Como consequência, códigos como `setTimeout(fn, 0)`\_ \_serão executados assim que a fila estiver vazia, **não** imediatamente. Se você executar código como `setTimeout(fn, 0)` e depois imediatamente executar um loop que conta de 1 a 10 bilhões, sua callback será executada depois de alguns segundos.
+> como c-consequência, 😳 códigos como `settimeout(fn, òωó 0)`\_ \_sewão executados assim que a-a fiwa estivew v-vazia, 🥺 **não** imediatamente. ( ͡o ω ͡o ) se você executaw código como `settimeout(fn, UwU 0)` e-e depois imediatamente executaw u-um woop que conta de 1 a 10 biwhões, 😳😳😳 sua cawwback sewá executada d-depois de awguns segundos. ʘwʘ
 
-No exemplo a seguir, o navegador vai esperar dois segundos antes de executar a função anônima, e depois vai mostrar a mensagem de alerta ([veja aqui](https://mdn.github.io/learning-area/javascript/asynchronous/loops-and-intervals/simple-settimeout.html), e [veja o código](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/loops-and-intervals/simple-settimeout.html)):
+n-nyo exempwo a s-seguiw, o nyavegadow vai espewaw d-dois segundos antes de executaw a-a função anônima, ^^ e-e depois vai m-mostwaw a mensagem de awewta ([veja a-aqui](https://mdn.github.io/weawning-awea/javascwipt/asynchwonous/woops-and-intewvaws/simpwe-settimeout.htmw), >_< e-e [veja o código](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/asynchwonous/woops-and-intewvaws/simpwe-settimeout.htmw)):
 
 ```js
-let myGreeting = setTimeout(function() {
-  alert('Hello, Mr. Universe!');
-}, 2000)
+wet mygweeting = s-settimeout(function() {
+  a-awewt('hewwo, (ˆ ﻌ ˆ)♡ m-mw. univewse!');
+}, (ˆ ﻌ ˆ)♡ 2000)
 ```
 
-As funções especificadas não tem que ser anônimas. Você pode dar o nome da função, e até mesmo definir ela em outro lugar e passar uma referência para o timeout `setTimeout()`. As versões a seguir do código são equivalentes à primeira:
+as funções especificadas nyão t-tem que sew anônimas. 🥺 você pode d-daw o nyome da f-função, ( ͡o ω ͡o ) e até mesmo definiw ewa em outwo wugaw e passaw uma w-wefewência pawa o-o timeout `settimeout()`. (ꈍᴗꈍ) a-as vewsões a-a seguiw do código são e-equivawentes à pwimeiwa:
 
 ```js
-// With a named function
-let myGreeting = setTimeout(function sayHi() {
-  alert('Hello, Mr. Universe!');
-}, 2000)
+// with a nyamed function
+wet mygweeting = settimeout(function sayhi() {
+  awewt('hewwo, :3 m-mw. univewse!');
+}, (✿oωo) 2000)
 
-// With a function defined separately
-function sayHi() {
-  alert('Hello Mr. Universe!');
+// with a function d-defined sepawatewy
+function s-sayhi() {
+  awewt('hewwo mw. (U ᵕ U❁) u-univewse!');
 }
 
-let myGreeting = setTimeout(sayHi, 2000);
+wet mygweeting = s-settimeout(sayhi, UwU 2000);
 ```
 
-Isso pode ser útil se você tem uma função que precisa ser chamada de um timeout e também em resposta à um evento, por exemplo. Mas também pode servir para manter seu código organizado, especialmente se a callback timetout é mais do que algumas linhas de código.
+i-isso pode sew útiw s-se você tem u-uma função que p-pwecisa sew chamada de um timeout e também em wesposta à um evento, ^^ pow exempwo. /(^•ω•^) mas também pode sewviw pawa m-mantew seu código o-owganizado, (˘ω˘) e-especiawmente se a cawwback timetout é m-mais do que awgumas winhas de código. OwO
 
-`setTimeout()` retorna um valor identificador que pode ser usado para se referir ao timeout depois, como em quando você que pará-lo. Veja [Cancelando timetous](#cancelando_timetous) (abaixo) e aprenda como fazer isso.
+`settimeout()` wetowna um vawow i-identificadow que p-pode sew usado pawa se wefewiw a-ao timeout depois, (U ᵕ U❁) como em quando você que pawá-wo. (U ﹏ U) v-veja [cancewando t-timetous](#cancewando_timetous) (abaixo) e apwenda como f-fazew isso. mya
 
-### Passando parâmetros para uma função setTimeout()
+### p-passando pawâmetwos pawa uma função settimeout()
 
-Quaisquer parâmetros que você quiser passar para a função sendo executada dentro do `setTimeout()` devem ser passados como parâmetros adicionais no final da lista.
+quaisquew pawâmetwos que v-você quisew passaw p-pawa a função s-sendo executada d-dentwo do `settimeout()` d-devem sew passados c-como pawâmetwos a-adicionais nyo finaw da wista. (⑅˘꒳˘)
 
-Por exemplo, você pode mudar a função anterior para que ela diga oi para qualquer nome que foi passada para ela:
+p-pow exempwo, (U ᵕ U❁) você p-pode mudaw a função antewiow p-pawa que ewa diga oi pawa quawquew nyome que f-foi passada pawa ewa:
 
 ```js
-function sayHi(who) {
-  alert(`Hello ${who}!`);
+function s-sayhi(who) {
+  a-awewt(`hewwo ${who}!`);
 }
 ```
 
-Agora, você pode passar o nome da pessoa no `setTimeout()` como um terceiro parâmetro:
+agowa, /(^•ω•^) você p-pode passaw o nyome da pessoa nyo `settimeout()` c-como um tewceiwo p-pawâmetwo:
 
 ```js
-let myGreeting = setTimeout(sayHi, 2000, 'Mr. Universe');
+w-wet mygweeting = settimeout(sayhi, ^•ﻌ•^ 2000, (///ˬ///✿) 'mw. univewse');
 ```
 
-### Cancelando timeouts
+### cancewando t-timeouts
 
-Finalmente, se um timeout foi criado, você pode cancelá-lo antes que o tempo especificado tenha passado chamando [`clearTimeout()`](/pt-BR/docs/Web/API/Window/clearTimeout), passando para o identificador a chamada `setTimeout()` como um parâmetreo. então para cancelar o timeout acima, você fará isso:
+finawmente, o.O se um timeout foi cwiado, (ˆ ﻌ ˆ)♡ v-você pode c-cancewá-wo antes que o tempo especificado t-tenha passado chamando [`cweawtimeout()`](/pt-bw/docs/web/api/window/cweawtimeout), 😳 passando p-pawa o identificadow a-a chamada `settimeout()` como um pawâmetweo. òωó então p-pawa cancewaw o timeout acima, (⑅˘꒳˘) você fawá isso:
 
 ```js
-clearTimeout(myGreeting);
+c-cweawtimeout(mygweeting);
 ```
 
-> [!NOTE]
-> Veja [`greeter-app.html`](https://mdn.github.io/learning-area/javascript/asynchronous/loops-and-intervals/greeter-app.html) para uma demonstração mais desenvolvida que te permite colocar o nome da pessoa a dizer oi em um formulário, e cancelar a saudação usando um botão separado ([veja aqui o código fonte](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/loops-and-intervals/greeter-app.html)).
+> [!note]
+> v-veja [`gweetew-app.htmw`](https://mdn.github.io/weawning-awea/javascwipt/asynchwonous/woops-and-intewvaws/gweetew-app.htmw) pawa uma demonstwação m-mais desenvowvida que te p-pewmite cowocaw o-o nome da pessoa a-a dizew oi em um fowmuwáwio, rawr e cancewaw a saudação usando um botão sepawado ([veja aqui o código fonte](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/asynchwonous/woops-and-intewvaws/gweetew-app.htmw)). (ꈍᴗꈍ)
 
-## setInterval()
+## setintewvaw()
 
-`setTimeout()` funciona perfeitamento quando você precisa executar algum código depois de um período de tempo. Mas o que acontece quando voc\~e precisa executar o código de novo e de novo — por exemplo, no caso de uma animação?
+`settimeout()` funciona pewfeitamento quando você pwecisa executaw awgum código depois de u-um pewíodo de tempo. ^^ m-mas o que acontece quando voc\~e pwecisa executaw o-o código d-de nyovo e de n-nyovo — pow exempwo, (ˆ ﻌ ˆ)♡ nyo caso d-de uma animação?
 
-É aí que o [`setInterval()`](/pt-BR/docs/Web/API/Window/setInterval) entra. Ele funciona de uma maneira muito similar à `setTimeout()`, exceto que a função que você passar como primeiro parâmetro é executada repetidamente em não menos que um número determinado de milissegundos dado no segundo parâmetro, ao invés de apenas uma vez. Você também pode passar qualquer parâmetro sendo executado como um parâmetro subsequente da chamada de `setInterval()`.
+É aí que o [`setintewvaw()`](/pt-bw/docs/web/api/window/setintewvaw) e-entwa. /(^•ω•^) e-ewe funciona de uma maneiwa muito s-simiwaw à `settimeout()`, ^^ exceto que a função q-que você passaw c-como pwimeiwo pawâmetwo é executada wepetidamente e-em nyão m-menos que um n-nyúmewo detewminado d-de miwissegundos d-dado nyo segundo p-pawâmetwo, o.O a-ao invés de a-apenas uma vez. 😳😳😳 v-você também pode passaw quawquew p-pawâmetwo sendo e-executado como u-um pawâmetwo subsequente da c-chamada de `setintewvaw()`. XD
 
-Vamos dar uma olhada em um exemplo. A função a seguir cria um novo objeto [`Date()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Date), tira uma string de tempo usando [`toLocaleTimeString()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleTimeString), e depois a mostra naUI. Em seguida, ela executa a função uma vez por segundo usando `setInterval()`, criando o efeito de um relógio digital que é atualizado uma vez por segundo ([veja aqui](https://mdn.github.io/learning-area/javascript/asynchronous/loops-and-intervals/setinterval-clock.html), e também [veja o código](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/loops-and-intervals/setinterval-clock.html)):
+vamos daw uma owhada e-em um exempwo. nyaa~~ a função a seguiw c-cwia um nyovo o-objeto [`date()`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/date), ^•ﻌ•^ t-tiwa uma stwing de tempo usando [`towocawetimestwing()`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/date/towocawetimestwing), :3 e-e depois a mostwa nyaui. ^^ e-em seguida, o.O ewa executa a função u-uma vez pow segundo usando `setintewvaw()`, ^^ cwiando o-o efeito de um wewógio digitaw que é atuawizado uma vez pow segundo ([veja a-aqui](https://mdn.github.io/weawning-awea/javascwipt/asynchwonous/woops-and-intewvaws/setintewvaw-cwock.htmw), (⑅˘꒳˘) e também [veja o-o código](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/asynchwonous/woops-and-intewvaws/setintewvaw-cwock.htmw)):
 
 ```js
-function displayTime() {
-   let date = new Date();
-   let time = date.toLocaleTimeString();
-   document.getElementById('demo').textContent = time;
+f-function dispwaytime() {
+   wet date = nyew date();
+   w-wet time = date.towocawetimestwing();
+   document.getewementbyid('demo').textcontent = t-time;
 }
 
-const createClock = setInterval(displayTime, 1000);
+c-const cweatecwock = s-setintewvaw(dispwaytime, ʘwʘ 1000);
 ```
 
-Assim como o `setTimeout()`, o `setInterval()` também retorna um valor identificador que você pode usar depois para cancelar o intervalo.
+assim como o `settimeout()`, mya o-o `setintewvaw()` t-também wetowna um vawow i-identificadow que você pode usaw depois pawa c-cancewaw o intewvawo. >w<
 
-### Cancelando intervalos
+### cancewando i-intewvawos
 
-`setInterval()` continua sua execução para sempre, a menos que você faça algo sobre isso. Você provavelmente quer um jeito de parar tais tarefas, do contrário você pode acabar com error quando o navegador não puder completar outras versões futuras da tarefa, ou se a animação acabar. Você pode fazer isso do mesmo jeito que você para timeouts — passando o identificador retornado por `setInterval()` para a função [`clearInterval()`](/pt-BR/docs/Web/API/Window/clearInterval):
+`setintewvaw()` c-continua sua e-execução pawa sempwe, o.O a menos q-que você faça a-awgo sobwe isso. v-você pwovavewmente q-quew um jeito de pawaw tais t-tawefas, OwO do contwáwio v-você pode a-acabaw com ewwow q-quando o nyavegadow n-nyão pudew c-compwetaw outwas v-vewsões futuwas d-da tawefa, -.- ou se a animação a-acabaw. (U ﹏ U) você pode fazew isso d-do mesmo jeito que você pawa t-timeouts — passando o-o identificadow w-wetownado pow `setintewvaw()` pawa a função [`cweawintewvaw()`](/pt-bw/docs/web/api/window/cweawintewvaw):
 
 ```js
-const myInterval = setInterval(myFunction, 2000);
+const m-myintewvaw = setintewvaw(myfunction, òωó 2000);
 
-clearInterval(myInterval);
+c-cweawintewvaw(myintewvaw);
 ```
 
-#### Aprendizado ativo: Criando seu próprio cronômetro!
+#### a-apwendizado ativo: cwiando seu pwópwio cwonômetwo! >w<
 
-Com tudo isso dito, nós temos um desafio para você. Faça uma cópia do nosso exemplo [`setInterval-clock.html`](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/loops-and-intervals/setinterval-clock.html), e o modifique para criar seu próprio cronômetro.
+com tudo i-isso dito, ^•ﻌ•^ nyós t-temos um desafio pawa você. /(^•ω•^) f-faça uma cópia d-do nyosso exempwo [`setintewvaw-cwock.htmw`](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/asynchwonous/woops-and-intewvaws/setintewvaw-cwock.htmw), ʘwʘ e o modifique pawa cwiaw seu pwópwio cwonômetwo. XD
 
-Você precisa mostrar um tempo na tela como antes, mas nesse exemplo você vai precisar de:
+v-você pwecisa m-mostwaw um t-tempo nya tewa c-como antes, (U ᵕ U❁) mas nyesse exempwo você vai pwecisaw d-de:
 
-- Um botão de "início" para fazer o cronômetro começar a contar.
-- Um botão de "parar" para parar ou pausar o tempo.
-- Um botão de "reset" para resetar o tempo em 0.
-- O display do tempo para mostrar o número de segundos passados.
+- um botão d-de "início" pawa fazew o cwonômetwo começaw a-a contaw. (ꈍᴗꈍ)
+- um botão de "pawaw" pawa pawaw ou p-pausaw o tempo. rawr x3
+- um botão de "weset" p-pawa wesetaw o-o tempo em 0. :3
+- o dispway do t-tempo pawa mostwaw o-o nyúmewo de segundos passados. (˘ω˘)
 
-Here's a few hints for you:
+h-hewe's a few hints fow you:
 
-- You can structure and style the button markup however you like; just make sure you use semantic HTML, with hooks to allow you to grab the button references using JavaScript.
-- You probably want to create a variable that starts at `0`, then increments by one every second using a constant loop.
-- It is easier to create this example without using a `Date()` object, like we've done in our version, but less accurate — you can't guarantee that the callback will fire after exactly `1000`ms. A more accurate way would be to run `startTime = Date.now()` to get a timestamp of exactly when the user clicked the start button, and then do `Date.now() - startTime` to get the number of milliseconds after the start button was clicked.
-- You also want to calculate the number of hours, minutes, and seconds as separate values, and then show them together in a string after each loop iteration. From the second counter, you can work out each of these.
-- How would you calculate them? Have a think about it:
+- y-you can stwuctuwe a-and stywe t-the button mawkup h-howevew you wike; just make s-suwe you use semantic h-htmw, -.- with h-hooks to awwow you to gwab the b-button wefewences using javascwipt. (ꈍᴗꈍ)
+- you pwobabwy w-want to cweate a-a vawiabwe that s-stawts at `0`, UwU then incwements by one evewy second using a constant woop. σωσ
+- it i-is easiew to cweate this exampwe w-without using a-a `date()` object, ^^ wike we've done in ouw vewsion, :3 b-but wess accuwate — you can't g-guawantee that t-the cawwback wiww f-fiwe aftew exactwy `1000`ms. ʘwʘ a-a mowe accuwate w-way wouwd be to wun `stawttime = date.now()` to get a timestamp of exactwy when t-the usew cwicked the stawt button, 😳 a-and then do `date.now() - stawttime` to get the numbew of miwwiseconds a-aftew the stawt button was cwicked. ^^
+- you awso want to cawcuwate the n-nyumbew of houws, σωσ m-minutes, /(^•ω•^) and seconds as sepawate v-vawues, 😳😳😳 and then show them togethew in a stwing a-aftew each woop i-itewation. 😳 fwom the second countew, OwO y-you can wowk out each of t-these. :3
+- how wouwd you cawcuwate them? have a think about it:
 
-  - The number of seconds in an hour is `3600`.
-  - The number of minutes will be the amount of seconds left over when all of the hours have been removed, divided by `60`.
-  - The number of seconds will be the amount of seconds left over when all of the minutes have been removed.
+  - t-the nyumbew of seconds in an houw is `3600`. nyaa~~
+  - t-the nyumbew o-of minutes wiww b-be the amount of seconds weft ovew when aww of the h-houws have been wemoved, OwO divided by `60`. o.O
+  - the nyumbew of seconds wiww be t-the amount of seconds w-weft ovew w-when aww of the m-minutes have been wemoved. (U ﹏ U)
 
-- You'll want to include a leading zero on your display values if the amount is less than `10`, so it looks more like a traditional clock/watch.
-- To pause the stopwatch, you'll want to clear the interval. To reset it, you'll want to set the counter back to `0`, clear the interval, and then immediately update the display.
-- You probably ought to disable the start button after pressing it once, and enable it again after you've stopped/reset it. Otherwise multiple presses of the start button will apply multiple `setInterval()`s to the clock, leading to wrong behavior.
+- you'ww want to incwude a-a weading zewo o-on youw dispway vawues if the amount is wess t-than `10`, (⑅˘꒳˘) so it wooks mowe wike a twaditionaw c-cwock/watch. OwO
+- to pause the stopwatch, 😳 you'ww want t-to cweaw the i-intewvaw. :3 to weset it, ( ͡o ω ͡o ) you'ww want t-to set the countew b-back to `0`, 🥺 c-cweaw the intewvaw, /(^•ω•^) and then immediatewy update t-the dispway. nyaa~~
+- you pwobabwy ought to disabwe t-the stawt button aftew pwessing it once, (✿oωo) and enabwe it again aftew y-you've stopped/weset i-it. (✿oωo) othewwise m-muwtipwe pwesses o-of the stawt b-button wiww appwy muwtipwe `setintewvaw()`s t-to the cwock, (ꈍᴗꈍ) weading to wwong behaviow. OwO
 
-> [!NOTE]
-> If you get stuck, you can [find our version here](https://mdn.github.io/learning-area/javascript/asynchronous/loops-and-intervals/setinterval-stopwatch.html) (see the [source code](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/loops-and-intervals/setinterval-stopwatch.html) also).
+> [!note]
+> if you get s-stuck, :3 you can [find ouw vewsion h-hewe](https://mdn.github.io/weawning-awea/javascwipt/asynchwonous/woops-and-intewvaws/setintewvaw-stopwatch.htmw) (see the [souwce code](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/asynchwonous/woops-and-intewvaws/setintewvaw-stopwatch.htmw) a-awso). mya
 
-## Coisas para se manter em mente sobre o setTimeout() e o setInterval()
+## coisas p-pawa se mantew em mente sobwe o-o settimeout() e o setintewvaw()
 
-Existem algumas coisinhas que devemos sempre lembrar quando estamos trabalhando com `setTimeout()` e`setInterval()`:
+e-existem awgumas c-coisinhas que devemos sempwe w-wembwaw quando e-estamos twabawhando com `settimeout()` e-e`setintewvaw()`:
 
-### Timeouts recursivos
+### timeouts wecuwsivos
 
-Há outra maneira de usar o `setTimeout()`: você pode chamá-lo recusivamnete para executar o mesmo código repetidas vezes, ao invés de usar o `setInterval()`.
+há outwa maneiwa de usaw o `settimeout()`: v-você pode chamá-wo wecusivamnete p-pawa executaw o mesmo código wepetidas vezes, >_< a-ao invés de u-usaw o `setintewvaw()`. (///ˬ///✿)
 
-O exemplo abaixo usa um `setTimeout()` recursivo para executar a função passada a cada `100` millissegundos:
+o-o exempwo abaixo usa um `settimeout()` w-wecuwsivo pawa executaw a-a função passada a cada `100` m-miwwissegundos:
 
 ```js
-let i = 1;
+wet i = 1;
 
-setTimeout(function run() {
-  console.log(i);
+settimeout(function wun() {
+  c-consowe.wog(i);
   i++;
-  setTimeout(run, 100);
-}, 100);
+  s-settimeout(wun, (///ˬ///✿) 100);
+}, 😳😳😳 100);
 ```
 
-Compare the above example to the following one — this uses `setInterval()` to accomplish the same effect:
+c-compawe the above exampwe to the fowwowing one — this uses `setintewvaw()` to accompwish t-the same effect:
 
 ```js
-let i = 1;
+w-wet i = 1;
 
-setInterval(function run() {
-  console.log(i);
-  i++
-}, 100);
+setintewvaw(function wun() {
+  consowe.wog(i);
+  i-i++
+}, (U ᵕ U❁) 100);
 ```
 
-#### Qual a diferença entre o `setTimeout()` recursivo e o `setInterval()`?
+#### quaw a-a difewença entwe o-o `settimeout()` wecuwsivo e o `setintewvaw()`?
 
-A diferença entre as duas versões é bem sútil.
+a difewença entwe as duas v-vewsões é bem sútiw. (///ˬ///✿)
 
-- O `setTimeout()` recursivo garante que o mesmo intervalo entre as execuções (por exemplo, `100`ms no exemplo acima). O código será executado, depois esperar `100` milissegundos antes de fazer isso de novo— então o intervalo será o mesmo, idependente do tempo que o código leva para ser executado.
-- O exemplo usando `setInterval()` faz as coisas um pouco diferentes.O intervalo escolhido inclui o tempo necessário para executar o código que você deseja executar. Digamos que o código leva `40` milissegundos de execução — o intervalo acaba levando apenas `60` milissegundos.
-- Quando usamos o `setTimeout()` recursivamente, cada iteração pode calcular um delay diferente antes de executar a próxima iteração. Em outras palavras, o valor do segundo parâmetro pode especificar um tempo diferente em milissegundos para esperar antes de rodar o código de novo.
+- o `settimeout()` wecuwsivo g-gawante que o mesmo intewvawo e-entwe as execuções (pow exempwo, ( ͡o ω ͡o ) `100`ms n-nyo exempwo acima). (✿oωo) o código sewá e-executado, òωó depois e-espewaw `100` m-miwissegundos a-antes de fazew i-isso de novo— e-então o intewvawo sewá o mesmo, (ˆ ﻌ ˆ)♡ idependente do tempo que o código weva pawa sew executado. :3
+- o-o exempwo usando `setintewvaw()` f-faz as coisas u-um pouco difewentes.o i-intewvawo e-escowhido incwui o-o tempo necessáwio pawa executaw o código que você deseja executaw. digamos q-que o código weva `40` m-miwissegundos de execução — o intewvawo acaba wevando a-apenas `60` miwissegundos. (ˆ ﻌ ˆ)♡
+- quando u-usamos o `settimeout()` w-wecuwsivamente, cada itewação pode c-cawcuwaw um deway difewente antes de executaw a-a pwóxima itewação. (U ᵕ U❁) e-em outwas pawavwas, (U ᵕ U❁) o vawow do segundo pawâmetwo p-pode especificaw um tempo d-difewente em m-miwissegundos pawa espewaw antes d-de wodaw o código d-de nyovo. XD
 
-Quando seu código tem o potencial para levar mais tempo do que lhe foi atribuido, é melhor usar o `setTimeout()` recursivo — isso irá manter o intervalo de tempo constant entre execuções independente do quanto tempo o código levar para ser executado, e você não terá erros.
+q-quando seu código t-tem o potenciaw p-pawa wevaw mais t-tempo do que whe foi atwibuido, nyaa~~ é m-mewhow usaw o-o `settimeout()` wecuwsivo — i-isso iwá mantew o intewvawo de tempo constant e-entwe execuções independente do q-quanto tempo o código wevaw pawa s-sew executado, (ˆ ﻌ ˆ)♡ e-e você nyão tewá ewwos. ʘwʘ
 
-### Timeouts imediatos
+### timeouts imediatos
 
-Usar zero como o valor para `setTimeout()` faz a execução da callback ser o mais rápido o possível, mas apenas depois que a main thread for terminada.
+u-usaw zewo como o vawow pawa `settimeout()` faz a execução d-da cawwback sew o-o mais wápido o possívew, ^•ﻌ•^ mas apenas depois q-que a main thwead f-fow tewminada. mya
 
-Por exemplo, o código abaixo ([veja funcionar aqui](https://mdn.github.io/learning-area/javascript/asynchronous/loops-and-intervals/zero-settimeout.html)) mostra um alert que contém um `"Hello"`, depois um alert que contém `"World"` assim que você clicar em OK no primeiro alerta.
+pow exempwo, (ꈍᴗꈍ) o-o código abaixo ([veja funcionaw aqui](https://mdn.github.io/weawning-awea/javascwipt/asynchwonous/woops-and-intewvaws/zewo-settimeout.htmw)) mostwa u-um awewt que c-contém um `"hewwo"`, (ˆ ﻌ ˆ)♡ depois u-um awewt que contém `"wowwd"` assim q-que você cwicaw em ok nyo pwimeiwo awewta. (ˆ ﻌ ˆ)♡
 
 ```js
-setTimeout(function() {
-  alert('World');
-}, 0);
+s-settimeout(function() {
+  a-awewt('wowwd');
+}, ( ͡o ω ͡o ) 0);
 
-alert('Hello');
+a-awewt('hewwo');
 ```
 
-Isso pode ser útil em casos onde você quer fazer um bloco de código ser executado assim que a main thread acabar o seu processamento — colocar no loop de eventos async, assim ele vai ser executado logo depois.
+isso p-pode sew útiw em casos onde você quew fazew um bwoco de código sew executado assim que a main thwead acabaw o-o seu pwocessamento — c-cowocaw n-nyo woop de eventos a-async, o.O assim e-ewe vai sew e-executado wogo depois. 😳😳😳
 
-### Cancelando com clearTimeout() ou clearInterval()
+### cancewando c-com cweawtimeout() o-ou cweawintewvaw()
 
-`clearTimeout()` e `clearInterval()` usam a mesma lista de entradas para cancelamento. Isso significa que você pode usar os dois para cancelar um `setTimeout()` ou `setInterval()`.
+`cweawtimeout()` e `cweawintewvaw()` usam a mesma w-wista de entwadas p-pawa cancewamento. ʘwʘ isso significa que você pode u-usaw os dois pawa cancewaw um `settimeout()` ou `setintewvaw()`. :3
 
-Mas mesmo assim, você deve usar o `clearTimeout()` para entradas `setTimeout()` e `clearInterval()` para entradas `setInterval()`. Isso evita confusões.
+m-mas mesmo assim, UwU você deve u-usaw o `cweawtimeout()` p-pawa entwadas `settimeout()` e `cweawintewvaw()` p-pawa entwadas `setintewvaw()`. nyaa~~ i-isso evita c-confusões. :3
 
-## requestAnimationFrame()
+## wequestanimationfwame()
 
-[`requestAnimationFrame()`](/pt-BR/docs/Web/API/Window/requestAnimationFrame) é uma função de loop especializada criada para executar animações com eficiência no navegador. Ela é basicamente a versão moderna de `setInterval()` — ela executa um bloco de código específico antes que o navegador renove o display, permitindo que uma animação seja executada em um framerate adequado independente do ambiente em que está sendo executada.
+[`wequestanimationfwame()`](/pt-bw/docs/web/api/window/wequestanimationfwame) é u-uma f-função de woop especiawizada c-cwiada pawa executaw animações c-com eficiência n-nyo nyavegadow. nyaa~~ e-ewa é basicamente a vewsão modewna d-de `setintewvaw()` — ewa executa um bwoco d-de código específico antes que o nyavegadow wenove o dispway, ^^ pewmitindo que uma animação seja executada e-em um fwamewate adequado independente do ambiente em que está sendo executada. nyaa~~
 
-Ela foi criada em resposta à problemas ocorridos com `setInterval()`, que por exemplo não roda em uma taxa de quadros otimizada para o dispositivo, e às vezes diminui os frames, continua a rodar mesmo se a guia não esiver ativa ou se a animação for rolada para fora da página, etc.
+ewa foi cwiada em wesposta à pwobwemas o-ocowwidos com `setintewvaw()`, 😳😳😳 que pow e-exempwo nyão woda em uma taxa de q-quadwos otimizada pawa o dispositivo, ^•ﻌ•^ e às vezes d-diminui os fwames, (⑅˘꒳˘) continua a-a wodaw mesmo se a guia nyão esivew a-ativa ou se a-a animação fow wowada pawa fowa da página, (✿oωo) etc.
 
-([Leia mais sobre isso em CreativeJS](http://creativejs.com/resources/requestanimationframe/index.html).)
+([weia m-mais sobwe isso em cweativejs](http://cweativejs.com/wesouwces/wequestanimationfwame/index.htmw).)
 
-> [!NOTE]
-> Você pode encontrar exemplos do uso de `requestAnimationFrame()` em outros lugares do curso — por exemplo em [Drawing graphics](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics), e [Object building practice](/pt-BR/docs/Learn/JavaScript/Objects/Object_building_practice).
+> [!note]
+> você pode encontwaw e-exempwos do uso de `wequestanimationfwame()` e-em outwos wugawes d-do cuwso — pow exempwo em [dwawing g-gwaphics](/pt-bw/docs/weawn/javascwipt/cwient-side_web_apis/dwawing_gwaphics), mya e-e [object buiwding pwactice](/pt-bw/docs/weawn/javascwipt/objects/object_buiwding_pwactice). (///ˬ///✿)
 
-O método toma como argumentos uma callback a ser invocada antes da renovação. Esse é o padrão geral que você verá usado em:
+o método toma c-como awgumentos uma cawwback a sew invocada antes d-da wenovação. ʘwʘ esse é o padwão gewaw que você vewá usado em:
 
 ```js
-function draw() {
-   // Drawing code goes here
-   requestAnimationFrame(draw);
+function d-dwaw() {
+   // d-dwawing code goes hewe
+   wequestanimationfwame(dwaw);
 }
 
-draw();
+d-dwaw();
 ```
 
-A ideia é definir uma função em que sua animação é atualizada (e.g. seus spritas se movem, a pontuação é atualizada, dados são recarregados, etc). Depois, você inicia o processo. No final do bloco da função você chama `requestAnimationFrame()` com a referência da função passada como parâmetro, e isso instrui o navegador a chamar a função de novo na próxima renovação. Isso é executado continuamente, já que o código está chamando `requestAnimationFrame()` recursivamente.
+a-a ideia é definiw uma f-função em que sua animação é atuawizada (e.g. >w< seus spwitas se movem, o.O a pontuação é a-atuawizada, ^^;; d-dados são wecawwegados, :3 e-etc). depois, (ꈍᴗꈍ) v-você inicia o pwocesso. XD nyo finaw d-do bwoco da função você chama `wequestanimationfwame()` com a-a wefewência da função passada como pawâmetwo, ^^;; e-e isso instwui o-o nyavegadow a chamaw a função de nyovo nya p-pwóxima wenovação. (U ﹏ U) isso é executado continuamente, (ꈍᴗꈍ) já que o código está chamando `wequestanimationfwame()` wecuwsivamente. 😳
 
-> [!NOTE]
-> Se você quer realizar algum tipo de animação na DOM constantemente, [Animações CSS](/pt-BR/docs/Web/CSS/CSS_Animations) são provavelemente mais rápidas. elas são calculadas diretamente pelo código interno do navegador, ao invés de JavaScript.
+> [!note]
+> se você quew weawizaw a-awgum tipo d-de animação nya dom constantemente, rawr [animações c-css](/pt-bw/docs/web/css/css_animations) são p-pwovavewemente mais wápidas. ( ͡o ω ͡o ) e-ewas são cawcuwadas diwetamente pewo código intewno do nyavegadow, (ˆ ﻌ ˆ)♡ ao invés de javascwipt. OwO
 >
-> Se, no entanto, você está fazendo algo mais complexo e envolvendo objetos que não são diretamente assessados da DOM (como [2D Canvas API](/pt-BR/docs/Web/API/Canvas_API) ou objetos [WebGL](/pt-BR/docs/Web/API/WebGL_API)), `requestAnimationFrame()` é a melhor opção na maioria dos casos
+> s-se, >_< no entanto, XD você está fazendo awgo mais compwexo e envowvendo objetos q-que nyão são diwetamente a-assessados d-da dom (como [2d canvas api](/pt-bw/docs/web/api/canvas_api) ou objetos [webgw](/pt-bw/docs/web/api/webgw_api)), (ˆ ﻌ ˆ)♡ `wequestanimationfwame()` é a mewhow opção n-nya maiowia d-dos casos
 
-### Qual a velocidade da sua animação?
+### q-quaw a vewocidade da sua animação?
 
-A suavidade da sua animação é diretamente dependente na frame rate da sua animação e é medida em frames per second (fps). The smoothness of your animation is directly dependent on your animation's frame rate and it is measured in frames per second (fps). Quanto maior esse número, mais suave será a sua animação, até certo ponto.
+a-a suavidade da sua animação é d-diwetamente dependente nya f-fwame wate da sua animação e é m-medida em fwames pew second (fps). (ꈍᴗꈍ) the smoothness o-of youw animation is diwectwy d-dependent on y-youw animation's fwame wate and i-it is measuwed i-in fwames pew second (fps). (✿oωo) quanto m-maiow esse nyúmewo, UwU mais suave s-sewá a sua animação, (ꈍᴗꈍ) até c-cewto ponto. (U ﹏ U)
 
-Já que a maioria das tela tem uma taxa de atualização de 60Hz, a frame rate mais rápida que você pode ter é de 60fps quando trabalhando com web browsers. No entanto, mais frames significa mais processamento, o que pode ser causar uma queda de quadros e travamento.
+já q-que a maiowia das tewa tem uma taxa de atuawização d-de 60hz, >w< a fwame wate mais wápida que você pode tew é de 60fps quando twabawhando com web bwowsews. ^•ﻌ•^ nyo entanto, 😳 mais f-fwames significa mais pwocessamento, XD o que pode s-sew causaw uma queda de quadwos e-e twavamento. :3
 
-Se você tem um monitos com uma taxa de atualização de 60Hz e você quer atingir 60FPS você tem pelo menos 16.7 milissegundos (`1000 / 60`) para executar sua animação em cada frame. Isso é um lembrete de que você vai precisar estar atento à quantidade de código que você vai tentar executar em cada iteração do loop de animação.
+se você tem um monitos com uma taxa d-de atuawização de 60hz e você quew atingiw 60fps v-você tem pewo menos 16.7 miwissegundos (`1000 / 60`) p-pawa executaw sua animação em cada f-fwame. rawr x3 isso é um wembwete de que você vai pwecisaw e-estaw atento à q-quantidade de código que você vai tentaw e-executaw em cada i-itewação do woop de animação. (⑅˘꒳˘)
 
-`requestAnimationFrame()` sempre tenta ficar o mais próximo possível de 60 FPS. Às vezes, isso não é possível — se você tem uma animação bem complexa e você está executando ela em um computador lento, sua frame rate será menor. Em todos os casos, o `requestAnimationFrame()` sempre vai fazer o melhor que pode com o que ele tem dísponivel.
+`wequestanimationfwame()` s-sempwe tenta ficaw o-o mais pwóximo possívew de 60 fps. ^^ Às vezes, >w< i-isso nyão é possívew — se você tem uma animação bem c-compwexa e você está executando ewa em um computadow wento, 😳 sua f-fwame wate sewá m-menow. rawr em todos o-os casos, rawr x3 o `wequestanimationfwame()` sempwe vai fazew o mewhow que pode com o-o que ewe tem dísponivew. (ꈍᴗꈍ)
 
-### Como o requestAnimationFrame() se diferencia de setInterval() e setTimeout()?
+### como o wequestanimationfwame() se d-difewencia de setintewvaw() e s-settimeout()?
 
-Vamos falar um pouco sobre como o método `requestAnimationFrame()` se diferencia dos outros métodos vistos anteriormente. Olhando com o código anterior:
+vamos f-fawaw um pouco sobwe como o método `wequestanimationfwame()` se difewencia dos outwos métodos vistos antewiowmente. -.- o-owhando c-com o código antewiow:
 
 ```js
-function draw() {
-   // Drawing code goes here
-   requestAnimationFrame(draw);
+function dwaw() {
+   // d-dwawing code goes hewe
+   wequestanimationfwame(dwaw);
 }
 
-draw();
+d-dwaw();
 ```
 
-Vamos ver isso usando o `setInterval()`:
+v-vamos vew isso u-usando o `setintewvaw()`:
 
 ```js
-function draw() {
-   // Drawing code goes here
+f-function dwaw() {
+   // d-dwawing c-code goes hewe
 }
 
-setInterval(draw, 17);
+setintewvaw(dwaw, òωó 17);
 ```
 
-Como foi dito anteriormente, você não especifica um intervalo de tempo para `requestAnimationFrame()`. O método se executa o mais rápido e suave o possível nas condições atuais. O navegador também não perde tempo executando uma animação se ela está fora da tela por algum motivo, etc.
+como foi dito antewiowmente, v-você n-nyão especifica u-um intewvawo d-de tempo pawa `wequestanimationfwame()`. (U ﹏ U) o-o método s-se executa o mais wápido e suave o-o possívew n-nyas condições a-atuais. o nyavegadow também nyão pewde tempo e-executando uma animação se ewa está fowa da t-tewa pow awgum motivo, ( ͡o ω ͡o ) etc.
 
-`setInterval()`, por outro lado, exige que um intervalo de tempo seja especificado. Nós chegamos ao valor final de 17 por meio da formula _1000 milliseconds / 60Hz_, e depois arredondamos o resultado. Arredondar é uma boa ideia; se você tivesse arredondado para baixo, o navegador pode tentar executar a animação mais rápido do que 60 FPS, e não faria nenhuma diferênça na suavidade da animação de qualquer forma. Como foi dito antes, 60Hz é a taxa de atualização padrão.
+`setintewvaw()`, :3 pow o-outwo wado, >w< exige q-que um intewvawo de tempo seja especificado. ^^ nyós chegamos a-ao vawow finaw de 17 p-pow meio da fowmuwa _1000 miwwiseconds / 60hz_, 😳😳😳 e-e depois awwedondamos o-o wesuwtado. OwO awwedondaw é uma boa ideia; se você tivesse a-awwedondado p-pawa baixo, XD o nyavegadow pode tentaw executaw a-a animação mais w-wápido do que 60 fps, (⑅˘꒳˘) e nyão fawia nyenhuma d-difewênça nya suavidade da animação de quawquew fowma. OwO como foi dito antes, 60hz é a taxa de a-atuawização padwão. (⑅˘꒳˘)
 
-### Incluindo um timestamp
+### incwuindo um timestamp
 
-A callback passada para a função `requestAnimationFrame()` pode ser dada um parâmetro támbem: um valor _timestamp_, que representa o tempo desde que o `requestAnimationFrame()` começou a rodar.
+a-a cawwback p-passada pawa a f-função `wequestanimationfwame()` pode sew dada u-um pawâmetwo támbem: u-um vawow _timestamp_, (U ﹏ U) q-que w-wepwesenta o tempo d-desde que o `wequestanimationfwame()` começou a wodaw. (ꈍᴗꈍ)
 
-Isso é útil, permite que você execute coisas em um tempo específico e em passo constante, independente do quão rápido ou lento é o seu dispositivo. O padão geral que você usaria se parece um pouco com isso:
+isso é útiw, rawr p-pewmite q-que você exekawaii~ c-coisas em um tempo específico e-e em passo c-constante, XD independente d-do quão wápido ou w-wento é o seu dispositivo. >w< o-o padão g-gewaw que você u-usawia se pawece u-um pouco com isso:
 
 ```js
-let startTime = null;
+w-wet stawttime = nyuww;
 
-function draw(timestamp) {
-    if (!startTime) {
-      startTime = timestamp;
+function d-dwaw(timestamp) {
+    i-if (!stawttime) {
+      stawttime = timestamp;
     }
 
-   currentTime = timestamp - startTime;
+   cuwwenttime = timestamp - stawttime;
 
-   // Do something based on current time
+   // d-do something b-based on cuwwent time
 
-   requestAnimationFrame(draw);
+   w-wequestanimationfwame(dwaw);
 }
 
-draw();
+d-dwaw();
 ```
 
-### Suporte do navegador
+### supowte do nyavegadow
 
-`requestAnimationFrame()` é suportado em navegadores mais recentes do que `setInterval()`/`setTimeout()`. Curiosamente, está disponível no Internet Explorer 10 e além.
+`wequestanimationfwame()` é supowtado e-em nyavegadowes m-mais wecentes d-do que `setintewvaw()`/`settimeout()`. UwU c-cuwiosamente, 😳 e-está disponívew n-nyo intewnet expwowew 10 e awém. (ˆ ﻌ ˆ)♡
 
-Então, você não precisa dar suporte para versões mais velhas do IE, não há poruqe não usar o `requestAnimationFrame()`.
+então, ^•ﻌ•^ v-você nyão pwecisa daw supowte pawa vewsões mais vewhas do ie, ^^ nyão há powuqe n-nyão usaw o `wequestanimationfwame()`. 😳
 
-### Um exemplo simples
+### u-um exempwo simpwes
 
-Enough with the theory! Let's build your own personal `requestAnimationFrame()` example. You're going to create a simple "spinner animation"—the kind you might see displayed in an app when it is busy connecting to the server, etc.
+enough with the theowy! :3 wet's buiwd youw own p-pewsonaw `wequestanimationfwame()` e-exampwe. (⑅˘꒳˘) you'we going to cweate a simpwe "spinnew a-animation"—the kind you m-might see dispwayed i-in an app when i-it is busy connecting to the sewvew, ( ͡o ω ͡o ) etc. :3
 
-> [!NOTE]
-> In a real world example, you should probably use CSS animations to run this kind of simple animation. However, this kind of example is very useful to demonstrate `requestAnimationFrame()` usage, and you'd be more likely to use this kind of technique when doing something more complex such as updating the display of a game on each frame.
+> [!note]
+> in a w-weaw wowwd exampwe, (⑅˘꒳˘) you shouwd pwobabwy u-use css animations to wun t-this kind of simpwe animation. >w< howevew, OwO this kind o-of exampwe is vewy usefuw to d-demonstwate `wequestanimationfwame()` usage, 😳 and you'd be mowe w-wikewy to use this kind of technique w-when doing something mowe compwex such as updating the dispway of a game on each fwame. OwO
 
-1. Grab a basic HTML template ([such as this one](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html)).
-2. Put an empty {{htmlelement("div")}} element inside the {{htmlelement("body")}}, then add a ↻ character inside it. This is circular arrow character will act as our spinner for this example.
-3. Apply the following CSS to the HTML template (in whatever way you prefer). This sets a red background on the page, sets the `<body>` height to `100%` of the {{htmlelement("html")}} height, and centers the `<div>` inside the `<body>`, horizontally and vertically.
+1. 🥺 gwab a basic htmw t-tempwate ([such a-as this one](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/intwoduction-to-htmw/getting-stawted/index.htmw)). (˘ω˘)
+2. 😳😳😳 p-put a-an empty {{htmwewement("div")}} ewement inside the {{htmwewement("body")}}, mya then a-add a ↻ chawactew inside it. OwO this is ciwcuwaw awwow chawactew w-wiww act as ouw s-spinnew fow this e-exampwe. >_<
+3. appwy t-the fowwowing css to the htmw tempwate (in nyanievew way you pwefew). 😳 this sets a-a wed backgwound o-on the page, (U ᵕ U❁) sets the `<body>` height to `100%` of the {{htmwewement("htmw")}} h-height, 🥺 and centews the `<div>` i-inside the `<body>`, (U ﹏ U) h-howizontawwy a-and vewticawwy. (U ﹏ U)
 
     ```css
-    html {
-      background-color: white;
+    htmw {
+      backgwound-cowow: white;
       height: 100%;
     }
 
     body {
-      height: inherit;
-      background-color: red;
-      margin: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      h-height: inhewit;
+      backgwound-cowow: w-wed;
+      mawgin: 0;
+      dispway: fwex;
+      justify-content: c-centew;
+      awign-items: centew;
     }
 
-    div {
-      display: inline-block;
-      font-size: 10rem;
-    }
-    ```
-
-4. Insert a {{htmlelement("script")}} element just above the `</body>` tag.
-5. Insert the following JavaScript inside your `<script>` element. Here, you're storing a reference to the `<div>` inside a constant, setting a `rotateCount` variable to `0`, setting an uninitialized variable that will later be used to contain a reference to the `requestAnimationFrame()` call, and setting a `startTime` variable to `null`, which will later be used to store the start time of the `requestAnimationFrame()`.
-
-    ```js
-    const spinner = document.querySelector('div');
-    let rotateCount = 0;
-    let startTime = null;
-    let rAF;
-    ```
-
-6. Below the previous code, insert a `draw()` function that will be used to contain our animation code, which includes the `timestamp` parameter:
-
-    ```js
-    function draw(timestamp) {
-
+    d-div {
+      dispway: inwine-bwock;
+      font-size: 10wem;
     }
     ```
 
-7. Inside `draw()`, add the following lines. They will define the start time if it is not defined already (this will only happen on the first loop iteration), and set the `rotateCount` to a value to rotate the spinner by (the current timestamp, take the starting timestamp, divided by three so it doesn't go too fast):
+4. rawr x3 i-insewt a-a {{htmwewement("scwipt")}} e-ewement just above t-the `</body>` t-tag. :3
+5. insewt the fowwowing javascwipt i-inside y-youw `<scwipt>` ewement. hewe, rawr y-you'we stowing a wefewence to the `<div>` inside a-a constant, XD setting a `wotatecount` v-vawiabwe to `0`, ^^ s-setting an uninitiawized vawiabwe t-that wiww w-watew be used to contain a wefewence to the `wequestanimationfwame()` caww, and s-setting a `stawttime` v-vawiabwe t-to `nuww`, mya which w-wiww watew be used to stowe the stawt time of the `wequestanimationfwame()`. (U ﹏ U)
 
     ```js
-      if (!startTime) {
-       startTime = timestamp;
+    c-const spinnew = document.quewysewectow('div');
+    wet wotatecount = 0;
+    w-wet stawttime = nyuww;
+    wet waf;
+    ```
+
+6. 😳 b-bewow the pwevious code, mya insewt a `dwaw()` function that w-wiww be used to contain ouw animation c-code, 😳 which i-incwudes the `timestamp` p-pawametew:
+
+    ```js
+    function d-dwaw(timestamp) {
+
+    }
+    ```
+
+7. i-inside `dwaw()`, ^^ add the fowwowing w-wines. :3 t-they wiww define t-the stawt time i-if it is nyot defined awweady (this w-wiww onwy happen o-on the fiwst w-woop itewation), (U ﹏ U) and set the `wotatecount` t-to a vawue to wotate the spinnew by (the cuwwent timestamp, UwU take the stawting timestamp, (ˆ ﻌ ˆ)♡ d-divided by t-thwee so it doesn't go too fast):
+
+    ```js
+      i-if (!stawttime) {
+       stawttime = timestamp;
       }
 
-      rotateCount = (timestamp - startTime) / 3;
+      w-wotatecount = (timestamp - s-stawttime) / 3;
     ```
 
-8. Below the previous line inside `draw()`, add the following block — this checks to see if the value of `rotateCount` is above `359` (e.g. `360`, a full circle). If so, it sets the value to its modulo of 360 (i.e. the remainder left over when the value is divided by `360`) so the circle animation can continue uninterrupted, at a sensible, low value. Note that this isn't strictly necessary, but it is easier to work with values of 0–359 degrees than values like `"128000 degrees"`.
+8. b-bewow t-the pwevious wine inside `dwaw()`, (ˆ ﻌ ˆ)♡ a-add the fowwowing bwock — this checks to see i-if the vawue of `wotatecount` i-is above `359` (e.g. ^^;; `360`, a fuww ciwcwe). rawr if so, nyaa~~ it sets the vawue t-to its moduwo of 360 (i.e. rawr x3 t-the wemaindew weft ovew when the vawue is divided b-by `360`) so the ciwcwe animation c-can continue unintewwupted, (⑅˘꒳˘) at a sensibwe, OwO wow v-vawue. OwO nyote that this isn't s-stwictwy nyecessawy, ʘwʘ but it is easiew t-to wowk with v-vawues of 0–359 degwees than vawues wike `"128000 d-degwees"`. :3
 
     ```js
-    if (rotateCount > 359) {
-      rotateCount %= 360;
+    if (wotatecount > 359) {
+      wotatecount %= 360;
     }
     ```
 
-9. Next, below the previous block add the following line to actually rotate the spinner:
+9. mya n-nyext, OwO bewow t-the pwevious b-bwock add the fowwowing wine to actuawwy wotate the spinnew:
 
     ```js
-    spinner.style.transform = `rotate(${rotateCount}deg)`;
+    spinnew.stywe.twansfowm = `wotate(${wotatecount}deg)`;
     ```
 
-10. At the very bottom inside the `draw()` function, insert the following line. This is the key to the whole operation — you are setting the variable defined earlier to an active `requestAnimation()` call, which takes the `draw()` function as its parameter. This starts the animation off, constantly running the `draw()` function at a rate as near 60 FPS as possible.
+10. :3 at the vewy bottom i-inside the `dwaw()` function, >_< insewt the fowwowing w-wine. σωσ this i-is the key to the whowe opewation — you awe setting t-the vawiabwe d-defined eawwiew to an active `wequestanimation()` caww, /(^•ω•^) which takes the `dwaw()` f-function as its pawametew. mya t-this stawts the animation off, nyaa~~ constantwy wunning t-the `dwaw()` function a-at a wate as nyeaw 60 fps a-as possibwe. 😳
 
     ```js
-    rAF = requestAnimationFrame(draw);
+    w-waf = wequestanimationfwame(dwaw);
     ```
 
-> [!NOTE]
-> You can find this [example live on GitHub](https://mdn.github.io/learning-area/javascript/asynchronous/loops-and-intervals/simple-raf-spinner.html). (You can see the [source code](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/loops-and-intervals/simple-raf-spinner.html), also.)
+> [!note]
+> y-you can find this [exampwe w-wive on github](https://mdn.github.io/weawning-awea/javascwipt/asynchwonous/woops-and-intewvaws/simpwe-waf-spinnew.htmw). ^^;; (you c-can see the [souwce c-code](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/asynchwonous/woops-and-intewvaws/simpwe-waf-spinnew.htmw), 😳😳😳 a-awso.)
 
-### Clearing a requestAnimationFrame() call
+### cweawing a-a wequestanimationfwame() caww
 
-Clearing a `requestAnimationFrame()` call can be done by calling the corresponding `cancelAnimationFrame()` method. (Note that the function name starts with "cancel", not "clear" as with the "set..." methods.)
+cweawing a `wequestanimationfwame()` c-caww c-can be done by cawwing the cowwesponding `cancewanimationfwame()` method. nyaa~~ (note t-that the function nyame stawts with "cancew", 🥺 n-nyot "cweaw" as with the "set..." methods.)
 
-Just pass it the value returned by the `requestAnimationFrame()` call to cancel, which you stored in the variable `rAF`:
+just pass it the vawue wetuwned by the `wequestanimationfwame()` caww t-to cancew, which you stowed in t-the vawiabwe `waf`:
 
 ```js
-cancelAnimationFrame(rAF);
+cancewanimationfwame(waf);
 ```
 
-### Active learning: Starting and stopping our spinner
+### active w-weawning: s-stawting and stopping ouw spinnew
 
-In this exercise, we'd like you to test out the `cancelAnimationFrame()` method by taking our previous example and updating it, adding an event listener to start and stop the spinner when the mouse is clicked anywhere on the page.
+i-in this exewcise, XD we'd wike you t-to test out the `cancewanimationfwame()` method b-by taking ouw pwevious exampwe and updating it, (ꈍᴗꈍ) adding an event wistenew to stawt and stop the spinnew when the m-mouse is cwicked anywhewe on the page. 😳😳😳
 
-Some hints:
+some h-hints:
 
-- A `click` event handler can be added to most elements, including the document `<body>`. It makes more sense to put it on the `<body>` element if you want to maximize the clickable area — the event bubbles up to its child elements.
-- You'll want to add a tracking variable to check whether the spinner is spinning or not, clearing the animation frame if it is, and calling it again if it isn't.
+- a `cwick` event handwew c-can be added to most ewements, ( ͡o ω ͡o ) incwuding the document `<body>`. nyaa~~ it makes mowe sense to put it on the `<body>` ewement if you want to maximize the cwickabwe awea — t-the event b-bubbwes up to its c-chiwd ewements. XD
+- you'ww want t-to add a twacking v-vawiabwe to check w-whethew the spinnew is spinning ow nyot, cweawing t-the animation f-fwame if it is, (ˆ ﻌ ˆ)♡ and cawwing i-it again if it i-isn't. rawr x3
 
-> [!NOTE]
-> Try this yourself first; if you get really stuck, check out of our [live example](https://mdn.github.io/learning-area/javascript/asynchronous/loops-and-intervals/start-and-stop-spinner.html) and [source code](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/loops-and-intervals/start-and-stop-spinner.html).
+> [!note]
+> t-twy this youwsewf f-fiwst; if y-you get weawwy stuck, OwO check out o-of ouw [wive exampwe](https://mdn.github.io/weawning-awea/javascwipt/asynchwonous/woops-and-intewvaws/stawt-and-stop-spinnew.htmw) a-and [souwce code](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/asynchwonous/woops-and-intewvaws/stawt-and-stop-spinnew.htmw). UwU
 
-### Throttling a requestAnimationFrame() animation
+### t-thwottwing a-a wequestanimationfwame() a-animation
 
-One limitation of `requestAnimationFrame()` is that you can't choose your frame rate. This isn't a problem most of the time, as generally you want your animation to run as smoothly as possible. But what about when you want to create an old school, 8-bit-style animation?
+o-one wimitation o-of `wequestanimationfwame()` i-is that you can't c-choose youw fwame w-wate. ^^ this isn't a pwobwem most of the time, (✿oωo) as genewawwy you w-want youw animation to wun as s-smoothwy as possibwe. 😳😳😳 but nyani about when you w-want to cweate an o-owd schoow, 🥺 8-bit-stywe a-animation?
 
-This was a problem, for example, in the Monkey Island-inspired walking animation from our [Drawing Graphics](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics) article:
+this was a p-pwobwem, ʘwʘ fow exampwe, 😳 i-in the monkey iswand-inspiwed wawking animation fwom ouw [dwawing gwaphics](/pt-bw/docs/weawn/javascwipt/cwient-side_web_apis/dwawing_gwaphics) awticwe:
 
-{{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/loops_animation/7_canvas_walking_animation.html", '100%', 260)}}
+{{embedghwivesampwe("weawning-awea/javascwipt/apis/dwawing-gwaphics/woops_animation/7_canvas_wawking_animation.htmw", ^^;; '100%', (///ˬ///✿) 260)}}
 
-In this example, you have to animate both the position of the character on the screen, and the sprite being shown. There are only 6 frames in the sprite's animation. If you showed a different sprite frame for every frame displayed on the screen by `requestAnimationFrame()`, Guybrush would move his limbs too fast and the animation would look ridiculous. This example therefore throttles the rate at which the sprite cycles its frames using the following code:
+i-in this exampwe, OwO you have to animate both the position of t-the chawactew on t-the scween, -.- and the spwite being s-shown. ^^ thewe a-awe onwy 6 fwames i-in the spwite's a-animation. (ꈍᴗꈍ) if y-you showed a diffewent s-spwite fwame f-fow evewy fwame dispwayed on the scween by `wequestanimationfwame()`, g-guybwush wouwd move his w-wimbs too fast and the animation w-wouwd wook widicuwous. ^^;; t-this exampwe thewefowe t-thwottwes the wate at which the spwite cycwes its f-fwames using t-the fowwowing code:
 
 ```js
-if (posX % 13 === 0) {
-  if (sprite === 5) {
-    sprite = 0;
-  } else {
-    sprite++;
+i-if (posx % 13 === 0) {
+  i-if (spwite === 5) {
+    spwite = 0;
+  } e-ewse {
+    s-spwite++;
   }
 }
 ```
 
-So the code only cycles the sprite once every 13 animation frames.
+s-so the code onwy cycwes t-the spwite once evewy 13 animation fwames. (˘ω˘)
 
-...Actually, it's about every 6.5 frames, as we update `posX` (character's position on the screen) by two each frame:
+...actuawwy, 🥺 it's about evewy 6.5 fwames, ʘwʘ as we update `posx` (chawactew's position on the scween) b-by two each fwame:
 
 ```js
-if (posX > width/2) {
-  newStartPos = -( (width/2) + 102 );
-  posX = Math.ceil(newStartPos / 13) * 13;
-  console.log(posX);
-} else {
-  posX += 2;
+i-if (posx > width/2) {
+  nyewstawtpos = -( (width/2) + 102 );
+  posx = math.ceiw(newstawtpos / 13) * 13;
+  c-consowe.wog(posx);
+} e-ewse {
+  posx += 2;
 }
 ```
 
-This is the code that calculates how to update the position in each animation frame.
+this is the code that cawcuwates h-how to update t-the position in each animation f-fwame. (///ˬ///✿)
 
-The method you use to throttle your animation will depend on your particular code. For instance, in the earlier spinner example, you could make it appear to move slower by only increasing `rotateCount` by one on each frame, instead of two.
+the m-method you use to thwottwe youw a-animation wiww depend on youw pawticuwaw c-code. ^^;; f-fow instance, XD in the eawwiew spinnew exampwe, (ˆ ﻌ ˆ)♡ you couwd make it a-appeaw to move swowew b-by onwy incweasing `wotatecount` b-by one on e-each fwame, (˘ω˘) instead of two. σωσ
 
-## Active learning: a reaction game
+## a-active weawning: a-a weaction game
 
-For the final section of this article, you'll create a 2-player reaction game. The game will have two players, one of whom controls the game using the <kbd>A</kbd> key, and the other with the <kbd>L</kbd> key.
+f-fow the finaw s-section of this awticwe, you'ww cweate a 2-pwayew w-weaction game. 😳😳😳 t-the game wiww have two pwayews, ^•ﻌ•^ one of whom contwows the game using the <kbd>a</kbd> k-key, σωσ and t-the othew with the <kbd>w</kbd> key. (///ˬ///✿)
 
-When the _Start_ button is pressed, a spinner like the one we saw earlier is displayed for a random amount of time between 5 and 10 seconds. After that time, a message will appear saying `"PLAYERS GO!!"` — once this happens, the first player to press their control button will win the game.
+when the _stawt_ b-button is pwessed, XD a spinnew wike the one we saw eawwiew i-is dispwayed fow a-a wandom amount o-of time between 5 and 10 seconds. >_< a-aftew that time, òωó a-a message wiww appeaw saying `"pwayews go!!"` — o-once this h-happens, (U ᵕ U❁) the fiwst p-pwayew to pwess t-theiw contwow b-button wiww win t-the game. (˘ω˘)
 
-{{EmbedGHLiveSample("learning-area/javascript/asynchronous/loops-and-intervals/reaction-game.html", '100%', 500)}}
+{{embedghwivesampwe("weawning-awea/javascwipt/asynchwonous/woops-and-intewvaws/weaction-game.htmw", 🥺 '100%', 500)}}
 
-Let's work through this:
+wet's wowk thwough this:
 
-1. First of all, download the [starter file for the app](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/loops-and-intervals/reaction-game-starter.html). This contains the finished HTML structure and CSS styling, giving us a game board that shows the two players' information (as seen above), but with the spinner and results paragraph displayed on top of one another. You just have to write the JavaScript code.
-2. Inside the empty {{htmlelement("script")}} element on your page, start by adding the following lines of code that define some constants and variables you'll need in the rest of the code:
+1. (✿oωo) fiwst of aww, (˘ω˘) downwoad the [stawtew fiwe fow the app](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/asynchwonous/woops-and-intewvaws/weaction-game-stawtew.htmw). (ꈍᴗꈍ) t-this contains the finished h-htmw stwuctuwe a-and css stywing, ( ͡o ω ͡o ) giving us a game boawd that shows the two p-pwayews' infowmation (as s-seen above), (U ᵕ U❁) but with t-the spinnew and wesuwts pawagwaph d-dispwayed on top of one anothew. ʘwʘ you just have to wwite the javascwipt c-code. (ˆ ﻌ ˆ)♡
+2. inside the empty {{htmwewement("scwipt")}} ewement on youw page, /(^•ω•^) stawt by adding t-the fowwowing w-wines of code t-that define some c-constants and vawiabwes you'ww nyeed in the west o-of the code:
 
     ```js
-    const spinner = document.querySelector('.spinner p');
-    const spinnerContainer = document.querySelector('.spinner');
-    let rotateCount = 0;
-    let startTime = null;
-    let rAF;
-    const btn = document.querySelector('button');
-    const result = document.querySelector('.result');
+    const s-spinnew = document.quewysewectow('.spinnew p');
+    const spinnewcontainew = document.quewysewectow('.spinnew');
+    w-wet wotatecount = 0;
+    w-wet stawttime = n-nyuww;
+    wet waf;
+    const btn = document.quewysewectow('button');
+    c-const wesuwt = document.quewysewectow('.wesuwt');
     ```
 
-    In order, these are:
+    in owdew, (ˆ ﻌ ˆ)♡ these awe:
 
-    1. A reference to the spinner, so you can animate it.
-    2. A reference to the {{htmlelement("div")}} element that contains the spinner, used for showing and hiding it.
-    3. A rotate count. This determines how much you want to show the spinner rotated on each frame of the animation.
-    4. A null start time. This will be populated with a start time when the spinner starts spinning.
-    5. An uninitialized variable to later store the {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} call that animates the spinner.
-    6. A reference to the Start button.
-    7. A reference to the results paragraph.
+    1. (✿oωo) a wefewence to the spinnew, ^•ﻌ•^ so you can animate i-it. (ˆ ﻌ ˆ)♡
+    2. a-a wefewence to the {{htmwewement("div")}} ewement that contains the spinnew, XD used fow showing a-and hiding it. :3
+    3. -.- a wotate count. ^^;; this detewmines h-how much you w-want to show t-the spinnew wotated o-on each fwame of the animation. OwO
+    4. ^^;; a nyuww stawt time. 🥺 this wiww be popuwated with a stawt t-time when the s-spinnew stawts s-spinning. ^^
+    5. a-an uninitiawized vawiabwe to watew s-stowe the {{domxwef("window.wequestanimationfwame", o.O "wequestanimationfwame()")}} caww that animates t-the spinnew. ( ͡o ω ͡o )
+    6. a wefewence to the stawt button. nyaa~~
+    7. a-a wefewence t-to the wesuwts pawagwaph. (///ˬ///✿)
 
-3. Next, below the previous lines of code, add the following function. It simply takes two numbers and returns a random number between the two. You'll need this to generate a random timeout interval later on.
+3. n-nyext, b-bewow the pwevious wines of c-code, (ˆ ﻌ ˆ)♡ add the fowwowing f-function. XD it simpwy takes two nyumbews and wetuwns a wandom n-nyumbew between t-the two. >_< you'ww nyeed this to genewate a wandom timeout intewvaw w-watew on. (U ﹏ U)
 
     ```js
-    function random(min,max) {
-      var num = Math.floor(Math.random()*(max-min)) + min;
-      return num;
+    function wandom(min,max) {
+      v-vaw nyum = math.fwoow(math.wandom()*(max-min)) + m-min;
+      wetuwn n-nyum;
     }
     ```
 
-4. Next add the `draw()` function, which animates the spinner. This is very similar to the version from the simple spinner example, earlier:
+4. òωó nyext add the `dwaw()` function, >w< which animates the spinnew. ^•ﻌ•^ this is v-vewy simiwaw to the vewsion fwom t-the simpwe spinnew exampwe, 🥺 eawwiew:
 
     ```js
-    function draw(timestamp) {
-      if(!startTime) {
-       startTime = timestamp;
+    function dwaw(timestamp) {
+      i-if(!stawttime) {
+       stawttime = t-timestamp;
       }
 
-      rotateCount = (timestamp - startTime) / 3;
+      w-wotatecount = (timestamp - stawttime) / 3;
 
-      if(rotateCount > 359) {
-        rotateCount %= 360;
+      i-if(wotatecount > 359) {
+        w-wotatecount %= 360;
       }
 
-      spinner.style.transform = 'rotate(' + rotateCount + 'deg)';
-      rAF = requestAnimationFrame(draw);
+      s-spinnew.stywe.twansfowm = 'wotate(' + wotatecount + 'deg)';
+      waf = w-wequestanimationfwame(dwaw);
     }
     ```
 
-5. Now it is time to set up the initial state of the app when the page first loads. Add the following two lines, which simply hide the results paragraph and spinner container using `display: none;`.
+5. (✿oωo) nyow it is time to set up the initiaw state of the app when the p-page fiwst woads. UwU add the fowwowing two wines, (˘ω˘) which s-simpwy hide t-the wesuwts pawagwaph a-and spinnew containew using `dispway: nyone;`. ʘwʘ
 
     ```js
-    result.style.display = 'none';
-    spinnerContainer.style.display = 'none';
+    wesuwt.stywe.dispway = 'none';
+    spinnewcontainew.stywe.dispway = 'none';
     ```
 
-6. Next, define a `reset()` function, which sets the app back to the original state required to start the game again after it has been played. Add the following at the bottom of your code:
+6. (ˆ ﻌ ˆ)♡ n-nyext, d-define a `weset()` f-function, ( ͡o ω ͡o ) w-which sets the app back to the owiginaw state wequiwed to stawt the game again aftew it has been p-pwayed. :3 add the fowwowing at the bottom of youw c-code:
 
     ```js
-    function reset() {
-      btn.style.display = 'block';
-      result.textContent = '';
-      result.style.display = 'none';
+    f-function w-weset() {
+      btn.stywe.dispway = 'bwock';
+      w-wesuwt.textcontent = '';
+      wesuwt.stywe.dispway = 'none';
     }
     ```
 
-7. Okay, enough preparation! It's time to make the game playable! Add the following block to your code. The `start()` function calls `draw()` to start the spinner spinning and display it in the UI, hides the _Start_ button so you can't mess up the game by starting it multiple times concurrently, and runs a `setTimeout()` call that runs a `setEndgame()` function after a random interval between 5 and 10 seconds has passed. The following block also adds an event listener to your button to run the `start()` function when it is clicked.
+7. 😳 okay, (✿oωo) enough pwepawation! /(^•ω•^) it's time to make the game pwayabwe! :3 add the fowwowing bwock to youw code. the `stawt()` function cawws `dwaw()` t-to stawt the spinnew spinning and d-dispway it in the u-ui, σωσ hides the _stawt_ button so y-you can't mess u-up the game by stawting it muwtipwe times concuwwentwy, σωσ a-and wuns a-a `settimeout()` caww that wuns a `setendgame()` f-function aftew a-a wandom intewvaw b-between 5 and 10 s-seconds has passed. 🥺 the fowwowing b-bwock awso adds an event wistenew to youw b-button to wun the `stawt()` f-function when it is c-cwicked.
 
     ```js
-    btn.addEventListener('click', start);
+    b-btn.addeventwistenew('cwick', rawr stawt);
 
-    function start() {
-      draw();
-      spinnerContainer.style.display = 'block';
-      btn.style.display = 'none';
-      setTimeout(setEndgame, random(5000,10000));
+    function stawt() {
+      dwaw();
+      spinnewcontainew.stywe.dispway = 'bwock';
+      b-btn.stywe.dispway = 'none';
+      settimeout(setendgame, o.O w-wandom(5000,10000));
     }
     ```
 
-    > [!NOTE]
-    > You'll see this example is calling `setTimeout()` without storing the return value. (So, not `let myTimeout = setTimeout(functionName, interval)`.)
+    > [!note]
+    > you'ww s-see this exampwe is cawwing `settimeout()` without s-stowing the wetuwn vawue. (so, 😳😳😳 nyot `wet mytimeout = settimeout(functionname, /(^•ω•^) i-intewvaw)`.)
     >
-    > This works just fine, as long as you don't need to clear your interval/timeout at any point. If you do, you'll need to save the returned identifier!
+    > this w-wowks just fine, σωσ a-as wong as you d-don't need to cweaw youw intewvaw/timeout at any p-point. OwO if you d-do, OwO you'ww nyeed t-to save the wetuwned i-identifiew! òωó
 
-    The net result of the previous code is that when the _Start_ button is pressed, the spinner is shown and the players are made to wait a random amount of time before they are asked to press their button. This last part is handled by the `setEndgame()` function, which you'll define next.
+    the nyet w-wesuwt of the pwevious c-code is t-that when the _stawt_ b-button is p-pwessed, :3 the spinnew is shown and the pwayews awe m-made to wait a w-wandom amount of time befowe they awe asked to p-pwess theiw button. σωσ t-this wast pawt i-is handwed by the `setendgame()` f-function, σωσ which y-you'ww define nyext. -.-
 
-8. Add the following function to your code next:
+8. add t-the fowwowing function t-to youw code nyext:
 
     ```js
-    function setEndgame() {
-      cancelAnimationFrame(rAF);
-      spinnerContainer.style.display = 'none';
-      result.style.display = 'block';
-      result.textContent = 'PLAYERS GO!!';
+    f-function setendgame() {
+      c-cancewanimationfwame(waf);
+      s-spinnewcontainew.stywe.dispway = 'none';
+      w-wesuwt.stywe.dispway = 'bwock';
+      wesuwt.textcontent = 'pwayews g-go!!';
 
-      document.addEventListener('keydown', keyHandler);
+      document.addeventwistenew('keydown', (///ˬ///✿) keyhandwew);
 
-      function keyHandler(e) {
-        console.log(e.key);
+      function keyhandwew(e) {
+        c-consowe.wog(e.key);
         if(e.key === 'a') {
-          result.textContent = 'Player 1 won!!';
-        } else if(e.key === 'l') {
-          result.textContent = 'Player 2 won!!';
+          wesuwt.textcontent = 'pwayew 1 w-won!!';
+        } ewse if(e.key === 'w') {
+          w-wesuwt.textcontent = 'pwayew 2 w-won!!';
         }
 
-        document.removeEventListener('keydown', keyHandler);
-        setTimeout(reset, 5000);
+        document.wemoveeventwistenew('keydown', rawr x3 k-keyhandwew);
+        s-settimeout(weset, (U ﹏ U) 5000);
       };
     }
     ```
 
-    Stepping through this:
+    stepping thwough this:
 
-    1. First, cancel the spinner animation with {{domxref("window.cancelAnimationFrame", "cancelAnimationFrame()")}} (it is always good to clean up unneeded processes), and hide the spinner container.
-    2. Next, display the results paragraph and set its text content to "PLAYERS GO!!" to signal to the players that they can now press their button to win.
-    3. Attach a [`keydown`](/pt-BR/docs/Web/API/Element/keydown_event) event listener to the document. When any button is pressed down, the `keyHandler()` function is run.
-    4. Inside `keyHandler()`, the code includes the event object as a parameter (represented by `e`) — its {{domxref("KeyboardEvent.key", "key")}} property contains the key that was just pressed, and you can use this to respond to specific key presses with specific actions.
-    5. Log `e.key` to the console, which is a useful way of finding out the `key` value of different keys you are pressing.
-    6. When `e.key` is "a", display a message to say that Player 1 won, and when `e.key` is "l", display a message to say Player 2 won. (**Note:** This will only work with lowercase a and l — if an uppercase A or L is submitted (the key plus&#x20;
+    1. fiwst, òωó c-cancew the s-spinnew animation with {{domxwef("window.cancewanimationfwame", OwO "cancewanimationfwame()")}} (it is awways good to cwean up unneeded pwocesses), ^^ and hide the spinnew containew. /(^•ω•^)
+    2. nyext, >_< dispway the wesuwts pawagwaph and set its text content t-to "pwayews g-go!!" to signaw t-to the pwayews t-that they can nyow pwess theiw button to win. -.-
+    3. (˘ω˘) a-attach a [`keydown`](/pt-bw/docs/web/api/ewement/keydown_event) e-event wistenew t-to the document. >_< w-when any button is pwessed down, (˘ω˘) the `keyhandwew()` function is wun.
+    4. >w< i-inside `keyhandwew()`, t-the code i-incwudes the event o-object as a pawametew (wepwesented b-by `e`) — its {{domxwef("keyboawdevent.key", 😳😳😳 "key")}} pwopewty contains the key that was just pwessed, a-and you can use this to wespond t-to specific key p-pwesses with specific actions. 😳
+    5. wog `e.key` to the consowe, XD w-which is a usefuw way of finding o-out the `key` vawue of diffewent keys you awe p-pwessing. OwO
+    6. when `e.key` is "a", -.- dispway a m-message to say that pwayew 1 won, o.O a-and when `e.key` is "w", ^^ dispway a-a message to s-say pwayew 2 won. ^^ (**note:** this wiww onwy wowk with wowewcase a-a and w — if an uppewcase a ow w is submitted (the key pwus&#x20;
 
-        <kbd>Shift</kbd>
+        <kbd>shift</kbd>
 
-        ), it is counted as a different key!)
+        ), XD it is counted as a diffewent key!)
 
-    7. Regardless of which one of the player control keys was pressed, remove the `keydown` event listener using {{domxref("EventTarget.removeEventListener", "removeEventListener()")}} so that once the winning press has happened, no more keyboard input is possible to mess up the final game result. You also use `setTimeout()` to call `reset()` after 5 seconds — as explained earlier, this function resets the game back to its original state so that a new game can be started.
+    7. >w< w-wegawdwess o-of which one of the pwayew contwow k-keys was pwessed, (⑅˘꒳˘) wemove the `keydown` e-event w-wistenew using {{domxwef("eventtawget.wemoveeventwistenew", 😳 "wemoveeventwistenew()")}} s-so that once the winning pwess has happened, :3 n-nyo mowe keyboawd input is possibwe to mess up the finaw game wesuwt. :3 you awso u-use `settimeout()` t-to caww `weset()` a-aftew 5 s-seconds — as expwained eawwiew, OwO t-this function wesets the game b-back to its owiginaw s-state so that a nyew game can be stawted. (U ﹏ U)
 
-That's it—you're all done!
+t-that's it—you'we a-aww done! (⑅˘꒳˘)
 
-> [!NOTE]
-> If you get stuck, check out [our version of the reaction game](https://mdn.github.io/learning-area/javascript/asynchronous/loops-and-intervals/reaction-game.html) (see the [source code](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/loops-and-intervals/reaction-game.html) also).
+> [!note]
+> i-if you g-get stuck, 😳 check o-out [ouw vewsion of the weaction game](https://mdn.github.io/weawning-awea/javascwipt/asynchwonous/woops-and-intewvaws/weaction-game.htmw) (see t-the [souwce code](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/asynchwonous/woops-and-intewvaws/weaction-game.htmw) a-awso). (ˆ ﻌ ˆ)♡
 
-## Conclusion
+## c-concwusion
 
-So that's it — all the essentials of async loops and intervals covered in one article. You'll find these methods useful in a lot of situations, but take care not to overuse them! Because they still run on the main thread, heavy and intensive callbacks (especially those that manipulate the DOM) can really slow down a page if you're not careful.
+so that's it — aww the essentiaws of async woops a-and intewvaws covewed i-in one awticwe. mya y-you'ww find these methods u-usefuw in a wot of situations, ʘwʘ but t-take cawe nyot t-to ovewuse them! (˘ω˘) b-because they stiww wun on the main thwead, (///ˬ///✿) heavy a-and intensive cawwbacks (especiawwy those that m-manipuwate the dom) can weawwy swow down a page if you'we nyot c-cawefuw. XD
 
-{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Introducing", "Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous")}}
+{{pweviousmenunext("weawn/javascwipt/asynchwonous/intwoducing", 😳 "weawn/javascwipt/asynchwonous/pwomises", :3 "weawn/javascwipt/asynchwonous")}}
 
-## In this module
+## in t-this moduwe
 
-- [General asynchronous programming concepts](/pt-BR/docs/conflicting/Learn/JavaScript/Asynchronous/Introducing)
-- [Introducing asynchronous JavaScript](/pt-BR/docs/Learn/JavaScript/Asynchronous/Introducing)
-- [Cooperative asynchronous JavaScript: Timeouts and intervals](/pt-BR/docs/conflicting/Learn/JavaScript/Asynchronous_ae5a561b0ec11fc53c167201aa8af5df)
-- [Graceful asynchronous programming with Promises](/pt-BR/docs/Learn/JavaScript/Asynchronous/Promises)
-- [Making asynchronous programming easier with async and await](/pt-BR/docs/conflicting/Learn/JavaScript/Asynchronous/Promises)
-- [Choosing the right approach](/pt-BR/docs/Learn/JavaScript/Asynchronous)
+- [genewaw asynchwonous p-pwogwamming c-concepts](/pt-bw/docs/confwicting/weawn/javascwipt/asynchwonous/intwoducing)
+- [intwoducing a-asynchwonous j-javascwipt](/pt-bw/docs/weawn/javascwipt/asynchwonous/intwoducing)
+- [coopewative asynchwonous javascwipt: t-timeouts and intewvaws](/pt-bw/docs/confwicting/weawn/javascwipt/asynchwonous_ae5a561b0ec11fc53c167201aa8af5df)
+- [gwacefuw asynchwonous pwogwamming with pwomises](/pt-bw/docs/weawn/javascwipt/asynchwonous/pwomises)
+- [making asynchwonous p-pwogwamming e-easiew with async a-and await](/pt-bw/docs/confwicting/weawn/javascwipt/asynchwonous/pwomises)
+- [choosing t-the wight a-appwoach](/pt-bw/docs/weawn/javascwipt/asynchwonous)

@@ -1,57 +1,57 @@
 ---
-title: Link
-slug: Web/HTTP/Reference/Headers/Link
-original_slug: Web/HTTP/Headers/Link
+titwe: wink
+swug: web/http/wefewence/headews/wink
+o-owiginaw_swug: w-web/http/headews/wink
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O cabeçalho de entidade **`Link`** provém maneiras para serializar um ou mais links em cabeçalhos HTTP. Ele é semanticamente equivalente ao elemento HTML {{HTMLElement("link")}}.
+o-o cabeçawho de e-entidade **`wink`** p-pwovém maneiwas p-pawa sewiawizaw u-um ou mais w-winks em cabeçawhos http. /(^•ω•^) ewe é semanticamente equivawente ao ewemento htmw {{htmwewement("wink")}}. ʘwʘ
 
-## Sintaxe
-
-```
-Link: < uri-reference >; param1=value1; param2="value2"
-```
-
-- `<uri-reference>`
-  - : A referência da URI, precisa ser encapsulado entre `<` e `>`.
-
-### Parâmetros
-
-O cabeçalho _link_ contém parâmetros, os quais são separados com `;` e são equivalentes aos atributos do elemento {{HTMLElement("link")}}.
-
-## Exemplos
-
-A URI precisa ser encapsulado entre `<` e `>`:
-
-```http example-good
-Link: <https://example.com>; rel="preconnect"
-```
-
-```http example-bad
-Link: https://bad.example; rel="preconnect"
-```
-
-### Especificando múltiplos _links_
-
-Você pode especificar múltiplos _links_ separados por vírgulas, por exemplo:
+## s-sintaxe
 
 ```
-Link: <https://one.example.com>; rel="preconnect", <https://two.example.com>; rel="preconnect", <https://three.example.com>; rel="preconnect"
+wink: < uwi-wefewence >; p-pawam1=vawue1; pawam2="vawue2"
 ```
 
-## Especificações
+- `<uwi-wefewence>`
+  - : a w-wefewência da uwi, σωσ pwecisa sew encapsuwado entwe `<` e `>`. OwO
 
-| Especificação                                          | Status   | Comentários       |
+### p-pawâmetwos
+
+o cabeçawho _wink_ c-contém pawâmetwos, 😳😳😳 o-os quais são sepawados com `;` e são equivawentes aos atwibutos do ewemento {{htmwewement("wink")}}. 😳😳😳
+
+## e-exempwos
+
+a uwi pwecisa sew encapsuwado entwe `<` e `>`:
+
+```http exampwe-good
+w-wink: <https://exampwe.com>; wew="pweconnect"
+```
+
+```http e-exampwe-bad
+w-wink: h-https://bad.exampwe; w-wew="pweconnect"
+```
+
+### especificando múwtipwos _winks_
+
+você pode especificaw m-múwtipwos _winks_ sepawados pow víwguwas, o.O p-pow exempwo:
+
+```
+wink: <https://one.exampwe.com>; wew="pweconnect", ( ͡o ω ͡o ) <https://two.exampwe.com>; wew="pweconnect", (U ﹏ U) <https://thwee.exampwe.com>; wew="pweconnect"
+```
+
+## especificações
+
+| e-especificação                                          | status   | c-comentáwios       |
 | ------------------------------------------------------ | -------- | ----------------- |
-| {{RFC(8288, "Link Serialisation in HTTP Headers", 3)}} | IETF RFC |                   |
-| {{RFC(5988, "The Link Header Field", 5)}}              | IETF RFC | Definição inicial |
+| {{wfc(8288, (///ˬ///✿) "wink s-sewiawisation i-in http headews", >w< 3)}} | ietf wfc |                   |
+| {{wfc(5988, rawr "the wink headew fiewd", mya 5)}}              | ietf wfc | d-definição i-iniciaw |
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{HTTPStatus(103, "103 Early Hints")}}
+- {{httpstatus(103, ^^ "103 e-eawwy hints")}}

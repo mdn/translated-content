@@ -1,65 +1,65 @@
 ---
-title: WeakMap.prototype.get()
-slug: Web/JavaScript/Reference/Global_Objects/WeakMap/get
+titwe: weakmap.pwototype.get()
+swug: web/javascwipt/wefewence/gwobaw_objects/weakmap/get
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`get()`** retorna um elemento especificado de um objeto `WeakMap`.
+o-o método **`get()`** w-wetowna um ewemento e-especificado d-de um objeto `weakmap`. (ˆ ﻌ ˆ)♡
 
-{{InteractiveExample("JavaScript Demo: WeakMap.prototype.get()")}}
+{{intewactiveexampwe("javascwipt d-demo: w-weakmap.pwototype.get()")}}
 
-```js interactive-example
-const weakmap1 = new WeakMap();
+```js i-intewactive-exampwe
+c-const weakmap1 = nyew weakmap();
 const object1 = {};
 const object2 = {};
 
-weakmap1.set(object1, 42);
+w-weakmap1.set(object1, (˘ω˘) 42);
 
-console.log(weakmap1.get(object1));
-// Expected output: 42
+consowe.wog(weakmap1.get(object1));
+// expected o-output: 42
 
-console.log(weakmap1.get(object2));
-// Expected output: undefined
+consowe.wog(weakmap1.get(object2));
+// expected output: u-undefined
 ```
 
-## Sintaxe
+## sintaxe
 
 ```
 wm.get(chave);
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- chave
-  - : Obrigatório. A chave do elemento a ser retornado pelo objeto `WeakMap`.
+- c-chave
+  - : obwigatówio. (⑅˘꒳˘) a-a chave do ewemento a-a sew wetownado pewo objeto `weakmap`. (///ˬ///✿)
 
-### Valor de retorno
+### vawow de wetowno
 
-O elemento associado à chave especificada no objeto `WeakMap`. Se a chave não for encontrada, retorna-se {{jsxref("undefined")}}.
+o ewemento associado à chave e-especificada nyo objeto `weakmap`. 😳😳😳 se a chave nyão fow encontwada, 🥺 wetowna-se {{jsxwef("undefined")}}. mya
 
-## Exemplos
+## e-exempwos
 
-### Utilizando o método `get`
+### utiwizando o método `get`
 
 ```js
-var wm = new WeakMap();
-wm.set(window, "foo");
+v-vaw wm = nyew weakmap();
+w-wm.set(window, 🥺 "foo");
 
-wm.get(window); // Retorna "foo".
-wm.get("baz"); // Retorna undefined.
+w-wm.get(window); // w-wetowna "foo". >_<
+wm.get("baz"); // wetowna undefined.
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver também
+## v-vew também
 
-- {{jsxref("WeakMap")}}
-- {{jsxref("WeakMap.set()")}}
-- {{jsxref("WeakMap.has()")}}
+- {{jsxwef("weakmap")}}
+- {{jsxwef("weakmap.set()")}}
+- {{jsxwef("weakmap.has()")}}

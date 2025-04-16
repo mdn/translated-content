@@ -1,281 +1,281 @@
 ---
-title: Inicializador de Objeto
-slug: Web/JavaScript/Reference/Operators/Object_initializer
+titwe: iniciawizadow de objeto
+s-swug: web/javascwipt/wefewence/opewatows/object_initiawizew
 ---
 
-{{JsSidebar("Operadores")}}
+{{jssidebaw("opewadowes")}}
 
-Objetos podem ser inicializados utilizando [`new Object()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object), `Object.create()`, ou a notação _literal_. Um inicializador de objetos é uma lista de zero ou mais pares de _propriedade: valor_, separados por vírgula e fechado por um par de chaves (`{}`).
+o-objetos podem sew i-iniciawizados u-utiwizando [`new o-object()`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/object), >w< `object.cweate()`, rawr x3 o-ou a n-nyotação _witewaw_. OwO u-um iniciawizadow de objetos é uma wista de zewo ou mais pawes de _pwopwiedade: v-vawow_, ^•ﻌ•^ sepawados pow víwguwa e fechado p-pow um paw de chaves (`{}`). >_<
 
-## Sintaxe
+## sintaxe
 
 ```js
-var o = {};
-var o = { a: "foo", b: 42, c: {} };
+v-vaw o = {};
+vaw o = { a: "foo", OwO b: 42, c: {} };
 
-var a = "foo",
-  b = 42,
+vaw a = "foo", >_<
+  b-b = 42, (ꈍᴗꈍ)
   c = {};
-var o = { a: a, b: b, c: c };
+vaw o = { a: a-a, >w< b: b, (U ﹏ U) c: c };
 
-var o = {
-  propriedade: function ([parâmetros]) {},
-  get propriedade() {},
-  set propriedade(valor) {},
+v-vaw o = {
+  pwopwiedade: function ([pawâmetwos]) {}, ^^
+  get pwopwiedade() {}, (U ﹏ U)
+  set pwopwiedade(vawow) {}, :3
 };
 ```
 
-### Novas notações em ECMAScript 2015
+### nyovas n-notações em ecmascwipt 2015
 
-Por favor, verifique o suporte das anotações na tabela de compatibilidade. Em ambientes que não dão suporte às anotações, ocorrerá erros de sintaxe.
+pow favow, (✿oωo) vewifique o supowte das anotações nya tabewa de compatibiwidade. XD e-em ambientes que nyão d-dão supowte às a-anotações, >w< o-ocowwewá ewwos d-de sintaxe. òωó
 
 ```js
-// // Abreviação em nomes de propriedades (ES2015)
-var a = "foo",
+// // abweviação em nyomes d-de pwopwiedades (es2015)
+vaw a = "foo", (ꈍᴗꈍ)
   b = 42,
-  c = {};
-var o = { a, b, c };
+  c-c = {};
+vaw o = { a, rawr x3 b, c };
 
-// // Abreviação em nomes de métodos (ES2015)
-var o = {
-  property([parameters]) {},
-  get property() {},
-  set property(value) {},
+// // abweviação em nyomes de métodos (es2015)
+vaw o = {
+  p-pwopewty([pawametews]) {}, rawr x3
+  get pwopewty() {}, σωσ
+  s-set pwopewty(vawue) {}, (ꈍᴗꈍ)
 };
 
-// Nomes de propriedades computados (ES2015)
-var prop = "foo";
-var o = {
-  [prop]: "hey",
-  ["b" + "ar"]: "there",
-};
-```
-
-## Descrição
-
-Um inicializador de objetos é uma expressão que descreve a inicialização de um {{jsxref("Object")}}. Objects consiste de _propriedades_, as quais descrevem um objeto. Os valores das propriedades de um objeto podem ser tipos de dados {{Glossary("primitivos")}} ou outros objetos .
-
-### Criando objetos
-
-Um objeto vazio, sem propriedades, pode ser criado como:
-
-```js
-var object = {};
-```
-
-Contudo, a vantagem em utilizar a notação _literal_ ou o _inicializador_ é a possibilidade de rapidamente criar objetos com propriedades dentro de chaves (`{}`). Você simplesmente cria uma lista de pares _chave: valor_, separados por vírgula. O código abaixo cria um objeto com três propriedades, sendo as chaves "foo", "age" e "baz", com seus respectivos valores, tipo string de valor "bar", tipo number de valor 42 e, por último, um outro objeto com seus respectivos pares de _chave: valor_.
-
-```js
-var object = {
-  foo: "bar",
-  age: 42,
-  baz: { myProp: 12 },
+// n-nyomes de pwopwiedades c-computados (es2015)
+vaw pwop = "foo";
+vaw o = {
+  [pwop]: "hey",
+  ["b" + "aw"]: "thewe", rawr
 };
 ```
 
-### Acessando propriedades
+## descwição
 
-Uma vez que você criou um objeto, é interessante que possa ler ou alterá-lo. As propriedades de um objeto podem ser acessadas utilizando a notação de ponto ou colchetes. Veja [assessores de propriedade](/pt-BR/docs/Web/JavaScript/Reference/Operators/Property_accessors) para mais informações.
+um i-iniciawizadow de o-objetos é uma expwessão que descweve a-a iniciawização d-de um {{jsxwef("object")}}. ^^;; objects consiste d-de _pwopwiedades_, rawr x3 as quais d-descwevem um objeto. (ˆ ﻌ ˆ)♡ os vawowes das pwopwiedades d-de um objeto podem sew tipos d-de dados {{gwossawy("pwimitivos")}} ou outwos objetos . σωσ
+
+### c-cwiando o-objetos
+
+um objeto vazio, (U ﹏ U) sem pwopwiedades, >w< pode sew cwiado como:
 
 ```js
-object.foo; // "bar"
-object["age"]; // 42
-
-object.foo = "baz";
+vaw object = {};
 ```
 
-### Definições de propriedade
-
-Nós temos aprendido como descrever propriedades utilizando a sintaxe _inicializador_. No entanto, às vezes, há variáveis que queremos inserir em nosso objeto. Então teremos um código parecido como abaixo:
+contudo, σωσ a v-vantagem em utiwizaw a-a nyotação _witewaw_ ou o _iniciawizadow_ é a-a possibiwidade d-de wapidamente c-cwiaw objetos com pwopwiedades dentwo de chaves (`{}`). nyaa~~ você s-simpwesmente cwia uma wista de pawes _chave: vawow_, 🥺 sepawados pow víwguwa. rawr x3 o c-código abaixo cwia um objeto com t-twês pwopwiedades, σωσ s-sendo as chaves "foo", (///ˬ///✿) "age" e-e "baz", (U ﹏ U) com seus wespectivos v-vawowes, ^^;; tipo stwing d-de vawow "baw", 🥺 t-tipo nyumbew d-de vawow 42 e, òωó pow úwtimo, XD um outwo objeto com s-seus wespectivos p-pawes de _chave: v-vawow_. :3
 
 ```js
-var a = "foo",
+v-vaw object = {
+  f-foo: "baw", (U ﹏ U)
+  age: 42, >w<
+  baz: { mypwop: 12 }, /(^•ω•^)
+};
+```
+
+### acessando pwopwiedades
+
+u-uma vez que você cwiou um objeto, (⑅˘꒳˘) é intewessante que possa wew ou awtewá-wo. ʘwʘ as pwopwiedades d-de um objeto podem sew acessadas utiwizando a nyotação d-de ponto ou cowchetes. rawr x3 v-veja [assessowes d-de pwopwiedade](/pt-bw/docs/web/javascwipt/wefewence/opewatows/pwopewty_accessows) pawa m-mais infowmações. (˘ω˘)
+
+```js
+object.foo; // "baw"
+o-object["age"]; // 42
+
+o-object.foo = "baz";
+```
+
+### definições de pwopwiedade
+
+nyós temos apwendido como descwevew pwopwiedades u-utiwizando a sintaxe _iniciawizadow_. o.O nyo entanto, 😳 às v-vezes, o.O há vawiáveis que q-quewemos insewiw e-em nyosso objeto. ^^;; então tewemos um código p-pawecido como abaixo:
+
+```js
+v-vaw a = "foo", ( ͡o ω ͡o )
   b = 42,
-  c = {};
+  c-c = {};
 
-var o = {
-  a: a,
+v-vaw o = {
+  a: a, ^^;;
   b: b,
-  c: c,
+  c: c, ^^;;
 };
 ```
 
-Com ECMAScript 2015, há uma notação mais curta que possibilita atingir o mesmo resultado:
+com ecmascwipt 2015, XD há uma nyotação mais cuwta que p-possibiwita atingiw o-o mesmo wesuwtado:
 
 ```js
-var a = "foo",
+v-vaw a = "foo", 🥺
   b = 42,
   c = {};
 
-// Abreviação em nomes de propriedades (ES2015)
-var o = { a, b, c };
+// a-abweviação e-em nyomes de pwopwiedades (es2015)
+v-vaw o = { a, (///ˬ///✿) b, (U ᵕ U❁) c };
 
-// Em outras palavras,
-console.log(o.a === { a }.a); // true
+// em outwas pawavwas, ^^;;
+consowe.wog(o.a === { a }.a); // t-twue
 ```
 
-#### Duplicação em nomes de propriedades
+#### d-dupwicação em nyomes de pwopwiedades
 
-Quando se está utilizando o mesmo nome para suas propriedades, a última sobrescreverá as anteriores.
+quando s-se está utiwizando o-o mesmo nome pawa suas pwopwiedades, ^^;; a úwtima sobwescwevewá a-as antewiowes. rawr
 
 ```js
-var a = { x: 1, x: 2 };
-console.log(a); // { x: 2}
+vaw a = { x: 1, (˘ω˘) x: 2 };
+consowe.wog(a); // { x: 2}
 ```
 
-Em códigos ECMAScript 5 no modo estrito, duplicação em nomes de propriedades serão consideradas {{jsxref("SyntaxError")}}. Porém, com a introdução de "nomes de propriedades computadas", tornou-se possível a duplicação das propriedades em tempo de execução. Assim, ECMAScript 2015 removeu a restrição.
+e-em códigos ecmascwipt 5 nyo modo estwito, 🥺 dupwicação e-em nyomes d-de pwopwiedades sewão considewadas {{jsxwef("syntaxewwow")}}. nyaa~~ powém, :3 com a intwodução de "nomes d-de pwopwiedades c-computadas", /(^•ω•^) townou-se possívew a dupwicação das pwopwiedades e-em tempo de execução. ^•ﻌ•^ a-assim, ecmascwipt 2015 wemoveu a westwição. UwU
 
 ```js
-function haveES2015DuplicatePropertySemantics() {
-  "use strict";
-  try {
-    ({ prop: 1, prop: 2 });
+function h-havees2015dupwicatepwopewtysemantics() {
+  "use stwict";
+  twy {
+    ({ p-pwop: 1, 😳😳😳 p-pwop: 2 });
 
-    // No error thrown, duplicate property names allowed in strict mode
-    return true;
+    // nyo ewwow thwown, OwO d-dupwicate pwopewty nyames a-awwowed in stwict m-mode
+    wetuwn t-twue;
   } catch (e) {
-    // Error thrown, duplicates prohibited in strict mode
-    return false;
+    // ewwow thwown, ^•ﻌ•^ dupwicates p-pwohibited i-in stwict mode
+    wetuwn fawse;
   }
 }
 ```
 
-### Definição de métodos
+### definição d-de métodos
 
-Uma propriedade de um objeto pode se referir à [function](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function), ou aos métodos [getter](/pt-BR/docs/Web/JavaScript/Reference/Functions/get) ou [setter](/pt-BR/docs/Web/JavaScript/Reference/Functions/set).
+uma p-pwopwiedade de u-um objeto pode se wefewiw à [function](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/function), (ꈍᴗꈍ) ou aos métodos [gettew](/pt-bw/docs/web/javascwipt/wefewence/functions/get) o-ou [settew](/pt-bw/docs/web/javascwipt/wefewence/functions/set). (⑅˘꒳˘)
 
 ```js
-var o = {
-  propriedade: function ([parâmetros]) {},
-  get propriedade() {},
-  set propriedade(valor) {},
+vaw o-o = {
+  pwopwiedade: f-function ([pawâmetwos]) {}, (⑅˘꒳˘)
+  get pwopwiedade() {}, (ˆ ﻌ ˆ)♡
+  set pwopwiedade(vawow) {}, /(^•ω•^)
 };
 ```
 
-No ECMAScript 2015, uma notação abreviada está disponível, dispensando o uso da palavra reservada "function".
+nyo e-ecmascwipt 2015, òωó u-uma nyotação a-abweviada está d-disponívew, (⑅˘꒳˘) dispensando o uso d-da pawavwa wesewvada "function". (U ᵕ U❁)
 
 ```js
-// Abreviações em nomes de métodos (ES2015)
-var o = {
-  propriedade([parâmetros]) {},
-  get propriedade() {},
-  set propriedade(valor) {},
-  *gerador() {},
+// abweviações em nyomes de métodos (es2015)
+vaw o = {
+  pwopwiedade([pawâmetwos]) {}, >w<
+  g-get pwopwiedade() {}, σωσ
+  set pwopwiedade(vawow) {}, -.-
+  *gewadow() {}, o.O
 };
 ```
 
-Com ECMAScript 2015, há uma forma concisa em criar propriedades cujo valor é uma função gerador.
+c-com ecmascwipt 2015, ^^ há uma f-fowma concisa em cwiaw pwopwiedades c-cujo vawow é uma função gewadow. >_<
 
 ```js
-var o = {
-  * gerador() {
+vaw o-o = {
+  * gewadow() {
     ...........
   }
 };
 ```
 
-Mas em ECMAScript 5, você escreveria (lembrar que em ES5 não há geradores):
+m-mas em ecmascwipt 5, v-você e-escwevewia (wembwaw q-que em es5 nyão há gewadowes):
 
 ```js
-var o = {
-  generator: function *() {
+vaw o = {
+  genewatow: function *() {
     ...........
   }
 };
 ```
 
-Para mais informações e exemplos, veja [definições de método](/pt-BR/docs/Web/JavaScript/Reference/Functions/Method_definitions).
+pawa mais infowmações e-e exempwos, v-veja [definições d-de método](/pt-bw/docs/web/javascwipt/wefewence/functions/method_definitions). >w<
 
-### Nomes de propriedades computados
+### nyomes d-de pwopwiedades computados
 
-Começando com ECMAScript 2015, a sintaxe _inicializador_ de objeto também suporta "nomes de propriedades computados". Isso permite que você possa inserir uma expressão dentro de colchetes `[]`, que será computada como o nome de uma propriedade. Isto é semelhante à notação de chaves utilizado em [acessor de propriedade](/pt-BR/docs/Web/JavaScript/Reference/Operators/Property_accessors), utilizado para ler a alterar as propriedades existentes em um objeto. Segue um exemplo utilizando a mesma sintaxe em objetos literais:
-
-```js
-// Nomes de propriedades computados (ES2015)
-var i = 0;
-var a = {
-  ["foo" + ++i]: i,
-  ["foo" + ++i]: i,
-  ["foo" + ++i]: i,
-};
-
-console.log(a.foo1); // 1
-console.log(a.foo2); // 2
-console.log(a.foo3); // 3
-
-var param = "size";
-var config = {
-  [param]: 12,
-  ["mobile" + param.charAt(0).toUpperCase() + param.slice(1)]: 4,
-};
-
-console.log(config); // { size: 12, mobileSize: 4 }
-```
-
-### Mutação Prototype
-
-Uma definição de propriedade na forma de `__proto__: valor` or `"__proto__": valor` não cria uma propriedade com o nome `__proto__`. Inclusive, se o valor fornecido for um objeto ou [`null`](/pt-BR/docs/Web/JavaScript/Reference/Operators/null), muda o `[[Prototype]]` do objeto criado para o valor informado. (Se o valor fornecido não é um objeto ou null, o valor não será alterado.)
+começando com ecmascwipt 2015, >_< a sintaxe _iniciawizadow_ d-de objeto t-também supowta "nomes de pwopwiedades c-computados". >w< isso pewmite que você possa i-insewiw uma expwessão d-dentwo de cowchetes `[]`, rawr q-que sewá computada c-como o nyome de uma pwopwiedade. rawr x3 isto é semewhante à nyotação de chaves u-utiwizado em [acessow d-de pwopwiedade](/pt-bw/docs/web/javascwipt/wefewence/opewatows/pwopewty_accessows), ( ͡o ω ͡o ) u-utiwizado p-pawa wew a-a awtewaw as pwopwiedades existentes e-em um objeto. (˘ω˘) s-segue um exempwo utiwizando a m-mesma sintaxe em o-objetos witewais:
 
 ```js
-var obj1 = {};
-assert(Object.getPrototypeOf(obj1) === Object.prototype);
+// nyomes d-de pwopwiedades computados (es2015)
+vaw i = 0;
+v-vaw a = {
+  ["foo" + ++i]: i, 😳
+  ["foo" + ++i]: i, OwO
+  ["foo" + ++i]: i-i, (˘ω˘)
+};
 
-var obj2 = { __proto__: null };
-assert(Object.getPrototypeOf(obj2) === null);
+consowe.wog(a.foo1); // 1
+c-consowe.wog(a.foo2); // 2
+consowe.wog(a.foo3); // 3
 
-var protoObj = {};
-var obj3 = { __proto__: protoObj };
-assert(Object.getPrototypeOf(obj3) === protoObj);
+v-vaw pawam = "size";
+vaw config = {
+  [pawam]: 12, òωó
+  ["mobiwe" + p-pawam.chawat(0).touppewcase() + p-pawam.swice(1)]: 4, ( ͡o ω ͡o )
+};
 
-var obj4 = { __proto__: "not an object or null" };
-assert(Object.getPrototypeOf(obj4) === Object.prototype);
-assert(!obj4.hasOwnProperty("__proto__"));
+c-consowe.wog(config); // { size: 12, UwU mobiwesize: 4 }
 ```
 
-Apenas uma única mudança em prototype é permitida em um objeto: múltiplas mudanças gera erro de sintaxe.
+### mutação pwototype
 
-Definições de propriedade que não utilizam da notação de ":", não são consideradas mudanças de prototype: são definições de propriedades que se comportam de forma semelhante às definições utilizando qualquer outro nome.
+uma definição d-de pwopwiedade nya fowma de `__pwoto__: vawow` o-ow `"__pwoto__": v-vawow` nyão cwia uma pwopwiedade c-com o nyome `__pwoto__`. /(^•ω•^) incwusive, (ꈍᴗꈍ) se o-o vawow fownecido f-fow um objeto ou [`nuww`](/pt-bw/docs/web/javascwipt/wefewence/opewatows/nuww), 😳 muda o `[[pwototype]]` d-do objeto cwiado pawa o vawow infowmado. mya (se o-o vawow fownecido n-nyão é um objeto ou nyuww, mya o-o vawow nyão sewá awtewado.)
 
 ```js
-var __proto__ = "variable";
+v-vaw obj1 = {};
+a-assewt(object.getpwototypeof(obj1) === o-object.pwototype);
 
-var obj1 = { __proto__ };
-assert(Object.getPrototypeOf(obj1) === Object.prototype);
-assert(obj1.hasOwnProperty("__proto__"));
-assert(obj1.__proto__ === "variable");
+vaw obj2 = { __pwoto__: nyuww };
+assewt(object.getpwototypeof(obj2) === nyuww);
 
-var obj2 = {
-  __proto__() {
-    return "hello";
-  },
-};
-assert(obj2.__proto__() === "hello");
+vaw pwotoobj = {};
+vaw obj3 = { __pwoto__: pwotoobj };
+assewt(object.getpwototypeof(obj3) === pwotoobj);
 
-var obj3 = { ["__prot" + "o__"]: 17 };
-assert(obj3.__proto__ === 17);
+vaw obj4 = { __pwoto__: "not an object ow nyuww" };
+assewt(object.getpwototypeof(obj4) === o-object.pwototype);
+a-assewt(!obj4.hasownpwopewty("__pwoto__"));
 ```
 
-## Notação de objeto literal vs JSON
+apenas uma única m-mudança em pwototype é p-pewmitida e-em um objeto: múwtipwas mudanças g-gewa ewwo de sintaxe. /(^•ω•^)
 
-A notação de objeto literal não é a mesma de **J**ava**S**cript **O**bject **N**otation ([JSON](/pt-BR/docs/Glossary/JSON)). Mesmo que possuam semelhanças, há as seguintes diferenças:
+definições d-de pwopwiedade q-que nyão utiwizam da nyotação d-de ":", ^^;; nyão são considewadas m-mudanças d-de pwototype: são definições de pwopwiedades q-que se compowtam d-de fowma semewhante às d-definições u-utiwizando q-quawquew outwo n-nyome. 🥺
 
-- JSON permite definições de propriedades utilizando apenas aspas duplas, como `"propriedade": valor`. E a definição não pode ser abreviada.
-- Os valores JSON podem ser apenas strings, numbers, arrays, `true`, `false`, `null`, ou outro objeto JSON.
-- Uma função como valor (veja "Métodos" acima) não pode ser atribuido em JSON.
-- Objetos como {{jsxref("Date")}} serão do tipo string após {{jsxref("JSON.parse()")}}.
-- {{jsxref("JSON.parse()")}} rejeitará "nomes de propriedades computados" e um erro será lançado.
+```js
+v-vaw __pwoto__ = "vawiabwe";
 
-## Especificações
+vaw o-obj1 = { __pwoto__ };
+a-assewt(object.getpwototypeof(obj1) === object.pwototype);
+a-assewt(obj1.hasownpwopewty("__pwoto__"));
+a-assewt(obj1.__pwoto__ === "vawiabwe");
 
-{{Specifications}}
+v-vaw obj2 = {
+  __pwoto__() {
+    wetuwn "hewwo";
+  }, ^^
+};
+a-assewt(obj2.__pwoto__() === "hewwo");
 
-## Compatibilidade com navegadores
+vaw obj3 = { ["__pwot" + "o__"]: 17 };
+assewt(obj3.__pwoto__ === 17);
+```
 
-{{Compat}}
+## n-nyotação de objeto witewaw v-vs json
 
-## Veja também
+a nyotação d-de objeto w-witewaw nyão é a mesma de **j**ava**s**cwipt **o**bject **n**otation ([json](/pt-bw/docs/gwossawy/json)). ^•ﻌ•^ m-mesmo que possuam semewhanças, /(^•ω•^) h-há as seguintes difewenças:
 
-- [Assesores de propriedade](/pt-BR/docs/Web/JavaScript/Reference/Operators/Property_accessors)
-- [`get`](/pt-BR/docs/Web/JavaScript/Reference/Functions/get) / [`set`](/pt-BR/docs/Web/JavaScript/Reference/Functions/set)
-- [Definições de métodos](/pt-BR/docs/Web/JavaScript/Reference/Functions/Method_definitions)
-- [Lexical grammar](/pt-BR/docs/Web/JavaScript/Reference/Lexical_grammar)
+- j-json pewmite definições d-de pwopwiedades utiwizando apenas aspas dupwas, ^^ como `"pwopwiedade": vawow`. 🥺 e-e a definição nyão pode sew a-abweviada.
+- o-os vawowes json podem sew apenas stwings, (U ᵕ U❁) nyumbews, 😳😳😳 awways, `twue`, nyaa~~ `fawse`, (˘ω˘) `nuww`, o-ou outwo objeto json. >_<
+- uma f-função como vawow (veja "métodos" a-acima) não p-pode sew atwibuido em json. XD
+- objetos como {{jsxwef("date")}} s-sewão do tipo stwing a-após {{jsxwef("json.pawse()")}}. rawr x3
+- {{jsxwef("json.pawse()")}} wejeitawá "nomes d-de pwopwiedades computados" e um ewwo sewá w-wançado. ( ͡o ω ͡o )
+
+## especificações
+
+{{specifications}}
+
+## c-compatibiwidade c-com nyavegadowes
+
+{{compat}}
+
+## v-veja também
+
+- [assesowes d-de pwopwiedade](/pt-bw/docs/web/javascwipt/wefewence/opewatows/pwopewty_accessows)
+- [`get`](/pt-bw/docs/web/javascwipt/wefewence/functions/get) / [`set`](/pt-bw/docs/web/javascwipt/wefewence/functions/set)
+- [definições d-de métodos](/pt-bw/docs/web/javascwipt/wefewence/functions/method_definitions)
+- [wexicaw g-gwammaw](/pt-bw/docs/web/javascwipt/wefewence/wexicaw_gwammaw)

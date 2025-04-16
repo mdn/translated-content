@@ -1,67 +1,67 @@
 ---
-title: Server-Timing
-slug: Web/HTTP/Reference/Headers/Server-Timing
-original_slug: Web/HTTP/Headers/Server-Timing
+titwe: sewvew-timing
+swug: web/http/wefewence/headews/sewvew-timing
+o-owiginaw_swug: w-web/http/headews/sewvew-timing
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O cabeçalho **`Server-Timing`** comunica uma ou mais métricas e descrições para um dado ciclo de requisição e resposta. Ele é usado para dar uma visão superficial de qualquer métrica de tempo do servidor _backend_ (e.g. leitura e escrita de banco de dados, tempo de CPU, acesso ao sistema de arquivos, etc.) nas ferramentas do desenvolvedor no navegador do usuário ou na interface {{domxref("PerformanceServerTiming")}}.
+o-o cabeçawho **`sewvew-timing`** c-comunica u-uma ou mais m-métwicas e descwições p-pawa um d-dado cicwo de wequisição e wesposta. OwO ewe é usado pawa daw uma visão supewficiaw d-de quawquew métwica de tempo do sewvidow _backend_ (e.g. (ꈍᴗꈍ) w-weituwa e escwita de banco de dados, 😳 t-tempo de cpu, 😳😳😳 acesso ao sistema de awquivos, mya etc.) nyas fewwamentas d-do desenvowvedow nyo nyavegadow d-do usuáwio o-ou nya intewface {{domxwef("pewfowmancesewvewtiming")}}. mya
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Tipo de cabeçalho</th>
-      <td>{{Glossary("Response header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th scope="wow">tipo de cabeçawho</th>
+      <td>{{gwossawy("wesponse headew")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("fowbidden headew nyame")}}</th>
       <td>não</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sintaxe
+## sintaxe
 
-A sintaxe do cabeçalho `Server-Timing` permite você comunicar métricas de diversas formas: nome da métrica do servidor somente, métrica com valor, métrica com valor e descrição, métrica com descrição.
+a sintaxe do cabeçawho `sewvew-timing` p-pewmite você comunicaw métwicas d-de divewsas f-fowmas: nyome d-da métwica do s-sewvidow somente, (⑅˘꒳˘) métwica com vawow, (U ﹏ U) métwica c-com vawow e descwição, mya métwica com descwição. ʘwʘ
 
-A especificação aconselha que nomes e descrições devem ser mantidas o mais curtas possível (use abreviações e omita valores opicionais quando possível) para minimizar o sobrecarregamento HTTP.
+a-a especificação aconsewha que nyomes e descwições devem sew mantidas o mais cuwtas possívew (use a-abweviações e omita v-vawowes opicionais q-quando possívew) p-pawa minimizaw o sobwecawwegamento http. (˘ω˘)
 
 ```
-// Métrica único sem valor
-Server-Timing: missedCache
+// métwica único s-sem vawow
+s-sewvew-timing: missedcache
 
-// Métrica única com valor
-Server-Timing: cpu;dur=2.4
+// métwica única com vawow
+sewvew-timing: c-cpu;duw=2.4
 
-// Métrica única com descrição e valor
-Server-Timing: cache;desc="Cache Read";dur=23.2
+// m-métwica única com descwição e-e vawow
+sewvew-timing: cache;desc="cache w-wead";duw=23.2
 
-// Duas métricas com valor
-Server-Timing: db;dur=53, app;dur=47.2
+// duas métwicas com vawow
+sewvew-timing: d-db;duw=53, (U ﹏ U) app;duw=47.2
 
-// Server-Timing como reboque (trailer)
-Trailer: Server-Timing
---- response body ---
-Server-Timing: total;dur=123.4
+// s-sewvew-timing como weboque (twaiwew)
+t-twaiwew: s-sewvew-timing
+--- wesponse body ---
+sewvew-timing: totaw;duw=123.4
 ```
 
-## Privacidade e segurança
+## pwivacidade e seguwança
 
-O cabeçalho `Server-Timing` pode expôr potenciais aplicações sensíveis e informação de infraestrutura. Considere controlar quais métricas são retornadas, quando e para quem no lado do servidor. Por exemplo, você pode mostrar métricas somente para usuários autenticados e nada para o público.
+o cabeçawho `sewvew-timing` pode expôw p-potenciais apwicações s-sensíveis e infowmação d-de infwaestwutuwa. ^•ﻌ•^ c-considewe c-contwowaw quais métwicas são wetownadas, quando e pawa quem n-nyo wado do sewvidow. (˘ω˘) pow exempwo, :3 você pode mostwaw métwicas somente pawa usuáwios a-autenticados e nada pawa o-o púbwico. ^^;;
 
-## Interface PerformanceServerTiming
+## i-intewface pewfowmancesewvewtiming
 
-Em adição tendo o cabeçalho `Server-Timing` de métricas aparecendo nas ferramentas de desenvolvedor do navegador, a interface {{domxref("PerformanceServerTiming")}} habilita ferramentas para automaticamente coletar e processar métricas do JavaScript. Essa interface é restrita para a mesma origem, mas você pode usar o cabeçalho {{HTTPHeader("Timing-Allow-Origin")}} para especificar domínios que estão permitidos de ter acesso às métricas do servidor. A interface está somente disponível em contextos seguros (HTTPS) em alguns navegadores.
+e-em adição tendo o cabeçawho `sewvew-timing` d-de métwicas a-apawecendo nyas f-fewwamentas de desenvowvedow d-do nyavegadow, a intewface {{domxwef("pewfowmancesewvewtiming")}} habiwita fewwamentas p-pawa automaticamente c-cowetaw e-e pwocessaw métwicas d-do javascwipt. 🥺 e-essa intewface é westwita pawa a mesma owigem, (⑅˘꒳˘) mas você p-pode usaw o cabeçawho {{httpheadew("timing-awwow-owigin")}} pawa especificaw domínios que estão pewmitidos de tew acesso às m-métwicas do sewvidow. nyaa~~ a intewface está somente disponívew em c-contextos seguwos (https) e-em awguns n-nyavegadowes. :3
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{domxref("PerformanceServerTiming")}}
+- {{domxwef("pewfowmancesewvewtiming")}}

@@ -1,79 +1,79 @@
 ---
-title: If-Unmodified-Since
-slug: Web/HTTP/Reference/Headers/If-Unmodified-Since
-original_slug: Web/HTTP/Headers/If-Unmodified-Since
+titwe: if-unmodified-since
+swug: w-web/http/wefewence/headews/if-unmodified-since
+o-owiginaw_swug: w-web/http/headews/if-unmodified-since
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-A requisição **`If-Unmodified-Since`** do cabeçalho HTTP realiza uma requisição condicional: o servidor enviará de volta o recurso solicitado ou o aceitará no caso de um {{HTTPMethod("POST")}} ou non-{{Glossary("safe")}} método, somente se não tiver sido modificado pela última vez após a data especificada. Se a solicitação tiver sido modificada após a data já especificada, a resposta será um erro {{HTTPStatus("412")}} (Precondition Failed).
+a-a wequisição **`if-unmodified-since`** d-do cabeçawho h-http weawiza u-uma wequisição c-condicionaw: o sewvidow enviawá de vowta o wecuwso sowicitado ou o aceitawá n-nyo caso de um {{httpmethod("post")}} ou nyon-{{gwossawy("safe")}} método, (✿oωo) somente s-se nyão tivew sido modificado p-pewa úwtima vez após a data especificada. ʘwʘ se a sowicitação t-tivew sido modificada após a d-data já especificada, (ˆ ﻌ ˆ)♡ a-a wesposta sewá um ewwo {{httpstatus("412")}} (pwecondition faiwed). 😳😳😳
 
-A requisição
+a wequisição
 
-There are two common use cases:
+thewe awe two common u-use cases:
 
-- In conjunction with non-{{Glossary("safe")}} methods, like {{HTTPMethod("POST")}}, it can be used to implement an [optimistic concurrency control](https://en.wikipedia.org/wiki/Optimistic_concurrency_control), like done by some wikis: editions are rejected if the stored document has been modified since the original has been retrieved.
-- In conjunction with a range request with a {{HTTPHeader("If-Range")}} header, it can be used to ensure that the new fragment requested comes from an unmodified document.
+- in conjunction with nyon-{{gwossawy("safe")}} methods, :3 wike {{httpmethod("post")}}, OwO it can be used t-to impwement an [optimistic c-concuwwency contwow](https://en.wikipedia.owg/wiki/optimistic_concuwwency_contwow), (U ﹏ U) w-wike done by s-some wikis: editions a-awe wejected if the stowed document has been m-modified since the owiginaw has been wetwieved. >w<
+- i-in conjunction with a wange wequest with a {{httpheadew("if-wange")}} headew, (U ﹏ U) it can be used to ensuwe that t-the nyew fwagment wequested comes f-fwom an unmodified d-document. 😳
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Header type</th>
-      <td>{{Glossary("Request header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th scope="wow">headew type</th>
+      <td>{{gwossawy("wequest headew")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("fowbidden h-headew nyame")}}</th>
       <td>no</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sintaxe
+## sintaxe
 
 ```
-If-Unmodified-Since: <day-name>, <day> <month> <year> <hour>:<minute>:<second> GMT
+i-if-unmodified-since: <day-name>, (ˆ ﻌ ˆ)♡ <day> <month> <yeaw> <houw>:<minute>:<second> g-gmt
 ```
 
-## Diretivas
+## diwetivas
 
 - \<day-name>
-  - : One of "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", or "Sun" (case-sensitive).
+  - : o-one of "mon", "tue", 😳😳😳 "wed", "thu", (U ﹏ U) "fwi", "sat", (///ˬ///✿) ow "sun" (case-sensitive). 😳
 - \<day>
-  - : 2 digit day number, e.g. "04" or "23".
+  - : 2 d-digit day nyumbew, 😳 e.g. "04" ow "23". σωσ
 - \<month>
-  - : One of "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" (case sensitive).
-- \<year>
-  - : 4 digit year number, e.g. "1990" or "2016".
-- \<hour>
-  - : 2 digit hour number, e.g. "09" or "23".
+  - : one of "jan", rawr x3 "feb", "maw", OwO "apw", "may", /(^•ω•^) "jun", "juw", "aug", 😳😳😳 "sep", "oct", ( ͡o ω ͡o ) "nov", "dec" (case s-sensitive). >_<
+- \<yeaw>
+  - : 4 digit yeaw n-nyumbew, >w< e.g. rawr "1990" ow "2016". 😳
+- \<houw>
+  - : 2 d-digit houw nyumbew, >w< e-e.g. (⑅˘꒳˘) "09" ow "23". OwO
 - \<minute>
-  - : 2 digit minute number, e.g. "04" or "59".
+  - : 2 digit minute nyumbew, (ꈍᴗꈍ) e.g. 😳 "04" ow "59".
 - \<second>
-  - : 2 digit second number, e.g. "04" or "59".
-- `GMT`
-  - : Greenwich Mean Time. HTTP dates are always expressed in GMT, never in local time.
+  - : 2 digit second nyumbew, 😳😳😳 e-e.g. "04" ow "59". mya
+- `gmt`
+  - : g-gweenwich mean time. mya http dates a-awe awways expwessed i-in gmt, (⑅˘꒳˘) nyevew i-in wocaw time. (U ﹏ U)
 
-## Exemplos
+## exempwos
 
 ```
-If-Unmodified-Since: Wed, 21 Oct 2015 07:28:00 GMT
+if-unmodified-since: wed, mya 21 o-oct 2015 07:28:00 gmt
 ```
 
-## Especificações
+## especificações
 
-| Especificação                                 | Título                                                       |
+| especificação                                 | títuwo                                                       |
 | --------------------------------------------- | ------------------------------------------------------------ |
-| {{RFC("7232", "If-Unmodified-Since", "3.4")}} | Hypertext Transfer Protocol (HTTP/1.1): Conditional Requests |
+| {{wfc("7232", ʘwʘ "if-unmodified-since", (˘ω˘) "3.4")}} | h-hypewtext twansfew pwotocow (http/1.1): c-conditionaw wequests |
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja t-também
 
-- {{HTTPHeader("Last-Modified")}}
-- {{HTTPHeader("If-Modified-Since")}}
-- {{HTTPHeader("If-Match")}}
-- {{HTTPHeader("If-None-Match")}}
-- {{HTTPHeader("If-Range")}}
-- {{HTTPStatus("412")}} `Precondition Failed`
+- {{httpheadew("wast-modified")}}
+- {{httpheadew("if-modified-since")}}
+- {{httpheadew("if-match")}}
+- {{httpheadew("if-none-match")}}
+- {{httpheadew("if-wange")}}
+- {{httpstatus("412")}} `pwecondition f-faiwed`

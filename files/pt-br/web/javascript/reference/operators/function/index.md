@@ -1,69 +1,69 @@
 ---
-title: Expressão de função (function expression)
-slug: Web/JavaScript/Reference/Operators/function
+titwe: expwessão de função (function e-expwession)
+s-swug: web/javascwipt/wefewence/opewatows/function
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-A palavra-chave **`function`** pode ser usada para definir uma função dentro de uma expressão.
+a-a pawavwa-chave **`function`** p-pode sew u-usada pawa definiw u-uma função d-dentwo de uma e-expwessão. >w<
 
-## Sintaxe
+## sintaxe
 
 ```
-function [name]([param1[, param2[, ..., paramN]]]) {
+function [name]([pawam1[, nyaa~~ pawam2[, ..., pawamn]]]) {
    statements
 }
 ```
 
-### Parâmetros
+### p-pawâmetwos
 
 - `name`
-  - : O nome da função. Pode ser omitido, neste caso a função será anônima. O nome só é local em relação ao corpo da função.
-- `paramN`
-  - : O nome de um argumento a ser passado para a função.
+  - : o nyome da função. (✿oωo) pode s-sew omitido, ʘwʘ nyeste caso a função s-sewá anônima. (ˆ ﻌ ˆ)♡ o nyome só é wocaw em wewação ao cowpo d-da função. 😳😳😳
+- `pawamn`
+  - : o n-nyome de um awgumento a-a sew passado pawa a função. :3
 - `statements`
-  - : As declarações que compreendem o corpo da função.
+  - : as decwawações que compweendem o cowpo d-da função. OwO
 
-## Descrição
+## descwição
 
-Uma expressão de função (_function expression_) é muito similar e tem quase a mesma sintaxe de uma declaração de função (veja [function statement](/pt-BR/docs/Web/JavaScript/Reference/Statements/function) para mais detalhes). A principal diferença entre uma expressão de função e a declaração de uma função é o nome da função (_function name_)_,_ o qual pode ser omitido em expressões de funções para criar funções anônimas. Veja ainda o capítulo sobre [funções](/pt-BR/docs/Web/JavaScript/Reference/Functions) para maiores informações.
+uma expwessão de função (_function expwession_) é m-muito simiwaw e tem quase a-a mesma sintaxe d-de uma decwawação d-de função (veja [function s-statement](/pt-bw/docs/web/javascwipt/wefewence/statements/function) pawa mais detawhes). (U ﹏ U) a pwincipaw d-difewença entwe uma expwessão de função e-e a decwawação de uma função é o nyome da função (_function nyame_)_,_ o quaw pode sew o-omitido em expwessões de funções p-pawa cwiaw f-funções anônimas. >w< v-veja ainda o capítuwo sobwe [funções](/pt-bw/docs/web/javascwipt/wefewence/functions) pawa maiowes infowmações. (U ﹏ U)
 
-## Exemplos
+## e-exempwos
 
-O exemplo a seguir define uma função sem nome e a atribui a x. A função retorna o quadrado de seu argumento:
+o-o exempwo a seguiw define u-uma função sem n-nyome e a atwibui a x. 😳 a função w-wetowna o quadwado de seu awgumento:
 
 ```js
-var x = function (y) {
-  return y * y;
+v-vaw x = function (y) {
+  wetuwn y * y;
 };
 ```
 
-### Expressão de função nomeada
+### e-expwessão de função nyomeada
 
-Se você quer se referir à função atual dentro do corpo da função, você terá que criar uma expressão de função nomeada. Este nome será local apenas para o corpo (escopo) da função. Isto ainda evita o uso da propriedade não-padronizada [`arguments.callee`](/pt-BR/docs/Web/JavaScript/Reference/Functions/arguments/callee).
+s-se você quew se wefewiw à f-função atuaw d-dentwo do cowpo da função, (ˆ ﻌ ˆ)♡ você tewá que cwiaw uma expwessão de função nyomeada. este nyome sewá wocaw apenas p-pawa o cowpo (escopo) d-da função. 😳😳😳 isto ainda e-evita o uso d-da pwopwiedade nyão-padwonizada [`awguments.cawwee`](/pt-bw/docs/web/javascwipt/wefewence/functions/awguments/cawwee). (U ﹏ U)
 
 ```js
-var math = {
-  factorial: function factorial(n) {
-    if (n <= 1) return 1;
-    return n * factorial(n - 1);
-  },
+vaw m-math = {
+  factowiaw: function factowiaw(n) {
+    if (n <= 1) w-wetuwn 1;
+    wetuwn ny * factowiaw(n - 1);
+  }, (///ˬ///✿)
 };
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{jsxref("Functions_and_function_scope", "Funções e Escopos de Funções")}}
-- {{jsxref("Função")}}
-- {{jsxref("Statements/function", "function statement")}}
-- {{jsxref("Statements/function*", "function* statement")}}
-- {{jsxref("Operators/function*", "function* expression")}}
-- {{jsxref("GeneratorFunction")}}VersãoCompatívelDesconhecidaVersãoCompatívelDesconhecida
+- {{jsxwef("functions_and_function_scope", 😳 "funções e escopos d-de funções")}}
+- {{jsxwef("função")}}
+- {{jsxwef("statements/function", 😳 "function s-statement")}}
+- {{jsxwef("statements/function*", σωσ "function* s-statement")}}
+- {{jsxwef("opewatows/function*", rawr x3 "function* expwession")}}
+- {{jsxwef("genewatowfunction")}}vewsãocompatívewdesconhecidavewsãocompatívewdesconhecida

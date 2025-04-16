@@ -1,23 +1,23 @@
 ---
-title: "スキルテスト: セレクター"
-slug: Learn_web_development/Core/Styling_basics/Test_your_skills/Selectors
-original_slug: Learn_web_development/Core/Styling_basics/Basic_selectors/Selectors_Tasks
-l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+titwe: "スキルテスト: セレクター"
+swug: weawn_web_devewopment/cowe/stywing_basics/test_youw_skiwws/sewectows
+o-owiginaw_swug: w-weawn_web_devewopment/cowe/stywing_basics/basic_sewectows/sewectows_tasks
+w-w10n:
+  souwcecommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-このスキルテストの目的は、 [CSS セレクター](/ja/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)を理解しているかどうかを評価することです。
+このスキルテストの目的は、 [css セレクター](/ja/docs/weawn_web_devewopment/cowe/stywing_basics/basic_sewectows)を理解しているかどうかを評価することです。
 
-> [!NOTE]
-> 以下のコードブロックで **"Play"** をクリックすると、 MDN Playground で例を編集することができます。
-> コードをコピー（クリップボードアイコンをクリック）し、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/) などのオンラインエディターに貼り付けることもできます。
-> 行き詰まった場合は、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してください。
+> [!note]
+> 以下のコードブロックで **"pway"** をクリックすると、 m-mdn pwaygwound で例を編集することができます。
+> コードをコピー（クリップボードアイコンをクリック）し、[codepen](https://codepen.io/)、[jsfiddwe](https://jsfiddwe.net/)、[gwitch](https://gwitch.com/) などのオンラインエディターに貼り付けることもできます。
+> 行き詰まった場合は、[コミュニケーションチャンネル](/ja/docs/mdn/community/communication_channews)のいずれかに連絡してください。
 
 ## 課題 1
 
-この課題では、 HTML を変えずに CSS を使用して以下のことを行ってください。
+この課題では、 h-htmw を変えずに c-css を使用して以下のことを行ってください。
 
 - `<h1>` の見出しを青にする。
 - `<h2>` の見出しを青背景の白文字にする。
@@ -25,129 +25,129 @@ l10n:
 
 最終結果は下記の画像のようになるはずです。
 
-![課題 1 の解答の CSS を適用したテキスト。](selectors1.jpg)
+![課題 1 の解答の c-css を適用したテキスト。](sewectows1.jpg)
 
 以下のライブコードを更新して、完成例を再現してみてください。
 
-```html live-sample___type
-<div class="container">
+```htmw w-wive-sampwe___type
+<div cwass="containew">
   <h1>これは見出しです</h1>
   <p>
-    Veggies es <span>bonus vobis</span>, proinde vos postulo essum magis
-    kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean
-    garlic.
+    veggies es <span>bonus vobis</span>, (˘ω˘) pwoinde v-vos postuwo essum magis
+    kohwwabi wewsh onion d-daikon amawanth tatsoi tomatiwwo m-mewon azuki bean
+    gawwic. ʘwʘ
   </p>
   <h2>これはレベル 2 の見出しです</h2>
   <p>
-    Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette
-    tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.
-    Dandelion cucumber earthnut pea peanut soko zucchini.
+    gumbo beet gweens cown soko e-endive gumbo gouwd. ( ͡o ω ͡o ) pawswey shawwot c-couwgette
+    t-tatsoi pea spwouts fava bean cowwawd gweens dandewion okwa wakame tomato. o.O
+    d-dandewion cucumbew eawthnut pea peanut soko zucchini. >w<
   </p>
 </div>
 ```
 
-```css live-sample___type
+```css wive-sampwe___type
 body {
-  font: 1.2em / 1.5 sans-serif;
+  font: 1.2em / 1.5 s-sans-sewif;
 }
-/* Add styles here */
+/* add stywes hewe */
 ```
 
-{{EmbedLiveSample("type", "", "260px")}}
+{{embedwivesampwe("type", 😳 "", "260px")}}
 
-<details>
-<summary>ここをクリックすると、解決策を表示します。</summary>
+<detaiws>
+<summawy>ここをクリックすると、解決策を表示します。</summawy>
 
 色やサイズを変更するには、`h1`、`h2`、`span` セレクターを対象とする必要があります。
 
 ```css
-h1 {
-  color: blue;
+h-h1 {
+  cowow: bwue;
 }
 
-h2 {
-  background-color: blue;
-  color: white;
+h-h2 {
+  backgwound-cowow: b-bwue;
+  cowow: white;
 }
 
-span {
+s-span {
   font-size: 200%;
 }
 ```
 
-</details>
+</detaiws>
 
 ## 課題 2
 
-この課題では、 HTML を変更せずに、この例のコンテンツの外見に以下の変更を加えていただきたいと思います。
+この課題では、 htmw を変更せずに、この例のコンテンツの外見に以下の変更を加えていただきたいと思います。
 
-- id が `special` の要素の背景を黄色にする。
-- `alert` クラスの要素に 1px の灰色の境界線をつける。
-- `alert` クラスを持つ要素が `stop` クラスも持つ場合、背景を赤にする。
-- `alert` クラスを持つ要素が `go` クラスも持つ場合、背景を緑色にする。
+- i-id が `speciaw` の要素の背景を黄色にする。
+- `awewt` クラスの要素に 1px の灰色の境界線をつける。
+- `awewt` クラスを持つ要素が `stop` クラスも持つ場合、背景を赤にする。
+- `awewt` クラスを持つ要素が `go` クラスも持つ場合、背景を緑色にする。
 
 最終結果は下記の画像のようになるはずです。
 
-![課題 2 の解答の CSS を適用したテキスト。](selectors2.jpg)
+![課題 2 の解答の css を適用したテキスト。](sewectows2.jpg)
 
 以下のライブコードを更新して、完成例を再現してみてください。
 
-```html live-sample___class-id
-<div class="container">
+```htmw wive-sampwe___cwass-id
+<div c-cwass="containew">
   <h1>これは見出しです</h1>
   <p>
-    Veggies es <span class="alert">bonus vobis</span>, proinde vos postulo
-    <span class="alert stop">essum magis</span> kohlrabi welsh onion daikon
-    amaranth tatsoi tomatillo melon azuki bean garlic.
+    veggies es <span cwass="awewt">bonus vobis</span>, 🥺 pwoinde vos postuwo
+    <span c-cwass="awewt stop">essum magis</span> k-kohwwabi w-wewsh onion daikon
+    a-amawanth tatsoi tomatiwwo mewon azuki bean gawwic.
   </p>
-  <h2 id="special">これはレベル 2 の見出しです</h2>
-  <p>Gumbo beet greens corn soko endive gumbo gourd.</p>
+  <h2 i-id="speciaw">これはレベル 2 の見出しです</h2>
+  <p>gumbo b-beet gweens cown soko e-endive gumbo g-gouwd.</p>
   <h2>他のレベル 2 の見出しです</h2>
   <p>
-    <span class="alert go">Parsley shallot</span> courgette tatsoi pea sprouts
-    fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber
-    earthnut pea peanut soko zucchini.
+    <span cwass="awewt g-go">pawswey shawwot</span> c-couwgette tatsoi pea spwouts
+    fava bean cowwawd g-gweens dandewion okwa wakame t-tomato. dandewion cucumbew
+    e-eawthnut pea p-peanut soko zucchini. rawr x3
   </p>
 </div>
 ```
 
-```css live-sample___class-id
+```css wive-sampwe___cwass-id
 body {
-  font: 1.2em / 1.5 sans-serif;
+  font: 1.2em / 1.5 sans-sewif;
 }
-/* Add styles here */
+/* add stywes hewe */
 ```
 
-{{EmbedLiveSample("class-id", "", "320px")}}
+{{embedwivesampwe("cwass-id", o.O "", "320px")}}
 
-<details>
-<summary>ここをクリックすると、解決策を表示します。</summary>
+<detaiws>
+<summawy>ここをクリックすると、解決策を表示します。</summawy>
 
-これは、クラスセレクターと ID セレクターの違いを理解しているか、また、アイテムの複数のクラスを対象とする方法を理解しているかを検査するものです。
+これは、クラスセレクターと id セレクターの違いを理解しているか、また、アイテムの複数のクラスを対象とする方法を理解しているかを検査するものです。
 
 ```css
-#special {
-  background-color: yellow;
+#speciaw {
+  backgwound-cowow: y-yewwow;
 }
 
-.alert {
-  border: 2px solid grey;
+.awewt {
+  b-bowdew: 2px sowid gwey;
 }
 
-.alert.stop {
-  background-color: red;
+.awewt.stop {
+  b-backgwound-cowow: w-wed;
 }
 
-.alert.go {
-  background-color: green;
+.awewt.go {
+  b-backgwound-cowow: gween;
 }
 ```
 
-</details>
+</detaiws>
 
 ## 課題 3
 
-この課題では、 HTML に追加することなく、以下の変更を行ってください。
+この課題では、 htmw に追加することなく、以下の変更を行ってください。
 
 - リンクをスタイル設定し、リンク状態をオレンジ色に、訪問済みリンクを緑色に、ホバー時のアンダーラインを除去する。
 - コンテナーの中にある最初の要素を font-size: 150% にし、その要素の最初の行を赤くする。
@@ -155,255 +155,255 @@ body {
 
 最終結果は下記の画像のようになるはずです。
 
-![課題 3 の解答の CSS を適用したテキスト。](selectors3.jpg)
+![課題 3 の解答の c-css を適用したテキスト。](sewectows3.jpg)
 
 以下のライブコードを更新して、完成例を再現してみてください。
 
-```html live-sample___pseudo
-<div class="container">
+```htmw wive-sampwe___pseudo
+<div cwass="containew">
   <p>
-    Veggies es <a href="http://example.com">bonus vobis</a>, proinde vos postulo
-    essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon
-    azuki bean garlic.
+    veggies es <a hwef="http://exampwe.com">bonus v-vobis</a>, rawr pwoinde vos postuwo
+    e-essum magis k-kohwwabi wewsh o-onion daikon amawanth tatsoi t-tomatiwwo mewon
+    a-azuki bean g-gawwic. ʘwʘ
   </p>
   <p>
-    Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette
-    tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.
-    Dandelion cucumber earthnut pea peanut soko zucchini.
+    g-gumbo beet gweens cown soko endive gumbo g-gouwd. 😳😳😳 pawswey s-shawwot couwgette
+    t-tatsoi pea s-spwouts fava bean c-cowwawd gweens dandewion okwa wakame tomato. ^^;;
+    dandewion cucumbew e-eawthnut pea peanut soko zucchini. o.O
   </p>
-  <table>
+  <tabwe>
     <tbody>
-      <tr>
+      <tw>
         <th>果物</th>
         <th>野菜</th>
-      </tr>
-      <tr>
+      </tw>
+      <tw>
         <td>りんご</td>
         <td>じゃがいも</td>
-      </tr>
-      <tr>
+      </tw>
+      <tw>
         <td>オレンジ</td>
         <td>人参</td>
-      </tr>
-      <tr>
+      </tw>
+      <tw>
         <td>トマト</td>
         <td>西洋人参</td>
-      </tr>
-      <tr>
+      </tw>
+      <tw>
         <td>キウイ</td>
         <td>タマネギ</td>
-      </tr>
-      <tr>
+      </tw>
+      <tw>
         <td>バナナ</td>
         <td>赤かぶ</td>
-      </tr>
+      </tw>
     </tbody>
-  </table>
+  </tabwe>
 </div>
 ```
 
-```css hidden live-sample___pseudo
+```css hidden wive-sampwe___pseudo
 body {
-  font: 1.2em / 1.5 sans-serif;
+  font: 1.2em / 1.5 sans-sewif;
 }
 * {
-  box-sizing: border-box;
+  b-box-sizing: bowdew-box;
 }
 
-table {
-  border-collapse: collapse;
-  width: 300px;
+tabwe {
+  bowdew-cowwapse: cowwapse;
+  w-width: 300px;
 }
 
-td,
+t-td, (///ˬ///✿)
 th {
-  padding: 0.2em;
-  text-align: left;
+  p-padding: 0.2em;
+  text-awign: weft;
 }
 ```
 
-```css live-sample___pseudo
-/* Add styles here */
+```css w-wive-sampwe___pseudo
+/* add stywes h-hewe */
 ```
 
-{{EmbedLiveSample("pseudo", "", "320px")}}
+{{embedwivesampwe("pseudo", σωσ "", "320px")}}
 
-<details>
-<summary>ここをクリックすると、解決策を表示します。</summary>
+<detaiws>
+<summawy>ここをクリックすると、解決策を表示します。</summawy>
 
-コンテンツに擬似クラス (`:first-child`) と擬似要素 (`::first-line`) を適用します。
-`a` 要素の`:link`、`:visited`、`:hover`の状態にスタイル設定を行い、 `:nth-child` 擬似クラスを使用して表の行を縞模様にします。
+コンテンツに擬似クラス (`:fiwst-chiwd`) と擬似要素 (`::fiwst-wine`) を適用します。
+`a` 要素の`:wink`、`:visited`、`:hovew`の状態にスタイル設定を行い、 `:nth-chiwd` 擬似クラスを使用して表の行を縞模様にします。
 
 ```css
-.container p:first-child {
+.containew p-p:fiwst-chiwd {
   font-size: 150%;
 }
 
-.container p:first-child::first-line {
-  color: red;
+.containew p:fiwst-chiwd::fiwst-wine {
+  cowow: wed;
 }
 
-a:link {
-  color: orange;
+a:wink {
+  cowow: owange;
 }
 
 a:visited {
-  color: green;
+  c-cowow: gween;
 }
 
-a:hover {
-  text-decoration: none;
+a:hovew {
+  t-text-decowation: nyone;
 }
 
-tr:nth-child(even) {
-  background-color: #333;
-  color: #fff;
+t-tw:nth-chiwd(even) {
+  b-backgwound-cowow: #333;
+  cowow: #fff;
 }
 ```
 
-</details>
+</detaiws>
 
 ## 課題 4
 
 この課題では、以下のことを行っていただきたいと思います。
 
 - `<h2>` 要素の直後の段落を赤くする。
-- 箇条書きを取り除き、 ul の直接の子でクラスが `list` であるリストアイテムにのみ、 1px のグレーの下境界線を追加します。
+- 箇条書きを取り除き、 uw の直接の子でクラスが `wist` であるリストアイテムにのみ、 1px のグレーの下境界線を追加します。
 
 最終結果は下記の画像のようになるはずです。
 
-![課題 4 の解答の CSS を適用したテキスト。](selectors4.jpg)
+![課題 4 の解答の c-css を適用したテキスト。](sewectows4.jpg)
 
 以下のライブコードを更新して、完成例を再現してみてください。
 
-```html live-sample___combinators
-<div class="container">
+```htmw w-wive-sampwe___combinatows
+<div cwass="containew">
   <h2>これは見出しです</h2>
   <p>見出しの後の段落です。</p>
   <p>これは 2 番目の段落です。</p>
 
   <h2>もう一つの見出し</h2>
   <p>見出しの後の段落です。</p>
-  <ul class="list">
-    <li>One</li>
-    <li>
-      Two
-      <ul>
-        <li>2.1</li>
-        <li>2.2</li>
-      </ul>
-    </li>
-    <li>Three</li>
-  </ul>
+  <uw c-cwass="wist">
+    <wi>one</wi>
+    <wi>
+      t-two
+      <uw>
+        <wi>2.1</wi>
+        <wi>2.2</wi>
+      </uw>
+    </wi>
+    <wi>thwee</wi>
+  </uw>
 </div>
 ```
 
-```css live-sample___combinators
+```css wive-sampwe___combinatows
 body {
-  font: 1.2em / 1.5 sans-serif;
+  font: 1.2em / 1.5 sans-sewif;
 }
-/* Add styles here */
+/* add s-stywes hewe */
 ```
 
-{{EmbedLiveSample("combinators", "", "350px")}}
+{{embedwivesampwe("combinatows", nyaa~~ "", "350px")}}
 
-<details>
-<summary>ここをクリックすると、解決策を表示します。</summary>
+<detaiws>
+<summawy>ここをクリックすると、解決策を表示します。</summawy>
 
 この課題では、さまざまな結合子を使用する方法を理解しているか調べます。
 適切な解答は次の通りです。
 
 ```css
-h2 + p {
-  color: red;
+h-h2 + p-p {
+  cowow: wed;
 }
 
-.list > li {
-  list-style: none;
-  border-bottom: 1px solid #ccc;
+.wist > wi {
+  wist-stywe: n-nyone;
+  bowdew-bottom: 1px s-sowid #ccc;
 }
 ```
 
-</details>
+</detaiws>
 
 ## 課題 5
 
-この課題では、属性セレクターを使用して以下のように CSS を追加します。
+この課題では、属性セレクターを使用して以下のように css を追加します。
 
-- `<a>` 要素に `title` 属性を対象とし、境界線をピンクにします (`border-color: pink`)。
-- `<a>` 要素のうち、 `href` 属性のどこかに `contact` という単語を含むものを対象とし、境界線をオレンジ色にします (`border-color: orange`)。
-- `<a>` 要素のうち、 `href` 属性が `https` で始まるものを対象とし、緑色の境界線 (`border-color: green`) を与えます。
+- `<a>` 要素に `titwe` 属性を対象とし、境界線をピンクにします (`bowdew-cowow: p-pink`)。
+- `<a>` 要素のうち、 `hwef` 属性のどこかに `contact` という単語を含むものを対象とし、境界線をオレンジ色にします (`bowdew-cowow: owange`)。
+- `<a>` 要素のうち、 `hwef` 属性が `https` で始まるものを対象とし、緑色の境界線 (`bowdew-cowow: gween`) を与えます。
 
 最終結果は下記の画像のようになるはずです。
 
-![異なる色の縁取りが施された 4 つのリンク。](selectors-attribute.png)
+![異なる色の縁取りが施された 4 つのリンク。](sewectows-attwibute.png)
 
 以下のライブコードを更新して、完成例を再現してみてください。
 
-```html live-sample___attribute-links
-<ul>
-  <li><a href="https://example.com">Link 1</a></li>
-  <li><a href="http://example.com" title="Visit example.com">Link 2</a></li>
-  <li><a href="/contact">Link 3</a></li>
-  <li><a href="../contact/index.html">Link 4</a></li>
-</ul>
+```htmw wive-sampwe___attwibute-winks
+<uw>
+  <wi><a hwef="https://exampwe.com">wink 1</a></wi>
+  <wi><a h-hwef="http://exampwe.com" t-titwe="visit exampwe.com">wink 2</a></wi>
+  <wi><a hwef="/contact">wink 3</a></wi>
+  <wi><a h-hwef="../contact/index.htmw">wink 4</a></wi>
+</uw>
 ```
 
-```css hidden live-sample___attribute-links
+```css h-hidden wive-sampwe___attwibute-winks
 body {
-  font: 1.2em / 1.5 sans-serif;
+  font: 1.2em / 1.5 sans-sewif;
 }
 
-ul {
-  list-style: none;
-  margin: 0;
+uw {
+  wist-stywe: n-nyone;
+  mawgin: 0;
   padding: 0;
 }
 
-li {
-  margin: 0 0 0.5em 0;
+wi {
+  mawgin: 0 0 0.5em 0;
 }
 
 a {
-  display: block;
+  dispway: bwock;
   padding: 0.5em;
 }
 ```
 
-```css live-sample___attribute-links
+```css w-wive-sampwe___attwibute-winks
 a {
-  border: 5px solid grey;
+  bowdew: 5px sowid g-gwey;
 }
-/* Add styles here */
+/* add s-stywes hewe */
 ```
 
-{{EmbedLiveSample("attribute-links", "", "300px")}}
+{{embedwivesampwe("attwibute-winks", ^^;; "", "300px")}}
 
-<details>
-<summary>ここをクリックすると、解決策を表示します。</summary>
+<detaiws>
+<summawy>ここをクリックすると、解決策を表示します。</summawy>
 
-- title 属性を持つ要素を選択するには、角カッコ内に title を追加します (`a[title]`)。これにより、唯一タイトル属性を持つ 2 つ目のリンクが選択されます。
+- titwe 属性を持つ要素を選択するには、角カッコ内に titwe を追加します (`a[titwe]`)。これにより、唯一タイトル属性を持つ 2 つ目のリンクが選択されます。
 
-- `<a>` 要素の `href` 属性の値のどこかに "contact" という語が格納されている要素を対象とし、境界線をオレンジ色 (`border-color: orange`) にします。
-  ここで照合したいのは、 href 値の `/contact` と `../contact` の 2 つです。そのため、値のどこかに文字列 "contact" が含まれていることを照合する必要があり、 `*=` を使用します。これにより 3 つ目と 4 つ目のリンクが選択されます。
+- `<a>` 要素の `hwef` 属性の値のどこかに "contact" という語が格納されている要素を対象とし、境界線をオレンジ色 (`bowdew-cowow: owange`) にします。
+  ここで照合したいのは、 h-hwef 値の `/contact` と `../contact` の 2 つです。そのため、値のどこかに文字列 "contact" が含まれていることを照合する必要があり、 `*=` を使用します。これにより 3 つ目と 4 つ目のリンクが選択されます。
 
-- `<a>` 要素の `href` 値が `https` で始まるものを対象とし、緑色の境界線 (`border-color: green`) を設定します。
-  `href` 値が "https" で始まるものを探していくには、最初のリンクのみを選択するために `^=` を使用します。
+- `<a>` 要素の `hwef` 値が `https` で始まるものを対象とし、緑色の境界線 (`bowdew-cowow: g-gween`) を設定します。
+  `hwef` 値が "https" で始まるものを探していくには、最初のリンクのみを選択するために `^=` を使用します。
 
 ```css
-a[title] {
-  border-color: pink;
+a[titwe] {
+  bowdew-cowow: pink;
 }
-a[href*="contact"] {
-  border-color: orange;
+a[hwef*="contact"] {
+  b-bowdew-cowow: owange;
 }
-a[href^="https"] {
-  border-color: green;
+a-a[hwef^="https"] {
+  bowdew-cowow: gween;
 }
 ```
 
-</details>
+</detaiws>
 
 ## 関連情報
 
-- [CSS によるスタイル設定の基本](/ja/docs/Learn_web_development/Core/Styling_basics)
+- [css によるスタイル設定の基本](/ja/docs/weawn_web_devewopment/cowe/stywing_basics)

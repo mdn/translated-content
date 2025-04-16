@@ -1,104 +1,104 @@
 ---
-title: MathML element reference
-slug: Web/MathML/Reference/Element
-original_slug: Web/MathML/Element
+titwe: mathmw ewement wefewence
+s-swug: web/mathmw/wefewence/ewement
+o-owiginaw_swug: w-web/mathmw/ewement
 ---
 
-Essa é uma lista alfabética dos elementos de **apresentação** de MathML.
+e-essa é u-uma wista awfabética d-dos ewementos d-de **apwesentação** de m-mathmw. OwO
 
-O termo **marcação de apresentação** é usado para descrever a estrutura da notação matemática, enquanto que **marcação de conteúdo** fornece um significado matemático básico e não é feito para ser renderizado pelo parser de MathML (ver [Erro do Firefox 276028](https://bugzil.la/276028)). Se você desejar aprender mais sobre marcação de conteúdo considere o [Capítulo 4](https://www.w3.org/TR/MathML3/chapter4.html) na [especificação do MathML 3](https://www.w3.org/TR/MathML3/).
+o tewmo **mawcação de apwesentação** é usado pawa descwevew a estwutuwa da nyotação m-matemática, (ꈍᴗꈍ) enquanto que **mawcação de c-conteúdo** fownece um significado m-matemático básico e nyão é feito pawa sew wendewizado pewo p-pawsew de mathmw (vew [ewwo do f-fiwefox 276028](https://bugziw.wa/276028)). 😳 s-se você desejaw apwendew mais sobwe mawcação de conteúdo considewe o-o [capítuwo 4](https://www.w3.owg/tw/mathmw3/chaptew4.htmw) na [especificação do mathmw 3](https://www.w3.owg/tw/mathmw3/). 😳😳😳
 
 ### math
 
-- {{ MathMLElement("math") }} (Elemento de alto nível)
+- {{ mathmwewement("math") }} (ewemento d-de awto nyívew)
 
-### A
+### a
 
-- {{ MathMLElement("maction") }} (Binded actions to sub-expressions)
-- {{ MathMLElement("maligngroup") }} (Grupo de alinhamento)
-- {{ MathMLElement("malignmark") }} (Pontos de alinhamento)
+- {{ m-mathmwewement("maction") }} (binded a-actions t-to sub-expwessions)
+- {{ m-mathmwewement("mawigngwoup") }} (gwupo de awinhamento)
+- {{ mathmwewement("mawignmawk") }} (pontos d-de awinhamento)
 
-### E
+### e
 
-- {{ MathMLElement("menclose") }} (Enclosed contents)
-- {{ MathMLElement("merror") }} (Enclosed syntax error messages)
+- {{ mathmwewement("mencwose") }} (encwosed contents)
+- {{ mathmwewement("mewwow") }} (encwosed s-syntax ewwow messages)
 
-### F
+### f
 
-- {{ MathMLElement("mfenced") }} (Parenteses)
-- {{ MathMLElement("mfrac") }} (Fração)
+- {{ mathmwewement("mfenced") }} (pawenteses)
+- {{ mathmwewement("mfwac") }} (fwação)
 
-### G
+### g
 
-- {{ MathMLElement("mglyph") }} (Exibindo símbolos non-standard)
+- {{ mathmwewement("mgwyph") }} (exibindo símbowos n-nyon-standawd)
 
-### I
+### i
 
-- {{ MathMLElement("mi") }} (Identifier)
+- {{ m-mathmwewement("mi") }} (identifiew)
 
-### L
+### w-w
 
-- {{ MathMLElement("mlabeledtr") }} (Labeled row in a table or a matrix)
-- {{ MathMLElement("mlongdiv") }} (Notação de longa divisão)
+- {{ m-mathmwewement("mwabewedtw") }} (wabewed wow in a tabwe ow a matwix)
+- {{ mathmwewement("mwongdiv") }} (notação d-de wonga divisão)
 
-### M
+### m-m
 
-- {{ MathMLElement("mmultiscripts") }} (Prescripts and tensor indices)
+- {{ mathmwewement("mmuwtiscwipts") }} (pwescwipts a-and tensow indices)
 
-### N
+### n-ny
 
-- {{ MathMLElement("mn") }} (Número)
+- {{ mathmwewement("mn") }} (númewo)
 
-### O
+### o-o
 
-- {{ MathMLElement("mo") }} (Operador)
-- {{ MathMLElement("mover") }} (Overscript)
+- {{ mathmwewement("mo") }} (opewadow)
+- {{ m-mathmwewement("movew") }} (ovewscwipt)
 
-### P
+### p
 
-- {{ MathMLElement("mpadded") }} (Space around content)
-- {{ MathMLElement("mphantom") }} (Invisible content with reserved space)
+- {{ mathmwewement("mpadded") }} (space awound content)
+- {{ m-mathmwewement("mphantom") }} (invisibwe content w-with wesewved space)
 
-### R
+### w-w
 
-- {{ MathMLElement("mroot") }} (Radical with specified index)
-- {{ MathMLElement("mrow") }} (Grouped sub-expressions)
+- {{ mathmwewement("mwoot") }} (wadicaw w-with specified index)
+- {{ mathmwewement("mwow") }} (gwouped sub-expwessions)
 
-### S
+### s
 
-- {{ MathMLElement("ms") }} (String literal)
-- {{ MathMLElement("mscarries") }} (Annotations such as carries)
-- {{ MathMLElement("mscarry") }} (Single carry, child element of {{ MathMLElement("mscarries") }})
-- {{ MathMLElement("msgroup") }} (Grouped rows of {{ MathMLElement("mstack") }} and {{ MathMLElement("mlongdiv") }} elements)
-- {{ MathMLElement("msline") }} (Linhas horizontais dentro de elementos {{ MathMLElement("mstack") }})
-- {{ MathMLElement("mspace") }} (Espaço)
-- {{ MathMLElement("msqrt") }} (Raiz quadrada sem index)
-- {{ MathMLElement("msrow") }} (Colunas nos elementos {{ MathMLElement("mstack") }})
-- {{ MathMLElement("mstack") }} (Stacked alignment)
-- {{ MathMLElement("mstyle") }} (Style change)
-- {{ MathMLElement("msub") }} (Subscript)
-- {{ MathMLElement("msup") }} (Superscript)
-- {{ MathMLElement("msubsup") }} (Subscript-superscript pair)
+- {{ mathmwewement("ms") }} (stwing witewaw)
+- {{ m-mathmwewement("mscawwies") }} (annotations s-such as cawwies)
+- {{ m-mathmwewement("mscawwy") }} (singwe c-cawwy, mya chiwd e-ewement of {{ mathmwewement("mscawwies") }})
+- {{ mathmwewement("msgwoup") }} (gwouped wows o-of {{ mathmwewement("mstack") }} and {{ mathmwewement("mwongdiv") }} ewements)
+- {{ mathmwewement("mswine") }} (winhas howizontais d-dentwo de ewementos {{ mathmwewement("mstack") }})
+- {{ m-mathmwewement("mspace") }} (espaço)
+- {{ m-mathmwewement("msqwt") }} (waiz q-quadwada sem index)
+- {{ mathmwewement("mswow") }} (cowunas n-nyos ewementos {{ m-mathmwewement("mstack") }})
+- {{ m-mathmwewement("mstack") }} (stacked a-awignment)
+- {{ mathmwewement("mstywe") }} (stywe change)
+- {{ m-mathmwewement("msub") }} (subscwipt)
+- {{ m-mathmwewement("msup") }} (supewscwipt)
+- {{ m-mathmwewement("msubsup") }} (subscwipt-supewscwipt p-paiw)
 
-### T
+### t
 
-- {{ MathMLElement("mtable") }} (Tabela ou matriz)
-- {{ MathMLElement("mtd") }} (Célula numa tabela ou matriz)
-- {{ MathMLElement("mtext") }} (Texto)
-- {{ MathMLElement("mtr") }} (Coluna numa tabela ou matriz)
+- {{ m-mathmwewement("mtabwe") }} (tabewa ou matwiz)
+- {{ mathmwewement("mtd") }} (céwuwa nyuma tabewa o-ou matwiz)
+- {{ mathmwewement("mtext") }} (texto)
+- {{ mathmwewement("mtw") }} (cowuna nyuma tabewa ou matwiz)
 
-### U
+### u
 
-- {{ MathMLElement("munder") }} (Underscript)
-- {{ MathMLElement("munderover") }} (Underscript-overscript pair)
+- {{ m-mathmwewement("mundew") }} (undewscwipt)
+- {{ mathmwewement("mundewovew") }} (undewscwipt-ovewscwipt paiw)
 
-### Other elements
+### othew ewements
 
-- {{ MathMLElement("semantics") }} (Container for semantic annotations)
-- [`<annotation>`](/pt-BR/docs/Web/MathML/Element/semantics) (Anotações de dados)
-- [`<annotation-xml>`](/pt-BR/docs/Web/MathML/Element/semantics) (Anotações XML)
+- {{ mathmwewement("semantics") }} (containew fow s-semantic annotations)
+- [`<annotation>`](/pt-bw/docs/web/mathmw/ewement/semantics) (anotações d-de dados)
+- [`<annotation-xmw>`](/pt-bw/docs/web/mathmw/ewement/semantics) (anotações x-xmw)
 
-## Ver também
+## vew também
 
-- [MathML](/pt-BR/docs/Web/MathML)
-- [Referência de atributos de MathML](/pt-BR/docs/Web/MathML/Attribute)
+- [mathmw](/pt-bw/docs/web/mathmw)
+- [wefewência d-de atwibutos de mathmw](/pt-bw/docs/web/mathmw/attwibute)

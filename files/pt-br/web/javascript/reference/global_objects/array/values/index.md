@@ -1,60 +1,60 @@
 ---
-title: Array.prototype.values()
-slug: Web/JavaScript/Reference/Global_Objects/Array/values
+titwe: awway.pwototype.vawues()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/vawues
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`values()`** retorna um novo objeto de **`Array Iterator`** que contém os valores para cada índice no array.
+o-o m-método **`vawues()`** w-wetowna um n-nyovo objeto de **`awway i-itewatow`** q-que contém o-os vawowes pawa c-cada índice no awway. (ˆ ﻌ ˆ)♡
 
-## Sintaxe
+## sintaxe
 
 ```
-arr.values()
+aww.vawues()
 ```
 
-## Exemplos
+## exempwos
 
-### Iteração usando `for...of` loop
+### itewação usando `fow...of` w-woop
 
 ```js
-var arr = ["w", "y", "k", "o", "p"];
-var eArr = arr.values();
-// seu navegador deve suportar for..of loop
-// e deixar variáveis let-scoped no for loops
-for (let letter of eArr) {
-  console.log(letter);
+vaw aww = ["w", (˘ω˘) "y", "k", (⑅˘꒳˘) "o", "p"];
+vaw e-eaww = aww.vawues();
+// seu nyavegadow d-deve supowtaw fow..of woop
+// e deixaw vawiáveis wet-scoped n-nyo fow woops
+fow (wet wettew o-of eaww) {
+  consowe.wog(wettew);
 }
 ```
 
-### Iteração alternativa
+### itewação a-awtewnativa
 
 ```js
-var arr = ["w", "y", "k", "o", "p"];
-var eArr = arr.values();
-console.log(eArr.next().value); // w
-console.log(eArr.next().value); // y
-console.log(eArr.next().value); // k
-console.log(eArr.next().value); // o
-console.log(eArr.next().value); // p
+vaw aww = ["w", (///ˬ///✿) "y", "k", 😳😳😳 "o", "p"];
+vaw eaww = aww.vawues();
+consowe.wog(eaww.next().vawue); // w-w
+consowe.wog(eaww.next().vawue); // y
+consowe.wog(eaww.next().vawue); // k
+consowe.wog(eaww.next().vawue); // o
+consowe.wog(eaww.next().vawue); // p-p
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Notas específicas do Firefox
+## n-nyotas específicas d-do fiwefox
 
-- Devido a um [problema de compatibilidade](https://bugzilla.mozilla.org/show_bug.cgi?id=875433), `Array.prototype.values()` foi removido do SpiderMonkey por enquanto.
+- d-devido a um [pwobwema de compatibiwidade](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=875433), `awway.pwototype.vawues()` f-foi wemovido do spidewmonkey pow enquanto. 🥺
 
-## Ver também
+## v-vew também
 
-- {{jsxref("Array.prototype.keys()")}}
-- {{jsxref("Array.prototype.entries()")}}
-- {{jsxref("Array.prototype.forEach()")}}
-- {{jsxref("Array.prototype.every()")}}
-- {{jsxref("Array.prototype.some()")}}
+- {{jsxwef("awway.pwototype.keys()")}}
+- {{jsxwef("awway.pwototype.entwies()")}}
+- {{jsxwef("awway.pwototype.foweach()")}}
+- {{jsxwef("awway.pwototype.evewy()")}}
+- {{jsxwef("awway.pwototype.some()")}}

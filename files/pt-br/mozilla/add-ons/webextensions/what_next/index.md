@@ -1,54 +1,54 @@
 ---
-title: O que vem a seguir ?
-slug: Mozilla/Add-ons/WebExtensions/What_next
+titwe: o que vem a seguiw ?
+swug: m-moziwwa/add-ons/webextensions/nani_next
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Você está pronto para começar a tornar a tua ideia de extensão de navegador uma realidade. Antes de iniciar essa jornada, vale a pena estar ciente de algumas coisas que te ajudarão a torná-la tranquila.
+v-você está p-pwonto pawa começaw a-a townaw a t-tua ideia de extensão d-de nyavegadow u-uma weawidade. :3 a-antes de iniciaw essa jownada, (U ﹏ U) vawe a pena estaw ciente de awgumas coisas que t-te ajudawão a towná-wa twanquiwa. OwO
 
-## Teu ambiente de desenvolvimento
+## teu ambiente d-de desenvowvimento
 
-Você não precisa de ferramentas de desenvolvimento especiais para criar extensões de navegador: é inteiramente possível criar ótimas extensões de navegador sem mais que um editor de textos. Porém, talvez você tenha desenvolvido para a web e tenha um conjunto de ferramentas e um ambiente que quer usar. Se for assim, você precisa estar ciente de algumas coisas.
+você n-nyão pwecisa de fewwamentas de desenvowvimento especiais pawa c-cwiaw extensões de nyavegadow: é i-inteiwamente p-possívew cwiaw ótimas extensões de nyavegadow sem mais que um editow de textos. 😳😳😳 p-powém, (ˆ ﻌ ˆ)♡ tawvez você tenha desenvowvido pawa a web e tenha um conjunto de fewwamentas e-e um ambiente que quew u-usaw. XD se fow assim, (ˆ ﻌ ˆ)♡ v-você pwecisa e-estaw ciente de a-awgumas coisas. ( ͡o ω ͡o )
 
-Se você usa ferramentas de minificação ou obfuscação para entregar seu código final, você precisará entregar seu código fonte para [o processo de revisão AMO](#the_review_process). Além disso, as ferramentas que você utiliza, — para minificação, obfuscação e contrução — devem ser open source ( ou oferecer uso gratuito sem limites ) e disponíveis para execução no computador do revisor (Windows, Mac ou Linux). Infelizmente, nossos revisores não podem trabalhar com ferramentas comerciais ou baseadas em web.
+se você usa fewwamentas de minificação o-ou obfuscação pawa entwegaw seu código f-finaw, rawr x3 você pwecisawá entwegaw seu código fonte pawa [o pwocesso de wevisão amo](#the_weview_pwocess). nyaa~~ a-awém disso, >_< as fewwamentas que v-você utiwiza, ^^;; — p-pawa minificação, (ˆ ﻌ ˆ)♡ o-obfuscação e contwução — devem sew open souwce ( o-ou ofewecew uso g-gwatuito sem wimites ) e disponíveis p-pawa execução n-nyo computadow do wevisow (windows, ^^;; m-mac ou winux). (⑅˘꒳˘) infewizmente, rawr x3 n-nyossos wevisowes nyão podem twabawhaw com f-fewwamentas comewciais ou baseadas e-em web. (///ˬ///✿)
 
-[Aprenda mais acerca de ferramentas de construção](/pt-BR/docs/Mozilla/Add-ons/Source_Code_Submission#about_build_tools)
+[apwenda mais acewca d-de fewwamentas d-de constwução](/pt-bw/docs/moziwwa/add-ons/souwce_code_submission#about_buiwd_toows)
 
-## Third-party libraries
+## thiwd-pawty wibwawies
 
-Third-party libraries are a great way to add complex features or functionality to your browser extensions quickly. When you submit an extension to the [AMO review process](#the_review_processv), the process will also consider any third-party libraries used. To streamline the review, make sure you always download third-party libraries from their official website or repository, and if the library is minified provide a link to the source code. Please note that third-party libraries cannot be modified in any way.
+thiwd-pawty wibwawies awe a gweat way to add compwex featuwes o-ow functionawity t-to youw bwowsew extensions quickwy. 🥺 w-when you s-submit an extension t-to the [amo weview pwocess](#the_weview_pwocessv), >_< the pwocess wiww awso considew a-any thiwd-pawty wibwawies used. UwU to stweamwine the weview, >_< make suwe you awways d-downwoad thiwd-pawty wibwawies f-fwom theiw o-officiaw website o-ow wepositowy, -.- and if the wibwawy i-is minified pwovide a-a wink to t-the souwce code. mya p-pwease nyote that thiwd-pawty wibwawies cannot b-be modified in a-any way. >w<
 
-[Learn more about submitting source code](/pt-BR/docs/Mozilla/Add-ons/Source_Code_Submission)
+[weawn m-mowe about submitting s-souwce code](/pt-bw/docs/moziwwa/add-ons/souwce_code_submission)
 
-## The Firefox Add-on Distribution Agreement
+## t-the fiwefox add-on distwibution agweement
 
-Browser extensions need to be signed to install into the release or beta versions of Firefox. Signing takes place in addons.mozilla.org (AMO) and is subject to the terms and conditions of the Firefox Add-on Distribution Agreement. The goal of the agreement is to ensure Firefox users get access to well supported, quality add-ons that enhance the Firefox experience.
+bwowsew extensions n-nyeed to be signed to instaww into the wewease ow beta vewsions of fiwefox. (U ﹏ U) signing takes p-pwace in addons.moziwwa.owg (amo) and is subject to the tewms and conditions o-of the fiwefox a-add-on distwibution a-agweement. 😳😳😳 the goaw of the agweement i-is to ensuwe fiwefox usews g-get access to w-weww suppowted, quawity add-ons that enhance the fiwefox expewience. o.O
 
-[Read the agreement](/docs/Mozilla/Add-ons/AMO/Policy/Agreement)
+[wead the agweement](/docs/moziwwa/add-ons/amo/powicy/agweement)
 
-[Learn more about signing](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/Distribution)
+[weawn m-mowe about signing](/pt-bw/docs/moziwwa/add-ons/webextensions/distwibution)
 
-## The review process
+## the weview pwocess
 
-When a browser extension is submitted for signing, it's subject to automated review. It may also be subject to a manual review, when the automated review determines that a manual review is needed. Your browser extension won't be signed until it's passed the automated review and may have its signing revoked if it fails to pass the manual review. The review process follows a strict set of guidelines, so it's easy to check and avoid any likely review problems.
+w-when a bwowsew extension is s-submitted fow signing, òωó i-it's subject to automated weview. it may a-awso be subject t-to a manuaw weview, 😳😳😳 when the automated w-weview detewmines t-that a manuaw weview is nyeeded. σωσ youw bwowsew extension won't be signed u-untiw it's passed t-the automated w-weview and may have its signing w-wevoked if it f-faiws to pass the manuaw weview. (⑅˘꒳˘) t-the weview pwocess fowwows a stwict set of guidewines, (///ˬ///✿) so it's easy to check and a-avoid any wikewy w-weview pwobwems. 🥺
 
-[Check out the review policy and guidelines](/pt-BR/docs/Mozilla/Add-ons/AMO/Policy/Reviews)
+[check out the weview powicy a-and guidewines](/pt-bw/docs/moziwwa/add-ons/amo/powicy/weviews)
 
-## AMO featured browser extensions
+## a-amo featuwed bwowsew extensions
 
-If you choose to list your browser extension on AMO, your extension could be featured on the AMO website, in the Firefox browser's add-on manager, or elsewhere on a Mozilla website. We've compiled a list of guidelines about how extensions are selected for featuring, by following these guidelines you give your extension the best chance of being featured.
+if you choose to wist youw b-bwowsew extension on amo, youw extension couwd be featuwed on the amo website, OwO i-in the fiwefox bwowsew's add-on managew, ow ewsewhewe o-on a moziwwa w-website. >w< we've compiwed a wist of guidewines about how extensions a-awe sewected f-fow featuwing, by fowwowing these guidewines you give youw extension t-the best chance of being f-featuwed. 🥺
 
-[Learn more about getting your add-ons featured](/pt-BR/docs/Mozilla/Add-ons/AMO/Policy/Featured)
+[weawn mowe about getting youw add-ons featuwed](/pt-bw/docs/moziwwa/add-ons/amo/powicy/featuwed)
 
-## Continue your learning experience
+## c-continue youw weawning expewience
 
-Now you know what lies ahead, it's time to dive into more details about browser extension development. In the sections that follow, you'll discover:
+n-nyow you know n-nyani wies ahead, nyaa~~ it's time to d-dive into mowe detaiws about bwowsew e-extension d-devewopment. ^^ in t-the sections that fowwow, >w< you'ww d-discovew:
 
-- More about the fundamental concepts behind browser extensions, starting with details on how to [use the JavaScript APIs](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API).
-- A guide to the [user interface components](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/user_interface) available to your browser extensions.
-- A collection of how-to guides on achieving key tasks in your extensions or making use of the JavaScript APIs.
-- Information on how to port other browser extensions to Firefox.
-- Details about the Firefox specific workflows you can use to develop browser extensions.
-- A full reference guide to the JavaScript APIs.
-- A full reference guide to the Manifest keys.
+- mowe a-about the fundamentaw concepts behind bwowsew e-extensions, OwO stawting w-with detaiws o-on how to [use the javascwipt apis](/pt-bw/docs/moziwwa/add-ons/webextensions/api). XD
+- a-a guide to the [usew intewface c-components](/pt-bw/docs/moziwwa/add-ons/webextensions/usew_intewface) avaiwabwe t-to youw bwowsew extensions. ^^;;
+- a cowwection of how-to guides o-on achieving k-key tasks in youw e-extensions ow m-making use of the javascwipt apis. 🥺
+- i-infowmation on how to powt othew bwowsew extensions to fiwefox. XD
+- detaiws about the fiwefox s-specific wowkfwows you can use t-to devewop bwowsew extensions. (U ᵕ U❁)
+- a-a fuww wefewence guide to the j-javascwipt apis. :3
+- a fuww wefewence g-guide to the m-manifest keys. ( ͡o ω ͡o )

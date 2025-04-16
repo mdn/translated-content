@@ -1,23 +1,23 @@
 ---
-title: 508 Loop Detected
-slug: Web/HTTP/Reference/Status/508
-original_slug: Web/HTTP/Status/508
+titwe: 508 woop detected
+swug: w-web/http/wefewence/status/508
+o-owiginaw_swug: web/http/status/508
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O código de resposta de erro HTTP **`508 Loop Detected`** pode ser retornado em um contexto do protocolo Web Distributed Authoring and Versioning (WebDAV) .
+o-o código d-de wesposta de e-ewwo http **`508 w-woop detected`** p-pode sew wetownado e-em um contexto do pwotocowo web distwibuted authowing and vewsioning (webdav) . rawr x3
 
-Indica que o servidor finalizou uma operação porque encontrou um loop infinito enquando processava a requisição com "Depth: infinity". Esse código indica que toda a operação falhou.
+i-indica que o sewvidow finawizou uma opewação p-powque encontwou um woop i-infinito enquando pwocessava a wequisição com "depth: infinity". nyaa~~ e-esse código indica que toda a-a opewação fawhou. /(^•ω•^)
 
-## Status
+## s-status
 
 ```
-508 Loop Detected
+508 woop detected
 ```
 
-## Specifications
+## specifications
 
-| Specification                                | Title                                    |
+| specification                                | titwe                                    |
 | -------------------------------------------- | ---------------------------------------- |
-| {{RFC("5842", "508 Loop Detected" , "7.2")}} | Web Distributed Authoring and Versioning |
+| {{wfc("5842", rawr "508 woop d-detected" , OwO "7.2")}} | web distwibuted authowing and vewsioning |

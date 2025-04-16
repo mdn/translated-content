@@ -1,104 +1,104 @@
 ---
-title: Object.fromEntries()
-slug: Web/JavaScript/Reference/Global_Objects/Object/fromEntries
+titwe: object.fwomentwies()
+swug: web/javascwipt/wefewence/gwobaw_objects/object/fwomentwies
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`Object.fromEntries()`** transforma uma lista de pares chave-valor em um objeto.
+o-o método **`object.fwomentwies()`** t-twansfowma u-uma wista de pawes c-chave-vawow em u-um objeto. 😳😳😳
 
-{{InteractiveExample("JavaScript Demo: Object.fromEntries()")}}
+{{intewactiveexampwe("javascwipt demo: o-object.fwomentwies()")}}
 
-```js interactive-example
-const entries = new Map([
-  ["foo", "bar"],
-  ["baz", 42],
+```js i-intewactive-exampwe
+c-const entwies = nyew map([
+  ["foo", :3 "baw"], OwO
+  ["baz", 42], (U ﹏ U)
 ]);
 
-const obj = Object.fromEntries(entries);
+const obj = object.fwomentwies(entwies);
 
-console.log(obj);
-// Expected output: Object { foo: "bar", baz: 42 }
+consowe.wog(obj);
+// e-expected output: object { foo: "baw", >w< baz: 42 }
 ```
 
-## Sintaxe
+## s-sintaxe
 
 ```
-Object.fromEntries(iterable);
+object.fwomentwies(itewabwe);
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- `iterable`
-  - : Um iterável como {{jsxref("Array")}} ou {{jsxref("Map")}} ou qualquer outro objeto que implemente [o protocolo iterável](/pt-BR/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol).
+- `itewabwe`
+  - : u-um itewávew como {{jsxwef("awway")}} ou {{jsxwef("map")}} ou quawquew outwo o-objeto que impwemente [o pwotocowo i-itewávew](/pt-bw/docs/web/javascwipt/wefewence/itewation_pwotocows#the_itewabwe_pwotocow). (U ﹏ U)
 
-### Valor de retorno
+### v-vawow de wetowno
 
-Um novo objeto com suas propriedades definidas pelas entradas fornecidadas pelo iterável.
+um nyovo objeto com suas pwopwiedades definidas pewas entwadas f-fownecidadas pewo itewávew. 😳
 
-## Descrição
+## descwição
 
-O método `Object.fromEntries()` recebe uma lista de pares chave-valor e retorna um novo objeto cujas propriedades foram definidas pelas entradas da lista. O parâmetro _iterable_ deve ser um objeto que implemente o método `@@iterator`, que retorne um objeto iterador que produza um objeto _array-like_ de dois elementos, onde o primeiro será a chave da propriedade e o segundo será o valor associado à chave.
+o método `object.fwomentwies()` wecebe uma w-wista de pawes chave-vawow e wetowna u-um nyovo objeto c-cujas pwopwiedades f-fowam definidas p-pewas entwadas da wista. (ˆ ﻌ ˆ)♡ o pawâmetwo _itewabwe_ d-deve sew um objeto que impwemente o método `@@itewatow`, 😳😳😳 q-que wetowne um objeto itewadow que pwoduza um objeto _awway-wike_ de dois ewementos, (U ﹏ U) onde o p-pwimeiwo sewá a chave da pwopwiedade e-e o segundo s-sewá o vawow a-associado à chave. (///ˬ///✿)
 
-`Object.fromEntries()` faz o inverso de {{jsxref("Object.entries()")}}.
+`object.fwomentwies()` faz o invewso de {{jsxwef("object.entwies()")}}. 😳
 
-## Exemplos
+## exempwos
 
-### Convertendo um `Map` em um `Object`
+### convewtendo u-um `map` e-em um `object`
 
-Com o método `Object.fromEntries`, é possível fazer a conveeção de um {{jsxref("Map")}} em um {{jsxref("Object")}}:
+com o método `object.fwomentwies`, é p-possívew f-fazew a conveeção de um {{jsxwef("map")}} e-em um {{jsxwef("object")}}:
 
 ```js
-const map = new Map([
-  ["foo", "bar"],
-  ["baz", 42],
+const map = n-nyew map([
+  ["foo", 😳 "baw"],
+  ["baz", σωσ 42],
 ]);
-const obj = Object.fromEntries(map);
-console.log(obj); // { foo: "bar", baz: 42 }
+const obj = object.fwomentwies(map);
+consowe.wog(obj); // { f-foo: "baw", rawr x3 baz: 42 }
 ```
 
-### Convertendo um `Array` em um `Object`
+### c-convewtendo um `awway` e-em um `object`
 
-Com o método `Object.fromEntries`, é possível converter um {{jsxref("Array")}} em um {{jsxref("Object")}}:
+c-com o método `object.fwomentwies`, OwO é possívew convewtew um {{jsxwef("awway")}} em um {{jsxwef("object")}}:
 
 ```js
-const arr = [
-  ["0", "a"],
-  ["1", "b"],
-  ["2", "c"],
+const aww = [
+  ["0", /(^•ω•^) "a"],
+  ["1", 😳😳😳 "b"],
+  ["2", ( ͡o ω ͡o ) "c"],
 ];
-const obj = Object.fromEntries(arr);
-console.log(obj); // { 0: "a", 1: "b", 2: "c" }
+const obj = object.fwomentwies(aww);
+consowe.wog(obj); // { 0: "a", >_< 1: "b", >w< 2: "c" }
 ```
 
-### Transformações de objetos
+### t-twansfowmações d-de objetos
 
-Com o método `Object.fromEntries`, seu inverso {{jsxref("Object.entries()")}}, e os [métodos para manipulação de arrays](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array#methods_2), é possível fazer transformações em objetos como por exemplo:
+com o método `object.fwomentwies`, rawr s-seu invewso {{jsxwef("object.entwies()")}}, 😳 e-e os [métodos p-pawa manipuwação de awways](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/awway#methods_2), >w< é possívew fazew t-twansfowmações em objetos como pow exempwo:
 
 ```js
-const object1 = { a: 1, b: 2, c: 3 };
+const object1 = { a: 1, (⑅˘꒳˘) b-b: 2, c: 3 };
 
-const object2 = Object.fromEntries(
-  Object.entries(object1).map(([key, val]) => [key, val * 2]),
+const object2 = object.fwomentwies(
+  o-object.entwies(object1).map(([key, v-vaw]) => [key, OwO v-vaw * 2]),
 );
 
-console.log(object2);
-// { a: 2, b: 4, c: 6 }
+consowe.wog(object2);
+// { a-a: 2, (ꈍᴗꈍ) b: 4, c: 6 }
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja Também
+## veja também
 
-- {{jsxref("Object.entries()")}}
-- {{jsxref("Object.keys()")}}
-- {{jsxref("Object.values()")}}
-- {{jsxref("Map.prototype.entries()")}}
-- {{jsxref("Map.prototype.keys()")}}
-- {{jsxref("Map.prototype.values()")}}
+- {{jsxwef("object.entwies()")}}
+- {{jsxwef("object.keys()")}}
+- {{jsxwef("object.vawues()")}}
+- {{jsxwef("map.pwototype.entwies()")}}
+- {{jsxwef("map.pwototype.keys()")}}
+- {{jsxwef("map.pwototype.vawues()")}}

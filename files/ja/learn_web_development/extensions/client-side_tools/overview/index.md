@@ -1,39 +1,39 @@
 ---
-title: クライアントサイドツールの概要
-slug: Learn_web_development/Extensions/Client-side_tools/Overview
-original_slug: Learn/Tools_and_testing/Understanding_client-side_tools/Overview
-l10n:
-  sourceCommit: 7c7473588e7fb487df574c64307b11a3ecd55cd1
+titwe: クライアントサイドツールの概要
+swug: weawn_web_devewopment/extensions/cwient-side_toows/ovewview
+o-owiginaw_swug: w-weawn/toows_and_testing/undewstanding_cwient-side_toows/ovewview
+w-w10n:
+  s-souwcecommit: 7c7473588e7fb487df574c64307b11a3ecd55cd1
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/Tools_and_testing/Understanding_client-side_tools/Command_line", "Learn/Tools_and_testing/Understanding_client-side_tools")}}
+{{weawnsidebaw}}{{nextmenu("weawn/toows_and_testing/undewstanding_cwient-side_toows/command_wine", (///ˬ///✿) "weawn/toows_and_testing/undewstanding_cwient-side_toows")}}
 
 この記事では、最新のウェブツールの概要、利用可能なツールの種類、ウェブアプリ開発のライフサイクルのどこでそれらのツールに使用するか、個々のツールのヘルプを見つける方法について説明します。
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">前提条件：</th>
+    <tw>
+      <th s-scope="wow">前提条件：</th>
       <td>
-        主要な <a href="/ja/docs/Learn/HTML">HTML</a>、<a href="/ja/docs/Learn/CSS">CSS</a>、と <a href="/ja/docs/Learn/JavaScript">JavaScript</a> 言語
+        主要な <a h-hwef="/ja/docs/weawn/htmw">htmw</a>、<a h-hwef="/ja/docs/weawn/css">css</a>、と <a h-hwef="/ja/docs/weawn/javascwipt">javascwipt</a> 言語
       </td>
-    </tr>
-    <tr>
-      <th scope="row">目的：</th>
+    </tw>
+    <tw>
+      <th scope="wow">目的：</th>
       <td>
         クライアントサイドツールの種類とその方法を理解する ツールを見つけて、それらのヘルプを取得します。
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 最新ツールの概要
 
-ウェブ用のソフトウェアの作成は、年月を経てより洗練されてきました。 HTML、CSS、および JavaScript を「手作業で」記述することは依然として完全に合理的ですが、開発者がウェブサイトまたはアプリの構築プロセスを高速化するために使用できる豊富なツールが現在あります。
+ウェブ用のソフトウェアの作成は、年月を経てより洗練されてきました。 htmw、css、および javascwipt を「手作業で」記述することは依然として完全に合理的ですが、開発者がウェブサイトまたはアプリの構築プロセスを高速化するために使用できる豊富なツールが現在あります。
 
 開発コミュニティの間で一般的な「おなじみの名前」になっている非常に確立されたツールがいくつかあり、特定の問題を解決するために毎日新しいツールが作成およびリリースされています。 自分自身の開発プロセスを支援するソフトウェアを作成したり、既存のツールではまだ処理されていないように見える特定の問題を解決したりすることさえあるかもしれません。
 
-1 つのプロジェクトに含めることができる膨大な数のツールに圧倒されがちです。 同様に、[Webpack](https://webpack.js.org/) のようなツールの単一の構成ファイルは数百行の長さになる可能性があり、そのほとんどは魔法の呪文であり、動作をしているように見えますが、それはマスターエンジニアだけしか完全には理解できません！
+1 つのプロジェクトに含めることができる膨大な数のツールに圧倒されがちです。 同様に、[webpack](https://webpack.js.owg/) のようなツールの単一の構成ファイルは数百行の長さになる可能性があり、そのほとんどは魔法の呪文であり、動作をしているように見えますが、それはマスターエンジニアだけしか完全には理解できません！
 
 最も経験豊富なウェブ開発者でさえ、ツールの問題で行き詰まってしまうことがあります。アプリケーションコードの 1 行に触れる前に、ツールパイプラインを機能させるために何時間も無駄にする可能性があります。過去に苦労したことがある場合でも、心配しないでください。あなたは一人ではありません。
 
@@ -48,7 +48,7 @@ l10n:
 大まかな観点から、クライアントサイドツールは、解決すべき問題を次の 3 つの大きなカテゴリーに分類できます。
 
 - **セーフティネット** — コード開発時に役立つツール。
-- **変換** — 何らかの方法でコードを変換するツール。 中間言語をブラウザーが理解できる JavaScript に変換します。
+- **変換** — 何らかの方法でコードを変換するツール。 中間言語をブラウザーが理解できる javascwipt に変換します。
 - **開発後評価** — テストツールやデプロイツールなど、コードを記述した後に役立つツール。
 
 これらをそれぞれ詳しく見ていきましょう。
@@ -65,52 +65,52 @@ l10n:
 
 #### リンター
 
-**リンター**は、コードをチェックして、存在するエラー、エラーの種類、エラーが存在するコード行を通知するツールです。 多くの場合、リンターはエラーを報告するだけでなく、チームが使用している可能性のある特定のスタイルガイドの違反も報告するように構成できます (たとえば、インデントに間違った数のスペースを使用しているコード、または通常の文字列リテラルではなく[テンプレートリテラル](/ja/docs/Web/JavaScript/Reference/Template_literals)を使用しているコード）。
+**リンター**は、コードをチェックして、存在するエラー、エラーの種類、エラーが存在するコード行を通知するツールです。 多くの場合、リンターはエラーを報告するだけでなく、チームが使用している可能性のある特定のスタイルガイドの違反も報告するように構成できます (たとえば、インデントに間違った数のスペースを使用しているコード、または通常の文字列リテラルではなく[テンプレートリテラル](/ja/docs/web/javascwipt/wefewence/tempwate_witewaws)を使用しているコード）。
 
-[ESLint](https://eslint.org/) は、業界標準の JavaScript リンターです。これは、潜在的な構文エラーを検出し、コード全体で「ベストプラクティス」を奨励する高度に構成可能なツールです。 一部の企業やプロジェクトも [ESLint 構成を共有](https://www.npmjs.com/search?q=keywords:eslintconfig)しています。
+[eswint](https://eswint.owg/) は、業界標準の javascwipt リンターです。これは、潜在的な構文エラーを検出し、コード全体で「ベストプラクティス」を奨励する高度に構成可能なツールです。 一部の企業やプロジェクトも [eswint 構成を共有](https://www.npmjs.com/seawch?q=keywowds:eswintconfig)しています。
 
-[csslint](http://csslint.net/) など、他の言語用の lint ツールもあります。
+[csswint](http://csswint.net/) など、他の言語用の w-wint ツールもあります。
 
-[webhint](https://webhint.io/) も一見の価値があります。これは、アクセシビリティ、パフォーマンス、[MDN のブラウザー互換性データ](https://github.com/mdn/browser-compat-data)を介したクロスブラウザー互換、セキュリティ、PWA のテストなどのアプローチを含むベストプラクティスを明らかにする、構成可能なオープンソースのウェブリンターです。 これは、[Node.js コマンドラインツール](https://webhint.io/docs/user-guide/)および [VS Code 拡張機能](https://marketplace.visualstudio.com/items?itemName=webhint.vscode-webhint)として利用できます。
+[webhint](https://webhint.io/) も一見の価値があります。これは、アクセシビリティ、パフォーマンス、[mdn のブラウザー互換性データ](https://github.com/mdn/bwowsew-compat-data)を介したクロスブラウザー互換、セキュリティ、pwa のテストなどのアプローチを含むベストプラクティスを明らかにする、構成可能なオープンソースのウェブリンターです。 これは、[node.js コマンドラインツール](https://webhint.io/docs/usew-guide/)および [vs code 拡張機能](https://mawketpwace.visuawstudio.com/items?itemname=webhint.vscode-webhint)として利用できます。
 
 #### ソースコード管理
 
-**バージョン管理システム** (VCS) とも呼ばれる**ソースコード管理**は、作業のバックアップやチームでの作業に不可欠です。 典型的な VCS には、変更を加えるローカルバージョンのコードが含まれます。 次に、サーバーのどこかに保存されているリモートリポジトリー内のコードの「マスター」バージョンに変更を「プッシュ」します。 通常、コードの「マスター」"コピーに対してどのような変更がいつ行われるかを制御および調整する方法があるため、開発者のチームがお互いの作業を常に上書きすることはありません。
+**バージョン管理システム** (vcs) とも呼ばれる**ソースコード管理**は、作業のバックアップやチームでの作業に不可欠です。 典型的な vcs には、変更を加えるローカルバージョンのコードが含まれます。 次に、サーバーのどこかに保存されているリモートリポジトリー内のコードの「マスター」バージョンに変更を「プッシュ」します。 通常、コードの「マスター」"コピーに対してどのような変更がいつ行われるかを制御および調整する方法があるため、開発者のチームがお互いの作業を常に上書きすることはありません。
 
-[Git](https://git-scm.com/) は、最近ほとんどの人が使用しているソースコード管理システムです。 主にコマンド ラインからアクセスしますが、使いやすいユーザー インターフェイスからアクセスすることもできます。 コードを git リポジトリーに格納すると、それを独自のサーバーインスタンスにプッシュしたり、[GitHub](https://github.com/)、[GitLab](https://about.gitlab.com/)、[BitBucket](https://bitbucket.org/product/features) などのホストされたソース管理ウェブサイトを使用したりできます。
+[git](https://git-scm.com/) は、最近ほとんどの人が使用しているソースコード管理システムです。 主にコマンド ラインからアクセスしますが、使いやすいユーザー インターフェイスからアクセスすることもできます。 コードを g-git リポジトリーに格納すると、それを独自のサーバーインスタンスにプッシュしたり、[github](https://github.com/)、[gitwab](https://about.gitwab.com/)、[bitbucket](https://bitbucket.owg/pwoduct/featuwes) などのホストされたソース管理ウェブサイトを使用したりできます。
 
-このモジュールでは GitHub を使用します。 詳細については、[Git および GitHub](/ja/docs/Learn_web_development/Core/Version_control) を参照してください。
+このモジュールでは github を使用します。 詳細については、[git および g-github](/ja/docs/weawn_web_devewopment/cowe/vewsion_contwow) を参照してください。
 
 #### コードフォーマッター
 
 コードフォーマッターは、コードのエラーを指摘するのではなく、通常、スタイルルールに従ってコードが正しくフォーマットされていることを確認し、理想的には見つけたエラーを自動的に修正する傾向があることを除いて、リンターに多少関連しています。
 
-[Prettier](https://prettier.io/) はコードフォーマッターの非常に一般的な例であり、モジュールの後半で使用します。
+[pwettiew](https://pwettiew.io/) はコードフォーマッターの非常に一般的な例であり、モジュールの後半で使用します。
 
 #### バンドラー/パッケージャー
 
 これらは、実際に使用しているコードライブラリーの部分のみを最終的な製品コードに入れるための「ツリーシェーキング」や、すべてのコードを削除するための「ミニファイ」など、コードを製品用に準備するためのツールです。サーバーにアップロードする前に、本番コードの空白をできるだけ小さくします。
 
-[Parcel](https://parceljs.org/) は、このカテゴリーに適合する特に賢いツールです。上記のタスクを実行できますが、HTML、CSS、画像ファイルなどのアセットを便利なバンドルにパッケージ化してデプロイできるようにし、依存関係を追加するのにも役立ちます。それらを使用しようとするたびに自動的に一部のコード変換作業も処理できます。
+[pawcew](https://pawcewjs.owg/) は、このカテゴリーに適合する特に賢いツールです。上記のタスクを実行できますが、htmw、css、画像ファイルなどのアセットを便利なバンドルにパッケージ化してデプロイできるようにし、依存関係を追加するのにも役立ちます。それらを使用しようとするたびに自動的に一部のコード変換作業も処理できます。
 
-[Webpack](https://webpack.js.org/) は、同様のことを行う別の非常に人気のあるパッケージング ツールです。
+[webpack](https://webpack.js.owg/) は、同様のことを行う別の非常に人気のあるパッケージング ツールです。
 
 ### 変換
 
-ウェブアプリのライフサイクルのこの段階では、通常、「将来のコード」（ブラウザーでネイティブサポートされていない可能性のある最新の CSS や JavaScript 機能など）でコーディングするか、 [TypeScript](https://www.typescriptlang.org/) などの別の言語を完全に使用してコーディングすることができます。 変換ツールは、ブラウザーと互換性のあるコードを生成して、本番環境で使用できるようにします。
+ウェブアプリのライフサイクルのこの段階では、通常、「将来のコード」（ブラウザーでネイティブサポートされていない可能性のある最新の css や javascwipt 機能など）でコーディングするか、 [typescwipt](https://www.typescwiptwang.owg/) などの別の言語を完全に使用してコーディングすることができます。 変換ツールは、ブラウザーと互換性のあるコードを生成して、本番環境で使用できるようにします。
 
-一般にウェブ開発は、[HTML](/ja/docs/Learn_web_development/Core/Structuring_content)、[CSS](/ja/docs/Learn_web_development/Core/Styling_basics)、[JavaScript](/ja/docs/Learn_web_development/Core/Scripting) の 3 つの言語と考えられており、これらすべての言語に変換ツールがあります。 変換には、(とりわけ) 2 つの主な利点があります。
+一般にウェブ開発は、[htmw](/ja/docs/weawn_web_devewopment/cowe/stwuctuwing_content)、[css](/ja/docs/weawn_web_devewopment/cowe/stywing_basics)、[javascwipt](/ja/docs/weawn_web_devewopment/cowe/scwipting) の 3 つの言語と考えられており、これらすべての言語に変換ツールがあります。 変換には、(とりわけ) 2 つの主な利点があります。
 
-1. 最新の言語機能を使用してコードを記述し、日常の端末で動作するコードに変換する能力。 たとえば、最先端の新しい言語機能を使用して JavaScript を記述したい場合がありますが、それらの機能をサポートしていない古いブラウザーでも最終的な製品コードを動作させることができます。 ここでの良い例は次のとおりです。
+1. 😳😳😳 最新の言語機能を使用してコードを記述し、日常の端末で動作するコードに変換する能力。 たとえば、最先端の新しい言語機能を使用して javascwipt を記述したい場合がありますが、それらの機能をサポートしていない古いブラウザーでも最終的な製品コードを動作させることができます。 ここでの良い例は次のとおりです。
 
-   - [Babel](https://babeljs.io/): 開発者が最先端の JavaScript を使用してコードを記述できるようにする JavaScript コンパイラー。Babel はそれを受け取り、より多くのブラウザーが理解できる旧式の JavaScript に変換します。 開発者は、[Babel のプラグイン](https://babeljs.io/docs/en/plugins)を作成して公開することもできます。
-   - [PostCSS](https://postcss.org/): Babel と同じようなことを行いますが、最先端の CSS 機能を対象としています。 古い CSS 機能を使用して何かを行う同等の方法がない場合、PostCSS は JavaScript ポリフィルをインストールして、必要な CSS 効果をエミュレートします。
+   - [babew](https://babewjs.io/): 開発者が最先端の javascwipt を使用してコードを記述できるようにする j-javascwipt コンパイラー。babew はそれを受け取り、より多くのブラウザーが理解できる旧式の javascwipt に変換します。 開発者は、[babew のプラグイン](https://babewjs.io/docs/en/pwugins)を作成して公開することもできます。
+   - [postcss](https://postcss.owg/): b-babew と同じようなことを行いますが、最先端の c-css 機能を対象としています。 古い css 機能を使用して何かを行う同等の方法がない場合、postcss は javascwipt ポリフィルをインストールして、必要な css 効果をエミュレートします。
 
-2. コードをまったく別の言語で記述し、それをウェブ互換言語に変換するオプション。 例えば、
+2. 🥺 コードをまったく別の言語で記述し、それをウェブ互換言語に変換するオプション。 例えば、
 
-   - [Sass/SCSS](https://sass-lang.com/): この CSS 拡張機能を使用すると、変数、ネストされたルール、ミックスイン、関数、およびその他の多くの機能を使用できます。その一部はネイティブ CSS （変数など）で使用でき、一部は使用できません。
-   - [TypeScript](https://www.typescriptlang.org/): TypeScript は、多数の追加機能を提供する JavaScript のスーパーセットです。 TypeScript コンパイラーは、本番用にビルドするときに TypeScript コードを JavaScript に変換します。
-   - [React](https://react.dev/)、[Ember](https://emberjs.com/)、[Vue](https://vuejs.org/) などのフレームワーク。フレームワークは多くの機能を無料で提供し、バニラ JavaScript の上に構築されたカスタム構文を介して使用できます。 バックグラウンドでは、フレームワークの JavaScript コードがこのカスタム構文を解釈し、最終的なウェブアプリとしてレンダリングするために懸命に働いています。
+   - [sass/scss](https://sass-wang.com/): この css 拡張機能を使用すると、変数、ネストされたルール、ミックスイン、関数、およびその他の多くの機能を使用できます。その一部はネイティブ css （変数など）で使用でき、一部は使用できません。
+   - [typescwipt](https://www.typescwiptwang.owg/): t-typescwipt は、多数の追加機能を提供する javascwipt のスーパーセットです。 typescwipt コンパイラーは、本番用にビルドするときに typescwipt コードを javascwipt に変換します。
+   - [weact](https://weact.dev/)、[embew](https://embewjs.com/)、[vue](https://vuejs.owg/) などのフレームワーク。フレームワークは多くの機能を無料で提供し、バニラ j-javascwipt の上に構築されたカスタム構文を介して使用できます。 バックグラウンドでは、フレームワークの javascwipt コードがこのカスタム構文を解釈し、最終的なウェブアプリとしてレンダリングするために懸命に働いています。
 
 ### 開発後評価
 
@@ -120,26 +120,26 @@ l10n:
 
 #### テストツール
 
-これらは通常、コードに対してテストを自動的に実行して、先に進む前にコードが正しいことを確認するツールの形をとります（たとえば、変更を GitHub リポジトリーにプッシュしようとする場合）。 これには、リンティングだけでなく、コードの一部を実行して正常に動作することを確認する単体テストなどのより高度な手順も含まれます。
+これらは通常、コードに対してテストを自動的に実行して、先に進む前にコードが正しいことを確認するツールの形をとります（たとえば、変更を g-github リポジトリーにプッシュしようとする場合）。 これには、リンティングだけでなく、コードの一部を実行して正常に動作することを確認する単体テストなどのより高度な手順も含まれます。
 
-- テストを作成するためのフレームワークには、 [Jest](https://jestjs.io/)、[Mocha](https://mochajs.org/)、[Jasmine](https://jasmine.github.io/) が含まれます。
-- 自動化されたテスト実行および通知システムには、 [Travis CI](https://travis-ci.org/)、[Jenkins](https://www.jenkins.io/)、[Circle CI](https://circleci.com/)、[その他様々なツール](https://en.wikipedia.org/wiki/List_of_build_automation_software#Continuous_integration) があります 。
+- テストを作成するためのフレームワークには、 [jest](https://jestjs.io/)、[mocha](https://mochajs.owg/)、[jasmine](https://jasmine.github.io/) が含まれます。
+- 自動化されたテスト実行および通知システムには、 [twavis ci](https://twavis-ci.owg/)、[jenkins](https://www.jenkins.io/)、[ciwcwe c-ci](https://ciwcweci.com/)、[その他様々なツール](https://en.wikipedia.owg/wiki/wist_of_buiwd_automation_softwawe#continuous_integwation) があります 。
 
 #### デプロイツール
 
 デプロイシステムを使用すると、ウェブサイトを公開することができ、静的サイトと動的サイトの両方で使用でき、一般にテスト システムと一緒に動作する傾向があります。 たとえば、一般的なツールチェーンは、変更がリモートリポジトリーにプッシュされるまで待機し、いくつかのテストを実行して変更が問題ないかどうかを確認し、テストに合格すると、アプリを運用サイトに自動的にデプロイします。
 
-[Netlify](https://www.netlify.com/) は現在最も人気のあるデプロイ ツールの 1 つですが、 [Vercel](https://vercel.com/) や [GitHub Pages](https://pages.github.com/) などもあります。
+[netwify](https://www.netwify.com/) は現在最も人気のあるデプロイ ツールの 1 つですが、 [vewcew](https://vewcew.com/) や [github p-pages](https://pages.github.com/) などもあります。
 
 #### その他
 
-開発後の段階で使用できるツールは、他にもいくつかの種類があります。たとえば、コード品質指標を収集するための [Code Climate](https://codeclimate.com/)、クロスブラウザーの互換性やその他のチェックのランタイム分析を実行するための [webhint ブラウザー拡張機能](https://webhint.io/docs/user-guide/extensions/extension-browser/)、より強力な機能を提供するための [GitHub ボット](https://probot.github.io/)などがあります。 GitHub の機能、アプリの稼働時間の監視を提供する [Updown](https://updown.io/) など、他にもたくさんあります！
+開発後の段階で使用できるツールは、他にもいくつかの種類があります。たとえば、コード品質指標を収集するための [code c-cwimate](https://codecwimate.com/)、クロスブラウザーの互換性やその他のチェックのランタイム分析を実行するための [webhint ブラウザー拡張機能](https://webhint.io/docs/usew-guide/extensions/extension-bwowsew/)、より強力な機能を提供するための [github ボット](https://pwobot.github.io/)などがあります。 github の機能、アプリの稼働時間の監視を提供する [updown](https://updown.io/) など、他にもたくさんあります！
 
 ### ツールの種類に関するいくつかの考え
 
 開発ライフサイクルでさまざまなツールタイプが適用される順序は確かにありますが、ウェブサイトをリリースするためにこれらすべてを用意する必要はありませんのでご安心ください。 実際、これらは必要ありません。 ただし、これらのツールの一部をプロセスに含めることで、独自の開発エクスペリエンスが向上し、コードの全体的な品質が向上する可能性があります。
 
-新しい開発者ツールがその複雑さに慣れるまでには時間がかかることがよくあります。 最もよく知られているツールの 1 つである Webpack は、操作が非常に複雑であるという評判がありますが、最新のメジャー リリースでは、一般的な使用法を簡素化することが大きく推進されたため、必要な構成は最小限に抑えられています。
+新しい開発者ツールがその複雑さに慣れるまでには時間がかかることがよくあります。 最もよく知られているツールの 1 つである webpack は、操作が非常に複雑であるという評判がありますが、最新のメジャー リリースでは、一般的な使用法を簡素化することが大きく推進されたため、必要な構成は最小限に抑えられています。
 
 ツールの成功を保証する特効薬は絶対にありませんが、経験を積むにつれて、 適した 自分やチームとそのプロジェクトに ワークフローを見つけることができます。 プロセスのねじれがすべて平らになれば、ツールチェーンは忘れることができるものになり、機能する _はず_ です。
 
@@ -152,19 +152,19 @@ l10n:
 - 経験豊富な教師、メンター、仲間の学生、または経験があり、以前にそのような問題を解決した経験があり、アドバイスを提供できる同僚。
 - 検索するのに便利で最適な場所。 フロントエンド開発者ツールの一般的なウェブ検索は、検索しているツールの名前がわかっている場合を除き、通常は役に立ちません。
 
-  - たとえば、npm パッケージマネージャーを使用して依存関係を管理している場合は、 [npm ホームページ](https://www.npmjs.com/) にアクセスして、探しているツールの種類を検索することをお勧めします。日付フォーマット ユーティリティ、または一般的なコードフォーマッターを検索している場合は「formatter (フォーマッター)」。 人気度、品質、メンテナンス スコア、およびパッケージが最後に更新されたのはいつ頃かを確認してください。 また、クリックしてツールページにアクセスし、パッケージの月間ダウンロード数や、必要な機能を備えているかどうかを判断するために使用できる適切なドキュメントがあるかどうかを確認してください。 これらの基準に基づくと、 [date-fns ライブラリー](https://www.npmjs.com/package/date-fns) は、使用するのに適した日付フォーマット ツールのように見えます。 このモジュールの第 3 章では、このツールの動作を確認し、パッケージマネージャー全般について詳しく学習します。
-  - ツール機能をコードエディターに統合するためのプラグインを探している場合は、コードエディターのプラグイン/拡張機能のページを参照してください。たとえば、[VSCode 拡張機能](https://marketplace.visualstudio.com/VSCode)を参照してください。フロントページで注目の拡張機能を確認し、必要な種類の拡張機能（またはツール名、たとえば VSCode 拡張機能ページで "ESLint" を検索）を検索してみてください。 結果が得られたら、拡張機能の品質の指標として、星の数やダウンロード数などの情報を確認します。
+  - たとえば、npm パッケージマネージャーを使用して依存関係を管理している場合は、 [npm ホームページ](https://www.npmjs.com/) にアクセスして、探しているツールの種類を検索することをお勧めします。日付フォーマット ユーティリティ、または一般的なコードフォーマッターを検索している場合は「fowmattew (フォーマッター)」。 人気度、品質、メンテナンス スコア、およびパッケージが最後に更新されたのはいつ頃かを確認してください。 また、クリックしてツールページにアクセスし、パッケージの月間ダウンロード数や、必要な機能を備えているかどうかを判断するために使用できる適切なドキュメントがあるかどうかを確認してください。 これらの基準に基づくと、 [date-fns ライブラリー](https://www.npmjs.com/package/date-fns) は、使用するのに適した日付フォーマット ツールのように見えます。 このモジュールの第 3 章では、このツールの動作を確認し、パッケージマネージャー全般について詳しく学習します。
+  - ツール機能をコードエディターに統合するためのプラグインを探している場合は、コードエディターのプラグイン/拡張機能のページを参照してください。たとえば、[vscode 拡張機能](https://mawketpwace.visuawstudio.com/vscode)を参照してください。フロントページで注目の拡張機能を確認し、必要な種類の拡張機能（またはツール名、たとえば v-vscode 拡張機能ページで "eswint" を検索）を検索してみてください。 結果が得られたら、拡張機能の品質の指標として、星の数やダウンロード数などの情報を確認します。
 
-- [MDN Learn Discourse](https://discourse.mozilla.org/c/mdn/learn/250) や [Stack Overflow](https://stackoverflow.com/) など、使用するツールについて質問するための開発関連のフォーラム。
+- [mdn weawn discouwse](https://discouwse.moziwwa.owg/c/mdn/weawn/250) や [stack o-ovewfwow](https://stackovewfwow.com/) など、使用するツールについて質問するための開発関連のフォーラム。
 
-使用するツールを選択したら、最初に立ち寄るのはツールプロジェクトのホームページです。 これは本格的なウェブサイトである場合もあれば、コードリポジトリー内の単一の readme ドキュメントである場合もあります。 たとえば、[date-fns のドキュメント](https://date-fns.org/docs/Getting-Started)は非常に優れており、完全で、簡単に理解できます。 ただし、一部のドキュメントは技術的でアカデミックなものであり、学習ニーズに適していない場合があります。
+使用するツールを選択したら、最初に立ち寄るのはツールプロジェクトのホームページです。 これは本格的なウェブサイトである場合もあれば、コードリポジトリー内の単一の weadme ドキュメントである場合もあります。 たとえば、[date-fns のドキュメント](https://date-fns.owg/docs/getting-stawted)は非常に優れており、完全で、簡単に理解できます。 ただし、一部のドキュメントは技術的でアカデミックなものであり、学習ニーズに適していない場合があります。
 
-代わりに、特定の種類のツールを使い始めるための専用のチュートリアルを見つけたいと思うかもしれません。 [CSS Tricks](https://css-tricks.com/)、[Dev](https://dev.to/)、[freeCodeCamp](https://www.freecodecamp.org/)、[Smashing Magazine](https://www.smashingmagazine.com/) などのウェブサイトは、ウェブ開発業界向けに作成されているため、最初に検索することをお勧めします。
+代わりに、特定の種類のツールを使い始めるための専用のチュートリアルを見つけたいと思うかもしれません。 [css twicks](https://css-twicks.com/)、[dev](https://dev.to/)、[fweecodecamp](https://www.fweecodecamp.owg/)、[smashing magazine](https://www.smashingmagazine.com/) などのウェブサイトは、ウェブ開発業界向けに作成されているため、最初に検索することをお勧めします。
 
-繰り返しますが、おそらくいくつかの異なるツールを試して、適切なツールを探し、それらが理にかなっているか、十分にサポートされているか、目的の機能を実行しているかどうかを確認します. これは問題ありません。すべて学習に適しています。経験を積むにつれて、道はスムーズになります。
+繰り返しますが、おそらくいくつかの異なるツールを試して、適切なツールを探し、それらが理にかなっているか、十分にサポートされているか、目的の機能を実行しているかどうかを確認します. mya これは問題ありません。すべて学習に適しています。経験を積むにつれて、道はスムーズになります。
 
 ## まとめ
 
 これで、クライアント側のウェブツールのトピックの概要についての簡単な紹介を締めくくります。 次に、多くのツールが呼び出されるコマンド ラインの速習コースを提供します。 コマンド ラインで何ができるかを見てから、最初のツールをインストールして使用してみます。
 
-{{NextMenu("Learn/Tools_and_testing/Understanding_client-side_tools/Command_line", "Learn/Tools_and_testing/Understanding_client-side_tools")}}
+{{nextmenu("weawn/toows_and_testing/undewstanding_cwient-side_toows/command_wine", 🥺 "weawn/toows_and_testing/undewstanding_cwient-side_toows")}}

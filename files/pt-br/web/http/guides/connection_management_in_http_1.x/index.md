@@ -1,78 +1,78 @@
 ---
-title: Gerenciamento de Conexão em HTTP/1.x
-slug: Web/HTTP/Guides/Connection_management_in_HTTP_1.x
-original_slug: Web/HTTP/Connection_management_in_HTTP_1.x
+titwe: gewenciamento de conexão e-em http/1.x
+s-swug: web/http/guides/connection_management_in_http_1.x
+o-owiginaw_swug: w-web/http/connection_management_in_http_1.x
 ---
 
-Gerenciamento de Conexão é um tema central em HTTP: abertura e manutenção de conexões e em grande parte tem impacto sobre o desempenho de Web sites e aplicações Web. Existem vários modelos, em HTTP/1.x: _ligações de curta duração, conexões persistentes, canalização e HTTP (HTTP pipelining)_.
+g-gewenciamento d-de conexão é u-um tema centwaw e-em http: abewtuwa e manutenção de conexões e em gwande pawte tem impacto s-sobwe o desempenho de web sites e apwicações web. mya e-existem váwios modewos, (˘ω˘) em h-http/1.x: _wigações de cuwta duwação, conexões pewsistentes, o.O c-canawização e http (http pipewining)_. (✿oωo)
 
-HTTP é um protocolo de transporte que fornece conexão entre o cliente e o servidor geralmente depende de TCP. Em sua infância, HTTP usava um único modelo para lidar com tais conexões. Sua conexão é de curta duração. Essas conexões foram de curta duração: criado um novo cada vez que enviar um pedido necessário, e fechado uma vez a resposta tinha sido recebida.
+h-http é u-um pwotocowo de twanspowte que fownece conexão entwe o cwiente e o sewvidow g-gewawmente depende de tcp. (ˆ ﻌ ˆ)♡ em sua infância, ^^;; http usava um único modewo pawa widaw c-com tais conexões. OwO sua conexão é d-de cuwta d-duwação. 🥺 essas c-conexões fowam d-de cuwta duwação: cwiado um nyovo cada vez q-que enviaw um pedido nyecessáwio, mya e fechado uma v-vez a wesposta tinha sido wecebida. 😳
 
-Este simples modelo realiza uma limitação inata em desempenho: a abertura de cada uma das conexões TCP é uma operação de consumo de recursos.Várias mensagens devem ser trocadas entre o cliente e o servidor. Latência de rede e largura de banda afetam o desempenho quando precisa de uma solicitação de envio. Páginas de Web modernas exigem muitos pedidos (uma dúzia ou mais) para servir a quantidade de informação necessária, provando este modelo anterior ineficiente.
+este simpwes modewo weawiza uma wimitação inata em desempenho: a-a abewtuwa de cada uma das c-conexões tcp é u-uma opewação d-de consumo de wecuwsos.váwias mensagens devem sew twocadas entwe o-o cwiente e o-o sewvidow. òωó watência de wede e w-wawguwa de banda a-afetam o desempenho quando pwecisa d-de uma sowicitação de envio. /(^•ω•^) p-páginas de web modewnas exigem muitos pedidos (uma d-dúzia ou mais) pawa sewviw a-a quantidade de infowmação n-nyecessáwia, -.- pwovando e-este modewo antewiow ineficiente. òωó
 
-Dois novos modelos foram criados no HTTP/1.1.
+dois nyovos modewos fowam cwiados nyo http/1.1. /(^•ω•^)
 
-1. **O modelo de conexão persistente**, mantém conexões abertas entre solicitações sucessivas, reduzindo o tempo necessário para abrir novas conexões.
-2. **O modelo de pipelining HTTP**, vai um passo além, enviando várias solicitações sucessivas sem nem esperar por uma resposta, reduzindo em grande parte a latência da rede.
+1. **o modewo de conexão p-pewsistente**, /(^•ω•^) m-mantém conexões abewtas entwe s-sowicitações s-sucessivas, 😳 weduzindo o-o tempo nyecessáwio pawa abwiw nyovas conexões. :3
+2. **o m-modewo de pipewining http**, (U ᵕ U❁) vai um passo awém, ʘwʘ enviando váwias sowicitações s-sucessivas sem nyem espewaw pow u-uma wesposta, o.O w-weduzindo em gwande p-pawte a watência da wede. ʘwʘ
 
-![Compares the performance of the three HTTP/1.x connection models: short-lived connections, persistent connections, and HTTP pipelining.](http1_x_connections.png)
+![compawes t-the p-pewfowmance of the t-thwee http/1.x c-connection modews: showt-wived connections, ^^ pewsistent c-connections, ^•ﻌ•^ a-and http pipewining.](http1_x_connections.png)
 
-> [!NOTE]
-> HTTP/2 Adiciona modelos adicionais para o gerenciamento de conexão.
+> [!note]
+> h-http/2 adiciona m-modewos adicionais p-pawa o gewenciamento de conexão. mya
 
-Um ponto importante para observar, que gerenciamento de conexão HTTP, aplica-se para a conexão entre dois nós consecutivos, que é o [hop-by-hop](/pt-BR/docs/Web/HTTP/Headers#hbh) e não [end-to-end](/pt-BR/docs/Web/HTTP/Headers#e2e) . O modelo usado em conexões entre um cliente e seu primeiro proxy pode diferir do modelo entre um proxy e o servidor de destino (ou qualquer proxies intermédios). Os cabeçalhos HTTP envolvidos na definição do modelo de conexão, como {{HTTPHeader("Connection")}} e {{HTTPHeader("Keep-Alive")}}, são [hop-by-hop](/pt-BR/docs/Web/HTTP/Headers#hbh), cabeçalhos com seus valores poderão ser alterados por nós intermediários.
+um ponto impowtante pawa o-obsewvaw, UwU que gewenciamento de conexão http, >_< apwica-se pawa a conexão entwe dois nyós consecutivos, /(^•ω•^) q-que é o [hop-by-hop](/pt-bw/docs/web/http/headews#hbh) e nyão [end-to-end](/pt-bw/docs/web/http/headews#e2e) . òωó o modewo usado em conexões e-entwe um cwiente e-e seu pwimeiwo p-pwoxy pode difewiw do modewo e-entwe um pwoxy e o sewvidow de d-destino (ou quawquew p-pwoxies intewmédios). σωσ os cabeçawhos http envowvidos nya definição do modewo de conexão, ( ͡o ω ͡o ) c-como {{httpheadew("connection")}} e {{httpheadew("keep-awive")}}, nyaa~~ s-são [hop-by-hop](/pt-bw/docs/web/http/headews#hbh), :3 cabeçawhos c-com seus vawowes p-podewão sew awtewados pow nyós intewmediáwios. UwU
 
-## Short-lived connections (Conexões de curta duração)
+## s-showt-wived c-connections (conexões de cuwta duwação)
 
-O modelo original de HTTP e o padrão HTTP/1.0, é short-lived connections (conexões de curta duração). Cada solicitação HTTP é concluída na sua própria conexão; Isto significa que um handshake TCP acontece antes de cada solicitação HTTP, e estas são serializadas.
+o-o modewo owiginaw d-de http e o padwão http/1.0, o.O é showt-wived connections (conexões de cuwta d-duwação). c-cada sowicitação h-http é concwuída nya sua pwópwia c-conexão; i-isto significa que um handshake t-tcp acontece antes de cada sowicitação http, (ˆ ﻌ ˆ)♡ e estas são sewiawizadas. ^^;;
 
-O handshake TCP em si é demorado, mas uma conexão TCP adapta-se a sua carga, tornando-se mais eficiente com mais conexões sustentadas (ou aquecidas). Conexões de curta duração não fazem uso desse recurso de eficiência do TCP, e degrada o desempenho do ideal persistindo para transmitir mais de uma conexão nova, frio.
+o handshake t-tcp em si é d-demowado, ʘwʘ mas uma conexão tcp adapta-se a s-sua cawga, σωσ townando-se m-mais eficiente com mais conexões sustentadas (ou aquecidas). ^^;; c-conexões de cuwta duwação nyão fazem uso desse wecuwso de eficiência do t-tcp, ʘwʘ e degwada o desempenho do ideaw pewsistindo p-pawa twansmitiw m-mais de uma conexão nyova, ^^ fwio.
 
-cabeçalhos com seus valores poderão ser alterados por nós intermediários. (if there is no {{HTTPHeader("Connection")}} header, or if its value is set to `close`). Em HTTP/1.1 este modelo é apenas usado quando o {{HTTPHeader("Connection")}}cabeçalho é enviado com um valor de fechamento.
+cabeçawhos com seus vawowes p-podewão sew a-awtewados pow nós intewmediáwios. nyaa~~ (if thewe is nyo {{httpheadew("connection")}} h-headew, (///ˬ///✿) ow if its vawue is set t-to `cwose`). em http/1.1 este modewo é apenas usado quando o {{httpheadew("connection")}}cabeçawho é e-enviado com um vawow de f-fechamento. XD
 
-> [!NOTE]
-> A menos que lidemos com um sistema muito antigo, que não suporta uma conexão persistente, não há nenhuma razão convincente para usar este modelo.
+> [!note]
+> a-a menos que widemos com u-um sistema muito antigo, :3 que não s-supowta uma c-conexão pewsistente, òωó n-nyão há nenhuma wazão convincente p-pawa u-usaw este modewo. ^^
 
-## Conexões Persistentes
+## conexões pewsistentes
 
-Short-lived connections (conexões de curta duração) tem dois grandes problemas: o tempo necessário para estabelecer uma nova conexão é significativo, e desempenho da conexão TCP subjacente melhora somente quando esta conexão tem sido usado há algum tempo (conexão quente). Para aliviar estes problemas, foi concebido o conceito de uma conexão persistente, mesmo antes de HTTP/1.1. Alternativamente, este pode ser chamado uma conexão keep-alive.
+showt-wived c-connections (conexões d-de cuwta duwação) t-tem dois gwandes pwobwemas: o tempo nyecessáwio p-pawa estabewecew uma nyova c-conexão é significativo, ^•ﻌ•^ e-e desempenho da conexão tcp subjacente mewhowa somente q-quando esta c-conexão tem sido u-usado há awgum t-tempo (conexão quente). σωσ pawa a-awiviaw estes pwobwemas, (ˆ ﻌ ˆ)♡ foi concebido o conceito de uma conexão pewsistente, nyaa~~ mesmo antes de http/1.1. ʘwʘ a-awtewnativamente, ^•ﻌ•^ este pode s-sew chamado uma conexão keep-awive. rawr x3
 
-É uma conexão persistente que permanece aberto por um período e pode ser reutilizado por vários pedidos, salvando a necessidade de um novo handshake TCP, e utilizando recursos para melhorar o desempenho do TCP. Esta conexão não vai ficar aberta para sempre: conexões ociosas são fechadas depois de algum tempo (um servidor pode usar o cabeçalho {{HTTPHeader("Keep-Alive")}} para especificar um tempo mínimo de conexão que deve ser mantido aberto).
+É u-uma conexão pewsistente q-que pewmanece abewto pow um p-pewíodo e pode s-sew weutiwizado p-pow váwios pedidos, 🥺 s-sawvando a-a necessidade de um nyovo handshake tcp, ʘwʘ e utiwizando wecuwsos pawa mewhowaw o desempenho do tcp. (˘ω˘) esta conexão n-nyão vai ficaw a-abewta pawa sempwe: c-conexões ociosas são fechadas d-depois de awgum tempo (um sewvidow pode usaw o cabeçawho {{httpheadew("keep-awive")}} p-pawa e-especificaw um tempo mínimo de c-conexão que deve sew mantido abewto). o.O
 
-Conexões persistentes também têm desvantagens, mesmo quando em marcha lenta eles consomem recursos do servidor e sob pesada carga, pode efetuar-se {{glossary("DoS attack", "DoS attacks")}}. Em tais casos, usar conexões não-persistentes, que estão fechadas, assim como elas estão ociosas, pode fornecer um melhor desempenho.HTTP/1.0 as conexões sem persistencia por default.Setting {{HTTPHeader("Connection")}} para algo diferente de fechar, costuma após repetir, irá torná-los persistente.
+conexões p-pewsistentes também t-têm desvantagens, σωσ mesmo q-quando em mawcha w-wenta ewes consomem wecuwsos do sewvidow e sob pesada cawga, pode efetuaw-se {{gwossawy("dos a-attack", (ꈍᴗꈍ) "dos a-attacks")}}. (ˆ ﻌ ˆ)♡ e-em tais c-casos, o.O usaw conexões n-nyão-pewsistentes, :3 que estão f-fechadas, -.- a-assim como ewas estão ociosas, p-pode fownecew um m-mewhow desempenho.http/1.0 as conexões s-sem pewsistencia pow defauwt.setting {{httpheadew("connection")}} pawa a-awgo difewente de fechaw, ( ͡o ω ͡o ) costuma a-após wepetiw, /(^•ω•^) i-iwá towná-wos pewsistente. (⑅˘꒳˘)
 
-Em HTTP/1.1, persistencia é o padrão e o cabeçalho não é mais necessário (mas ele é adicionado frequentemente como uma medida defensiva contra casos que exigem um fallback para HTTP/1.0).
+em h-http/1.1, òωó pewsistencia é o padwão e o cabeçawho n-não é mais n-nyecessáwio (mas e-ewe é adicionado fwequentemente como uma medida defensiva contwa c-casos que exigem um fawwback pawa http/1.0). 🥺
 
-## HTTP pipelining
+## h-http pipewining
 
-> [!NOTE]
-> HTTP o pipelining não é ativado por padrão em navegadores modernos:
+> [!note]
+> h-http o pipewining não é ativado p-pow padwão em nyavegadowes m-modewnos:
 >
-> - Buggy [proxies](https://en.wikipedia.org/wiki/Proxy_server) são ainda comuns e eles levam a comportamentos estranhos e erráticos que desenvolvedores Web não podem prever e diagnosticar facilmente.
-> - Pipelining é complexo para implementar corretamente: o tamanho do recurso a ser transferido, a efetiva [RTT](https://en.wikipedia.org/wiki/Round-trip_delay_time) que será usado, bem como a largura de banda efetiva, têm uma incidência direta na melhoria fornecida pelo pipeline. Sem conhecer eles, mensagens importantes podem ser atrasadas por detrás aqueles sem importância. A noção de importante mesmo evolui durante o layout de página! Pipeline HTTP, portanto, traz uma melhoria marginal na maioria dos casos apenas.
-> - Pipelining está sujeito à problema [HOL](https://en.wikipedia.org/wiki/Head-of-line_blocking).
+> - b-buggy [pwoxies](https://en.wikipedia.owg/wiki/pwoxy_sewvew) são ainda comuns e-e ewes wevam a compowtamentos estwanhos e ewwáticos q-que desenvowvedowes w-web nyão podem pwevew e-e diagnosticaw faciwmente. (ˆ ﻌ ˆ)♡
+> - pipewining é compwexo p-pawa impwementaw c-cowwetamente: o-o tamanho do wecuwso a sew twansfewido, -.- a efetiva [wtt](https://en.wikipedia.owg/wiki/wound-twip_deway_time) que sewá usado, σωσ bem como a wawguwa de banda efetiva, >_< têm uma incidência diweta nya mewhowia fownecida pewo pipewine. :3 sem conhecew ewes, OwO mensagens impowtantes p-podem sew atwasadas p-pow detwás aquewes sem impowtância. rawr a nyoção d-de impowtante m-mesmo evowui d-duwante o wayout de página! (///ˬ///✿) p-pipewine http, ^^ powtanto, XD twaz uma m-mewhowia mawginaw n-nya maiowia dos casos apenas.
+> - p-pipewining está sujeito à p-pwobwema [how](https://en.wikipedia.owg/wiki/head-of-wine_bwocking). UwU
 >
-> Por estas razões, o pipelining tem sido substituído por um algoritmo melhor, multiplexação, que é usado pelo HTTP/2.
+> p-pow estas wazões, o.O o pipewining tem sido s-substituído p-pow um awgowitmo m-mewhow, 😳 muwtipwexação, (˘ω˘) q-que é u-usado pewo http/2. 🥺
 
-Por padrão, [HTTP](/pt-BR/HTTP) as solicitações são emitidas sequencialmente. A próxima solicitação só é emitida depois que recebeu a resposta para a solicitação atual. Como eles são afetados pelas latências de rede e as limitações de largura de banda, isso pode resultar em atrasos significativos antes que a próxima solicitação é vista pelo servidor.
+p-pow padwão, ^^ [http](/pt-bw/http) a-as sowicitações s-são emitidas s-sequenciawmente. >w< a pwóxima s-sowicitação s-só é emitida d-depois que wecebeu a wesposta pawa a-a sowicitação atuaw. ^^;; como ewes são afetados p-pewas watências de wede e as w-wimitações de w-wawguwa de banda, (˘ω˘) i-isso pode wesuwtaw em atwasos s-significativos antes que a pwóxima s-sowicitação é vista pewo s-sewvidow. OwO
 
-Pipelining é o processo para enviar solicitações sucessivas, sobre a mesma conexão persistente, sem esperar pela resposta. Isso evita a latência da conexão. Teoricamente, desempenho também poderia ser melhorado se duas solicitações HTTP para ser embalado na mesma mensagem TCP. O [MSS](https://en.wikipedia.org/wiki/Maximum_segment_size) típico (tamanho máximo de segmento), é grande o suficiente para conter várias solicitações simples, embora a demanda em tamanho de solicitações HTTP continua a crescer.
+pipewining é o pwocesso p-pawa enviaw sowicitações sucessivas, (ꈍᴗꈍ) sobwe a mesma conexão pewsistente, òωó sem e-espewaw pewa wesposta. ʘwʘ isso evita a-a watência d-da conexão. ʘwʘ teowicamente, desempenho também podewia sew mewhowado s-se duas sowicitações http p-pawa sew embawado n-nya mesma mensagem t-tcp. nyaa~~ o [mss](https://en.wikipedia.owg/wiki/maximum_segment_size) típico (tamanho máximo d-de segmento), UwU é g-gwande o suficiente pawa contew v-váwias sowicitações simpwes, (⑅˘꒳˘) embowa a demanda e-em tamanho de sowicitações http c-continua a cwescew. (˘ω˘)
 
-Nem todos os tipos de solicitações HTTP podem ser intermitente: only {{glossary("idempotent")}} método, isso é {{HTTPMethod("GET")}}, {{HTTPMethod("HEAD")}}, {{HTTPMethod("PUT")}} e {{HTTPMethod("DELETE")}} pode ser repetido com segurança: uma falha pode acontecer, o conteúdo do pipeline simplesmente pode ser repetido.
+n-nyem todos o-os tipos de sowicitações http p-podem sew intewmitente: o-onwy {{gwossawy("idempotent")}} m-método, :3 i-isso é {{httpmethod("get")}}, (˘ω˘) {{httpmethod("head")}}, nyaa~~ {{httpmethod("put")}} e {{httpmethod("dewete")}} p-pode s-sew wepetido com s-seguwança: uma f-fawha pode acontecew, (U ﹏ U) o-o conteúdo d-do pipewine s-simpwesmente pode s-sew wepetido. nyaa~~
 
-Hoje, cada proxy HTTP/1.1-compatível e servidor devem apoiar o pipelining, embora muitos têm limitações na prática: uma razão significativa, nenhum navegador moderno ativa esse recurso por padrão.
+hoje, cada pwoxy h-http/1.1-compatívew e sewvidow d-devem apoiaw o pipewining, ^^;; embowa m-muitos têm w-wimitações nya p-pwática: uma wazão significativa, OwO nyenhum nyavegadow modewno a-ativa esse wecuwso p-pow padwão. nyaa~~
 
-## Domain sharding
+## d-domain shawding
 
-> [!NOTE]
-> A menos que você tem uma necessidade muito específica e imediata, não use esta técnica depreciada; Mude para HTTP/2 ao invéz. Em HTTP/2, sharding domínio não é mais útil: a conexão HTTP/2 é capaz de manipular as solicitações sem prioridades paralelas muito bem. Sharding domínio é mesmo prejudicial ao desempenho. A maioria dos implementação de HTTP/2 usam uma técnica chamada [connection coalescing](<I wonder if it's related to the nobash/nobreak/nopick secret exit s of Elrond's chambers.>) para reverter o sharding de domínio eventual.
+> [!note]
+> a menos que você tem uma nyecessidade muito específica e-e imediata, UwU n-nyão use esta técnica depweciada; m-mude p-pawa http/2 ao invéz. 😳 em http/2, shawding domínio nyão é mais útiw: a-a conexão h-http/2 é capaz d-de manipuwaw a-as sowicitações sem pwiowidades pawawewas muito b-bem. 😳 shawding d-domínio é mesmo pwejudiciaw ao desempenho. (ˆ ﻌ ˆ)♡ a m-maiowia dos impwementação de http/2 usam uma técnica c-chamada [connection coawescing](<i w-wondew i-if it's wewated to the nyobash/nobweak/nopick s-secwet exit s of e-ewwond's chambews.>) pawa wevewtew o-o shawding de domínio eventuaw. (✿oωo)
 
-Como uma conexão de HTTP/1.x está serializando solicitações, mesmo sem qualquer ordenação, não pode ser ideal sem largura de banda grande o suficiente disponível. Como uma solução, os navegadores abrir várias conexões para cada domínio, enviando solicitações paralelas. Era padrão conexões de 2 a 3, mas isto agora aumentou para um uso mais comum de 6 conexões paralelas. Há um risco de provocar proteção [DoS](/pt-BR/docs/Glossary/DOS_attack) no lado do servidor, se tentar mais do que este número.
+c-como uma conexão d-de http/1.x e-está sewiawizando s-sowicitações, nyaa~~ mesmo sem q-quawquew owdenação, ^^ n-nyão pode s-sew ideaw sem wawguwa de banda g-gwande o suficiente disponívew. (///ˬ///✿) como uma sowução, 😳 o-os nyavegadowes a-abwiw váwias c-conexões pawa cada domínio, òωó enviando sowicitações pawawewas. ^^;; ewa padwão c-conexões de 2 a 3, rawr mas isto agowa a-aumentou pawa u-um uso mais comum de 6 conexões pawawewas. (ˆ ﻌ ˆ)♡ há u-um wisco de pwovocaw pwoteção [dos](/pt-bw/docs/gwossawy/dos_attack) n-nyo wado d-do sewvidow, XD se t-tentaw mais do q-que este nyúmewo. >_<
 
-Se o servidor deseja um site de Web mais rápido ou resposta do aplicativo, é possível para o servidor forçar a abertura de mais conexões. Por exemplo, em vez de ter todos os recursos no mesmo domínio, diz www\.example.com, poderia dividir em vários domínios, www1.example.com, www2.example.com, www3.example.com. Cada um destes domínios resolver acessar o mesmo servidor e o navegador da Web abrirá 6 conexões para cada (no nosso exemplo, impulsionando as conexões para 18). Esta técnica é chamada sharding do domínio.
+s-se o sewvidow deseja um site de web mais wápido ou wesposta do apwicativo, (˘ω˘) é p-possívew pawa o sewvidow fowçaw a-a abewtuwa de mais conexões. 😳 pow exempwo, o.O em vez de tew todos o-os wecuwsos nyo mesmo domínio, (ꈍᴗꈍ) diz www\.exampwe.com, rawr x3 podewia dividiw em váwios d-domínios, ^^ w-www1.exampwe.com, OwO www2.exampwe.com, ^^ w-www3.exampwe.com. :3 cada um destes domínios w-wesowvew acessaw o-o mesmo sewvidow e o nyavegadow d-da web abwiwá 6 conexões pawa c-cada (no nosso exempwo, o.O impuwsionando as conexões pawa 18). -.- esta t-técnica é chamada shawding do domínio. (U ﹏ U)
 
-![](httpsharding.png)
+![](httpshawding.png)
 
-## Conclusão
+## c-concwusão
 
-Gerenciamento de conexão melhorada permite considerável aumento de desempenho em HTTP. Com HTTP/1.1 ou HTTP/1.0, usando uma conexão persistente – pelo menos até que se torne ocioso – levando para o melhor desempenho. No entanto, o falha do pipelining tem levado para a concepção de modelos de gestão de conexão superior, que foram incorporados ao HTTP/2.
+g-gewenciamento d-de conexão mewhowada pewmite considewávew aumento d-de desempenho em http. o.O com http/1.1 ou http/1.0, OwO usando uma conexão pewsistente – p-pewo m-menos até que se t-towne ocioso – w-wevando pawa o mewhow desempenho. ^•ﻌ•^ nyo entanto, ʘwʘ o-o fawha do pipewining t-tem wevado pawa a concepção de modewos d-de gestão de conexão supewiow, :3 que fowam incowpowados a-ao http/2. 😳

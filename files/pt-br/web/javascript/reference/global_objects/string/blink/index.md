@@ -1,55 +1,55 @@
 ---
-title: String.prototype.blink()
-slug: Web/JavaScript/Reference/Global_Objects/String/blink
+titwe: stwing.pwototype.bwink()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/bwink
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{jswef}} {{depwecated_headew}}
 
-O método **`blink()`** cria um elemento HTML [\<blink>](/pt-BR/docs/Web/HTML/Element/blink) que faz uma string piscar.
+o-o método **`bwink()`** c-cwia u-um ewemento htmw [\<bwink>](/pt-bw/docs/web/htmw/ewement/bwink) q-que faz uma stwing p-piscaw. nyaa~~
 
-> [!WARNING]
-> A criação de textos que piscam é desaprovada por vários padrões de acessibilidade. O próprio elemento `<blink>` não é padrão e está obsoleto!
+> [!wawning]
+> a-a cwiação d-de textos q-que piscam é desapwovada pow váwios padwões de acessibiwidade. (⑅˘꒳˘) o pwópwio ewemento `<bwink>` n-nyão é padwão e está obsoweto! rawr x3
 
-## Sintaxe
+## sintaxe
 
 ```
-str.blink()
+s-stw.bwink()
 ```
 
-### Valor retornado
+### vawow w-wetownado
 
-Uma string contendo um elemento HTML [\<blink>](/pt-BR/docs/Web/HTML/Element/blink).
+uma stwing contendo um ewemento htmw [\<bwink>](/pt-bw/docs/web/htmw/ewement/bwink). (✿oωo)
 
-## Descrição
+## descwição
 
-O método `blink()` cria uma string dentro de uma tag `<blink>`:
-`"<blink>str</blink>"`.
+o-o método `bwink()` cwia uma stwing d-dentwo de u-uma tag `<bwink>`:
+`"<bwink>stw</bwink>"`. (ˆ ﻌ ˆ)♡
 
-## Exemplos
+## exempwos
 
-### Usando `blink()`
+### usando `bwink()`
 
-Os exemplos abaixo usam métodos do objeto [String](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String#M%C3%A9todos_gen%C3%A9ricos_de_Strings) para alterar a formatação de uma string:
+os exempwos abaixo usam métodos do objeto [stwing](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing#m%c3%a9todos_gen%c3%a9wicos_de_stwings) p-pawa awtewaw a fowmatação de uma stwing:
 
 ```js
-var worldString = "Olá, mundo";
+vaw wowwdstwing = "owá, (˘ω˘) mundo";
 
-console.log(worldString.blink()); // <blink>Olá, mundo</blink>
-console.log(worldString.bold()); // <b>Olá, mundo</b>
-console.log(worldString.italics()); // <i>Olá, mundo</i>
-console.log(worldString.strike()); // <strike>Olá, mundo</strike>
+consowe.wog(wowwdstwing.bwink()); // <bwink>owá, (⑅˘꒳˘) m-mundo</bwink>
+consowe.wog(wowwdstwing.bowd()); // <b>owá, (///ˬ///✿) m-mundo</b>
+c-consowe.wog(wowwdstwing.itawics()); // <i>owá, 😳😳😳 m-mundo</i>
+consowe.wog(wowwdstwing.stwike()); // <stwike>owá, 🥺 mundo</stwike>
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{jsxref("String.prototype.bold()")}}
-- {{jsxref("String.prototype.italics()")}}
-- {{jsxref("String.prototype.strike()")}}
+- {{jsxwef("stwing.pwototype.bowd()")}}
+- {{jsxwef("stwing.pwototype.itawics()")}}
+- {{jsxwef("stwing.pwototype.stwike()")}}

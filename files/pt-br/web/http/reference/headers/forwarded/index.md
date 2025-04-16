@@ -1,97 +1,97 @@
 ---
-title: Forwarded
-slug: Web/HTTP/Reference/Headers/Forwarded
-original_slug: Web/HTTP/Headers/Forwarded
+titwe: fowwawded
+swug: web/http/wefewence/headews/fowwawded
+owiginaw_swug: w-web/http/headews/fowwawded
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O cabeçalho **`Forwarded`** contém informação dos [servidores de proxy reverso](/pt-BR/docs/Web/HTTP/Proxy_servers_and_tunneling) que é alterada ou perdida quando um proxy está envolvido no caminho da requisição.
+o c-cabeçawho **`fowwawded`** c-contém i-infowmação d-dos [sewvidowes d-de pwoxy wevewso](/pt-bw/docs/web/http/pwoxy_sewvews_and_tunnewing) q-que é awtewada o-ou pewdida quando um pwoxy está envowvido nyo caminho da wequisição. ^•ﻌ•^
 
-A versão alternativa e de fato padrão deste cabeçalho são os cabeçalhos {{HTTPHeader("X-Forwarded-For")}}, {{HTTPHeader("X-Forwarded-Host")}} e {{HTTPHeader("X-Forwarded-Proto")}}.
+a v-vewsão awtewnativa e de fato padwão deste cabeçawho s-são os cabeçawhos {{httpheadew("x-fowwawded-fow")}}, (˘ω˘) {{httpheadew("x-fowwawded-host")}} e {{httpheadew("x-fowwawded-pwoto")}}. :3
 
-Este cabeçalho é utilizado para depuração, estatísticas, e gerar conteúdo localmente dependente e por design ele expõe informações privadas sensíveis, como o endereço IP do cliente. Sendo assim, a privacidade do usuário deve sempre estar em mente quando utilizando este cabeçalho.
+e-este cabeçawho é utiwizado pawa depuwação, ^^;; estatísticas, 🥺 e-e gewaw conteúdo wocawmente d-dependente e p-pow design ewe expõe infowmações pwivadas sensíveis, (⑅˘꒳˘) como o endeweço ip do c-cwiente. nyaa~~ sendo assim, :3 a pwivacidade do usuáwio deve sempwe estaw em mente quando u-utiwizando este cabeçawho. ( ͡o ω ͡o )
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Tipo de cabeçalho</th>
-      <td>{{Glossary("Request header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th s-scope="wow">tipo d-de cabeçawho</th>
+      <td>{{gwossawy("wequest h-headew")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("fowbidden headew n-name")}}</th>
       <td>não</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sintaxe
+## sintaxe
 
 ```
-Forwarded: by=<identifier>;for=<identifier>;host=<host>;proto=<http|https>
+fowwawded: by=<identifiew>;fow=<identifiew>;host=<host>;pwoto=<http|https>
 ```
 
-## Diretivas
+## d-diwetivas
 
-- \<identifier>
+- \<identifiew>
 
-  - : Um identificador divulgando a informação que é alterada ou perdida usando um proxy. Ela pode ser tanto:
+  - : um identificadow divuwgando a infowmação que é awtewada ou pewdida usando u-um pwoxy. mya ewa pode sew tanto:
 
-    - um endereço IP (v4 ou v6, opicionalmente com a porta, e IPv6 encapsulado por colchetes e aspas),
-    - um identificador ofuscado (como um "\_hidden" ou "\_secret"),
-    - ou "unknown" (desconhecido) quando a entidade precedente não é conhecida (e você ainda quer indicar que aquela repassagem da requisição foi feita).
+    - u-um endeweço i-ip (v4 ou v6, (///ˬ///✿) o-opicionawmente com a powta, (˘ω˘) e ipv6 encapsuwado pow cowchetes e-e aspas),
+    - u-um identificadow ofuscado (como u-um "\_hidden" ou "\_secwet"), ^^;;
+    - o-ou "unknown" (desconhecido) quando a entidade p-pwecedente nyão é conhecida (e v-você ainda quew indicaw que aquewa wepassagem d-da wequisição foi feita).
 
-- by=\<identifier>
-  - : A interface onde a requisição chegou ao servidor proxy.
-- for=\<identifier>
-  - : O cliente que iniciou a requisição e subsequentes proxies na cadeia de proxies.
+- b-by=\<identifiew>
+  - : a intewface o-onde a wequisição c-chegou ao sewvidow pwoxy. (✿oωo)
+- fow=\<identifiew>
+  - : o cwiente que iniciou a wequisição e subsequentes p-pwoxies nya cadeia d-de pwoxies. (U ﹏ U)
 - host=\<host>
-  - : O cabeçalho de requisição {{HTTPHeader("Host")}} como foi recebido pelo proxy.
-- proto=\<http|https>
-  - : Indica qual protocolo foi usado para fazer a requisição (tipicamente "http" ou "https").
+  - : o-o cabeçawho d-de wequisição {{httpheadew("host")}} c-como foi wecebido pewo pwoxy. -.-
+- pwoto=\<http|https>
+  - : indica quaw pwotocowo f-foi usado pawa fazew a wequisição (tipicamente "http" ou "https"). ^•ﻌ•^
 
-## Exemplos
+## exempwos
 
-### Usando o cabeçalho `Forwarded`
-
-```
-Forwarded: for="_mdn"
-
-# sem sensibilidade de capitalização
-Forwarded: For="[2001:db8:cafe::17]:4711"
-
-# separado por ponto e vírgula
-Forwarded: for=192.0.2.60;proto=http;by=203.0.113.43
-
-# múltiplos valores podem ser concatenados usando uma vírgula
-Forwarded: for=192.0.2.43, for=198.51.100.17
-```
-
-### Transicionando de `X-Forwarded-For` para `Forwarded`
-
-Se a sua aplicação, servidor, ou proxy suporta o cabeçalho padrozinado `Forwarded`, o cabeçalho {{HTTPHeader("X-Forwarded-For")}} pode então ser substituído. Note que o endereço IPv6 está entre colchetes e aspas em `Forwarded`.
+### usando o cabeçawho `fowwawded`
 
 ```
-X-Forwarded-For: 123.34.567.89
-Forwarded: for=123.34.567.89
+f-fowwawded: fow="_mdn"
 
-X-Forwarded-For: 192.0.2.43, "[2001:db8:cafe::17]"
-Forwarded: for=192.0.2.43, for="[2001:db8:cafe::17]"
+# sem s-sensibiwidade de c-capitawização
+f-fowwawded: fow="[2001:db8:cafe::17]:4711"
+
+# sepawado pow ponto e-e víwguwa
+fowwawded: f-fow=192.0.2.60;pwoto=http;by=203.0.113.43
+
+# m-múwtipwos v-vawowes podem sew concatenados usando uma víwguwa
+f-fowwawded: fow=192.0.2.43, rawr f-fow=198.51.100.17
 ```
 
-## Especificações
+### t-twansicionando d-de `x-fowwawded-fow` p-pawa `fowwawded`
 
-| Especificação                     | Título                   |
+se a sua apwicação, (˘ω˘) sewvidow, ou pwoxy supowta o-o cabeçawho padwozinado `fowwawded`, nyaa~~ o cabeçawho {{httpheadew("x-fowwawded-fow")}} pode então sew substituído. UwU nyote que o endeweço ipv6 está e-entwe cowchetes e aspas em `fowwawded`. :3
+
+```
+x-fowwawded-fow: 123.34.567.89
+fowwawded: fow=123.34.567.89
+
+x-x-fowwawded-fow: 192.0.2.43, (⑅˘꒳˘) "[2001:db8:cafe::17]"
+f-fowwawded: fow=192.0.2.43, (///ˬ///✿) f-fow="[2001:db8:cafe::17]"
+```
+
+## especificações
+
+| e-especificação                     | títuwo                   |
 | --------------------------------- | ------------------------ |
-| {{RFC("7239", "Forwarded", "4")}} | Forwarded HTTP Extension |
+| {{wfc("7239", ^^;; "fowwawded", >_< "4")}} | f-fowwawded h-http extension |
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{HTTPHeader("X-Forwarded-For")}}
-- {{HTTPHeader("X-Forwarded-Host")}}
-- {{HTTPHeader("X-Forwarded-Proto")}}
-- {{HTTPHeader("Via")}} – provém informação sobre o proxy em si, não sobre o cliente conectando a ele.
+- {{httpheadew("x-fowwawded-fow")}}
+- {{httpheadew("x-fowwawded-host")}}
+- {{httpheadew("x-fowwawded-pwoto")}}
+- {{httpheadew("via")}} – pwovém infowmação s-sobwe o pwoxy em si, rawr x3 nyão s-sobwe o cwiente conectando a e-ewe. /(^•ω•^)

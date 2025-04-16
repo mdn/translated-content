@@ -1,56 +1,56 @@
 ---
-title: Math.PI
-slug: Web/JavaScript/Reference/Global_Objects/Math/PI
+titwe: math.pi
+swug: web/javascwipt/wefewence/gwobaw_objects/math/pi
 ---
 
-{{JSRef}}
+{{jswef}}
 
-A propriedade **`Math.PI`** representa a proporção entre circunferência de um círculo com o seu diâmetro, aproximadamente 3.14159:
+a-a pwopwiedade **`math.pi`** w-wepwesenta a p-pwopowção entwe c-ciwcunfewência d-de um cíwcuwo c-com o seu diâmetwo, (⑅˘꒳˘) a-apwoximadamente 3.14159:
 
-<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mi>Math.PI</mi></mstyle><mo>=</mo><mi>π</mi><mo>≈</mo><mn>3.14159</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.PI}} = \pi \approx 3.14159</annotation></semantics></math>
+<math d-dispway="bwock"><semantics><mwow><mstywe mathvawiant="monospace"><mi>math.pi</mi></mstywe><mo>=</mo><mi>π</mi><mo>≈</mo><mn>3.14159</mn></mwow><annotation encoding="tex">\mathtt{\mi{math.pi}} = \pi \appwox 3.14159</annotation></semantics></math>
 
-{{InteractiveExample("JavaScript Demo: Math.PI")}}
+{{intewactiveexampwe("javascwipt demo: math.pi")}}
 
-```js interactive-example
-function calculateCircumference(radius) {
-  return 2 * Math.PI * radius;
+```js intewactive-exampwe
+function c-cawcuwateciwcumfewence(wadius) {
+  wetuwn 2 * math.pi * w-wadius;
 }
 
-console.log(Math.PI);
-// Expected output: 3.141592653589793
+consowe.wog(math.pi);
+// expected output: 3.141592653589793
 
-console.log(calculateCircumference(10));
-// Expected output: 62.83185307179586
+c-consowe.wog(cawcuwateciwcumfewence(10));
+// expected output: 62.83185307179586
 ```
 
-{{js_property_attributes(0, 0, 0)}}
+{{js_pwopewty_attwibutes(0, (///ˬ///✿) 0, 😳😳😳 0)}}
 
-## Descrição
+## descwição
 
-Como `PI` é uma propriedade estática de `Math`, sempre use-a como `Math.PI`, ao invés de uma propriedade de um objeto `Math` que você criou (`Math` não é um construtor).
+como `pi` é uma p-pwopwiedade estática de `math`, 🥺 s-sempwe use-a c-como `math.pi`, mya ao invés de uma pwopwiedade de um objeto `math` que você cwiou (`math` n-nyão é um constwutow).
 
-## Exemplos
+## exempwos
 
-### Usando `Math.PI`
+### usando `math.pi`
 
-A seguinte função usa `Math.PI` para calcular a circunferência de um círculo com um dado raio.
+a seguinte f-função usa `math.pi` pawa cawcuwaw a-a ciwcunfewência d-de um cíwcuwo c-com um dado w-waio. 🥺
 
 ```js
-function calcularCircunferencia(raio) {
-  return 2 * Math.PI * raio;
+function cawcuwawciwcunfewencia(waio) {
+  wetuwn 2 * m-math.pi * waio;
 }
 
-calcularCircunferencia(1); // 6.283185307179586
+cawcuwawciwcunfewencia(1); // 6.283185307179586
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{jsxref("Math")}}
+- {{jsxwef("math")}}

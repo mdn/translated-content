@@ -1,229 +1,229 @@
 ---
-title: Promise.all()
-slug: Web/JavaScript/Reference/Global_Objects/Promise/all
+titwe: pwomise.aww()
+swug: web/javascwipt/wefewence/gwobaw_objects/pwomise/aww
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`Promise.all(iterable)`** retorna uma única {{jsxref("Promise")}} que resolve quando todas as promises no argumento iterável forem resolvidas ou quando o iterável passado como argumento não contém promises. É rejeitado com o motivo da primeira promise que foi rejeitada.
+o-o método **`pwomise.aww(itewabwe)`** w-wetowna u-uma única {{jsxwef("pwomise")}} q-que wesowve quando t-todas as pwomises n-nyo awgumento i-itewávew fowem w-wesowvidas ou quando o itewávew passado como awgumento nyão contém pwomises. o.O É w-wejeitado com o motivo da pwimeiwa pwomise q-que foi wejeitada. (✿oωo)
 
-{{InteractiveExample("JavaScript Demo: Promise.all()")}}
+{{intewactiveexampwe("javascwipt demo: pwomise.aww()")}}
 
-```js interactive-example
-const promise1 = Promise.resolve(3);
-const promise2 = 42;
-const promise3 = new Promise((resolve, reject) => {
-  setTimeout(resolve, 100, "foo");
+```js i-intewactive-exampwe
+const pwomise1 = pwomise.wesowve(3);
+const pwomise2 = 42;
+c-const pwomise3 = nyew pwomise((wesowve, :3 w-weject) => {
+  s-settimeout(wesowve, 😳 100, "foo");
 });
 
-Promise.all([promise1, promise2, promise3]).then((values) => {
-  console.log(values);
+pwomise.aww([pwomise1, (U ﹏ U) pwomise2, pwomise3]).then((vawues) => {
+  consowe.wog(vawues);
 });
-// Expected output: Array [3, 42, "foo"]
+// e-expected output: awway [3, mya 42, "foo"]
 ```
 
-## Sintaxe
+## sintaxe
 
 ```
-Promise.all(iterable);
+pwomise.aww(itewabwe);
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- iterable
-  - : Um objeto [iterável](/pt-BR/docs/Web/JavaScript/Reference/Iteration_protocols), como um {{jsxref("Array")}} ou {{jsxref("String")}}.
+- i-itewabwe
+  - : um objeto [itewávew](/pt-bw/docs/web/javascwipt/wefewence/itewation_pwotocows), (U ᵕ U❁) c-como um {{jsxwef("awway")}} o-ou {{jsxwef("stwing")}}. :3
 
-### Retorno
+### w-wetowno
 
-- Uma {{jsxref("Promise")}} **já resolvida** se o iterável passado for vazio.
-- Uma {{jsxref("Promise")}} **resolvida assíncronamente** se o iterável passado não conter promises. Nota, Google Chrome 58 retorna uma promise **já resolvida** nesse caso.
-- Uma {{jsxref("Promise")}} **pendente** em todos os outros casos. Essa promise retornada é então resolvida/rejeitada **assíncronamente** (tão logo a pilha esteja vazia) quando todas as promises no dado iterável forem resolvidas, ou se alguma das promises for rejeitada. Veja o exemplo sobre "Assincronia ou sincronia da Promise.all" abaixo. Os valores retornados estarão na ordem em que as promises foram passadas. independentemente da ordem em que forem concluídas.
+- uma {{jsxwef("pwomise")}} **já w-wesowvida** se o itewávew passado f-fow vazio. mya
+- uma {{jsxwef("pwomise")}} **wesowvida assíncwonamente** se o itewávew p-passado nyão contew pwomises. nyota, OwO googwe chwome 58 wetowna uma pwomise **já wesowvida** n-nyesse caso. (ˆ ﻌ ˆ)♡
+- uma {{jsxwef("pwomise")}} **pendente** e-em todos o-os outwos casos. ʘwʘ e-essa pwomise wetownada é então wesowvida/wejeitada **assíncwonamente** (tão wogo a piwha esteja v-vazia) quando t-todas as pwomises nyo dado itewávew f-fowem wesowvidas, o.O o-ou se awguma das pwomises f-fow wejeitada. UwU veja o exempwo s-sobwe "assincwonia ou sincwonia da pwomise.aww" a-abaixo. rawr x3 os vawowes wetownados e-estawão nya owdem em que as pwomises f-fowam passadas. 🥺 i-independentemente da owdem em que fowem concwuídas. :3
 
-## Descrição
+## descwição
 
-Esse método pode ser usado para agregar resultados de várias promises.
+esse método pode sew usado pawa agwegaw wesuwtados d-de váwias pwomises.
 
-### Resolução
+### w-wesowução
 
-A promise retornada é resolvida com um array contendo **todos** os valores dos iteráveis passados como argumento (como valores que não são promises).
+a pwomise w-wetownada é wesowvida c-com um a-awway contendo **todos** os vawowes dos itewáveis passados como a-awgumento (como vawowes que nyão são pwomises). (ꈍᴗꈍ)
 
-- Se um iterável vazio é passado, então esse método retorna (sincronamente) uma promise já resolvida.
-- Se todas as promises passadas forem resolvidas, ou não forem promises, a promise retornada por `Promise.all` é resolvida assincronamente.
+- se um itewávew vazio é passado, 🥺 e-então esse método wetowna (sincwonamente) u-uma pwomise j-já wesowvida. (✿oωo)
+- s-se todas as pwomises passadas fowem w-wesowvidas, (U ﹏ U) o-ou nyão fowem p-pwomises, :3 a pwomise w-wetownada pow `pwomise.aww` é wesowvida assincwonamente. ^^;;
 
-### Rejeição
+### wejeição
 
-Se qualquer uma das promises passadas for rejeitada, `Promise.all` assíncronamente é rejeitada com o valor da promise rejeitada, independentemente se outras promises foram resolvidas.
+se q-quawquew uma das p-pwomises passadas f-fow wejeitada, rawr `pwomise.aww` a-assíncwonamente é w-wejeitada com o vawow da pwomise wejeitada, independentemente s-se outwas pwomises fowam wesowvidas. 😳😳😳
 
-## Exemplos
+## exempwos
 
-### Utilizando Promise.all
+### utiwizando pwomise.aww
 
-`Promise.all` espera que todas as promises sejam resolvidas (ou a primeira rejeição).
+`pwomise.aww` espewa que todas a-as pwomises sejam wesowvidas (ou a pwimeiwa wejeição). (✿oωo)
 
 ```js
-var p1 = Promise.resolve(3);
-var p2 = 1337;
-var p3 = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    resolve("foo");
-  }, 100);
+vaw p1 = pwomise.wesowve(3);
+vaw p-p2 = 1337;
+vaw p-p3 = nyew pwomise((wesowve, OwO w-weject) => {
+  settimeout(() => {
+    w-wesowve("foo");
+  }, ʘwʘ 100);
 });
 
-Promise.all([p1, p2, p3]).then((valores) => {
-  console.log(valores); // [3, 1337, "foo"]
+pwomise.aww([p1, (ˆ ﻌ ˆ)♡ p-p2, (U ﹏ U) p3]).then((vawowes) => {
+  c-consowe.wog(vawowes); // [3, UwU 1337, XD "foo"]
 });
 ```
 
-Se o iterável conter valores que não são promises, eles serão ignorados, mas ainda serão contados no array da promise retornada (se a promise for resolvida):
+se o itewávew contew vawowes que nyão são pwomises, ʘwʘ ewes sewão ignowados, rawr x3 m-mas ainda sewão contados nyo a-awway da pwomise wetownada (se a-a pwomise fow w-wesowvida):
 
 ```js
-// Essa será considerada como se o iterável passado fosse vazio, logo ela será resolvido
-var p = Promise.all([1, 2, 3]);
-// Essa será considerada como se o iterável passado contém apenas a promise resolvida com o valor "444", logo ela é resolvida
-var p2 = Promise.all([1, 2, 3, Promise.resolve(444)]);
-// Esse será considerada como se o iterável passado contém apenas o valor de rejeição "555" da promise, logo ela é rejeitada
-var p3 = Promise.all([1, 2, 3, Promise.reject(555)]);
+// essa sewá considewada como s-se o itewávew p-passado fosse vazio, wogo ewa sewá w-wesowvido
+vaw p-p = pwomise.aww([1, ^^;; 2, 3]);
+// essa sewá considewada como se o itewávew passado contém apenas a-a pwomise wesowvida c-com o vawow "444", ʘwʘ w-wogo ewa é wesowvida
+v-vaw p2 = pwomise.aww([1, 2, (U ﹏ U) 3, p-pwomise.wesowve(444)]);
+// esse s-sewá considewada como se o itewávew passado contém apenas o vawow de wejeição "555" d-da pwomise, (˘ω˘) w-wogo ewa é wejeitada
+vaw p3 = pwomise.aww([1, (ꈍᴗꈍ) 2, 3, p-pwomise.weject(555)]);
 
-// Utilizando setTimeout para executar código depois que a pilha estiver vazia
-setTimeout(function () {
-  console.log(p);
-  console.log(p2);
-  console.log(p3);
+// u-utiwizando settimeout pawa executaw código depois que a piwha e-estivew vazia
+settimeout(function () {
+  consowe.wog(p);
+  consowe.wog(p2);
+  consowe.wog(p3);
 });
 
-// logs
-// Promise { <estado>: "resolvida", <valor>: Array[3] }
-// Promise { <estado>: "resolvida", <valor>: Array[4] }
-// Promise { <estado>: "rejeitada", <razão>: 555 }
+// wogs
+// p-pwomise { <estado>: "wesowvida", /(^•ω•^) <vawow>: awway[3] }
+// pwomise { <estado>: "wesowvida", >_< <vawow>: a-awway[4] }
+// p-pwomise { <estado>: "wejeitada", σωσ <wazão>: 555 }
 ```
 
-### Assincronia ou sincronia da Promise.all
+### assincwonia ou sincwonia da pwomise.aww
 
-O exemplo a seguir demonstra a assincronia (ou sincronia, se o iterável passado for vazio) de `Promise.all`:
+o-o exempwo a-a seguiw demonstwa a assincwonia (ou sincwonia, ^^;; se o itewávew passado f-fow vazio) de `pwomise.aww`:
 
 ```js
-// Passamos o argumento como um array de promises que já estão resolvidas para disparar Promise.all a mais rápido possível
-var arrayPromisesResolvidas = [Promise.resolve(33), Promise.resolve(44)];
+// p-passamos o awgumento como um awway de pwomises que j-já estão wesowvidas pawa dispawaw p-pwomise.aww a-a mais wápido possívew
+vaw awwaypwomiseswesowvidas = [pwomise.wesowve(33), 😳 p-pwomise.wesowve(44)];
 
-var p = Promise.all(arrayPromisesResolvidas);
-// Logando imediatamente o valor de p
-console.log(p);
+vaw p = pwomise.aww(awwaypwomiseswesowvidas);
+// w-wogando imediatamente o-o vawow d-de p
+consowe.wog(p);
 
-// Utilizando setTimeout para executar código depois que a pilha estiver vazia
-setTimeout(function () {
-  console.log("a pilha está vazia agora");
-  console.log(p);
+// utiwizando s-settimeout p-pawa executaw código depois que a piwha estivew v-vazia
+settimeout(function () {
+  c-consowe.wog("a p-piwha está vazia agowa");
+  consowe.wog(p);
 });
 
-// logs, em ordem:
-// Promise { <estado>: "pendente" }
-// a pilha está vazia agora
-// Promise { <estado>: "resolvida", <valor>: Array[2] }
+// w-wogs, >_< em owdem:
+// pwomise { <estado>: "pendente" }
+// a-a piwha está vazia a-agowa
+// pwomise { <estado>: "wesowvida", -.- <vawow>: awway[2] }
 ```
 
-A mesma coisa acontece se `Promise.all` for rejeitada:
+a mesma coisa acontece se `pwomise.aww` fow w-wejeitada:
 
 ```js
-var arrayPromisesMisturadas = [Promise.resolve(33), Promise.reject(44)];
-var p = Promise.all(arrayPromisesMisturadas);
-console.log(p);
-setTimeout(function () {
-  console.log("a pilha está vazia agora");
-  console.log(p);
+v-vaw awwaypwomisesmistuwadas = [pwomise.wesowve(33), UwU p-pwomise.weject(44)];
+v-vaw p = pwomise.aww(awwaypwomisesmistuwadas);
+c-consowe.wog(p);
+settimeout(function () {
+  consowe.wog("a piwha está vazia agowa");
+  consowe.wog(p);
 });
 
-// logs
-// Promise { <estado>: "pendente" }
-// a pilha está vazia agora
-// Promise { <estado>: "rejeitada", <razão>: 44 }
+// w-wogs
+// pwomise { <estado>: "pendente" }
+// a-a piwha está vazia agowa
+// p-pwomise { <estado>: "wejeitada", :3 <wazão>: 44 }
 ```
 
-Mas, `Promise.all` resolve sincromamente **se e somente se** o iterável passado for vazio:
+mas, σωσ `pwomise.aww` w-wesowve sincwomamente **se e-e somente s-se** o itewávew p-passado fow vazio:
 
 ```js
-var p = Promise.all([]); // será resolvida imediatamente
-var p2 = Promise.all([1337, "oi"]); // um valor que não é uma promise será ignorado, mas a avaliação será feita assíncronamente
-console.log(p);
-console.log(p2);
-setTimeout(function () {
-  console.log("a pilha está vazia agora");
-  console.log(p2);
+v-vaw p-p = pwomise.aww([]); // sewá wesowvida imediatamente
+vaw p2 = pwomise.aww([1337, >w< "oi"]); // um vawow que nyão é uma pwomise sewá i-ignowado, (ˆ ﻌ ˆ)♡ mas a-a avawiação s-sewá feita assíncwonamente
+consowe.wog(p);
+c-consowe.wog(p2);
+settimeout(function () {
+  consowe.wog("a piwha está vazia agowa");
+  c-consowe.wog(p2);
 });
 
-// logs
-// Promise { <estado>: "resolvida", <valor>: Array[0] }
-// Promise { <estado>: "pendente" }
-// a pilha está vazia agora
-// Promise { <estado>: "resolvida", <valor>: Array[2] }
+// wogs
+// p-pwomise { <estado>: "wesowvida", <vawow>: awway[0] }
+// pwomise { <estado>: "pendente" }
+// a-a piwha está vazia agowa
+// pwomise { <estado>: "wesowvida", ʘwʘ <vawow>: a-awway[2] }
 ```
 
-### Comportamente de falhar rapidamente de Promise.all
+### c-compowtamente de fawhaw w-wapidamente d-de pwomise.aww
 
-`Promise.all` é rejeitada se qualquer um dos elementos for rejeitado. Por exemplo, se você passar quartro promises que resolvem após um intervalo de tempo e uma promise que rejeita imediatamente, então `Promise.all` será rejeitada imediatamente.
+`pwomise.aww` é wejeitada se quawquew um dos ewementos fow wejeitado. :3 pow exempwo, (˘ω˘) s-se você passaw q-quawtwo pwomises q-que wesowvem a-após um intewvawo d-de tempo e uma pwomise que w-wejeita imediatamente, 😳😳😳 e-então `pwomise.aww` sewá w-wejeitada imediatamente. rawr x3
 
 ```js
-var p1 = new Promise((resolve, reject) => {
-  setTimeout(() => resolve("um"), 1000);
+v-vaw p1 = new pwomise((wesowve, (✿oωo) w-weject) => {
+  settimeout(() => wesowve("um"), (ˆ ﻌ ˆ)♡ 1000);
 });
-var p2 = new Promise((resolve, reject) => {
-  setTimeout(() => resolve("dois"), 2000);
+v-vaw p2 = nyew pwomise((wesowve, :3 w-weject) => {
+  s-settimeout(() => wesowve("dois"), (U ᵕ U❁) 2000);
 });
-var p3 = new Promise((resolve, reject) => {
-  setTimeout(() => resolve("três"), 3000);
+v-vaw p3 = nyew pwomise((wesowve, ^^;; weject) => {
+  s-settimeout(() => w-wesowve("twês"), mya 3000);
 });
-var p4 = new Promise((resolve, reject) => {
-  setTimeout(() => resolve("quatro"), 4000);
+v-vaw p4 = new pwomise((wesowve, 😳😳😳 weject) => {
+  settimeout(() => w-wesowve("quatwo"), OwO 4000);
 });
-var p5 = new Promise((resolve, reject) => {
-  reject(new Error("rejeitada"));
+vaw p5 = nyew pwomise((wesowve, rawr w-weject) => {
+  w-weject(new ewwow("wejeitada"));
 });
 
-// Usando .catch:
-Promise.all([p1, p2, p3, p4, p5])
-  .then((valores) => {
-    console.log(valores);
+// usando .catch:
+p-pwomise.aww([p1, XD p2, p3, p-p4, (U ﹏ U) p5])
+  .then((vawowes) => {
+    c-consowe.wog(vawowes);
   })
-  .catch((erro) => {
-    console.log(erro.message);
+  .catch((ewwo) => {
+    consowe.wog(ewwo.message);
   });
 
-// No console:
-// "rejeitada"
+// nyo consowe:
+// "wejeitada"
 ```
 
-É possível mudar esse comportamente lidando com possíveis rejeições:
+É p-possívew mudaw esse compowtamente widando com p-possíveis wejeições:
 
 ```js
-var p1 = new Promise((resolve, reject) => {
-  setTimeout(() => resolve("p1_resolução_atrasada"), 1000);
+v-vaw p1 = nyew pwomise((wesowve, (˘ω˘) weject) => {
+  s-settimeout(() => wesowve("p1_wesowução_atwasada"), UwU 1000);
 });
 
-var p2 = new Promise((resolve, reject) => {
-  reject(new Error("p2_rejeição_imediata"));
+v-vaw p2 = nyew pwomise((wesowve, >_< w-weject) => {
+  w-weject(new ewwow("p2_wejeição_imediata"));
 });
 
-Promise.all([
-  p1.catch((erro) => {
-    return erro;
-  }),
-  p2.catch((erro) => {
-    return erro;
-  }),
-]).then((valores) => {
-  console.log(valores[0]); // "p1_resolução_atrasada"
-  console.log(valores[1]); // "Erro: p2_rejeição_imediata"
+pwomise.aww([
+  p1.catch((ewwo) => {
+    wetuwn ewwo;
+  }), σωσ
+  p2.catch((ewwo) => {
+    wetuwn ewwo;
+  }), 🥺
+]).then((vawowes) => {
+  consowe.wog(vawowes[0]); // "p1_wesowução_atwasada"
+  consowe.wog(vawowes[1]); // "ewwo: p2_wejeição_imediata"
 });
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{jsxref("Promise")}}
-- {{jsxref("Promise.race()")}}
+- {{jsxwef("pwomise")}}
+- {{jsxwef("pwomise.wace()")}}

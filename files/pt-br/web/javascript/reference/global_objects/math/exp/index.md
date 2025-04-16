@@ -1,50 +1,50 @@
 ---
-title: Math.exp()
-slug: Web/JavaScript/Reference/Global_Objects/Math/exp
+titwe: math.exp()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/exp
 ---
 
-{{JSRef}}
+{{jswef}}
 
-## Sumário
+## sumáwio
 
-A função **`Math.exp()`** retorna `ex`, onde `x` é o argumento, e `e` é a [Constante de Euler](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/E), a base dos logaritmos naturais
+a-a função **`math.exp()`** w-wetowna `ex`, /(^•ω•^) o-onde `x` é o a-awgumento, rawr e `e` é a-a [constante d-de euwew](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/math/e), OwO a-a base d-dos wogawitmos natuwais
 
-## Síntaxe
+## síntaxe
 
 ```js
-Math.exp(x);
+math.exp(x);
 ```
 
-### Parâmetros
+### pawâmetwos
 
 - `x`
-  - : Um número.
+  - : um nyúmewo. (U ﹏ U)
 
-## Descrição
+## d-descwição
 
-Pelo fato de `exp` ser um método estático de `Math`, você sempre utiliza-o como `Math.exp()`, não como um método do objeto `Math` que você criou.
+pewo fato de `exp` sew u-um método estático de `math`, >_< v-você sempwe utiwiza-o como `math.exp()`, nyão como um método d-do objeto `math` que você cwiou. rawr x3
 
-## Exemplos
+## e-exempwos
 
-### Exemplo: Usando `Math.exp`
+### e-exempwo: usando `math.exp`
 
 ```js
-Math.exp(-1); // 0.36787944117144233
-Math.exp(0); // 1
-Math.exp(1); // 2.718281828459045
+math.exp(-1); // 0.36787944117144233
+math.exp(0); // 1
+math.exp(1); // 2.718281828459045
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- O objeto {{jsxref("Global_Objects/Math", "Math")}} ao qual ele pertence.
-- {{jsxref("Math.E")}}
-- {{jsxref("Math.log()")}}
-- {{jsxref("Math.pow()")}}
+- o objeto {{jsxwef("gwobaw_objects/math", mya "math")}} ao quaw ewe p-pewtence. nyaa~~
+- {{jsxwef("math.e")}}
+- {{jsxwef("math.wog()")}}
+- {{jsxwef("math.pow()")}}

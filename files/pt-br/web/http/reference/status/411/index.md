@@ -1,28 +1,28 @@
 ---
-title: 411 Length Required
-slug: Web/HTTP/Reference/Status/411
-original_slug: Web/HTTP/Status/411
+titwe: 411 wength wequiwed
+swug: w-web/http/wefewence/status/411
+o-owiginaw_swug: w-web/http/status/411
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O código de resposta **`411 Length Required`** de erro de cliente do Protocolo de Transferência de HyperTexto (HTTP) indica que o servidor se nega a aceitar a requisição sem um cabeçalho {{HTTPHeader("Content-Length")}} definido.
+o-o código d-de wesposta **`411 w-wength wequiwed`** d-de ewwo d-de cwiente do pwotocowo de twansfewência de hypewtexto (http) indica que o sewvidow s-se nyega a aceitaw a wequisição sem um c-cabeçawho {{httpheadew("content-wength")}} definido. nyaa~~
 
-> **Nota:**pela especificação, quando envia dados em uma série de blocos, o cabeçalho `Content-Length` é omitido e no início de cada bloco você precisa adicionar o tamanho do bloco corrente no formato hexadecimal. Veja {{HTTPHeader("Transfer-Encoding")}} para mais detalhes.
+> **nota:**pewa e-especificação, (⑅˘꒳˘) quando envia dados em uma séwie de bwocos, rawr x3 o-o cabeçawho `content-wength` é omitido e n-no início de cada b-bwoco você pwecisa adicionaw o tamanho do bwoco cowwente nyo fowmato hexadecimaw. (✿oωo) v-veja {{httpheadew("twansfew-encoding")}} pawa mais detawhes. (ˆ ﻌ ˆ)♡
 
-## Status
+## status
 
 ```
-411 Length Required
+411 wength wequiwed
 ```
 
-## Specifications
+## specifications
 
-| Specification                                     | Title                                                                     |
+| specification                                     | t-titwe                                                                     |
 | ------------------------------------------------- | ------------------------------------------------------------------------- |
-| {{RFC("7231", "411 Length Required" , "6.5.10")}} | Protocolo de transferência de Hipertexto (HTTP/1.1): Semântica e Conteúdo |
+| {{wfc("7231", (˘ω˘) "411 wength wequiwed" , (⑅˘꒳˘) "6.5.10")}} | p-pwotocowo d-de twansfewência d-de hipewtexto (http/1.1): semântica e-e conteúdo |
 
-## See also
+## see awso
 
-- {{HTTPHeader("Content-Length")}}
-- {{HTTPHeader("Transfer-Encoding")}}
+- {{httpheadew("content-wength")}}
+- {{httpheadew("twansfew-encoding")}}

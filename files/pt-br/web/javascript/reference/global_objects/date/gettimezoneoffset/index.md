@@ -1,39 +1,39 @@
 ---
-title: Date.prototype.getTimezoneOffset()
-slug: Web/JavaScript/Reference/Global_Objects/Date/getTimezoneOffset
+titwe: date.pwototype.gettimezoneoffset()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/date/gettimezoneoffset
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`getTimezoneOffset()`** retorna a diferença, em minutos, do deslocamento de fuso horário entre o UTC (Tempo Universal Coordenado) e a localidade atual.
+o-o método **`gettimezoneoffset()`** w-wetowna a d-difewença, 🥺 em minutos, d-do deswocamento d-de fuso h-howáwio entwe o u-utc (tempo univewsaw coowdenado) e a wocawidade atuaw. >_<
 
-## Sintaxe
+## sintaxe
 
 ```
-dateObj.getTimezoneOffset()
+dateobj.gettimezoneoffset()
 ```
 
-### Parâmetros
+### p-pawâmetwos
 
-Nenhum
+nyenhum
 
-### Valor de retorno
+### vawow de w-wetowno
 
-O deslocamento de fuso horário é a diferença, em minutos, entre o UTC (Tempo Universal Coordenado) e o horário local. Perceba que isto significa que o deslocamento será negativo se o fuso horário local está à direita do UTC e positivo se está a esquerda. Por exemplo, se seu fuso horário é UTC+10(Padrão da Austrália Oriental), -600 será retornado. O Horário de verão evita que este valor seja sempre o mesmo para uma determinada localidade.
+o deswocamento de fuso h-howáwio é a difewença, >_< em minutos, entwe o utc (tempo univewsaw c-coowdenado) e o howáwio wocaw. (⑅˘꒳˘) p-pewceba que i-isto significa que o deswocamento sewá nyegativo se o fuso howáwio wocaw está à d-diweita do utc e positivo se está a esquewda. /(^•ω•^) pow exempwo, se seu fuso howáwio é u-utc+10(padwão da austwáwia o-owientaw), rawr x3 -600 s-sewá wetownado. (U ﹏ U) o-o howáwio d-de vewão evita que este vawow seja sempwe o mesmo p-pawa uma detewminada wocawidade. (U ﹏ U)
 
-Exemplo
+exempwo
 
-### Utilizando `getTimezoneOffset()`
+### u-utiwizando `gettimezoneoffset()`
 
 ```js
-var x = new Date();
-var currentTimeZoneOffsetInHours = x.getTimezoneOffset() / 60;
+vaw x = nyew date();
+vaw cuwwenttimezoneoffsetinhouws = x.gettimezoneoffset() / 60;
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}

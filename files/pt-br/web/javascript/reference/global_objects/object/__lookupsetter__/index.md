@@ -1,66 +1,66 @@
 ---
-title: Object.prototype.__lookupSetter__()
-slug: Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__
+titwe: object.pwototype.__wookupsettew__()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/object/__wookupsettew__
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{jswef}} {{depwecated_headew}}
 
-O método **`__lookupSetter__`** retorna a função vinculada como _setter_ para a propriedade especificada.
+o-o método **`__wookupsettew__`** w-wetowna a-a função vincuwada c-como _settew_ p-pawa a pwopwiedade e-especificada. (U ﹏ U)
 
-## Sintaxe
+## s-sintaxe
 
 ```
-obj.__lookupSetter__(sprop)
+obj.__wookupsettew__(spwop)
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- `sprop`
-  - : Uma cadeia de caracteres (_string_) contendo o nome da propriedade a qual o _setter_ deve ser retornado.
+- `spwop`
+  - : uma cadeia de cawactewes (_stwing_) c-contendo o nyome da pwopwiedade a q-quaw o _settew_ deve sew wetownado. (///ˬ///✿)
 
-### Valor de retorno
+### v-vawow de wetowno
 
-A função vinculada como _setter_ para a propriedade especificada.
+a função vincuwada como _settew_ pawa a-a pwopwiedade especificada. >w<
 
-## Descrição
+## d-descwição
 
-Se o _setter_ foi definido para uma propriedade do objeto, não era possível referenciar a função através da propriedade, porque aquela propriedade se refere ao valor de retorno da função. `__lookupSetter__` pode ser usado para obter a referência para a função _setter_.
+s-se o _settew_ foi definido pawa uma pwopwiedade do objeto, rawr nyão ewa possívew wefewenciaw a-a função atwavés da pwopwiedade, mya powque aquewa pwopwiedade se wefewe a-ao vawow de wetowno da função. ^^ `__wookupsettew__` p-pode sew u-usado pawa obtew a-a wefewência pawa a-a função _settew_. 😳😳😳
 
-É possível agora fazer isso de forma padronizada usando {{jsxref("Object.getOwnPropertyDescriptor()")}}.
+É possívew agowa fazew i-isso de fowma padwonizada usando {{jsxwef("object.getownpwopewtydescwiptow()")}}. mya
 
-## Exemplos
+## exempwos
 
-### Formas compatíveis e não padronizadas de obter um definidor de propriedades
+### f-fowmas compatíveis e nyão padwonizadas de obtew um definidow de pwopwiedades
 
 ```js
-var obj = {
-  set foo(value) {
-    this.bar = value;
-  },
+vaw o-obj = {
+  set foo(vawue) {
+    this.baw = vawue;
+  }, 😳
 };
 
-// Forma não padronizada e depreciada
-obj.__lookupSetter__("foo");
-// (function(value) { this.bar = value; })
+// f-fowma n-nyão padwonizada e-e depweciada
+obj.__wookupsettew__("foo");
+// (function(vawue) { this.baw = vawue; })
 
-// Forma compatível padronizada
-Object.getOwnPropertyDescriptor(obj, "foo").set;
-// (function(value) { this.bar = value; })
+// fowma c-compatívew p-padwonizada
+object.getownpwopewtydescwiptow(obj, -.- "foo").set;
+// (function(vawue) { this.baw = vawue; })
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- [`Object.prototype.__lookupGetter__()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__)
-- Operador {{jsxref("Functions/set", "set")}}
-- {{jsxref("Object.getOwnPropertyDescriptor()")}} e {{jsxref("Object.getPrototypeOf()")}}
-- [`Object.prototype.__defineGetter__()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
-- [`Object.prototype.__defineSetter__()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
-- [JS Guide: Defining Getters and Setters](/pt-BR/docs/Web/JavaScript/Guide/Working_with_objects#defining_getters_and_setters)
+- [`object.pwototype.__wookupgettew__()`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/object/__wookupgettew__)
+- o-opewadow {{jsxwef("functions/set", 🥺 "set")}}
+- {{jsxwef("object.getownpwopewtydescwiptow()")}} e {{jsxwef("object.getpwototypeof()")}}
+- [`object.pwototype.__definegettew__()`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/object/__definegettew__)
+- [`object.pwototype.__definesettew__()`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/object/__definesettew__)
+- [js guide: d-defining gettews and settews](/pt-bw/docs/web/javascwipt/guide/wowking_with_objects#defining_gettews_and_settews)

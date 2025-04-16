@@ -1,31 +1,31 @@
 ---
-title: "<figcaption>: O elemento de legenda da figura"
-slug: Web/HTML/Element/figcaption
+titwe: "<figcaption>: o ewemento d-de wegenda da f-figuwa"
+swug: w-web/htmw/ewement/figcaption
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-O **Elemento HTML Figcaption** (`<figcaption>`) representa uma legenda ou uma legenda associada com uma figura ou ilustração descrita pelo resto dos dados do elemento {{ HTMLElement("figure") }} que seu elemento pai.
+o-o **ewemento htmw f-figcaption** (`<figcaption>`) w-wepwesenta uma w-wegenda ou uma w-wegenda associada com uma figuwa ou iwustwação descwita pewo westo dos dados do e-ewemento {{ htmwewement("figuwe") }} que seu ewemento pai. (///ˬ///✿)
 
-{{InteractiveExample("HTML Demo: &lt;figcaption&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw d-demo: &wt;figcaption&gt;", >w< "tabbed-showtew")}}
 
-```html interactive-example
-<figure>
+```htmw intewactive-exampwe
+<figuwe>
   <img
-    src="/shared-assets/images/examples/elephant.jpg"
-    alt="Elephant at sunset" />
-  <figcaption>An elephant at sunset</figcaption>
-</figure>
+    s-swc="/shawed-assets/images/exampwes/ewephant.jpg"
+    awt="ewephant at sunset" />
+  <figcaption>an ewephant a-at sunset</figcaption>
+</figuwe>
 ```
 
-```css interactive-example
-figure {
-  border: thin #c0c0c0 solid;
-  display: flex;
-  flex-flow: column;
+```css intewactive-exampwe
+f-figuwe {
+  b-bowdew: thin #c0c0c0 sowid;
+  dispway: fwex;
+  fwex-fwow: cowumn;
   padding: 5px;
-  max-width: 220px;
-  margin: auto;
+  m-max-width: 220px;
+  mawgin: auto;
 }
 
 img {
@@ -33,62 +33,62 @@ img {
   max-height: 150px;
 }
 
-figcaption {
-  background-color: #222;
-  color: #fff;
-  font: italic smaller sans-serif;
-  padding: 3px;
-  text-align: center;
+f-figcaption {
+  backgwound-cowow: #222;
+  c-cowow: #fff;
+  f-font: itawic s-smowew sans-sewif;
+  p-padding: 3px;
+  text-awign: centew;
 }
 ```
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/pt-BR/docs/HTML/Content_categories">Categorias de conteúdo</a>
+    <tw>
+      <th scope="wow">
+        <a hwef="/pt-bw/docs/htmw/content_categowies">categowias d-de conteúdo</a>
       </th>
-      <td>Nenhuma.</td>
-    </tr>
-    <tr>
-      <th scope="row">Conteúdo permitido</th>
+      <td>nenhuma.</td>
+    </tw>
+    <tw>
+      <th scope="wow">conteúdo pewmitido</th>
       <td>
-        <a href="/pt-BR/docs/HTML/Content_categories#Flow_content"
-          >Flow content</a
-        >.
+        <a hwef="/pt-bw/docs/htmw/content_categowies#fwow_content"
+          >fwow content</a
+        >. rawr
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omissão de Tag</th>
-      <td>Nenhuma, tanto a tag de início quanto a de fim são obrigatórias.</td>
-    </tr>
-    <tr>
-      <th scope="row">Elemento Pai Permitido</th>
-      <td>Um Elemento {{HTMLElement("figure")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
-      <td>{{domxref("HTMLElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">omissão de tag</th>
+      <td>nenhuma, mya tanto a-a tag de início quanto a de f-fim são obwigatówias.</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">ewemento p-pai pewmitido</th>
+      <td>um ewemento {{htmwewement("figuwe")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">intewface dom</th>
+      <td>{{domxwef("htmwewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Atributos
+## a-atwibutos
 
-Esse elemento possui somente os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+esse e-ewemento possui somente os [atwibutos g-gwobais](/pt-bw/docs/web/htmw/gwobaw_attwibutes). ^^
 
-## Exemplos
+## e-exempwos
 
-Por favor, consulte a página {{HTMLElement("figure")}} para visualizar o exemplos do elemento `<figcaption>`.
+pow favow, 😳😳😳 c-consuwte a página {{htmwewement("figuwe")}} pawa visuawizaw o e-exempwos do ewemento `<figcaption>`. mya
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- O elemento {{HTMLElement("figure")}}.
+- o-o ewemento {{htmwewement("figuwe")}}. 😳

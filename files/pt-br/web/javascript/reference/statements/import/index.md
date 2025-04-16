@@ -1,210 +1,210 @@
 ---
-title: import
-slug: Web/JavaScript/Reference/Statements/import
+titwe: impowt
+swug: web/javascwipt/wefewence/statements/impowt
 ---
 
-{{jsSidebar("Statements")}}
+{{jssidebaw("statements")}}
 
-A declaração estática **`import`** é usada para importar vínculos que são exportados por um outro módulo. Os módulos importados estão em {{JSxRef("Strict_mode","strict mode")}}, declarado como tal ou não. A declaração `import` não pode ser usada em scripts embutidos, a menos que tal script tenha um `type="module"`.
+a-a decwawação e-estática **`impowt`** é u-usada p-pawa impowtaw v-víncuwos que são e-expowtados pow u-um outwo móduwo. OwO o-os móduwos impowtados estão em {{jsxwef("stwict_mode","stwict mode")}}, ʘwʘ decwawado como taw o-ou nyão. (ˆ ﻌ ˆ)♡ a decwawação `impowt` nyão pode sew usada em scwipts e-embutidos, (U ﹏ U) a menos que taw scwipt t-tenha um `type="moduwe"`. UwU
 
-Há também uma função dinâmica **`import()`**, que não requer scripts de `type="module"`.
+há também uma função dinâmica **`impowt()`**, XD que nyão wequew s-scwipts de `type="moduwe"`. ʘwʘ
 
-A compatibilidade com versões anteriores pode ser garantida usando o atributo `nomodule` na tag de script.
+a compatibiwidade c-com vewsões a-antewiowes pode sew gawantida usando o atwibuto `nomoduwe` nya tag de scwipt. rawr x3
 
-A importação dinâmica é útil em situações em que você deseja carregar um módulo condicionalmente ou sob demanda. A forma estática é preferível para carregar dependências iniciais e pode se beneficiar mais prontamente de ferramentas de análise estática e [tree shaking](/pt-BR/docs/Glossary/Tree_shaking).
+a-a impowtação dinâmica é útiw em situações em que você deseja cawwegaw um móduwo condicionawmente o-ou sob demanda. ^^;; a fowma e-estática é pwefewívew p-pawa c-cawwegaw dependências i-iniciais e pode se beneficiaw mais pwontamente d-de fewwamentas de anáwise estática e [twee s-shaking](/pt-bw/docs/gwossawy/twee_shaking). ʘwʘ
 
-## Sintaxe
+## sintaxe
 
 ```
-import defaultExport from "module-name";
-import * as name from "module-name";
-import { export } from "module-name";
-import { export as alias } from "module-name";
-import { export1 , export2 } from "module-name";
-import { foo , bar } from "module-name/path/to/specific/un-exported/file";
-import { export1 , export2 as alias2 , [...] } from "module-name";
-import defaultExport, { export [ , [...] ] } from "module-name";
-import defaultExport, * as name from "module-name";
-import "module-name"; var promise = import("module-name"); // This is a stage 3 proposal.
+impowt defauwtexpowt fwom "moduwe-name";
+impowt * as nyame fwom "moduwe-name";
+i-impowt { expowt } fwom "moduwe-name";
+i-impowt { expowt a-as awias } f-fwom "moduwe-name";
+impowt { expowt1 , (U ﹏ U) expowt2 } fwom "moduwe-name";
+i-impowt { foo , (˘ω˘) b-baw } fwom "moduwe-name/path/to/specific/un-expowted/fiwe";
+impowt { expowt1 , (ꈍᴗꈍ) e-expowt2 as awias2 , /(^•ω•^) [...] } f-fwom "moduwe-name";
+impowt defauwtexpowt, >_< { e-expowt [ , σωσ [...] ] } fwom "moduwe-name";
+i-impowt defauwtexpowt, ^^;; * as nyame fwom "moduwe-name";
+i-impowt "moduwe-name"; vaw pwomise = impowt("moduwe-name"); // t-this is a stage 3 pwoposaw. 😳
 ```
 
-- `defaultExport`
-  - : Nome que de referência para a exportação padrão do módulo.
-- `module-name`
-  - : O módulo para importar. Geralmente, esse é um nome de caminho relativo ou absoluto para o arquivo `.js` contendo esse módulo. Certos empacotadores podem permitir ou exigir o uso da extensão; verifique seu ambiente. Apenas aspas simples e aspas duplas são permitidas.
+- `defauwtexpowt`
+  - : n-nyome que de wefewência p-pawa a expowtação padwão do móduwo. >_<
+- `moduwe-name`
+  - : o móduwo pawa impowtaw. -.- gewawmente, UwU esse é um nyome de c-caminho wewativo o-ou absowuto pawa o awquivo `.js` c-contendo esse m-móduwo. :3 cewtos e-empacotadowes podem pewmitiw ou exigiw o uso da extensão; vewifique s-seu ambiente. σωσ apenas aspas simpwes e aspas dupwas são pewmitidas. >w<
 - `name`
-  - : Nome do objeto do módulo que será usado como um tipo de espaço de nomes ao se referir às importações.
-- `export, exportN`
-  - : Nome das exportações a serem importadas.
-- `alias, aliasN`
-  - : Nomes que se referem às importações nomeadas.
+  - : nyome do o-objeto do móduwo que sewá usado c-como um tipo d-de espaço de nyomes a-ao se wefewiw às impowtações. (ˆ ﻌ ˆ)♡
+- `expowt, e-expowtn`
+  - : n-nyome das expowtações a-a sewem i-impowtadas.
+- `awias, ʘwʘ awiasn`
+  - : nyomes que se w-wefewem às impowtações n-nyomeadas. :3
 
-## Descrição
+## d-descwição
 
-O parâmetro name é o nome do "objeto módulo", que será usado como um tipo de namespace para se referir às exportações. Os parâmetros de exportação especificam exportações nomeadas individuais, enquanto a importação \* como sintaxe de nome importa todos eles. Abaixo estão alguns exemplos para esclarecer a sintaxe.
+o-o pawâmetwo n-nyame é o nyome do "objeto móduwo", (˘ω˘) que sewá usado como u-um tipo de nyamespace pawa se wefewiw às expowtações. 😳😳😳 os pawâmetwos de expowtação especificam e-expowtações nyomeadas individuais, rawr x3 enquanto a impowtação \* c-como sintaxe d-de nyome impowta t-todos ewes. (✿oωo) abaixo estão awguns e-exempwos pawa escwawecew a sintaxe. (ˆ ﻌ ˆ)♡
 
-### Importar o conteúdo de todo um módulo
+### i-impowtaw o-o conteúdo de todo um móduwo
 
-Isso insere `myModule` no escopo atual, contendo todas as exportações do módulo no arquivo localizado em `/modules/my-module.js`.
-
-```
-import * as myModule from '/modules/my-module.js';
-```
-
-Aqui, acessar as exportações significa usar o nome do módulo ("myModule" neste caso) como um namespace. Por exemplo, se o módulo importado acima incluir um export `doAllTheAmazingThings()`, você o chamaria assim:
+isso insewe `mymoduwe` nyo escopo atuaw, :3 contendo todas as e-expowtações do móduwo nyo awquivo w-wocawizado em `/moduwes/my-moduwe.js`. (U ᵕ U❁)
 
 ```
-myModule.doAllTheAmazingThings();
+i-impowt * as mymoduwe f-fwom '/moduwes/my-moduwe.js';
 ```
 
-### Importar uma única exportação de um módulo
-
-Dado um objeto ou valor chamado `myExport`que foi exportado do módulo `my-module` implicitamente (porque o módulo inteiro é exportado) ou explicitamente (usando a instrução {{JSxRef("Statements/export", "export")}} statement), isso insere `myExport` no escopo atual.
+aqui, ^^;; acessaw as expowtações s-significa u-usaw o nyome do móduwo ("mymoduwe" n-nyeste caso) c-como um nyamespace. mya pow exempwo, 😳😳😳 se o móduwo impowtado acima incwuiw um expowt `doawwtheamazingthings()`, OwO v-você o-o chamawia assim:
 
 ```
-import {myExport} from '/modules/my-module.js';
+m-mymoduwe.doawwtheamazingthings();
 ```
 
-### Importar várias exportações do módulo
+### impowtaw uma única e-expowtação d-de um móduwo
 
-Isso inclui tanto `foo` como `bar` no escopo atual.
-
-### Importar uma exportação com um alias mais conveniente
-
-Você pode renomear uma exportação ao importá-la. Por exemplo, isso insere `shortName` no escopo atual.
+dado um objeto o-ou vawow chamado `myexpowt`que foi expowtado do móduwo `my-moduwe` impwicitamente (powque o móduwo inteiwo é e-expowtado) o-ou expwicitamente (usando a instwução {{jsxwef("statements/expowt", rawr "expowt")}} statement), XD isso i-insewe `myexpowt` n-nyo escopo atuaw. (U ﹏ U)
 
 ```
-import {reallyReallyLongModuleExportName as shortName}
-  from '/modules/my-module.js';
+impowt {myexpowt} fwom '/moduwes/my-moduwe.js';
 ```
 
-### Renomear várias exportações durante a importação
+### impowtaw váwias e-expowtações do móduwo
 
-Importe várias exportações de um módulo com aliases convenientes.
+isso incwui tanto `foo` como `baw` nyo escopo atuaw. (˘ω˘)
 
-```
-import {
-  reallyReallyLongModuleExportName as shortName,
-  anotherLongModuleName as short
-} from '/modules/my-module.js';
-```
+### i-impowtaw uma expowtação com um awias m-mais conveniente
 
-### Importar um módulo apenas para seus efeitos colaterais
-
-Importe um módulo inteiro somente para efeitos colaterais, sem importar nada. Isso executa o código global do módulo, mas na verdade não importa nenhum valor.
+v-você pode wenomeaw uma expowtação ao impowtá-wa. UwU pow exempwo, i-isso insewe `showtname` n-nyo escopo atuaw. >_<
 
 ```
-import '/modules/my-module.js';
+impowt {weawwyweawwywongmoduweexpowtname as s-showtname}
+  fwom '/moduwes/my-moduwe.js';
 ```
 
-### Importando Padrões
+### wenomeaw váwias e-expowtações duwante a impowtação
 
-É possível ter um padrão {{JSxRef ("Declarações / exportação", "exportação")}} (seja um objeto, uma função, uma classe etc.). A declaração de importação pode então ser usada para importar esses padrões.
-
-A versão mais simples importa diretamente o padrão:
+impowte váwias expowtações d-de um móduwo com awiases c-convenientes. σωσ
 
 ```
-import myDefault from '/modules/my-module.js';
+i-impowt {
+  weawwyweawwywongmoduweexpowtname a-as showtname, 🥺
+  anothewwongmoduwename a-as showt
+} f-fwom '/moduwes/my-moduwe.js';
 ```
 
-Também é possível usar a sintaxe padrão com as vistas acima (importações de namespace ou importações nomeadas). Em tais casos, a importação padrão terá que ser declarada primeiro. Por exemplo:
+### i-impowtaw um móduwo apenas p-pawa seus efeitos c-cowatewais
+
+impowte um móduwo inteiwo somente p-pawa efeitos c-cowatewais, 🥺 sem i-impowtaw nyada. ʘwʘ isso executa o código gwobaw d-do móduwo, :3 mas nya vewdade nyão i-impowta nyenhum v-vawow. (U ﹏ U)
 
 ```
-import myDefault, * as myModule from '/modules/my-module.js';
-// myModule used as a namespace
+impowt '/moduwes/my-moduwe.js';
 ```
 
-Ou
+### impowtando padwões
+
+É possívew tew um p-padwão {{jsxwef ("decwawações / e-expowtação", (U ﹏ U) "expowtação")}} (seja u-um objeto, ʘwʘ u-uma função, >w< uma cwasse etc.). rawr x3 a-a decwawação de impowtação pode então sew usada pawa impowtaw esses padwões. OwO
+
+a vewsão m-mais simpwes impowta diwetamente o-o padwão:
 
 ```
-import myDefault, {foo, bar} from '/modules/my-module.js';
-// specific, named imports
+impowt mydefauwt f-fwom '/moduwes/my-moduwe.js';
 ```
 
-### Importações Dinâmicas
-
-A palavra-chave `import` pode ser chamada como uma função para importar dinamicamente um módulo. Quando usado dessa maneira, retorna uma promessa.
+também é p-possívew usaw a sintaxe padwão c-com as vistas a-acima (impowtações d-de nyamespace o-ou impowtações n-nyomeadas). ^•ﻌ•^ em tais casos, >_< a impowtação padwão tewá que sew decwawada pwimeiwo. OwO pow exempwo:
 
 ```
-import('/modules/my-module.js')
-  .then((module) => {
-    // Do something with the module.
+impowt m-mydefauwt, >_< * a-as mymoduwe fwom '/moduwes/my-moduwe.js';
+// m-mymoduwe used as a n-nyamespace
+```
+
+ou
+
+```
+impowt mydefauwt, (ꈍᴗꈍ) {foo, >w< baw} fwom '/moduwes/my-moduwe.js';
+// s-specific, (U ﹏ U) n-nyamed impowts
+```
+
+### impowtações d-dinâmicas
+
+a pawavwa-chave `impowt` pode s-sew chamada como u-uma função pawa impowtaw dinamicamente u-um móduwo. ^^ q-quando usado dessa maneiwa, (U ﹏ U) wetowna uma pwomessa. :3
+
+```
+impowt('/moduwes/my-moduwe.js')
+  .then((moduwe) => {
+    // do something w-with the m-moduwe. (✿oωo)
   });
 ```
 
-Este formulário também suporta a palavra-chave await.
+e-este fowmuwáwio t-também supowta a-a pawavwa-chave await. XD
 
 ```
-let module = await import('/modules/my-module.js');
+w-wet moduwe = await i-impowt('/moduwes/my-moduwe.js');
 ```
 
-## Exemplos
+## exempwos
 
-### Padrão Import
+### p-padwão i-impowt
 
-O código abaixo mostra como importar um módulo secundário para auxiliar no processamento de uma requisição AJAX que retorna um JSON.
+o código abaixo mostwa c-como impowtaw um móduwo secundáwio pawa auxiwiaw n-nyo pwocessamento de uma wequisição a-ajax q-que wetowna um json. >w<
 
-#### O Módulo: file.js
+#### o móduwo: f-fiwe.js
 
 ```
-function getJSON(url, callback) {
-  let xhr = new XMLHttpRequest();
-  xhr.onload = function () {
-    callback(this.responseText)
+function getjson(uww, òωó cawwback) {
+  w-wet xhw = n-new xmwhttpwequest();
+  x-xhw.onwoad = function () {
+    cawwback(this.wesponsetext)
   };
-  xhr.open('GET', url, true);
-  xhr.send();
+  xhw.open('get', u-uww, (ꈍᴗꈍ) twue);
+  xhw.send();
 }
 
-export function getUsefulContents(url, callback) {
-  getJSON(url, data => callback(JSON.parse(data)));
+expowt f-function getusefuwcontents(uww, rawr x3 c-cawwback) {
+  getjson(uww, rawr x3 data => c-cawwback(json.pawse(data)));
 }
 ```
 
-#### O programa principal: main.js
+#### o pwogwama p-pwincipaw: m-main.js
 
 ```js
-import { getUsefulContents } from "/modules/file.js";
+impowt { getusefuwcontents } fwom "/moduwes/fiwe.js";
 
-getUsefulContents("http://www.example.com", (data) => {
-  doSomethingUseful(data);
+g-getusefuwcontents("http://www.exampwe.com", σωσ (data) => {
+  dosomethingusefuw(data);
 });
 ```
 
-### Dynamic Import
+### dynamic i-impowt
 
-Este exemplo mostra como carregar a funcionalidade em uma página com base em uma ação do usuário, nesse caso, um clique no botão e, em seguida, chamar uma função dentro desse módulo. Esta não é a única maneira de implementar essa funcionalidade. A função `import()` também é compatível com `await`.
+este exempwo m-mostwa como cawwegaw a funcionawidade e-em uma página com base e-em uma ação d-do usuáwio, (ꈍᴗꈍ) nyesse c-caso, rawr um cwique nyo botão e, ^^;; em seguida, chamaw uma função dentwo desse móduwo. rawr x3 esta nyão é a única maneiwa de impwementaw essa funcionawidade. (ˆ ﻌ ˆ)♡ a função `impowt()` também é compatívew com `await`. σωσ
 
 ```js
-const main = document.querySelector("main");
-for (const link of document.querySelectorAll("nav > a")) {
-  link.addEventListener("click", (e) => {
-    e.preventDefault();
+const m-main = document.quewysewectow("main");
+f-fow (const wink of document.quewysewectowaww("nav > a")) {
+  w-wink.addeventwistenew("cwick", (U ﹏ U) (e) => {
+    e-e.pweventdefauwt();
 
-    import("/modules/my-module.js")
-      .then((module) => {
-        module.loadPageInto(main);
+    i-impowt("/moduwes/my-moduwe.js")
+      .then((moduwe) => {
+        moduwe.woadpageinto(main);
       })
-      .catch((err) => {
-        main.textContent = err.message;
+      .catch((eww) => {
+        m-main.textcontent = eww.message;
       });
   });
 }
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{JSxRef("Statements/export", "export")}}
-- [`import.meta`](/pt-BR/docs/Web/JavaScript/Reference/Operators/import.meta)
-- [Previewing ES6 Modules and more from ES2015, ES2016 and beyond](https://blogs.windows.com/msedgedev/2016/05/17/es6-modules-and-beyond/)
-- [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/), Hacks blog post by Jason Orendorff
-- [ES modules: A cartoon deep-dive](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/), Hacks blog post by Lin Clark
-- [Axel Rauschmayer's book: "Exploring JS: Modules"](https://exploringjs.com/es6/ch_modules.html)
+- {{jsxwef("statements/expowt", >w< "expowt")}}
+- [`impowt.meta`](/pt-bw/docs/web/javascwipt/wefewence/opewatows/impowt.meta)
+- [pweviewing es6 m-moduwes and mowe f-fwom es2015, σωσ es2016 and beyond](https://bwogs.windows.com/msedgedev/2016/05/17/es6-moduwes-and-beyond/)
+- [es6 in depth: moduwes](https://hacks.moziwwa.owg/2015/08/es6-in-depth-moduwes/), nyaa~~ h-hacks b-bwog post by j-jason owendowff
+- [es m-moduwes: a c-cawtoon deep-dive](https://hacks.moziwwa.owg/2018/03/es-moduwes-a-cawtoon-deep-dive/), 🥺 h-hacks bwog p-post by win cwawk
+- [axew w-wauschmayew's b-book: "expwowing js: m-moduwes"](https://expwowingjs.com/es6/ch_moduwes.htmw)

@@ -1,162 +1,162 @@
 ---
-title: super
-slug: Web/JavaScript/Reference/Operators/super
+titwe: supew
+swug: web/javascwipt/wefewence/opewatows/supew
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-A palavra-chave **super** é usada para acessar o objeto pai de um objeto, em outros casos, é usada para acessar a classe pai de uma classe.
+a-a pawavwa-chave **supew** é u-usada p-pawa acessaw o-o objeto pai de u-um objeto, (˘ω˘) em outwos c-casos, ʘwʘ é usada p-pawa acessaw a-a cwasse pai de uma cwasse. ( ͡o ω ͡o )
 
-## Síntaxe
+## síntaxe
 
 ```
-// chama o objeto (ou construtor) pai
-super(...[arguments]);
-// chama um método da classe/objeto pai
-super.metodo([arguments]);
+// chama o objeto (ou constwutow) p-pai
+supew(...[awguments]);
+// chama um método da cwasse/objeto p-pai
+supew.metodo([awguments]);
 ```
 
-## Descrição
+## descwição
 
-Quando usada no construtor de uma classe, a palavra-chave `super` deve ser usada apenas uma vez, e precisa ser usada antes que a palavra-chave `this` possa ser usada. Essa palavra-chave também pode ser usada para chamar uma função ou objeto pai.
+q-quando usada nyo constwutow de uma cwasse, o.O a pawavwa-chave `supew` d-deve sew usada apenas uma v-vez, >w< e pwecisa s-sew usada antes que a pawavwa-chave `this` possa sew usada. 😳 essa pawavwa-chave t-também pode sew usada pawa chamaw uma função ou objeto pai. 🥺
 
-## Exemplo
+## exempwo
 
-### Usando `super` em classes
+### u-usando `supew` em cwasses
 
-Esse trecho de código foi obtido através de [classes sample](https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html) ([demonstração](https://googlechrome.github.io/samples/classes-es6/index.html)). Aqui `super()` é chamado para evitar duplicar a parte do construtor que é comum entre `Polygon` e `Square`.
+esse t-twecho de código f-foi obtido atwavés d-de [cwasses s-sampwe](https://github.com/googwechwome/sampwes/bwob/gh-pages/cwasses-es6/index.htmw) ([demonstwação](https://googwechwome.github.io/sampwes/cwasses-es6/index.htmw)). rawr x3 aqui `supew()` é chamado p-pawa evitaw dupwicaw a pawte do constwutow q-que é comum entwe `powygon` e `squawe`. o.O
 
 ```js
-class Polygon {
-  constructor(height, width) {
-    this.name = "Polygon";
-    this.height = height;
-    this.width = width;
+cwass powygon {
+  constwuctow(height, rawr width) {
+    this.name = "powygon";
+    this.height = h-height;
+    this.width = w-width;
   }
-  sayName() {
-    console.log("Hi, I am a ", this.name + ".");
+  s-sayname() {
+    c-consowe.wog("hi, ʘwʘ i am a ", 😳😳😳 this.name + ".");
   }
 }
 
-class Square extends Polygon {
-  constructor(length) {
-    this.height; // ReferenceError, precisa chamar o super primeiro!
+cwass squawe extends powygon {
+  c-constwuctow(wength) {
+    t-this.height; // wefewenceewwow, ^^;; p-pwecisa chamaw o-o supew pwimeiwo! o.O
 
-    // Aqui, ele chama a classe construtora pai com o tamanho
-    // provido pelo Polygon -> width e height
-    super(length, length);
+    // aqui, (///ˬ///✿) e-ewe chama a cwasse constwutowa p-pai com o tamanho
+    // pwovido pewo powygon -> w-width e height
+    supew(wength, σωσ w-wength);
 
-    // Nota: Em classes derivadas, super() deve ser chamado antes de
-    // usar this. Deixar isso de fora vai causar um ReferenceError.
-    this.name = "Square";
+    // nyota: em cwasses d-dewivadas, nyaa~~ s-supew() deve sew chamado antes de
+    // usaw this. ^^;; deixaw isso de fowa vai causaw um wefewenceewwow. ^•ﻌ•^
+    this.name = "squawe";
   }
 
-  get area() {
-    return this.height * this.width;
+  g-get awea() {
+    w-wetuwn this.height * this.width;
   }
 
-  set area(value) {
-    this.area = value;
+  s-set awea(vawue) {
+    t-this.awea = v-vawue;
   }
 }
 ```
 
-### Super chamando métodos estáticos
+### supew chamando métodos estáticos
 
-Você também pode chamar o super em métodos [estáticos](/pt-BR/docs/Web/JavaScript/Reference/Classes/static).
+você t-também pode chamaw o supew em métodos [estáticos](/pt-bw/docs/web/javascwipt/wefewence/cwasses/static). σωσ
 
 ```js
-class Human {
-  constructor() {}
-  static ping() {
-    return "ping";
+cwass human {
+  constwuctow() {}
+  s-static ping() {
+    wetuwn "ping";
   }
 }
 
-class Computer extends Human {
-  constructor() {}
+c-cwass computew e-extends human {
+  c-constwuctow() {}
   static pingpong() {
-    return super.ping() + " pong";
+    w-wetuwn s-supew.ping() + " p-pong";
   }
 }
-Computer.pingpong(); // 'ping pong'
+c-computew.pingpong(); // 'ping pong'
 ```
 
-### Ao deletar propriedades do super, será emitido um erro
+### ao dewetaw pwopwiedades d-do supew, -.- s-sewá emitido um e-ewwo
 
-Você não pode utilizar o [delete operator](/pt-BR/docs/Web/JavaScript/Reference/Operators/delete) e `super.prop` ou `super[expr]` para deletar uma propriedade da classe pai. Isto emitirá um {{jsxref("ReferenceError")}}.
+você nyão p-pode utiwizaw o-o [dewete opewatow](/pt-bw/docs/web/javascwipt/wefewence/opewatows/dewete) e `supew.pwop` ou `supew[expw]` pawa d-dewetaw uma pwopwiedade da cwasse pai. ^^;; isto emitiwá um {{jsxwef("wefewenceewwow")}}. XD
 
 ```js
-class Base {
-  constructor() {}
+cwass base {
+  constwuctow() {}
   foo() {}
 }
-class Derived extends Base {
-  constructor() {}
-  delete() {
-    delete super.foo;
+cwass d-dewived extends base {
+  constwuctow() {}
+  dewete() {
+    dewete s-supew.foo;
   }
 }
 
-new Derived().delete(); // ReferenceError: invalid delete involving 'super'.
+n-nyew dewived().dewete(); // w-wefewenceewwow: invawid dewete i-invowving 'supew'. 🥺
 ```
 
-### `Super.prop` não pode sobrescrever propriedades não editáveis
+### `supew.pwop` nyão p-pode sobwescwevew p-pwopwiedades nyão editáveis
 
-`super`não pode sobrescrever o valor de uma propriedade quando esta houver sido definida como não editável ('writable: false') com, e.g., {{jsxref("Object.defineProperty")}}.
+`supew`não pode sobwescwevew o vawow de uma pwopwiedade quando e-esta houvew sido definida como n-nyão editávew ('wwitabwe: fawse') c-com, òωó e.g., {{jsxwef("object.definepwopewty")}}. (ˆ ﻌ ˆ)♡
 
 ```js
-class X {
-  constructor() {
-    Object.defineProperty(this, "prop", {
-      configurable: true,
-      writable: false,
-      value: 1,
+c-cwass x {
+  constwuctow() {
+    object.definepwopewty(this, -.- "pwop", :3 {
+      c-configuwabwe: t-twue, ʘwʘ
+      wwitabwe: fawse, 🥺
+      v-vawue: 1, >_<
     });
   }
-  f() {
-    super.prop = 2;
+  f-f() {
+    supew.pwop = 2;
   }
 }
 
-var x = new X();
+vaw x = nyew x();
 x.f();
-console.log(x.prop); // 1
+consowe.wog(x.pwop); // 1
 ```
 
-### Usando `super.prop` em objetos literais
+### usando `supew.pwop` em objetos witewais
 
-`super` também pode ser usado na inicialização da notação literal de objetos. No exemplo abaixo, cada objeto define um método. No segundo objeto, `super` chama o método do primeiro objeto. Isso funciona graças ao {{jsxref("Object.setPrototypeOf()")}}, com o qual é possível configurar o prototype do `obj2` para o `obj1`, tornando o `super` capaz de encontrar o `method1()` por meio do `obj2`.
+`supew` t-também p-pode sew usado n-nya iniciawização da nyotação w-witewaw de o-objetos. ʘwʘ nyo exempwo abaixo, (˘ω˘) cada o-objeto define um método. (✿oωo) nyo segundo objeto, (///ˬ///✿) `supew` chama o método do pwimeiwo o-objeto. rawr x3 isso f-funciona gwaças ao {{jsxwef("object.setpwototypeof()")}}, -.- com o-o quaw é possívew c-configuwaw o pwototype do `obj2` pawa o `obj1`, ^^ townando o `supew` c-capaz de encontwaw o `method1()` pow meio do `obj2`. (⑅˘꒳˘)
 
 ```js
-var obj1 = {
-  method1() {
-    console.log("method 1");
-  },
+vaw obj1 = {
+  m-method1() {
+    consowe.wog("method 1");
+  }, nyaa~~
 };
 
-var obj2 = {
-  method2() {
-    super.method1();
-  },
+vaw obj2 = {
+  m-method2() {
+    s-supew.method1();
+  }, /(^•ω•^)
 };
 
-Object.setPrototypeOf(obj2, obj1);
-obj2.method2(); // retorna "method 1"
+object.setpwototypeof(obj2, (U ﹏ U) obj1);
+obj2.method2(); // wetowna "method 1"
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Notas Gecko específicas
+## nyotas gecko específicas
 
-- `super()` ainda não funciona como esperado para prototypes nativos.
+- `supew()` a-ainda nyão funciona como espewado p-pawa pwototypes nyativos.
 
-## Veja mais
+## veja mais
 
-- [Classes](/pt-BR/docs/Web/JavaScript/Reference/Classes)
+- [cwasses](/pt-bw/docs/web/javascwipt/wefewence/cwasses)

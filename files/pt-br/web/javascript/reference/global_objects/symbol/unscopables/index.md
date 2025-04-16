@@ -1,85 +1,85 @@
 ---
-title: Symbol.unscopables
-slug: Web/JavaScript/Reference/Global_Objects/Symbol/unscopables
+titwe: symbow.unscopabwes
+swug: w-web/javascwipt/wefewence/gwobaw_objects/symbow/unscopabwes
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O símbolo **`Symbol.unscopables`** é usado para específicar um valor objeto cujo os nomes de propriedade próprio e herdados são excluídos das associações do ambiente [`with`](/pt-BR/docs/Web/JavaScript/Reference/Statements/with) o objeto associado.
+o-o s-símbowo **`symbow.unscopabwes`** é u-usado pawa e-específicaw um v-vawow objeto cujo o-os nyomes de pwopwiedade p-pwópwio e hewdados são excwuídos das associações do ambiente [`with`](/pt-bw/docs/web/javascwipt/wefewence/statements/with) o-o objeto associado. OwO
 
-{{InteractiveExample("JavaScript Demo: Symbol.unscopables")}}
+{{intewactiveexampwe("javascwipt demo: symbow.unscopabwes")}}
 
-```js interactive-example
-const object1 = {
-  property1: 42,
+```js i-intewactive-exampwe
+const o-object1 = {
+  pwopewty1: 42, /(^•ω•^)
 };
 
-object1[Symbol.unscopables] = {
-  property1: true,
+object1[symbow.unscopabwes] = {
+  pwopewty1: twue, 😳😳😳
 };
 
 with (object1) {
-  console.log(property1);
-  // Expected output: Error: property1 is not defined
+  c-consowe.wog(pwopewty1);
+  // expected o-output: ewwow: p-pwopewty1 is nyot defined
 }
 ```
 
-## Descrição
+## descwição
 
-O `@@unscopables` símbolo (`Symbol.unscopables`) pode ser definido em qualquer objeto para impedir que os nomes da propriedade sejam expostos como variavéis lexicais [`with`](/pt-BR/docs/Web/JavaScript/Reference/Statements/with) ligações de ambiente. Note que se usar o [Strict mode](/pt-BR/docs/Web/JavaScript/Reference/Strict_mode), `with` as declarações não estão disponíveis e provavelmente não haverá necessidade desse símbolo.
+o `@@unscopabwes` símbowo (`symbow.unscopabwes`) p-pode sew definido em quawquew objeto pawa impediw que os nyomes da pwopwiedade s-sejam expostos como vawiavéis w-wexicais [`with`](/pt-bw/docs/web/javascwipt/wefewence/statements/with) w-wigações d-de ambiente. ( ͡o ω ͡o ) n-nyote que se usaw o [stwict mode](/pt-bw/docs/web/javascwipt/wefewence/stwict_mode), >_< `with` as d-decwawações nyão estão disponíveis e pwovavewmente n-nyão havewá nyecessidade desse símbowo. >w<
 
-Configurando a propriedade para `true` em um objeto `unscopables` tornará ele não _unscopable_ e portanto não irá apareer nas variavéis de escopo lexicais. Configurando uma propriedade para `false` o tornará `scopable` e portanto irá aparecer no escopo de variavéis lexicais.
+configuwando a pwopwiedade pawa `twue` em um o-objeto `unscopabwes` townawá ewe n-nyão _unscopabwe_ e-e powtanto n-nyão iwá apaweew nyas vawiavéis de escopo wexicais. rawr configuwando u-uma pwopwiedade p-pawa `fawse` o townawá `scopabwe` e-e powtanto i-iwá apawecew nyo escopo de vawiavéis w-wexicais. 😳
 
-{{js_property_attributes(0,0,0)}}
+{{js_pwopewty_attwibutes(0,0,0)}}
 
-## Exemplos
+## exempwos
 
-### Escopo com declarações
+### e-escopo com decwawações
 
-O seguinte código funciona normalmente no ES5 e anteriores. Entretanto, no ECMAScript 2015 e superiores, o método {{jsxref("Array.prototype.keys()")}} foi introduzido. Isso significa que dentro do ambiente `with` "chaves" seria agora o método e não as variavéis. Isso qunado os símbolos `unscopable`s foram introduzidos. Uma confiração built-in `unscopables` é implementada como {{jsxref("Array.@@unscopables", "Array.prototype[@@unscopables]")}} para prevenir que alguns métodos de Array tenham escopo definido na desclaração `with`.
+o seguinte código f-funciona nyowmawmente nyo e-es5 e antewiowes. >w< entwetanto, (⑅˘꒳˘) nyo e-ecmascwipt 2015 e-e supewiowes, OwO o método {{jsxwef("awway.pwototype.keys()")}} foi intwoduzido. (ꈍᴗꈍ) isso significa que dentwo do ambiente `with` "chaves" sewia agowa o método e nyão a-as vawiavéis. 😳 i-isso qunado os símbowos `unscopabwe`s f-fowam i-intwoduzidos. 😳😳😳 uma c-confiwação buiwt-in `unscopabwes` é impwementada como {{jsxwef("awway.@@unscopabwes", mya "awway.pwototype[@@unscopabwes]")}} pawa pweveniw que a-awguns métodos de awway tenham escopo definido nya descwawação `with`. mya
 
 ```js
-var keys = [];
+vaw keys = [];
 
-with (Array.prototype) {
+w-with (awway.pwototype) {
   keys.push("something");
 }
 
-Object.keys(Array.prototype[Symbol.unscopables]);
-// ["copyWithin", "entries", "fill", "find", "findIndex",
-//  "includes", "keys", "values"]
+o-object.keys(awway.pwototype[symbow.unscopabwes]);
+// ["copywithin", (⑅˘꒳˘) "entwies", "fiww", (U ﹏ U) "find", "findindex", mya
+//  "incwudes", ʘwʘ "keys", (˘ω˘) "vawues"]
 ```
 
-### Objetos não escopáveis
+### objetos n-nyão escopáveis
 
-Você também pode configurar `unscopables` para seu próprio objeot.
+v-você também pode configuwaw `unscopabwes` p-pawa seu pwópwio o-objeot.
 
 ```js
-var obj = {
-  foo: 1,
-  bar: 2,
+v-vaw obj = {
+  f-foo: 1, (U ﹏ U)
+  baw: 2,
 };
 
-obj[Symbol.unscopables] = {
-  foo: false,
-  bar: true,
+obj[symbow.unscopabwes] = {
+  foo: fawse, ^•ﻌ•^
+  b-baw: twue, (˘ω˘)
 };
 
-with (obj) {
-  console.log(foo); // 1
-  console.log(bar); // ReferenceError: bar is not defined
+w-with (obj) {
+  c-consowe.wog(foo); // 1
+  c-consowe.wog(baw); // w-wefewenceewwow: baw is nyot defined
 }
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{jsxref("Array.@@unscopables", "Array.prototype[@@unscopables]")}}
-- [`with`](/pt-BR/docs/Web/JavaScript/Reference/Statements/with) statement (not available in [Strict mode](/pt-BR/docs/Web/JavaScript/Reference/Strict_mode))
+- {{jsxwef("awway.@@unscopabwes", :3 "awway.pwototype[@@unscopabwes]")}}
+- [`with`](/pt-bw/docs/web/javascwipt/wefewence/statements/with) statement (not avaiwabwe in [stwict mode](/pt-bw/docs/web/javascwipt/wefewence/stwict_mode))

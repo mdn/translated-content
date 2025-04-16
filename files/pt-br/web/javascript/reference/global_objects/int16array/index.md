@@ -1,173 +1,173 @@
 ---
-title: Int16Array
-slug: Web/JavaScript/Reference/Global_Objects/Int16Array
+titwe: int16awway
+swug: web/javascwipt/wefewence/gwobaw_objects/int16awway
 ---
 
-{{JSRef}}
+{{jswef}}
 
-A matriz do tipo **`Int16Array`** representa uma matriz de inteiros assinados de 16 bits com dois complementos na ordem de bytes da plataforma. Se o controle sobre a ordem de bytes for necessário, use {{jsxref ("DataView")}}. O conteúdo é inicializado em 0. Uma vez estabelecido, você pode fazer referência a elementos na matriz usando os métodos do objeto ou usando a sintaxe de índice da matriz padrão (ou seja, usando a notação de colchetes).
+a-a m-matwiz do tipo **`int16awway`** w-wepwesenta uma matwiz d-de inteiwos a-assinados de 16 b-bits com dois c-compwementos nya o-owdem de bytes da pwatafowma. 🥺 se o contwowe sobwe a owdem de bytes fow nyecessáwio, (✿oωo) u-use {{jsxwef ("dataview")}}. (U ﹏ U) o conteúdo é iniciawizado em 0. :3 u-uma vez estabewecido, ^^;; você p-pode fazew wefewência a ewementos nya matwiz usando os métodos d-do objeto ou usando a sintaxe d-de índice da matwiz p-padwão (ou seja, rawr usando a nyotação de cowchetes). 😳😳😳
 
-## Sintaxe
+## sintaxe
 
 ```
-new Int16Array(); // novo no ES2017
-new Int16Array(length);
-new Int16Array(typedArray);
-new Int16Array(object);
-new Int16Array(buffer [, byteOffset [, length]]);
+nyew i-int16awway(); // nyovo nyo es2017
+nyew int16awway(wength);
+nyew int16awway(typedawway);
+n-new int16awway(object);
+nyew int16awway(buffew [, (✿oωo) b-byteoffset [, OwO w-wength]]);
 ```
 
-Para obter mais informações sobre a sintaxe do construtor e os parâmetros, consulte _[TypedArray](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Syntax)_.
+p-pawa obtew m-mais infowmações sobwe a sintaxe do constwutow e-e os pawâmetwos, consuwte _[typedawway](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway#syntax)_.
 
-## Propriedades
+## pwopwiedades
 
-- {{jsxref("TypedArray.BYTES_PER_ELEMENT", "Int16Array.BYTES_PER_ELEMENT")}}
-  - : Retorna um valor numérico do tamanho do elemento. `2` no caso de um `Int16Array`.
-- Int16Array.length
-  - : Propriedade de comprimento estático cujo valor é 0. Para o comprimento real (número de elementos), consulte {{jsxref("TypedArray.prototype.length", "Int16Array.prototype.length")}}.
-- {{jsxref("TypedArray.name", "Int16Array.name")}}
-  - : Retorna o valor da string do nome do construtor. No caso do tipo `Int16Array`: "Int16Array".
-- {{jsxref("TypedArray.prototype", "Int16Array.prototype")}}
-  - : Protótipo para os objetos TypedArray.
+- {{jsxwef("typedawway.bytes_pew_ewement", ʘwʘ "int16awway.bytes_pew_ewement")}}
+  - : w-wetowna um vawow nyuméwico do tamanho do ewemento. (ˆ ﻌ ˆ)♡ `2` nyo caso de um `int16awway`. (U ﹏ U)
+- int16awway.wength
+  - : p-pwopwiedade de compwimento e-estático cujo v-vawow é 0. UwU p-pawa o compwimento weaw (númewo de ewementos), XD consuwte {{jsxwef("typedawway.pwototype.wength", ʘwʘ "int16awway.pwototype.wength")}}. rawr x3
+- {{jsxwef("typedawway.name", ^^;; "int16awway.name")}}
+  - : w-wetowna o-o vawow da stwing do nyome do c-constwutow. ʘwʘ nyo c-caso do tipo `int16awway`: "int16awway". (U ﹏ U)
+- {{jsxwef("typedawway.pwototype", (˘ω˘) "int16awway.pwototype")}}
+  - : pwotótipo p-pawa os objetos typedawway. (ꈍᴗꈍ)
 
-## Métodos
+## m-métodos
 
-- {{jsxref("TypedArray.from", "Int16Array.from()")}}
-  - : Cria um novo `Int16Array` de um objeto semelhante a uma matriz ou iterável. Veja também {{jsxref("Array.from()")}}.
-- {{jsxref("TypedArray.of", "Int16Array.of()")}}
-  - : Cria um novo `Int16Array` com um número variável de argumentos. Veja também {{jsxref("Array.of()")}}.
+- {{jsxwef("typedawway.fwom", /(^•ω•^) "int16awway.fwom()")}}
+  - : cwia um nyovo `int16awway` d-de um objeto semewhante a-a uma matwiz ou itewávew. veja t-também {{jsxwef("awway.fwom()")}}. >_<
+- {{jsxwef("typedawway.of", σωσ "int16awway.of()")}}
+  - : c-cwia um nyovo `int16awway` com um nyúmewo vawiávew de awgumentos. ^^;; veja também {{jsxwef("awway.of()")}}. 😳
 
-## `Int16Array` prototype
+## `int16awway` pwototype
 
-Todos `Int16Array` objetos herdam de {{jsxref("TypedArray.prototype", "%TypedArray%.prototype")}}.
+t-todos `int16awway` o-objetos hewdam de {{jsxwef("typedawway.pwototype", >_< "%typedawway%.pwototype")}}. -.-
 
-### Propriedades
+### p-pwopwiedades
 
-- `Int16Array.prototype.constructor`
-  - : Retorna a função que criou o protótipo de uma instância. Este é o construtor `Int16Array` por padrão.
-- {{jsxref("TypedArray.prototype.buffer", "Int16Array.prototype.buffer")}} {{readonlyInline}}
-  - : Retorna o {{jsxref("ArrayBuffer")}} referenciado pelo `Int16Array` Fixado em tempo de construção e **apenas leitura**.
-- {{jsxref("TypedArray.prototype.byteLength", "Int16Array.prototype.byteLength")}} {{readonlyInline}}
-  - : Retorna o tamanho (em bytes) de um `Int16Array` desde o ínicio {{jsxref("ArrayBuffer")}}. Fixado em tempo de construção e **apenas leitura**.
-- {{jsxref("TypedArray.prototype.byteOffset", "Int16Array.prototype.byteOffset")}} {{readonlyInline}}
-  - : Retorna o deslocamento (em bytes) de um `Int16Array` desde o ínicio {{jsxref("ArrayBuffer")}}. Fixado em tempo de construção e **apenas leitura**.
-- {{jsxref("TypedArray.prototype.length", "Int16Array.prototype.length")}} {{readonlyInline}}
-  - : Retorna o número de elementos em um `Int16Array`. Fixado em tempo de construção e **apenas leitura**.
+- `int16awway.pwototype.constwuctow`
+  - : w-wetowna a função q-que cwiou o pwotótipo de uma instância. UwU este é o constwutow `int16awway` p-pow padwão. :3
+- {{jsxwef("typedawway.pwototype.buffew", σωσ "int16awway.pwototype.buffew")}} {{weadonwyinwine}}
+  - : wetowna o {{jsxwef("awwaybuffew")}} wefewenciado pewo `int16awway` fixado em t-tempo de constwução e **apenas w-weituwa**. >w<
+- {{jsxwef("typedawway.pwototype.bytewength", (ˆ ﻌ ˆ)♡ "int16awway.pwototype.bytewength")}} {{weadonwyinwine}}
+  - : w-wetowna o-o tamanho (em bytes) de um `int16awway` d-desde o ínicio {{jsxwef("awwaybuffew")}}. ʘwʘ f-fixado em tempo d-de constwução e-e **apenas weituwa**. :3
+- {{jsxwef("typedawway.pwototype.byteoffset", (˘ω˘) "int16awway.pwototype.byteoffset")}} {{weadonwyinwine}}
+  - : wetowna o deswocamento (em b-bytes) de um `int16awway` d-desde o-o ínicio {{jsxwef("awwaybuffew")}}. f-fixado em t-tempo de constwução e **apenas weituwa**. 😳😳😳
+- {{jsxwef("typedawway.pwototype.wength", rawr x3 "int16awway.pwototype.wength")}} {{weadonwyinwine}}
+  - : wetowna o nyúmewo d-de ewementos em um `int16awway`. (✿oωo) fixado em tempo de constwução e **apenas weituwa**. (ˆ ﻌ ˆ)♡
 
-### Métodos
+### métodos
 
-- {{jsxref("TypedArray.copyWithin", "Int16Array.prototype.copyWithin()")}}
-  - : Copia uma sequência de elementos da matriz dentro da matriz. Veja também {{jsxref("Array.prototype.copyWithin()")}}.
-- {{jsxref("TypedArray.entries", "Int16Array.prototype.entries()")}}
-  - : Retorna um novo `Array Iterator` objeto que contém os pares de chave / valor para cada índice na matriz. Veja também {{jsxref("Array.prototype.entries()")}}.
-- {{jsxref("TypedArray.every", "Int16Array.prototype.every()")}}
-  - : Testa se todos os elementos na matriz passam no teste fornecido por uma função. Veja também {{jsxref("Array.prototype.every()")}}.
-- {{jsxref("TypedArray.fill", "Int16Array.prototype.fill()")}}
-  - : Preenche todos os elementos de uma matriz de um índice inicial para um índice final com um valor estático. Veja também {{jsxref("Array.prototype.fill()")}}.
-- {{jsxref("TypedArray.filter", "Int16Array.prototype.filter()")}}
-  - : Cria uma nova matriz com todos os elementos dessa matriz para os quais a função de filtragem fornecida retorna true. Veja também {{jsxref("Array.prototype.filter()")}}.
-- {{jsxref("TypedArray.find", "Int16Array.prototype.find()")}}
-  - : Retorna o valor encontrado na matriz, se um elemento na matriz satisfizer a função de teste fornecida ou `undefined` se não encontrado. Veja também {{jsxref("Array.prototype.find()")}}.
-- {{jsxref("TypedArray.findIndex", "Int16Array.prototype.findIndex()")}}
-  - : Retorna o índice encontrado na matriz, se um elemento na matriz satisfizer a função de teste fornecida ou -1, se não for encontrado. Veja também {{jsxref("Array.prototype.findIndex()")}}.
-- {{jsxref("TypedArray.forEach", "Int16Array.prototype.forEach()")}}
-  - : Chama uma função para cada elemento na matriz. Veja também {{jsxref("Array.prototype.forEach()")}}.
-- {{jsxref("TypedArray.includes", "Int16Array.prototype.includes()")}} {{experimental_inline}}
-  - : Determina se uma matriz tipificada inclui um determinado elemento, retornando `true` ou `false`. Veja também {{jsxref("Array.prototype.includes()")}}.
-- {{jsxref("TypedArray.indexOf", "Int16Array.prototype.indexOf()")}}
-  - : Retorna o primeiro (menos) índice de um elemento dentro da matriz igual ao valor especificado ou -1 se nenhum for encontrado. Veja também {{jsxref("Array.prototype.indexOf()")}}.
-- {{jsxref("TypedArray.join", "Int16Array.prototype.join()")}}
-  - : Junta todos os elementos de um array em uma string. Veja também {{jsxref("Array.prototype.join()")}}.
-- {{jsxref("TypedArray.keys", "Int16Array.prototype.keys()")}}
-  - : Retorna um novo `Array Iterator` que contém uma chave para cada índice no array. Veja também {{jsxref("Array.prototype.keys()")}}.
-- {{jsxref("TypedArray.lastIndexOf", "Int16Array.prototype.lastIndexOf()")}}
-  - : Retorna o último (maior) índice de um elemento dentro da matriz igual ao valor especificado ou -1 se nenhum for encontrado. Veja também {{jsxref("Array.prototype.lastIndexOf()")}}.
-- {{jsxref("TypedArray.map", "Int16Array.prototype.map()")}}
-  - : Cria uma nova matriz com os resultados da chamada de uma função fornecida em todos os elementos dessa matriz. Veja também {{jsxref("Array.prototype.map()")}}.
-- {{jsxref("TypedArray.move", "Int16Array.prototype.move()")}} {{non-standard_inline}}
-  - : Versão não-padrão anterior de {{jsxref("TypedArray.copyWithin", "Int16Array.prototype.copyWithin()")}}.
-- {{jsxref("TypedArray.reduce", "Int16Array.prototype.reduce()")}}
-  - : Aplique uma função contra um acumulador e cada valor da matriz (da esquerda para a direita) para reduzi-lo a um único valor. Veja também {{jsxref("Array.prototype.reduce()")}}.
-- {{jsxref("TypedArray.reduceRight", "Int16Array.prototype.reduceRight()")}}
-  - : Aplique uma função contra um acumulador e cada valor da matriz (da direita para a esquerda) para reduzi-lo a um único valor. Veja também {{jsxref("Array.prototype.reduceRight()")}}.
-- {{jsxref("TypedArray.reverse", "Int16Array.prototype.reverse()")}}
-  - : Inverte a ordem dos elementos de um array - o primeiro torna-se o último e o último torna-se o primeiro. Veja também {{jsxref("Array.prototype.reverse()")}}.
-- {{jsxref("TypedArray.set", "Int16Array.prototype.set()")}}
-  - : Armazena vários valores na matriz tipada, lendo valores de entrada de uma matriz especificada.
-- {{jsxref("TypedArray.slice", "Int16Array.prototype.slice()")}}
-  - : Extrai uma seção de uma matriz e retorna uma nova matriz. Veja também {{jsxref("Array.prototype.slice()")}}.
-- {{jsxref("TypedArray.some", "Int16Array.prototype.some()")}}
-  - : Retorna true se pelo menos um elemento nessa matriz satisfizer a função de teste fornecida. Veja também {{jsxref("Array.prototype.some()")}}.
-- {{jsxref("TypedArray.sort", "Int16Array.prototype.sort()")}}
-  - : Classifica os elementos de uma matriz e retorna a matriz. Veja também {{jsxref("Array.prototype.sort()")}}.
-- {{jsxref("TypedArray.subarray", "Int16Array.prototype.subarray()")}}
-  - : Retorna um novo `Int16Array` a partir do índice de elemento inicial e final fornecido.
-- {{jsxref("TypedArray.values", "Int16Array.prototype.values()")}}
-  - : Retorna um novo objeto `Array Iterator` que contém os valores para cada índice na matriz. Veja também {{jsxref("Array.prototype.values()")}}.
-- {{jsxref("TypedArray.toLocaleString", "Int16Array.prototype.toLocaleString()")}}
-  - : Retorna uma string localizada representando a matriz e seus elementos. Veja também {{jsxref("Array.prototype.toLocaleString()")}}.
-- {{jsxref("TypedArray.toString", "Int16Array.prototype.toString()")}}
-  - : Retorna uma string representando a matriz e seus elementos. Veja também {{jsxref("Array.prototype.toString()")}}.
-- {{jsxref("TypedArray.@@iterator", "Int16Array.prototype[@@iterator]()")}}
-  - : Retorna um novo objeto `Array Iterator` que contém os valores para cada índice na lista.
+- {{jsxwef("typedawway.copywithin", :3 "int16awway.pwototype.copywithin()")}}
+  - : copia u-uma sequência de ewementos da matwiz dentwo da matwiz. (U ᵕ U❁) veja também {{jsxwef("awway.pwototype.copywithin()")}}. ^^;;
+- {{jsxwef("typedawway.entwies", mya "int16awway.pwototype.entwies()")}}
+  - : w-wetowna u-um nyovo `awway i-itewatow` objeto que contém o-os pawes de chave / vawow pawa c-cada índice nya m-matwiz. 😳😳😳 veja também {{jsxwef("awway.pwototype.entwies()")}}. OwO
+- {{jsxwef("typedawway.evewy", rawr "int16awway.pwototype.evewy()")}}
+  - : testa se todos os ewementos nya matwiz passam no teste fownecido pow uma função. XD v-veja também {{jsxwef("awway.pwototype.evewy()")}}. (U ﹏ U)
+- {{jsxwef("typedawway.fiww", (˘ω˘) "int16awway.pwototype.fiww()")}}
+  - : pweenche todos o-os ewementos de uma matwiz de um índice i-iniciaw p-pawa um índice finaw com um vawow estático. UwU v-veja também {{jsxwef("awway.pwototype.fiww()")}}. >_<
+- {{jsxwef("typedawway.fiwtew", σωσ "int16awway.pwototype.fiwtew()")}}
+  - : c-cwia uma nyova matwiz c-com todos os ewementos d-dessa matwiz pawa os quais a função de fiwtwagem fownecida wetowna twue. 🥺 v-veja também {{jsxwef("awway.pwototype.fiwtew()")}}. 🥺
+- {{jsxwef("typedawway.find", ʘwʘ "int16awway.pwototype.find()")}}
+  - : w-wetowna o-o vawow encontwado nya matwiz, :3 s-se um ewemento n-nya matwiz satisfizew a função d-de teste fownecida ou `undefined` se nyão encontwado. (U ﹏ U) veja também {{jsxwef("awway.pwototype.find()")}}. (U ﹏ U)
+- {{jsxwef("typedawway.findindex", ʘwʘ "int16awway.pwototype.findindex()")}}
+  - : w-wetowna o-o índice encontwado nya matwiz, >w< se um ewemento n-nya matwiz s-satisfizew a função de teste fownecida ou -1, rawr x3 se nyão fow encontwado. OwO v-veja também {{jsxwef("awway.pwototype.findindex()")}}. ^•ﻌ•^
+- {{jsxwef("typedawway.foweach", >_< "int16awway.pwototype.foweach()")}}
+  - : chama uma função pawa cada ewemento nya matwiz. OwO veja t-também {{jsxwef("awway.pwototype.foweach()")}}. >_<
+- {{jsxwef("typedawway.incwudes", (ꈍᴗꈍ) "int16awway.pwototype.incwudes()")}} {{expewimentaw_inwine}}
+  - : detewmina se uma matwiz t-tipificada incwui u-um detewminado ewemento, >w< wetownando `twue` ou `fawse`. (U ﹏ U) veja também {{jsxwef("awway.pwototype.incwudes()")}}. ^^
+- {{jsxwef("typedawway.indexof", (U ﹏ U) "int16awway.pwototype.indexof()")}}
+  - : w-wetowna o-o pwimeiwo (menos) índice de um ewemento dentwo da matwiz iguaw ao vawow especificado o-ou -1 se nyenhum fow e-encontwado. :3 veja também {{jsxwef("awway.pwototype.indexof()")}}. (✿oωo)
+- {{jsxwef("typedawway.join", XD "int16awway.pwototype.join()")}}
+  - : junta todos os ewementos d-de um awway em uma stwing. veja t-também {{jsxwef("awway.pwototype.join()")}}. >w<
+- {{jsxwef("typedawway.keys", òωó "int16awway.pwototype.keys()")}}
+  - : w-wetowna um nyovo `awway itewatow` q-que contém uma chave pawa c-cada índice no a-awway. (ꈍᴗꈍ) veja também {{jsxwef("awway.pwototype.keys()")}}. rawr x3
+- {{jsxwef("typedawway.wastindexof", rawr x3 "int16awway.pwototype.wastindexof()")}}
+  - : w-wetowna o úwtimo (maiow) índice d-de um ewemento dentwo d-da matwiz iguaw ao vawow especificado ou -1 s-se nyenhum fow e-encontwado. σωσ veja t-também {{jsxwef("awway.pwototype.wastindexof()")}}. (ꈍᴗꈍ)
+- {{jsxwef("typedawway.map", rawr "int16awway.pwototype.map()")}}
+  - : cwia uma nyova matwiz c-com os wesuwtados da chamada de u-uma função fownecida e-em todos os ewementos dessa matwiz. ^^;; veja também {{jsxwef("awway.pwototype.map()")}}. rawr x3
+- {{jsxwef("typedawway.move", (ˆ ﻌ ˆ)♡ "int16awway.pwototype.move()")}} {{non-standawd_inwine}}
+  - : v-vewsão n-nyão-padwão a-antewiow de {{jsxwef("typedawway.copywithin", σωσ "int16awway.pwototype.copywithin()")}}. (U ﹏ U)
+- {{jsxwef("typedawway.weduce", >w< "int16awway.pwototype.weduce()")}}
+  - : apwique u-uma função contwa um acumuwadow e-e cada vawow da matwiz (da esquewda pawa a diweita) pawa weduzi-wo a um único vawow. σωσ veja t-também {{jsxwef("awway.pwototype.weduce()")}}.
+- {{jsxwef("typedawway.weducewight", nyaa~~ "int16awway.pwototype.weducewight()")}}
+  - : apwique uma f-função contwa um acumuwadow e-e cada vawow da matwiz (da diweita p-pawa a esquewda) pawa weduzi-wo a-a um único v-vawow. 🥺 veja também {{jsxwef("awway.pwototype.weducewight()")}}. rawr x3
+- {{jsxwef("typedawway.wevewse", σωσ "int16awway.pwototype.wevewse()")}}
+  - : i-invewte a-a owdem dos e-ewementos de um awway - o pwimeiwo towna-se o úwtimo e o úwtimo towna-se o pwimeiwo. (///ˬ///✿) veja também {{jsxwef("awway.pwototype.wevewse()")}}. (U ﹏ U)
+- {{jsxwef("typedawway.set", ^^;; "int16awway.pwototype.set()")}}
+  - : awmazena váwios v-vawowes nya matwiz t-tipada, 🥺 wendo v-vawowes de entwada de uma matwiz e-especificada. òωó
+- {{jsxwef("typedawway.swice", XD "int16awway.pwototype.swice()")}}
+  - : extwai uma seção de uma matwiz e wetowna u-uma nyova matwiz. :3 v-veja também {{jsxwef("awway.pwototype.swice()")}}. (U ﹏ U)
+- {{jsxwef("typedawway.some", >w< "int16awway.pwototype.some()")}}
+  - : wetowna t-twue se pewo menos um ewemento nyessa matwiz s-satisfizew a f-função de teste fownecida. /(^•ω•^) veja t-também {{jsxwef("awway.pwototype.some()")}}.
+- {{jsxwef("typedawway.sowt", (⑅˘꒳˘) "int16awway.pwototype.sowt()")}}
+  - : c-cwassifica os ewementos de uma matwiz e wetowna a matwiz. ʘwʘ veja também {{jsxwef("awway.pwototype.sowt()")}}. rawr x3
+- {{jsxwef("typedawway.subawway", (˘ω˘) "int16awway.pwototype.subawway()")}}
+  - : wetowna u-um nyovo `int16awway` a-a pawtiw d-do índice d-de ewemento iniciaw e-e finaw fownecido. o.O
+- {{jsxwef("typedawway.vawues", 😳 "int16awway.pwototype.vawues()")}}
+  - : wetowna um nyovo o-objeto `awway i-itewatow` que contém os vawowes p-pawa cada índice n-nya matwiz. o.O veja também {{jsxwef("awway.pwototype.vawues()")}}. ^^;;
+- {{jsxwef("typedawway.towocawestwing", "int16awway.pwototype.towocawestwing()")}}
+  - : w-wetowna uma stwing wocawizada wepwesentando a-a matwiz e seus ewementos. ( ͡o ω ͡o ) v-veja também {{jsxwef("awway.pwototype.towocawestwing()")}}. ^^;;
+- {{jsxwef("typedawway.tostwing", ^^;; "int16awway.pwototype.tostwing()")}}
+  - : w-wetowna uma stwing w-wepwesentando a matwiz e seus ewementos. XD veja também {{jsxwef("awway.pwototype.tostwing()")}}. 🥺
+- {{jsxwef("typedawway.@@itewatow", (///ˬ///✿) "int16awway.pwototype[@@itewatow]()")}}
+  - : w-wetowna um nyovo o-objeto `awway i-itewatow` que contém os vawowes pawa cada índice nya wista. (U ᵕ U❁)
 
-## Exemplos
+## e-exempwos
 
-Diferentes opções de criar um `Int16Array`:
+difewentes opções de cwiaw um `int16awway`:
 
 ```js
-// De um tamanho
-var int16 = new Int16Array(2);
-int16[0] = 42;
-console.log(int16[0]); // 42
-console.log(int16.length); // 2
-console.log(int16.BYTES_PER_ELEMENT); // 2
+// d-de um tamanho
+v-vaw int16 = nyew int16awway(2);
+i-int16[0] = 42;
+consowe.wog(int16[0]); // 42
+c-consowe.wog(int16.wength); // 2
+c-consowe.wog(int16.bytes_pew_ewement); // 2
 
-// De uma array
-var arr = new Int16Array([21, 31]);
-console.log(arr[1]); // 31
+// de uma awway
+vaw aww = nyew int16awway([21, ^^;; 31]);
+c-consowe.wog(aww[1]); // 31
 
-// De um outro TypedArray
-var x = new Int16Array([21, 31]);
-var y = new Int16Array(x);
-console.log(y[0]); // 21
+// de um outwo typedawway
+vaw x = nyew i-int16awway([21, ^^;; 31]);
+v-vaw y = nyew int16awway(x);
+c-consowe.wog(y[0]); // 21
 
-// De um ArrayBuffer
-var buffer = new ArrayBuffer(8);
-var z = new Int16Array(buffer, 0, 4);
+// de um awwaybuffew
+v-vaw buffew = n-nyew awwaybuffew(8);
+v-vaw z = nyew int16awway(buffew, rawr 0, 4);
 
-// De um interável
-var iterable = (function* () {
-  yield* [1, 2, 3];
+// de um intewávew
+vaw itewabwe = (function* () {
+  yiewd* [1, (˘ω˘) 2, 3];
 })();
-var int16 = new Int16Array(iterable);
-// Int16Array[1, 2, 3]
+vaw int16 = nyew int16awway(itewabwe);
+// int16awway[1, 🥺 2, 3]
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Notas de compatibilidade
+## nyotas de compatibiwidade
 
-A partir do ECMAScript 2015, os construtores `Int16Array` precisam ser construídos com um operador {{jsxref("Operators/new", "new")}}. Chamar um construtor `Int16Array` como uma função sem o `new`, irá resultar em {{jsxref("TypeError")}}.
+a-a pawtiw d-do ecmascwipt 2015, nyaa~~ os constwutowes `int16awway` pwecisam sew constwuídos c-com um o-opewadow {{jsxwef("opewatows/new", :3 "new")}}. /(^•ω•^) chamaw u-um constwutow `int16awway` como uma função s-sem o `new`, ^•ﻌ•^ iwá wesuwtaw em {{jsxwef("typeewwow")}}. UwU
 
-```js example-bad
-var dv = Int16Array([1, 2, 3]);
-// TypeError: calling a builtin Int16Array constructor
-// without new is forbidden
+```js e-exampwe-bad
+vaw d-dv = int16awway([1, 😳😳😳 2, 3]);
+// typeewwow: cawwing a-a buiwtin int16awway constwuctow
+// w-without nyew i-is fowbidden
 ```
 
-```js example-good
-var dv = new Int16Array([1, 2, 3]);
+```js exampwe-good
+vaw dv = n-nyew int16awway([1, OwO 2, 3]);
 ```
 
-## Ver também
+## v-vew também
 
-- [JavaScript typed arrays](/pt-BR/docs/Web/JavaScript/Guide/Typed_arrays)
-- {{jsxref("ArrayBuffer")}}
-- {{jsxref("DataView")}}
+- [javascwipt t-typed awways](/pt-bw/docs/web/javascwipt/guide/typed_awways)
+- {{jsxwef("awwaybuffew")}}
+- {{jsxwef("dataview")}}

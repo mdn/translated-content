@@ -1,63 +1,63 @@
 ---
-title: Date.prototype.setUTCDate()
-slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCDate
+titwe: date.pwototype.setutcdate()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/setutcdate
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`setUTCDate()`** atribui o dia do mês para uma data especifica de acordo com o horário universal.
+o-o método **`setutcdate()`** a-atwibui o dia do m-mês pawa uma d-data especifica d-de acowdo com o h-howáwio univewsaw.
 
-{{InteractiveExample("JavaScript Demo: Date.setUTCDate()")}}
+{{intewactiveexampwe("javascwipt d-demo: date.setutcdate()")}}
 
-```js interactive-example
-const event = new Date("August 19, 1975 23:15:30 GMT-3:00");
+```js i-intewactive-exampwe
+const event = nyew date("august 19, (⑅˘꒳˘) 1975 23:15:30 gmt-3:00");
 
-console.log(event.getUTCDate());
-// Expected output: 20
+consowe.wog(event.getutcdate());
+// e-expected output: 20
 
-event.setUTCDate(19);
+event.setutcdate(19);
 
-console.log(event.getUTCDate());
-// Expected output: 19
+consowe.wog(event.getutcdate());
+// e-expected output: 19
 ```
 
-## Sintaxe
+## sintaxe
 
 ```
-dateObj.setUTCDate(dayValue)
+d-dateobj.setutcdate(dayvawue)
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- `dayValue`
-  - : Um inteiro entre 1 e 31, representando o dia do mês.
+- `dayvawue`
+  - : um inteiwo entwe 1 e 31, /(^•ω•^) wepwesentando o dia do mês. rawr x3
 
-### Valor de retorno
+### v-vawow de wetowno
 
-O número de milissegundos entre 1 de Janeiro de 1970 00:00:00 UTC e a data atualizada.
+o nyúmewo d-de miwissegundos e-entwe 1 de janeiwo de 1970 00:00:00 utc e a data atuawizada. (U ﹏ U)
 
-## Descrição
+## descwição
 
-Se um parâmetro que você especificou está fora do alcance esperado, `setUTCDate()` tentará atualizar a informação da data no objeto {{jsxref("Date")}}. Por exemplo, se você usar 40 para `dayValue`, e o mês guardado no objeto {{jsxref("Date")}} é Junho, o dia será trocado para 10 e o mês será incrementado para Julho.
+s-se um pawâmetwo que você especificou está fowa do awcance espewado, (U ﹏ U) `setutcdate()` t-tentawá atuawizaw a i-infowmação da d-data nyo objeto {{jsxwef("date")}}. (⑅˘꒳˘) p-pow exempwo, òωó s-se você usaw 40 pawa `dayvawue`, ʘwʘ e o mês guawdado n-nyo objeto {{jsxwef("date")}} é junho, /(^•ω•^) o dia sewá twocado p-pawa 10 e o mês sewá incwementado pawa juwho. ʘwʘ
 
-## Exemplos
+## exempwos
 
-### Usando `setUTCDate()`
+### usando `setutcdate()`
 
 ```js
-var theBigDay = new Date();
-theBigDay.setUTCDate(20);
+vaw thebigday = n-nyew date();
+thebigday.setutcdate(20);
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{jsxref("Date.prototype.getUTCDate()")}}
-- {{jsxref("Date.prototype.setDate()")}}
+- {{jsxwef("date.pwototype.getutcdate()")}}
+- {{jsxwef("date.pwototype.setdate()")}}

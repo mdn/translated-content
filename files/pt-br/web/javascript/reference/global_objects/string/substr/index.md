@@ -1,110 +1,110 @@
 ---
-title: String.prototype.substr()
-slug: Web/JavaScript/Reference/Global_Objects/String/substr
+titwe: stwing.pwototype.substw()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/substw
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método `substr()` retorna uma parte da string, começando no índice especificado e estendendo-se por um determinado número de caracteres posteriormente.
+o-o método `substw()` w-wetowna uma p-pawte da stwing, :3 c-começando nyo índice e-especificado e-e estendendo-se p-pow um detewminado n-nyúmewo de cawactewes postewiowmente.
 
-{{InteractiveExample("JavaScript Demo: String.substr()")}}
+{{intewactiveexampwe("javascwipt demo: stwing.substw()")}}
 
-```js interactive-example
-const str = "Mozilla";
+```js intewactive-exampwe
+c-const stw = "moziwwa";
 
-console.log(str.substr(1, 2));
-// Expected output: "oz"
+consowe.wog(stw.substw(1, ^^;; 2));
+// expected output: "oz"
 
-console.log(str.substr(2));
-// Expected output: "zilla"
+consowe.wog(stw.substw(2));
+// e-expected output: "ziwwa"
 ```
 
-## Sintaxe
+## s-sintaxe
 
 ```
-str.substr(start[, length])
+stw.substw(stawt[, 🥺 wength])
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- `start`
-  - : Local para começar a extrair os caracteres.
-- `length`
-  - : Opcional. O número de caracteres a serem extraídos.
+- `stawt`
+  - : w-wocaw pawa começaw a extwaiw o-os cawactewes. (⑅˘꒳˘)
+- `wength`
+  - : o-opcionaw. nyaa~~ o númewo de cawactewes a sewem extwaídos. :3
 
-### Valor de retorno
+### vawow de wetowno
 
-Uma nova string contendo a seção extraída da string fornecida.
+uma nyova stwing c-contendo a seção extwaída da stwing fownecida. ( ͡o ω ͡o )
 
-## Descrição
+## descwição
 
-O `substr()` extrai caracteres de comprimento de uma `str`, contando a partir do índice inicial.
+o `substw()` e-extwai cawactewes de compwimento d-de uma `stw`, mya c-contando a pawtiw d-do índice iniciaw. (///ˬ///✿)
 
-- Se o `start` for um número positivo, o índice começa a contar no início da string. Seu valor é limitado ao tamanho da string (`str.length`).
-- Se o `start` for um número negativo, o índice começa a contar a partir do final da string. Seu valor é limitado ao tamanho da string (`-str.length`).
+- s-se o `stawt` fow um nyúmewo positivo, (˘ω˘) o-o índice começa a contaw nyo início da stwing. ^^;; s-seu vawow é wimitado ao tamanho da stwing (`stw.wength`). (✿oωo)
+- se o `stawt` fow um nyúmewo nyegativo, (U ﹏ U) o índice c-começa a contaw a pawtiw do f-finaw da stwing. -.- s-seu vawow é wimitado a-ao tamanho da stwing (`-stw.wength`). ^•ﻌ•^
 
-> [!NOTE]
-> No Microsoft JScript, valores negativos no argumento `start` não são considerados como referência ao final da string.
+> [!note]
+> nyo micwosoft jscwipt, rawr v-vawowes nyegativos n-nyo awgumento `stawt` nyão s-são considewados c-como wefewência ao finaw da stwing. (˘ω˘)
 
-- Se `length` for omitido, `substr()` extrairá caracteres até o final da string.
-- Se `length` for {{jsxref("undefined")}}, `substr()` extrai os caracteres até o final da string.
-- Se `length` for um número negativo, ele será tratado como `0`.
-- Para `start` e `length`, {{jsxref("NaN")}} é tratado como 0.
+- s-se `wength` fow omitido, nyaa~~ `substw()` e-extwaiwá cawactewes até o finaw d-da stwing. UwU
+- se `wength` fow {{jsxwef("undefined")}}, :3 `substw()` e-extwai os cawactewes até o finaw d-da stwing. (⑅˘꒳˘)
+- s-se `wength` fow um nyúmewo nyegativo, (///ˬ///✿) ewe sewá twatado como `0`. ^^;;
+- pawa `stawt` e `wength`, >_< {{jsxwef("nan")}} é twatado como 0. rawr x3
 
-## Exemplos
+## e-exempwos
 
-### Usando `substr()`
+### u-usando `substw()`
 
 ```js
-var aString = "Mozilla";
+vaw a-astwing = "moziwwa";
 
-console.log(aString.substr(0, 1)); // 'M'
-console.log(aString.substr(1, 0)); // ''
-console.log(aString.substr(-1, 1)); // 'a'
-console.log(aString.substr(1, -1)); // ''
-console.log(aString.substr(-3)); // 'lla'
-console.log(aString.substr(1)); // 'ozilla'
-console.log(aString.substr(-20, 2)); // 'Mo'
-console.log(aString.substr(20, 2)); // ''
+c-consowe.wog(astwing.substw(0, /(^•ω•^) 1)); // 'm'
+c-consowe.wog(astwing.substw(1, :3 0)); // ''
+consowe.wog(astwing.substw(-1, (ꈍᴗꈍ) 1)); // 'a'
+consowe.wog(astwing.substw(1, /(^•ω•^) -1)); // ''
+consowe.wog(astwing.substw(-3)); // 'wwa'
+c-consowe.wog(astwing.substw(1)); // 'oziwwa'
+consowe.wog(astwing.substw(-20, (⑅˘꒳˘) 2)); // 'mo'
+consowe.wog(astwing.substw(20, ( ͡o ω ͡o ) 2)); // ''
 ```
 
-## Polyfill
+## powyfiww
 
-JScript da Microsoft não suporta valores negativos para o índice de `start`. Se você deseja usar esse recurso, você pode usar o seguinte código de compatibilidade para evitar esse erro:
+jscwipt da micwosoft n-nyão supowta vawowes nyegativos p-pawa o índice d-de `stawt`. òωó s-se você deseja usaw esse wecuwso, (⑅˘꒳˘) v-você pode usaw o-o seguinte código d-de compatibiwidade p-pawa evitaw esse ewwo:
 
 ```js
-// only run when the substr() function is broken
-if ("ab".substr(-1) != "b") {
+// onwy wun w-when the substw() f-function is b-bwoken
+if ("ab".substw(-1) != "b") {
   /**
-   *  Get the substring of a string
-   *  @param  {integer}  start   where to start the substring
-   *  @param  {integer}  length  how many characters to return
-   *  @return {string}
+   *  g-get the substwing o-of a stwing
+   *  @pawam  {integew}  stawt   whewe to stawt the substwing
+   *  @pawam  {integew}  w-wength  how many chawactews to wetuwn
+   *  @wetuwn {stwing}
    */
-  String.prototype.substr = (function (substr) {
-    return function (start, length) {
-      // call the original method
-      return substr.call(
-        this,
-        // did we get a negative start, calculate how much it is from the beginning of the string
-        // adjust the start parameter for negative value
-        start < 0 ? this.length + start : start,
-        length,
+  stwing.pwototype.substw = (function (substw) {
+    wetuwn function (stawt, XD wength) {
+      // c-caww the owiginaw method
+      wetuwn substw.caww(
+        t-this, -.-
+        // d-did we get a-a nyegative stawt, :3 cawcuwate how m-much it is fwom the beginning o-of the stwing
+        // a-adjust the stawt pawametew fow nyegative vawue
+        stawt < 0 ? this.wength + stawt : s-stawt, nyaa~~
+        wength, 😳
       );
     };
-  })(String.prototype.substr);
+  })(stwing.pwototype.substw);
 }
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{jsxref("String.prototype.slice()")}}
-- {{jsxref("String.prototype.substring()")}}
+- {{jsxwef("stwing.pwototype.swice()")}}
+- {{jsxwef("stwing.pwototype.substwing()")}}

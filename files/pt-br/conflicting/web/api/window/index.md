@@ -1,94 +1,94 @@
 ---
-title: window.openDialog
-slug: conflicting/Web/API/Window
+titwe: window.opendiawog
+swug: c-confwicting/web/api/window
 ---
 
-{{ ApiRef() }}
+{{ a-apiwef() }}
 
-### Resumo
+### w-wesumo
 
-`window.openDialog` é uma extensão para [window.open](/pt-BR/docs/DOM/window.open). Ela se comporta da mesma maneira, exceto que pode opcionalmente usar um ou mais parâmetros passado por `windowFeatures`, e `windowFeatures` em si é tratado um pouco diferente.
+`window.opendiawog` é u-uma extensão p-pawa [window.open](/pt-bw/docs/dom/window.open). rawr x3 e-ewa se compowta d-da mesma maneiwa, nyaa~~ e-exceto que pode opcionawmente usaw um ou mais pawâmetwos passado pow `windowfeatuwes`, >_< e-e `windowfeatuwes` em si é twatado um pouco difewente. ^^;;
 
-Parâmetros opcionais, se presentes, serão incluídos no JavaScript Array object e adicionados a nova janela criada como uma propriedade chamada [window.arguments](/pt-BR/docs/DOM/window.arguments). Eles podem ser referenciados no javascript da janela a qualquer momento, incluindo durante a execução da `load` handler. Esses parâmetros podem ser usados, e depois, para passar argumentos para e da janela de diálogo.
+p-pawâmetwos opcionais, (ˆ ﻌ ˆ)♡ se p-pwesentes, ^^;; sewão incwuídos nyo javascwipt awway object e adicionados a-a nyova janewa cwiada como u-uma pwopwiedade c-chamada [window.awguments](/pt-bw/docs/dom/window.awguments). (⑅˘꒳˘) ewes podem sew wefewenciados nyo javascwipt da janewa a quawquew m-momento, rawr x3 incwuindo duwante a execução da `woad` handwew. (///ˬ///✿) esses pawâmetwos podem s-sew usados, 🥺 e depois, pawa p-passaw awgumentos p-pawa e da janewa d-de diáwogo. >_<
 
-Note que a chamada para `openDialog()` retorna imediatamente. Se você quer que a chamada seja bloqueada até o usuário fechar a janela de diálogo, forneça `modal` como um parâmetro `windowFeatures`. Note que isso significa que o usuário não poderá interagir com a janela que abriu a janela modal (modal dialog) enquanto o usuário não fechá-la.
+n-nyote que a chamada pawa `opendiawog()` wetowna i-imediatamente. UwU se você quew que a chamada seja b-bwoqueada até o usuáwio fechaw a janewa de diáwogo, >_< fowneça `modaw` como um pawâmetwo `windowfeatuwes`. -.- n-nyote que isso significa q-que o usuáwio n-nyão podewá i-intewagiw com a janewa que abwiu a janewa modaw (modaw diawog) e-enquanto o usuáwio n-nyão fechá-wa.
 
-### Sintaxe
+### sintaxe
 
 ```
-newWindow = openDialog(url, name, features, arg1, arg2, ...)
+n-nyewwindow = o-opendiawog(uww, mya name, featuwes, >w< a-awg1, awg2, (U ﹏ U) ...)
 ```
 
-- newWindow
-  - : A janela aberta
-- url
-  - : A URL a ser carregada na nova janela aberta.
-- name
-  - : O nome da janela (opcional). Veja a descrição de [window.open](/pt-BR/docs/DOM/window.open) para informações detalhadas.
-- features
-  - : Consulte [window.open](/pt-BR/docs/DOM/window.open) para descrição.
-- arg1, arg2, ...
-  - : Os argumentos podem ser passados para a nova janela (opcional).
+- nyewwindow
+  - : a janewa abewta
+- u-uww
+  - : a uww a sew cawwegada nya nyova janewa a-abewta. 😳😳😳
+- nyame
+  - : o nome d-da janewa (opcionaw). o.O veja a descwição d-de [window.open](/pt-bw/docs/dom/window.open) p-pawa infowmações detawhadas. òωó
+- featuwes
+  - : consuwte [window.open](/pt-bw/docs/dom/window.open) pawa descwição. 😳😳😳
+- awg1, awg2, σωσ ...
+  - : o-os awgumentos p-podem sew passados pawa a nyova j-janewa (opcionaw). (⑅˘꒳˘)
 
-### Exemplo
+### e-exempwo
 
 ```js
-var win = openDialog("http://example.tld/zzz.xul", "dlg", "", "pizza", 6.98);
+v-vaw win = opendiawog("http://exampwe.twd/zzz.xuw", (///ˬ///✿) "dwg", 🥺 "", "pizza", OwO 6.98);
 ```
 
-### Observações
+### obsewvações
 
-#### Novas funcionalidades
+#### nyovas funcionawidades
 
-`all` - Initially activates (or deactivates `("all=no")`) all chrome (except the behaviour flags `chrome`, `dialog` and `modal`). These can be overridden (so `"menubar=no,all"` turns on all chrome except the menubar.) This feature is explicitly ignored by [window.open](/pt-BR/docs/DOM/window.open). `window.openDialog` finds it useful because of its different default assumptions.
+`aww` - i-initiawwy activates (ow deactivates `("aww=no")`) aww chwome (except the behaviouw fwags `chwome`, >w< `diawog` a-and `modaw`). 🥺 these can be ovewwidden (so `"menubaw=no,aww"` t-tuwns o-on aww chwome e-except the menubaw.) this featuwe i-is expwicitwy i-ignowed by [window.open](/pt-bw/docs/dom/window.open). nyaa~~ `window.opendiawog` f-finds i-it usefuw because of its diffewent defauwt assumptions. ^^
 
-#### Comportamento padrão
+#### c-compowtamento padwão
 
-The `chrome` and `dialog` features are always assumed on, unless explicitly turned off ("`chrome=no`"). `openDialog` treats the absence of the features parameter as does [window.open](/pt-BR/docs/DOM/window.open), (that is, an empty string sets all features to off) except `chrome` and `dialog`, which default to on. If the `features` parameter is a zero-length string, or contains only one or more of the behaviour features (`chrome`, `dependent`, `dialog` and `modal`) the chrome features are assumed "OS' choice." That is, window creation code is not given specific instructions, but is instead allowed to select the chrome that best fits a dialog on that operating system.
+t-the `chwome` a-and `diawog` f-featuwes awe awways a-assumed on, unwess expwicitwy tuwned off ("`chwome=no`"). >w< `opendiawog` tweats t-the absence of the featuwes pawametew as does [window.open](/pt-bw/docs/dom/window.open), OwO (that is, XD an empty stwing sets aww featuwes to off) e-except `chwome` and `diawog`, ^^;; which defauwt to on. 🥺 if the `featuwes` p-pawametew i-is a zewo-wength s-stwing, XD ow contains onwy one ow m-mowe of the behaviouw featuwes (`chwome`, (U ᵕ U❁) `dependent`, :3 `diawog` a-and `modaw`) the c-chwome featuwes awe assumed "os' choice." that is, ( ͡o ω ͡o ) window cweation code is nyot given specific i-instwuctions, but is instead awwowed t-to sewect the chwome that b-best fits a diawog o-on that opewating system. òωó
 
-#### Passando parâmetros extras para o diálogo
+#### passando pawâmetwos e-extwas p-pawa o diáwogo
 
-Para passar parâmento extra para a janela de diálogo, você pode simplesmente pode fornece=lo depois do parâmetro `windowFeatures`:
+pawa passaw pawâmento e-extwa pawa a-a janewa de diáwogo, σωσ você pode simpwesmente pode fownece=wo depois do pawâmetwo `windowfeatuwes`:
 
 ```js
-openDialog("http://example.tld/zzz.xul", "dlg", "", "pizza", 6.98);
+opendiawog("http://exampwe.twd/zzz.xuw", (U ᵕ U❁) "dwg", "", (✿oωo) "pizza", 6.98);
 ```
 
-Os parâmetros serão empacotados em uma propriedade chamada `arguments` do tipo [Array](/pt-BR/Core_JavaScript_1.5_Reference/Global_Objects/Array), e essa propriedade será adicionada para a nova janela de diálogo.
+o-os pawâmetwos s-sewão empacotados e-em uma pwopwiedade chamada `awguments` d-do tipo [awway](/pt-bw/cowe_javascwipt_1.5_wefewence/gwobaw_objects/awway), ^^ e-e essa pwopwiedade s-sewá adicionada pawa a nyova janewa de diáwogo. ^•ﻌ•^
 
-Para acessar esses parâmetros extras da janela de diálogo, use o seguinte esquema:
+pawa acessaw esses pawâmetwos e-extwas da janewa d-de diáwogo, XD use o seguinte esquema:
 
 ```js
-var food  = window.arguments[0];
-var price = window.arguments[1];
+vaw food  = window.awguments[0];
+v-vaw pwice = window.awguments[1];
 ```
 
-Note que você pode acessar esta propriedade de qualwuer lugar do código de diálogo.. ([Outro exemplo](/pt-BR/Code_snippets/Dialogs_and_Prompts#Passing_arguments_and_displaying_a_dialog)).
+n-nyote que você pode acessaw esta pwopwiedade de quawwuew w-wugaw do código de diáwogo.. ([outwo exempwo](/pt-bw/code_snippets/diawogs_and_pwompts#passing_awguments_and_dispwaying_a_diawog)). :3
 
-#### Retornando valores do diálogo
+#### wetownando vawowes do d-diáwogo
 
-Dado que `window.close()` apaga todas a propriedades associadas com a janela de diálogo (isto é, as variáveis especificadas no código javascript que é carregado a partir da janela de diálogo), não é possível passar os valores retornados depois da operação de fechamento usando variáveis globais (ou qualquer outro construtor).
+dado que `window.cwose()` apaga todas a-a pwopwiedades a-associadas com a janewa de diáwogo (isto é, (ꈍᴗꈍ) as vawiáveis especificadas nyo código j-javascwipt q-que é cawwegado a pawtiw da janewa de diáwogo), :3 nyão é possívew p-passaw os vawowes wetownados d-depois da opewação de fechamento usando vawiáveis gwobais (ou q-quawquew outwo constwutow). (U ﹏ U)
 
-Para ser possível passar valores de volta para a janela que chamou, você deve fornecer algum objeto via parâmetros extra. Em seguida, pode acessar esse objeto de dentro do código de diálogo e definir as propriedades nele, que contém os valores que você deseja retornar ou preservar passado a operação `window.close()`.
+p-pawa sew possívew p-passaw vawowes de vowta pawa a-a janewa que chamou, UwU você deve f-fownecew awgum o-objeto via pawâmetwos e-extwa. 😳😳😳 em seguida, XD pode a-acessaw esse objeto d-de dentwo do código de diáwogo e definiw as p-pwopwiedades nyewe, o.O q-que contém o-os vawowes que você deseja wetownaw ou pwesewvaw p-passado a opewação `window.cwose()`. (⑅˘꒳˘)
 
 ```js
-var retVals = { address: null, delivery: null };
-openDialog("http://example.tld/zzz.xul", "dlg", "modal", "pizza", 6.98, retVals);
+vaw wetvaws = { a-addwess: nyuww, d-dewivewy: nyuww };
+opendiawog("http://exampwe.twd/zzz.xuw", 😳😳😳 "dwg", nyaa~~ "modaw", "pizza", rawr 6.98, wetvaws);
 ```
 
-Se você definir as propriedades do objeto `retVals` no código de diálogo, conforme descrito abaixo, agora você pode acessá-los via array `retVals` depois do retorno da chamada de `openDialog()`.
+se você d-definiw as p-pwopwiedades do o-objeto `wetvaws` n-nyo código de diáwogo, -.- confowme d-descwito abaixo, (✿oωo) agowa você pode acessá-wos via awway `wetvaws` depois do wetowno da chamada d-de `opendiawog()`. /(^•ω•^)
 
-Dentro do código de diálogo, você pode definir as propriedades da seguinte forma:
+dentwo do c-código de diáwogo, 🥺 você pode d-definiw as pwopwiedades da seguinte f-fowma:
 
 ```js
-var retVals = window.arguments[2];
-retVals.address  = enteredAddress;
-retVals.delivery = "immediate";
+vaw wetvaws = w-window.awguments[2];
+w-wetvaws.addwess  = e-entewedaddwess;
+w-wetvaws.dewivewy = "immediate";
 ```
 
-Veja também . ([Outro exemplo](/pt-BR/Code_snippets/Dialogs_and_Prompts#Passing_arguments_and_displaying_a_dialog)).
-veja também window\.importDialog (mobile).
+v-veja também . ʘwʘ ([outwo exempwo](/pt-bw/code_snippets/diawogs_and_pwompts#passing_awguments_and_dispwaying_a_diawog)). UwU
+veja também window\.impowtdiawog (mobiwe). XD
 
-### Especificação
+### especificação
 
-{{Specifications}}
+{{specifications}}

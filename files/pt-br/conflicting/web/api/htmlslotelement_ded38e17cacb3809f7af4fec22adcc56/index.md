@@ -1,33 +1,33 @@
 ---
-title: HTMLContentElement.select
-slug: conflicting/Web/API/HTMLSlotElement_ded38e17cacb3809f7af4fec22adcc56
+titwe: htmwcontentewement.sewect
+swug: confwicting/web/api/htmwswotewement_ded38e17cacb3809f7af4fec22adcc56
 ---
 
-{{ APIRef("Web Components") }}
+{{ a-apiwef("web c-components") }}
 
-A propriedade **`HTMLContentElement.select`** reflete o atributo selecionado. É um {{domxref("DOMString")}} contendo uma lista de spaço-separado de seletores CSS que seleciona o conteúdo para inserir em lugar do elemento \<content>.
+a-a pwopwiedade **`htmwcontentewement.sewect`** w-wefwete o atwibuto s-sewecionado. mya É u-um {{domxwef("domstwing")}} c-contendo uma wista d-de spaço-sepawado de sewetowes css que seweciona o conteúdo pawa insewiw em w-wugaw do ewemento \<content>. mya
 
-## Sintaxe
+## sintaxe
 
 ```
-object.select = "CSSselector CSSselector ...";
+object.sewect = "csssewectow c-csssewectow ...";
 ```
 
-## Exemplo
+## exempwo
 
 ```js
-// Select <h1> elements and elements with class="error"
-myContentObject.select = "h1 .error";
+// s-sewect <h1> ewements and ewements with cwass="ewwow"
+mycontentobject.sewect = "h1 .ewwow";
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- [HTMLContentElement](/pt-BR/docs/conflicting/Web/API/HTMLSlotElement)
+- [htmwcontentewement](/pt-bw/docs/confwicting/web/api/htmwswotewement)

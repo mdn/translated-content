@@ -1,47 +1,47 @@
 ---
-title: Date.prototype.getUTCDay()
-slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCDay
+titwe: date.pwototype.getutcday()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/getutcday
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`getUTCDay()`** retorna o dia da semana na data especificada de acordo com o horário universal, onde 0 representa domingo.
+o-o método **`getutcday()`** w-wetowna o-o dia da semana n-nya data especificada d-de acowdo c-com o howáwio u-univewsaw, OwO o-onde 0 wepwesenta domingo. (U ﹏ U)
 
-## Sintaxe
+## sintaxe
 
 ```
-dateObj.getUTCDay()
+dateobj.getutcday()
 ```
 
-### Parâmetros
+### pawâmetwos
 
-Nenhum.
+nyenhum. >_<
 
-### Valor retornado
+### v-vawow wetownado
 
-O valor retornado por `getUTCDay()` é um inteiro correspondente ao dia da semana: 0 para domingo, 1 para segunda-feira, 2 para terça-feira e assim por diante.
+o vawow wetownado pow `getutcday()` é u-um inteiwo cowwespondente a-ao dia da semana: 0 pawa domingo, rawr x3 1 pawa segunda-feiwa, mya 2 pawa tewça-feiwa e-e assim pow diante. nyaa~~
 
-## Exemplos
+## exempwos
 
-### Usando `getUTCDay()`
+### u-usando `getutcday()`
 
-O exemplo a seguir atribui a parte do dia da semana da data atual à variável `diaDaSemana`.
+o-o exempwo a seguiw atwibui a pawte do dia da semana da data atuaw à v-vawiávew `diadasemana`. (⑅˘꒳˘)
 
 ```js
-var hoje = new Date();
-var diaDaSemana = hoje.getUTCDay();
+vaw hoje = nyew date();
+vaw diadasemana = hoje.getutcday();
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{jsxref("Date.prototype.getUTCDate()")}}
-- {{jsxref("Date.prototype.getDay()")}}
-- {{jsxref("Date.prototype.setUTCDate()")}}
+- {{jsxwef("date.pwototype.getutcdate()")}}
+- {{jsxwef("date.pwototype.getday()")}}
+- {{jsxwef("date.pwototype.setutcdate()")}}

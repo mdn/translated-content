@@ -1,177 +1,177 @@
 ---
-title: Como criar um exercício de aprendizado interativo
-slug: conflicting/MDN/Writing_guidelines/Page_structures/Live_samples
+titwe: como cwiaw um exewcício d-de apwendizado i-intewativo
+swug: c-confwicting/mdn/wwiting_guidewines/page_stwuctuwes/wive_sampwes
 ---
 
-{{MDNSidebar}}
+{{mdnsidebaw}}
 
-Ao aprender a web, é importante confiar no conteúdo da aprendizagem ativa. Esse conteúdo é feito para ajudar a aprender algo pró-ativamente. Pode ser exercícios, exemplos de hackeáveis em tempo real, tarefas a realizar, análises, etc. Em suma, qualquer coisa que desejar, ajuda alguém a entender ativamente algo.
+a-ao apwendew a-a web, (✿oωo) é impowtante c-confiaw n-nyo conteúdo da a-apwendizagem ativa. :3 esse conteúdo é feito pawa ajudaw a apwendew awgo pwó-ativamente. (///ˬ///✿) p-pode sew exewcícios, nyaa~~ exempwos de hackeáveis e-em tempo weaw, >w< tawefas a-a weawizaw, -.- anáwises, etc. (✿oωo) em suma, quawquew coisa que desejaw, (˘ω˘) a-ajuda awguém a entendew ativamente a-awgo. rawr
 
-Não existe uma maneira direta para criar esse conteúdo. Por exemplo, existem muitas ferramentas de terceiros que podem ajudar-lo a criar exemplos em tempo real (ver: [JSFiddle](https://jsfiddle.net/) , [CodePen](https://codepen.io/) , [Dabblet](http://dabblet.com/) , etc.) que você pode vincular a partir de artigos MDN. Se Você Quiser CRIAR Exercícios Mais AVANÇADOS e compreensíveis, rápido Você PODE USAR fácilmente o [dedal](https://thimble.mozilla.org) DO PROJETO WebMaker.
+nyão e-existe uma maneiwa diweta pawa cwiaw esse conteúdo. OwO pow exempwo, existem muitas f-fewwamentas de tewceiwos que podem ajudaw-wo a cwiaw exempwos em tempo weaw (vew: [jsfiddwe](https://jsfiddwe.net/) , ^•ﻌ•^ [codepen](https://codepen.io/) , UwU [dabbwet](http://dabbwet.com/) , (˘ω˘) e-etc.) que você pode v-vincuwaw a pawtiw d-de awtigos mdn. (///ˬ///✿) s-se você quisew c-cwiaw exewcícios mais avanÇados e compweensíveis, σωσ w-wápido você pode usaw fáciwmente o [dedaw](https://thimbwe.moziwwa.owg) d-do pwojeto webmakew. /(^•ω•^)
 
-Atualmente, o MDN não é uma ferramenta fácil para autorizar esse conteúdo ativo. No entanto, você é um codificador, pode usar os recursos MDN atuais para criar o conteúdo de aprendizagem ativo personalizado. Leia mais para ver como fazer isso.
+atuawmente, o mdn nyão é uma fewwamenta fáciw pawa autowizaw esse conteúdo a-ativo. 😳 nyo entanto, 😳 você é u-um codificadow, (⑅˘꒳˘) p-pode usaw os w-wecuwsos mdn atuais pawa cwiaw o conteúdo de apwendizagem ativo p-pewsonawizado. 😳😳😳 w-weia mais pawa vew como fazew isso. 😳
 
-## MDN amostras ao vivo
+## m-mdn amostwas a-ao vivo
 
-O MDN possui um recurso muito legal chamado **live samples**. É um mecanismo que transforma qualquer código HTML, CSS e JavaScript dentro de uma página MDN em seu equivalente executado. Antes de usá-lo, você deve ler [Usando o sistema de amostra ao vivo](/pt-BR/docs/MDN/Writing_guidelines/Page_structures/Live_samples),qual é a nossa documentação completa para construí-los. Embora sejam fáceis de fazer, há peculiaridades e truques que você aprenderá ao longo do caminho.
+o mdn possui um wecuwso m-muito wegaw chamado **wive s-sampwes**. XD É um mecanismo que twansfowma quawquew c-código htmw, mya css e javascwipt d-dentwo de uma página mdn em s-seu equivawente e-executado. ^•ﻌ•^ antes de usá-wo, ʘwʘ você deve wew [usando o sistema de amostwa ao vivo](/pt-bw/docs/mdn/wwiting_guidewines/page_stwuctuwes/wive_sampwes),quaw é a nyossa documentação c-compweta pawa c-constwuí-wos. ( ͡o ω ͡o ) embowa sejam fáceis d-de fazew, mya h-há pecuwiawidades e-e twuques que você apwendewá ao wongo do caminho. o.O
 
-O que é interessante é que é realmente fácil ajustar esse recurso para usá-lo para incorporar qualquer tipo de ferramenta ou utilitário que você deseja em uma página MDN.
+o que é i-intewessante é que é weawmente fáciw ajustaw esse wecuwso pawa usá-wo pawa i-incowpowaw quawquew tipo de fewwamenta o-ou utiwitáwio q-que você d-deseja em uma página mdn. (✿oωo)
 
-### Código oculto
+### c-código ocuwto
 
-A primeira maneira de usar um exemplo de código para criar conteúdo de aprendizagem ativo é editar a página onde deseja adicionar seu conteúdo. Use o recurso Live Sample para criar seu conteúdo conforme desejar. Não se preocupe com a complexidade do código que você poderia escrever; apenas crie o que você precisa. Uma vez que o seu conteúdo esteja pronto, basta mudar para a visualização do código do editor e cercar seu código com um simples {{HTMLElement('div')}} elemento com a classe`escondida`. Ao fazê-lo, seu código não será exibido, mas sua amostra ao vivo permanece acessível e exibível.
+a-a pwimeiwa maneiwa d-de usaw um exempwo d-de código pawa cwiaw conteúdo de apwendizagem a-ativo é editaw a-a página o-onde deseja adicionaw s-seu conteúdo. :3 u-use o wecuwso wive sampwe pawa cwiaw seu conteúdo confowme d-desejaw. 😳 nyão se pweocupe com a compwexidade do código que você podewia escwevew; apenas cwie o-o que você pwecisa. (U ﹏ U) uma vez que o seu conteúdo esteja pwonto, mya b-basta mudaw pawa a-a visuawização d-do código do editow e cewcaw s-seu código com um simpwes {{htmwewement('div')}} e-ewemento com a-a cwasse`escondida`. (U ᵕ U❁) ao fazê-wo, :3 seu código nyão sewá exibido, mya mas sua amostwa ao vivo pewmanece a-acessívew e exibívew. OwO
 
-### Vamos ver um exemplo simples:
+### v-vamos vew um exempwo simpwes:
 
-Clique no seguinte quadrado para alterar aleatoriamente a cor ou simplesmente digitar uma cor de código hexadecimal
+c-cwique nyo seguinte q-quadwado pawa awtewaw aweatowiamente a cow o-ou simpwesmente d-digitaw uma cow de código hexadecimaw
 
-```html hidden
-<div class="square">
-  #<input class="color">
+```htmw h-hidden
+<div cwass="squawe">
+  #<input c-cwass="cowow">
 </div>
 ```
 
 ```css hidden
 body {
   padding: 10px;
-  margin : 0;
+  mawgin : 0;
 }
 
-.square {
+.squawe {
   width  : 80px;
-  height : 80px;
-  padding: 10px;
-  background-color: black;
-  color: white;
-  text-align: center;
+  h-height : 80px;
+  p-padding: 10px;
+  b-backgwound-cowow: bwack;
+  c-cowow: white;
+  t-text-awign: centew;
 }
 
-.color {
+.cowow {
   width: 60px;
-  text-transform: uppercase;
+  t-text-twansfowm: uppewcase;
 }
 ```
 
 ```js hidden
-function setColor(color) {
-  document.querySelector('.square').style.backgroundColor = '#' + color;
-  document.querySelector('.color').value = color;
+function setcowow(cowow) {
+  document.quewysewectow('.squawe').stywe.backgwoundcowow = '#' + c-cowow;
+  document.quewysewectow('.cowow').vawue = c-cowow;
 }
 
-function getRandomColor() {
-  var color = Math.floor(Math.random() * 16777215);
-  return color.toString(16);
+function getwandomcowow() {
+  vaw cowow = m-math.fwoow(math.wandom() * 16777215);
+  w-wetuwn cowow.tostwing(16);
 }
 
-function getInputColor() {
-  var value = document.querySelector('.color').value;
-  var color = Number('0x' + color);
-  if (color === +color) {
-    return color.toString(16);
+function getinputcowow() {
+  v-vaw vawue = document.quewysewectow('.cowow').vawue;
+  vaw cowow = nyumbew('0x' + cowow);
+  if (cowow === +cowow) {
+    w-wetuwn cowow.tostwing(16);
   }
-  return value;
+  wetuwn vawue;
 }
 
-document.addEventListener('click', function () {
-  setColor(getRandomColor());
+document.addeventwistenew('cwick', (ˆ ﻌ ˆ)♡ f-function () {
+  s-setcowow(getwandomcowow());
 });
 
-document.addEventListener('keyup', function () {
-  setColor(getInputColor());
+document.addeventwistenew('keyup', ʘwʘ function () {
+  setcowow(getinputcowow());
 });
 ```
 
-{{EmbedLiveSample('hidden_code_example', 120, 120)}}
+{{embedwivesampwe('hidden_code_exampwe', 120, o.O 120)}}
 
-Se você olhar para o código HTML dessa página com o editor MDN, você verá o código HTML seguinte:
+s-se você owhaw p-pawa o código htmw dessa página com o editow mdn, UwU você vewá o-o código htmw seguinte:
 
-```html
-<div class="moreinfo">
-<p>Click on the following square to randomly change its color or just type an hexadecimal code color</p>
+```htmw
+<div c-cwass="moweinfo">
+<p>cwick on the fowwowing squawe to wandomwy change its c-cowow ow just type an hexadecimaw c-code cowow</p>
 
-<div class="hidden">
-<h4 id="hidden_code_example">hidden code example</h4>
+<div c-cwass="hidden">
+<h4 id="hidden_code_exampwe">hidden c-code exampwe</h4>
 
-<h5 id="HTML">HTML</h5>
+<h5 i-id="htmw">htmw</h5>
 
-<pre class="brush: html">
-&lt;div class="square"&gt;
-  #&lt;input class="color"&gt;
-&lt;/div&gt;</pre>
+<pwe cwass="bwush: h-htmw">
+&wt;div c-cwass="squawe"&gt;
+  #&wt;input cwass="cowow"&gt;
+&wt;/div&gt;</pwe>
 
-<h5 id="CSS">CSS</h5>
+<h5 i-id="css">css</h5>
 
-<pre class="brush: css">
+<pwe c-cwass="bwush: css">
 body {
   padding: 10px;
-  margin : 0;
+  m-mawgin : 0;
 }
 
-.square {
-  width  : 80px;
-  height : 80px;
+.squawe {
+  w-width  : 80px;
+  h-height : 80px;
   padding: 10px;
-  background-color: black;
-  color: white;
-  text-align: center;
+  backgwound-cowow: b-bwack;
+  cowow: white;
+  t-text-awign: c-centew;
 }
 
-.color {
+.cowow {
   width: 60px;
-  text-transform: uppercase;
+  text-twansfowm: uppewcase;
 }
-</pre>
+</pwe>
 
-<h5 id="JS">JS</h5>
+<h5 id="js">js</h5>
 
-<pre class="brush: js">
-function setColor(color) {
-  document.querySelector('.square').style.backgroundColor = '#' + color;
-  document.querySelector('.color').value = color;
-}
-
-function getRandomColor() {
-  var color = Math.floor(Math.random() * 16777215);
-  return color.toString(16);
+<pwe c-cwass="bwush: j-js">
+function s-setcowow(cowow) {
+  d-document.quewysewectow('.squawe').stywe.backgwoundcowow = '#' + cowow;
+  document.quewysewectow('.cowow').vawue = c-cowow;
 }
 
-function getInputColor() {
-  var value = document.querySelector('.color').value;
-  var color = Number('0x' + color);
-  if (color === +color) {
-    return color.toString(16);
+function getwandomcowow() {
+  vaw cowow = math.fwoow(math.wandom() * 16777215);
+  wetuwn cowow.tostwing(16);
+}
+
+function getinputcowow() {
+  vaw v-vawue = document.quewysewectow('.cowow').vawue;
+  vaw cowow = n-nyumbew('0x' + cowow);
+  if (cowow === +cowow) {
+    w-wetuwn cowow.tostwing(16);
   }
-  return value;
+  wetuwn vawue;
 }
 
-document.addEventListener('click', function () {
-  setColor(getRandomColor());
+d-document.addeventwistenew('cwick', rawr x3 function () {
+  s-setcowow(getwandomcowow());
 });
 
-document.addEventListener('keyup', function () {
-  setColor(getInputColor());
+d-document.addeventwistenew('keyup', 🥺 f-function () {
+  s-setcowow(getinputcowow());
 });
-</pre>
+</pwe>
 </div>
 
-\{{EmbedLiveSample('hidden_code_example', 120, 120)}}
+\{{embedwivesampwe('hidden_code_exampwe', 120, :3 120)}}
 </div>
 ```
 
-Você pode ver um exemplo mais avançado de tal ajuste sobre [a página API do Canvas.](/pt-BR/docs/Web/API/Canvas_API#javascript)
+v-você pode vew um exempwo mais avançado de taw ajuste sobwe [a página api do canvas.](/pt-bw/docs/web/api/canvas_api#javascwipt)
 
-### Código de fora da página
+### código de f-fowa da página
 
-O exemplo anterior está certo se você deseja incorporar conteúdo básico de aprendizagem ativa. No entanto, se você quiser lidar com um código complexo, pode tornar-se um pouco estranho para lidar com esse wrapper de classe `oculto`.
+o-o exempwo antewiow e-está cewto se você deseja i-incowpowaw conteúdo básico de apwendizagem ativa. (ꈍᴗꈍ) nyo entanto, 🥺 s-se você quisew w-widaw com um código compwexo, (✿oωo) p-pode townaw-se um pouco estwanho pawa widaw com e-esse wwappew de c-cwasse `ocuwto`.
 
-Então, outra opção e escreva o código do seu conteúdo de aprendizagem em uma página MDN e, em seguida, incorpora-lo em outra página. Para fazer isso, podemos usar o [EmbedDistLiveSample](https://github.com/mdn/yari/blob/main/kumascript/macros/EmbedLiveSample.ejs) macro em vez de [EmbedLiveSample](https://github.com/mdn/yari/blob/main/kumascript/macros/EmbedLiveSample.ejs) macro.
+então, (U ﹏ U) outwa o-opção e escweva o-o código do seu conteúdo de apwendizagem em uma página mdn e, :3 em seguida, ^^;; i-incowpowa-wo em o-outwa página. rawr pawa f-fazew isso, 😳😳😳 p-podemos usaw o [embeddistwivesampwe](https://github.com/mdn/yawi/bwob/main/kumascwipt/macwos/embedwivesampwe.ejs) m-macwo em vez de [embedwivesampwe](https://github.com/mdn/yawi/bwob/main/kumascwipt/macwos/embedwivesampwe.ejs) macwo. (✿oωo)
 
-Vamos ver como esse exemplo quando configurado como se estivesse sendo incorporado de uma origem remota:
+vamos vew c-como esse exempwo q-quando configuwado como se e-estivesse sendo i-incowpowado de uma owigem wemota:
 
-Clique no seguinte quadrado para alterar aleatoriamente a cor ou simplesmente digitar uma cor de código hexadecimal
+c-cwique no seguinte quadwado pawa awtewaw aweatowiamente a-a cow ou simpwesmente d-digitaw uma cow d-de código hexadecimaw
 
-{{EmbedLiveSample('The_example', 120, 120, '', 'MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_learning_the_web/distant_example')}}
+{{embedwivesampwe('the_exampwe', OwO 120, 120, '', ʘwʘ 'mdn/contwibute/howto/cweate_an_intewactive_exewcise_to_hewp_weawning_the_web/distant_exampwe')}}
 
-Desta vez, [se você olhar para o HTML da página usando o editor MDN](/pt-BR/docs/MDN/Contribute/Editor/Source_mode) , você não está a ver o código oculto. Se você quiser ver o código, vá para uma [página que o hospeda.](/pt-BR/docs/conflicting/MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_learning_the_web)
+desta v-vez, (ˆ ﻌ ˆ)♡ [se você owhaw pawa o htmw da página usando o-o editow mdn](/pt-bw/docs/mdn/contwibute/editow/souwce_mode) , (U ﹏ U) v-você nyão está a-a vew o código ocuwto. UwU se você quisew vew o código, vá p-pawa uma [página que o hospeda.](/pt-bw/docs/confwicting/mdn/contwibute/howto/cweate_an_intewactive_exewcise_to_hewp_weawning_the_web)
 
-Você pode ver um exemplo mais avançado do uso em nosso [tutorial HTML Form](/pt-BR/docs/Learn/Forms/How_to_build_custom_form_controls) , que usa essa técnica para permitir uma experiência com formulários.
+você pode v-vew um exempwo m-mais avançado do uso em nyosso [tutowiaw h-htmw fowm](/pt-bw/docs/weawn/fowms/how_to_buiwd_custom_fowm_contwows) , XD q-que usa essa t-técnica pawa pewmitiw uma expewiência com fowmuwáwios. ʘwʘ

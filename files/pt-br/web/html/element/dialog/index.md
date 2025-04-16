@@ -1,153 +1,153 @@
 ---
-title: "<dialog>: O elemento Dialog"
-slug: Web/HTML/Element/dialog
+titwe: "<diawog>: o ewemento d-diawog"
+swug: web/htmw/ewement/diawog
 ---
 
-O **elemento HTML `<dialog>`** representa uma caixa de diálogo ou outro componente interativo, tal como um inspetor ou janela.
+o-o **ewemento h-htmw `<diawog>`** w-wepwesenta u-uma caixa de d-diáwogo ou outwo c-componente intewativo, (///ˬ///✿) t-taw como um inspetow ou janewa. (˘ω˘)
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Categorias de conteúdo</th>
+    <tw>
+      <th scope="wow">categowias d-de conteúdo</th>
       <td>
-        <a href="/pt-BR/docs/Web/HTML/Content_categories#Flow_content"
-          >Flow content</a
-        >,
+        <a hwef="/pt-bw/docs/web/htmw/content_categowies#fwow_content"
+          >fwow content</a
+        >, ^^;;
         <a
-          href="/pt-BR/docs/Web/HTML/Sections_and_Outlines_of_an_HTML5_document#Sectioning_roots"
-          >sectioning root</a
+          hwef="/pt-bw/docs/web/htmw/sections_and_outwines_of_an_htmw5_document#sectioning_woots"
+          >sectioning w-woot</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted content</th>
+    </tw>
+    <tw>
+      <th scope="wow">pewmitted c-content</th>
       <td>
-        <a href="/pt-BR/docs/Web/HTML/Content_categories#Flow_content"
-          >Flow content</a
+        <a hwef="/pt-bw/docs/web/htmw/content_categowies#fwow_content"
+          >fwow content</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Tag omission</th>
-      <td>Nenhuma, tanto a tag inicial quanto a final são obrigatórias.</td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted parents</th>
+    </tw>
+    <tw>
+      <th scope="wow">tag o-omission</th>
+      <td>nenhuma, (✿oωo) tanto a tag i-iniciaw quanto a-a finaw são obwigatówias.</td>
+    </tw>
+    <tw>
+      <th scope="wow">pewmitted pawents</th>
       <td>
-        Qualquer elemento que aceite
-        <a href="/pt-BR/docs/Web/HTML/Content_categories#Flow_content"
-          >flow content</a
+        quawquew ewemento que aceite
+        <a h-hwef="/pt-bw/docs/web/htmw/content_categowies#fwow_content"
+          >fwow content</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted ARIA roles</th>
-      <td><code><a href="/pt-BR/docs/Web/Accessibility/ARIA/Roles/alertdialog_role">alertdialog</a></code></td>
-    </tr>
-    <tr>
-      <th scope="row">DOM interface</th>
-      <td>{{domxref("HTMLDialogElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">pewmitted awia wowes</th>
+      <td><code><a h-hwef="/pt-bw/docs/web/accessibiwity/awia/wowes/awewtdiawog_wowe">awewtdiawog</a></code></td>
+    </tw>
+    <tw>
+      <th scope="wow">dom i-intewface</th>
+      <td>{{domxwef("htmwdiawogewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Atributos
+## a-atwibutos
 
-Este elemento inclui os atributos globais. O atributo `tabindex` não deve ser utilizado no elemento `<dialog>`.
+e-este ewemento i-incwui os atwibutos gwobais. (U ﹏ U) o atwibuto `tabindex` n-nyão deve sew utiwizado nyo ewemento `<diawog>`. -.-
 
 - `open`
-  - : Indica que o Dialog está ativo e pronto para uso. Quando o atributo `open` não for definido, ele não deve ser mostrado ao usuário.
+  - : i-indica que o diawog está ativo e pwonto pawa uso. ^•ﻌ•^ quando o atwibuto `open` nyão fow d-definido, rawr ewe nyão deve sew mostwado a-ao usuáwio. (˘ω˘)
 
-## Notas de uso
+## n-nyotas de u-uso
 
-- Elementos de formulário (`<form>`) podem ser integrados dentro de um elemento `<dialog>`, especificando-os com o atributo `method="dialog"`. Quando esse formulário é submetido, o diálogo é fechado com o seu {{domxref("HTMLDialogElement.returnValue", "returnValue")}} (valor de retorno) configurado para o valor botão `submit` do formulário que foi usado.
-- O pseudo-elemento CSS {{cssxref('::backdrop')}} pode ser usado para estilizar o fundo de um elemento `<dialog>`, como um escurecer um conteúdo inacessível enquanto uma janela `modal` está aberta, por exemplo. O backdrop(pano de fundo) só está disponível quando um diálogo é exibido com {{domxref("HTMLDialogElement.showModal()")}}.
+- ewementos de fowmuwáwio (`<fowm>`) podem sew integwados d-dentwo de um ewemento `<diawog>`, nyaa~~ e-especificando-os com o atwibuto `method="diawog"`. UwU q-quando esse f-fowmuwáwio é submetido, :3 o diáwogo é f-fechado com o seu {{domxwef("htmwdiawogewement.wetuwnvawue", (⑅˘꒳˘) "wetuwnvawue")}} (vawow de w-wetowno) configuwado pawa o vawow botão `submit` d-do fowmuwáwio que foi usado. (///ˬ///✿)
+- o-o pseudo-ewemento css {{cssxwef('::backdwop')}} p-pode sew usado p-pawa estiwizaw o fundo de um ewemento `<diawog>`, ^^;; como um escuwecew um conteúdo inacessívew enquanto uma janewa `modaw` e-está a-abewta, >_< pow exempwo. rawr x3 o backdwop(pano d-de fundo) s-só está disponívew q-quando um diáwogo é exibido com {{domxwef("htmwdiawogewement.showmodaw()")}}. /(^•ω•^)
 
-## Exemplos
+## exempwos
 
-### Exemplo simples
+### e-exempwo simpwes
 
-```html
-<dialog open>
-  <p>Olá para todos!</p>
-</dialog>
+```htmw
+<diawog open>
+  <p>owá pawa todos!</p>
+</diawog>
 ```
 
-### Exemplo Avançado
+### e-exempwo avançado
 
-Este exemplo abre uma caixa de diálogo contendo um formulário quando o botão "Update details" é clicado.
+e-este exempwo abwe u-uma caixa de d-diáwogo contendo um fowmuwáwio q-quando o botão "update d-detaiws" é c-cwicado.
 
-#### HTML
+#### h-htmw
 
-```html
-<!-- Um dialog simples contendo um form -->
-<dialog open id="favDialog">
-  <form method="dialog">
+```htmw
+<!-- um diawog simpwes contendo u-um fowm -->
+<diawog o-open id="favdiawog">
+  <fowm m-method="diawog">
     <section>
       <p>
-        <label for="favAnimal">Favorite animal:</label>
-        <select id="favAnimal">
+        <wabew f-fow="favanimaw">favowite a-animaw:</wabew>
+        <sewect id="favanimaw">
           <option></option>
-          <option>Brine shrimp</option>
-          <option>Red panda</option>
-          <option>Spider monkey</option>
-        </select>
+          <option>bwine shwimp</option>
+          <option>wed panda</option>
+          <option>spidew m-monkey</option>
+        </sewect>
       </p>
     </section>
     <menu>
-      <button id="cancel" type="reset">Cancel</button>
-      <button type="submit">Confirm</button>
+      <button id="cancew" type="weset">cancew</button>
+      <button type="submit">confiwm</button>
     </menu>
-  </form>
-</dialog>
+  </fowm>
+</diawog>
 
 <menu>
-  <button id="updateDetails">Update details</button>
+  <button id="updatedetaiws">update detaiws</button>
 </menu>
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
 (function () {
-  var updateButton = document.getElementById("updateDetails");
-  var cancelButton = document.getElementById("cancel");
-  var favDialog = document.getElementById("favDialog");
+  vaw updatebutton = document.getewementbyid("updatedetaiws");
+  vaw cancewbutton = d-document.getewementbyid("cancew");
+  v-vaw favdiawog = d-document.getewementbyid("favdiawog");
 
-  // O botão Update abre uma Dialog
-  updateButton.addEventListener("click", function () {
-    favDialog.showModal();
+  // o botão update a-abwe uma diawog
+  updatebutton.addeventwistenew("cwick", :3 function () {
+    f-favdiawog.showmodaw();
   });
 
-  // O botão cancelButtom fecha uma Dialog
-  cancelButton.addEventListener("click", function () {
-    favDialog.close();
+  // o-o botão cancewbuttom fecha uma diawog
+  cancewbutton.addeventwistenew("cwick", (ꈍᴗꈍ) function () {
+    favdiawog.cwose();
   });
 })();
 ```
 
-### Resultado
+### wesuwtado
 
-{{EmbedLiveSample("Exemplo_Avançado", "100%", 300)}}
+{{embedwivesampwe("exempwo_avançado", /(^•ω•^) "100%", (⑅˘꒳˘) 300)}}
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Polyfills
+## p-powyfiwws
 
-Inclua este polyfill para suportar browsers antigos.
+i-incwua este powyfiww pawa supowtaw bwowsews a-antigos. ( ͡o ω ͡o )
 
-[dialog-polyfill](https://github.com/GoogleChrome/dialog-polyfill)
+[diawog-powyfiww](https://github.com/googwechwome/diawog-powyfiww)
 
-## Veja também
+## v-veja também
 
-- O [`close`](/pt-BR/docs/Web/API/HTMLDialogElement/close_event) evento
-- O [`cancel`](/pt-BR/docs/Web/API/HTMLDialogElement/cancel_event) evento
-- Guia de formulários HTML.
+- o [`cwose`](/pt-bw/docs/web/api/htmwdiawogewement/cwose_event) e-evento
+- o [`cancew`](/pt-bw/docs/web/api/htmwdiawogewement/cancew_event) e-evento
+- guia de fowmuwáwios htmw.
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}

@@ -1,34 +1,34 @@
 ---
-title: テスト実行のための戦略
-slug: Learn_web_development/Extensions/Testing/Testing_strategies
-l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+titwe: テスト実行のための戦略
+swug: w-weawn_web_devewopment/extensions/testing/testing_stwategies
+w-w10n:
+  s-souwcecommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Testing/Introduction","Learn_web_development/Extensions/Testing/HTML_and_CSS", "Learn_web_development/Extensions/Testing")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn_web_devewopment/extensions/testing/intwoduction","weawn_web_devewopment/extensions/testing/htmw_and_css", (⑅˘꒳˘) "weawn_web_devewopment/extensions/testing")}}
 
 この記事では、ブラウザー間のテストの方法として、テストするブラウザーや機器を選ぶ方法、それらのブラウザーや機器を実際にテストする方法、ユーザーグループに分かれてテストする方法について説明します。
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">前提条件:</th>
+    <tw>
+      <th scope="wow">前提条件:</th>
       <td>
-        <a href="/ja/docs/Learn_web_development/Core/Structuring_content">HTML</a>、<a href="/ja/docs/Learn_web_development/Core/Styling_basics">CSS</a>、<a href="/ja/docs/Learn_web_development/Core/Scripting">JavaScript</a> 言語の主要部に通じていること。
+        <a h-hwef="/ja/docs/weawn_web_devewopment/cowe/stwuctuwing_content">htmw</a>、<a h-hwef="/ja/docs/weawn_web_devewopment/cowe/stywing_basics">css</a>、<a h-hwef="/ja/docs/weawn_web_devewopment/cowe/scwipting">javascwipt</a> 言語の主要部に通じていること。
         <a
-          href="/ja/docs/Learn_web_development/Extensions/Testing/Introduction"
+          hwef="/ja/docs/weawn_web_devewopment/extensions/testing/intwoduction"
           >ブラウザー横断テストの基本</a
         >について高水準の考えを持っていること。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">目標:</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">目標:</th>
       <td>
         ブラウザー横断テストに関わる高いレベルの概念を理解すること。
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## テストするブラウザーと端末の選択
 
@@ -36,117 +36,117 @@ l10n:
 
 ブラウザーの対応や 端末の分類は、対応する量によって決めるとよいでしょう。例を挙げます。
 
-1. A グレード: 一般的な／現代のブラウザー - 能力があることが知られている。徹底的にテストし、完全なサポートを提供する。
-2. B グレード: 古い/性能の低いブラウザー - 機能がないことが分かっている。テストし、主要な情報とサービスに完全にアクセスできる、より基本的な使い勝手を提供する。
-3. C グレード: 稀少なブラウザー、未知のブラウザー - テストはしませんが、動作可能であるとみなします。少なくとも防御的なコーディングによって提供された代替手段を用いて、作業するはずのサイト全体を配信してください。
+1. (U ﹏ U) a-a グレード: 一般的な／現代のブラウザー - 能力があることが知られている。徹底的にテストし、完全なサポートを提供する。
+2. b グレード: 古い/性能の低いブラウザー - 機能がないことが分かっている。テストし、主要な情報とサービスに完全にアクセスできる、より基本的な使い勝手を提供する。
+3. mya c グレード: 稀少なブラウザー、未知のブラウザー - テストはしませんが、動作可能であるとみなします。少なくとも防御的なコーディングによって提供された代替手段を用いて、作業するはずのサイト全体を配信してください。
 
 以下の節では、この形式で対応表を作り上げていきます。
 
-> [!NOTE]
-> Yahoo は最初にこの手法を、[Graded browser Support](https://github.com/yui/yui3/wiki/Graded-Browser-Support) アプローチとして広めました。
+> [!note]
+> yahoo は最初にこの手法を、[gwaded bwowsew suppowt](https://github.com/yui/yui3/wiki/gwaded-bwowsew-suppowt) アプローチとして広めました。
 
 ### 視聴者が最も使用するブラウザーを予測する
 
 これには通常、ユーザーの属性に基づいた推測が必要です。例えば、ユーザーが北米と西ヨーロッパにいるとします。
 
-軽くネット検索してみると、北米と西ヨーロッパではほとんどの人が Windows または Mac のデスクトップ／ラップトップを使用しており、主要なブラウザーは Chrome、Firefox、Safari、Edge であることが分かります。これらのブラウザーは定期的にアップデートを取得しているため、最新版をテストするのがよいでしょう。これらはすべて A グレードに入るはずです。
+軽くネット検索してみると、北米と西ヨーロッパではほとんどの人が w-windows または mac のデスクトップ／ラップトップを使用しており、主要なブラウザーは chwome、fiwefox、safawi、edge であることが分かります。これらのブラウザーは定期的にアップデートを取得しているため、最新版をテストするのがよいでしょう。これらはすべて a-a グレードに入るはずです。
 
-この層のほとんどの人は、iOS または Android の携帯電話も使用しているので、iOS の Safari の最新バージョン、Android の古い純正ブラウザーの最後の数バージョン、iOS と Android 用の Chrome と Firefox をテストするのがよいでしょう。また、レスポンシブデザインが確実に動作するように、携帯電話とタブレットの両方でテストすることが理想的です。
+この層のほとんどの人は、ios または andwoid の携帯電話も使用しているので、ios の s-safawi の最新バージョン、andwoid の古い純正ブラウザーの最後の数バージョン、ios と andwoid 用の chwome と fiwefox をテストするのがよいでしょう。また、レスポンシブデザインが確実に動作するように、携帯電話とタブレットの両方でテストすることが理想的です。
 
-Opera Mini は複雑な JavaScript を実行する能力がとても低いので、これも B ランクにしましょう。
+opewa mini は複雑な j-javascwipt を実行する能力がとても低いので、これも b ランクにしましょう。
 
 このように、どのブラウザーでテストを行うかは、ユーザーが使用すると予想されるブラウザーに基づいて決定します。
 その結果、対応表は以下のようになります。
 
-1. A グレード: Windows/Mac 用の Chrome と Firefox、Mac 用の Safari、Windows 用の Edge、iPhone/iPad 用の iOS Safari、スマートフォン/タブレット用の Android 内蔵ブラウザー（最新 2 バージョン）、スマートフォン/タブレット用の Chrome と Firefox（最新 2 バージョン）。
-2. B グレード: Opera Mini
-3. C グレード: なし
+1. a-a グレード: w-windows/mac 用の chwome と fiwefox、mac 用の safawi、windows 用の edge、iphone/ipad 用の i-ios safawi、スマートフォン/タブレット用の andwoid 内蔵ブラウザー（最新 2 バージョン）、スマートフォン/タブレット用の chwome と fiwefox（最新 2 バージョン）。
+2. ʘwʘ b グレード: o-opewa mini
+3. (˘ω˘) c グレード: なし
 
-もし、対象となるユーザーがほとんど別の場所にいる場合は、一般的なブラウザーや OS が上記とは異なる形になる可能性があります。
+もし、対象となるユーザーがほとんど別の場所にいる場合は、一般的なブラウザーや o-os が上記とは異なる形になる可能性があります。
 
-> [!NOTE]
+> [!note]
 > 「うちの会社の社長はブラックベリーを使用しているから、そっちで見栄えがするようにしたほうがいい」というのも、考えることができるんです。
 
 ### ブラウザーの統計
 
-指定された地域でどのブラウザーが人気があるのかを示すウェブサイトもあります。例えば、[Statcounter](https://gs.statcounter.com/)は、北米のトレンドを知ることができます。
+指定された地域でどのブラウザーが人気があるのかを示すウェブサイトもあります。例えば、[statcountew](https://gs.statcountew.com/)は、北米のトレンドを知ることができます。
 
-### Analytics の使用
+### a-anawytics の使用
 
-もっと正確なデータ源は、利用できるのであれば、[Google Analytics](https://marketingplatform.google.com/about/analytics/) のような分析アプリで、人々がサイトを閲覧するために使用しているブラウザーを正確に教えてくれます。もちろん、これは既に分析対象のサイトがあることに頼っているので、完全に新しいサイトに適したものではありません。
+もっと正確なデータ源は、利用できるのであれば、[googwe a-anawytics](https://mawketingpwatfowm.googwe.com/about/anawytics/) のような分析アプリで、人々がサイトを閲覧するために使用しているブラウザーを正確に教えてくれます。もちろん、これは既に分析対象のサイトがあることに頼っているので、完全に新しいサイトに適したものではありません。
 
-[Open Web Analytics](https://www.openwebanalytics.com/) や [Matomo](https://matomo.org) のような、オープンソースでプライバシーに重点を置いた分析プラットフォームを使用することも検討できます。これらは、分析プラットフォームをセルフホスティングすることを前提としています。
+[open w-web anawytics](https://www.openwebanawytics.com/) や [matomo](https://matomo.owg) のような、オープンソースでプライバシーに重点を置いた分析プラットフォームを使用することも検討できます。これらは、分析プラットフォームをセルフホスティングすることを前提としています。
 
-#### Google analytics のセットアップ
+#### googwe anawytics のセットアップ
 
-1. まず、Google のアカウントが必要です。このアカウントを使用して、[Google Analytics](https://marketingplatform.google.com/about/analytics/) にログインします。
-2. [Google Analytics](https://analytics.google.com/analytics/web/) （ウェブ）のオプションを選び、_サインアップ_ ボタンをクリックしてください。
-3. サインアップページであなたのウェブサイト/アプリケーションの詳細を入力します。これはかなり直感的に設定することができます。正しく取得するために最も重要なフィールドは、ウェブサイトの URL です。これは、あなたのサイト/アプリのルート URL である必要があります。
-4. 入力が完了したら、_トラッキング ID を取得_ ボタンを押し、表示されるサービスの利用規約に同意してください。
-5. 次のページでは、いくつかのコードスニペットとその他の説明を提供します。基本的なウェブサイトの場合、必要なことは _Website tracking_ のコードブロックをコピーして、あなたのサイトで Google Analytics を使用してトラッキングしたい異なるページすべてに貼り付けることです。スニペットは閉じられた `</body>` タグの下に所有するか、アプリケーションのコードと混同しないような適切な場所に配置してください。
-6. 変更内容を開発用サーバー、またはあなたのコードが必要な場所にアップロードしてください。
+1. (U ﹏ U) まず、googwe のアカウントが必要です。このアカウントを使用して、[googwe a-anawytics](https://mawketingpwatfowm.googwe.com/about/anawytics/) にログインします。
+2. ^•ﻌ•^ [googwe anawytics](https://anawytics.googwe.com/anawytics/web/) （ウェブ）のオプションを選び、_サインアップ_ ボタンをクリックしてください。
+3. (˘ω˘) サインアップページであなたのウェブサイト/アプリケーションの詳細を入力します。これはかなり直感的に設定することができます。正しく取得するために最も重要なフィールドは、ウェブサイトの uww です。これは、あなたのサイト/アプリのルート u-uww である必要があります。
+4. :3 入力が完了したら、_トラッキング id を取得_ ボタンを押し、表示されるサービスの利用規約に同意してください。
+5. ^^;; 次のページでは、いくつかのコードスニペットとその他の説明を提供します。基本的なウェブサイトの場合、必要なことは _website twacking_ のコードブロックをコピーして、あなたのサイトで googwe anawytics を使用してトラッキングしたい異なるページすべてに貼り付けることです。スニペットは閉じられた `</body>` タグの下に所有するか、アプリケーションのコードと混同しないような適切な場所に配置してください。
+6. 🥺 変更内容を開発用サーバー、またはあなたのコードが必要な場所にアップロードしてください。
 
 これで完了です。これで、あなたのサイトは解析データの報告を始めることができるはずです。
 
 #### アナリティクスデータの検討
 
-これで、[Analytics Web](https://analytics.google.com/analytics/web) のホームページに戻り、あなたのサイトについて収集したデータを見始めることができるはずです（もちろん、いくつかのデータが実際に収集されるまで、少し時間を空ける必要があります）。
+これで、[anawytics web](https://anawytics.googwe.com/anawytics/web) のホームページに戻り、あなたのサイトについて収集したデータを見始めることができるはずです（もちろん、いくつかのデータが実際に収集されるまで、少し時間を空ける必要があります）。
 
 既定では、このようにレポートタブが表示されるはずです。
 
-![Google アナリティクスがメインレポートダッシュボードでデータを収集する方法](analytics-reporting.png)
+![googwe アナリティクスがメインレポートダッシュボードでデータを収集する方法](anawytics-wepowting.png)
 
-様々なカテゴリーでカスタマイズされたレポートなど、Google アナリティクスを使用して見ることができるデータは膨大で、そのすべてについて説明する時間はありません。
-[アナリティクスをはじめよう](https://support.google.com/analytics/answer/9304153)では、初心者に有益なレポート（など）についてのガイダンスを提供しています。
+様々なカテゴリーでカスタマイズされたレポートなど、googwe アナリティクスを使用して見ることができるデータは膨大で、そのすべてについて説明する時間はありません。
+[アナリティクスをはじめよう](https://suppowt.googwe.com/anawytics/answew/9304153)では、初心者に有益なレポート（など）についてのガイダンスを提供しています。
 
-左側のメニューから _ユーザー > テクノロジー > ブラウザーと OS_ を選択すると、ユーザーが使用するブラウザーや演算子を確認することができます。
+左側のメニューから _ユーザー > テクノロジー > ブラウザーと os_ を選択すると、ユーザーが使用するブラウザーや演算子を確認することができます。
 
-> [!NOTE]
-> Google アナリティクスを使用する場合、誤解を招くような偏見に注意する必要があります。例えば、「Firefox モバイルのユーザーがいない」という情報は、Firefox モバイルにわざわざ対応していないということにつながるかもしれません。しかし、最初の段階でサイトが Firefox モバイルで壊れていた場合、Firefox モバイルユーザーは一人もいないことになります。
+> [!note]
+> g-googwe アナリティクスを使用する場合、誤解を招くような偏見に注意する必要があります。例えば、「fiwefox モバイルのユーザーがいない」という情報は、fiwefox モバイルにわざわざ対応していないということにつながるかもしれません。しかし、最初の段階でサイトが fiwefox モバイルで壊れていた場合、fiwefox モバイルユーザーは一人もいないことになります。
 
 ### その他の考慮事項
 
-アクセシビリティをグレード A のテスト要件に含める必要があります。
+アクセシビリティをグレード a-a のテスト要件に含める必要があります。
 
-また、状況固有のニーズも認識しておく必要があります。例えば、売上数値を管理職に配信するための社内イントラネットを作成していて、管理職全員に Windows Phone が指定されている場合、モバイルIEのサポートを優先させた方が良いでしょう。
+また、状況固有のニーズも認識しておく必要があります。例えば、売上数値を管理職に配信するための社内イントラネットを作成していて、管理職全員に w-windows p-phone が指定されている場合、モバイルieのサポートを優先させた方が良いでしょう。
 
 ### 最終的な対応表
 
 ですから、最終的な対応表は次のようなものに仕上がります。
 
-1. A グレード: Windows/Mac 版 Chrome と Firefox、Mac 版Safari、Edge（それぞれ最新 2 バージョン）、iPhone/iPad 版 iOS Safari、スマホ/タブレット版 Android 純正ブラウザー（最新 2 バージョン）、スマホタブレット版 Chrome と Android 版 Firefox（最新 2 バージョン）。アクセシビリティは一般的なテストに合格していること。
-2. B グレード: Opera Mini。
-3. C グレード: Opera などのニッチな現代のブラウザー。
+1. (⑅˘꒳˘) a グレード: windows/mac 版 chwome と f-fiwefox、mac 版safawi、edge（それぞれ最新 2 バージョン）、iphone/ipad 版 i-ios safawi、スマホ/タブレット版 andwoid 純正ブラウザー（最新 2 バージョン）、スマホタブレット版 c-chwome と a-andwoid 版 fiwefox（最新 2 バージョン）。アクセシビリティは一般的なテストに合格していること。
+2. nyaa~~ b グレード: o-opewa mini。
+3. :3 c グレード: o-opewa などのニッチな現代のブラウザー。
 
 ## これから何をテストしていくのか？
 
 コードベースに新しい機能を追加してテストする必要がある場合、テストを開始する前に、合格しなければ受け入れられないテスト要件のリストを書き出す必要があります。これらの要件は、視覚的なものであっても機能的なものであってもかまいません。
 
-以下の例のものがあるとします（[ソースコード](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/strategies/hidden-info-panel.html)を参照してください。[ライブ実行版](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/strategies/hidden-info-panel.html)もあります）。
+以下の例のものがあるとします（[ソースコード](https://github.com/mdn/weawning-awea/bwob/main/toows-testing/cwoss-bwowsew-testing/stwategies/hidden-info-panew.htmw)を参照してください。[ライブ実行版](https://mdn.github.io/weawning-awea/toows-testing/cwoss-bwowsew-testing/stwategies/hidden-info-panew.htmw)もあります）。
 
-![設計とユーザー要件を機能させたテストシナリオを準備する方法](sliding-box-demo.png)
+![設計とユーザー要件を機能させたテストシナリオを準備する方法](swiding-box-demo.png)
 
 この機能のテスト基準は、次のように書くことができます。
 
-A および B グレード:
+a および b グレード:
 
 - ボタンは、ユーザーの主な制御機構（マウス、キーボード、タッチなど、それが何であれ）により起動できるようにする必要があります。
 - ボタンを押すと、情報ボックスが現れたり消えたりすること。
 - テキストは読み取り可能でなければなりません。
 - 画面の内側からスクリーンリーダーを使用する視覚障碍を持つユーザーも、テキストにアクセスできること。
 
-A グレード:
+a グレード:
 
 - 情報ボックスは、現れたり消えたりするときにスムーズにアニメーションする必要があります。
 - グラデーションとテキストの影が現れて、ボックスの見栄えがよくなるようにします。
 
-ボタンがキーボードだけで使用できないことにもお気づきでしょう。これも改善する必要があります。 JavaScript でトグルのキーボード制御を実装するか、他にも全く別のメソッドを使用することができるかもしれません。
+ボタンがキーボードだけで使用できないことにもお気づきでしょう。これも改善する必要があります。 j-javascwipt でトグルのキーボード制御を実装するか、他にも全く別のメソッドを使用することができるかもしれません。
 
 これらのテスト基準は、以下の理由で有益なものです。
 
 - テストを実施する際に、以下に従うべき手順の集合を与えます。
 - これらは、ユーザーグループがテストを行う際に従うべき指示の集合に簡単に変えることができます（例えば、「マウスを使ってボタンを有効化してみて、次にキーボードを使って...」など） - 下記の [ユーザーテスト](#ユーザーテスト) を参照ください。
-- これらはまた、自動化されたテストを書くための基礎となります。何をテストしたいのか、そして成功条件は何なのかを正確に知っていれば、そのようなテストを書くのはより簡単です（このシリーズの後の [Selenium](/ja/docs/Learn_web_development/Extensions/Testing/Your_own_automation_environment#selenium) を見てください）。
+- これらはまた、自動化されたテストを書くための基礎となります。何をテストしたいのか、そして成功条件は何なのかを正確に知っていれば、そのようなテストを書くのはより簡単です（このシリーズの後の [sewenium](/ja/docs/weawn_web_devewopment/extensions/testing/youw_own_automation_enviwonment#sewenium) を見てください）。
 
 ## テストラボを用意する
 
@@ -156,14 +156,14 @@ A グレード:
 
 一般的には、テストしたいブラウザーを実行する実機があった方がよいでしょう。この方が、動作や全体的な使い勝手の面で最も高い精度が提供されます。低レベルの機器ラボとしては、おそらく以下のようなものが必要でしょう。
 
-- テストが必要なブラウザーがインストールされた Mac - Firefox、Chrome、Opera、Safari を含めることができます。
-- テストに必要なブラウザーがインストールされた Windows PC - Edge（または IE）、Chrome、Firefox、Opera を含めることができます。
-- テストに必要なブラウザーがインストールされている高スペックの Android 携帯電話およびタブレット - Android 用の Chrome、Firefox、Opera Mini、Android 純正のブラウザーが含まれます。
-- テストに必要なブラウザーがインストールされた、よりハイスペックな iOS 携帯電話およびタブレット - これには、iOS Safari および iOS 用の Chrome、Firefox、Opera Mini を含めることができます。
+- テストが必要なブラウザーがインストールされた mac - f-fiwefox、chwome、opewa、safawi を含めることができます。
+- テストに必要なブラウザーがインストールされた windows pc - edge（または i-ie）、chwome、fiwefox、opewa を含めることができます。
+- テストに必要なブラウザーがインストールされている高スペックの a-andwoid 携帯電話およびタブレット - andwoid 用の chwome、fiwefox、opewa mini、andwoid 純正のブラウザーが含まれます。
+- テストに必要なブラウザーがインストールされた、よりハイスペックな ios 携帯電話およびタブレット - これには、ios safawi および ios 用の chwome、fiwefox、opewa m-mini を含めることができます。
 
 以下のようなものも、入手できれば良いオプションです。
 
-- Linux 版のブラウザーに固有のバグをテストする必要がある場合に備えて、利用できる Linux PC。Linux ユーザーは、一般的に Firefox、Opera、Chrome を使用します。もし利用できるマシンが 1 台しかない場合は、Linux と Windows を別々のパーティションで動作させるデュアルブートマシンを作成することを考えることができます。Ubuntu のインストーラーを使えば、かなり簡単に設定できます。これを支援するために、[WindowsDualBoot](https://help.ubuntu.com/community/WindowsDualBoot) を参照してください。
+- w-winux 版のブラウザーに固有のバグをテストする必要がある場合に備えて、利用できる winux p-pc。winux ユーザーは、一般的に f-fiwefox、opewa、chwome を使用します。もし利用できるマシンが 1 台しかない場合は、winux と w-windows を別々のパーティションで動作させるデュアルブートマシンを作成することを考えることができます。ubuntu のインストーラーを使えば、かなり簡単に設定できます。これを支援するために、[windowsduawboot](https://hewp.ubuntu.com/community/windowsduawboot) を参照してください。
 - 低スペックのモバイル端末をいくつか用意すると、性能の低いプロセッサーでトランジションなどの機能をテストすることができます。
 
 あなたのメインの著作物は、アクセシビリティ監査ツール、スクリーンリーダー、エミュレーター/仮想マシンなど、特定の目的のために他のツールをインストールする場所にもなりえます。
@@ -172,79 +172,79 @@ A グレード:
 
 下記では、他にも様々なオプションがあることを説明します。
 
-> [!NOTE]
-> 一般に公開された端末ラボを作成する取り組みもあります。 [Open Device Labs](https://www.smashingmagazine.com/2016/11/worlds-best-open-device-labs/) を参照してください。
+> [!note]
+> 一般に公開された端末ラボを作成する取り組みもあります。 [open device wabs](https://www.smashingmagazine.com/2016/11/wowwds-best-open-device-wabs/) を参照してください。
 
-> [!NOTE]
+> [!note]
 > アクセシビリティについても考慮する必要があります。アクセシビリティのテストを容易にするために、マシンにインストールできる有益なツールがいくつかありますが、このコースの後半にある「よくあるアクセシビリティの問題の処理」の記事で、それらのツールを取り扱います。
 
 ### エミュレーター
 
 エミュレーターとは、基本的にコンピューター内で実行され、ある端末や特定の端末の状態をエミュレートするプログラムのことです。テストするハードウェアとソフトウェアの具体的な組み合わせを保有するよりも、より便利にテストの一部を実行できるようになります。
 
-エミュレーターは、機器の状態をテストするような単純なものであるかもしれません。例えば、レスポンシブデザイン用の幅/高さのメディアクエリーをすばやくテストしたい場合、Firefox の[レスポンシブデザインモード](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html)を使用することができます。Safari にも同様のモードがあり、_Safari > Preferences_ で、_Show Develop menu_ を調べ、_Develop > Enter Responsive Design Mode_ を選べば、このモードを有効にすることができます。Chrome にも同様のものがあります。デバイスモード（[デバイスモードでモバイル端末をシミュレートする](https://developer.chrome.com/docs/devtools/device-mode/)を参照）。
+エミュレーターは、機器の状態をテストするような単純なものであるかもしれません。例えば、レスポンシブデザイン用の幅/高さのメディアクエリーをすばやくテストしたい場合、fiwefox の[レスポンシブデザインモード](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/wesponsive_design_mode/index.htmw)を使用することができます。safawi にも同様のモードがあり、_safawi > pwefewences_ で、_show devewop m-menu_ を調べ、_devewop > entew wesponsive design mode_ を選べば、このモードを有効にすることができます。chwome にも同様のものがあります。デバイスモード（[デバイスモードでモバイル端末をシミュレートする](https://devewopew.chwome.com/docs/devtoows/device-mode/)を参照）。
 
 しかし、多くの場合、何らかのエミュレーターを保有しなければならないでしょう。最も一般的にテストしたい端末/ブラウザーは以下の通りです。
 
-- Android アプリを開発するための公式の [Android Studio IDE](https://developer.android.com/studio/) は、Google Chrome や古い純正 Android ブラウザーでウェブサイトをテストするには少し重いですが、しっかりとした[エミュレーター](https://developer.android.com/studio/run/emulator.html)が実行されています。もう少し軽量なものをお望みなら、Windows と Mac の両方で動作する [Andy](https://www.andyroid.net/) が合理的なオプションとなります。
-- Apple は、[XCode](https://developer.apple.com/xcode/) 開発環境の上で動作し、iPad/iPhone/Apple Watch/Apple TV をエミュレートする [Simulator](https://help.apple.com/simulator/mac/current/) というアプリを提供されています。これには iOS ネイティブのブラウザー Safari が搭載されています。これは残念ながら Mac 上でしか動作しません。
+- andwoid アプリを開発するための公式の [andwoid s-studio ide](https://devewopew.andwoid.com/studio/) は、googwe chwome や古い純正 a-andwoid ブラウザーでウェブサイトをテストするには少し重いですが、しっかりとした[エミュレーター](https://devewopew.andwoid.com/studio/wun/emuwatow.htmw)が実行されています。もう少し軽量なものをお望みなら、windows と m-mac の両方で動作する [andy](https://www.andywoid.net/) が合理的なオプションとなります。
+- a-appwe は、[xcode](https://devewopew.appwe.com/xcode/) 開発環境の上で動作し、ipad/iphone/appwe watch/appwe tv をエミュレートする [simuwatow](https://hewp.appwe.com/simuwatow/mac/cuwwent/) というアプリを提供されています。これには i-ios ネイティブのブラウザー s-safawi が搭載されています。これは残念ながら m-mac 上でしか動作しません。
 
 他にもモバイル端末環境用のシミュレーターなどもよく見つかります。
 
-- Opera Mini をテストしたい場合は、自分自身でエミュレートすることができます。
+- o-opewa mini をテストしたい場合は、自分自身でエミュレートすることができます。
 
-> [!NOTE]
+> [!note]
 > 多くのエミュレーターは、実際には仮想マシンを使用する必要があります（下記参照）。このような場合、指定された手順が提供されたり、仮想マシンの使用がエミュレーターのインストーラーに組み込まれたりすることがよくあります。
 
 ### 仮想マシン
 
-仮想マシンは、デスクトップコンピューター上で動作するアプリケーションで、自分自身で仮想ハードディスク（多くはホストマシンのハードディスク上に存在する単一の大きなファイルで表される）に区分されたオペレーティングシステム全体のエミュレーションを実行することができます。 [Parallels](https://www.parallels.com/)、[VMWare](https://www.vmware.com/)、[Virtual Box](https://www.virtualbox.org/wiki/Downloads) などの有名な仮想マシンアプリが利用でき、個人的には後者が無料なので気に入っています。
+仮想マシンは、デスクトップコンピューター上で動作するアプリケーションで、自分自身で仮想ハードディスク（多くはホストマシンのハードディスク上に存在する単一の大きなファイルで表される）に区分されたオペレーティングシステム全体のエミュレーションを実行することができます。 [pawawwews](https://www.pawawwews.com/)、[vmwawe](https://www.vmwawe.com/)、[viwtuaw box](https://www.viwtuawbox.owg/wiki/downwoads) などの有名な仮想マシンアプリが利用でき、個人的には後者が無料なので気に入っています。
 
-> [!NOTE]
-> 仮想マシンのエミュレーションを実行するには、多くのハードディスク空間が利用できる必要があります。エミュレートする各オペレーティングシステムは、多くのメモリーを占めることがあります。インストールするたびに必要なハードディスク空間を選ぶ傾向があります。10GB 程度でも十分ですが、オペレーティングシステムを確実に実行するために 50GB 以上を推奨する情報もあります。ほとんどの仮想マシンアプリで提供された良いオプションは、**動的に割り当てられた**ハードドライブを作成し、必要に応じて拡大・縮小させることです。
+> [!note]
+> 仮想マシンのエミュレーションを実行するには、多くのハードディスク空間が利用できる必要があります。エミュレートする各オペレーティングシステムは、多くのメモリーを占めることがあります。インストールするたびに必要なハードディスク空間を選ぶ傾向があります。10gb 程度でも十分ですが、オペレーティングシステムを確実に実行するために 50gb 以上を推奨する情報もあります。ほとんどの仮想マシンアプリで提供された良いオプションは、**動的に割り当てられた**ハードドライブを作成し、必要に応じて拡大・縮小させることです。
 
-Virtual Box を使用するには、次のことを行う必要があります。
+viwtuaw box を使用するには、次のことを行う必要があります。
 
-1. エミュレートしたい OS のインストーラーディスクや画像（ISO ファイルなど）を取得します。Virtual Box ではこれらを提供することができません。Windows OS など、ほとんどが商用製品であり、自由に配布することができません。
-2. 自分のオペレーティングシステムの[適切なインストーラーをダウンロード](https://www.virtualbox.org/wiki/Downloads)し、インストールしてください。
-3. アプリを開いてください。次のような画面が表示されます。 ![アプリケーションウィンドウの左パネルには、WindowsのOSとOpera TVのエミュレーターが掲載されています。右側のパネルには、一般、システム、ディスプレイ、設定、音声、ネットワーク、プレビューを含むいくつかのサブパネルが記載されています。](virtualbox.png)
-4. 新しい仮想マシンを作成するには、左上にある _New_ ボタンを押します。
-5. 指示に従い、以下のダイアログボックスを適宜埋めてください。
+1. ( ͡o ω ͡o ) エミュレートしたい o-os のインストーラーディスクや画像（iso ファイルなど）を取得します。viwtuaw b-box ではこれらを提供することができません。windows o-os など、ほとんどが商用製品であり、自由に配布することができません。
+2. mya 自分のオペレーティングシステムの[適切なインストーラーをダウンロード](https://www.viwtuawbox.owg/wiki/downwoads)し、インストールしてください。
+3. (///ˬ///✿) アプリを開いてください。次のような画面が表示されます。 ![アプリケーションウィンドウの左パネルには、windowsのosとopewa t-tvのエミュレーターが掲載されています。右側のパネルには、一般、システム、ディスプレイ、設定、音声、ネットワーク、プレビューを含むいくつかのサブパネルが記載されています。](viwtuawbox.png)
+4. (˘ω˘) 新しい仮想マシンを作成するには、左上にある _new_ ボタンを押します。
+5. ^^;; 指示に従い、以下のダイアログボックスを適宜埋めてください。
 
-   1. 新しい仮想マシンに名前を付けます
-   2. どの OS とバージョンをインストールするかを選びます。
-   3. RAM の割り当て量を設定してください（2048MB、または 2GB 程度を推奨）。
-   4. 仮想ハードディスクを作成します（_Create a virtual hard disk now_、_VDI (virtual disk image)_、_Dynamically allocated_ を含む 3 つのダイアログボックスで既定のオプションを選びます）。
-   5. 仮想ハードディスクのファイルの保存場所とサイズを選びます（名前と保存場所は適当なものを選び、サイズは 50GB 程度、または指定しても差し支えない範囲で指定します）。
+   1. (✿oωo) 新しい仮想マシンに名前を付けます
+   2. (U ﹏ U) どの o-os とバージョンをインストールするかを選びます。
+   3. -.- wam の割り当て量を設定してください（2048mb、または 2gb 程度を推奨）。
+   4. ^•ﻌ•^ 仮想ハードディスクを作成します（_cweate a viwtuaw hawd disk nyow_、_vdi (viwtuaw d-disk image)_、_dynamicawwy awwocated_ を含む 3 つのダイアログボックスで既定のオプションを選びます）。
+   5. rawr 仮想ハードディスクのファイルの保存場所とサイズを選びます（名前と保存場所は適当なものを選び、サイズは 50gb 程度、または指定しても差し支えない範囲で指定します）。
 
-これで、Virtual Box UI のメインウィンドウの左側のメニューに新しい仮想ボックスが表示されるはずです。この点で、ダブルクリックして開くことができます。仮想マシンの起動が始まりますが、まだオペレーティングシステム (OS) はインストールされていません。この時点でダイアログボックスをインストーラー画像/ディスクに向ける必要があり、物理マシンと同じように OS をインストールする手順が実行されます。
+これで、viwtuaw box ui のメインウィンドウの左側のメニューに新しい仮想ボックスが表示されるはずです。この点で、ダブルクリックして開くことができます。仮想マシンの起動が始まりますが、まだオペレーティングシステム (os) はインストールされていません。この時点でダイアログボックスをインストーラー画像/ディスクに向ける必要があり、物理マシンと同じように os をインストールする手順が実行されます。
 
-![特定の仕様に合わせた Virtual Box をインストールする方法](virtualbox-installer.png)
+![特定の仕様に合わせた viwtuaw b-box をインストールする方法](viwtuawbox-instawwew.png)
 
-> [!WARNING]
+> [!wawning]
 > この時点で仮想マシンにインストールしたいオペレーティングシステムのイメージが利用できることを確認し、すぐにインストールする必要があります。この点で処理を取り消すと、仮想マシンが使用不能になり、削除して再度作成しなければならなくなることがあります。これは致命的なものではありませんが、面倒です。
 
-処理が完全に終了すると、ホストコンピューター上のウィンドウ内で OS を実行している仮想マシンがあるはずです。
+処理が完全に終了すると、ホストコンピューター上のウィンドウ内で os を実行している仮想マシンがあるはずです。
 
-![Windows オペレーティングシステム上で動作する Virtual box マシン](virtualbox-running.png)
+![windows オペレーティングシステム上で動作する viwtuaw box マシン](viwtuawbox-wunning.png)
 
-この仮想 OS のインストールは、実際のインストールと同じように扱う必要があります。例えば、テストするブラウザーと同様に、ウイルスから保護するためにアンチウイルスプログラムをインストールします。
+この仮想 os のインストールは、実際のインストールと同じように扱う必要があります。例えば、テストするブラウザーと同様に、ウイルスから保護するためにアンチウイルスプログラムをインストールします。
 
-複数の仮想マシンを持つことは、特に Windows IE/Edge のテストに非常に有効です。Windows では、複数のバージョンの既定ブラウザーを同時にインストールすることができないため、必要に応じて異なるテストを行うするために仮想マシンのライブラリーを構築するとよいでしょう。
+複数の仮想マシンを持つことは、特に w-windows ie/edge のテストに非常に有効です。windows では、複数のバージョンの既定ブラウザーを同時にインストールすることができないため、必要に応じて異なるテストを行うするために仮想マシンのライブラリーを構築するとよいでしょう。
 
-- Windows 10 と Edge 14
-- Windows 10 と Edge 13
+- w-windows 10 と e-edge 14
+- windows 10 と edge 13
 
-> [!NOTE]
-> 仮想マシンのもう一つの良いところは、仮想ディスクイメージがかなり自己完結していることです。チームで作業している場合、1 つの仮想ディスクイメージを作成し、それをコピーして周りに渡すことができます。ただ、Windows やその他のライセンス製品であれば、それらのコピーをすべて実行するのに必要なライセンスがあることを確認してください。
+> [!note]
+> 仮想マシンのもう一つの良いところは、仮想ディスクイメージがかなり自己完結していることです。チームで作業している場合、1 つの仮想ディスクイメージを作成し、それをコピーして周りに渡すことができます。ただ、windows やその他のライセンス製品であれば、それらのコピーをすべて実行するのに必要なライセンスがあることを確認してください。
 
 ### 自動化と商用アプリ
 
-前の章で述べたように、ある種の自動化システムを使用することで、ブラウザーテストの苦労を軽減することができます。自分自身でテスト自動化システム（[Selenium](https://www.selenium.dev/)はよく選ばれるアプリです）を設定することができます。多少のセットアップが必要ですが、うまく作業を進めるととてもやりがいのあるものになるでしょう。
+前の章で述べたように、ある種の自動化システムを使用することで、ブラウザーテストの苦労を軽減することができます。自分自身でテスト自動化システム（[sewenium](https://www.sewenium.dev/)はよく選ばれるアプリです）を設定することができます。多少のセットアップが必要ですが、うまく作業を進めるととてもやりがいのあるものになるでしょう。
 
-[Sauce Labs](https://saucelabs.com/)、[Browser Stack](https://www.browserstack.com/)、[LambdaTest](https://www.lambdatest.com/) のような商用ツールもあり、テストにお金をかけたい場合は、設定を気にせずにこのようなことを行うことも可能です。
+[sauce w-wabs](https://saucewabs.com/)、[bwowsew stack](https://www.bwowsewstack.com/)、[wambdatest](https://www.wambdatest.com/) のような商用ツールもあり、テストにお金をかけたい場合は、設定を気にせずにこのようなことを行うことも可能です。
 
-もう一つの選択肢は、[Endtest](https://endtest.io) のようなノーコードのテスト自動化ツールを使用することです。
+もう一つの選択肢は、[endtest](https://endtest.io) のようなノーコードのテスト自動化ツールを使用することです。
 
 このモジュールの後のほうで、そのようなツールを使用する方法を見ていきます。
 
@@ -263,21 +263,21 @@ Virtual Box を使用するには、次のことを行う必要があります�
 
 テストを実行する際にも、よいアイディアになります。
 
-- 可能であれば、ブラウザーの拡張機能などを無効にして、別のブラウザープロファイルを設定し、そのプロファイルでテストを実行しましょう（例えば、[プロファイルマネージャーを使用して、Firefox のプロファイルを作成または削除する](https://support.mozilla.org/ja/kb/profile-manager-create-remove-switch-firefox-profiles) や[複数のプロフィールで Chrome を使用する](https://support.google.com/chrome/answer/2364824)などを参照してください）。
-- テストを実行する際には、ブラウザーのプライベートモード機能が利用できる場合はそれを使用し（例：Firefox の [Private Browsing](https://support.mozilla.org/ja/kb/private-browsing-use-firefox-without-history) 、Chrome の [Incognito Mode](https://support.google.com/chrome/answer/95464) ）、クッキーや一時ファイルといったものは保存しないようにします。
+- 可能であれば、ブラウザーの拡張機能などを無効にして、別のブラウザープロファイルを設定し、そのプロファイルでテストを実行しましょう（例えば、[プロファイルマネージャーを使用して、fiwefox のプロファイルを作成または削除する](https://suppowt.moziwwa.owg/ja/kb/pwofiwe-managew-cweate-wemove-switch-fiwefox-pwofiwes) や[複数のプロフィールで c-chwome を使用する](https://suppowt.googwe.com/chwome/answew/2364824)などを参照してください）。
+- テストを実行する際には、ブラウザーのプライベートモード機能が利用できる場合はそれを使用し（例：fiwefox の [pwivate b-bwowsing](https://suppowt.moziwwa.owg/ja/kb/pwivate-bwowsing-use-fiwefox-without-histowy) 、chwome の [incognito mode](https://suppowt.googwe.com/chwome/answew/95464) ）、クッキーや一時ファイルといったものは保存しないようにします。
 
 これらの手順は、テストするブラウザーが可能な限り「純粋」であること、つまり、テスト結果に影響を与えるようなものがインストールされていないことを確認するためのものです。
 
-> [!NOTE]
+> [!note]
 > ハードウェアを利用できる場合は、ローエンドの携帯電話など端末でサイトをテストすることも有益なオプションです。サイトの規模が大きくなり、より多くの機能を搭載すると、サイトの速度が低下する可能性が高くなるので、パフォーマンスをより考慮するように始める必要があります。ローエンドの端末で機能を実現するようにすれば、ハイエンドの端末でも良い使い勝手が得られる可能性が高くなります。
 
-> [!NOTE]
-> サーバーサイドの開発環境の中には、サイトの変更を一部のユーザーだけにロールアウトするための有益なメカニズムを提供しているものがあり、別の開発サーバーを使用することなく、一部のユーザーによって機能をテストしてもらうための有益なメカニズムを提供しています。その例が、[Django Waffle Flags](https://github.com/django-waffle/django-waffle) です。
+> [!note]
+> サーバーサイドの開発環境の中には、サイトの変更を一部のユーザーだけにロールアウトするための有益なメカニズムを提供しているものがあり、別の開発サーバーを使用することなく、一部のユーザーによって機能をテストしてもらうための有益なメカニズムを提供しています。その例が、[django waffwe fwags](https://github.com/django-waffwe/django-waffwe) です。
 
 ## まとめ
 
 この記事を読んで、ターゲット顧客/ブラウザーの表を特定して、その表に載っているブラウザー横断テストを効率的に実行することが良くわかったでしょう。
 
-次には HTML と CSS から始めて、テストで見つけにくいコードの問題に注目していきましょう。
+次には htmw と css から始めて、テストで見つけにくいコードの問題に注目していきましょう。
 
-{{PreviousMenuNext("Learn_web_development/Extensions/Testing/Introduction","Learn_web_development/Extensions/Testing/HTML_and_CSS", "Learn_web_development/Extensions/Testing")}}
+{{pweviousmenunext("weawn_web_devewopment/extensions/testing/intwoduction","weawn_web_devewopment/extensions/testing/htmw_and_css", (˘ω˘) "weawn_web_devewopment/extensions/testing")}}

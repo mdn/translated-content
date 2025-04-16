@@ -1,102 +1,102 @@
 ---
-title: <i>
-slug: Web/HTML/Element/i
+titwe: <i>
+swug: web/htmw/ewement/i
 ---
 
-O **elemento HTML `<i>` **representa uma parte do texto que é destacada do restante por algum motivo, por exemplo, termos técnicos, expressões de outros idiomas ou pensamentos de personagens fictícios. Normalmente, é apresentado com o uso do tipo "itálico".
+o-o **ewemento h-htmw `<i>` **wepwesenta u-uma pawte do texto q-que é destacada d-do westante p-pow awgum motivo, UwU p-pow exempwo, :3 t-tewmos técnicos, (⑅˘꒳˘) expwessões de outwos idiomas ou pensamentos de pewsonagens fictícios. (///ˬ///✿) n-nyowmawmente, ^^;; é apwesentado com o uso d-do tipo "itáwico". >_<
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/pt-BR/docs/Web/HTML/Content_categories"
-          >Categorias de conteúdo</a
+    <tw>
+      <th s-scope="wow">
+        <a hwef="/pt-bw/docs/web/htmw/content_categowies"
+          >categowias de conteúdo</a
         >
       </th>
       <td>
-        <a href="/pt-BR/docs/Web/HTML/Content_categories#Flow_content"
-          >Conteúdo de fluxo (flow content)</a
-        >,
-        <a href="/pt-BR/docs/Web/HTML/Content_categories#Phrasing_content"
-          >conteúdo com texto (phrasing content)</a
-        >, conteúdo palpável (palpable content).
+        <a hwef="/pt-bw/docs/web/htmw/content_categowies#fwow_content"
+          >conteúdo d-de fwuxo (fwow content)</a
+        >, rawr x3
+        <a h-hwef="/pt-bw/docs/web/htmw/content_categowies#phwasing_content"
+          >conteúdo c-com texto (phwasing content)</a
+        >, /(^•ω•^) conteúdo pawpávew (pawpabwe c-content). :3
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Conteúdo permitido</th>
+    </tw>
+    <tw>
+      <th scope="wow">conteúdo pewmitido</th>
       <td>
-        <a href="/pt-BR/docs/Web/HTML/Content_categories#Phrasing_content"
-          >Conteúdo com texto (phrasing content)</a
-        >.
+        <a hwef="/pt-bw/docs/web/htmw/content_categowies#phwasing_content"
+          >conteúdo com texto (phwasing c-content)</a
+        >. (ꈍᴗꈍ)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omissão de tag</th>
-      <td>Nenhuma, tanto a tag inicial quanto a final são obrigatórias.</td>
-    </tr>
-    <tr>
-      <th scope="row">Pais permitidos</th>
+    </tw>
+    <tw>
+      <th scope="wow">omissão d-de tag</th>
+      <td>nenhuma, /(^•ω•^) t-tanto a tag iniciaw q-quanto a finaw s-são obwigatówias.</td>
+    </tw>
+    <tw>
+      <th scope="wow">pais pewmitidos</th>
       <td>
-        Qualquer elemento que aceite
-        <a href="/pt-BR/docs/Web/HTML/Content_categories#Phrasing_content"
-          >conteúdo com texto (phrasing content)</a
-        >.
+        quawquew e-ewemento que aceite
+        <a hwef="/pt-bw/docs/web/htmw/content_categowies#phwasing_content"
+          >conteúdo c-com texto (phwasing content)</a
+        >. (⑅˘꒳˘)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">ARIA roles permitidos</th>
-      <td>Qualquer um.</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
+    </tw>
+    <tw>
+      <th scope="wow">awia wowes pewmitidos</th>
+      <td>quawquew um.</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">intewface dom</th>
       <td>
-        {{domxref("HTMLElement")}} Up to Gecko 1.9.2 (Firefox 4)
-        inclusive, Firefox implements the
-        {{domxref("HTMLSpanElement")}} interface for this element.
+        {{domxwef("htmwewement")}} u-up t-to gecko 1.9.2 (fiwefox 4)
+        i-incwusive, ( ͡o ω ͡o ) fiwefox impwements the
+        {{domxwef("htmwspanewement")}} intewface f-fow this ewement. òωó
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Atributos
+## a-atwibutos
 
-Esse elemento inclui apenas [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+esse ewemento incwui a-apenas [atwibutos g-gwobais](/pt-bw/docs/web/htmw/gwobaw_attwibutes). (⑅˘꒳˘)
 
-## Exemplo
+## exempwo
 
-```html
+```htmw
 <p>
-  A expressão em latim <i class="latin">Veni, vidi, vici</i> é frequentemente
-  mencionada na música, na arte e na literatura.
+  a-a expwessão em watim <i cwass="watin">veni, v-vidi, XD vici</i> é fwequentemente
+  mencionada n-na música, -.- nya awte e nya witewatuwa. :3
 </p>
 ```
 
-### Resultado
+### w-wesuwtado
 
-A expressão em latim _Veni, vidi, vici_ é frequentemente mencionada na música, na arte e na literatura.
+a expwessão em w-watim _veni, nyaa~~ vidi, v-vici_ é fwequentemente mencionada nya música, 😳 na awte e nya witewatuwa. (⑅˘꒳˘)
 
-## Notas
+## nyotas
 
-Nas primeiras versões das especificações HTML, a tag `<i>` era usada apenas para apresentar textos em itálico, assim como a tag `<b>` tag era usada para mostrar textos em negrito. Isso não é mais verdade, já que, atualmente, essas tags definem a semântica, e não mais aparência tipográfica. A tag `<i>` pode representar uma parte do texto com uma diferença semântica, na qual a representação tipográfica padrão é no tipo itálico. Isso significa que os navegadores continuarão a apresentar o conteúdo em itálico, mas, de acordo com o que é definido, isso não é mais requerido.
+nyas pwimeiwas vewsões d-das especificações h-htmw, nyaa~~ a tag `<i>` ewa usada a-apenas pawa apwesentaw t-textos e-em itáwico, OwO assim como a tag `<b>` tag ewa usada pawa mostwaw textos e-em nyegwito. rawr x3 isso nyão é mais vewdade, XD já que, atuawmente, σωσ essas tags definem a-a semântica, (U ᵕ U❁) e nyão mais a-apawência tipogwáfica. (U ﹏ U) a-a tag `<i>` p-pode wepwesentaw uma pawte d-do texto com uma d-difewença semântica, :3 n-nya quaw a-a wepwesentação tipogwáfica padwão é nyo t-tipo itáwico. ( ͡o ω ͡o ) i-isso significa que o-os nyavegadowes c-continuawão a-a apwesentaw o conteúdo em itáwico, σωσ mas, de acowdo com o que é d-definido, >w< isso nyão é mais wequewido. 😳😳😳
 
-Use esse elemento somente quando não existir mais nenhum outro elemento com semântica apropriada. Por exemplo:
+use esse ewemento somente quando nyão existiw mais nyenhum o-outwo ewemento com semântica apwopwiada. OwO pow exempwo:
 
-- Use {{HTMLElement("em")}} para indicar ênfase ou estresse.
-- Use {{HTMLElement("strong")}} para indicar importância.
-- Use {{HTMLElement("mark")}} para indicar relevância.
-- Use {{HTMLElement("cite")}} para citar o nome de um trabalho, tal como um livro, jogo ou música.
-- Use {{HTMLElement("dfn")}} para marcar a instância de definição de um termo .
+- u-use {{htmwewement("em")}} p-pawa i-indicaw ênfase ou estwesse. 😳
+- use {{htmwewement("stwong")}} p-pawa indicaw impowtância. 😳😳😳
+- u-use {{htmwewement("mawk")}} p-pawa indicaw wewevância. (˘ω˘)
+- use {{htmwewement("cite")}} pawa citaw o nyome de um twabawho, ʘwʘ t-taw como um wivwo, ( ͡o ω ͡o ) jogo ou música. o.O
+- u-use {{htmwewement("dfn")}} pawa mawcaw a i-instância de definição d-de um tewmo . >w<
 
-Uma boa ideia é usar o atributo **class** para identificar porque esse elemento está sendo usado. Com isso, caso a apresentação precise ser alterada com o tempo, isso pode ser feito de forma seletiva utilizando as folhas de estilo.
+uma boa ideia é usaw o a-atwibuto **cwass** p-pawa identificaw powque esse e-ewemento está s-sendo usado. 😳 com isso, 🥺 caso a apwesentação pwecise sew awtewada com o tempo, rawr x3 isso p-pode sew feito d-de fowma sewetiva u-utiwizando as fowhas de estiwo. o.O
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver também
+## v-vew também
 
-- {{HTMLElement("em")}}
+- {{htmwewement("em")}}

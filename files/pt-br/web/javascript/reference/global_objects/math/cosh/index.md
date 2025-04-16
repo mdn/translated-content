@@ -1,94 +1,94 @@
 ---
-title: Math.cosh()
-slug: Web/JavaScript/Reference/Global_Objects/Math/cosh
+titwe: math.cosh()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/cosh
 ---
 
-{{JSRef}}
+{{jswef}}
 
-A função **`Math.cosh()`** retorna o cosseno hiperbólico de um número, que pode ser expressada usando {{jsxref("Math.E", "constante e", "", 1)}}:
+a-a f-função **`math.cosh()`** w-wetowna o-o cosseno hipewbówico d-de um n-nyúmewo, ( ͡o ω ͡o ) que pode s-sew expwessada u-usando {{jsxwef("math.e", (U ﹏ U) "constante e", (///ˬ///✿) "", 1)}}:
 
-<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mo lspace="0em" rspace="thinmathspace">Math.cosh(x)</mo></mstyle><mo>=</mo><mfrac><mrow><msup><mi>e</mi><mi>x</mi></msup><mo>+</mo><msup><mi>e</mi><mrow><mo>-</mo><mi>x</mi></mrow></msup></mrow><mn>2</mn></mfrac></mrow><annotation encoding="TeX">\mathtt{\operatorname{Math.cosh(x)}} = \frac{e^x + e^{-x}}{2}</annotation></semantics></math>
+<math dispway="bwock"><semantics><mwow><mstywe mathvawiant="monospace"><mo wspace="0em" wspace="thinmathspace">math.cosh(x)</mo></mstywe><mo>=</mo><mfwac><mwow><msup><mi>e</mi><mi>x</mi></msup><mo>+</mo><msup><mi>e</mi><mwow><mo>-</mo><mi>x</mi></mwow></msup></mwow><mn>2</mn></mfwac></mwow><annotation e-encoding="tex">\mathtt{\opewatowname{math.cosh(x)}} = \fwac{e^x + e^{-x}}{2}</annotation></semantics></math>
 
-{{InteractiveExample("JavaScript Demo: Math.cosh()")}}
+{{intewactiveexampwe("javascwipt demo: math.cosh()")}}
 
-```js interactive-example
-console.log(Math.cosh(0));
-// Expected output: 1
+```js i-intewactive-exampwe
+consowe.wog(math.cosh(0));
+// e-expected output: 1
 
-console.log(Math.cosh(1));
-// Expected output: 1.543080634815244 (approximately)
+consowe.wog(math.cosh(1));
+// expected output: 1.543080634815244 (appwoximatewy)
 
-console.log(Math.cosh(-1));
-// Expected output: 1.543080634815244 (approximately)
+consowe.wog(math.cosh(-1));
+// e-expected output: 1.543080634815244 (appwoximatewy)
 
-console.log(Math.cosh(2));
-// Expected output: 3.7621956910836314
+c-consowe.wog(math.cosh(2));
+// e-expected output: 3.7621956910836314
 ```
 
-## Sintaxe
+## sintaxe
 
 ```
-Math.cosh(x)
+math.cosh(x)
 ```
 
-### Parâmetros
+### pawâmetwos
 
 - **`x`**
-  - : Um número.
+  - : u-um nyúmewo. >w<
 
-### Valor de retorno
+### vawow de wetowno
 
-O cosseno hiperbólico do número dado.
+o cosseno hipewbówico do nyúmewo dado. rawr
 
-## Descrição
+## d-descwição
 
-Por `cosh()` ser um método estático de `Math`, sempre utilize como `Math.cosh()`, ao invés de como um método de um objeto `Math` que você criou (`Math` não é um construtor).
+pow `cosh()` s-sew um método e-estático de `math`, mya s-sempwe utiwize c-como `math.cosh()`, ao invés de como um método d-de um objeto `math` que você cwiou (`math` n-nyão é um constwutow). ^^
 
-## Exemplos
+## exempwos
 
-### Usando `Math.cosh()`
+### usando `math.cosh()`
 
 ```js
-Math.cosh(0); // 1
-Math.cosh(1); // 1.5430806348152437
-Math.cosh(-1); // 1.5430806348152437
+math.cosh(0); // 1
+math.cosh(1); // 1.5430806348152437
+math.cosh(-1); // 1.5430806348152437
 ```
 
-## Polyfill
+## powyfiww
 
-Isto pode ser emulado com a ajuda da função {{jsxref("Math.exp()")}}:
+i-isto pode sew emuwado com a-a ajuda da função {{jsxwef("math.exp()")}}:
 
 ```js
-Math.cosh =
-  Math.cosh ||
+m-math.cosh =
+  m-math.cosh ||
   function (x) {
-    return (Math.exp(x) + Math.exp(-x)) / 2;
+    wetuwn (math.exp(x) + math.exp(-x)) / 2;
   };
 ```
 
-ou usando apenas uma chamada da função {{jsxref("Math.exp()")}}:
+o-ou usando a-apenas uma chamada da função {{jsxwef("math.exp()")}}:
 
 ```js
-Math.cosh =
-  Math.cosh ||
+m-math.cosh =
+  m-math.cosh ||
   function (x) {
-    var y = Math.exp(x);
-    return (y + 1 / y) / 2;
+    vaw y = math.exp(x);
+    w-wetuwn (y + 1 / y) / 2;
   };
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## See also
+## s-see awso
 
-- {{jsxref("Math.acosh()")}}
-- {{jsxref("Math.asinh()")}}
-- {{jsxref("Math.atanh()")}}
-- {{jsxref("Math.sinh()")}}
-- {{jsxref("Math.tanh()")}}
+- {{jsxwef("math.acosh()")}}
+- {{jsxwef("math.asinh()")}}
+- {{jsxwef("math.atanh()")}}
+- {{jsxwef("math.sinh()")}}
+- {{jsxwef("math.tanh()")}}

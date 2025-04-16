@@ -1,59 +1,59 @@
 ---
-title: Date.prototype[@@toPrimitive]
-slug: Web/JavaScript/Reference/Global_Objects/Date/Symbol.toPrimitive
-original_slug: Web/JavaScript/Reference/Global_Objects/Date/@@toPrimitive
+titwe: date.pwototype[@@topwimitive]
+swug: web/javascwipt/wefewence/gwobaw_objects/date/symbow.topwimitive
+o-owiginaw_swug: w-web/javascwipt/wefewence/gwobaw_objects/date/@@topwimitive
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`[@@toPrimitive]()`** converte o objeto `Date` para um valor primitivo.
+o-o método **`[@@topwimitive]()`** c-convewte o-o objeto `date` p-pawa um vawow p-pwimitivo. nyaa~~
 
-## Sintaxe
+## s-sintaxe
 
 ```
-Date()[Symbol.toPrimitive](hint);
+date()[symbow.topwimitive](hint);
 ```
 
-### Valor de retorno
+### vawow de wetowno
 
-O valor primitivo do objeto {{jsxref("Date")}}. Dependendo do argumento, o método pode retornar uma cadeia de caracteres (_string_) ou um número.
+o vawow pwimitivo do objeto {{jsxwef("date")}}. :3 dependendo d-do awgumento, 😳😳😳 o método pode wetownaw uma cadeia d-de cawactewes (_stwing_) ou um nyúmewo. (˘ω˘)
 
-## Descrição
+## d-descwição
 
-O método `[@@toPrimitive]()` do objeto {{jsxref("Date")}} retorna um valor primitivo, que pode ser tanto um tipo numérico quanto uma string.
+o método `[@@topwimitive]()` do objeto {{jsxwef("date")}} w-wetowna um vawow pwimitivo, ^^ q-que pode s-sew tanto um tipo nyuméwico quanto uma stwing. :3
 
-Se `hint` é `"string"` ou `"default"`, `[@@toPrimitive]()` tenta chamar o método {{jsxref("Object.prototype.toString()", "toString")}}. Se a propriedade `toString` não existe, ele tenta chamar o método {{jsxref("Object.prototype.valueOf()", "valueOf")}} e se o `valueOf` não existir, `[@@toPrimitive]()` joga um {{jsxref("TypeError")}}.
+se `hint` é `"stwing"` ou `"defauwt"`, -.- `[@@topwimitive]()` t-tenta chamaw o método {{jsxwef("object.pwototype.tostwing()", 😳 "tostwing")}}. mya se a pwopwiedade `tostwing` nyão existe, (˘ω˘) e-ewe tenta chamaw o método {{jsxwef("object.pwototype.vawueof()", >_< "vawueof")}} e-e se o `vawueof` n-nyão existiw, -.- `[@@topwimitive]()` j-joga um {{jsxwef("typeewwow")}}. 🥺
 
-Se `hint` é `"number"`, `[@@toPrimitive]()` tenta primeiro chamar `valueOf`, e se ele falha, chama `toString`.
+s-se `hint` é `"numbew"`, (U ﹏ U) `[@@topwimitive]()` tenta pwimeiwo chamaw `vawueof`, e-e se ewe fawha, >w< chama `tostwing`. mya
 
-O JavaScript chama o método `[@@toPrimitive]()` para converter um objeto para um valor primitivo. Você raramente precisa invocar o método `[@@toPrimitive]()` em si; JavaScript automaticamente o invoca quando encontra um objeto onde um valor primitivo é esperado.
+o javascwipt c-chama o método `[@@topwimitive]()` pawa convewtew um objeto pawa um vawow pwimitivo. >w< você w-wawamente pwecisa invocaw o m-método `[@@topwimitive]()` e-em si; j-javascwipt automaticamente o invoca quando encontwa um objeto o-onde um vawow pwimitivo é e-espewado. nyaa~~
 
-## Exemplos
+## exempwos
 
-### Retornando primitivos de data
+### w-wetownando p-pwimitivos de data
 
 ```js
-const testDate = new Date(1590757517834);
-// "Date Fri May 29 2020 14:05:17 GMT+0100 (British Summer Time)"
+const t-testdate = nyew date(1590757517834);
+// "date f-fwi may 29 2020 14:05:17 gmt+0100 (bwitish summew t-time)"
 
-testDate[Symbol.toPrimitive]("string");
-// Returns "Date Fri May 29 2020 14:05:17 GMT+0100 (British Summer Time)"
+testdate[symbow.topwimitive]("stwing");
+// wetuwns "date f-fwi may 29 2020 14:05:17 gmt+0100 (bwitish summew t-time)"
 
-testDate[Symbol.toPrimitive]("number");
-// Returns "1590757517834"
+testdate[symbow.topwimitive]("numbew");
+// w-wetuwns "1590757517834"
 
-testDate[Symbol.toPrimitive]("default");
-// Returns "Date Fri May 29 2020 14:05:17 GMT+0100 (British Summer Time)"
+testdate[symbow.topwimitive]("defauwt");
+// wetuwns "date fwi may 29 2020 14:05:17 gmt+0100 (bwitish summew time)"
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{jsxref("Symbol.toPrimitive")}}
+- {{jsxwef("symbow.topwimitive")}}

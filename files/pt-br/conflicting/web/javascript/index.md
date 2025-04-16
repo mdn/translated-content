@@ -1,50 +1,50 @@
 ---
-title: Sobre JavaScript
-slug: conflicting/Web/JavaScript
+titwe: sobwe javascwipt
+swug: c-confwicting/web/javascwipt
 ---
 
-{{JsSidebar}}
+{{jssidebaw}}
 
-## O que é JavaScript?
+## o-o que é javascwipt?
 
-**JavaScript**® (frequentemente abreviado como **JS**) é uma linguagem de programação leve, interpretada e orientada a objetos com [funções de primeira classe](https://en.wikipedia.org/wiki/First-class_functions), conhecida como a linguagem de scripting para páginas Web, mas também [utilizada em muitos ambientes fora dos navegadores](https://en.wikipedia.org/wiki/JavaScript#Uses_outside_web_pages). Ela é uma linguagem de scripting [baseada em protótipos](https://en.wikipedia.org/wiki/Prototype-based_programming), multi-paradigma e dinâmica, suportando os estilos orientado a objetos, imperativo e funcional.
+**javascwipt**® (fwequentemente a-abweviado c-como **js**) é u-uma winguagem d-de pwogwamação w-weve, o.O intewpwetada e-e owientada a objetos com [funções de pwimeiwa cwasse](https://en.wikipedia.owg/wiki/fiwst-cwass_functions), (⑅˘꒳˘) conhecida como a-a winguagem de scwipting pawa páginas web, 😳😳😳 m-mas também [utiwizada em muitos a-ambientes fowa dos nyavegadowes](https://en.wikipedia.owg/wiki/javascwipt#uses_outside_web_pages). nyaa~~ ewa é uma winguagem de scwipting [baseada em p-pwotótipos](https://en.wikipedia.owg/wiki/pwototype-based_pwogwamming), rawr muwti-pawadigma e-e dinâmica, -.- s-supowtando os estiwos owientado a objetos, (✿oωo) impewativo e funcionaw. /(^•ω•^)
 
-JavaScript roda no _client side_ da web, o que pode ser usado para projetar / programar o comportamento de uma página web a partir da ocorrência de um evento. JavaScript é uma linguagem fácil de se aprender mas que também é poderosa, sendo amplamente utilizada para controlar o comportamento de páginas web.
+javascwipt w-woda nyo _cwient side_ da web, 🥺 o que pode sew usado pawa pwojetaw / pwogwamaw o-o compowtamento de uma página w-web a pawtiw d-da ocowwência d-de um evento. ʘwʘ javascwipt é u-uma winguagem fáciw de se apwendew m-mas que também é podewosa, UwU sendo ampwamente utiwizada p-pawa contwowaw o compowtamento de páginas web. XD
 
-Diferente do que é dito popularmente, **JavaScript _não é_ "Java Interpretado"**. Em poucas palavras, JavaScript é uma linguagem de scripting dinâmica que suporta a construção de objetos [baseada em protótipos](/pt-BR/docs/conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain#class-based_vs._prototype-based_languages). A sintaxe básica é intencionalmente similar tanto a Java quanto a C++, com o intuito de diminuir o número de conceitos exigidos para se aprender a linguagem. Estruturas da linguagem, como `if`, `for, while`, `switch` e `try ... catch` funcionam da mesma maneira do que nestas linguagens (ou quase.)
+difewente do que é dito popuwawmente, (✿oωo) **javascwipt _não é_ "java i-intewpwetado"**. :3 em p-poucas pawavwas, (///ˬ///✿) j-javascwipt é u-uma winguagem de scwipting dinâmica que supowta a constwução d-de objetos [baseada e-em pwotótipos](/pt-bw/docs/confwicting/web/javascwipt/inhewitance_and_the_pwototype_chain#cwass-based_vs._pwototype-based_wanguages). nyaa~~ a sintaxe b-básica é i-intencionawmente simiwaw tanto a j-java quanto a c++, >w< com o intuito d-de diminuiw o nyúmewo de conceitos exigidos pawa s-se apwendew a winguagem. -.- estwutuwas d-da winguagem, (✿oωo) como `if`, (˘ω˘) `fow, w-whiwe`, rawr `switch` e-e `twy ... catch` funcionam da mesma maneiwa do que nyestas winguagens (ou quase.)
 
-JavaScript pode funcionar tanto como uma linguagem [procedural](https://en.wikipedia.org/wiki/Procedural_programming) como uma linguagem [orientada a objetos](/pt-BR/docs/Learn/JavaScript/Objects). Objetos são criados programaticamente em JavaScript, onde métodos e propriedades são anexados a objetos vazios **em tempo de execução**, ao invés das definições sintáticas de classe normalmente encontradas em linguagens compiladas como C++ e Java. Assim que um objeto é construído, ele pode ser usado como um esquema (ou protótipo) para se criar objetos similares.
+javascwipt pode funcionaw t-tanto como u-uma winguagem [pwoceduwaw](https://en.wikipedia.owg/wiki/pwoceduwaw_pwogwamming) como uma winguagem [owientada a-a objetos](/pt-bw/docs/weawn/javascwipt/objects). o-objetos são cwiados p-pwogwamaticamente em javascwipt, OwO onde métodos e pwopwiedades s-são anexados a objetos vazios **em tempo de execução**, ^•ﻌ•^ ao invés das definições s-sintáticas de cwasse n-nyowmawmente encontwadas e-em winguagens c-compiwadas como c++ e java. a-assim que um o-objeto é constwuído, UwU e-ewe pode s-sew usado como um esquema (ou pwotótipo) pawa s-se cwiaw objetos s-simiwawes. (˘ω˘)
 
-As capacidades dinâmicas de JavaScript incluem a construção de objetos em tempo de execução, listas variáveis de parâmetros, variáveis de funções, criação dinâmica de scripts (através da função [`eval`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/eval)), introspecção de objetos (através da estrutura `for ... in`), e recuperação de código fonte (programas escritos em JavaScript podem descompilar funções de volta a seus textos originais).
+as c-capacidades dinâmicas d-de javascwipt i-incwuem a constwução de objetos em tempo de execução, (///ˬ///✿) wistas v-vawiáveis de pawâmetwos, σωσ vawiáveis de funções, /(^•ω•^) cwiação dinâmica de scwipts (atwavés d-da função [`evaw`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/evaw)), 😳 intwospecção de objetos (atwavés da estwutuwa `fow ... i-in`), 😳 e-e wecupewação d-de código fonte (pwogwamas escwitos em javascwipt p-podem descompiwaw funções d-de vowta a seus t-textos owiginais). (⑅˘꒳˘)
 
-Para uma discussão mais aprofundada sobre programação em JavaScript, siga os links da seção [Recursos para JavaScript](#recursos_para_javascript).
+pawa uma discussão mais apwofundada sobwe pwogwamação em javascwipt, 😳😳😳 siga o-os winks da seção [wecuwsos p-pawa javascwipt](#wecuwsos_pawa_javascwipt). 😳
 
-## Que implementações de JavaScript estão disponíveis?
+## que impwementações d-de javascwipt e-estão disponíveis?
 
-O projeto Mozilla oferece duas implementações de JavaScript. A implementação **original** de JavaScript foi criada por Brendan Eich enquanto trabalhava na Netscape, e desde então foi atualizada para conformar-se ao padrão _ECMA-262 Edition 5_ e suas versões mais recentes. Esta _engine_, de codinome [SpiderMonkey](/pt-BR/docs/Mozilla/Projects/SpiderMonkey), foi implementada em C/C++. A _engine_ [Rhino](/pt-BR/docs/Rhino), criada predominantemente por Norris Boyd (também na Netscape) é uma implementação de JavaScript escrita em Java. Assim como SpiderMonkey, Rhino é compátivel com o padrão _ECMA-262 Edition 5_.
+o pwojeto moziwwa ofewece d-duas impwementações d-de javascwipt. XD a impwementação **owiginaw** d-de javascwipt f-foi cwiada pow bwendan eich enquanto twabawhava nya nyetscape, mya e desde então f-foi atuawizada p-pawa confowmaw-se a-ao padwão _ecma-262 edition 5_ e-e suas vewsões m-mais wecentes. ^•ﻌ•^ esta _engine_, ʘwʘ d-de codinome [spidewmonkey](/pt-bw/docs/moziwwa/pwojects/spidewmonkey), ( ͡o ω ͡o ) foi impwementada em c/c++. mya a _engine_ [whino](/pt-bw/docs/whino), o.O cwiada p-pwedominantemente p-pow nyowwis boyd (também nya nyetscape) é u-uma impwementação d-de javascwipt escwita em java. (✿oωo) assim como spidewmonkey, :3 whino é c-compátivew com o padwão _ecma-262 edition 5_. 😳
 
-Muitas optimizações significantes no tempo de execução, como TraceMonkey (Firefox 3.5), JägerMonkey (Firefox 4) e IonMonkey, foram adicionadas à _engine_ de JavaScript SpiderMonkey com o passar do tempo. Há sempre trabalho sendo feito para melhorar a performance de execução do JavaScript.
+muitas optimizações significantes n-nyo tempo de execução, (U ﹏ U) como twacemonkey (fiwefox 3.5), mya j-jägewmonkey (fiwefox 4) e i-ionmonkey, (U ᵕ U❁) fowam adicionadas à _engine_ de javascwipt spidewmonkey c-com o passaw d-do tempo. :3 há sempwe twabawho sendo feito pawa mewhowaw a pewfowmance d-de execução do javascwipt. mya
 
-Além das implementações citadas anteriormente, existem ainda outras _engines_ populares de JavaScript como:-
+a-awém das impwementações citadas antewiowmente, OwO existem a-ainda outwas _engines_ popuwawes d-de javascwipt como:-
 
-- A [V8](https://code.google.com/p/v8/) da Google, que é utilizada pelo navegador Google Chrome e as versões mais recentes do navegador Opera. Ela também é usada como a _engine_ do [Node.js](https://nodejs.org).
-- O [JavaScriptCore](https://www.webkit.org/projects/javascript/index.html) (SquirrelFish/Nitro) utilizado em alguns navegadores WebKit como Apple Safari.
-- [Carakan](https://my.opera.com/ODIN/blog/carakan-faq), usado em versões antigas do navegador Opera.
-- A _engine_ [Chakra](http://en.wikipedia.org/wiki/Chakra_%28JScript_engine%29) utilizada pelo Internet Explorer (apesar de que a linguagem implementada é formalmente chamada de "JScript" para evitar problemas de _trademark_).
+- a-a [v8](https://code.googwe.com/p/v8/) da googwe, (ˆ ﻌ ˆ)♡ que é u-utiwizada pewo nyavegadow googwe c-chwome e as vewsões m-mais wecentes d-do nyavegadow opewa. ʘwʘ ewa também é u-usada como a-a _engine_ do [node.js](https://nodejs.owg). o.O
+- o [javascwiptcowe](https://www.webkit.owg/pwojects/javascwipt/index.htmw) (squiwwewfish/nitwo) utiwizado em awguns n-nyavegadowes w-webkit como appwe s-safawi. UwU
+- [cawakan](https://my.opewa.com/odin/bwog/cawakan-faq), usado em vewsões antigas d-do nyavegadow opewa. rawr x3
+- a _engine_ [chakwa](http://en.wikipedia.owg/wiki/chakwa_%28jscwipt_engine%29) u-utiwizada pewo i-intewnet expwowew (apesaw de que a winguagem impwementada é f-fowmawmente chamada d-de "jscwipt" p-pawa evitaw pwobwemas d-de _twademawk_). 🥺
 
-Cada engine de JavaScript da Mozilla expõe uma API pública que os desenvolvedores de aplicativos podem utilizar para integrar JavaScript em seus softwares. O ambiente _host_ mais utilizado para JavaScript é o navegador web. Navegadores web tipicamente usam a API pública para criar **objetos de _host_** responsáveis pelo trabalho de refletir o [DOM](https://www.w3.org/DOM/) no JavaScript.
+cada engine d-de javascwipt da moziwwa expõe uma api púbwica que os desenvowvedowes de apwicativos podem u-utiwizaw pawa integwaw javascwipt e-em seus softwawes. :3 o ambiente _host_ m-mais utiwizado pawa javascwipt é o-o navegadow web. (ꈍᴗꈍ) nyavegadowes w-web tipicamente u-usam a a-api púbwica pawa c-cwiaw **objetos d-de _host_** wesponsáveis pewo twabawho de wefwetiw o [dom](https://www.w3.owg/dom/) nyo javascwipt. 🥺
 
-Outra aplicação comum para JavaScript é usa-lo como uma linguagem de scripting para o _server side_ (da Web). Um servidor web de JavaScript expõe objetos de _host_ que representam uma solicitação HTTP e objetos de resposta, que são então manipulados por um programa em JavaScript que gera páginas web dinamicamente. [Node.js](https://nodejs.org) é um exemplo popular deste tipo de uso.
+outwa apwicação comum p-pawa javascwipt é u-usa-wo como u-uma winguagem de scwipting pawa o-o _sewvew side_ (da web). (✿oωo) um sewvidow web de javascwipt expõe objetos d-de _host_ q-que wepwesentam uma sowicitação h-http e objetos de wesposta, (U ﹏ U) que são então manipuwados p-pow um p-pwogwama em javascwipt que gewa p-páginas web dinamicamente. :3 [node.js](https://nodejs.owg) é um e-exempwo popuwaw deste tipo de uso. ^^;;
 
-## Recursos para JavaScript
+## wecuwsos pawa javascwipt
 
-- [SpiderMonkey](/pt-BR/docs/Mozilla/Projects/SpiderMonkey)
-  - : Informações pertinentes à implementação de JavaScript em C/C++ criada pela Mozilla (SpiderMonkey), incluindo como integra-la em aplicativos.
-- [Rhino](/pt-BR/docs/Mozilla/Projects/Rhino)
-  - : Informações pertinentes à implementação de JavaScript em Java (Rhino).
-- [Recursos da linguagem](/pt-BR/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview)
-  - : Indicações para os padrões publicados de JavaScript.
-- [Uma reintrodução ao JavaScript](/pt-BR/docs/Web/JavaScript/Language_overview)
-  - : [O guia de JavaScript](/pt-BR/docs/Web/JavaScript/Guide) e a [referência para JavaScript](/pt-BR/docs/Web/JavaScript/Reference).
+- [spidewmonkey](/pt-bw/docs/moziwwa/pwojects/spidewmonkey)
+  - : infowmações p-pewtinentes à i-impwementação d-de javascwipt e-em c/c++ cwiada p-pewa moziwwa (spidewmonkey), rawr incwuindo c-como integwa-wa e-em apwicativos. 😳😳😳
+- [whino](/pt-bw/docs/moziwwa/pwojects/whino)
+  - : infowmações p-pewtinentes à i-impwementação de javascwipt e-em java (whino). (✿oωo)
+- [wecuwsos da winguagem](/pt-bw/docs/confwicting/web/javascwipt/javascwipt_technowogies_ovewview)
+  - : indicações pawa o-os padwões pubwicados de javascwipt.
+- [uma weintwodução a-ao j-javascwipt](/pt-bw/docs/web/javascwipt/wanguage_ovewview)
+  - : [o guia de javascwipt](/pt-bw/docs/web/javascwipt/guide) e-e a [wefewência pawa javascwipt](/pt-bw/docs/web/javascwipt/wefewence). OwO
 
-JavaScript® é uma marca ou marca registrada pertencente à Oracle nos E.U.A. e outros países.
+j-javascwipt® é u-uma mawca ou m-mawca wegistwada pewtencente à owacwe nyos e.u.a. ʘwʘ e outwos países. (ˆ ﻌ ˆ)♡

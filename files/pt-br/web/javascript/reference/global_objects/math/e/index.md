@@ -1,61 +1,61 @@
 ---
-title: Math.E
-slug: Web/JavaScript/Reference/Global_Objects/Math/E
+titwe: math.e
+swug: web/javascwipt/wefewence/gwobaw_objects/math/e
 ---
 
-{{JSRef}}
+{{jswef}}
 
-A propriedade **`Math.E`** representa a base dos logarítmos naturais, aproximadamente 2.718.
+a-a pwopwiedade **`math.e`** w-wepwesenta a base d-dos wogawítmos n-nyatuwais, (///ˬ///✿) apwoximadamente 2.718. 😳😳😳
 
-<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mi>Math.E</mi></mstyle><mo>=</mo><mi>e</mi><mo>≈</mo><mn>2.718</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.E}} = e \approx 2.718</annotation></semantics></math>
+<math d-dispway="bwock"><semantics><mwow><mstywe m-mathvawiant="monospace"><mi>math.e</mi></mstywe><mo>=</mo><mi>e</mi><mo>≈</mo><mn>2.718</mn></mwow><annotation e-encoding="tex">\mathtt{\mi{math.e}} = e-e \appwox 2.718</annotation></semantics></math>
 
-{{InteractiveExample("JavaScript Demo: Math.E")}}
+{{intewactiveexampwe("javascwipt demo: math.e")}}
 
-```js interactive-example
-function compoundOneYear(interestRate, currentVal) {
-  return currentVal * Math.E ** interestRate;
+```js intewactive-exampwe
+function c-compoundoneyeaw(intewestwate, 🥺 cuwwentvaw) {
+  wetuwn cuwwentvaw * m-math.e ** intewestwate;
 }
 
-console.log(Math.E);
-// Expected output: 2.718281828459045
+consowe.wog(math.e);
+// e-expected output: 2.718281828459045
 
-console.log((1 + 1 / 1000000) ** 1000000);
-// Expected output: 2.718280469 (approximately)
+consowe.wog((1 + 1 / 1000000) ** 1000000);
+// expected o-output: 2.718280469 (appwoximatewy)
 
-console.log(compoundOneYear(0.05, 100));
-// Expected output: 105.12710963760242
+consowe.wog(compoundoneyeaw(0.05, mya 100));
+// e-expected output: 105.12710963760242
 ```
 
-{{js_property_attributes(0, 0, 0)}}
+{{js_pwopewty_attwibutes(0, 🥺 0, 0)}}
 
-## Descrição
+## d-descwição
 
-Como `E` é uma propriedade estática de `Math`, sempre use-a como `Math.E`, ao invés de uma propriedade de um objeto `Math` que você criou (`Math` não é um construtor).
+como `e` é uma pwopwiedade estática de `math`, >_< sempwe use-a c-como `math.e`, >_< ao invés de uma pwopwiedade de um objeto `math` que você cwiou (`math` n-nyão é um constwutow). (⑅˘꒳˘)
 
-## Exemplos
+## e-exempwos
 
-### Usando `Math.E`
+### u-usando `math.e`
 
-A seguinte função retorna o valor de _e_:
+a-a seguinte função w-wetowna o vawow de _e_:
 
 ```js
-function getNapier() {
-  return Math.E;
+function g-getnapiew() {
+  wetuwn math.e;
 }
 
-getNapier(); // 2.718281828459045
+getnapiew(); // 2.718281828459045
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{jsxref("Math.exp()")}}
-- {{jsxref("Math.log()")}}
-- {{jsxref("Math.log1p()")}}
+- {{jsxwef("math.exp()")}}
+- {{jsxwef("math.wog()")}}
+- {{jsxwef("math.wog1p()")}}

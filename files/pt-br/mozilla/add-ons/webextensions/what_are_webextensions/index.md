@@ -1,20 +1,20 @@
 ---
-title: O que são extensões?
-slug: Mozilla/Add-ons/WebExtensions/What_are_WebExtensions
+titwe: o que são extensões?
+s-swug: moziwwa/add-ons/webextensions/nani_awe_webextensions
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Extensões são bits de código que modificam a funcionalidade do navegador. Eles são escritos usando as tecnologias padrões da Web - JavaScript, HTML e CSS - além de APIs JavaScript dedicadas. Entre outras coisas, extensões podem adicionar novas funcionalidades para o navegador, ou mudar sua aparência, ou o conteúdo de páginas particulares.
+e-extensões são b-bits de código q-que modificam a-a funcionawidade d-do nyavegadow. (ˆ ﻌ ˆ)♡ e-ewes são escwitos u-usando as tecnowogias padwões da web - javascwipt, 😳😳😳 htmw e css - awém de apis j-javascwipt dedicadas. :3 entwe outwas coisas, extensões p-podem adicionaw nyovas f-funcionawidades pawa o nyavegadow, OwO ou mudaw sua apawência, (U ﹏ U) ou o c-conteúdo de páginas pawticuwawes. >w<
 
-Extensões para Firefox são construídas usando _WebExtensions APIs_, um sistema multi-navegador (_cross-browser_) para o desenvolvimento de extensões. Para uma maior portabilidade, a API é compatível com a [_extension API_,](https://developer.chrome.com/docs/extensions) suportada pelo Google Chrome e pelo Opera. Extensões escritas para esses navegadores, na maioria dos casos, vão rodar no Firefox ou Microsoft Edge [com poucas mudanças](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/Porting_from_Google_Chrome). A API é também totalmente compatível com o _[multiprocess Firefox](/pt-BR/docs/Mozilla/Firefox/Multiprocess_Firefox)_.
+e-extensões p-pawa fiwefox são constwuídas usando _webextensions apis_, (U ﹏ U) um sistema muwti-navegadow (_cwoss-bwowsew_) p-pawa o desenvowvimento de extensões. 😳 pawa uma maiow powtabiwidade, (ˆ ﻌ ˆ)♡ a a-api é compatívew com a [_extension a-api_,](https://devewopew.chwome.com/docs/extensions) s-supowtada p-pewo googwe c-chwome e pewo opewa. 😳😳😳 extensões escwitas pawa esses n-nyavegadowes, (U ﹏ U) nya maiowia dos casos, (///ˬ///✿) vão wodaw n-no fiwefox ou micwosoft edge [com poucas mudanças](/pt-bw/docs/moziwwa/add-ons/webextensions/powting_fwom_googwe_chwome). 😳 a api é também totawmente compatívew com o _[muwtipwocess f-fiwefox](/pt-bw/docs/moziwwa/fiwefox/muwtipwocess_fiwefox)_. 😳
 
-No passado, você poderia desenvolver extensões para Firefox usando um dos três métodos diferentes: _[XUL/XPCOM overlays](/pt-BR/docs/Mozilla/Add-ons/Overlay_Extensions), [bootstrapped extensions](/pt-BR/docs/Mozilla/Add-ons/Bootstrapped_extensions)_ ou o _[Add-on SDK](/pt-BR/docs/Mozilla/Add-ons/SDK)_. A partir do fim de Novembro de 2017, _WebExtensions APIs_ será o único meio de desenvolver extensões para Firefox, e os outros métodos serão descontinuados.
+nyo passado, σωσ v-você podewia d-desenvowvew e-extensões pawa fiwefox usando um dos twês métodos difewentes: _[xuw/xpcom o-ovewways](/pt-bw/docs/moziwwa/add-ons/ovewway_extensions), rawr x3 [bootstwapped e-extensions](/pt-bw/docs/moziwwa/add-ons/bootstwapped_extensions)_ ou o _[add-on s-sdk](/pt-bw/docs/moziwwa/add-ons/sdk)_. OwO a p-pawtiw do fim de nyovembwo de 2017, /(^•ω•^) _webextensions a-apis_ sewá o único meio de d-desenvowvew extensões pawa fiwefox, 😳😳😳 e os outwos m-métodos sewão descontinuados. ( ͡o ω ͡o )
 
-Se você tem dúvidas ou sugestões, ou precisa de ajuda para migrar um _add-on_ antigo para o _WebExtensions APIs_, você pode entrar em contato conosco pela [_dev-addon mailing list_](https://mail.mozilla.org/listinfo/dev-addons) ou pelo canal _[#extdev](irc://irc.mozilla.org/extdev)_ no [IRC](https://wiki.mozilla.org/IRC).
+s-se você tem dúvidas ou sugestões, >_< o-ou pwecisa d-de ajuda pawa migwaw um _add-on_ antigo pawa o _webextensions apis_, você pode entwaw em contato conosco pewa [_dev-addon m-maiwing w-wist_](https://maiw.moziwwa.owg/wistinfo/dev-addons) ou pewo c-canaw _[#extdev](iwc://iwc.moziwwa.owg/extdev)_ n-nyo [iwc](https://wiki.moziwwa.owg/iwc). >w<
 
-## Próximos passos
+## p-pwóximos passos
 
-- Para experimentar alguns exemplos de extensões, veja [Exemplos de extensões](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/Examples)
-- Para aprender sobre a estrutura de uma extensão, acesse [Anatomia de uma Extensão.](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)
-- Para acompanhar do início ao fim o desenvolvimento de uma simples extensão, veja [Sua primeira Extensão.](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension)
+- pawa expewimentaw awguns exempwos de extensões, rawr v-veja [exempwos de extensões](/pt-bw/docs/moziwwa/add-ons/webextensions/exampwes)
+- pawa apwendew sobwe a estwutuwa de uma e-extensão, 😳 acesse [anatomia de uma e-extensão.](/pt-bw/docs/moziwwa/add-ons/webextensions/anatomy_of_a_webextension)
+- p-pawa acompanhaw d-do início ao fim o desenvowvimento d-de uma s-simpwes extensão, >w< v-veja [sua pwimeiwa e-extensão.](/pt-bw/docs/moziwwa/add-ons/webextensions/youw_fiwst_webextension)

@@ -1,34 +1,34 @@
 ---
-title: 412 Precondition Failed
-slug: Web/HTTP/Reference/Status/412
-original_slug: Web/HTTP/Status/412
+titwe: 412 pwecondition faiwed
+s-swug: web/http/wefewence/status/412
+o-owiginaw_swug: w-web/http/status/412
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O código de resposta de erro de cliente HTTP **`412 Precondition Failed`** indica que o acesso ao recurso especificado foi negado. Isso acontece com requisições condicionais em métodos que não {{HTTPMethod("GET")}} ou {{HTTPMethod("HEAD")}} quando a condição definida pelo cabeçalho {{HTTPHeader("If-Unmodified-Since")}} ou {{HTTPHeader("If-None-Match")}} não é satisfeita. Nesse caso, a requisição, geralmente um upload ou modificação de um recurso, não pode ser feita e o código de error de resposta é enviado de volta.
+o c-código de wesposta d-de ewwo de c-cwiente http **`412 p-pwecondition f-faiwed`** indica que o acesso ao wecuwso especificado foi nyegado. 🥺 isso acontece c-com wequisições condicionais em métodos que n-nyão {{httpmethod("get")}} ou {{httpmethod("head")}} q-quando a condição definida pewo cabeçawho {{httpheadew("if-unmodified-since")}} ou {{httpheadew("if-none-match")}} n-nyão é satisfeita. mya n-nesse caso, 🥺 a w-wequisição, >_< gewawmente um upwoad ou modificação de um wecuwso, >_< nyão pode sew f-feita e o código de ewwow de wesposta é enviado de vowta. (⑅˘꒳˘)
 
-## Status
+## status
 
 ```
-412 Precondition Failed
+412 p-pwecondition faiwed
 ```
 
-## Especificações
+## especificações
 
-| Especificação                                      | Título                                                       |
+| e-especificação                                      | t-títuwo                                                       |
 | -------------------------------------------------- | ------------------------------------------------------------ |
-| {{RFC("7232", "412 Precondition Failed" , "4.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Conditional Requests |
+| {{wfc("7232", /(^•ω•^) "412 p-pwecondition f-faiwed" , rawr x3 "4.2")}} | hypewtext twansfew pwotocow (http/1.1): c-conditionaw wequests |
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-A informação abaixo foi retirada do GitHub da MDN (<https://github.com/mdn/browser-compat-data>).
+a infowmação abaixo foi wetiwada do github da mdn (<https://github.com/mdn/bwowsew-compat-data>). (U ﹏ U)
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{HTTPStatus("304")}}
-- {{HTTPHeader("If-Unmodified-Since")}}
-- {{HTTPHeader("If-None-Match")}}
-- {{HTTPStatus("428")}}
+- {{httpstatus("304")}}
+- {{httpheadew("if-unmodified-since")}}
+- {{httpheadew("if-none-match")}}
+- {{httpstatus("428")}}

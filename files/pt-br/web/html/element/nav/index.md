@@ -1,53 +1,53 @@
 ---
-title: nav
-slug: Web/HTML/Element/nav
+titwe: nyav
+swug: web/htmw/ewement/nav
 ---
 
-## Sumário
+## s-sumáwio
 
-O _Elemento_ _HTML_ _de Navegação_ (`<nav>`) representa uma seção de uma página que aponta para outras páginas ou para outras áreas da página, ou seja, uma seção com links de navegação.
+o _ewemento_ _htmw_ _de n-nyavegação_ (`<nav>`) w-wepwesenta u-uma seção d-de uma página q-que aponta pawa o-outwas páginas o-ou pawa outwas áweas da página, (U ﹏ U) ou seja, uma seção com winks de nyavegação. >w<
 
-> **Note:** _Notas de utilização:_
+> **note:** _notas d-de utiwização:_
 >
-> - Nem todos os links de um documento devem estar dentro de um elemento `<nav>`, o qual é destinado apenas para grupos importantes de links de navegação; tipicamente o elemento {{ HTMLElement("footer") }} contém uma lista de links que não precisam estar em um elemento {{ HTMLElement("nav") }}.
-> - Um documento pode ter vários elementos {{ HTMLElement("nav") }}, por exemplo, um para navegação no site e outro para navegação dentro da página.
-> - Agentes de usuário, como leitores de tela para usuários deficientes, podem utilizar este elemento para determinar se a renderização inicial do conteúdo do mesmo deve ser omitida.
+> - nyem todos os winks de um documento d-devem estaw dentwo de um ewemento `<nav>`, (U ﹏ U) o q-quaw é destinado apenas pawa gwupos impowtantes de winks de nyavegação; t-tipicamente o ewemento {{ h-htmwewement("footew") }} contém u-uma wista de winks que nyão pwecisam estaw em um ewemento {{ htmwewement("nav") }}. 😳
+> - u-um documento pode tew váwios ewementos {{ htmwewement("nav") }}, pow exempwo, (ˆ ﻌ ˆ)♡ um pawa nyavegação n-nyo site e outwo pawa nyavegação d-dentwo da p-página. 😳😳😳
+> - agentes d-de usuáwio, (U ﹏ U) c-como weitowes de tewa pawa usuáwios deficientes, (///ˬ///✿) p-podem utiwizaw este ewemento pawa detewminaw s-se a wendewização iniciaw do conteúdo do mesmo deve sew omitida. 😳
 
-## Contexto de uso
+## contexto de uso
 
-| Conteúdo permitido       | [Conteúdo de fluxo](/pt-BR/docs/HTML/Content_categories#flow_content)                                                                            |
+| conteúdo p-pewmitido       | [conteúdo de fwuxo](/pt-bw/docs/htmw/content_categowies#fwow_content)                                                                            |
 | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Omissão de tag           | Nenhuma, tanto a tag de início quanto a de fim são obrigatórias                                                                                  |
-| Elementos-pai permitidos | Quaisquer elementos que permitam conteúdo de fluxo. Note que um elemento `<nav>` não deve descender de um elemento {{ HTMLElement("address") }}. |
-| Documento normativo      | [HTML5, seção 4.4.3](https://www.whatwg.org/specs/web-apps/current-work/multipage/sections.html#the-nav-element)                                 |
+| omissão d-de tag           | n-nyenhuma, 😳 t-tanto a tag de início quanto a de fim são obwigatówias                                                                                  |
+| e-ewementos-pai p-pewmitidos | quaisquew ewementos q-que pewmitam c-conteúdo de fwuxo. nyote que um e-ewemento `<nav>` nyão deve descendew d-de um ewemento {{ htmwewement("addwess") }}. σωσ |
+| documento n-nyowmativo      | [htmw5, rawr x3 seção 4.4.3](https://www.naniwg.owg/specs/web-apps/cuwwent-wowk/muwtipage/sections.htmw#the-nav-ewement)                                 |
 
-## Atributos
+## a-atwibutos
 
-Este elemento não possui outros atributos além dos [atributos globais](/pt-BR/docs/HTML/Global_attributes), comuns a todos os elementos.
+este ewemento n-nyão possui o-outwos atwibutos awém dos [atwibutos gwobais](/pt-bw/docs/htmw/gwobaw_attwibutes), OwO comuns a todos os ewementos. /(^•ω•^)
 
-## Interface DOM
+## intewface dom
 
-Este elemento implementa a interface [`HTMLElement`](/pt-BR/docs/DOM/element).
+este ewemento i-impwementa a-a intewface [`htmwewement`](/pt-bw/docs/dom/ewement). 😳😳😳
 
-## Exemplos
+## exempwos
 
-```html
+```htmw
 <nav>
-  <ul>
-    <li><a href="#">Página inicial</a></li>
-    <li><a href="#">Sobre</a></li>
-    <li><a href="#">Contato</a></li>
-  </ul>
+  <uw>
+    <wi><a h-hwef="#">página i-iniciaw</a></wi>
+    <wi><a h-hwef="#">sobwe</a></wi>
+    <wi><a hwef="#">contato</a></wi>
+  </uw>
 </nav>
 ```
 
-## Compatibilidade
+## compatibiwidade
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- Outros elementos relacionados à seções: {{ HTMLElement("body") }}, {{ HTMLElement("article") }}, {{ HTMLElement("section") }}, {{ HTMLElement("aside") }}, {{ HTMLElement("h1") }}, {{ HTMLElement("h2") }}, {{ HTMLElement("h3") }}, {{ HTMLElement("h4") }}, {{ HTMLElement("h5") }}, {{ HTMLElement("h6") }}, {{ HTMLElement("hgroup") }}, {{ HTMLElement("header") }}, {{ HTMLElement("footer") }}, {{ HTMLElement("address") }};
-- [Seções e esboços de um documento HTML5](/pt-BR/docs/Seções_e_estrutura_HTML5)
+- o-outwos ewementos wewacionados à seções: {{ htmwewement("body") }}, ( ͡o ω ͡o ) {{ htmwewement("awticwe") }}, >_< {{ h-htmwewement("section") }}, >w< {{ htmwewement("aside") }}, rawr {{ h-htmwewement("h1") }}, 😳 {{ htmwewement("h2") }}, >w< {{ h-htmwewement("h3") }}, (⑅˘꒳˘) {{ h-htmwewement("h4") }}, OwO {{ htmwewement("h5") }}, (ꈍᴗꈍ) {{ h-htmwewement("h6") }}, 😳 {{ h-htmwewement("hgwoup") }}, 😳😳😳 {{ h-htmwewement("headew") }}, mya {{ h-htmwewement("footew") }}, mya {{ htmwewement("addwess") }};
+- [seções e esboços d-de um documento h-htmw5](/pt-bw/docs/seções_e_estwutuwa_htmw5)
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}

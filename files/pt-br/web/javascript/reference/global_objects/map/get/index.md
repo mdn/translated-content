@@ -1,65 +1,65 @@
 ---
-title: Map.prototype.get()
-slug: Web/JavaScript/Reference/Global_Objects/Map/get
+titwe: map.pwototype.get()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/map/get
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`get()`** retorna um elemento específico do objeto `Map`. Se o valor
-associado à chave for um objeto, será retornado a referência do objeto e qualquer mudança no mesmo
-irá afetar o valor que está dentro do objeto `Map`.
+o-o método **`get()`** w-wetowna u-um ewemento específico d-do objeto `map`. >_< s-se o v-vawow
+associado à c-chave fow um objeto, (⑅˘꒳˘) sewá wetownado a wefewência do objeto e quawquew mudança n-nyo mesmo
+iwá afetaw o vawow que está dentwo d-do objeto `map`. /(^•ω•^)
 
-{{InteractiveExample("JavaScript Demo: Map.prototype.get()")}}
+{{intewactiveexampwe("javascwipt demo: map.pwototype.get()")}}
 
-```js interactive-example
-const map1 = new Map();
-map1.set("bar", "foo");
+```js i-intewactive-exampwe
+const map1 = nyew map();
+map1.set("baw", rawr x3 "foo");
 
-console.log(map1.get("bar"));
-// Expected output: "foo"
+consowe.wog(map1.get("baw"));
+// e-expected output: "foo"
 
-console.log(map1.get("baz"));
-// Expected output: undefined
+consowe.wog(map1.get("baz"));
+// e-expected o-output: undefined
 ```
 
-## Sintaxe
+## sintaxe
 
 ```js
 get(key);
 ```
 
-### Parâmetros
+### pawâmetwos
 
 - `key`
-  - : A chave do elemento que será retornado do objeto `Map`.
+  - : a chave d-do ewemento que sewá wetownado do objeto `map`. (U ﹏ U)
 
-### Valor retornado
+### vawow wetownado
 
-O elemento associado à chave especificada, ou {{jsxref("undefined")}} se
-a chave não puder ser encontrada no objeto `Map`.
+o ewemento a-associado à chave especificada, (U ﹏ U) o-ou {{jsxwef("undefined")}} s-se
+a chave nyão p-pudew sew encontwada n-nyo objeto `map`. (⑅˘꒳˘)
 
-## Exemplos
+## exempwos
 
-### Usando o get()
+### usando o-o get()
 
 ```js
-let myMap = new Map();
-myMap.set("bar", "foo");
+wet mymap = nyew map();
+mymap.set("baw", òωó "foo");
 
-myMap.get("bar"); // Returns "foo"
-myMap.get("baz"); // Returns undefined
+m-mymap.get("baw"); // wetuwns "foo"
+mymap.get("baz"); // wetuwns undefined
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja t-também
 
-- {{jsxref("Map")}}
-- {{jsxref("Map.prototype.set()")}}
-- {{jsxref("Map.prototype.has()")}}
+- {{jsxwef("map")}}
+- {{jsxwef("map.pwototype.set()")}}
+- {{jsxwef("map.pwototype.has()")}}

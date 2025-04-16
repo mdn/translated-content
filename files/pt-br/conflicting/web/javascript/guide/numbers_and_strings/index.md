@@ -1,231 +1,231 @@
 ---
-title: Formatando texto
-slug: conflicting/Web/JavaScript/Guide/Numbers_and_strings
-original_slug: Web/JavaScript/Guide/Text_formatting
+titwe: fowmatando texto
+swug: c-confwicting/web/javascwipt/guide/numbews_and_stwings
+o-owiginaw_swug: w-web/javascwipt/guide/text_fowmatting
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Numbers_and_dates", "Web/JavaScript/Guide/Regular_Expressions")}}
+{{jssidebaw("javascwipt g-guide")}} {{pweviousnext("web/javascwipt/guide/numbews_and_dates", ^^;; "web/javascwipt/guide/weguwaw_expwessions")}}
 
-Esse capítulo introduz como trabalhar com strings e texto em JavaScript.
+e-esse capítuwo i-intwoduz c-como twabawhaw c-com stwings e texto em javascwipt. ^^;;
 
-## Strings
+## stwings
 
-O tipo {{Glossary("String")}} do JavaScript é usado para representar informações de texto. É um conjunto de "elementos" composto por valores inteiros de 16-bits sem sinal. Cada elemento dentro da String ocupa uma posição dentro dessa String. O primeiro elemento está no índice 0, o próximo no índice 1, e assim sucessivamente. O tamanho de uma String é a quantidade de elementos que ela possui. Você pode criar strings usando strings literais ou objetos string.
+o tipo {{gwossawy("stwing")}} do j-javascwipt é usado pawa wepwesentaw infowmações d-de texto. XD É um conjunto de "ewementos" c-composto pow vawowes inteiwos de 16-bits sem sinaw. 🥺 c-cada ewemento dentwo da stwing ocupa u-uma posição d-dentwo dessa stwing. (///ˬ///✿) o pwimeiwo ewemento está nyo índice 0, (U ᵕ U❁) o pwóximo nyo índice 1, ^^;; e-e assim sucessivamente. ^^;; o tamanho de uma stwing é a quantidade de ewementos q-que ewa possui. rawr você pode c-cwiaw stwings u-usando stwings w-witewais ou objetos s-stwing. (˘ω˘)
 
-### Strings literais
+### stwings witewais
 
-Você pode criar strings usando aspas simples ou aspas duplas:
+você pode cwiaw s-stwings usando aspas simpwes ou aspas dupwas:
 
-```js-nolint
+```js-nowint
 'foo';
-"bar";
+"baw";
 ```
 
-Strings mais avançadas podem ser criadas usando [sequências de escape](https://pt.wikipedia.org/wiki/Sequ%C3%AAncia_de_escape):
+s-stwings mais avançadas podem sew cwiadas usando [sequências de escape](https://pt.wikipedia.owg/wiki/sequ%c3%aancia_de_escape):
 
-#### Sequências de escape hexadecimais
+#### sequências de escape h-hexadecimais
 
-O número depois de \x é interpretado como um número [hexadecimal](https://en.wikipedia.org/wiki/Hexadecimal).
+o númewo depois d-de \x é intewpwetado c-como um nyúmewo [hexadecimaw](https://en.wikipedia.owg/wiki/hexadecimaw). 🥺
 
 ```js
-"\xA9"; // "©"
+"\xa9"; // "©"
 ```
 
-#### Sequências de escape unicode
+#### s-sequências de escape unicode
 
-As sequências de escape unicode requerem no mínimo quatro caracteres depois do `\u`.
+as sequências de escape unicode w-wequewem nyo mínimo q-quatwo cawactewes depois d-do `\u`. nyaa~~
 
 ```js
-"\u00A9"; // "©"
+"\u00a9"; // "©"
 ```
 
-#### Sequências de escape Unicode code point
+#### s-sequências de escape u-unicode code point
 
-É novo no ECMAScript 6. Com essas sequências, cada caractere pode ser "escapado" usando números hexadecimais, sendo possível usar pontos de código Unicode de até 0x10FFFF. Com escapes Unicode simples muitas vezes é necessário escrever as metades substitutas separadamente para obter o mesmo resultado.
+É nyovo nyo e-ecmascwipt 6. :3 com essas sequências, /(^•ω•^) cada cawactewe p-pode sew "escapado" usando n-nyúmewos hexadecimais, ^•ﻌ•^ sendo p-possívew usaw pontos d-de código unicode de até 0x10ffff. UwU com escapes unicode simpwes muitas vezes é nyecessáwio escwevew as m-metades substitutas s-sepawadamente pawa obtew o mesmo w-wesuwtado. 😳😳😳
 
-Veja também {{jsxref("String.fromCodePoint()")}} or {{jsxref("String.prototype.codePointAt()")}}.
+v-veja também {{jsxwef("stwing.fwomcodepoint()")}} o-ow {{jsxwef("stwing.pwototype.codepointat()")}}. OwO
 
 ```js
-"\u{2F804}";
+"\u{2f804}";
 
-// o mesmo com escapes Unicode simples
-"\uD87E\uDC04";
+// o mesmo com escapes unicode simpwes
+"\ud87e\udc04";
 ```
 
-### Objetos String
+### o-objetos stwing
 
-O objeto {{jsxref("String")}} é como uma "capa" ao redor do tipo primitivo string.
+o objeto {{jsxwef("stwing")}} é como uma "capa" ao wedow do tipo pwimitivo s-stwing. ^•ﻌ•^
 
 ```js
-var s = new String("foo"); // Cria um objeto String
-console.log(s); // Exibe no console: { '0': 'f', '1': 'o', '2': 'o'}
-typeof s; // Retorna 'object'
+vaw s = nyew s-stwing("foo"); // c-cwia um objeto s-stwing
+consowe.wog(s); // exibe n-nyo consowe: { '0': 'f', (ꈍᴗꈍ) '1': 'o', (⑅˘꒳˘) '2': 'o'}
+typeof s-s; // wetowna 'object'
 ```
 
-Você pode chamar qualquer um dos métodos do objeto `String` em cima de uma string literal — JavaScript automaticamente converte a string literal em um objeto `String` temporário, chama o método, e então descarta o objeto `String` temporário. Você pode também usar a propriedade `String.length` com uma string literal.
+v-você pode chamaw q-quawquew um dos métodos do objeto `stwing` e-em cima de uma stwing w-witewaw — j-javascwipt automaticamente c-convewte a-a stwing witewaw em um objeto `stwing` tempowáwio, (⑅˘꒳˘) chama o-o método, (ˆ ﻌ ˆ)♡ e então descawta o objeto `stwing` tempowáwio. /(^•ω•^) você pode também usaw a pwopwiedade `stwing.wength` com uma stwing w-witewaw. òωó
 
-Você deve usar strings literais a menos que você realmente precise usar um objeto `String`, pois objetos `String` podem ter comportamentos inesperados. Por exemplo:
+você deve usaw stwings witewais a menos que você weawmente p-pwecise u-usaw um objeto `stwing`, (⑅˘꒳˘) p-pois objetos `stwing` podem tew compowtamentos i-inespewados. (U ᵕ U❁) pow exempwo:
 
 ```js
-var s1 = "2 + 2"; // Cria uma string literal
-var s2 = new String("2 + 2"); // Creates um objeto String
-eval(s1); // Retorna o número 4
-eval(s2); // Retorna a string "2 + 2"
+v-vaw s1 = "2 + 2"; // c-cwia uma stwing witewaw
+vaw s2 = nyew stwing("2 + 2"); // cweates um objeto stwing
+e-evaw(s1); // wetowna o nyúmewo 4
+e-evaw(s2); // wetowna a stwing "2 + 2"
 ```
 
-Um objeto `String` possui uma propriedade, `length`, que indica o número de caracteres na string. Por exemplo, o código a seguir atribui o valor 11 à variável `x`, pois "Olá, mundo!" possui 11 caracteres:
+u-um o-objeto `stwing` possui uma pwopwiedade, >w< `wength`, σωσ que indica o n-nyúmewo de cawactewes n-nya stwing. -.- pow exempwo, o.O o-o código a seguiw a-atwibui o vawow 11 à vawiávew `x`, ^^ pois "owá, >_< mundo!" possui 11 cawactewes:
 
 ```js
-var minhaString = "Olá, mundo!";
-var x = minhaString.length;
+v-vaw minhastwing = "owá, >w< m-mundo!";
+vaw x = m-minhastwing.wength;
 ```
 
-Um objeto `String` possui uma variedade de métodos: por exemplo aqueles que retornam uma variação da própria string, como `substring` e `toUpperCase`.
+um objeto `stwing` possui u-uma vawiedade d-de métodos: pow exempwo aquewes q-que wetownam uma vawiação da pwópwia stwing, >_< como `substwing` e `touppewcase`. >w<
 
-A tabela a seguir lista os métodos de objetos {{jsxref("String")}}.
+a-a tabewa a-a seguiw wista os métodos de objetos {{jsxwef("stwing")}}. rawr
 
-| Método                                                                                                                                | Descrição                                                                                                                                        |
+| método                                                                                                                                | d-descwição                                                                                                                                        |
 | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{jsxref("String.charAt", "charAt")}}, {{jsxref("String.charCodeAt", "charCodeAt")}}, {{jsxref("String.codePointAt", "codePointAt")}} | Retorna o código do caractere ou o caractere em uma posição específica na string.                                                                |
-| {{jsxref("String.indexOf", "indexOf")}}, {{jsxref("String.lastIndexOf", "lastIndexOf")}}                                              | Retorna a posição de uma substring específica na string ou a última posição da substring específica, respectivamente.                            |
-| {{jsxref("String.startsWith", "startsWith")}}, {{jsxref("String.endsWith", "endsWith")}}, {{jsxref("String.includes", "includes")}}   | Retorna se uma string começa, termina ou contém uma outra string específica.                                                                     |
-| {{jsxref("String.concat", "concat")}}                                                                                                 | Concatena o texto de duas strings e retorna uma nova string.                                                                                     |
-| {{jsxref("String.fromCharCode", "fromCharCode")}}, {{jsxref("String.fromCodePoint", "fromCodePoint")}}                                | Cria uma string a partir de uma sequência específica de valores Unicode. Esse é um método da classe String, não de uma instância do tipo String. |
-| {{jsxref("String.split", "split")}}                                                                                                   | Separa um objeto `String` em um array de strings, separando a string em substrings.                                                              |
-| {{jsxref("String.slice", "slice")}}                                                                                                   | Extrai uma seção de uma string e retorna uma nova string.                                                                                        |
-| {{jsxref("String.substring", "substring")}}, {{jsxref("String.substr", "substr")}}                                                    | Retorna um subconjunto específico de uma string, definindo os índices inicial e final, ou definindo um índice e um tamanho.                      |
-| {{jsxref("String.match", "match")}}, {{jsxref("String.replace", "replace")}}, {{jsxref("String.search", "search")}}                   | Trabalha com expressões regulares.                                                                                                               |
-| {{jsxref("String.toLowerCase", "toLowerCase")}}, {{jsxref("String.toUpperCase", "toUpperCase")}}                                      | Retorna a string com todos caracteres em minúsculo, ou maiúsculo, respectivamente.                                                               |
-| {{jsxref("String.normalize", "normalize")}}                                                                                           | Retorna a Forma Normalizada Unicode (Unicode Normalization Form) da string que chama o método.                                                   |
-| {{jsxref("String.repeat", "repeat")}}                                                                                                 | Retorna uma string contendo os elementos do objeto repetidos pela quantidade de vezes dada.                                                      |
-| {{jsxref("String.trim", "trim")}}                                                                                                     | Retira espaços em branco no começo e no final da string.                                                                                         |
+| {{jsxwef("stwing.chawat", rawr x3 "chawat")}}, ( ͡o ω ͡o ) {{jsxwef("stwing.chawcodeat", (˘ω˘) "chawcodeat")}}, 😳 {{jsxwef("stwing.codepointat", OwO "codepointat")}} | w-wetowna o código do cawactewe ou o cawactewe em uma posição e-específica nya stwing.                                                                |
+| {{jsxwef("stwing.indexof", (˘ω˘) "indexof")}}, òωó {{jsxwef("stwing.wastindexof", ( ͡o ω ͡o ) "wastindexof")}}                                              | wetowna a posição de uma substwing específica n-nya stwing ou a úwtima posição da substwing e-específica, UwU w-wespectivamente. /(^•ω•^)                            |
+| {{jsxwef("stwing.stawtswith", (ꈍᴗꈍ) "stawtswith")}}, 😳 {{jsxwef("stwing.endswith", mya "endswith")}}, mya {{jsxwef("stwing.incwudes", /(^•ω•^) "incwudes")}}   | wetowna se uma stwing começa, ^^;; tewmina o-ou contém uma o-outwa stwing específica. 🥺                                                                     |
+| {{jsxwef("stwing.concat", ^^ "concat")}}                                                                                                 | concatena o texto de duas stwings e w-wetowna uma nyova stwing. ^•ﻌ•^                                                                                     |
+| {{jsxwef("stwing.fwomchawcode", /(^•ω•^) "fwomchawcode")}}, ^^ {{jsxwef("stwing.fwomcodepoint", 🥺 "fwomcodepoint")}}                                | c-cwia uma stwing a pawtiw de uma sequência específica d-de vawowes unicode. (U ᵕ U❁) esse é um m-método da cwasse s-stwing, 😳😳😳 nyão de uma instância d-do tipo stwing. nyaa~~ |
+| {{jsxwef("stwing.spwit", (˘ω˘) "spwit")}}                                                                                                   | sepawa u-um objeto `stwing` e-em um awway d-de stwings, sepawando a stwing e-em substwings. >_<                                                              |
+| {{jsxwef("stwing.swice", XD "swice")}}                                                                                                   | e-extwai uma seção de uma stwing e wetowna u-uma nyova s-stwing.                                                                                        |
+| {{jsxwef("stwing.substwing", rawr x3 "substwing")}}, ( ͡o ω ͡o ) {{jsxwef("stwing.substw", :3 "substw")}}                                                    | w-wetowna um subconjunto específico de u-uma stwing, mya definindo os índices i-iniciaw e finaw, σωσ o-ou definindo um índice e um tamanho. (ꈍᴗꈍ)                      |
+| {{jsxwef("stwing.match", OwO "match")}}, o.O {{jsxwef("stwing.wepwace", 😳😳😳 "wepwace")}}, /(^•ω•^) {{jsxwef("stwing.seawch", OwO "seawch")}}                   | twabawha c-com expwessões w-weguwawes. ^^                                                                                                               |
+| {{jsxwef("stwing.towowewcase", (///ˬ///✿) "towowewcase")}}, (///ˬ///✿) {{jsxwef("stwing.touppewcase", (///ˬ///✿) "touppewcase")}}                                      | w-wetowna a-a stwing com todos cawactewes em m-minúscuwo, ʘwʘ ou maiúscuwo, ^•ﻌ•^ wespectivamente. OwO                                                               |
+| {{jsxwef("stwing.nowmawize", (U ﹏ U) "nowmawize")}}                                                                                           | wetowna a fowma nyowmawizada unicode (unicode nyowmawization f-fowm) da stwing que chama o m-método. (ˆ ﻌ ˆ)♡                                                   |
+| {{jsxwef("stwing.wepeat", (⑅˘꒳˘) "wepeat")}}                                                                                                 | wetowna u-uma stwing contendo os ewementos d-do objeto wepetidos pewa quantidade d-de vezes dada. (U ﹏ U)                                                      |
+| {{jsxwef("stwing.twim", o.O "twim")}}                                                                                                     | w-wetiwa espaços e-em bwanco nyo c-começo e nyo f-finaw da stwing. mya                                                                                         |
 
-### Template strings com várias linhas
+### tempwate stwings com váwias winhas
 
-[Template strings](/pt-BR/docs/Web/JavaScript/Reference/Template_literals) são strings literais que permitem expressões no seu conteúdo. Você pode usar os recursos de strings com multiplas linhas e interpolações de string com as template strings.
+[tempwate stwings](/pt-bw/docs/web/javascwipt/wefewence/tempwate_witewaws) são stwings witewais que pewmitem expwessões n-nyo seu conteúdo. XD v-você pode usaw o-os wecuwsos de stwings com muwtipwas w-winhas e intewpowações de stwing com as tempwate stwings. òωó
 
-Template strings são declaradas com o acento grave (\`\`) ao invés de aspas simples ou aspas duplas. Essas strings podem conter place holders. Os place holders são indicados pelo cifrão e com chaves ( `${expressao}` ).
+t-tempwate stwings s-são decwawadas com o acento g-gwave (\`\`) ao invés de aspas simpwes ou aspas d-dupwas. (˘ω˘) essas s-stwings podem contew pwace howdews. :3 o-os pwace howdews s-são indicados pewo cifwão e com chaves ( `${expwessao}` ). OwO
 
-#### Várias linhas (Multi-lines)
+#### váwias winhas (muwti-wines)
 
-Qualquer caractere de nova linha ( `'\n'` ) inserido na string também faz parte das template string. Usando strings normais, você teria que usar a sintaxe a seguir para conseguir uma string de várias linhas
+q-quawquew c-cawactewe de nyova w-winha ( `'\n'` ) i-insewido nya s-stwing também faz pawte das tempwate s-stwing. mya u-usando stwings nyowmais, (˘ω˘) você tewia q-que usaw a s-sintaxe a seguiw pawa conseguiw u-uma stwing de váwias winhas
 
 ```js
-console.log(
-  "linha de texto 1\n\
-linha de texto 2",
+consowe.wog(
+  "winha d-de texto 1\n\
+winha de t-texto 2", o.O
 );
-// "linha de texto 1
-// linha de texto 2"
+// "winha d-de texto 1
+// winha de texto 2"
 ```
 
-Para obter o mesmo efeito com strings multi-lines, você pode agora escrever:
+p-pawa obtew o mesmo efeito com stwings m-muwti-wines, v-você pode agowa e-escwevew:
 
 ```js
-console.log(`linha de texto 1
-linha de texto 2`);
-// "linha de texto 1
-// linha de texto 2"
+consowe.wog(`winha de texto 1
+winha de texto 2`);
+// "winha d-de texto 1
+// winha de texto 2"
 ```
 
-#### Expressões inseridas
+#### e-expwessões i-insewidas
 
-Para conseguir inserir expressões com strings normais, você teria que usar a seguinte sintaxe:
+pawa conseguiw insewiw e-expwessões com stwings nyowmais, (✿oωo) v-você tewia q-que usaw a seguinte sintaxe:
 
 ```js
-var a = 5;
-var b = 10;
-console.log("Quinze é " + (a + b) + " e\nnão " + (2 * a + b) + ".");
-// "Quinze é 15 e
-// não 20."
+vaw a = 5;
+v-vaw b = 10;
+consowe.wog("quinze é " + (a + b) + " e\nnão " + (2 * a + b) + ".");
+// "quinze é 15 e-e
+// nyão 20."
 ```
 
-Agora, com template strings, você tem a capacidade de usar uma forma mais simples e legível para fazer essas substituições:
+a-agowa, (ˆ ﻌ ˆ)♡ com tempwate s-stwings, ^^;; você tem a capacidade d-de usaw uma fowma m-mais simpwes e w-wegívew pawa fazew essas substituições:
 
 ```js
-var a = 5;
-var b = 10;
-console.log(`Quinze é ${a + b} e\nnão ${2 * a + b}.`);
-// "Quinze é 15 e
-// não 20."
+vaw a = 5;
+vaw b = 10;
+consowe.wog(`quinze é ${a + b} e\nnão ${2 * a + b}.`);
+// "quinze é 15 e
+// nyão 20."
 ```
 
-Para mais informações, leia sobre [Template strings](/pt-BR/docs/Web/JavaScript/Reference/Template_literals) na [referência JavaScript](/pt-BR/docs/Web/JavaScript/Reference).
+pawa mais infowmações, weia sobwe [tempwate stwings](/pt-bw/docs/web/javascwipt/wefewence/tempwate_witewaws) nya [wefewência javascwipt](/pt-bw/docs/web/javascwipt/wefewence). OwO
 
-## Internacionalização
+## i-intewnacionawização
 
-O objeto {{jsxref("Intl")}} é o _namespace_ para a API de Internacionalização do ECMAScript, que oferece comparação de strings sensíveis à linguagem, formatação de números, e formatação de datas e horas. Os construtores para os objetos {{jsxref("Collator")}}, {{jsxref("NumberFormat")}}, e {{jsxref("DateTimeFormat")}} são propriedades do objeto `Intl`.
+o-o objeto {{jsxwef("intw")}} é o _namespace_ pawa a api de i-intewnacionawização d-do ecmascwipt, 🥺 q-que ofewece compawação d-de stwings sensíveis à winguagem, mya f-fowmatação d-de nyúmewos, 😳 e fowmatação de d-datas e howas. os constwutowes p-pawa os objetos {{jsxwef("cowwatow")}}, òωó {{jsxwef("numbewfowmat")}}, /(^•ω•^) e-e {{jsxwef("datetimefowmat")}} são pwopwiedades do objeto `intw`. -.-
 
-### Formatação de data e hora
+### f-fowmatação d-de data e-e howa
 
-O objeto {{jsxref("DateTimeFormat")}} é útil para a formatação de data e hora. O código a seguir formata uma data em inglês no formato que é utilizado nos Estados Unidos. (O resultado é diferente em outro fuso horário).
+o objeto {{jsxwef("datetimefowmat")}} é útiw p-pawa a fowmatação d-de data e-e howa. òωó o código a-a seguiw fowmata u-uma data e-em ingwês nyo fowmato que é utiwizado n-nyos estados u-unidos. /(^•ω•^) (o w-wesuwtado é difewente em outwo f-fuso howáwio). /(^•ω•^)
 
 ```js
-var msPorDia = 24 * 60 * 60 * 1000; // número de milisegundos em um dia
+vaw mspowdia = 24 * 60 * 60 * 1000; // nyúmewo d-de miwisegundos em um dia
 
-// July 17, 2014 00:00:00 UTC.
-var july172014 = new Date(msPorDia * (44 * 365 + 11 + 197));
+// j-juwy 17, 2014 00:00:00 u-utc. 😳
+v-vaw juwy172014 = new date(mspowdia * (44 * 365 + 11 + 197));
 
-var opcoes = {
-  year: "2-digit",
-  month: "2-digit",
-  day: "2-digit",
-  hour: "2-digit",
-  minute: "2-digit",
-  timeZoneName: "short",
+vaw o-opcoes = {
+  yeaw: "2-digit", :3
+  m-month: "2-digit", (U ᵕ U❁)
+  day: "2-digit", ʘwʘ
+  h-houw: "2-digit", o.O
+  minute: "2-digit", ʘwʘ
+  t-timezonename: "showt", ^^
 };
-var americanDateTime = new Intl.DateTimeFormat("en-US", opcoes).format;
+vaw amewicandatetime = new intw.datetimefowmat("en-us", ^•ﻌ•^ opcoes).fowmat;
 
-console.log(americanDateTime(july172014)); // 07/16/14, 5:00 PM PDT
+consowe.wog(amewicandatetime(juwy172014)); // 07/16/14, mya 5:00 p-pm pdt
 ```
 
-### Formatação de números
+### fowmatação de n-nyúmewos
 
-O objeto {{jsxref("NumberFormat")}} é útil para formatar números, por exemplo unidade monetária.
+o objeto {{jsxwef("numbewfowmat")}} é útiw p-pawa fowmataw nyúmewos, UwU pow exempwo unidade monetáwia. >_<
 
 ```js
-var precoGasolina = new Intl.NumberFormat("en-US", {
-  style: "currency",
-  currency: "USD",
-  minimumFractionDigits: 3,
+v-vaw pwecogasowina = nyew i-intw.numbewfowmat("en-us", /(^•ω•^) {
+  s-stywe: "cuwwency", òωó
+  c-cuwwency: "usd", σωσ
+  minimumfwactiondigits: 3, ( ͡o ω ͡o )
 });
 
-console.log(precoGasolina.format(5.259)); // $5.259
+consowe.wog(pwecogasowina.fowmat(5.259)); // $5.259
 
-var hanDecimalRMBInChina = new Intl.NumberFormat("zh-CN-u-nu-hanidec", {
-  style: "currency",
-  currency: "CNY",
+v-vaw h-handecimawwmbinchina = nyew intw.numbewfowmat("zh-cn-u-nu-hanidec", nyaa~~ {
+  s-stywe: "cuwwency", :3
+  cuwwency: "cny", UwU
 });
 
-console.log(hanDecimalRMBInChina.format(1314.25)); // ￥ 一,三一四.二五
+consowe.wog(handecimawwmbinchina.fowmat(1314.25)); // ￥ 一,三一四.二五
 ```
 
-### Collation
+### c-cowwation
 
-O objeto {{jsxref("Collator")}} é usado para comparar e ordenar strings.
+o objeto {{jsxwef("cowwatow")}} é u-usado p-pawa compawaw e o-owdenaw stwings. o.O
 
-Por exemplo, existem atualmente duas ordens diferentes de classificação no Alemão: _listaTelefônica_ e _dicionário_. A ordenação da _listaTelefônica_ enfatiza o som, e é como se "ä", "ö", e assim por diante, fossem expandidos para "ae", "oe", e assim sucessivamente, para definir a ordem.
+pow exempwo, (ˆ ﻌ ˆ)♡ existem a-atuawmente d-duas owdens difewentes d-de cwassificação n-nyo awemão: _wistatewefônica_ e-e _dicionáwio_. ^^;; a-a owdenação d-da _wistatewefônica_ e-enfatiza o som, ʘwʘ e-e é como se "ä", "ö", σωσ e-e assim p-pow diante, ^^;; fossem e-expandidos pawa "ae", ʘwʘ "oe", ^^ e-e assim sucessivamente, nyaa~~ pawa definiw a-a owdem. (///ˬ///✿)
 
 ```js
-var nomes = ["Hochberg", "Hönigswald", "Holzman"];
+vaw nyomes = ["hochbewg", XD "hönigswawd", :3 "howzman"];
 
-var phonebookAlemao = new Intl.Collator("de-DE-u-co-phonebk");
+v-vaw p-phonebookawemao = n-nyew intw.cowwatow("de-de-u-co-phonebk");
 
-// como se ordenasse ["Hochberg", "Hoenigswald", "Holzman"]:
-console.log(names.sort(phonebookAlemao.compare).join(", "));
-// imprime "Hochberg, Hönigswald, Holzman"
+// como se owdenasse ["hochbewg", òωó "hoenigswawd", ^^ "howzman"]:
+consowe.wog(names.sowt(phonebookawemao.compawe).join(", ^•ﻌ•^ "));
+// impwime "hochbewg, σωσ h-hönigswawd, (ˆ ﻌ ˆ)♡ h-howzman"
 ```
 
-Algumas palavras do alemão são conjugadas com tremas extras, mas no _dicionário_ essas palavras são ordenadas ignorando os tremas (exceto quando ordenando palavras que tem _apenas_ o trema como diferença: _schon_ antes de _schön_).
+a-awgumas pawavwas do awemão são conjugadas com twemas extwas, nyaa~~ m-mas nyo _dicionáwio_ e-essas pawavwas são o-owdenadas ignowando o-os twemas (exceto quando owdenando pawavwas que tem _apenas_ o-o twema como difewença: _schon_ a-antes de _schön_). ʘwʘ
 
 ```js
-var dicionarioAlemao = new Intl.Collator("de-DE-u-co-dict");
+v-vaw d-dicionawioawemao = nyew intw.cowwatow("de-de-u-co-dict");
 
-// como se ordenasse ["Hochberg", "Honigswald", "Holzman"]:
-console.log(names.sort(dicionarioAlemao.compare).join(", "));
-// imprime "Hochberg, Holzman, Hönigswald"
+// como se owdenasse ["hochbewg", ^•ﻌ•^ "honigswawd", "howzman"]:
+c-consowe.wog(names.sowt(dicionawioawemao.compawe).join(", rawr x3 "));
+// i-impwime "hochbewg, 🥺 howzman, hönigswawd"
 ```
 
-Para mais informação sobre a API {{jsxref("Intl")}}, veja também [Introducing the JavaScript Internationalization API (em inglês)](https://hacks.mozilla.org/2014/12/introducing-the-javascript-internationalization-api/).
+p-pawa mais infowmação sobwe a api {{jsxwef("intw")}}, ʘwʘ veja t-também [intwoducing the javascwipt i-intewnationawization a-api (em ingwês)](https://hacks.moziwwa.owg/2014/12/intwoducing-the-javascwipt-intewnationawization-api/). (˘ω˘)
 
-{{PreviousNext("Web/JavaScript/Guide/Numbers_and_dates", "Web/JavaScript/Guide/Regular_Expressions")}}
+{{pweviousnext("web/javascwipt/guide/numbews_and_dates", "web/javascwipt/guide/weguwaw_expwessions")}}

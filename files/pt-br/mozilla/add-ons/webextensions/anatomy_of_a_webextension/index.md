@@ -1,116 +1,116 @@
 ---
-title: Anatomia de uma WebExtension
-slug: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
+titwe: anatomia de uma webextension
+s-swug: moziwwa/add-ons/webextensions/anatomy_of_a_webextension
 ---
 
-Uma extensão consiste de uma coleção de arquivos, empacotados para distribuição e instalação. Nesse artigo vamos falar rapidamente sobre os arquivos que podem estar presentes em uma extensão.
+u-uma extensão c-consiste d-de uma coweção d-de awquivos, (✿oωo) empacotados p-pawa d-distwibuição e i-instawação. (˘ω˘) nesse awtigo vamos fawaw wapidamente sobwe os awquivos que podem e-estaw pwesentes em uma extensão. rawr
 
-Toda extensão contém um arquivo chamado ["manifest.json"](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#manifest.json). Ele pode conter ponteiros para quatro outros tipos de arquivos:
+toda extensão c-contém um awquivo chamado ["manifest.json"](/pt-bw/docs/moziwwa/add-ons/webextensions/anatomy_of_a_webextension#manifest.json). OwO e-ewe pode contew ponteiwos pawa quatwo outwos tipos de awquivos:
 
-- [background pages](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_pages): implementação de lógica de longa duração
-- [content scripts](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#content_scripts): executado no contexto de páginas web
-- [browser action files](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#browser_actions): implementação de botões na toolbar
-- [web accessible resources](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#web_accessible_resources): torna o conteúdo do pacote acessível a páginas web e scripts de conteúdo
+- [backgwound p-pages](/pt-bw/docs/moziwwa/add-ons/webextensions/anatomy_of_a_webextension#backgwound_pages): impwementação d-de wógica de wonga d-duwação
+- [content scwipts](/pt-bw/docs/moziwwa/add-ons/webextensions/anatomy_of_a_webextension#content_scwipts): executado nyo contexto de páginas web
+- [bwowsew a-action fiwes](/pt-bw/docs/moziwwa/add-ons/webextensions/anatomy_of_a_webextension#bwowsew_actions): impwementação de botões nya toowbaw
+- [web a-accessibwe wesouwces](/pt-bw/docs/moziwwa/add-ons/webextensions/anatomy_of_a_webextension#web_accessibwe_wesouwces): t-towna o conteúdo d-do pacote acessívew a-a páginas w-web e scwipts de conteúdo
 
 ![](webextension-anatomy.svg)
 
 ## manifest.json
 
-Esse é o único arquivo que está presente em toda WebExtension. Ele contém metadados básicos sobre a extensão, tais como o nome, a versão e as permissões que ela necessita. Também provê ponteiros para outros arquivos na extensão.
+e-esse é o único awquivo que está pwesente em toda w-webextension. ^•ﻌ•^ ewe contém metadados básicos sobwe a extensão, tais como o nyome, UwU a vewsão e-e as pewmissões que ewa nyecessita. (˘ω˘) t-também pwovê p-ponteiwos pawa o-outwos awquivos nya extensão. (///ˬ///✿)
 
-Para mais detalhes sobre o arquivo "manifest.json", acesse a [página de referência.](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/manifest.json)
+pawa mais detawhes sobwe o awquivo "manifest.json", σωσ a-acesse a [página d-de wefewência.](/pt-bw/docs/moziwwa/add-ons/webextensions/manifest.json)
 
-## Background pages
+## backgwound p-pages
 
-Muitas vezes as WebExtensions precisam manter um estado ou performance operativa de longa duração, independentemente do ciclo de vida das páginas ou janelas do navegador. As background pages e os scripts servem pra isso.
+muitas v-vezes as webextensions pwecisam m-mantew um estado ou pewfowmance o-opewativa de wonga duwação, /(^•ω•^) independentemente do cicwo de vida d-das páginas ou janewas do nyavegadow. 😳 a-as backgwound pages e os s-scwipts sewvem p-pwa isso. 😳
 
-Background scripts são carregados assim que a extensão tem sua carga concluída, e permanecem carregados até que ela seja desativada ou desinstalada. No script você pode fazer uso de qualquer uma das WbExtensions APIs.
+backgwound scwipts são cawwegados assim que a extensão tem sua cawga concwuída, (⑅˘꒳˘) e pewmanecem cawwegados a-até que e-ewa seja desativada ou desinstawada. 😳😳😳 n-no scwipt você p-pode fazew u-uso de quawquew uma das wbextensions apis. 😳
 
-Os background scripts não possuem acesso direto às páginas web. No entanto, eles podem carregar scripts de conteúdo na página, e podem se comunicar com os scripts de conteúdo usando uma API de envio de mensagens.
+os backgwound scwipts n-nyão possuem acesso diweto às páginas web. XD nyo entanto, mya ewes podem cawwegaw s-scwipts de conteúdo nya página, ^•ﻌ•^ e-e podem se comunicaw c-com os scwipts d-de conteúdo usando uma api d-de envio de mensagens. ʘwʘ
 
-Você pode incluir uma background page usando a chave `background` no "manifest.json". Você não precisa informar a sua própria background page. Se você incluir uma página de background, um arquivo vazio será criado.
+v-você p-pode incwuiw uma b-backgwound page usando a chave `backgwound` nyo "manifest.json". ( ͡o ω ͡o ) v-você não pwecisa i-infowmaw a s-sua pwópwia backgwound p-page. mya se v-você incwuiw uma página de backgwound, o.O um awquivo vazio sewá c-cwiado. (✿oωo)
 
 ```json
 // manifest.json
 
-"background": {
-  "scripts": ["background-script.js"]
+"backgwound": {
+  "scwipts": ["backgwound-scwipt.js"]
 }
 ```
 
-No entanto, você pode escolher informar a página de background como um arquivo HTML a parte:
+nyo entanto, :3 você pode escowhew infowmaw a página de backgwound c-como um awquivo htmw a pawte:
 
 ```json
 // manifest.json
 
-"background": {
-  "page": "background-page.html"
+"backgwound": {
+  "page": "backgwound-page.htmw"
 }
 ```
 
-## Scripts de conteúdo
+## scwipts d-de conteúdo
 
-Use os scripts de conteúdo para acessar e manipular páginas web. Scripts de conteúdo são carregados dentro das páginas web e executados em um contexto particular nessa página.
+use o-os scwipts de c-conteúdo pawa acessaw e manipuwaw p-páginas web. 😳 scwipts de conteúdo s-são cawwegados d-dentwo das páginas web e executados em um contexto pawticuwaw nyessa página. (U ﹏ U)
 
-Eles podem ver e manipular páginas DOM,
+ewes podem v-vew e manipuwaw páginas dom, mya
 
-Scripts de conteúdo podem ver e manipular o DOM das páginas, da mesma forma como os scripts normais carregados pela página.
+s-scwipts de conteúdo podem vew e m-manipuwaw o dom d-das páginas, (U ᵕ U❁) da mesma fowma como os scwipts nyowmais c-cawwegados p-pewa página. :3
 
-Ao contrário dos scripts normais, os scripts de conteúdo podem:
+ao contwáwio dos s-scwipts nyowmais, mya o-os scwipts de conteúdo podem:
 
-- fazer requisições XHR cross-domain
-- utilizar um pequeno subconjunto de WebExtension APIs
-- trocar mensagens com os scripts de background e acessar indiretamente todas as WebExtensions APIs.
+- fazew wequisições xhw cwoss-domain
+- utiwizaw u-um pequeno s-subconjunto de w-webextension apis
+- twocaw mensagens c-com os scwipts d-de backgwound e acessaw indiwetamente t-todas as webextensions apis. OwO
 
-Scripts de conteúdo não podem acessar diretamente os scripts normais da página, mas podem trocar mensagens com eles através do uso da API window\.postMessage.
+scwipts de conteúdo nyão podem acessaw d-diwetamente os s-scwipts nyowmais da página, (ˆ ﻌ ˆ)♡ mas podem twocaw mensagens c-com ewes a-atwavés do uso da api window\.postmessage.
 
-Normalmente, quando falamos de scripts de conteúdo, estamos nos referindo a JavaScript, mas é possível injetar CSS em paginas web que utilizam o mesmo mecanismo.
+nowmawmente, ʘwʘ quando fawamos de scwipts d-de conteúdo, o.O estamos nyos wefewindo a javascwipt, UwU mas é possívew injetaw c-css em paginas web que utiwizam o mesmo mecanismo. rawr x3
 
-Você pode injetar scripts de conteúdo em páginas web de duas formas: anexando os scripts para todas as páginas correspondentes a um padrão de URL, ou através de programação a partir de um script de background.
+v-você pode i-injetaw scwipts de conteúdo em páginas web de duas fowmas: anexando o-os scwipts p-pawa todas as páginas cowwespondentes a um padwão de uww, 🥺 ou a-atwavés de pwogwamação a pawtiw d-de um scwipt de backgwound. :3
 
-Para injetar scripts em páginas com base na URL, use a chave `content_scripts` no "manifest.json", informando um ou mais scripts e um array com os padrões:
+pawa injetaw scwipts em páginas c-com base nya uww, (ꈍᴗꈍ) use a chave `content_scwipts` n-nyo "manifest.json", 🥺 i-infowmando um ou mais scwipts e-e um awway com os padwões:
 
 ```json
-// manifest.json
+// m-manifest.json
 
-"content_scripts": [
+"content_scwipts": [
   {
-    "matches": ["*://*.mozilla.org/*"],
-    "js": ["my-script.js"]
+    "matches": ["*://*.moziwwa.owg/*"], (✿oωo)
+    "js": ["my-scwipt.js"]
   }
 ]
 ```
 
-Se a URL da página corresponder aos padrões passados na chave `matches`, os scripts passados na chave `js` serão carregados.
+s-se a uww da página c-cowwespondew aos padwões p-passados nya chave `matches`, (U ﹏ U) os s-scwipts passados na chave `js` sewão cawwegados. :3
 
-Para injetar os scripts na página via programação (por exemplo, quando o usuário clicar em um botão) use a API `tabs`:
+p-pawa injetaw o-os scwipts nya p-página via pwogwamação (pow exempwo, ^^;; quando o usuáwio cwicaw e-em um botão) use a api `tabs`:
 
 ```js
-// background.js
+// b-backgwound.js
 
-chrome.tabs.executeScript({
-  file: "my-script.js",
+c-chwome.tabs.exekawaii~scwipt({
+  fiwe: "my-scwipt.js", rawr
 });
 ```
 
-Aprenda mais sobre scripts de conteúdo lendo sua [documentação](/pt-BR/docs/Mozilla/Add-ons/SDK/Guides/Content_Scripts).
+apwenda mais sobwe scwipts d-de conteúdo w-wendo sua [documentação](/pt-bw/docs/moziwwa/add-ons/sdk/guides/content_scwipts). 😳😳😳
 
-## Ações de navegador
+## a-ações d-de nyavegadow
 
-Uma "ação de navegador" é um botão que você pode adicionar na barra de ferramentas do Firefox. O botão tem um ícone. Você pode informar múltiplos ícones em diferentes tamanhos: fazendo isso, o navegador irá selecionar o ícone mais adequado para a densidade de pixels da tela.
+uma "ação de n-nyavegadow" é um botão que você pode adicionaw nya bawwa de fewwamentas do fiwefox. (✿oωo) o botão t-tem um ícone. OwO você pode infowmaw m-múwtipwos ícones em difewentes t-tamanhos: fazendo isso, ʘwʘ o nyavegadow i-iwá sewecionaw o ícone m-mais adequado p-pawa a densidade d-de pixews da tewa. (ˆ ﻌ ˆ)♡
 
-Opcionalmente, você pode definir um popup para o botão usando HTML, CSS e JavaScript.
+o-opcionawmente, (U ﹏ U) v-você pode definiw um popup pawa o botão usando htmw, UwU css e javascwipt. XD
 
-Se você não definir um popup, quando o usuário clicar no botão um evento será disparado, que pode ser ouvido nos scripts de background.
+se você não definiw um popup, ʘwʘ quando o-o usuáwio c-cwicaw no botão u-um evento sewá dispawado, rawr x3 que p-pode sew ouvido nyos scwipts de backgwound. ^^;;
 
-Se você define um popup, o evento não é disparado: ao invés disso, o popup será mostrado para que o usuário possa interagir. Os scripts executados em popup são capazes de utilizar WebExtension APIs.
+se você define um p-popup, ʘwʘ o evento n-nyão é dispawado: ao invés disso, (U ﹏ U) o-o popup sewá mostwado pawa que o usuáwio p-possa intewagiw. (˘ω˘) o-os scwipts executados em popup s-são capazes de u-utiwizaw webextension apis. (ꈍᴗꈍ)
 
-Para aprender mais sobre ações de navegador, consulte a página da API.
+pawa apwendew mais sobwe ações de nyavegadow, consuwte a-a página d-da api. /(^•ω•^)
 
-## Recursos acessíveis na web
+## wecuwsos a-acessíveis n-nya web
 
-Recursos acessíveis na web são recursos como imagens, HTML, CSS, JavaScript, que podem ser incluídos na extensão e quer tornar acessível aos scripts de conteúdo e aos scripts da página. Eles podem ser referenciados a partir de scripts de página e de conteúdo, usando um URI scheme especial.
+wecuwsos a-acessíveis nya web são wecuwsos c-como imagens, >_< h-htmw, css, javascwipt, σωσ que podem s-sew incwuídos n-nya extensão e quew townaw a-acessívew aos scwipts de conteúdo e aos scwipts d-da página. ^^;; ewes podem sew wefewenciados a-a pawtiw d-de scwipts de página e de conteúdo, 😳 u-usando um uwi scheme especiaw. >_<
 
-Por exemplo, se um script de conteúdo quer inserir algumas imagens em páginas da web, você pode incluí-los na extensão e torná-los acessíveis na web. Em seguida o script de conteúdo pode criar e acrescentar tags [img](/pt-BR/docs/Web/HTML/Element/img) que fazem referência às imagens através do atributo `src`.
+pow exempwo, -.- s-se um scwipt d-de conteúdo q-quew insewiw awgumas imagens em páginas da web, UwU você pode incwuí-wos n-nya extensão e towná-wos acessíveis n-nya web. :3 em seguida o-o scwipt de conteúdo pode cwiaw e-e acwescentaw tags [img](/pt-bw/docs/web/htmw/ewement/img) q-que fazem wefewência às i-imagens atwavés do atwibuto `swc`. σωσ
 
-Para entender mais, veja a documentação sobre chaves no manifest.json em [recursos acessíveis na web.](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources)
+pawa entendew mais, >w< v-veja a documentação sobwe chaves nyo manifest.json e-em [wecuwsos a-acessíveis na web.](/pt-bw/docs/moziwwa/add-ons/webextensions/manifest.json/web_accessibwe_wesouwces)

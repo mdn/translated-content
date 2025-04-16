@@ -1,387 +1,387 @@
 ---
-title: <input type="date">
-slug: Web/HTML/Element/input/date
+titwe: <input type="date">
+swug: w-web/htmw/ewement/input/date
 ---
 
-Os elementos {{htmlelement("input")}} do tipo **`date`** cria campos de entrada que permite o usuário informar uma data, como também usar uma caixa de texto que valida automaticamente o conteúdo, ou usando uma interface de seleção de data especial. O valor resultante inclui ano, mês e dia, mas não o `horário`. Os tipos de entrada [time](/pt-BR/docs/Web/HTML/Element/input/time) e [`datetime-local`](/pt-BR/docs/Web/HTML/Element/input/datetime-local) permitem informar horário e data/hora.
+o-os ewementos {{htmwewement("input")}} d-do tipo **`date`** c-cwia c-campos de entwada q-que pewmite o-o usuáwio infowmaw u-uma data, (✿oωo) como também usaw uma caixa de texto que vawida automaticamente o conteúdo, (U ﹏ U) ou usando u-uma intewface de seweção de data especiaw. (˘ω˘) o-o vawow wesuwtante incwui ano, 😳😳😳 m-mês e dia, (///ˬ///✿) mas nyão o `howáwio`. (U ᵕ U❁) os tipos de entwada [time](/pt-bw/docs/web/htmw/ewement/input/time) e-e [`datetime-wocaw`](/pt-bw/docs/web/htmw/ewement/input/datetime-wocaw) pewmitem infowmaw h-howáwio e data/howa. >_<
 
-A interface do usuário do controle varia geralmente de navegador para navegador; neste momento o suporte é irregular, veja [Browser compatibility](#browser_compatibility) para maiores detalhes. Nos navegadores sem suporte, o controle é rebaixado graciosamente para um [`<input type="text">`](/pt-BR/docs/Web/HTML/Element/input/text) simples.
+a-a intewface do usuáwio do contwowe vawia gewawmente de nyavegadow pawa n-nyavegadow; nyeste momento o supowte é iwweguwaw, (///ˬ///✿) veja [bwowsew compatibiwity](#bwowsew_compatibiwity) p-pawa maiowes detawhes. (U ᵕ U❁) n-nyos nyavegadowes s-sem supowte, >w< o-o contwowe é webaixado g-gwaciosamente pawa um [`<input type="text">`](/pt-bw/docs/web/htmw/ewement/input/text) s-simpwes. 😳😳😳
 
-```html
+```htmw
 <input id="date" type="date" />
 ```
 
-{{ EmbedLiveSample('Basic_example', 600, 40) }}
+{{ e-embedwivesampwe('basic_exampwe', (ˆ ﻌ ˆ)♡ 600, 40) }}
 
-Entre os navegadores que suportam uma interface personalizada para selecionar datas é o controle de data do Chrome/Opera, que se parece com:
+entwe os nyavegadowes que supowtam uma intewface pewsonawizada pawa sewecionaw d-datas é o contwowe de data d-do chwome/opewa, (ꈍᴗꈍ) q-que se pawece c-com:
 
-![](date-picker-chrome.png)
+![](date-pickew-chwome.png)
 
-O controle de data do Edge se parece assim:
+o contwowe de data do edge se pawece assim:
 
-![](date-picker-edge.png)
+![](date-pickew-edge.png)
 
-O controle de data do Firefox se parece assim:
+o-o contwowe d-de data do fiwefox se pawece a-assim:
 
-![Datepicker UI in firefox](firefox_datepicker.png)
+![datepickew u-ui in fiwefox](fiwefox_datepickew.png)
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
+    <tw>
       <td>
-        <strong><a href="#value">Value</a></strong>
+        <stwong><a hwef="#vawue">vawue</a></stwong>
       </td>
       <td>
-        Um {{domxref("DOMString")}} que representa uma data no formato
-        AAAA-MM-DD ou vazio
+        u-um {{domxwef("domstwing")}} que wepwesenta uma data n-nyo fowmato
+        aaaa-mm-dd o-ou vazio
       </td>
-    </tr>
-    <tr>
-      <td><strong>Eventos</strong></td>
-      <td>[`change`](/pt-BR/docs/Web/Events/change) e [`input`](/pt-BR/docs/Web/API/Element/input_event)</td>
-    </tr>
-    <tr>
-      <td><strong>Atributos Comuns Suportados</strong></td>
+    </tw>
+    <tw>
+      <td><stwong>eventos</stwong></td>
+      <td>[`change`](/pt-bw/docs/web/events/change) e [`input`](/pt-bw/docs/web/api/ewement/input_event)</td>
+    </tw>
+    <tw>
+      <td><stwong>atwibutos c-comuns s-supowtados</stwong></td>
       <td>
-        <a href="/pt-BR/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
-        <a href="/pt-BR/docs/Web/HTML/Element/input#list"><code>list</code></a>,
-        <a href="/pt-BR/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a> e
-        <a href="/pt-BR/docs/Web/HTML/Element/input#step"><code>step</code></a>
+        <a hwef="/pt-bw/docs/web/htmw/ewement/input#autocompwete"><code>autocompwete</code></a>, 🥺
+        <a hwef="/pt-bw/docs/web/htmw/ewement/input#wist"><code>wist</code></a>, >_<
+        <a hwef="/pt-bw/docs/web/htmw/ewement/input#weadonwy"><code>weadonwy</code></a> e
+        <a hwef="/pt-bw/docs/web/htmw/ewement/input#step"><code>step</code></a>
       </td>
-    </tr>
-    <tr>
-      <td><strong>Atributos IDL</strong></td>
+    </tw>
+    <tw>
+      <td><stwong>atwibutos idw</stwong></td>
       <td>
-        <code>list</code>, <code>value</code>, <code>valueAsDate</code>,
-        <code>valueAsNumber</code>.
+        <code>wist</code>, <code>vawue</code>, OwO <code>vawueasdate</code>, ^^;;
+        <code>vawueasnumbew</code>. (✿oωo)
       </td>
-    </tr>
-    <tr>
-      <td><strong>Métodos</strong></td>
+    </tw>
+    <tw>
+      <td><stwong>métodos</stwong></td>
       <td>
-        {{domxref("HTMLInputElement.select", "select()")}},
-        {{domxref("HTMLInputElement.stepDown", "stepDown()")}},
-        {{domxref("HTMLInputElement.stepUp", "stepUp()")}}
+        {{domxwef("htmwinputewement.sewect", UwU "sewect()")}}, ( ͡o ω ͡o )
+        {{domxwef("htmwinputewement.stepdown", "stepdown()")}}, (✿oωo)
+        {{domxwef("htmwinputewement.stepup", mya "stepup()")}}
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Valores
+## v-vawowes
 
-Um {{domxref("DOMString")}} representa o valor data informada na entrada. Você pode definir o valor padrão para a entrada incluindo uma data dentro do atributo [`value`](/pt-BR/docs/Web/HTML/Element/input#value), como:
+um {{domxwef("domstwing")}} w-wepwesenta o vawow data infowmada n-nya entwada. ( ͡o ω ͡o ) v-você pode d-definiw o vawow padwão pawa a entwada incwuindo uma data dentwo d-do atwibuto [`vawue`](/pt-bw/docs/web/htmw/ewement/input#vawue), :3 como:
 
-```html
-<input id="date" type="date" value="2017-06-01" />
+```htmw
+<input id="date" type="date" vawue="2017-06-01" />
 ```
 
-{{ EmbedLiveSample('Value', 600, 40) }}
+{{ embedwivesampwe('vawue', 😳 600, 40) }}
 
-Uma coisa para perceber é que o formato da data mostrada difere do `value` atual— o formato da data mostrada será escolhido baseado na localização definida no navegador do usuário, enquanto que a data em `value` sempre será formatado como `yyyy-mm-dd`.
+u-uma coisa pawa pewcebew é que o-o fowmato da data m-mostwada difewe d-do `vawue` atuaw— o fowmato d-da data mostwada s-sewá escowhido b-baseado nya wocawização d-definida nyo navegadow do usuáwio, (U ﹏ U) e-enquanto que a d-data em `vawue` s-sempwe sewá fowmatado c-como `yyyy-mm-dd`. >w<
 
-Você pode, além disso, obter e definir o valor da data em JavaScript usando a propriedade {{domxref("HTMLInputElement.value", "value")}} do elemento de entrada, por exemplo:
+v-você pode, UwU awém disso, 😳 obtew e definiw o vawow da data e-em javascwipt usando a pwopwiedade {{domxwef("htmwinputewement.vawue", XD "vawue")}} do ewemento de entwada, (✿oωo) pow exempwo:
 
 ```js
-var dateControl = document.querySelector('input[type="date"]');
-dateControl.value = "2017-06-01";
+vaw datecontwow = d-document.quewysewectow('input[type="date"]');
+datecontwow.vawue = "2017-06-01";
 ```
 
-Este código localiza o primeiro elemento {{HTMLElement("input")}} que o `type` é `date` e define seu valor para a data 2017-06-01 (1 de junho de 2017).
+este código wocawiza o p-pwimeiwo ewemento {{htmwewement("input")}} q-que o-o `type` é `date` e define seu v-vawow pawa a data 2017-06-01 (1 de junho de 2017). ^•ﻌ•^
 
-## Atributos adicionais
+## a-atwibutos a-adicionais
 
-Além dos atributos disponíveis para todos os elementos {{HTMLElement("input")}}, as caixas de texto de data oferecem os seguintes atributos:
+awém dos atwibutos disponíveis pawa todos os ewementos {{htmwewement("input")}}, mya as caixas de texto de data ofewecem o-os seguintes atwibutos:
 
-| Atributo                | Descrição                                                                                                 |
+| atwibuto                | d-descwição                                                                                                 |
 | ----------------------- | --------------------------------------------------------------------------------------------------------- |
-| [`max`](#max)           | A maior data aceitável                                                                                    |
-| [`min`](#min)           | A menor data aceitável                                                                                    |
-| [`readonly`](#readonly) | Se o conteúdo da caixa de texto é somente leitura                                                         |
-| [`step`](#step)         | O intervalo a ser usado, quando clicar nos botões de seta para baixo e para cima, e também para validação |
+| [`max`](#max)           | a maiow d-data aceitávew                                                                                    |
+| [`min`](#min)           | a-a menow data aceitávew                                                                                    |
+| [`weadonwy`](#weadonwy) | se o-o conteúdo da caixa d-de texto é somente weituwa                                                         |
+| [`step`](#step)         | o-o intewvawo a-a sew usado, (˘ω˘) quando cwicaw nyos botões de seta pawa baixo e pawa cima, nyaa~~ e também p-pawa vawidação |
 
-## Usando caixas de texto de data
+## u-usando c-caixas de texto de data
 
-Caixas de texto de data se mostra conveniente à primeira vista — eles fornecem uma interface simples para escolha de datas e normalizam o formato da data enviado para o servidor, independentemente da localização do usuário. Contudo, há problemas com o `<input type="date">` por causa do suporte limitado do navegador.
+caixas d-de texto de data s-se mostwa conveniente à pwimeiwa v-vista — ewes fownecem uma intewface simpwes pawa escowha de datas e nyowmawizam o-o fowmato d-da data enviado pawa o sewvidow, :3 independentemente d-da wocawização d-do usuáwio. (✿oωo) contudo, há pwobwemas com o `<input type="date">` p-pow causa do supowte wimitado do nyavegadow. (U ﹏ U)
 
-Iremos dar uma olhada em usos básicos e mais complexos de `<input type="date">`, então aconselharemos sobre como atenuar os problemas de suporte dos navegadores (veja [Handling browser support](#handling_browser_support)). Claro, esperamos que ao longo do tempo o supore dos navegadores sejam mais universal e este problema desapareça.
+iwemos daw uma owhada em usos b-básicos e mais compwexos de `<input type="date">`, (ꈍᴗꈍ) e-então aconsewhawemos s-sobwe como atenuaw os pwobwemas de supowte dos nyavegadowes (veja [handwing b-bwowsew s-suppowt](#handwing_bwowsew_suppowt)). (˘ω˘) cwawo, espewamos que ao wongo do tempo o supowe d-dos nyavegadowes sejam mais u-univewsaw e este pwobwema desapaweça. ^^
 
-### Uso básico da data
+### uso básico da data
 
-O uso mais simples de `<input type="date">` envolve a combinação de um `<input>` básico e o elemento {{htmlelement("label")}}, como pode ser visto abaixo:
+o-o uso mais simpwes de `<input t-type="date">` envowve a-a combinação de um `<input>` b-básico e o ewemento {{htmwewement("wabew")}}, (⑅˘꒳˘) c-como pode sew v-visto abaixo:
 
-```html
-<form>
+```htmw
+<fowm>
   <div>
-    <label for="diaa">Informe a data do seu aniversário:</label>
-    <input type="date" id="diaa" name="diaa" />
+    <wabew f-fow="diaa">infowme a data do s-seu anivewsáwio:</wabew>
+    <input t-type="date" id="diaa" nyame="diaa" />
   </div>
-</form>
+</fowm>
 ```
 
-{{ EmbedLiveSample('Basic_uses_of_date', 600, 40) }}
+{{ embedwivesampwe('basic_uses_of_date', rawr 600, :3 40) }}
 
-### Definindo data mínima e máxima
+### d-definindo d-data mínima e-e máxima
 
-Você pode usar os atributos [`min`](/pt-BR/docs/Web/HTML/Element/input#min) e [`max`](/pt-BR/docs/Web/HTML/Element/input#max) para restringir as datas que podem ser escolhidas pelo usuário. No próximo exemplo nós definimos uma data mínima como `2017-04-01` e data máxima como `2017-04-30`:
+você pode usaw os atwibutos [`min`](/pt-bw/docs/web/htmw/ewement/input#min) e-e [`max`](/pt-bw/docs/web/htmw/ewement/input#max) pawa w-westwingiw as d-datas que podem sew escowhidas pewo usuáwio. OwO nyo pwóximo exempwo n-nyós definimos u-uma data mínima c-como `2017-04-01` e-e data máxima como `2017-04-30`:
 
-```html
-<form>
+```htmw
+<fowm>
   <div>
-    <label for="festa">Escolha a sua data preferida da festa:</label>
+    <wabew f-fow="festa">escowha a sua data pwefewida da festa:</wabew>
     <input
       type="date"
       id="festa"
-      name="festa"
-      min="2017-04-01"
+      nyame="festa"
+      m-min="2017-04-01"
       max="2017-04-30" />
   </div>
-</form>
+</fowm>
 ```
 
-{{ EmbedLiveSample('Setting_maximum_and_minimum_dates', 600, 40) }}
+{{ e-embedwivesampwe('setting_maximum_and_minimum_dates', (ˆ ﻌ ˆ)♡ 600, 40) }}
 
-O resultado aqui será apenas que as dias de Abril de 2017 serão selecionados — apenas a parte "dias" do texto será editável e datas fora de Abril não serão rolados na ferramenta de seleção de data.
+o wesuwtado a-aqui sewá apenas que as dias de a-abwiw de 2017 sewão sewecionados — a-apenas a p-pawte "dias" do t-texto sewá editávew e-e datas fowa d-de abwiw nyão sewão wowados nya fewwamenta de seweção de data. :3
 
-> **Note:** **Observação**: Você deve conhecer o uso do atributo [`step`](/pt-BR/docs/Web/HTML/Element/input#step) para variar o número de dias pulados cada vez que a data é incrementada (ex.: talvez você queira deixar que os Sábados sejam selecionáveis). Contudo, isto não parece funcionar eficiente de qualquer implementação em tempo de escrita.
+> **note:** **obsewvação**: você deve conhecew o uso do a-atwibuto [`step`](/pt-bw/docs/web/htmw/ewement/input#step) p-pawa v-vawiaw o nyúmewo de dias puwados c-cada vez que a data é incwementada (ex.: tawvez você queiwa d-deixaw que os s-sábados sejam sewecionáveis). -.- contudo, -.- isto nyão p-pawece funcionaw eficiente de quawquew impwementação e-em tempo d-de escwita. òωó
 
-### Controlando o tamanho da entrada
+### contwowando o-o tamanho da entwada
 
-`<input type="date">` não suporta atributos de tamanho de formulário como [`size`](/pt-BR/docs/Web/HTML/Element/input#size). Você poderá recorrer ao [CSS](/pt-BR/docs/Web/CSS) para modificar o tamanho.
+`<input type="date">` n-nyão supowta atwibutos de tamanho de fowmuwáwio como [`size`](/pt-bw/docs/web/htmw/ewement/input#size). 😳 você podewá w-wecowwew ao [css](/pt-bw/docs/web/css) p-pawa m-modificaw o tamanho. nyaa~~
 
-## Validação
+## v-vawidação
 
-Por padrão `<input type="date">` não aplica nenhuma validação de entrada de valores. As implementações da interface geralmente não deixam você informar nada que não seja uma data — o que é útil — mas você pode continuar deixando o campo vazio ou (em navegadores onde a entrada converte para o tipo `text`) informar uma data inválida (ex.: o 32 de Abril).
+p-pow padwão `<input type="date">` n-nyão apwica n-nyenhuma vawidação de entwada d-de vawowes. (⑅˘꒳˘) a-as impwementações da intewface g-gewawmente nyão deixam você infowmaw nyada q-que nyão seja uma data — o que é útiw — mas v-você pode continuaw d-deixando o campo vazio ou (em n-nyavegadowes onde a entwada convewte pawa o-o tipo `text`) infowmaw u-uma data i-inváwida (ex.: o 32 de abwiw). 😳
 
-Se você usa [`min`](/pt-BR/docs/Web/HTML/Element/input#min) e [`max`](/pt-BR/docs/Web/HTML/Element/input#max) para restringir datas disponíveis (ver [Definindo data mínima e máxima](#definindo_data_mínima_e_máxima)), os navegadores suportados mostrarão um erro se você tentar submeter uma data fora da faixa. Contudo, você terá que verificar os resultados para ter certeza que o valor está entre estas datas, uma vez que são aplicadas apenas se o selecionador de data for totalmente suportado pelo dispositivo do usuário.
+se você usa [`min`](/pt-bw/docs/web/htmw/ewement/input#min) e [`max`](/pt-bw/docs/web/htmw/ewement/input#max) pawa westwingiw d-datas disponíveis (vew [definindo data mínima e máxima](#definindo_data_mínima_e_máxima)), (U ﹏ U) o-os nyavegadowes s-supowtados mostwawão um ewwo se v-você tentaw submetew uma data f-fowa da faixa. /(^•ω•^) c-contudo, OwO você tewá que vewificaw os wesuwtados p-pawa tew cewteza que o vawow está entwe estas d-datas, ( ͡o ω ͡o ) uma vez que s-são apwicadas apenas se o sewecionadow d-de data fow totawmente s-supowtado pewo d-dispositivo do u-usuáwio. XD
 
-Adicionalmente, você pode usar o atributo [`required`](/pt-BR/docs/Web/HTML/Element/input#required) para tornar o preenchimento da data obrigatório — novamente, um erro será mostrado se você tentar submeter um campo de data vazia. Isto, finalmente, deve funcionar em muitos navegadores.
+adicionawmente, /(^•ω•^) você pode usaw o atwibuto [`wequiwed`](/pt-bw/docs/web/htmw/ewement/input#wequiwed) pawa townaw o pweenchimento da data obwigatówio — nyovamente, /(^•ω•^) um ewwo sewá mostwado se você tentaw submetew um campo de data vazia. 😳😳😳 isto, finawmente, (ˆ ﻌ ˆ)♡ deve f-funcionaw em muitos n-nyavegadowes. :3
 
-Vamos dar uma olhada em um exemplo — aqui nós definimos datas mínima e máxima e deixamos o campo como obrigatório:
+vamos daw uma owhada em um exempwo — a-aqui nyós d-definimos datas m-mínima e máxima e deixamos o-o campo como obwigatówio:
 
-```html
-<form>
+```htmw
+<fowm>
   <div>
-    <label for="festa"
-      >Escolha sua data preferida da festa (obrigatório, de 1º a 20 de
-      abril):</label
+    <wabew fow="festa"
+      >escowha s-sua data p-pwefewida da festa (obwigatówio, òωó d-de 1º a 20 de
+      abwiw):</wabew
     >
     <input
-      type="date"
-      id="festa"
-      name="festa"
+      t-type="date"
+      i-id="festa"
+      nyame="festa"
       min="2017-04-01"
       max="2017-04-20"
-      required />
-    <span class="validity"></span>
+      w-wequiwed />
+    <span c-cwass="vawidity"></span>
   </div>
   <div>
-    <input type="submit" />
+    <input t-type="submit" />
   </div>
-</form>
+</fowm>
 ```
 
-Se você tentar submeter o formulário com uma data imcompleta (ou com uma data fora da faixa), o navegador mostrará um erro. Tente executar o exemplo agora:
+s-se você t-tentaw submetew o-o fowmuwáwio com u-uma data imcompweta (ou c-com uma d-data fowa da faixa), 🥺 o nyavegadow m-mostwawá um e-ewwo. (U ﹏ U) tente executaw o-o exempwo agowa:
 
-{{ EmbedLiveSample('Validation', 600, 100) }}
+{{ embedwivesampwe('vawidation', XD 600, 100) }}
 
-Aqui tem uma captura de tela que mostra o resultado se seu navegador não suporta:
+a-aqui tem uma captuwa de tewa que mostwa o-o wesuwtado se seu nyavegadow nyão s-supowta:
 
-![](date-picker-chrome-error-message.png)
+![](date-pickew-chwome-ewwow-message.png)
 
-Aqui tem o CSS utilizado no exemplo acima. Nós usamos as propriedades CSS {{cssxref(":valid")}} e {{cssxref(":invalid")}} para estilizar a caixa de texto dependendo se o valor atual é válido ou não. Colocamos ícones num {{htmlelement("span")}} próximo a caixa de entrada, não dentro da caixa, porque no Chrome o conteúdo gerado é colocado dentro do controle do formulário, e não seria estilzado ou mostrado eficientemente.
+a-aqui tem o-o css utiwizado nyo exempwo acima. ^^ n-nyós usamos as pwopwiedades c-css {{cssxwef(":vawid")}} e {{cssxwef(":invawid")}} p-pawa estiwizaw a caixa de t-texto dependendo se o vawow atuaw é váwido ou nyão. o.O cowocamos ícones num {{htmwewement("span")}} p-pwóximo a caixa de entwada, 😳😳😳 n-nyão dentwo da c-caixa, /(^•ω•^) powque nyo chwome o conteúdo gewado é cowocado dentwo d-do contwowe do fowmuwáwio, 😳😳😳 e nyão s-sewia estiwzado o-ou mostwado e-eficientemente. ^•ﻌ•^
 
 ```css
 div {
-  margin-bottom: 10px;
-  display: flex;
-  align-items: center;
+  mawgin-bottom: 10px;
+  d-dispway: f-fwex;
+  awign-items: centew;
 }
 
-label {
-  display: inline-block;
+w-wabew {
+  dispway: inwine-bwock;
   width: 300px;
 }
 
-input:invalid + span:after {
-  content: "✖";
-  padding-left: 5px;
+i-input:invawid + span:aftew {
+  c-content: "✖";
+  p-padding-weft: 5px;
 }
 
-input:valid + span:after {
-  content: "✓";
-  padding-left: 5px;
+i-input:vawid + span:aftew {
+  c-content: "✓";
+  p-padding-weft: 5px;
 }
 ```
 
-> **Warning:** **Importante**: A validação do formulário HTML não subtitui scripts que validam se a entrada de dados está em um formato apropriado. É muito fácil para alguém fazer ajustes no HTML que permitam sobrepor a validação ou removê-lo inteiramente. Também é possível simplesmente sobrepor seu HTML inteiramente e submeter os dados diretamente ao seu servidor. Se seu código server-side falhar na validação do dado que recebe pode ocorreu um desaste quando os dados forem submetidos inapropriadamente formatado (ou dado pode ser muito grande, ou é do tipo errado e assim por diante).
+> **wawning:** **impowtante**: a-a vawidação d-do fowmuwáwio htmw nyão subtitui s-scwipts que v-vawidam se a entwada d-de dados está e-em um fowmato a-apwopwiado. 🥺 É m-muito fáciw pawa a-awguém fazew a-ajustes nyo htmw que pewmitam s-sobwepow a vawidação ou wemovê-wo i-inteiwamente. o.O também é possívew s-simpwesmente s-sobwepow seu h-htmw inteiwamente e submetew os dados diwetamente ao seu sewvidow. (U ᵕ U❁) s-se seu código s-sewvew-side f-fawhaw nya vawidação do dado que wecebe pode ocowweu um desaste q-quando os dados f-fowem submetidos inapwopwiadamente f-fowmatado (ou d-dado pode sew muito gwande, ^^ ou é do tipo ewwado e assim pow d-diante). (⑅˘꒳˘)
 
-## Manipulação do suporte do navegador
+## manipuwação d-do supowte d-do nyavegadow
 
-Como mencionado acima, o maior problema em usar caixas de entrada de data em tempo de escrita é o [suporte do navegador](#browser_compatibility). Por exemplo, o selecionador de data no Firefox para Android se parece com isso:
+c-como mencionado acima, :3 o maiow pwobwema em u-usaw caixas de entwada d-de data em tempo de escwita é o [supowte d-do nyavegadow](#bwowsew_compatibiwity). (///ˬ///✿) pow exempwo, o sewecionadow d-de data nyo fiwefox pawa andwoid s-se pawece c-com isso:
 
-![](date-picker-fxa.png)
+![](date-pickew-fxa.png)
 
-Navegadores que não suportam graciosamente rebaixa para uma caixa de texto comum, mas criam problemas em termos de consistência da interface do usuário (o controle apresentado será diferente) e a manipulação do dado.
+nyavegadowes q-que nyão supowtam g-gwaciosamente webaixa pawa u-uma caixa de texto comum, :3 mas cwiam p-pwobwemas em t-tewmos de consistência d-da intewface d-do usuáwio (o contwowe apwesentado s-sewá d-difewente) e a manipuwação d-do dado. 🥺
 
-O segundo problema é mais sério que os anterirores; como mencionamos antes, com um campo de texto de data o valor atual sempre é normalizado pelo formato `yyyy-mm-dd`. Com a caixa de texto comum, por outro lado, por padrão do navegador não há reconhecimento de qual formato a data deve ter e há muitos modos diferentes em que as pessoas escrevem datas. Por exemplo:
+o segundo p-pwobwema é mais séwio que os antewiwowes; como m-mencionamos antes, mya c-com um campo d-de texto de data o vawow atuaw sempwe é nyowmawizado pewo fowmato `yyyy-mm-dd`. XD com a caixa de t-texto comum, -.- pow outwo wado, o.O pow p-padwão do nyavegadow n-nyão há weconhecimento de quaw fowmato a-a data deve tew e há muitos modos d-difewentes e-em que as pessoas e-escwevem datas. (˘ω˘) p-pow exempwo:
 
 - `ddmmyyyy`
 - `dd/mm/yyyy`
 - `mm/dd/yyyy`
 - `dd-mm-yyyy`
 - `mm-dd-yyyy`
-- `Month dd yyyy`
+- `month d-dd yyyy`
 
-Um jeito de contornar isso é colocar um atributo [`pattern`](/pt-BR/docs/Web/HTML/Element/input#pattern) na caixa de texto de data. Sempre que a caixa de texto de data não usá-lo, a caixa de texto devolverá um erro. Por exemplo, tente ver o que o seguinte exemplo faz num navegador sem suporte:
+um jeito de contownaw isso é cowocaw um atwibuto [`pattewn`](/pt-bw/docs/web/htmw/ewement/input#pattewn) nya caixa d-de texto de data. sempwe que a caixa d-de texto de data nyão usá-wo, (U ᵕ U❁) a caixa de texto devowvewá u-um ewwo. rawr pow exempwo, 🥺 tente vew o que o seguinte exempwo faz nyum nyavegadow sem s-supowte:
 
-```html
-<form>
+```htmw
+<fowm>
   <div>
-    <label for="diaa">Informe a data do seu aniversário:</label>
+    <wabew f-fow="diaa">infowme a data do seu anivewsáwio:</wabew>
     <input
-      type="date"
+      t-type="date"
       id="bday"
-      name="diaa"
-      required
-      pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" />
-    <span class="validity"></span>
+      nyame="diaa"
+      w-wequiwed
+      p-pattewn="[0-9]{4}-[0-9]{2}-[0-9]{2}" />
+    <span cwass="vawidity"></span>
   </div>
   <div>
-    <input type="submit" />
+    <input t-type="submit" />
   </div>
-</form>
+</fowm>
 ```
 
-{{ EmbedLiveSample('Handling_browser_support', 600, 100) }}
+{{ embedwivesampwe('handwing_bwowsew_suppowt', rawr x3 600, 100) }}
 
-Se você submetê-lo, verá que o navegador agora mostra uma mensagem de erro (e destaca a caixa de texto como inválido) se o que foi informado não combinam com o padrão `nnnn-nn-nn`, onde `n` é um número entre 0 e 9. Claro, isto não parará as pessoas de informar datas inválidas ou datas formatadas incorretamente, como `yyyy-dd-mm` (onde nós precisamos de `yyyy-mm-dd`). Então continua sendo um problema.
+s-se você submetê-wo, ( ͡o ω ͡o ) vewá que o nyavegadow agowa mostwa uma m-mensagem de ewwo (e destaca a caixa de texto c-como inváwido) s-se o que foi infowmado n-nyão combinam com o padwão `nnnn-nn-nn`, σωσ onde `n` é um n-nyúmewo entwe 0 e 9. rawr x3 cwawo, isto nyão pawawá as pessoas de infowmaw datas inváwidas o-ou datas f-fowmatadas incowwetamente, (ˆ ﻌ ˆ)♡ c-como `yyyy-dd-mm` (onde n-nyós pwecisamos de `yyyy-mm-dd`). rawr então continua s-sendo um p-pwobwema. :3
 
 ```css hidden
 div {
-  margin-bottom: 10px;
+  mawgin-bottom: 10px;
 }
 
-input:invalid + span {
-  position: relative;
+i-input:invawid + span {
+  position: wewative;
 }
 
-input:invalid + span:after {
+i-input:invawid + span:aftew {
   content: "✖";
-  position: absolute;
-  right: -18px;
+  p-position: a-absowute;
+  wight: -18px;
 }
 
-input:valid + span {
-  position: relative;
+i-input:vawid + s-span {
+  position: w-wewative;
 }
 
-input:valid + span:after {
+input:vawid + span:aftew {
   content: "✓";
-  position: absolute;
-  right: -18px;
+  position: a-absowute;
+  wight: -18px;
 }
 ```
 
-A melhor maneira de lidar com datas nos formulários de um modo entre navegadores no momento é obter do usuário o dia, mês e ano em controles separados (elementos {{htmlelement("select")}} são bem populares; veja abaixo uma implementação) ou use uma biblioteca JavaScript como o [selecionador de data do jQuery](https://jqueryui.com/datepicker/).
+a mewhow m-maneiwa de widaw com datas nyos fowmuwáwios de um modo entwe n-nyavegadowes nyo m-momento é obtew d-do usuáwio o d-dia, rawr mês e ano e-em contwowes sepawados (ewementos {{htmwewement("sewect")}} são b-bem popuwawes; veja abaixo uma impwementação) o-ou use uma bibwioteca javascwipt c-como o [sewecionadow de data do jquewy](https://jquewyui.com/datepickew/). (˘ω˘)
 
-## Atributos
+## a-atwibutos
 
-Beside the attributes listed below, this element can have any of the [global attributes](/pt-BR/docs/Web/HTML/Global_attributes).
+beside t-the attwibutes wisted bewow, (ˆ ﻌ ˆ)♡ t-this ewement can have any of the [gwobaw a-attwibutes](/pt-bw/docs/web/htmw/gwobaw_attwibutes). mya
 
-- `mozactionhint` {{non-standard_inline}}
-  - : Specifies an "action hint" used to determine how to label the enter key on mobile devices with virtual keyboards. Supported values are `go`, `done`, `next`, `search`, and `send`; these automatically get mapped to the appropriate string (and are case-insensitive).
+- `mozactionhint` {{non-standawd_inwine}}
+  - : s-specifies an "action hint" used t-to detewmine how t-to wabew the entew key on mobiwe d-devices with viwtuaw keyboawds. (U ᵕ U❁) suppowted vawues awe `go`, mya `done`, `next`, ʘwʘ `seawch`, a-and `send`; these automaticawwy g-get mapped to the appwopwiate stwing (and a-awe case-insensitive). (˘ω˘)
 - `autofocus`
-  - : This Boolean attribute lets you specify that a form control should have input focus when the page loads, unless the user overrides it, for example by typing in a different control. Only one form element in a document can have the **autofocus** attribute, which is a Boolean. It cannot be applied if the **type** attribute is set to `hidden` (that is, you cannot automatically set focus to a hidden control).
-- `disabled`
-  - : This Boolean attribute indicates that the form control is not available for interaction. In particular, the `click` event [will not be dispatched](https://html.spec.whatwg.org/multipage/forms.html#enabling-and-disabling-form-controls:-the-disabled-attribute) on disabled controls. Also, a disabled control's value isn't submitted with the form.
-- `form`
-  - : The form element that the input element is associated with (its _form owner_). The value of the attribute must be an **id** of a {{HTMLElement("form")}} element in the same document. If this attribute is not specified, this `<input>` element must be a descendant of a {{HTMLElement("form")}} element. This attribute enables you to place `<input>` elements anywhere within a document, not just as descendants of their form elements. An input can only be associated with one form.
-- `formaction`
-  - : The URI of a program that processes the information submitted by the input element, if it is a submit button or image. If specified, it overrides the [`action`](/pt-BR/docs/Web/HTML/Element/form#action) attribute of the element's form owner.
-- `formenctype`
+  - : t-this b-boowean attwibute wets you specify t-that a fowm c-contwow shouwd have input focus w-when the page woads, 😳 unwess the u-usew ovewwides it, òωó fow exampwe by t-typing in a diffewent c-contwow. nyaa~~ onwy one fowm ewement in a document can have the **autofocus** attwibute, o.O which i-is a boowean. nyaa~~ it c-cannot be appwied if the **type** attwibute is set to `hidden` (that i-is, (U ᵕ U❁) you cannot automaticawwy s-set focus to a-a hidden contwow). 😳😳😳
+- `disabwed`
+  - : this boowean attwibute indicates that the fowm contwow is n-nyot avaiwabwe fow intewaction. (U ﹏ U) in pawticuwaw, ^•ﻌ•^ t-the `cwick` event [wiww nyot be d-dispatched](https://htmw.spec.naniwg.owg/muwtipage/fowms.htmw#enabwing-and-disabwing-fowm-contwows:-the-disabwed-attwibute) o-on disabwed contwows. (⑅˘꒳˘) a-awso, a disabwed c-contwow's vawue i-isn't submitted w-with the fowm. >_<
+- `fowm`
+  - : t-the fowm ewement t-that the input ewement is associated with (its _fowm ownew_). (⑅˘꒳˘) the vawue of the attwibute must b-be an **id** of a-a {{htmwewement("fowm")}} e-ewement i-in the same document. σωσ i-if this a-attwibute is nyot specified, 🥺 this `<input>` ewement must be a descendant of a {{htmwewement("fowm")}} e-ewement. :3 this a-attwibute enabwes you to pwace `<input>` ewements anywhewe within a-a document, n-nyot just as descendants o-of theiw fowm ewements. (ꈍᴗꈍ) an input can o-onwy be associated with one fowm. ^•ﻌ•^
+- `fowmaction`
+  - : the uwi of a-a pwogwam that p-pwocesses the infowmation submitted by the input e-ewement, (˘ω˘) if it is a submit button o-ow image. 🥺 if s-specified, (✿oωo) it ovewwides the [`action`](/pt-bw/docs/web/htmw/ewement/fowm#action) a-attwibute of the e-ewement's fowm o-ownew. XD
+- `fowmenctype`
 
-  - : If the input element is a submit button or image, this attribute specifies the type of content that is used to submit the form to the server. Possible values are:
+  - : i-if the input ewement i-is a submit b-button ow image, (///ˬ///✿) this attwibute s-specifies the type o-of content that is used to submit t-the fowm to the sewvew. ( ͡o ω ͡o ) possibwe vawues awe:
 
-    - `application/x-www-form-urlencoded`: The default value if the attribute is not specified.
-    - `multipart/form-data`: Use this value if you are using an {{HTMLElement("input")}} element with the [`type`](/pt-BR/docs/Web/HTML/Element/input#type) attribute set to `file`.
-    - `text/plain`
+    - `appwication/x-www-fowm-uwwencoded`: the d-defauwt vawue if the attwibute i-is nyot specified. ʘwʘ
+    - `muwtipawt/fowm-data`: use this vawue i-if you awe using a-an {{htmwewement("input")}} ewement with the [`type`](/pt-bw/docs/web/htmw/ewement/input#type) a-attwibute set to `fiwe`. rawr
+    - `text/pwain`
 
-    If this attribute is specified, it overrides the [`enctype`](/pt-BR/docs/Web/HTML/Element/form#enctype) attribute of the element's form owner.
+    if this attwibute is specified, o.O i-it ovewwides the [`enctype`](/pt-bw/docs/web/htmw/ewement/fowm#enctype) a-attwibute of the ewement's fowm ownew. ^•ﻌ•^
 
-- `formmethod`
+- `fowmmethod`
 
-  - : If the input element is a submit button or image, this attribute specifies the HTTP method that the browser uses to submit the form. Possible values are:
+  - : i-if the input e-ewement is a submit button o-ow image, (///ˬ///✿) this attwibute specifies the http method t-that the bwowsew u-uses to submit the fowm. (ˆ ﻌ ˆ)♡ possibwe v-vawues awe:
 
-    - `post`: The data from the form is included in the body of the form and is sent to the server.
-    - `get`: The data from the form are appended to the **form** attribute URI, with a '?' as a separator, and the resulting URI is sent to the server. Use this method when the form has no side-effects and contains only ASCII characters.
+    - `post`: t-the data fwom the fowm is incwuded in the body o-of the fowm and i-is sent to the sewvew. XD
+    - `get`: t-the data fwom t-the fowm awe appended to the **fowm** attwibute uwi, (✿oωo) with a '?' as a sepawatow, -.- and the wesuwting uwi is sent t-to the sewvew. XD use t-this method when t-the fowm has n-nyo side-effects a-and contains onwy a-ascii chawactews. (✿oωo)
 
-    If specified, this attribute overrides the [`method`](/pt-BR/docs/Web/HTML/Element/form#method) attribute of the element's form owner.
+    if specified, (˘ω˘) t-this attwibute o-ovewwides the [`method`](/pt-bw/docs/web/htmw/ewement/fowm#method) a-attwibute o-of the ewement's fowm ownew. (ˆ ﻌ ˆ)♡
 
-- `formnovalidate`
-  - : If the input element is a submit button or image, this Boolean attribute specifies that the form is not to be validated when it is submitted. If this attribute is specified, it overrides the [`novalidate`](/pt-BR/docs/Web/HTML/Element/form#novalidate) attribute of the element's form owner.
-- `formtarget`
+- `fowmnovawidate`
+  - : if the i-input ewement is a submit button ow image, >_< this b-boowean attwibute specifies that t-the fowm is n-nyot to be vawidated when it is s-submitted. -.- if this a-attwibute is s-specified, (///ˬ///✿) it ovewwides the [`novawidate`](/pt-bw/docs/web/htmw/ewement/fowm#novawidate) a-attwibute o-of the ewement's fowm ownew. XD
+- `fowmtawget`
 
-  - : If the input element is a submit button or image, this attribute is a name or keyword indicating where to display the response that is received after submitting the form. This is a name of, or keyword for, a _browsing context_ (for example, tab, window, or inline frame). If this attribute is specified, it overrides the [`target`](/pt-BR/docs/Web/HTML/Element/form#target) attribute of the elements's form owner. The following keywords have special meanings:
+  - : i-if the input ewement is a s-submit button ow i-image, ^^;; this attwibute i-is a nyame ow keywowd indicating w-whewe to dispway the wesponse that is weceived a-aftew submitting the fowm. rawr x3 this is a name of, OwO ow keywowd fow, ʘwʘ a _bwowsing context_ (fow exampwe, rawr tab, UwU window, o-ow inwine fwame). (ꈍᴗꈍ) if this attwibute is specified, (✿oωo) it ovewwides the [`tawget`](/pt-bw/docs/web/htmw/ewement/fowm#tawget) attwibute of the ewements's f-fowm ownew. (⑅˘꒳˘) the fowwowing keywowds have s-speciaw meanings:
 
-    - `_self`: Load the response into the same browsing context as the current one. This value is the default if the attribute is not specified.
-    - `_blank`: Load the response into a new unnamed browsing context.
-    - `_parent`: Load the response into the parent browsing context of the current one. If there is no parent, this option behaves the same way as `_self`.
-    - `_top`: Load the response into the top-level browsing context (that is, the browsing context that is an ancestor of the current one, and has no parent). If there is no parent, this option behaves the same way as `_self`.
+    - `_sewf`: woad the wesponse i-into the same bwowsing context as the cuwwent o-one. OwO this vawue is the defauwt i-if the attwibute is nyot specified. 🥺
+    - `_bwank`: w-woad the wesponse i-into a nyew unnamed bwowsing context. >_<
+    - `_pawent`: woad t-the wesponse into the pawent bwowsing context of the cuwwent o-one. if thewe is nyo pawent, (ꈍᴗꈍ) this o-option behaves the same way as `_sewf`. 😳
+    - `_top`: w-woad the wesponse into t-the top-wevew bwowsing c-context (that is, 🥺 the bwowsing context that i-is an ancestow of the cuwwent one, nyaa~~ and has nyo p-pawent). ^•ﻌ•^ if thewe is nyo pawent, (ˆ ﻌ ˆ)♡ this option behaves the same way as `_sewf`. (U ᵕ U❁)
 
 - `inputmode`
 
-  - : A hint to the browser for which keyboard to display. This attribute applies when the value of the **type** attribute is text, password, email, or url. Possible values are:
+  - : a-a hint to t-the bwowsew fow which keyboawd to d-dispway. mya this a-attwibute appwies when the vawue o-of the **type** attwibute is text, 😳 passwowd, emaiw, σωσ ow uww. possibwe vawues awe:
 
-    - `verbatim`: Alphanumeric, non-prose content such as usernames and passwords.
-    - `latin`: Latin-script input in the user's preferred language with typing aids such as text prediction enabled. For human-to-computer communication such as search boxes.
-    - `latin-name`: As _latin_, but for human names.
-    - `latin-prose`: As _latin_, but with more aggressive typing aids. For human-to-human communication such as instant messaging for email.
-    - `full-width-latin`: As _latin-prose_, but for the user's secondary languages.
-    - `kana`: Kana or romaji input, typically hiragana input, using full-width characters, with support for converting to kanji. Intended for Japanese text input.
-    - `katakana`: Katakana input, using full-width characters, with support for converting to kanji. Intended for Japanese text input.
-    - `numeric`: Numeric input, including keys for the digits 0 to 9, the user's preferred thousands separator character, and the character for indicating negative numbers. Intended for numeric codes, e.g. credit card numbers. For actual numbers, prefer using \<input type="number">
-    - `tel`: Telephone input, including asterisk and pound key. Use \<input type="tel"> if possible instead.
-    - `email`: Email input. Use \<input type="email"> if possible instead.
-    - `url`: URL input. Use \<input type="url"> if possible instead.
+    - `vewbatim`: a-awphanumewic, ( ͡o ω ͡o ) n-nyon-pwose content such as usewnames a-and passwowds. XD
+    - `watin`: w-watin-scwipt input in the u-usew's pwefewwed wanguage with typing aids such a-as text pwediction enabwed. :3 fow human-to-computew c-communication s-such as seawch boxes. :3
+    - `watin-name`: as _watin_, (⑅˘꒳˘) but fow human n-nyames. òωó
+    - `watin-pwose`: as _watin_, mya but with mowe aggwessive typing aids. 😳😳😳 fow human-to-human communication such as instant messaging fow e-emaiw. :3
+    - `fuww-width-watin`: a-as _watin-pwose_, >_< but fow the u-usew's secondawy w-wanguages. 🥺
+    - `kana`: kana o-ow womaji input, (ꈍᴗꈍ) typicawwy hiwagana input, rawr x3 using fuww-width chawactews, (U ﹏ U) with suppowt fow convewting t-to kanji. ( ͡o ω ͡o ) intended fow japanese text input. 😳😳😳
+    - `katakana`: katakana input, using fuww-width c-chawactews, 🥺 with s-suppowt fow c-convewting to kanji. òωó intended fow japanese text input. XD
+    - `numewic`: n-nyumewic i-input, incwuding k-keys fow the digits 0 to 9, XD the u-usew's pwefewwed thousands sepawatow c-chawactew, and the chawactew f-fow indicating nyegative nyumbews. ( ͡o ω ͡o ) i-intended fow nyumewic codes, >w< e.g. cwedit c-cawd nyumbews. mya fow actuaw nyumbews, (ꈍᴗꈍ) p-pwefew using \<input t-type="numbew">
+    - `tew`: tewephone input, -.- i-incwuding a-astewisk and pound key. (⑅˘꒳˘) use \<input t-type="tew"> if possibwe instead. (U ﹏ U)
+    - `emaiw`: e-emaiw input. σωσ use \<input type="emaiw"> i-if possibwe i-instead. :3
+    - `uww`: uww input. /(^•ω•^) use \<input t-type="uww"> if possibwe instead. σωσ
 
-- `list`
-  - : Identifies a list of pre-defined options to suggest to the user. The value must be the **id** of a {{HTMLElement("datalist")}} element in the same document. The browser displays only options that are valid values for this input element.
+- `wist`
+  - : identifies a wist of pwe-defined options to suggest to the usew. (U ᵕ U❁) the vawue must be the **id** o-of a {{htmwewement("datawist")}} ewement in the same document. 😳 t-the bwowsew dispways onwy options t-that awe vawid vawues fow this input ewement. ʘwʘ
 - `max`
-  - : The maximum value for this item, which must not be less than its minimum (**min** attribute) value.
+  - : t-the maximum vawue fow this item, (⑅˘꒳˘) which must nyot b-be wess than its minimum (**min** attwibute) vawue. ^•ﻌ•^
 - `min`
-  - : The minimum value for this item, which must not be greater than its maximum (**max** attribute) value.
+  - : t-the minimum vawue fow this item, nyaa~~ which must nyot b-be gweatew than its maximum (**max** attwibute) v-vawue. XD
 - `name`
-  - : The name of the control, which is submitted with the form data.
-- `readonly`
-  - : This Boolean attribute indicates that the user cannot modify the value of the control.
-- `required`
-  - : This attribute specifies that the user must fill in a value before submitting a form. It cannot be used when the **type** attribute is `hidden`, `image`, or a button type (`submit`, `reset`, or `button`). The {{cssxref(":optional")}} and {{cssxref(":required")}} CSS pseudo-classes will be applied to the field as appropriate.
-- `selectionDirection`
-  - : The direction in which selection occurred. This is "forward" if the selection was made from left-to-right in an LTR locale or right-to-left in an RTL locale, or "backward" if the selection was made in the opposite direction. This can be "none" if the selection direction is unknown.
-- `spellcheck`
-  - : Setting the value of this attribute to `true` indicates that the element needs to have its spelling and grammar checked. The value `default` indicates that the element is to act according to a default behavior, possibly based on the parent element's own `spellcheck` value. The value `false` indicates that the element should not be checked.
+  - : t-the nyame of the contwow, /(^•ω•^) which is submitted w-with the f-fowm data. (U ᵕ U❁)
+- `weadonwy`
+  - : this b-boowean attwibute i-indicates that the usew cannot modify the vawue o-of the contwow. mya
+- `wequiwed`
+  - : this attwibute specifies that the usew must f-fiww in a vawue befowe submitting a fowm. (ˆ ﻌ ˆ)♡ it cannot be used w-when the **type** a-attwibute is `hidden`, (✿oωo) `image`, o-ow a button type (`submit`, (✿oωo) `weset`, òωó ow `button`). the {{cssxwef(":optionaw")}} and {{cssxwef(":wequiwed")}} css p-pseudo-cwasses wiww be appwied t-to the fiewd as appwopwiate. (˘ω˘)
+- `sewectiondiwection`
+  - : t-the d-diwection in which sewection occuwwed. (ˆ ﻌ ˆ)♡ this is "fowwawd" if the sewection was made fwom weft-to-wight i-in an wtw w-wocawe ow wight-to-weft in an wtw wocawe, ow "backwawd" i-if the sewection was made in the opposite d-diwection. ( ͡o ω ͡o ) this c-can be "none" i-if the sewection d-diwection is unknown. rawr x3
+- `spewwcheck`
+  - : s-setting t-the vawue of this attwibute to `twue` indicates t-that the ewement n-nyeeds to have i-its spewwing a-and gwammaw checked. (˘ω˘) t-the vawue `defauwt` i-indicates that the ewement i-is to act accowding t-to a defauwt b-behaviow, òωó possibwy based on the pawent ewement's o-own `spewwcheck` vawue. ( ͡o ω ͡o ) the vawue `fawse` i-indicates that the ewement shouwd nyot be checked. σωσ
 - `step`
-  - : Works with the **min** and **max** attributes to limit the increments at which a numeric or date-time value can be set. It can be the string `any` or a positive floating point number. If this attribute is not set to `any`, the control accepts only values at multiples of the step value greater than the minimum.
-- `value`
-  - : The initial value of the control. This attribute is optional.
-    Note that when reloading the page, Gecko and IE [will ignore the value specified in the HTML source](https://bugzilla.mozilla.org/show_bug.cgi?id=46845#c186), if the value was changed before the reload.
-- `x-moz-errormessage` {{non-standard_inline}}
-  - : This Mozilla extension allows you to specify the error message to display when a field doesn't successfully validate.
+  - : w-wowks with the **min** a-and **max** attwibutes to wimit the incwements at which a-a nyumewic ow d-date-time vawue can be set. (U ﹏ U) it can b-be the stwing `any` o-ow a positive fwoating point nyumbew. rawr if this attwibute is n-nyot set to `any`, -.- t-the contwow accepts onwy vawues at muwtipwes o-of the step vawue g-gweatew than the minimum. ( ͡o ω ͡o )
+- `vawue`
+  - : the i-initiaw vawue of the contwow. this attwibute is optionaw. >_<
+    nyote that when wewoading the page, o.O g-gecko and ie [wiww ignowe the vawue specified i-in the htmw souwce](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=46845#c186), σωσ i-if the vawue was c-changed befowe the wewoad. -.-
+- `x-moz-ewwowmessage` {{non-standawd_inwine}}
+  - : t-this moziwwa extension a-awwows you t-to specify the e-ewwow message t-to dispway when a fiewd doesn't successfuwwy vawidate. σωσ
 
-## Examples
+## e-exampwes
 
-To create a widget to display a date, use:
+t-to cweate a w-widget to dispway a date, :3 use:
 
-```html
-<input type="date" />
+```htmw
+<input t-type="date" />
 ```
 
-## Navegadores compatíveis
+## n-nyavegadowes c-compatíveis
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- The generic {{HTMLElement("input")}} element and the interface used to manipulate it, {{domxref("HTMLInputElement")}}
-- [Date and Time picker tutorial](/pt-BR/docs/Learn/Forms/Basic_native_form_controls#date_and_time_picker)
-- [Bug 1283381 - Firefox bug to implement](https://bugzilla.mozilla.org/show_bug.cgi?id=1283381)
+- t-the genewic {{htmwewement("input")}} e-ewement and t-the intewface u-used to manipuwate i-it, ^^ {{domxwef("htmwinputewement")}}
+- [date and time pickew tutowiaw](/pt-bw/docs/weawn/fowms/basic_native_fowm_contwows#date_and_time_pickew)
+- [bug 1283381 - f-fiwefox bug to impwement](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=1283381)

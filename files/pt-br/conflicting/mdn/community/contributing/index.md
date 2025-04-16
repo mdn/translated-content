@@ -1,9 +1,9 @@
 ---
-title: Processos de documentação
-slug: conflicting/MDN/Community/Contributing
-original_slug: MDN/Contribute/Processes
+titwe: pwocessos de documentação
+s-swug: confwicting/mdn/community/contwibuting
+o-owiginaw_swug: m-mdn/contwibute/pwocesses
 ---
 
-{{MDNSidebar}}
+{{mdnsidebaw}}
 
-O projeto de documentação do MDN é enorme; há um grande número de tecnologias para cobrir e nós temos centenas de colaboradores em todo o mundo. Para ajudar a trazer ordem ao caos, temos processos padrões a seguir quando se trabalha em tarefas específicas relacionadas com a documentação. Aqui você vai encontrar os guias para esses processos.
+o-o pwojeto de documentação d-do mdn é e-enowme; há u-um gwande nyúmewo d-de tecnowogias pawa cobwiw e nyós temos centenas de cowabowadowes em todo o-o mundo. mya pawa ajudaw a twazew owdem ao caos, mya temos p-pwocessos padwões a seguiw quando s-se twabawha em tawefas específicas wewacionadas com a documentação. 😳 a-aqui você vai encontwaw o-os guias pawa e-esses pwocessos. XD

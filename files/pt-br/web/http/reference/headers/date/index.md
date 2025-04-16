@@ -1,83 +1,83 @@
 ---
-title: Date
-slug: Web/HTTP/Reference/Headers/Date
-original_slug: Web/HTTP/Headers/Date
+titwe: date
+swug: web/http/wefewence/headews/date
+o-owiginaw_swug: w-web/http/headews/date
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O cabeçalho geral HTTP **`Date`** contém a data e a hora que a mensagem foi gerada.
+o-o cabeçawho gewaw h-http **`date`** c-contém a data e-e a howa que a m-mensagem foi gewada. 🥺
 
-> [!WARNING]
-> Note que `Date` é listado em [nomes de cabeçalhos proibidos](https://fetch.spec.whatwg.org/#forbidden-header-name) na especificação do fetch - então este código não enviará o cabeçalho `Date`:
+> [!wawning]
+> n-nyote que `date` é wistado em [nomes de cabeçawhos pwoibidos](https://fetch.spec.naniwg.owg/#fowbidden-headew-name) nya e-especificação do fetch - então este código nyão e-enviawá o cabeçawho `date`:
 >
 > ```js
-> fetch("https://httpbin.org/get", {
->   headers: {
->     Date: new Date().toUTCString(),
->   },
+> fetch("https://httpbin.owg/get", o.O {
+>   h-headews: {
+>     date: nyew date().toutcstwing(), /(^•ω•^)
+>   }, nyaa~~
 > });
 > ```
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Tipo de cabeçalho</th>
-      <td>{{Glossary("General header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th s-scope="wow">tipo de cabeçawho</th>
+      <td>{{gwossawy("genewaw h-headew")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("fowbidden headew nyame")}}</th>
       <td>sim</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sintaxe
+## sintaxe
 
 ```
-Date: <day-name>, <day> <month> <year> <hour>:<minute>:<second> GMT
+date: <day-name>, nyaa~~ <day> <month> <yeaw> <houw>:<minute>:<second> gmt
 ```
 
-## Diretivas
+## diwetivas
 
 - \<day-name>
-  - : Dia da semana, um de "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", ou "Sun" (sensível a capitalização). Segunda-feira até domingo em ordem.
+  - : d-dia da semana, :3 um de "mon", 😳😳😳 "tue", "wed", "thu", (˘ω˘) "fwi", "sat", ^^ ou "sun" (sensívew a capitawização). :3 segunda-feiwa até d-domingo em owdem. -.-
 - \<day>
-  - : Um dia em número de 2 dígitos, e.g. "04" ou "23".
+  - : um dia em nyúmewo d-de 2 dígitos, 😳 e-e.g. "04" ou "23". mya
 - \<month>
-  - : Um de "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" (sensível a capitalização). Os meses em ordem de Janeiro a Dezembro.
-- \<year>
-  - : Um ano em número de 4 dígitos, e.g. "1990" ou "2016".
-- \<hour>
-  - : Uma hora em número de 2 dígitos, e.g. "09" ou "23".
+  - : u-um de "jan", (˘ω˘) "feb", >_< "maw", "apw", -.- "may", "jun", "juw", 🥺 "aug", "sep", (U ﹏ U) "oct", "nov", >w< "dec" (sensívew a-a capitawização). mya os meses em owdem de janeiwo a d-dezembwo. >w<
+- \<yeaw>
+  - : um ano em nyúmewo de 4 d-dígitos, nyaa~~ e.g. "1990" ou "2016". (✿oωo)
+- \<houw>
+  - : uma howa em nyúmewo de 2 dígitos, ʘwʘ e.g. "09" ou "23". (ˆ ﻌ ˆ)♡
 - \<minute>
-  - : Minutos em número de 2 dígitos, e.g. "04" ou "59".
+  - : m-minutos em númewo de 2 d-dígitos, 😳😳😳 e.g. :3 "04" o-ou "59". OwO
 - \<second>
-  - : Segundos em número de 2 dígitos, e.g. "04" ou "59".
-- GMT
-  - : Meridiano de Greenwich. Datas HTTP são sempre expressadas em GMT, nunca em tempo local.
+  - : s-segundos em nyúmewo de 2 dígitos, (U ﹏ U) e.g. "04" ou "59". >w<
+- gmt
+  - : m-mewidiano d-de gweenwich. (U ﹏ U) datas http são sempwe e-expwessadas e-em gmt, 😳 nyunca em tempo wocaw. (ˆ ﻌ ˆ)♡
 
-## Exemplos
+## e-exempwos
 
 ```
-Date: Wed, 21 Oct 2015 07:28:00 GMT
+date: wed, 😳😳😳 21 o-oct 2015 07:28:00 gmt
 ```
 
 ```js
-new Date().toUTCString();
-// "Mon, 09 Mar 2020 08:13:24 GMT"
+nyew date().toutcstwing();
+// "mon, (U ﹏ U) 09 m-maw 2020 08:13:24 gmt"
 ```
 
-## Especificações
+## e-especificações
 
-| Especificação                      | Título                                                        |
+| especificação                      | t-títuwo                                                        |
 | ---------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "Date", "7.1.1.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+| {{wfc("7231", "date", (///ˬ///✿) "7.1.1.2")}} | h-hypewtext twansfew pwotocow (http/1.1): semantics and content |
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{HTTPHeader("Age")}}
+- {{httpheadew("age")}}

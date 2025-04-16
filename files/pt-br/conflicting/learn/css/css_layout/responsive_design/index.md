@@ -1,67 +1,67 @@
 ---
-title: Mobile Web Development
-slug: conflicting/Learn/CSS/CSS_layout/Responsive_Design
-original_slug: Web/Guide/Mobile
+titwe: mobiwe web devewopment
+s-swug: confwicting/weawn/css/css_wayout/wesponsive_design
+o-owiginaw_swug: w-web/guide/mobiwe
 ---
 
-Esta página fornece uma visão geral de algumas das principais técnicas necessárias para desenvolver websites que trabalham bem em dispositivos moveis. Se você esta vendo esta informação no projeto Firefox OS da Mozilla, veja a página [Firefox OS](/pt-BR/Mozilla/Firefox_OS). Ou você pode estar interessado em detalhes sobre [Firefox para Android](/pt-BR/Mozilla/Firefox_for_Android).
+esta p-página fownece u-uma visão gewaw d-de awgumas d-das pwincipais técnicas n-nyecessáwias pawa desenvowvew websites que twabawham bem em dispositivos m-moveis. 😳😳😳 se você esta vendo esta infowmação n-nyo pwojeto fiwefox os da moziwwa, nyaa~~ v-veja a página [fiwefox os](/pt-bw/moziwwa/fiwefox_os). rawr ou você pode estaw i-intewessado em detawhes sobwe [fiwefox p-pawa andwoid](/pt-bw/moziwwa/fiwefox_fow_andwoid). -.-
 
-We've organized it into two sections, [designing for mobile devices](#designing_for_mobile_devices) and [cross-browser compatibility](#cross-browser_development). Also see Jason Grlicky's guide to [mobile-friendliness](/pt-BR/docs/Learn/CSS/CSS_layout/Responsive_Design) for web developers.
+w-we've owganized it into two sections, (✿oωo) [designing fow mobiwe devices](#designing_fow_mobiwe_devices) and [cwoss-bwowsew c-compatibiwity](#cwoss-bwowsew_devewopment). /(^•ω•^) awso see jason gwwicky's guide to [mobiwe-fwiendwiness](/pt-bw/docs/weawn/css/css_wayout/wesponsive_design) fow web d-devewopews. 🥺
 
-## Projetando para dispositivos móveis
+## pwojetando pawa d-dispositivos móveis
 
-Dispositivos móveis possuem características de hardware bastante diferentes comparados com desktops ou notebooks. Suas telas geralmente são menores, obviamente, mas eles costumam alterar automáticamente a orientação da tela entre os modos retrato e paisagem à medida que o usuário rotaciona o dispositivo. Eles geralmente têm telas sensíveis ao toque para entrada do usuário. API's como geolocalização ou orientação da tela não são suportadas em desktops ou são muito menos úteis e essas API's dão aos usuários mobile novas formas de interagir com seu site.
+d-dispositivos m-móveis possuem c-cawactewísticas de hawdwawe bastante difewentes c-compawados com desktops ou notebooks. ʘwʘ suas t-tewas gewawmente são menowes, UwU obviamente, XD mas ewes costumam awtewaw automáticamente a owientação d-da tewa entwe os modos wetwato e-e paisagem à m-medida que o u-usuáwio wotaciona o dispositivo. (✿oωo) ewes gewawmente têm tewas sensíveis a-ao toque p-pawa entwada do usuáwio. :3 api's c-como geowocawização o-ou owientação da tewa nyão s-são supowtadas em desktops o-ou são muito menos úteis e essas api's dão aos u-usuáwios mobiwe nyovas fowmas d-de intewagiw com seu site. (///ˬ///✿)
 
-### Working with small screens
+### w-wowking with smow s-scweens
 
-[Responsive Web Design](/pt-BR/docs/Web/Progressive_web_apps) is a term for a set of techniques that enables your web site to adapt its layout as its viewing environment — most obviously, the size and orientation of the screen — changes. It includes techniques such as:
+[wesponsive web design](/pt-bw/docs/web/pwogwessive_web_apps) is a tewm fow a set of techniques that enabwes youw web site to adapt i-its wayout as its v-viewing enviwonment — most o-obviouswy, nyaa~~ the size a-and owientation o-of the scween — changes. >w< it incwudes techniques such as:
 
-- fluid CSS layouts, to make the page adapt smoothly as the browser window size changes
-- the use of [media queries](/pt-BR/docs/CSS/Media_queries) to conditionally include CSS rules appropriate for the device screen [width](/pt-BR/docs/CSS/Media_queries#width) and [height](/pt-BR/docs/CSS/Media_queries#height)
+- f-fwuid css wayouts, -.- to make the page adapt smoothwy as the bwowsew window size c-changes
+- the use of [media quewies](/pt-bw/docs/css/media_quewies) t-to conditionawwy i-incwude css w-wuwes appwopwiate fow the device s-scween [width](/pt-bw/docs/css/media_quewies#width) a-and [height](/pt-bw/docs/css/media_quewies#height)
 
-The [viewport meta tag](/pt-BR/Mobile/Viewport_meta_tag) instructs the browser to display your site at the appropriate scale for the user's device.
+t-the [viewpowt m-meta tag](/pt-bw/mobiwe/viewpowt_meta_tag) instwucts the bwowsew to dispway y-youw site at t-the appwopwiate s-scawe fow the usew's d-device. (✿oωo)
 
-### Working with touch screens
+### w-wowking with touch scweens
 
-To use a touch screen you'll need to work with [DOM Touch events](/pt-BR/docs/DOM/Touch_events). You won't be able to use the [CSS :hover](/en-US/CSS/:hover) pseudo-class, and will need to design clickable items like buttons to respect the fact that fingers are fatter than mouse pointers. See this article on [designing for touch screens](https://web.archive.org/web/20150520130912/http://www.whatcreative.co.uk/blog/tips/designing-for-touch-screen/).
+to use a touch scween you'ww nyeed t-to wowk with [dom touch events](/pt-bw/docs/dom/touch_events). (˘ω˘) you won't be abwe to use the [css :hovew](/en-us/css/:hovew) pseudo-cwass, rawr and w-wiww nyeed to design cwickabwe items wike buttons to wespect the f-fact that fingews a-awe fattew than m-mouse pointews. OwO see this awticwe o-on [designing fow touch scweens](https://web.awchive.owg/web/20150520130912/http://www.nanicweative.co.uk/bwog/tips/designing-fow-touch-scween/).
 
-You can use the [-moz-touch-enabled](/pt-BR/docs/CSS/Media_queries#-moz-touch-enabled) media query to load different CSS on a touch-enabled device.
+y-you can use t-the [-moz-touch-enabwed](/pt-bw/docs/css/media_quewies#-moz-touch-enabwed) media quewy to woad diffewent css on a touch-enabwed device. ^•ﻌ•^
 
-### Optimizing images
+### o-optimizing images
 
-To help users whose devices have low or expensive bandwidth, you can optimize images by loading images appropriate to the device screen size and resolution. You do this in CSS by querying for screen [height](/pt-BR/docs/CSS/Media_queries#height), [width](/pt-BR/docs/CSS/Media_queries#width), and [pixel ratio](/pt-BR/docs/CSS/Media_queries#-moz-device-pixel-ratio).
+to hewp usews w-whose devices have wow ow expensive b-bandwidth, UwU y-you can optimize images by woading images appwopwiate t-to the device s-scween size and wesowution. (˘ω˘) y-you do this in css b-by quewying fow scween [height](/pt-bw/docs/css/media_quewies#height), (///ˬ///✿) [width](/pt-bw/docs/css/media_quewies#width), σωσ and [pixew watio](/pt-bw/docs/css/media_quewies#-moz-device-pixew-watio).
 
-You can also make use of CSS properties to implement visual effects like [gradients](/pt-BR/docs/CSS/Using_CSS_gradients) and [shadows](/en-US/CSS/Box-shadow) without images.
+you can awso m-make use of css p-pwopewties to impwement v-visuaw effects wike [gwadients](/pt-bw/docs/css/using_css_gwadients) a-and [shadows](/en-us/css/box-shadow) w-without images. /(^•ω•^)
 
-### Mobile APIs
+### mobiwe apis
 
-Finally, you can take advantage of the new possibilities offered by mobile devices, such as [orientation](/pt-BR/Detecting_device_orientation) and [geolocation](/en-US/Using_geolocation).
+f-finawwy, 😳 you can take advantage of the nyew possibiwities offewed by mobiwe d-devices, 😳 such as [owientation](/pt-bw/detecting_device_owientation) a-and [geowocation](/en-us/using_geowocation). (⑅˘꒳˘)
 
-## Cross-browser development
+## cwoss-bwowsew devewopment
 
-### Write cross-browser code
+### w-wwite cwoss-bwowsew c-code
 
-To create web sites that will work acceptably across different mobile browsers:
+to cweate web sites that wiww wowk acceptabwy acwoss d-diffewent mobiwe bwowsews:
 
-- Try to avoid using browser-specific features, such as vendor-prefixed CSS properties.
-- If you do need to use these features, check whether other browsers implement their own versions of these features, and target them too.
-- For browsers that don't support these features, provide an acceptable fallback.
+- twy to avoid using bwowsew-specific featuwes, 😳😳😳 such a-as vendow-pwefixed css pwopewties. 😳
+- if you d-do nyeed to use t-these featuwes, XD check whethew othew bwowsews impwement theiw own v-vewsions of these f-featuwes, mya and tawget them too.
+- fow bwowsews that don't suppowt t-these featuwes, ^•ﻌ•^ pwovide an acceptabwe f-fawwback. ʘwʘ
 
-For example, if you set a gradient as a background for some text using a vendor-prefixed property like `-webkit-linear-gradient`, it's best to include the other vendor-prefixed versions of the [linear-gradient](/pt-BR/docs/CSS/linear-gradient) property. If you don't do that, at least make sure that the default background contrasts with the text: that way, the page will at least be usable in a browser which is not targeted by your `linear-gradient` rule.
+fow exampwe, ( ͡o ω ͡o ) if you set a gwadient as a backgwound f-fow some text using a vendow-pwefixed p-pwopewty w-wike `-webkit-wineaw-gwadient`, mya it's best t-to incwude the othew vendow-pwefixed v-vewsions of t-the [wineaw-gwadient](/pt-bw/docs/css/wineaw-gwadient) p-pwopewty. o.O if you don't d-do that, (✿oωo) at weast m-make suwe that the defauwt backgwound contwasts w-with the text: t-that way, :3 the page w-wiww at weast be usabwe in a bwowsew which is n-nyot tawgeted by youw `wineaw-gwadient` w-wuwe. 😳
 
-See this [list of Gecko-specific properties](/pt-BR/docs/CSS/CSS_Reference/Mozilla_Extensions), and this list of [WebKit-specific properties](/pt-BR/docs/CSS/CSS_Reference/Webkit_Extensions), and Peter Beverloo's [table of vendor-specific properties](https://peter.sh/experiments/vendor-prefixed-css-property-overview/).
+s-see this [wist of gecko-specific pwopewties](/pt-bw/docs/css/css_wefewence/moziwwa_extensions), (U ﹏ U) and this wist of [webkit-specific p-pwopewties](/pt-bw/docs/css/css_wefewence/webkit_extensions), mya a-and petew bevewwoo's [tabwe o-of v-vendow-specific pwopewties](https://petew.sh/expewiments/vendow-pwefixed-css-pwopewty-ovewview/). (U ᵕ U❁)
 
-Using tools like [CSS Lint](http://csslint.net/) can help find problems like this in code, and preprocessors like [SASS](https://sass-lang.com/) and [LESS](https://lesscss.org/) can help you to produce cross-browser code.
+u-using toows wike [css wint](http://csswint.net/) can hewp find pwobwems wike this in code, :3 and pwepwocessows w-wike [sass](https://sass-wang.com/) and [wess](https://wesscss.owg/) c-can hewp you to pwoduce cwoss-bwowsew c-code. mya
 
-### Take care with user agent sniffing
+### take cawe w-with usew agent sniffing
 
-It's preferable for web sites to detect specific device features such as screen size and touch screens using the techniques listed above, and adapt themselves accordingly. But sometimes this is impractical, and web sites resort to parsing the browser's user agent string to try to distinguish between desktops, tablets, and phones, to serve different content to each type of device.
+it's pwefewabwe f-fow web s-sites to detect s-specific device f-featuwes such a-as scween size and touch scweens using the techniques wisted above, and adapt themsewves accowdingwy. OwO but sometimes t-this is impwacticaw, (ˆ ﻌ ˆ)♡ a-and web s-sites wesowt to pawsing the bwowsew's u-usew agent stwing to twy to distinguish between desktops, ʘwʘ t-tabwets, and phones, o.O t-to sewve diffewent content t-to each type of device. UwU
 
-If you do this, make sure your algorithm is correct, and you aren't serving the wrong type of content to a device because you don't understand a particular browser's user agent string. See this [guide to using the user agent string to determine device type](/pt-BR/Browser_detection_using_the_user_agent#Mobile.2C_Tablet_or_Desktop).
+if you do this, rawr x3 make suwe y-youw awgowithm i-is cowwect, 🥺 and you awen't sewving t-the wwong t-type of content to a device because you don't undewstand a pawticuwaw bwowsew's u-usew agent stwing. :3 s-see this [guide t-to using the u-usew agent stwing t-to detewmine device type](/pt-bw/bwowsew_detection_using_the_usew_agent#mobiwe.2c_tabwet_ow_desktop). (ꈍᴗꈍ)
 
-### Teste em vários navegadores
+### t-teste e-em váwios nyavegadowes
 
-Teste seu site em vários navegadores. Isso significa testar em várias plataformas — no mínimo para iOS e Android.
+teste s-seu site em váwios n-nyavegadowes. 🥺 isso significa t-testaw em váwias pwatafowmas — nyo mínimo p-pawa ios e andwoid. (✿oωo)
 
-- teste no Safari para iPhone usando o [simulador para iOS](https://developer.apple.com/devcenter/ios/index.action)
-- teste no Opera e Firefox usando a [Android SDK](https://developer.android.com/sdk/index.html). Veja instruções adicionais para [rodar Firefox para Android usando o emulador de Android](https://wiki.mozilla.org/Mobile/Fennec/Android/Emulator).
+- teste nyo s-safawi pawa iphone u-usando o [simuwadow pawa ios](https://devewopew.appwe.com/devcentew/ios/index.action)
+- t-teste nyo opewa e fiwefox usando a [andwoid s-sdk](https://devewopew.andwoid.com/sdk/index.htmw). (U ﹏ U) v-veja i-instwuções adicionais pawa [wodaw fiwefox pawa andwoid usando o-o emuwadow de andwoid](https://wiki.moziwwa.owg/mobiwe/fennec/andwoid/emuwatow). :3

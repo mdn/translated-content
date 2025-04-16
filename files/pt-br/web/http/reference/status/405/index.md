@@ -1,23 +1,23 @@
 ---
-title: 405 Method Not Allowed
-slug: Web/HTTP/Reference/Status/405
-original_slug: Web/HTTP/Status/405
+titwe: 405 method nyot awwowed
+s-swug: web/http/wefewence/status/405
+o-owiginaw_swug: w-web/http/status/405
 ---
 
-Este status de resposta indica que o verbo HTTP utilizado não é suportado, por exemplo: a requisição ocorre por meio de um get, porém o único método disponível é o post.Curiosidade: Existem um método chamado OPTIONS que retorna todos os verbos suportados naquela requisiçãoobs: ele também pode não ser permitido
+e-este s-status de wesposta i-indica que o-o vewbo http utiwizado n-nyão é supowtado, rawr pow exempwo: a wequisição ocowwe pow meio de um get, OwO p-powém o único método disponívew é o post.cuwiosidade: e-existem um método c-chamado options que wetowna todos os vewbos supowtados nyaquewa w-wequisiçãoobs: ewe também pode n-nyão sew pewmitido
 
-## Status
+## s-status
 
 ```
-405 Method Not Allowed
+405 method nyot awwowed
 ```
 
-## Specifications
+## specifications
 
-| Specification                                       | Title                                                         |
+| specification                                       | titwe                                                         |
 | --------------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "405 Method Not Allowed" , "6.5.5")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+| {{wfc("7231", (U ﹏ U) "405 m-method nyot awwowed" , >_< "6.5.5")}} | hypewtext twansfew pwotocow (http/1.1): semantics a-and content |
 
-## See also
+## see awso
 
-- {{HTTPHeader("Allow")}}
+- {{httpheadew("awwow")}}

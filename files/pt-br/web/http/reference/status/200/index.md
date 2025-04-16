@@ -1,38 +1,38 @@
 ---
-title: 200 OK
-slug: Web/HTTP/Reference/Status/200
-original_slug: Web/HTTP/Status/200
+titwe: 200 ok
+swug: web/http/wefewence/status/200
+o-owiginaw_swug: w-web/http/status/200
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O código HTTP **`200 OK`** é a resposta de status de sucesso que indica que a requisição foi bem sucedida. Uma resposta 200 é cacheável por padrão.
+o-o c-código http **`200 o-ok`** é a wesposta d-de status d-de sucesso que i-indica que a wequisição foi bem sucedida. (⑅˘꒳˘) uma wesposta 200 é cacheávew pow p-padwão. òωó
 
-O significado de sucesso depende do método de requisição HTTP:
+o significado de sucesso depende do método d-de wequisição http:
 
-- {{HTTPMethod("GET")}}: O recurso foi carregado e transmitido no corpo da mensagem.
-- {{HTTPMethod("HEAD")}}: Os cabeçalhos da entidade estão no corpo da mensagem.
-- {{HTTPMethod("POST")}}: O recurso descrevendo o resultado da ação é transmitido no corpo da mensagem.
-- {{HTTPMethod("TRACE")}}: O corpo da mensagem contém a mensagem da requisição tal qual foi recebida pelo servidor.
+- {{httpmethod("get")}}: o-o wecuwso foi cawwegado e twansmitido nyo cowpo da mensagem. ʘwʘ
+- {{httpmethod("head")}}: o-os cabeçawhos da entidade e-estão nyo c-cowpo da mensagem. /(^•ω•^)
+- {{httpmethod("post")}}: o wecuwso descwevendo o wesuwtado da ação é twansmitido nyo cowpo d-da mensagem.
+- {{httpmethod("twace")}}: o cowpo da mensagem contém a mensagem da wequisição t-taw quaw foi wecebida pewo sewvidow. ʘwʘ
 
-O resultado de sucesso de um {{HTTPMethod("PUT")}} ou {{HTTPMethod("DELETE")}} geralmente não são `200 OK`, e sim {{HTTPStatus("204")}} `No Content` (ou {{HTTPStatus("201")}} `Created` quando o recurso é carregado pela primeira vez).
+o-o wesuwtado d-de sucesso d-de um {{httpmethod("put")}} o-ou {{httpmethod("dewete")}} gewawmente nyão são `200 o-ok`, σωσ e sim {{httpstatus("204")}} `no content` (ou {{httpstatus("201")}} `cweated` quando o wecuwso é c-cawwegado pewa pwimeiwa vez). OwO
 
-## Status
+## status
 
 ```
-200 OK
+200 ok
 ```
 
-## Especificações
+## especificações
 
-| Especificação                       | Título                                                        |
+| especificação                       | t-títuwo                                                        |
 | ----------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "200 OK" , "6.3.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+| {{wfc("7231", 😳😳😳 "200 ok" , 😳😳😳 "6.3.1")}} | h-hypewtext twansfew p-pwotocow (http/1.1): s-semantics and content |
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- [HTTP request methods](/pt-BR/docs/Web/HTTP/Methods)
+- [http wequest m-methods](/pt-bw/docs/web/http/methods)

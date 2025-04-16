@@ -1,121 +1,121 @@
 ---
-title: Map.prototype.forEach()
-slug: Web/JavaScript/Reference/Global_Objects/Map/forEach
+titwe: map.pwototype.foweach()
+swug: web/javascwipt/wefewence/gwobaw_objects/map/foweach
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`forEach()`** executa a função que foi provida uma vez para cada par de chave-valor no objeto `Map`, na order em que foram inseridos.
+o-o método **`foweach()`** e-executa a f-função que foi p-pwovida uma vez p-pawa cada paw de c-chave-vawow nyo o-objeto `map`, mya n-na owdew em que fowam insewidos. (///ˬ///✿)
 
-{{InteractiveExample("JavaScript Demo: Map.prototype.forEach()")}}
+{{intewactiveexampwe("javascwipt demo: map.pwototype.foweach()")}}
 
-```js interactive-example
-function logMapElements(value, key, map) {
-  console.log(`m[${key}] = ${value}`);
+```js intewactive-exampwe
+function wogmapewements(vawue, (˘ω˘) key, ^^;; m-map) {
+  consowe.wog(`m[${key}] = ${vawue}`);
 }
 
-new Map([
-  ["foo", 3],
-  ["bar", {}],
-  ["baz", undefined],
-]).forEach(logMapElements);
+nyew map([
+  ["foo", (✿oωo) 3],
+  ["baw", (U ﹏ U) {}],
+  ["baz", -.- undefined], ^•ﻌ•^
+]).foweach(wogmapewements);
 
-// Expected output: "m[foo] = 3"
-// Expected output: "m[bar] = [object Object]"
-// Expected output: "m[baz] = undefined"
+// e-expected output: "m[foo] = 3"
+// expected output: "m[baw] = [object o-object]"
+// expected output: "m[baz] = undefined"
 ```
 
-## Sintaxe
+## sintaxe
 
 ```js
-// Arrow function
-forEach(() => { ... } )
-forEach((value) => { ... } )
-forEach((value, key) => { ... } )
-forEach((value, key, map) => { ... } )
+// a-awwow function
+foweach(() => { ... } )
+f-foweach((vawue) => { ... } )
+f-foweach((vawue, rawr key) => { ... (˘ω˘) } )
+foweach((vawue, nyaa~~ key, map) => { ... } )
 
-// função de Callback
-forEach(callbackFn)
-forEach(callbackFn, thisArg)
+// função de c-cawwback
+foweach(cawwbackfn)
+foweach(cawwbackfn, UwU thisawg)
 
-// função de callback inline
-forEach(function callbackFn() { ... })
-forEach(function callbackFn(value) { ... })
-forEach(function callbackFn(value, key) { ... })
-forEach(function callbackFn(value, key, map) { ... })
-forEach(function callbackFn(value, key, map) { ... }, thisArg)
+// função de cawwback inwine
+foweach(function c-cawwbackfn() { ... })
+foweach(function c-cawwbackfn(vawue) { ... })
+f-foweach(function c-cawwbackfn(vawue, :3 k-key) { ... })
+foweach(function cawwbackfn(vawue, (⑅˘꒳˘) key, map) { ... })
+foweach(function c-cawwbackfn(vawue, (///ˬ///✿) key, map) { ... ^^;; }, thisawg)
 ```
 
-### Parâmetros
+### p-pawâmetwos
 
-- `callbackFn`
-  - : A função que será executada em cada entrada do map. Ela receberá os seguintes argumentos:
-    - `value` {{Optional_Inline}}
-      - : O valor de cada iteração.
-    - `key` {{Optional_Inline}}
-      - : A chave de cada iteração.
-    - `map` {{Optional_Inline}}
-      - : O map que está sendo iterado.
-- `thisArg` {{Optional_Inline}}
-  - : O valor para usar como `this` quando o callback for executado.
+- `cawwbackfn`
+  - : a função que sewá executada em cada entwada do map. >_< ewa wecebewá o-os seguintes awgumentos:
+    - `vawue` {{optionaw_inwine}}
+      - : o-o vawow d-de cada itewação. rawr x3
+    - `key` {{optionaw_inwine}}
+      - : a-a chave de cada itewação. /(^•ω•^)
+    - `map` {{optionaw_inwine}}
+      - : o map que está sendo itewado. :3
+- `thisawg` {{optionaw_inwine}}
+  - : o-o vawow p-pawa usaw como `this` quando o c-cawwback fow executado. (ꈍᴗꈍ)
 
-### Valor retornado
+### v-vawow wetownado
 
-{{jsxref("undefined")}}.
+{{jsxwef("undefined")}}. /(^•ω•^)
 
-## Descrição
+## d-descwição
 
-O método `forEach` executa o `callback` fornecido uma vez para cada chave do map
-que realmente existe.
-Ele não é invocado para chaves que foram deletadas.
-Porém, é executado para valores que estão presentes mesmo tendo o valor `undefined`.
+o método `foweach` e-executa o `cawwback` fownecido uma vez p-pawa cada chave do map
+que weawmente e-existe. (⑅˘꒳˘)
+ewe nyão é invocado p-pawa chaves q-que fowam dewetadas. ( ͡o ω ͡o )
+powém, òωó é executado pawa vawowes que estão pwesentes mesmo tendo o vawow `undefined`. (⑅˘꒳˘)
 
-O `callback` é invocado com **três argumentos**:
+o `cawwback` é i-invocado com **twês a-awgumentos**:
 
-- O `value` de entrada
-- A `key` de entrada
-- o **objeto `Map`** que está sendo percorrido
+- o `vawue` d-de entwada
+- a `key` d-de entwada
+- o-o **objeto `map`** que está sendo pewcowwido
 
-Se o parâmetro `thisArg` for fornecido para o `forEach`, ele será passado para o
-`callback` quando for invocado, para ser usado como o valor de `this`. De outra forma,
-o valor `undefined` será usado como valor de `this`. O valor de `this` será
-observado pelo `callback` em última análise e será determinado de acordo com
-[as regras usuais para a determinação do `this` visto por uma função](/pt-BR/docs/Web/JavaScript/Reference/Operators/this).
+se o pawâmetwo `thisawg` f-fow fownecido pawa o `foweach`, XD ewe sewá passado pawa o
+`cawwback` quando f-fow invocado, -.- pawa sew usado c-como o vawow d-de `this`. :3 de outwa f-fowma, nyaa~~
+o vawow `undefined` sewá usado como v-vawow de `this`. 😳 o-o vawow de `this` s-sewá
+obsewvado p-pewo `cawwback` em úwtima anáwise e sewá detewminado d-de acowdo c-com
+[as wegwas u-usuais pawa a-a detewminação d-do `this` visto pow uma função](/pt-bw/docs/web/javascwipt/wefewence/opewatows/this). (⑅˘꒳˘)
 
-Cada valor será visitado uma vez, exceto no caso em que foram deletados e adicionados novamente
-antes do `forEach` ser finalizado. O `callback` não é invocado para valores que foram removidos antes de
-terem sidos visitados. Novos valores adicionados antes do `forEach` terminar serão visitados.
+cada vawow sewá visitado u-uma vez, nyaa~~ exceto nyo caso em que fowam dewetados e adicionados nyovamente
+antes do `foweach` s-sew finawizado. OwO o `cawwback` nyão é invocado pawa vawowes que f-fowam wemovidos a-antes de
+tewem sidos v-visitados. rawr x3 nyovos vawowes adicionados a-antes do `foweach` tewminaw s-sewão visitados. XD
 
-## Exemplos
+## e-exempwos
 
-### Exibindo o conteúdo de um objeto Map
+### exibindo o conteúdo de um objeto map
 
-O código a seguir imprime uma linha para cada elemento do objeto `Map`:
+o código a seguiw impwime uma w-winha pawa cada ewemento do objeto `map`:
 
 ```js
-function logMapElements(value, key, map) {
-  console.log(`map.get('${key}') = ${value}`);
+f-function wogmapewements(vawue, σωσ key, map) {
+  consowe.wog(`map.get('${key}') = ${vawue}`);
 }
-new Map([
-  ["foo", 3],
-  ["bar", {}],
-  ["baz", undefined],
-]).forEach(logMapElements);
-// logs:
+n-nyew m-map([
+  ["foo", (U ᵕ U❁) 3],
+  ["baw", (U ﹏ U) {}],
+  ["baz", :3 undefined], ( ͡o ω ͡o )
+]).foweach(wogmapewements);
+// wogs:
 // "map.get('foo') = 3"
-// "map.get('bar') = [object Object]"
-// "map.get('baz') = undefined"
+// "map.get('baw') = [object o-object]"
+// "map.get('baz') = u-undefined"
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{jsxref("Array.prototype.forEach()")}}
-- {{jsxref("Set.prototype.forEach()")}}
+- {{jsxwef("awway.pwototype.foweach()")}}
+- {{jsxwef("set.pwototype.foweach()")}}

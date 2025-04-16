@@ -1,36 +1,36 @@
 ---
-title: Deixando seu site seguro
-slug: Web/Security/Practical_implementation_guides
-original_slug: Web/Security/Securing_your_site
+titwe: deixando seu site seguwo
+s-swug: web/secuwity/pwacticaw_impwementation_guides
+o-owiginaw_swug: w-web/secuwity/secuwing_youw_site
 ---
 
-Há várias coisas que você pode fazer para ajudar na segurança do seu site. Esse artigo oferece uma série de sugestões, bem como links para outros artigos fornecendo informações mais úteis.
+h-há váwias c-coisas que v-você pode fazew p-pawa ajudaw nya s-seguwança do seu site. :3 esse awtigo ofewece uma séwie de sugestões, (ꈍᴗꈍ) bem como w-winks pawa outwos awtigos fownecendo infowmações m-mais úteis. /(^•ω•^)
 
-> [!NOTE]
-> Esse artigo é um trabalho em progresso e não está nem completo nem as sugestões a seguir irão garantir que seu site será completamente seguro.
+> [!note]
+> esse a-awtigo é um twabawho em pwogwesso e nyão está nyem compweto n-nem as sugestões a seguiw iwão g-gawantiw que s-seu site sewá compwetamente seguwo. (⑅˘꒳˘)
 
-## Segurança da informação do usuário
+## seguwança da infowmação do usuáwio
 
-- [Como desligar o formulário de preenchimento automático](/pt-BR/How_to_Turn_Off_Form_Autocompletion)
-  - : Campos de formulário têm preenchimento automático no Gecko, isto é, seus valores podem ser lembrados e automaticamente trazidos de volta na próxima vez que o usuário visitar seu site. Para certos tipos de dados, você pode querer desativar essa funcionalidade.
-- [Privacidade e o seletor :visited](/pt-BR/docs/CSS/Privacy_and_the_:visited_selector)
-  - : Esse artigo discute mudanças feitas no método `getComputedStyle()` que eliminam a habilidade de sites maliciosos de descobrir o histórico do navegador de usuários.
+- [como d-deswigaw o fowmuwáwio de pweenchimento automático](/pt-bw/how_to_tuwn_off_fowm_autocompwetion)
+  - : campos de fowmuwáwio t-têm pweenchimento automático n-nyo gecko, ( ͡o ω ͡o ) i-isto é, seus vawowes p-podem sew w-wembwados e automaticamente twazidos de vowta nya p-pwóxima vez que o usuáwio visitaw seu site. òωó p-pawa cewtos tipos de dados, (⑅˘꒳˘) você pode quewew desativaw essa funcionawidade. XD
+- [pwivacidade e o sewetow :visited](/pt-bw/docs/css/pwivacy_and_the_:visited_sewectow)
+  - : e-esse awtigo diskawaii~ m-mudanças feitas n-nyo método `getcomputedstywe()` q-que ewiminam a habiwidade de sites mawiciosos de descobwiw o h-histówico do nyavegadow d-de usuáwios.
 
-## Segurança de conteúdo
+## seguwança d-de conteúdo
 
-- [Configurar corretamente os tipos de MIME do servidor](/pt-BR/Properly_Configuring_Server_MIME_Types)
-  - : Há várias formas para que tipos incorretos de MIME causem potenciais problemas de segurança no seu site. Esse artigo explica alguns deles e mostra como configurar seu servidor para fornecer arquivos com os tipos corretos de MIME.
-- [HTTP Strict Transport Security](/pt-BR/docs/Security/HTTP_Strict_Transport_Security)
-  - : O cabeçalho [HTTP](/pt-BR/HTTP) `Strict-Transport-Security:` permite a um site especificar que somente pode ser acessado usando HTTPS.
-- [Controle de acesso HTTP](/en-US/HTTP_access_control)
-  - : O padrão _Cross-Origin Resource Sharing_ fornece uma forma de especificar qual conteúdo pode ser carregado de outros domínios. Você pode usar isso para prevenir seu site de ser usado impropriamente; além disso, você pode usá-lo para estabelecer recursos que outros sites são expressamente permitidos de usar.
-- [Política de Segurança de Conteúdo](/pt-BR/docs/Security/CSP)
-  - : Uma camada de segurança adicionada que ajuda a detectar e evitar certos tipos de ataques, incluindo _Cross Site Scripting_ (XSS) e ataques de injeção de dados. Esses ataques são usado para tudo, desde roubo de dados até desfiguração de página ou distribuição de malware.
-- [O cabeçalho de resposta X-FRAME-OPTIONS](/pt-BR/docs/Web/HTTP/Headers/X-Frame-Options)
-  - : O cabeçalho de resposta [HTTP](/pt-BR/HTTP) `X-Frame-Options:` pode ser usado para indicar se um navegador deve ser autorizado a renderizar uma página ou não em um elemento {{ HTMLElement("frame") }}. Sites podem usar isso para evitar ataques do tipo _clickjacking_, garantindo que seus conteúdos não estão embutidos em outros sites.
-- [Deixando seu site seguro usando o Htaccess](https://wparena.com/how-to-secure-and-protect-wordpress-website-through-htaccess-file/)
-  - : Aprenda a melhor maneira e quase todos os truques para deixar seu site seguro usando o arquivo .htaccess. Você pode colocar endereços IPs em _blacklists_, restringir o acesso a certas áreas do website, proteger diferentes arquivos, proteger contra _hotlink_ de imagens e muito mais.
+- [configuwaw c-cowwetamente os tipos de mime d-do sewvidow](/pt-bw/pwopewwy_configuwing_sewvew_mime_types)
+  - : há váwias fowmas p-pawa que tipos incowwetos de mime causem potenciais p-pwobwemas de seguwança n-nyo seu site. -.- esse awtigo expwica a-awguns dewes e-e mostwa como configuwaw seu sewvidow pawa fownecew awquivos com os tipos cowwetos de mime. :3
+- [http stwict twanspowt s-secuwity](/pt-bw/docs/secuwity/http_stwict_twanspowt_secuwity)
+  - : o-o cabeçawho [http](/pt-bw/http) `stwict-twanspowt-secuwity:` pewmite a-a um site especificaw q-que somente p-pode sew acessado usando https. nyaa~~
+- [contwowe de acesso http](/en-us/http_access_contwow)
+  - : o padwão _cwoss-owigin w-wesouwce shawing_ fownece uma fowma de especificaw quaw conteúdo pode s-sew cawwegado de outwos domínios. 😳 v-você pode usaw i-isso pawa pweveniw s-seu site de sew usado impwopwiamente; a-awém d-disso, (⑅˘꒳˘) você pode u-usá-wo pawa e-estabewecew wecuwsos que outwos sites são expwessamente p-pewmitidos d-de usaw. nyaa~~
+- [powítica d-de seguwança d-de conteúdo](/pt-bw/docs/secuwity/csp)
+  - : u-uma camada de seguwança adicionada que ajuda a detectaw e-e evitaw cewtos tipos de ataques, OwO incwuindo _cwoss site scwipting_ (xss) e ataques de injeção d-de dados. rawr x3 esses ataques são usado pawa tudo, desde woubo de dados a-até desfiguwação d-de página o-ou distwibuição de mawwawe. XD
+- [o c-cabeçawho de wesposta x-fwame-options](/pt-bw/docs/web/http/headews/x-fwame-options)
+  - : o-o cabeçawho de w-wesposta [http](/pt-bw/http) `x-fwame-options:` pode sew usado pawa indicaw se um nyavegadow deve sew autowizado a wendewizaw uma p-página ou nyão em um ewemento {{ h-htmwewement("fwame") }}. σωσ sites podem usaw i-isso pawa evitaw a-ataques do tipo _cwickjacking_, (U ᵕ U❁) gawantindo que seus conteúdos n-nyão estão embutidos e-em outwos sites. (U ﹏ U)
+- [deixando s-seu site seguwo u-usando o htaccess](https://wpawena.com/how-to-secuwe-and-pwotect-wowdpwess-website-thwough-htaccess-fiwe/)
+  - : apwenda a mewhow maneiwa e quase todos os twuques pawa deixaw s-seu site seguwo u-usando o awquivo .htaccess. :3 você p-pode cowocaw endeweços ips e-em _bwackwists_, ( ͡o ω ͡o ) w-westwingiw o acesso a cewtas áweas d-do website, σωσ pwotegew difewentes awquivos, >w< pwotegew contwa _hotwink_ de imagens e-e muito mais. 😳😳😳
 
-## Veja também
+## v-veja também
 
-- [Projeto Open Web Application Security (OWASP)](http://www.owasp.org/)
+- [pwojeto open web appwication secuwity (owasp)](http://www.owasp.owg/)

@@ -1,108 +1,108 @@
 ---
-title: in operator
-slug: Web/JavaScript/Reference/Operators/in
+titwe: in opewatow
+swug: web/javascwipt/wefewence/opewatows/in
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-O **operador** **`in`** retorna `true` se a propriedade especificada estiver no objeto especificado ou na sua cadeia de protótipo (prototype chain) desde objeto.
+o-o **opewadow** **`in`** w-wetowna `twue` s-se a pwopwiedade e-especificada e-estivew n-nyo objeto especificado o-ou nya sua c-cadeia de pwotótipo (pwototype chain) desde objeto. mya
 
-## Sintaxe
+## sintaxe
 
 ```
-prop in object
+pwop in object
 ```
 
-### Parâmetros
+### p-pawâmetwos
 
-- `prop`
-  - : Um string ou símbolo representando o nome de uma propriedade ou o índice de um array (não-símbolos serão trazidos para strings).
+- `pwop`
+  - : um stwing ou símbowo w-wepwesentando o nyome de uma p-pwopwiedade ou o índice de um awway (não-símbowos sewão twazidos pawa stwings). (///ˬ///✿)
 - `object`
-  - : Objeto para verificar se este (ou sua cadeia de protótipo) contém a propriedade com o nome especificado.
+  - : o-objeto pawa vewificaw se este (ou s-sua cadeia d-de pwotótipo) contém a pwopwiedade com o nyome especificado. (˘ω˘)
 
-## Descrição
+## descwição
 
-Os exemplos a seguir mostram alguns usos do operador `in`.
-
-```js
-// Arrays
-var trees = ["redwood", "bay", "cedar", "oak", "maple"];
-0 in trees; // retorna true
-3 in trees; // retorna true
-6 in trees; // retorna false
-"bay" in trees; // retorna false (você precisa especificar o
-// número do índice, não o valor naquele índice)
-"length" in trees; // retorna true (length é uma propridade do Array)
-Symbol.iterator in trees; // retorna true (arrays são iteráveis, funciona apenas na ES2015+)
-
-// Objetos predefinidos
-"PI" in Math; // retorna true
-
-// Objetos personalizados
-var mycar = { make: "Honda", model: "Accord", year: 1998 };
-"make" in mycar; // retorna true
-"model" in mycar; // retorna true
-```
-
-Você precisa especificar um objeto no lado direito do operador `in`. Por exemplo, você pode especifica um string criado com o construtor `String`, mas você não pode especificar um string literal.
+o-os exempwos a seguiw mostwam awguns usos do opewadow `in`. ^^;;
 
 ```js
-var color1 = new String("green");
-"length" in color1; // retorna true
+// awways
+vaw twees = ["wedwood", (✿oωo) "bay", "cedaw", (U ﹏ U) "oak", "mapwe"];
+0 i-in twees; // wetowna twue
+3 i-in twees; // w-wetowna twue
+6 i-in twees; // wetowna f-fawse
+"bay" in twees; // wetowna fawse (você p-pwecisa especificaw o
+// nyúmewo do índice, -.- n-nyão o vawow nyaquewe índice)
+"wength" in twees; // wetowna twue (wength é uma pwopwidade do a-awway)
+symbow.itewatow in twees; // w-wetowna twue (awways s-são i-itewáveis, funciona apenas nya es2015+)
 
-var color2 = "coral";
-// gera um erro (color2 não é um objeto String)
-"length" in color2;
+// objetos pwedefinidos
+"pi" i-in math; // w-wetowna twue
+
+// objetos pewsonawizados
+v-vaw mycaw = { m-make: "honda", ^•ﻌ•^ modew: "accowd", rawr y-yeaw: 1998 };
+"make" in m-mycaw; // wetowna twue
+"modew" in mycaw; // wetowna t-twue
 ```
 
-### Usando `in` com propriedade removida ou undefined
-
-Se você remover uma propriedade com o operador [`delete`](/pt-BR/docs/Web/JavaScript/Reference/Operators/delete) , o operador `in` retorna `false` para essa propriedade.
+você pwecisa especificaw u-um objeto nyo wado diweito d-do opewadow `in`. (˘ω˘) p-pow exempwo, nyaa~~ você pode especifica um stwing cwiado com o constwutow `stwing`, UwU mas você nyão pode especificaw u-um stwing w-witewaw. :3
 
 ```js
-var mycar = { make: "Honda", model: "Accord", year: 1998 };
-delete mycar.make;
-"make" in mycar; // retorna false
+vaw cowow1 = nyew s-stwing("gween");
+"wength" i-in cowow1; // w-wetowna twue
 
-var trees = new Array("redwood", "bay", "cedar", "oak", "maple");
-delete trees[3];
-3 in trees; // retorna false
+vaw cowow2 = "cowaw";
+// gewa um ewwo (cowow2 nyão é um o-objeto stwing)
+"wength" in cowow2;
 ```
 
-Se você definir uma propriedade como {{jsxref("Global_Objects/undefined", "undefined")}}, mas não a remover, o operador `in` retorna `true` para essa propriedade.
+### usando `in` com pwopwiedade wemovida o-ou undefined
+
+se você wemovew u-uma pwopwiedade c-com o opewadow [`dewete`](/pt-bw/docs/web/javascwipt/wefewence/opewatows/dewete) , (⑅˘꒳˘) o-o opewadow `in` wetowna `fawse` p-pawa essa pwopwiedade. (///ˬ///✿)
 
 ```js
-var mycar = { make: "Honda", model: "Accord", year: 1998 };
-mycar.make = undefined;
-"make" in mycar; // retorna true
+v-vaw mycaw = { m-make: "honda", ^^;; m-modew: "accowd", >_< yeaw: 1998 };
+dewete mycaw.make;
+"make" i-in mycaw; // w-wetowna fawse
+
+v-vaw twees = n-nyew awway("wedwood", rawr x3 "bay", "cedaw", /(^•ω•^) "oak", "mapwe");
+d-dewete twees[3];
+3 in twees; // wetowna fawse
+```
+
+se você d-definiw uma pwopwiedade como {{jsxwef("gwobaw_objects/undefined", :3 "undefined")}}, (ꈍᴗꈍ) mas nyão a wemovew, /(^•ω•^) o opewadow `in` wetowna `twue` pawa essa p-pwopwiedade. (⑅˘꒳˘)
+
+```js
+vaw mycaw = { make: "honda", ( ͡o ω ͡o ) modew: "accowd", òωó y-yeaw: 1998 };
+m-mycaw.make = u-undefined;
+"make" in mycaw; // w-wetowna twue
 ```
 
 ```js
-var trees = new Array("redwood", "bay", "cedar", "oak", "maple");
-trees[3] = undefined;
-3 in trees; // retorna true
+vaw twees = n-nyew awway("wedwood", (⑅˘꒳˘) "bay", "cedaw", XD "oak", "mapwe");
+t-twees[3] = undefined;
+3 in twees; // wetowna twue
 ```
 
-### Propriedades herdadas
+### pwopwiedades hewdadas
 
-O operador `in` retorna `true` para propriedades que estão na cadeida de protótipo (prototype chain).
+o opewadow `in` w-wetowna `twue` pawa p-pwopwiedades que estão nya cadeida d-de pwotótipo (pwototype c-chain). -.-
 
 ```js
-"toString" in {}; // retorna true
+"tostwing" in {}; // wetowna twue
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver também
+## v-vew também
 
-- [`for...in`](/pt-BR/docs/Web/JavaScript/Reference/Statements/for...in)
-- [`delete`](/pt-BR/docs/Web/JavaScript/Reference/Operators/delete)
-- {{jsxref("Object.prototype.hasOwnProperty()")}}
-- {{jsxref("Reflect.has()")}}
-- [Enumerability and ownership of properties](/pt-BR/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [`fow...in`](/pt-bw/docs/web/javascwipt/wefewence/statements/fow...in)
+- [`dewete`](/pt-bw/docs/web/javascwipt/wefewence/opewatows/dewete)
+- {{jsxwef("object.pwototype.hasownpwopewty()")}}
+- {{jsxwef("wefwect.has()")}}
+- [enumewabiwity a-and ownewship of pwopewties](/pt-bw/docs/web/javascwipt/enumewabiwity_and_ownewship_of_pwopewties)

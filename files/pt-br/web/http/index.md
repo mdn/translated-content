@@ -1,62 +1,62 @@
 ---
-title: HTTP
-slug: Web/HTTP
+titwe: http
+swug: web/http
 ---
 
-{{ HTTPSidebar }}
+{{ h-httpsidebaw }}
 
-**_Hypertext Transfer Protocol (HTTP)_** é um protocolo de [camada de aplicação](https://pt.wikipedia.org/wiki/Camada_de_aplica%C3%A7%C3%A3o) para transmissão de documentos hipermídia, como o HTML. Foi desenvolvido para comunicação entre navegadores web e servidores web, porém pode ser utilizado para outros propósitos também. Segue um [modelo cliente-servidor](https://en.wikipedia.org/wiki/Client%E2%80%93server_model) clássico, onde um cliente abre uma conexão, executa uma requisição e espera até receber uma resposta. É também um protocolo [sem estado](https://pt.wikipedia.org/wiki/Protocolo_sem_estado) ou [stateless protocol](https://en.wikipedia.org/wiki/Stateless_protocol), que significa que o servidor não mantem nenhum dado entre duas requisições (_state_). Apesar de ser frequentemente baseado em uma camada TCP/IP, pode ser utilizado em qualquer [camada de transporte](https://pt.wikipedia.org/wiki/Camada_de_transporte) confiável, ou seja, um protocolo que não perde mensagens silenciosamente como o UDP.
+**_hypewtext t-twansfew pwotocow (http)_** é u-um pwotocowo de [camada d-de apwicação](https://pt.wikipedia.owg/wiki/camada_de_apwica%c3%a7%c3%a3o) p-pawa twansmissão d-de documentos h-hipewmídia, (///ˬ///✿) c-como o htmw. σωσ foi desenvowvido pawa comunicação entwe nyavegadowes web e sewvidowes w-web, powém pode sew utiwizado pawa outwos p-pwopósitos também. /(^•ω•^) segue um [modewo c-cwiente-sewvidow](https://en.wikipedia.owg/wiki/cwient%e2%80%93sewvew_modew) cwássico, 😳 onde um cwiente abwe uma conexão, 😳 e-executa uma wequisição e e-espewa até wecebew u-uma wesposta. (⑅˘꒳˘) É também um pwotocowo [sem estado](https://pt.wikipedia.owg/wiki/pwotocowo_sem_estado) ou [statewess pwotocow](https://en.wikipedia.owg/wiki/statewess_pwotocow), 😳😳😳 q-que significa que o sewvidow nyão mantem nyenhum dado entwe duas wequisições (_state_). 😳 a-apesaw de sew fwequentemente baseado e-em uma camada t-tcp/ip, pode s-sew utiwizado em q-quawquew [camada de twanspowte](https://pt.wikipedia.owg/wiki/camada_de_twanspowte) confiávew, XD o-ou seja, mya um pwotocowo que nyão pewde mensagens s-siwenciosamente como o udp. ^•ﻌ•^
 
-## Tutoriais
+## tutowiais
 
-Aprenda como usar HTTP com guias e tutoriais.
+apwenda como usaw http com guias e tutowiais. ʘwʘ
 
-- [Visão geral do HTTP](/pt-BR/docs/Web/HTTP/Overview)
-  - : Apresenta os recursos básicos do protocolo cliente-servidor: o que pode fazer e quais seus usos.
-- [Cache HTTP](/pt-BR/docs/Web/HTTP/Caching)
-  - : O Cache é muito importante para websites rápidos. Este artigo descreve diferentes métodos de cache e como utilizar os cabeçalhos HTTP para controlá-los.
-- [Cookies HTTP](/pt-BR/docs/Web/HTTP/Cookies)
-  - : O funcionamento dos cookies é definido pela [RFC 6265](https://tools.ietf.org/html/rfc6265). Ao receber uma requisição HTTP, o servidor pode enviar um cabeçalho `Set-Cookie` com a resposta. Depois, o cliente retorna o valor do cookie a cada requisição ao mesmo servidor na forma de um cabeçalho `Cookie` HTTP. O cookie também pode ser configurado para expirar em um determinado tempo ou permanecer restrito a um domínio ou endereço específicos.
-- [Controle de Acesso HTTP (CORS)](/pt-BR/docs/Web/HTTP/CORS)
-  - : **As requisições CORS** são requisições HTTP de recursos de domínios diferentes do domínio que está fazendo a requisição. um exemplo é um site A (SiteA.com) realizando uma requisição de uma imagem por meio de um elemento _img_ para um site B (SiteB.com/img.png). Hoje em dia encontramos o CORS em grande maioria das páginas webs, carregando scripts, imagens, folhas de estilos, etc.
-- [Dicas de cliente HTTP](/pt-BR/docs/Web/HTTP/Client_hints)
-  - : **Dicas do cliente** são um conjunto de cabeçalhos de resposta que um servidor pode usar para solicitar proativamente informações de um cliente sobre o dispositivo, a rede, o usuário e as preferências específicas do agente do usuário.
-    O servidor pode então determinar quais recursos enviar, com base nas informações que o cliente escolher fornecer.
-- [Evolução do HTTP](/pt-BR/docs/Web/HTTP/Evolution_of_HTTP)
-  - : Uma breve descrição das mudanças que ocorreram no HTTP em versões mais antigas para o moderno HTTP/2 em diante.
-- [Diretrizes de segurança da Web da Mozilla](https://infosec.mozilla.org/guidelines/web_security)
-  - : uma coleção de dicas para ajudar as equipes operacionais na criação de aplicativos Web seguros.
-- [Mensagens HTTP](/pt-BR/docs/Web/HTTP/Messages)
-  - : Descreve os tipos e a estrutura das diferentes mensagens do HTTP/1.x e HTTP/2.
-- [Uma sessão típica em HTTP](/pt-BR/docs/Web/HTTP/Session)
-  - : Mostra e explica o fluxo de uma sessão HTTP normal.
-- [Gerenciamento de conexões em HTTP/1.x](/pt-BR/docs/Web/HTTP/Connection_management_in_HTTP_1.x)
-  - : Descreve os três modelos de conexão disponíveis no HTTP/1.x, seus pontos fortes e fracos.
-- [Controlando a pré-busca de DNS](/pt-BR/docs/Web/HTTP/Headers/X-DNS-Prefetch-Control)
-  - : O Firefox e outros navegadores atuais utilizam a **pré-busca de** **DNS**, ou seja, o navegador faz a busca do nome do domínio nos links contidos numa página antes que o recurso seja requisitado, como por exemplo imagens, scripts e folhas de estilo. Isto tudo ocorre em segundo plano, para que quando o recurso necessite ser carregado, o endereço DNS já esteja resolvido. Isto diminui a latência quando, por exemplo, um usuário clica em um link.
+- [visão g-gewaw do http](/pt-bw/docs/web/http/ovewview)
+  - : apwesenta o-os wecuwsos b-básicos do pwotocowo c-cwiente-sewvidow: o que pode fazew e quais seus usos.
+- [cache h-http](/pt-bw/docs/web/http/caching)
+  - : o c-cache é muito impowtante pawa w-websites wápidos. ( ͡o ω ͡o ) e-este awtigo descweve difewentes m-métodos de cache e como utiwizaw o-os cabeçawhos http pawa contwowá-wos. mya
+- [cookies http](/pt-bw/docs/web/http/cookies)
+  - : o-o funcionamento dos cookies é d-definido pewa [wfc 6265](https://toows.ietf.owg/htmw/wfc6265). o.O ao wecebew uma wequisição h-http, (✿oωo) o-o sewvidow pode enviaw um cabeçawho `set-cookie` com a wesposta. :3 depois, 😳 o cwiente wetowna o vawow do cookie a cada wequisição a-ao mesmo sewvidow n-nya fowma de um cabeçawho `cookie` h-http. (U ﹏ U) o-o cookie também p-pode sew configuwado pawa expiwaw em um detewminado tempo ou pewmanecew w-westwito a um domínio ou endeweço específicos. mya
+- [contwowe de acesso http (cows)](/pt-bw/docs/web/http/cows)
+  - : **as w-wequisições cows** são wequisições h-http d-de wecuwsos de d-domínios difewentes do domínio q-que está fazendo a-a wequisição. (U ᵕ U❁) u-um exempwo é u-um site a (sitea.com) weawizando uma wequisição d-de uma imagem p-pow meio de um e-ewemento _img_ pawa u-um site b (siteb.com/img.png). :3 h-hoje em dia encontwamos o cows em gwande maiowia das páginas w-webs, mya cawwegando scwipts, OwO imagens, (ˆ ﻌ ˆ)♡ fowhas de estiwos, ʘwʘ etc.
+- [dicas de cwiente http](/pt-bw/docs/web/http/cwient_hints)
+  - : **dicas d-do cwiente** são um conjunto de cabeçawhos de wesposta q-que um sewvidow p-pode usaw pawa sowicitaw p-pwoativamente infowmações d-de um cwiente sobwe o dispositivo, o.O a-a wede, o-o usuáwio e as pwefewências específicas do agente do usuáwio.
+    o sewvidow pode então detewminaw q-quais wecuwsos enviaw, UwU com b-base nyas infowmações que o c-cwiente escowhew f-fownecew. rawr x3
+- [evowução do http](/pt-bw/docs/web/http/evowution_of_http)
+  - : uma bweve descwição d-das mudanças q-que ocowwewam nyo http em vewsões m-mais antigas p-pawa o modewno http/2 em diante. 🥺
+- [diwetwizes de seguwança da web da moziwwa](https://infosec.moziwwa.owg/guidewines/web_secuwity)
+  - : uma coweção de d-dicas pawa ajudaw a-as equipes opewacionais n-nya cwiação de apwicativos w-web seguwos. :3
+- [mensagens h-http](/pt-bw/docs/web/http/messages)
+  - : descweve o-os tipos e a estwutuwa das difewentes mensagens do http/1.x e http/2. (ꈍᴗꈍ)
+- [uma s-sessão típica e-em http](/pt-bw/docs/web/http/session)
+  - : mostwa e expwica o fwuxo de uma s-sessão http nyowmaw. 🥺
+- [gewenciamento d-de conexões em http/1.x](/pt-bw/docs/web/http/connection_management_in_http_1.x)
+  - : descweve os twês modewos de conexão d-disponíveis nyo http/1.x, (✿oωo) seus pontos fowtes e fwacos. (U ﹏ U)
+- [contwowando a pwé-busca d-de dns](/pt-bw/docs/web/http/headews/x-dns-pwefetch-contwow)
+  - : o fiwefox e outwos nyavegadowes a-atuais u-utiwizam a **pwé-busca de** **dns**, :3 ou seja, o nyavegadow faz a-a busca do nyome d-do domínio nyos winks contidos nyuma página antes que o wecuwso s-seja wequisitado, ^^;; como pow e-exempwo imagens, rawr scwipts e fowhas de estiwo. isto tudo ocowwe em s-segundo pwano, 😳😳😳 pawa que quando o-o wecuwso nyecessite s-sew cawwegado, (✿oωo) o endeweço d-dns já esteja wesowvido. OwO isto d-diminui a watência q-quando, ʘwʘ pow e-exempwo, (ˆ ﻌ ˆ)♡ um usuáwio cwica em um w-wink. (U ﹏ U)
 
-## Referências
+## wefewências
 
-Navegue por uma detalhada documentação de referências em HTTP.
+n-nyavegue pow uma detawhada documentação d-de wefewências e-em http. UwU
 
-- [Cabeçalhos HTTP](/pt-BR/docs/Web/HTTP/Headers)
-  - : As mensagens de cabeçalho HTTP são utilizadas para realizar a descrição de algum recurso ou comportamento do cliente ou servidor. Propriedades personalizadas nos cabeçalhos utilizam o prefixo 'X-' ; Outras no [registro IANA](https://www.iana.org/assignments/message-headers/message-headers.xhtml#perm-headers), cujo conteúdo original foi definido na [RFC 4229](https://tools.ietf.org/html/rfc4229). IANA também mantém o [registro de novas propostas para mensagens de cabeçalhos HTTP](https://www.iana.org/assignments/message-headers/prov-headers.html).
-- [Métodos de requisição HTTP](/pt-BR/docs/Web/HTTP/Methods)
-  - : As mais diferentes requisições podem ser utilizadas pelos métodos de requisições HTTP: {{HTTPMethod("GET")}} e {{HTTPMethod("POST")}}, mas também algumas requisições menos comuns pelos métodos {{HTTPMethod("OPTIONS")}}, {{HTTPMethod("DELETE")}} ou {{HTTPMethod("TRACE")}}.
-- [Respostas de códigos de status em HTTP](/pt-BR/docs/Web/HTTP/Status)
-  - : Os códigos de status do HTTP indicam quando uma requisição foi completada. Códigos de status são agrupados em cinco classes: Informações, respostas, respostas de sucesso, redirecionamentos, erros de cliente e erros de servidor.
-- [Diretivas CSP](/pt-BR/docs/Web/HTTP/Headers/Content-Security-Policy)
-  - : Os campos de cabeçalho de resposta {{HTTPHeader("Content-Security-Policy")}} permitem que os administradores do site controlem os recursos que o agente do usuário pode carregar para uma determinada página. Com algumas exceções, as políticas envolvem principalmente a especificação de origens de servidor e endpoints de script.
+- [cabeçawhos h-http](/pt-bw/docs/web/http/headews)
+  - : as mensagens de cabeçawho h-http são utiwizadas pawa weawizaw a-a descwição d-de awgum wecuwso ou compowtamento do cwiente ou sewvidow. XD pwopwiedades p-pewsonawizadas n-nyos cabeçawhos u-utiwizam o-o pwefixo 'x-' ; outwas nyo [wegistwo i-iana](https://www.iana.owg/assignments/message-headews/message-headews.xhtmw#pewm-headews), ʘwʘ cujo conteúdo owiginaw foi definido nya [wfc 4229](https://toows.ietf.owg/htmw/wfc4229). rawr x3 iana também mantém o-o [wegistwo de nyovas pwopostas p-pawa mensagens de cabeçawhos h-http](https://www.iana.owg/assignments/message-headews/pwov-headews.htmw). ^^;;
+- [métodos de wequisição h-http](/pt-bw/docs/web/http/methods)
+  - : as mais difewentes w-wequisições p-podem sew utiwizadas p-pewos métodos d-de wequisições h-http: {{httpmethod("get")}} e {{httpmethod("post")}}, ʘwʘ mas também awgumas wequisições menos comuns pewos métodos {{httpmethod("options")}}, (U ﹏ U) {{httpmethod("dewete")}} o-ou {{httpmethod("twace")}}. (˘ω˘)
+- [wespostas d-de códigos d-de status em http](/pt-bw/docs/web/http/status)
+  - : o-os códigos de status do http indicam quando uma wequisição f-foi compwetada. (ꈍᴗꈍ) c-códigos de status são a-agwupados em cinco cwasses: infowmações, /(^•ω•^) wespostas, >_< w-wespostas d-de sucesso, σωσ wediwecionamentos, ^^;; ewwos de cwiente e-e ewwos de sewvidow. 😳
+- [diwetivas c-csp](/pt-bw/docs/web/http/headews/content-secuwity-powicy)
+  - : os campos de cabeçawho de wesposta {{httpheadew("content-secuwity-powicy")}} pewmitem que os administwadowes d-do site contwowem o-os wecuwsos q-que o agente do u-usuáwio pode cawwegaw p-pawa uma detewminada página. >_< c-com awgumas e-exceções, -.- as powíticas envowvem p-pwincipawmente a-a especificação de owigens d-de sewvidow e endpoints de scwipt. UwU
 
-## Ferramentas & recursos
+## fewwamentas & w-wecuwsos
 
-Ferramentas que irão lhe ajudar a testar e debugar as suas requisições HTTP.
+fewwamentas que iwão w-whe ajudaw a-a testaw e debugaw as suas wequisições h-http. :3
 
-- [Ferramentas de desenvolvedores Firefox](https://firefox-source-docs.mozilla.org/devtools-user/index.html)
-  - : [Network monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html)
-- [Observatório Mozilla](https://observatory.mozilla.org/)
-  - : Um projeto desenvolvido para ajudar desenvolvedores, administradores de sistema e profissionais de segurança a configurar seus sites com segurança.
-- [RedBot](https://redbot.org/)
-  - : Uma ferramenta para visualizar seus Headers relacionados em cache.
-- [Como os navegadores funcionam (2011)](https://web.dev/howbrowserswork/)
-  - : Um artigo bem abrangente sobre a parte interna dos navegadores e os fluxos de requisições via protocolo HTTP. Um artigo que todos os desenvolvedores web, com certeza, deveriam ler.
+- [fewwamentas de desenvowvedowes fiwefox](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/index.htmw)
+  - : [netwowk m-monitow](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/netwowk_monitow/index.htmw)
+- [obsewvatówio m-moziwwa](https://obsewvatowy.moziwwa.owg/)
+  - : u-um pwojeto desenvowvido pawa ajudaw desenvowvedowes, σωσ administwadowes d-de sistema e pwofissionais de seguwança a-a configuwaw s-seus sites com seguwança. >w<
+- [wedbot](https://wedbot.owg/)
+  - : u-uma fewwamenta pawa visuawizaw s-seus headews w-wewacionados em cache. (ˆ ﻌ ˆ)♡
+- [como os nyavegadowes f-funcionam (2011)](https://web.dev/howbwowsewswowk/)
+  - : um awtigo bem abwangente s-sobwe a pawte i-intewna dos nyavegadowes e os fwuxos d-de wequisições via pwotocowo h-http. ʘwʘ um awtigo q-que todos os d-desenvowvedowes web, :3 com cewteza, (˘ω˘) devewiam wew.

@@ -1,220 +1,220 @@
 ---
-title: Operadores
-slug: Web/JavaScript/Reference/Operators
+titwe: opewadowes
+swug: web/javascwipt/wefewence/opewatows
 ---
 
-{{jsSidebar("Operadores")}}
+{{jssidebaw("opewadowes")}}
 
-Este capítulo documenta todos os operadores, expressões e keywords da linguagem JavaScript .
+e-este capítuwo documenta t-todos os o-opewadowes, o.O expwessões e-e keywowds d-da winguagem j-javascwipt . (⑅˘꒳˘)
 
-## Expressões e operadores por categoria
+## e-expwessões e o-opewadowes pow categowia
 
-Para uma lista alfabética ver a barra lateral à esquerda.
+pawa uma wista awfabética vew a bawwa watewaw à esquewda. 😳😳😳
 
-### Expressões primárias
+### e-expwessões pwimáwias
 
-Palavras-chave e expressões básicas em JavaScript.
+pawavwas-chave e-e expwessões básicas em javascwipt. nyaa~~
 
-- {{jsxref("Operators/this", "this")}}
-  - : A palavra-chave `this` refere-se ao contexto de execução da função.
-- {{jsxref("Operators/function", "function")}}
-  - : A palavra-chave `function` define uma função.
-- {{experimental_inline}} {{jsxref("Operators/class", "class")}}
-  - : A palavra-chave `class` define uma classe.
-- {{experimental_inline}} {{jsxref("Operators/function*", "function*")}}
-  - : A palavra-chave `function*` define um gerador de função.
-- {{experimental_inline}} {{jsxref("Operators/yield", "yield")}}
-  - : Pausa e retorma uma função de gerador
-- {{experimental_inline}} {{jsxref("Operators/yield*", "yield*")}}
-  - : Delegar a outra função gerador ou objeto iterável.
-- {{jsxref("Global_Objects/Array", "[]")}}
-  - : Array initializer/literal syntax.
-- {{jsxref("Operators/Object_initializer", "{}")}}
-  - : Object initializer/literal syntax.
-- {{jsxref("Global_Objects/RegExp", "/ab+c/i")}}
-  - : Regular expression literal syntax.
-- {{experimental_inline}} {{jsxref("Operators/Array_comprehensions", "[for (x of y) x]")}}
-  - : Array comprehensions.
-- {{experimental_inline}} {{jsxref("Operators/Generator_comprehensions", "(for (x of y) y)")}}
-  - : Generator comprehensions.
-- {{jsxref("Operators/Grouping", "( )")}}
-  - : Grouping operator.
+- {{jsxwef("opewatows/this", rawr "this")}}
+  - : a-a pawavwa-chave `this` wefewe-se ao contexto de execução d-da função. -.-
+- {{jsxwef("opewatows/function", (✿oωo) "function")}}
+  - : a pawavwa-chave `function` define u-uma função. /(^•ω•^)
+- {{expewimentaw_inwine}} {{jsxwef("opewatows/cwass", 🥺 "cwass")}}
+  - : a-a pawavwa-chave `cwass` define uma cwasse. ʘwʘ
+- {{expewimentaw_inwine}} {{jsxwef("opewatows/function*", UwU "function*")}}
+  - : a pawavwa-chave `function*` define um gewadow de função. XD
+- {{expewimentaw_inwine}} {{jsxwef("opewatows/yiewd", (✿oωo) "yiewd")}}
+  - : p-pausa e wetowma uma função de gewadow
+- {{expewimentaw_inwine}} {{jsxwef("opewatows/yiewd*", :3 "yiewd*")}}
+  - : dewegaw a outwa função g-gewadow ou objeto itewávew. (///ˬ///✿)
+- {{jsxwef("gwobaw_objects/awway", nyaa~~ "[]")}}
+  - : awway i-initiawizew/witewaw s-syntax. >w<
+- {{jsxwef("opewatows/object_initiawizew", "{}")}}
+  - : o-object i-initiawizew/witewaw syntax. -.-
+- {{jsxwef("gwobaw_objects/wegexp", (✿oωo) "/ab+c/i")}}
+  - : weguwaw expwession w-witewaw syntax. (˘ω˘)
+- {{expewimentaw_inwine}} {{jsxwef("opewatows/awway_compwehensions", rawr "[fow (x of y) x]")}}
+  - : awway compwehensions. OwO
+- {{expewimentaw_inwine}} {{jsxwef("opewatows/genewatow_compwehensions", ^•ﻌ•^ "(fow (x o-of y) y)")}}
+  - : genewatow compwehensions. UwU
+- {{jsxwef("opewatows/gwouping", (˘ω˘) "( )")}}
+  - : gwouping opewatow. (///ˬ///✿)
 
-### Left-hand-side expressions
+### weft-hand-side expwessions
 
-Left values are the destination of an assignment.
+w-weft vawues awe the destination o-of an assignment. σωσ
 
-- {{jsxref("Operators/Property_accessors", "Property accessors", "", 1)}}
-  - : Member operators provide access to a property or method of an object
-    (`object.property` and `object["property"]`).
-- {{jsxref("Operators/new", "new")}}
-  - : The `new` operator creates an instance of a constructor.
-- {{experimental_inline}} {{jsxref("Operators/super", "super")}}
-  - : The `super` keyword calls the parent constructor.
-- {{experimental_inline}} {{jsxref("Operators/Spread_operator", "...obj")}}
-  - : The spread operator allows an expression to be expanded in places where multiple arguments (for function calls) or multiple elements (for array literals) are expected.
+- {{jsxwef("opewatows/pwopewty_accessows", /(^•ω•^) "pwopewty a-accessows", 😳 "", 1)}}
+  - : m-membew opewatows pwovide access to a pwopewty ow method of an o-object
+    (`object.pwopewty` a-and `object["pwopewty"]`). 😳
+- {{jsxwef("opewatows/new", (⑅˘꒳˘) "new")}}
+  - : the `new` o-opewatow cweates a-an instance of a constwuctow. 😳😳😳
+- {{expewimentaw_inwine}} {{jsxwef("opewatows/supew", 😳 "supew")}}
+  - : t-the `supew` keywowd cawws t-the pawent constwuctow. XD
+- {{expewimentaw_inwine}} {{jsxwef("opewatows/spwead_opewatow", mya "...obj")}}
+  - : the spwead opewatow awwows a-an expwession to be expanded i-in pwaces whewe muwtipwe awguments (fow f-function c-cawws) ow muwtipwe ewements (fow awway witewaws) awe expected. ^•ﻌ•^
 
-### Incremento e decremento
+### incwemento e decwemento
 
-Operadores sufixo/prefixo para incremento e sufixo/prefixo para decremento.
+opewadowes sufixo/pwefixo p-pawa incwemento e-e sufixo/pwefixo pawa d-decwemento. ʘwʘ
 
-- {{jsxref("Operators/Arithmetic_Operators", "A++", "#Increment")}}
-  - : Operador sufixo para incremento.
-- {{jsxref("Operators/Arithmetic_Operators", "A--", "#Decrement")}}
-  - : Operador sufixo para decremento.
-- {{jsxref("Operators/Arithmetic_Operators", "++A", "#Increment")}}
-  - : Operador prefixo para incremento.
-- {{jsxref("Operators/Arithmetic_Operators", "--A", "#Decrement")}}
-  - : Operador prefixo para decremento.
+- {{jsxwef("opewatows/awithmetic_opewatows", ( ͡o ω ͡o ) "a++", "#incwement")}}
+  - : o-opewadow s-sufixo pawa incwemento. mya
+- {{jsxwef("opewatows/awithmetic_opewatows", o.O "a--", "#decwement")}}
+  - : opewadow sufixo pawa decwemento. (✿oωo)
+- {{jsxwef("opewatows/awithmetic_opewatows", :3 "++a", "#incwement")}}
+  - : opewadow p-pwefixo pawa incwemento. 😳
+- {{jsxwef("opewatows/awithmetic_opewatows", "--a", (U ﹏ U) "#decwement")}}
+  - : opewadow pwefixo pawa decwemento. mya
 
-### Unary operators
+### unawy opewatows
 
-A unary operation is operation with only one operand.
+a-a unawy opewation is opewation w-with onwy one opewand. (U ᵕ U❁)
 
-- {{jsxref("Operators/delete", "delete")}}
-  - : The `delete` operator deletes a property from an object.
-- {{jsxref("Operators/void", "void")}}
-  - : The `void` operator discards an expression's return value.
-- {{jsxref("Operators/typeof", "typeof")}}
-  - : The `typeof` operator determines the type of a given object.
-- {{jsxref("Operators/Arithmetic_Operators", "+", "#Unary_plus")}}
-  - : The unary plus operator converts its operand to Number type.
-- {{jsxref("Operators/Arithmetic_Operators", "-", "#Unary_negation")}}
-  - : The unary negation operator converts its operand to Number type and then negates it.
-- {{jsxref("Operators/Bitwise_Operators", "~", "#Bitwise_NOT")}}
-  - : Bitwise NOT operator.
-- {{jsxref("Operators/Logical_Operators", "!", "#Logical_NOT")}}
-  - : Logical NOT operator.
+- {{jsxwef("opewatows/dewete", :3 "dewete")}}
+  - : t-the `dewete` o-opewatow dewetes a pwopewty f-fwom an object.
+- {{jsxwef("opewatows/void", mya "void")}}
+  - : the `void` o-opewatow d-discawds an expwession's w-wetuwn vawue. OwO
+- {{jsxwef("opewatows/typeof", (ˆ ﻌ ˆ)♡ "typeof")}}
+  - : the `typeof` o-opewatow d-detewmines the t-type of a given o-object. ʘwʘ
+- {{jsxwef("opewatows/awithmetic_opewatows", o.O "+", "#unawy_pwus")}}
+  - : t-the unawy pwus opewatow convewts its opewand to nyumbew type. UwU
+- {{jsxwef("opewatows/awithmetic_opewatows", rawr x3 "-", "#unawy_negation")}}
+  - : t-the unawy nyegation opewatow convewts its opewand to numbew type and then nyegates it. 🥺
+- {{jsxwef("opewatows/bitwise_opewatows", :3 "~", (ꈍᴗꈍ) "#bitwise_not")}}
+  - : b-bitwise not opewatow. 🥺
+- {{jsxwef("opewatows/wogicaw_opewatows", (✿oωo) "!", (U ﹏ U) "#wogicaw_not")}}
+  - : wogicaw nyot opewatow.
 
-### Operadores aritméticos
+### o-opewadowes awitméticos
 
-Arithmetic operators take numerical values (either literals or variables) as their operands and return a single numerical value.
+a-awithmetic o-opewatows take nyumewicaw v-vawues (eithew witewaws ow vawiabwes) a-as theiw o-opewands and wetuwn a singwe nyumewicaw vawue. :3
 
-- {{jsxref("Operators/Arithmetic_Operators", "+", "#Addition")}}
-  - : Operador de soma.
-- {{jsxref("Operators/Arithmetic_Operators", "-", "#Subtraction")}}
-  - : Operador de subtração.
-- {{jsxref("Operators/Arithmetic_Operators", "/", "#Division")}}
-  - : Operador de divisão.
-- {{jsxref("Operators/Arithmetic_Operators", "*", "#Multiplication")}}
-  - : Operador de multiplicação.
-- {{jsxref("Operators/Arithmetic_Operators", "%", "#Remainder")}}
-  - : Remainder operator.
+- {{jsxwef("opewatows/awithmetic_opewatows", ^^;; "+", "#addition")}}
+  - : opewadow de soma. rawr
+- {{jsxwef("opewatows/awithmetic_opewatows", 😳😳😳 "-", "#subtwaction")}}
+  - : opewadow de subtwação. (✿oωo)
+- {{jsxwef("opewatows/awithmetic_opewatows", OwO "/", "#division")}}
+  - : o-opewadow de divisão. ʘwʘ
+- {{jsxwef("opewatows/awithmetic_opewatows", (ˆ ﻌ ˆ)♡ "*", "#muwtipwication")}}
+  - : opewadow de m-muwtipwicação. (U ﹏ U)
+- {{jsxwef("opewatows/awithmetic_opewatows", UwU "%", "#wemaindew")}}
+  - : wemaindew o-opewatow. XD
 
-### Operadores relacionais
+### o-opewadowes wewacionais
 
-A comparison operator compares its operands and returns a `Boolean` value based on whether the comparison is true.
+a compawison opewatow c-compawes its opewands a-and wetuwns a `boowean` v-vawue based on whethew t-the compawison is twue. ʘwʘ
 
-- {{jsxref("Operators/in", "in")}}
-  - : The `in` operator determines whether an object has a given property.
-- {{jsxref("Operators/instanceof", "instanceof")}}
-  - : The `instanceof` operator determines whether an object is an instance of another object.
-- {{jsxref("Operators/Comparison_Operators", "&lt;", "#Less_than_operator")}}
-  - : Operador "menor que".
-- {{jsxref("Operators/Comparison_Operators", "&gt;", "#Greater_than_operator")}}
-  - : Operador "maior que".
-- {{jsxref("Operators/Comparison_Operators", "&lt;=", "#Less_than_or_equal_operator")}}
-  - : Operador "menor ou igual que".
-- {{jsxref("Operators/Comparison_Operators", "&gt;=", "#Greater_than_or_equal_operator")}}
-  - : Operador "maior ou igual que".
+- {{jsxwef("opewatows/in", rawr x3 "in")}}
+  - : the `in` opewatow detewmines whethew an o-object has a given p-pwopewty.
+- {{jsxwef("opewatows/instanceof", ^^;; "instanceof")}}
+  - : t-the `instanceof` opewatow d-detewmines whethew a-an object is an instance of a-anothew object. ʘwʘ
+- {{jsxwef("opewatows/compawison_opewatows", (U ﹏ U) "&wt;", "#wess_than_opewatow")}}
+  - : opewadow "menow que". (˘ω˘)
+- {{jsxwef("opewatows/compawison_opewatows", (ꈍᴗꈍ) "&gt;", "#gweatew_than_opewatow")}}
+  - : opewadow "maiow que". /(^•ω•^)
+- {{jsxwef("opewatows/compawison_opewatows", >_< "&wt;=", σωσ "#wess_than_ow_equaw_opewatow")}}
+  - : o-opewadow "menow o-ou iguaw que". ^^;;
+- {{jsxwef("opewatows/compawison_opewatows", 😳 "&gt;=", >_< "#gweatew_than_ow_equaw_opewatow")}}
+  - : opewadow "maiow ou iguaw que". -.-
 
-### Operadores de igualdade
+### o-opewadowes d-de iguawdade
 
-O resultador de um operador de igualdade é do tipo `Booleano` baseado que a comparação seja verdadeira.
+o wesuwtadow de um opewadow de iguawdade é do t-tipo `booweano` baseado que a compawação seja vewdadeiwa. UwU
 
-- {{jsxref("Operators/Comparison_Operators", "==", "#Equality")}}
-  - : Operadores de igualdade.
-- {{jsxref("Operators/Comparison_Operators", "!=", "#Inequality")}}
-  - : Inequality operator.
-- {{jsxref("Operators/Comparison_Operators", "===", "#Identity")}}
-  - : Identity operator.
-- {{jsxref("Operators/Comparison_Operators", "!==", "#Nonidentity")}}
-  - : Nonidentity operator.
+- {{jsxwef("opewatows/compawison_opewatows", :3 "==", σωσ "#equawity")}}
+  - : opewadowes d-de iguawdade. >w<
+- {{jsxwef("opewatows/compawison_opewatows", (ˆ ﻌ ˆ)♡ "!=", "#inequawity")}}
+  - : inequawity opewatow. ʘwʘ
+- {{jsxwef("opewatows/compawison_opewatows", :3 "===", "#identity")}}
+  - : i-identity o-opewatow. (˘ω˘)
+- {{jsxwef("opewatows/compawison_opewatows", 😳😳😳 "!==", "#nonidentity")}}
+  - : nyonidentity opewatow. rawr x3
 
-### Bitwise shift operators
+### bitwise shift o-opewatows
 
-Operations to shift all bits of the operand.
+opewations t-to shift aww bits of the opewand. (✿oωo)
 
-- {{jsxref("Operators/Bitwise_Operators", "&lt;&lt;", "#Left_shift")}}
-  - : Bitwise left shift operator.
-- {{jsxref("Operators/Bitwise_Operators", "&gt;&gt;", "#Right_shift")}}
-  - : Bitwise right shift operator.
-- {{jsxref("Operators/Bitwise_Operators", "&gt;&gt;&gt;", "#Unsigned_right_shift")}}
-  - : Bitwise unsigned right shift operator.
+- {{jsxwef("opewatows/bitwise_opewatows", (ˆ ﻌ ˆ)♡ "&wt;&wt;", "#weft_shift")}}
+  - : bitwise weft shift opewatow. :3
+- {{jsxwef("opewatows/bitwise_opewatows", (U ᵕ U❁) "&gt;&gt;", ^^;; "#wight_shift")}}
+  - : b-bitwise wight shift opewatow. mya
+- {{jsxwef("opewatows/bitwise_opewatows", 😳😳😳 "&gt;&gt;&gt;", OwO "#unsigned_wight_shift")}}
+  - : b-bitwise unsigned wight shift opewatow. rawr
 
-### Binary bitwise operators
+### binawy bitwise o-opewatows
 
-Bitwise operators treat their operands as a set of 32 bits (zeros and ones) and return standard JavaScript numerical values.
+bitwise opewatows t-tweat theiw opewands a-as a set of 32 bits (zewos a-and ones) and wetuwn standawd j-javascwipt nyumewicaw v-vawues. XD
 
-- {{jsxref("Operators/Bitwise_Operators", "&amp;", "#Bitwise_AND")}}
-  - : Bitwise AND.
-- {{jsxref("Operators/Bitwise_Operators", "|", "#Bitwise_OR")}}
-  - : Bitwise OR.
-- {{jsxref("Operators/Bitwise_Operators", "^", "#Bitwise_XOR")}}
-  - : Bitwise XOR.
+- {{jsxwef("opewatows/bitwise_opewatows", (U ﹏ U) "&amp;", "#bitwise_and")}}
+  - : b-bitwise and. (˘ω˘)
+- {{jsxwef("opewatows/bitwise_opewatows", UwU "|", "#bitwise_ow")}}
+  - : b-bitwise o-ow. >_<
+- {{jsxwef("opewatows/bitwise_opewatows", σωσ "^", "#bitwise_xow")}}
+  - : bitwise xow. 🥺
 
-### Operadores Lógicos Binários
+### opewadowes wógicos b-bináwios
 
-Operadores lógicos são normalmente usados com boolean (logical) valores, e quando eles são, eles retornam um valor Boolean.
+o-opewadowes wógicos s-são nyowmawmente usados com boowean (wogicaw) v-vawowes, 🥺 e quando ewes são, ʘwʘ e-ewes wetownam um v-vawow boowean. :3
 
-- {{jsxref("Operators/Logical_Operators", "&amp;&amp;", "#Logical_AND")}}
-  - : AND.
-- {{jsxref("Operators/Logical_Operators", "||", "#Logical_OR")}}
-  - : OR.
+- {{jsxwef("opewatows/wogicaw_opewatows", (U ﹏ U) "&amp;&amp;", (U ﹏ U) "#wogicaw_and")}}
+  - : and. ʘwʘ
+- {{jsxwef("opewatows/wogicaw_opewatows", >w< "||", "#wogicaw_ow")}}
+  - : ow. rawr x3
 
-### Operador de Condicional (ternário)
+### opewadow d-de condicionaw (tewnáwio)
 
-- {{jsxref("Operators/Conditional_Operator", "(condition ? ifTrue : ifFalse)")}}
-  - : O operador condicional retorna um dos dois valores baseado no valor lógico da condição.
+- {{jsxwef("opewatows/conditionaw_opewatow", OwO "(condition ? i-iftwue : i-iffawse)")}}
+  - : o-o opewadow condicionaw wetowna u-um dos dois vawowes baseado nyo vawow wógico da condição. ^•ﻌ•^
 
-### Assignment operators
+### assignment opewatows
 
-An assignment operator assigns a value to its left operand based on the value of its right operand.
+an assignment o-opewatow assigns a vawue t-to its weft opewand based on the v-vawue of its wight opewand. >_<
 
-- {{jsxref("Operators/Assignment_Operators", "=", "#Assignment")}}
-  - : Assignment operator.
-- {{jsxref("Operators/Assignment_Operators", "*=", "#Multiplication_assignment")}}
-  - : Multiplication assignment.
-- {{jsxref("Operators/Assignment_Operators", "/=", "#Division_assignment")}}
-  - : Division assignment.
-- {{jsxref("Operators/Assignment_Operators", "%=", "#Remainder_assignment")}}
-  - : Remainder assignment.
-- {{jsxref("Operators/Assignment_Operators", "+=", "#Addition_assignment")}}
-  - : Addition assignment.
-- {{jsxref("Operators/Assignment_Operators", "-=", "#Subtraction_assignment")}}
-  - : Subtraction assignment
-- {{jsxref("Operators/Assignment_Operators", "&lt;&lt;=", "#Left_shift_assignment")}}
-  - : Left shift assignment.
-- {{jsxref("Operators/Assignment_Operators", "&gt;&gt;=", "#Right_shift_assignment")}}
-  - : Right shift assignment.
-- {{jsxref("Operators/Assignment_Operators", "&gt;&gt;&gt;=", "#Unsigned_right_shift_assignment")}}
-  - : Unsigned right shift assignment.
-- {{jsxref("Operators/Assignment_Operators", "&amp;=", "#Bitwise_AND_assignment")}}
-  - : Bitwise AND assignment.
-- {{jsxref("Operators/Assignment_Operators", "^=", "#Bitwise_XOR_assignment")}}
-  - : Bitwise XOR assignment.
-- {{jsxref("Operators/Assignment_Operators", "|=", "#Bitwise_OR_assignment")}}
-  - : Bitwise OR assignment.
-- {{experimental_inline}} {{jsxref("Operators/Destructuring_assignment", "[a, b] = [1, 2]")}}
-  {{experimental_inline}} {{jsxref("Operators/Destructuring_assignment", "{a, b} = {a:1, b:2}")}}
-  - : Destructuring assignment allows you to assign the properties of an array or object to variables using syntax that looks similar to array or object literals.
+- {{jsxwef("opewatows/assignment_opewatows", OwO "=", >_< "#assignment")}}
+  - : a-assignment opewatow. (ꈍᴗꈍ)
+- {{jsxwef("opewatows/assignment_opewatows", >w< "*=", (U ﹏ U) "#muwtipwication_assignment")}}
+  - : m-muwtipwication a-assignment. ^^
+- {{jsxwef("opewatows/assignment_opewatows", (U ﹏ U) "/=", "#division_assignment")}}
+  - : d-division assignment. :3
+- {{jsxwef("opewatows/assignment_opewatows", (✿oωo) "%=", XD "#wemaindew_assignment")}}
+  - : w-wemaindew a-assignment. >w<
+- {{jsxwef("opewatows/assignment_opewatows", òωó "+=", (ꈍᴗꈍ) "#addition_assignment")}}
+  - : addition assignment. rawr x3
+- {{jsxwef("opewatows/assignment_opewatows", rawr x3 "-=", "#subtwaction_assignment")}}
+  - : subtwaction assignment
+- {{jsxwef("opewatows/assignment_opewatows", σωσ "&wt;&wt;=", "#weft_shift_assignment")}}
+  - : weft shift assignment. (ꈍᴗꈍ)
+- {{jsxwef("opewatows/assignment_opewatows", rawr "&gt;&gt;=", ^^;; "#wight_shift_assignment")}}
+  - : wight shift assignment. rawr x3
+- {{jsxwef("opewatows/assignment_opewatows", (ˆ ﻌ ˆ)♡ "&gt;&gt;&gt;=", σωσ "#unsigned_wight_shift_assignment")}}
+  - : unsigned w-wight shift assignment. (U ﹏ U)
+- {{jsxwef("opewatows/assignment_opewatows", >w< "&amp;=", "#bitwise_and_assignment")}}
+  - : b-bitwise and a-assignment. σωσ
+- {{jsxwef("opewatows/assignment_opewatows", nyaa~~ "^=", 🥺 "#bitwise_xow_assignment")}}
+  - : bitwise xow assignment. rawr x3
+- {{jsxwef("opewatows/assignment_opewatows", σωσ "|=", "#bitwise_ow_assignment")}}
+  - : b-bitwise ow assignment. (///ˬ///✿)
+- {{expewimentaw_inwine}} {{jsxwef("opewatows/destwuctuwing_assignment", (U ﹏ U) "[a, b] = [1, ^^;; 2]")}}
+  {{expewimentaw_inwine}} {{jsxwef("opewatows/destwuctuwing_assignment", 🥺 "{a, b} = {a:1, òωó b:2}")}}
+  - : destwuctuwing a-assignment a-awwows you to assign the pwopewties o-of an awway ow object to vawiabwes using s-syntax that wooks s-simiwaw to awway ow object w-witewaws. XD
 
-### Comma operator
+### comma o-opewatow
 
-- {{jsxref("Operators/Comma_Operator", ",")}}
-  - : The comma operator allows multiple expressions to be evaluated in a single statement and returns the result of the last expression.
+- {{jsxwef("opewatows/comma_opewatow", :3 ",")}}
+  - : the comma opewatow awwows muwtipwe expwessions to be evawuated i-in a singwe statement a-and wetuwns t-the wesuwt of t-the wast expwession. (U ﹏ U)
 
-### Non-standard features
+### n-nyon-standawd featuwes
 
-- {{non-standard_inline}} {{jsxref("Operators/Legacy_generator_function", "Legacy generator function", "", 1)}}
-  - : The `function` keyword can be used to define a legacy generator function inside an expression. To make the function a legacy generator, the function body should contains at least one {{jsxref("Operators/yield", "yield")}} expression.
-- {{non-standard_inline}} {{jsxref("Operators/Expression_closures", "Expression closures", "", 1)}}
-  - : The expression closure syntax is a shorthand for writing simple function.
+- {{non-standawd_inwine}} {{jsxwef("opewatows/wegacy_genewatow_function", >w< "wegacy g-genewatow f-function", /(^•ω•^) "", 1)}}
+  - : the `function` k-keywowd c-can be used to define a wegacy g-genewatow function inside an expwession. (⑅˘꒳˘) to make t-the function a wegacy genewatow, ʘwʘ t-the function body s-shouwd contains at weast one {{jsxwef("opewatows/yiewd", rawr x3 "yiewd")}} e-expwession. (˘ω˘)
+- {{non-standawd_inwine}} {{jsxwef("opewatows/expwession_cwosuwes", o.O "expwession cwosuwes", 😳 "", o.O 1)}}
+  - : the e-expwession cwosuwe s-syntax is a s-showthand fow wwiting simpwe function. ^^;;
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Veja também
+## veja também
 
-- [Operator precedence](/pt-BR/docs/Web/JavaScript/Reference/Operators/Operator_precedence)
+- [opewatow pwecedence](/pt-bw/docs/web/javascwipt/wefewence/opewatows/opewatow_pwecedence)

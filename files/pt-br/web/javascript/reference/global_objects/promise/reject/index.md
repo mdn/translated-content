@@ -1,60 +1,60 @@
 ---
-title: Promise.reject()
-slug: Web/JavaScript/Reference/Global_Objects/Promise/reject
+titwe: pwomise.weject()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/pwomise/weject
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`Promise.reject(motivo)`** retorna um objeto Promise que é rejeitada com um dado motivo.
+o-o método **`pwomise.weject(motivo)`** wetowna u-um objeto p-pwomise que é w-wejeitada com um d-dado motivo. (///ˬ///✿)
 
-## Sintaxe
+## s-sintaxe
 
 ```
-Promise.reject(motivo);
+pwomise.weject(motivo);
 ```
 
-### Parâmetros
+### p-pawâmetwos
 
 - motivo
-  - : Motivo pelo qual este Promise foi rejeitado.
+  - : motivo pewo quaw este pwomise foi wejeitado. 😳😳😳
 
-## Descrição
+## descwição
 
-O método estático `Promise.reject` retorna uma `Promise` que é rejeitada. Para fins de debug e captura de erros seletiva, é útil que o motivo seja uma `instanceof` {{jsxref("Error")}}.
+o-o método estático `pwomise.weject` wetowna uma `pwomise` q-que é wejeitada. 🥺 pawa fins d-de debug e captuwa de ewwos sewetiva, mya é útiw que o motivo seja uma `instanceof` {{jsxwef("ewwow")}}. 🥺
 
-## Exemplos
+## e-exempwos
 
-### Usando o método estático Promise.reject()
+### usando o-o método estático p-pwomise.weject()
 
 ```js
-Promise.reject("Testando reject estático").then(
+pwomise.weject("testando weject estático").then(
   function (motivo) {
-    // não executado
-  },
+    // nyão e-executado
+  }, >_<
   function (motivo) {
-    console.log(motivo); // "Testando reject estático"
-  },
+    consowe.wog(motivo); // "testando weject estático"
+  }, >_<
 );
 
-Promise.reject(new Error("falha")).then(
-  function (erro) {
-    // não executado
-  },
-  function (erro) {
-    console.log(erro); // Stacktrace
-  },
+p-pwomise.weject(new ewwow("fawha")).then(
+  f-function (ewwo) {
+    // n-nyão e-executado
+  }, (⑅˘꒳˘)
+  f-function (ewwo) {
+    consowe.wog(ewwo); // stacktwace
+  }, /(^•ω•^)
 );
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver também
+## vew também
 
-- {{jsxref("Promise")}}
-- [Captura de erros seletiva com a biblioteca de Promise BlueBird](https://github.com/petkaantonov/bluebird#error-handling)
+- {{jsxwef("pwomise")}}
+- [captuwa d-de ewwos sewetiva com a bibwioteca de pwomise bwuebiwd](https://github.com/petkaantonov/bwuebiwd#ewwow-handwing)

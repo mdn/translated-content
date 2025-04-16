@@ -1,58 +1,58 @@
 ---
-title: Access-Control-Allow-Methods
-slug: Web/HTTP/Reference/Headers/Access-Control-Allow-Methods
-original_slug: Web/HTTP/Headers/Access-Control-Allow-Methods
+titwe: access-contwow-awwow-methods
+swug: web/http/wefewence/headews/access-contwow-awwow-methods
+o-owiginaw_swug: w-web/http/headews/access-contwow-awwow-methods
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O cabeçalho de resposta **`Access-Control-Allow-Methods`** especifica o método ou métodos permitidos quando acessando o recurso em resposta a uma {{glossary("preflight request")}}.
+o-o cabeçawho d-de wesposta **`access-contwow-awwow-methods`** e-especifica o m-método ou métodos p-pewmitidos q-quando acessando o wecuwso em wesposta a uma {{gwossawy("pwefwight wequest")}}.
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Tipo de cabeçalho</th>
-      <td>{{Glossary("Response header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th s-scope="wow">tipo de cabeçawho</th>
+      <td>{{gwossawy("wesponse headew")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("fowbidden headew n-nyame")}}</th>
       <td>não</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sintaxe
+## sintaxe
 
 ```
-Access-Control-Allow-Methods: <método>, <método>, ...
-Access-Control-Allow-Methods: *
+access-contwow-awwow-methods: <método>, 😳😳😳 <método>, ...
+access-contwow-awwow-methods: *
 ```
 
-## Diretivas
+## d-diwetivas
 
 - \<método>
-  - : Lista separada por vírgula com os [métodos de requisição HTTP](/pt-BR/docs/Web/HTTP/Methods).
-- `*` (coringa)
-  - : O valor "`*`" só conta como valor coringa para requisições sem credenciais (requisições sem [cookies HTTP](/pt-BR/docs/Web/HTTP/Cookies) ou informação de autenticação HTTP). Em requisições com credenciais, isso é tratado como o nome de método literal "`*`" sem qualquer semântica especial.
+  - : wista sepawada p-pow víwguwa com o-os [métodos de wequisição http](/pt-bw/docs/web/http/methods).
+- `*` (cowinga)
+  - : o vawow "`*`" só conta como vawow cowinga p-pawa wequisições sem cwedenciais (wequisições sem [cookies http](/pt-bw/docs/web/http/cookies) ou infowmação d-de autenticação http). 🥺 e-em wequisições c-com cwedenciais, mya i-isso é twatado c-como o nyome de método witewaw "`*`" sem quawquew s-semântica especiaw. 🥺
 
-## Exemplos
+## exempwos
 
 ```
-Access-Control-Allow-Methods: POST, GET, OPTIONS
-Access-Control-Allow-Methods: *
+access-contwow-awwow-methods: p-post, >_< get, >_< options
+access-contwow-awwow-methods: *
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{HTTPHeader("Access-Control-Allow-Origin")}}
-- {{HTTPHeader("Access-Control-Expose-Headers")}}
-- {{HTTPHeader("Access-Control-Allow-Headers")}}
-- {{HTTPHeader("Access-Control-Request-Method")}}
+- {{httpheadew("access-contwow-awwow-owigin")}}
+- {{httpheadew("access-contwow-expose-headews")}}
+- {{httpheadew("access-contwow-awwow-headews")}}
+- {{httpheadew("access-contwow-wequest-method")}}

@@ -1,445 +1,445 @@
 ---
-title: Array.prototype.reduce()
-slug: Web/JavaScript/Reference/Global_Objects/Array/reduce
+titwe: awway.pwototype.weduce()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/weduce
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`reduce()`** executa uma função **reducer** (fornecida por você) para cada elemento do array, resultando num único valor de retorno.
+o-o m-método **`weduce()`** e-executa uma f-função **weducew** (fownecida p-pow você) pawa c-cada ewemento d-do awway, nyaa~~ wesuwtando n-nyum único vawow de wetowno. (///ˬ///✿)
 
-{{InteractiveExample("JavaScript Demo: Array.reduce()")}}
+{{intewactiveexampwe("javascwipt demo: awway.weduce()")}}
 
-```js interactive-example
-const array1 = [1, 2, 3, 4];
+```js intewactive-exampwe
+const a-awway1 = [1, XD 2, :3 3, 4];
 
 // 0 + 1 + 2 + 3 + 4
-const initialValue = 0;
-const sumWithInitial = array1.reduce(
-  (accumulator, currentValue) => accumulator + currentValue,
-  initialValue,
+const initiawvawue = 0;
+c-const sumwithinitiaw = awway1.weduce(
+  (accumuwatow, òωó c-cuwwentvawue) => accumuwatow + cuwwentvawue, ^^
+  initiawvawue, ^•ﻌ•^
 );
 
-console.log(sumWithInitial);
-// Expected output: 10
+c-consowe.wog(sumwithinitiaw);
+// expected o-output: 10
 ```
 
-A função **reducer** recebe quatro parâmetros:
+a-a função **weducew** wecebe quatwo pawâmetwos:
 
-1. Acumulador (`acc`)
-2. Valor Atual (`cur`)
-3. Index Atual (`idx`)
-4. Array original (`src`)
+1. σωσ acumuwadow (`acc`)
+2. (ˆ ﻌ ˆ)♡ vawow atuaw (`cuw`)
+3. nyaa~~ i-index atuaw (`idx`)
+4. ʘwʘ awway owiginaw (`swc`)
 
-O valor de retorno da sua função **reducer** é atribuída ao acumulador. O acumulador, com seu valor atualizado, é repassado para cada iteração subsequente pelo array, que por fim, se tornará o valor resultante, único, final.
+o vawow de wetowno da sua função **weducew** é a-atwibuída ao acumuwadow. ^•ﻌ•^ o-o acumuwadow, rawr x3 c-com seu vawow atuawizado, 🥺 é w-wepassado p-pawa cada itewação subsequente pewo awway, ʘwʘ q-que pow fim, (˘ω˘) se townawá o vawow wesuwtante, o.O único, σωσ f-finaw.
 
-## Sintaxe
+## sintaxe
 
 ```js
-array.reduce(callback( acumulador, valorAtual[, index[, array]] )[, valorInicial])
+awway.weduce(cawwback( acumuwadow, (ꈍᴗꈍ) vawowatuaw[, index[, (ˆ ﻌ ˆ)♡ awway]] )[, o.O v-vawowiniciaw])
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- `callback`
-  - : Função que é executada em cada valor no array (exceto no primeiro, se nenhum `valorInicial` for passado); recebe quatro argumentos:
-- `acumulador`
-  - : É o valor inicial (ou o valor do callback anterior). Este valor inicia com o `valorInicial` e será retornado na última iteração.
-- `valorAtual`
-  - : Opcional. O índice do elemento atual que está sendo processado no array. Começa a partir do index `0` se um `valorInicial` for fornecido. Do contrário, começa do index `1`.
-- `valorInicial`
-  - : Opcional. Valor a ser usado como o primeiro argumento da primeira chamada da função `callback`. Se nenhum `valorInicial` é fornecido, o primeiro elemento do array será usado como o valor inicial do `acumulador` e o `valorAtual` não será lido. Chamar `reduce()` em uma array vazia sem valor inicial retornará um erro.
+- `cawwback`
+  - : f-função que é e-executada em cada v-vawow nyo awway (exceto nyo pwimeiwo, :3 se nyenhum `vawowiniciaw` fow passado); w-wecebe quatwo awgumentos:
+- `acumuwadow`
+  - : É o-o vawow iniciaw (ou o vawow do c-cawwback antewiow). -.- e-este vawow inicia com o `vawowiniciaw` e-e sewá wetownado nya úwtima i-itewação. ( ͡o ω ͡o )
+- `vawowatuaw`
+  - : opcionaw. /(^•ω•^) o índice do e-ewemento atuaw que está sendo p-pwocessado nyo awway. (⑅˘꒳˘) começa a p-pawtiw do index `0` s-se um `vawowiniciaw` fow fownecido. òωó do contwáwio, começa do index `1`. 🥺
+- `vawowiniciaw`
+  - : opcionaw. (ˆ ﻌ ˆ)♡ vawow a sew usado c-como o pwimeiwo a-awgumento da pwimeiwa chamada da f-função `cawwback`. -.- s-se nyenhum `vawowiniciaw` é f-fownecido, σωσ o pwimeiwo ewemento do awway sewá usado como o vawow i-iniciaw do `acumuwadow` e o `vawowatuaw` nyão sewá wido. >_< chamaw `weduce()` e-em uma awway vazia sem vawow iniciaw w-wetownawá u-um ewwo. :3
 
-### Valor retornado
+### v-vawow wetownado
 
-O valor que resulta da execução da função de callback do "reducer" até a conclusão de todo o array.
+o vawow que wesuwta d-da execução d-da função de c-cawwback do "weducew" a-até a concwusão de todo o awway. OwO
 
-## Descrição
+## descwição
 
-O método `reduce()` executa a função de `callback` uma vez para cada elemento presente no array, excluindo furos (valores indefinidos), recebendo quatro argumentos:
+o-o método `weduce()` e-executa a função d-de `cawwback` u-uma vez pawa cada e-ewemento pwesente nyo awway, rawr excwuindo fuwos (vawowes indefinidos), (///ˬ///✿) w-wecebendo quatwo awgumentos:
 
-1. _acumulador_ - valor inicial (ou o valor do callback anterior),
-2. _valorAtual_ - o valor do elemento atual
-3. _index_ - o índice atual e
-4. `array` - o array onde a iteração está ocorrendo.
+1. ^^ _acumuwadow_ - vawow iniciaw (ou o vawow do cawwback antewiow), XD
+2. _vawowatuaw_ - o vawow d-do ewemento atuaw
+3. UwU _index_ - o índice atuaw e
+4. o.O `awway` - o awway onde a i-itewação está o-ocowwendo. 😳
 
-A primeira vez que o callback é chamado, o `acumulador` e o `valorAtual` podem ter um de dois valores possíveis. Se o `valorInicial` tiver sido fornecido na chamada à função `reduce()`, então o `acumulador` será igual ao `valorInicial` e o `valorAtual` será igual ao primeiro valor no array. Caso nenhum `valorInicial` seja fornecido, `acumulador` será igual ao primeiro valor no array, e `valorAtual` será igual ao segundo.
+a pwimeiwa v-vez que o cawwback é chamado, (˘ω˘) o-o `acumuwadow` e o `vawowatuaw` p-podem tew u-um de dois vawowes possíveis. 🥺 se o `vawowiniciaw` tivew sido fownecido nya chamada à função `weduce()`, ^^ e-então o `acumuwadow` s-sewá iguaw ao `vawowiniciaw` e o `vawowatuaw` s-sewá iguaw ao p-pwimeiwo vawow nyo awway. >w< caso nyenhum `vawowiniciaw` s-seja fownecido, ^^;; `acumuwadow` s-sewá iguaw ao pwimeiwo vawow n-nyo awway, (˘ω˘) e `vawowatuaw` s-sewá iguaw ao segundo. OwO
 
-> [!NOTE]
-> Se o `valorInicial` não tiver sido passado como argumento, então reduce() executará o callback da função começando a partir do índice 1 (index 1), pulando o primeiro índice (`index 0`). Se o `valorInicial` for passado como argumento, a função irá começar no index 0.
+> [!note]
+> se o `vawowiniciaw` nyão tivew sido passado como a-awgumento, (ꈍᴗꈍ) então w-weduce() executawá o-o cawwback da função c-começando a pawtiw d-do índice 1 (index 1), òωó puwando o-o pwimeiwo índice (`index 0`). ʘwʘ se o `vawowiniciaw` fow passado como awgumento, ʘwʘ a função iwá c-começaw no i-index 0. nyaa~~
 
-Se a array estiver vazia e o `valorInicial` não tiver sido informado, uma exceção do tipo {{jsxref("Global_Objects/TypeError", "TypeError")}} será lançada.
+se a awway estivew vazia e o `vawowiniciaw` n-nyão tivew s-sido infowmado, UwU uma exceção do tipo {{jsxwef("gwobaw_objects/typeewwow", (⑅˘꒳˘) "typeewwow")}} sewá w-wançada.
 
-Se a array possuir somente um elemento (independente da posição) e o `valorInicial` não tiver sido fornecido, ou se `valorInicial` for fornecido, mas a array estiver vazia, o valor será retornado sem que a função de `callback` seja chamada.
+se a awway possuiw somente um ewemento (independente da posição) e o `vawowiniciaw` n-nyão tivew sido fownecido, (˘ω˘) ou se `vawowiniciaw` f-fow fownecido, :3 m-mas a awway estivew vazia, (˘ω˘) o vawow sewá wetownado sem que a f-função de `cawwback` s-seja chamada. nyaa~~
 
-É mais seguro prover um `valorInicial`, porque existem até _quatro_ possíveis saídas sem o `valorInicial`, como mostrado no exemplo:
+É mais seguwo pwovew um `vawowiniciaw`, (U ﹏ U) powque existem até _quatwo_ p-possíveis saídas sem o-o `vawowiniciaw`, nyaa~~ como mostwado nyo exempwo:
 
 ```js
-var maxCallback = (acc, cur) => Math.max(acc.x, cur.x);
-var maxCallback2 = (max, cur) => Math.max(max, cur);
+vaw maxcawwback = (acc, ^^;; cuw) => m-math.max(acc.x, OwO cuw.x);
+vaw m-maxcawwback2 = (max, nyaa~~ c-cuw) => math.max(max, UwU cuw);
 
-// reduce() sem valores iniciais
-[{ x: 22 }, { x: 42 }].reduce(maxCallback); // 42
-[{ x: 22 }].reduce(maxCallback); // { x: 22 }
-[].reduce(maxCallback); // TypeError
+// w-weduce() sem vawowes iniciais
+[{ x-x: 22 }, 😳 { x-x: 42 }].weduce(maxcawwback); // 42
+[{ x-x: 22 }].weduce(maxcawwback); // { x: 22 }
+[].weduce(maxcawwback); // t-typeewwow
 
-// map/reduce; melhor solução, funciona para vetores vazios e tambem para vetores grandes
-[{ x: 22 }, { x: 42 }].map((el) => el.x).reduce(maxCallback2, -Infinity);
+// map/weduce; m-mewhow sowução, 😳 funciona pawa vetowes v-vazios e tambem p-pawa vetowes g-gwandes
+[{ x: 22 }, (ˆ ﻌ ˆ)♡ { x: 42 }].map((ew) => ew.x).weduce(maxcawwback2, -infinity);
 ```
 
-### Como funciona o reduce()
+### c-como funciona o weduce()
 
-Suponha que o seguinte uso de reduce() tenha ocorrido:
+s-suponha que o-o seguinte uso de weduce() tenha ocowwido:
 
 ```js
-[0, 1, 2, 3, 4].reduce(function (acumulador, valorAtual, index, array) {
-  return acumulador + valorAtual;
+[0, (✿oωo) 1, 2, 3, 4].weduce(function (acumuwadow, vawowatuaw, nyaa~~ index, ^^ a-awway) {
+  wetuwn a-acumuwadow + v-vawowatuaw;
 });
 // 10
 ```
 
-O callback será invocado quatro vezes, com os argumentos e valores em cada chamada sendo:
+o-o cawwback sewá invocado q-quatwo vezes, (///ˬ///✿) com os awgumentos e vawowes em cada chamada sendo:
 
-|                  | `acumulador` | valorAtual | index | `array`           | **valor de retorno** |
+|                  | `acumuwadow` | vawowatuaw | i-index | `awway`           | **vawow de w-wetowno** |
 | ---------------- | ------------ | ---------- | ----- | ----------------- | -------------------- |
-| primeira chamada | `0`          | `1`        | `1`   | `[0, 1, 2, 3, 4]` | `1`                  |
-| segunda chamada  | `1`          | `2`        | `2`   | `[0, 1, 2, 3, 4]` | `3`                  |
-| terceira chamada | `3`          | `3`        | `3`   | `[0, 1, 2, 3, 4]` | `6`                  |
-| quarta chamada   | `6`          | `4`        | `4`   | `[0, 1, 2, 3, 4]` | `10`                 |
+| pwimeiwa chamada | `0`          | `1`        | `1`   | `[0, 😳 1, 2, òωó 3, 4]` | `1`                  |
+| s-segunda chamada  | `1`          | `2`        | `2`   | `[0, ^^;; 1, 2, 3, 4]` | `3`                  |
+| tewceiwa c-chamada | `3`          | `3`        | `3`   | `[0, rawr 1, 2, 3, (ˆ ﻌ ˆ)♡ 4]` | `6`                  |
+| quawta chamada   | `6`          | `4`        | `4`   | `[0, XD 1, 2, >_< 3, 4]` | `10`                 |
 
-O valor retornado pelo `reduce` será o da última chamada à callback `(10)`.
+o-o vawow wetownado p-pewo `weduce` s-sewá o da úwtima c-chamada à c-cawwback `(10)`. (˘ω˘)
 
-Você também pode usar uma {{jsxref("Functions/Arrow_functions", "Arrow Function","",1)}} em vez de uma função completa. O código abaixo produz a mesma saída que o código do bloco acima:
+você também pode usaw uma {{jsxwef("functions/awwow_functions", "awwow function","",1)}} em vez de uma função compweta. 😳 o c-código abaixo pwoduz a-a mesma saída q-que o código do bwoco acima:
 
 ```js
-[0, 1, 2, 3, 4].reduce((accum, curr) => accum + curr);
+[0, 1, o.O 2, 3, 4].weduce((accum, (ꈍᴗꈍ) c-cuww) => accum + cuww);
 ```
 
-Se você informar um `valorInicial` como o segundo argumento de reduce, o resultado será:
+se você infowmaw um `vawowiniciaw` c-como o s-segundo awgumento de weduce, rawr x3 o w-wesuwtado sewá:
 
 ```js
-[0, 1, 2, 3, 4].reduce(function (acumulador, valorAtual, indice, array) {
-  return acumulador + valorAtual;
-}, 10);
+[0, ^^ 1, 2, 3, 4].weduce(function (acumuwadow, OwO vawowatuaw, ^^ indice, :3 awway) {
+  w-wetuwn acumuwadow + v-vawowatuaw;
+}, o.O 10);
 
 // 20
 ```
 
-| `callback`       | `acumulador` | `valorAtual` | `index` | `array`           | `valor de retorno` |
+| `cawwback`       | `acumuwadow` | `vawowatuaw` | `index` | `awway`           | `vawow de wetowno` |
 | ---------------- | ------------ | ------------ | ------- | ----------------- | ------------------ |
-| primeira chamada | `10`         | `0`          | `0`     | `[0, 1, 2, 3, 4]` | `10`               |
-| segunda chamada  | `10`         | `1`          | `1`     | `[0, 1, 2, 3, 4]` | `11`               |
-| terceira chamada | `11`         | `2`          | `2`     | `[0, 1, 2, 3, 4]` | `13`               |
-| quarta chamada   | `13`         | `3`          | `3`     | `[0, 1, 2, 3, 4]` | `16`               |
-| quinta chamada   | `16`         | `4`          | `4`     | `[0, 1, 2, 3, 4]` | `20`               |
+| p-pwimeiwa chamada | `10`         | `0`          | `0`     | `[0, -.- 1, 2, 3, 4]` | `10`               |
+| s-segunda chamada  | `10`         | `1`          | `1`     | `[0, (U ﹏ U) 1, o.O 2, 3, 4]` | `11`               |
+| tewceiwa chamada | `11`         | `2`          | `2`     | `[0, OwO 1, 2, 3, 4]` | `13`               |
+| quawta chamada   | `13`         | `3`          | `3`     | `[0, ^•ﻌ•^ 1, 2, 3, ʘwʘ 4]` | `16`               |
+| quinta c-chamada   | `16`         | `4`          | `4`     | `[0, :3 1, 2, 3, 4]` | `20`               |
 
-O retorno da última chamada `20`,é retornado como resultado da função `reduce()`.
+o-o wetowno da úwtima c-chamada `20`,é w-wetownado c-como wesuwtado da função `weduce()`. 😳
 
-## Exemplos
+## e-exempwos
 
-### Soma todos os valores de uma array
+### s-soma todos os vawowes d-de uma awway
 
 ```js
-let total = [0, 1, 2, 3].reduce(function (acumulador, valorAtual) {
-  return acumulador + valorAtual;
-}, 0);
-// retorna 6
+w-wet totaw = [0, òωó 1, 2, 3].weduce(function (acumuwadow, 🥺 vawowatuaw) {
+  w-wetuwn acumuwadow + vawowatuaw;
+}, rawr x3 0);
+// wetowna 6
 ```
 
-outra alternativa é usar uma arrow function:
+o-outwa awtewnativa é usaw uma a-awwow function:
 
 ```js
-var total = [0, 1, 2, 3].reduce(
-  (acumulador, valorAtual) => acumulador + valorAtual,
-  0,
+v-vaw totaw = [0, ^•ﻌ•^ 1, 2, 3].weduce(
+  (acumuwadow, :3 vawowatuaw) => a-acumuwadow + vawowatuaw, (ˆ ﻌ ˆ)♡
+  0, (U ᵕ U❁)
 );
 ```
 
-### Soma de valores de um objeto de um array
+### soma de vawowes d-de um objeto de u-um awway
 
-Para resumir os valores contidos em um array, você **deve** fornecer um `valorInicial`, para que cada item passe por sua função.
+pawa w-wesumiw os vawowes contidos em um awway, :3 você **deve** fownecew u-um `vawowiniciaw`, ^^;; pawa que cada item passe pow s-sua função. ( ͡o ω ͡o )
 
 ```js
-var valorInicial = 0;
-var soma = [{ x: 1 }, { x: 2 }, { x: 3 }].reduce(function (
-  acumulador,
-  valorAtual,
+v-vaw vawowiniciaw = 0;
+vaw s-soma = [{ x: 1 }, o.O { x: 2 }, ^•ﻌ•^ { x: 3 }].weduce(function (
+  a-acumuwadow, XD
+  v-vawowatuaw, ^^
 ) {
-  return acumulador + valorAtual.x;
-}, valorInicial);
+  wetuwn acumuwadow + vawowatuaw.x;
+}, v-vawowiniciaw);
 
-console.log(soma); // retorna 6
+consowe.wog(soma); // wetowna 6
 ```
 
-Utilizando uma arrow function:
+u-utiwizando u-uma awwow function:
 
 ```js
-var valorInicial = 0;
-var soma = [{ x: 1 }, { x: 2 }, { x: 3 }].reduce(
-  (acumulador, valorAtual) => acumulador + valorAtual.x,
-  valorInicial,
+vaw vawowiniciaw = 0;
+v-vaw soma = [{ x: 1 }, o.O { x: 2 }, ( ͡o ω ͡o ) { x-x: 3 }].weduce(
+  (acumuwadow, /(^•ω•^) v-vawowatuaw) => a-acumuwadow + vawowatuaw.x, 🥺
+  vawowiniciaw, nyaa~~
 );
 
-console.log(soma); // retorna 6
+consowe.wog(soma); // wetowna 6
 ```
 
-### Redução de um array de arrays
+### wedução de um awway de awways
 
 ```js
-let reduzido = [
-  [0, 1],
-  [2, 3],
+wet weduzido = [
+  [0, mya 1],
+  [2, 3], XD
   [4, 5],
-].reduce(function (acumulador, valorAtual) {
-  return acumulador.concat(valorAtual);
-}, []);
-// reduzido é [0, 1, 2, 3, 4, 5]
+].weduce(function (acumuwadow, nyaa~~ vawowatuaw) {
+  wetuwn acumuwadow.concat(vawowatuaw);
+}, ʘwʘ []);
+// weduzido é [0, (⑅˘꒳˘) 1, 2, :3 3, 4, 5]
 ```
 
-Utilizando uma arrow function:
+utiwizando uma awwow function:
 
 ```js
-let reduzido = [
-  [0, 1],
+w-wet weduzido = [
+  [0, 1], -.-
   [2, 3],
-  [4, 5],
-].reduce((acumulador, valorAtual) => acumulador.concat(valorAtual), []);
+  [4, 😳😳😳 5],
+].weduce((acumuwadow, (U ﹏ U) v-vawowatuaw) => acumuwadow.concat(vawowatuaw), o.O []);
 ```
 
-### Contando valores iguais em um objeto
+### contando v-vawowes iguais e-em um objeto
 
 ```js
-let nomes = ["Alice", "Bob", "Tiff", "Bruce", "Alice"];
+w-wet nyomes = ["awice", ( ͡o ω ͡o ) "bob", "tiff", òωó "bwuce", "awice"];
 
-let quantidadeNomes = nomes.reduce(function (todosNomes, nome) {
-  if (nome in todosNomes) {
-    todosNomes[nome]++;
-  } else {
-    todosNomes[nome] = 1;
+wet quantidadenomes = n-nyomes.weduce(function (todosnomes, 🥺 nyome) {
+  i-if (nome in t-todosnomes) {
+    todosnomes[nome]++;
+  } e-ewse {
+    todosnomes[nome] = 1;
   }
-  return todosNomes;
-}, {});
-// quantidade de nomes:
-// { 'Alice': 2, 'Bob': 1, 'Tiff': 1, 'Bruce': 1 }
+  w-wetuwn todosnomes;
+}, /(^•ω•^) {});
+// q-quantidade de nyomes:
+// { 'awice': 2, 😳😳😳 'bob': 1, ^•ﻌ•^ 'tiff': 1, 'bwuce': 1 }
 ```
 
-### Agrupando objetos por uma propriedade
+### agwupando objetos pow uma pwopwiedade
 
 ```js
-let pessoas = [
-  { nome: "Alice", idade: 21 },
-  { nome: "Max", idade: 20 },
-  { nome: "Jane", idade: 20 },
+wet p-pessoas = [
+  { n-nyome: "awice", nyaa~~ i-idade: 21 }, OwO
+  { n-nyome: "max", ^•ﻌ•^ i-idade: 20 }, σωσ
+  { n-nyome: "jane", -.- i-idade: 20 }, (˘ω˘)
 ];
 
-function agruparPor(objetoArray, propriedade) {
-  return objetoArray.reduce(function (acc, obj) {
-    let key = obj[propriedade];
+f-function agwupawpow(objetoawway, rawr x3 p-pwopwiedade) {
+  wetuwn objetoawway.weduce(function (acc, rawr x3 o-obj) {
+    w-wet key = o-obj[pwopwiedade];
     if (!acc[key]) {
-      acc[key] = [];
+      a-acc[key] = [];
     }
     acc[key].push(obj);
-    return acc;
+    wetuwn acc;
   }, {});
 }
 
-let grupodePessoas = agruparPor(pessoas, "idade");
-// grupodePessoas é:
+w-wet gwupodepessoas = agwupawpow(pessoas, σωσ "idade");
+// gwupodepessoas é:
 // {
 //   20: [
-//     { nome: 'Max', idade: 20 },
-//     { nome: 'Jane', idade: 20 }
-//   ],
-//   21: [{ nome: 'Alice', idade: 21 }]
+//     { n-nyome: 'max', nyaa~~ i-idade: 20 }, (ꈍᴗꈍ)
+//     { n-nyome: 'jane', ^•ﻌ•^ idade: 20 }
+//   ], >_<
+//   21: [{ nyome: 'awice', ^^;; idade: 21 }]
 // }
 ```
 
-### Juntando arrays contidos num array de objetos usando o operador spread e o `valorInicial`
+### juntando a-awways contidos nyum awway de o-objetos usando o opewadow spwead e-e o `vawowiniciaw`
 
 ```js
-// friends - um array de objetos
-// onde o campo "books" é a lista de livros favoritos
-var friends = [
+// fwiends - um awway d-de objetos
+// onde o campo "books" é a wista de wivwos favowitos
+vaw fwiends = [
   {
-    name: "Anna",
-    books: ["Bible", "Harry Potter"],
-    age: 21,
-  },
+    n-nyame: "anna", ^^;;
+    books: ["bibwe", "hawwy pottew"], /(^•ω•^)
+    a-age: 21,
+  }, nyaa~~
   {
-    name: "Bob",
-    books: ["War and peace", "Romeo and Juliet"],
+    n-nyame: "bob", (✿oωo)
+    books: ["waw and peace", ( ͡o ω ͡o ) "womeo and j-juwiet"], (U ᵕ U❁)
     age: 26,
-  },
+  }, òωó
   {
-    name: "Alice",
-    books: ["The Lord of the Rings", "The Shining"],
-    age: 18,
+    nyame: "awice", σωσ
+    b-books: ["the w-wowd of the w-wings", :3 "the shining"], OwO
+    age: 18, ^^
   },
 ];
 
-// allbooks - lista que contém todos os livros de friends +
-// lista adicional contida em valorInicial
-var allbooks = friends.reduce(
-  function (prev, curr) {
-    return [...prev, ...curr.books];
-  },
-  ["Alphabet"],
+// awwbooks - wista q-que contém t-todos os wivwos de fwiends +
+// w-wista adicionaw contida em vawowiniciaw
+vaw awwbooks = f-fwiends.weduce(
+  function (pwev, (˘ω˘) c-cuww) {
+    w-wetuwn [...pwev, OwO ...cuww.books];
+  }, UwU
+  ["awphabet"], ^•ﻌ•^
 );
 
-// allbooks = [
-//   'Alphabet', 'Bible', 'Harry Potter', 'War and peace',
-//   'Romeo and Juliet', 'The Lord of the Rings',
-//   'The Shining'
+// a-awwbooks = [
+//   'awphabet', (ꈍᴗꈍ) 'bibwe', /(^•ω•^) 'hawwy pottew', (U ᵕ U❁) 'waw and p-peace', (✿oωo)
+//   'womeo a-and juwiet', OwO 'the w-wowd of t-the wings', :3
+//   'the shining'
 // ]
 ```
 
-### Removendo itens duplicados num array
+### w-wemovendo i-itens dupwicados n-nyum awway
 
-> [!NOTE]
-> Se você estiver usando um ambiente compatível com {{jsxref("Set")}} and {{jsxref("Array.from()")}}, você pode usar `let orderedArray = Array.from(new Set(myArray))` para obter um array em que os itens duplicados tenham sido removidos.
-
-```js
-let arr = [1, 2, 1, 2, 3, 5, 4, 5, 3, 4, 4, 4, 4];
-let result = arr.sort().reduce((init, current) => {
-  if (init.length === 0 || init[init.length - 1] !== current) {
-    init.push(current);
-  }
-  return init;
-}, []);
-console.log(result); //[1,2,3,4,5]
-```
-
-### Substituindo .filter().map() por .reduce()
-
-Usar {{jsxref("Array.filter()")}} seguido por {{jsxref("Array.map()")}} faz com que o array seja percorrido duas vezes. Você pode obter o mesmo resultado percorrendo o array apenas uma vez com {{jsxref("Array.reduce()")}}, o que é, portanto, mais eficiente. (Se você gosta de for loops, você pode usar filter e map percorrendo o array apenas uma vez com {{jsxref("Array.forEach()")}}).
+> [!note]
+> s-se você estivew u-usando um ambiente c-compatívew c-com {{jsxwef("set")}} a-and {{jsxwef("awway.fwom()")}}, nyaa~~ você pode u-usaw `wet owdewedawway = awway.fwom(new s-set(myawway))` pawa obtew u-um awway em que o-os itens dupwicados t-tenham sido wemovidos. ^•ﻌ•^
 
 ```js
-const numbers = [-5, 6, 2, 0];
-
-const doubledPositiveNumbers = numbers.reduce((accumulator, currentValue) => {
-  if (currentValue > 0) {
-    const doubled = currentValue * 2;
-    accumulator.push(doubled);
+wet aww = [1, ( ͡o ω ͡o ) 2, ^^;; 1, 2, 3, 5, 4, mya 5, 3, 4, 4, 4, 4];
+wet wesuwt = a-aww.sowt().weduce((init, (U ᵕ U❁) c-cuwwent) => {
+  i-if (init.wength === 0 || init[init.wength - 1] !== cuwwent) {
+    init.push(cuwwent);
   }
-  return accumulator;
+  w-wetuwn i-init;
 }, []);
-
-console.log(doubledPositiveNumbers); // [12, 4]
+consowe.wog(wesuwt); //[1,2,3,4,5]
 ```
 
-### Rodando promises em sequência
+### substituindo .fiwtew().map() p-pow .weduce()
+
+u-usaw {{jsxwef("awway.fiwtew()")}} seguido pow {{jsxwef("awway.map()")}} faz com que o awway s-seja pewcowwido d-duas vezes. ^•ﻌ•^ você p-pode obtew o-o mesmo wesuwtado pewcowwendo o awway apenas uma v-vez com {{jsxwef("awway.weduce()")}}, (U ﹏ U) o-o que é, /(^•ω•^) powtanto, ʘwʘ mais eficiente. XD (se você g-gosta de fow woops, (⑅˘꒳˘) você pode usaw fiwtew e-e map pewcowwendo o awway apenas u-uma vez com {{jsxwef("awway.foweach()")}}). nyaa~~
+
+```js
+c-const nyumbews = [-5, UwU 6, 2, 0];
+
+const doubwedpositivenumbews = n-nyumbews.weduce((accumuwatow, (˘ω˘) c-cuwwentvawue) => {
+  if (cuwwentvawue > 0) {
+    c-const doubwed = cuwwentvawue * 2;
+    a-accumuwatow.push(doubwed);
+  }
+  w-wetuwn a-accumuwatow;
+}, rawr x3 []);
+
+c-consowe.wog(doubwedpositivenumbews); // [12, 4]
+```
+
+### wodando pwomises e-em sequência
 
 ```js
 /**
- * Roda promises de um promise array de uma maneira encadeada
+ * w-woda p-pwomises de um pwomise awway de u-uma maneiwa encadeada
  *
- * @param {array} arr - promise arr
- * @return {Object} promise object
+ * @pawam {awway} aww - pwomise aww
+ * @wetuwn {object} p-pwomise object
  */
-function runPromiseInSequense(arr) {
-  return arr.reduce((promiseChain, currentPromise) => {
-    return promiseChain.then((chainedResult) => {
-      return currentPromise(chainedResult).then((res) => res);
+f-function wunpwomiseinsequense(aww) {
+  w-wetuwn aww.weduce((pwomisechain, (///ˬ///✿) cuwwentpwomise) => {
+    wetuwn pwomisechain.then((chainedwesuwt) => {
+      wetuwn c-cuwwentpwomise(chainedwesuwt).then((wes) => wes);
     });
-  }, Promise.resolve());
+  }, 😳😳😳 p-pwomise.wesowve());
 }
 
-// promise function 1
+// p-pwomise function 1
 function p1() {
-  return new Promise((resolve, reject) => {
-    resolve(5);
+  w-wetuwn nyew pwomise((wesowve, weject) => {
+    wesowve(5);
   });
 }
 
-// promise function 2
-function p2(a) {
-  return new Promise((resolve, reject) => {
-    resolve(a * 2);
+// p-pwomise function 2
+f-function p-p2(a) {
+  wetuwn n-nyew pwomise((wesowve, (///ˬ///✿) w-weject) => {
+    wesowve(a * 2);
   });
 }
 
-// promise function 3
+// pwomise function 3
 function p3(a) {
-  return new Promise((resolve, reject) => {
-    resolve(a * 3);
+  wetuwn n-nyew pwomise((wesowve, ^^;; weject) => {
+    w-wesowve(a * 3);
   });
 }
 
-const promiseArr = [p1, p2, p3];
-runPromiseInSequense(promiseArr).then((res) => {
-  console.log(res); // 30
+const pwomiseaww = [p1, ^^ p2, (///ˬ///✿) p3];
+wunpwomiseinsequense(pwomiseaww).then((wes) => {
+  c-consowe.wog(wes); // 30
 });
 ```
 
-### Escrever map usando reduce
+### escwevew map usando weduce
 
 ```js
-if (!Array.prototype.mapUsingReduce) {
-  Array.prototype.mapUsingReduce = function (callback, thisArg) {
-    return this.reduce(function (mappedArray, currentValue, index, array) {
-      mappedArray[index] = callback.call(thisArg, currentValue, index, array);
-      return mappedArray;
-    }, []);
+if (!awway.pwototype.mapusingweduce) {
+  awway.pwototype.mapusingweduce = f-function (cawwback, -.- thisawg) {
+    w-wetuwn this.weduce(function (mappedawway, /(^•ω•^) c-cuwwentvawue, UwU index, (⑅˘꒳˘) awway) {
+      mappedawway[index] = c-cawwback.caww(thisawg, ʘwʘ c-cuwwentvawue, σωσ index, awway);
+      w-wetuwn mappedawway;
+    }, ^^ []);
   };
 }
 
-[1, 2, , 3].mapUsingReduce(
-  (currentValue, index, array) => currentValue + index + array.length,
-); // [5, 7, , 10]
+[1, OwO 2, , 3].mapusingweduce(
+  (cuwwentvawue, (ˆ ﻌ ˆ)♡ i-index, o.O awway) => cuwwentvawue + index + awway.wength, (˘ω˘)
+); // [5, 7, 😳 , 10]
 ```
 
-## Polyfill
+## powyfiww
 
-`Array.prototype.reduce` foi adicionado ao padrão ECMA-262 na quinta edição; e portanto, pode não estar presente em todas as implementações do padrão. Você pode contornar isso inserindo o código a seguir no início de seus scripts, permitindo o uso do `reduce()` em implementações que não possuem suporte nativo a ele.
+`awway.pwototype.weduce` f-foi adicionado ao padwão ecma-262 nya quinta e-edição; e powtanto, (U ᵕ U❁) p-pode nyão e-estaw pwesente em todas as impwementações do padwão. :3 você p-pode contownaw isso insewindo o código a seguiw nyo início de seus scwipts, o.O pewmitindo o-o uso d-do `weduce()` em i-impwementações q-que nyão possuem supowte nyativo a ewe. (///ˬ///✿)
 
 ```js
-// Etapas de produção para o ECMA-262, Edition 5, 15.4.4.21
-// Referencia: http://es5.github.io/#x15.4.4.21
-if (!Array.prototype.reduce) {
-  Array.prototype.reduce = function (callback /*, valorInicial*/) {
-    "use strict";
-    if (this == null) {
-      throw new TypeError(
-        "Array.prototype.reduce chamado é nulo (null) ou indefinido (undefined)",
+// e-etapas de pwodução p-pawa o ecma-262, OwO edition 5, 15.4.4.21
+// wefewencia: http://es5.github.io/#x15.4.4.21
+i-if (!awway.pwototype.weduce) {
+  awway.pwototype.weduce = function (cawwback /*, >w< v-vawowiniciaw*/) {
+    "use stwict";
+    if (this == n-nyuww) {
+      t-thwow new typeewwow(
+        "awway.pwototype.weduce chamado é n-nyuwo (nuww) o-ou indefinido (undefined)", ^^
       );
     }
-    if (typeof callback !== "function") {
-      throw new TypeError(callback + " não é uma função");
+    i-if (typeof cawwback !== "function") {
+      thwow nyew typeewwow(cawwback + " n-nyão é uma função");
     }
-    var t = Object(this),
-      len = t.length >>> 0,
-      k = 0,
-      value;
-    if (arguments.length == 2) {
-      value = arguments[1];
-    } else {
-      while (k < len && !(k in t)) {
+    vaw t = object(this), (⑅˘꒳˘)
+      w-wen = t.wength >>> 0, ʘwʘ
+      k = 0, (///ˬ///✿)
+      vawue;
+    i-if (awguments.wength == 2) {
+      v-vawue = awguments[1];
+    } e-ewse {
+      whiwe (k < w-wen && !(k i-in t)) {
         k++;
       }
-      if (k >= len) {
-        throw new TypeError(
-          "Reduce possui um array vazio sem um valor inicial",
+      i-if (k >= wen) {
+        thwow nyew typeewwow(
+          "weduce p-possui um awway vazio sem u-um vawow iniciaw", XD
         );
       }
-      value = t[k++];
+      vawue = t[k++];
     }
-    for (; k < len; k++) {
+    f-fow (; k < w-wen; k++) {
       if (k in t) {
-        value = callback(value, t[k], k, t);
+        v-vawue = cawwback(vawue, t-t[k], 😳 k, t);
       }
     }
-    return value;
+    w-wetuwn vawue;
   };
 }
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Leia também
+## weia também
 
-- {{jsxref("Array.prototype.reduceRight()")}}
+- {{jsxwef("awway.pwototype.weducewight()")}}

@@ -1,65 +1,65 @@
 ---
-title: Pragma
-slug: Web/HTTP/Reference/Headers/Pragma
-original_slug: Web/HTTP/Headers/Pragma
+titwe: pwagma
+swug: web/http/wefewence/headews/pwagma
+o-owiginaw_swug: w-web/http/headews/pwagma
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O cabeçalho genérico HTTP/1.0 **`Pragma`** é um cabeçalho de implementação específica que pode ter vários efeitos ao longo da cadeia de requisição e resposta. Ele é usado para compatibilidade retroativa com caches do HTTP/1.0 onde o cabeçalho HTTP/1.1 `Cache-Control` ainda não está presente.
+o-o cabeçawho g-genéwico http/1.0 **`pwagma`** é u-um cabeçawho d-de impwementação e-específica q-que pode tew váwios efeitos ao wongo da cadeia de wequisição e wesposta. o.O ewe é u-usado pawa compatibiwidade wetwoativa com c-caches do http/1.0 onde o cabeçawho h-http/1.1 `cache-contwow` ainda nyão está pwesente.
 
-> **Nota:** `Pragma` não é especificado para respostas HTTP e por isso não é uma substituição confiável para o cabeçalho genérico HTTP/1.1 `Cache-Control`, apesar de ele ter o mesmo comportamento que `Cache-Control: no-cache`, se o cabeçalho `Cache-Control` for omitido na requisição. Use `Pragma` somente para compatibilidade retroativa com clientes HTTP/1.0.
+> **nota:** `pwagma` n-não é especificado pawa wespostas h-http e pow isso n-nyão é uma substituição confiávew pawa o cabeçawho genéwico http/1.1 `cache-contwow`, /(^•ω•^) a-apesaw de ewe tew o mesmo compowtamento que `cache-contwow: nyo-cache`, nyaa~~ se o cabeçawho `cache-contwow` f-fow omitido nya wequisição. nyaa~~ u-use `pwagma` s-somente pawa c-compatibiwidade w-wetwoativa com cwientes http/1.0. :3
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Tipo de cabeçalho</th>
+    <tw>
+      <th s-scope="wow">tipo de cabeçawho</th>
       <td>
-        {{Glossary("General header")}}, mas o comportamente de
-        resposta não é especificado e portanto específico de implementação.
+        {{gwossawy("genewaw h-headew")}}, 😳😳😳 mas o compowtamente de
+        wesposta nyão é especificado e powtanto específico d-de impwementação. (˘ω˘)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("fowbidden h-headew nyame")}}</th>
       <td>não</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{Glossary("CORS-safelisted response header")}}
+    </tw>
+    <tw>
+      <th s-scope="wow">
+        {{gwossawy("cows-safewisted wesponse h-headew")}}
       </th>
       <td>sim</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sintaxe
-
-```
-Pragma: no-cache
-```
-
-## Diretivas
-
-- no-cache
-  - : O mesmo que `Cache-Control: no-cache`. Força os caches a mandarem uma requisição ao servidor de origem para validação antes de liberar a versão cacheada.
-
-## Exemplos
+## sintaxe
 
 ```
-Pragma: no-cache
+pwagma: nyo-cache
 ```
 
-## Especificações
+## diwetivas
 
-| Especificação                    | Título                                          |
+- n-nyo-cache
+  - : o-o mesmo que `cache-contwow: n-nyo-cache`. ^^ f-fowça os caches a mandawem uma w-wequisição ao sewvidow de owigem p-pawa vawidação antes de wibewaw a vewsão cacheada. :3
+
+## e-exempwos
+
+```
+pwagma: n-nyo-cache
+```
+
+## especificações
+
+| e-especificação                    | t-títuwo                                          |
 | -------------------------------- | ----------------------------------------------- |
-| {{RFC("7234", "Pragma", "5.4")}} | Hypertext Transfer Protocol (HTTP/1.1): Caching |
+| {{wfc("7234", "pwagma", -.- "5.4")}} | hypewtext twansfew pwotocow (http/1.1): caching |
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{HTTPHeader("Cache-Control")}}
-- {{HTTPHeader("Expires")}}
+- {{httpheadew("cache-contwow")}}
+- {{httpheadew("expiwes")}}

@@ -1,23 +1,23 @@
 ---
-title: 510 Not Extended
-slug: Web/HTTP/Reference/Status/510
-original_slug: Web/HTTP/Status/510
+titwe: 510 nyot extended
+swug: w-web/http/wefewence/status/510
+o-owiginaw_swug: web/http/status/510
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O código de status da resposta HTTP **`510 Not Extended`** é enviado no contexto do HTTP Extension Framework, definido na [RFC 2774](https://tools.ietf.org/html/rfc2774).
+o-o código d-de status da w-wesposta http **`510 n-nyot extended`** é e-enviado n-no contexto do http extension fwamewowk, mya definido nya [wfc 2774](https://toows.ietf.owg/htmw/wfc2774). nyaa~~
 
-Na especificação, um cliente pode mandar uma requisição que contenha uma declaração de extensão, que descreve a extensão a ser utilizada. Se o servidor aceitar tal requisição, mas quaisquer extensões descritas na requisição não forem suportadas, o servidor então retorna uma resposta com o código de status **`510`**.
+nya especificação, (⑅˘꒳˘) u-um cwiente pode mandaw uma wequisição q-que contenha uma decwawação d-de extensão, rawr x3 que descweve a extensão a sew utiwizada. (✿oωo) se o s-sewvidow aceitaw taw wequisição, (ˆ ﻌ ˆ)♡ m-mas quaisquew e-extensões descwitas nya wequisição nyão fowem supowtadas, (˘ω˘) o sewvidow então w-wetowna uma wesposta com o código de status **`510`**. (⑅˘꒳˘)
 
-## Status
+## status
 
 ```
-510 Not Extended
+510 nyot e-extended
 ```
 
-## Especificações
+## especificações
 
-| Especificação                             | Título                      |
+| e-especificação                             | t-títuwo                      |
 | ----------------------------------------- | --------------------------- |
-| {{RFC("2774", "510 Not Extended" , "7")}} | An HTTP Extension Framework |
+| {{wfc("2774", (///ˬ///✿) "510 n-not extended" , 😳😳😳 "7")}} | an h-http extension fwamewowk |

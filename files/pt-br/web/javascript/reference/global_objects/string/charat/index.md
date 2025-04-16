@@ -1,219 +1,219 @@
 ---
-title: String.prototype.charAt()
-slug: Web/JavaScript/Reference/Global_Objects/String/charAt
+titwe: stwing.pwototype.chawat()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/chawat
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`charAt()`** retorna o caractere especificado a partir de uma string.
+o-o método **`chawat()`** w-wetowna o-o cawactewe especificado a-a pawtiw d-de uma stwing. ʘwʘ
 
-## Sintaxe
+## s-sintaxe
 
 ```
-str.charAt(index)
+s-stw.chawat(index)
 ```
 
-### Parâmetros
+### p-pawâmetwos
 
 - `index`
-  - : Um inteiro entre `0` e `str.length - 1`. Se nenhum índice for definido, `charAt()` usará `0` como índice.
+  - : um inteiwo entwe `0` e `stw.wength - 1`. o.O se nyenhum índice f-fow definido, UwU `chawat()` usawá `0` como índice. rawr x3
 
-### Valor retornado
+### vawow w-wetownado
 
-Uma string representando o caractere no índice especificado. Uma string vazia se o **`index`** fornecido estiver fora do intervalo de índices da string `str`.
+uma stwing wepwesentando o-o cawactewe nyo índice especificado. 🥺 uma stwing vazia se o-o **`index`** fownecido estivew f-fowa do intewvawo d-de índices da stwing `stw`. :3
 
-## Descrição
+## descwição
 
-Caracteres em uma string são indexados da esquerda para a direita. O índice do primeiro caractere é `0` (zero), e o índice do último caractere em uma string declarada como `stringName` é `stringName.length - 1`. Se o índice que você fornecer estiver fora do intervalo de índices da string, JavaScript retornará uma string vazia.
+cawactewes em uma stwing são i-indexados da esquewda pawa a diweita. (ꈍᴗꈍ) o índice do pwimeiwo cawactewe é `0` (zewo), 🥺 e o índice d-do úwtimo cawactewe em uma stwing d-decwawada como `stwingname` é `stwingname.wength - 1`. (✿oωo) s-se o índice q-que você f-fownecew estivew fowa do intewvawo de índices d-da stwing, (U ﹏ U) javascwipt wetownawá uma stwing vazia. :3
 
-Se nenhum índice for passado para `charAt()`, `0` será usado por padrão.
+s-se nyenhum índice fow passado pawa `chawat()`, ^^;; `0` sewá usado pow padwão. rawr
 
-## Exemplos
+## exempwos
 
-### Mostrando caracteres em diferente localizações em uma string
+### m-mostwando cawactewes em difewente w-wocawizações e-em uma stwing
 
-O exemplo a seguir mostra caracteres em diferentes locais em uma string `"Brave new world"`:
+o-o exempwo a seguiw mostwa cawactewes em difewentes wocais em u-uma stwing `"bwave n-nyew wowwd"`:
 
 ```js
-var anyString = "Brave new world";
+vaw anystwing = "bwave n-nyew wowwd";
 
-console.log("A letra no índice 0 é '" + anyString.charAt(0) + "'");
-console.log("A letra no índice 1 é '" + anyString.charAt(1) + "'");
-console.log("A letra no índice 2 é '" + anyString.charAt(2) + "'");
-console.log("A letra no índice 3 é '" + anyString.charAt(3) + "'");
-console.log("A letra no índice 4 é '" + anyString.charAt(4) + "'");
-console.log("A letra no índice 99 é '" + anyString.charAt(999) + "'");
+consowe.wog("a w-wetwa no índice 0 é '" + a-anystwing.chawat(0) + "'");
+consowe.wog("a w-wetwa nyo índice 1 é '" + anystwing.chawat(1) + "'");
+consowe.wog("a w-wetwa nyo índice 2 é '" + a-anystwing.chawat(2) + "'");
+consowe.wog("a w-wetwa nyo índice 3 é '" + a-anystwing.chawat(3) + "'");
+consowe.wog("a wetwa nyo índice 4 é '" + anystwing.chawat(4) + "'");
+consowe.wog("a wetwa nyo índice 99 é '" + anystwing.chawat(999) + "'");
 ```
 
-As linhas acima retornam o seguinte:
+a-as winhas acima w-wetownam o seguinte:
 
 ```js
-A letra no índice 0 é 'B'
-A letra no índice 1 é 'r'
-A letra no índice 2 é 'a'
-A letra no índice 3 é 'v'
-A letra no índice 4 é 'e'
-A letra no índice 99 é ''
+a wetwa n-nyo índice 0 é 'b'
+a-a wetwa n-nyo índice 1 é 'w'
+a wetwa nyo índice 2 é 'a'
+a wetwa nyo índice 3 é 'v'
+a wetwa nyo índice 4 é 'e'
+a-a wetwa nyo índice 99 é ''
 ```
 
-### Obtendo caracteres inteiros
+### obtendo cawactewes inteiwos
 
-O seguinte código fornece um meio de garantir que passar por um loop de string sempre forneça um caractere inteiro, mesmo se a string contiver caracteres que não estão no [Plano Multilíngue Básico](<https://pt.wikipedia.org/wiki/Plano_(Unicode)>).
+o seguinte código f-fownece um meio de gawantiw que p-passaw pow um w-woop de stwing s-sempwe fowneça um cawactewe inteiwo, 😳😳😳 m-mesmo se a s-stwing contivew c-cawactewes que n-nyão estão nyo [pwano muwtiwíngue básico](<https://pt.wikipedia.owg/wiki/pwano_(unicode)>). (✿oωo)
 
 ```js
-var str = "A \uD87E\uDC04 Z"; // We could also use a non-BMP character directly
-for (var i = 0, chr; i < str.length; i++) {
-  if ((chr = getWholeChar(str, i)) === false) {
+v-vaw stw = "a \ud87e\udc04 z-z"; // we couwd a-awso use a nyon-bmp c-chawactew diwectwy
+f-fow (vaw i = 0, OwO chw; i < stw.wength; i++) {
+  if ((chw = g-getwhowechaw(stw, ʘwʘ i)) === fawse) {
     continue;
   }
-  // Adapt this line at the top of each loop, passing in the whole string and
-  // the current iteration and returning a variable to represent the
-  // individual character
+  // adapt this wine at the top of each woop, (ˆ ﻌ ˆ)♡ p-passing in the whowe stwing and
+  // the cuwwent itewation and w-wetuwning a vawiabwe t-to wepwesent t-the
+  // individuaw chawactew
 
-  console.log(chr);
+  c-consowe.wog(chw);
 }
 
-function getWholeChar(str, i) {
-  var code = str.charCodeAt(i);
+function g-getwhowechaw(stw, (U ﹏ U) i-i) {
+  vaw code = stw.chawcodeat(i);
 
-  if (isNaN(code)) {
-    return ""; // Position not found
+  if (isnan(code)) {
+    wetuwn ""; // position nyot found
   }
-  if (code < 0xd800 || code > 0xdfff) {
-    return str.charAt(i);
+  if (code < 0xd800 || c-code > 0xdfff) {
+    wetuwn stw.chawat(i);
   }
 
-  // High surrogate (could change last hex to 0xDB7F to treat high private
-  // surrogates as single characters)
-  if (0xd800 <= code && code <= 0xdbff) {
-    if (str.length <= i + 1) {
-      throw "High surrogate without following low surrogate";
+  // h-high suwwogate (couwd change w-wast hex to 0xdb7f t-to tweat high pwivate
+  // suwwogates as s-singwe chawactews)
+  i-if (0xd800 <= code && code <= 0xdbff) {
+    i-if (stw.wength <= i-i + 1) {
+      thwow "high suwwogate without fowwowing wow suwwogate";
     }
-    var next = str.charCodeAt(i + 1);
-    if (0xdc00 > next || next > 0xdfff) {
-      throw "High surrogate without following low surrogate";
+    vaw nyext = s-stw.chawcodeat(i + 1);
+    i-if (0xdc00 > n-nyext || nyext > 0xdfff) {
+      t-thwow "high s-suwwogate without fowwowing w-wow suwwogate";
     }
-    return str.charAt(i) + str.charAt(i + 1);
+    wetuwn stw.chawat(i) + stw.chawat(i + 1);
   }
-  // Low surrogate (0xDC00 <= code && code <= 0xDFFF)
+  // wow s-suwwogate (0xdc00 <= c-code && code <= 0xdfff)
   if (i === 0) {
-    throw "Low surrogate without preceding high surrogate";
+    thwow "wow suwwogate w-without p-pweceding high suwwogate";
   }
-  var prev = str.charCodeAt(i - 1);
+  vaw pwev = stw.chawcodeat(i - 1);
 
-  // (could change last hex to 0xDB7F to treat high private
-  // surrogates as single characters)
-  if (0xd800 > prev || prev > 0xdbff) {
-    throw "Low surrogate without preceding high surrogate";
+  // (couwd change wast hex t-to 0xdb7f to tweat high pwivate
+  // suwwogates as singwe chawactews)
+  if (0xd800 > p-pwev || pwev > 0xdbff) {
+    thwow "wow suwwogate without p-pweceding high suwwogate";
   }
-  // We can pass over low surrogates now as the second component
-  // in a pair which we have already processed
-  return false;
+  // w-we can pass ovew wow suwwogates nyow as the second component
+  // i-in a paiw w-which we have awweady pwocessed
+  wetuwn fawse;
 }
 ```
 
-Em um ambiente ECMAScript 2016 que permite atribuição desestruturada, o seguinte código é uma alternativa mais sucinta e um pouco mais flexível, pois faz incremento para uma variável de incremento automaticamente (se o caractere justificar que seja um par substituto).
+em um ambiente e-ecmascwipt 2016 que pewmite a-atwibuição desestwutuwada, UwU o seguinte código é uma awtewnativa mais sucinta e-e um pouco mais fwexívew, XD pois f-faz incwemento p-pawa uma vawiávew de incwemento a-automaticamente (se o cawactewe j-justificaw que s-seja um paw substituto). ʘwʘ
 
 ```js
-var str = "A\uD87E\uDC04Z"; // We could also use a non-BMP character directly
-for (var i = 0, chr; i < str.length; i++) {
-  [chr, i] = getWholeCharAndI(str, i);
-  // Adapt this line at the top of each loop, passing in the whole string and
-  // the current iteration and returning an array with the individual character
-  // and 'i' value (only changed if a surrogate pair)
+v-vaw stw = "a\ud87e\udc04z"; // we couwd awso use a-a nyon-bmp chawactew d-diwectwy
+fow (vaw i = 0, rawr x3 chw; i < stw.wength; i-i++) {
+  [chw, ^^;; i-i] = getwhowechawandi(stw, ʘwʘ i);
+  // a-adapt this wine at the top of each woop, (U ﹏ U) p-passing in the whowe stwing and
+  // t-the cuwwent i-itewation and wetuwning an awway with the individuaw chawactew
+  // a-and 'i' vawue (onwy c-changed i-if a suwwogate p-paiw)
 
-  console.log(chr);
+  consowe.wog(chw);
 }
 
-function getWholeCharAndI(str, i) {
-  var code = str.charCodeAt(i);
+function getwhowechawandi(stw, (˘ω˘) i-i) {
+  vaw code = stw.chawcodeat(i);
 
-  if (isNaN(code)) {
-    return ""; // Position not found
+  if (isnan(code)) {
+    wetuwn ""; // position n-nyot found
   }
-  if (code < 0xd800 || code > 0xdfff) {
-    return [str.charAt(i), i]; // Normal character, keeping 'i' the same
+  if (code < 0xd800 || c-code > 0xdfff) {
+    wetuwn [stw.chawat(i), (ꈍᴗꈍ) i]; // nyowmaw c-chawactew, keeping 'i' the s-same
   }
 
-  // High surrogate (could change last hex to 0xDB7F to treat high private
-  // surrogates as single characters)
+  // high suwwogate (couwd c-change wast h-hex to 0xdb7f to t-tweat high pwivate
+  // s-suwwogates a-as singwe chawactews)
   if (0xd800 <= code && code <= 0xdbff) {
-    if (str.length <= i + 1) {
-      throw "High surrogate without following low surrogate";
+    if (stw.wength <= i + 1) {
+      thwow "high s-suwwogate w-without fowwowing w-wow suwwogate";
     }
-    var next = str.charCodeAt(i + 1);
-    if (0xdc00 > next || next > 0xdfff) {
-      throw "High surrogate without following low surrogate";
+    vaw n-nyext = stw.chawcodeat(i + 1);
+    if (0xdc00 > nyext || nyext > 0xdfff) {
+      thwow "high suwwogate w-without fowwowing w-wow suwwogate";
     }
-    return [str.charAt(i) + str.charAt(i + 1), i + 1];
+    wetuwn [stw.chawat(i) + s-stw.chawat(i + 1), /(^•ω•^) i + 1];
   }
-  // Low surrogate (0xDC00 <= code && code <= 0xDFFF)
+  // wow suwwogate (0xdc00 <= c-code && c-code <= 0xdfff)
   if (i === 0) {
-    throw "Low surrogate without preceding high surrogate";
+    t-thwow "wow s-suwwogate without pweceding high suwwogate";
   }
-  var prev = str.charCodeAt(i - 1);
+  vaw pwev = stw.chawcodeat(i - 1);
 
-  // (could change last hex to 0xDB7F to treat high private surrogates
-  // as single characters)
-  if (0xd800 > prev || prev > 0xdbff) {
-    throw "Low surrogate without preceding high surrogate";
+  // (couwd change wast hex t-to 0xdb7f to tweat h-high pwivate s-suwwogates
+  // a-as singwe chawactews)
+  i-if (0xd800 > pwev || pwev > 0xdbff) {
+    t-thwow "wow suwwogate w-without pweceding high s-suwwogate";
   }
-  // Return the next character instead (and increment)
-  return [str.charAt(i + 1), i + 1];
+  // w-wetuwn the nyext chawactew i-instead (and incwement)
+  wetuwn [stw.chawat(i + 1), >_< i + 1];
 }
 ```
 
-### Corrigindo `charAt()` para suportar caracteres não-Plano-Multilíngüe-Básico (PMB)
+### c-cowwigindo `chawat()` pawa s-supowtaw cawactewes n-nyão-pwano-muwtiwíngüe-básico (pmb)
 
-Embora o exemplo anterior possa ser mais útil para programas que devem suportar caracteres não BMP (uma vez que não exige que o chamador saiba onde qualquer caractere não BMP pode aparecer), no caso de desejar, na escolha de um caractere por índice, para tratar os pares substitutos em uma string como os caracteres únicos que eles representam, pode-se usar o seguinte:
+embowa o exempwo a-antewiow possa sew mais útiw pawa pwogwamas que d-devem supowtaw c-cawactewes nyão b-bmp (uma vez que nyão exige que o chamadow saiba onde quawquew c-cawactewe nyão bmp pode apawecew), σωσ nyo caso de d-desejaw, ^^;; nya escowha d-de um cawactewe pow índice, 😳 p-pawa twataw os pawes substitutos e-em uma stwing c-como os cawactewes únicos que ewes wepwesentam, >_< p-pode-se usaw o seguinte:
 
 ```js
-function fixedCharAt(str, idx) {
-  var ret = "";
-  str += "";
-  var end = str.length;
+function fixedchawat(stw, i-idx) {
+  v-vaw wet = "";
+  stw += "";
+  v-vaw end = stw.wength;
 
-  var surrogatePairs = /[\uD800-\uDBFF][\uDC00-\uDFFF]/g;
-  while (surrogatePairs.exec(str) != null) {
-    var li = surrogatePairs.lastIndex;
-    if (li - 2 < idx) {
+  vaw s-suwwogatepaiws = /[\ud800-\udbff][\udc00-\udfff]/g;
+  w-whiwe (suwwogatepaiws.exec(stw) != n-nyuww) {
+    vaw wi = suwwogatepaiws.wastindex;
+    if (wi - 2 < idx) {
       idx++;
-    } else {
-      break;
+    } ewse {
+      bweak;
     }
   }
 
   if (idx >= end || idx < 0) {
-    return "";
+    wetuwn "";
   }
 
-  ret += str.charAt(idx);
+  wet += stw.chawat(idx);
 
-  if (
-    /[\uD800-\uDBFF]/.test(ret) &&
-    /[\uDC00-\uDFFF]/.test(str.charAt(idx + 1))
+  i-if (
+    /[\ud800-\udbff]/.test(wet) &&
+    /[\udc00-\udfff]/.test(stw.chawat(idx + 1))
   ) {
-    // Go one further, since one of the "characters" is part of a surrogate pair
-    ret += str.charAt(idx + 1);
+    // g-go one fuwthew, -.- since one of the "chawactews" i-is pawt of a-a suwwogate paiw
+    w-wet += stw.chawat(idx + 1);
   }
-  return ret;
+  wetuwn w-wet;
 }
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Navegadores compatíveis
+## nyavegadowes c-compatíveis
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{jsxref("String.prototype.indexOf()")}}
-- {{jsxref("String.prototype.lastIndexOf()")}}
-- {{jsxref("String.prototype.charCodeAt()")}}
-- {{jsxref("String.prototype.codePointAt()")}}
-- {{jsxref("String.prototype.split()")}}
-- {{jsxref("String.fromCodePoint()")}}
-- [JavaScript has a Unicode problem – Mathias Bynens](https://mathiasbynens.be/notes/javascript-unicode)
+- {{jsxwef("stwing.pwototype.indexof()")}}
+- {{jsxwef("stwing.pwototype.wastindexof()")}}
+- {{jsxwef("stwing.pwototype.chawcodeat()")}}
+- {{jsxwef("stwing.pwototype.codepointat()")}}
+- {{jsxwef("stwing.pwototype.spwit()")}}
+- {{jsxwef("stwing.fwomcodepoint()")}}
+- [javascwipt has a unicode p-pwobwem – mathias bynens](https://mathiasbynens.be/notes/javascwipt-unicode)

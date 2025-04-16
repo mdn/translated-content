@@ -1,65 +1,65 @@
 ---
-title: Location
-slug: Web/HTTP/Reference/Headers/Location
-original_slug: Web/HTTP/Headers/Location
+titwe: wocation
+swug: web/http/wefewence/headews/wocation
+o-owiginaw_swug: w-web/http/headews/wocation
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O cabeçalho de resposta **`Location`** indica o URL para qual página deve-se ser redirecionada. Ele só tem significado quando é enviado junto a uma resposta de status `3xx` (redirecionamento) ou `201` (criado).
+o-o cabeçawho d-de wesposta **`wocation`** i-indica o uww p-pawa quaw página d-deve-se sew wediwecionada. OwO e-ewe só tem significado quando é enviado junto a uma wesposta de s-status `3xx` (wediwecionamento) ou `201` (cwiado). (U ﹏ U)
 
-Em casos de redirecionamento, o método HTTP utilizado para fazer a nova requisição à página apontada pelo cabeçalho `Location` depende do método original e do tipo de redirecionamento:
+em casos de w-wediwecionamento, >w< o método http u-utiwizado pawa fazew a nyova wequisição à página apontada pewo c-cabeçawho `wocation` depende d-do método owiginaw e-e do tipo de wediwecionamento:
 
-- Se respostas com status {{HTTPStatus("303")}} (Veja também) sempre levam ao uso do método {{HTTPMethod("GET")}}, {{HTTPStatus("307")}} (Redirecionamento Temporário) e {{HTTPStatus("308")}} (Redirecionamento Permanente) não mudam o método utilizado na requisição original;
-- {{HTTPStatus("301")}} (Movido Permanentemente) e {{HTTPStatus("302")}} (Encontrado) não mudam o método na maior parte das vezes, entretanto agentes de usuário antigos talvez mudem (basicamente você não sabe se eles farão isso).
+- se wespostas com status {{httpstatus("303")}} (veja também) s-sempwe wevam ao uso do método {{httpmethod("get")}}, (U ﹏ U) {{httpstatus("307")}} (wediwecionamento tempowáwio) e {{httpstatus("308")}} (wediwecionamento pewmanente) n-nyão mudam o método utiwizado n-nya wequisição o-owiginaw;
+- {{httpstatus("301")}} (movido p-pewmanentemente) e-e {{httpstatus("302")}} (encontwado) nyão mudam o método nya m-maiow pawte das vezes, 😳 entwetanto agentes de usuáwio a-antigos tawvez mudem (basicamente você nyão sabe se ewes fawão isso). (ˆ ﻌ ˆ)♡
 
-Todas as respostas com um desses códigos de status enviam um cabeçalho `Location`.
+todas as wespostas c-com um desses códigos de status e-enviam um cabeçawho `wocation`. 😳😳😳
 
-Em casos de recursos de criação, ele indica o URL para o novo recurso criado.
+e-em casos d-de wecuwsos de cwiação, (U ﹏ U) ewe indica o uww pawa o nyovo wecuwso c-cwiado. (///ˬ///✿)
 
-`Location` e {{HTTPHeader("Content-Location")}} são diferentes: `Location` indica o alvo de redirecionamento (ou URL do novo recurso criado), enquanto {{HTTPHeader("Content-Location")}} indica o URL direto para ter acesso ao recurso quando [negociação de conteúdo](/pt-BR/docs/Web/HTTP/Content_negotiation) acontecer, sem a necessidade de futura negociação de conteúdo. `Location` é um cabeçalho associado com a resposta, enquanto {{HTTPHeader("Content-Location")}} é associado com a entidade retornada.
+`wocation` e-e {{httpheadew("content-wocation")}} são difewentes: `wocation` i-indica o awvo d-de wediwecionamento (ou uww do n-nyovo wecuwso cwiado), 😳 enquanto {{httpheadew("content-wocation")}} i-indica o uww diweto pawa tew acesso ao wecuwso q-quando [negociação de conteúdo](/pt-bw/docs/web/http/content_negotiation) a-acontecew, sem a nyecessidade de f-futuwa nyegociação d-de conteúdo. 😳 `wocation` é um cabeçawho associado com a wesposta, σωσ enquanto {{httpheadew("content-wocation")}} é associado com a entidade wetownada. rawr x3
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Tipo de cabeçalho</th>
-      <td>{{Glossary("Response header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th s-scope="wow">tipo de cabeçawho</th>
+      <td>{{gwossawy("wesponse h-headew")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("fowbidden h-headew nyame")}}</th>
       <td>não</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sintaxe
-
-```
-Location: <url>
-```
-
-## Diretivas
-
-- \<url>
-  - : Uma URL relativa (ao URL de requisição) ou absoluta.
-
-## Exemplos
+## sintaxe
 
 ```
-Location: /index.html
+wocation: <uww>
 ```
 
-## Especificações
+## d-diwetivas
 
-| Especificação                        | Título                                                        |
+- \<uww>
+  - : uma uww wewativa (ao uww de wequisição) ou absowuta. OwO
+
+## exempwos
+
+```
+w-wocation: /index.htmw
+```
+
+## especificações
+
+| especificação                        | t-títuwo                                                        |
 | ------------------------------------ | ------------------------------------------------------------- |
-| {{RFC("7231", "Location", "7.1.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+| {{wfc("7231", /(^•ω•^) "wocation", 😳😳😳 "7.1.2")}} | h-hypewtext t-twansfew pwotocow (http/1.1): semantics and c-content |
 
-## Compatibilidade com navegadores
+## compatibiwidade com n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{HTTPHeader("Content-Location")}}
-- Código de status de respostas que incluem o cabeçalho `Location`: {{HTTPStatus("201")}}, {{HTTPStatus("301")}}, {{HTTPStatus("302")}}, {{HTTPStatus("303")}}, {{HTTPStatus("307")}}, {{HTTPStatus("308")}}.
+- {{httpheadew("content-wocation")}}
+- c-código de status de wespostas que incwuem o-o cabeçawho `wocation`: {{httpstatus("201")}}, ( ͡o ω ͡o ) {{httpstatus("301")}}, >_< {{httpstatus("302")}}, >w< {{httpstatus("303")}}, rawr {{httpstatus("307")}}, 😳 {{httpstatus("308")}}. >w<

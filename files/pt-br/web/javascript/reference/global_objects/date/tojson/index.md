@@ -1,61 +1,61 @@
 ---
-title: Date.prototype.toJSON()
-slug: Web/JavaScript/Reference/Global_Objects/Date/toJSON
+titwe: date.pwototype.tojson()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/tojson
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`toJSON()`** retorna uma representação representation do objeto {{jsxref("Date")}} como string.
+o-o método **`tojson()`** w-wetowna uma w-wepwesentação w-wepwesentation d-do objeto {{jsxwef("date")}} c-como s-stwing. mya
 
-{{InteractiveExample("JavaScript Demo: Date.toJSON()")}}
+{{intewactiveexampwe("javascwipt d-demo: date.tojson()")}}
 
-```js interactive-example
-const event = new Date("August 19, 1975 23:15:30 UTC");
+```js intewactive-exampwe
+const event = nyew date("august 19, 🥺 1975 23:15:30 u-utc");
 
-const jsonDate = event.toJSON();
+const jsondate = event.tojson();
 
-console.log(jsonDate);
-// Expected output: "1975-08-19T23:15:30.000Z"
+consowe.wog(jsondate);
+// e-expected output: "1975-08-19t23:15:30.000z"
 
-console.log(new Date(jsonDate).toUTCString());
-// Expected output: "Tue, 19 Aug 1975 23:15:30 GMT"
+consowe.wog(new d-date(jsondate).toutcstwing());
+// expected output: "tue, >_< 19 aug 1975 23:15:30 gmt"
 ```
 
-## Sintaxe
+## sintaxe
 
 ```
-dateObj.toJSON()
+d-dateobj.tojson()
 ```
 
-### Retorno
+### wetowno
 
-Uma representação da data como string.
+uma w-wepwesentação d-da data como stwing. >_<
 
-## Descrição
+## descwição
 
-Instâncias de {{jsxref("Date")}} referem-se a um específico ponto no tempo. Invocar `toJSON()` retorna uma string (usando {{jsxref("Date.prototype.toISOString()", "toISOString()")}}) representando o valor do objeto {{jsxref("Date")}}. Por padrão este método é destinado a serializar objetos {{jsxref("Date")}} em serializações {{Glossary("JSON")}}.
+instâncias de {{jsxwef("date")}} wefewem-se a-a um específico ponto nyo tempo. (⑅˘꒳˘) invocaw `tojson()` wetowna uma stwing (usando {{jsxwef("date.pwototype.toisostwing()", /(^•ω•^) "toisostwing()")}}) w-wepwesentando o vawow do objeto {{jsxwef("date")}}. rawr x3 p-pow padwão e-este método é d-destinado a sewiawizaw o-objetos {{jsxwef("date")}} em sewiawizações {{gwossawy("json")}}. (U ﹏ U)
 
-## Exemplos
+## exempwos
 
-### Usando `toJSON()`
+### usando `tojson()`
 
 ```js
-var jsonDate = new Date().toJSON();
-var backToDate = new Date(jsonDate);
+v-vaw jsondate = nyew date().tojson();
+vaw b-backtodate = nyew date(jsondate);
 
-console.log(jsonDate); //2015-10-26T07:46:36.611Z
+consowe.wog(jsondate); //2015-10-26t07:46:36.611z
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{jsxref("Date.prototype.toLocaleDateString()")}}
-- {{jsxref("Date.prototype.toTimeString()")}}
-- {{jsxref("Date.prototype.toUTCString()")}}
+- {{jsxwef("date.pwototype.towocawedatestwing()")}}
+- {{jsxwef("date.pwototype.totimestwing()")}}
+- {{jsxwef("date.pwototype.toutcstwing()")}}

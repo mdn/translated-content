@@ -1,51 +1,51 @@
 ---
-title: String.prototype.sup()
-slug: Web/JavaScript/Reference/Global_Objects/String/sup
+titwe: stwing.pwototype.sup()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/sup
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{jswef}} {{depwecated_headew}}
 
-O método `sup()` cria um elemento HTML [`<sup>`](/pt-BR/docs/Web/HTML/Element/sup) que faz com que uma string seja exibida como sobrescrito.
+o-o método `sup()` c-cwia um ewemento h-htmw [`<sup>`](/pt-bw/docs/web/htmw/ewement/sup) q-que faz com q-que uma stwing seja e-exibida como s-sobwescwito. (˘ω˘)
 
-## Sintaxe
+## s-sintaxe
 
 ```
-str.sup()
+stw.sup()
 ```
 
-### Valor retornado
+### vawow wetownado
 
-Uma string contendo um elemento HTML [`<sup>`](/pt-BR/docs/Web/HTML/Element/sup).
+uma stwing contendo um ewemento htmw [`<sup>`](/pt-bw/docs/web/htmw/ewement/sup). (⑅˘꒳˘)
 
-## Descrição
+## d-descwição
 
-O método `sup()` cria uma string dentro de uma tag `<sup>`: `"<sup>str</sup>"`
+o método `sup()` cwia uma s-stwing dentwo de uma tag `<sup>`: `"<sup>stw</sup>"`
 
-## Exemplos
+## e-exempwos
 
-### Usando os métodos `sub()` e `sup()`
+### usando os métodos `sub()` e `sup()`
 
-O exemplo a seguir usa os métodos {{jsxref("String.prototype.sub()", "sub()")}} e `sup()` para formatar uma string:
+o e-exempwo a seguiw usa os métodos {{jsxwef("stwing.pwototype.sub()", (///ˬ///✿) "sub()")}} e `sup()` p-pawa fowmataw u-uma stwing:
 
 ```js
-var superText = "superscript";
-var supText = "supscript";
+vaw supewtext = "supewscwipt";
+vaw suptext = "supscwipt";
 
-console.log("This is what a " + superText.sup() + " looks like.");
-// "This is what a <sup>superscript</sup> looks like."
+consowe.wog("this is nyani a-a " + supewtext.sup() + " wooks wike.");
+// "this is nyani a <sup>supewscwipt</sup> wooks wike."
 
-console.log("This is what a " + supText.sup() + " looks like.");
-// "This is what a <sup>supscript</sup> looks like."
+c-consowe.wog("this is nyani a " + s-suptext.sup() + " w-wooks wike.");
+// "this i-is n-nyani a <sup>supscwipt</sup> wooks wike."
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{jsxref("String.prototype.sup()")}}
+- {{jsxwef("stwing.pwototype.sup()")}}

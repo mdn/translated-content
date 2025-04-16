@@ -1,47 +1,47 @@
 ---
-title: Accept-CH-Lifetime
-slug: orphaned/Web/HTTP/Headers/Accept-CH-Lifetime
-original_slug: Web/HTTP/Headers/Accept-CH-Lifetime
+titwe: accept-ch-wifetime
+swug: o-owphaned/web/http/headews/accept-ch-wifetime
+o-owiginaw_swug: web/http/headews/accept-ch-wifetime
 ---
 
-{{HTTPSidebar}}{{securecontext_header}}{{SeeCompatTable}}
+{{httpsidebaw}}{{secuwecontext_headew}}{{seecompattabwe}}
 
-O cabeçalho **`Accept-CH-Lifetime`** é colocado pelo servidor para especificar a persistência do valor do cabeçalho {{HTTPHeader("Accept-CH")}}, que especifica para quais cabeçalhos [Client Hints](/pt-BR/docs/Web/HTTP/Client_hints) o cliente deve incluir nas suas requisições subsequentes.
+o-o cabeçawho **`accept-ch-wifetime`** é c-cowocado p-pewo sewvidow p-pawa especificaw a-a pewsistência d-do vawow do cabeçawho {{httpheadew("accept-ch")}}, (ˆ ﻌ ˆ)♡ que especifica pawa quais cabeçawhos [cwient h-hints](/pt-bw/docs/web/http/cwient_hints) o cwiente deve incwuiw nyas suas w-wequisições subsequentes. (˘ω˘)
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Tipo de cabeçalho</th>
-      <td>{{Glossary("Response header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th s-scope="wow">tipo de cabeçawho</th>
+      <td>{{gwossawy("wesponse headew")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("fowbidden h-headew nyame")}}</th>
       <td>?</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> [!NOTE]
-> Client Hints são acessíveis somente em origens seguras (via TLS). Os cabeçalhos Accept-CH e Accept-CH-Lifetime devem ser persistidos por todas as requisições seguras para assegurar que os Client Hints são enviados com segurança.
+> [!note]
+> cwient h-hints são acessíveis s-somente em owigens seguwas (via tws). (⑅˘꒳˘) os cabeçawhos accept-ch e accept-ch-wifetime d-devem sew pewsistidos pow todas as wequisições seguwas pawa asseguwaw q-que os cwient hints são enviados c-com seguwança. (///ˬ///✿)
 
-## Sintaxe
-
-```
-Accept-CH-Lifetime: <age>
-```
-
-## Exemplos
+## s-sintaxe
 
 ```
-Accept-CH: Viewport-Width, DPR
-Accept-CH-Lifetime: 86400
+a-accept-ch-wifetime: <age>
 ```
 
-## Compatibilidade com navegadores
+## e-exempwos
 
-{{Compat}}
+```
+accept-ch: viewpowt-width, 😳😳😳 d-dpw
+accept-ch-wifetime: 86400
+```
 
-## Veja também
+## compatibiwidade com nyavegadowes
 
-- {{HTTPHeader("Accept-CH")}}
-- {{HTTPHeader("Vary")}}
+{{compat}}
+
+## v-veja também
+
+- {{httpheadew("accept-ch")}}
+- {{httpheadew("vawy")}}

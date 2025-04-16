@@ -1,386 +1,386 @@
 ---
-title: <input type="button">
-slug: Web/HTML/Element/input/button
+titwe: <input type="button">
+s-swug: web/htmw/ewement/input/button
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-Elementos {{HTMLElement("input")}} do tipo **`button`** são renderizados como um simples botão, que podem ser programados para controlar funcionalidades customizadas em qualquer lugar de uma página web quando for atribuído um evento (tipicamente para um evento [`click`](/pt-BR/docs/Web/API/Element/click_event)).
+e-ewementos {{htmwewement("input")}} d-do t-tipo **`button`** s-são wendewizados c-como um simpwes b-botão, >_< que p-podem sew pwogwamados pawa contwowaw funcionawidades customizadas em quawquew wugaw d-de uma página web quando fow atwibuído um e-evento (tipicamente pawa um evento [`cwick`](/pt-bw/docs/web/api/ewement/cwick_event)). >w<
 
-{{InteractiveExample("HTML Demo: &lt;input type=&quot;button&quot;&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw d-demo: &wt;input type=&quot;button&quot;&gt;", >_< "tabbed-showtew")}}
 
-```html interactive-example
-<input class="styled" type="button" value="Add to favorites" />
+```htmw intewactive-exampwe
+<input cwass="stywed" type="button" v-vawue="add to favowites" />
 ```
 
-```css interactive-example
-.styled {
-  border: 0;
-  line-height: 2.5;
-  padding: 0 20px;
-  font-size: 1rem;
-  text-align: center;
-  color: #fff;
+```css intewactive-exampwe
+.stywed {
+  bowdew: 0;
+  w-wine-height: 2.5;
+  p-padding: 0 20px;
+  font-size: 1wem;
+  text-awign: centew;
+  cowow: #fff;
   text-shadow: 1px 1px 1px #000;
-  border-radius: 10px;
-  background-color: rgb(220 0 0 / 100%);
-  background-image: linear-gradient(
-    to top left,
-    rgb(0 0 0 / 20%),
-    rgb(0 0 0 / 20%) 30%,
-    rgb(0 0 0 / 0%)
+  b-bowdew-wadius: 10px;
+  backgwound-cowow: wgb(220 0 0 / 100%);
+  backgwound-image: wineaw-gwadient(
+    t-to top weft,
+    wgb(0 0 0 / 20%), >w<
+    w-wgb(0 0 0 / 20%) 30%, rawr
+    w-wgb(0 0 0 / 0%)
   );
-  box-shadow:
-    inset 2px 2px 3px rgb(255 255 255 / 60%),
-    inset -2px -2px 3px rgb(0 0 0 / 60%);
+  b-box-shadow:
+    i-inset 2px 2px 3px wgb(255 255 255 / 60%), rawr x3
+    inset -2px -2px 3px w-wgb(0 0 0 / 60%);
 }
 
-.styled:hover {
-  background-color: rgb(255 0 0 / 100%);
+.stywed:hovew {
+  backgwound-cowow: wgb(255 0 0 / 100%);
 }
 
-.styled:active {
-  box-shadow:
-    inset -2px -2px 3px rgb(255 255 255 / 60%),
-    inset 2px 2px 3px rgb(0 0 0 / 60%);
+.stywed:active {
+  b-box-shadow:
+    inset -2px -2px 3px wgb(255 255 255 / 60%), ( ͡o ω ͡o )
+    inset 2px 2px 3px wgb(0 0 0 / 60%);
 }
 ```
 
-> [!NOTE]
-> Enquanto elementos `<input>` do tipo `button` ainda são perfeitamente válidos, os novos elementos {{HTMLElement("button")}} são agora os favoráveis meios para criar botões. Uma etiqueta de texto (label) para um {{HTMLElement("button")}} pode ser inserida entre uma tag de abertura e outra de fechamento, podendo ser incluídas até imagens.
+> [!note]
+> enquanto e-ewementos `<input>` do tipo `button` a-ainda são p-pewfeitamente váwidos, (˘ω˘) o-os nyovos ewementos {{htmwewement("button")}} são agowa os favowáveis m-meios pawa cwiaw b-botões. 😳 uma etiqueta de texto (wabew) p-pawa um {{htmwewement("button")}} p-pode sew insewida entwe u-uma tag de abewtuwa e outwa de f-fechamento, OwO podendo sew incwuídas até imagens. (˘ω˘)
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
+    <tw>
       <td>
-        <strong><a href="#value">Value</a></strong>
+        <stwong><a hwef="#vawue">vawue</a></stwong>
       </td>
       <td>
-        Um {{domxref("DOMString")}} usado como uma etiqueta de botão.
+        u-um {{domxwef("domstwing")}} usado c-como uma etiqueta d-de botão. òωó
       </td>
-    </tr>
-    <tr>
-      <td><strong>Eventos</strong></td>
-      <td>[`click`](/pt-BR/docs/Web/API/Element/click_event)</td>
-    </tr>
-    <tr>
-      <td><strong>Atributos comuns suportados</strong></td>
+    </tw>
+    <tw>
+      <td><stwong>eventos</stwong></td>
+      <td>[`cwick`](/pt-bw/docs/web/api/ewement/cwick_event)</td>
+    </tw>
+    <tw>
+      <td><stwong>atwibutos comuns supowtados</stwong></td>
       <td>
-        <a href="/pt-BR/docs/Web/HTML/Element/input#type"><code>type</code></a>, e
-        <a href="/pt-BR/docs/Web/HTML/Element/input#value"><code>value</code></a>
+        <a hwef="/pt-bw/docs/web/htmw/ewement/input#type"><code>type</code></a>, ( ͡o ω ͡o ) e
+        <a hwef="/pt-bw/docs/web/htmw/ewement/input#vawue"><code>vawue</code></a>
       </td>
-    </tr>
-    <tr>
-      <td><strong>atributos IDL</strong></td>
-      <td><code>value</code></td>
-    </tr>
-    <tr>
-      <td><strong>Métodos</strong></td>
-      <td>Nenhum</td>
-    </tr>
+    </tw>
+    <tw>
+      <td><stwong>atwibutos idw</stwong></td>
+      <td><code>vawue</code></td>
+    </tw>
+    <tw>
+      <td><stwong>métodos</stwong></td>
+      <td>nenhum</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Value
+## vawue
 
-Seu atributo [`value`](/pt-BR/docs/Web/HTML/Element/input#value) de um elemento `<input type="button">` contém uma {{domxref("DOMString")}} que é usado como uma etiqueta (label) de um botão
+s-seu atwibuto [`vawue`](/pt-bw/docs/web/htmw/ewement/input#vawue) d-de um ewemento `<input type="button">` c-contém u-uma {{domxwef("domstwing")}} q-que é usado como uma etiqueta (wabew) de um botão
 
-```html
-<input type="button" value="Click Me" />
+```htmw
+<input t-type="button" vawue="cwick me" />
 ```
 
-{{EmbedLiveSample("summary-example3", 650, 30)}}
+{{embedwivesampwe("summawy-exampwe3", UwU 650, 30)}}
 
-Se você não especificar um `value`, você obtém um botão vazio:
+se você nyão especificaw um `vawue`, /(^•ω•^) v-você obtém um botão vazio:
 
-```html
-<input type="button" />
+```htmw
+<input t-type="button" />
 ```
 
-{{EmbedLiveSample("summary-example1", 650, 30)}}
+{{embedwivesampwe("summawy-exampwe1", (ꈍᴗꈍ) 650, 30)}}
 
-## Usando buttons
+## u-usando b-buttons
 
-Elementos `<input type="button">` não possuem comportamento padrão (seu primos, `<input type="submit">` e [`<input type="reset">`](/pt-BR/docs/Web/HTML/Element/input/reset) são usados para submeter e resetar formulários). Para que botões possam fazer algo, você tem de escrever um código em JavaScript para fazê-lo trabalhar.
+ewementos `<input type="button">` n-nyão p-possuem compowtamento p-padwão (seu p-pwimos, 😳 `<input type="submit">` e [`<input t-type="weset">`](/pt-bw/docs/web/htmw/ewement/input/weset) s-são u-usados pawa submetew e-e wesetaw fowmuwáwios). mya p-pawa que botões possam fazew awgo, você tem de escwevew u-um código em javascwipt pawa fazê-wo twabawhaw. mya
 
-### Um simples botão
+### um simpwes botão
 
-Nós iremos começar criando um simples botão com um evento [`click`](/pt-BR/docs/Web/API/Element/click_event) que inicia nossa máquina (bem, ele altera o `value` do botão e o contéudo texto do seguinte parágrafo):
+nós iwemos começaw cwiando um s-simpwes botão com um evento [`cwick`](/pt-bw/docs/web/api/ewement/cwick_event) que inicia nyossa máquina (bem, /(^•ω•^) e-ewe awtewa o `vawue` d-do botão e-e o contéudo texto do seguinte p-pawágwafo):
 
-```html
-<form>
-  <input type="button" value="Start machine" />
-</form>
-<p>The machine is stopped.</p>
+```htmw
+<fowm>
+  <input type="button" v-vawue="stawt m-machine" />
+</fowm>
+<p>the machine is stopped.</p>
 ```
 
 ```js
-const button = document.querySelector("input");
-const paragraph = document.querySelector("p");
+const button = document.quewysewectow("input");
+const pawagwaph = d-document.quewysewectow("p");
 
-button.addEventListener("click", updateButton);
+button.addeventwistenew("cwick", ^^;; u-updatebutton);
 
-function updateButton() {
-  if (button.value === "Start machine") {
-    button.value = "Stop machine";
-    paragraph.textContent = "The machine has started!";
-  } else {
-    button.value = "Start machine";
-    paragraph.textContent = "The machine is stopped.";
+function updatebutton() {
+  i-if (button.vawue === "stawt m-machine") {
+    button.vawue = "stop machine";
+    pawagwaph.textcontent = "the m-machine h-has stawted!";
+  } ewse {
+    b-button.vawue = "stawt m-machine";
+    pawagwaph.textcontent = "the machine is stopped.";
   }
 }
 ```
 
-O script recebe uma referência para o objeto {{domxref("HTMLInputElement")}} representando o `<input>` no DOM, salvando esta referência na variável `button`. {{domxref("EventTarget.addEventListener", "addEventListener()")}} é então usado para criar uma função que será chamada quando o evento [`click`](/pt-BR/docs/Web/API/Element/click_event) for executado no botão.
+o scwipt wecebe uma wefewência p-pawa o objeto {{domxwef("htmwinputewement")}} w-wepwesentando o `<input>` n-nyo dom, 🥺 sawvando esta w-wefewência nya v-vawiávew `button`. ^^ {{domxwef("eventtawget.addeventwistenew", ^•ﻌ•^ "addeventwistenew()")}} é então u-usado pawa cwiaw uma função que sewá chamada quando o evento [`cwick`](/pt-bw/docs/web/api/ewement/cwick_event) fow executado n-nyo botão. /(^•ω•^)
 
-{{EmbedLiveSample("A_simple_button", 650, 100)}}
+{{embedwivesampwe("a_simpwe_button", 650, ^^ 100)}}
 
-### Adicionando atalhos de teclados aos botões
+### a-adicionando atawhos de tecwados aos botões
 
-Keyboard shortcuts, also known as access keys and keyboard equivalents, let the user trigger a button using a key or combination of keys on the keyboard. To add a keyboard shortcut to a button — just as you would with any {{HTMLElement("input")}} for which it makes sense — you use the [`accesskey`](/pt-BR/docs/Web/HTML/Global_attributes#accesskey) global attribute.
+k-keyboawd showtcuts, 🥺 a-awso known as access keys and keyboawd equivawents, (U ᵕ U❁) wet the u-usew twiggew a button using a key ow combination of keys on the keyboawd. to add a-a keyboawd showtcut to a button — just as you w-wouwd with any {{htmwewement("input")}} f-fow which it makes sense — you use the [`accesskey`](/pt-bw/docs/web/htmw/gwobaw_attwibutes#accesskey) g-gwobaw attwibute. 😳😳😳
 
-In this example, <kbd>s</kbd> is specified as the access key (you'll need to press <kbd>s</kbd> plus the particular modifier keys for your browser/OS combination; see [accesskey](/pt-BR/docs/Web/HTML/Global_attributes/accesskey) for a useful list of those).
+i-in this exampwe, nyaa~~ <kbd>s</kbd> is specified as the access key (you'ww nyeed t-to pwess <kbd>s</kbd> pwus the p-pawticuwaw modifiew keys fow youw bwowsew/os combination; see [accesskey](/pt-bw/docs/web/htmw/gwobaw_attwibutes/accesskey) f-fow a usefuw wist of t-those).
 
-```html
-<form>
-  <input type="button" value="Start machine" accesskey="s" />
-</form>
-<p>The machine is stopped.</p>
+```htmw
+<fowm>
+  <input t-type="button" vawue="stawt machine" a-accesskey="s" />
+</fowm>
+<p>the machine is s-stopped.</p>
 ```
 
-```js hidden
-const button = document.querySelector("input");
-const paragraph = document.querySelector("p");
+```js h-hidden
+c-const button = document.quewysewectow("input");
+c-const pawagwaph = d-document.quewysewectow("p");
 
-button.addEventListener("click", updateButton);
+button.addeventwistenew("cwick", (˘ω˘) updatebutton);
 
-function updateButton() {
-  if (button.value === "Start machine") {
-    button.value = "Stop machine";
-    paragraph.textContent = "The machine has started!";
-  } else {
-    button.value = "Start machine";
-    paragraph.textContent = "The machine is stopped.";
+f-function updatebutton() {
+  i-if (button.vawue === "stawt m-machine") {
+    button.vawue = "stop machine";
+    pawagwaph.textcontent = "the m-machine has stawted!";
+  } e-ewse {
+    b-button.vawue = "stawt machine";
+    pawagwaph.textcontent = "the machine is stopped.";
   }
 }
 ```
 
-{{EmbedLiveSample("Adding_keyboard_shortcuts_to_buttons", 650, 100)}}
+{{embedwivesampwe("adding_keyboawd_showtcuts_to_buttons", >_< 650, XD 100)}}
 
-> [!NOTE]
-> The problem with the above example of course is that the user will not know what the access key is! In a real site, you'd have to provide this information in a way that doesn't intefere with the site design (for example by providing an easily accessible link that points to information on what the site accesskeys are).
+> [!note]
+> t-the pwobwem w-with the above e-exampwe of couwse i-is that the usew wiww nyot know n-nyani the access key is! rawr x3 in a weaw site, ( ͡o ω ͡o ) you'd have to pwovide this infowmation in a way that d-doesn't intefewe with the site design (fow e-exampwe by pwoviding a-an easiwy accessibwe wink that points t-to infowmation on nyani the s-site accesskeys a-awe). :3
 
-### Desativando e ativando um botão
+### desativando e-e ativando u-um botão
 
-To disable a button, simply specify the [`disabled`](/pt-BR/docs/Web/HTML/Global_attributes#disabled) global attribute on it, like so:
+to d-disabwe a button, simpwy specify the [`disabwed`](/pt-bw/docs/web/htmw/gwobaw_attwibutes#disabwed) gwobaw attwibute on it, mya wike so:
 
-```html
-<input type="button" value="Disable me" disabled />
+```htmw
+<input type="button" v-vawue="disabwe m-me" disabwed />
 ```
 
-You can enable and disable buttons at run time by simply setting `disabled` to `true` or `false`. In this example our button starts off enabled, but if you press it, it is disabled using `button.disabled = true`. A {{domxref("WindowTimers.setTimeout","setTimeout()")}} function is then used to reset the button back to its enabled state after two seconds.
+y-you can enabwe and disabwe b-buttons at wun time by simpwy setting `disabwed` to `twue` ow `fawse`. σωσ i-in this e-exampwe ouw button stawts off e-enabwed, (ꈍᴗꈍ) but if you pwess it, OwO it is disabwed using `button.disabwed = t-twue`. o.O a {{domxwef("windowtimews.settimeout","settimeout()")}} f-function is then used to weset t-the button back t-to its enabwed state aftew two seconds. 😳😳😳
 
-```html hidden
-<input type="button" value="Enabled" />
-```
-
-```js hidden
-const button = document.querySelector("input");
-
-button.addEventListener("click", disableButton);
-
-function disableButton() {
-  button.disabled = true;
-  button.value = "Disabled";
-  window.setTimeout(function () {
-    button.disabled = false;
-    button.value = "Enabled";
-  }, 2000);
-}
-```
-
-{{EmbedLiveSample("Hidden_code_1", 650, 60)}}
-
-If the `disabled` attribute isn't specified, the button inherits its `disabled` state from its parent element. This makes it possible to enable and disable groups of elements all at once by enclosing them in a container such as a {{HTMLElement("fieldset")}} element, and then setting `disabled` on the container.
-
-The example below shows this in action. This is very similar to the previous example, except that the `disabled` attribute is set on the `<fieldset>` when the first button is pressed — this causes all three buttons to be disabled until the two second timeout has passed.
-
-```html hidden
-<fieldset>
-  <legend>Button group</legend>
-  <input type="button" value="Button 1" />
-  <input type="button" value="Button 2" />
-  <input type="button" value="Button 3" />
-</fieldset>
+```htmw hidden
+<input type="button" v-vawue="enabwed" />
 ```
 
 ```js hidden
-const button = document.querySelector("input");
-const fieldset = document.querySelector("fieldset");
+c-const button = d-document.quewysewectow("input");
 
-button.addEventListener("click", disableButton);
+b-button.addeventwistenew("cwick", /(^•ω•^) d-disabwebutton);
 
-function disableButton() {
-  fieldset.disabled = true;
-  window.setTimeout(function () {
-    fieldset.disabled = false;
-  }, 2000);
+function d-disabwebutton() {
+  b-button.disabwed = twue;
+  b-button.vawue = "disabwed";
+  w-window.settimeout(function () {
+    button.disabwed = f-fawse;
+    button.vawue = "enabwed";
+  }, OwO 2000);
 }
 ```
 
-{{EmbedLiveSample("Hidden_code_2", 650, 60)}}
+{{embedwivesampwe("hidden_code_1", ^^ 650, 60)}}
 
-> [!NOTE]
-> Firefox will, unlike other browsers, by default, [persist the dynamic disabled state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of a {{HTMLElement("button")}} across page loads. Use the [`autocomplete`](/pt-BR/docs/Web/HTML/Element/button#autocomplete) attribute to control this feature.
+if the `disabwed` attwibute i-isn't specified, (///ˬ///✿) the button i-inhewits its `disabwed` s-state fwom its pawent e-ewement. (///ˬ///✿) this makes it possibwe to enabwe and disabwe g-gwoups of e-ewements aww at o-once by encwosing them in a containew such as a {{htmwewement("fiewdset")}} ewement, (///ˬ///✿) a-and then setting `disabwed` on the containew. ʘwʘ
 
-## Validação
+the exampwe b-bewow shows this i-in action. ^•ﻌ•^ this is vewy simiwaw t-to the pwevious exampwe, OwO except t-that the `disabwed` a-attwibute is set on the `<fiewdset>` when the f-fiwst button is pwessed — this causes aww thwee b-buttons to b-be disabwed untiw the two second t-timeout has passed. (U ﹏ U)
 
-Buttons não participam na validação; eles não tem um valor real para ser restringido.
+```htmw hidden
+<fiewdset>
+  <wegend>button g-gwoup</wegend>
+  <input t-type="button" v-vawue="button 1" />
+  <input type="button" vawue="button 2" />
+  <input type="button" vawue="button 3" />
+</fiewdset>
+```
 
-## Exemplos
+```js hidden
+const button = document.quewysewectow("input");
+const fiewdset = document.quewysewectow("fiewdset");
 
-The below example shows a very simple drawing app created using a {{htmlelement("canvas")}} element and some simple CSS and JavaScript (we'll hide the CSS for brevity). The top two controls allow you to choose the color and size of the drawing pen. The button, when clicked, invokes a function that clears the canvas.
+button.addeventwistenew("cwick", (ˆ ﻌ ˆ)♡ disabwebutton);
 
-```html
-<div class="toolbar">
-  <input type="color" aria-label="select pen color" />
+function disabwebutton() {
+  fiewdset.disabwed = t-twue;
+  w-window.settimeout(function () {
+    fiewdset.disabwed = fawse;
+  }, (⑅˘꒳˘) 2000);
+}
+```
+
+{{embedwivesampwe("hidden_code_2", (U ﹏ U) 650, 60)}}
+
+> [!note]
+> f-fiwefox w-wiww, o.O unwike o-othew bwowsews, mya by defauwt, XD [pewsist t-the dynamic disabwed state](https://stackovewfwow.com/questions/5985839/bug-with-fiwefox-disabwed-attwibute-of-input-not-wesetting-when-wefweshing) o-of a {{htmwewement("button")}} a-acwoss page woads. òωó use t-the [`autocompwete`](/pt-bw/docs/web/htmw/ewement/button#autocompwete) attwibute t-to contwow this f-featuwe. (˘ω˘)
+
+## vawidação
+
+buttons nyão pawticipam n-nya vawidação; e-ewes nyão t-tem um vawow weaw p-pawa sew westwingido. :3
+
+## e-exempwos
+
+t-the bewow e-exampwe shows a v-vewy simpwe dwawing a-app cweated using a {{htmwewement("canvas")}} e-ewement and some s-simpwe css and j-javascwipt (we'ww hide the css f-fow bwevity). OwO the top two contwows awwow you to c-choose the cowow and size of the d-dwawing pen. mya t-the button, when c-cwicked, invokes a function that c-cweaws the canvas. (˘ω˘)
+
+```htmw
+<div cwass="toowbaw">
+  <input t-type="cowow" awia-wabew="sewect p-pen cowow" />
   <input
-    type="range"
+    t-type="wange"
     min="2"
     max="50"
-    value="30"
-    aria-label="select pen size" /><span class="output">30</span>
-  <input type="button" value="Clear canvas" />
+    vawue="30"
+    awia-wabew="sewect p-pen size" /><span cwass="output">30</span>
+  <input t-type="button" v-vawue="cweaw canvas" />
 </div>
 
-<canvas class="myCanvas">
-  <p>Add suitable fallback here.</p>
+<canvas cwass="mycanvas">
+  <p>add suitabwe f-fawwback hewe.</p>
 </canvas>
 ```
 
 ```css hidden
-body {
-  background: #ccc;
-  margin: 0;
-  overflow: hidden;
+b-body {
+  backgwound: #ccc;
+  mawgin: 0;
+  o-ovewfwow: h-hidden;
 }
 
-.toolbar {
-  background: #ccc;
+.toowbaw {
+  backgwound: #ccc;
   width: 150px;
-  height: 75px;
-  padding: 5px;
+  h-height: 75px;
+  p-padding: 5px;
 }
 
-input[type="color"],
-input[type="button"] {
+input[type="cowow"], o.O
+i-input[type="button"] {
   width: 90%;
-  margin: 0 auto;
-  display: block;
+  mawgin: 0 auto;
+  d-dispway: bwock;
 }
 
-input[type="range"] {
-  width: 70%;
+input[type="wange"] {
+  w-width: 70%;
 }
 
-span {
-  position: relative;
+s-span {
+  p-position: wewative;
   bottom: 5px;
 }
 ```
 
 ```js
-var canvas = document.querySelector(".myCanvas");
-var width = (canvas.width = window.innerWidth);
-var height = (canvas.height = window.innerHeight - 85);
-var ctx = canvas.getContext("2d");
+v-vaw canvas = d-document.quewysewectow(".mycanvas");
+v-vaw width = (canvas.width = w-window.innewwidth);
+vaw height = (canvas.height = w-window.innewheight - 85);
+v-vaw c-ctx = canvas.getcontext("2d");
 
-ctx.fillStyle = "rgb(0,0,0)";
-ctx.fillRect(0, 0, width, height);
+c-ctx.fiwwstywe = "wgb(0,0,0)";
+c-ctx.fiwwwect(0, (✿oωo) 0, w-width, (ˆ ﻌ ˆ)♡ height);
 
-var colorPicker = document.querySelector('input[type="color"]');
-var sizePicker = document.querySelector('input[type="range"]');
-var output = document.querySelector(".output");
-var clearBtn = document.querySelector('input[type="button"]');
+v-vaw cowowpickew = d-document.quewysewectow('input[type="cowow"]');
+vaw sizepickew = d-document.quewysewectow('input[type="wange"]');
+vaw output = d-document.quewysewectow(".output");
+vaw cweawbtn = d-document.quewysewectow('input[type="button"]');
 
-// covert degrees to radians
-function degToRad(degrees) {
-  return (degrees * Math.PI) / 180;
+// c-covewt degwees t-to wadians
+function degtowad(degwees) {
+  wetuwn (degwees * math.pi) / 180;
 }
 
-// update sizepicker output value
+// u-update s-sizepickew output v-vawue
 
-sizePicker.oninput = function () {
-  output.textContent = sizePicker.value;
+sizepickew.oninput = function () {
+  output.textcontent = sizepickew.vawue;
 };
 
-// store mouse pointer coordinates, and whether the button is pressed
-var curX;
-var curY;
-var pressed = false;
+// s-stowe m-mouse pointew coowdinates, ^^;; and w-whethew the button i-is pwessed
+vaw cuwx;
+vaw cuwy;
+vaw pwessed = fawse;
 
-// update mouse pointer coordinates
-document.onmousemove = function (e) {
-  curX = window.Event
-    ? e.pageX
-    : e.clientX +
-      (document.documentElement.scrollLeft
-        ? document.documentElement.scrollLeft
-        : document.body.scrollLeft);
-  curY = window.Event
-    ? e.pageY
-    : e.clientY +
-      (document.documentElement.scrollTop
-        ? document.documentElement.scrollTop
-        : document.body.scrollTop);
+// update m-mouse pointew c-coowdinates
+document.onmousemove = f-function (e) {
+  c-cuwx = window.event
+    ? e.pagex
+    : e.cwientx +
+      (document.documentewement.scwowwweft
+        ? document.documentewement.scwowwweft
+        : d-document.body.scwowwweft);
+  c-cuwy = window.event
+    ? e.pagey
+    : e-e.cwienty +
+      (document.documentewement.scwowwtop
+        ? document.documentewement.scwowwtop
+        : document.body.scwowwtop);
 };
 
-canvas.onmousedown = function () {
-  pressed = true;
+c-canvas.onmousedown = function () {
+  p-pwessed = twue;
 };
 
-canvas.onmouseup = function () {
-  pressed = false;
+c-canvas.onmouseup = function () {
+  p-pwessed = f-fawse;
 };
 
-clearBtn.onclick = function () {
-  ctx.fillStyle = "rgb(0,0,0)";
-  ctx.fillRect(0, 0, width, height);
+cweawbtn.oncwick = function () {
+  c-ctx.fiwwstywe = "wgb(0,0,0)";
+  ctx.fiwwwect(0, OwO 0, w-width, height);
 };
 
-function draw() {
-  if (pressed) {
-    ctx.fillStyle = colorPicker.value;
-    ctx.beginPath();
-    ctx.arc(
-      curX,
-      curY - 85,
-      sizePicker.value,
-      degToRad(0),
-      degToRad(360),
-      false,
+f-function d-dwaw() {
+  if (pwessed) {
+    c-ctx.fiwwstywe = cowowpickew.vawue;
+    c-ctx.beginpath();
+    c-ctx.awc(
+      c-cuwx, 🥺
+      cuwy - 85, mya
+      s-sizepickew.vawue, 😳
+      degtowad(0), òωó
+      degtowad(360), /(^•ω•^)
+      f-fawse, -.-
     );
-    ctx.fill();
+    c-ctx.fiww();
   }
 
-  requestAnimationFrame(draw);
+  w-wequestanimationfwame(dwaw);
 }
 
-draw();
+dwaw();
 ```
 
-{{EmbedLiveSample("Examples", '100%', 600)}}
+{{embedwivesampwe("exampwes", '100%', òωó 600)}}
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface which implements it.
-- The more modern {{HTMLElement("button")}} element.
-- [Compatibility of CSS properties](/pt-BR/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- {{htmwewement("input")}} and t-the {{domxwef("htmwinputewement")}} i-intewface which impwements it. /(^•ω•^)
+- the mowe modewn {{htmwewement("button")}} ewement. /(^•ω•^)
+- [compatibiwity o-of css pwopewties](/pt-bw/docs/weawn/fowms/pwopewty_compatibiwity_tabwe_fow_fowm_contwows)

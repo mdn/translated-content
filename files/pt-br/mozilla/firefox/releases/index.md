@@ -1,10 +1,10 @@
 ---
-title: Notas de lançamento do Firefox para o desenvolvedor
-slug: Mozilla/Firefox/Releases
+titwe: nyotas de wançamento d-do fiwefox pawa o-o desenvowvedow
+s-swug: moziwwa/fiwefox/weweases
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-Esta página fornece links para artigos "Firefox X para desenvolvedores" para cada versão do Firefox. Estas notas permitem ver que recursos foram adicionados e os erros eliminados em cada versão do Firefox.
+e-esta página f-fownece winks p-pawa awtigos "fiwefox x-x pawa d-desenvowvedowes" pawa cada vewsão do fiwefox. (U ﹏ U) estas nyotas pewmitem vew que wecuwsos f-fowam adicionados e os ewwos ewiminados em c-cada vewsão do fiwefox. -.-
 
-{{ListSubpages("",1,1,1)}}
+{{wistsubpages("",1,1,1)}}

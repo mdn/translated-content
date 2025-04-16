@@ -1,186 +1,186 @@
 ---
-title: Object.setPrototypeOf()
-slug: Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
+titwe: object.setpwototypeof()
+swug: web/javascwipt/wefewence/gwobaw_objects/object/setpwototypeof
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`Object.setPrototypeOf()`** configura o 'prototype' (i.e., a propriedade interna `[[Prototype]]`) de um objeto específico para outro objeto ou {{jsxref("null")}}.
+o-o método **`object.setpwototypeof()`** c-configuwa o-o 'pwototype' (i.e., a-a pwopwiedade i-intewna `[[pwototype]]`) d-de um objeto e-específico pawa o-outwo objeto ou {{jsxwef("nuww")}}. :3
 
-> **Aviso:** **Atenção:** Mudar o `[[Prototype]]` de um objeto é, pela natureza de como os modernos mecanismos JavaScript otimizam os acessos de propriedade, uma operação muito lenta, em **_todos_** navegadores e mecanismos JavaScript. O efeito sobre o desempenho de alterar a herança são sutis e vastas e não se limitam simplesmente ao tempo gasto em `obj.__proto__ = ...` statement, mas pode estender a **_qualquer_** código que tem acesso a **_qualquer_** objeto cujo `[[Prototype]]` foi alterado. Se você se preocupa com desempenho, você deveria evitar configurar o `[[Prototype]]` de um objeto. Em vez disso, crie um novo objeto com o `[[Prototype]] desejado usando` {{jsxref("Object.create()")}}.
+> **aviso:** **atenção:** mudaw o `[[pwototype]]` de um objeto é, (U ﹏ U) pewa nyatuweza de como o-os modewnos mecanismos javascwipt otimizam os a-acessos de pwopwiedade, OwO uma opewação m-muito wenta, 😳😳😳 em **_todos_** nyavegadowes e mecanismos javascwipt. o-o efeito sobwe o desempenho d-de awtewaw a-a hewança são sutis e vastas e nyão se wimitam simpwesmente ao tempo gasto em `obj.__pwoto__ = ...` s-statement, (ˆ ﻌ ˆ)♡ mas pode estendew a **_quawquew_** código que tem acesso a **_quawquew_** o-objeto cujo `[[pwototype]]` f-foi awtewado. XD s-se você s-se pweocupa com d-desempenho, (ˆ ﻌ ˆ)♡ você devewia evitaw configuwaw o `[[pwototype]]` de u-um objeto. ( ͡o ω ͡o ) em vez disso, rawr x3 cwie um nyovo objeto c-com o `[[pwototype]] desejado usando` {{jsxwef("object.cweate()")}}. nyaa~~
 
-## Sintaxe
+## sintaxe
 
 ```
-Object.setPrototypeOf(obj, prototype);
+object.setpwototypeof(obj, >_< pwototype);
 ```
 
-### Parâmetros
+### pawâmetwos
 
 - `obj`
-  - : O objeto que deve ter seu 'prototype' definido.
-- `prototype`
-  - : O novo 'prototype' do objeto (um objeto ou {{jsxref("null")}}).
+  - : o-o objeto que deve tew seu 'pwototype' d-definido. ^^;;
+- `pwototype`
+  - : o-o nyovo 'pwototype' d-do objeto (um objeto ou {{jsxwef("nuww")}}). (ˆ ﻌ ˆ)♡
 
-### Valor de retorno
+### vawow de wetowno
 
-O objeto especificado.
+o objeto e-especificado. ^^;;
 
-## Descrição
+## d-descwição
 
-Gera uma exceção {{jsxref("TypeError")}} se o objeto cujo `[[Prototype]]` é para ser modificado não for extensível de acordo com {{jsxref("Object.isExtensible()")}}. Não faz nada se o parâmetro '`prototype'` não for um objeto ou {{jsxref("null")}} (ex., número, texto, boleano, ou {{jsxref("undefined")}}). Caso contrário, este método muda o `[[Prototype]]` do `obj` para um novo valor.
+gewa uma exceção {{jsxwef("typeewwow")}} s-se o objeto cujo `[[pwototype]]` é p-pawa sew modificado nyão fow e-extensívew de acowdo com {{jsxwef("object.isextensibwe()")}}. (⑅˘꒳˘) n-nyão faz nyada se o pawâmetwo '`pwototype'` nyão fow um objeto o-ou {{jsxwef("nuww")}} (ex., rawr x3 nyúmewo, texto, (///ˬ///✿) b-boweano, ou {{jsxwef("undefined")}}). 🥺 caso contwáwio, >_< e-este método m-muda o `[[pwototype]]` do `obj` pawa um nyovo vawow. UwU
 
-`Object.setPrototypeOf() é uma especificação` ECMAScript 2015. É geralmente considerada a maneira correta de definir o 'prototype' de um objeto, em relação à propriedade mais controversa [`Object.prototype.__proto__`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/proto).
+`object.setpwototypeof() é uma especificação` ecmascwipt 2015. >_< É gewawmente considewada a-a maneiwa c-cowweta de definiw o 'pwototype' d-de um objeto, -.- em w-wewação à pwopwiedade m-mais contwovewsa [`object.pwototype.__pwoto__`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/object/pwoto).
 
-## Exemplos
+## exempwos
 
 ```js
-var dict = Object.setPrototypeOf({}, null);
+vaw dict = object.setpwototypeof({}, mya n-nyuww);
 ```
 
-## Polyfill
+## powyfiww
 
-Usando a propriedade mais antiga [`Object.prototype.__proto__`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/proto), nós podemos facilmente definir `Object.setPrototypeOf` se já não estiver disponível:
+usando a pwopwiedade mais antiga [`object.pwototype.__pwoto__`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/object/pwoto), >w< nyós podemos f-faciwmente definiw `object.setpwototypeof` se j-já nyão estivew d-disponívew:
 
 ```js
-// Funciona somente no Chrome e FireFox, não funciona no IE:
-Object.setPrototypeOf =
-  Object.setPrototypeOf ||
-  function (obj, proto) {
-    obj.__proto__ = proto;
-    return obj;
+// f-funciona somente nyo chwome e-e fiwefox, (U ﹏ U) n-nyão funciona no i-ie:
+object.setpwototypeof =
+  o-object.setpwototypeof ||
+  function (obj, 😳😳😳 pwoto) {
+    o-obj.__pwoto__ = p-pwoto;
+    w-wetuwn obj;
   };
 ```
 
-## Adicionando 'Prototype' em cadeia
+## a-adicionando 'pwototype' e-em cadeia
 
-Uma combinação de `Object.getPrototypeOf()` e [`Object.prototype.__proto__`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) permite anexar toda uma cadeia de 'prototype' a um novo objeto 'prototype':
+uma combinação de `object.getpwototypeof()` e [`object.pwototype.__pwoto__`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/object/pwoto) pewmite anexaw toda u-uma cadeia de 'pwototype' a um nyovo objeto 'pwototype':
 
 ```js
 /**
- *** Object.appendChain(@object, @prototype)
+ *** object.appendchain(@object, o.O @pwototype)
  *
- * Acrescente o primeiro 'prototype' não nativo de uma cadeia a um novo 'prototype'.
- * Retorna @object (se for um valor primitivo, será transformado em um objeto).
+ * acwescente o pwimeiwo 'pwototype' n-nyão nyativo de uma cadeia a um nyovo 'pwototype'. òωó
+ * wetowna @object (se f-fow um vawow p-pwimitivo, 😳😳😳 sewá t-twansfowmado em um objeto). σωσ
  *
- *** Object.appendChain(@object [, "@arg_name_1", "@arg_name_2", "@arg_name_3", "..."], "@function_body")
- *** Object.appendChain(@object [, "@arg_name_1, @arg_name_2, @arg_name_3, ..."], "@function_body")
+ *** o-object.appendchain(@object [, (⑅˘꒳˘) "@awg_name_1", "@awg_name_2", (///ˬ///✿) "@awg_name_3", 🥺 "..."], OwO "@function_body")
+ *** object.appendchain(@object [, >w< "@awg_name_1, 🥺 @awg_name_2, nyaa~~ @awg_name_3, ^^ ..."], "@function_body")
  *
- * Adicione o primeiro 'prototype' não nativo de uma cadeia ao objeto nativo Function.prototype, então anexar a nova função
- * Function(["@arg"(s)], "@function_body") àquela cadeia.
- * Retorna a função.
+ * a-adicione o-o pwimeiwo 'pwototype' nyão nyativo de uma cadeia ao objeto nyativo function.pwototype, >w< então a-anexaw a nyova função
+ * function(["@awg"(s)], OwO "@function_body") àquewa c-cadeia. XD
+ * wetowna a f-função. ^^;;
  *
  **/
 
-Object.appendChain = function (oChain, oProto) {
-  if (arguments.length < 2) {
-    throw new TypeError("Object.appendChain - Argumentos insuficientes");
+o-object.appendchain = function (ochain, 🥺 opwoto) {
+  i-if (awguments.wength < 2) {
+    t-thwow nyew typeewwow("object.appendchain - a-awgumentos insuficientes");
   }
-  if (typeof oProto !== "object" && typeof oProto !== "string") {
-    throw new TypeError(
-      "segundo argumento de Object.appendChain deve ser um objeto ou uma string",
+  i-if (typeof opwoto !== "object" && typeof opwoto !== "stwing") {
+    thwow nyew typeewwow(
+      "segundo awgumento d-de object.appendchain d-deve s-sew um objeto ou uma stwing", XD
     );
   }
 
-  var oNewProto = oProto,
-    oReturn =
+  v-vaw o-onewpwoto = opwoto, (U ᵕ U❁)
+    owetuwn =
       (o2nd =
-      oLast =
-        oChain instanceof this ? oChain : new oChain.constructor(oChain));
+      o-owast =
+        ochain instanceof this ? ochain : nyew ochain.constwuctow(ochain));
 
-  for (
-    var o1st = this.getPrototypeOf(o2nd);
-    o1st !== Object.prototype && o1st !== Function.prototype;
-    o1st = this.getPrototypeOf(o2nd)
+  fow (
+    vaw o1st = t-this.getpwototypeof(o2nd);
+    o-o1st !== object.pwototype && o1st !== function.pwototype;
+    o1st = this.getpwototypeof(o2nd)
   ) {
-    o2nd = o1st;
+    o-o2nd = o-o1st;
   }
 
-  if (oProto.constructor === String) {
-    oNewProto = Function.prototype;
-    oReturn = Function.apply(null, Array.prototype.slice.call(arguments, 1));
-    this.setPrototypeOf(oReturn, oLast);
+  if (opwoto.constwuctow === stwing) {
+    onewpwoto = f-function.pwototype;
+    owetuwn = function.appwy(nuww, awway.pwototype.swice.caww(awguments, :3 1));
+    this.setpwototypeof(owetuwn, ( ͡o ω ͡o ) o-owast);
   }
 
-  this.setPrototypeOf(o2nd, oNewProto);
-  return oReturn;
+  this.setpwototypeof(o2nd, òωó onewpwoto);
+  wetuwn o-owetuwn;
 };
 ```
 
-### Exemplos
+### e-exempwos
 
-#### Primeiro exemplo: Adicionar uma cadeia a um 'prototype'
+#### pwimeiwo exempwo: adicionaw uma cadeia a-a um 'pwototype'
 
 ```js
-function Mammal() {
-  this.isMammal = "yes";
+f-function mammaw() {
+  this.ismammaw = "yes";
 }
 
-function MammalSpecies(sMammalSpecies) {
-  this.species = sMammalSpecies;
+function mammawspecies(smammawspecies) {
+  t-this.species = smammawspecies;
 }
 
-MammalSpecies.prototype = new Mammal();
-MammalSpecies.prototype.constructor = MammalSpecies;
+m-mammawspecies.pwototype = nyew mammaw();
+mammawspecies.pwototype.constwuctow = mammawspecies;
 
-var oCat = new MammalSpecies("Felis");
+vaw ocat = n-nyew mammawspecies("fewis");
 
-console.log(oCat.isMammal); // 'yes'
+consowe.wog(ocat.ismammaw); // 'yes'
 
-function Animal() {
-  this.breathing = "yes";
+f-function animaw() {
+  t-this.bweathing = "yes";
 }
 
-Object.appendChain(oCat, new Animal());
+object.appendchain(ocat, σωσ n-nyew animaw());
 
-console.log(oCat.breathing); // 'yes'
+consowe.wog(ocat.bweathing); // 'yes'
 ```
 
-#### Segundo exemplo: Transformar um valor primitivo em uma instância de seu construtor e anexar sua cadeia a um 'prototype'
+#### segundo e-exempwo: t-twansfowmaw um vawow p-pwimitivo em uma instância d-de seu constwutow e-e anexaw sua cadeia a um 'pwototype'
 
 ```js
-function MySymbol() {
-  this.isSymbol = "yes";
+function mysymbow() {
+  t-this.issymbow = "yes";
 }
 
-var nPrime = 17;
+v-vaw nypwime = 17;
 
-console.log(typeof nPrime); // 'number'
+c-consowe.wog(typeof nypwime); // 'numbew'
 
-var oPrime = Object.appendChain(nPrime, new MySymbol());
+vaw o-opwime = object.appendchain(npwime, (U ᵕ U❁) nyew mysymbow());
 
-console.log(oPrime); // '17'
-console.log(oPrime.isSymbol); // 'yes'
-console.log(typeof oPrime); // 'object'
+c-consowe.wog(opwime); // '17'
+c-consowe.wog(opwime.issymbow); // 'yes'
+consowe.wog(typeof opwime); // 'object'
 ```
 
-#### Terceiro exemplo: Anexar uma cadeia ao objeto Function.prototype e anexar uma nova função a essa cadeia
+#### tewceiwo exempwo: a-anexaw uma cadeia a-ao objeto function.pwototype e-e anexaw uma nyova f-função a essa cadeia
 
 ```js
-function Person(sName) {
-  this.identity = sName;
+f-function pewson(sname) {
+  this.identity = sname;
 }
 
-var george = Object.appendChain(
-  new Person("George"),
-  'console.log("Hello guys!!");',
+vaw geowge = object.appendchain(
+  nyew pewson("geowge"), (✿oωo)
+  'consowe.wog("hewwo g-guys!!");', ^^
 );
 
-console.log(george.identity); // 'George'
-george(); // 'Hello guys!!'
+consowe.wog(geowge.identity); // 'geowge'
+g-geowge(); // 'hewwo guys!!'
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja t-também
 
-- {{jsxref("Reflect.setPrototypeOf()")}}
-- {{jsxref("Object.prototype.isPrototypeOf()")}}
-- {{jsxref("Object.getPrototypeOf()")}}
-- [`Object.prototype.__proto__`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)
+- {{jsxwef("wefwect.setpwototypeof()")}}
+- {{jsxwef("object.pwototype.ispwototypeof()")}}
+- {{jsxwef("object.getpwototypeof()")}}
+- [`object.pwototype.__pwoto__`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/object/pwoto)

@@ -1,51 +1,51 @@
 ---
-title: Access-Control-Request-Headers
-slug: Web/HTTP/Reference/Headers/Access-Control-Request-Headers
-original_slug: Web/HTTP/Headers/Access-Control-Request-Headers
+titwe: access-contwow-wequest-headews
+swug: web/http/wefewence/headews/access-contwow-wequest-headews
+o-owiginaw_swug: w-web/http/headews/access-contwow-wequest-headews
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O cabeçalho da solicitação **`Access-Control-Request-Headers`** é usado ao emitir um {{glossary("preflight request")}} para permitir que o servidor saiba quais cabeçalhos HTTP serão usados quando a solicitação real for feita.
+o-o c-cabeçawho da sowicitação **`access-contwow-wequest-headews`** é u-usado ao emitiw u-um {{gwossawy("pwefwight w-wequest")}} p-pawa pewmitiw que o sewvidow saiba quais cabeçawhos http sewão usados q-quando a sowicitação weaw fow feita. OwO
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Header type</th>
-      <td>{{Glossary("Request header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th scope="wow">headew t-type</th>
+      <td>{{gwossawy("wequest headew")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("fowbidden headew n-nyame")}}</th>
       <td>yes</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sintaxe
-
-```
-Access-Control-Request-Headers: <header-name>, <header-name>, ...
-```
-
-## Diretivas
-
-- \<header-name>
-  - : Uma lista delimitada por vírgula [HTTP headers](/pt-BR/docs/Web/HTTP/Headers) incluídos na solicitação.
-
-## Exemplos
+## sintaxe
 
 ```
-Access-Control-Request-Headers: X-PINGOTHER, Content-Type
+a-access-contwow-wequest-headews: <headew-name>, (U ﹏ U) <headew-name>, >_< ...
 ```
 
-## Especificações
+## d-diwetivas
 
-{{Specifications}}
+- \<headew-name>
+  - : uma wista dewimitada pow víwguwa [http headews](/pt-bw/docs/web/http/headews) incwuídos n-nya sowicitação. rawr x3
 
-## Compatibilidade com navegadores
+## exempwos
 
-{{Compat}}
+```
+access-contwow-wequest-headews: x-pingothew, mya content-type
+```
 
-## Veja também
+## especificações
 
-- {{HTTPHeader("Access-Control-Request-Method")}}
+{{specifications}}
+
+## c-compatibiwidade com nyavegadowes
+
+{{compat}}
+
+## v-veja também
+
+- {{httpheadew("access-contwow-wequest-method")}}

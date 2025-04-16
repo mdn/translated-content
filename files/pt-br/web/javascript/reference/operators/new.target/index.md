@@ -1,88 +1,88 @@
 ---
-title: new.target
-slug: Web/JavaScript/Reference/Operators/new.target
+titwe: nyew.tawget
+swug: web/javascwipt/wefewence/opewatows/new.tawget
 ---
 
-{{JSSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-A propriedade `new.target` permite que você detecte quando uma função ou construtor foi chamado utilizando o operador new. Em construtores e funções instaciadas com o operador [new](/pt-BR/docs/Web/JavaScript/Reference/Operators/new) , `new.target` retorna a referência ao construtor ou função. Em chamadas normais de funções , `new.target` é {{jsxref("undefined")}}.
+a-a pwopwiedade `new.tawget` p-pewmite que v-você detecte q-quando uma função o-ou constwutow f-foi chamado utiwizando o-o opewadow n-nyew. mya em constwutowes e funções instaciadas com o opewadow [new](/pt-bw/docs/web/javascwipt/wefewence/opewatows/new) , mya `new.tawget` wetowna a-a wefewência ao constwutow ou função. (⑅˘꒳˘) em chamadas n-nyowmais de funções , (U ﹏ U) `new.tawget` é {{jsxwef("undefined")}}. mya
 
-## Sintaxe
+## s-sintaxe
 
 ```
-new.target
+nyew.tawget
 ```
 
-## Descrição
+## descwição
 
-A sintaxe `new.target` consiste na palavra- chave `"new`", o ponto, e o nome da propriedade `"target"`. Normalmente "`new."` serve como um contexto para a propriedade de acesso, mas aqui `"new."` não é exatamente um objeto. Em chamadas de construtores, entretanto, `new.target` se refere ao construtor invocado pelo `new` e então "`new.`" se torna um contexto virtual.
+a sintaxe `new.tawget` c-consiste nya pawavwa- chave `"new`", ʘwʘ o-o ponto, (˘ω˘) e o-o nyome da pwopwiedade `"tawget"`. nyowmawmente "`new."` sewve como um contexto pawa a pwopwiedade d-de acesso, (U ﹏ U) mas aqui `"new."` nyão é exatamente um objeto. ^•ﻌ•^ em chamadas de constwutowes, (˘ω˘) e-entwetanto, :3 `new.tawget` se wefewe a-ao constwutow invocado p-pewo `new` e-e então "`new.`" s-se towna um contexto viwtuaw. ^^;;
 
-`new.target` é uma propriedade meta que é disponibilizada para todas as funções. Em funções do tipo flecha `=>`, `new.target` se refere ao `new.target` em torno da função.
+`new.tawget` é uma pwopwiedade m-meta que é disponibiwizada pawa todas as funções. 🥺 em funções d-do tipo fwecha `=>`, (⑅˘꒳˘) `new.tawget` se wefewe ao `new.tawget` em towno da função. nyaa~~
 
-## Exemplos
+## exempwos
 
-### new\.target em chamadas de Função
+### nyew\.tawget e-em chamadas de função
 
-Em chamadas normais de função (diferente de chamadas a funções do tipo construtor), `new.target` é {{jsxref("undefined")}}. Isso permite que você detecte se a função foi chamada como um novo construtor.
+em c-chamadas nyowmais d-de função (difewente d-de chamadas a funções do tipo constwutow), :3 `new.tawget` é {{jsxwef("undefined")}}. ( ͡o ω ͡o ) isso pewmite que v-você detecte s-se a função foi chamada como um n-nyovo constwutow. mya
 
 ```js
-function Foo() {
-  if (!new.target) throw "Foo() must be called with new";
-  console.log("Foo instanciado com new");
+f-function foo() {
+  if (!new.tawget) thwow "foo() m-must be cawwed with n-nyew";
+  consowe.wog("foo instanciado com nyew");
 }
 
-Foo(); // throws "Foo() must be called with new"
-new Foo(); // logs "Foo instanciado com new"
+f-foo(); // thwows "foo() must b-be cawwed with nyew"
+nyew foo(); // w-wogs "foo i-instanciado com nyew"
 ```
 
-### new\.target em Construtores
+### new\.tawget em constwutowes
 
-Em classes construtoras, `new.target` se refere ao construtor que foi diretamente invocado pelo `new`. Isto também é o caso se o construtor é uma classe pai e foi delegado pelo construtor de um filho.
+em cwasses constwutowas, (///ˬ///✿) `new.tawget` se wefewe ao constwutow que foi d-diwetamente invocado p-pewo `new`. (˘ω˘) isto também é o-o caso se o constwutow é u-uma c-cwasse pai e foi dewegado pewo constwutow de um fiwho. ^^;;
 
 ```js
-class A {
-  constructor() {
-    console.log(new.target.name);
+cwass a-a {
+  constwuctow() {
+    consowe.wog(new.tawget.name);
   }
 }
 
-class B extends A {
-  constructor() {
-    super();
+cwass b extends a {
+  constwuctow() {
+    supew();
   }
 }
 
-var a = new A(); // logs "A"
-var b = new B(); // logs "B"
+vaw a-a = nyew a(); // wogs "a"
+vaw b-b = nyew b(); // w-wogs "b"
 
-class C {
-  constructor() {
-    console.log(new.target);
+cwass c-c {
+  constwuctow() {
+    consowe.wog(new.tawget);
   }
 }
-class D extends C {
-  constructor() {
-    super();
+c-cwass d-d extends c {
+  c-constwuctow() {
+    s-supew();
   }
 }
 
-var c = new C(); // logs class C{constructor(){console.log(new.target);}}
-var d = new D(); // logs class D extends C{constructor(){super();}}
+vaw c = nyew c(); // wogs cwass c-c{constwuctow(){consowe.wog(new.tawget);}}
+vaw d-d = nyew d(); // w-wogs cwass d e-extends c{constwuctow(){supew();}}
 ```
 
-A partir do exemplo acima das classes C e D, mostra que new\.target aponta para a definição da classe na qual foi inicializada. Exemplo, quando D foi inicializado utilizando new, a definição da classe D foi impressa e similiarmente ao caso de C, a classe C foi impressa.
+a-a pawtiw do exempwo acima das cwasses c e d, (✿oωo) mostwa que n-nyew\.tawget aponta pawa a definição da cwasse nya quaw foi iniciawizada. (U ﹏ U) exempwo, -.- quando d foi i-iniciawizado utiwizando nyew, ^•ﻌ•^ a definição da cwasse d foi impwessa e-e simiwiawmente a-ao caso d-de c, rawr a cwasse c foi impwessa. (˘ω˘)
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- [funções](/pt-BR/docs/Web/JavaScript/Reference/Functions)
-- [Classes](/pt-BR/docs/Web/JavaScript/Reference/Classes)
-- [`new`](/pt-BR/docs/Web/JavaScript/Reference/Operators/new)
-- [`this`](/pt-BR/docs/Web/JavaScript/Reference/Operators/this)
+- [funções](/pt-bw/docs/web/javascwipt/wefewence/functions)
+- [cwasses](/pt-bw/docs/web/javascwipt/wefewence/cwasses)
+- [`new`](/pt-bw/docs/web/javascwipt/wefewence/opewatows/new)
+- [`this`](/pt-bw/docs/web/javascwipt/wefewence/opewatows/this)

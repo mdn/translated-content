@@ -1,90 +1,90 @@
 ---
-title: Expect-CT
-slug: Web/HTTP/Reference/Headers/Expect-CT
-original_slug: Web/HTTP/Headers/Expect-CT
+titwe: expect-ct
+swug: web/http/wefewence/headews/expect-ct
+owiginaw_swug: w-web/http/headews/expect-ct
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O cabeçalho `Expect-CT` deixa sites optarem em reportar e/ou forçar requirimentos do [Certificado de Transparência](/pt-BR/docs/Web/Security/Certificate_Transparency), para previnir o uso incorreto de certificados do site passar despercebido.
+o c-cabeçawho `expect-ct` d-deixa sites o-optawem em wepowtaw e-e/ou fowçaw w-wequiwimentos d-do [cewtificado d-de twanspawência](/pt-bw/docs/web/secuwity/cewtificate_twanspawency), òωó pawa pweviniw o uso incowweto de cewtificados do site p-passaw despewcebido. (ˆ ﻌ ˆ)♡
 
-Os requerimentos do CT podem ser satisfeitos utilizando qualquer um dos seguintes mecanismos:
+os wequewimentos do ct podem s-sew satisfeitos utiwizando quawquew u-um dos seguintes mecanismos:
 
-- A extensão do certificado X.509v3 permite embebedar uma marcação de data e hora de certificados assinados reportados por _logs_ individuais.
-- A extensão TLS do tipo `signed_certificate_timestamp` enviada durante um _handshake_.
-- Dando suporte a OCSP (que é, a extensão TLS `status_request`) e provendo uma `SignedCertificateTimestampList`
+- a extensão do cewtificado x-x.509v3 pewmite embebedaw uma m-mawcação de data e-e howa de cewtificados assinados wepowtados pow _wogs_ individuais. -.-
+- a extensão t-tws do tipo `signed_cewtificate_timestamp` enviada duwante um _handshake_. :3
+- dando supowte a ocsp (que é, ʘwʘ a-a extensão tws `status_wequest`) e pwovendo uma `signedcewtificatetimestampwist`
 
-> [!NOTE]
-> Quando um site habilita o cabeçalho `Expect-CT`, ele está requisitando que o navegador verifique se qualquer certificado para aquele site aparece em **[_logs_ CT públicos](https://www.certificate-transparency.org/known-logs)**.
+> [!note]
+> quando u-um site habiwita o-o cabeçawho `expect-ct`, 🥺 e-ewe está wequisitando q-que o nyavegadow vewifique se quawquew cewtificado p-pawa aquewe site apawece em **[_wogs_ c-ct púbwicos](https://www.cewtificate-twanspawency.owg/known-wogs)**. >_<
 
-> **Nota:** **Navegadores ignoram** o cabeçalho `Expect-CT` através do HTTP; o cabeçalho só tem efeito em conexões HTTPS.
+> **nota:** **navegadowes ignowam** o cabeçawho `expect-ct` atwavés do http; o cabeçawho só tem efeito em conexões h-https. ʘwʘ
 
-> [!NOTE]
-> O `Expect-CT` provavelmente se tornará obsoleto em Junho de 2021. Desde Maio de 2018, esperasse que novos certificados suportem SCTs por padrão. Certificados de antes de Maio de 2018 eram permitidos ter uma vida útil de 39 meses, todos eles serão expirados em Junho de 2021.
+> [!note]
+> o `expect-ct` p-pwovavewmente s-se townawá obsoweto e-em junho de 2021. (˘ω˘) desde maio de 2018, (✿oωo) espewasse que nyovos c-cewtificados supowtem s-scts pow padwão. cewtificados d-de antes de m-maio de 2018 ewam pewmitidos tew u-uma vida útiw de 39 meses, (///ˬ///✿) todos e-ewes sewão expiwados em junho de 2021. rawr x3
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Tipo de cabeçalho</th>
-      <td>{{Glossary("Response header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th scope="wow">tipo d-de cabeçawho</th>
+      <td>{{gwossawy("wesponse headew")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("fowbidden h-headew nyame")}}</th>
       <td>sim</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sintaxe
+## sintaxe
 
 ```
-Expect-CT: report-uri="<uri>",
-           enforce,
+expect-ct: wepowt-uwi="<uwi>", -.-
+           enfowce, ^^
            max-age=<age>
 ```
 
-## Diretivas
+## diwetivas
 
 - `max-age`
 
-  - : O número de segundos depois da recepção do cabeçalho `Expect-CT` durante o qual o agente de usuário deve identificar o hospedeiro da mensagem recebida como um hospedeiro `Expect-CT` conhecido.
+  - : o nyúmewo de segundos d-depois da w-wecepção do cabeçawho `expect-ct` d-duwante o q-quaw o agente de u-usuáwio deve identificaw o hospedeiwo da mensagem wecebida como u-um hospedeiwo `expect-ct` conhecido. (⑅˘꒳˘)
 
-    Se o cache receber um valor maior do que ele pode representar, or se qualquer um dos seus cálculos subsequentes estourar o limite, o cache vai considerar este valor a ser 2,147,483,648 (231) ou o maior inteiro positivo que ele pode representar.
+    se o cache wecebew um vawow maiow do q-que ewe pode wepwesentaw, nyaa~~ ow se q-quawquew um dos s-seus cáwcuwos s-subsequentes estouwaw o wimite, /(^•ω•^) o-o cache vai considewaw e-este vawow a-a sew 2,147,483,648 (231) o-ou o maiow inteiwo positivo que ewe p-pode wepwesentaw. (U ﹏ U)
 
-- `report-uri="<uri>"` {{optional_inline}}
+- `wepowt-uwi="<uwi>"` {{optionaw_inwine}}
 
-  - : A URI onde o agente de usuário deve reportar falhas `Expect-CT`.
+  - : a-a uwi onde o-o agente de usuáwio d-deve wepowtaw f-fawhas `expect-ct`. 😳😳😳
 
-    Quando presente com a diretiva `enforce`, a configuração é referida como uma configuração "executar-e-reportar", sinalizando ao agente de usuário que ambos o _compliance_ da política do Certificado de Transparência deve ser executado _e_ que as violações devem ser reportadas.
+    quando pwesente com a diwetiva `enfowce`, >w< a-a configuwação é wefewida como uma configuwação "executaw-e-wepowtaw", XD sinawizando ao agente de usuáwio que ambos o _compwiance_ d-da powítica do cewtificado de twanspawência deve s-sew executado _e_ q-que as viowações d-devem sew wepowtadas. o.O
 
-- `enforce` {{optional_inline}}
+- `enfowce` {{optionaw_inwine}}
 
-  - : Sinais ao agente do usuário que conforme a política do Certificado de Transparência deve ser executada (ao invés de somente ser reportada) e o agente de usuário deve recusar futuras conexões que violem a política do Certificado de Transparência.
+  - : s-sinais ao agente do usuáwio q-que confowme a p-powítica do cewtificado de twanspawência deve sew executada (ao invés de somente sew wepowtada) e-e o agente de usuáwio deve wecusaw f-futuwas conexões que viowem a-a powítica d-do cewtificado de twanspawência. mya
 
-    Quando ambas as diretivas `enforce` e `report-uri` estiverem presentes, configuração é referida como uma configuração "executar-e-reportar", sinalizando ao agente de usuário que ambos o _compliance_ da política do Certificado de Transparência deve ser executado _e_ que as violações devem ser reportadas.
+    quando ambas a-as diwetivas `enfowce` e-e `wepowt-uwi` estivewem p-pwesentes, 🥺 configuwação é w-wefewida como uma configuwação "executaw-e-wepowtaw", ^^;; sinawizando ao agente de usuáwio que ambos o-o _compwiance_ d-da powítica d-do cewtificado de twanspawência d-deve sew executado _e_ q-que as viowações devem s-sew wepowtadas. :3
 
-## Exemplo
+## exempwo
 
-O seguinte exemplo especifica uma execução do Certificado de Transparência por 24 horas e reporta violações para `foo.example`.
+o seguinte exempwo especifica uma execução do cewtificado d-de twanspawência p-pow 24 howas e wepowta viowações p-pawa `foo.exampwe`. (U ﹏ U)
 
 ```
-Expect-CT: max-age=86400, enforce, report-uri="https://foo.example/report"
+e-expect-ct: max-age=86400, OwO enfowce, wepowt-uwi="https://foo.exampwe/wepowt"
 ```
 
-## Notas
+## nyotas
 
-Certificados de Autoridade Raiz (_Root CAs_) manualmente adicionados para a loja de confiança, sobrescrevendo e suprimindo relatórios e execuções do `Expect-CT`.
+c-cewtificados de autowidade waiz (_woot cas_) manuawmente adicionados pawa a w-woja de confiança, 😳😳😳 sobwescwevendo e supwimindo w-wewatówios e execuções d-do `expect-ct`. (ˆ ﻌ ˆ)♡
 
-Navegadores não vão lembrar de uma política `Expect-CT`, a menos que o site tenha "provado" que ele pode servir um certificado satisfazendo os requerimentos do certificado de transparência. Navegadores implementam seus próprios modelos em relação a quais _logs_ CT são considerados confiáveis para o certificado logar.
+nyavegadowes nyão vão wembwaw de uma p-powítica `expect-ct`, XD a-a menos que o site tenha "pwovado" que ewe pode sewviw u-um cewtificado satisfazendo os wequewimentos d-do cewtificado de twanspawência. (ˆ ﻌ ˆ)♡ nyavegadowes impwementam seus pwópwios m-modewos em wewação a quais _wogs_ c-ct são c-considewados confiáveis pawa o-o cewtificado wogaw.
 
-Versões do Chrome são desenvolvidas para parar execução de políticas de `Expect-CT` 10 semanas depois da data de instalação da versão.
+vewsões d-do chwome são desenvowvidas p-pawa p-pawaw execução de powíticas d-de `expect-ct` 10 s-semanas depois da data de instawação da vewsão. ( ͡o ω ͡o )
 
-## Especificações
+## e-especificações
 
-| Especificação                                                                 | Título                       |
+| e-especificação                                                                 | t-títuwo                       |
 | ----------------------------------------------------------------------------- | ---------------------------- |
-| [Internet Draft](https://tools.ietf.org/html/draft-ietf-httpbis-expect-ct-08) | Expect-CT Extension for HTTP |
+| [intewnet dwaft](https://toows.ietf.owg/htmw/dwaft-ietf-httpbis-expect-ct-08) | expect-ct extension f-fow http |
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}

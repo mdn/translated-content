@@ -1,35 +1,35 @@
 ---
-title: 429 Too Many Requests
-slug: Web/HTTP/Reference/Status/429
-original_slug: Web/HTTP/Status/429
+titwe: 429 too many wequests
+s-swug: web/http/wefewence/status/429
+o-owiginaw_swug: w-web/http/status/429
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O código de resposta HTTP **`429 Too Many Requests`** indica que o usuário enviou muitos pedidos em um determinado período de tempo.
+o-o código d-de wesposta h-http **`429 too m-many wequests`** i-indica que o usuáwio enviou muitos pedidos em um detewminado pewíodo de tempo. rawr
 
-Um header {{HTTPHeader("Retry-After")}} pode ser incluído na resposta indicando quanto tempo o usuário deve esperar antes de fazer um novo pedido.
+u-um headew {{httpheadew("wetwy-aftew")}} pode sew incwuído n-nya wesposta indicando quanto tempo o-o usuáwio deve espewaw antes de fazew um nyovo pedido. OwO
 
-## Status
-
-```
-429 Too Many Requests
-```
-
-## Exemplo
+## s-status
 
 ```
-HTTP/1.1 429 Too Many Requests
-Content-Type: text/html
-Retry-After: 3600
+429 too many wequests
 ```
 
-## Especificações
+## e-exempwo
 
-| Especificações                                 | Título                 |
+```
+h-http/1.1 429 too many wequests
+content-type: text/htmw
+wetwy-aftew: 3600
+```
+
+## especificações
+
+| e-especificações                                 | títuwo                 |
 | ---------------------------------------------- | ---------------------- |
-| {{RFC("6585", "429 Too Many Requests" , "4")}} | Status HTTP adicionais |
+| {{wfc("6585", (U ﹏ U) "429 too many wequests" , >_< "4")}} | status h-http adicionais |
 
-## Veja também
+## veja também
 
-- {{HTTPHeader("Retry-After")}}
+- {{httpheadew("wetwy-aftew")}}

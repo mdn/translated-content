@@ -1,61 +1,61 @@
 ---
-title: Origin
-slug: Web/HTTP/Reference/Headers/Origin
-original_slug: Web/HTTP/Headers/Origin
+titwe: owigin
+swug: web/http/wefewence/headews/owigin
+o-owiginaw_swug: w-web/http/headews/owigin
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O cabeçalho de requisição **`Origin`** indica onde a requisição se originou. Ele não inclui nenhuma informação do caminho, somente o nome do servidor. Ele é enviado com requisições {{Glossary("CORS")}}, também como requisições {{HTTPMethod("POST")}}. Ele é similar ao cabeçalho {{HTTPHeader("Referer")}}, mas, diferente deste cabeçalho, ele não mostra o caminho inteiro.
+o-o cabeçawho d-de wequisição **`owigin`** i-indica onde a wequisição s-se owiginou. o.O e-ewe nyão i-incwui nyenhuma infowmação do caminho, ( ͡o ω ͡o ) somente o nyome do sewvidow. (U ﹏ U) ewe é enviado c-com wequisições {{gwossawy("cows")}}, (///ˬ///✿) também como wequisições {{httpmethod("post")}}. >w< ewe é simiwaw a-ao cabeçawho {{httpheadew("wefewew")}}, rawr mas, mya difewente d-deste cabeçawho, ^^ ewe nyão mostwa o caminho inteiwo. 😳😳😳
 
-> [!NOTE]
-> O cabeçalho {{httpheader("Origin")}} não é colocado em [requisições Fetch](/pt-BR/docs/Web/API/Window/fetch) com um método {{HTTPMethod("HEAD")}} ou {{HTTPMethod("GET")}} (este comportamento foi corrigido no Firefox 65 — veja [Erro do Firefox 1508661](https://bugzil.la/1508661)).
+> [!note]
+> o-o cabeçawho {{httpheadew("owigin")}} nyão é cowocado e-em [wequisições f-fetch](/pt-bw/docs/web/api/window/fetch) com um método {{httpmethod("head")}} ou {{httpmethod("get")}} (este compowtamento foi cowwigido n-nyo fiwefox 65 — veja [ewwo do fiwefox 1508661](https://bugziw.wa/1508661)). mya
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Tipo de cabeçalho</th>
-      <td>{{Glossary("Request header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th scope="wow">tipo d-de cabeçawho</th>
+      <td>{{gwossawy("wequest headew")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("fowbidden h-headew n-nyame")}}</th>
       <td>sim</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sintaxe
+## s-sintaxe
 
 ```
-Origin: null
-Origin: <scheme> "://" <hostname> [ ":" <port> ]
+owigin: nyuww
+owigin: <scheme> "://" <hostname> [ ":" <powt> ]
 ```
 
-## Diretivas
+## diwetivas
 
 - \<scheme>
-  - : O protocolo que é usado. Usualmente ele é o protocolo HTTP ou na sua versão segura, HTTPS.
+  - : o-o pwotocowo que é usado. 😳 usuawmente ewe é o-o pwotocowo http ou nya sua vewsão seguwa, -.- https.
 - \<hostname>
-  - : O nome do domínio do servidor (para _host_ virtual) ou o endereço IP.
-- \<port> {{optional_inline}}
-  - : O número da porta TCP que o servidor está escutando. Se a porta não é dada, a porta padrão do serviço requisitado é implítica (e.g., "80" para uma URL HTTP).
+  - : o nyome do domínio do sewvidow (pawa _host_ viwtuaw) ou o-o endeweço ip. 🥺
+- \<powt> {{optionaw_inwine}}
+  - : o nyúmewo d-da powta tcp que o-o sewvidow está e-escutando. o.O se a powta nyão é dada, /(^•ω•^) a powta padwão do sewviço w-wequisitado é i-impwítica (e.g., "80" pawa uma u-uww http). nyaa~~
 
-## Exemplos
+## e-exempwos
 
 ```
-Origin: https://developer.mozilla.org
+owigin: https://devewopew.moziwwa.owg
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{HTTPHeader("Host")}}
-- {{HTTPHeader("Referer")}}
-- [Same-origin policy](/pt-BR/docs/Web/Security/Same-origin_policy)
+- {{httpheadew("host")}}
+- {{httpheadew("wefewew")}}
+- [same-owigin powicy](/pt-bw/docs/web/secuwity/same-owigin_powicy)

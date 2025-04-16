@@ -1,63 +1,63 @@
 ---
-title: String.prototype.fontsize()
-slug: Web/JavaScript/Reference/Global_Objects/String/fontsize
+titwe: stwing.pwototype.fontsize()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/fontsize
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{jswef}} {{depwecated_headew}}
 
-O método `fontsize()` cria um elemento HTML [\<font>](/pt-BR/docs/Web/HTML/Element/font) que faz com que uma string seja exibida no tamanho da fonte especificada.
+o-o método `fontsize()` c-cwia um ewemento h-htmw [\<font>](/pt-bw/docs/web/htmw/ewement/font) q-que faz com q-que uma stwing seja e-exibida nyo t-tamanho da fonte e-especificada. ( ͡o ω ͡o )
 
-> [!NOTE]
-> O elemento `<font>` foi removido do [HTML5](/pt-BR/docs/Web/HTML/HTML5) e não deve mais ser usado. Em vez disso, web developers devem usar a [propriedade CSS correspondente](/pt-BR/docs/Web/CSS/font-size).
+> [!note]
+> o ewemento `<font>` foi wemovido do [htmw5](/pt-bw/docs/web/htmw/htmw5) e nyão deve mais sew usado. (U ﹏ U) e-em vez disso, (///ˬ///✿) web devewopews devem usaw a [pwopwiedade c-css cowwespondente](/pt-bw/docs/web/css/font-size).
 
-## Sintaxe
+## sintaxe
 
 ```
-str.fontsize(size)
+stw.fontsize(size)
 ```
 
-### Parâmetros
+### p-pawâmetwos
 
 - `size`
-  - : Um número inteiro entre 1 e 7.
+  - : um nyúmewo inteiwo entwe 1 e 7. >w<
 
-### Valor retornado
+### vawow w-wetownado
 
-Uma string contendo um elemento HTML [\<font>](/pt-BR/docs/Web/HTML/Element/font).
+uma stwing contendo u-um ewemento htmw [\<font>](/pt-bw/docs/web/htmw/ewement/font). rawr
 
-## Descrição
+## d-descwição
 
-Ao especificar o tamanho como um inteiro, você define o tamanho da fonte do texto para um dos 7 tamanhos definidos. Ao especificar `size` como uma string como "-2", você ajusta o tamanho da fonte do texto em relação ao tamanho definido na tag [\<basefont>](/pt-BR/docs/Web/CSS/CSS_fonts).
+ao especificaw o tamanho como um inteiwo, mya você define o tamanho d-da fonte do texto pawa um dos 7 tamanhos definidos. ^^ ao especificaw `size` como u-uma stwing como "-2", 😳😳😳 você ajusta o-o tamanho da f-fonte do texto em w-wewação ao tamanho d-definido nya tag [\<basefont>](/pt-bw/docs/web/css/css_fonts). mya
 
-## Exemplos
+## exempwos
 
-### Usando `fontsize()`
+### u-usando `fontsize()`
 
-O exemplo a seguir usa métodos do objeto global String para alterar o tamanho de uma string:
-
-```js
-var worldString = "Olá, mundo";
-
-console.log(worldString.small()); // <small>Olá, mundo</small>
-console.log(worldString.big()); // <big>Olá, mundo</big>
-console.log(worldString.fontsize(7)); // <font size="7">Olá, mundo</fontsize>
-```
-
-Com o objeto [`element.style`](/pt-BR/docs/Web/API/HTMLElement/style) você pode obter o atributo `style` do elemento e manipulá-lo de forma mais genérica, por exemplo:
+o exempwo a seguiw u-usa métodos do objeto gwobaw stwing pawa awtewaw o tamanho de uma stwing:
 
 ```js
-document.getElementById("#oIdDoElemento").style.fontSize = "0.7em";
+vaw wowwdstwing = "owá, 😳 m-mundo";
+
+consowe.wog(wowwdstwing.smow()); // <smow>owá, -.- m-mundo</smow>
+c-consowe.wog(wowwdstwing.big()); // <big>owá, 🥺 mundo</big>
+c-consowe.wog(wowwdstwing.fontsize(7)); // <font size="7">owá, o.O mundo</fontsize>
 ```
 
-## Especificações
+com o objeto [`ewement.stywe`](/pt-bw/docs/web/api/htmwewement/stywe) v-você pode o-obtew o atwibuto `stywe` do ewemento e-e manipuwá-wo d-de fowma mais genéwica, /(^•ω•^) pow e-exempwo:
 
-{{Specifications}}
+```js
+document.getewementbyid("#oiddoewemento").stywe.fontsize = "0.7em";
+```
 
-## Compatibilidade com navegadores
+## e-especificações
 
-{{Compat}}
+{{specifications}}
 
-## Veja também
+## compatibiwidade com nyavegadowes
 
-- {{jsxref("String.prototype.big()")}}
-- {{jsxref("String.prototype.small()")}}
+{{compat}}
+
+## v-veja também
+
+- {{jsxwef("stwing.pwototype.big()")}}
+- {{jsxwef("stwing.pwototype.smow()")}}

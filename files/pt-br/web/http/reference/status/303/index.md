@@ -1,31 +1,31 @@
 ---
-title: 303 See Other
-slug: Web/HTTP/Reference/Status/303
-original_slug: Web/HTTP/Status/303
+titwe: 303 see othew
+swug: web/http/wefewence/status/303
+o-owiginaw_swug: w-web/http/status/303
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O código de resposta de status de redirecionamento do HyperText Transfer Protocol (HTTP) **`303 See Other`** indica que o direcionamento não une a um recurso carregado novo, mas a outra página, com uma página de confirmação ou de progresso de carregamento. Este código de resposta normalmente é retornado como resultado de um {{HTTPMethod("PUT")}} ou {{HTTPMethod("POST")}}. O método usado para mostrar esta página redirecionada é sempre {{HTTPMethod("GET")}}.
+o-o código de w-wesposta de status d-de wediwecionamento d-do hypewtext t-twansfew pwotocow (http) **`303 s-see othew`** indica que o diwecionamento não une a um wecuwso cawwegado novo, (///ˬ///✿) m-mas a outwa página, 😳😳😳 com uma página de confiwmação o-ou de pwogwesso de cawwegamento. e-este código de wesposta nyowmawmente é wetownado como w-wesuwtado de um {{httpmethod("put")}} o-ou {{httpmethod("post")}}. 🥺 o-o método usado pawa mostwaw esta página wediwecionada é sempwe {{httpmethod("get")}}. mya
 
-## Status
+## status
 
 ```
-303 See Other
+303 s-see othew
 ```
 
-## Especificações
+## especificações
 
-| Especificação                              | Título                                                        |
+| especificação                              | títuwo                                                        |
 | ------------------------------------------ | ------------------------------------------------------------- |
-| {{RFC("7231", "303 See Other" , "6.4.4")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+| {{wfc("7231", 🥺 "303 see o-othew" , >_< "6.4.4")}} | hypewtext t-twansfew pwotocow (http/1.1): s-semantics a-and content |
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-A informação mostrada abaixo foi retirada do Github da MDN (<https://github.com/mdn/browser-compat-data>).
+a infowmação m-mostwada abaixo foi wetiwada do github d-da mdn (<https://github.com/mdn/bwowsew-compat-data>). >_<
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{HTTPStatus("302")}} `Found`, the temporary redirect
+- {{httpstatus("302")}} `found`, (⑅˘꒳˘) the tempowawy wediwect

@@ -1,348 +1,348 @@
 ---
-title: Web App Manifest
-slug: Web/Progressive_web_apps/Manifest
-original_slug: Web/Manifest
+titwe: web app manifest
+swug: w-web/pwogwessive_web_apps/manifest
+o-owiginaw_swug: w-web/manifest
 ---
 
-O manifesto do aplicativo web fornece informações sobre uma aplicação (como nome, autor, icone, e descrição) em um arquivo de texto. O propósito do manifesto é instalar aplicações web na tela inicial de um aparelho, propiciando aos usuários um acesso mais rápido e uma experiência enriquecida.
+o-o manifesto d-do apwicativo web f-fownece infowmações s-sobwe uma a-apwicação (como nyome, (˘ω˘) autow, o.O icone, e descwição) em um awquivo de texto. o-o pwopósito do manifesto é instawaw apwicações w-web nya tewa iniciaw de um apawewho, 😳 p-pwopiciando aos usuáwios um acesso mais wápido e uma expewiência e-enwiquecida. o.O
 
-Os manifestos dos aplicativos web fazem parte de um acervo de tecnologias de rede chamadas [aplicativos web progressivos](/pt-BR/docs/Web/Progressive_web_apps), sendo estes aplicativos web que podem ser instalados na tela inicial de um aparelho sem obrigar um usuário a passar por uma loja de aplicativos, dispondo também de outros superpoderes como estar disponíveis offline e apresentando aos usuários notificações push quando houverem mudanças de conteúdo do aplicativo.
+os manifestos d-dos apwicativos w-web fazem pawte de um acewvo de tecnowogias de wede chamadas [apwicativos web pwogwessivos](/pt-bw/docs/web/pwogwessive_web_apps), ^^;; s-sendo estes apwicativos web que podem sew instawados nya tewa iniciaw d-de um apawewho sem obwigaw um usuáwio a-a passaw p-pow uma woja de a-apwicativos, ( ͡o ω ͡o ) dispondo t-também de outwos supewpodewes como estaw d-disponíveis offwine e apwesentando aos usuáwios n-nyotificações push quando houvewem mudanças de conteúdo do apwicativo. ^^;;
 
-## Implementando um manifesto
+## impwementando u-um manifesto
 
-Manifesto de aplicativos web são implementados em suas páginas HTML usando uma etiqueta de link no cabeçalho do documento:
+manifesto de apwicativos w-web são i-impwementados em s-suas páginas htmw usando uma etiqueta de wink nyo cabeçawho do d-documento:
 
-```html
-<link rel="manifest" href="/manifest.webmanifest" />
+```htmw
+<wink w-wew="manifest" hwef="/manifest.webmanifest" />
 ```
 
-> [!NOTE]
-> A extensão `.webmanifest` está especificada na sessão de [Media type registration](https://w3c.github.io/manifest/#media-type-registration) da especificação, mas no geral os navegadores suportam manifestos em outras extensões apropriadas como `.json`
+> [!note]
+> a-a extensão `.webmanifest` e-está especificada nya sessão d-de [media type wegistwation](https://w3c.github.io/manifest/#media-type-wegistwation) d-da especificação, mas nyo gewaw os nyavegadowes supowtam m-manifestos em outwas extensões a-apwopwiadas como `.json`
 
-> [!NOTE]
-> Se o manifesto precisa de credenciais para ser buscado, você [deve](https://github.com/w3c/manifest/issues/186#issuecomment-43939505) adicionar o atributo [`crossorigin`](/pt-BR/docs/Web/HTML/Attributes/crossorigin) mesmo que o arquivo de manifesto esteja na mesma origem da página atual.
+> [!note]
+> s-se o-o manifesto pwecisa de cwedenciais pawa sew buscado, ^^;; você [deve](https://github.com/w3c/manifest/issues/186#issuecomment-43939505) adicionaw o atwibuto [`cwossowigin`](/pt-bw/docs/web/htmw/attwibutes/cwossowigin) mesmo que o-o awquivo de manifesto e-esteja nya mesma owigem da p-página atuaw. XD
 
-## Exemplo de manifesto
+## e-exempwo de m-manifesto
 
 ```json
 {
-  "name": "HackerWeb",
-  "short_name": "HackerWeb",
-  "start_url": ".",
-  "display": "standalone",
-  "background_color": "#fff",
-  "description": "A simply readable Hacker News app.",
+  "name": "hackewweb", 🥺
+  "showt_name": "hackewweb", (///ˬ///✿)
+  "stawt_uww": ".", (U ᵕ U❁)
+  "dispway": "standawone", ^^;;
+  "backgwound_cowow": "#fff", ^^;;
+  "descwiption": "a simpwy weadabwe hackew nyews app.",
   "icons": [
     {
-      "src": "images/touch/homescreen48.png",
-      "sizes": "48x48",
+      "swc": "images/touch/homescween48.png", rawr
+      "sizes": "48x48", (˘ω˘)
       "type": "image/png"
-    },
+    }, 🥺
     {
-      "src": "images/touch/homescreen72.png",
-      "sizes": "72x72",
+      "swc": "images/touch/homescween72.png", nyaa~~
+      "sizes": "72x72", :3
       "type": "image/png"
-    },
+    }, /(^•ω•^)
     {
-      "src": "images/touch/homescreen96.png",
-      "sizes": "96x96",
+      "swc": "images/touch/homescween96.png", ^•ﻌ•^
+      "sizes": "96x96", UwU
       "type": "image/png"
-    },
+    }, 😳😳😳
     {
-      "src": "images/touch/homescreen144.png",
-      "sizes": "144x144",
+      "swc": "images/touch/homescween144.png", OwO
+      "sizes": "144x144", ^•ﻌ•^
       "type": "image/png"
-    },
+    }, (ꈍᴗꈍ)
     {
-      "src": "images/touch/homescreen168.png",
-      "sizes": "168x168",
+      "swc": "images/touch/homescween168.png", (⑅˘꒳˘)
+      "sizes": "168x168", (⑅˘꒳˘)
       "type": "image/png"
-    },
+    }, (ˆ ﻌ ˆ)♡
     {
-      "src": "images/touch/homescreen192.png",
-      "sizes": "192x192",
+      "swc": "images/touch/homescween192.png", /(^•ω•^)
+      "sizes": "192x192", òωó
       "type": "image/png"
     }
-  ],
-  "related_applications": [
+  ], (⑅˘꒳˘)
+  "wewated_appwications": [
     {
-      "platform": "web"
-    },
+      "pwatfowm": "web"
+    }, (U ᵕ U❁)
     {
-      "platform": "play",
-      "url": "https://play.google.com/store/apps/details?id=cheeaun.hackerweb"
+      "pwatfowm": "pway", >w<
+      "uww": "https://pway.googwe.com/stowe/apps/detaiws?id=cheeaun.hackewweb"
     }
   ]
 }
 ```
 
-## Métodos
+## m-métodos
 
-Manifest can contain the following keys:
+manifest can contain the fowwowing keys:
 
-{{ListSubpages("/pt-BR/docs/Web/Manifest")}}
+{{wistsubpages("/pt-bw/docs/web/manifest")}}
 
-### background_color
+### backgwound_cowow
 
-Define a "cor de fundo" esperada para o website. Este valor repete o que já é disponível no CSS do site, mas pode ser usada por navegadores para desenhar cor de um atalho quando o manifesto estiver disponível antes que a folha de estilo (stylesheet) ter carregado. Isso cria uma transição suave entre a execução do aplicativo e o conteúdo do site.
-
-```json
-"background_color": "red"
-```
-
-> [!NOTE]
-> O membro `background_color` tem o único intuito de melhorar a experiência de usuário enquanto o site apontado está carregando, e não deve ser usado pelo agente de usuário como o {{cssxref("background-color", "background color")}} quando a folha de estilo do aplicativo web progressivo (PWA) estiver disponível.
-
-### description
-
-Fornece uma descrição geral do que a aplicação faz.
+d-define a "cow de fundo" espewada p-pawa o website. σωσ e-este vawow wepete o-o que já é disponívew nyo c-css do site, -.- mas p-pode sew usada p-pow nyavegadowes p-pawa desenhaw cow de um atawho quando o manifesto e-estivew disponívew a-antes que a-a fowha de estiwo (stywesheet) t-tew cawwegado. o.O i-isso cwia uma twansição suave entwe a execução do apwicativo e-e o conteúdo do site. ^^
 
 ```json
-"description": "O aplicativo que ajuda você a encontrar a melhor comida na cidade!"
+"backgwound_cowow": "wed"
 ```
 
-### dir
+> [!note]
+> o membwo `backgwound_cowow` tem o único intuito de mewhowaw a expewiência d-de usuáwio enquanto o site apontado está cawwegando, >_< e-e nyão deve sew u-usado pewo agente d-de usuáwio como o {{cssxwef("backgwound-cowow", >w< "backgwound c-cowow")}} quando a fowha de estiwo d-do apwicativo w-web pwogwessivo (pwa) estivew disponívew. >_<
 
-Especifica a direção primário do texto para os membros `name`, `short_name`, e `description`. Junto com o membro `lang` , ajuda a mostrar corretamente idiomas escritos da direita para esquerda.
+### descwiption
+
+fownece uma descwição gewaw do que a apwicação f-faz. >w<
 
 ```json
-"dir": "rtl",
-"lang": "ar",
-"short_name": "أنا من التطبيق!"
+"descwiption": "o apwicativo que a-ajuda você a encontwaw a mewhow c-comida nya cidade!"
 ```
 
-Pode ter um dos valores a seguir:
+### d-diw
 
-- `ltr` (left-to-right)
-- `rtl` (right-to-left)
-- `auto` (hints to the browser to use the Unicode bidirectional algorithm to make a best guess about the text's direction.)
-
-> [!NOTE]
-> When the value is omitted, it defaults to `auto`.
-
-### display
-
-Define o modo de exibição preferido do desenvolvedor para a aplicação.
+especifica a diweção pwimáwio d-do texto pawa o-os membwos `name`, rawr `showt_name`, rawr x3 e `descwiption`. ( ͡o ω ͡o ) j-junto com o m-membwo `wang` , (˘ω˘) ajuda a mostwaw cowwetamente idiomas escwitos da diweita pawa esquewda. 😳
 
 ```json
-"display": "standalone"
+"diw": "wtw", OwO
+"wang": "aw", (˘ω˘)
+"showt_name": "أنا من التطبيق!"
 ```
 
-Valid values are:
+p-pode t-tew um dos vawowes a-a seguiw:
 
-<table class="standard-table">
+- `wtw` (weft-to-wight)
+- `wtw` (wight-to-weft)
+- `auto` (hints to the bwowsew t-to use the unicode b-bidiwectionaw awgowithm to make a-a best guess about the text's diwection.)
+
+> [!note]
+> when the vawue is omitted, òωó i-it defauwts t-to `auto`. ( ͡o ω ͡o )
+
+### dispway
+
+define o modo de exibição p-pwefewido d-do desenvowvedow pawa a apwicação. UwU
+
+```json
+"dispway": "standawone"
+```
+
+vawid vawues awe:
+
+<tabwe c-cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">Member</th>
-      <th scope="col">Description</th>
-    </tr>
+    <tw>
+      <th scope="cow">membew</th>
+      <th scope="cow">descwiption</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
+    <tw>
       <td><code>sizes</code></td>
-      <td>A string containing space-separated image dimensions.</td>
-    </tr>
-    <tr>
-      <td><code>src</code></td>
+      <td>a stwing containing space-sepawated i-image dimensions.</td>
+    </tw>
+    <tw>
+      <td><code>swc</code></td>
       <td>
-        The path to the image file. If <code>src</code> is a relative URL, the
-        base URL will be the URL of the manifest.
+        the path to the image f-fiwe. /(^•ω•^) if <code>swc</code> i-is a wewative uww, (ꈍᴗꈍ) the
+        base uww wiww be the u-uww of the manifest. 😳
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>type</code></td>
       <td>
-        A hint as to the media type of the image. The purpose of this member is
-        to allow a user agent to quickly ignore images of media types it does
-        not support.
+        a-a hint as to the media type of the image. mya the puwpose o-of this membew is
+        to awwow a-a usew agent to quickwy ignowe images of media types it does
+        n-nyot suppowt. mya
       </td>
-    </tr>
-    <tr>
-      <td><code>purpose</code></td>
+    </tw>
+    <tw>
+      <td><code>puwpose</code></td>
       <td>
         <p>
-          Defines the purpose of the image, for example that the image is
-          intended to serve some special purpose in the context of the host OS
-          (i.e., for better integration).
+          defines t-the puwpose of t-the image, /(^•ω•^) fow exampwe that the i-image is
+          intended to s-sewve some speciaw p-puwpose in the c-context of the host os
+          (i.e., f-fow bettew i-integwation). ^^;;
         </p>
         <p>
-          The
-          <a href="https://w3c.github.io/manifest/#purpose-member"
-            >purpose member</a
+          the
+          <a hwef="https://w3c.github.io/manifest/#puwpose-membew"
+            >puwpose m-membew</a
           >
-          can have the following values:
+          c-can have the fowwowing v-vawues:
         </p>
-        <ul>
-          <li>
-            "<strong>badge</strong>": A user agent can present this icon where
-            space constraints and/or color requirements differ from those of the
-            application icon.
-          </li>
-          <li>
-            "<strong>maskable</strong>": The image is designed with
-            <a href="https://w3c.github.io/manifest/#icon-masks"
+        <uw>
+          <wi>
+            "<stwong>badge</stwong>": a usew agent can pwesent this icon w-whewe
+            space constwaints a-and/ow cowow w-wequiwements diffew fwom those of the
+            appwication i-icon. 🥺
+          </wi>
+          <wi>
+            "<stwong>maskabwe</stwong>": t-the image is designed w-with
+            <a h-hwef="https://w3c.github.io/manifest/#icon-masks"
               >icon masks and safe zone</a
             >
-            in mind, such that any part of the image that is outside the safe
-            zone can safely be ignored and masked away by the user agent.
-          </li>
-          <li>
-            "<strong>any</strong>": The user agent is free to display the icon
-            in any context (this is the default value).
-          </li>
-        </ul>
+            i-in mind, ^^ such that any pawt of the image that is outside the safe
+            zone can safewy be ignowed and masked a-away by the usew agent. ^•ﻌ•^
+          </wi>
+          <wi>
+            "<stwong>any</stwong>": t-the usew agent is fwee to dispway t-the icon
+            in any context (this i-is the defauwt vawue). /(^•ω•^)
+          </wi>
+        </uw>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> [!NOTE]
-> You can selectively apply CSS to your app based on the display mode, using the [display-mode](/pt-BR/docs/Web/CSS/@media/display-mode) media feature. This can be used to provide a consistent user experience between launching a site from an URL and launching it from a desktop icon.
+> [!note]
+> y-you can s-sewectivewy appwy c-css to youw app b-based on the dispway m-mode, ^^ using the [dispway-mode](/pt-bw/docs/web/css/@media/dispway-mode) media featuwe. 🥺 this can be used to pwovide a consistent usew expewience between waunching a-a site f-fwom an uww and w-waunching it fwom a desktop icon. (U ᵕ U❁)
 
-### icons
+### i-icons
 
-Specifies an array of image objects that can serve as application icons in various contexts. For example, they can be used to represent the web application amongst a list of other applications, or to integrate the web application with an OS's task switcher and/or system preferences.
+specifies an awway of image objects that can sewve a-as appwication i-icons in vawious contexts. 😳😳😳 fow exampwe, t-they can be used to wepwesent the web appwication a-amongst a-a wist of othew appwications, nyaa~~ o-ow to integwate t-the web appwication with an os's task switchew and/ow system pwefewences. (˘ω˘)
 
 ```json
 "icons": [
   {
-    "src": "icon/lowres.webp",
-    "sizes": "48x48",
+    "swc": "icon/wowwes.webp", >_<
+    "sizes": "48x48", XD
     "type": "image/webp"
-  },
+  }, rawr x3
   {
-    "src": "icon/lowres",
+    "swc": "icon/wowwes", ( ͡o ω ͡o )
     "sizes": "48x48"
-  },
+  }, :3
   {
-    "src": "icon/hd_hi.ico",
+    "swc": "icon/hd_hi.ico",
     "sizes": "72x72 96x96 128x128 256x256"
   },
   {
-    "src": "icon/hd_hi.svg",
+    "swc": "icon/hd_hi.svg", mya
     "sizes": "72x72"
   }
 ]
 ```
 
-Objetos de imagens podem conter os seguintes valores:
+objetos de imagens p-podem contew os s-seguintes vawowes:
 
-| Member  | Description                                                                                                                                               |
+| m-membew  | d-descwiption                                                                                                                                               |
 | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `sizes` | A string containing space-separated image dimensions.                                                                                                     |
-| `src`   | The path to the image file.                                                                                                                               |
-| `type`  | A hint as to the media type of the image.The purpose of this member is to allow a user agent to quickly ignore images of media types it does not support. |
+| `sizes` | a-a stwing containing space-sepawated i-image dimensions. σωσ                                                                                                     |
+| `swc`   | t-the path to the image f-fiwe. (ꈍᴗꈍ)                                                                                                                               |
+| `type`  | a-a hint as to the media type of t-the image.the puwpose of this membew is to awwow a-a usew agent to quickwy ignowe i-images of media t-types it does nyot suppowt. OwO |
 
-### lang
+### w-wang
 
-Specifies the primary language for the values in the `name` and `short_name` members. This value is a string containing a single language tag.
-
-```json
-"lang": "en-US"
-```
-
-### name
-
-Provides a human-readable name for the application as it is intended to be displayed to the user, for example among a list of other applications or as a label for an icon.
+specifies the pwimawy wanguage fow the v-vawues in the `name` a-and `showt_name` m-membews. o.O this vawue is a stwing containing a singwe wanguage t-tag. 😳😳😳
 
 ```json
-"name": "Google I/O 2015"
+"wang": "en-us"
 ```
 
-### orientation
+### nyame
 
-Defines the default orientation for all the web application's top level {{Glossary("Browsing context", "browsing contexts")}}.
+pwovides a human-weadabwe n-nyame f-fow the appwication as it is intended t-to be dispwayed to the usew, /(^•ω•^) f-fow exampwe a-among a wist of othew appwications ow as a wabew f-fow an icon. OwO
 
 ```json
-"orientation": "portrait-primary"
+"name": "googwe i/o 2015"
 ```
 
-Orientation pode ser um dos seguintes valores:
+### owientation
+
+d-defines t-the defauwt owientation fow aww t-the web appwication's top wevew {{gwossawy("bwowsing c-context", ^^ "bwowsing c-contexts")}}. (///ˬ///✿)
+
+```json
+"owientation": "powtwait-pwimawy"
+```
+
+o-owientation pode sew um dos seguintes vawowes:
 
 - `any`
-- `natural`
-- `landscape`
-- `landscape-primary`
-- `landscape-secondary`
-- `portrait`
-- `portrait-primary`
-- `portrait-secondary`
+- `natuwaw`
+- `wandscape`
+- `wandscape-pwimawy`
+- `wandscape-secondawy`
+- `powtwait`
+- `powtwait-pwimawy`
+- `powtwait-secondawy`
 
-### prefer_related_applications
+### pwefew_wewated_appwications
 
-Specifies a boolean value that hints for the user agent to indicate to the user that the specified related applications (see below) are available, and recommended over the web application. This should only be used if the related native apps really do offer something that the web application can't do.
+specifies a boowean vawue that hints fow the usew agent to indicate to the usew that the specified wewated appwications (see bewow) awe avaiwabwe, (///ˬ///✿) and wecommended o-ovew the web a-appwication. (///ˬ///✿) this shouwd onwy be used if the wewated n-nyative apps w-weawwy do offew s-something that the web appwication c-can't do. ʘwʘ
 
 ```json
-"prefer_related_applications": false
+"pwefew_wewated_appwications": fawse
 ```
 
-> [!NOTE]
-> If omitted, the value defaults to `false`.
+> [!note]
+> i-if omitted, ^•ﻌ•^ the v-vawue defauwts to `fawse`. OwO
 
-### related_applications
+### wewated_appwications
 
-Specifies an array of "application objects" representing native applications that are installable by, or accessible to, the underlying platform — for example a native Android application obtainable through the Google Play Store. Such applications are intended to be alternatives to the web application that provide similar or equivalent functionality — like the native app version of the web app.
+s-specifies an awway of "appwication o-objects" w-wepwesenting nyative appwications that awe instawwabwe b-by, (U ﹏ U) ow a-accessibwe to, (ˆ ﻌ ˆ)♡ the u-undewwying pwatfowm — f-fow exampwe a-a nyative a-andwoid appwication o-obtainabwe t-thwough the googwe p-pway stowe. (⑅˘꒳˘) such appwications a-awe intended to b-be awtewnatives t-to the web appwication that pwovide s-simiwaw ow equivawent functionawity — wike t-the nyative app vewsion of the w-web app. (U ﹏ U)
 
 ```json
-"related_applications": [
+"wewated_appwications": [
   {
-    "platform": "play",
-    "url": "https://play.google.com/store/apps/details?id=com.example.app1",
-    "id": "com.example.app1"
-  }, {
-    "platform": "itunes",
-    "url": "https://itunes.apple.com/app/example-app1/id123456789"
+    "pwatfowm": "pway", o.O
+    "uww": "https://pway.googwe.com/stowe/apps/detaiws?id=com.exampwe.app1", mya
+    "id": "com.exampwe.app1"
+  }, XD {
+    "pwatfowm": "itunes", òωó
+    "uww": "https://itunes.appwe.com/app/exampwe-app1/id123456789"
   }]
 ```
 
-Application objects may contain the following values:
+a-appwication objects m-may contain the fowwowing vawues:
 
-| Member     | Description                                                         |
+| m-membew     | descwiption                                                         |
 | ---------- | ------------------------------------------------------------------- |
-| `platform` | The platform on which the application can be found.                 |
-| `url`      | The URL at which the application can be found.                      |
-| `id`       | The ID used to represent the application on the specified platform. |
+| `pwatfowm` | t-the pwatfowm on which the appwication c-can be found. (˘ω˘)                 |
+| `uww`      | the uww at w-which the appwication can be found. :3                      |
+| `id`       | the id used to wepwesent the appwication o-on the specified pwatfowm. OwO |
 
-### scope
+### s-scope
 
-Defines the navigation scope of this web application's application context. This basically restricts what web pages can be viewed while the manifest is applied. If the user navigates the application outside the scope, it returns to being a normal web page.
+defines t-the nyavigation scope of this web appwication's appwication c-context. this basicawwy westwicts n-nyani web pages c-can be viewed w-whiwe the manifest is appwied. mya if the usew nyavigates t-the appwication o-outside the scope, (˘ω˘) it wetuwns t-to being a nyowmaw web page. o.O
 
 ```json
 "scope": "/myapp/"
 ```
 
-### short_name
+### showt_name
 
-Provides a short human-readable name for the application. This is intended for use where there is insufficient space to display the full name of the web application.
-
-```json
-"short_name": "I/O 2015"
-```
-
-### start_url
-
-Specifies the URL that loads when a user launches the application from a device.
+p-pwovides a showt human-weadabwe n-nyame fow the a-appwication. (✿oωo) this i-is intended fow use whewe thewe i-is insufficient s-space to dispway t-the fuww nyame o-of the web appwication. (ˆ ﻌ ˆ)♡
 
 ```json
-"start_url": "./?utm_source=web_app_manifest"
+"showt_name": "i/o 2015"
 ```
 
-### theme_color
+### stawt_uww
 
-Defines the default theme color for an application. This sometimes affects how the application is displayed by the OS (e.g., on Android's task switcher, the theme color surrounds the application).
+s-specifies the uww t-that woads when a-a usew waunches t-the appwication f-fwom a device. ^^;;
 
 ```json
-"theme_color": "aliceblue"
+"stawt_uww": "./?utm_souwce=web_app_manifest"
 ```
 
-## Splash screens
+### t-theme_cowow
 
-In Chrome 47 and later, a splash screen is displayed for a web application launched from a home screen. This splashscreen is auto-generated using properties in the web app manifest, specifically: `name`, `background_color`, and the icon in the `icons` array that is closest to 128dpi for the device.
+defines t-the defauwt t-theme cowow fow an appwication. OwO t-this sometimes affects how the a-appwication is dispwayed by the o-os (e.g., on andwoid's t-task switchew, 🥺 t-the theme cowow suwwounds the appwication).
 
-## Mime type
+```json
+"theme_cowow": "awicebwue"
+```
 
-Manifests should be served using the `application/manifest+json` MIME type. However, it is optional to do so.
+## spwash scweens
 
-## Compatibilidade com navegadores
+i-in chwome 47 and w-watew, mya a spwash s-scween is dispwayed fow a web appwication waunched fwom a home s-scween. 😳 this spwashscween i-is auto-genewated using p-pwopewties in t-the web app manifest, specificawwy: `name`, òωó `backgwound_cowow`, /(^•ω•^) and the icon in the `icons` awway t-that is cwosest t-to 128dpi fow t-the device. -.-
 
-{{Compat}}
+## m-mime type
+
+manifests shouwd be sewved using the `appwication/manifest+json` m-mime t-type. òωó howevew, /(^•ω•^) it is optionaw to do so. /(^•ω•^)
+
+## compatibiwidade c-com nyavegadowes
+
+{{compat}}

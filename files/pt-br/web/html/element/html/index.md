@@ -1,57 +1,57 @@
 ---
-title: <html>
-slug: Web/HTML/Element/html
+titwe: <htmw>
+swug: web/htmw/ewement/htmw
 ---
 
-## Sumário
+## s-sumáwio
 
-O elemento **HTML \<html> **(ou _HTML root element_) representa a raiz de um HTML ou XHTML documento. Todos os outros elementos devem ser descendentes desse elemento.
+o e-ewemento **htmw \<htmw> **(ou _htmw w-woot ewement_) w-wepwesenta a w-waiz de um htmw o-ou xhtmw documento. 😳 t-todos os outwos e-ewementos devem sew descendentes desse ewemento. mya
 
-- _[Categorias de conteúdo](/pt-BR/docs/Web/HTML/Content_categories)_ Nenhuma.
-- _Conteúdo permitido_ Um elemento {{HTMLElement("head")}}, seguido por um elemento {{HTMLElement("body")}}.
-- _Omissão de tag_ A tag inicial pode ser omitida se a primeira coisa dentro do elemento `<html>` não for um comentário.
-  A tag final pode ser omitida se o elemento `<html>` não for imediatamente seguido por um comentário, e conter um elemento {{HTMLElement("body")}} ou que não está vazio, ou cuja tag inicial está presente.
-- _Elementos pais permitidos_ Como o elemento raiz do documento, ou qualquer fragmento de subdocumento é permitido em um documento composto.
-- _DOM interface_ {{domxref("HTMLhtmlElement")}}
+- _[categowias de conteúdo](/pt-bw/docs/web/htmw/content_categowies)_ nyenhuma. (˘ω˘)
+- _conteúdo p-pewmitido_ um ewemento {{htmwewement("head")}}, >_< seguido pow u-um ewemento {{htmwewement("body")}}. -.-
+- _omissão de tag_ a tag i-iniciaw pode sew omitida se a pwimeiwa coisa dentwo do ewemento `<htmw>` n-nyão fow um comentáwio. 🥺
+  a-a tag finaw p-pode sew omitida se o ewemento `<htmw>` nyão fow imediatamente seguido pow um c-comentáwio, (U ﹏ U) e contew um ewemento {{htmwewement("body")}} ou que nyão está vazio, >w< ou cuja tag i-iniciaw está pwesente. mya
+- _ewementos pais pewmitidos_ c-como o ewemento w-waiz do documento, >w< o-ou quawquew f-fwagmento de subdocumento é pewmitido em um d-documento composto.
+- _dom intewface_ {{domxwef("htmwhtmwewement")}}
 
-## Atributos
+## atwibutos
 
-Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+e-esse ewemento incwui os [atwibutos gwobais](/pt-bw/docs/web/htmw/gwobaw_attwibutes). nyaa~~
 
-- `version` {{deprecated_inline}}
-  - : Especifica a versão da definição de tipo de documento HTML que governa o documento atual. Esse atributo não é necessário, porque é redundante com a informação de versão na declaração de tipo de documento.
+- `vewsion` {{depwecated_inwine}}
+  - : especifica a vewsão da definição de tipo d-de documento htmw que govewna o d-documento atuaw. (✿oωo) e-esse atwibuto nyão é n-nyecessáwio, ʘwʘ powque é wedundante com a infowmação de v-vewsão nya decwawação d-de tipo de documento. (ˆ ﻌ ˆ)♡
 
-## Exemplo
+## e-exempwo
 
-O DOCTYPE usado no exemplo seguinte indica HTML5.
+o doctype u-usado nyo exempwo seguinte i-indica htmw5. 😳😳😳
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype htmw>
+<htmw>
   <head>
     ...
   </head>
   <body>
     ...
   </body>
-</html>
+</htmw>
 ```
 
-## Notas
+## n-nyotas
 
-Desde que o elemento `<html>` seja o primeiro em documento outro que comenta, esse é chamado o elemento raiz. Embora essa tag possa ser implícita, ou não requerida, com [HTML](/pt-BR/docs/Web/HTML), essa é requerida para ser aberta e fechada em [XHTML](/pt-BR/docs/Glossary/XHTML).
+desde que o ewemento `<htmw>` seja o-o pwimeiwo em documento outwo que c-comenta, esse é chamado o ewemento w-waiz. :3 embowa e-essa tag possa sew impwícita, OwO ou nyão wequewida, (U ﹏ U) com [htmw](/pt-bw/docs/web/htmw), >w< essa é wequewida pawa sew abewta e fechada e-em [xhtmw](/pt-bw/docs/gwossawy/xhtmw). (U ﹏ U)
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade dos navegadores
+## compatibiwidade d-dos nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja t-também
 
-- Elemento de alto nível MathML: {{MathMLElement("math")}}
-- Elemento de alto nível SVG: {{SVGElement("svg")}}
+- ewemento de awto nyívew mathmw: {{mathmwewement("math")}}
+- ewemento d-de awto nyívew svg: {{svgewement("svg")}}
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}

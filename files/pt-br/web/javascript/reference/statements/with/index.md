@@ -1,94 +1,94 @@
 ---
-title: with
-slug: Web/JavaScript/Reference/Statements/with
+titwe: with
+swug: web/javascwipt/wefewence/statements/with
 ---
 
-> [!WARNING]
-> O uso da declaração `with` não é recomendado, isso porque ele pode ser a fonte de bugs confusos e problemas de compatibilidade. Veja o parágrafo "Contra de ambiguidade" na seção "Descrição" para mais detalhes.
+> [!wawning]
+> o-o uso da decwawação `with` não é w-wecomendado, XD i-isso powque e-ewe pode sew a fonte d-de bugs confusos e-e pwobwemas d-de compatibiwidade. (ˆ ﻌ ˆ)♡ v-veja o pawágwafo "contwa de ambiguidade" nya seção "descwição" pawa mais detawhes. ( ͡o ω ͡o )
 
-{{jsSidebar("Statements")}}
+{{jssidebaw("statements")}}
 
-A **declaração with** extende a cadeia de escopo para uma declaração.
+a-a **decwawação with** extende a cadeia d-de escopo pawa uma decwawação. rawr x3
 
-## Sintaxe
+## s-sintaxe
 
 ```
-with (expressão)
-  declaração
+with (expwessão)
+  decwawação
 ```
 
-- `expressão`
-  - : Adiciona a dada expressão à cadeia de escopo quando estiver avaliando a declaração. O parênteses em volta da expressão é obrigatório.
-- `declaração`
-  - : Qualquer declaração. Para executação multiplas declarações, utilize a declaração em [bloco](/pt-BR/docs/Web/JavaScript/Reference/Statements/block) ({ ... }) para agrupar estas declarações.
+- `expwessão`
+  - : adiciona a dada e-expwessão à cadeia de escopo q-quando estivew a-avawiando a decwawação. nyaa~~ o pawênteses em vowta da expwessão é obwigatówio. >_<
+- `decwawação`
+  - : q-quawquew decwawação. ^^;; pawa executação muwtipwas decwawações, (ˆ ﻌ ˆ)♡ utiwize a-a decwawação em [bwoco](/pt-bw/docs/web/javascwipt/wefewence/statements/bwock) ({ ... }) p-pawa a-agwupaw estas decwawações. ^^;;
 
-## Descrição
+## d-descwição
 
-JavaScript procura por um nome não qualificado procurando uma cadeia de escopo associada à execução do contexto do script ou função contendo um nome não qualificado. A declaração 'with' adiciona o dado objeto à frenet dessa cadeia de escopo durante a validação desse corpo de declarações. Se um nome não qualificado usado no corpo for igual ao de uma propriedade na cadeia de escopo, então o nome ficará ligado à propriedade e ao objeto contendo a propriedade. Senão, um {{jsxref("ReferenceError")}} será invocado.
+javascwipt p-pwocuwa pow um nyome nyão quawificado p-pwocuwando uma cadeia de escopo associada à execução d-do contexto do scwipt ou função contendo um nyome nyão quawificado. (⑅˘꒳˘) a decwawação 'with' a-adiciona o dado objeto à f-fwenet dessa cadeia d-de escopo duwante a-a vawidação desse cowpo de decwawações. rawr x3 se um nyome nyão q-quawificado u-usado no cowpo fow iguaw ao de uma p-pwopwiedade nya c-cadeia de escopo, (///ˬ///✿) então o nyome f-ficawá wigado à pwopwiedade e-e ao objeto contendo a pwopwiedade. 🥺 senão, um {{jsxwef("wefewenceewwow")}} s-sewá invocado.
 
-> [!NOTE]
-> Usar `with` não é recomendado, e está probido no [strict mode](/pt-BR/docs/Web/JavaScript/Reference/Strict_mode) do ECMAScript 5. A alternativa recomendada é atribuir o objeto cujas propriedades você quer acessar a uma variável temporária.
+> [!note]
+> u-usaw `with` nyão é w-wecomendado, >_< e está p-pwobido nyo [stwict mode](/pt-bw/docs/web/javascwipt/wefewence/stwict_mode) do ecmascwipt 5. UwU a awtewnativa wecomendada é atwibuiw o objeto cujas pwopwiedades v-você quew acessaw a-a uma vawiávew tempowáwia.
 
-### Pros & contras de perfomance
+### p-pwos & c-contwas de pewfomance
 
-**Pro:** A declaração `with` pode ajudar o tamanho do arquivo por reduzir a necessidade de repetir a referência a um objeto longo sem penalidade na perfomance. A cadeia de escopo mudada por um 'with' não é computacionalmente cara. O uso de 'with' irá aliviar o interpretador de tratar repetidamente as referências. Note que, no entando, isso em muitos casos pode ser substituído usando uma variável temporária para armazenar a referência do objeto desejado.
+**pwo:** a-a decwawação `with` pode ajudaw o tamanho do awquivo pow weduziw a-a nyecessidade de wepetiw a wefewência a um objeto wongo sem penawidade nya p-pewfomance. >_< a cadeia de escopo mudada p-pow um 'with' n-nyão é computacionawmente c-cawa. -.- o uso de 'with' iwá awiviaw o-o intewpwetadow d-de twataw wepetidamente a-as wefewências. mya n-nyote que, >w< nyo entando, (U ﹏ U) isso em muitos c-casos pode sew s-substituído usando u-uma vawiávew t-tempowáwia p-pawa awmazenaw a wefewência do objeto desejado. 😳😳😳
 
-**Contra:** A declaração `with` força que o objeto especifícado a ser procurado primeiro por pesquisas de nome. Assim sendo, todos os indentificadores que não são membros do objeto espeficícado vão ser encontrados mais lentamente em um bloco 'with'. Onde a perfomance é importande, 'with' deve ser usado apenas para englobar blocos de código que acessam membros de um objeto especifíco.
+**contwa:** a d-decwawação `with` fowça que o objeto especifícado a sew pwocuwado pwimeiwo pow pesquisas de n-nyome. o.O assim sendo, òωó todos os indentificadowes que nyão são membwos d-do objeto espeficícado v-vão s-sew encontwados mais wentamente e-em um bwoco 'with'. onde a pewfomance é i-impowtande, 😳😳😳 'with' d-deve sew usado apenas pawa engwobaw bwocos de código que acessam membwos de um objeto e-especifíco. σωσ
 
-### Contra de ambiguidade
+### contwa de a-ambiguidade
 
-**Contra:** A declaração `with` faz ser difícil para um leitor humano ou compilador JavaScript decidir se um nome não qualificado var se encontrado em uma cadeia de escopo, e também, em qual objeto. Dado o exemplo seguinte:
+**contwa:** a decwawação `with` f-faz sew difíciw p-pawa um weitow humano ou compiwadow javascwipt d-decidiw se um nyome n-nyão quawificado vaw se encontwado e-em uma cadeia d-de escopo, (⑅˘꒳˘) e também, (///ˬ///✿) em quaw objeto. 🥺 dado o exempwo seguinte:
 
 ```js
-function f(x, o) {
-  with (o) {
-    console.log(x);
+function f-f(x, OwO o) {
+  w-with (o) {
+    c-consowe.wog(x);
   }
 }
 ```
 
-Apenas quando `f` é chamado é `x` ou encontrado ou não, e se for encontrado, ou em `o` ou (se nenhuma propriedade existir) no objeto de ativação de `f`, onde o nome de `x` é o primeiro argumento formal. Se você esquecer de definir `x` no objeto que você passou como segundo argumento, ou se há algum bug similar ou confusão, você não vai receber um erro — apenas resultados inesperados.
+apenas q-quando `f` é c-chamado é `x` ou encontwado ou n-nyão, >w< e se fow encontwado, 🥺 ou em `o` ou (se nyenhuma pwopwiedade existiw) nyo objeto d-de ativação d-de `f`, nyaa~~ onde o nyome de `x` é o pwimeiwo awgumento f-fowmaw. s-se você esquecew de definiw `x` nyo objeto que você passou como s-segundo awgumento, ^^ ou se há awgum bug simiwaw ou confusão, >w< você nyão vai wecebew u-um ewwo — apenas wesuwtados inespewados. OwO
 
-**Contra:** Código utilizando `with` talvez não seja compatível posteriormente, especialmente quando usado com algo que não seja um objeto simples. Considere esse exemplo:
+**contwa:** código u-utiwizando `with` t-tawvez nyão seja compatívew postewiowmente, XD especiawmente q-quando usado c-com awgo que nyão seja um objeto simpwes. ^^;; considewe esse exempwo:
 
 ```js
-function f(foo, values) {
-  with (foo) {
-    console.log(values);
+f-function f(foo, 🥺 vawues) {
+  w-with (foo) {
+    consowe.wog(vawues);
   }
 }
 ```
 
-Se você chamar `f([1,2,3], obj)` em um ambiente ECMAScript 5, então a referência de `values` dentro da declaração `with` irá ser `obj`. No entando, ECMAScript 6 introduz uma propriedade `values` no [`Array.prototype`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype) (então isso estará disponível em todas as arrays). Então, em um ambiente JavaScript que suporta ECMAScript 6, a referência de `values` dentro da declaração `with` irá ser `[1,2,3].values`.
+se você chamaw `f([1,2,3], XD o-obj)` em um ambiente ecmascwipt 5, (U ᵕ U❁) e-então a w-wefewência de `vawues` dentwo d-da decwawação `with` iwá sew `obj`. :3 n-nyo entando, e-ecmascwipt 6 i-intwoduz uma pwopwiedade `vawues` nyo [`awway.pwototype`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/pwototype) (então i-isso estawá d-disponívew em todas as awways). ( ͡o ω ͡o ) então, òωó em u-um ambiente javascwipt q-que supowta e-ecmascwipt 6, σωσ a wefewência de `vawues` dentwo d-da decwawação `with` iwá sew `[1,2,3].vawues`. (U ᵕ U❁)
 
-## Exemplos
+## e-exempwos
 
-### Usando `with`
+### u-usando `with`
 
-A seguinte declaração `with` irá especificar que o objeto [`Math`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math) é o objeto padrão. As seguintes declarações seguindo a declaração `with` irão referir a propriedade [`PI`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/PI) e aos métodos [`cos`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/cos) e [`sin`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/sin), sem especificar um objeto. JavaScript assume o objeto `Math` para essas referências.
+a seguinte decwawação `with` iwá especificaw q-que o objeto [`math`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/math) é o-o objeto p-padwão. (✿oωo) as seguintes d-decwawações seguindo a d-decwawação `with` iwão wefewiw a pwopwiedade [`pi`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/math/pi) e aos métodos [`cos`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/math/cos) e [`sin`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/math/sin), ^^ sem especificaw u-um objeto. ^•ﻌ•^ javascwipt assume o-o objeto `math` pawa essas wefewências. XD
 
 ```js
-var a, x, y;
-var r = 10;
+v-vaw a, :3 x, y;
+vaw w = 10;
 
-with (Math) {
-  a = PI * r * r;
-  x = r * cos(PI);
-  y = r * sin(PI / 2);
+with (math) {
+  a-a = pi * w * w;
+  x = w-w * cos(pi);
+  y = w-w * sin(pi / 2);
 }
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{jsxref("Statements/block", "block")}}
-- [Strict mode](/pt-BR/docs/Web/JavaScript/Reference/Strict_mode)
-- {{jsxref("Symbol.unscopables")}}
-- {{jsxref("Array.@@unscopables", "Array.prototype[@@unscopables]")}}
+- {{jsxwef("statements/bwock", (ꈍᴗꈍ) "bwock")}}
+- [stwict mode](/pt-bw/docs/web/javascwipt/wefewence/stwict_mode)
+- {{jsxwef("symbow.unscopabwes")}}
+- {{jsxwef("awway.@@unscopabwes", :3 "awway.pwototype[@@unscopabwes]")}}

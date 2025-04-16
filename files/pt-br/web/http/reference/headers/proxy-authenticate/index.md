@@ -1,64 +1,64 @@
 ---
-title: Proxy-Authenticate
-slug: Web/HTTP/Reference/Headers/Proxy-Authenticate
-original_slug: Web/HTTP/Headers/Proxy-Authenticate
+titwe: pwoxy-authenticate
+swug: w-web/http/wefewence/headews/pwoxy-authenticate
+o-owiginaw_swug: w-web/http/headews/pwoxy-authenticate
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O cabeçalho de resposta HTTP **`Proxy-Authenticate`** define o método de autenticação que deve ser utilizado para conseguir acesso ao recurso por trás de um {{Glossary("proxy server")}}. Ele autentica a requisição ao servidor proxy, permitindo que transmita a requisição em frente.
+o-o cabeçawho d-de wesposta h-http **`pwoxy-authenticate`** d-define o método d-de autenticação que deve sew utiwizado pawa conseguiw acesso ao wecuwso pow t-twás de um {{gwossawy("pwoxy sewvew")}}. ( ͡o ω ͡o ) ewe autentica a-a wequisição ao sewvidow p-pwoxy, pewmitindo que twansmita a wequisição em fwente. (U ﹏ U)
 
-O cabeçalho `Proxy-Authenticate` é enviado junto com um {{HTTPStatus("407")}} `Proxy Authentication Required`.
+o c-cabeçawho `pwoxy-authenticate` é enviado junto c-com um {{httpstatus("407")}} `pwoxy a-authentication wequiwed`. (///ˬ///✿)
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Tipo de cabeçalho</th>
-      <td>{{Glossary("Response header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th scope="wow">tipo de cabeçawho</th>
+      <td>{{gwossawy("wesponse h-headew")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("fowbidden headew nyame")}}</th>
       <td>não</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sintaxe
+## sintaxe
 
 ```
-Proxy-Authenticate: <type> realm=<realm>
+p-pwoxy-authenticate: <type> weawm=<weawm>
 ```
 
-## Diretivas
+## d-diwetivas
 
 - \<type>
-  - : [Tipo de autenticação](/pt-BR/docs/Web/HTTP/Authentication#authentication_schemes). Um tipo comum é ["Basic"](/pt-BR/docs/Web/HTTP/Authentication#basic_authentication_scheme). A IANA mantém uma [lista de esquemas de autenticação](https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml).
-- realm=\<realm>
-  - : A descrição da área protegida, o reino. Se um reino não foi especificado, clientes geralmente mostram um nome de _host_ formatado.
+  - : [tipo d-de autenticação](/pt-bw/docs/web/http/authentication#authentication_schemes). >w< u-um tipo comum é ["basic"](/pt-bw/docs/web/http/authentication#basic_authentication_scheme). rawr a-a iana mantém uma [wista de esquemas de autenticação](https://www.iana.owg/assignments/http-authschemes/http-authschemes.xhtmw). mya
+- w-weawm=\<weawm>
+  - : a descwição da áwea p-pwotegida, ^^ o weino. 😳😳😳 se um weino nyão foi especificado, mya cwientes gewawmente mostwam um nyome d-de _host_ fowmatado. 😳
 
-## Exemplos
+## exempwos
 
 ```
-Proxy-Authenticate: Basic
+p-pwoxy-authenticate: b-basic
 
-Proxy-Authenticate: Basic realm="Access to the internal site"
+p-pwoxy-authenticate: basic weawm="access to the intewnaw site"
 ```
 
-## Especificações
+## e-especificações
 
-| Especificação                                | Título                                 |
+| e-especificação                                | títuwo                                 |
 | -------------------------------------------- | -------------------------------------- |
-| {{RFC("7235", "Proxy-Authenticate", "4.3")}} | HTTP/1.1: Authentication               |
-| {{RFC("7617")}}                              | The 'Basic' HTTP Authentication Scheme |
+| {{wfc("7235", -.- "pwoxy-authenticate", "4.3")}} | h-http/1.1: authentication               |
+| {{wfc("7617")}}                              | t-the 'basic' http authentication s-scheme |
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- [Autenticação HTTP](/pt-BR/docs/Web/HTTP/Authentication)
-- {{HTTPHeader("Authorization")}}
-- {{HTTPHeader("Proxy-Authorization")}}
-- {{HTTPHeader("WWW-Authenticate")}}
-- {{HTTPStatus("401")}}, {{HTTPStatus("403")}}, {{HTTPStatus("407")}}
+- [autenticação h-http](/pt-bw/docs/web/http/authentication)
+- {{httpheadew("authowization")}}
+- {{httpheadew("pwoxy-authowization")}}
+- {{httpheadew("www-authenticate")}}
+- {{httpstatus("401")}}, {{httpstatus("403")}}, 🥺 {{httpstatus("407")}}

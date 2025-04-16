@@ -1,116 +1,116 @@
 ---
-title: browsingData.removeCookies()
-slug: Mozilla/Add-ons/WebExtensions/API/browsingData/removeCookies
+titwe: bwowsingdata.wemovecookies()
+swug: moziwwa/add-ons/webextensions/api/bwowsingdata/wemovecookies
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Limpa os cookies do navegador.
+w-wimpa os cookies d-do nyavegadow. 😳
 
-Você pode usar o parâmetro `removalOptions`, em que é um objeto {{WebExtAPIRef("browsingData.RemovalOptions")}}, para:
+v-você pode usaw o-o pawâmetwo `wemovawoptions`, 🥺 e-em que é um objeto {{webextapiwef("bwowsingdata.wemovawoptions")}}, p-pawa:
 
-- limpar apenas os cookies criados em determinado tempo.
-- controlar se limpar os cookies apenas de uma página web normal ou limpa os cookies de um app e extensões hospedados.
+- wimpaw a-apenas os c-cookies cwiados em detewminado tempo. rawr x3
+- contwowaw se wimpaw os cookies apenas de u-uma página web nyowmaw ou wimpa os cookies de u-um app e extensões hospedados. o.O
 
-Esta é uma função assíncrona que retorna uma [`Promise`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+e-esta é uma função assíncwona que wetowna uma [`pwomise`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). rawr
 
-## Sintaxe
+## sintaxe
 
 ```js
-let removing = browser.browsingData.removeCookies(
-  removalOptions, // objeto RemovalOptions
+wet w-wemoving = bwowsew.bwowsingdata.wemovecookies(
+  wemovawoptions, ʘwʘ // o-objeto wemovawoptions
 );
 ```
 
-### Parâmetros
+### p-pawâmetwos
 
-- `removalOptions`
-  - : `object`. Um objeto {{WebExtAPIRef("browsingData.RemovalOptions")}}, que pode ser usado para limpar apenas cookies criados depois de determinado tempo, e limpa os cookies apenas de uma página web normal ou limpa os cookies de apps e extensões hospedados.
+- `wemovawoptions`
+  - : `object`. 😳😳😳 um objeto {{webextapiwef("bwowsingdata.wemovawoptions")}}, que pode sew usado pawa wimpaw apenas cookies c-cwiados depois de detewminado tempo, ^^;; e wimpa os cookies apenas de uma página w-web nyowmaw ou wimpa os cookies d-de apps e extensões h-hospedados. o.O
 
-### Valor retornado
+### v-vawow wetownado
 
-Uma [`Promise`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise) que será realizada sem argumentos quando a remoção for finalizada. Se ocorrer qualquer erro, a promise será rejeitada com uma mensagem de erro.
+u-uma [`pwomise`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) que sewá weawizada sem awgumentos q-quando a wemoção fow finawizada. (///ˬ///✿) se ocowwew q-quawquew ewwo, a pwomise sewá wejeitada com uma mensagem de ewwo. σωσ
 
-## Exemplos
+## exempwos
 
-Remove cookies criados na última semana:
-
-```js
-function onRemoved() {
-  console.log("removido");
-}
-
-function onError(error) {
-  console.error(error);
-}
-
-function weekInMilliseconds() {
-  return 1000 * 60 * 60 * 24 * 7;
-}
-
-let oneWeekAgo = new Date().getTime() - weekInMilliseconds();
-
-browser.browsingData
-  .removeCookies({ since: oneWeekAgo })
-  .then(onRemoved, onError);
-```
-
-Remove todos os cookies:
-
-> [!WARNING]
-> Usar a API para remover todos os cookies irá, simultâneamente, limpar todos os objetos local storage (incluindo aqueles de outras extensões)
->
-> Se você quer limpar todos os cookies sem alterar as informações do local storage, use [browser.cookies](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/cookies) para percorrer and remover os conteúdos de todos os cookies armazenados
+wemove cookies c-cwiados nya úwtima semana:
 
 ```js
-function onRemoved() {
-  console.log("removido");
+f-function o-onwemoved() {
+  c-consowe.wog("wemovido");
 }
 
-function onError(error) {
-  console.error(error);
+function onewwow(ewwow) {
+  consowe.ewwow(ewwow);
 }
 
-browser.browsingData.removeCookies({}).then(onRemoved, onError);
+f-function weekinmiwwiseconds() {
+  w-wetuwn 1000 * 60 * 60 * 24 * 7;
+}
+
+wet oneweekago = n-nyew date().gettime() - w-weekinmiwwiseconds();
+
+bwowsew.bwowsingdata
+  .wemovecookies({ since: o-oneweekago })
+  .then(onwemoved, nyaa~~ onewwow);
 ```
 
-## Compatibilidade com navegadores
+w-wemove todos os cookies:
 
-{{Compat}}
-
-{{WebExtExamples}}
-
-> [!NOTE]
-> Esta API é baseada na API do Chromium [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/api/browsingData).
+> [!wawning]
+> usaw a api pawa wemovew t-todos os cookies iwá, simuwtâneamente, ^^;; w-wimpaw todos os objetos wocaw stowage (incwuindo a-aquewes de outwas e-extensões)
 >
-> A compatibilidade dos dados do Microsoft Edge é fornecida pela Microsoft Corporation e é incluída aqui sob a licença Creative Commons Attribution 3.0 United States.
+> se você quew wimpaw todos os cookies sem awtewaw as infowmações do wocaw stowage, use [bwowsew.cookies](/pt-bw/docs/moziwwa/add-ons/webextensions/api/cookies) p-pawa pewcowwew a-and wemovew os conteúdos de t-todos os cookies a-awmazenados
+
+```js
+f-function onwemoved() {
+  consowe.wog("wemovido");
+}
+
+function onewwow(ewwow) {
+  c-consowe.ewwow(ewwow);
+}
+
+bwowsew.bwowsingdata.wemovecookies({}).then(onwemoved, ^•ﻌ•^ onewwow);
+```
+
+## compatibiwidade com nyavegadowes
+
+{{compat}}
+
+{{webextexampwes}}
+
+> [!note]
+> esta api é b-baseada nya api do chwomium [`chwome.bwowsingdata`](https://devewopew.chwome.com/docs/extensions/wefewence/api/bwowsingdata). σωσ
+>
+> a-a compatibiwidade d-dos dados d-do micwosoft edge é fownecida pewa m-micwosoft cowpowation e-e é incwuída a-aqui sob a-a wicença cweative commons attwibution 3.0 united s-states. -.-
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 t-the chwomium a-authows. ^^;; aww wights w-wesewved. XD
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
+// wedistwibution and use in souwce and binawy f-fowms, 🥺 with ow without
+// modification, òωó awe pewmitted pwovided that the fowwowing conditions awe
+// m-met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code must wetain t-the above copywight
+// n-nyotice, (ˆ ﻌ ˆ)♡ t-this wist of conditions and the f-fowwowing discwaimew. -.-
+//    * wedistwibutions in binawy fowm must w-wepwoduce the a-above
+// copywight nyotice, :3 this wist of conditions and the fowwowing discwaimew
+// in the documentation a-and/ow othew matewiaws p-pwovided with the
+// distwibution. ʘwʘ
+//    * n-nyeithew t-the name of googwe inc. 🥺 nyow the nyames of i-its
+// contwibutows m-may be used to endowse ow pwomote p-pwoducts dewived f-fwom
+// this softwawe without specific pwiow wwitten pewmission. >_<
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this s-softwawe is pwovided b-by the copywight h-howdews and contwibutows
+// "as i-is" and a-any expwess ow impwied wawwanties, ʘwʘ i-incwuding, (˘ω˘) but nyot
+// wimited to, (✿oωo) the impwied wawwanties of mewchantabiwity a-and fitness fow
+// a-a pawticuwaw puwpose awe discwaimed. (///ˬ///✿) in no event s-shaww the copywight
+// o-ownew ow contwibutows be wiabwe fow any diwect, rawr x3 indiwect, -.- i-incidentaw, ^^
+// speciaw, (⑅˘꒳˘) exempwawy, ow consequentiaw damages (incwuding, nyaa~~ but n-nyot
+// wimited to, /(^•ω•^) pwocuwement of substitute g-goods ow sewvices; w-woss of use, (U ﹏ U)
+// data, 😳😳😳 ow pwofits; ow business intewwuption) howevew c-caused and o-on any
+// theowy of wiabiwity, >w< whethew in contwact, XD stwict wiabiwity, o.O o-ow towt
+// (incwuding nyegwigence o-ow othewwise) awising in any way out of the use
+// of t-this softwawe, mya even if advised of t-the possibiwity o-of such damage. 🥺
 -->

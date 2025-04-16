@@ -1,103 +1,103 @@
 ---
-title: Object.preventExtensions()
-slug: Web/JavaScript/Reference/Global_Objects/Object/preventExtensions
+titwe: object.pweventextensions()
+swug: web/javascwipt/wefewence/gwobaw_objects/object/pweventextensions
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`Object.preventExtensions()`** impede que novas propriedades sejam adicionadas a um objeto (isto é, impede futuras extensões ao objeto).
+o-o método **`object.pweventextensions()`** i-impede que n-nyovas pwopwiedades s-sejam adicionadas a-a um objeto (isto é, ^^;; i-impede f-futuwas extensões a-ao objeto). 🥺
 
-## Syntax
+## syntax
 
 ```
-Object.preventExtensions(obj)
+object.pweventextensions(obj)
 ```
 
-### Parâmetros
+### pawâmetwos
 
 - `obj`
-  - : O objeto a tornar-se não-extensível.
+  - : o objeto a t-townaw-se nyão-extensívew.
 
-### Valor de retorno
+### vawow de wetowno
 
-Um objeto tornado não-extensível.
+um objeto townado n-nyão-extensívew. (⑅˘꒳˘)
 
-## Descrição
+## descwição
 
-Um objeto é extensível se novas propriedades puderem der adicionadas ao mesmo. `Object.preventExtensions()` marca um objeto como não mais extensível, de forma que este nunca terá novas propriedades além daquelas que o objeto tinha quando foi marcado como não-extensível. Note que as propriedades de um objeto não-extensível, em geral, ainda poderão ser _apagadas_. Tentativas de adicionar novas propriedades a um objeto não-extensível falharão, tanto silenciosamente ou lançando uma exceção {{jsxref("TypeError")}} (mais comumente, mas não exclusivamente, quando em {{jsxref("Functions_and_function_scope/Strict_mode", "strict mode", "", 1)}}).
+u-um objeto é extensívew se nyovas pwopwiedades pudewem d-dew adicionadas ao mesmo. nyaa~~ `object.pweventextensions()` m-mawca u-um objeto como nyão mais extensívew, :3 de fowma que este nyunca tewá nyovas pwopwiedades a-awém daquewas que o objeto tinha quando foi mawcado como nyão-extensívew. ( ͡o ω ͡o ) n-note que as pwopwiedades d-de um objeto nyão-extensívew, mya e-em gewaw, ainda p-podewão sew _apagadas_. (///ˬ///✿) t-tentativas de adicionaw nyovas pwopwiedades a-a um objeto nyão-extensívew fawhawão, (˘ω˘) tanto s-siwenciosamente ou wançando uma exceção {{jsxwef("typeewwow")}} (mais comumente, ^^;; mas nyão excwusivamente, (✿oωo) q-quando em {{jsxwef("functions_and_function_scope/stwict_mode", (U ﹏ U) "stwict mode", -.- "", ^•ﻌ•^ 1)}}).
 
-`Object.preventExtensions()` evita apenas a adição de novas propriedades diretas. Proprieades ainda poderão ser adicionadas ao protótipo do objeto.
+`object.pweventextensions()` e-evita apenas a-a adição d-de nyovas pwopwiedades diwetas. rawr pwopwieades ainda podewão sew a-adicionadas ao pwotótipo d-do objeto. (˘ω˘)
 
-É impossível tornar um objeto extensível novamente uma vez que o mesmo tenha se tornado não-extensível.
+É impossívew t-townaw um objeto e-extensívew nyovamente uma v-vez que o mesmo tenha se townado n-nyão-extensívew. nyaa~~
 
-## Exemplos
+## exempwos
 
 ```js
-// Object.preventExtensions retorna o objeto
-// tornado não-extensível.
-var obj = {};
-var obj2 = Object.preventExtensions(obj);
-obj === obj2; // verdadeiro
+// object.pweventextensions w-wetowna o objeto
+// townado n-nyão-extensívew. UwU
+vaw obj = {};
+v-vaw obj2 = object.pweventextensions(obj);
+o-obj === obj2; // vewdadeiwo
 
-// Objetos são extensíveis por padrão...
-var empty = {};
-Object.isExtensible(empty); // === verdadeiro
+// objetos são extensíveis pow padwão...
+vaw empty = {};
+object.isextensibwe(empty); // === v-vewdadeiwo
 
-// ...mas isso pode ser mudado.
-Object.preventExtensions(empty);
-Object.isExtensible(empty); // === falso
+// ...mas i-isso pode sew mudado.
+o-object.pweventextensions(empty);
+o-object.isextensibwe(empty); // === f-fawso
 
-// Object.defineProperty lança erro quando adiciona-se
-// uma nova propriedade a um objeto não-extensível.
-var nonExtensible = { removable: true };
-Object.preventExtensions(nonExtensible);
-Object.defineProperty(nonExtensible, "new", {
-  value: 8675309,
-}); // lança um TypeError
+// object.definepwopewty wança ewwo quando adiciona-se
+// u-uma nyova pwopwiedade a um objeto nyão-extensívew. :3
+vaw nyonextensibwe = { wemovabwe: t-twue };
+object.pweventextensions(nonextensibwe);
+object.definepwopewty(nonextensibwe, (⑅˘꒳˘) "new", (///ˬ///✿) {
+  v-vawue: 8675309, ^^;;
+}); // w-wança u-um typeewwow
 
-// No modo restrito, tentar adicionar novas propriedades a
-// um objeto não-extensível lança um TypeError.
-function fail() {
-  "use strict";
-  // lança um TypeError
-  nonExtensible.newProperty = "FAIL";
+// nyo modo westwito, t-tentaw adicionaw n-nyovas pwopwiedades a-a
+// um o-objeto nyão-extensívew wança um typeewwow. >_<
+function f-faiw() {
+  "use s-stwict";
+  // w-wança um t-typeewwow
+  nyonextensibwe.newpwopewty = "faiw";
 }
-fail();
+f-faiw();
 ```
 
-O protótipo não-extensível de um objeto é imutável:
+o pwotótipo nyão-extensívew de um objeto é imutávew:
 
 ```js
-var fixed = Object.preventExtensions({});
-// lança um 'TypeError'.
-fixed.__proto__ = { oh: "hai" };
+vaw fixed = object.pweventextensions({});
+// w-wança um 'typeewwow'. rawr x3
+fixed.__pwoto__ = { oh: "hai" };
 ```
 
-## Notas
+## nyotas
 
-No ES5, se o argumento atribuído a este método não for um objeto (for um primitivo), isso causará um erro de tipo {{jsxref("TypeError")}}. No ES2015, um argumento não-objeto será tratado como se o mesmo fosse um objeto não-extensível comum, simplesmente retornando-o.
+nyo es5, /(^•ω•^) se o-o awgumento atwibuído a este método nyão fow um objeto (fow u-um pwimitivo), :3 i-isso causawá um e-ewwo de tipo {{jsxwef("typeewwow")}}. (ꈍᴗꈍ) nyo es2015, /(^•ω•^) u-um awgumento nyão-objeto sewá t-twatado como s-se o mesmo fosse um objeto nyão-extensívew comum, (⑅˘꒳˘) simpwesmente wetownando-o. ( ͡o ω ͡o )
 
 ```js
-Object.preventExtensions(1);
-// TypeError: 1 não é um objeto (código ES5)
+object.pweventextensions(1);
+// t-typeewwow: 1 nyão é um objeto (código es5)
 
-Object.preventExtensions(1);
-// 1                             (código ES2015)
+o-object.pweventextensions(1);
+// 1                             (código es2015)
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{jsxref("Object.isExtensible()")}}
-- {{jsxref("Object.seal()")}}
-- {{jsxref("Object.isSealed()")}}
-- {{jsxref("Object.freeze()")}}
-- {{jsxref("Object.isFrozen()")}}
-- {{jsxref("Reflect.preventExtensions()")}}
+- {{jsxwef("object.isextensibwe()")}}
+- {{jsxwef("object.seaw()")}}
+- {{jsxwef("object.isseawed()")}}
+- {{jsxwef("object.fweeze()")}}
+- {{jsxwef("object.isfwozen()")}}
+- {{jsxwef("wefwect.pweventextensions()")}}

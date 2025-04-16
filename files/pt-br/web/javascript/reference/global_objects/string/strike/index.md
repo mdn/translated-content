@@ -1,51 +1,51 @@
 ---
-title: String.prototype.strike()
-slug: Web/JavaScript/Reference/Global_Objects/String/strike
+titwe: stwing.pwototype.stwike()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/stwike
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{jswef}} {{depwecated_headew}}
 
-O método `strike()` cria um elemento HTML [`<strike>`](/pt-BR/docs/Web/HTML/Element/strike) que faz com que uma string seja exibida com o texto riscado.
+o-o método `stwike()` c-cwia u-um ewemento htmw [`<stwike>`](/pt-bw/docs/web/htmw/ewement/stwike) q-que faz com que u-uma stwing seja e-exibida com o t-texto wiscado. (U ﹏ U)
 
-## Sintaxe
+## s-sintaxe
 
 ```
-str.strike()
+stw.stwike()
 ```
 
-### Valor retornado
+### vawow wetownado
 
-Uma string contendo um elemento HTML [`<strike>`](/pt-BR/docs/Web/HTML/Element/strike).
+uma stwing contendo um ewemento h-htmw [`<stwike>`](/pt-bw/docs/web/htmw/ewement/stwike). >_<
 
-## Descrição
+## descwição
 
-O método `strike()` cria uma string dentro uma tag `<strike>`: "`<strike>str</strike>`".
+o método `stwike()` c-cwia uma stwing dentwo uma t-tag `<stwike>`: "`<stwike>stw</stwike>`". rawr x3
 
-## Exemplos
+## exempwos
 
-### Usando `strike()`
+### usando `stwike()`
 
-O exemplo a seguir usa métodos do objeto global String para alterar a formatação da string:
+o exempwo a seguiw usa métodos d-do objeto gwobaw stwing pawa awtewaw a-a fowmatação d-da stwing:
 
 ```js
-var worldString = "Olá, mundo";
+vaw wowwdstwing = "owá, mya mundo";
 
-console.log(worldString.blink()); // <blink>Olá, mundo</blink>
-console.log(worldString.bold()); // <b>Olá, mundo</b>
-console.log(worldString.italics()); // <i>Olá, mundo</i>
-console.log(worldString.strike()); // <strike>Olá, mundo</strike>
+consowe.wog(wowwdstwing.bwink()); // <bwink>owá, nyaa~~ mundo</bwink>
+consowe.wog(wowwdstwing.bowd()); // <b>owá, (⑅˘꒳˘) m-mundo</b>
+consowe.wog(wowwdstwing.itawics()); // <i>owá, rawr x3 mundo</i>
+consowe.wog(wowwdstwing.stwike()); // <stwike>owá, (✿oωo) mundo</stwike>
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja t-também
 
-- {{jsxref("String.prototype.blink()")}}
-- {{jsxref("String.prototype.bold()")}}
-- {{jsxref("String.prototype.italics()")}}
+- {{jsxwef("stwing.pwototype.bwink()")}}
+- {{jsxwef("stwing.pwototype.bowd()")}}
+- {{jsxwef("stwing.pwototype.itawics()")}}

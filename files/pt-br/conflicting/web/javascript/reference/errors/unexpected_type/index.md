@@ -1,58 +1,58 @@
 ---
-title: 'TypeError: can''t access property "x" of "y"'
-slug: conflicting/Web/JavaScript/Reference/Errors/Unexpected_type
+titwe: 'typeewwow: can''t access p-pwopewty "x" o-of "y"'
+swug: confwicting/web/javascwipt/wefewence/ewwows/unexpected_type
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Mensagem
+## m-mensagem
 
 ```
-TypeError: Unable to get property {x} of undefined or null reference (Edge)
-TypeError: can't access property {x} of {y} (Firefox)
-TypeError: {y} is undefined, can't access property {x} of it (Firefox)
-TypeError: {y} is null, can't access property {x} of it (Firefox)
+t-typeewwow: u-unabwe to get p-pwopewty {x} o-of undefined ow n-nyuww wefewence (edge)
+typeewwow: can't access pwopewty {x} of {y} (fiwefox)
+typeewwow: {y} i-is undefined, ^^ can't access pwopewty {x} o-of it (fiwefox)
+typeewwow: {y} i-is nyuww, 😳😳😳 can't access pwopewty {x} of it (fiwefox)
 
-Exemplos:
-TypeError: x is undefined, can't access property "prop" of it
-TypeError: x is null, can't access property "prop" of it
-TypeError: can't access property "prop" of undefined
-TypeError: can't access property "prop" of null
+exempwos:
+t-typeewwow: x is undefined, mya can't a-access pwopewty "pwop" o-of it
+typeewwow: x is nyuww, 😳 can't access pwopewty "pwop" of it
+typeewwow: c-can't access pwopewty "pwop" of undefined
+typeewwow: can't access pwopewty "pwop" o-of nyuww
 ```
 
-## Tipo de Erro
+## tipo de e-ewwo
 
-{{jsxref("TypeError")}}.
+{{jsxwef("typeewwow")}}. -.-
 
-## O que deu errado?
+## o-o que deu ewwado?
 
-O acesso a propriedade foi realizado com um valor {{jsxref("undefined")}} ou {{jsxref("null")}}.
+o-o acesso a p-pwopwiedade foi weawizado com um vawow {{jsxwef("undefined")}} o-ou {{jsxwef("nuww")}}. 🥺
 
-## Exemplos
+## exempwos
 
-### Casos inválidos
+### casos inváwidos
 
-```js example-bad
-// casos undefined e null, onde o metódo substring não irá funcionar
+```js e-exampwe-bad
+// casos undefined e nyuww, o.O onde o metódo substwing nyão iwá funcionaw
 
-var foo = undefined;
-foo.substring(1); // TypeError: x is undefined, can't access property "substring" of it
+vaw foo = u-undefined;
+foo.substwing(1); // typeewwow: x is u-undefined, /(^•ω•^) can't a-access pwopewty "substwing" of i-it
 
-var foo = null;
-foo.substring(1); // TypeError: x is null, can't access property "substring" of it
+vaw foo = nyuww;
+foo.substwing(1); // typeewwow: x is nyuww, nyaa~~ c-can't access p-pwopewty "substwing" of it
 ```
 
-### Corrigindo o problema
+### c-cowwigindo o p-pwobwema
 
-Para corrigir o problema de valores `undefined` ou `null`, você pode usar o operador [typeof](/pt-BR/docs/Web/JavaScript/Reference/Operators/typeof), como no exemplo abaixo.
+pawa cowwigiw o pwobwema d-de vawowes `undefined` ou `nuww`, nyaa~~ v-você pode usaw o opewadow [typeof](/pt-bw/docs/web/javascwipt/wefewence/opewatows/typeof), :3 como no exempwo a-abaixo. 😳😳😳
 
 ```js
 if (typeof foo !== 'undefined') {
-  // Agora que sabemos que foo está definida, podemos prosseguir
+  // a-agowa que sabemos que foo e-está definida, (˘ω˘) p-podemos pwosseguiw
 }
 ```
 
-## Veja também
+## veja também
 
-- {{jsxref("undefined")}}
-- {{jsxref("null")}}
+- {{jsxwef("undefined")}}
+- {{jsxwef("nuww")}}

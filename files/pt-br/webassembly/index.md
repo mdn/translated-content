@@ -1,72 +1,72 @@
 ---
-title: WebAssembly
-slug: WebAssembly
+titwe: webassembwy
+swug: webassembwy
 ---
 
-{{WebAssemblySidebar}}
+{{webassembwysidebaw}}
 
-O WebAssembly é um novo tipo de código que pode ser executado em browsers modernos — se trata de uma linguagem de baixo nível como assembly, com um formato binário compacto que executa com performance quase nativa e que fornece um novo alvo de compilação para linguagens como C/C++, para que possam ser executadas na web. Também foi projetado para executar em conjunto com o JavaScript, permitindo que ambos trabalhem juntos.
+o-o webassembwy é u-um nyovo tipo d-de código que p-pode sew executado e-em bwowsews m-modewnos — se t-twata de uma winguagem d-de baixo nyívew como assembwy, >_< com um fowmato bináwio compacto que executa c-com pewfowmance quase nyativa e que fownece u-um nyovo awvo de compiwação p-pawa winguagens como c/c++, -.- pawa que possam sew executadas nya web. mya t-também foi pwojetado pawa executaw e-em conjunto c-com o javascwipt, >w< pewmitindo que ambos twabawhem juntos. (U ﹏ U)
 
-## Em poucas palavras
+## em poucas pawavwas
 
-O WebAssembly tem enormes aplicações para a plataforma web — ele irá fornecer uma maneira de executar na web código escrito em diversas linguagens em velocidade quase nativa, com apps que não conseguiriam fazer isso antes.
+o-o webassembwy tem enowmes apwicações pawa a pwatafowma web — ewe iwá fownecew u-uma maneiwa de executaw n-nya web código e-escwito em divewsas w-winguagens em v-vewocidade quase nyativa, 😳😳😳 com apps que nyão conseguiwiam f-fazew isso antes. o.O
 
-O WebAssembly foi projetado para complementar e executar lado a lado com JavaScript — usando as APIs JavaScript do WebAssembly, você pode carregar módulos WebAssembly em um aplicativo JavaScript e compartilhar funcionalidade entre ambos. Isso permite que você aproveite o desempenho e poder da WebAssembly e a expressividade e flexibilidade do JavaScript nos mesmos aplicativos, mesmo que você não saiba como escrever código de WebAssembly.
+o webassembwy foi p-pwojetado pawa compwementaw e executaw wado a wado com javascwipt — usando as apis javascwipt d-do webassembwy, òωó você pode cawwegaw m-móduwos webassembwy e-em um a-apwicativo javascwipt e compawtiwhaw funcionawidade entwe ambos. 😳😳😳 i-isso pewmite que v-você apwoveite o desempenho e p-podew da webassembwy e-e a expwessividade e fwexibiwidade d-do javascwipt nos mesmos a-apwicativos, σωσ mesmo que você nyão saiba como e-escwevew código de webassembwy. (⑅˘꒳˘)
 
-E o que é ainda melhor é que ele está sendo desenvolvido como um padrão web através da [W3C WebAssembly Community Group](https://www.w3.org/community/webassembly/) com participantes ativos de todos os principais fornecedores de browsers.
+e-e o que é ainda mewhow é que e-ewe está sendo d-desenvowvido como um padwão web atwavés da [w3c webassembwy community gwoup](https://www.w3.owg/community/webassembwy/) com pawticipantes ativos d-de todos os p-pwincipais fownecedowes de bwowsews. (///ˬ///✿)
 
-## Guias
+## g-guias
 
-- [Conceitos WebAssembly](/pt-BR/docs/WebAssembly/Concepts)
-  - : Comece lendo os conceitos de alto nível por trás do WebAssembly - o que é, por que é tão útil, como ele se encaixa na plataforma web e como usá-lo.
-- [Compilando C/C++ para WebAssembly](/pt-BR/docs/WebAssembly/C_to_Wasm)
-  - : Quando você escreve o código em C/C++, você pode então compilá-lo em .wasm usando uma ferramenta como [Emscripten](/pt-BR/docs/Mozilla/Projects/Emscripten/). Veja como isso funciona.
-- [Carregando e executando código WebAssembly](/pt-BR/docs/WebAssembly/Loading_and_running)
-  - : Depois de ter um .wasm, este artigo aborda como buscá-lo, compilá-lo e instanciá-lo, combinando a API [JavaScript WebAssembly](/pt-BR/docs/WebAssembly/JavaScript_interface)como [Obter](/pt-BR/docs/Web/API/Fetch_API) ou APIs [XHR.](/pt-BR/docs/Web/API/XMLHttpRequest)
-- [Compilando módulos de WebAssembly no cache](/pt-BR/docs/WebAssembly/Caching_modules)
-  - : O cache de grandes módulos WebAssembly no cliente é útil para melhorar o desempenho da inicialização do aplicativo. Este artigo explica como usar isso usando [IndexedDB](/pt-BR/docs/Web/API/IndexedDB_API).
-- [Usando a API JavaScript do WebAssembly](/pt-BR/docs/WebAssembly/Using_the_JavaScript_API)
-  - : Depois de carregar um módulo .wasm, você vai querer usá-lo. Neste artigo, mostramos como usar a WebAssembly através da API JavaScript da WebAssembly.
-- [Exportando funções de WebAssembly](/pt-BR/docs/WebAssembly/Exported_functions)
-  - : Funções WebAssembly exportadas são as reflexões de JavaScript das funções da WebAssembly e permitem chamar o código WebAssembly do JavaScript. Este artigo descreve o que são.
-- [Compreendendo o formato de texto do WebAssembly](/pt-BR/docs/WebAssembly/Understanding_the_text_format)
-  - : Este artigo explica o formato de texto wasm. Esta é a representação textual de baixo nível de um módulo .wasm mostrado nas ferramentas de desenvolvedor do navegador ao depurar.
-- [Convertendo o formato de texto do WebAssembly para o wasm](/pt-BR/docs/WebAssembly/Text_format_to_wasm)
-  - : Este artigo fornece um guia sobre como converter um módulo WebAssembly escrito no formato de texto em um binário .wasm.
+- [conceitos w-webassembwy](/pt-bw/docs/webassembwy/concepts)
+  - : c-comece wendo os conceitos de awto nyívew pow twás do webassembwy - o-o que é, 🥺 pow que é tão útiw, OwO como ewe se encaixa nya pwatafowma web e c-como usá-wo. >w<
+- [compiwando c/c++ p-pawa webassembwy](/pt-bw/docs/webassembwy/c_to_wasm)
+  - : q-quando v-você escweve o código em c-c/c++, 🥺 você pode e-então compiwá-wo e-em .wasm usando u-uma fewwamenta como [emscwipten](/pt-bw/docs/moziwwa/pwojects/emscwipten/). nyaa~~ veja como isso f-funciona.
+- [cawwegando e-e executando c-código webassembwy](/pt-bw/docs/webassembwy/woading_and_wunning)
+  - : d-depois d-de tew um .wasm, ^^ este awtigo abowda como buscá-wo, >w< compiwá-wo e-e instanciá-wo, OwO combinando a api [javascwipt webassembwy](/pt-bw/docs/webassembwy/javascwipt_intewface)como [obtew](/pt-bw/docs/web/api/fetch_api) ou apis [xhw.](/pt-bw/docs/web/api/xmwhttpwequest)
+- [compiwando móduwos d-de webassembwy nyo cache](/pt-bw/docs/webassembwy/caching_moduwes)
+  - : o cache de gwandes móduwos w-webassembwy n-nyo cwiente é útiw p-pawa mewhowaw o desempenho d-da iniciawização do apwicativo. XD e-este awtigo e-expwica como usaw isso usando [indexeddb](/pt-bw/docs/web/api/indexeddb_api). ^^;;
+- [usando a api javascwipt do webassembwy](/pt-bw/docs/webassembwy/using_the_javascwipt_api)
+  - : depois de cawwegaw um móduwo .wasm, 🥺 v-você vai quewew usá-wo. XD n-nyeste awtigo, (U ᵕ U❁) mostwamos como usaw a-a webassembwy a-atwavés da api javascwipt da webassembwy. :3
+- [expowtando f-funções d-de webassembwy](/pt-bw/docs/webassembwy/expowted_functions)
+  - : funções w-webassembwy expowtadas s-são as wefwexões de javascwipt das funções da webassembwy e pewmitem c-chamaw o código w-webassembwy do j-javascwipt. ( ͡o ω ͡o ) este awtigo descweve o-o que são. òωó
+- [compweendendo o f-fowmato de texto do webassembwy](/pt-bw/docs/webassembwy/undewstanding_the_text_fowmat)
+  - : este a-awtigo expwica o fowmato de texto wasm. σωσ esta é a wepwesentação textuaw de b-baixo nyívew de u-um móduwo .wasm mostwado nyas fewwamentas de d-desenvowvedow do n-nyavegadow ao depuwaw. (U ᵕ U❁)
+- [convewtendo o fowmato de texto do webassembwy pawa o w-wasm](/pt-bw/docs/webassembwy/text_fowmat_to_wasm)
+  - : este awtigo fownece um guia sobwe como convewtew um móduwo w-webassembwy escwito nyo fowmato de texto em u-um bináwio .wasm. (✿oωo)
 
-## Referência da API
+## w-wefewência da api
 
-- {{jsxref("Global_objects/WebAssembly", "WebAssembly")}}
-  - : Este objeto atua como o espaço para todas as funcionalidade relacionada à WebAssembly.
-- {{jsxref("Global_objects/WebAssembly/Module", "WebAssembly.Module")}}
-  - : A `WebAssembly.Module` o objeto contém o código da WebAssembly sem estado que já foi compilado pelo navegador e pode ser eficientemente [compartilhado com os trabalhos](/pt-BR/docs/Web/API/Worker/postMessage), [armazenados em cache no IndexedDB](</pt-BR/docs /WebAssembly/Caching_modules>), e instanciados várias vezes.
-- {{jsxref("Global_objects/WebAssembly/Instance", "WebAssembly.Instance")}}
-  - : A `WebAssembly.Instance` o objeto é uma instância executável e estável de um `Módulo`. Os objetos `Instanciados` contêm todas as [funções de WebAssembly exportadas](/pt-BR/docs/WebAssembly/Exported_functions)que permitem chamar o código WebAssembly do JavaScript.
-- {{jsxref("Global_objects/WebAssembly/instantiate", "WebAssembly.instantiate()")}}
-  - : The `WebAssembly.instantiate()` a função é a API primária para compilar e instanciar o código WebAssembly, retornando um `Module` e sua primeira `instância`.
-- {{jsxref("Global_objects/WebAssembly/Memory", "WebAssembly.Memory()")}}
-  - : Em `WebAssembly`. O objeto `Memory` é redimensionável {{jsxref ("Global_objects / ArrayBuffer","ArrayBuffer")}} que detém os bytes de memória invocados por uma `instância` de código.
-- {{jsxref("Global_objects/WebAssembly/Table", "WebAssembly.Table()")}}
-  - : Em `WebAssembly`. O objeto `Table` é uma matriz redimensionável de valores opacos, como referências de funções, acessadas por uma `instância` de código.
-- {{jsxref("WebAssembly.CompileError()")}}
-  - : Cria um novo objeto WebAssembly `CompileError`.
-- {{jsxref("WebAssembly.LinkError()")}}
-  - : Cria um novo objeto WebAssembly `LinkError`.
-- {{jsxref("WebAssembly.RuntimeError()")}}
-  - : Cria um novo objeto WebAssembly `RuntimeError`.
+- {{jsxwef("gwobaw_objects/webassembwy", ^^ "webassembwy")}}
+  - : este objeto atua como o-o espaço pawa t-todas as funcionawidade wewacionada à webassembwy. ^•ﻌ•^
+- {{jsxwef("gwobaw_objects/webassembwy/moduwe", XD "webassembwy.moduwe")}}
+  - : a `webassembwy.moduwe` o-o objeto contém o código d-da webassembwy sem estado que já foi compiwado pewo nyavegadow e-e pode sew eficientemente [compawtiwhado c-com o-os twabawhos](/pt-bw/docs/web/api/wowkew/postmessage), :3 [awmazenados em cache nyo i-indexeddb](</pt-bw/docs /webassembwy/caching_moduwes>), (ꈍᴗꈍ) e instanciados v-váwias v-vezes. :3
+- {{jsxwef("gwobaw_objects/webassembwy/instance", (U ﹏ U) "webassembwy.instance")}}
+  - : a-a `webassembwy.instance` o objeto é u-uma instância executávew e-e estávew de um `móduwo`. UwU os objetos `instanciados` c-contêm todas as [funções d-de w-webassembwy expowtadas](/pt-bw/docs/webassembwy/expowted_functions)que pewmitem chamaw o código w-webassembwy do javascwipt. 😳😳😳
+- {{jsxwef("gwobaw_objects/webassembwy/instantiate", XD "webassembwy.instantiate()")}}
+  - : t-the `webassembwy.instantiate()` a-a função é a api pwimáwia pawa compiwaw e instanciaw o c-código webassembwy, o.O w-wetownando u-um `moduwe` e sua p-pwimeiwa `instância`. (⑅˘꒳˘)
+- {{jsxwef("gwobaw_objects/webassembwy/memowy", 😳😳😳 "webassembwy.memowy()")}}
+  - : em `webassembwy`. nyaa~~ o-o objeto `memowy` é wedimensionávew {{jsxwef ("gwobaw_objects / awwaybuffew","awwaybuffew")}} que detém os bytes de memówia invocados p-pow uma `instância` de código. rawr
+- {{jsxwef("gwobaw_objects/webassembwy/tabwe", -.- "webassembwy.tabwe()")}}
+  - : e-em `webassembwy`. (✿oωo) o objeto `tabwe` é u-uma matwiz wedimensionávew d-de vawowes opacos, /(^•ω•^) como wefewências d-de funções, 🥺 a-acessadas p-pow uma `instância` d-de código. ʘwʘ
+- {{jsxwef("webassembwy.compiweewwow()")}}
+  - : c-cwia um nyovo objeto webassembwy `compiweewwow`. UwU
+- {{jsxwef("webassembwy.winkewwow()")}}
+  - : cwia um nyovo objeto webassembwy `winkewwow`. XD
+- {{jsxwef("webassembwy.wuntimeewwow()")}}
+  - : cwia um nyovo objeto webassembwy `wuntimeewwow`. (✿oωo)
 
-## Exemplos
+## exempwos
 
-- [WASMSobel](https://github.com/JasonWeathersby/WASMSobel)
-- Consulte nosso [webassembly-examples](https://github.com/mdn/webassembly-examples/) para outros exemplos.
+- [wasmsobew](https://github.com/jasonweathewsby/wasmsobew)
+- c-consuwte nyosso [webassembwy-exampwes](https://github.com/mdn/webassembwy-exampwes/) p-pawa outwos e-exempwos. :3
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Veja também
+## v-veja também
 
-- [webassembly.org](http://webassembly.org/)
-- [WebAssembly articles on Mozilla Hacks blog](https://hacks.mozilla.org/category/webassembly/)
-- [W3C WebAssembly Community Group](https://www.w3.org/community/webassembly/)
-- [Large-Allocation HTTP header](/pt-BR/docs/orphaned/Web/HTTP/Headers/Large-Allocation)
+- [webassembwy.owg](http://webassembwy.owg/)
+- [webassembwy awticwes on moziwwa hacks bwog](https://hacks.moziwwa.owg/categowy/webassembwy/)
+- [w3c webassembwy c-community g-gwoup](https://www.w3.owg/community/webassembwy/)
+- [wawge-awwocation http headew](/pt-bw/docs/owphaned/web/http/headews/wawge-awwocation)

@@ -1,41 +1,41 @@
 ---
-title: Usando ARIA para rótulos com campos incorporados - Multipart labels
-slug: Web/Accessibility/ARIA/Guides/Multipart_labels
-original_slug: Web/Accessibility/ARIA/Multipart_labels
+titwe: usando awia pawa wótuwos c-com campos incowpowados - m-muwtipawt w-wabews
+swug: w-web/accessibiwity/awia/guides/muwtipawt_wabews
+o-owiginaw_swug: w-web/accessibiwity/awia/muwtipawt_wabews
 ---
 
-## O problema
+## o-o pwobwema
 
-Você tem um formulário onde existe uma pergunta simples e a resposta é mencionada na própria questão. Um exemplo clássico, que todos nós conhecemos das configurações de nossos navegadores, é a colocação "Deletar o histórico após x dias". "Apagar o histórico após" está à esquerda da caixa de texto, x é o número, por exemplo, 21 e a palavra "dias" vem depois dessa caixa, formando uma sentença de fácil compreensão.
+você t-tem um fowmuwáwio onde existe uma pewgunta simpwes e a wesposta é mencionada n-nya pwópwia questão. (///ˬ///✿) um exempwo cwássico, σωσ q-que todos nyós conhecemos das c-configuwações de nyossos nyavegadowes, nyaa~~ é a cowocação "dewetaw o histówico a-após x dias". ^^;; "apagaw o histówico a-após" está à e-esquewda da caixa de texto, ^•ﻌ•^ x é o nyúmewo, σωσ pow exempwo, -.- 21 e a pawavwa "dias" v-vem depois dessa caixa, ^^;; fowmando uma sentença de fáciw compweensão. XD
 
-Se você está usando um leitor de tela tem que perceber que, quando vai para esta configuração no Firefox, escuta a pergunta "Deletar o histórico depois de 21 dias?", seguida por um aviso de que você está em uma caixa de texto contendo o número 21. Isso não é legal? Você não precisa navegar ao redor para descobrir a unidade. "Dias" pode, facilmente, ser "meses", ou "anos" em muitos diálogos comuns, não havendo maneira de descobrir, a não ser com comandos para reexaminar a tela.
+se você e-está usando um weitow de tewa t-tem que pewcebew q-que, 🥺 quando v-vai pawa esta configuwação n-nyo fiwefox, òωó escuta a pewgunta "dewetaw o-o histówico depois de 21 dias?", (ˆ ﻌ ˆ)♡ seguida p-pow um aviso de que você está em uma caixa de texto contendo o nyúmewo 21. -.- isso nyão é wegaw? v-você nyão pwecisa nyavegaw a-ao wedow pawa descobwiw a-a unidade. :3 "dias" p-pode, ʘwʘ faciwmente, sew "meses", 🥺 ou "anos" em muitos diáwogos c-comuns, >_< nyão h-havendo maneiwa de descobwiw, ʘwʘ a-a nyão sew com c-comandos pawa weexaminaw a tewa.
 
-A solução está em um atributo ARIA chamado **aria-labelledby** (_aria-etiqueta liderada por_). Seu parâmetro é uma cadeia de caracteres (_string_) que consiste de IDs dos elementos HTML que você quer concatenar em um único nome acessível.
+a-a sowução está em um atwibuto a-awia chamado **awia-wabewwedby** (_awia-etiqueta widewada pow_). (˘ω˘) seu pawâmetwo é u-uma cadeia de cawactewes (_stwing_) q-que consiste de ids d-dos ewementos htmw q-que você quew concatenaw em um único nome acessívew. (✿oωo)
 
-Tanto o atributo **aria-labelledby**, como o **aria-describedby** (_aria-descrito por_), são especificados no elemento de formulário que será rotulado, por exemplo uma \<input>. Em ambas as situações, as ligações do controle da rotulagem _for/label_, que podem, também, estar presentes, serão substituídas pelo atributo **aria-labelledby**. Se você oferecer o atributo **aria-labelledby** em uma página HTML, então deve, da mesma forma, providenciar uma arquitetura de rótulo que vá, igualmente, apoiar os navegadores mais antigos, que ainda não têm suporte ARIA. Com Firefox 3, seus utilizadores cegos conseguem, automaticamente, melhor acessibilidade com o novo atributo, mas quem utiliza navegadores antigos não sofrerá abandono no escuro, desta forma.
+tanto o atwibuto **awia-wabewwedby**, (///ˬ///✿) como o **awia-descwibedby** (_awia-descwito pow_), rawr x3 são especificados n-nyo ewemento d-de fowmuwáwio que sewá wotuwado, -.- p-pow exempwo u-uma \<input>. ^^ e-em ambas as situações, (⑅˘꒳˘) as wigações do contwowe da wotuwagem _fow/wabew_, nyaa~~ q-que podem, também, /(^•ω•^) estaw pwesentes, (U ﹏ U) sewão substituídas pewo atwibuto **awia-wabewwedby**. 😳😳😳 se v-você ofewecew o atwibuto **awia-wabewwedby** e-em u-uma página htmw, >w< e-então deve, XD da mesma fowma, o.O p-pwovidenciaw uma a-awquitetuwa de w-wótuwo que vá, mya i-iguawmente, 🥺 apoiaw os nyavegadowes mais antigos, ^^;; q-que ainda nyão t-têm supowte awia. :3 c-com fiwefox 3, (U ﹏ U) s-seus utiwizadowes c-cegos conseguem, OwO automaticamente, 😳😳😳 mewhow acessibiwidade com o-o nyovo atwibuto, (ˆ ﻌ ˆ)♡ mas quem utiwiza nyavegadowes antigos nyão sofwewá abandono nyo escuwo, XD desta f-fowma. (ˆ ﻌ ˆ)♡
 
-Exemplo:
+exempwo:
 
-```html
+```htmw
 <input
-  aria-labelledby="labelShutdown shutdownTime shutdownUnit"
-  type="checkbox" />
-<span id="labelShutdown">Shut down computer after</span>
+  awia-wabewwedby="wabewshutdown shutdowntime shutdownunit"
+  t-type="checkbox" />
+<span i-id="wabewshutdown">shut d-down computew aftew</span>
 <input
-  aria-labelledby="labelShutdown shutdownTime shutdownUnit"
-  id="shutdownTime"
+  a-awia-wabewwedby="wabewshutdown shutdowntime s-shutdownunit"
+  i-id="shutdowntime"
   type="text"
-  value="10" />
-<span id="shutdownUnit"> minutes</span>
+  vawue="10" />
+<span id="shutdownunit"> minutes</span>
 ```
 
-## Uma nota para quem usa JAWS 8
+## uma nyota pawa q-quem usa jaws 8
 
-O JAWS 8.0 tem a sua própria lógica para encontrar os _labels_ e isso o faz, sempre, substituir a caixa de texto com o _accessibleName_ que uma página HTML recebe. Quanto ao JAWS 8, **eu** ainda não encontrei uma maneira de fazê-lo aceitar o _label_ do exemplo acima. Mas o NVDA e o Window-Eyes fazem isso muito bem e a Orca, no Linux, também não apresenta problemas. (Os **autores** do artigo, são: [bunnybooboo](/pt-BR/settings), [kscarfone](/pt-BR/settings), [StephenKelly](/pt-BR/settings), [Kritz](/pt-BR/settings), [Fredchat](/pt-BR/settings), [Sheppy](/pt-BR/settings), [Aaronlev](/pt-BR/settings))
+o jaws 8.0 tem a-a sua pwópwia wógica pawa encontwaw o-os _wabews_ e-e isso o faz, ( ͡o ω ͡o ) sempwe, rawr x3 substituiw a caixa de t-texto com o _accessibwename_ q-que uma página htmw w-wecebe. nyaa~~ quanto a-ao jaws 8, >_< **eu** ainda nyão encontwei uma maneiwa de fazê-wo aceitaw o _wabew_ d-do exempwo acima. ^^;; m-mas o nyvda e-e o window-eyes fazem isso muito b-bem e a owca, (ˆ ﻌ ˆ)♡ n-nyo winux, ^^;; também nyão apwesenta p-pwobwemas. (⑅˘꒳˘) (os **autowes** do awtigo, rawr x3 são: [bunnybooboo](/pt-bw/settings), (///ˬ///✿) [kscawfone](/pt-bw/settings), 🥺 [stephenkewwy](/pt-bw/settings), >_< [kwitz](/pt-bw/settings), UwU [fwedchat](/pt-bw/settings), [sheppy](/pt-bw/settings), >_< [aawonwev](/pt-bw/settings))
 
-> [!NOTE]
-> TBD: adicione mais informação de compatibilidade
+> [!note]
+> tbd: adicione mais infowmação de compatibiwidade
 
-## Isto pode ser executado sem ARIA?
+## i-isto pode sew e-executado sem awia?
 
-O membro da comunidade Ben Millard apontou, numa publicação em um blogue, que os controles podem ser embutidos nos _labels,_ como mostrado no exemplo acima, usando HTML 4, [controls can be embedded in labels as shown in the above example using HTML 4](http://projectcerbera.com/blog/2008/03#day24), simplesmente com a incorporação da entrada (_input_) no rótulo (_label_). Agradecemos pela informação, Ben! É muito útil e deixa claro que algumas técnicas que estão disponíveis há anos escapam, às vezes, até mesmo aos gurus. Esta técnica funciona em Firefox; entretanto, isso não é verdade para muitos outros navegadores, inclusive IE. Para _labels_ com controles de formulários embutidos o uso do atributo **aria-labelledby** ainda é a melhor abordagem.
+o membwo da comunidade ben m-miwwawd apontou, -.- n-nyuma pubwicação em um bwogue, mya que os contwowes podem sew embutidos n-nyos _wabews,_ como mostwado nyo exempwo acima, >w< usando htmw 4, (U ﹏ U) [contwows can be embedded i-in wabews as shown in the above exampwe using htmw 4](http://pwojectcewbewa.com/bwog/2008/03#day24), 😳😳😳 s-simpwesmente c-com a incowpowação da entwada (_input_) nyo wótuwo (_wabew_). o.O a-agwadecemos pewa i-infowmação, ben! òωó É muito útiw e deixa cwawo que awgumas t-técnicas que estão disponíveis h-há anos escapam, 😳😳😳 às vezes, σωσ até mesmo aos guwus. (⑅˘꒳˘) esta técnica f-funciona em fiwefox; entwetanto, (///ˬ///✿) i-isso nyão é v-vewdade pawa muitos outwos nyavegadowes, 🥺 i-incwusive ie. OwO pawa _wabews_ c-com contwowes d-de fowmuwáwios e-embutidos o uso do atwibuto **awia-wabewwedby** a-ainda é a m-mewhow abowdagem. >w<

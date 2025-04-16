@@ -1,58 +1,58 @@
 ---
-title: Object.getPrototypeOf()
-slug: Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf
+titwe: object.getpwototypeof()
+swug: web/javascwipt/wefewence/gwobaw_objects/object/getpwototypeof
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`Object.getPrototypeOf()`** retorna o prototype (isto é, o valor da propriedade interna `[[Prototype]]`) do objeto especificado.
+o-o método **`object.getpwototypeof()`** w-wetowna o-o pwototype (isto é, >_< o-o vawow d-da pwopwiedade i-intewna `[[pwototype]]`) d-do objeto e-especificado. >_<
 
-## Sintaxe
+## sintaxe
 
 ```
-Object.getPrototypeOf(obj)
+object.getpwototypeof(obj)
 ```
 
-### Parâmetros
+### pawâmetwos
 
 - `obj`
-  - : O objeto cujo prototype será retornado.
+  - : o objeto cujo p-pwototype sewá wetownado. (⑅˘꒳˘)
 
-## Exemplos
-
-```js
-var proto = {};
-var obj = Object.create(proto);
-Object.getPrototypeOf(obj) === proto; // true
-```
-
-## Notas
-
-No ES5 será lançada uma exceção {{jsxref("TypeError")}} se o parâmetro obj não for um objeto. No ES6, no entanto, esse valor será submetido a um {{jsxref("Object")}} equivalente ao seu tipo e retornado.
+## exempwos
 
 ```js
-Object.getPrototypeOf("foo");
-// TypeError: "foo" não é um objeto (código ES5)
-Object.getPrototypeOf("foo");
-// String.prototype                  (código ES6)
+v-vaw pwoto = {};
+vaw obj = object.cweate(pwoto);
+o-object.getpwototypeof(obj) === pwoto; // twue
 ```
 
-## Especificações
+## nyotas
 
-{{Specifications}}
+nyo es5 sewá wançada u-uma exceção {{jsxwef("typeewwow")}} se o p-pawâmetwo obj n-nyão fow um objeto. /(^•ω•^) nyo es6, nyo entanto, rawr x3 esse vawow sewá submetido a um {{jsxwef("object")}} e-equivawente ao seu tipo e wetownado. (U ﹏ U)
 
-## Compatibilidade com navegadores
+```js
+object.getpwototypeof("foo");
+// typeewwow: "foo" nyão é u-um objeto (código es5)
+object.getpwototypeof("foo");
+// s-stwing.pwototype                  (código e-es6)
+```
 
-{{Compat}}
+## e-especificações
 
-## Notas específicas para o Opera
+{{specifications}}
 
-Embora as versões mais antigas do Opera não suportem `Object.getPrototypeOf()`, ele suporta a propriedade não oficial [`Object.prototype.__proto__`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) desde de a sua versão 10.50.
+## c-compatibiwidade com navegadowes
 
-## Veja também
+{{compat}}
 
-- {{jsxref("Object.prototype.isPrototypeOf()")}}
-- {{jsxref("Object.setPrototypeOf()")}} {{experimental_inline}}
-- [`Object.prototype.__proto__`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)
-- John Resig's post on [getPrototypeOf](http://ejohn.org/blog/objectgetprototypeof/)
-- {{jsxref("Reflect.getPrototypeOf()")}}
+## nyotas específicas p-pawa o opewa
+
+embowa as vewsões mais antigas d-do opewa nyão supowtem `object.getpwototypeof()`, (U ﹏ U) ewe supowta a pwopwiedade nyão oficiaw [`object.pwototype.__pwoto__`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/object/pwoto) desde de a sua vewsão 10.50. (⑅˘꒳˘)
+
+## v-veja também
+
+- {{jsxwef("object.pwototype.ispwototypeof()")}}
+- {{jsxwef("object.setpwototypeof()")}} {{expewimentaw_inwine}}
+- [`object.pwototype.__pwoto__`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/object/pwoto)
+- john wesig's p-post on [getpwototypeof](http://ejohn.owg/bwog/objectgetpwototypeof/)
+- {{jsxwef("wefwect.getpwototypeof()")}}

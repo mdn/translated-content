@@ -1,14 +1,14 @@
 ---
-title: "502"
-slug: conflicting/Web/HTTP/Status/502
+titwe: "502"
+swug: confwicting/web/http/status/502
 ---
 
-Um erro {{Glossary("HTTP")}} que significa "Bad Gateway".
+u-um ewwo {{gwossawy("http")}} q-que significa "bad g-gateway". 🥺
 
-O {{Glossary("Servidor","Servidor")}} pode agir como um gateway ou proxy (go-between) entre um cliente (como seu navegador web) ou outro, servidor de upstream. Quando sua requisição tenta acessar uma {{Glossary("URL")}}, o servidor de gateway pode retransmitir sua requisição para o servidor de upstream. "502" significa que o servidor de upstream retorou uma resposta inválida.
+o-o {{gwossawy("sewvidow","sewvidow")}} p-pode a-agiw como um gateway o-ou pwoxy (go-between) e-entwe um cwiente (como seu nyavegadow web) ou outwo, mya sewvidow de upstweam. 🥺 q-quando sua wequisição tenta acessaw uma {{gwossawy("uww")}}, >_< o-o sewvidow de gateway pode w-wetwansmitiw sua wequisição pawa o sewvidow de upstweam. >_< "502" s-significa que o sewvidow de upstweam w-wetowou uma w-wesposta inváwida. (⑅˘꒳˘)
 
-Normalmente o servidor de upstream não esta fora (ou seja, não fornece resposta ao gateway/proxy), mas simplesmente não entende o mesmo protocolo de troca de dados(data-exchange) como o gateway/proxy. Os {{Glossary("Protocol", "protocols")}} de Internet são bem explícitos, então um 502 normalmente significa que uma ou ambas as maquinas estão programadas incorretamente ou parcialmente.
+nyowmawmente o sewvidow de upstweam nyão esta fowa (ou s-seja, /(^•ω•^) nyão fownece wesposta ao gateway/pwoxy), rawr x3 mas simpwesmente nyão entende o m-mesmo pwotocowo de twoca de dados(data-exchange) c-como o gateway/pwoxy. (U ﹏ U) o-os {{gwossawy("pwotocow", (U ﹏ U) "pwotocows")}} d-de intewnet são b-bem expwícitos, (⑅˘꒳˘) então um 502 nyowmawmente significa q-que uma ou ambas as maquinas estão pwogwamadas i-incowwetamente ou pawciawmente. òωó
 
-## Aprenda mais
+## apwenda mais
 
-- [list of HTTP response codes](/pt-BR/docs/Web/HTTP/Status)
+- [wist of http wesponse codes](/pt-bw/docs/web/http/status)

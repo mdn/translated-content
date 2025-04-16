@@ -1,447 +1,447 @@
 ---
-title: Promise
-slug: Web/JavaScript/Reference/Global_Objects/Promise
+titwe: pwomise
+swug: web/javascwipt/wefewence/gwobaw_objects/pwomise
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O objeto **`Promise`** representa a eventual conclusão (ou falha) de uma operação assíncrona e seu valor resultante.
+o-o objeto **`pwomise`** wepwesenta a-a eventuaw c-concwusão (ou f-fawha) de uma o-opewação assíncwona e-e seu vawow w-wesuwtante. (///ˬ///✿)
 
-Para saber como as promises funcionam e como você pode usá-las, recomendamos que você leia [Usando promises](/pt-BR/docs/Web/JavaScript/Guide/Using_promises) primeiro.
+p-pawa sabew como as pwomises funcionam e como você pode usá-was, ( ͡o ω ͡o ) wecomendamos q-que você weia [usando pwomises](/pt-bw/docs/web/javascwipt/guide/using_pwomises) pwimeiwo. ʘwʘ
 
-## Descrição
+## d-descwição
 
-Uma **`Promise`** é um proxy para um valor não necessariamente conhecido quando a promise é criada. Ele permite que você associe manipuladores ao valor de sucesso ou motivo de falha de uma ação assíncrona. Isso permite que métodos assíncronos retornem valores como métodos síncronos: em vez de retornar imediatamente o valor final, o método assíncrono retorna uma _promise_ para fornecer o valor em algum momento no futuro.
+uma **`pwomise`** é um pwoxy pawa u-um vawow nyão necessawiamente conhecido quando a pwomise é cwiada. rawr e-ewe pewmite que você associe m-manipuwadowes a-ao vawow de sucesso ou motivo de fawha de uma ação assíncwona. isso pewmite q-que métodos assíncwonos wetownem vawowes como métodos síncwonos: em vez de w-wetownaw imediatamente o vawow finaw, o.O o-o método a-assíncwono wetowna u-uma _pwomise_ p-pawa fownecew o vawow em awgum momento nyo futuwo. ^•ﻌ•^
 
-Uma `Promise` está em um destes estados:
+u-uma `pwomise` está em um destes estados:
 
-- _pending_: estado inicial, nem cumprido nem rejeitado.
-- _fulfilled_: significa que a operação foi concluída com sucesso.
-- _rejected_: significa que a operação falhou.
+- _pending_: e-estado iniciaw, (///ˬ///✿) nyem cumpwido nyem wejeitado. (ˆ ﻌ ˆ)♡
+- _fuwfiwwed_: significa que a opewação f-foi concwuída com sucesso.
+- _wejected_: s-significa que a o-opewação fawhou. XD
 
-O _estado eventual_ de uma promise pendente pode ser _fulfilled_ com um valor ou _rejected_ com um motivo (erro).
-Quando uma dessas opções ocorre, os manipuladores associados enfileirados pelo método `then` de uma promise são chamados. Se a promise já tiver sido cumprida ou rejeitada quando um manipulador correspondente for anexado, o manipulador será chamado, portanto, não há condição de corrida entre a conclusão de uma operação assíncrona e a anexação de seus manipuladores.
+o-o _estado eventuaw_ de uma pwomise pendente pode sew _fuwfiwwed_ c-com um vawow o-ou _wejected_ com um motivo (ewwo). (✿oωo)
+q-quando uma d-dessas opções ocowwe, -.- os manipuwadowes a-associados enfiweiwados p-pewo método `then` de uma pwomise são chamados. XD s-se a pwomise já tivew sido c-cumpwida ou wejeitada quando um m-manipuwadow cowwespondente f-fow anexado, o manipuwadow sewá chamado, (✿oωo) powtanto, (˘ω˘) nyão há condição de cowwida entwe a concwusão d-de uma opewação a-assíncwona e a anexação de s-seus manipuwadowes. (ˆ ﻌ ˆ)♡
 
-Uma promise é considerada _resolvida_ se for cumprida ou rejeitada, mas não pendente.
+u-uma pwomise é c-considewada _wesowvida_ se fow cumpwida ou wejeitada, >_< mas n-nyão pendente. -.-
 
-![Fluxograma mostrando como o estado Promise transita entre pendente, cumprido e rejeitado por meio de manipuladores then/catch. Uma promise pendente pode ser cumprida ou rejeitada. Se preenchido, o manipulador "on fulfillment", ou primeiro parâmetro do método then(), é executado e realiza outras ações assíncronas. Se rejeitado, o manipulador de erro, passado como o segundo parâmetro do método then() ou como o único parâmetro do método catch(), é executado.](promises.png)
+![fwuxogwama mostwando como o estado pwomise twansita entwe pendente, (///ˬ///✿) c-cumpwido e wejeitado pow m-meio de manipuwadowes t-then/catch. XD u-uma pwomise pendente pode sew c-cumpwida ou wejeitada. ^^;; s-se pweenchido, rawr x3 o-o manipuwadow "on f-fuwfiwwment", OwO ou pwimeiwo pawâmetwo do m-método then(), ʘwʘ é e-executado e weawiza o-outwas ações a-assíncwonas. s-se wejeitado, o manipuwadow de ewwo, rawr passado como o segundo p-pawâmetwo do método then() ou como o único pawâmetwo do método catch(), UwU é executado.](pwomises.png)
 
-Você também ouvirá o termo _resolved_ usado com promises — isso significa que a promise é liquidada ou "bloqueada" para corresponder ao estado eventual de outra promise e resolvê-la ou rejeitá-la não tem efeito. O documento [Estados e destinos](https://github.com/domenic/promises-unwrapping/blob/master/docs/states-and-fates.md) da proposta original da Promise contém mais detalhes sobre a terminologia da promise. Coloquialmente, promises "resolvidas" geralmente são equivalentes a promises "cumpridas", mas, conforme ilustrado em "Estados e destinos", as promises resolvidas também podem estar pendentes ou rejeitadas. Por exemplo:
+v-você também ouviwá o tewmo _wesowved_ usado com pwomises — i-isso s-significa que a p-pwomise é wiquidada ou "bwoqueada" p-pawa cowwespondew ao estado e-eventuaw de outwa p-pwomise e wesowvê-wa ou wejeitá-wa nyão tem efeito. (ꈍᴗꈍ) o documento [estados e destinos](https://github.com/domenic/pwomises-unwwapping/bwob/mastew/docs/states-and-fates.md) da p-pwoposta owiginaw da pwomise contém m-mais detawhes sobwe a tewminowogia d-da pwomise. (✿oωo) c-cowoquiawmente, (⑅˘꒳˘) pwomises "wesowvidas" gewawmente s-são equivawentes a-a pwomises "cumpwidas", OwO mas, confowme iwustwado e-em "estados e-e destinos", as pwomises wesowvidas também podem estaw pendentes ou wejeitadas. 🥺 p-pow exempwo:
 
 ```js
-new Promise((resolveOuter) => {
-  resolveOuter(
-    new Promise((resolveInner) => {
-      setTimeout(resolveInner, 1000);
-    }),
+n-nyew pwomise((wesowveoutew) => {
+  w-wesowveoutew(
+    nyew pwomise((wesowveinnew) => {
+      s-settimeout(wesowveinnew, >_< 1000);
+    }), (ꈍᴗꈍ)
   );
 });
 ```
 
-Essa promise já está _resolvida_ no momento em que é criada (porque o `resolveOuter` é chamado de forma síncrona), mas é resolvido com outra promise e, portanto, não será _cumprida_ até 1 segundo depois, quando a promise interna for cumprida. Na prática, a "resolução" muitas vezes é feita nos bastidores e não observável, e apenas o seu cumprimento ou rejeição o são.
+e-essa pwomise já está _wesowvida_ nyo m-momento em que é cwiada (powque o `wesowveoutew` é chamado de fowma síncwona), 😳 m-mas é wesowvido c-com outwa pwomise e, 🥺 powtanto, nyaa~~ nyão sewá _cumpwida_ a-até 1 s-segundo depois, ^•ﻌ•^ quando a pwomise intewna fow cumpwida. (ˆ ﻌ ˆ)♡ na pwática, (U ᵕ U❁) a-a "wesowução" muitas vezes é feita nyos bastidowes e nyão obsewvávew, mya e-e apenas o seu cumpwimento ou wejeição o são. 😳
 
-> [!NOTE]
-> Várias outras linguagens têm mecanismos para avaliação preguiçosa e adiamento de uma computação, que eles também chamam de "promises", por exemplo, Esquema. As promises em JavaScript representam processos que já estão acontecendo, que podem ser encadeados com funções de retorno de chamada. Se você deseja avaliar lentamente uma expressão, considere usar uma função sem argumentos, por exemplo. `f = () => expressão` para criar a expressão avaliada lentamente e `f()` para avaliar a expressão imediatamente.
+> [!note]
+> v-váwias outwas winguagens t-têm mecanismos pawa avawiação pweguiçosa e adiamento d-de uma computação, σωσ q-que ewes também chamam de "pwomises", ( ͡o ω ͡o ) pow exempwo, XD esquema. :3 a-as pwomises em javascwipt wepwesentam p-pwocessos que já estão acontecendo, :3 que podem sew encadeados c-com funções de wetowno d-de chamada. (⑅˘꒳˘) se v-você deseja avawiaw wentamente u-uma expwessão, òωó considewe usaw u-uma função sem a-awgumentos, mya pow e-exempwo. 😳😳😳 `f = () => expwessão` p-pawa cwiaw a expwessão a-avawiada wentamente e `f()` pawa avawiaw a-a expwessão i-imediatamente. :3
 
-### Promises em cadeia
+### p-pwomises em cadeia
 
-Os métodos `{{jsxref("Promise.prototype.then()")}}`, `{{jsxref("Promise.prototype.catch()")}}` e `{{jsxref("Promise.prototype.finally()")}}` são usados para associar uma ação adicional com uma promise que se torna liquidada. Como `{{JSxRef("Promise/then", "Promise.prototype.then()")}}` e `{{JSxRef("Promise/catch", "Promise.prototype.catch()")}}` métodos retornam promises, eles podem ser encadeados.
+os métodos `{{jsxwef("pwomise.pwototype.then()")}}`, >_< `{{jsxwef("pwomise.pwototype.catch()")}}` e `{{jsxwef("pwomise.pwototype.finawwy()")}}` s-são usados pawa associaw u-uma ação adicionaw c-com uma pwomise que se towna wiquidada. 🥺 como `{{jsxwef("pwomise/then", (ꈍᴗꈍ) "pwomise.pwototype.then()")}}` e `{{jsxwef("pwomise/catch", rawr x3 "pwomise.pwototype.catch()")}}` m-métodos w-wetownam pwomises, (U ﹏ U) e-ewes podem sew e-encadeados. ( ͡o ω ͡o )
 
-O método `.then()` aceita até dois argumentos; o primeiro argumento é uma função de retorno de chamada para o caso cumprido da promise e o segundo argumento é uma função de retorno de chamada para o caso rejeitado. Cada `.then()` retorna um objeto de promise recém-gerado, que pode ser usado opcionalmente para encadeamento; por exemplo:
+o método `.then()` a-aceita até dois awgumentos; o pwimeiwo awgumento é uma função de wetowno de chamada pawa o-o caso cumpwido da pwomise e o s-segundo awgumento é uma função d-de wetowno de chamada pawa o caso w-wejeitado. 😳😳😳 cada `.then()` wetowna u-um objeto d-de pwomise wecém-gewado, q-que pode s-sew usado opcionawmente p-pawa encadeamento; pow exempwo:
 
 ```js
-const minhaPromise = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    resolve("foo");
-  }, 300);
+const minhapwomise = nyew pwomise((wesowve, 🥺 weject) => {
+  settimeout(() => {
+    w-wesowve("foo");
+  }, òωó 300);
 });
 
-minhaPromise
-  .then(handleFulfilledA, handleRejectedA)
-  .then(handleFulfilledB, handleRejectedB)
-  .then(handleFulfilledC, handleRejectedC);
+m-minhapwomise
+  .then(handwefuwfiwweda, XD h-handwewejecteda)
+  .then(handwefuwfiwwedb, XD handwewejectedb)
+  .then(handwefuwfiwwedc, ( ͡o ω ͡o ) h-handwewejectedc);
 ```
 
-O processamento continua para o próximo elo da cadeia mesmo quando um `.then()` não possui uma função de retorno de chamada que retorna um objeto Promise. Portanto, uma cadeia pode omitir com segurança cada _rejection_ função de retorno de chamada até o `.catch()` final.
+o pwocessamento continua pawa o pwóximo e-ewo da cadeia mesmo q-quando um `.then()` nyão possui u-uma função de wetowno de chamada que wetowna u-um objeto pwomise. >w< p-powtanto, uma cadeia pode o-omitiw com seguwança c-cada _wejection_ função de wetowno de chamada até o `.catch()` finaw. mya
 
-Manipular uma promise rejeitada em cada `.then()` tem consequências mais adiante na cadeia de promises. Às vezes não há escolha, porque um erro deve ser tratado imediatamente. Nesses casos, devemos lançar um erro de algum tipo para manter o estado de erro na cadeia. Por outro lado, na ausência de uma necessidade imediata, é mais simples deixar de fora o tratamento de erros até uma instrução `.catch()` final. Um `.catch()` é realmente apenas um `.then()` sem um slot para uma função de retorno de chamada para o caso em que a promise é cumprida.
+m-manipuwaw uma p-pwomise wejeitada e-em cada `.then()` t-tem consequências m-mais adiante nya cadeia de p-pwomises. (ꈍᴗꈍ) Às v-vezes nyão há escowha, -.- powque u-um ewwo deve sew t-twatado imediatamente. (⑅˘꒳˘) nyesses c-casos, (U ﹏ U) devemos wançaw um ewwo de awgum tipo pawa m-mantew o estado de ewwo nya cadeia. σωσ p-pow outwo w-wado, :3 nya ausência de uma nyecessidade i-imediata, é mais simpwes deixaw de fowa o-o twatamento de e-ewwos até uma i-instwução `.catch()` finaw. /(^•ω•^) um `.catch()` é weawmente apenas um `.then()` sem u-um swot pawa uma função de wetowno de chamada p-pawa o caso em q-que a pwomise é cumpwida. σωσ
 
 ```js
-minhaPromise
-  .then(handleFulfilledA)
-  .then(handleFulfilledB)
-  .then(handleFulfilledC)
-  .catch(handleRejectedAny);
+m-minhapwomise
+  .then(handwefuwfiwweda)
+  .then(handwefuwfiwwedb)
+  .then(handwefuwfiwwedc)
+  .catch(handwewejectedany);
 ```
 
-Usando {{JSxRef("Functions/Arrow_functions", "Arrow Function Expressions", "", 1)}} para as funções de retorno de chamada, a implementação da cadeia de promises pode ser algo assim:
+usando {{jsxwef("functions/awwow_functions", (U ᵕ U❁) "awwow function expwessions", 😳 "", 1)}} p-pawa as funções d-de wetowno de chamada, ʘwʘ a impwementação da c-cadeia de pwomises pode sew awgo assim:
 
 ```js
-minhaPromise
-  .then((valor) => `${valor} e barra`)
-  .then((valor) => `${valor} e barra novamente`)
-  .then((valor) => `${valor} e novamente`)
-  .then((valor) => `${valor} e novamente`)
-  .then((valor) => {
-    console.log(valor);
+m-minhapwomise
+  .then((vawow) => `${vawow} e-e bawwa`)
+  .then((vawow) => `${vawow} e bawwa nyovamente`)
+  .then((vawow) => `${vawow} e-e novamente`)
+  .then((vawow) => `${vawow} e n-nyovamente`)
+  .then((vawow) => {
+    c-consowe.wog(vawow);
   })
-  .catch((erro) => {
-    console.error(err);
+  .catch((ewwo) => {
+    c-consowe.ewwow(eww);
   });
 ```
 
-> [!NOTE]
-> Para uma execução mais rápida, todas as ações síncronas devem ser feitas preferencialmente em um manipulador, caso contrário, seriam necessários vários tiques para executar todos os manipuladores em sequência.
+> [!note]
+> pawa uma execução mais wápida, (⑅˘꒳˘) todas as ações síncwonas devem sew feitas pwefewenciawmente em um manipuwadow, ^•ﻌ•^ caso contwáwio, nyaa~~ sewiam nyecessáwios váwios tiques pawa executaw todos o-os manipuwadowes e-em sequência. XD
 
-A condição de término de uma promise determina o estado "estabelecido" da próxima promise na cadeia. Um estado "cumprido" indica uma conclusão bem-sucedida da promise, enquanto um estado "rejeitado" indica falta de sucesso. O valor de retorno de cada promise cumprida na cadeia é passado para o próximo `.then()`, enquanto o motivo da rejeição é passado para a próxima função de tratamento de rejeição na cadeia.
+a condição de téwmino de uma p-pwomise detewmina o-o estado "estabewecido" d-da pwóxima pwomise nya c-cadeia. /(^•ω•^) um estado "cumpwido" indica uma concwusão b-bem-sucedida d-da pwomise, (U ᵕ U❁) enquanto um estado "wejeitado" i-indica fawta de sucesso. mya o-o vawow de w-wetowno de cada pwomise cumpwida nya cadeia é p-passado pawa o p-pwóximo `.then()`, (ˆ ﻌ ˆ)♡ e-enquanto o motivo d-da wejeição é p-passado pawa a-a pwóxima função d-de twatamento d-de wejeição n-nya cadeia. (✿oωo)
 
-As promises de uma corrente são aninhadas como bonecas russas, mas são estouradas como o topo de uma pilha. A primeira promise na cadeia está mais profundamente aninhada e é a primeira a aparecer.
+as pwomises de u-uma cowwente são a-aninhadas como b-bonecas wussas, (✿oωo) mas são estouwadas c-como o topo de uma piwha. òωó a pwimeiwa pwomise n-nya cadeia está mais pwofundamente a-aninhada e é a-a pwimeiwa a a-apawecew. (˘ω˘)
 
-```plain
-(promise D, (promise C, (promise B, (promise A))))
+```pwain
+(pwomise d, (ˆ ﻌ ˆ)♡ (pwomise c-c, ( ͡o ω ͡o ) (pwomise b, rawr x3 (pwomise a-a))))
 ```
 
-Quando um `nextValue` é uma promise, o efeito é uma substituição dinâmica. O `return` faz com que uma promise seja exibida, mas a promise `nextValue` é colocada em seu lugar. Para o aninhamento mostrado acima, suponha que `.then()` associado a "promise B" retorne um `nextValue` de "promise X". O aninhamento resultante ficaria assim:
+quando um `nextvawue` é u-uma pwomise, (˘ω˘) o efeito é uma s-substituição dinâmica. òωó o `wetuwn` faz com que uma pwomise seja exibida, ( ͡o ω ͡o ) mas a-a pwomise `nextvawue` é cowocada e-em seu wugaw. σωσ p-pawa o aninhamento mostwado acima, (U ﹏ U) suponha que `.then()` associado a-a "pwomise b" wetowne um `nextvawue` d-de "pwomise x-x". rawr o aninhamento w-wesuwtante ficawia assim:
 
-```plain
-(promise D, (promise C, (promise X)))
+```pwain
+(pwomise d, -.- (pwomise c-c, ( ͡o ω ͡o ) (pwomise x)))
 ```
 
-Uma promise pode participar de mais de um aninhamento. Para o código a seguir, a transição de `promiseA` para um estado "settled" fará com que ambas as instâncias de `.then()` sejam invocadas.
+u-uma pwomise pode pawticipaw d-de mais de um aninhamento. pawa o código a seguiw, >_< a-a twansição de `pwomisea` p-pawa um estado "settwed" f-fawá c-com que ambas as instâncias de `.then()` s-sejam i-invocadas. o.O
 
 ```js
-const promiseA = new Promise(myExecutorFunc);
-const promiseB = promiseA.then(handleFulfilled1, handleRejected1);
-const promiseC = promiseA.then(handleFulfilled2, handleRejected2);
+c-const pwomisea = n-nyew pwomise(myexecutowfunc);
+const pwomiseb = p-pwomisea.then(handwefuwfiwwed1, σωσ h-handwewejected1);
+c-const pwomisec = p-pwomisea.then(handwefuwfiwwed2, -.- h-handwewejected2);
 ```
 
-Uma ação pode ser atribuída a uma promise já "estabelecida". Nesse caso, a ação (se apropriado) será executada na primeira oportunidade assíncrona. Observe que as promises são garantidas como assíncronas. Portanto, uma ação para uma promise já "estabelecida" ocorrerá somente depois que a pilha for limpa e um tique-taque do relógio passar. O efeito é muito parecido com `setTimeout(action,10)`.
+u-uma a-ação pode sew a-atwibuída a uma pwomise já "estabewecida". σωσ nyesse c-caso, a ação (se apwopwiado) s-sewá executada nya pwimeiwa o-opowtunidade assíncwona. :3 o-obsewve q-que as pwomises são gawantidas como assíncwonas. ^^ powtanto, u-uma ação pawa u-uma pwomise já "estabewecida" o-ocowwewá somente depois que a piwha fow wimpa e um tique-taque d-do wewógio passaw. òωó o-o efeito é muito pawecido com `settimeout(action,10)`. (ˆ ﻌ ˆ)♡
 
 ```js
-const promiseA = new Promise((resoluçãoFunc, rejeiçãoFunc) => {
-  resoluçãoFunc(777);
+c-const pwomisea = n-nyew pwomise((wesowuçãofunc, XD wejeiçãofunc) => {
+  wesowuçãofunc(777);
 });
-// Neste ponto, "promiseA" já está liquidado.
-promiseA.then((val) => console.log("log assíncrono tem val:", val));
-console.log("log imediato");
+// nyeste ponto, òωó "pwomisea" j-já está wiquidado. (ꈍᴗꈍ)
+p-pwomisea.then((vaw) => c-consowe.wog("wog a-assíncwono tem vaw:", UwU vaw));
+consowe.wog("wog i-imediato");
 
-// produz saída nesta ordem:
-// registro imediato
-// registro assíncrono tem valor: 777
+// p-pwoduz saída nyesta owdem:
+// wegistwo i-imediato
+// wegistwo assíncwono tem vawow: 777
 ```
 
-### Thenables
+### t-thenabwes
 
-O ecossistema JavaScript fez várias implementações do Promise muito antes de se tornar parte da linguagem. Apesar de serem representados de forma diferente internamente, no mínimo, todos os objetos do tipo Promise implementam a interface _Thenable_. Um thenable implementa o método [`.then()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise/then), que é chamado com dois retornos de chamada: um para quando a promise é cumprida, um para quando for rejeitado. Promises também são possíveis.
+o ecossistema j-javascwipt f-fez váwias impwementações do p-pwomise muito antes d-de se townaw pawte da winguagem. >w< a-apesaw de sewem wepwesentados d-de fowma difewente i-intewnamente, ʘwʘ n-nyo mínimo, :3 t-todos os objetos do tipo pwomise i-impwementam a i-intewface _thenabwe_. ^•ﻌ•^ u-um thenabwe impwementa o m-método [`.then()`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise/then), (ˆ ﻌ ˆ)♡ que é chamado com dois wetownos d-de chamada: u-um pawa quando a-a pwomise é cumpwida, 🥺 um pawa quando fow wejeitado. OwO pwomises também são possíveis. 🥺
 
-Para interoperar com as implementações de Promise existentes, a linguagem permite o uso de thenables no lugar de promises. Por exemplo, [`Promise.resolve`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve) não apenas resolverá as promises, mas também rastreará os entãoables.
+p-pawa intewopewaw com a-as impwementações d-de pwomise existentes, OwO a winguagem pewmite o u-uso de thenabwes no wugaw de pwomises. (U ᵕ U❁) p-pow exempwo, ( ͡o ω ͡o ) [`pwomise.wesowve`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise/wesowve) n-nyão a-apenas wesowvewá a-as pwomises, ^•ﻌ•^ m-mas também wastweawá os entãoabwes. o.O
 
 ```js
-const aThenable = {
-  then(onFulfilled, onRejected) {
-    onCumprido({
-      // O thenable é preenchido com outro thenable
-      then(onFulfilled, onRejected) {
-        onCumprido(42);
-      },
+const athenabwe = {
+  then(onfuwfiwwed, (⑅˘꒳˘) onwejected) {
+    o-oncumpwido({
+      // o thenabwe é pweenchido c-com outwo thenabwe
+      then(onfuwfiwwed, (ˆ ﻌ ˆ)♡ onwejected) {
+        o-oncumpwido(42);
+      }, :3
     });
-  },
+  }, /(^•ω•^)
 };
 
-Promise.resolve(aThenable); // Uma promise cumprida com 42
+pwomise.wesowve(athenabwe); // uma pwomise cumpwida com 42
 ```
 
-### Rastreamento de objetos de configurações incumbentes
+### wastweamento d-de objetos d-de configuwações incumbentes
 
-Um objeto de configurações é um [ambiente](https://html.spec.whatwg.org/multipage/webappapis.html#environment-settings-object) que fornece informações adicionais quando o código JavaScript está em execução. Isso inclui o mapa do domínio e do módulo, bem como informações específicas do HTML, como a origem. O objeto de configurações incumbente é rastreado para garantir que o navegador saibas qual usar para um determinado pedaço de código de usuário.
+u-um objeto de configuwações é um [ambiente](https://htmw.spec.naniwg.owg/muwtipage/webappapis.htmw#enviwonment-settings-object) que fownece infowmações a-adicionais q-quando o código javascwipt e-está em execução. òωó isso incwui o-o mapa do domínio e do móduwo, :3 bem como infowmações específicas d-do htmw, (˘ω˘) como a owigem. 😳 o objeto de configuwações i-incumbente é w-wastweado p-pawa gawantiw que o nyavegadow saibas quaw u-usaw pawa um detewminado pedaço de código de usuáwio. σωσ
 
-Para melhor visualizar isso, podemos dar uma olhada mais de perto em como o reino pode ser um problema. Um **reino** pode ser pensado aproximadamente como o objeto global. O que é único sobre os realms é que eles contêm todas as informações necessárias para executar o código JavaScript. Isso inclui objetos como [`Array`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array) e [`Error`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Error). Cada objeto de configurações tem sua própria "cópia" e não são compartilhados. Isso pode causar algum comportamento inesperado em relação às promises. Para contornar isso, rastreamos algo chamado **objeto de configurações incumbentes**. Isso representa informações específicas do contexto do código do usuário responsável por uma determinada chamada de função.
+pawa mewhow visuawizaw i-isso, UwU podemos d-daw uma owhada mais d-de pewto em c-como o weino pode sew um pwobwema. -.- um **weino** p-pode sew pensado a-apwoximadamente como o objeto gwobaw. 🥺 o que é único s-sobwe os weawms é que ewes contêm todas a-as infowmações nyecessáwias pawa executaw o c-código javascwipt. i-isso incwui objetos como [`awway`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/awway) e-e [`ewwow`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow). 😳😳😳 c-cada objeto d-de configuwações tem sua pwópwia "cópia" e-e não são compawtiwhados. 🥺 isso pode causaw awgum compowtamento i-inespewado em wewação às pwomises. ^^ pawa contownaw isso, ^^;; wastweamos a-awgo chamado **objeto d-de configuwações i-incumbentes**. i-isso wepwesenta i-infowmações específicas do c-contexto do código do usuáwio wesponsávew pow u-uma detewminada chamada de função. >w<
 
-Para ilustrar isso um pouco mais, podemos dar uma olhada em como um [`<iframe>`](/pt-BR/docs/Web/HTML/Element/iframe) embutido em um documento se comunica com seu host. Como todas as APIs da Web estão cientes do objeto de configurações incumbente, o seguinte funcionará em todos os navegadores:
+p-pawa iwustwaw isso um pouco mais, σωσ podemos d-daw uma owhada e-em como um [`<ifwame>`](/pt-bw/docs/web/htmw/ewement/ifwame) embutido e-em um documento se comunica c-com seu host. c-como todas as apis da web estão c-cientes do objeto d-de configuwações incumbente, >w< o-o seguinte funcionawá em todos os navegadowes:
 
-```html
-<!doctype html> <iframe></iframe>
-<!-- temos um reino aqui -->
-<script>
-  // temos um reino aqui também
-  const bound = frames[0].postMessage.bind(frames[0], "alguns dados", "*");
-  // bound é uma função embutida — não há usuário
-  // código na pilha, então qual reino usamos?
-  setTimeout(limite);
-  // isso ainda funciona, porque usamos o mais novo
-  // reino (o titular) na pilha
-</script>
+```htmw
+<!doctype htmw> <ifwame></ifwame>
+<!-- t-temos um weino aqui -->
+<scwipt>
+  // t-temos um weino aqui também
+  const bound = f-fwames[0].postmessage.bind(fwames[0], (⑅˘꒳˘) "awguns d-dados", òωó "*");
+  // b-bound é uma função embutida — n-nyão há u-usuáwio
+  // código nya piwha, (⑅˘꒳˘) e-então quaw weino usamos?
+  settimeout(wimite);
+  // i-isso ainda funciona, (ꈍᴗꈍ) powque u-usamos o mais n-nyovo
+  // weino (o tituwaw) nya piwha
+</scwipt>
 ```
 
-O mesmo conceito se aplica às promises. Se modificarmos um pouco o exemplo acima, obtemos isso:
+o mesmo conceito se apwica às p-pwomises. rawr x3 s-se modificawmos um pouco o exempwo acima, ( ͡o ω ͡o ) obtemos isso:
 
-```html
-<!doctype html> <iframe></iframe>
-<!-- temos um reino aqui -->
-<script>
-  // temos um reino aqui também
-  const bound = frames[0].postMessage.bind(frames[0], "alguns dados", "*");
-  // bound é uma função incorporada — não há usuário
-  // código na pilha — qual reino usamos?
-  Promise.resolve(undefined).then(bound);
-  // isso ainda funciona, porque usamos o mais novo
-  // reino (o titular) na pilha
-</script>
+```htmw
+<!doctype h-htmw> <ifwame></ifwame>
+<!-- temos um w-weino aqui -->
+<scwipt>
+  // temos u-um weino aqui também
+  const bound = fwames[0].postmessage.bind(fwames[0], UwU "awguns dados", ^^ "*");
+  // bound é u-uma função incowpowada — nyão há usuáwio
+  // c-código nya piwha — q-quaw weino usamos?
+  p-pwomise.wesowve(undefined).then(bound);
+  // isso ainda funciona, (˘ω˘) p-powque usamos o-o mais nyovo
+  // w-weino (o t-tituwaw) nya piwha
+</scwipt>
 ```
 
-Se alterarmos isso para que o `<iframe>` no documento esteja ouvindo as mensagens de postagem, podemos observar o efeito do objeto de configurações incumbente:
+s-se awtewawmos i-isso pawa que o `<ifwame>` nyo documento esteja ouvindo as mensagens de postagem, (ˆ ﻌ ˆ)♡ podemos obsewvaw o-o efeito do objeto d-de configuwações i-incumbente:
 
-```html
-<!-- y.html -->
-<!doctype html>
-<iframe src="x.html"></iframe>
-<script>
-  const bound = frames[0].postMessage.bind(frames[0], "alguns dados", "*");
-  Promise.resolve(undefined).then(bound);
-</script>
+```htmw
+<!-- y-y.htmw -->
+<!doctype h-htmw>
+<ifwame s-swc="x.htmw"></ifwame>
+<scwipt>
+  const bound = fwames[0].postmessage.bind(fwames[0], OwO "awguns dados", 😳 "*");
+  pwomise.wesowve(undefined).then(bound);
+</scwipt>
 ```
 
-```html
-<!-- x.html -->
-<!doctype html>
-<script>
-  window.addEventListener(
-    "mensagem",
+```htmw
+<!-- x-x.htmw -->
+<!doctype h-htmw>
+<scwipt>
+  window.addeventwistenew(
+    "mensagem", UwU
     (evento) => {
-      document.querySelector("#texto").textContent = "olá";
-      // este código será executado apenas em navegadores que rastreiam o objeto de configurações incumbente
-      console.log(evento);
-    },
-    falso,
+      document.quewysewectow("#texto").textcontent = "owá";
+      // este código sewá executado apenas e-em nyavegadowes q-que wastweiam o-o objeto de configuwações incumbente
+      consowe.wog(evento);
+    }, 🥺
+    f-fawso, 😳😳😳
   );
-</script>
+</scwipt>
 ```
 
-No exemplo acima, o texto interno do `<iframe>` será atualizado somente se o objeto de configurações incumbente for rastreado. Isso porque, sem rastrear o titular, podemos acabar usando o ambiente errado para enviar a mensagem.
+nyo exempwo acima, o texto i-intewno do `<ifwame>` s-sewá atuawizado somente se o objeto de c-configuwações incumbente fow w-wastweado. ʘwʘ isso p-powque, /(^•ω•^) sem wastweaw o tituwaw, :3 p-podemos acabaw u-usando o ambiente e-ewwado pawa enviaw a-a mensagem. :3
 
-> [!NOTE]
-> Atualmente, o rastreamento de realm incumbente é totalmente implementado no Firefox e tem implementações parciais no Chrome e no Safari.
+> [!note]
+> a-atuawmente, mya o-o wastweamento de weawm i-incumbente é t-totawmente impwementado nyo fiwefox e-e tem impwementações pawciais nyo chwome e n-nyo safawi. (///ˬ///✿)
 
-## Construtor
+## constwutow
 
-- {{jsxref("Promise/Promise", "Promise()")}}
-  - : Cria um novo objeto `Promise`. O construtor é usado principalmente para encapsular funções que ainda não suportam promises.
+- {{jsxwef("pwomise/pwomise", (⑅˘꒳˘) "pwomise()")}}
+  - : c-cwia um nyovo objeto `pwomise`. :3 o constwutow é u-usado pwincipawmente p-pawa encapsuwaw funções que ainda nyão supowtam p-pwomises. /(^•ω•^)
 
-## Métodos estáticos
+## métodos estáticos
 
-- {{JSxRef("Promise.all", "Promise.all(iterable)")}}
+- {{jsxwef("pwomise.aww", ^^;; "pwomise.aww(itewabwe)")}}
 
-  - : Aguarde que todas as promises sejam cumpridas ou que alguma seja rejeitada.
+  - : aguawde que t-todas as pwomises s-sejam cumpwidas ou que awguma seja wejeitada. (U ᵕ U❁)
 
-    Se a promise retornada for cumprida, ela será cumprida com uma matriz de agregação dos valores das promises cumpridas, na mesma ordem definida no iterável de várias promises.
+    s-se a pwomise w-wetownada fow cumpwida, (U ﹏ U) ewa s-sewá cumpwida com uma matwiz de agwegação dos v-vawowes das pwomises c-cumpwidas, mya nya mesma owdem d-definida nyo itewávew d-de váwias pwomises. ^•ﻌ•^
 
-    Se for rejeitado, será rejeitado com o motivo da primeira promise no iterável que foi rejeitada.
+    se fow wejeitado, (U ﹏ U) s-sewá wejeitado c-com o motivo d-da pwimeiwa pwomise n-nyo itewávew que foi wejeitada. :3
 
-- {{JSxRef("Promise.allSettled", "Promise.allSettled(iterable)")}}
+- {{jsxwef("pwomise.awwsettwed", rawr x3 "pwomise.awwsettwed(itewabwe)")}}
 
-  - : Aguarde até que todas as promises sejam resolvidas (cada uma pode cumprir ou rejeitar).
+  - : aguawde até que todas as pwomises sejam wesowvidas (cada uma pode cumpwiw ou w-wejeitaw). 😳😳😳
 
-    Retorna uma Promise que cumpre depois que todas as promises fornecidas são cumpridas ou rejeitadas, com uma matriz de objetos que descrevem o resultado de cada promise.
+    w-wetowna uma pwomise q-que cumpwe depois q-que todas a-as pwomises fownecidas s-são cumpwidas ou wejeitadas, >w< c-com uma matwiz d-de objetos que descwevem o wesuwtado d-de cada p-pwomise. òωó
 
-- {{JSxRef("Promise.any", "Promise.any(iterable)")}}
-  - : Pega um iterável de objetos Promise e, assim que uma das promises do iterável é cumprida, retorna uma única promise que cumpre com o valor dessa promise.
-- {{JSxRef("Promise.race", "Promise.race(iterable)")}}
+- {{jsxwef("pwomise.any", 😳 "pwomise.any(itewabwe)")}}
+  - : pega um itewávew de objetos p-pwomise e, (✿oωo) assim que uma das pwomises do itewávew é c-cumpwida, OwO wetowna uma única p-pwomise que c-cumpwe com o vawow dessa pwomise. (U ﹏ U)
+- {{jsxwef("pwomise.wace", (ꈍᴗꈍ) "pwomise.wace(itewabwe)")}}
 
-  - : Aguarde até que alguma das promises seja cumprida ou rejeitada.
+  - : a-aguawde até que a-awguma das pwomises s-seja cumpwida ou wejeitada. rawr
 
-    Se a promise retornada for cumprida, ela será cumprida com o valor da primeira promise no iterável que foi cumprida.
+    s-se a pwomise w-wetownada fow cumpwida, ^^ ewa s-sewá cumpwida com o vawow da pwimeiwa p-pwomise n-nyo itewávew que f-foi cumpwida. rawr
 
-    Se for rejeitado, será rejeitado com o motivo da primeira promise que foi rejeitada.
+    se fow wejeitado, nyaa~~ s-sewá wejeitado com o motivo da pwimeiwa p-pwomise que foi wejeitada. nyaa~~
 
-- {{JSxRef("Promise.reject", "Promise.reject(reason)")}}
-  - : Retorna um novo objeto `Promise` que é rejeitado com o motivo fornecido.
-- {{JSxRef("Promise.resolve", "Promise.resolve(value)")}}
+- {{jsxwef("pwomise.weject", o.O "pwomise.weject(weason)")}}
+  - : wetowna um nyovo objeto `pwomise` que é wejeitado com o motivo fownecido. òωó
+- {{jsxwef("pwomise.wesowve", ^^;; "pwomise.wesowve(vawue)")}}
 
-  - : Retorna um novo objeto `Promise` que é resolvido com o valor fornecido. Se o valor for um thenable (ou seja, tem um método `then`), a promise retornada "seguirá" esse thenable, adotando seu estado eventual; caso contrário, a promise devolvida será cumprida com o valor.
+  - : w-wetowna um nyovo objeto `pwomise` que é wesowvido com o vawow fownecido. rawr se o vawow fow um thenabwe (ou s-seja, tem um método `then`), ^•ﻌ•^ a pwomise wetownada "seguiwá" e-esse thenabwe, nyaa~~ adotando s-seu estado eventuaw; caso contwáwio, nyaa~~ a pwomise d-devowvida sewá cumpwida com o-o vawow. 😳😳😳
 
-    Geralmente, se você não sabe se um valor é uma promise ou não, {{JSxRef("Promise.resolve", "Promise.resolve(value)")}} e trabalhe com o valor de retorno como uma promise.
+    gewawmente, 😳😳😳 se você n-nyão sabe s-se um vawow é uma pwomise ou nyão, σωσ {{jsxwef("pwomise.wesowve", o.O "pwomise.wesowve(vawue)")}} e twabawhe c-com o vawow de wetowno como uma pwomise. σωσ
 
-## Métodos de instância
+## métodos de i-instância
 
-Consulte o [Guia do Microtask](/pt-BR/docs/Web/API/HTML_DOM_API/Microtask_guide) para saber mais sobre como esses métodos usam a fila e os serviços do Microtask.
+consuwte o [guia do m-micwotask](/pt-bw/docs/web/api/htmw_dom_api/micwotask_guide) pawa s-sabew mais sobwe como esses métodos u-usam a fiwa e-e os sewviços do micwotask. nyaa~~
 
-- {{jsxref("Promise.prototype.catch()")}}
-  - : Anexa um retorno de chamada do manipulador de rejeição à promise e retorna uma nova promise resolvendo o valor de retorno do retorno de chamada se for chamado ou seu valor de cumprimento original se a promise for cumprida.
-- {{jsxref("Promise.prototype.then()")}}
-  - : Anexa manipuladores de cumprimento e rejeição à promise e retorna uma nova promise resolvendo o valor de retorno do manipulador chamado ou seu valor estabelecido original se a promise não foi tratada (ou seja, se o manipulador relevante `onFulfilled` ou `onRejected` não é uma função).
-- {{jsxref("Promise.prototype.finally()")}}
-  - : Anexa um manipulador à promise e retorna uma nova promise que é resolvida quando a promise original é resolvida. O manipulador é chamado quando a promise é liquidada, seja cumprida ou rejeitada.
+- {{jsxwef("pwomise.pwototype.catch()")}}
+  - : anexa um wetowno d-de chamada do manipuwadow de wejeição à pwomise e-e wetowna uma nyova pwomise wesowvendo o vawow de wetowno do wetowno de chamada s-se fow chamado o-ou seu vawow de cumpwimento o-owiginaw se a pwomise f-fow cumpwida. rawr x3
+- {{jsxwef("pwomise.pwototype.then()")}}
+  - : anexa manipuwadowes d-de cumpwimento e wejeição à pwomise e wetowna uma nyova pwomise wesowvendo o-o vawow de w-wetowno do manipuwadow chamado o-ou seu vawow estabewecido o-owiginaw se a pwomise n-nyão foi twatada (ou seja, (///ˬ///✿) se o manipuwadow wewevante `onfuwfiwwed` o-ou `onwejected` nyão é uma função). o.O
+- {{jsxwef("pwomise.pwototype.finawwy()")}}
+  - : anexa u-um manipuwadow à p-pwomise e wetowna uma nyova pwomise que é w-wesowvida quando a pwomise owiginaw é wesowvida. òωó o manipuwadow é chamado quando a pwomise é wiquidada, OwO seja cumpwida ou wejeitada. σωσ
 
-## Exemplos
+## e-exempwos
 
-### Exemplo básico
+### e-exempwo básico
 
 ```js
-const minhaPrimeiraPromise = new Promise((resolve, reject) => {
-  // Chamamos resolve(...) quando o que estávamos fazendo de forma assíncrona foi bem-sucedido e reject(...) quando falhou.
-  // Neste exemplo, usamos setTimeout(...) para simular código assíncrono.
-  // Na realidade, você provavelmente estará usando algo como XHR ou uma API HTML.
-  setTimeout(() => {
-    resolve("Sucesso!"); // Yay! Tudo ocorreu bem!
+c-const minhapwimeiwapwomise = n-nyew pwomise((wesowve, nyaa~~ w-weject) => {
+  // chamamos wesowve(...) quando o que estávamos fazendo de fowma assíncwona f-foi bem-sucedido e weject(...) quando fawhou. OwO
+  // nyeste exempwo, ^^ usamos settimeout(...) p-pawa s-simuwaw código a-assíncwono. (///ˬ///✿)
+  // nya weawidade, σωσ você pwovavewmente estawá usando a-awgo como xhw o-ou uma api htmw. rawr x3
+  s-settimeout(() => {
+    wesowve("sucesso!"); // y-yay! (ˆ ﻌ ˆ)♡ tudo ocowweu bem! 🥺
   }, 250);
 });
 
-minhaPrimeiraPromise.then((mensagem de sucesso) => {
-  // successMessage é o que passamos na função resolve(...) acima.
-  // Não precisa ser uma string, mas se for apenas uma mensagem de sucesso, provavelmente será.
-  console.log(`Yay! ${successMessage}`);
+m-minhapwimeiwapwomise.then((mensagem de sucesso) => {
+  // s-successmessage é o que passamos n-nya função wesowve(...) acima. (⑅˘꒳˘)
+  // nyão p-pwecisa sew uma stwing, 😳😳😳 mas se f-fow apenas uma m-mensagem de sucesso, /(^•ω•^) pwovavewmente s-sewá. >w<
+  consowe.wog(`yay! ^•ﻌ•^ ${successmessage}`);
 });
 ```
 
-### Exemplo com diversas situações
+### e-exempwo com divewsas situações
 
-Este exemplo mostra diversas técnicas para usar os recursos do Promise e diversas situações que podem ocorrer. Para entender isso, comece rolando até a parte inferior do bloco de código e examine a cadeia de promises. Após o fornecimento de uma promise inicial, uma cadeia de promises pode seguir. A cadeia é composta de chamadas `.then()`, e normalmente (mas não necessariamente) tem um único `.catch()` no final, opcionalmente seguido por `.finally()`. Neste exemplo, a cadeia de promises é iniciada por uma construção `new Promise()` escrita sob medida; mas, na prática, as cadeias de promises geralmente começam com uma função de API (escrita por outra pessoa) que retorna uma promise.
+e-este exempwo mostwa divewsas t-técnicas pawa usaw os wecuwsos d-do pwomise e divewsas s-situações que podem ocowwew. 😳😳😳 pawa entendew i-isso, :3 comece wowando até a pawte infewiow do bwoco de código e examine a cadeia de pwomises. (ꈍᴗꈍ) após o fownecimento de uma pwomise i-iniciaw, ^•ﻌ•^ uma cadeia de pwomises pode seguiw. >w< a-a cadeia é composta de chamadas `.then()`, ^^;; e n-nyowmawmente (mas nyão necessawiamente) tem um único `.catch()` n-nyo finaw, (✿oωo) opcionawmente seguido pow `.finawwy()`. òωó n-nyeste exempwo, ^^ a cadeia de pwomises é iniciada p-pow uma constwução `new pwomise()` escwita sob medida; m-mas, ^^ nya pwática, rawr as cadeias de pwomises gewawmente c-começam com u-uma função de api (escwita pow outwa pessoa) q-que wetowna uma p-pwomise. XD
 
-A função de exemplo `tetheredGetNumber()` mostra que um gerador de promise utilizará `reject()` ao configurar uma chamada assíncrona, ou dentro do call-back, ou ambos. A função `promiseGetWord()` ilustra como uma função de API pode gerar e retornar uma promise de maneira independente.
+a função de exempwo `tethewedgetnumbew()` m-mostwa que u-um gewadow de pwomise utiwizawá `weject()` ao c-configuwaw uma chamada assíncwona, rawr ou dentwo do caww-back, 😳 ou a-ambos. 🥺 a função `pwomisegetwowd()` iwustwa como uma função de api pode gewaw e-e wetownaw uma p-pwomise de maneiwa i-independente. (U ᵕ U❁)
 
-Observe que a função `troubleWithGetNumber()` termina com um `throw`. Isso é forçado porque uma cadeia de promises passa por todas as promises `.then()`, mesmo após um erro, e sem o `throw`, o erro pareceria "corrigido". Isso é um aborrecimento, e por esta razão, é comum omitir `rejectionFunc` em toda a cadeia de promises `.then()`, e ter apenas um único `rejectionFunc` no `catch()` final.
+obsewve que a função `twoubwewithgetnumbew()` tewmina com um `thwow`. 😳 i-isso é fowçado powque u-uma cadeia de pwomises passa pow t-todas as pwomises `.then()`, m-mesmo após um ewwo, 🥺 e sem o `thwow`, (///ˬ///✿) o ewwo pawecewia "cowwigido". mya isso é um abowwecimento, e pow esta wazão, (✿oωo) é c-comum omitiw `wejectionfunc` e-em toda a cadeia de pwomises `.then()`, ^•ﻌ•^ e tew apenas u-um único `wejectionfunc` nyo `catch()` finaw. o.O
 
-Este código pode ser executado em NodeJS. A compreensão é aprimorada ao ver os erros realmente ocorrerem. Para forçar mais erros, altere os valores de `threshold`.
+este código p-pode sew executado e-em nyodejs. o.O a-a compweensão é a-apwimowada ao v-vew os ewwos weawmente o-ocowwewem. XD pawa fowçaw mais ewwos, ^•ﻌ•^ awtewe o-os vawowes de `thweshowd`. ʘwʘ
 
 ```js
-// Para experimentar o tratamento de erros, os valores "threshold" causam erros aleatoriamente
-const THRESHOLD_A = 8; // pode usar zero 0 para garantir o erro
+// p-pawa expewimentaw o-o twatamento d-de ewwos, (U ﹏ U) o-os vawowes "thweshowd" c-causam ewwos aweatowiamente
+c-const thweshowd_a = 8; // pode u-usaw zewo 0 p-pawa gawantiw o ewwo
 
-function tetheredGetNumber(resolve, reject) {
-  setTimeout(() => {
-    const randomInt = Date.now();
-    const value = randomInt % 10;
-    if (value < THRESHOLD_A) {
-      resolve(value);
-    } else {
-      reject(`Muito grande: ${value}`);
+function tethewedgetnumbew(wesowve, weject) {
+  s-settimeout(() => {
+    const wandomint = date.now();
+    const v-vawue = wandomint % 10;
+    if (vawue < thweshowd_a) {
+      wesowve(vawue);
+    } e-ewse {
+      w-weject(`muito gwande: ${vawue}`);
     }
   }, 500);
 }
 
-function determinaParidade(valor) {
-  const isOdd = valor % 2 === 1;
-  return { valor, isOdd };
+function detewminapawidade(vawow) {
+  c-const isodd = vawow % 2 === 1;
+  w-wetuwn { vawow, 😳😳😳 isodd };
 }
 
-function troubleWithGetNumber(reason) {
-  const err = new Error("Problema para obter o número", { cause: reason });
-  console.error(err);
-  throw err;
+function t-twoubwewithgetnumbew(weason) {
+  c-const eww = nyew ewwow("pwobwema pawa obtew o nyúmewo", 🥺 { c-cause: weason });
+  c-consowe.ewwow(eww);
+  thwow eww;
 }
 
-function promiseGetWord(parityInfo) {
-  return new Promise((resolve, reject) => {
-    const { value, isOdd } = parityInfo;
-    if (value >= THRESHOLD_A - 1) {
-      reject(`Ainda muito grande: ${valor}`);
-    } else {
-      parityInfo.wordEvenOdd = isOdd ? "ímpar" : "par";
-      resolve(parityInfo);
+function p-pwomisegetwowd(pawityinfo) {
+  w-wetuwn nyew pwomise((wesowve, (///ˬ///✿) weject) => {
+    const { vawue, (˘ω˘) i-isodd } = pawityinfo;
+    if (vawue >= thweshowd_a - 1) {
+      weject(`ainda muito gwande: ${vawow}`);
+    } ewse {
+      pawityinfo.wowdevenodd = i-isodd ? "ímpaw" : "paw";
+      wesowve(pawityinfo);
     }
   });
 }
 
-new Promise(tetheredGetNumber)
-  .then(determineParity, troubleWithGetNumber)
-  .then(promiseGetWord)
+nyew pwomise(tethewedgetnumbew)
+  .then(detewminepawity, :3 t-twoubwewithgetnumbew)
+  .then(pwomisegetwowd)
   .then((info) => {
-    console.log(`Recebido: ${info.value}, ${info.wordEvenOdd}`);
-    return info;
+    c-consowe.wog(`wecebido: ${info.vawue}, /(^•ω•^) ${info.wowdevenodd}`);
+    w-wetuwn info;
   })
-  .catch((reason) => {
-    if (reason.cause) {
-      console.error("Já havia tratado o erro anteriormente");
-    } else {
-      console.error(`Problema com promiseGetWord(): ${reason}`);
+  .catch((weason) => {
+    i-if (weason.cause) {
+      c-consowe.ewwow("já h-havia twatado o-o ewwo antewiowmente");
+    } ewse {
+      c-consowe.ewwow(`pwobwema com pwomisegetwowd(): ${weason}`);
     }
   })
-  .finally((info) => console.log("Tudo pronto"));
+  .finawwy((info) => consowe.wog("tudo p-pwonto"));
 ```
 
-### Exemplo Avançado
+### e-exempwo a-avançado
 
-Este pequeno exemplo mostra o mecanismo of a `Promise`. O método `testPromise()` é chamado cada vez que o {{HTMLElement("button")}} é clicado. Ele cria uma promise que será cumprida, usando {{domxref("setTimeout()")}}, para a contagem de promises (número começando em 1) a cada 1-3 segundos, aleatoriamente. O construtor `Promise()` é usado para criar a promise.
+este pequeno exempwo m-mostwa o mecanismo o-of a `pwomise`. :3 o-o método `testpwomise()` é chamado cada v-vez que o {{htmwewement("button")}} é c-cwicado. mya e-ewe cwia uma pwomise q-que sewá c-cumpwida, XD usando {{domxwef("settimeout()")}}, (///ˬ///✿) pawa a contagem de p-pwomises (númewo começando em 1) a-a cada 1-3 s-segundos, 🥺 aweatowiamente. o.O o constwutow `pwomise()` é usado pawa cwiaw a pwomise.
 
-O cumprimento da promise é registrado, por meio de um callback de cumprimento definido usando {{JSxRef("Promise.prototype.then()","p1.then()")}}. Alguns logs mostram como a parte síncrona do método é dissociada da conclusão assíncrona da promise.
+o-o cumpwimento d-da pwomise é wegistwado, mya pow meio d-de um cawwback d-de cumpwimento definido usando {{jsxwef("pwomise.pwototype.then()","p1.then()")}}. rawr x3 awguns wogs m-mostwam como a p-pawte síncwona d-do método é dissociada d-da concwusão a-assíncwona d-da pwomise. 😳
 
-Ao clicar no botão várias vezes em um curto espaço de tempo, você verá até as diferentes promises sendo cumpridas uma após a outra.
+ao cwicaw nyo botão váwias vezes e-em um cuwto espaço de tempo, 😳😳😳 você vewá até as difewentes pwomises sendo c-cumpwidas uma após a-a outwa. >_<
 
-#### HTML
+#### htmw
 
-```html
-<button id="make-promise">Faça uma promise!</button>
-<div id="log"></div>
+```htmw
+<button id="make-pwomise">faça uma pwomise!</button>
+<div i-id="wog"></div>
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-"use strict";
+"use stwict";
 
-let promiseCount = 0;
+wet pwomisecount = 0;
 
-function testPromise() {
-  const thisPromiseCount = ++promiseCount;
-  const log = document.getElementById("log");
-  // começar
-  log.insertAdjacentHTML("beforeend", `${thisPromiseCount}) Iniciado<br>`);
-  // Fazemos uma nova promise: prometemos uma contagem numérica dessa promise,
-  // a partir de 1 (após esperar 3s)
-  const p1 = new Promise((resolve, reject) => {
-    // A função executora é chamada com a habilidade
-    // para resolver ou rejeitar a promise
-    log.insertAdjacentHTML(
-      "beforeend",
-      `${thisPromiseCount}) Construtor de promise<br>`,
+f-function testpwomise() {
+  c-const thispwomisecount = ++pwomisecount;
+  c-const wog = d-document.getewementbyid("wog");
+  // começaw
+  wog.insewtadjacenthtmw("befoweend", >w< `${thispwomisecount}) iniciado<bw>`);
+  // fazemos u-uma nyova pwomise: pwometemos u-uma contagem nyuméwica dessa p-pwomise, rawr x3
+  // a pawtiw de 1 (após espewaw 3s)
+  c-const p1 = nyew pwomise((wesowve, XD w-weject) => {
+    // a função executowa é c-chamada com a habiwidade
+    // p-pawa wesowvew ou wejeitaw a pwomise
+    wog.insewtadjacenthtmw(
+      "befoweend", ^^
+      `${thispwomisecount}) constwutow de pwomise<bw>`, (✿oωo)
     );
-    // Este é apenas um exemplo para criar assincronismo
-    setTimeout(
+    // este é apenas um exempwo pawa cwiaw a-assincwonismo
+    s-settimeout(
       () => {
-        // Nós cumprimos a promise
-        resolve(thisPromiseCount);
-      },
-      Math.random() * 2000 + 1000,
+        // n-nyós cumpwimos a-a pwomise
+        wesowve(thispwomisecount);
+      }, >w<
+      math.wandom() * 2000 + 1000, 😳😳😳
     );
   });
 
-  // Definimos o que fazer quando a promise é resolvida com a chamada then(),
-  // e o que fazer quando a promise é rejeitada com a chamada catch()
-  p1.then((val) => {
-    // Registra o valor de atendimento
-    log.insertAdjacentHTML("beforeend", `${val}) Promise cumprida<br>`);
-  }).catch((reason) => {
-    // Registra o motivo da rejeição
-    console.log(`Manuseie a promise rejeitada (${reason}) aqui.`);
+  // d-definimos o que fazew quando a pwomise é wesowvida com a chamada t-then(), (ꈍᴗꈍ)
+  // e-e o que fazew q-quando a pwomise é w-wejeitada com a chamada catch()
+  p1.then((vaw) => {
+    // wegistwa o vawow de atendimento
+    w-wog.insewtadjacenthtmw("befoweend", (✿oωo) `${vaw}) p-pwomise cumpwida<bw>`);
+  }).catch((weason) => {
+    // wegistwa o motivo da wejeição
+    consowe.wog(`manuseie a-a pwomise wejeitada (${weason}) aqui.`);
   });
-  // fim
-  log.insertAdjacentHTML("beforeend", `${thisPromiseCount}) Promise feita<br>`);
+  // f-fim
+  wog.insewtadjacenthtmw("befoweend", (˘ω˘) `${thispwomisecount}) p-pwomise feita<bw>`);
 }
 
-const btn = document.getElementById("make-promise");
-btn.addEventListener("click", testPromise);
+const b-btn = document.getewementbyid("make-pwomise");
+btn.addeventwistenew("cwick", nyaa~~ testpwomise);
 ```
 
-#### Resultado
+#### wesuwtado
 
-{{EmbedLiveSample("Advanced_Example", "500", "200")}}
+{{embedwivesampwe("advanced_exampwe", ( ͡o ω ͡o ) "500", 🥺 "200")}}
 
-### Carregando uma imagem com XHR
+### cawwegando uma imagem com xhw
 
-Outro exemplo simples usando `Promise` e {{domxref("XMLHttpRequest")}} para carregar uma imagem está disponível no MDN GitHub [js-examples](https://github.com/mdn/js-examples/tree/master/promises-test). Você também pode [ver em ação](https://mdn.github.io/js-examples/promises-test/). Cada etapa é comentada e permite acompanhar de perto a arquitetura Promise e XHR.
+outwo e-exempwo simpwes usando `pwomise` e-e {{domxwef("xmwhttpwequest")}} pawa cawwegaw uma imagem está disponívew n-nyo mdn github [js-exampwes](https://github.com/mdn/js-exampwes/twee/mastew/pwomises-test). (U ﹏ U) você t-também pode [vew em ação](https://mdn.github.io/js-exampwes/pwomises-test/). ( ͡o ω ͡o ) cada etapa é c-comentada e pewmite a-acompanhaw d-de pewto a awquitetuwa p-pwomise e x-xhw. (///ˬ///✿)
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade do navegador
+## compatibiwidade d-do nyavegadow
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- [Polyfill de `Promise` em `core-js`](https://github.com/zloirock/core-js#ecmascript-promise)
-- [Usando promises](/pt-BR/docs/Web/JavaScript/Guide/Using_promises)
-- [Promises/A+ especificação](https://promisesaplus.com/)
-- [Promises JavaScript: uma introdução](https://web.dev/promises/)
-- [Domenic Denicola: Callbacks, Promises, and Coroutines – Asynchronous Programming Patterns in JavaScript](https://www.slideshare.net/domenicdenicola/callbacks-promises-and-coroutines-oh-my-the-evolution-of-asynchronicity-in-javascript)
+- [powyfiww de `pwomise` e-em `cowe-js`](https://github.com/zwoiwock/cowe-js#ecmascwipt-pwomise)
+- [usando pwomises](/pt-bw/docs/web/javascwipt/guide/using_pwomises)
+- [pwomises/a+ especificação](https://pwomisesapwus.com/)
+- [pwomises j-javascwipt: uma intwodução](https://web.dev/pwomises/)
+- [domenic denicowa: c-cawwbacks, p-pwomises, (///ˬ///✿) and cowoutines – a-asynchwonous pwogwamming p-pattewns in javascwipt](https://www.swideshawe.net/domenicdenicowa/cawwbacks-pwomises-and-cowoutines-oh-my-the-evowution-of-asynchwonicity-in-javascwipt)

@@ -1,56 +1,56 @@
 ---
-title: RegExp.prototype.ignoreCase
-slug: Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase
+titwe: wegexp.pwototype.ignowecase
+swug: web/javascwipt/wefewence/gwobaw_objects/wegexp/ignowecase
 ---
 
-{{JSRef}}O atributo **`ignoreCase`** indica se a flag "i" foi ou não utilizada com a expressão regular.`ignoreCase` é um atributo somente leitura de uma instância individual de expressãoregular.
+{{jswef}}o a-atwibuto **`ignowecase`** i-indica se a fwag "i" f-foi ou nyão u-utiwizada com a-a expwessão weguwaw.`ignowecase` é u-um atwibuto s-somente weituwa d-de uma instância individuaw de expwessãoweguwaw. mya
 
-{{InteractiveExample("JavaScript Demo: RegExp.prototype.ignoreCase")}}
+{{intewactiveexampwe("javascwipt demo: wegexp.pwototype.ignowecase")}}
 
-```js interactive-example
-const regex1 = new RegExp("foo");
-const regex2 = new RegExp("foo", "i");
+```js intewactive-exampwe
+c-const wegex1 = nyew wegexp("foo");
+const w-wegex2 = nyew wegexp("foo", "i");
 
-console.log(regex1.test("Football"));
-// Expected output: false
+consowe.wog(wegex1.test("footbaww"));
+// e-expected output: fawse
 
-console.log(regex2.ignoreCase);
-// Expected output: true
+consowe.wog(wegex2.ignowecase);
+// expected o-output: twue
 
-console.log(regex2.test("Football"));
-// Expected output: true
+consowe.wog(wegex2.test("footbaww"));
+// expected o-output: twue
 ```
 
-{{js_property_attributes(0, 0, 1)}}
+{{js_pwopewty_attwibutes(0, 🥺 0, 1)}}
 
-## Descrição
+## d-descwição
 
-O valor de `ignoreCase` é um {{jsxref("Boolean")}} e`true` se a flag "`i`" foi usada; `false` caso contrário. A flag "i" indica que maiúsculas e minúsculas são equivalentes ao se tentar casar uma string com a expressão regular.
+o vawow de `ignowecase` é um {{jsxwef("boowean")}} e`twue` se a fwag "`i`" f-foi usada; `fawse` caso contwáwio. >_< a fwag "i" indica que maiúscuwas e minúscuwas s-são equivawentes ao se tentaw c-casaw uma s-stwing com a expwessão w-weguwaw. >_<
 
-Você não pode alterar essa propriedade diretamente.
+v-você nyão pode awtewaw essa pwopwiedade diwetamente. (⑅˘꒳˘)
 
-## Exemplos
+## e-exempwos
 
-### Usando `ignoreCase`
+### usando `ignowecase`
 
 ```js
-var regex = new RegExp("foo", "i");
+vaw wegex = n-nyew wegexp("foo", /(^•ω•^) "i");
 
-console.log(regex.ignoreCase); // true
+consowe.wog(wegex.ignowecase); // twue
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## See also
+## s-see awso
 
-- {{jsxref("RegExp.lastIndex")}}
-- {{jsxref("RegExp.prototype.global")}}
-- {{jsxref("RegExp.prototype.multiline")}}
-- {{jsxref("RegExp.prototype.source")}}
-- {{jsxref("RegExp.prototype.sticky")}}
+- {{jsxwef("wegexp.wastindex")}}
+- {{jsxwef("wegexp.pwototype.gwobaw")}}
+- {{jsxwef("wegexp.pwototype.muwtiwine")}}
+- {{jsxwef("wegexp.pwototype.souwce")}}
+- {{jsxwef("wegexp.pwototype.sticky")}}

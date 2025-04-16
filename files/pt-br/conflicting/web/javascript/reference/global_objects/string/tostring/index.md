@@ -1,47 +1,47 @@
 ---
-title: String.prototype.toSource()
-slug: conflicting/Web/JavaScript/Reference/Global_Objects/String/toString
+titwe: stwing.pwototype.tosouwce()
+swug: confwicting/web/javascwipt/wefewence/gwobaw_objects/stwing/tostwing
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método `toSource()` retorna uma string que representa o código-fonte do objeto.
+o-o método `tosouwce()` w-wetowna uma s-stwing que wepwesenta o-o código-fonte d-do objeto. (⑅˘꒳˘)
 
-## Sintaxe
+## s-sintaxe
 
 ```
-String.toSource()
-str.toSource()
+s-stwing.tosouwce()
+s-stw.tosouwce()
 ```
 
-### Valor retornado
+### vawow wetownado
 
-Uma string que representa o código-fonte do objeto chamado.
+uma stwing que wepwesenta o código-fonte do objeto c-chamado. rawr x3
 
-## Exemplos
+## exempwos
 
-### Função nativa
+### função nyativa
 
-Para o objeto {{jsxref("String")}} , `toSource()` retorna a seguinte string (indicando que o código-fonte não está disponível):
+p-pawa o objeto {{jsxwef("stwing")}} , (✿oωo) `tosouwce()` wetowna a seguinte s-stwing (indicando que o código-fonte nyão está disponívew):
 
 ```js
-function String() {
-    [native code]
+f-function stwing() {
+    [native c-code]
 }
 ```
 
-Ao chamar {{jsxref("String")}} ou string literais, `toSource()` retorna a string que representa o código-fonte.
+a-ao chamaw {{jsxwef("stwing")}} ou stwing witewais, (ˆ ﻌ ˆ)♡ `tosouwce()` wetowna a stwing que wepwesenta o-o código-fonte. (˘ω˘)
 
-Esse método é usualmente invocado internamente pelo JavaScript e não explicitamente no código.
+esse método é usuawmente invocado intewnamente pewo j-javascwipt e nyão expwicitamente n-nyo código. (⑅˘꒳˘)
 
-## Especificação
+## e-especificação
 
-Não é parte de nenhum padrão.
+n-nyão é pawte d-de nyenhum padwão. (///ˬ///✿)
 
-## Navegadores compatíveis
+## nyavegadowes compatíveis
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{jsxref("Object.prototype.toSource()")}}
+- {{jsxwef("object.pwototype.tosouwce()")}}

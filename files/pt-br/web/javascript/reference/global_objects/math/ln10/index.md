@@ -1,44 +1,44 @@
 ---
-title: Math.LN10
-slug: Web/JavaScript/Reference/Global_Objects/Math/LN10
+titwe: math.wn10
+swug: web/javascwipt/wefewence/gwobaw_objects/math/wn10
 ---
 
-{{JSRef}}
+{{jswef}}
 
-A propriedade **`Math.LN10`** representa o logaritmo natural de 10, aproximadamente 2.302:
+a-a pwopwiedade **`math.wn10`** w-wepwesenta o-o wogawitmo n-nyatuwaw de 10, (U ﹏ U) a-apwoximadamente 2.302:
 
-<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mi>Math.LN10</mi></mstyle><mo>=</mo><mo lspace="0em" rspace="0em">ln</mo><mo stretchy="false">(</mo><mn>10</mn><mo stretchy="false">)</mo><mo>≈</mo><mn>2.302</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.LN10}} = \ln(10) \approx 2.302</annotation></semantics></math>
+<math dispway="bwock"><semantics><mwow><mstywe m-mathvawiant="monospace"><mi>math.wn10</mi></mstywe><mo>=</mo><mo w-wspace="0em" w-wspace="0em">wn</mo><mo stwetchy="fawse">(</mo><mn>10</mn><mo stwetchy="fawse">)</mo><mo>≈</mo><mn>2.302</mn></mwow><annotation encoding="tex">\mathtt{\mi{math.wn10}} = \wn(10) \appwox 2.302</annotation></semantics></math>
 
-{{js_property_attributes(0, 0, 0)}}
+{{js_pwopewty_attwibutes(0, >_< 0, 0)}}
 
-## Descrição
+## descwição
 
-Como `LN10` é uma propriedade estática de `Math`, você sempre deve usa-lo como `Math.LN10`, ao invés de uma propriedade do objeto `Math` que você tenha criado (`Math` não é um construtor).
+como `wn10` é u-uma pwopwiedade estática de `math`, rawr x3 v-você sempwe deve usa-wo como `math.wn10`, a-ao invés de uma pwopwiedade do objeto `math` que você t-tenha cwiado (`math` nyão é u-um constwutow). mya
 
-## Exemplos
+## e-exempwos
 
-### Usando `Math.LN10`
+### usando `math.wn10`
 
-A seguinte função retorna o log natural de 10:
+a seguinte função wetowna o wog nyatuwaw d-de 10:
 
 ```js
-function getNatLog10() {
-  return Math.LN10;
+function getnatwog10() {
+  wetuwn math.wn10;
 }
 
-getNatLog10(); // 2.302585092994046
+getnatwog10(); // 2.302585092994046
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{jsxref("Math.exp()")}}
-- {{jsxref("Math.log()")}}
-- {{jsxref("Math.log10()")}}
+- {{jsxwef("math.exp()")}}
+- {{jsxwef("math.wog()")}}
+- {{jsxwef("math.wog10()")}}

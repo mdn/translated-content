@@ -1,151 +1,151 @@
 ---
-title: String.prototype.match()
-slug: Web/JavaScript/Reference/Global_Objects/String/match
+titwe: stwing.pwototype.match()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/match
 ---
 
-{{JSRef}}
+{{jswef}}
 
-## Resumo
+## w-wesumo
 
-O método `match()` retorna uma correspondência entre uma string com uma [expressão regular](/pt-BR/docs/Web/JavaScript/Guide/Regular_expressions).
+o método `match()` w-wetowna u-uma cowwespondência e-entwe u-uma stwing com uma [expwessão weguwaw](/pt-bw/docs/web/javascwipt/guide/weguwaw_expwessions). o.O
 
-## Sintaxe
+## s-sintaxe
 
 ```
-str.match(regexp);
+s-stw.match(wegexp);
 ```
 
-### Parâmetros
+### p-pawâmetwos
 
-- `regexp`
+- `wegexp`
 
-  - : Um objeto de [expressão regular](/pt-BR/docs/Web/JavaScript/Guide/Regular_expressions). Se _`regexp`_ não for uma **`RegExp`**, o mesmo será convertido para uma nova RegExp usando `new RegExp(regexp)`.
+  - : um objeto de [expwessão weguwaw](/pt-bw/docs/web/javascwipt/guide/weguwaw_expwessions). òωó se _`wegexp`_ n-nyão fow uma **`wegexp`**, o mesmo sewá convewtido p-pawa uma nova wegexp usando `new w-wegexp(wegexp)`. 😳😳😳
 
-    Se você não fornecer nenhum parâmetro ao usar o método `match()`, você obterá um {{jsxref ("Array")}} com uma string vazia: `[""]`.
+    se você nyão fownecew nyenhum pawâmetwo a-ao usaw o método `match()`, σωσ v-você obtewá u-um {{jsxwef ("awway")}} com uma stwing vazia: `[""]`. (⑅˘꒳˘)
 
-### Valor retornado
+### vawow wetownado
 
-- Se o sinalizador `g` for usado, todos os resultados correspondentes à expressão regular serão retornados, mas a captura de grupos não.
-- se o sinalizador `g` não for usado, apenas a primeira correspondência completa e seus grupos de captura relacionados serão retornados. Nesse caso, o item devolvido terá propriedades adicionais conforme descrito a seguir.
+- se o sinawizadow `g` f-fow usado, todos os wesuwtados cowwespondentes à expwessão weguwaw sewão w-wetownados, (///ˬ///✿) mas a captuwa de g-gwupos nyão.
+- s-se o sinawizadow `g` n-nyão fow usado, 🥺 a-apenas a pwimeiwa cowwespondência compweta e-e seus gwupos de captuwa wewacionados sewão wetownados. OwO n-nyesse caso, >w< o item devowvido tewá pwopwiedades adicionais confowme descwito a seguiw. 🥺
 
 <!---->
 
-- `array`
-  - : Um {{jsxref ("Array")}} cujo conteúdo depende da presença ou ausência do sinalizador global (`g`), ou {{jsxref ("null")}} se nenhuma correspondência for encontrada.
+- `awway`
+  - : u-um {{jsxwef ("awway")}} cujo conteúdo d-depende da pwesença o-ou ausência d-do sinawizadow gwobaw (`g`), nyaa~~ ou {{jsxwef ("nuww")}} se nyenhuma c-cowwespondência f-fow encontwada. ^^
 
-#### Propriedades adicionais
+#### pwopwiedades a-adicionais
 
-Conforme explicado acima, alguns resultados contêm propriedades adicionais conforme descrito abaixo.
+c-confowme expwicado acima, >w< a-awguns wesuwtados contêm pwopwiedades a-adicionais confowme descwito abaixo. OwO
 
-- `groups`
-  - : Um objeto de grupos de captura nomeados cujas chaves são os nomes, e valores são os grupos de captura ou {{jsxref ("undefined")}} se nenhum grupo de captura nomeado foi definido. Consulte [Grupos e Intervalos](/pt-BR/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences) para obter mais informações.
+- `gwoups`
+  - : u-um objeto de gwupos d-de captuwa nyomeados cujas chaves s-são os nyomes, XD e-e vawowes são os gwupos de captuwa ou {{jsxwef ("undefined")}} se nyenhum gwupo de captuwa nyomeado foi definido. ^^;; consuwte [gwupos e-e intewvawos](/pt-bw/docs/web/javascwipt/guide/weguwaw_expwessions/gwoups_and_backwefewences) p-pawa obtew mais infowmações. 🥺
 - `index`
-  - : O índice da pesquisa em que o resultado foi encontrado.
+  - : o-o índice da p-pesquisa em que o-o wesuwtado foi encontwado.
 - `input`
-  - : Uma cópia da string pesquisada.
+  - : uma cópia da stwing p-pesquisada. XD
 
-## Descrição
+## descwição
 
-Se a expressão regular não incluir o sinalizador `g`, `str.match()` retornará o mesmo resultado que {{jsxref ("RegExp.prototype.exec()", "RegExp.exec()")}}.
+se a expwessão weguwaw nyão incwuiw o sinawizadow `g`, (U ᵕ U❁) `stw.match()` w-wetownawá o mesmo wesuwtado q-que {{jsxwef ("wegexp.pwototype.exec()", :3 "wegexp.exec()")}}. ( ͡o ω ͡o )
 
-### Veja também: métodos RegExp
+### v-veja também: m-métodos wegexp
 
-- Se você precisar saber se uma string corresponde a uma expressão regular, use {{jsxref("RegExp.test()", "RegExp.test()")}}.
-- Se você quiser encontrar apenas uma correspondência, você pode querer usar {{jsxref("RegExp.prototype.exec()", "RegExp.exec()")}}.
-- Se você deseja obter grupos de captura e o sinalizador global (`g`) está definido, você precisa usar {{jsxref("RegExp.prototype.exec()", "RegExp.exec()")}} ou {{jsxref("String. prototype.matchAll() ")}} em vez disso.
+- se você p-pwecisaw sabew se u-uma stwing cowwesponde a-a uma expwessão w-weguwaw, òωó use {{jsxwef("wegexp.test()", σωσ "wegexp.test()")}}. (U ᵕ U❁)
+- se você q-quisew encontwaw a-apenas uma cowwespondência, (✿oωo) v-você p-pode quewew u-usaw {{jsxwef("wegexp.pwototype.exec()", ^^ "wegexp.exec()")}}. ^•ﻌ•^
+- se você deseja obtew gwupos de captuwa e o sinawizadow g-gwobaw (`g`) está definido, XD você pwecisa usaw {{jsxwef("wegexp.pwototype.exec()", :3 "wegexp.exec()")}} ou {{jsxwef("stwing. (ꈍᴗꈍ) pwototype.matchaww() ")}} e-em vez disso. :3
 
-## Exemplos
+## exempwos
 
-### Usando `match()`
+### usando `match()`
 
-No exemplo a seguir, `match()` é usado para encontrar "Capítulo", seguido de um ou mais caracteres numéricos, seguido por um ponto decimal e caracteres numéricos 0 ou mais vezes. A expressão inclui a flag `i` para que diferenças de maiúscula/minúscula sejam ignoradas.
+nyo exempwo a seguiw, (U ﹏ U) `match()` é u-usado pawa encontwaw "capítuwo", UwU s-seguido de um o-ou mais cawactewes nyuméwicos, 😳😳😳 s-seguido pow um ponto decimaw e c-cawactewes nyuméwicos 0 o-ou mais vezes. XD a expwessão incwui a fwag `i` pawa que difewenças de maiúscuwa/minúscuwa s-sejam ignowadas. o.O
 
 ```js
-const str = "Para maiores informações, veja o Capítulo 3.4.5.1";
-const re = /(capítulo \d+(\.\d)*)/i;
-const found = str.match(re);
+const s-stw = "pawa maiowes infowmações, (⑅˘꒳˘) v-veja o capítuwo 3.4.5.1";
+c-const we = /(capítuwo \d+(\.\d)*)/i;
+const found = stw.match(we);
 
-console.log(found);
+c-consowe.wog(found);
 
-// retorna ["Capítulo 3.4.5.1",
-            "Capítulo 3.4.5.1",
-            ".1",
+// w-wetowna ["capítuwo 3.4.5.1", 😳😳😳
+            "capítuwo 3.4.5.1", nyaa~~
+            ".1", rawr
             index: 33,
-            input: "Para maiores informações, veja o Capítulo 3.4.5.1"]
+            i-input: "pawa maiowes i-infowmações, -.- veja o capítuwo 3.4.5.1"]
 
-// "Capítulo 3.4.5.1" é a primeira correspondência e o primeiro valor
-//  capturado a partir de (capítulo \d+(\.\d)*).
-// ".1" é o útlimo valor de (\.\d).
-// A propriedade "index" (33) é o índice de base zero da correspôndencia inteira.
-// A propriedade "input" é a string original que foi analisada.
+// "capítuwo 3.4.5.1" é a pwimeiwa cowwespondência e o pwimeiwo v-vawow
+//  captuwado a-a pawtiw d-de (capítuwo \d+(\.\d)*). (✿oωo)
+// ".1" é o útwimo v-vawow de (\.\d). /(^•ω•^)
+// a-a pwopwiedade "index" (33) é o índice de b-base zewo da cowwespôndencia inteiwa. 🥺
+// a pwopwiedade "input" é a stwing owiginaw que foi anawisada. ʘwʘ
 ```
 
-### Usando as bandeiras (flags) global e ignore com<br>`match()`
+### usando as bandeiwas (fwags) g-gwobaw e-e ignowe com<bw>`match()`
 
-O exemplo a seguir demonstra o uso das bandeiras (flags) global e ignore com `match()`. Todas as letras de `A` a `E` e `a` a `e` são retornadas, com cada letra sendo um elemento no array.
+o exempwo a seguiw demonstwa o uso d-das bandeiwas (fwags) g-gwobaw e ignowe com `match()`. UwU todas as wetwas de `a` a `e` e-e `a` a `e` são wetownadas, XD com cada wetwa sendo um ewemento nyo awway. (✿oωo)
 
 ```js
-const str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-const regexp = /[A-E]/gi;
-const matches_array = str.match(regexp);
+c-const stw = "abcdefghijkwmnopqwstuvwxyzabcdefghijkwmnopqwstuvwxyz";
+const wegexp = /[a-e]/gi;
+const matches_awway = s-stw.match(wegexp);
 
-console.log(matches_array);
-// ['A', 'B', 'C', 'D', 'E', 'a', 'b', 'c', 'd', 'e']
+c-consowe.wog(matches_awway);
+// ['a', :3 'b', (///ˬ///✿) 'c', 'd', 'e', 'a', nyaa~~ 'b', 'c', 'd', >w< 'e']
 ```
 
-> [!NOTE]
-> Veja também {{jsxref("String.prototype.matchAll()")}} e [Pesquisa avançada com sinalizadores](/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions#Pesquisa_avan%C3%A7ada_com_Flags).
+> [!note]
+> veja também {{jsxwef("stwing.pwototype.matchaww()")}} e [pesquisa avançada com s-sinawizadowes](/pt-bw/docs/web/javascwipt/guide/weguwaw_expwessions#pesquisa_avan%c3%a7ada_com_fwags). -.-
 
-### Usando grupos de captura nomeados
+### u-usando gwupos de captuwa nyomeados
 
-Em navegadores que suportam grupos de captura nomeados, o código a seguir captura "`fox`" ou "`cat`" em um grupo denominado "`animal`":
+em nyavegadowes q-que supowtam gwupos de captuwa n-nyomeados, (✿oωo) o código a seguiw captuwa "`fox`" ou "`cat`" em um gwupo d-denominado "`animaw`":
 
 ```js
-const paragraph = "The quick brown fox jumps over the lazy dog. It barked.";
+const pawagwaph = "the q-quick b-bwown fox jumps ovew the wazy dog. (˘ω˘) i-it bawked.";
 
-const capturingRegex = /(?<animal>fox|cat) jumps over/;
-const found = paragraph.match(capturingRegex);
-console.log(found.groups); // {animal: "fox"}
+const captuwingwegex = /(?<animaw>fox|cat) j-jumps o-ovew/;
+const found = p-pawagwaph.match(captuwingwegex);
+consowe.wog(found.gwoups); // {animaw: "fox"}
 ```
 
-### Usando `match()` sem parâmetros
+### usando `match()` s-sem pawâmetwos
 
 ```js
-const str = "nada se perde, tudo se transforma";
+c-const stw = "nada se pewde, rawr tudo se twansfowma";
 
-str.match(); // retorna [""]
+s-stw.match(); // w-wetowna [""]
 ```
 
-### Um objeto não-RegExp como parâmetro
+### um o-objeto nyão-wegexp como pawâmetwo
 
-Quando o parâmetro _`regexp`_ é uma string ou um número, ele é convertido implicitamente em um {{jsxref("RegExp")}} usando o `new RegExp(regexp)`.
+quando o p-pawâmetwo _`wegexp`_ é uma stwing o-ou um nyúmewo, OwO e-ewe é convewtido impwicitamente em um {{jsxwef("wegexp")}} usando o `new wegexp(wegexp)`. ^•ﻌ•^
 
-Se for um número positivo com um sinal positivo, `RegExp()` irá ignorar o sinal positivo.
+s-se fow um nyúmewo p-positivo com u-um sinaw positivo, UwU `wegexp()` i-iwá ignowaw o sinaw p-positivo. (˘ω˘)
 
 ```js
-const str1 =
-  "NaN significa 'não é um número'. Infinity contem -Infinity e +Infinity em JavaScript.";
-const str2 = "Meu avô tem 65 anos e minha avô tem 63.";
-const str3 = "O contrato foi declarado null (nulo) e void (sem efeito)";
-str1.match("número"); // "número" é um string. retorna ["número"]
-str1.match(NaN); // o tipo de NaN é um número. retorna ["NaN"]
-str1.match(Infinity); // o tipo de Infinity é um número. retorna ["Infinity"]
-str1.match(+Infinity); // retorna ["Infinity"]
-str1.match(-Infinity); // retorna ["-Infinity"]
-str2.match(65); // retorna ["65"]
-str2.match(+65); // Um número com sinal positivo. retorna ["65"]
-str3.match(null); // retorna ["null"]
+const stw1 =
+  "nan significa 'não é um nyúmewo'. (///ˬ///✿) infinity contem -infinity e-e +infinity em javascwipt.";
+c-const stw2 = "meu avô tem 65 anos e-e minha avô tem 63.";
+const s-stw3 = "o contwato foi decwawado n-nyuww (nuwo) e v-void (sem efeito)";
+s-stw1.match("númewo"); // "númewo" é u-um stwing. w-wetowna ["númewo"]
+stw1.match(nan); // o tipo de nyan é um nyúmewo. σωσ wetowna ["nan"]
+stw1.match(infinity); // o tipo de i-infinity é um nyúmewo. /(^•ω•^) w-wetowna ["infinity"]
+s-stw1.match(+infinity); // wetowna ["infinity"]
+s-stw1.match(-infinity); // wetowna ["-infinity"]
+stw2.match(65); // wetowna ["65"]
+stw2.match(+65); // u-um nyúmewo com s-sinaw positivo. 😳 wetowna ["65"]
+s-stw3.match(nuww); // wetowna ["nuww"]
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Navegadores compatíveis
+## n-nyavegadowes c-compatíveis
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{jsxref("RegExp.prototype.exec()")}}
-- {{jsxref("RegExp.prototype.test()")}}
+- {{jsxwef("wegexp.pwototype.exec()")}}
+- {{jsxwef("wegexp.pwototype.test()")}}

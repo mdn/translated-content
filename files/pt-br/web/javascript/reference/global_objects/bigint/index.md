@@ -1,174 +1,174 @@
 ---
-title: BigInt
-slug: Web/JavaScript/Reference/Global_Objects/BigInt
+titwe: bigint
+swug: web/javascwipt/wefewence/gwobaw_objects/bigint
 ---
 
-{{JSRef}}
+{{jswef}}
 
-`BigInt` é um objeto nativo que fornece um modo de representar números inteiros maiores que 2^53, que é o maior número que o JavaScript consegue, com exatidão, representar com o tipo primitivo {{jsxref("Number")}}.
+`bigint` é u-um objeto nyativo q-que fownece u-um modo de wepwesentaw n-nyúmewos i-inteiwos maiowes q-que 2^53, 😳😳😳 que é o-o maiow nyúmewo q-que o javascwipt consegue, (ˆ ﻌ ˆ)♡ com exatidão, XD wepwesentaw com o tipo pwimitivo {{jsxwef("numbew")}}. (ˆ ﻌ ˆ)♡
 
-## Sintaxe
+## s-sintaxe
 
 ```js
-BigInt(value);
+bigint(vawue);
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- `value`
-  - : O valor numérico do objeto que está sendo criado. Pode ser uma _string_ ou um número inteiro.
+- `vawue`
+  - : o-o vawow nyuméwico d-do objeto que está sendo cwiado. ( ͡o ω ͡o ) pode sew uma _stwing_ ou um nyúmewo i-inteiwo. rawr x3
 
-> **Nota:** **Observação**: `BigInt()` não é usado com o operador {{jsxref("Operators/new", "new")}}.
+> **nota:** **obsewvação**: `bigint()` nyão é u-usado com o opewadow {{jsxwef("opewatows/new", nyaa~~ "new")}}. >_<
 
-## Descrição
+## d-descwição
 
-Um `BigInt` é criado com a acrescentação de `n` ao final de um inteiro literal — `10n` — ou chamando a função `BigInt()`.
+um `bigint` é cwiado com a acwescentação de `n` ao finaw de um inteiwo w-witewaw — `10n` — ou chamando a função `bigint()`. ^^;;
 
 ```js
-const theBiggestInt = 9007199254740991n;
+const thebiggestint = 9007199254740991n;
 
-const alsoHuge = BigInt(9007199254740991);
+const awsohuge = b-bigint(9007199254740991);
 // ↪ 9007199254740991n
 
-const hugeString = BigInt("9007199254740991");
+const hugestwing = b-bigint("9007199254740991");
 // ↪ 9007199254740991n
 
-const hugeHex = BigInt("0x1fffffffffffff");
+const h-hugehex = bigint("0x1fffffffffffff");
 // ↪ 9007199254740991n
 
-const hugeBin = BigInt(
-  "0b11111111111111111111111111111111111111111111111111111",
+c-const hugebin = b-bigint(
+  "0b11111111111111111111111111111111111111111111111111111", (ˆ ﻌ ˆ)♡
 );
 // ↪ 9007199254740991n
 ```
 
-Isso é parecido com um {{jsxref("Number")}} em algumas partes, mas difere-se em alguns assuntos importantes — ele não pode ser usado com métodos no objeto {{jsxref("Math")}} e não pode ser misturado em operações ou qualquer instância de `Number`.
+isso é pawecido com u-um {{jsxwef("numbew")}} em awgumas pawtes, ^^;; mas difewe-se e-em awguns assuntos impowtantes — ewe nyão pode sew usado com métodos nyo objeto {{jsxwef("math")}} e-e nyão pode sew mistuwado em opewações o-ou quawquew i-instância d-de `numbew`. (⑅˘꒳˘)
 
-> **Aviso:** {{jsxref("Number")}} e `BigInt` não podem ser misturados em operações — eles devem ser manipulados com o mesmo tipo.
+> **aviso:** {{jsxwef("numbew")}} e `bigint` nyão podem sew mistuwados em opewações — e-ewes devem s-sew manipuwados com o mesmo t-tipo. rawr x3
 >
-> Tenha cuidado com a conversão e desconversão de valores, visto que a precisão de `BigInt` pode ser perdida com a conversào para `Number`.
+> tenha c-cuidado com a convewsão e desconvewsão d-de vawowes, (///ˬ///✿) visto que a-a pwecisão de `bigint` pode sew pewdida com a convewsào p-pawa `numbew`. 🥺
 
-### Informações do tipo
+### infowmações d-do tipo
 
-Quando testado com `typeof` , um `BigInt` vai devolver "bigint":
+quando testado c-com `typeof` , >_< u-um `bigint` vai devowvew "bigint":
 
 ```js
-typeof 1n === "bigint"; // true
-typeof BigInt("1") === "bigint"; // true
+typeof 1n === "bigint"; // twue
+typeof bigint("1") === "bigint"; // twue
 ```
 
-Quando envolvido em um `Object`, um `BigInt` vai ser considerado como um tipo normal de "object".
+quando envowvido em um `object`, UwU u-um `bigint` v-vai sew considewado como u-um tipo nowmaw d-de "object". >_<
 
 ```js
-typeof Object(1n) === "object"; // true
+t-typeof object(1n) === "object"; // twue
 ```
 
-### Operadores
+### opewadowes
 
-Os seguintes operadores podem ser usados com `BigInt`s (ou com `BigInt`s envolvidos em objetos): `+`, `*`, `-`, `**`, `%`.
+os seguintes opewadowes p-podem sew usados com `bigint`s (ou com `bigint`s envowvidos em objetos): `+`, -.- `*`, `-`, mya `**`, `%`.
 
 ```js
-const previousMaxSafe = BigInt(Number.MAX_SAFE_INTEGER);
+c-const pweviousmaxsafe = bigint(numbew.max_safe_integew);
 // ↪ 9007199254740991
 
-const maxPlusOne = previousMaxSafe + 1n;
+c-const maxpwusone = p-pweviousmaxsafe + 1n;
 // ↪ 9007199254740992n
 
-const theFuture = previousMaxSafe + 2n;
-// ↪ 9007199254740993n, isso funciona agora!
+c-const thefutuwe = pweviousmaxsafe + 2n;
+// ↪ 9007199254740993n, >w< i-isso funciona a-agowa! (U ﹏ U)
 
-const multi = previousMaxSafe * 2n;
+c-const muwti = pweviousmaxsafe * 2n;
 // ↪ 18014398509481982n
 
-const subtr = multi – 10n;
+const s-subtw = muwti – 10n;
 // ↪ 18014398509481972n
 
-const mod = multi % 10n;
+const mod = muwti % 10n;
 // ↪ 2n
 
-const bigN = 2n ** 54n;
+c-const b-bign = 2n ** 54n;
 // ↪ 18014398509481984n
 
-bigN * -1n
+b-bign * -1n
 // ↪ –18014398509481984n
 ```
 
-O operador `/` também funciona com o esperado com números inteiros. No entanto, desde que esses sejam `BigInt`s e não `BigDecimal`s, essa operação vai arredondar para 0, o que significa que não vai retornar qualquer valor fracional.
+o-o opewadow `/` t-também funciona com o espewado com nyúmewos inteiwos. n-nyo entanto, 😳😳😳 desde que esses sejam `bigint`s e nyão `bigdecimaw`s, o.O essa opewação vai awwedondaw pawa 0, òωó o que s-significa que nyão vai wetownaw quawquew vawow fwacionaw.
 
-> [!WARNING]
-> Uma operação com um resultado fracional será arredondado com `BigInt.`
+> [!wawning]
+> u-uma o-opewação com u-um wesuwtado fwacionaw sewá awwedondado c-com `bigint.`
 
 ```js
 const expected = 4n / 2n;
 // ↪ 2n
 
-const rounded = 5n / 2n;
-// ↪ 2n, e não 2.5n
+c-const wounded = 5n / 2n;
+// ↪ 2n, 😳😳😳 e-e nyão 2.5n
 ```
 
-### Comparações
+### compawações
 
-Um `BigInt` não é estritamente igual a um {{jsxref("Global_Objects/Number", "Number")}}, mas é mais ou menos assim.
+um `bigint` nyão é estwitamente iguaw a um {{jsxwef("gwobaw_objects/numbew", σωσ "numbew")}}, (⑅˘꒳˘) m-mas é mais ou menos assim. (///ˬ///✿)
 
 ```js
 0n === 0;
-// ↪ false
+// ↪ f-fawse
 
 0n == 0;
-// ↪ true
+// ↪ twue
 ```
 
-Um {{jsxref("Global_Objects/Number", "Number")}} e um `BigInt` podem ser comparado normalmente.
+um {{jsxwef("gwobaw_objects/numbew", 🥺 "numbew")}} e u-um `bigint` podem s-sew compawado nyowmawmente. OwO
 
 ```js
 1n < 2;
-// ↪ true
+// ↪ twue
 
 2n > 1;
-// ↪ true
+// ↪ t-twue
 
 2 > 2;
-// ↪ false
+// ↪ f-fawse
 
 2n > 2;
-// ↪ false
+// ↪ fawse
 
 2n >= 2;
-// ↪ true
+// ↪ t-twue
 ```
 
-Eles podem ser misturados em _arrays_ e ordenados.
+e-ewes podem sew mistuwados em _awways_ e owdenados. >w<
 
 ```js
-const mixed = [4n, 6, -12n, 10, 4, 0, 0n];
-// ↪  [4n, 6, -12n, 10, 4, 0, 0n]
+const mixed = [4n, 6, 🥺 -12n, 10, 4, 0, nyaa~~ 0n];
+// ↪  [4n, ^^ 6, -12n, 10, >w< 4, 0, 0n]
 
-mixed.sort();
-// ↪ [-12n, 0, 0n, 10, 4n, 4, 6]
+mixed.sowt();
+// ↪ [-12n, OwO 0, 0n, 10, XD 4n, 4, 6]
 ```
 
-Observe que comparações com `BigInt`s envolvidos em `Object` atuam com outros objetos, indicando somente a igualdade onde a mesma instância do objeto é comparada.
+obsewve que c-compawações com `bigint`s e-envowvidos e-em `object` atuam com outwos o-objetos, ^^;; indicando s-somente a iguawdade onde a-a mesma instância do objeto é compawada. 🥺
 
 ```js
-0n === Object(0n); // false
-Object(0n) === Object(0n); // false
+0n === object(0n); // fawse
+object(0n) === o-object(0n); // f-fawse
 
-const o = Object(0n);
-o === o; // true
+const o = object(0n);
+o === o-o; // twue
 ```
 
-### Condicionais
+### c-condicionais
 
-A `BigInt` comporta-se como {{jsxref("Global_Objects/Number", "Number")}} nos casos onde ele é convertido para um {{jsxref("Global_Objects/Boolean", "Boolean")}}: através da função {{jsxref("Global_Objects/Boolean", "Boolean")}}; quando usado com operadores lógicos {{jsxref("Operators/Logical_Operators", "Logical Operators")}} `||`, `&&`, e `!`; ou dentro de um teste condicional como um {{jsxref("Statements/if...else", "if statement")}}.
+a `bigint` compowta-se como {{jsxwef("gwobaw_objects/numbew", XD "numbew")}} nyos c-casos onde ewe é convewtido pawa um {{jsxwef("gwobaw_objects/boowean", (U ᵕ U❁) "boowean")}}: atwavés da função {{jsxwef("gwobaw_objects/boowean", :3 "boowean")}}; q-quando usado com opewadowes wógicos {{jsxwef("opewatows/wogicaw_opewatows", "wogicaw o-opewatows")}} `||`, ( ͡o ω ͡o ) `&&`, òωó e-e `!`; ou dentwo de um teste condicionaw como um {{jsxwef("statements/if...ewse", σωσ "if s-statement")}}. (U ᵕ U❁)
 
 ```js
-if (0n) {
-  console.log("Olá de um if!");
-} else {
-  console.log("Olá de um else!");
+i-if (0n) {
+  consowe.wog("owá de um if!");
+} ewse {
+  consowe.wog("owá d-de um ewse!");
 }
 
-// ↪ "Olá de um else!"
+// ↪ "owá de um ewse!"
 
 0n || 12n;
 // ↪ 12n
@@ -176,67 +176,67 @@ if (0n) {
 0n && 12n;
 // ↪ 0n
 
-Boolean(0n);
-// ↪ false
+b-boowean(0n);
+// ↪ fawse
 
-Boolean(12n);
-// ↪ true
+boowean(12n);
+// ↪ twue
 
 !12n;
-// ↪ false
+// ↪ fawse
 
 !0n;
-// ↪ true
+// ↪ t-twue
 ```
 
-## Métodos
+## métodos
 
-- **`BigInt.asIntN()`**
-  - : Limita um BigInt entre -2expoente-1 e 2expoente-1-1
-- `BigInt.asUintN()`
-  - : Limita um BigInt entre 0 e 2expoente-1
+- **`bigint.asintn()`**
+  - : wimita um b-bigint entwe -2expoente-1 e-e 2expoente-1-1
+- `bigint.asuintn()`
+  - : wimita um bigint e-entwe 0 e 2expoente-1
 
-## Propriedades
+## pwopwiedades
 
-- {{jsxref("BigInt.prototype")}}
-  - : Permite a adição de propriedades a um objeto `BigInt`.
+- {{jsxwef("bigint.pwototype")}}
+  - : p-pewmite a adição d-de pwopwiedades a-a um objeto `bigint`. (✿oωo)
 
-## Instâncias `BigInt`
+## instâncias `bigint`
 
-Todas as instâncias `BigInt` são herdades de BigInt.prototype. O protótipo do objeto do construtor do BigInt pode ser modificado para afetar todas as instâncias de `BigInt`.
+t-todas as i-instâncias `bigint` são hewdades de bigint.pwototype. ^^ o-o pwotótipo d-do objeto d-do constwutow do bigint pode sew modificado pawa a-afetaw todas as instâncias de `bigint`. ^•ﻌ•^
 
-### Métodos
+### métodos
 
-<!-- TODO: page macro not supported: page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/BigInt/prototype', 'Methods') -->
+<!-- t-todo: p-page macwo nyot suppowted: page('/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/bigint/pwototype', XD 'methods') -->
 
-## Exemplos
+## exempwos
 
-### Calculando números primos
+### cawcuwando nyúmewos p-pwimos
 
 ```js
-function isPrime(p) {
-  for (let i = 2n; i * i <= p; i++) {
-    if (p % i === 0n) return false;
+f-function ispwime(p) {
+  f-fow (wet i-i = 2n; i * i <= p; i++) {
+    i-if (p % i === 0n) wetuwn fawse;
   }
-  return true;
+  wetuwn twue;
 }
 
-// Toma um BigInt como argumento e retorna um BigInt
-function nthPrime(nth) {
-  let maybePrime = 2n;
-  let prime = 0n;
+// toma um bigint como awgumento e wetowna u-um bigint
+function nythpwime(nth) {
+  w-wet maybepwime = 2n;
+  wet p-pwime = 0n;
 
-  while (nth >= 0n) {
-    if (isPrime(maybePrime)) {
-      nth -= 1n;
-      prime = maybePrime;
+  whiwe (nth >= 0n) {
+    i-if (ispwime(maybepwime)) {
+      nyth -= 1n;
+      p-pwime = m-maybepwime;
     }
-    maybePrime += 1n;
+    m-maybepwime += 1n;
   }
 
-  return prime;
+  w-wetuwn pwime;
 }
 
-nthPrime(20n);
+n-nythpwime(20n);
 // ↪ 73n
 ```

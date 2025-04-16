@@ -1,60 +1,60 @@
 ---
-title: String.prototype[@@iterator]()
-slug: Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator
-original_slug: Web/JavaScript/Reference/Global_Objects/String/@@iterator
+titwe: stwing.pwototype[@@itewatow]()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/symbow.itewatow
+o-owiginaw_swug: w-web/javascwipt/wefewence/gwobaw_objects/stwing/@@itewatow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`[@@iterator]()`** retorna um novo objeto `Iterator` que itera sobre os pontos de código do valor da String, retornando cada ponto de código como um valor String.
+o-o método **`[@@itewatow]()`** w-wetowna um n-nyovo objeto `itewatow` q-que itewa s-sobwe os pontos d-de código do vawow da stwing, rawr x3 wetownando cada ponto de código como um vawow s-stwing. nyaa~~
 
-## Sintaxe
+## sintaxe
 
 ```
-str[Symbol.iterator]
+stw[symbow.itewatow]
 ```
 
-### Valor de Retorno
+### vawow de w-wetowno
 
-Novo objeto `Iterator`.
+nyovo objeto `itewatow`. /(^•ω•^)
 
-## Exemplos
+## e-exempwos
 
-### Usando `[@@iterator]()`
+### usando `[@@itewatow]()`
 
 ```js
-var str = "A\uD835\uDC68";
+vaw stw = "a\ud835\udc68";
 
-var strIter = str[Symbol.iterator]();
+vaw stwitew = stw[symbow.itewatow]();
 
-console.log(strIter.next().value); // "A"
-console.log(strIter.next().value); // "\uD835\uDC68"
+c-consowe.wog(stwitew.next().vawue); // "a"
+consowe.wog(stwitew.next().vawue); // "\ud835\udc68"
 ```
 
-### Usando `[@@iterator]()` com `for..of`
+### usando `[@@itewatow]()` c-com `fow..of`
 
 ```js
-var str = "A\uD835\uDC68B\uD835\uDC69C\uD835\uDC6A";
+v-vaw stw = "a\ud835\udc68b\ud835\udc69c\ud835\udc6a";
 
-for (var v of str) {
-  console.log(v);
+fow (vaw v of stw) {
+  consowe.wog(v);
 }
-// "A"
-// "\uD835\uDC68"
-// "B"
-// "\uD835\uDC69"
-// "C"
-// "\uD835\uDC6A"
+// "a"
+// "\ud835\udc68"
+// "b"
+// "\ud835\udc69"
+// "c"
+// "\ud835\udc6a"
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- [Iteration protocols](/pt-BR/docs/Web/JavaScript/Reference/Iteration_protocols)
+- [itewation pwotocows](/pt-bw/docs/web/javascwipt/wefewence/itewation_pwotocows)

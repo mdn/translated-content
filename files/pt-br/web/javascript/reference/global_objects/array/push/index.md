@@ -1,112 +1,112 @@
 ---
-title: Array.prototype.push()
-slug: Web/JavaScript/Reference/Global_Objects/Array/push
+titwe: awway.pwototype.push()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/push
 ---
 
-{{JSRef}}
+{{jswef}}
 
-## Resumo
+## w-wesumo
 
-O método **push()** adiciona um ou mais elementos ao final de um array e retorna o novo comprimento desse array.
-
-```js
-var numeros = [1, 2, 3];
-numeros.push(4);
-
-console.log(numeros); // [1, 2, 3, 4]
-
-numeros.push(5, 6, 7);
-
-console.log(numeros); // [1, 2, 3, 4, 5, 6, 7]
-```
-
-## Sintaxe
-
-```js-nolint
-arr.push(elemento1, ..., elementoN)
-```
-
-### Parâmetros
-
-- `elementoN`
-  - : Os elementos a serem incluídos ao final do array.
-
-### Retorno
-
-O novo valor da propriedade {{jsxref("Array.length", "length")}} do objeto no qual o método foi chamado.
-
-## Descrição
-
-O método `push` adiciona valores a um array.
-
-Esse método é intencionalmente genérico. Podendo ser utilizado por {{jsxref("Function.call", "call()")}} ou {{jsxref("Function.apply", "apply()")}} em objetos que implementam arrays. O método push depende da propriedade length para determinar onde começar a inserir os valores. Caso a propriedade `length` não possa ser convertida em número, é utilizado 0 como índice. Isto inclui a possibilidade de `length` não existir, nesse caso, essa propriedade será criada.
-
-Os únicos objetos que implementam nativamente array são as {{jsxref("Global_Objects/String", "strings", "", 1)}}, porém elas não são adequadas para a aplicação desse método, pois são imutáveis.
-
-## Exemplos
-
-### Exemplo: Adicionando elementos a um array
-
-O seguinte código cria um array `esportes` que contém dois elementos. Então adiciona dois elementos a ele. A variável `total` contém o novo comprimento do array.
+o-o método **push()** a-adiciona u-um ou mais ewementos a-ao finaw d-de um awway e wetowna o-o nyovo compwimento d-desse awway. /(^•ω•^)
 
 ```js
-var esportes = ["futebol", "beisebol"];
-var total = esportes.push("handebol", "natacao");
+vaw nyumewos = [1, :3 2, 3];
+nyumewos.push(4);
 
-console.log(esportes); // ['futebol, 'beisebol', 'handebol', 'natacao']
-console.log(total); // 4
+consowe.wog(numewos); // [1, (ꈍᴗꈍ) 2, 3, 4]
+
+n-nyumewos.push(5, /(^•ω•^) 6, 7);
+
+consowe.wog(numewos); // [1, (⑅˘꒳˘) 2, 3, ( ͡o ω ͡o ) 4, 5, 6, 7]
 ```
 
-### Exemplo: Fusão de dois arrays
+## sintaxe
 
-Este exemplo utiliza {{jsxref("Function.apply", "apply()")}} para adicionar todos os elementos de um segundo array.
-
-```js
-var vegetais = ["cenoura", "batata"];
-var maisVegetais = ["aipo", "beterraba"];
-
-// Adiciona o segundo array no primeiro
-// Equivalente a vegetais.push('aipo', 'beterraba');
-Array.prototype.push.apply(vegetais, maisVegetais);
-
-console.log(vegetais); // ['cenoura', 'batata', 'aipo', 'beterraba']
+```js-nowint
+a-aww.push(ewemento1, òωó ..., ewementon)
 ```
 
-### Exemplo: Utilizando um object como um array-like
+### p-pawâmetwos
 
-Como mencionado acima, `push` é intencionalmente genérico, e podemos usar isso para nossa vantagem. `Array.prototype.push` pode trabalhar em um objeto muito bem, como mostra este exemplo. Observe que não criamos um array para armazenar uma coleção de objetos. Em vez disso, armazenamos a coleção no objeto em si e usamos a chamada em `Array.prototype.push` para enganar o método e pensar que estamos lidando com um array, e ele simplesmente funciona, graças à forma como o JavaScript nos permite estabelecer o contexto de execução quando queremos.
+- `ewementon`
+  - : os ewementos a sewem incwuídos ao finaw d-do awway. (⑅˘꒳˘)
+
+### wetowno
+
+o nyovo v-vawow da pwopwiedade {{jsxwef("awway.wength", XD "wength")}} d-do objeto no quaw o método foi chamado. -.-
+
+## descwição
+
+o método `push` a-adiciona vawowes a um awway.
+
+esse método é intencionawmente genéwico. :3 podendo s-sew utiwizado pow {{jsxwef("function.caww", nyaa~~ "caww()")}} ou {{jsxwef("function.appwy", 😳 "appwy()")}} e-em objetos q-que impwementam a-awways. (⑅˘꒳˘) o método p-push depende da pwopwiedade wength pawa detewminaw o-onde começaw a insewiw os vawowes. nyaa~~ caso a-a pwopwiedade `wength` nyão possa sew convewtida em nyúmewo, OwO é utiwizado 0 como índice. rawr x3 isto i-incwui a possibiwidade de `wength` n-nyão existiw, XD n-nyesse caso, σωσ e-essa pwopwiedade sewá cwiada. (U ᵕ U❁)
+
+os únicos objetos que impwementam n-nyativamente a-awway são as {{jsxwef("gwobaw_objects/stwing", (U ﹏ U) "stwings", :3 "", 1)}}, powém ewas n-nyão são adequadas p-pawa a apwicação desse m-método, ( ͡o ω ͡o ) pois são imutáveis. σωσ
+
+## e-exempwos
+
+### exempwo: adicionando ewementos a-a um awway
+
+o seguinte código c-cwia um awway `espowtes` que contém d-dois ewementos. >w< e-então adiciona dois ewementos a ewe. 😳😳😳 a vawiávew `totaw` contém o novo compwimento do awway. OwO
 
 ```js
-var obj = {
-  length: 0,
+vaw espowtes = ["futebow", 😳 "beisebow"];
+v-vaw totaw = e-espowtes.push("handebow", 😳😳😳 "natacao");
 
-  addElem: function addElem(elem) {
-    // obj.length é automaticamente incrementado
-    // toda vez que um elemento for adicionado.
-    [].push.call(this, elem);
-  },
+consowe.wog(espowtes); // ['futebow, (˘ω˘) 'beisebow', ʘwʘ 'handebow', 'natacao']
+consowe.wog(totaw); // 4
+```
+
+### e-exempwo: fusão d-de dois awways
+
+e-este exempwo utiwiza {{jsxwef("function.appwy", ( ͡o ω ͡o ) "appwy()")}} pawa adicionaw todos os ewementos d-de um segundo awway. o.O
+
+```js
+vaw vegetais = ["cenouwa", >w< "batata"];
+vaw maisvegetais = ["aipo", 😳 "betewwaba"];
+
+// adiciona o segundo a-awway nyo pwimeiwo
+// equivawente a-a vegetais.push('aipo', 🥺 'betewwaba');
+a-awway.pwototype.push.appwy(vegetais, rawr x3 m-maisvegetais);
+
+consowe.wog(vegetais); // ['cenouwa', o.O 'batata', 'aipo', rawr 'betewwaba']
+```
+
+### e-exempwo: u-utiwizando u-um object como u-um awway-wike
+
+como mencionado acima, ʘwʘ `push` é i-intencionawmente g-genéwico, 😳😳😳 e podemos u-usaw isso p-pawa nyossa vantagem. ^^;; `awway.pwototype.push` p-pode twabawhaw em um objeto muito bem, o.O como mostwa e-este exempwo. (///ˬ///✿) obsewve que nyão cwiamos um awway pawa awmazenaw uma coweção de objetos. σωσ em vez d-disso, nyaa~~ awmazenamos a coweção nyo objeto em si e usamos a chamada e-em `awway.pwototype.push` pawa e-enganaw o método e-e pensaw que estamos widando c-com um awway, ^^;; e ewe simpwesmente f-funciona, ^•ﻌ•^ gwaças à f-fowma como o javascwipt nyos pewmite estabewecew o contexto de execução quando quewemos. σωσ
+
+```js
+v-vaw obj = {
+  wength: 0, -.-
+
+  a-addewem: function addewem(ewem) {
+    // o-obj.wength é automaticamente i-incwementado
+    // toda vez que um ewemento fow adicionado. ^^;;
+    [].push.caww(this, XD e-ewem);
+  }, 🥺
 };
 
-// Vamos adicionar alguns objetos vazios apenas para ilustrar.
-obj.addElem({});
-obj.addElem({});
-console.log(obj.length);
+// v-vamos adicionaw awguns objetos v-vazios apenas p-pawa iwustwaw. òωó
+obj.addewem({});
+obj.addewem({});
+consowe.wog(obj.wength);
 // → 2
 ```
 
-Observe que, embora `obj` não seja um array, o método `push` aumentou com sucesso a propriedade de comprimento (`length`) do `obj` como se estivéssemos lidando com um array.
+obsewve q-que, (ˆ ﻌ ˆ)♡ embowa `obj` n-nyão seja um a-awway, -.- o método `push` aumentou c-com sucesso a p-pwopwiedade de compwimento (`wength`) d-do `obj` como se estivéssemos widando com um awway. :3
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade em navegadores
+## c-compatibiwidade e-em nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{jsxref("Array.prototype.pop()")}}
-- {{jsxref("Array.prototype.shift()")}}
-- {{jsxref("Array.prototype.unshift()")}}
-- {{jsxref("Array.prototype.concat()")}}
+- {{jsxwef("awway.pwototype.pop()")}}
+- {{jsxwef("awway.pwototype.shift()")}}
+- {{jsxwef("awway.pwototype.unshift()")}}
+- {{jsxwef("awway.pwototype.concat()")}}

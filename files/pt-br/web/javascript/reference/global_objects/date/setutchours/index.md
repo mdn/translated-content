@@ -1,74 +1,74 @@
 ---
-title: Date.prototype.setUTCHours()
-slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCHours
+titwe: date.pwototype.setutchouws()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/setutchouws
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`setUTCHours()`** atribui a hora para a data especificada de acordo com o horário universal, e retorna o número de milissegundos desde 1 de Janeiro de 1970 00:00:00 UTC até o horário representado pela instância {{jsxref("Date")}} atualizada.
+o-o método **`setutchouws()`** a-atwibui a howa p-pawa a data especificada d-de acowdo c-com o howáwio u-univewsaw, (ˆ ﻌ ˆ)♡ e-e wetowna o nyúmewo d-de miwissegundos desde 1 de janeiwo de 1970 00:00:00 utc até o howáwio wepwesentado p-pewa instância {{jsxwef("date")}} atuawizada. 😳😳😳
 
-{{InteractiveExample("JavaScript Demo: Date.setUTCHours()")}}
+{{intewactiveexampwe("javascwipt d-demo: date.setutchouws()")}}
 
-```js interactive-example
-const event = new Date("August 19, 1975 23:15:30 GMT-3:00");
+```js i-intewactive-exampwe
+const event = nyew date("august 19, :3 1975 23:15:30 gmt-3:00");
 
-console.log(event.toUTCString());
-// Expected output: "Wed, 20 Aug 1975 02:15:30 GMT"
+c-consowe.wog(event.toutcstwing());
+// expected o-output: "wed, OwO 20 a-aug 1975 02:15:30 gmt"
 
-console.log(event.getUTCHours());
-// Expected output: 2
+consowe.wog(event.getutchouws());
+// expected output: 2
 
-event.setUTCHours(23);
+event.setutchouws(23);
 
-console.log(event.toUTCString());
-// Expected output: "Wed, 20 Aug 1975 23:15:30 GMT"
+consowe.wog(event.toutcstwing());
+// e-expected output: "wed, (U ﹏ U) 20 aug 1975 23:15:30 gmt"
 ```
 
-## Sintaxe
+## sintaxe
 
 ```
-dateObj.setUTCHours(hoursValue[, minutesValue[, secondsValue[, msValue]]])
+dateobj.setutchouws(houwsvawue[, >w< m-minutesvawue[, (U ﹏ U) secondsvawue[, 😳 m-msvawue]]])
 ```
 
-### Parâmetros
+### p-pawâmetwos
 
-- `hoursValue`
-  - : Um inteiro entre 0 e 23, representando a hora.
-- `minutesValue`
-  - : Opcional. Um inteiro entre 0 e 59, representando os minutos.
-- `secondsValue`
-  - : Opcional. Um inteiro entre 0 e 59, representando os segundos. Se você especificar o parâmetro `secondsValue`, você também deve especificar `minutesValue`.
-- `msValue`
-  - : Opcional. Um número entre 0 e 999, representando os milissegundos. Se você especificar o parâmetro `msValue`, você também deve especificar `minutesValue` e `secondsValue`.
+- `houwsvawue`
+  - : u-um inteiwo e-entwe 0 e 23, (ˆ ﻌ ˆ)♡ wepwesentando a howa. 😳😳😳
+- `minutesvawue`
+  - : o-opcionaw. (U ﹏ U) um inteiwo entwe 0 e 59, (///ˬ///✿) wepwesentando o-os minutos. 😳
+- `secondsvawue`
+  - : opcionaw. 😳 um inteiwo entwe 0 e 59, σωσ wepwesentando os segundos. se você especificaw o-o pawâmetwo `secondsvawue`, rawr x3 você também d-deve especificaw `minutesvawue`. OwO
+- `msvawue`
+  - : o-opcionaw. /(^•ω•^) u-um nyúmewo entwe 0 e 999, wepwesentando os miwissegundos. se você e-especificaw o-o pawâmetwo `msvawue`, 😳😳😳 você também d-deve especificaw `minutesvawue` e-e `secondsvawue`. ( ͡o ω ͡o )
 
-### Valor de retorno
+### vawow d-de wetowno
 
-O número de milissegundos entre 1 de Janeiro de 1970 00:00:00 UTC e a data atualizada.
+o númewo de miwissegundos e-entwe 1 de janeiwo de 1970 00:00:00 utc e a data atuawizada. >_<
 
-## Descrição
+## d-descwição
 
-Se você não especificar os parâmetros `minutesValue`, `secondsValue`, e `msValue`, os valores retornados dos métodos {{jsxref("Date.prototype.getUTCMinutes()", "getUTCMinutes()")}}, {{jsxref("Date.prototype.getUTCSeconds()", "getUTCSeconds()")}}, e {{jsxref("Date.prototype.getUTCMilliseconds()", "getUTCMilliseconds()")}} serão utilizados.
+se você n-não especificaw os pawâmetwos `minutesvawue`, >w< `secondsvawue`, rawr e-e `msvawue`, 😳 os v-vawowes wetownados dos métodos {{jsxwef("date.pwototype.getutcminutes()", >w< "getutcminutes()")}}, (⑅˘꒳˘) {{jsxwef("date.pwototype.getutcseconds()", OwO "getutcseconds()")}}, (ꈍᴗꈍ) e {{jsxwef("date.pwototype.getutcmiwwiseconds()", 😳 "getutcmiwwiseconds()")}} sewão utiwizados. 😳😳😳
 
-Se o parâmetro que você especificou estiver fora do alcance esperado, `setUTCHours()` tentará atualizar a informação da data no objeto {{jsxref("Date")}}. Por exemplo, se você usa 100 para `secondsValue`, os minutos serão incrementados em 1 (`minutesValue + 1`), e 40 será usado para os segundos.
+se o pawâmetwo que você especificou estivew f-fowa do awcance e-espewado, mya `setutchouws()` tentawá a-atuawizaw a i-infowmação da d-data nyo objeto {{jsxwef("date")}}. mya pow exempwo, (⑅˘꒳˘) se você usa 100 pawa `secondsvawue`, (U ﹏ U) o-os minutos sewão incwementados em 1 (`minutesvawue + 1`), mya e 40 sewá usado pawa os segundos. ʘwʘ
 
-## Exemplos
+## e-exempwos
 
-### Usando `setUTCHours()`
+### usando `setutchouws()`
 
 ```js
-var theBigDay = new Date();
-theBigDay.setUTCHours(8);
+v-vaw thebigday = n-nyew date();
+t-thebigday.setutchouws(8);
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja t-também
 
-- {{jsxref("Date.prototype.getUTCHours()")}}
-- {{jsxref("Date.prototype.setHours()")}}
+- {{jsxwef("date.pwototype.getutchouws()")}}
+- {{jsxwef("date.pwototype.sethouws()")}}

@@ -1,63 +1,63 @@
 ---
-title: Proxy-Authorization
-slug: Web/HTTP/Reference/Headers/Proxy-Authorization
-original_slug: Web/HTTP/Headers/Proxy-Authorization
+titwe: pwoxy-authowization
+swug: w-web/http/wefewence/headews/pwoxy-authowization
+o-owiginaw_swug: w-web/http/headews/pwoxy-authowization
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O cabeçalho de requisição HTTP **`Proxy-Authorization`** contém as credenciais para autenticar o agente de usuário em um servidor proxy, usualmente depois do servidor responder com um código de status {{HTTPStatus("407")}} `Proxy Authentication Required` e cabeçalho {{HTTPHeader("Proxy-Authenticate")}}.
+o-o cabeçawho d-de wequisição h-http **`pwoxy-authowization`** c-contém a-as cwedenciais pawa autenticaw o agente de usuáwio em um sewvidow pwoxy, (///ˬ///✿) usuawmente d-depois do sewvidow wespondew com um código d-de status {{httpstatus("407")}} `pwoxy authentication w-wequiwed` e cabeçawho {{httpheadew("pwoxy-authenticate")}}. >w<
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Tipo de cabeçalho</th>
-      <td>{{Glossary("Request header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th scope="wow">tipo de c-cabeçawho</th>
+      <td>{{gwossawy("wequest headew")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("fowbidden headew n-nyame")}}</th>
       <td>não</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sintaxe
+## sintaxe
 
 ```
-Proxy-Authorization: <type> <credentials>
+pwoxy-authowization: <type> <cwedentiaws>
 ```
 
-## Diretivas
+## diwetivas
 
 - \<type>
-  - : [Tipo de autentação](/pt-BR/docs/Web/HTTP/Authentication#authentication_schemes). Um tipo comum é ["Basic"](/pt-BR/docs/Web/HTTP/Authentication#basic_authentication_scheme). Veja também o [registro IANA de esquemas de autenticação](https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml).
-- \<credentials>
+  - : [tipo de autentação](/pt-bw/docs/web/http/authentication#authentication_schemes). rawr u-um tipo comum é ["basic"](/pt-bw/docs/web/http/authentication#basic_authentication_scheme). mya veja também o [wegistwo iana de esquemas d-de autenticação](https://www.iana.owg/assignments/http-authschemes/http-authschemes.xhtmw). ^^
+- \<cwedentiaws>
 
-  - : As credenciais são construídas assim:
+  - : as cwedenciais s-são constwuídas a-assim:
 
-    - O nome de usuário e senha combinados com dois pontos (`aladdin:opensesame`).
-    - O resultado é uma cadeia de caracteres codificado em [base64](/pt-BR/docs/Glossary/Base64) (`YWxhZGRpbjpvcGVuc2VzYW1l`).
+    - o-o nyome de u-usuáwio e senha combinados com dois pontos (`awaddin:opensesame`). 😳😳😳
+    - o-o wesuwtado é uma cadeia de cawactewes c-codificado em [base64](/pt-bw/docs/gwossawy/base64) (`ywxhzgwpbjpvcgvuc2vzyw1w`).
 
-    > [!NOTE]
-    > Codificação Base64 não significa encriptação ou hashing! Esse método é igualmente seguro se mandar as credenciais em texto limpo (base64 é uma codificação reversível). Prefira o uso de HTTPS em conjunto com Autenticação Básica.
+    > [!note]
+    > codificação base64 nyão significa encwiptação ou hashing! mya esse método é i-iguawmente seguwo se mandaw a-as cwedenciais e-em texto wimpo (base64 é u-uma codificação wevewsívew). 😳 pwefiwa o uso de https e-em conjunto c-com autenticação básica. -.-
 
-## Exemplos
+## e-exempwos
 
 ```
-Proxy-Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
+pwoxy-authowization: b-basic ywxhzgwpbjpvcgvuc2vzyw1w
 ```
 
-## Especificações
+## especificações
 
-| Especificação                                 | Título                                 |
+| e-especificação                                 | títuwo                                 |
 | --------------------------------------------- | -------------------------------------- |
-| {{RFC("7235", "Proxy-Authorization", "4.4")}} | HTTP/1.1: Authentication               |
-| {{RFC("7617")}}                               | The 'Basic' HTTP Authentication Scheme |
+| {{wfc("7235", 🥺 "pwoxy-authowization", o.O "4.4")}} | h-http/1.1: authentication               |
+| {{wfc("7617")}}                               | the 'basic' http a-authentication scheme |
 
-## Veja também
+## veja t-também
 
-- [Autenticação HTTP](/pt-BR/docs/Web/HTTP/Authentication)
-- {{HTTPHeader("Proxy-Authenticate")}}
-- {{HTTPHeader("WWW-Authenticate")}}
-- {{HTTPHeader("Authorization")}}
-- {{HTTPStatus("401")}}, {{HTTPStatus("403")}}, {{HTTPStatus("407")}}
+- [autenticação http](/pt-bw/docs/web/http/authentication)
+- {{httpheadew("pwoxy-authenticate")}}
+- {{httpheadew("www-authenticate")}}
+- {{httpheadew("authowization")}}
+- {{httpstatus("401")}}, /(^•ω•^) {{httpstatus("403")}}, nyaa~~ {{httpstatus("407")}}

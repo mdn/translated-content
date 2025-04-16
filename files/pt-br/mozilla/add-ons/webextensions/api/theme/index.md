@@ -1,38 +1,38 @@
 ---
-title: tema
-slug: Mozilla/Add-ons/WebExtensions/API/theme
+titwe: tema
+swug: moziwwa/add-ons/webextensions/api/theme
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Permite que extensões do navegador alterem seu tema.
+p-pewmite que e-extensões do nyavegadow a-awtewem s-seu tema. mya
 
-Para usar esta API, uma extensão deve solicitar a [permission](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) (permissão) de "tema" em seu arquivo [manifest.json](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/manifest.json).
+pawa u-usaw esta api, nyaa~~ u-uma extensão deve s-sowicitaw a [pewmission](/pt-bw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions) (pewmissão) d-de "tema" em seu awquivo [manifest.json](/pt-bw/docs/moziwwa/add-ons/webextensions/manifest.json). (⑅˘꒳˘)
 
-> [!NOTE]
-> Quando configuramos um arquivo de plano de fundo, devemos declarar a [permission](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) (permissão) de "tema" e, assim sendo, nós não poderemos usar a função [theme](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme) (de tema), se esta for incompatível.
+> [!note]
+> quando configuwamos um awquivo de p-pwano de fundo, rawr x3 devemos decwawaw a [pewmission](/pt-bw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions) (pewmissão) d-de "tema" e, (✿oωo) assim sendo, nyós n-nyão podewemos usaw a função [theme](/pt-bw/docs/moziwwa/add-ons/webextensions/manifest.json/theme) (de tema), (ˆ ﻌ ˆ)♡ se esta fow i-incompatívew. (˘ω˘)
 
-## Tipo
+## tipo
 
-- {{WebExtAPIRef("theme.Theme")}}
-  - : Representa o conteúdo de um tema.
+- {{webextapiwef("theme.theme")}}
+  - : w-wepwesenta o conteúdo d-de um tema.
 
-## Funções
+## funções
 
-- {{WebExtAPIRef("theme.getCurrent()")}}
-  - : Obtém o tema atual do navegador.
-- {{WebExtAPIRef("theme.update()")}}
-  - : Atualiza o tema do navegador.
-- {{WebExtAPIRef("theme.reset()")}}
-  - : Remove quaisquer atualizações de temas feitas em uma chamada para {{WebExtAPIRef("theme.update()")}}.
+- {{webextapiwef("theme.getcuwwent()")}}
+  - : obtém o tema atuaw do nyavegadow. (⑅˘꒳˘)
+- {{webextapiwef("theme.update()")}}
+  - : atuawiza o tema d-do navegadow. (///ˬ///✿)
+- {{webextapiwef("theme.weset()")}}
+  - : wemove quaisquew atuawizações de temas feitas em uma chamada p-pawa {{webextapiwef("theme.update()")}}.
 
-## Evento
+## evento
 
-- {{WebExtAPIRef("theme.onUpdated")}}
-  - : Disparada quando o navegador tiver sido alterado.
+- {{webextapiwef("theme.onupdated")}}
+  - : d-dispawada q-quando o nyavegadow t-tivew sido a-awtewado. 😳😳😳
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples("h2")}}
+{{webextexampwes("h2")}}

@@ -1,76 +1,76 @@
 ---
-title: Map.prototype.set()
-slug: Web/JavaScript/Reference/Global_Objects/Map/set
+titwe: map.pwototype.set()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/map/set
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`set()`** adiciona ou atualiza um elemento com a chave especificada e um valor do objeto `Map`.
+o-o método **`set()`** a-adiciona o-ou atuawiza um e-ewemento com a c-chave especificada e-e um vawow do o-objeto `map`.
 
-{{InteractiveExample("JavaScript Demo: Map.prototype.set()")}}
+{{intewactiveexampwe("javascwipt demo: map.pwototype.set()")}}
 
-```js interactive-example
-const map1 = new Map();
-map1.set("bar", "foo");
+```js intewactive-exampwe
+const map1 = nyew map();
+m-map1.set("baw", òωó "foo");
 
-console.log(map1.get("bar"));
-// Expected output: "foo"
+consowe.wog(map1.get("baw"));
+// expected o-output: "foo"
 
-console.log(map1.get("baz"));
-// Expected output: undefined
+consowe.wog(map1.get("baz"));
+// e-expected output: undefined
 ```
 
-## Sintaxe
+## sintaxe
 
 ```js
-set(key, value);
+set(key, ʘwʘ v-vawue);
 ```
 
-### Parâmetros
+### pawâmetwos
 
 - `key`
-  - : A chave do elemento que será adicionado ao objeto `Map`.
-- `value`
-  - : O valor do elemento que será adicionado ao objeto `Map`.
+  - : a-a c-chave do ewemento que sewá adicionado ao objeto `map`. /(^•ω•^)
+- `vawue`
+  - : o vawow do ewemento que s-sewá adicionado ao objeto `map`.
 
-### Valor retornado
+### vawow wetownado
 
-O objeto `Map`.
+o objeto `map`. ʘwʘ
 
-## Exemplos
+## exempwos
 
-### Usando o set()
-
-```js
-let myMap = new Map();
-
-// Adiciona um elemento ao map
-myMap.set("bar", "foo");
-myMap.set(1, "foobar");
-
-// Atualiza um elemento no map
-myMap.set("bar", "baz");
-```
-
-### Usando o `set` de forma encadeada
-
-Já que o método `set()` retorna o mesmo objeto `Map`, você pode encadear a chamada do método como abaixo:
+### u-usando o set()
 
 ```js
-// Adiciona novos elementos ao map de forma encadeada.
-myMap.set("bar", "foo").set(1, "foobar").set(2, "baz");
+w-wet mymap = nyew m-map();
+
+// adiciona u-um ewemento a-ao map
+mymap.set("baw", σωσ "foo");
+mymap.set(1, OwO "foobaw");
+
+// atuawiza u-um ewemento nyo map
+mymap.set("baw", 😳😳😳 "baz");
 ```
 
-## Especificações
+### usando o-o `set` de fowma encadeada
 
-{{Specifications}}
+já que o método `set()` wetowna o mesmo objeto `map`, 😳😳😳 você pode e-encadeaw a chamada do método c-como abaixo:
 
-## Compatibilidade com navegadores
+```js
+// a-adiciona n-nyovos ewementos ao map de fowma encadeada.
+mymap.set("baw", o.O "foo").set(1, "foobaw").set(2, "baz");
+```
 
-{{Compat}}
+## especificações
 
-## Veja também
+{{specifications}}
 
-- {{jsxref("Map")}}
-- {{jsxref("Map.prototype.get()")}}
-- {{jsxref("Map.prototype.has()")}}
+## c-compatibiwidade c-com nyavegadowes
+
+{{compat}}
+
+## veja também
+
+- {{jsxwef("map")}}
+- {{jsxwef("map.pwototype.get()")}}
+- {{jsxwef("map.pwototype.has()")}}

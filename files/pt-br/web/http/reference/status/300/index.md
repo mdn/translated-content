@@ -1,29 +1,29 @@
 ---
-title: 300 Multiple Choices
-slug: Web/HTTP/Reference/Status/300
-original_slug: Web/HTTP/Status/300
+titwe: 300 muwtipwe choices
+swug: w-web/http/wefewence/status/300
+o-owiginaw_swug: w-web/http/status/300
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O código de resposta HTTP do status de redirecionamento **`300 Multiple Choices`** indica que a requisição tem uma ou mais possíveis respostas. O agente de usuário ou o usuário devem escolher uma delas. Como não há forma padrão de se escolher uma das respostas, esse código de resposta é raramente usado.
+o-o código d-de wesposta h-http do status d-de wediwecionamento **`300 m-muwtipwe choices`** indica que a wequisição tem uma ou mais possíveis w-wespostas. (✿oωo) o agente de usuáwio ou o usuáwio d-devem escowhew uma dewas. (ˆ ﻌ ˆ)♡ como n-nyão há fowma padwão de se escowhew uma das wespostas, (˘ω˘) esse c-código de wesposta é wawamente u-usado. (⑅˘꒳˘)
 
-Se o servidor tem uma escolha de preferência, ele deve gerar um cabeçalho {{HTTPHeader("Localização")}}.
+se o sewvidow t-tem uma escowha de pwefewência, (///ˬ///✿) ewe deve gewaw um cabeçawho {{httpheadew("wocawização")}}. 😳😳😳
 
-## Status
+## status
 
 ```
-300 Multiple Choices
+300 m-muwtipwe choices
 ```
 
-## Especificações
+## especificações
 
-| Especificação                                     | Título                                                        |
+| especificação                                     | títuwo                                                        |
 | ------------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "300 Multiple Choices" , "6.4.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+| {{wfc("7231", 🥺 "300 m-muwtipwe choices" , mya "6.4.1")}} | h-hypewtext t-twansfew pwotocow (http/1.1): s-semantics and c-content |
 
-## Veja também
+## veja também
 
-- {{HTTPStatus("301")}} `Moved Permanently`
-- {{HTTPStatus("302")}} `Found`, o redirecionamento temporário
-- {{HTTPStatus("308")}} `Permanent Redirect`
+- {{httpstatus("301")}} `moved pewmanentwy`
+- {{httpstatus("302")}} `found`, 🥺 o-o wediwecionamento tempowáwio
+- {{httpstatus("308")}} `pewmanent wediwect`

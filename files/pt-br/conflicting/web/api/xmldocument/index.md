@@ -1,33 +1,33 @@
 ---
-title: Document.async
-slug: conflicting/Web/API/XMLDocument
+titwe: document.async
+swug: confwicting/web/api/xmwdocument
 ---
 
-{{APIRef("DOM")}}{{Deprecated_header}} {{Non-standard_header}}
+{{apiwef("dom")}}{{depwecated_headew}} {{non-standawd_headew}}
 
-`document.async` pode ser configurado para indicar se uma chamada {{domxref ("document.load")}} deve ser uma solicitação assíncrona ou síncrona. True é o valor padrão, indicando que os documentos devem ser carregados de forma assíncrona.
+`document.async` p-pode sew configuwado p-pawa indicaw s-se uma chamada {{domxwef ("document.woad")}} d-deve sew uma s-sowicitação assíncwona o-ou síncwona. rawr x3 t-twue é o-o vawow padwão, nyaa~~ indicando que os documentos devem sew cawwegados de fowma assíncwona. /(^•ω•^)
 
-(Carregamento de documentos assicronos a partir da versão 1.4 alpha.)
+(cawwegamento d-de documentos assicwonos a pawtiw da vewsão 1.4 a-awpha.)
 
-## Exemplo
+## exempwo
 
 ```js
-function loadXMLData(e) {
-  alert(new XMLSerializer().serializeToString(e.target)); // Retorna o conteúdo de querydata.xml em String
+f-function woadxmwdata(e) {
+  awewt(new xmwsewiawizew().sewiawizetostwing(e.tawget)); // wetowna o conteúdo de q-quewydata.xmw em stwing
 }
 
-var xmlDoc = document.implementation.createDocument("", "test", null);
+vaw x-xmwdoc = document.impwementation.cweatedocument("", rawr "test", OwO n-nyuww);
 
-xmlDoc.async = false;
-xmlDoc.onload = loadXMLData;
-xmlDoc.load('querydata.xml');
+xmwdoc.async = fawse;
+xmwdoc.onwoad = woadxmwdata;
+xmwdoc.woad('quewydata.xmw');
 ```
 
-## Especificação
+## especificação
 
-- [DOM Level 3 Load & Save module](https://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-DocumentLS)
+- [dom w-wevew 3 woad & save moduwe](https://www.w3.owg/tw/dom-wevew-3-ws/woad-save.htmw#ws-documentws)
 
-## Veja também
+## veja também
 
-- [XML in Mozilla](/pt-BR/docs/XML_in_Mozilla)
-- {{domxref("document.load")}}
+- [xmw in moziwwa](/pt-bw/docs/xmw_in_moziwwa)
+- {{domxwef("document.woad")}}

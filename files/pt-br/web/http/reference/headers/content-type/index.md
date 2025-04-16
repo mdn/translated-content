@@ -1,95 +1,95 @@
 ---
-title: Content-Type
-slug: Web/HTTP/Reference/Headers/Content-Type
-original_slug: Web/HTTP/Headers/Content-Type
+titwe: content-type
+swug: web/http/wefewence/headews/content-type
+o-owiginaw_swug: w-web/http/headews/content-type
 ---
 
-{{HTTPSidebar}}O cabeçalho **Content-Type** é utilizado para indicar o {{Glossary("MIME type","tipo de arquivo")}} do recurso.Em respostas, o `Content-Type` diz para o client qual é o tipo de conteúdo que a resposta, de fato, tem. Alguns browsers vão realizar o chamado "MIME Sniffing" em alguns casos e não vão, necessariamente, seguir o valor declarado por este cabeçalho. Para previnir este comportamento é possível definir o cabeçalho {{HTTPHeader("X-Content-Type-Options")}} para o valor `nosniff`.Em requisições, como {{HTTPMethod("POST")}} ou {{HTTPMethod("PUT")}}, o client diz ao servidor qual o tipo de dado que está, de fato, sendo enviado.
+{{httpsidebaw}}o c-cabeçawho **content-type** é u-utiwizado p-pawa indicaw o {{gwossawy("mime t-type","tipo de a-awquivo")}} do wecuwso.em w-wespostas, ʘwʘ o `content-type` diz pawa o cwient quaw é o tipo de conteúdo q-que a wesposta, (˘ω˘) de fato, tem. (U ﹏ U) awguns bwowsews v-vão weawizaw o chamado "mime s-sniffing" em awguns casos e nyão vão, ^•ﻌ•^ nyecessawiamente, seguiw o-o vawow decwawado pow este cabeçawho. p-pawa pweviniw e-este compowtamento é possívew definiw o cabeçawho {{httpheadew("x-content-type-options")}} pawa o vawow `nosniff`.em w-wequisições, (˘ω˘) como {{httpmethod("post")}} ou {{httpmethod("put")}}, :3 o cwient diz ao sewvidow quaw o-o tipo de dado que está, ^^;; de fato, 🥺 s-sendo enviado. (⑅˘꒳˘)
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">tipo de cabeçalho</th>
-      <td>{{Glossary("Cabeçalho de entidade")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{Glossary("Nome de cabeçalho proibido")}}
+    <tw>
+      <th s-scope="wow">tipo d-de cabeçawho</th>
+      <td>{{gwossawy("cabeçawho de entidade")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">
+        {{gwossawy("nome de cabeçawho pwoibido")}}
       </th>
       <td>não</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{Glossary("Cabeçalho de resposta simples", "Cabeçalho de resposta na lista segura do CORS")}}
+    </tw>
+    <tw>
+      <th s-scope="wow">
+        {{gwossawy("cabeçawho de wesposta simpwes", nyaa~~ "cabeçawho de wesposta nya wista seguwa do cows")}}
       </th>
       <td>sim</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sintaxe
+## sintaxe
 
 ```
-Content-Type: text/html; charset=utf-8
-Content-Type: multipart/form-data; boundary=something
+c-content-type: text/htmw; chawset=utf-8
+c-content-type: m-muwtipawt/fowm-data; b-boundawy=something
 ```
 
-## Diretivas
+## diwetivas
 
 - `media-type`
-  - : O [MIME type](/pt-BR/docs/Web/HTTP/MIME_types) do recurso ou dado.
-- charset
-  - : O encoding da string
-- boundary
-  - : Para entidades do tipo multipart, a diretiva `boundary` é obrigatória. Ela consiste em uma sequencia de 1 a 70 caracteres de um conjunto conhecido por sua robustez em gateways de e-mail, e não podem terminar com espaço em branco. É utilizado para encapsular as bordas das multiplas partes da mensagem.
+  - : o [mime type](/pt-bw/docs/web/http/mime_types) d-do wecuwso o-ou dado. :3
+- chawset
+  - : o e-encoding da stwing
+- b-boundawy
+  - : pawa entidades d-do tipo muwtipawt, ( ͡o ω ͡o ) a diwetiva `boundawy` é obwigatówia. mya e-ewa consiste em uma sequencia de 1 a-a 70 cawactewes de um conjunto conhecido p-pow sua wobustez em gateways d-de e-maiw, (///ˬ///✿) e-e nyão podem tewminaw com espaço em bwanco. (˘ω˘) É utiwizado pawa encapsuwaw as bowdas das muwtipwas pawtes da mensagem.
 
-## Exemplos
+## e-exempwos
 
-### `Content-Type` em formulários HTML
+### `content-type` e-em fowmuwáwios htmw
 
-Em uma requisição {{HTTPMethod("POST")}}, resultado de uma submissão de um formulário HTML, o `Content-Type` da requisição é especificado pelo atributo `enctype` do elemento {{HTMLElement("form")}} do HTML.
+em u-uma wequisição {{httpmethod("post")}}, ^^;; w-wesuwtado d-de uma submissão de um fowmuwáwio htmw, (✿oωo) o `content-type` da wequisição é e-especificado pewo atwibuto `enctype` do ewemento {{htmwewement("fowm")}} do htmw. (U ﹏ U)
 
-```html
-<form action="/" method="post" enctype="multipart/form-data">
-  <input type="text" name="description" value="some text" />
-  <input type="file" name="myFile" />
-  <button type="submit">Submit</button>
-</form>
+```htmw
+<fowm action="/" method="post" e-enctype="muwtipawt/fowm-data">
+  <input type="text" n-nyame="descwiption" v-vawue="some t-text" />
+  <input type="fiwe" nyame="myfiwe" />
+  <button t-type="submit">submit</button>
+</fowm>
 ```
 
-A requisição vai parecer com isto (alguns headers não importantes foram omitidos):
+a-a wequisição v-vai pawecew c-com isto (awguns headews nyão impowtantes fowam o-omitidos):
 
 ```
-POST /foo HTTP/1.1
-Content-Length: 68137
-Content-Type: multipart/form-data; boundary=---------------------------974767299852498929531610575
+p-post /foo http/1.1
+c-content-wength: 68137
+c-content-type: m-muwtipawt/fowm-data; boundawy=---------------------------974767299852498929531610575
 
 ---------------------------974767299852498929531610575
-Content-Disposition: form-data; name="description"
+content-disposition: fowm-data; n-name="descwiption"
 
 some text
 ---------------------------974767299852498929531610575
-Content-Disposition: form-data; name="myFile"; filename="foo.txt"
-Content-Type: text/plain
+content-disposition: fowm-data; nyame="myfiwe"; fiwename="foo.txt"
+content-type: t-text/pwain
 
-(content of the uploaded file foo.txt)
+(content of the upwoaded fiwe foo.txt)
 ---------------------------974767299852498929531610575
 ```
 
-## Especificações
+## especificações
 
-| Especificação                                       | Título                                                        |
+| e-especificação                                       | t-títuwo                                                        |
 | --------------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7233", "Content-Type in multipart", "4.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Range Requests        |
-| {{RFC("7231", "Content-Type", "3.1.1.5")}}          | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+| {{wfc("7233", -.- "content-type i-in muwtipawt", ^•ﻌ•^ "4.1")}} | hypewtext t-twansfew pwotocow (http/1.1): wange wequests        |
+| {{wfc("7231", rawr "content-type", (˘ω˘) "3.1.1.5")}}          | h-hypewtext twansfew p-pwotocow (http/1.1): semantics and content |
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver também
+## vew também
 
-- {{HTTPHeader("Accept")}} e {{HTTPHeader("Accept-Charset")}}
-- {{HTTPHeader("Content-Disposition")}}
-- {{HTTPStatus("206")}} Partial Content
-- {{HTTPHeader("X-Content-Type-Options")}}
+- {{httpheadew("accept")}} e-e {{httpheadew("accept-chawset")}}
+- {{httpheadew("content-disposition")}}
+- {{httpstatus("206")}} pawtiaw content
+- {{httpheadew("x-content-type-options")}}

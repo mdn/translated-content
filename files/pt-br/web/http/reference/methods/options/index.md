@@ -1,118 +1,118 @@
 ---
-title: OPTIONS
-slug: Web/HTTP/Reference/Methods/OPTIONS
-original_slug: Web/HTTP/Methods/OPTIONS
+titwe: options
+swug: web/http/wefewence/methods/options
+o-owiginaw_swug: w-web/http/methods/options
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O **método HTTP `OPTIONS` **é utilizado para que um cliente possa descobrir quais as opções de requisição permitidas para um determinado recurso em um servidor. O cliente pode especificar uma URL específica no método `OPTIONS` ou um asterisco(\*) indicando que se refere ao servidor como um todo para sanar suas dúvidas em relação as opções de requisição permitidas.
+o-o **método h-http `options` **é u-utiwizado p-pawa que um cwiente p-possa descobwiw q-quais as opções de wequisição pewmitidas pawa um detewminado wecuwso e-em um sewvidow. ( ͡o ω ͡o ) o cwiente pode especificaw uma uww e-específica no método `options` o-ou um astewisco(\*) indicando que se wefewe ao sewvidow como u-um todo pawa sanaw suas dúvidas e-em wewação as o-opções de wequisição pewmitidas. σωσ
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Request possui corpo</th>
-      <td>Não</td>
-    </tr>
-    <tr>
-      <th scope="row">Resposta bem sucedida possui corpo</th>
-      <td>Não</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Seguro")}}</th>
-      <td>Sim</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Idempotente")}}</th>
-      <td>Sim</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Cacheável")}}</th>
-      <td>Não</td>
-    </tr>
-    <tr>
-      <th scope="row">Permitido em formulários HTML</th>
-      <td>Não</td>
-    </tr>
+    <tw>
+      <th scope="wow">wequest possui cowpo</th>
+      <td>não</td>
+    </tw>
+    <tw>
+      <th scope="wow">wesposta b-bem sucedida possui cowpo</th>
+      <td>não</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("seguwo")}}</th>
+      <td>sim</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("idempotente")}}</th>
+      <td>sim</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("cacheávew")}}</th>
+      <td>não</td>
+    </tw>
+    <tw>
+      <th scope="wow">pewmitido e-em fowmuwáwios h-htmw</th>
+      <td>não</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sintaxe
-
-```
-OPTIONS /index.html HTTP/1.1
-OPTIONS * HTTP/1.1
-```
-
-## Exemplos
-
-### Descobrindo quais tipos de requisição são permitidas
-
-Para descobrir quais tipos de requisição um servidor suporta, é possível utilizar o curl e enviar uma requisição OPTIONS:
+## s-sintaxe
 
 ```
-curl -X OPTIONS http://example.org -i
+o-options /index.htmw http/1.1
+options * http/1.1
 ```
 
-A resposta terá um cabeçalho {{HTTPHeader("Allow")}} com os métodos permitidos:
+## e-exempwos
+
+### descobwindo quais tipos de w-wequisição são pewmitidas
+
+pawa descobwiw quais tipos de wequisição um sewvidow supowta, >w< é p-possívew utiwizaw o cuww e enviaw u-uma wequisição o-options:
 
 ```
-HTTP/1.1 200 OK
-Allow: OPTIONS, GET, HEAD, POST
-Cache-Control: max-age=604800
-Date: Thu, 13 Oct 2016 11:45:00 GMT
-Expires: Thu, 20 Oct 2016 11:45:00 GMT
-Server: EOS (lax004/2813)
-x-ec-custom-error: 1
-Content-Length: 0
+c-cuww -x options http://exampwe.owg -i
 ```
 
-### Requisições Preflighted no CORS
-
-No [CORS](/pt-BR/docs/Web/HTTP/CORS), uma requisição preflight com o método OPTIONS é enviada para que o servidor possa indicar se é possível enviar uma requisição específica com os parâmetros informados. No exemplo abaixo, o cabeçalho {{HTTPHeader("Access-Control-Request-Method")}} indica para o servidor que quando a requisição específica for enviada, ela será enviada como uma requisição POST. O cabeçalho {{HTTPHeader("Access-Control-Request-Headers")}} indica para o servidor que quando a requisição específica for enviada, ela será enviada com os cabeçalhos customizados `X-PINGOTHER` e `Content-Type`. A partir desta requisição com o método OPTIONS, o servidor possui a oportunidade de indicar se a requisição específica será aceita da forma como foi indicada pelos parâmetros supracitados (o método POST e os dois cabeçalhos customizados).
+a wesposta tewá um cabeçawho {{httpheadew("awwow")}} c-com os métodos p-pewmitidos:
 
 ```
-OPTIONS /resources/post-here/ HTTP/1.1
-Host: bar.other
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
-Accept-Language: en-us,en;q=0.5
-Accept-Encoding: gzip,deflate
-Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
-Connection: keep-alive
-Origin: http://foo.example
-Access-Control-Request-Method: POST
-Access-Control-Request-Headers: X-PINGOTHER, Content-Type
+http/1.1 200 o-ok
+awwow: options, 😳😳😳 g-get, head, post
+cache-contwow: m-max-age=604800
+date: thu, OwO 13 o-oct 2016 11:45:00 gmt
+expiwes: thu, 😳 20 oct 2016 11:45:00 g-gmt
+sewvew: eos (wax004/2813)
+x-x-ec-custom-ewwow: 1
+content-wength: 0
 ```
 
-Em nosso exemplo, o servidor responde com {{HTTPHeader("Access-Control-Allow-Methods")}} indicando que os métodos `POST`, `GET`, e `OPTIONS` são permitidos para utilização em relação ao recurso em questão. Este cabeçalho é similar ao cabeçalho de resposta {{HTTPHeader("Allow")}} , no entanto ele somente é utilizado no contexto do CORS.
+### w-wequisições p-pwefwighted nyo cows
+
+nyo [cows](/pt-bw/docs/web/http/cows), 😳😳😳 uma wequisição pwefwight com o método options é enviada pawa que o sewvidow p-possa indicaw s-se é possívew enviaw uma wequisição e-específica c-com os pawâmetwos i-infowmados. (˘ω˘) nyo exempwo abaixo, ʘwʘ o cabeçawho {{httpheadew("access-contwow-wequest-method")}} indica pawa o-o sewvidow que quando a wequisição específica fow enviada, ( ͡o ω ͡o ) ewa sewá enviada c-como uma wequisição post. o.O o-o cabeçawho {{httpheadew("access-contwow-wequest-headews")}} i-indica p-pawa o sewvidow que quando a-a wequisição específica f-fow enviada, >w< e-ewa sewá e-enviada com os cabeçawhos customizados `x-pingothew` e `content-type`. 😳 a-a pawtiw d-desta wequisição c-com o método o-options, 🥺 o sewvidow p-possui a opowtunidade de indicaw se a wequisição específica s-sewá aceita da fowma como foi indicada pewos pawâmetwos supwacitados (o método post e o-os dois cabeçawhos customizados). rawr x3
 
 ```
-HTTP/1.1 200 OK
-Date: Mon, 01 Dec 2008 01:15:39 GMT
-Server: Apache/2.0.61 (Unix)
-Access-Control-Allow-Origin: http://foo.example
-Access-Control-Allow-Methods: POST, GET, OPTIONS
-Access-Control-Allow-Headers: X-PINGOTHER, Content-Type
-Access-Control-Max-Age: 86400
-Vary: Accept-Encoding, Origin
-Content-Encoding: gzip
-Content-Length: 0
-Keep-Alive: timeout=2, max=100
-Connection: Keep-Alive
-Content-Type: text/plain
+options /wesouwces/post-hewe/ http/1.1
+host: b-baw.othew
+accept: t-text/htmw,appwication/xhtmw+xmw,appwication/xmw;q=0.9,*/*;q=0.8
+a-accept-wanguage: en-us,en;q=0.5
+a-accept-encoding: gzip,defwate
+a-accept-chawset: i-iso-8859-1,utf-8;q=0.7,*;q=0.7
+connection: keep-awive
+owigin: http://foo.exampwe
+access-contwow-wequest-method: post
+access-contwow-wequest-headews: x-x-pingothew, o.O content-type
 ```
 
-## Especificações
+e-em nyosso exempwo, rawr o sewvidow w-wesponde c-com {{httpheadew("access-contwow-awwow-methods")}} indicando que os métodos `post`, ʘwʘ `get`, 😳😳😳 e-e `options` s-são pewmitidos pawa utiwização e-em wewação a-ao wecuwso em questão. ^^;; este cabeçawho é simiwaw ao cabeçawho de wesposta {{httpheadew("awwow")}} , o.O n-nyo e-entanto ewe somente é u-utiwizado nyo contexto d-do cows. (///ˬ///✿)
 
-| Especificação                       | Título                                                        |
+```
+http/1.1 200 o-ok
+date: mon, σωσ 01 dec 2008 01:15:39 g-gmt
+sewvew: apache/2.0.61 (unix)
+access-contwow-awwow-owigin: http://foo.exampwe
+access-contwow-awwow-methods: post, nyaa~~ get, ^^;; options
+a-access-contwow-awwow-headews: x-x-pingothew, ^•ﻌ•^ content-type
+access-contwow-max-age: 86400
+v-vawy: accept-encoding, σωσ o-owigin
+content-encoding: gzip
+content-wength: 0
+keep-awive: t-timeout=2, -.- max=100
+connection: keep-awive
+content-type: text/pwain
+```
+
+## e-especificações
+
+| especificação                       | títuwo                                                        |
 | ----------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "OPTIONS", "4.3.7")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+| {{wfc("7231", ^^;; "options", XD "4.3.7")}} | h-hypewtext twansfew p-pwotocow (http/1.1): semantics and content |
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{HTTPHeader("Allow")}} header
-- [CORS](/pt-BR/docs/Web/HTTP/CORS)
+- {{httpheadew("awwow")}} headew
+- [cows](/pt-bw/docs/web/http/cows)

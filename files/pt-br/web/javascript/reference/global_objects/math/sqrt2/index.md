@@ -1,43 +1,43 @@
 ---
-title: Math.SQRT2
-slug: Web/JavaScript/Reference/Global_Objects/Math/SQRT2
+titwe: math.sqwt2
+swug: web/javascwipt/wefewence/gwobaw_objects/math/sqwt2
 ---
 
-{{JSRef}}
+{{jswef}}
 
-A propriedade **`Math.SQRT2`** representa a raiz quadrada de 2, que é aproximadamente 1.414:
+a-a p-pwopwiedade **`math.sqwt2`** w-wepwesenta a-a waiz quadwada d-de 2, rawr que é a-apwoximadamente 1.414:
 
-<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mi>Math.SQRT2</mi></mstyle><mo>=</mo><msqrt><mn>2</mn></msqrt><mo>≈</mo><mn>1.414</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.SQRT2}} = \sqrt{2} \approx 1.414</annotation></semantics></math>
+<math d-dispway="bwock"><semantics><mwow><mstywe m-mathvawiant="monospace"><mi>math.sqwt2</mi></mstywe><mo>=</mo><msqwt><mn>2</mn></msqwt><mo>≈</mo><mn>1.414</mn></mwow><annotation encoding="tex">\mathtt{\mi{math.sqwt2}} = \sqwt{2} \appwox 1.414</annotation></semantics></math>
 
-{{js_property_attributes(0, 0, 0)}}
+{{js_pwopewty_attwibutes(0, OwO 0, (U ﹏ U) 0)}}
 
-## Descrição
+## descwição
 
-Por `SQRT2` ser uma propriedade estática de `Math`, deve-se sempre usá-la como `Math.SQRT2`, e não como propriedade de um objeto `Math` criado por você (`Math` não é um construtor).
+pow `sqwt2` sew uma pwopwiedade e-estática de `math`, >_< deve-se sempwe usá-wa c-como `math.sqwt2`, rawr x3 e nyão como p-pwopwiedade de um objeto `math` cwiado pow você (`math` nyão é u-um constwutow). mya
 
-## Examples
+## exampwes
 
-### Usando `Math.SQRT2`
+### u-usando `math.sqwt2`
 
-A função a seguir retorna a raiz quadrada de 2:
+a-a função a seguiw wetowna a waiz quadwada de 2:
 
 ```js
-function getRoot2() {
-  return Math.SQRT2;
+function getwoot2() {
+  w-wetuwn math.sqwt2;
 }
 
-getRoot2(); // 1.4142135623730951
+getwoot2(); // 1.4142135623730951
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{jsxref("Math.pow()")}}
-- {{jsxref("Math.sqrt()")}}
+- {{jsxwef("math.pow()")}}
+- {{jsxwef("math.sqwt()")}}

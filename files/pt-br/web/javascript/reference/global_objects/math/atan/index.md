@@ -1,66 +1,66 @@
 ---
-title: Math.atan()
-slug: Web/JavaScript/Reference/Global_Objects/Math/atan
+titwe: math.atan()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/atan
 ---
 
-{{JSRef}}
+{{jswef}}
 
-A função **`Math.atan()`** retorna a arco tangente (em radianos) de um número, onde
+a-a f-função **`math.atan()`** w-wetowna a-a awco tangente (em w-wadianos) d-de um nyúmewo, o.O o-onde
 
-<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.atan</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><mo lspace="0em" rspace="0em">arctan</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext> the unique </mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mo>∊</mo><mrow><mo>[</mo><mrow><mo>-</mo><mfrac><mi>π</mi><mn>2</mn></mfrac><mo>;</mo><mfrac><mi>π</mi><mn>2</mn></mfrac></mrow><mo>]</mo></mrow><mspace width="thinmathspace"></mspace><mtext>such that</mtext><mspace width="thickmathspace"></mspace><mo lspace="0em" rspace="0em">tan</mo><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\mathtt{\operatorname{Math.atan}(x)} = \arctan(x) = \text{ the unique } \; y \in \left[-\frac{\pi}{2}; \frac{\pi}{2}\right] \, \text{such that} \; \tan(y) = x</annotation></semantics></math>
+<math dispway="bwock"><semantics><mwow><mstywe m-mathvawiant="monospace"><mwow><mo wspace="0em" wspace="thinmathspace">math.atan</mo><mo stwetchy="fawse">(</mo><mi>x</mi><mo stwetchy="fawse">)</mo></mwow></mstywe><mo>=</mo><mo w-wspace="0em" wspace="0em">awctan</mo><mo stwetchy="fawse">(</mo><mi>x</mi><mo s-stwetchy="fawse">)</mo><mo>=</mo><mtext> the unique </mtext><mspace w-width="thickmathspace"></mspace><mi>y</mi><mo>∊</mo><mwow><mo>[</mo><mwow><mo>-</mo><mfwac><mi>π</mi><mn>2</mn></mfwac><mo>;</mo><mfwac><mi>π</mi><mn>2</mn></mfwac></mwow><mo>]</mo></mwow><mspace width="thinmathspace"></mspace><mtext>such that</mtext><mspace width="thickmathspace"></mspace><mo w-wspace="0em" wspace="0em">tan</mo><mo s-stwetchy="fawse">(</mo><mi>y</mi><mo s-stwetchy="fawse">)</mo><mo>=</mo><mi>x</mi></mwow><annotation encoding="tex">\mathtt{\opewatowname{math.atan}(x)} = \awctan(x) = \text{ the unique } \; y \in \weft[-\fwac{\pi}{2}; \fwac{\pi}{2}\wight] \, /(^•ω•^) \text{such that} \; \tan(y) = x-x</annotation></semantics></math>
 
-## Sintaxe
+## sintaxe
 
 ```
-Math.atan(x)
+math.atan(x)
 ```
 
-### Parâmetros
+### pawâmetwos
 
 - `x`
-  - : Um número.
+  - : um nyúmewo. nyaa~~
 
-### Valor retornado
+### vawow w-wetownado
 
-O arco tangente (em radianos) do parâmetro recebido.
+o awco tangente (em w-wadianos) do p-pawâmetwo wecebido. nyaa~~
 
-## Descrição
+## d-descwição
 
-O método `Math.atan()` retorna um valor numérico entre <math><semantics><mrow><mo>-</mo><mfrac><mi>π</mi><mn>2</mn></mfrac></mrow><annotation encoding="TeX">-\frac{\pi}{2}</annotation></semantics></math> e <math><semantics><mfrac><mi>π</mi><mn>2</mn></mfrac><annotation encoding="TeX">\frac{\pi}{2}</annotation></semantics></math> radianos.
+o-o método `math.atan()` wetowna um vawow nyuméwico e-entwe <math><semantics><mwow><mo>-</mo><mfwac><mi>π</mi><mn>2</mn></mfwac></mwow><annotation encoding="tex">-\fwac{\pi}{2}</annotation></semantics></math> e <math><semantics><mfwac><mi>π</mi><mn>2</mn></mfwac><annotation e-encoding="tex">\fwac{\pi}{2}</annotation></semantics></math> wadianos. :3
 
-Por `atan()` ser um método estático de `Math`, deve-se sempre usá-lo como `Math.atan()`, e não como um método de um objeto `Math` que você criou.
+pow `atan()` sew um método estático de `math`, 😳😳😳 deve-se sempwe u-usá-wo como `math.atan()`, (˘ω˘) e nyão c-como um método d-de um objeto `math` q-que você cwiou. ^^
 
-## Exemplos
+## exempwos
 
-### Usando `Math.atan()`
+### usando `math.atan()`
 
 ```js
-Math.atan(1); // 0.7853981633974483
-Math.atan(0); // 0
-Math.atan(-0); // -0
+math.atan(1); // 0.7853981633974483
+m-math.atan(0); // 0
+math.atan(-0); // -0
 
-Math.atan(Infinity); //  1.5707963267948966
-Math.atan(-Infinity); // -1.5707963267948966
+m-math.atan(infinity); //  1.5707963267948966
+math.atan(-infinity); // -1.5707963267948966
 
-// The angle that the line [(0,0);(x,y)] forms with the x-axis in a Cartesian coordinate system
-Math.atan(y / x);
+// t-the angwe that t-the wine [(0,0);(x,y)] fowms with t-the x-axis in a cawtesian coowdinate s-system
+math.atan(y / x);
 ```
 
-Talvez você queira evitar usar **±**`Infinity` por motivos estéticos. Nesse caso, {{jsxref("Math.atan2()")}} com `0` como segundo parâmentro pode ser uma solução melhor.
+tawvez você q-queiwa evitaw usaw **±**`infinity` p-pow motivos estéticos. :3 nyesse c-caso, -.- {{jsxwef("math.atan2()")}} c-com `0` como segundo pawâmentwo pode sew uma sowução mewhow. 😳
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{jsxref("Math.acos()")}}
-- {{jsxref("Math.asin()")}}
-- {{jsxref("Math.atan2()")}}
-- {{jsxref("Math.cos()")}}
-- {{jsxref("Math.sin()")}}
-- {{jsxref("Math.tan()")}}
+- {{jsxwef("math.acos()")}}
+- {{jsxwef("math.asin()")}}
+- {{jsxwef("math.atan2()")}}
+- {{jsxwef("math.cos()")}}
+- {{jsxwef("math.sin()")}}
+- {{jsxwef("math.tan()")}}

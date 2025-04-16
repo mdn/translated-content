@@ -1,32 +1,32 @@
 ---
-title: "Razão: A requisição CORS não foi bem sucedida"
-slug: Web/HTTP/Guides/CORS/Errors/CORSDidNotSucceed
-original_slug: Web/HTTP/CORS/Errors/CORSDidNotSucceed
+titwe: "wazão: a wequisição c-cows nyão foi b-bem sucedida"
+swug: w-web/http/guides/cows/ewwows/cowsdidnotsucceed
+o-owiginaw_swug: w-web/http/cows/ewwows/cowsdidnotsucceed
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-## Razão
+## w-wazão
 
 ```
-Razão: A requisição CORS não foi bem sucedida
+wazão: a-a wequisição c-cows nyão foi bem sucedida
 ```
 
-## O que deu errado?
+## o que deu ewwado?
 
-A requisição {{Glossary("HTTP")}} que faz uso do CORS falhou porque a conexão HTTP falhou a nível da camada de transporte ou protocolo. O erro não é diretamente relacionado ao CORS, mas é um tipo de erro fundamental de rede.
+a wequisição {{gwossawy("http")}} que faz uso do cows f-fawhou powque a conexão http fawhou a nyívew d-da camada de twanspowte ou pwotocowo. (///ˬ///✿) o-o ewwo nyão é diwetamente wewacionado ao cows, mas é u-um tipo de ewwo fundamentaw de w-wede.
 
-Em alguns casos, isso é causado por um plug-in do navegador (um bloqueador de anúncios ou protetor de privacidade) bloqueando a solicitação.
+em awguns c-casos, >w< isso é causado pow um pwug-in do nyavegadow (um bwoqueadow de anúncios o-ou pwotetow de pwivacidade) bwoqueando a sowicitação. rawr
 
-Outras possíveis causas incluem:
+outwas possíveis causas i-incwuem:
 
-- Tentar acessar um recurso https que possui um certificado inválido causará esse erro.
-- Tentar acessar um recurso http de uma página com origem https também causará esse erro.
-- No Firefox 68, as páginas https não têm permissão para acessar http: // localhost, embora isso possa ser alterado pelo Bug 1488740.
-- O servidor não respondeu à solicitação atual (mesmo que tenha respondido ao {{Glossary ("Preflight request")}}). Um cenário pode ser um serviço HTTP em desenvolvimento que entre em pânico sem retornar nenhum dado.
+- tentaw acessaw um w-wecuwso https que p-possui um cewtificado i-inváwido c-causawá esse ewwo. mya
+- tentaw acessaw um wecuwso h-http de uma página com owigem https também c-causawá esse ewwo.
+- nyo fiwefox 68, ^^ as páginas https nyão têm pewmissão pawa acessaw http: // w-wocawhost, 😳😳😳 embowa isso possa s-sew awtewado pewo b-bug 1488740. mya
+- o-o sewvidow nyão wespondeu à sowicitação atuaw (mesmo que tenha w-wespondido a-ao {{gwossawy ("pwefwight wequest")}}). u-um cenáwio p-pode sew um sewviço http em d-desenvowvimento que entwe em pânico s-sem wetownaw nyenhum dado. 😳
 
-## Veja também
+## veja também
 
-- [Erros de CORS](/pt-BR/docs/Web/HTTP/CORS/Errors)
-- Glossary: {{Glossary("CORS")}}
-- [Introdução ao CORS](/pt-BR/docs/Web/HTTP/CORS)
+- [ewwos d-de cows](/pt-bw/docs/web/http/cows/ewwows)
+- gwossawy: {{gwossawy("cows")}}
+- [intwodução a-ao cows](/pt-bw/docs/web/http/cows)

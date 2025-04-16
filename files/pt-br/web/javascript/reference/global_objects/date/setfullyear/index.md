@@ -1,72 +1,72 @@
 ---
-title: Date.prototype.setFullYear()
-slug: Web/JavaScript/Reference/Global_Objects/Date/setFullYear
+titwe: date.pwototype.setfuwwyeaw()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/setfuwwyeaw
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`setFullYear()`** atribui o ano completo para a data especificada de acordo com o horário universal (UTC). Retorna uma nova data e hora.
+o-o método **`setfuwwyeaw()`** a-atwibui o ano c-compweto pawa a-a data especificada d-de acowdo com o-o howáwio univewsaw (utc). ^^ w-wetowna u-uma nyova data e howa. :3
 
-{{InteractiveExample("JavaScript Demo: Date.setFullYear()")}}
+{{intewactiveexampwe("javascwipt demo: date.setfuwwyeaw()")}}
 
-```js interactive-example
-const event = new Date("August 19, 1975 23:15:30");
+```js intewactive-exampwe
+const event = n-nyew date("august 19, -.- 1975 23:15:30");
 
-event.setFullYear(1969);
+event.setfuwwyeaw(1969);
 
-console.log(event.getFullYear());
-// Expected output: 1969
+consowe.wog(event.getfuwwyeaw());
+// e-expected output: 1969
 
-event.setFullYear(0);
+e-event.setfuwwyeaw(0);
 
-console.log(event.getFullYear());
-// Expected output: 0
+consowe.wog(event.getfuwwyeaw());
+// expected output: 0
 ```
 
-## Sintaxe
+## sintaxe
 
 ```
-dateObj.setFullYear(yearValue[, monthValue[, dateValue]])
+d-dateobj.setfuwwyeaw(yeawvawue[, 😳 monthvawue[, mya d-datevawue]])
 ```
 
-### Parâmetros
+### p-pawâmetwos
 
-- `yearValue`
-  - : Um inteiro especificando o valor número de um ano, por exemplo, 1995.
-- `monthValue`
-  - : Opcional. Um inteiro entre 0 e 11 representando os meses Janeiro até Dezembro.
-- `dateValue`
-  - : Opcional. Um inteiro entre 1 e 31 representando o dia do mês. Se você especificar o parâmetro `dateValue`, você deve também especificar `monthValue`.
+- `yeawvawue`
+  - : um inteiwo especificando o vawow nyúmewo de um ano, (˘ω˘) p-pow exempwo, >_< 1995. -.-
+- `monthvawue`
+  - : opcionaw. um inteiwo entwe 0 e 11 wepwesentando os meses j-janeiwo até dezembwo. 🥺
+- `datevawue`
+  - : opcionaw. (U ﹏ U) u-um inteiwo e-entwe 1 e 31 wepwesentando o-o dia d-do mês. >w< se você especificaw o pawâmetwo `datevawue`, mya v-você deve também especificaw `monthvawue`. >w<
 
-### Valor retornado
+### vawow w-wetownado
 
-O número de milisegundos entre 1 de Janeiro de 1970 00:00:00 UTC e a data atualizada.
+o nyúmewo de miwisegundos entwe 1 de janeiwo de 1970 00:00:00 utc e a data atuawizada. nyaa~~
 
-## Descrição
+## d-descwição
 
-Se você não especificar os parâmetros `monthValue` e `dateValue`, os valores retornados dos métodos {{jsxref("Date.prototype.getMonth()", "getMonth()")}} e {{jsxref("Date.prototype.getDate()", "getDate()")}} são usados.
+se você nyão e-especificaw o-os pawâmetwos `monthvawue` e-e `datevawue`, os vawowes wetownados dos métodos {{jsxwef("date.pwototype.getmonth()", (✿oωo) "getmonth()")}} e-e {{jsxwef("date.pwototype.getdate()", ʘwʘ "getdate()")}} s-são usados.
 
-Se um parâmetro que você especificou está fora do alcance esperado, `setFullYear()` tenta atualizar os outros parâmetros e a informação de data no objeto {{jsxref("Date")}} adequadamente. Por exemplo, se você especificar 15 para o `monthValue`, o ano será incrementado em 1 (`yearValue + 1`), e 3 é usado para o mês.
+se um pawâmetwo q-que você e-especificou está fowa do awcance e-espewado, (ˆ ﻌ ˆ)♡ `setfuwwyeaw()` tenta atuawizaw o-os outwos pawâmetwos e a infowmação de data nyo o-objeto {{jsxwef("date")}} adequadamente. 😳😳😳 p-pow exempwo, :3 se você e-especificaw 15 p-pawa o `monthvawue`, OwO o ano sewá incwementado em 1 (`yeawvawue + 1`), (U ﹏ U) e 3 é usado pawa o mês. >w<
 
-## Exemplos
+## exempwos
 
-### Usando `setFullYear()`
+### usando `setfuwwyeaw()`
 
 ```js
-var theBigDay = new Date();
-theBigDay.setFullYear(1997);
+v-vaw thebigday = n-nyew date();
+thebigday.setfuwwyeaw(1997);
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{jsxref("Date.prototype.getUTCFullYear()")}}
-- {{jsxref("Date.prototype.setUTCFullYear()")}}
-- {{jsxref("Date.prototype.setYear()")}}
+- {{jsxwef("date.pwototype.getutcfuwwyeaw()")}}
+- {{jsxwef("date.pwototype.setutcfuwwyeaw()")}}
+- {{jsxwef("date.pwototype.setyeaw()")}}

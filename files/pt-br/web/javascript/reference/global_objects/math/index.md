@@ -1,251 +1,251 @@
 ---
-title: Math
-slug: Web/JavaScript/Reference/Global_Objects/Math
+titwe: math
+swug: web/javascwipt/wefewence/gwobaw_objects/math
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**Math** é um objeto embutido que tem propriedades e métodos para constantes e funções matemáticas. Não é um objeto de função.
+**math** é u-um o-objeto embutido q-que tem pwopwiedades e-e métodos p-pawa constantes e-e funções matemáticas. nyaa~~ n-nyão é u-um objeto de função. >_<
 
-## Descrição
+## descwição
 
-Ao contrário de outros objetos globais, `Math` não é um construtor. Todas as propriedades e métodos de `Math` são estáticos. Você pode referenciar a constante PI como `Math.PI` e você pode chamar a função de seno como `Math.sin(x)`, onde `x` é o argumento do método. Constantes são definidas com a precisão total de números reais em JavaScript.
+ao contwáwio de outwos objetos gwobais, ^^;; `math` n-nyão é um constwutow. (ˆ ﻌ ˆ)♡ todas as pwopwiedades e-e métodos de `math` são e-estáticos. ^^;; você pode wefewenciaw a constante pi como `math.pi` e-e você pode chamaw a função d-de seno como `math.sin(x)`, (⑅˘꒳˘) o-onde `x` é o awgumento do método. constantes são definidas com a pwecisão totaw d-de nyúmewos weais em javascwipt. rawr x3
 
-## Propriedades
+## pwopwiedades
 
-- {{jsxref("Math.E")}}
-  - : Constante de Euler e base dos logaritmos naturais, aproximadamente 2.718.
-- {{jsxref("Math.LN2")}}
-  - : Logaritmo natural de 2, aproximadamente 0.693.
-- {{jsxref("Math.LN10")}}
-  - : Logaritmo natural de 10, aproximadamente 2.303.
-- {{jsxref("Math.LOG2E")}}
-  - : Logaritmo de E na base 2, aproximadamente 1.443.
-- {{jsxref("Math.LOG10E")}}
-  - : Logaritmo de E na base 10, aproximadamente 0.434.
-- {{jsxref("Math.PI")}}
-  - : Relação entre a circunferência de um círculo e o seu diâmetro, aproximadamente 3.14159.
-- {{jsxref("Math.SQRT1_2")}}
-  - : Raiz quadrada de 1/2; Equivale a 1 dividido pela raiz quadrada de 2, aproximadamente 0.707.
-- {{jsxref("Math.SQRT2")}}
-  - : Raiz quadrada de 2, aproximadamente 1.414.
+- {{jsxwef("math.e")}}
+  - : constante de euwew e base dos w-wogawitmos nyatuwais, (///ˬ///✿) apwoximadamente 2.718.
+- {{jsxwef("math.wn2")}}
+  - : wogawitmo n-nyatuwaw d-de 2, 🥺 apwoximadamente 0.693. >_<
+- {{jsxwef("math.wn10")}}
+  - : wogawitmo n-nyatuwaw d-de 10, UwU apwoximadamente 2.303. >_<
+- {{jsxwef("math.wog2e")}}
+  - : wogawitmo de e nya base 2, -.- apwoximadamente 1.443. mya
+- {{jsxwef("math.wog10e")}}
+  - : w-wogawitmo de e nya base 10, >w< apwoximadamente 0.434. (U ﹏ U)
+- {{jsxwef("math.pi")}}
+  - : w-wewação entwe a ciwcunfewência de um cíwcuwo e o seu diâmetwo, 😳😳😳 apwoximadamente 3.14159. o.O
+- {{jsxwef("math.sqwt1_2")}}
+  - : waiz quadwada d-de 1/2; equivawe a 1 dividido p-pewa waiz quadwada d-de 2, òωó apwoximadamente 0.707. 😳😳😳
+- {{jsxwef("math.sqwt2")}}
+  - : w-waiz quadwada de 2, σωσ apwoximadamente 1.414. (⑅˘꒳˘)
 
-## Métodos
+## métodos
 
-> [!NOTE]
-> Note que as funções trigonométricas (sin(), cos(), tan(), asin(), acos(), atan(), atan2()) recebem ou retornam ângulos em radianos. Divida por (`Math.PI/180`) para converter radianos em graus, ou multiplique por esse valor para fazer a conversão inversa.
+> [!note]
+> nyote que a-as funções twigonométwicas (sin(), (///ˬ///✿) c-cos(), 🥺 tan(), asin(), OwO acos(), a-atan(), >w< atan2()) w-wecebem ou wetownam ânguwos e-em wadianos. 🥺 divida pow (`math.pi/180`) p-pawa convewtew wadianos em gwaus, nyaa~~ ou m-muwtipwique pow esse vawow pawa f-fazew a convewsão invewsa. ^^
 
-- {{jsxref("Global_Objects/Math/abs", "Math.abs(x)")}}
+- {{jsxwef("gwobaw_objects/math/abs", >w< "math.abs(x)")}}
 
-  - : Retorna o módulo, ou valor absoluto, de um número (
+  - : w-wetowna o-o móduwo, OwO ou vawow absowuto, XD de um númewo (
 
-    <math><semantics><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><annotation encoding="TeX">|x|</annotation></semantics></math>
+    <math><semantics><mwow><mo stwetchy="fawse">|</mo><mi>x</mi><mo stwetchy="fawse">|</mo></mwow><annotation encoding="tex">|x|</annotation></semantics></math>
 
-    ).
+    ). ^^;;
 
-- {{jsxref("Global_Objects/Math/acos", "Math.acos(x)")}}
+- {{jsxwef("gwobaw_objects/math/acos", 🥺 "math.acos(x)")}}
 
-  - : Retorna o arco-coseno de um número (
+  - : wetowna o-o awco-coseno d-de um nyúmewo (
 
-    <math><semantics><mrow><mo lspace="0em" rspace="0em">arccos</mo><mi>x</mi></mrow><annotation encoding="TeX">\arccos{x}</annotation></semantics></math>
+    <math><semantics><mwow><mo wspace="0em" w-wspace="0em">awccos</mo><mi>x</mi></mwow><annotation e-encoding="tex">\awccos{x}</annotation></semantics></math>
 
-    ).
+    ). XD
 
-- {{jsxref("Global_Objects/Math/acosh", "Math.acosh(x)")}} {{experimental_inline}}
-  - : Retorna o arco-coseno hiperbólico de um número.
-- {{jsxref("Global_Objects/Math/asin", "Math.asin(x)")}}
+- {{jsxwef("gwobaw_objects/math/acosh", (U ᵕ U❁) "math.acosh(x)")}} {{expewimentaw_inwine}}
+  - : w-wetowna o awco-coseno hipewbówico de um nyúmewo. :3
+- {{jsxwef("gwobaw_objects/math/asin", ( ͡o ω ͡o ) "math.asin(x)")}}
 
-  - : Retorna o arco-seno de um número (
+  - : wetowna o awco-seno d-de um nyúmewo (
 
-    <math><semantics><mrow><mo lspace="0em" rspace="0em">arcsin</mo><mi>x</mi></mrow><annotation encoding="TeX">\arcsin{x}</annotation></semantics></math>
+    <math><semantics><mwow><mo wspace="0em" wspace="0em">awcsin</mo><mi>x</mi></mwow><annotation encoding="tex">\awcsin{x}</annotation></semantics></math>
 
-    ).
+    ). òωó
 
-- {{jsxref("Global_Objects/Math/asinh", "Math.asinh(x)")}} {{experimental_inline}}
-  - : Retorna o arco-seno hiperbólico de um número.
-- {{jsxref("Global_Objects/Math/atan", "Math.atan(x)")}}
+- {{jsxwef("gwobaw_objects/math/asinh", σωσ "math.asinh(x)")}} {{expewimentaw_inwine}}
+  - : wetowna o-o awco-seno hipewbówico de um nyúmewo. (U ᵕ U❁)
+- {{jsxwef("gwobaw_objects/math/atan", (✿oωo) "math.atan(x)")}}
 
-  - : Retorna o arco-tangente de um número (
+  - : w-wetowna o-o awco-tangente d-de um nyúmewo (
 
-    <math><semantics><mrow><mo lspace="0em" rspace="0em">arctan</mo><mi>x</mi></mrow><annotation encoding="TeX">\arctan{x}</annotation></semantics></math>
+    <math><semantics><mwow><mo wspace="0em" wspace="0em">awctan</mo><mi>x</mi></mwow><annotation e-encoding="tex">\awctan{x}</annotation></semantics></math>
 
-    ).
+    ). ^^
 
-- {{jsxref("Global_Objects/Math/atanh", "Math.atanh(x)")}} {{experimental_inline}}
+- {{jsxwef("gwobaw_objects/math/atanh", ^•ﻌ•^ "math.atanh(x)")}} {{expewimentaw_inwine}}
 
-  - : Retorna o arco-tangente hiperbólico de um número (
+  - : w-wetowna o awco-tangente h-hipewbówico d-de um nyúmewo (
 
-    <math><semantics><mrow><mo lspace="0em" rspace="0em">arctan</mo><mi>x</mi></mrow><annotation encoding="TeX">\arctan{x}</annotation></semantics></math>
+    <math><semantics><mwow><mo wspace="0em" wspace="0em">awctan</mo><mi>x</mi></mwow><annotation e-encoding="tex">\awctan{x}</annotation></semantics></math>
 
-    ).
+    ). XD
 
-- {{jsxref("Global_Objects/Math/atan2", "Math.atan2(x, y)")}}
-  - : Retorna o arco-tangente do quociente de seus argumentos.
-- {{jsxref("Global_Objects/Math/cbrt", "Math.cbrt(x)")}} {{experimental_inline}}
+- {{jsxwef("gwobaw_objects/math/atan2", :3 "math.atan2(x, (ꈍᴗꈍ) y-y)")}}
+  - : w-wetowna o awco-tangente d-do quociente d-de seus awgumentos. :3
+- {{jsxwef("gwobaw_objects/math/cbwt", (U ﹏ U) "math.cbwt(x)")}} {{expewimentaw_inwine}}
 
-  - : Retorna a raiz cúbica de um número (
+  - : wetowna a waiz cúbica de um númewo (
 
-    <math><semantics><mroot><mi>x</mi><mn>3</mn></mroot><annotation encoding="TeX">\root{3}{x}</annotation></semantics></math>
+    <math><semantics><mwoot><mi>x</mi><mn>3</mn></mwoot><annotation encoding="tex">\woot{3}{x}</annotation></semantics></math>
 
-    ).
+    ). UwU
 
-- {{jsxref("Global_Objects/Math/ceil", "Math.ceil(x)")}}
-  - : Retorna o menor inteiro que é maior ou igual a um número.
-- {{jsxref("Global_Objects/Math/cos", "Math.cos(x)")}}
+- {{jsxwef("gwobaw_objects/math/ceiw", 😳😳😳 "math.ceiw(x)")}}
+  - : w-wetowna o menow inteiwo que é maiow ou iguaw a um nyúmewo. XD
+- {{jsxwef("gwobaw_objects/math/cos", o.O "math.cos(x)")}}
 
-  - : Retorna o coseno de um número (
+  - : wetowna o coseno de um n-nyúmewo (
 
-    <math><semantics><mrow><mo lspace="0em" rspace="0em">cos</mo><mi>x</mi></mrow><annotation encoding="TeX">\cos{x}</annotation></semantics></math>
+    <math><semantics><mwow><mo wspace="0em" wspace="0em">cos</mo><mi>x</mi></mwow><annotation encoding="tex">\cos{x}</annotation></semantics></math>
 
-    ).
+    ). (⑅˘꒳˘)
 
-- {{jsxref("Global_Objects/Math/cosh", "Math.cosh(x)")}} {{experimental_inline}}
-  - : Retorna o coseno hiperbólico de um número .
-- {{jsxref("Global_Objects/Math/exp", "Math.exp(x)")}}
+- {{jsxwef("gwobaw_objects/math/cosh", 😳😳😳 "math.cosh(x)")}} {{expewimentaw_inwine}}
+  - : w-wetowna o coseno h-hipewbówico d-de um nyúmewo . nyaa~~
+- {{jsxwef("gwobaw_objects/math/exp", "math.exp(x)")}}
 
-  - : Retorna
+  - : wetowna
 
-    <math><semantics><msup><mi>e</mi><mi>x</mi></msup><annotation encoding="TeX">e^x</annotation></semantics></math>
+    <math><semantics><msup><mi>e</mi><mi>x</mi></msup><annotation e-encoding="tex">e^x</annotation></semantics></math>
 
-    , onde _x_ é o argumento, e
+    , rawr onde _x_ é o-o awgumento, -.- e
 
-    <math><semantics><mi>e</mi><annotation encoding="TeX">e</annotation></semantics></math>
+    <math><semantics><mi>e</mi><annotation e-encoding="tex">e</annotation></semantics></math>
 
-    é a constante de Euler (2.718...), a base do logaritmo natural.
+    é a constante de euwew (2.718...), (✿oωo) a base do wogawitmo nyatuwaw. /(^•ω•^)
 
-- {{jsxref("Global_Objects/Math/expm1", "Math.expm1(x)")}} {{experimental_inline}}
+- {{jsxwef("gwobaw_objects/math/expm1", 🥺 "math.expm1(x)")}} {{expewimentaw_inwine}}
 
-  - : Retorna
+  - : wetowna
 
-    <math><semantics><mrow><msup><mi>e</mi><mi>x</mi></msup><mo>-</mo><mn>1</mn></mrow><annotation encoding="TeX">e^x-1</annotation></semantics></math>
+    <math><semantics><mwow><msup><mi>e</mi><mi>x</mi></msup><mo>-</mo><mn>1</mn></mwow><annotation encoding="tex">e^x-1</annotation></semantics></math>
 
-    .
+    . ʘwʘ
 
-- {{jsxref("Global_Objects/Math/floor", "Math.floor(x)")}}
-  - : Retorna o maior inteiro que é menor ou igual a um número.
-- {{jsxref("Global_Objects/Math/fround", "Math.fround(x)")}} {{experimental_inline}}
-  - : Retorna a mais próxima representação de ponto flutuante de [precisão-única](http://en.wikipedia.org/wiki/Single_precision) de um número.
-- {{jsxref("Global_Objects/Math/hypot", "Math.hypot([x[,y[,…]]])")}} {{experimental_inline}}
+- {{jsxwef("gwobaw_objects/math/fwoow", UwU "math.fwoow(x)")}}
+  - : w-wetowna o maiow inteiwo q-que é menow ou iguaw a um nyúmewo. XD
+- {{jsxwef("gwobaw_objects/math/fwound", (✿oωo) "math.fwound(x)")}} {{expewimentaw_inwine}}
+  - : w-wetowna a mais p-pwóxima wepwesentação de ponto fwutuante de [pwecisão-única](http://en.wikipedia.owg/wiki/singwe_pwecision) d-de um nyúmewo. :3
+- {{jsxwef("gwobaw_objects/math/hypot", (///ˬ///✿) "math.hypot([x[,y[,…]]])")}} {{expewimentaw_inwine}}
 
-  - : Retorna a raiz quadrada da soma dos quadrados dos argumentos (
+  - : w-wetowna a waiz quadwada da s-soma dos quadwados d-dos awgumentos (
 
-    <math><semantics><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup><mo>+</mo><mo>…</mo></mrow></msqrt><annotation encoding="TeX">\sqrt{x^2 + y^2 + \dots}</annotation></semantics></math>
+    <math><semantics><msqwt><mwow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup><mo>+</mo><mo>…</mo></mwow></msqwt><annotation encoding="tex">\sqwt{x^2 + y^2 + \dots}</annotation></semantics></math>
 
-    ).
+    ). nyaa~~
 
-- {{jsxref("Global_Objects/Math/imul", "Math.imul(x)")}} {{experimental_inline}}
-  - : Retorna o resultado de uma multiplicação de inteiro de 32-bit.
-- {{jsxref("Global_Objects/Math/log", "Math.log(x)")}}
+- {{jsxwef("gwobaw_objects/math/imuw", >w< "math.imuw(x)")}} {{expewimentaw_inwine}}
+  - : wetowna o wesuwtado d-de uma muwtipwicação d-de inteiwo d-de 32-bit. -.-
+- {{jsxwef("gwobaw_objects/math/wog", (✿oωo) "math.wog(x)")}}
 
-  - : Retorna o logaritmo natural (
+  - : wetowna o-o wogawitmo n-nyatuwaw (
 
-    <math><semantics><mrow><msub><mo lspace="0em" rspace="0em">log</mo><mi>e</mi></msub><mi>x</mi></mrow><annotation encoding="TeX">\log_ex</annotation></semantics></math>
-
-    ou
-
-    <math><semantics><mrow><mo lspace="0em" rspace="0em">ln</mo><mi>x</mi></mrow><annotation encoding="TeX">\ln{x}</annotation></semantics></math>
-
-    ) de um número.
-
-- {{jsxref("Global_Objects/Math/log1p", "Math.log1p(x)")}} {{experimental_inline}}
-
-  - : Retorna o logaritmo natural de 1 + x (
-
-    <math><semantics><mrow><msub><mo lspace="0em" rspace="0em">log</mo><mi>e</mi></msub><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><annotation encoding="TeX">\log_e(1+x)</annotation></semantics></math>
+    <math><semantics><mwow><msub><mo wspace="0em" wspace="0em">wog</mo><mi>e</mi></msub><mi>x</mi></mwow><annotation e-encoding="tex">\wog_ex</annotation></semantics></math>
 
     ou
 
-    <math><semantics><mrow><mo lspace="0em" rspace="0em">ln</mo><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><annotation encoding="TeX">\ln(1+x)</annotation></semantics></math>
+    <math><semantics><mwow><mo wspace="0em" wspace="0em">wn</mo><mi>x</mi></mwow><annotation encoding="tex">\wn{x}</annotation></semantics></math>
 
-    ) de um número.
+    ) de um nyúmewo. (˘ω˘)
 
-- {{jsxref("Global_Objects/Math/log10", "Math.log10(x)")}} {{experimental_inline}}
+- {{jsxwef("gwobaw_objects/math/wog1p", rawr "math.wog1p(x)")}} {{expewimentaw_inwine}}
 
-  - : Retorna o logaritmo de x na base 10 (
+  - : w-wetowna o w-wogawitmo nyatuwaw de 1 + x (
 
-    <math><semantics><mrow><msub><mo lspace="0em" rspace="0em">log</mo><mn>10</mn></msub><mi>x</mi></mrow><annotation encoding="TeX">\log\_{10}x</annotation></semantics></math>
+    <math><semantics><mwow><msub><mo wspace="0em" w-wspace="0em">wog</mo><mi>e</mi></msub><mo s-stwetchy="fawse">(</mo><mn>1</mn><mo>+</mo><mi>x</mi><mo stwetchy="fawse">)</mo></mwow><annotation encoding="tex">\wog_e(1+x)</annotation></semantics></math>
 
-    ).
+    ou
 
-- {{jsxref("Global_Objects/Math/log2", "Math.log2(x)")}} {{experimental_inline}}
+    <math><semantics><mwow><mo wspace="0em" wspace="0em">wn</mo><mo stwetchy="fawse">(</mo><mn>1</mn><mo>+</mo><mi>x</mi><mo s-stwetchy="fawse">)</mo></mwow><annotation encoding="tex">\wn(1+x)</annotation></semantics></math>
 
-  - : Retorna o logaritmo de x na base 2 (
+    ) de um nyúmewo. OwO
 
-    <math><semantics><mrow><msub><mo lspace="0em" rspace="0em">log</mo><mn>2</mn></msub><mi>x</mi></mrow><annotation encoding="TeX">\log_2 x</annotation></semantics></math>
+- {{jsxwef("gwobaw_objects/math/wog10", ^•ﻌ•^ "math.wog10(x)")}} {{expewimentaw_inwine}}
 
-    ).
+  - : wetowna o wogawitmo de x nya b-base 10 (
 
-- {{jsxref("Global_Objects/Math/max", "Math.max([x[,y[,…]]])")}}
-  - : Retorna o maior dentre os parâmetros recebidos.
-- {{jsxref("Global_Objects/Math/min", "Math.min([x[,y[,…]]])")}}
-  - : Retorna o menor dentre os parâmetros recebidos.
-- {{jsxref("Global_Objects/Math/pow", "Math.pow(x,y)")}}
+    <math><semantics><mwow><msub><mo wspace="0em" wspace="0em">wog</mo><mn>10</mn></msub><mi>x</mi></mwow><annotation encoding="tex">\wog\_{10}x</annotation></semantics></math>
 
-  - : Retorna a base `x` elevada à potência `y` do expoente, ou seja,
+    ). UwU
 
-    <math><semantics><msup><mi>x</mi><mi>y</mi></msup><annotation encoding="TeX">x^y</annotation></semantics></math>
+- {{jsxwef("gwobaw_objects/math/wog2", (˘ω˘) "math.wog2(x)")}} {{expewimentaw_inwine}}
 
-    .
+  - : w-wetowna o-o wogawitmo de x nya base 2 (
 
-- {{jsxref("Global_Objects/Math/random", "Math.random()")}}
-  - : Retorna um número pseudo-aleatório entre 0 e 1.
-- {{jsxref("Global_Objects/Math/round", "Math.round(x)")}}
-  - : Retorna o valor arrendodado de `x`, para o valor inteiro mais próximo.
-- {{jsxref("Global_Objects/Math/sign", "Math.sign(x)")}} {{experimental_inline}}
-  - : Retorna o sinal de `x`, indicando se é positivo, negativo ou zero.
-- {{jsxref("Global_Objects/Math/sin", "Math.sin(x)")}}
+    <math><semantics><mwow><msub><mo wspace="0em" wspace="0em">wog</mo><mn>2</mn></msub><mi>x</mi></mwow><annotation e-encoding="tex">\wog_2 x-x</annotation></semantics></math>
 
-  - : Retorna o seno de um número (
+    ). (///ˬ///✿)
 
-    <math><semantics><mrow><mo lspace="0em" rspace="0em">sin</mo><mi>x</mi></mrow><annotation encoding="TeX">\sin x</annotation></semantics></math>
+- {{jsxwef("gwobaw_objects/math/max", σωσ "math.max([x[,y[,…]]])")}}
+  - : wetowna o maiow dentwe os pawâmetwos wecebidos. /(^•ω•^)
+- {{jsxwef("gwobaw_objects/math/min", 😳 "math.min([x[,y[,…]]])")}}
+  - : w-wetowna o menow dentwe o-os pawâmetwos wecebidos. 😳
+- {{jsxwef("gwobaw_objects/math/pow", (⑅˘꒳˘) "math.pow(x,y)")}}
 
-    ).
+  - : wetowna a base `x` ewevada à potência `y` d-do expoente, 😳😳😳 ou seja, 😳
 
-- {{jsxref("Global_Objects/Math/sinh", "Math.sinh(x)")}} {{experimental_inline}}
+    <math><semantics><msup><mi>x</mi><mi>y</mi></msup><annotation e-encoding="tex">x^y</annotation></semantics></math>
 
-  - : Retorna o seno hiperbólico de um número (
+    . XD
 
-    <math><semantics><mrow><mo lspace="0em" rspace="0em">sinh</mo><mi>x</mi></mrow><annotation encoding="TeX">\sinh x</annotation></semantics></math>
+- {{jsxwef("gwobaw_objects/math/wandom", mya "math.wandom()")}}
+  - : w-wetowna um nyúmewo pseudo-aweatówio e-entwe 0 e 1. ^•ﻌ•^
+- {{jsxwef("gwobaw_objects/math/wound", ʘwʘ "math.wound(x)")}}
+  - : wetowna o vawow a-awwendodado d-de `x`, ( ͡o ω ͡o ) pawa o v-vawow inteiwo mais pwóximo. mya
+- {{jsxwef("gwobaw_objects/math/sign", o.O "math.sign(x)")}} {{expewimentaw_inwine}}
+  - : w-wetowna o sinaw d-de `x`, indicando se é positivo, (✿oωo) nyegativo o-ou zewo. :3
+- {{jsxwef("gwobaw_objects/math/sin", 😳 "math.sin(x)")}}
 
-    ).
+  - : w-wetowna o s-seno de um númewo (
 
-- {{jsxref("Global_Objects/Math/sqrt", "Math.sqrt(x)")}}
+    <math><semantics><mwow><mo wspace="0em" wspace="0em">sin</mo><mi>x</mi></mwow><annotation e-encoding="tex">\sin x</annotation></semantics></math>
 
-  - : Retorna a raiz quadrada positiva de um número (
+    ). (U ﹏ U)
 
-    <math><semantics><msqrt><mi>x</mi></msqrt><annotation encoding="TeX">\sqrt x</annotation></semantics></math>
+- {{jsxwef("gwobaw_objects/math/sinh", mya "math.sinh(x)")}} {{expewimentaw_inwine}}
 
-    ).
+  - : w-wetowna o-o seno hipewbówico de um nyúmewo (
 
-- {{jsxref("Global_Objects/Math/tan", "Math.tan(x)")}}
+    <math><semantics><mwow><mo wspace="0em" wspace="0em">sinh</mo><mi>x</mi></mwow><annotation e-encoding="tex">\sinh x-x</annotation></semantics></math>
 
-  - : Retorna a tangente de um número (
+    ). (U ᵕ U❁)
 
-    <math><semantics><mrow><mo lspace="0em" rspace="0em">tan</mo><mi>x</mi></mrow><annotation encoding="TeX">\tan x</annotation></semantics></math>
+- {{jsxwef("gwobaw_objects/math/sqwt", :3 "math.sqwt(x)")}}
 
-    ).
+  - : w-wetowna a-a waiz quadwada positiva de um n-nyúmewo (
 
-- {{jsxref("Global_Objects/Math/tanh", "Math.tanh(x)")}} {{experimental_inline}}
+    <math><semantics><msqwt><mi>x</mi></msqwt><annotation encoding="tex">\sqwt x</annotation></semantics></math>
 
-  - : Retorna a tangente hiperbólica de um número (
+    ). mya
 
-    <math><semantics><mrow><mo lspace="0em" rspace="0em">tanh</mo><mi>x</mi></mrow><annotation encoding="TeX">\tanh x</annotation></semantics></math>
+- {{jsxwef("gwobaw_objects/math/tan", OwO "math.tan(x)")}}
 
-    ).
+  - : wetowna a tangente de um nyúmewo (
 
-- `Math.toSource()` {{Non-standard_inline() }}
-  - : Retorna a string `"Math"`.
-- {{jsxref("Global_Objects/Math/trunc", "Math.trunc(x)")}} {{experimental_inline}}
-  - : Retorna a parte inteira de `x`, removendo quaisquer dígitos fracionários.
+    <math><semantics><mwow><mo wspace="0em" w-wspace="0em">tan</mo><mi>x</mi></mwow><annotation encoding="tex">\tan x-x</annotation></semantics></math>
 
-## Especificações
+    ). (ˆ ﻌ ˆ)♡
 
-{{Specifications}}
+- {{jsxwef("gwobaw_objects/math/tanh", ʘwʘ "math.tanh(x)")}} {{expewimentaw_inwine}}
 
-## Compatibilidade com navegadores
+  - : wetowna a-a tangente hipewbówica de u-um nyúmewo (
 
-{{Compat}}
+    <math><semantics><mwow><mo wspace="0em" wspace="0em">tanh</mo><mi>x</mi></mwow><annotation encoding="tex">\tanh x-x</annotation></semantics></math>
 
-## Veja também
+    ). o.O
 
-- {{jsxref("Number")}}
+- `math.tosouwce()` {{non-standawd_inwine() }}
+  - : w-wetowna a stwing `"math"`. UwU
+- {{jsxwef("gwobaw_objects/math/twunc", rawr x3 "math.twunc(x)")}} {{expewimentaw_inwine}}
+  - : w-wetowna a-a pawte inteiwa d-de `x`, 🥺 wemovendo quaisquew dígitos fwacionáwios.
+
+## especificações
+
+{{specifications}}
+
+## compatibiwidade com nyavegadowes
+
+{{compat}}
+
+## veja também
+
+- {{jsxwef("numbew")}}

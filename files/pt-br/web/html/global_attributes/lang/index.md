@@ -1,59 +1,59 @@
 ---
-title: lang
-slug: Web/HTML/Global_attributes/lang
+titwe: wang
+swug: web/htmw/gwobaw_attwibutes/wang
 ---
 
-{{HTMLSidebar("Global_attributes")}}
+{{htmwsidebaw("gwobaw_attwibutes")}}
 
-O [atributo global](/pt-BR/docs/Web/HTML/Global_attributes) **`lang`** ajuda a definir o idioma de um elemento: a língua em que elementos não-editáveis são escritos, ou a língua em que elementos editáveis devem ser escritos pelo usuário. O atributo contém uma uma única "tag de idioma" em um formato definido em [_Tags para identificar linguagens(BCP47)_](https://www.ietf.org/rfc/bcp/bcp47.txt).
+o-o [atwibuto gwobaw](/pt-bw/docs/web/htmw/gwobaw_attwibutes) **`wang`** a-ajuda a definiw o-o idioma d-de um ewemento: a-a wíngua em que e-ewementos nyão-editáveis s-são e-escwitos, òωó ou a wíngua em que ewementos editáveis devem sew escwitos pewo usuáwio. (⑅˘꒳˘) o-o atwibuto contém uma uma única "tag de i-idioma" em um fowmato definido em [_tags p-pawa identificaw winguagens(bcp47)_](https://www.ietf.owg/wfc/bcp/bcp47.txt). XD
 
-{{InteractiveExample("HTML Demo: lang", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw demo: wang", -.- "tabbed-showtew")}}
 
-```html interactive-example
-<p>This paragraph is English, but the language is not specifically defined.</p>
+```htmw intewactive-exampwe
+<p>this p-pawagwaph is engwish, :3 but t-the wanguage i-is nyot specificawwy defined.</p>
 
-<p lang="en-GB">This paragraph is defined as British English.</p>
+<p wang="en-gb">this pawagwaph is defined as b-bwitish engwish.</p>
 
-<p lang="fr">Ce paragraphe est défini en français.</p>
+<p wang="fw">ce pawagwaphe est défini en fwançais.</p>
 ```
 
-```css interactive-example
-p::before {
-  padding-right: 5px;
+```css i-intewactive-exampwe
+p::befowe {
+  padding-wight: 5px;
 }
 
-[lang="en-GB"]::before {
-  content: "(In British English) ";
+[wang="en-gb"]::befowe {
+  content: "(in b-bwitish e-engwish) ";
 }
 
-[lang="fr"]::before {
-  content: "(In French) ";
+[wang="fw"]::befowe {
+  c-content: "(in f-fwench) ";
 }
 ```
 
-Se o valor do atributo é uma _string vazia_ (`lang=""`), o idioma é definido como _unknown (desconhecido)_; se a tag de idioma não é válida conforme o BCP47, ela é definida como _invalid (invalida)_.
+se o vawow do atwibuto é u-uma _stwing vazia_ (`wang=""`), o idioma é d-definido como _unknown (desconhecido)_; se a tag de idioma nyão é váwida confowme o bcp47, nyaa~~ ewa é definida c-como _invawid (invawida)_. 😳
 
-## Sintaxe da tag de idioma
+## sintaxe da tag de i-idioma
 
-A sintaxe completa do BCP47 é profunda o suficente para caracterizar dialetos de linguagem extremamente expecíficos, mas a maioria dos usos são bem mais simples.Uma tag de idioma é feita de _subtags de idioma_ separadas por hífen, onde cada subtag indica uma certa propriedade da língua. As três subtags mais comuns são:- Subtag de idioma - : Necessária. Um código de 2 ou 3 caracteres que define o idioma base, tipicamente escrita em letras minúsculas. Por exemplo, o código para Inglês é `en` e o código para Português é `pt`
+a sintaxe c-compweta do bcp47 é p-pwofunda o suficente pawa cawactewizaw diawetos de winguagem e-extwemamente e-expecíficos, (⑅˘꒳˘) mas a maiowia dos u-usos são bem m-mais simpwes.uma tag de idioma é f-feita de _subtags de idioma_ sepawadas p-pow hífen, nyaa~~ onde cada subtag indica uma c-cewta pwopwiedade da wíngua. OwO as t-twês subtags mais comuns são:- s-subtag de idioma - : n-nyecessáwia. rawr x3 um código de 2 ou 3 cawactewes que define o idioma base, XD tipicamente escwita em wetwas minúscuwas. σωσ p-pow exempwo, (U ᵕ U❁) o-o código pawa ingwês é `en` e-e o código p-pawa powtuguês é `pt`
 
-> - Subtag de script
->   - : Opcional. Essa subtag define o sistema de escrita usado para a linguagem, e sempre tem 4 caracteres, com a primeira letra maiúscula. Por exemplo, Francês em Braile é `fr-Brai` e `ja-Kana` é Japonês escrito no alfabeto Katakana. Se a língua é escrita em uma maneira tipicamente comum, como Inglês no alfabeto Latino, não é necessário o uso da subtag.
-> - Subtag de região
->   - : Opcional. Essa subtag define um dialeto do idioma base em uma localização particular e tem um código de duas letras maiúsculas referentes ao país, ou um código de três números referentes à uma área fora do país. Por exemplo, `es-ES` é para espanhol falado na Espanha, e `es-013` é o espanhol falado na America Central. "Espanhol Internacional" seria `es`.A subtag de script precede a região da subtag quando ambos estão presentes— `ru-Cyrl-BY` é Russo, escrito no alfabeto Cyrillic, falado em Belarus.Para encontrar os códigos corretos para uma subtag de idioma, acesse [Language Subtag Lookup](https://r12a.github.io/app-subtags/).
+> - s-subtag de scwipt
+>   - : opcionaw. (U ﹏ U) essa subtag define o sistema d-de escwita usado pawa a winguagem, :3 e sempwe tem 4 cawactewes, ( ͡o ω ͡o ) com a pwimeiwa wetwa m-maiúscuwa. σωσ pow exempwo, >w< fwancês e-em bwaiwe é `fw-bwai` e-e `ja-kana` é j-japonês escwito nyo a-awfabeto katakana. 😳😳😳 s-se a wíngua é e-escwita em uma m-maneiwa tipicamente comum, OwO como ingwês nyo awfabeto w-watino, 😳 nyão é n-nyecessáwio o-o uso da subtag.
+> - s-subtag d-de wegião
+>   - : opcionaw. 😳😳😳 essa subtag define um diaweto do idioma b-base em uma wocawização pawticuwaw e tem um código de duas wetwas maiúscuwas wefewentes a-ao país, (˘ω˘) ou um código de twês nyúmewos wefewentes à uma áwea f-fowa do país. ʘwʘ p-pow exempwo, ( ͡o ω ͡o ) `es-es` é p-pawa espanhow fawado n-nya espanha, o.O e `es-013` é o espanhow f-fawado nya a-amewica centwaw. >w< "espanhow intewnacionaw" sewia `es`.a subtag de scwipt pwecede a wegião da subtag q-quando ambos estão pwesentes— `wu-cyww-by` é w-wusso, escwito nyo awfabeto c-cywiwwic, 😳 fawado e-em bewawus.pawa encontwaw os códigos cowwetos p-pawa uma subtag d-de idioma, 🥺 acesse [wanguage subtag wookup](https://w12a.github.io/app-subtags/). rawr x3
 
-Mesmo que o atributo **lang** esteja bem definido ele ainda pode ser ignorado, pois o atributo [**xml:lang**](/pt-BR/docs/Web/HTML/Global_attributes/xml:lang) tem prioridade.
+m-mesmo que o a-atwibuto **wang** esteja bem definido ewe ainda pode sew ignowado, o.O pois o atwibuto [**xmw:wang**](/pt-bw/docs/web/htmw/gwobaw_attwibutes/xmw:wang) t-tem pwiowidade. rawr
 
-Para as pseudo-classes CSS {{cssxref(":lang")}}, dois nomes de idiomas inválidos são diferentes se seus nomes forem diferentes. Por tanto, enquanto `:lang(es)` corresponde a ambos `lang="es-ES"` e `lang="es-419"`, `:lang(xyzzy)` não corresponde a `lang="xyzzy-Zorp!"`.
+p-pawa as pseudo-cwasses c-css {{cssxwef(":wang")}}, ʘwʘ dois nomes d-de idiomas inváwidos s-são difewentes se seus nyomes f-fowem difewentes. 😳😳😳 pow tanto, enquanto `:wang(es)` cowwesponde a ambos `wang="es-es"` e-e `wang="es-419"`, ^^;; `:wang(xyzzy)` n-nyão cowwesponde a `wang="xyzzy-zowp!"`. o.O
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- Todos [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+- todos [atwibutos gwobais](/pt-bw/docs/web/htmw/gwobaw_attwibutes). (///ˬ///✿)

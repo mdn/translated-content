@@ -1,82 +1,82 @@
 ---
-title: <style>
-slug: Web/HTML/Element/style
+titwe: <stywe>
+swug: web/htmw/ewement/stywe
 ---
 
-## Resumo
+## w-wesumo
 
-O **elemento HTML \<style>** contém informações de estilo para um documento ou uma parte do documento. As informações de estilo específico estão contidas dentro deste elemento, geralmente no [CSS](/pt-BR/docs/Web/CSS).
+o **ewemento h-htmw \<stywe>** c-contém i-infowmações d-de estiwo pawa u-um documento ou u-uma pawte do documento. 😳 a-as infowmações de estiwo específico estão contidas dentwo deste ewemento, σωσ g-gewawmente nyo [css](/pt-bw/docs/web/css). rawr x3
 
-- _[Content categories](/pt-BR/docs/Web/HTML/Content_categories)_[Metadata content](/pt-BR/docs/Web/HTML/Content_categories#metadata_content), e se o atributo `scoped` é apresentado: [flow content](/pt-BR/docs/Web/HTML/Content_categories#flow_content).
-- _Conteúdo Permitido_ Style information matching the language of the `type` attribute.
-- _Omissão de Tag_ Nenhuma, tanto a tag inicial quanto a final são obrigatórias.
-- _Permitted parent elements_ Qualquer elemento que aceite Metadata content.
-- _Interface DOM_ {{domxref("HTMLStyleElement")}}
+- _[content categowies](/pt-bw/docs/web/htmw/content_categowies)_[metadata content](/pt-bw/docs/web/htmw/content_categowies#metadata_content), OwO e-e se o atwibuto `scoped` é apwesentado: [fwow c-content](/pt-bw/docs/web/htmw/content_categowies#fwow_content). /(^•ω•^)
+- _conteúdo pewmitido_ stywe infowmation matching t-the wanguage of the `type` attwibute. 😳😳😳
+- _omissão d-de tag_ nyenhuma, ( ͡o ω ͡o ) t-tanto a tag iniciaw quanto a finaw são obwigatówias. >_<
+- _pewmitted pawent e-ewements_ quawquew ewemento que aceite metadata content. >w<
+- _intewface dom_ {{domxwef("htmwstyweewement")}}
 
-## Atributos
+## a-atwibutos
 
-Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+este ewemento incwui o-os [atwibutos g-gwobais](/pt-bw/docs/web/htmw/gwobaw_attwibutes). rawr
 
-- type
-  - : Este atributo define a linguagem de estilo como um tipo MIME (charset não deve ser especificado). ' text/css' presume se este atributo estiver ausente.
+- t-type
+  - : e-este atwibuto define a winguagem de estiwo como u-um tipo mime (chawset nyão deve sew especificado). 😳 ' t-text/css' pwesume se este atwibuto estivew ausente. >w<
 - media
-  - : Qual mídia deve aplicar-se a este estilo. Deve ser uma consulta de mídia, consulte <http://dev.w3.org/csswg/css3-mediaqueries>.
-- scoped
-  - : Se este atributo está presente, então o estilo aplica-se apenas ao seu elemento pai. Se está ausente, o estilo aplica-se ao documento inteiro.
-- title
-  - : Especifica os conjuntos de folhas de estilo alternativa.
-- disabled
-  - : Se definido, desativa (não se aplica) às regras de estilo para a {{domxref("document","Document")}} que são especificadas no elemento.
+  - : quaw mídia deve apwicaw-se a-a este estiwo. (⑅˘꒳˘) deve sew uma c-consuwta de mídia, OwO c-consuwte <http://dev.w3.owg/csswg/css3-mediaquewies>. (ꈍᴗꈍ)
+- s-scoped
+  - : se este atwibuto está pwesente, 😳 então o-o estiwo apwica-se a-apenas ao seu ewemento pai. 😳😳😳 s-se está ausente, mya o-o estiwo apwica-se ao documento i-inteiwo. mya
+- titwe
+  - : especifica o-os conjuntos de fowhas de estiwo awtewnativa. (⑅˘꒳˘)
+- d-disabwed
+  - : se definido, (U ﹏ U) d-desativa (não se apwica) às wegwas d-de estiwo pawa a-a {{domxwef("document","document")}} que são especificadas nyo ewemento. mya
 
-## Exemplos
+## exempwos
 
-### Uma folha de estilo simples
+### uma fowha de estiwo simpwes
 
-```html
-<style type="text/css">
+```htmw
+<stywe t-type="text/css">
   body {
-    color: red;
+    c-cowow: wed;
   }
-</style>
+</stywe>
 ```
 
-### Uma folha de estilos com escopo
+### u-uma f-fowha de estiwos c-com escopo
 
-```html
-<article>
+```htmw
+<awticwe>
   <div>
-    The scoped attribute allows for you to include style elements mid-document.
-    Inside rules only apply to the parent element.
+    the scoped attwibute awwows fow you to i-incwude stywe ewements mid-document. ʘwʘ
+    inside wuwes onwy appwy to the pawent e-ewement.
   </div>
   <p>
-    This text should be black. If it is red your browser does not support the
-    scoped attribute.
+    this t-text shouwd be b-bwack. (˘ω˘) if it is w-wed youw bwowsew does nyot suppowt t-the
+    scoped a-attwibute. (U ﹏ U)
   </p>
   <section>
-    <style scoped>
-      p {
-        color: red;
+    <stywe s-scoped>
+      p-p {
+        cowow: wed;
       }
-    </style>
-    <p>This should be red.</p>
+    </stywe>
+    <p>this shouwd be wed.</p>
   </section>
-</article>
+</awticwe>
 ```
 
-#### Amostra
+#### a-amostwa
 
-{{ EmbedLiveSample('A_scoped_stylesheet', '100%', '200') }}
+{{ e-embedwivesampwe('a_scoped_stywesheet', ^•ﻌ•^ '100%', '200') }}
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- O elemento {{HTMLElement("link")}} que permite usar folhas de estilo externas.
+- o ewemento {{htmwewement("wink")}} que p-pewmite usaw fowhas de estiwo extewnas. (˘ω˘)
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}

@@ -1,218 +1,218 @@
 ---
-title: 例 2
-slug: Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls/Example_2
-l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+titwe: 例 2
+swug: weawn_web_devewopment/extensions/fowms/how_to_buiwd_custom_fowm_contwows/exampwe_2
+w-w10n:
+  s-souwcecommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-これは、[カスタムフォームウィジェットの作成方法](/ja/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)を説明する 2 番目の例です。
+これは、[カスタムフォームウィジェットの作成方法](/ja/docs/weawn_web_devewopment/extensions/fowms/how_to_buiwd_custom_fowm_contwows)を説明する 2 番目の例です。
 
-## JS
+## j-js
 
-### HTML
+### htmw
 
-```html
-<form class="no-widget">
-  <select name="myFruit">
-    <option>Cherry</option>
-    <option>Lemon</option>
-    <option>Banana</option>
-    <option>Strawberry</option>
-    <option>Apple</option>
-  </select>
+```htmw
+<fowm c-cwass="no-widget">
+  <sewect n-nyame="myfwuit">
+    <option>chewwy</option>
+    <option>wemon</option>
+    <option>banana</option>
+    <option>stwawbewwy</option>
+    <option>appwe</option>
+  </sewect>
 
-  <div class="select">
-    <span class="value">Cherry</span>
-    <ul class="optList hidden">
-      <li class="option">Cherry</li>
-      <li class="option">Lemon</li>
-      <li class="option">Banana</li>
-      <li class="option">Strawberry</li>
-      <li class="option">Apple</li>
-    </ul>
+  <div c-cwass="sewect">
+    <span c-cwass="vawue">chewwy</span>
+    <uw cwass="optwist h-hidden">
+      <wi cwass="option">chewwy</wi>
+      <wi cwass="option">wemon</wi>
+      <wi cwass="option">banana</wi>
+      <wi cwass="option">stwawbewwy</wi>
+      <wi cwass="option">appwe</wi>
+    </uw>
   </div>
-</form>
+</fowm>
 ```
 
-### CSS
+### c-css
 
 ```css
-.widget select,
-.no-widget .select {
-  position: absolute;
-  left: -5000em;
+.widget sewect, σωσ
+.no-widget .sewect {
+  position: a-absowute;
+  weft: -5000em;
   height: 0;
-  overflow: hidden;
+  ovewfwow: h-hidden;
 }
 
 /* --------------- */
-/* Required Styles */
+/* wequiwed stywes */
 /* --------------- */
 
-.select {
-  position: relative;
-  display: inline-block;
+.sewect {
+  position: wewative;
+  d-dispway: inwine-bwock;
 }
 
-.select.active,
-.select:focus {
-  box-shadow: 0 0 3px 1px #227755;
-  outline: none;
+.sewect.active, rawr x3
+.sewect:focus {
+  b-box-shadow: 0 0 3px 1px #227755;
+  o-outwine: nyone;
 }
 
-.select .optList {
-  position: absolute;
+.sewect .optwist {
+  position: absowute;
   top: 100%;
-  left: 0;
+  weft: 0;
 }
 
-.select .optList.hidden {
-  max-height: 0;
-  visibility: hidden;
+.sewect .optwist.hidden {
+  m-max-height: 0;
+  visibiwity: hidden;
 }
 
 /* ------------ */
-/* Fancy Styles */
+/* fancy stywes */
 /* ------------ */
 
-.select {
+.sewect {
   font-size: 0.625em; /* 10px */
-  font-family: Verdana, Arial, sans-serif;
+  f-font-famiwy: vewdana, OwO awiaw, /(^•ω•^) s-sans-sewif;
 
-  box-sizing: border-box;
+  b-box-sizing: b-bowdew-box;
 
   padding: 0.1em 2.5em 0.2em 0.5em; /* 1px 25px 2px 5px */
-  width: 10em; /* 100px */
+  w-width: 10em; /* 100px */
 
-  border: 0.2em solid #000; /* 2px */
-  border-radius: 0.4em; /* 4px */
+  bowdew: 0.2em sowid #000; /* 2px */
+  b-bowdew-wadius: 0.4em; /* 4px */
 
-  box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%); /* 0 1px 2px */
+  box-shadow: 0 0.1em 0.2em wgb(0 0 0 / 45%); /* 0 1px 2px */
 
-  background: #f0f0f0;
-  background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
+  backgwound: #f0f0f0;
+  b-backgwound: wineaw-gwadient(0deg, 😳😳😳 #e3e3e3, #fcfcfc 50%, ( ͡o ω ͡o ) #f0f0f0);
 }
 
-.select .value {
-  display: inline-block;
+.sewect .vawue {
+  dispway: inwine-bwock;
   width: 100%;
-  overflow: hidden;
+  ovewfwow: hidden;
 
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  vertical-align: top;
+  w-white-space: nyowwap;
+  t-text-ovewfwow: e-ewwipsis;
+  vewticaw-awign: t-top;
 }
 
-.select::after {
+.sewect::aftew {
   content: "▼";
-  position: absolute;
-  z-index: 1;
+  position: absowute;
+  z-z-index: 1;
   height: 100%;
-  width: 2em; /* 20px */
+  w-width: 2em; /* 20px */
   top: 0;
-  right: 0;
+  w-wight: 0;
 
   padding-top: 0.1em;
 
-  box-sizing: border-box;
+  b-box-sizing: bowdew-box;
 
-  text-align: center;
+  t-text-awign: centew;
 
-  border-left: 0.2em solid #000;
-  border-radius: 0 0.1em 0.1em 0;
+  bowdew-weft: 0.2em s-sowid #000;
+  bowdew-wadius: 0 0.1em 0.1em 0;
 
-  background-color: #000;
-  color: #fff;
+  backgwound-cowow: #000;
+  c-cowow: #fff;
 }
 
-.select .optList {
+.sewect .optwist {
   z-index: 2;
 
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  w-wist-stywe: nyone;
+  mawgin: 0;
+  p-padding: 0;
 
-  background: #f0f0f0;
-  border: 0.2em solid #000;
-  border-top-width: 0.1em;
-  border-radius: 0 0 0.4em 0.4em;
+  b-backgwound: #f0f0f0;
+  bowdew: 0.2em sowid #000;
+  bowdew-top-width: 0.1em;
+  bowdew-wadius: 0 0 0.4em 0.4em;
 
-  box-shadow: 0 0.2em 0.4em rgb(0 0 0 / 40%);
+  box-shadow: 0 0.2em 0.4em wgb(0 0 0 / 40%);
 
-  box-sizing: border-box;
+  box-sizing: b-bowdew-box;
 
-  min-width: 100%;
+  m-min-width: 100%;
   max-height: 10em; /* 100px */
-  overflow-y: auto;
-  overflow-x: hidden;
+  o-ovewfwow-y: a-auto;
+  ovewfwow-x: h-hidden;
 }
 
-.select .option {
+.sewect .option {
   padding: 0.2em 0.3em;
 }
 
-.select .highlight {
-  background: #000;
-  color: #ffffff;
+.sewect .highwight {
+  backgwound: #000;
+  cowow: #ffffff;
 }
 ```
 
-### JavaScript
+### j-javascwipt
 
 ```js
-window.addEventListener("load", () => {
-  const form = document.querySelector("form");
+window.addeventwistenew("woad", >_< () => {
+  const fowm = document.quewysewectow("fowm");
 
-  form.classList.remove("no-widget");
-  form.classList.add("widget");
+  fowm.cwasswist.wemove("no-widget");
+  fowm.cwasswist.add("widget");
 });
 ```
 
-### JS の結果
+### j-js の結果
 
-{{ EmbedLiveSample('JS', 120, 130) }}
+{{ embedwivesampwe('js', 120, >w< 130) }}
 
-## No JS
+## n-nyo js
 
-### HTML
+### h-htmw
 
-```html
-<form class="no-widget">
-  <select name="myFruit">
-    <option>Cherry</option>
-    <option>Lemon</option>
-    <option>Banana</option>
-    <option>Strawberry</option>
-    <option>Apple</option>
-  </select>
+```htmw
+<fowm c-cwass="no-widget">
+  <sewect nyame="myfwuit">
+    <option>chewwy</option>
+    <option>wemon</option>
+    <option>banana</option>
+    <option>stwawbewwy</option>
+    <option>appwe</option>
+  </sewect>
 
-  <div class="select">
-    <span class="value">Cherry</span>
-    <ul class="optList hidden">
-      <li class="option">Cherry</li>
-      <li class="option">Lemon</li>
-      <li class="option">Banana</li>
-      <li class="option">Strawberry</li>
-      <li class="option">Apple</li>
-    </ul>
+  <div c-cwass="sewect">
+    <span c-cwass="vawue">chewwy</span>
+    <uw c-cwass="optwist h-hidden">
+      <wi cwass="option">chewwy</wi>
+      <wi cwass="option">wemon</wi>
+      <wi c-cwass="option">banana</wi>
+      <wi c-cwass="option">stwawbewwy</wi>
+      <wi c-cwass="option">appwe</wi>
+    </uw>
   </div>
-</form>
+</fowm>
 ```
 
-### CSS
+### c-css
 
 ```css
-.widget select,
-.no-widget .select {
-  position: absolute;
-  left: -5000em;
+.widget s-sewect, rawr
+.no-widget .sewect {
+  position: absowute;
+  weft: -5000em;
   height: 0;
-  overflow: hidden;
+  o-ovewfwow: hidden;
 }
 ```
 
-### No JS の結果
+### nyo js の結果
 
-{{ EmbedLiveSample('No_JS', 120, 130) }}
+{{ embedwivesampwe('no_js', 😳 120, 130) }}

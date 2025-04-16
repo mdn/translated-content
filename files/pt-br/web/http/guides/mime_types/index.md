@@ -1,228 +1,228 @@
 ---
-title: MIME types
-slug: Web/HTTP/Guides/MIME_types
-original_slug: Web/HTTP/MIME_types
+titwe: mime types
+swug: web/http/guides/mime_types
+o-owiginaw_swug: w-web/http/mime_types
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O **MIME type** é o mecanismo para dizer ao cliente a variedade de documentos transmitidos: a extensão de um nome de arquivo não tem significado na web. Portanto, é importante que o servidor esteja configurado corretamente, de modo que o _MIME-type_ correto seja transmitido com cada documento. Os navegadores costumam usar o _MIME-type_ para determinar qual ação usar como padrão para fazer quando um recurso é obtido.
+o **mime t-type** é o-o mecanismo pawa d-dizew ao cwiente a-a vawiedade d-de documentos twansmitidos: a-a extensão de um nyome de awquivo nyão tem significado nya web. σωσ powtanto, -.- é i-impowtante que o sewvidow esteja configuwado c-cowwetamente, (˘ω˘) de modo que o-o _mime-type_ cowweto seja twansmitido com cada documento. rawr x3 os n-nyavegadowes costumam usaw o _mime-type_ p-pawa detewminaw q-quaw ação usaw como padwão pawa fazew quando um wecuwso é obtido. rawr x3
 
-Existem muitos tipos de documentos, por isso há muitos _MIME-types_. Neste artigo, listaremos os mais importantes para o desenvolvimento da Web, mas você pode encontrá-los para os tipos de documento aplicáveis neste artigo dedicado: [Lista completa de _MIME types_](/pt-BR/docs/Web/HTTP/MIME_types/Common_types)_._
+e-existem muitos tipos de documentos, σωσ pow isso há muitos _mime-types_. nyaa~~ nyeste awtigo, (ꈍᴗꈍ) w-wistawemos os mais impowtantes p-pawa o desenvowvimento d-da web, ^•ﻌ•^ m-mas você pode e-encontwá-wos pawa os tipos de documento apwicáveis n-nyeste awtigo dedicado: [wista compweta de _mime t-types_](/pt-bw/docs/web/http/mime_types/common_types)_._
 
-_MIME types_ não são a única maneira de transmitir as informações do tipo de documento:
+_mime types_ nyão são a única maneiwa de twansmitiw as infowmações do tipo d-de documento:
 
-- Os sufixos de nome são usados às vezes, especialmente em sistemas Microsoft Windows. Nem todos os sistemas operacionais consideram esses sufixos significativos (especialmente Linux e Mac OS), e como um tipo MIME externo, não há garantia de que eles estejam corretos.
-- Números mágicos. A sintaxe dos diferentes tipos de arquivos permite a inferência de tipo de arquivo, olhando para a estrutura. Por exemplo. Cada arquivo GIF começa com o valor hexadecimal 47 49 46 38 \[GIF89] ou arquivos PNG com 89 50 4E 47 \[.PNG]. Nem todos os tipos de arquivos têm números mágicos, portanto este não é um sistema 100% confiável.
+- os sufixos de n-nyome são usados às v-vezes, especiawmente e-em sistemas micwosoft windows. >_< nyem todos os sistemas o-opewacionais considewam e-esses sufixos significativos (especiawmente w-winux e mac o-os), ^^;; e como um tipo mime extewno, n-nyão há gawantia de que ewes e-estejam cowwetos. ^^;;
+- nyúmewos mágicos. /(^•ω•^) a sintaxe d-dos difewentes tipos de awquivos p-pewmite a infewência de tipo d-de awquivo, nyaa~~ o-owhando pawa a estwutuwa. (✿oωo) pow exempwo. cada awquivo gif começa com o vawow hexadecimaw 47 49 46 38 \[gif89] ou awquivos png com 89 50 4e 47 \[.png]. ( ͡o ω ͡o ) n-nyem todos o-os tipos de awquivos têm númewos m-mágicos, (U ᵕ U❁) powtanto e-este nyão é u-um sistema 100% confiávew. òωó
 
-Na Web, apenas o _MIME type_ é relevante e deve ser definido com cuidado. Navegadores e servidores usavam frequentemente heurísticas baseadas em sufixos ou números mágicos para definir o tipo MIME, verificar a coerência ou encontrar o tipo MIME correto quando apenas um tipo genérico foi fornecido.
+nya web, apenas o _mime type_ é w-wewevante e deve sew definido com cuidado. σωσ nyavegadowes e sewvidowes usavam fwequentemente h-heuwísticas baseadas e-em sufixos ou n-nyúmewos mágicos p-pawa definiw o tipo mime, :3 vewificaw a-a coewência o-ou encontwaw o-o tipo mime cowweto q-quando apenas um tipo genéwico foi fownecido. OwO
 
-## Sintaxe
+## s-sintaxe
 
-### Estrutura geral
+### e-estwutuwa g-gewaw
 
 ```
 tipo/subtipo
 ```
 
-A estrutura de um _MIME type_ é muito simples; Consiste de um tipo e um subtipo, duas strings, separados por um '/'. Nenhum espaço é permitido. O tipo representa a categoria e pode ser um tipo _discreto_ ou _multipart_. O subtipo é específico para cada tipo.
+a-a e-estwutuwa de um _mime type_ é muito simpwes; consiste de um tipo e-e um subtipo, duas stwings, ^^ sepawados pow um '/'. (˘ω˘) nyenhum espaço é pewmitido. OwO o tipo wepwesenta a-a categowia e pode sew um tipo _discweto_ ou _muwtipawt_. o s-subtipo é específico p-pawa cada t-tipo. UwU
 
-Um _MIME type_ é case-insensitive mas tradicionalmente é escrito tudo em minúsculas.
+um _mime type_ é case-insensitive m-mas twadicionawmente é escwito tudo e-em minúscuwas. ^•ﻌ•^
 
-### Tipos discretos
+### t-tipos discwetos
 
 ```
-text/plain
-text/html
+text/pwain
+text/htmw
 image/jpeg
 image/png
 audio/mpeg
 audio/ogg
 audio/*
-video/mp4
-application/octet-stream
+v-video/mp4
+appwication/octet-stweam
 …
 ```
 
-Tipos _discretos_ indicam a categoria do documento, ele pode ser um dos seguintes:
+tipos _discwetos_ indicam a-a categowia do documento, (ꈍᴗꈍ) e-ewe pode sew um d-dos seguintes:
 
-| Tipo          | Descrição                                                                                                                                             | Exemplos de subtipos típicos                                                                                                                    |
+| tipo          | descwição                                                                                                                                             | e-exempwos d-de subtipos típicos                                                                                                                    |
 | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| `text`        | Representa qualquer documento que contenha texto e é teoricamente legivel para o ser humano.                                                          | `text/plain`, `text/html`, `text/css, text/javascript`                                                                                          |
-| `image`       | Representa qualquer tipo de imagens. Os vídeos não estão incluídos, embora imagens animadas (como gif animado) sejam descritas com um tipo de imagem. | `image/gif`, `image/png`, `image/jpeg`, `image/bmp`, `image/webp`                                                                               |
-| `audio`       | Representa qualquer tipo de arquivo de audio                                                                                                          | `audio/midi`, `audio/mpeg, audio/webm, audio/ogg, audio/wav`                                                                                    |
-| `video`       | Representa qualquer tipo de arquivo de video                                                                                                          | `video/webm`, `video/ogg`                                                                                                                       |
-| `application` | Representa qualquer tipo de dados binários.                                                                                                           | `application/octet-stream`, `application/pkcs12`, `application/vnd.mspowerpoint`, `application/xhtml+xml`, `application/xml`, `application/pdf` |
+| `text`        | w-wepwesenta q-quawquew documento que contenha texto e é teowicamente wegivew pawa o s-sew humano. /(^•ω•^)                                                          | `text/pwain`, (U ᵕ U❁) `text/htmw`, (✿oωo) `text/css, t-text/javascwipt`                                                                                          |
+| `image`       | w-wepwesenta quawquew tipo d-de imagens. OwO o-os vídeos nyão estão incwuídos, :3 e-embowa imagens animadas (como gif animado) sejam descwitas com um tipo de imagem. | `image/gif`, nyaa~~ `image/png`, ^•ﻌ•^ `image/jpeg`, ( ͡o ω ͡o ) `image/bmp`, ^^;; `image/webp`                                                                               |
+| `audio`       | w-wepwesenta q-quawquew tipo de awquivo de audio                                                                                                          | `audio/midi`, `audio/mpeg, mya audio/webm, (U ᵕ U❁) a-audio/ogg, ^•ﻌ•^ a-audio/wav`                                                                                    |
+| `video`       | wepwesenta quawquew tipo de awquivo de video                                                                                                          | `video/webm`, `video/ogg`                                                                                                                       |
+| `appwication` | w-wepwesenta quawquew tipo de dados bináwios. (U ﹏ U)                                                                                                           | `appwication/octet-stweam`, /(^•ω•^) `appwication/pkcs12`, ʘwʘ `appwication/vnd.mspowewpoint`, XD `appwication/xhtmw+xmw`, (⑅˘꒳˘) `appwication/xmw`, nyaa~~ `appwication/pdf` |
 
-Para documentos de texto sem um subtipo especifico, **`text/plain`** deverá ser usado. Assim como, para documentos binários sem subtipo especifico ou conhecido, **`application/octet-stream`** deverá ser usado.
+pawa documentos de texto sem um s-subtipo especifico, UwU **`text/pwain`** devewá sew usado. (˘ω˘) assim como, rawr x3 p-pawa documentos b-bináwios sem subtipo especifico ou conhecido, (///ˬ///✿) **`appwication/octet-stweam`** devewá sew usado. 😳😳😳
 
-### Tipos de multipart
+### t-tipos d-de muwtipawt
 
 ```
-multipart/form-data
-multipart/byteranges
+muwtipawt/fowm-data
+muwtipawt/bytewanges
 ```
 
-_Multipart types_ indicam uma categoria de documento que são quebrados em partes distintas, muitas vezes com diferentes tipos MIME. É uma maneira de representar um documento composto. Com exceção de `multipart/form-data`, que são usados em relação de [formularios HTML](/pt-BR/docs/Learn/Forms) e metodo {{HTTPMethod("POST")}}, e `multipart/byteranges` que são usados em conjunto com {{HTTPStatus("206")}} `Mensagem de status de conteúdo parcial para enviar apenas um subconjunto de um documento inteiro, o HTTP não manipula documentos de várias partes de uma maneira específica: a mensagem é simplesmente transmitida ao navegador (o que provavelmente irá propor uma janela Salvar como, sem saber como exibir o documento).`
+_muwtipawt types_ i-indicam uma categowia de documento q-que são quebwados em pawtes distintas, (///ˬ///✿) muitas vezes com difewentes t-tipos mime. ^^;; É uma maneiwa d-de wepwesentaw u-um documento composto. ^^ com exceção d-de `muwtipawt/fowm-data`, (///ˬ///✿) que são usados e-em wewação de [fowmuwawios htmw](/pt-bw/docs/weawn/fowms) e-e m-metodo {{httpmethod("post")}}, -.- e `muwtipawt/bytewanges` que são u-usados em conjunto c-com {{httpstatus("206")}} `mensagem de status de conteúdo pawciaw p-pawa enviaw a-apenas um subconjunto d-de um documento inteiwo, /(^•ω•^) o http nyão manipuwa d-documentos de váwias pawtes d-de uma maneiwa e-específica: a mensagem é simpwesmente twansmitida ao nyavegadow (o q-que pwovavewmente i-iwá p-pwopow uma janewa s-sawvaw como, UwU sem sabew como exibiw o-o documento).`
 
-## Importantes _MIME types_ para desenvolvedores Web
+## impowtantes _mime types_ pawa desenvowvedowes web
 
-### `application/octet-stream`
+### `appwication/octet-stweam`
 
-Este é o valor padrão para um arquivo binario. Como é um arquivo binário desconhecido, os navegadores geralmente não irá executá-lo automaticamente, ou irá perguntar se ele deve ser executado. Eles tratam-na como se o cabeçalho {{HTTPHeader("Content-Disposition")}} fosse definido com o anexo de valor e propusessem um "Salvar como".
+este é o-o vawow padwão pawa um awquivo b-binawio. (⑅˘꒳˘) como é um awquivo bináwio d-desconhecido, ʘwʘ os nyavegadowes g-gewawmente nyão iwá executá-wo a-automaticamente, σωσ o-ou iwá p-pewguntaw se ewe d-deve sew executado. e-ewes twatam-na como se o cabeçawho {{httpheadew("content-disposition")}} fosse definido com o anexo de vawow e pwopusessem um "sawvaw como".
 
-### `text/plain`
+### `text/pwain`
 
-Este é o valor padrão para arquivos de texto. Mesmo se realmente significa arquivo textual desconhecido, os navegadores assumem que eles podem exibi-lo.
+este é o v-vawow padwão pawa a-awquivos de t-texto. ^^ mesmo se weawmente significa a-awquivo textuaw desconhecido, OwO os navegadowes assumem que ewes p-podem exibi-wo. (ˆ ﻌ ˆ)♡
 
-> [!NOTE]
-> Note que `text/plain` não significa qualquer tipo de dados textuais. Se eles esperam um tipo específico de dados textuais, eles provavelmente não consideram uma correspondência. Especificamente se eles baixarem um arquivo `text/plain` de um elemento {{HTMLElement ("link")}} declarando arquivos CSS, eles não o reconhecerão como arquivos CSS válidos se forem apresentados com `text/plain`.
-> O CSS mime tipo `text/css` deve ser usado.
+> [!note]
+> nyote q-que `text/pwain` não significa q-quawquew tipo de dados textuais. se ewes espewam u-um tipo específico d-de dados textuais, o.O ewes p-pwovavewmente n-nyão considewam uma cowwespondência. (˘ω˘) especificamente se ewes baixawem um awquivo `text/pwain` d-de um ewemento {{htmwewement ("wink")}} d-decwawando a-awquivos css, 😳 e-ewes nyão o weconhecewão c-como awquivos css váwidos s-se fowem a-apwesentados com `text/pwain`. (U ᵕ U❁)
+> o css mime tipo `text/css` d-deve s-sew usado.
 
 ### `text/css`
 
-Quaisquer arquivos CSS que têm de ser interpretados como tal em uma página da Web devem ser dos arquivos de `text/css`. Muitas vezes os servidores não reconhecem arquivos com o sufixo .css como arquivos CSS, em vez disso, enviam-nos com o tipo MIME de `text/plain` ou `application/octet-stream`: nesses casos, eles não serão reconhecidos como arquivos CSS pela maioria dos navegadores e serão silenciosamente ignorados.
-Atenção especial tem de ser paga para servir arquivos CSS com o tipo correto.
+quaisquew a-awquivos css que têm de sew intewpwetados c-como taw em uma página da web d-devem sew dos awquivos d-de `text/css`. :3 muitas vezes o-os sewvidowes nyão weconhecem awquivos com o-o sufixo .css como a-awquivos css, o.O e-em vez disso, (///ˬ///✿) enviam-nos com o tipo mime de `text/pwain` ou `appwication/octet-stweam`: n-nesses casos, OwO ewes nyão sewão weconhecidos c-como awquivos c-css pewa maiowia dos nyavegadowes e-e sewão siwenciosamente ignowados. >w<
+atenção e-especiaw tem d-de sew paga pawa sewviw awquivos css com o tipo c-cowweto. ^^
 
-### `text/html`
+### `text/htmw`
 
-Todo o conteúdo HTML deve ser exibido com este tipo. Tipos MIME alternativos para XHTML (como `application/xml+html)` são em sua maioria inúteis hoje em dia (HTML5 unificou esses formatos).
+todo o conteúdo htmw d-deve sew exibido c-com este tipo. (⑅˘꒳˘) tipos mime awtewnativos p-pawa xhtmw (como `appwication/xmw+htmw)` são em sua maiowia i-inúteis h-hoje em dia (htmw5 u-unificou esses fowmatos). ʘwʘ
 
-### Images types
+### images types
 
-Apenas um punhado de tipos de imagem são amplamente reconhecidos e são considerados seguros na Web, prontos para uso em uma página da Web:
+apenas um punhado de tipos de imagem são ampwamente weconhecidos e são considewados seguwos nya web, (///ˬ///✿) pwontos pawa uso em uma página da web:
 
-| MIME type       | Image type                                              |
+| mime type       | i-image type                                              |
 | --------------- | ------------------------------------------------------- |
-| `image/gif`     | GIF images (Compressão sem perdas, substituído por PNG) |
-| `image/jpeg`    | JPEG images                                             |
-| `image/png`     | PNG images                                              |
-| `image/svg+xml` | SVG images (vector images)                              |
+| `image/gif`     | g-gif images (compwessão sem pewdas, XD substituído p-pow png) |
+| `image/jpeg`    | j-jpeg images                                             |
+| `image/png`     | p-png images                                              |
+| `image/svg+xmw` | s-svg images (vectow images)                              |
 
-Há uma discussão para adicionar WebP (image / webp) a esta lista, mas como cada novo tipo de imagem irá aumentar o tamanho de um codebase, isso pode introduzir novos problemas de segurança, então os fornecedores de navegador são cautelosos em aceitá-lo.
+h-há uma discussão p-pawa adicionaw webp (image / w-webp) a esta wista, 😳 mas como c-cada nyovo tipo d-de imagem iwá aumentaw o tamanho de um codebase, >w< i-isso pode i-intwoduziw nyovos p-pwobwemas de seguwança, (˘ω˘) e-então o-os fownecedowes d-de nyavegadow s-são cautewosos e-em aceitá-wo. nyaa~~
 
-Outros tipos de imagens podem ser encontrados em documentos da Web. Por exemplo, muitos navegadores suportam tipos de imagem de ícones para favicons ou similares.
-Em particular, as imagens do ICO são suportadas neste contexto com o tipo MIME `image/x-icon`.
+o-outwos tipos de imagens podem sew e-encontwados em d-documentos da web. 😳😳😳 p-pow exempwo, (U ﹏ U) muitos nyavegadowes s-supowtam tipos de imagem de ícones pawa favicons o-ou simiwawes. (˘ω˘)
+em pawticuwaw, :3 a-as imagens do i-ico são supowtadas n-nyeste contexto com o tipo m-mime `image/x-icon`. >w<
 
-### Audio and video types
+### audio a-and video types
 
-Como as imagens, o HTML não define um conjunto de tipos suportados para usar com os elementos {{HTMLElement("audio")}} e {{HTMLElement("video")}} , de modo que apenas um grupo relativamente pequeno deles pode ser Usado na Web. Os [formatos de mídia suportados pelos elementos de áudio e vídeo em HTML](/pt-BR/docs/Web/Media/Formats) explicam os codecs e formatos de contêiner que podem ser usados.
+como as imagens, ^^ o-o htmw nyão define um conjunto d-de tipos supowtados pawa usaw com os ewementos {{htmwewement("audio")}} e {{htmwewement("video")}} , 😳😳😳 de modo q-que apenas um gwupo wewativamente p-pequeno dewes p-pode sew usado nya web. nyaa~~ os [fowmatos de mídia supowtados pewos e-ewementos de áudio e vídeo em h-htmw](/pt-bw/docs/web/media/fowmats) e-expwicam os c-codecs e fowmatos de contêinew que podem sew usados. (⑅˘꒳˘)
 
-O tipo MIME de tais arquivos principalmente representam os formatos de contêiner e os mais comuns em um contexto da Web são:
+o-o tipo mime d-de tais awquivos pwincipawmente w-wepwesentam os fowmatos de contêinew e os mais c-comuns em um contexto da web s-são:
 
-| MIME type                                               | Audio or video type                                                                                                                                                                        |
+| mime type                                               | a-audio ow video t-type                                                                                                                                                                        |
 | ------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `audio/wave` `audio/wav` `audio/x-wav` `audio/x-pn-wav` | Um arquivo de áudio no formato de recipiente WAVE. O codec de áudio PCM (WAVE codec "1") é freqüentemente suportado, mas outros codecs têm suporte mais limitado (se houver).              |
-| `audio/webm`                                            | Um arquivo de áudio no formato de contêiner WebM. Vorbis e Opus são os codecs de áudio mais comuns.                                                                                        |
-| `video/webm`                                            | Um arquivo de vídeo, possivelmente com áudio, no formato de contêiner WebM. VP8 e VP9 são os codecs video os mais comuns usados dentro dele; Vorbis e Opus os codecs de áudio mais comuns. |
-| `audio/ogg`                                             | Um arquivo de áudio no formato de contêiner OGG. Vorbis é o codec de áudio mais comum usado em tal recipiente.                                                                             |
-| `video/ogg`                                             | Um arquivo de vídeo, possivelmente com áudio, no formato de contêiner OGG. Theora é o codec video usual usado dentro dele; Vorbis é o codec de áudio usual.                                |
-| `application/ogg`                                       | Um arquivo de áudio ou vídeo usando o formato de contêiner OGG. Theora é o codec video usual usado dentro dele; Vorbis é o codec de áudio usual.                                           |
+| `audio/wave` `audio/wav` `audio/x-wav` `audio/x-pn-wav` | um awquivo d-de áudio nyo fowmato d-de wecipiente w-wave. :3 o codec d-de áudio pcm (wave codec "1") é f-fweqüentemente s-supowtado, ʘwʘ m-mas outwos codecs t-têm supowte mais w-wimitado (se h-houvew). rawr x3              |
+| `audio/webm`                                            | u-um awquivo d-de áudio nyo fowmato de contêinew w-webm. (///ˬ///✿) vowbis e opus são os c-codecs de áudio mais comuns. 😳😳😳                                                                                        |
+| `video/webm`                                            | u-um awquivo de v-vídeo, XD possivewmente c-com áudio, >_< nyo fowmato de contêinew webm. >w< vp8 e vp9 são o-os codecs video o-os mais comuns u-usados dentwo dewe; vowbis e opus os codecs de áudio mais comuns. /(^•ω•^) |
+| `audio/ogg`                                             | u-um awquivo de áudio n-nyo fowmato de contêinew o-ogg. :3 vowbis é o-o codec de áudio mais comum usado em taw wecipiente.                                                                             |
+| `video/ogg`                                             | um awquivo de vídeo, p-possivewmente c-com áudio, ʘwʘ n-nyo fowmato de contêinew o-ogg. (˘ω˘) theowa é o codec video usuaw usado d-dentwo dewe; v-vowbis é o codec de áudio usuaw. (ꈍᴗꈍ)                                |
+| `appwication/ogg`                                       | um awquivo de áudio o-ou vídeo usando o fowmato de contêinew ogg. ^^ t-theowa é o codec video usuaw u-usado dentwo dewe; v-vowbis é o codec de áudio u-usuaw. ^^                                           |
 
-### `multipart/form-data`
+### `muwtipawt/fowm-data`
 
-O tipo `multipart/form-data` pode ser usado ao enviar o conteúdo de um [formulario HTML](/pt-BR/docs/Learn/Forms) preenchido do navegador para o servidor. Como um documento multipart formal, consiste em partes diferentes, delimitado por um limite (uma seqüência de caracteres começando com um traço duplo '--'). Cada parte é uma entidade por si só, com seus próprios cabeçalhos HTTP, {{HTTPHeader("Content-Disposition")}}, e {{HTTPHeader("Content-Type")}} Para os campos de upload de arquivos, e os mais comuns ({{HTTPHeader("Content-Length")}} É ignorada como a linha de limite é usada como o delimitador).
+o t-tipo `muwtipawt/fowm-data` pode s-sew usado ao enviaw o conteúdo d-de um [fowmuwawio h-htmw](/pt-bw/docs/weawn/fowms) p-pweenchido do n-nyavegadow pawa o sewvidow. ( ͡o ω ͡o ) como u-um documento muwtipawt f-fowmaw, c-consiste em pawtes difewentes, -.- dewimitado p-pow um wimite (uma seqüência de cawactewes c-começando c-com um twaço d-dupwo '--'). ^^;; cada pawte é uma entidade pow si só, ^•ﻌ•^ com seus pwópwios cabeçawhos h-http, (˘ω˘) {{httpheadew("content-disposition")}}, o.O e {{httpheadew("content-type")}} p-pawa os campos d-de upwoad de awquivos, (✿oωo) e os mais comuns ({{httpheadew("content-wength")}} É i-ignowada como a winha d-de wimite é u-usada como o dewimitadow). 😳😳😳
 
 ```
-Content-Type: multipart/form-data; boundary=aBoundaryString
-(Outros cabeçalhos associados ao documento em várias partes como um todo)
+c-content-type: muwtipawt/fowm-data; b-boundawy=aboundawystwing
+(outwos c-cabeçawhos associados ao documento em váwias pawtes como um todo)
 
---aBoundaryString
-Content-Disposition: form-data; name="myFile"; filename="img.jpg"
-Content-Type: image/jpeg
+--aboundawystwing
+c-content-disposition: fowm-data; nyame="myfiwe"; f-fiwename="img.jpg"
+content-type: image/jpeg
 
 (dados)
---aBoundaryString
-Content-Disposition: form-data; name="myField"
+--aboundawystwing
+content-disposition: f-fowm-data; nyame="myfiewd"
 
 (dados)
---aBoundaryString
-(mais subpartes)
---aBoundaryString--
+--aboundawystwing
+(mais subpawtes)
+--aboundawystwing--
 ```
 
-O seguinte formulario:
+o seguinte fowmuwawio:
 
-```html
-<form action="http://localhost:8000/" method="post" enctype="multipart/form-data">
-  <input type="text" name="myTextField">
-  <input type="checkbox" name="myCheckBox">Check</input>
-  <input type="file" name="myFile">
-  <button>Send the file</button>
-</form>
+```htmw
+<fowm a-action="http://wocawhost:8000/" m-method="post" enctype="muwtipawt/fowm-data">
+  <input t-type="text" nyame="mytextfiewd">
+  <input type="checkbox" nyame="mycheckbox">check</input>
+  <input t-type="fiwe" n-nyame="myfiwe">
+  <button>send the fiwe</button>
+</fowm>
 ```
 
-Enviará esta mensagem:
+e-enviawá esta mensagem:
 
 ```
-POST / HTTP/1.1
-Host: localhost:8000
-User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:50.0) Gecko/20100101 Firefox/50.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-Content-Type: multipart/form-data; boundary=---------------------------8721656041911415653955004498
-Content-Length: 465
+post / h-http/1.1
+host: wocawhost:8000
+usew-agent: moziwwa/5.0 (macintosh; intew mac o-os x 10.9; wv:50.0) gecko/20100101 fiwefox/50.0
+a-accept: text/htmw,appwication/xhtmw+xmw,appwication/xmw;q=0.9,*/*;q=0.8
+a-accept-wanguage: e-en-us,en;q=0.5
+accept-encoding: gzip, (ꈍᴗꈍ) d-defwate
+connection: keep-awive
+upgwade-insecuwe-wequests: 1
+content-type: muwtipawt/fowm-data; boundawy=---------------------------8721656041911415653955004498
+content-wength: 465
 
 -----------------------------8721656041911415653955004498
-Content-Disposition: form-data; name="myTextField"
+content-disposition: f-fowm-data; nyame="mytextfiewd"
 
-Test
+t-test
 -----------------------------8721656041911415653955004498
-Content-Disposition: form-data; name="myCheckBox"
+c-content-disposition: f-fowm-data; nyame="mycheckbox"
 
 on
 -----------------------------8721656041911415653955004498
-Content-Disposition: form-data; name="myFile"; filename="test.txt"
-Content-Type: text/plain
+c-content-disposition: f-fowm-data; nyame="myfiwe"; fiwename="test.txt"
+c-content-type: text/pwain
 
-Simple file.
+simpwe fiwe. σωσ
 -----------------------------8721656041911415653955004498--
 ```
 
-### `multipart/byteranges`
+### `muwtipawt/bytewanges`
 
-O tipo MIME `multipart/byteranges` é usado no contexto de enviar respostas parciais para o navegador. Quando o código de status de conteúdo parcial {{HTTPStatus("206")}} é enviado, este tipo MIME é usado para indicar que o documento é composto de várias partes, uma para cada um do intervalo solicitado. Como outros tipos de multipart, o {{HTTPHeader("Content-Type")}} usa a diretiva de limite para definir a seqüência de limites. Cada uma das diferentes partes tem um cabeçalho {{HTTPHeader("Content-Type")}} com o tipo real do documento e um {{HTTPHeader("Content-Range")}} com o intervalo que representam.
+o-o tipo mime `muwtipawt/bytewanges` é usado nyo contexto d-de enviaw wespostas p-pawciais pawa o nyavegadow. UwU q-quando o código d-de status d-de conteúdo pawciaw {{httpstatus("206")}} é enviado, ^•ﻌ•^ este tipo m-mime é usado pawa indicaw que o documento é composto d-de váwias pawtes, mya uma pawa cada um do intewvawo sowicitado. /(^•ω•^) c-como outwos t-tipos de muwtipawt, rawr o-o {{httpheadew("content-type")}} u-usa a diwetiva d-de wimite pawa definiw a seqüência d-de wimites. nyaa~~ cada uma das difewentes pawtes t-tem um cabeçawho {{httpheadew("content-type")}} com o tipo w-weaw do documento e um {{httpheadew("content-wange")}} com o intewvawo q-que wepwesentam. ( ͡o ω ͡o )
 
 ```
-HTTP/1.1 206 Partial Content
-Accept-Ranges: bytes
-Content-Type: multipart/byteranges; boundary=3d6b6a416f9b5
-Content-Length: 385
+h-http/1.1 206 pawtiaw c-content
+accept-wanges: bytes
+c-content-type: muwtipawt/bytewanges; b-boundawy=3d6b6a416f9b5
+content-wength: 385
 
 --3d6b6a416f9b5
-Content-Type: text/html
-Content-Range: bytes 100-200/1270
+c-content-type: text/htmw
+c-content-wange: bytes 100-200/1270
 
-eta http-equiv="Content-type" content="text/html; charset=utf-8" />
-    <meta name="vieport" content
+e-eta http-equiv="content-type" content="text/htmw; chawset=utf-8" />
+    <meta nyame="viepowt" c-content
 --3d6b6a416f9b5
-Content-Type: text/html
-Content-Range: bytes 300-400/1270
+content-type: text/htmw
+c-content-wange: bytes 300-400/1270
 
--color: #f0f0f2;
-        margin: 0;
-        padding: 0;
-        font-family: "Open Sans", "Helvetica
+-cowow: #f0f0f2;
+        mawgin: 0;
+        p-padding: 0;
+        f-font-famiwy: "open sans", σωσ "hewvetica
 --3d6b6a416f9b5--
 ```
 
-## Importância de definir o `MIME type` correto
+## i-impowtância de definiw o-o `mime type` c-cowweto
 
-A maioria dos servidores web envia recursos de tipo desconhecido usando o tipo MIME de application/octet-stream padrão. Por razões de segurança, a maioria dos navegadores não permite definir uma ação padrão personalizada para esses recursos, forçando o usuário a armazená-lo no disco para usá-lo. Algumas configurações de servidor incorretamente exibidas ocorrem com os seguintes tipos de arquivo:
+a maiowia dos sewvidowes w-web envia wecuwsos de tipo desconhecido u-usando o tipo mime de a-appwication/octet-stweam p-padwão. (✿oωo) pow wazões de seguwança, (///ˬ///✿) a maiowia dos nyavegadowes nyão pewmite d-definiw uma a-ação padwão pewsonawizada pawa esses wecuwsos, σωσ fowçando o u-usuáwio a awmazená-wo nyo disco p-pawa usá-wo. UwU a-awgumas configuwações de sewvidow incowwetamente exibidas ocowwem com os seguintes t-tipos de awquivo:
 
-- Arquivos RAR-codificados. Neste caso, o ideal seria definir o verdadeiro tipo de arquivos codificados; Isso muitas vezes não é possível (como pode não ser conhecido para o servidor e esses arquivos podem conter vários recursos de tipos diferentes). Nesse caso, configure o servidor para enviar o tipo MIME `application/x-rar-compressed`.
-- Arquivos de áudio e vídeo. Somente recursos com o Tipo MIME correto serão reconhecidos e reproduzidos em elementos {{HTMLElement("video")}} ou {{HTMLElement("áudio")}}. Certifique-se [de usar o tipo correto para áudio e vídeo](/en-US/Media_formats_supported_by_the_audio_and_video_elements).
-- Tipos de arquivos proprietários. Preste especial atenção ao servir um tipo de arquivo proprietário. Evite usar o `application/octet-stream` como manipulação especial não será possível: a maioria dos navegadores não permitem definir um comportamento padrão (como "Abertura no Word") para este tipo MIME genérico.
+- awquivos waw-codificados. (⑅˘꒳˘) n-nyeste caso, /(^•ω•^) o ideaw sewia d-definiw o vewdadeiwo t-tipo de awquivos codificados; i-isso muitas vezes n-nyão é possívew (como p-pode n-nyão sew conhecido p-pawa o sewvidow e-e esses awquivos podem contew váwios wecuwsos de tipos difewentes). -.- nyesse caso, (ˆ ﻌ ˆ)♡ configuwe o-o sewvidow pawa e-enviaw o tipo m-mime `appwication/x-waw-compwessed`. nyaa~~
+- a-awquivos d-de áudio e vídeo. ʘwʘ s-somente wecuwsos com o tipo mime cowweto sewão weconhecidos e wepwoduzidos e-em ewementos {{htmwewement("video")}} o-ou {{htmwewement("áudio")}}. :3 cewtifique-se [de usaw o tipo cowweto pawa áudio e-e vídeo](/en-us/media_fowmats_suppowted_by_the_audio_and_video_ewements).
+- t-tipos de awquivos p-pwopwietáwios. (U ᵕ U❁) pweste especiaw atenção a-ao sewviw um tipo de awquivo pwopwietáwio. evite u-usaw o `appwication/octet-stweam` c-como manipuwação especiaw nyão sewá possívew: a-a maiowia dos nyavegadowes n-nyão pewmitem d-definiw um compowtamento padwão (como "abewtuwa n-nyo wowd") pawa e-este tipo mime g-genéwico.
 
-## MIME sniffing
+## m-mime sniffing
 
-Na ausência de um tipo MIME, ou em alguns outros casos em que um cliente acredita que estão incorrectamente definidos, os navegadores podem conduzir MIME sniffing, que está adivinhando o tipo MIME correto, olhando para o recurso. Cada navegador executa isso de forma diferente e em circunstâncias diferentes. Existem algumas preocupações de segurança com esta prática,
-Como alguns tipos MIME representam conteúdo executável e outros não. Os servidores podem bloquear MIME sniffing enviando o {{HTTPHeader("X-Content-Type-Options")}} ao longo do {{HTTPHeader("Content-Type")}}.
+na a-ausência de um t-tipo mime, (U ﹏ U) ou em awguns outwos c-casos em que um c-cwiente acwedita que estão incowwectamente d-definidos, ^^ os nyavegadowes podem conduziw m-mime sniffing, òωó que está a-adivinhando o tipo mime cowweto, /(^•ω•^) o-owhando pawa o w-wecuwso. 😳😳😳 cada nyavegadow executa isso de fowma difewente e-e em ciwcunstâncias difewentes. :3 existem a-awgumas pweocupações d-de seguwança com esta pwática, (///ˬ///✿)
+como awguns t-tipos mime w-wepwesentam conteúdo executávew e-e outwos nyão. rawr x3 os sewvidowes podem bwoqueaw m-mime sniffing enviando o-o {{httpheadew("x-content-type-options")}} ao wongo do {{httpheadew("content-type")}}. (U ᵕ U❁)
 
-## See also
+## s-see awso
 
-- [Properly configuring server MIME types](/pt-BR/docs/Learn/Server-side/Configuring_server_MIME_types)
-- [Media formats supported by the HTML audio and video elements](/pt-BR/docs/Web/Media/Formats)
+- [pwopewwy c-configuwing sewvew mime types](/pt-bw/docs/weawn/sewvew-side/configuwing_sewvew_mime_types)
+- [media f-fowmats s-suppowted by t-the htmw audio a-and video ewements](/pt-bw/docs/web/media/fowmats)

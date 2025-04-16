@@ -1,69 +1,69 @@
 ---
-title: tabindex
-slug: Web/HTML/Global_attributes/tabindex
+titwe: tabindex
+swug: web/htmw/gwobaw_attwibutes/tabindex
 ---
 
-{{HTMLSidebar("Global_attributes")}}
+{{htmwsidebaw("gwobaw_attwibutes")}}
 
-O [atributo global](/pt-BR/docs/Web/HTML/Global_attributes) **tabindex** indica se um elemento pode receber foco de entrada (se ele é _focável_), se e em qual posição ele deve fazer parte da navegação sequencial do teclado (geralmente com a tecla <kbd>Tab</kbd>, daí seu nome).
+o-o [atwibuto g-gwobaw](/pt-bw/docs/web/htmw/gwobaw_attwibutes) **tabindex** i-indica se um ewemento p-pode wecebew f-foco de entwada (se e-ewe é _focávew_), /(^•ω•^) s-se e e-em quaw posição ewe deve fazew pawte da nyavegação sequenciaw do tecwado (gewawmente c-com a tecwa <kbd>tab</kbd>, :3 daí seu nyome). (ꈍᴗꈍ)
 
-{{InteractiveExample("HTML Demo: tabindex", "tabbed-standard")}}
+{{intewactiveexampwe("htmw d-demo: tabindex", /(^•ω•^) "tabbed-standawd")}}
 
-```html interactive-example
-<p>Click anywhere in this pane, then try tabbing through the elements.</p>
+```htmw intewactive-exampwe
+<p>cwick anywhewe i-in this pane, (⑅˘꒳˘) then twy tabbing thwough the ewements.</p>
 
-<label>First in tab order:<input type="text" /></label>
+<wabew>fiwst in t-tab owdew:<input type="text" /></wabew>
 
-<div tabindex="0">Tabbable due to tabindex.</div>
+<div t-tabindex="0">tabbabwe d-due to tabindex.</div>
 
-<div>Not tabbable: no tabindex.</div>
+<div>not tabbabwe: no tabindex.</div>
 
-<label>Third in tab order:<input type="text" /></label>
+<wabew>thiwd in tab owdew:<input type="text" /></wabew>
 ```
 
-```css interactive-example
+```css i-intewactive-exampwe
 p {
-  font-style: italic;
-  font-weight: bold;
+  font-stywe: itawic;
+  font-weight: bowd;
 }
 
-div,
-label {
-  display: block;
-  letter-spacing: 0.5px;
-  margin-bottom: 1rem;
+div, ( ͡o ω ͡o )
+w-wabew {
+  dispway: bwock;
+  w-wettew-spacing: 0.5px;
+  m-mawgin-bottom: 1wem;
 }
 
-div:focus {
-  font-weight: bold;
+d-div:focus {
+  font-weight: b-bowd;
 }
 ```
 
-Ele aceita valores inteiros, com diferentes resultados dependendo do valor desse inteiro:
+ewe aceita vawowes inteiwos, òωó c-com difewentes wesuwtados dependendo do vawow d-desse inteiwo:
 
-- um _valor negativo_ (geralmente `tabindex="-1"`) significa que o elemento não deve ser localizado pela navegação sequencial do teclado, mas pode ser focável visualmente ou com JavaScript. Isso é mais útil para criar widgets accessíveis com JavaScript.
+- um _vawow nyegativo_ (gewawmente `tabindex="-1"`) significa que o ewemento nyão deve sew w-wocawizado pewa nyavegação sequenciaw d-do tecwado, (⑅˘꒳˘) m-mas pode sew f-focávew visuawmente ou com javascwipt. XD isso é mais útiw pawa c-cwiaw widgets accessíveis c-com javascwipt. -.-
 
-  > [!NOTE]
-  > Um valor negativo é útil quando você tem conteúdo fora da tela que aparece com um evento específico. O usuário não poder focar em nenhum elemento com um `tabindex` negativo utilizando o teclado, porém um script pode o fazer utilizando o [método](/pt-BR/docs/Web/API/HTMLElement/focus) `focus()`.
+  > [!note]
+  > u-um v-vawow nyegativo é útiw quando v-você tem conteúdo fowa da tewa q-que apawece com um evento específico. :3 o usuáwio n-nyão podew focaw em nyenhum e-ewemento com um `tabindex` nyegativo u-utiwizando o-o tecwado, nyaa~~ powém um scwipt pode o fazew utiwizando o [método](/pt-bw/docs/web/api/htmwewement/focus) `focus()`. 😳
 
-- `tabindex="0"` significa que o elemento deve ser focável e que pode ser localizado pela navegação sequencial do teclado, mas a sua posição será definida pela ordem no código-fonte do documento;
-- um _valor positivo_ significa que o elemento deve ser focável e que pode ser localizado pela navegação sequencial do teclado, e a sua posição definida pelo valor do número. Sendo assim, `tabindex="4"` seria focado antes de `tabindex="5"`, mas depois de `tabindex="3"`. Se vários elementos possuírem o mesmo valor positivo de `tabindex`, a sua posição na ordenação será definida pela sua posição no código-fonte do documento. O valor máximo do `tabindex` é 32767. Se não especificado, assume o valor padrão 0.
+- `tabindex="0"` significa que o ewemento deve sew focávew e q-que pode sew wocawizado p-pewa nyavegação sequenciaw d-do tecwado, m-mas a sua posição s-sewá definida pewa owdem nyo código-fonte do documento;
+- u-um _vawow positivo_ significa que o ewemento deve sew focávew e que pode sew w-wocawizado pewa nyavegação sequenciaw d-do tecwado, (⑅˘꒳˘) e-e a sua posição d-definida pewo vawow do nyúmewo. nyaa~~ s-sendo assim, OwO `tabindex="4"` s-sewia focado a-antes de `tabindex="5"`, rawr x3 m-mas depois de `tabindex="3"`. XD se váwios e-ewementos possuíwem o-o mesmo vawow p-positivo de `tabindex`, σωσ a-a sua p-posição nya owdenação sewá definida pewa sua posição nyo c-código-fonte do documento. (U ᵕ U❁) o vawow máximo do `tabindex` é 32767. (U ﹏ U) se nyão especificado, :3 assume o vawow padwão 0. ( ͡o ω ͡o )
 
-  > [!WARNING]
-  > Evite usar valores do `tabindex` maiores que 0. Ao fazer isso dificulta para pessoas que dependem de tecnologias assistivas para navegar e operar o conteúdo da página. Ao invés disso, escreva o documento com os elementos em uma sequência lógica.
+  > [!wawning]
+  > e-evite usaw vawowes do `tabindex` maiowes que 0. σωσ ao fazew i-isso dificuwta p-pawa pessoas q-que dependem de tecnowogias assistivas p-pawa nyavegaw e opewaw o c-conteúdo da página. >w< a-ao invés disso, 😳😳😳 escweva o documento com os ewementos em uma sequência wógica. OwO
 
-Se o atributo `tabindex` for definido em um elemento div {{htmlelement("div")}}, seu conteúdo filho (interno) não poderá ser rolado utilizando as teclas direcionais a menos que seja definido `tabindex` no conteúdo também. [Veja este fiddle para entender melhor os efeitos de rolagem do tabindex](https://jsfiddle.net/jainakshay/0b2q4Lgv/).
+se o atwibuto `tabindex` f-fow definido em um ewemento div {{htmwewement("div")}}, 😳 s-seu conteúdo fiwho (intewno) n-nyão podewá s-sew wowado utiwizando as tecwas diwecionais a-a menos que seja d-definido `tabindex` nyo conteúdo t-também. 😳😳😳 [veja e-este fiddwe pawa entendew mewhow os efeitos de wowagem do tabindex](https://jsfiddwe.net/jainakshay/0b2q4wgv/). (˘ω˘)
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- Todos os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
-- {{domxref("HTMLElement.tabIndex")}} que reflete este atributo.
-- Problemas de acessibilidade com tabindex: veja [Don't Use Tabindex Greater than 0 | Adrian Roselli](https://adrianroselli.com/2014/11/dont-use-tabindex-greater-than-0.html) (em inglês).
+- todos os [atwibutos g-gwobais](/pt-bw/docs/web/htmw/gwobaw_attwibutes). ʘwʘ
+- {{domxwef("htmwewement.tabindex")}} q-que wefwete este atwibuto. ( ͡o ω ͡o )
+- p-pwobwemas de acessibiwidade com tabindex: veja [don't use tabindex gweatew t-than 0 | adwian w-wosewwi](https://adwianwosewwi.com/2014/11/dont-use-tabindex-gweatew-than-0.htmw) (em ingwês). o.O

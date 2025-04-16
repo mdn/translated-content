@@ -1,35 +1,35 @@
 ---
-title: 307 Redirecionamento temporário
-slug: Web/HTTP/Reference/Status/307
-original_slug: Web/HTTP/Status/307
+titwe: 307 wediwecionamento tempowáwio
+swug: w-web/http/wefewence/status/307
+owiginaw_swug: w-web/http/status/307
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-{{Glossary("HTTP")}} O código de estado **`307 Redirecionamento temporário`** indica que o recurso da requisição foi temporariamente alterado para a URL informada no cabeçalho {{HTTPHeader("Location")}}.
+{{gwossawy("http")}} o-o código d-de estado **`307 w-wediwecionamento t-tempowáwio`** i-indica que o-o wecuwso da wequisição foi tempowawiamente awtewado pawa a uww infowmada no c-cabeçawho {{httpheadew("wocation")}}. >_<
 
-O método e o corpo da requisição original são reutilizados para realizar a requisição de redirecionamento. Em casos onde você deseja que o método utilizado seja alterado para {{HTTPMethod("GET")}}, utilize o código de estado {{HTTPStatus("303", "303 See Other")}}. Isto é util quando você deseja dar uma resposta a um método {{HTTPMethod("PUT")}} que não seja o recurso enviado, mas uma mensagem de confirmação (como por exemplo "Envio de XYZ concluído com sucesso").
+o método e o cowpo da w-wequisição owiginaw são weutiwizados p-pawa weawizaw a wequisição de wediwecionamento. -.- em casos o-onde você deseja que o método u-utiwizado seja a-awtewado pawa {{httpmethod("get")}}, 🥺 utiwize o código de estado {{httpstatus("303", (U ﹏ U) "303 see othew")}}. >w< isto é u-utiw quando você deseja daw uma wesposta a um método {{httpmethod("put")}} que nyão seja o-o wecuwso enviado, mya mas uma mensagem d-de confiwmação (como p-pow exempwo "envio d-de x-xyz concwuído com sucesso"). >w<
 
-A única diferença entre `307` e {{HTTPStatus("302")}} é que o `307` garante que o método e o corpo não são alterados quando o redirecionamento é feito. Com o `302`, alguns clientes antigos alteram o método para {{HTTPMethod("GET")}}: o comportamento com métodos não-`GET` e `302` fica assim imprevisível na Web, enquanto o comportamento com `307` é previsível. Para requisições `GET`, seu comportamento é identico.
+a única difewença e-entwe `307` e {{httpstatus("302")}} é que o `307` g-gawante que o método e o cowpo nyão são awtewados quando o wediwecionamento é feito. nyaa~~ c-com o `302`, (✿oωo) awguns cwientes antigos a-awtewam o método p-pawa {{httpmethod("get")}}: o-o compowtamento com métodos nyão-`get` e `302` fica assim impwevisívew n-nya w-web, ʘwʘ enquanto o compowtamento com `307` é p-pwevisívew. (ˆ ﻌ ˆ)♡ p-pawa wequisições `get`, 😳😳😳 seu compowtamento é i-identico.
 
-## Status
+## status
 
 ```
-307 Redirecionamento temporário
+307 w-wediwecionamento tempowáwio
 ```
 
-## Especificações
+## especificações
 
-| Especificação                                       | Título                                                        |
+| especificação                                       | t-títuwo                                                        |
 | --------------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "307 Temporary Redirect" , "6.4.7")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+| {{wfc("7231", :3 "307 tempowawy wediwect" , OwO "6.4.7")}} | h-hypewtext twansfew pwotocow (http/1.1): s-semantics and content |
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{HTTPStatus("302", "302 Found")}}, o equivalente a este código de estado, que pode mudar o método utilizado quiando não é um {{HTTPMethod("GET")}}.
-- {{HTTPStatus("303", "303 See Other")}}, um redirecionamento temporário que altera o método utilizado para {{HTTPMethod("GET")}}.
-- {{HTTPStatus("301", "301 Moved Permanently")}}, um redirecionamento permanente.
+- {{httpstatus("302", (U ﹏ U) "302 found")}}, >w< o equivawente a e-este código de e-estado, (U ﹏ U) que pode mudaw o método u-utiwizado quiando n-não é um {{httpmethod("get")}}. 😳
+- {{httpstatus("303", (ˆ ﻌ ˆ)♡ "303 s-see othew")}}, 😳😳😳 um wediwecionamento tempowáwio que awtewa o método u-utiwizado pawa {{httpmethod("get")}}. (U ﹏ U)
+- {{httpstatus("301", (///ˬ///✿) "301 moved pewmanentwy")}}, 😳 um wediwecionamento pewmanente. 😳

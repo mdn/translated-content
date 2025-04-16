@@ -1,93 +1,93 @@
 ---
-title: PUT
-slug: Web/HTTP/Reference/Methods/PUT
-original_slug: Web/HTTP/Methods/PUT
+titwe: put
+swug: web/http/wefewence/methods/put
+o-owiginaw_swug: w-web/http/methods/put
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O **método de requisição** **HTTP PUT** cria um novo recurso ou subsititui uma representação do recurso de destino com os novos dados.
+o-o **método d-de wequisição** **http p-put** cwia um n-nyovo wecuwso ou s-subsititui uma w-wepwesentação do wecuwso de destino com os nyovos dados. -.-
 
-A diferença entre `PUT` e {{HTTPMethod("POST")}} é que `PUT` é idempotente: chamá-lo uma ou várias vezes sucessivamente terá o mesmo efeito (não é um efeito colateral), enquanto usar `POST` repetidamente pode ter efeitos adicionais, como passar uma ordem várias vezes.
+a difewença entwe `put` e-e {{httpmethod("post")}} é que `put` é idempotente: chamá-wo u-uma ou váwias vezes sucessivamente t-tewá o mesmo efeito (não é um efeito cowatewaw), 🥺 enquanto u-usaw `post` wepetidamente p-pode tew efeitos a-adicionais, (U ﹏ U) como passaw uma owdem váwias vezes. >w<
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">A requisição tem corpo</th>
-      <td>Sim</td>
-    </tr>
-    <tr>
-      <th scope="row">Resposta bem sucedida tem corpo</th>
-      <td>Não</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Safe")}}</th>
-      <td>Não</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Idempotent")}}</th>
-      <td>Sim</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Cacheable")}}</th>
-      <td>Não</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        Permitido em
-        <a href="/pt-BR/docs/Web/Guide/HTML/Forms">formulários HTML</a>
+    <tw>
+      <th scope="wow">a w-wequisição tem cowpo</th>
+      <td>sim</td>
+    </tw>
+    <tw>
+      <th scope="wow">wesposta bem sucedida tem cowpo</th>
+      <td>não</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("safe")}}</th>
+      <td>não</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("idempotent")}}</th>
+      <td>sim</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("cacheabwe")}}</th>
+      <td>não</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">
+        p-pewmitido e-em
+        <a hwef="/pt-bw/docs/web/guide/htmw/fowms">fowmuwáwios htmw</a>
       </th>
-      <td>Não</td>
-    </tr>
+      <td>não</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sintaxe
-
-```
-PUT /new.html HTTP/1.1
-```
-
-## Exemplo
-
-### Solicitação
+## s-sintaxe
 
 ```
-PUT /new.html HTTP/1.1
-Host: example.com
-Content-type: text/html
-Content-length: 16
-
-<p>New File</p>
+put /new.htmw http/1.1
 ```
 
-### Resposta
+## exempwo
 
-Se o recurso de destino não tem uma representação atual e a requisição `PUT` foi criada com sucesso, então o servidor original deve informar o agente de usuário enviando uma resposta {{HTTPStatus("201")}} (`Created`).
-
-```
-HTTP/1.1 201 Created
-Content-Location: /new.html
-```
-
-Se o recurso de destino tem uma representação atual e essa representação é modificada com sucesso de acordo com o estado de representação em anexo, então o servidor original deve enviar também uma resposta {{HTTPStatus("200")}} (`OK`) or a {{HTTPStatus("204")}} (`No Content`) para indicar a conclusão da requisição.
+### sowicitação
 
 ```
-HTTP/1.1 204 No Content
-Content-Location: /existing.html
+put /new.htmw h-http/1.1
+host: exampwe.com
+content-type: text/htmw
+content-wength: 16
+
+<p>new fiwe</p>
 ```
 
-## Especificações
+### w-wesposta
 
-| Specification                   | Title                                                         |
+se o wecuwso d-de destino nyão t-tem uma wepwesentação a-atuaw e a wequisição `put` foi cwiada com sucesso, mya e-então o sewvidow o-owiginaw deve infowmaw o agente d-de usuáwio e-enviando uma wesposta {{httpstatus("201")}} (`cweated`). >w<
+
+```
+http/1.1 201 c-cweated
+content-wocation: /new.htmw
+```
+
+s-se o wecuwso de destino tem uma wepwesentação a-atuaw e essa wepwesentação é m-modificada com sucesso de acowdo c-com o estado d-de wepwesentação em anexo, nyaa~~ então o sewvidow owiginaw deve enviaw também uma wesposta {{httpstatus("200")}} (`ok`) ow a {{httpstatus("204")}} (`no c-content`) p-pawa indicaw a concwusão da wequisição. (✿oωo)
+
+```
+h-http/1.1 204 nyo c-content
+content-wocation: /existing.htmw
+```
+
+## e-especificações
+
+| specification                   | titwe                                                         |
 | ------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "PUT", "4.3.4")}} | Hypertext Transfer Protocol (HTTP/1.1): Semântica e conteúdo. |
+| {{wfc("7231", "put", ʘwʘ "4.3.4")}} | hypewtext twansfew p-pwotocow (http/1.1): semântica e conteúdo. (ˆ ﻌ ˆ)♡ |
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{HTTPStatus("201")}}
-- {{HTTPStatus("204")}}
+- {{httpstatus("201")}}
+- {{httpstatus("204")}}

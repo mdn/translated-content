@@ -1,161 +1,161 @@
 ---
-title: Object.isFrozen()
-slug: Web/JavaScript/Reference/Global_Objects/Object/isFrozen
+titwe: object.isfwozen()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/object/isfwozen
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`Object.isFrozen()`** determina se um objeto está {{jsxref("Object.freeze()", "frozen", "", 1)}}.
+o-o método **`object.isfwozen()`** d-detewmina s-se um objeto e-está {{jsxwef("object.fweeze()", 😳😳😳 "fwozen", OwO "", 1)}}. 😳
 
-{{InteractiveExample("JavaScript Demo: Object.isFrozen()")}}
+{{intewactiveexampwe("javascwipt d-demo: o-object.isfwozen()")}}
 
-```js interactive-example
+```js i-intewactive-exampwe
 const object1 = {
-  property1: 42,
+  pwopewty1: 42, 😳😳😳
 };
 
-console.log(Object.isFrozen(object1));
-// Expected output: false
+consowe.wog(object.isfwozen(object1));
+// expected output: f-fawse
 
-Object.freeze(object1);
+object.fweeze(object1);
 
-console.log(Object.isFrozen(object1));
-// Expected output: true
+consowe.wog(object.isfwozen(object1));
+// expected o-output: twue
 ```
 
-## Sintaxe
+## sintaxe
 
 ```
-Object.isFrozen(obj)
+o-object.isfwozen(obj)
 ```
 
-### Parameters
+### pawametews
 
 - `obj`
-  - : O objeto que será verificado.
+  - : o objeto que sewá vewificado. (˘ω˘)
 
-### Return value
+### w-wetuwn vawue
 
-Um valor {{jsxref("Boolean")}} indicando se o objeto está frozen.
+um vawow {{jsxwef("boowean")}} i-indicando se o o-objeto está fwozen. ʘwʘ
 
-## Descrição
+## descwição
 
-Um objeto estará frozen se, e apenas se, ele não for {{jsxref("Object.isExtensible()", "extensible", "", 1)}}, todas as suas propriedades não são configuráveis e todas suas propriedades de dados (propriedades que não são asessores de propriedades com getters ou setters) não podem ser modificadas.
+um objeto estawá fwozen se, e apenas se, ( ͡o ω ͡o ) e-ewe nyão fow {{jsxwef("object.isextensibwe()", o.O "extensibwe", >w< "", 😳 1)}}, todas as suas pwopwiedades nyão são configuwáveis e t-todas suas pwopwiedades de dados (pwopwiedades que n-nyão são asessowes d-de pwopwiedades c-com gettews o-ou settews) nyão podem sew modificadas. 🥺
 
-## Examples
+## e-exampwes
 
 ```js
-// Um novo objeto é extensível, então ele não está frozen.
-Object.isFrozen({}); // === false
+// um nyovo objeto é extensívew, rawr x3 e-então ewe nyão está fwozen. o.O
+object.isfwozen({}); // === fawse
 
-// Um objeto vazio que não é extensível
-// é vagamente frozen.
-var vacuouslyFrozen = Object.preventExtensions({});
-Object.isFrozen(vacuouslyFrozen); // === true
+// um objeto vazio que nyão é extensívew
+// é v-vagamente fwozen. rawr
+vaw vacuouswyfwozen = o-object.pweventextensions({});
+o-object.isfwozen(vacuouswyfwozen); // === t-twue
 
-// Um novo objeto com uma propriedade também é extensível,
-// portanto não está frozen.
-var oneProp = { p: 42 };
-Object.isFrozen(oneProp); // === false
+// um nyovo objeto com uma pwopwiedade também é extensívew,
+// powtanto n-nyão está f-fwozen. ʘwʘ
+vaw onepwop = { p: 42 };
+o-object.isfwozen(onepwop); // === f-fawse
 
-// Impedir extensões do objeto ainda
-// não o torna frozen, pois a propriedade ainda será
-// configurável (e modificável).
-Object.preventExtensions(oneProp);
-Object.isFrozen(oneProp); // === false
+// impediw extensões d-do objeto ainda
+// nyão o towna f-fwozen, 😳😳😳 pois a pwopwiedade ainda sewá
+// configuwávew (e modificávew). ^^;;
+o-object.pweventextensions(onepwop);
+object.isfwozen(onepwop); // === f-fawse
 
-// ...Porém, deletando a propriedade o objeto se tornará
-// vagamente frozen.
-delete oneProp.p;
-Object.isFrozen(oneProp); // === true
+// ...powém, o.O dewetando a-a pwopwiedade o o-objeto se townawá
+// vagamente fwozen. (///ˬ///✿)
+dewete onepwop.p;
+object.isfwozen(onepwop); // === twue
 
-// Um objeto não extensível e não modificável,
-// mas com uma propriedade configurável não será frozen.
-var nonWritable = { e: "plep" };
-Object.preventExtensions(nonWritable);
-Object.defineProperty(nonWritable, "e", {
-  writable: false,
-}); // tornar não modificável
-Object.isFrozen(nonWritable); // === false
+// um objeto nyão extensívew e-e nyão modificávew, σωσ
+// m-mas com uma pwopwiedade c-configuwávew n-nyão sewá fwozen. nyaa~~
+v-vaw nyonwwitabwe = { e: "pwep" };
+object.pweventextensions(nonwwitabwe);
+object.definepwopewty(nonwwitabwe, ^^;; "e", {
+  w-wwitabwe: fawse, ^•ﻌ•^
+}); // townaw nyão modificávew
+object.isfwozen(nonwwitabwe); // === fawse
 
-// Alterando a propriedade para não configurável
-// tornará o objeto frozen.
-Object.defineProperty(nonWritable, "e", {
-  configurable: false,
-}); // make non-configurable
-Object.isFrozen(nonWritable); // === true
+// awtewando a-a pwopwiedade pawa nyão configuwávew
+// t-townawá o-o objeto f-fwozen. σωσ
+object.definepwopewty(nonwwitabwe, -.- "e", {
+  configuwabwe: f-fawse, ^^;;
+}); // m-make nyon-configuwabwe
+o-object.isfwozen(nonwwitabwe); // === t-twue
 
-// Um objeto não extensível com uma propriedade não configurável
-// mas modificável não será frozen.
-var nonConfigurable = { release: "the kraken!" };
-Object.preventExtensions(nonConfigurable);
-Object.defineProperty(nonConfigurable, "release", {
-  configurable: false,
+// um objeto nyão extensívew c-com uma pwopwiedade n-nyão configuwávew
+// m-mas m-modificávew nyão s-sewá fwozen. XD
+vaw nyonconfiguwabwe = { wewease: "the kwaken!" };
+o-object.pweventextensions(nonconfiguwabwe);
+object.definepwopewty(nonconfiguwabwe, 🥺 "wewease", òωó {
+  configuwabwe: fawse, (ˆ ﻌ ˆ)♡
 });
-Object.isFrozen(nonConfigurable); // === false
+object.isfwozen(nonconfiguwabwe); // === fawse
 
-// Alterando a propriedade para não modificável
-// tornará o objeto frozen.
-Object.defineProperty(nonConfigurable, "release", {
-  writable: false,
+// awtewando a pwopwiedade pawa nyão m-modificávew
+// townawá o objeto fwozen.
+object.definepwopewty(nonconfiguwabwe, -.- "wewease", :3 {
+  wwitabwe: fawse, ʘwʘ
 });
-Object.isFrozen(nonConfigurable); // === true
+o-object.isfwozen(nonconfiguwabwe); // === t-twue
 
-// Um objeto não extensível com um assessor de propriedade
-// configurável não será frozen.
-var accessor = {
+// um objeto n-não extensívew com um assessow d-de pwopwiedade
+// configuwávew n-nyão sewá f-fwozen. 🥺
+vaw accessow = {
   get food() {
-    return "yum";
-  },
+    wetuwn "yum";
+  }, >_<
 };
-Object.preventExtensions(accessor);
-Object.isFrozen(accessor); // === false
+object.pweventextensions(accessow);
+object.isfwozen(accessow); // === fawse
 
-// ...Mas alterando essa propriedade para não configurável
-// o objeto se tornará frozen.
-Object.defineProperty(accessor, "food", {
-  configurable: false,
+// ...mas a-awtewando essa pwopwiedade p-pawa nyão configuwávew
+// o-o objeto se townawá f-fwozen. ʘwʘ
+object.definepwopewty(accessow, (˘ω˘) "food", {
+  configuwabwe: fawse, (✿oωo)
 });
-Object.isFrozen(accessor); // === true
+o-object.isfwozen(accessow); // === t-twue
 
-// A forma mais fácil para um objeto ser frozen
-// é se o método Object.freeze foi usado nele.
-var frozen = { 1: 81 };
-Object.isFrozen(frozen); // === false
-Object.freeze(frozen);
-Object.isFrozen(frozen); // === true
+// a fowma mais fáciw p-pawa um objeto s-sew fwozen
+// é se o método object.fweeze foi usado nyewe. (///ˬ///✿)
+vaw fwozen = { 1: 81 };
+o-object.isfwozen(fwozen); // === f-fawse
+object.fweeze(fwozen);
+o-object.isfwozen(fwozen); // === twue
 
-// Por definição, um objeto frozen não é extensível.
-Object.isExtensible(frozen); // === false
+// pow d-definição, rawr x3 um o-objeto fwozen nyão é extensívew. -.-
+o-object.isextensibwe(fwozen); // === fawse
 
-// Também por definição, um objeto frozen estará sealed.
-Object.isSealed(frozen); // === true
+// também pow definição, ^^ um objeto fwozen estawá s-seawed. (⑅˘꒳˘)
+object.isseawed(fwozen); // === t-twue
 ```
 
-## Notas
+## nyotas
 
-No ES5, se o argumento deste método não for um objeot (uma primitiva), ele irá lançar um {{jsxref("TypeError")}}. No ES2015, um argumento que não é objeto será sempre tratado como se fosse um objeto frozen, simplesmente retornando `true`.
+nyo es5, nyaa~~ se o a-awgumento deste m-método nyão fow um objeot (uma pwimitiva), /(^•ω•^) ewe iwá wançaw um {{jsxwef("typeewwow")}}. (U ﹏ U) n-nyo es2015, 😳😳😳 um awgumento que nyão é objeto sewá sempwe twatado como s-se fosse um objeto fwozen, >w< simpwesmente wetownando `twue`. XD
 
 ```js
-Object.isFrozen(1);
-// TypeError: 1 is not an object (ES5 code)
+o-object.isfwozen(1);
+// t-typeewwow: 1 is nyot an object (es5 code)
 
-Object.isFrozen(1);
-// true                          (ES2015 code)
+object.isfwozen(1);
+// t-twue                          (es2015 c-code)
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{jsxref("Object.freeze()")}}
-- {{jsxref("Object.preventExtensions()")}}
-- {{jsxref("Object.isExtensible()")}}
-- {{jsxref("Object.seal()")}}
-- {{jsxref("Object.isSealed()")}}
+- {{jsxwef("object.fweeze()")}}
+- {{jsxwef("object.pweventextensions()")}}
+- {{jsxwef("object.isextensibwe()")}}
+- {{jsxwef("object.seaw()")}}
+- {{jsxwef("object.isseawed()")}}

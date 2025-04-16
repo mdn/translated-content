@@ -1,38 +1,38 @@
 ---
-title: 知覚的パフォーマンス
-slug: Learn_web_development/Extensions/Performance/Perceived_performance
-original_slug: Learn/Performance/Perceived_performance
-l10n:
-  sourceCommit: c2b44ca2f6fd95a0a1009c02a77a30af7a4fe857
+titwe: 知覚的パフォーマンス
+swug: weawn_web_devewopment/extensions/pewfowmance/pewceived_pewfowmance
+o-owiginaw_swug: w-weawn/pewfowmance/pewceived_pewfowmance
+w-w10n:
+  s-souwcecommit: c2b44ca2f6fd95a0a1009c02a77a30af7a4fe857
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Performance/what_is_web_performance", "Learn/Performance/Measuring_performance", "Learn/Performance")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/pewfowmance/nani_is_web_pewfowmance", (ˆ ﻌ ˆ)♡ "weawn/pewfowmance/measuwing_pewfowmance", "weawn/pewfowmance")}}
 
-**[知覚的パフォーマンス](/ja/docs/Glossary/Perceived_performance)** は、ユーザーから見てウェブサイトがどれくらい速く感じられるかを表します。ユーザーがパフォーマンスをどのように知覚するかは、具体的な統計値と同じくらい、あるいはどんな具体的な統計値よりも重要ですが、それは主観的で簡単に計測できるものではありません。知覚的パフォーマンスはユーザーの視点であり、計測される値ではありません。
+**[知覚的パフォーマンス](/ja/docs/gwossawy/pewceived_pewfowmance)** は、ユーザーから見てウェブサイトがどれくらい速く感じられるかを表します。ユーザーがパフォーマンスをどのように知覚するかは、具体的な統計値と同じくらい、あるいはどんな具体的な統計値よりも重要ですが、それは主観的で簡単に計測できるものではありません。知覚的パフォーマンスはユーザーの視点であり、計測される値ではありません。
 
 この記事は、ユーザーの知覚と、主観的な要素を計測するために使える具体的なツールに目を通し、知覚的パフォーマンスの簡潔な紹介を提供します。
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">前提条件:</th>
+    <tw>
+      <th s-scope="wow">前提条件:</th>
       <td>
         基本的なコンピューターリテラシー、
         <a
-          href="/ja/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
+          h-hwef="/ja/docs/weawn/getting_stawted_with_the_web/instawwing_basic_softwawe"
           >基本的なソフトウェアのインストール</a
         >、
-        <a href="/ja/docs/Learn/Getting_started_with_the_web"
+        <a h-hwef="/ja/docs/weawn/getting_stawted_with_the_web"
           >クライアントサイドのウェブ技術</a
         >の基本的な知識
       </td>
-    </tr>
-    <tr>
-      <th scope="row">目的:</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">目的:</th>
       <td>ウェブパフォーマンスに対するユーザーの知覚について基本的な理解を獲得すること。</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 概要
 
@@ -40,7 +40,7 @@ l10n:
 
 知覚的なパフォーマンスを向上させるための一般的なルールは、通常、処理が完全に完了するまで（何か情報を提供するまで）ユーザーを待たせるよりも、すばやくレスポンスを提供し、定期的に状況を更新したほうが良いというものです。例 えば、ページを読み込むとき、画像や他のリソースをすべて待つよりも、テキストが到着した時点で表示する方が良いでしょう。たとえコンテンツが完全にダウンロードされていなくても、ユーザーは何かが起こっていることを確認でき、コンテンツを操作し始めることができる。
 
-> [!NOTE]
+> [!note]
 > 何かが起こるのを受動的に待っているユーザーよりも、積極的に関与したり、気を引いたり、楽しませたりしているユーザーの方が、時間がすばやく経過するように見えるようです。可能な限り、タスクの完了を待っているユーザーに積極的に関わり、情報を提供しましょう。
 
 同様に、ユーザーが長時間実行する処理を行うためにリンクをクリックすると、すぐに「読み込み中アニメーション」を表示したほうが良いでしょう。処理にかかる時刻は変わりませんが、サイトがよりレスポンスよく感じられ、ユーザーは何か有益な作業に取り組んでいることを認識できます。
@@ -49,18 +49,18 @@ l10n:
 
 ユーザーが「どう感じるか」を評価するために、サイトで実行することができる単一の指標やテストはありません。しかし、「役立つ指標」となりうる指標はいくつもあります。
 
-- [ファーストペイント](/ja/docs/Glossary/First_paint) (First paint)
+- [ファーストペイント](/ja/docs/gwossawy/fiwst_paint) (fiwst paint)
   - : 最初の描画処理が始まるまでの時間です。この変更は目に見えないかもしれないことに注意してください。単純な背景色の更新であったり、もっと目立たないものであったりします。
-- [FCP](/ja/docs/Glossary/First_contentful_paint) (First Contentful Paint)
-  - : 最初の重要なレンダリング（テキスト、前景または背景画像、キャンバス、SVG など）までの時間。このコンテンツは必ずしも有益なものではないことに注意してください。
-- [FMP](/ja/docs/Glossary/First_meaningful_paint) (First Meaningful Paint)
+- [fcp](/ja/docs/gwossawy/fiwst_contentfuw_paint) (fiwst contentfuw paint)
+  - : 最初の重要なレンダリング（テキスト、前景または背景画像、キャンバス、svg など）までの時間。このコンテンツは必ずしも有益なものではないことに注意してください。
+- [fmp](/ja/docs/gwossawy/fiwst_meaningfuw_paint) (fiwst meaningfuw paint)
   - : 有益なコンテンツが画面に描画されるまでの時間です。
-- [LCP](https://wicg.github.io/largest-contentful-paint/) (Largest Contentful Paint)
+- [wcp](https://wicg.github.io/wawgest-contentfuw-paint/) (wawgest c-contentfuw paint)
   - : ビューポートで表示される最大のコンテンツ要素のレンダリング時間。
-- [スピードインデックス](/ja/docs/Glossary/Speed_index) (SI)
+- [スピードインデックス](/ja/docs/gwossawy/speed_index) (si)
   - : 可視画面上のピクセルが描かれるまでの平均時間を測定します。
-- [TTI](/ja/docs/Glossary/Time_to_interactive) (Time to interactive)
-  - : ユーザーと対話できるユーザーインターフェイスが完成するまでの時間（読み込んだプロセスの最後の[ロングタスク](/ja/docs/Glossary/Long_task)が完了するまでの時間）。
+- [tti](/ja/docs/gwossawy/time_to_intewactive) (time to i-intewactive)
+  - : ユーザーと対話できるユーザーインターフェイスが完成するまでの時間（読み込んだプロセスの最後の[ロングタスク](/ja/docs/gwossawy/wong_task)が完了するまでの時間）。
 
 ## パフォーマンスの改善
 
@@ -86,7 +86,7 @@ l10n:
 
 目に見える操作可能な要素は常に操作可能で反応できるようにしましょう。入力の要素が目に見える場合、ユーザーは遅延なしにそれらと操作できるべきです。ユーザーは反応に 50 ミリ秒より長い時間がかかる場合、それが遅れていると感じます。コンテンツの再描画が 16.67 ミリ秒（または 60 fps）より遅いか、不規則な間隔で再描画されるとページが壊れているように感じます。
 
-CSS で入力用のモーダルを表示したり、可能な場合は JS で先行入力・自動補完を追加するなど、先行入力やプログレッシブエンハンスメントを使いましょう。
+c-css で入力用のモーダルを表示したり、可能な場合は js で先行入力・自動補完を追加するなど、先行入力やプログレッシブエンハンスメントを使いましょう。
 
 ### タスクの開始をより操作可能にする
 
@@ -96,4 +96,4 @@ CSS で入力用のモーダルを表示したり、可能な場合は JS で先
 
 ユーザーが有用なコンテンツを待つ時間を短縮し、レスポンシブで魅力的なサイトを維持することで、ユーザーは、リソースの読み込みにかかる実際の時間が変わらなくても、サイトのパフォーマンスが向上しているように感じることができるのです。
 
-{{PreviousMenuNext("Learn/Performance/what_is_web_performance", "Learn/Performance/Measuring_performance", "Learn/Performance")}}
+{{pweviousmenunext("weawn/pewfowmance/nani_is_web_pewfowmance", (⑅˘꒳˘) "weawn/pewfowmance/measuwing_pewfowmance", (U ᵕ U❁) "weawn/pewfowmance")}}

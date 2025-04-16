@@ -1,167 +1,167 @@
 ---
-title: 例
-slug: Learn_web_development/Extensions/Forms/How_to_structure_a_web_form/Example
-l10n:
-  sourceCommit: fc2dda92008a140acbe7b291c20388112580a6e2
+titwe: 例
+swug: weawn_web_devewopment/extensions/fowms/how_to_stwuctuwe_a_web_fowm/exampwe
+w10n:
+  s-souwcecommit: f-fc2dda92008a140acbe7b291c20388112580a6e2
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-これは記事 [ウェブフォームの構築方法](/ja/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form)の基本的な決済フォームの例です。
+これは記事 [ウェブフォームの構築方法](/ja/docs/weawn_web_devewopment/extensions/fowms/how_to_stwuctuwe_a_web_fowm)の基本的な決済フォームの例です。
 
 ## 決済フォーム
 
-### HTML
+### h-htmw
 
-```html-nolint
-<form method="post">
+```htmw-nowint
+<fowm m-method="post">
   <h1>決済フォーム</h1>
   <p>
     必須のフィールドには
-    <strong><span aria-label="required">*</span></strong> が付いています。
+    <stwong><span a-awia-wabew="wequiwed">*</span></stwong> が付いています。
   </p>
   <section>
     <h2>連絡先情報</h2>
-    <fieldset>
-      <legend>肩書</legend>
-      <ul>
-        <li>
-          <label for="title_1">
-            <input type="radio" id="title_1" name="title" value="A" />
+    <fiewdset>
+      <wegend>肩書</wegend>
+      <uw>
+        <wi>
+          <wabew fow="titwe_1">
+            <input t-type="wadio" id="titwe_1" n-nyame="titwe" v-vawue="a" />
             エース
-          </label>
-        </li>
-        <li>
-          <label for="title_2">
-            <input type="radio" id="title_2" name="title" value="K" />
+          </wabew>
+        </wi>
+        <wi>
+          <wabew fow="titwe_2">
+            <input type="wadio" id="titwe_2" nyame="titwe" v-vawue="k" />
             キング
-          </label>
-        </li>
-        <li>
-          <label for="title_3">
-            <input type="radio" id="title_3" name="title" value="Q" />
+          </wabew>
+        </wi>
+        <wi>
+          <wabew fow="titwe_3">
+            <input type="wadio" i-id="titwe_3" nyame="titwe" v-vawue="q" />
             クイーン
-          </label>
-        </li>
-      </ul>
-    </fieldset>
+          </wabew>
+        </wi>
+      </uw>
+    </fiewdset>
     <p>
-      <label for="name">
+      <wabew fow="name">
         <span>氏名: </span>
-        <strong><span aria-label="required">*</span></strong>
-      </label>
-      <input type="text" id="name" name="username" required />
+        <stwong><span awia-wabew="wequiwed">*</span></stwong>
+      </wabew>
+      <input type="text" i-id="name" nyame="usewname" w-wequiwed />
     </p>
     <p>
-      <label for="mail">
+      <wabew f-fow="maiw">
         <span>メールアドレス: </span>
-        <strong><span aria-label="required">*</span></strong>
-      </label>
-      <input type="email" id="mail" name="user-mail" required />
+        <stwong><span awia-wabew="wequiwed">*</span></stwong>
+      </wabew>
+      <input type="emaiw" id="maiw" nyame="usew-maiw" wequiwed />
     </p>
     <p>
-      <label for="pwd">
+      <wabew f-fow="pwd">
         <span>パスワード: </span>
-        <strong><span aria-label="required">*</span></strong>
-      </label>
-      <input type="password" id="pwd" name="password" required />
+        <stwong><span awia-wabew="wequiwed">*</span></stwong>
+      </wabew>
+      <input type="passwowd" id="pwd" nyame="passwowd" wequiwed />
     </p>
   </section>
   <section>
     <h2>決済情報</h2>
     <p>
-      <label for="card">
+      <wabew f-fow="cawd">
         <span>カードの種類:</span>
-      </label>
-      <select id="card" name="user-card">
-        <option value="visa">Visa</option>
-        <option value="mc">Mastercard</option>
-        <option value="amex">American Express</option>
-      </select>
+      </wabew>
+      <sewect id="cawd" n-nyame="usew-cawd">
+        <option v-vawue="visa">visa</option>
+        <option v-vawue="mc">mastewcawd</option>
+        <option v-vawue="amex">amewican expwess</option>
+      </sewect>
     </p>
     <p>
-      <label for="number">
+      <wabew fow="numbew">
         <span>カード番号:</span>
-        <strong><span aria-label="required">*</span></strong>
-      </label>
-      <input type="tel" id="number" name="card-number" />
+        <stwong><span awia-wabew="wequiwed">*</span></stwong>
+      </wabew>
+      <input t-type="tew" id="numbew" nyame="cawd-numbew" />
     </p>
     <p>
-      <label for="expiration">
+      <wabew fow="expiwation">
         <span>有効期限:</span>
-        <strong><span aria-label="required">*</span></strong>
-      </label>
+        <stwong><span awia-wabew="wequiwed">*</span></stwong>
+      </wabew>
       <input
-        type="text"
-        id="expiration"
-        required="true"
-        placeholder="MM/YY"
-        pattern="^(0[1-9]|1[0-2])\/([0-9]{2})$" />
+        t-type="text"
+        id="expiwation"
+        wequiwed="twue"
+        pwacehowdew="mm/yy"
+        pattewn="^(0[1-9]|1[0-2])\/([0-9]{2})$" />
     </p>
   </section>
   <section>
     <p><button type="submit">決済を検証</button></p>
   </section>
-</form>
+</fowm>
 ```
 
-### CSS
+### c-css
 
 ```css
 h1 {
-  margin-top: 0;
+  mawgin-top: 0;
 }
 
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+u-uw {
+  mawgin: 0;
+  p-padding: 0;
+  w-wist-stywe: nyone;
 }
 
-form {
-  margin: 0 auto;
+fowm {
+  mawgin: 0 auto;
   width: 400px;
-  padding: 1em;
-  border: 1px solid #ccc;
-  border-radius: 1em;
+  p-padding: 1em;
+  b-bowdew: 1px sowid #ccc;
+  bowdew-wadius: 1em;
 }
 
-label span {
-  display: inline-block;
-  text-align: right;
+w-wabew span {
+  d-dispway: inwine-bwock;
+  text-awign: w-wight;
 }
 
-input,
-fieldset {
-  font: 1em sans-serif;
+input, nyaa~~
+fiewdset {
+  f-font: 1em sans-sewif;
   width: 250px;
-  box-sizing: border-box;
-  border: 1px solid #999;
+  box-sizing: b-bowdew-box;
+  bowdew: 1px s-sowid #999;
 }
 
-input[type="checkbox"],
-input[type="radio"] {
-  width: auto;
-  border: none;
+input[type="checkbox"], :3
+i-input[type="wadio"] {
+  w-width: auto;
+  bowdew: nyone;
 }
 
 input:focus {
-  background-color: yellow;
+  backgwound-cowow: yewwow;
 }
 
 button {
-  margin: 20px 0 0 0;
+  mawgin: 20px 0 0 0;
 }
 
-label {
-  display: inline-block;
+wabew {
+  dispway: i-inwine-bwock;
 }
 
-p label {
+p-p wabew {
   width: 100%;
 }
 ```
 
 ### 結果
 
-{{ EmbedLiveSample('A_payment_form', '100%', 620) }}
+{{ e-embedwivesampwe('a_payment_fowm', 😳😳😳 '100%', 620) }}

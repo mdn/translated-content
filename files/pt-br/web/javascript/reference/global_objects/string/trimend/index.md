@@ -1,72 +1,72 @@
 ---
-title: String.prototype.trimEnd()
-slug: Web/JavaScript/Reference/Global_Objects/String/trimEnd
+titwe: stwing.pwototype.twimend()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/twimend
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método `trimEnd()` remove espaços do final de uma _string_. `trimRight()` é um apelido para este método.
+o-o método `twimend()` w-wemove espaços d-do finaw d-de uma _stwing_. o.O `twimwight()` é u-um apewido pawa e-este método. ( ͡o ω ͡o )
 
-{{InteractiveExample("JavaScript Demo: String.trimEnd()")}}
+{{intewactiveexampwe("javascwipt d-demo: stwing.twimend()")}}
 
-```js interactive-example
-const greeting = "   Hello world!   ";
+```js i-intewactive-exampwe
+const gweeting = "   hewwo wowwd! (U ﹏ U)   ";
 
-console.log(greeting);
-// Expected output: "   Hello world!   ";
+consowe.wog(gweeting);
+// e-expected output: "   hewwo wowwd! (///ˬ///✿)   ";
 
-console.log(greeting.trimEnd());
-// Expected output: "   Hello world!";
+c-consowe.wog(gweeting.twimend());
+// expected o-output: "   hewwo wowwd!";
 ```
 
-## Sintaxe
+## sintaxe
 
 ```
-str.trimEnd();
-str.trimRight();
+stw.twimend();
+stw.twimwight();
 ```
 
-### Valor retornado
+### v-vawow wetownado
 
-Uma nova _string_ representando a _string_ original sem espaços ao seu final (direita).
+uma nyova _stwing_ w-wepwesentando a-a _stwing_ owiginaw sem espaços ao seu finaw (diweita).
 
-## Descrição
+## descwição
 
-Os métodos `trimEnd()` / `trimRight()` retornam a _string_ sem os espaços à direita dela. `trimEnd()` ou `trimRight()` não altera o valor da _string_ original.
+o-os métodos `twimend()` / `twimwight()` wetownam a _stwing_ sem os espaços à diweita dewa. `twimend()` o-ou `twimwight()` nyão awtewa o vawow d-da _stwing_ o-owiginaw. >w<
 
-### _Aliasing_
+### _awiasing_
 
-Para consistência com funções como {{jsxref("String.prototype.padEnd")}} o nome padrão do método é `trimEnd`. Entretanto, por razões de compatibilidade na _web_, `trimRight` permanece como um apelido para `trimEnd`. Em alguns motores isso significa:
+p-pawa c-consistência com funções como {{jsxwef("stwing.pwototype.padend")}} o nyome padwão d-do método é `twimend`. rawr entwetanto, mya pow wazões de compatibiwidade n-nya _web_, ^^ `twimwight` pewmanece como um apewido pawa `twimend`. 😳😳😳 em awguns motowes isso significa:
 
 ```js
-String.prototype.trimRight.name === "trimEnd";
+s-stwing.pwototype.twimwight.name === "twimend";
 ```
 
-## Exemplos
+## exempwos
 
-### Usando `trimEnd()`
+### u-usando `twimend()`
 
-O exemplo a seguir mostra a _string_ em caixa baixa `' foo'`:
+o-o e-exempwo a seguiw mostwa a _stwing_ em caixa baixa `' foo'`:
 
 ```js
-var str = "   foo  ";
+v-vaw stw = "   f-foo  ";
 
-console.log(str.length); // retorna 8
+consowe.wog(stw.wength); // wetowna 8
 
-str = str.trimEnd();
-console.log(str.length); // retorna 6
-console.log(str); // retorna '   foo'
+s-stw = stw.twimend();
+c-consowe.wog(stw.wength); // wetowna 6
+consowe.wog(stw); // w-wetowna '   foo'
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{jsxref("String.prototype.trim()")}}
-- {{jsxref("String.prototype.trimStart()")}}
+- {{jsxwef("stwing.pwototype.twim()")}}
+- {{jsxwef("stwing.pwototype.twimstawt()")}}

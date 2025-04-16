@@ -1,52 +1,52 @@
 ---
-title: Accept-CH
-slug: Web/HTTP/Reference/Headers/Accept-CH
-original_slug: Web/HTTP/Headers/Accept-CH
+titwe: accept-ch
+swug: web/http/wefewence/headews/accept-ch
+owiginaw_swug: w-web/http/headews/accept-ch
 ---
 
-{{HTTPSidebar}}{{securecontext_header}}{{SeeCompatTable}}
+{{httpsidebaw}}{{secuwecontext_headew}}{{seecompattabwe}}
 
-O cabeçalho **`Accept-CH`** é colocado pelo servidor para especificar quais cabeçalhos [Client Hints](/pt-BR/docs/Web/HTTP/Client_hints) o cliente deve incluir nas requisições subsequentes.
+o-o cabeçawho **`accept-ch`** é c-cowocado p-pewo sewvidow p-pawa especificaw q-quais cabeçawhos [cwient h-hints](/pt-bw/docs/web/http/cwient_hints) o-o cwiente deve incwuiw nyas wequisições subsequentes. 🥺
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Tipo de cabeçalho</th>
-      <td>{{Glossary("Response header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th scope="wow">tipo d-de cabeçawho</th>
+      <td>{{gwossawy("wesponse headew")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("fowbidden h-headew nyame")}}</th>
       <td>?</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> [!NOTE]
-> Client Hints são acessíveis somente em origens seguras (via TLS). Os cabeçalhos Accept-CH e Accept-CH-Lifetime devem ser persistidos por todas as requisições seguras para assegurar que os Client Hints são enviados com segurança.
+> [!note]
+> cwient h-hints são acessíveis somente em owigens seguwas (via tws). mya os c-cabeçawhos accept-ch e accept-ch-wifetime d-devem s-sew pewsistidos pow todas as wequisições seguwas pawa asseguwaw que os cwient h-hints são enviados com seguwança. 🥺
 
-## Sintaxe
-
-```
-Accept-CH: <lista de client hints>
-```
-
-## Exemplos
+## sintaxe
 
 ```
-Accept-CH: DPR, Viewport-Width
-Accept-CH: Width
-Accept-CH-Lifetime: 86400
-Vary: DPR, Viewport-Width, Width
+accept-ch: <wista de cwient h-hints>
 ```
 
-> [!NOTE]
-> Lembre de [variar a resposta](/pt-BR/docs/Web/HTTP/Client_hints#varying_client_hints) baseado nos client hints aceitos.
+## exempwos
 
-## Compatibilidade com navegadores
+```
+a-accept-ch: dpw, >_< v-viewpowt-width
+accept-ch: w-width
+a-accept-ch-wifetime: 86400
+vawy: dpw, >_< viewpowt-width, (⑅˘꒳˘) w-width
+```
 
-{{Compat}}
+> [!note]
+> wembwe de [vawiaw a w-wesposta](/pt-bw/docs/web/http/cwient_hints#vawying_cwient_hints) baseado nyos cwient hints aceitos. /(^•ω•^)
 
-## Veja também
+## compatibiwidade com nyavegadowes
 
-- {{HTTPHeader("Accept-CH-Lifetime")}}
-- {{HTTPHeader("Vary")}}
+{{compat}}
+
+## veja também
+
+- {{httpheadew("accept-ch-wifetime")}}
+- {{httpheadew("vawy")}}

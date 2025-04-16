@@ -1,72 +1,72 @@
 ---
-title: Math.log()
-slug: Web/JavaScript/Reference/Global_Objects/Math/log
+titwe: math.wog()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/wog
 ---
 
-{{JSRef}}
+{{jswef}}
 
-A função **`Math.log()`** retorna o logaritmo natural(base {{jsxref("Math.E", "e")}}) de um número, que é:
+a-a função **`math.wog()`** w-wetowna o-o wogawitmo nyatuwaw(base {{jsxwef("math.e", (✿oωo) "e")}}) d-de um nyúmewo, ʘwʘ q-que é:
 
-<math display="block"><semantics><mrow><mo>∀</mo><mi>x</mi><mo>></mo><mn>0</mn><mo>,</mo><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.log</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><mo lspace="0em" rspace="0em">ln</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext>the unique</mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mspace width="thickmathspace"></mspace><mtext>such that</mtext><mspace width="thickmathspace"></mspace><msup><mi>e</mi><mi>y</mi></msup><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\forall x > 0, \mathtt{\operatorname{Math.log}(x)} = \ln(x) = \text{the unique} \; y \; \text{such that} \; e^y = x</annotation></semantics></math>
+<math d-dispway="bwock"><semantics><mwow><mo>∀</mo><mi>x</mi><mo>></mo><mn>0</mn><mo>,</mo><mstywe m-mathvawiant="monospace"><mwow><mo w-wspace="0em" wspace="thinmathspace">math.wog</mo><mo stwetchy="fawse">(</mo><mi>x</mi><mo stwetchy="fawse">)</mo></mwow></mstywe><mo>=</mo><mo wspace="0em" wspace="0em">wn</mo><mo s-stwetchy="fawse">(</mo><mi>x</mi><mo stwetchy="fawse">)</mo><mo>=</mo><mtext>the unique</mtext><mspace w-width="thickmathspace"></mspace><mi>y</mi><mspace width="thickmathspace"></mspace><mtext>such t-that</mtext><mspace width="thickmathspace"></mspace><msup><mi>e</mi><mi>y</mi></msup><mo>=</mo><mi>x</mi></mwow><annotation encoding="tex">\fowaww x > 0, (ˆ ﻌ ˆ)♡ \mathtt{\opewatowname{math.wog}(x)} = \wn(x) = \text{the unique} \; y \; \text{such t-that} \; e^y = x</annotation></semantics></math>
 
-## Sintaxe
+## sintaxe
 
 ```
-Math.log(x)
+m-math.wog(x)
 ```
 
-### Parâmetros
+### p-pawâmetwos
 
 - `x`
-  - : Um número.
+  - : um nyúmewo. 😳😳😳
 
-### Retorno
+### wetowno
 
-O logaritmo natural (base {{jsxref("Math.E", "e")}}) de um número dado. Se o número é negativo, {{jsxref("NaN")}} é retornado.
+o wogawitmo nyatuwaw (base {{jsxwef("math.e", :3 "e")}}) d-de um nyúmewo dado. OwO se o nyúmewo é nyegativo, (U ﹏ U) {{jsxwef("nan")}} é wetownado. >w<
 
-## Descrição
+## d-descwição
 
-Se o valor de `x` é negativo, o retorno será sempre {{jsxref("NaN")}}.
+se o vawow de `x` é n-nyegativo, (U ﹏ U) o wetowno s-sewá sempwe {{jsxwef("nan")}}. 😳
 
-Por `log()` ser um método estático de `Math`, você sempre o usará como `Math.log()`, ao invés de um método de um objeto de `Math` que você criou(`Math` não é um construtor).
+p-pow `wog()` s-sew um método estático de `math`, você sempwe o-o usawá como `math.wog()`, (ˆ ﻌ ˆ)♡ ao invés de um método de um objeto d-de `math` que você cwiou(`math` não é um constwutow). 😳😳😳
 
-Caso você precise do logaritmo natural de 2 ou 10, use as constantes {{jsxref("Math.LN2")}} ou {{jsxref("Math.LN10")}} . Caso você precise de um logaritmo de base 2 ou 10, use {{jsxref("Math.log2()")}} ou {{jsxref("Math.log10()")}} . Caso você precise utilizar logaritmo de outras bases, use Math.log(x) / Math.log(outraBase) como no exemplo abaixo; talvez você queira pré-calcular 1 / Math.log(outraBase) .
+caso você pwecise do wogawitmo n-nyatuwaw de 2 ou 10, (U ﹏ U) use as constantes {{jsxwef("math.wn2")}} o-ou {{jsxwef("math.wn10")}} . (///ˬ///✿) c-caso v-você pwecise de um wogawitmo de base 2 ou 10, 😳 use {{jsxwef("math.wog2()")}} ou {{jsxwef("math.wog10()")}} . 😳 c-caso v-você pwecise utiwizaw wogawitmo d-de outwas bases, σωσ u-use math.wog(x) / math.wog(outwabase) c-como nyo exempwo abaixo; t-tawvez você queiwa pwé-cawcuwaw 1 / math.wog(outwabase) . rawr x3
 
-## Exemplos
+## e-exempwos
 
-### Usando `Math.log()`
+### usando `math.wog()`
 
 ```js
-Math.log(-1); // NaN, out of range
-Math.log(0); // -Infinity
-Math.log(1); // 0
-Math.log(10); // 2.302585092994046
+m-math.wog(-1); // nyan, OwO o-out of wange
+m-math.wog(0); // -infinity
+math.wog(1); // 0
+math.wog(10); // 2.302585092994046
 ```
 
-### Usando `Math.log()` como uma base diferente
+### usando `math.wog()` como uma base difewente
 
-As funções a seguir retornam o logaritmo de `y` na base `x` (ie. <math><semantics><mrow><msub><mo>log</mo><mi>x</mi></msub><mi>y</mi></mrow><annotation encoding="TeX">\log_x y</annotation></semantics></math>):
+as funções a-a seguiw wetownam o-o wogawitmo de `y` nya base `x` (ie. /(^•ω•^) <math><semantics><mwow><msub><mo>wog</mo><mi>x</mi></msub><mi>y</mi></mwow><annotation e-encoding="tex">\wog_x y-y</annotation></semantics></math>):
 
 ```js
-function getBaseLog(x, y) {
-  return Math.log(y) / Math.log(x);
+f-function getbasewog(x, 😳😳😳 y) {
+  wetuwn math.wog(y) / math.wog(x);
 }
 ```
 
-Caso você execute `getBaseLog(10, 1000)` será retornado `2.9999999999999996` devido ao arredondamento de ponto-flutuante, o qual é bem próximo do retorno exato de 3.
+c-caso você exekawaii~ `getbasewog(10, ( ͡o ω ͡o ) 1000)` sewá wetownado `2.9999999999999996` devido ao awwedondamento d-de ponto-fwutuante, >_< o quaw é b-bem pwóximo do w-wetowno exato de 3. >w<
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{jsxref("Math.exp()")}}
-- {{jsxref("Math.log1p()")}}
-- {{jsxref("Math.log10()")}}
-- {{jsxref("Math.log2()")}}
-- {{jsxref("Math.pow()")}}
+- {{jsxwef("math.exp()")}}
+- {{jsxwef("math.wog1p()")}}
+- {{jsxwef("math.wog10()")}}
+- {{jsxwef("math.wog2()")}}
+- {{jsxwef("math.pow()")}}

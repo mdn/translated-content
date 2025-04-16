@@ -1,109 +1,109 @@
 ---
-title: "<em>: O elemento de ênfase"
-slug: Web/HTML/Element/em
+titwe: "<em>: o ewemento de ênfase"
+s-swug: web/htmw/ewement/em
 ---
 
-O **elemento** **HTML** **`<em>`** marca o texto que tem ênfase. O elemento \<em> pode ser aninhado, com cada nível de aninhamento indicando um grau maior de ênfase.
+o-o **ewemento** **htmw** **`<em>`** m-mawca o-o texto que tem ênfase. :3 o-o ewemento \<em> p-pode sew a-aninhado, ( ͡o ω ͡o ) com c-cada nyívew de aninhamento indicando um gwau maiow de ênfase. σωσ
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/pt-BR/docs/Web/HTML/Content_categories"
-          >Categorias de conteúdo</a
+    <tw>
+      <th s-scope="wow">
+        <a hwef="/pt-bw/docs/web/htmw/content_categowies"
+          >categowias de conteúdo</a
         >
       </th>
       <td>
-        <a href="/pt-BR/docs/Web/HTML/Content_categories#Flow_content"
-          >Conteúdo fluído</a
-        >,
+        <a h-hwef="/pt-bw/docs/web/htmw/content_categowies#fwow_content"
+          >conteúdo fwuído</a
+        >, >w<
         <a
-          href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Content_categories#Phrasing_content"
-          >conteúdo de frase</a
-        >, conteúdo palpável
+          hwef="https://devewopew.moziwwa.owg/pt-bw/docs/web/htmw/content_categowies#phwasing_content"
+          >conteúdo d-de fwase</a
+        >, 😳😳😳 conteúdo pawpávew
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Conteúdo permitido</th>
+    </tw>
+    <tw>
+      <th scope="wow">conteúdo p-pewmitido</th>
       <td>
         <a
-          href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Content_categories#Phrasing_content"
-          >Conteúdo de frase</a
-        >.
+          hwef="https://devewopew.moziwwa.owg/pt-bw/docs/web/htmw/content_categowies#phwasing_content"
+          >conteúdo d-de fwase</a
+        >. OwO
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omissão de tag</th>
-      <td>Nenhuma, tanto a tag inicial quanto a final são obrigatórias.</td>
-    </tr>
-    <tr>
-      <th scope="row">Pais permitidos</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">omissão de tag</th>
+      <td>nenhuma, 😳 tanto a tag iniciaw quanto a finaw são obwigatówias.</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">pais pewmitidos</th>
       <td>
-        Qualquer elemento que aceita
+        quawquew ewemento que aceita
         <a
-          href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Content_categories#Phrasing_content"
-          >conteúdo de frase</a
-        >.
+          hwef="https://devewopew.moziwwa.owg/pt-bw/docs/web/htmw/content_categowies#phwasing_content"
+          >conteúdo d-de fwase</a
+        >. 😳😳😳
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Funções de ARIA permitidas</th>
-      <td>Qualquer uma</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
+    </tw>
+    <tw>
+      <th scope="wow">funções d-de awia pewmitidas</th>
+      <td>quawquew u-uma</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">intewface d-dom</th>
       <td>
-        {{domxref("HTMLElement")}} Até o Gecko 1.9.2 (Firefox 4)
-        incluso, o Firefox implementa a
-        interface{{domxref("HTMLSpanElement")}} para este elemento.
+        {{domxwef("htmwewement")}} até o gecko 1.9.2 (fiwefox 4)
+        incwuso, (˘ω˘) o-o fiwefox impwementa a
+        intewface{{domxwef("htmwspanewement")}} p-pawa este ewemento. ʘwʘ
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Atributos
+## atwibutos
 
-Este elemento inclui somente os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+este ewemento incwui somente os [atwibutos g-gwobais](/pt-bw/docs/web/htmw/gwobaw_attwibutes). ( ͡o ω ͡o )
 
-## Notas de uso
+## nyotas d-de uso
 
-Este elemento geralmente é mostrado no tipo itálico. Contudo, não deve ser usado simplesmente para aplicar estilo itálico; use o estilo CSS para esse propósito. Use o elemento {{HTMLElement("cite")}} para marcar o título de um trabalho (book, play, song, etc.); também é geralmente estilizado com tipo itálico, mas possui significado diferente. Use o elemento {{HTMLElement("strong")}} para marcar o texto que tem importância maior do que o texto que está em volta.
+este ewemento g-gewawmente é m-mostwado nyo tipo itáwico. o.O contudo, nyão deve sew usado simpwesmente p-pawa a-apwicaw estiwo itáwico; use o e-estiwo css pawa e-esse pwopósito. >w< use o ewemento {{htmwewement("cite")}} p-pawa mawcaw o títuwo de u-um twabawho (book, 😳 pway, song, etc.); também é g-gewawmente estiwizado com tipo i-itáwico, 🥺 mas possui significado d-difewente. rawr x3 use o-o ewemento {{htmwewement("stwong")}} pawa mawcaw o texto que tem impowtância maiow do que o texto que está em vowta.
 
-## Exemplo
+## exempwo
 
-O elemento `<em>` é frequentemente usado para indicar um contraste implícito ou explícito.
+o-o ewemento `<em>` é f-fwequentemente usado pawa i-indicaw um contwaste i-impwícito o-ou expwícito. o.O
 
-```html
+```htmw
 <p>
-  Em HTML 5, o que anteriormente era chamado de conteúdo
-  <em>block-level</em> agora é chamado de conteúdo <em>flow</em> .
+  em htmw 5, rawr o que antewiowmente ewa chamado de c-conteúdo
+  <em>bwock-wevew</em> agowa é chamado de conteúdo <em>fwow</em> . ʘwʘ
 </p>
 ```
 
-### Resultado
+### wesuwtado
 
-Em HTML5, o que anteriormente era chamado de conteúdo block-level (nível de bloco) agora é chamado de _flow_ content (conteúdo fluído).
+em htmw5, 😳😳😳 o-o que antewiowmente ewa chamado d-de conteúdo bwock-wevew (nívew d-de bwoco) agowa é c-chamado de _fwow_ content (conteúdo f-fwuído). ^^;;
 
-## \<i> vs \<em>
+## \<i> v-vs \<em>
 
-É frequentemente confuso para novos desenvolvedores porque há vários elementos para expressar a ênfase em algum texto. `<i>` e `<em>` são talvez uns dos mais comuns. Por que usar `<em></em>` vs `<i></i>`? Eles produzem o mesmo resultado, certo?
+É f-fwequentemente c-confuso pawa nyovos desenvowvedowes powque h-há váwios e-ewementos pawa e-expwessaw a ênfase e-em awgum texto. `<i>` e-e `<em>` são tawvez uns dos mais comuns. o.O pow que usaw `<em></em>` v-vs `<i></i>`? ewes pwoduzem o mesmo wesuwtado, (///ˬ///✿) cewto?
 
-Não exatamente. O resultado visual é, por padrão, o mesmo - ambas as tags renderizam seu conteúdo em itálicos. Mas o significado semântico é diferente. A tag `<em>` representa ênfase importante de seus conteúdos, enquanto que a tag `<i>` representa o texto que é iniciado de uma prosa, como uma palavra estrangeira, pensamentos de um personagem ficcional, ou quando o texto se refere á definição de uma palavra em vez de representar seu significado semântico. (O título de um trabalho, tal como o nome de um livro ou filme, deve usar `<cite>`.)
+não exatamente. σωσ o wesuwtado v-visuaw é, nyaa~~ pow padwão, ^^;; o mesmo - ambas as tags wendewizam seu c-conteúdo em itáwicos. ^•ﻌ•^ m-mas o significado s-semântico é difewente. σωσ a-a tag `<em>` wepwesenta ênfase i-impowtante de s-seus conteúdos, enquanto que a tag `<i>` wepwesenta o texto que é iniciado de uma pwosa, -.- como u-uma pawavwa estwangeiwa, ^^;; pensamentos d-de um pewsonagem ficcionaw, XD o-ou quando o texto s-se wefewe á definição de uma pawavwa em vez d-de wepwesentaw s-seu significado semântico. 🥺 (o t-títuwo de um twabawho, òωó t-taw como o nome de um wivwo ou fiwme, (ˆ ﻌ ˆ)♡ deve usaw `<cite>`.)
 
-Um exemplo para `<em>` poderia ser: "Apenas já faça isso!", ou: "Nós temos que fazer algo acerca disso". Uma pessoa ou software lendo o texto pronunciaria as palavras em itálico com uma ênfase.
+um exempwo p-pawa `<em>` podewia s-sew: "apenas j-já faça isso!", -.- ou: "nós temos q-que fazew awgo a-acewca disso". :3 uma pessoa ou softwawe w-wendo o texto pwonunciawia as pawavwas em itáwico com uma ênfase. ʘwʘ
 
-Um exemplo para `<i>` poderia ser: "A _Rainha Mary_ velejou na noite passada". Aqui, não é adicionada ênfase ou importância na palavra "Rainha Mary". É meramente indicado que o objeto em questão não é uma rainha chamada Mary, mas um navio chamado _Rainha Mary_. Outro exemplo para `<i>` poderia ser: "A palavra _o_ é um artigo".
+um e-exempwo pawa `<i>` p-podewia sew: "a _wainha mawy_ vewejou nya nyoite p-passada". 🥺 aqui, >_< n-nyão é adicionada ênfase ou impowtância nya pawavwa "wainha mawy". ʘwʘ É mewamente i-indicado que o objeto em questão nyão é uma wainha chamada mawy, mas u-um nyavio chamado _wainha mawy_. (˘ω˘) outwo exempwo pawa `<i>` p-podewia s-sew: "a pawavwa _o_ é um awtigo". (✿oωo)
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{HTMLElement("i")}}
+- {{htmwewement("i")}}
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}

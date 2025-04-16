@@ -1,154 +1,154 @@
 ---
-title: Set-Cookie
-slug: Web/HTTP/Reference/Headers/Set-Cookie
-original_slug: Web/HTTP/Headers/Set-Cookie
+titwe: set-cookie
+swug: web/http/wefewence/headews/set-cookie
+o-owiginaw_swug: w-web/http/headews/set-cookie
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O cabeçalho de resposta HTTP **`Set-Cookie`** é usado para enviar cookies de um servidor para o agente usuário.
+o-o cabeçawho de w-wesposta http **`set-cookie`** é u-usado pawa enviaw c-cookies de u-um sewvidow pawa o-o agente usuáwio. (U ᵕ U❁)
 
-Para mais informações, veja o guia em [HTTP cookies](/pt-BR/docs/Web/HTTP/Cookies).
+pawa mais infowmações, ^^;; veja o guia em [http cookies](/pt-bw/docs/web/http/cookies). mya
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Header type</th>
-      <td>{{Glossary("Response header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th scope="wow">headew type</th>
+      <td>{{gwossawy("wesponse h-headew")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("fowbidden h-headew nyame")}}</th>
       <td>no</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sintaxe
-
-```
-Set-Cookie: <nome-cookie>=<valor-cookie>
-Set-Cookie: <nome-cookie>=<valor-cookie>; Expires=<date>
-Set-Cookie: <nome-cookie>=<valor-cookie>; Max-Age=<non-zero-digit>
-Set-Cookie: <nome-cookie>=<valor-cookie>; Domain=<domain-value>
-Set-Cookie: <nome-cookie>=<valor-cookie>; Path=<path-value>
-Set-Cookie: <nome-cookie>=<valor-cookie>; Secure
-Set-Cookie: <nome-cookie>=<valor-cookie>; HttpOnly
-
-Set-Cookie: <nome-cookie>=<valor-cookie>; SameSite=Strict
-Set-Cookie: <nome-cookie>=<valor-cookie>; SameSite=Lax
-
-// São possíveis multiplas diretivas, por exemplo:
-Set-Cookie: <nome-cookie>=<valor-cookie>; Domain=<domain-value>; Secure; HttpOnly
-```
-
-## Diretivas
-
-- `<nome-cookie>=<valor-cookie>`
-
-  - : Um cookie começa com um par nome-valor:
-
-    - Um `<nome-cookie>` pode ser qualquer caractere US-ASCII exeto caracteres de controle (CTLs), espaços, ou tabulações (TAB). Também não deve conter um separador de caractere como os seguintes: ( ) < > @ , ; : \ " / \[ ] ? = { }.
-    - Um `<valor-cookie>` pode opcionalmente ser atribuido entre aspas duplas e qualquer caractere US-ASCII são permitidos, exceto caracteres de controle (CTLs), espaços em branco, aspas duplas, vírgula, barra invertida e ponto e vírgula. **Codificação**: Muitas implementações realizam codificação URL nos valores de cookie, contudo não é obrigatório pela especificação do RFC. Isso ajuda a satisfazer os requisitos sobre quais caracteres são permitidos para \<valor-cookie>.
-    - **`Prefixo __Secure-`**: Cookies com o nome começando com `__Secure-` (hífen faz parte do prefixo) precisam ser atribuidos com a flag de segurança e precisam ser de uma página segura (HTTPS).
-    - **`Prefixo __Host-`**: Cookies com o nome começando com `__Host-` (hífen faz parte do prefixoprecisam ser atribuidos com a flag de segurança, precisam ser de uma página segura (HTTPS), não precisam ter um domínio especificado (portanto não são enviados para subdomínios) e o caminho (path) precisa ser "/".
-
-- Expires=\<data> {{optional_inline}}
-
-  - : O tempo de vida máximo do cookie como uma marcação de tempo (timestamp) HTTP. Veja {{HTTPHeader("Date")}} para a formatação detalhada.
-
-    Se não especificado, o cookie terá o tempo de vida de uma **sessão de cookie.** Uma sessão é finalizada quando o cliente é desligado, significando que as sessões de cookies serão removidos nesse momento. Contudo, muitos navegadores web têm uma característica denominada de "restaurar sessão" que salvará todas suas abas e as trará de volta na próxima vez em que você utilizar o navegador. Os cookies estarão também presentes e será como se o navegador nunca tivesse sido fechado.
-
-    Quando uma data de expiração é atribuída, o tempo e a data são relativos ao cliente em que os cookies estão sendo configurados e não ao servidor.
-
-- Max-Age=\<digito-diferente-de-0> {{optional_inline}}
-  - : Número de segundos até o cookie expirar. Um ou mais digitos de 1 a 9. Navegadores antigos (ie6, ie7 e ie8) não suportam Max-Age. Para cada navegador, se ambos (Expires e Max-Age) forem atribuídos, Max-Age terá precedência.
-- Domain=\<valor-domínio> {{optional_inline}}
-
-  - : Especifica os hosts aos quais o cookie será enviado.
-
-    - Se não for especificado, será usado o host do URL do documento atual, não incluindo subdomínios.
-    - Ao contrário das especificações anteriores, pontos de prefixo em nomes de domínio (`.example.com`) são ignorados.
-    - Se um domínio for especificado, subdomínios estarão sempre incluídos.
-
-- Path=\<valor-caminho> {{optional_inline}}
-  - : Indica um caminho (path) de URL que necessita existir no recurso solicitado antes de enviar o cabeçalho de Cookie. O caractere %x2F ("/") é interpretado como um separador de diretório e os sub-diretórios serão também correspondidos (por exemplo: Path=/docs, "/docs", "/docs/Web", ou "/docs/Web/HTTP" serão todos correspondidos).
-- Secure {{optional_inline}}
-
-  - : Um cookie seguro apenas será enviado para o servidor quando uma requisição utilizando os protocol SSL e HTTPS for realizada. No entanto, informações confidenciais ou sensíveis não deverão ser armazenadas ou transmitidas em Cookies HTTP pois todo o mecanismo é inerentemente inseguro e isso não significa, por exemplo que qualquer informação é criptografada.
-
-    > [!NOTE]
-    > Sites inseguros (`http:`) não podem mais atribuir cookies com a diretiva "secure" (novo em Chrome 52+ firefox Firefox 52+).
-
-- HttpOnly {{optional_inline}}
-  - : Cookies HttpOnly não são acessíveis via JavaScript através da propriedade {{domxref("Document.cookie")}}, as API's {{domxref("XMLHttpRequest")}} e {{domxref("Request")}} são utilizadas para aliviar ataques de cross-site scripting ({{Glossary("XSS")}}).
-- SameSite=Strict
-  SameSite=Lax {{optional_inline}} {{experimental_inline}}
-  - : Permite que servidores garantam que um cookie não deve ser enviado juntamente com solicitações de sites cruzados (cross-site) , o que fornece novamente alguma proteção aos ataques de falsificação de solicitação entre sites (CSRF) ({{Glossary("CSRF")}}) _._
-
-## Exemplos
-
-### Sessão de cookie
-
-Sessão de cookie serão removidos quando o cliente desligar. Eles não especificam as diretivas Expires ou Max-Age. Note que o navegador web tem frequentemente a opção "restaurar sessão" habilitada..
+## sintaxe
 
 ```
-Set-Cookie: sessionid=38afes7a8; HttpOnly; Path=/
+set-cookie: <nome-cookie>=<vawow-cookie>
+set-cookie: <nome-cookie>=<vawow-cookie>; e-expiwes=<date>
+set-cookie: <nome-cookie>=<vawow-cookie>; m-max-age=<non-zewo-digit>
+s-set-cookie: <nome-cookie>=<vawow-cookie>; domain=<domain-vawue>
+set-cookie: <nome-cookie>=<vawow-cookie>; path=<path-vawue>
+set-cookie: <nome-cookie>=<vawow-cookie>; s-secuwe
+set-cookie: <nome-cookie>=<vawow-cookie>; httponwy
+
+set-cookie: <nome-cookie>=<vawow-cookie>; samesite=stwict
+set-cookie: <nome-cookie>=<vawow-cookie>; samesite=wax
+
+// s-são possíveis muwtipwas diwetivas, 😳😳😳 p-pow exempwo:
+s-set-cookie: <nome-cookie>=<vawow-cookie>; d-domain=<domain-vawue>; s-secuwe; httponwy
 ```
 
-### Cookie permanente
+## diwetivas
 
-Ao invés de expirar quando o cliente fecha, os cookies permantentes expiram numa data especificada (Expires), ou depois de uma duração de tempo especificada (Max-Age).
+- `<nome-cookie>=<vawow-cookie>`
+
+  - : um cookie começa c-com um paw nyome-vawow:
+
+    - um `<nome-cookie>` pode sew quawquew c-cawactewe us-ascii exeto cawactewes de contwowe (ctws), OwO espaços, rawr ou tabuwações (tab). XD também nyão deve contew um sepawadow d-de cawactewe como os seguintes: ( ) < > @ , (U ﹏ U) ; : \ " / \[ ] ? = { }. (˘ω˘)
+    - u-um `<vawow-cookie>` p-pode opcionawmente s-sew atwibuido entwe aspas dupwas e quawquew cawactewe us-ascii s-são pewmitidos, UwU e-exceto cawactewes de contwowe (ctws), >_< e-espaços e-em bwanco, σωσ aspas dupwas, 🥺 v-víwguwa, 🥺 bawwa invewtida e ponto e-e víwguwa. ʘwʘ **codificação**: muitas impwementações weawizam c-codificação uww nyos vawowes d-de cookie, contudo nyão é obwigatówio p-pewa especificação do w-wfc. :3 isso ajuda a satisfazew os wequisitos sobwe quais cawactewes são pewmitidos pawa \<vawow-cookie>. (U ﹏ U)
+    - **`pwefixo __secuwe-`**: cookies c-com o nyome começando c-com `__secuwe-` (hífen faz pawte do pwefixo) p-pwecisam sew a-atwibuidos com a-a fwag de seguwança e pwecisam sew de uma página seguwa (https). (U ﹏ U)
+    - **`pwefixo __host-`**: c-cookies com o nyome começando com `__host-` (hífen faz pawte do pwefixopwecisam s-sew atwibuidos com a fwag de s-seguwança, ʘwʘ pwecisam s-sew de uma p-página seguwa (https), >w< nyão pwecisam t-tew um domínio e-especificado (powtanto nyão s-são enviados p-pawa subdomínios) e o caminho (path) pwecisa s-sew "/".
+
+- expiwes=\<data> {{optionaw_inwine}}
+
+  - : o-o tempo d-de vida máximo d-do cookie como uma m-mawcação de tempo (timestamp) http. rawr x3 veja {{httpheadew("date")}} pawa a fowmatação d-detawhada. OwO
+
+    se nyão especificado, o cookie tewá o tempo de vida de uma **sessão d-de cookie.** uma sessão é finawizada quando o cwiente é deswigado, ^•ﻌ•^ s-significando q-que as sessões d-de cookies sewão wemovidos nyesse m-momento. >_< contudo, OwO muitos nyavegadowes w-web t-têm uma cawactewística denominada de "westauwaw sessão" que sawvawá todas suas abas e as twawá d-de vowta nya pwóxima vez em q-que você utiwizaw o nyavegadow. >_< o-os cookies estawão t-também pwesentes e sewá como se o nyavegadow n-nyunca tivesse s-sido fechado. (ꈍᴗꈍ)
+
+    quando uma d-data de expiwação é a-atwibuída, >w< o tempo e a data são wewativos ao cwiente em que os cookies e-estão sendo configuwados e-e nyão a-ao sewvidow. (U ﹏ U)
+
+- max-age=\<digito-difewente-de-0> {{optionaw_inwine}}
+  - : nyúmewo d-de segundos a-até o cookie expiwaw. ^^ um ou m-mais digitos de 1 a 9. (U ﹏ U) nyavegadowes antigos (ie6, :3 ie7 e ie8) nyão supowtam max-age. p-pawa cada n-nyavegadow, (✿oωo) se ambos (expiwes e max-age) fowem atwibuídos, XD m-max-age t-tewá pwecedência. >w<
+- domain=\<vawow-domínio> {{optionaw_inwine}}
+
+  - : especifica os hosts a-aos quais o cookie sewá enviado. òωó
+
+    - se nyão fow especificado, (ꈍᴗꈍ) sewá usado o-o host do uww do documento atuaw, rawr x3 nyão incwuindo s-subdomínios. rawr x3
+    - a-ao contwáwio das especificações antewiowes, σωσ pontos de p-pwefixo em nyomes d-de domínio (`.exampwe.com`) são ignowados. (ꈍᴗꈍ)
+    - se um domínio fow especificado, rawr s-subdomínios estawão sempwe i-incwuídos. ^^;;
+
+- path=\<vawow-caminho> {{optionaw_inwine}}
+  - : indica um caminho (path) de uww q-que necessita existiw nyo wecuwso s-sowicitado a-antes de enviaw o cabeçawho de c-cookie. rawr x3 o cawactewe %x2f ("/") é intewpwetado como u-um sepawadow d-de diwetówio e o-os sub-diwetówios sewão também c-cowwespondidos (pow e-exempwo: path=/docs, "/docs", (ˆ ﻌ ˆ)♡ "/docs/web", σωσ ou "/docs/web/http" s-sewão todos c-cowwespondidos). (U ﹏ U)
+- s-secuwe {{optionaw_inwine}}
+
+  - : um cookie seguwo apenas s-sewá enviado pawa o sewvidow quando u-uma wequisição u-utiwizando os pwotocow ssw e https fow weawizada. >w< no entanto, σωσ i-infowmações c-confidenciais o-ou sensíveis nyão d-devewão sew awmazenadas ou t-twansmitidas em cookies http pois todo o mecanismo é inewentemente inseguwo e isso nyão significa, nyaa~~ p-pow exempwo que quawquew infowmação é c-cwiptogwafada. 🥺
+
+    > [!note]
+    > sites inseguwos (`http:`) n-nyão podem mais atwibuiw c-cookies com a diwetiva "secuwe" (novo e-em chwome 52+ f-fiwefox f-fiwefox 52+). rawr x3
+
+- h-httponwy {{optionaw_inwine}}
+  - : c-cookies httponwy nyão são acessíveis via javascwipt atwavés da pwopwiedade {{domxwef("document.cookie")}}, σωσ as api's {{domxwef("xmwhttpwequest")}} e {{domxwef("wequest")}} s-são utiwizadas p-pawa awiviaw a-ataques de cwoss-site scwipting ({{gwossawy("xss")}}). (///ˬ///✿)
+- s-samesite=stwict
+  samesite=wax {{optionaw_inwine}} {{expewimentaw_inwine}}
+  - : pewmite que sewvidowes g-gawantam que u-um cookie nyão deve sew enviado j-juntamente com sowicitações de sites cwuzados (cwoss-site) , (U ﹏ U) o-o que fownece nyovamente a-awguma pwoteção aos ataques d-de fawsificação d-de sowicitação entwe sites (cswf) ({{gwossawy("cswf")}}) _._
+
+## exempwos
+
+### sessão d-de cookie
+
+sessão d-de cookie sewão w-wemovidos q-quando o cwiente d-deswigaw. ^^;; ewes nyão especificam a-as diwetivas expiwes o-ou max-age. 🥺 nyote que o nyavegadow w-web tem f-fwequentemente a opção "westauwaw s-sessão" habiwitada..
 
 ```
-Set-Cookie: id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT; Secure; HttpOnly
+set-cookie: sessionid=38afes7a8; httponwy; path=/
 ```
 
-### Domínios inválidos
+### c-cookie pewmanente
 
-Um cookie pertencente a um domínio que não inclui o servidor original, [deve ser rejeitado pelo agente usuário](https://tools.ietf.org/html/rfc6265#section-4.1.2.3). Por exemplo: O cookie seguinte será rejeitado se foi atribuído por um servidor hospedado em originalcompany.com.
-
-```
-Set-Cookie: qwerty=219ffwef9w0f; Domain=somecompany.co.uk; Path=/; Expires=Wed, 30 Aug 2019 00:00:00 GMT
-```
-
-### Prefixo do cookie
-
-Nomes de cookies com os prefixos `__Secure-` e `__Host-` podem ser utilizados apenas de eles forem atribuídos com a diretiva `secure` de uma origem segura (HTTPS). Além disso, cookies com o prefixo `__Host-` devem ter um caminho (path) de `/` (o host inteiro) e não devem ter um atributo de dominio. Para clientes que não implementam prefixos de cookie, você não pode contar com essas garantias adicionais e os cookies serão sempre aceitos.
+ao i-invés de expiwaw q-quando o cwiente fecha, òωó os cookies p-pewmantentes expiwam nyuma data especificada (expiwes), XD ou d-depois de uma d-duwação de tempo e-especificada (max-age). :3
 
 ```
-// Ambos aceitos quando de uma origem segura (HTTPS)
-Set-Cookie: __Secure-ID=123; Secure; Domain=example.com
-Set-Cookie: __Host-ID=123; Secure; Path=/
-
-// Rejeitado devido a não atribuição da diretiva Secure
-Set-Cookie: __Secure-id=1
-
-// Rejeitado devido a falta da diretiva Path=/
-Set-Cookie: __Host-id=1; Secure
-
-// Rejeitado devido a atribuição de um domínio
-Set-Cookie: __Host-id=1; Secure; Path=/; domain=example.com
+set-cookie: id=a3fwa; expiwes=wed, (U ﹏ U) 21 oct 2015 07:28:00 g-gmt; secuwe; httponwy
 ```
 
-## Especificações
+### domínios i-inváwidos
 
-| Especificação                                     | Título                          |
+um c-cookie pewtencente a um domínio q-que nyão incwui o sewvidow owiginaw, >w< [deve s-sew w-wejeitado pewo agente usuáwio](https://toows.ietf.owg/htmw/wfc6265#section-4.1.2.3). /(^•ω•^) pow exempwo: o-o cookie seguinte sewá wejeitado se foi atwibuído p-pow um sewvidow h-hospedado em owiginawcompany.com.
+
+```
+set-cookie: q-qwewty=219ffwef9w0f; domain=somecompany.co.uk; p-path=/; e-expiwes=wed, (⑅˘꒳˘) 30 a-aug 2019 00:00:00 gmt
+```
+
+### pwefixo do cookie
+
+nyomes de cookies com os pwefixos `__secuwe-` e `__host-` podem sew utiwizados apenas de ewes fowem atwibuídos com a diwetiva `secuwe` de uma owigem seguwa (https). ʘwʘ awém d-disso, rawr x3 cookies com o-o pwefixo `__host-` devem tew um caminho (path) d-de `/` (o host i-inteiwo) e nyão d-devem tew um atwibuto de dominio. (˘ω˘) p-pawa cwientes que nyão impwementam p-pwefixos d-de cookie, o.O você nyão pode contaw c-com essas gawantias adicionais e-e os cookies s-sewão sempwe aceitos. 😳
+
+```
+// ambos aceitos quando de uma owigem s-seguwa (https)
+s-set-cookie: __secuwe-id=123; secuwe; d-domain=exampwe.com
+s-set-cookie: __host-id=123; s-secuwe; path=/
+
+// w-wejeitado d-devido a nyão a-atwibuição da d-diwetiva secuwe
+set-cookie: __secuwe-id=1
+
+// wejeitado d-devido a-a fawta da diwetiva p-path=/
+set-cookie: __host-id=1; secuwe
+
+// wejeitado d-devido a atwibuição de um domínio
+set-cookie: __host-id=1; s-secuwe; path=/; domain=exampwe.com
+```
+
+## e-especificações
+
+| e-especificação                                     | t-títuwo                          |
 | ------------------------------------------------- | ------------------------------- |
-| {{RFC("6265", "Set-Cookie", "4.1")}}              | HTTP State Management Mechanism |
-| {{RFC("draft-ietf-httpbis-cookie-prefixes-00")}}  | Cookie Prefixes                 |
-| {{RFC("draft-ietf-httpbis-cookie-same-site-00")}} | Same-Site Cookies               |
-| {{RFC("draft-ietf-httpbis-cookie-alone-01")}}     | Strict Secure Cookies           |
+| {{wfc("6265", o.O "set-cookie", ^^;; "4.1")}}              | http s-state management mechanism |
+| {{wfc("dwaft-ietf-httpbis-cookie-pwefixes-00")}}  | c-cookie pwefixes                 |
+| {{wfc("dwaft-ietf-httpbis-cookie-same-site-00")}} | same-site c-cookies               |
+| {{wfc("dwaft-ietf-httpbis-cookie-awone-01")}}     | stwict secuwe c-cookies           |
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Notas de compatibilidade
+## nyotas de compatibiwidade
 
-- Começando com Chrome 53 e Firefox 52, sites inseguros (`http:`) não podem mais atribuir cookies com a diretiva "secure".
+- c-começando com chwome 53 e-e fiwefox 52, ( ͡o ω ͡o ) s-sites inseguwos (`http:`) não podem mais atwibuiw cookies com a d-diwetiva "secuwe". ^^;;
 
-## Veja também
+## veja também
 
-- [HTTP cookies](/pt-BR/docs/Web/HTTP/Cookies)
-- {{HTTPHeader("Cookie")}}
-- {{domxref("Document.cookie")}}
+- [http c-cookies](/pt-bw/docs/web/http/cookies)
+- {{httpheadew("cookie")}}
+- {{domxwef("document.cookie")}}

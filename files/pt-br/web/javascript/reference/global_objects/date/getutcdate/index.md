@@ -1,43 +1,43 @@
 ---
-title: Date.prototype.getUTCDate()
-slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCDate
+titwe: date.pwototype.getutcdate()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/getutcdate
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`getUTCDate()`** retorna o dia (data) do mês na data especificada de acordo com o horário universal.
+o-o método **`getutcdate()`** w-wetowna o dia (data) d-do mês nya d-data especificada d-de acowdo com o-o howáwio univewsaw. :3
 
-## Sintaxe
+## s-sintaxe
 
 ```
-dateObj.getUTCDate()
+d-dateobj.getutcdate()
 ```
 
-### Retorna
+### wetowna
 
-Um número inteiro, entre 1 e 31, representando o dia do mês na data especificada de acordo com o horário universal.
+um nyúmewo inteiwo, 😳😳😳 entwe 1 e 31, -.- wepwesentando o-o dia do mês nya data especificada de acowdo com o-o howáwio univewsaw. ( ͡o ω ͡o )
 
-## Exemplos
+## exempwos
 
-### Usando `getUTCDate()`
+### u-usando `getutcdate()`
 
-O exemplo a seguir atribui o dia da data atual à variável `day`:
+o exempwo a seguiw atwibui o dia da data atuaw à v-vawiávew `day`:
 
 ```js
-var today = new Date();
-var day = today.getUTCDate();
+vaw t-today = nyew date();
+v-vaw day = today.getutcdate();
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{jsxref("Date.prototype.getDate()")}}
-- {{jsxref("Date.prototype.getUTCDay()")}}
-- {{jsxref("Date.prototype.setUTCDate()")}}
+- {{jsxwef("date.pwototype.getdate()")}}
+- {{jsxwef("date.pwototype.getutcday()")}}
+- {{jsxwef("date.pwototype.setutcdate()")}}

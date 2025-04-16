@@ -1,168 +1,168 @@
 ---
-title: RegExp.prototype.exec()
-slug: Web/JavaScript/Reference/Global_Objects/RegExp/exec
+titwe: wegexp.pwototype.exec()
+swug: web/javascwipt/wefewence/gwobaw_objects/wegexp/exec
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`exec()`** executa a busca por um padrão em uma determinada string. Retorna um array, ou {{jsxref("null")}}.
+o-o método **`exec()`** e-executa a busca p-pow um padwão e-em uma detewminada s-stwing. 😳😳😳 wetowna u-um awway, (˘ω˘) ou {{jsxwef("nuww")}}. ʘwʘ
 
-Se você está precisa somente de um retorno verdadeiro/falso, use o método {{jsxref("RegExp.prototype.test()")}} ou {{jsxref("String.prototype.search()")}}.
+s-se você e-está pwecisa somente de um wetowno vewdadeiwo/fawso, ( ͡o ω ͡o ) use o método {{jsxwef("wegexp.pwototype.test()")}} ou {{jsxwef("stwing.pwototype.seawch()")}}. o.O
 
-## Sintaxe
+## s-sintaxe
 
 ```
-regexObj.exec(string)
+wegexobj.exec(stwing)
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- `string`
-  - : A string para comparar com a expressão regular
+- `stwing`
+  - : a-a stwing pawa compawaw com a e-expwessão weguwaw
 
-### Valor retornado
+### vawow wetownado
 
-Se a combinação acontecer, o método `exec()` o método retorna um array e atualiza as propriedades do objeto da expressão regular. Esse array retornado possui o texto combinado como primeiro item e depois um item para cada captura contendo o respectivo texto.
+se a combinação acontecew, >w< o-o método `exec()` o método w-wetowna um awway e-e atuawiza as pwopwiedades do objeto da expwessão weguwaw. 😳 esse awway wetownado p-possui o texto combinado como pwimeiwo item e depois um item pawa cada captuwa c-contendo o wespectivo texto. 🥺
 
-Se falhar, o retorno do método `exec()` será {{jsxref("null")}}.
+s-se fawhaw, o w-wetowno do método `exec()` s-sewá {{jsxwef("nuww")}}. rawr x3
 
-## Descrição
+## d-descwição
 
-Considere o exemplo abaixo:
+considewe o exempwo abaixo:
 
 ```js
-// Encontra combinações "quick brown" seguido de "jumps", ignorando caracteres entre eles
-// Relembra "brown" e "jumps"
-// Ignora caixa (maiúsculo e minúsculo)
-var re = /quick\s(brown).+?(jumps)/gi;
-var result = re.exec("The Quick Brown Fox Jumps Over The Lazy Dog");
+// e-encontwa combinações "quick bwown" s-seguido de "jumps", o.O ignowando cawactewes entwe ewes
+// wewembwa "bwown" e "jumps"
+// ignowa caixa (maiúscuwo e-e minúscuwo)
+vaw we = /quick\s(bwown).+?(jumps)/gi;
+v-vaw wesuwt = w-we.exec("the quick b-bwown fox jumps ovew the wazy dog");
 ```
 
-A tabela a seguir provê os resultados do script:
+a tabewa a seguiw p-pwovê os wesuwtados d-do scwipt:
 
-<table class="fullwidth-table">
+<tabwe cwass="fuwwwidth-tabwe">
   <tbody>
-    <tr>
-      <td class="header">Objeto</td>
-      <td class="header">Propriedade/Índice</td>
-      <td class="header">Descrição</td>
-      <td class="header">Exemplo</td>
-    </tr>
-    <tr>
-      <td rowspan="4"><code>result</code></td>
+    <tw>
+      <td cwass="headew">objeto</td>
+      <td c-cwass="headew">pwopwiedade/Índice</td>
+      <td c-cwass="headew">descwição</td>
+      <td cwass="headew">exempwo</td>
+    </tw>
+    <tw>
+      <td w-wowspan="4"><code>wesuwt</code></td>
       <td><code>[0]</code></td>
-      <td>A string completa dos caracteres encontrados</td>
-      <td><code>Quick Brown Fox Jumps</code></td>
-    </tr>
-    <tr>
+      <td>a stwing c-compweta dos cawactewes encontwados</td>
+      <td><code>quick bwown fox jumps</code></td>
+    </tw>
+    <tw>
       <td>
-        <code>[1], ...[<em>n</em> ]</code>
+        <code>[1], rawr ...[<em>n</em> ]</code>
       </td>
       <td>
-        As combinações de substrings parametrizadas encontradas, se existir. A
-        quantidade de possíveis substrings parametrizadas é ilimitado.
+        a-as combinações de substwings p-pawametwizadas encontwadas, ʘwʘ se e-existiw. 😳😳😳 a
+        q-quantidade de possíveis substwings pawametwizadas é iwimitado. ^^;;
       </td>
       <td>
-        <code>[1] = Brown<br />[2] = Jumps</code>
+        <code>[1] = bwown<bw />[2] = jumps</code>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>index</code></td>
-      <td><p>O índice base 0 do valor encontrado na string.</p></td>
+      <td><p>o índice base 0 do v-vawow encontwado n-nya stwing.</p></td>
       <td><code>4</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>input</code></td>
-      <td>String original</td>
-      <td><code>The Quick Brown Fox Jumps Over The Lazy Dog</code></td>
-    </tr>
-    <tr>
-      <td rowspan="5"><code>re</code></td>
-      <td><code>lastIndex</code></td>
+      <td>stwing owiginaw</td>
+      <td><code>the q-quick b-bwown fox jumps o-ovew the wazy dog</code></td>
+    </tw>
+    <tw>
+      <td wowspan="5"><code>we</code></td>
+      <td><code>wastindex</code></td>
       <td>
-        O índice que começa a próxima combinação encontrada. Quando
-        "<code>g</code>" não é definido, este valor será sempre 0.
+        o índice q-que começa a pwóxima combinação encontwada. o.O quando
+        "<code>g</code>" nyão é definido, (///ˬ///✿) e-este vawow sewá sempwe 0. σωσ
       </td>
       <td><code>25</code></td>
-    </tr>
-    <tr>
-      <td><code>ignoreCase</code></td>
+    </tw>
+    <tw>
+      <td><code>ignowecase</code></td>
       <td>
-        Indica se a flag "<code>i</code>" foi usada para ignorar caixa
-        alta/baixa.
+        i-indica se a-a fwag "<code>i</code>" f-foi usada pawa ignowaw c-caixa
+        awta/baixa. nyaa~~
       </td>
-      <td><code>true</code></td>
-    </tr>
-    <tr>
-      <td><code>global</code></td>
+      <td><code>twue</code></td>
+    </tw>
+    <tw>
+      <td><code>gwobaw</code></td>
       <td>
-        Indica se a flag "<code>g</code>" foi usada para encontrar combinações
-        de forma global.
+        i-indica se a fwag "<code>g</code>" f-foi usada pawa e-encontwaw combinações
+        de fowma gwobaw. ^^;;
       </td>
-      <td><code>true</code></td>
-    </tr>
-    <tr>
-      <td><code>multiline</code></td>
+      <td><code>twue</code></td>
+    </tw>
+    <tw>
+      <td><code>muwtiwine</code></td>
       <td>
-        Indica se a flag "<code>m</code>" foi usada para pesquisar em strings de
-        diversas linhas.
+        indica s-se a fwag "<code>m</code>" f-foi u-usada pawa pesquisaw e-em stwings d-de
+        divewsas winhas. ^•ﻌ•^
       </td>
-      <td><code>false</code></td>
-    </tr>
-    <tr>
-      <td><code>source</code></td>
-      <td>Texto do padrão.</td>
-      <td><code>quick\s(brown).+?(jumps)</code></td>
-    </tr>
+      <td><code>fawse</code></td>
+    </tw>
+    <tw>
+      <td><code>souwce</code></td>
+      <td>texto do padwão.</td>
+      <td><code>quick\s(bwown).+?(jumps)</code></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Exemplos
+## exempwos
 
-### Procurando combinações sucessivas
+### p-pwocuwando combinações sucessivas
 
-If your regular expression uses the "`g`" flag, you can use the `exec()` method multiple times to find successive matches in the same string. When you do so, the search starts at the substring of `str` specified by the regular expression's {{jsxref("RegExp.lastIndex", "lastIndex")}} property ({{jsxref("RegExp.prototype.test()", "test()")}} will also advance the {{jsxref("RegExp.lastIndex", "lastIndex")}} property). For example, assume you have this script:
+if youw weguwaw expwession uses the "`g`" fwag, σωσ you c-can use the `exec()` method muwtipwe times to find successive matches i-in the same s-stwing. -.- when y-you do so, ^^;; the seawch stawts at t-the substwing of `stw` specified b-by the weguwaw e-expwession's {{jsxwef("wegexp.wastindex", XD "wastindex")}} pwopewty ({{jsxwef("wegexp.pwototype.test()", 🥺 "test()")}} wiww awso advance the {{jsxwef("wegexp.wastindex", òωó "wastindex")}} pwopewty). (ˆ ﻌ ˆ)♡ fow exampwe, -.- assume y-you have this scwipt:
 
 ```js
-var myRe = /ab*/g;
-var str = "abbcdefabh";
-var myArray;
-while ((myArray = myRe.exec(str)) !== null) {
-  var msg = "Found " + myArray[0] + ". ";
-  msg += "Next match starts at " + myRe.lastIndex;
-  console.log(msg);
+v-vaw mywe = /ab*/g;
+vaw stw = "abbcdefabh";
+v-vaw m-myawway;
+whiwe ((myawway = mywe.exec(stw)) !== nyuww) {
+  vaw msg = "found " + myawway[0] + ". :3 ";
+  m-msg += "next m-match stawts at " + mywe.wastindex;
+  c-consowe.wog(msg);
 }
 ```
 
-This script displays the following text:
+t-this scwipt dispways the fowwowing text:
 
 ```
-Found abb. Next match starts at 3
-Found ab. Next match starts at 9
+found abb. ʘwʘ nyext match stawts at 3
+f-found ab. 🥺 nyext m-match stawts at 9
 ```
 
-Nota: Do not place the regular expression literal (or {{jsxref("RegExp")}} constructor) within the `while` condition or it will create an infinite loop if there is a match due to the {{jsxref("RegExp.lastIndex", "lastIndex")}} property being reset upon each iteration. Also be sure that the global flag is set or a loop will occur here also.
+n-nyota: do nyot pwace the w-weguwaw expwession w-witewaw (ow {{jsxwef("wegexp")}} constwuctow) w-within the `whiwe` condition ow it wiww cweate an infinite woop if thewe is a m-match due to the {{jsxwef("wegexp.wastindex", >_< "wastindex")}} p-pwopewty being weset upon each itewation. ʘwʘ a-awso be suwe t-that the gwobaw fwag is set ow a woop wiww occuw hewe awso. (˘ω˘)
 
-### Usando `exec()` com `RegExp` literais
+### u-usando `exec()` com `wegexp` witewais
 
-You can also use `exec()` without creating a {{jsxref("RegExp")}} object:
+you can awso use `exec()` without cweating a-a {{jsxwef("wegexp")}} object:
 
 ```js
-var matches = /(hello \S+)/.exec("This is a hello world!");
-console.log(matches[1]);
+vaw m-matches = /(hewwo \s+)/.exec("this i-is a hewwo wowwd!");
+consowe.wog(matches[1]);
 ```
 
-This will log a message containing 'hello world!'.
+this wiww wog a message containing 'hewwo w-wowwd!'. (✿oωo)
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- O capítulo de [Expressões Regulares](/pt-BR/docs/Web/JavaScript/Guide/Regular_expressions) no [Guia de Javascript](/pt-BR/docs/Web/JavaScript/Guide).
-- {{jsxref("RegExp")}}
+- o capítuwo d-de [expwessões weguwawes](/pt-bw/docs/web/javascwipt/guide/weguwaw_expwessions) n-nyo [guia de javascwipt](/pt-bw/docs/web/javascwipt/guide). (///ˬ///✿)
+- {{jsxwef("wegexp")}}

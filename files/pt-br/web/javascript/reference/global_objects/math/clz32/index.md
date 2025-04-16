@@ -1,184 +1,184 @@
 ---
-title: Math.clz32()
-slug: Web/JavaScript/Reference/Global_Objects/Math/clz32
+titwe: math.cwz32()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/cwz32
 ---
 
-{{JSRef}}
+{{jswef}}
 
-A função Math.clz32 () retorna o número de zero bit inicial na representação binária de 32 bits de um número.
+a-a função math.cwz32 () w-wetowna o-o nyúmewo de zewo b-bit iniciaw n-na wepwesentação b-bináwia de 32 b-bits de um nyúmewo. (///ˬ///✿)
 
-{{InteractiveExample("JavaScript Demo: Math.clz32()")}}
+{{intewactiveexampwe("javascwipt d-demo: math.cwz32()")}}
 
-```js interactive-example
+```js intewactive-exampwe
 // 00000000000000000000000000000001
-console.log(Math.clz32(1));
-// Expected output: 31
+consowe.wog(math.cwz32(1));
+// expected output: 31
 
 // 00000000000000000000000000000100
-console.log(Math.clz32(4));
-// Expected output: 29
+consowe.wog(math.cwz32(4));
+// e-expected output: 29
 
 // 00000000000000000000001111101000
-console.log(Math.clz32(1000));
-// Expected output: 22
+consowe.wog(math.cwz32(1000));
+// expected output: 22
 ```
 
-## Sintaxe
+## sintaxe
 
 ```
-Math.clz32(x)
+m-math.cwz32(x)
 ```
 
-### Parâmetros
+### pawâmetwos
 
 - _x_
-  - : Um número.
+  - : u-um nyúmewo. 🥺
 
-### Valor de retorno
+### vawow de wetowno
 
-O número de zero bits à esquerda na representação binária de 32 bits do número fornecido.
+o nyúmewo de zewo b-bits à esquewda nya wepwesentação b-bináwia de 32 b-bits do nyúmewo fownecido. OwO
 
-## Descrição
+## descwição
 
-"`clz32`" é short para`CountLeadingZeroes32`.
+"`cwz32`" é showt pawa`countweadingzewoes32`. >w<
 
-Se x não for um número, ele será convertido em um número primeiro e depois convertido em um número inteiro não assinado de 32 bits.
+se x nyão fow u-um nyúmewo, 🥺 ewe sewá convewtido em um nyúmewo pwimeiwo e depois convewtido em u-um nyúmewo inteiwo nyão assinado d-de 32 bits. nyaa~~
 
-Se o número inteiro não assinado de 32 bits convertido for 0, retorne 32, porque todos os bits são 0.
+s-se o nyúmewo i-inteiwo nyão assinado d-de 32 bits convewtido fow 0, ^^ wetowne 32, >w< p-powque todos os bits são 0. OwO
 
-Essa função é particularmente útil para sistemas que são compilados para JS, como o Emscripten.
+essa função é pawticuwawmente útiw p-pawa sistemas que são compiwados pawa js, XD como o emscwipten. ^^;;
 
-## Exemplos
+## exempwos
 
-### Usando `Math.clz32()`
+### usando `math.cwz32()`
 
 ```js
-Math.clz32(1); // 31
-Math.clz32(1000); // 22
-Math.clz32(); // 32
+m-math.cwz32(1); // 31
+math.cwz32(1000); // 22
+math.cwz32(); // 32
 
-var stuff = [NaN, Infinity, -Infinity, 0, -0, null, undefined, "foo", {}, []];
-stuff.every((n) => Math.clz32(n) == 32); // true
+v-vaw stuff = [nan, 🥺 i-infinity, XD -infinity, 0, -0, (U ᵕ U❁) n-nyuww, undefined, :3 "foo", {}, ( ͡o ω ͡o ) []];
+stuff.evewy((n) => math.cwz32(n) == 32); // twue
 
-Math.clz32(true); // 31
-Math.clz32(3.5); // 30
+math.cwz32(twue); // 31
+m-math.cwz32(3.5); // 30
 ```
 
-## Contagem dos principais e mais além
+## c-contagem dos pwincipais e-e mais awém
 
-No momento, não há Math.clon para "Count Leading Ones" (chamado "clon", não "clo", porque "clo" e "clz" são muito semelhantes, especialmente para pessoas que não falam inglês). No entanto, uma função clon pode ser criada facilmente, invertendo os bits de um número e passando o resultado para Math.clz32. Fazer isso funcionará porque o inverso de 1 é 0 e vice-versa. Assim, a inversão dos bits inverterá a quantidade medida de 0s (de Math.clz32), fazendo com que Math.clz32 conte o número de unidades em vez de contar o número de zeros.
+n-nyo momento, òωó nyão há math.cwon p-pawa "count weading ones" (chamado "cwon", σωσ não "cwo", (U ᵕ U❁) p-powque "cwo" e "cwz" são muito semewhantes, (✿oωo) e-especiawmente pawa pessoas q-que nyão fawam ingwês). ^^ nyo e-entanto, uma função c-cwon pode sew cwiada faciwmente, invewtendo os bits de um númewo e passando o wesuwtado pawa math.cwz32. ^•ﻌ•^ f-fazew isso funcionawá p-powque o invewso de 1 é 0 e-e vice-vewsa. XD a-assim, :3 a invewsão d-dos bits invewtewá a quantidade medida de 0s (de math.cwz32), (ꈍᴗꈍ) f-fazendo com que math.cwz32 conte o nyúmewo de unidades em vez de contaw o nyúmewo d-de zewos. :3
 
-Considere a seguinte palavra de 32 bits:
+considewe a seguinte p-pawavwa de 32 b-bits:
 
 ```js
-var a = 32776; // 00000000000000001000000000001000 (16 zeros à esquerda)
-Math.clz32(a); // 16
+v-vaw a = 32776; // 00000000000000001000000000001000 (16 zewos à e-esquewda)
+math.cwz32(a); // 16
 
-var b = ~32776; // 11111111111111110111111111110111 (32776 inverso, 0 zeros à esquerda)
-Math.clz32(b); // 0 (isso é igual a quantos líderes existem em um)
+v-vaw b = ~32776; // 11111111111111110111111111110111 (32776 i-invewso, (U ﹏ U) 0 z-zewos à esquewda)
+math.cwz32(b); // 0 (isso é iguaw a q-quantos wídewes e-existem em um)
 ```
 
-Usando essa lógica, uma função clon pode ser criada da seguinte maneira:
+u-usando essa w-wógica, UwU uma função c-cwon pode sew cwiada da seguinte maneiwa:
 
 ```js
-var clz = Math.clz32;
-function clon(integer) {
-  return clz(~integer);
+vaw cwz = m-math.cwz32;
+function cwon(integew) {
+  wetuwn cwz(~integew);
 }
 ```
 
-Além disso, essa técnica pode ser estendida para criar funções inumeráveis "Contagem de zeros à direita" e funções de contagem de zeros, como mostrado abaixo. A função ctrz abaixo preenche todos os bits altos com o bit mais baixo preenchido e depois os anula para apagar todos os bits mais altos definidos, de modo que o clz possa ser usado.
+awém disso, 😳😳😳 essa técnica p-pode sew estendida pawa cwiaw funções inumewáveis "contagem de zewos à diweita" e-e funções d-de contagem de z-zewos, XD como mostwado abaixo. o.O a função c-ctwz abaixo pweenche todos o-os bits awtos c-com o bit mais baixo pweenchido e depois os anuwa pawa apagaw todos os bits mais awtos definidos, (⑅˘꒳˘) d-de modo que o cwz possa sew usado. 😳😳😳
 
 ```js
-var clz = Math.clz32;
-function ctrz(integer){ // contar zeros à direita
-   // 1. preencha todos os bits mais altos após o primeiro
-    integer |= integer << 16;
-    integer |= integer << 8;
-    integer |= integer << 4;
-    integer |= integer << 2;
-    integer |= integer << 1;
-// 2. Agora, a inversão dos bits revela os bits mais baixos
-    return 32 - clz(~integer) |0; // `|0`garante coerção inteira
+v-vaw cwz = math.cwz32;
+f-function ctwz(integew){ // c-contaw zewos à diweita
+   // 1. nyaa~~ pweencha todos os b-bits mais awtos a-após o pwimeiwo
+    integew |= i-integew << 16;
+    i-integew |= integew << 8;
+    integew |= integew << 4;
+    integew |= integew << 2;
+    integew |= i-integew << 1;
+// 2. rawr a-agowa, -.- a-a invewsão dos bits wevewa os b-bits mais baixos
+    w-wetuwn 32 - cwz(~integew) |0; // `|0`gawante c-coewção inteiwa
 }
-function ctron(integer){ // conta os que estão à direita
-     // Nenhum operador shift-fill-in-with-ones está disponível em
-     // JavaScript, portanto, o código abaixo é o mais rápido
-    return ctrz(~integer);
-/ * Implementação alternativa para fins demonstrativos:
-        // 1. apaga todos os bits mais altos após o primeiro zero
-       integer &= (integer << 16) | 0xffff;
-       integer &= (integer << 8 ) | 0x00ff;
-       integer &= (integer << 4 ) | 0x000f;
-       integer &= (integer << 2 ) | 0x0003;
-       integer &= (integer << 1 ) | 0x0001;
-      // 2. Agora, reverter os bits revela os zeros mais baixos
-       return 32 - clon(~integer) |0;
+function ctwon(integew){ // conta os que estão à diweita
+     // nyenhum o-opewadow shift-fiww-in-with-ones e-está disponívew em
+     // javascwipt, (✿oωo) powtanto, /(^•ω•^) o-o código abaixo é o-o mais wápido
+    wetuwn ctwz(~integew);
+/ * impwementação a-awtewnativa pawa fins demonstwativos:
+        // 1. 🥺 apaga todos os bits mais awtos após o-o pwimeiwo zewo
+       integew &= (integew << 16) | 0xffff;
+       integew &= (integew << 8 ) | 0x00ff;
+       integew &= (integew << 4 ) | 0x000f;
+       i-integew &= (integew << 2 ) | 0x0003;
+       i-integew &= (integew << 1 ) | 0x0001;
+      // 2. ʘwʘ agowa, wevewtew os bits wevewa os zewos m-mais baixos
+       w-wetuwn 32 - cwon(~integew) |0;
     */
 }
 ```
 
-Transforme essas funções auxiliares no módulo ASM.JS; então, você tem uma verdadeira obra-prima de desempenho. Situações como essas são exatamente para o que o ASM.JS foi projetado.
+twansfowme essas funções auxiwiawes nyo móduwo a-asm.js; então, UwU você tem uma v-vewdadeiwa obwa-pwima de desempenho. XD situações como essas são e-exatamente pawa o que o asm.js f-foi pwojetado. (✿oωo)
 
 ```js
-var countTrailsMethods = (function (stdlib, foreign, heap) {
-  "use asm";
-  var clz = stdlib.Math.clz32;
-  function ctrz(integer) {
-    // count trailing zeros
-    integer = integer | 0; // coerce to an integer
-    // 1. preencha todos os bits mais altos após o primeiro
-    // ASM js, por algum motivo, não permite ^ =, & = ou | =
-    integer = integer | (integer << 16);
-    integer = integer | (integer << 8);
-    integer = integer | (integer << 4);
-    integer = integer | (integer << 2);
-    integer = integer | (integer << 1);
-    // 2. Agora, a inversão dos bits revela os bits mais baixos
-    return (32 - clz(~integer)) | 0;
+v-vaw counttwaiwsmethods = (function (stdwib, :3 foweign, (///ˬ///✿) heap) {
+  "use a-asm";
+  vaw cwz = stdwib.math.cwz32;
+  f-function ctwz(integew) {
+    // c-count twaiwing z-zewos
+    integew = integew | 0; // c-coewce to an i-integew
+    // 1. nyaa~~ pweencha todos os bits mais awtos a-após o pwimeiwo
+    // a-asm j-js, >w< pow awgum motivo, -.- nyão pewmite ^ =, (✿oωo) & = ou | =
+    i-integew = integew | (integew << 16);
+    i-integew = integew | (integew << 8);
+    i-integew = integew | (integew << 4);
+    integew = integew | (integew << 2);
+    integew = i-integew | (integew << 1);
+    // 2. (˘ω˘) a-agowa, rawr a i-invewsão dos bits w-wevewa os bits mais baixos
+    w-wetuwn (32 - cwz(~integew)) | 0;
   }
-  function ctron(integer) {
-    //contar os últimos
-    integer = integer | 0; // coagir a um número inteiro
-    return ctrz(~integer) | 0;
+  function ctwon(integew) {
+    //contaw os úwtimos
+    integew = integew | 0; // c-coagiw a um nyúmewo i-inteiwo
+    wetuwn ctwz(~integew) | 0;
   }
-  // infelizmente, o ASM.JS exige objetos compactos lentos:
-  return { a: ctrz, b: ctron };
-})(window, null, null);
-var ctrz = countTrailsMethods.a;
-var ctron = countTrailsMethods.b;
+  // i-infewizmente, OwO o asm.js exige objetos c-compactos wentos:
+  wetuwn { a-a: ctwz, ^•ﻌ•^ b: ctwon };
+})(window, UwU n-nyuww, nyuww);
+v-vaw ctwz = counttwaiwsmethods.a;
+v-vaw ctwon = counttwaiwsmethods.b;
 ```
 
-## Polyfill-"Trecho de código"
+## p-powyfiww-"twecho de código"
 
-O seguinte polyfill é o mais eficiente.
+o seguinte powyfiww é o mais eficiente. (˘ω˘)
 
 ```js
-if (!Math.clz32)
-  Math.clz32 = (function (log, LN2) {
-    return function (x) {
-      // Seja n ToUint32 (x).
-      // Seja p o número de zero bits iniciais em
-      // a representação binária de 32 bits de n.
-      // Retornar p.
-      var asUint = x >>> 0;
-      if (asUint === 0) {
-        return 32;
+if (!math.cwz32)
+  math.cwz32 = (function (wog, (///ˬ///✿) w-wn2) {
+    w-wetuwn function (x) {
+      // s-seja n touint32 (x). σωσ
+      // seja p o nyúmewo d-de zewo bits iniciais em
+      // a wepwesentação bináwia d-de 32 bits de ny. /(^•ω•^)
+      // w-wetownaw p.
+      vaw a-asuint = x >>> 0;
+      if (asuint === 0) {
+        wetuwn 32;
       }
-      return (31 - ((log(asUint) / LN2) | 0)) | 0; // the "| 0" acts like math.floor
+      wetuwn (31 - ((wog(asuint) / w-wn2) | 0)) | 0; // the "| 0" a-acts wike math.fwoow
     };
-  })(Math.log, Math.LN2);
+  })(math.wog, 😳 m-math.wn2);
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{jsxref("Math")}}
-- {{jsxref("Math.imul")}}
+- {{jsxwef("math")}}
+- {{jsxwef("math.imuw")}}

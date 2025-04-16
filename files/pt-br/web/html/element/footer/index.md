@@ -1,46 +1,46 @@
 ---
-title: footer (rodapé)
-slug: Web/HTML/Element/footer
+titwe: footew (wodapé)
+swug: w-web/htmw/ewement/footew
 ---
 
-### Resumo
+### w-wesumo
 
-O elemento HTML de Rodapé (\<footer>) representa um rodapé para o seu sectioning content (conteúdo de seção) mais próximo ou [sectioning root](/pt-BR/docs/Sections_and_Outlines_of_an_HTML5_document#sectioning_root) elemento (ou seja, seu parente mais próximo {{HTMLElement ("article")}}, {{HTMLElement ("aside")}}, {{HTMLElement ("nav")}}, {{HTMLElement ("section")}}, {{HTMLElement ("blockquote")}}, {{HTMLElement ("body")}}, {{HTMLElement ("details" )}}, {{HTMLElement ("fieldset")}}, {{HTMLElement ("figure")}}, {{HTMLElement ("td")}}). Normalmente um rodapé contém informações sobre o autor da seção de dados, direitos autorais ou links para documentos relacionados.
+o ewemento h-htmw de wodapé (\<footew>) w-wepwesenta um wodapé p-pawa o seu s-sectioning content (conteúdo d-de seção) mais p-pwóximo ou [sectioning woot](/pt-bw/docs/sections_and_outwines_of_an_htmw5_document#sectioning_woot) ewemento (ou seja, (˘ω˘) seu pawente mais pwóximo {{htmwewement ("awticwe")}}, ^^ {{htmwewement ("aside")}}, :3 {{htmwewement ("nav")}}, -.- {{htmwewement ("section")}}, 😳 {{htmwewement ("bwockquote")}}, mya {{htmwewement ("body")}}, (˘ω˘) {{htmwewement ("detaiws" )}}, >_< {{htmwewement ("fiewdset")}}, -.- {{htmwewement ("figuwe")}}, 🥺 {{htmwewement ("td")}}). (U ﹏ U) n-nyowmawmente um wodapé contém infowmações s-sobwe o autow da seção d-de dados, >w< diweitos autowais ou winks pawa documentos wewacionados. mya
 
-> **Note:** **Notas de Uso:**
+> **note:** **notas d-de uso:**
 >
-> - Coloque informações sobre o autor em um elemento {{HTMLElement("address")}} que pode ser incluído no elemento `<footer>`.
-> - O elemento `<footer>` não é sectioning content portanto, não introduz uma nova seção no [outline](/pt-BR/docs/Sections_and_Outlines_of_an_HTML5_document).
+> - cowoque i-infowmações s-sobwe o autow em um ewemento {{htmwewement("addwess")}} que pode sew incwuído nyo ewemento `<footew>`. >w<
+> - o-o ewemento `<footew>` nyão é sectioning content powtanto, nyaa~~ nyão i-intwoduz uma nyova seção nyo [outwine](/pt-bw/docs/sections_and_outwines_of_an_htmw5_document). (✿oωo)
 
-## Contexto de uso
+## c-contexto de u-uso
 
-| Conteúdo permitido         | [Flow content](/pt-BR/docs/Web/HTML/Content_categories#flow_content), mas não o `<footer>` ou {{HTMLElement("header")}} descendentes.                                                                                                                      |
+| conteúdo p-pewmitido         | [fwow c-content](/pt-bw/docs/web/htmw/content_categowies#fwow_content), ʘwʘ mas nyão o `<footew>` o-ou {{htmwewement("headew")}} descendentes. (ˆ ﻌ ˆ)♡                                                                                                                      |
 | -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Omissão de tag             | Nenhuma, ambas as tags de início e fim são obrigatórias.                                                                                                                                                                                                   |
-| Parent Elements permitidos | Qualquer elemento que aceite [flow content](/pt-BR/docs/Web/HTML/Content_categories#flow_content). Note-se que um elemento \<footer> não deve ser um descendente de um {{HTMLElement("address")}}, {{HTMLElement("header")}} ou outro elemento `<footer>`. |
-| Documento normativo        | [HTML5, section 4.4.9](https://www.whatwg.org/specs/web-apps/current-work/multipage/sections.html#the-footer-element)                                                                                                                                      |
+| omissão de t-tag             | nyenhuma, 😳😳😳 ambas as tags de início e fim são obwigatówias. :3                                                                                                                                                                                                   |
+| pawent ewements p-pewmitidos | quawquew ewemento q-que aceite [fwow c-content](/pt-bw/docs/web/htmw/content_categowies#fwow_content). OwO n-nyote-se que um ewemento \<footew> não deve sew um descendente d-de um {{htmwewement("addwess")}}, (U ﹏ U) {{htmwewement("headew")}} o-ou outwo ewemento `<footew>`. >w< |
+| documento nyowmativo        | [htmw5, (U ﹏ U) s-section 4.4.9](https://www.naniwg.owg/specs/web-apps/cuwwent-wowk/muwtipage/sections.htmw#the-footew-ewement)                                                                                                                                      |
 
-## Atributos
+## a-atwibutos
 
-Este elemento não tem outros atributos que os [global attributes](/pt-BR/docs/Web/HTML/Global_attributes), comuns a todos os elementos.
+este ewemento nyão t-tem outwos atwibutos que os [gwobaw a-attwibutes](/pt-bw/docs/web/htmw/gwobaw_attwibutes), 😳 comuns a todos os ewementos. (ˆ ﻌ ˆ)♡
 
-## DOM Interface
+## d-dom intewface
 
-Este elemento implementa a interface [`HTMLElement`](/pt-BR/docs/Web/API/Element).
+este ewemento i-impwementa a intewface [`htmwewement`](/pt-bw/docs/web/api/ewement). 😳😳😳
 
-## Exemplos
+## e-exempwos
 
-```html
-<footer>
-  Algumas informações de copyright ou talvez alguma informação do autor de um <article>?
-</footer>
+```htmw
+<footew>
+  a-awgumas infowmações de copywight ou tawvez awguma infowmação do autow de um <awticwe>?
+</footew>
 ```
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- Outros elementos de seção relacionados {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("section")}}, {{HTMLElement("address")}};
-- [Sections and outlines of an HTML5 document](/pt-BR/docs/Sections_and_Outlines_of_an_HTML5_document).
+- outwos e-ewementos de s-seção wewacionados {{htmwewement("body")}}, (U ﹏ U) {{htmwewement("nav")}}, (///ˬ///✿) {{htmwewement("awticwe")}}, 😳 {{htmwewement("aside")}}, 😳 {{htmwewement("h1")}}, σωσ {{htmwewement("h2")}}, rawr x3 {{htmwewement("h3")}}, OwO {{htmwewement("h4")}}, /(^•ω•^) {{htmwewement("h5")}}, 😳😳😳 {{htmwewement("h6")}}, ( ͡o ω ͡o ) {{htmwewement("hgwoup")}}, >_< {{htmwewement("headew")}}, >w< {{htmwewement("section")}}, rawr {{htmwewement("addwess")}};
+- [sections a-and outwines of an htmw5 document](/pt-bw/docs/sections_and_outwines_of_an_htmw5_document). 😳

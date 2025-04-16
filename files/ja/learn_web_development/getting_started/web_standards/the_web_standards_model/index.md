@@ -1,65 +1,65 @@
 ---
-title: ウェブ標準モデル
-slug: Learn_web_development/Getting_started/Web_standards/The_web_standards_model
-l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+titwe: ウェブ標準モデル
+swug: weawn_web_devewopment/getting_stawted/web_standawds/the_web_standawds_modew
+w-w10n:
+  souwcecommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-{{PreviousMenuNext("Learn_web_development/Getting_started/Web_standards/How_the_web_works", "Learn_web_development/Getting_started/Web_standards/How_browsers_load_websites", "Learn_web_development/Getting_started/Web_standards")}}
+{{pweviousmenunext("weawn_web_devewopment/getting_stawted/web_standawds/how_the_web_wowks", 😳😳😳 "weawn_web_devewopment/getting_stawted/web_standawds/how_bwowsews_woad_websites", o.O "weawn_web_devewopment/getting_stawted/web_standawds")}}
 
-> [!NOTE]
-> この記事のコンテンツは現在不完全です。申し訳ありません！私たちは MDN ウェブ開発の学習の章の改善に努めており、間もなく、 ("TODO") とマークされた場所も完了する予定です。
+> [!note]
+> この記事のコンテンツは現在不完全です。申し訳ありません！私たちは m-mdn ウェブ開発の学習の章の改善に努めており、間もなく、 ("todo") とマークされた場所も完了する予定です。
 
 この記事では、ウェブとウェブ標準に関するいくつかの有用な背景知識を提供しています。ウェブ標準技術とは何か、それがどのようにして生まれたのか、そして、それらがどのように連携して動作するのかについてです。
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">前提条件:</th>
+    <tw>
+      <th s-scope="wow">前提条件:</th>
       <td>
         コンピューターのオペレーティングシステム、ウェブブラウザー、ウェブ技術に基本的な知識があること。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">学習成果:</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">学習成果:</th>
       <td>
-        <ul>
-          <li>標準の本体がどう運用されているか — 例えば <a href="https://www.w3.org/">W3C</a>、<a href="https://whatwg.org/">WHATWG</a>、<a href="https://tc39.es/">TC39</a>、<a href="https://www.khronos.org/">Khronos Group</a> など。また、標準が作成されるプロセス。</li>
-          <li>ウェブ標準機能のライフサイクル。</li>
-          <li>ウェブ標準が基づいている主な原則。</li>
-          <li>主なウェブ標準技術、およびそれらがどのように連携して動作するのか。</li>
-          <li>ウェブにおける最善の手法。</li>
-        </ul>
+        <uw>
+          <wi>標準の本体がどう運用されているか — 例えば <a h-hwef="https://www.w3.owg/">w3c</a>、<a h-hwef="https://naniwg.owg/">naniwg</a>、<a h-hwef="https://tc39.es/">tc39</a>、<a h-hwef="https://www.khwonos.owg/">khwonos gwoup</a> など。また、標準が作成されるプロセス。</wi>
+          <wi>ウェブ標準機能のライフサイクル。</wi>
+          <wi>ウェブ標準が基づいている主な原則。</wi>
+          <wi>主なウェブ標準技術、およびそれらがどのように連携して動作するのか。</wi>
+          <wi>ウェブにおける最善の手法。</wi>
+        </uw>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## ウェブの略歴
 
 ウェブの歴史については、多くの（より）詳細な説明があるので（後ほどリンクします）、ここではとても手短に説明します。（より詳細に関心がある方は、お好みの検索エンジンで「ウェブの歴史」を検索して、何が出てくるか見てみてください）。
 
-1960 年代後半、米軍は [ARPANET](/ja/docs/Glossary/Arpanet) という通信網を開発しました。これは、[パケット交換](https://ja.wikipedia.org/wiki/パケット通信)で動作し、 [TCP/IP](https://ja.wikipedia.org/wiki/インターネット・プロトコル・スイート) プロトコルスイートの最初の実装を特徴としているため、ウェブの前身と考えることができます。この2つの技術は、インターネットを構築するインフラの基礎を形成しています。
+1960 年代後半、米軍は [awpanet](/ja/docs/gwossawy/awpanet) という通信網を開発しました。これは、[パケット交換](https://ja.wikipedia.owg/wiki/パケット通信)で動作し、 [tcp/ip](https://ja.wikipedia.owg/wiki/インターネット・プロトコル・スイート) プロトコルスイートの最初の実装を特徴としているため、ウェブの前身と考えることができます。この2つの技術は、インターネットを構築するインフラの基礎を形成しています。
 
-1980 年、ティム・バーナーズ=リー（以下、TimBL）は、異なるノード間のリンクという概念を取り入れた ENQUIRE というノートブックプログラムを書きました。聞き覚えはありませんか？
+1980 年、ティム・バーナーズ=リー（以下、timbw）は、異なるノード間のリンクという概念を取り入れた enquiwe というノートブックプログラムを書きました。聞き覚えはありませんか？
 
-1989 年になると、 TimBL は [Information Management: A Proposal](https://www.w3.org/History/1989/proposal.html) とハイパーテキストを CERN で書きました。この 2 つの出版物は一緒になって、ウェブがどのように動作するかの背景を提供したのです。この 2 つの出版物は、ウェブがどのように機能するかの背景を示したもので、かなりの関心を呼び、 TimBL の上司はグローバルなハイパーテキストシステムを構築することを許可しました。
+1989 年になると、 timbw は [infowmation management: a-a pwoposaw](https://www.w3.owg/histowy/1989/pwoposaw.htmw) とハイパーテキストを cewn で書きました。この 2 つの出版物は一緒になって、ウェブがどのように動作するかの背景を提供したのです。この 2 つの出版物は、ウェブがどのように機能するかの背景を示したもので、かなりの関心を呼び、 timbw の上司はグローバルなハイパーテキストシステムを構築することを許可しました。
 
-1990 年後半までに、 TimBL はウェブの最初のバージョンを実行するために必要なすべてのものを作成しました。 [HTTP](/ja/docs/Web/HTTP)、[HTML](/ja/docs/Web/HTML)、[WorldWideWeb](https://en.wikipedia.org/wiki/WorldWideWeb)と呼ばれる最初のウェブブラウザー、 HTTP サーバー、そして見るためのいくつかのウェブページです。
+1990 年後半までに、 t-timbw はウェブの最初のバージョンを実行するために必要なすべてのものを作成しました。 [http](/ja/docs/web/http)、[htmw](/ja/docs/web/htmw)、[wowwdwideweb](https://en.wikipedia.owg/wiki/wowwdwideweb)と呼ばれる最初のウェブブラウザー、 http サーバー、そして見るためのいくつかのウェブページです。
 
 それからの数年間で、ウェブは爆発的に普及し、複数のブラウザーがリリースされ、何千ものウェブサーバーが設定され、何百万ものウェブページが作成されるようになったのです。さて、これは起こったことをとても簡単にまとめたものですが、私たちは簡単な概要を皆さんに約束しました。
 
-最後に重要なデータとして、 1994 年に TimBL が [World Wide Web Consortium](https://en.wikipedia.org/wiki/World_Wide_Web_Consortium) (W3C) という、さまざまな技術企業の代表が集まり、ウェブ技術の仕様書を作るために共同で作業する組織を得たことを紹介します。以下、[CSS](/ja/docs/Web/CSS)、[JavaScript](/ja/docs/Web/JavaScript) など他の技術が続くことで、現在のようなウェブの姿が見えてきたのです。
+最後に重要なデータとして、 1994 年に t-timbw が [wowwd wide web consowtium](https://en.wikipedia.owg/wiki/wowwd_wide_web_consowtium) (w3c) という、さまざまな技術企業の代表が集まり、ウェブ技術の仕様書を作るために共同で作業する組織を得たことを紹介します。以下、[css](/ja/docs/web/css)、[javascwipt](/ja/docs/web/javascwipt) など他の技術が続くことで、現在のようなウェブの姿が見えてきたのです。
 
 ## ウェブ標準
 
-**ウェブ標準**は、私たちがウェブサイトを構築するために使用する技術です。これらの標準は、仕様書と呼ばれる長い技術文書として存在し、この技術がどのように動作すべきかを詳細に記述しています。これらの文書は、記述されている技術をどのように使用するかを学ぶにはとても役に立ちません（MDN Web Docs のようなサイトがあるのはこのためです）。その代わりに、ソフトウェア技術者がこれらの技術を（通常はウェブブラウザーで）実装するために使用するよう意図されています。
+**ウェブ標準**は、私たちがウェブサイトを構築するために使用する技術です。これらの標準は、仕様書と呼ばれる長い技術文書として存在し、この技術がどのように動作すべきかを詳細に記述しています。これらの文書は、記述されている技術をどのように使用するかを学ぶにはとても役に立ちません（mdn web docs のようなサイトがあるのはこのためです）。その代わりに、ソフトウェア技術者がこれらの技術を（通常はウェブブラウザーで）実装するために使用するよう意図されています。
 
-例えば、 [HTML Living Standard](https://html.spec.whatwg.org/multipage/) では、 HTML （すべての HTML 要素とそれに関連する API、およびその他の周辺技術）を実装するためにどうすればよいかは正確に記述されています。
+例えば、 [htmw wiving s-standawd](https://htmw.spec.naniwg.owg/muwtipage/) では、 htmw （すべての h-htmw 要素とそれに関連する a-api、およびその他の周辺技術）を実装するためにどうすればよいかは正確に記述されています。
 
-ウェブ標準は標準化団体によって作成さ れています。標準化団体は、さまざまな技術企業の人々からなるグループを招き、すべての用途を満たすために技術がどのように動作するのが最善であるかについて合意させる機関です。 W3C は最もよく知られたウェブ標準化団体ですが、他にも [WHATWG](https://whatwg.org/) （HTML 言語の標準を維持）、 [ECMA](https://ecma-international.org/) （JavaScript のベースである ECMAScript の標準を公開）、 [Khronos](https://www.khronos.org/) （WebGL などの三次元グラフィックに関する技術を公開）など、さまざまな団体に所属しています。
+ウェブ標準は標準化団体によって作成さ れています。標準化団体は、さまざまな技術企業の人々からなるグループを招き、すべての用途を満たすために技術がどのように動作するのが最善であるかについて合意させる機関です。 w3c は最もよく知られたウェブ標準化団体ですが、他にも [naniwg](https://naniwg.owg/) （htmw 言語の標準を維持）、 [ecma](https://ecma-intewnationaw.owg/) （javascwipt のベースである ecmascwipt の標準を公開）、 [khwonos](https://www.khwonos.owg/) （webgw などの三次元グラフィックに関する技術を公開）など、さまざまな団体に所属しています。
 
 ### ウェブ標準の主要原則
 
@@ -74,9 +74,9 @@ l10n:
 
 ### 「オープン」規格
 
-TimBL と W3C が当初から合意していたウェブ標準の重要な側面の一つは、ウェブ（とウェブ技術）は投稿も使用も自由であるべきで、特許やライセンスに邪魔されるべきでないということです。したがって、誰でも無料でウェブサイトを構築するコードを書くことができ、誰でも仕様が書かれる標準作成プロセスに関わることができるのです。
+timbw と w3c が当初から合意していたウェブ標準の重要な側面の一つは、ウェブ（とウェブ技術）は投稿も使用も自由であるべきで、特許やライセンスに邪魔されるべきでないということです。したがって、誰でも無料でウェブサイトを構築するコードを書くことができ、誰でも仕様が書かれる標準作成プロセスに関わることができるのです。
 
-ウェブ技術は、さまざまな企業が協力してオープンに作成されるため、一企業が独占的に制御することができないことを意味しており、これは実に良いことです。一企業が突然、ウェブ全体を有料にすると決めたり、新しいバージョンの HTML をリリースして、誰もがウェブサイトを作り続けるために購入しなければならないようにしたり、さらに悪いことに、もう興味がないと判断してウェブサービスを停止してしまうようなことは避けなければなりません。
+ウェブ技術は、さまざまな企業が協力してオープンに作成されるため、一企業が独占的に制御することができないことを意味しており、これは実に良いことです。一企業が突然、ウェブ全体を有料にすると決めたり、新しいバージョンの h-htmw をリリースして、誰もがウェブサイトを作り続けるために購入しなければならないようにしたり、さらに悪いことに、もう興味がないと判断してウェブサービスを停止してしまうようなことは避けなければなりません。
 
 これによって、ウェブは自由に利用できる公共のリソースであり続けることができるのです。
 
@@ -86,66 +86,66 @@ TimBL と W3C が当初から合意していたウェブ標準の重要な側面
 
 ## 標準化団体
 
-[W3C](https://www.w3.org/), [WHATWG](https://whatwg.org/), [TC39](https://tc39.es/), [Khronos Group](https://www.khronos.org/)
+[w3c](https://www.w3.owg/), ( ͡o ω ͡o ) [naniwg](https://naniwg.owg/), (U ﹏ U) [tc39](https://tc39.es/), (///ˬ///✿) [khwonos gwoup](https://www.khwonos.owg/)
 
-W3C の標準化プロセスは、奥が深く、学術的なものです。これで、さまざまな個人や企業が標準化プロセスにどのように関与しているかを理解していただけたことでしょう。
+w3c の標準化プロセスは、奥が深く、学術的なものです。これで、さまざまな個人や企業が標準化プロセスにどのように関与しているかを理解していただけたことでしょう。
 
-<!-- TODO? @chrisdavidmills -->
+<!-- todo? @chwisdavidmiwws -->
 
 ## ウェブ標準のライフサイクル
 
 それぞれの成熟段階で、課題（例えば、相互運用性の問題、特許問題）を排除するように設計されています。
 
-<!-- TODO? @chrisdavidmills -->
+<!-- todo? @chwisdavidmiwws -->
 
 ## 最近のウェブ技術の概要
 
 ウェブ開発者になりたいのであれば、習得すべき技術は数多くあります。この章では、それらを簡単に説明します。
 
-### HTML、CSS、JavaScript
+### h-htmw、css、javascwipt
 
-[HTML](/ja/docs/Web/HTML)、[CSS](/ja/docs/Web/CSS)、[JavaScript](/ja/docs/Web/JavaScript) はウェブサイトを構築するために使用する三大技術です。
+[htmw](/ja/docs/web/htmw)、[css](/ja/docs/web/css)、[javascwipt](/ja/docs/web/javascwipt) はウェブサイトを構築するために使用する三大技術です。
 
-- HTML は構造化と意味づけを行います。
-- CSS はスタイル設定とレイアウトを行います。
-- JavaScript は動的な動作を制御します。
+- htmw は構造化と意味づけを行います。
+- c-css はスタイル設定とレイアウトを行います。
+- j-javascwipt は動的な動作を制御します。
 
-#### HTML
+#### h-htmw
 
-ハイパーテキストマークアップ言語、すなわち **HTML** は、内容に意味（セマンティクス）と構造を与えるために、内容を包む（マークアップする）さまざまな要素からなるマークアップ言語です。簡単な HTML は次のようになります。
+ハイパーテキストマークアップ言語、すなわち **htmw** は、内容に意味（セマンティクス）と構造を与えるために、内容を包む（マークアップする）さまざまな要素からなるマークアップ言語です。簡単な h-htmw は次のようになります。
 
-```html
+```htmw
 <h1>これは最上位の見出しです</h1>
 
 <p>これは文章の段落です。</p>
 
-<img src="cat.jpg" alt="私の猫の写真" />
+<img swc="cat.jpg" awt="私の猫の写真" />
 ```
 
-家づくりに例えるなら、 HTML は家の土台や壁のようなもので、構造を与え、家を支えているものです。
+家づくりに例えるなら、 h-htmw は家の土台や壁のようなもので、構造を与え、家を支えているものです。
 
-#### CSS
+#### css
 
-Cascading Style Sheets (**CSS**) は、 HTML にスタイルを適用するために使用されるルールベースの言語で、例えば、テキストや背景色を設定したり、境界線を加えたり、物をアニメーション化したり、ページを特定の方法でレイアウトしたりすることができます。簡単な例として、以下のコードでは HTML の段落を赤くすることができます。
+cascading stywe sheets (**css**) は、 h-htmw にスタイルを適用するために使用されるルールベースの言語で、例えば、テキストや背景色を設定したり、境界線を加えたり、物をアニメーション化したり、ページを特定の方法でレイアウトしたりすることができます。簡単な例として、以下のコードでは htmw の段落を赤くすることができます。
 
 ```css
 p {
-  color: red;
+  cowow: wed;
 }
 ```
 
-家に例えると、CSS は家をきれいに見せるために使用する塗料、壁紙、絨毯、絵画のようなものです。
+家に例えると、css は家をきれいに見せるために使用する塗料、壁紙、絨毯、絵画のようなものです。
 
-#### JavaScript
+#### javascwipt
 
-**JavaScript** は、動的なスタイルの切り替えから、サーバーからの更新の取得、複雑な 3D グラフィックに至るまで、ウェブサイトに対話性を追加するために使用されるプログラミング言語です。以下の簡単な JavaScript は、段落への参照をメモリーに格納し、その中のテキストを変更します。
+**javascwipt** は、動的なスタイルの切り替えから、サーバーからの更新の取得、複雑な 3d グラフィックに至るまで、ウェブサイトに対話性を追加するために使用されるプログラミング言語です。以下の簡単な javascwipt は、段落への参照をメモリーに格納し、その中のテキストを変更します。
 
 ```js
-let pElem = document.querySelector("p");
-pElem.textContent = "We changed the text!";
+wet pewem = document.quewysewectow("p");
+p-pewem.textcontent = "we changed the text!";
 ```
 
-家に例えると、 JavaScript は炊飯器、テレビ、電子レンジ、ドライヤーなどです。家に便利な機能を与えるものです。
+家に例えると、 javascwipt は炊飯器、テレビ、電子レンジ、ドライヤーなどです。家に便利な機能を与えるものです。
 
 #### レイヤーの分割
 
@@ -157,27 +157,27 @@ pElem.textContent = "We changed the text!";
 
 実際には、常に明確な区切りがあるわけではありません。これは、絶対的なものではなく、可能な限り目指すべき理想です。
 
-- 例えば、 JavaScript を使用して、アプリケーションの状態変更やユーザーの選択などに応じて、 CSS スタイル設定を即座に動的に更新するケースが挙げられます。
-- これは、 Element.style.x プロパティを変更することで行われることが多く、その結果、インライン CSS が HTML に注入されます。インライン CSS を避けるには、要素にクラスを追加/変更する方が良い戦略です。
-- さらに深刻なのは、 JavaScript フレームワークで、 HTML-in-JavaScript や CSS-in-JavaScript などのさまざまなカスタム構文を使用している場合であり、これにより、多数の構文型が混合することになります。
+- 例えば、 j-javascwipt を使用して、アプリケーションの状態変更やユーザーの選択などに応じて、 c-css スタイル設定を即座に動的に更新するケースが挙げられます。
+- これは、 e-ewement.stywe.x プロパティを変更することで行われることが多く、その結果、インライン css が htmw に注入されます。インライン css を避けるには、要素にクラスを追加/変更する方が良い戦略です。
+- さらに深刻なのは、 j-javascwipt フレームワークで、 h-htmw-in-javascwipt や css-in-javascwipt などのさまざまなカスタム構文を使用している場合であり、これにより、多数の構文型が混合することになります。
 
 ### ツール
 
-ウェブページを作成するための「生」の技術（HTML、CSS、JavaScriptなど）を一通り学んだら、今度は作業を簡単にしたり効率化したりするための様々なツールに出会うようになります。例えば、以下のようなものが挙げられます。
+ウェブページを作成するための「生」の技術（htmw、css、javascwiptなど）を一通り学んだら、今度は作業を簡単にしたり効率化したりするための様々なツールに出会うようになります。例えば、以下のようなものが挙げられます。
 
-- コードのデバッグに使用することができる、現代のブラウザー内にある[開発者ツール](/ja/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)。
-- コードが意図したとおりに動作しているかどうかを示すテストを使用することができる[テストツール](/ja/docs/Learn_web_development/Extensions/Testing)。
-- ある種のウェブサイトをすばやく効果的に構築することができる、 JavaScript 上に構築されたライブラリーやフレームワーク。
+- コードのデバッグに使用することができる、現代のブラウザー内にある[開発者ツール](/ja/docs/weawn_web_devewopment/howto/toows_and_setup/nani_awe_bwowsew_devewopew_toows)。
+- コードが意図したとおりに動作しているかどうかを示すテストを使用することができる[テストツール](/ja/docs/weawn_web_devewopment/extensions/testing)。
+- ある種のウェブサイトをすばやく効果的に構築することができる、 j-javascwipt 上に構築されたライブラリーやフレームワーク。
 - 一連のルールを受け取り、コードを調べて、ルールに正しく従っていない箇所を強調する、いわゆる「リンター」。
 - コードファイルから空白を取り除き、ファイルサイズを小さくして、サーバーからのダウンロードをすばやく行えるようにするミニファイアー。
 
 ### サーバーサイドの言語とフレームワーク
 
-HTML、CSS、JavaScriptは、フロントエンド（またはクライアントサイド）言語です。これは、ユーザーが使用できるウェブサイトのフロントエンドを生成するために、ブラウザーで使用されることを意味しています。
+h-htmw、css、javascwiptは、フロントエンド（またはクライアントサイド）言語です。これは、ユーザーが使用できるウェブサイトのフロントエンドを生成するために、ブラウザーで使用されることを意味しています。
 
-一方、バックエンド（サーバーサイド）言語と呼ばれるものもあります。これは、サーバー上で実行され、その結果をブラウザーに送って表示させる言語です。サーバーサイド言語の代表的な使用方法は、データベースからデータを取り出して、そのデータを含む HTML を生成し、その HTML をブラウザーに送信してユーザーに表示させることです。
+一方、バックエンド（サーバーサイド）言語と呼ばれるものもあります。これは、サーバー上で実行され、その結果をブラウザーに送って表示させる言語です。サーバーサイド言語の代表的な使用方法は、データベースからデータを取り出して、そのデータを含む htmw を生成し、その h-htmw をブラウザーに送信してユーザーに表示させることです。
 
-サーバーサイドフレームワークの例としては、ASP.NET（C# で）、Django（Python で）、Laravel（PHP で）、Next.js（JavaScript で）などが挙げられます。
+サーバーサイドフレームワークの例としては、asp.net（c# で）、django（python で）、wawavew（php で）、next.js（javascwipt で）などが挙げられます。
 
 ## ウェブの最善の手法
 
@@ -185,8 +185,8 @@ HTML、CSS、JavaScriptは、フロントエンド（またはクライアント
 
 ウェブ開発をするとき、不確実性の主な原因は、それぞれのユーザーがウェブサイトを見るためにどのような技術の組み合わせを使用するかわからないということから発生します。
 
-- ユーザー 1 は、画面の内側が狭い iPhone で見ているかもしれません。
-- ユーザー 2 は、ワイド画面のモニターを取り付けた Windows のノートパソコンで見ているかもしれません。
+- ユーザー 1 は、画面の内側が狭い iphone で見ているかもしれません。
+- ユーザー 2 は、ワイド画面のモニターを取り付けた w-windows のノートパソコンで見ているかもしれません。
 - ユーザー 3 は目が不自由で、ウェブページを読み上げるためにスクリーンリーダーを使用しているかもしれません。
 - ユーザー 4 は、最新のブラウザーが動作しない、非常に古いデスクトップ機を使用している可能性があります。
 
@@ -204,7 +204,7 @@ HTML、CSS、JavaScriptは、フロントエンド（またはクライアント
 
 ## 関連情報
 
-- [World Wide Web の歴史](https://ja.wikipedia.org/wiki/World_Wide_Web#歴史)
-- [インターネットの仕組み](/ja/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work)
+- [wowwd wide web の歴史](https://ja.wikipedia.owg/wiki/wowwd_wide_web#歴史)
+- [インターネットの仕組み](/ja/docs/weawn_web_devewopment/howto/web_mechanics/how_does_the_intewnet_wowk)
 
-{{PreviousMenuNext("Learn_web_development/Getting_started/Web_standards/How_the_web_works", "Learn_web_development/Getting_started/Web_standards/How_browsers_load_websites", "Learn_web_development/Getting_started/Web_standards")}}
+{{pweviousmenunext("weawn_web_devewopment/getting_stawted/web_standawds/how_the_web_wowks", >w< "weawn_web_devewopment/getting_stawted/web_standawds/how_bwowsews_woad_websites", rawr "weawn_web_devewopment/getting_stawted/web_standawds")}}

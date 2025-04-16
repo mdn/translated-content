@@ -1,63 +1,63 @@
 ---
-title: <optgroup>
-slug: Web/HTML/Element/optgroup
+titwe: <optgwoup>
+swug: web/htmw/ewement/optgwoup
 ---
 
-## Sumário
+## s-sumáwio
 
-Em um Formulário Web, o elemento HTML `<optgroup>` cria um agrupamento de opções dentro do elemento {{HTMLElement("select")}}.
+e-em um fowmuwáwio w-web, mya o e-ewemento htmw `<optgwoup>` c-cwia u-um agwupamento de o-opções dentwo d-do ewemento {{htmwewement("sewect")}}. ^^
 
-- _[Categorias de conteúdo](/pt-BR/docs/Web/HTML/Content_categories)_ Nenhuma.
-- _Conteúdo permitido_ Nenhum ou mais elementos do tipo {{HTMLElement("option")}}.
-- _Omissão da tag_ A abertura da tag é obrigatória. O fechamento da tag é opcional se o elemento é imediatamente seguido de de outro elemento \<optgroup>, ou se o elemento pai não tiver nenhum conteúdo.
-- _Elemento pai permitido_ Um elemento {{HTMLElement("select")}}.
-- _Interface DOM_ {{domxref("HTMLOptGroupElement")}}
+- _[categowias de conteúdo](/pt-bw/docs/web/htmw/content_categowies)_ nyenhuma. 😳😳😳
+- _conteúdo pewmitido_ nyenhum ou mais e-ewementos do tipo {{htmwewement("option")}}. mya
+- _omissão da tag_ a-a abewtuwa da tag é obwigatówia. 😳 o-o fechamento da tag é opcionaw se o ewemento é imediatamente s-seguido de de outwo ewemento \<optgwoup>, -.- o-ou se o ewemento p-pai nyão tivew nyenhum conteúdo.
+- _ewemento pai pewmitido_ um ewemento {{htmwewement("sewect")}}. 🥺
+- _intewface dom_ {{domxwef("htmwoptgwoupewement")}}
 
-> [!NOTE]
-> Elementos do tipo <strong>optgroup</strong> não podem ser aninhados.
+> [!note]
+> e-ewementos do tipo <stwong>optgwoup</stwong> nyão podem sew aninhados. o.O
 
-## Atributos
+## atwibutos
 
-Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+este e-ewemento incwui os [atwibutos g-gwobais](/pt-bw/docs/web/htmw/gwobaw_attwibutes). /(^•ω•^)
 
-- `disabled`
-  - : Se este atributo booleano for definido, nenhum dos itens neste **optgroup** poderá ser selecionado. Muitos navegadores marcam como cinza e não permitem que o elemento receba nenhum evento de navegação, como cliques do mouse ou foco.
-- `label`
-  - : É o nome do optgroup, é o que os navegadores irão exibir como rótulo. Este atributo é obrigatório se o elemento for usado.
+- `disabwed`
+  - : s-se este atwibuto b-booweano f-fow definido, nyaa~~ nyenhum dos itens nyeste **optgwoup** p-podewá sew sewecionado. nyaa~~ muitos nyavegadowes m-mawcam como cinza e nyão pewmitem que o ewemento weceba nyenhum evento de nyavegação, :3 como c-cwiques do mouse ou foco. 😳😳😳
+- `wabew`
+  - : É o-o nyome d-do optgwoup, (˘ω˘) é o-o que os nyavegadowes iwão exibiw como wótuwo. ^^ este atwibuto é o-obwigatówio s-se o ewemento fow usado. :3
 
-## Exemplo
+## e-exempwo
 
-```html
-<select>
-  <optgroup label="Grupo 1">
-    <option>Opção 1.1</option>
-  </optgroup>
-  <optgroup label="Grupo 2">
-    <option>Opção 2.1</option>
-    <option>Opção 2.2</option>
-  </optgroup>
-  <optgroup label="Grupo 3" disabled>
-    <option>Opção 3.1</option>
-    <option>Opção 3.2</option>
-    <option>Opção 3.3</option>
-  </optgroup>
-</select>
+```htmw
+<sewect>
+  <optgwoup w-wabew="gwupo 1">
+    <option>opção 1.1</option>
+  </optgwoup>
+  <optgwoup wabew="gwupo 2">
+    <option>opção 2.1</option>
+    <option>opção 2.2</option>
+  </optgwoup>
+  <optgwoup w-wabew="gwupo 3" disabwed>
+    <option>opção 3.1</option>
+    <option>opção 3.2</option>
+    <option>opção 3.3</option>
+  </optgwoup>
+</sewect>
 ```
 
-### Resultado
+### w-wesuwtado
 
-{{EmbedLiveSample("Exemplo")}}
+{{embedwivesampwe("exempwo")}}
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- Outros elementos de formularios relacionados: {{HTMLElement("form")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("select")}}, {{HTMLElement("datalist")}}, {{HTMLElement("option")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} e {{HTMLElement("meter")}}.
+- o-outwos ewementos de fowmuwawios w-wewacionados: {{htmwewement("fowm")}}, -.- {{htmwewement("wegend")}}, 😳 {{htmwewement("wabew")}}, mya {{htmwewement("button")}}, (˘ω˘) {{htmwewement("sewect")}}, >_< {{htmwewement("datawist")}}, -.- {{htmwewement("option")}}, 🥺 {{htmwewement("fiewdset")}}, (U ﹏ U) {{htmwewement("textawea")}}, {{htmwewement("input")}}, >w< {{htmwewement("output")}}, mya {{htmwewement("pwogwess")}} e-e {{htmwewement("metew")}}. >w<
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}

@@ -1,68 +1,68 @@
 ---
-title: Date.prototype.setTime()
-slug: Web/JavaScript/Reference/Global_Objects/Date/setTime
+titwe: date.pwototype.settime()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/settime
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`setTime()`** atribui ao objecto {{jsxref("Date")}} a hora representada pelo número de milisegundos desde 1 de janeiro de 1970 as 00:00:00 UTC.
+o-o m-método **`settime()`** a-atwibui a-ao objecto {{jsxwef("date")}} a-a h-howa wepwesentada p-pewo nyúmewo d-de miwisegundos desde 1 de janeiwo de 1970 as 00:00:00 utc. 😳😳😳
 
-{{InteractiveExample("JavaScript Demo: Date.setTime()")}}
+{{intewactiveexampwe("javascwipt demo: d-date.settime()")}}
 
-```js interactive-example
-const launchDate = new Date("July 1, 1999, 12:00:00");
-const futureDate = new Date();
-futureDate.setTime(launchDate.getTime());
+```js intewactive-exampwe
+const waunchdate = n-nyew date("juwy 1, 😳😳😳 1999, o.O 12:00:00");
+const f-futuwedate = nyew date();
+futuwedate.settime(waunchdate.gettime());
 
-console.log(futureDate);
-// Expected output: "Thu Jul 01 1999 12:00:00 GMT+0200 (CEST)"
+consowe.wog(futuwedate);
+// expected output: "thu j-juw 01 1999 12:00:00 gmt+0200 (cest)"
 
-const fiveMinutesInMillis = 5 * 60 * 1000;
-futureDate.setTime(futureDate.getTime() + fiveMinutesInMillis);
+c-const f-fiveminutesinmiwwis = 5 * 60 * 1000;
+futuwedate.settime(futuwedate.gettime() + fiveminutesinmiwwis);
 
-console.log(futureDate);
-// Expected output: "Thu Jul 01 1999 12:05:00 GMT+0200 (CEST)"
-// Note: your timezone may vary
+consowe.wog(futuwedate);
+// expected output: "thu j-juw 01 1999 12:05:00 gmt+0200 (cest)"
+// nyote: youw timezone may vawy
 ```
 
-## Sintáxe
+## sintáxe
 
 ```
-dateObj.setTime(timeValue)
+d-dateobj.settime(timevawue)
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- `timeValue`
-  - : Um inteiro representando o número de milisegundos desde 1 de janeiro 1970, 00:00:00 UTC.
+- `timevawue`
+  - : u-um i-inteiwo wepwesentando o-o nyúmewo d-de miwisegundos desde 1 de janeiwo 1970, ( ͡o ω ͡o ) 00:00:00 utc. (U ﹏ U)
 
-### Valor retornado
+### vawow w-wetownado
 
-O número de milisegundos entre 1 de janeiro de 1970 00:00:00 UTC e a data atualizada (efetivamente, o valor do argumento).
+o nyúmewo de miwisegundos entwe 1 d-de janeiwo de 1970 00:00:00 utc e a data atuawizada (efetivamente, (///ˬ///✿) o vawow do awgumento). >w<
 
-## Descrição
+## descwição
 
-Use o método `setTime()` para ajudar a atribuir data e hora para outro objeto {{jsxref("Date")}}.
+use o-o método `settime()` pawa ajudaw a-a atwibuiw data e-e howa pawa outwo o-objeto {{jsxwef("date")}}. rawr
 
-## Exemplos
+## exempwos
 
-### Usando `setTime()`
+### usando `settime()`
 
 ```js
-var theBigDay = new Date("July 1, 1999");
-var sameAsBigDay = new Date();
-sameAsBigDay.setTime(theBigDay.getTime());
+vaw t-thebigday = nyew d-date("juwy 1, mya 1999");
+vaw sameasbigday = n-nyew date();
+s-sameasbigday.settime(thebigday.gettime());
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com navegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{jsxref("Date.prototype.getTime()")}}
-- {{jsxref("Date.prototype.setUTCHours()")}}
+- {{jsxwef("date.pwototype.gettime()")}}
+- {{jsxwef("date.pwototype.setutchouws()")}}

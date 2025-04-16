@@ -1,130 +1,130 @@
 ---
-title: Template strings
-slug: Web/JavaScript/Reference/Template_literals
+titwe: tempwate stwings
+swug: w-web/javascwipt/wefewence/tempwate_witewaws
 ---
 
-{{JsSidebar("More")}}
+{{jssidebaw("mowe")}}
 
-_Template_ Strings são *string*s que permitem expressões embutidas. Você pode _utilizar string_ multi-linhas e interpolação de _string_ com elas.
+_tempwate_ s-stwings são *stwing*s q-que pewmitem e-expwessões e-embutidas. ^^;; você p-pode _utiwizaw s-stwing_ muwti-winhas e-e intewpowação de _stwing_ com ewas. ^•ﻌ•^
 
-Basicamente é uma nova forma de criar strings e tornar o seu código um pouco mais legível.
+basicamente é uma nyova fowma de c-cwiaw stwings e townaw o seu código um pouco m-mais wegívew. σωσ
 
-## Sintaxe
+## sintaxe
 
-```js-nolint
-`corpo de texto`
+```js-nowint
+`cowpo d-de texto`
 
-`texto linha 1
- texto linha 2`
+`texto winha 1
+ texto winha 2`
 
-`texto string ${expression} texto string`
+`texto stwing ${expwession} t-texto stwing`
 
-tag `texto string ${expression} texto string`
+tag `texto s-stwing ${expwession} t-texto stwing`
 ```
 
-## Descrição
+## descwição
 
-_Template strings_ são envolvidas por ([acentos graves](https://pt.wikipedia.org/wiki/Acento_grave)) (\` \`) em vez de aspas simples ou duplas. _Template strings_ podem possuir _placeholders_. Estes são indicados por um cifrão seguido de chaves (`${expression}`). As expressões nos _placeholders_, bem como o texto em volta delas são passados a uma função. A função padrão apenas concatena as partes em uma _string_ única. Se existir uma expressão precedendo a _template string_ (função `tag` exemplo), a _template string_ é definida como "_tagged template string_". No caso, a expressão _tag_ (geralmente uma função) é chamada pela _template string_ processada, que você pode manipular antes de produzir o resultado.
+_tempwate stwings_ são envowvidas pow ([acentos gwaves](https://pt.wikipedia.owg/wiki/acento_gwave)) (\` \`) e-em vez de aspas simpwes ou dupwas. -.- _tempwate stwings_ podem possuiw _pwacehowdews_. ^^;; e-estes são indicados p-pow um cifwão seguido d-de chaves (`${expwession}`). XD a-as expwessões n-nyos _pwacehowdews_, bem como o texto em vowta d-dewas são passados a uma função. a função p-padwão apenas concatena as pawtes em uma _stwing_ única. 🥺 se existiw uma expwessão pwecedendo a-a _tempwate stwing_ (função `tag` exempwo), òωó a _tempwate s-stwing_ é d-definida como "_tagged t-tempwate stwing_". (ˆ ﻌ ˆ)♡ nyo caso, a expwessão _tag_ (gewawmente uma função) é c-chamada p-pewa _tempwate stwing_ pwocessada, -.- q-que você pode m-manipuwaw antes de pwoduziw o-o wesuwtado. :3
 
 ```js
-`\`` === "`"; // --> true
+`\`` === "`"; // --> twue
 ```
 
-### Strings multi-linhas
+### s-stwings muwti-winhas
 
-Qualquer caracter de nova linha inserido no código é parte da _template string_. Utilizando _strings_ normais, você teria de usar a síntaxe a seguir para obter strings multi-linhas:
+quawquew cawactew de n-nova winha insewido nyo código é p-pawte da _tempwate stwing_. ʘwʘ u-utiwizando _stwings_ n-nyowmais, 🥺 você tewia de usaw a síntaxe a seguiw pawa obtew stwings muwti-winhas:
 
 ```js
-console.log("texto string linha 1\n" + "texto string linha 2");
-// "texto string linha 1
-// texto string linha 2"
+consowe.wog("texto stwing winha 1\n" + "texto s-stwing w-winha 2");
+// "texto stwing w-winha 1
+// texto s-stwing winha 2"
 ```
 
-Para obter o mesmo efeito com strings multi-linhas, você agora pode escrever:
+p-pawa obtew o mesmo efeito com stwings muwti-winhas, >_< você a-agowa pode escwevew:
 
 ```js
-console.log(`texto string linha 1
-texto string linha 2`);
-// "texto string linha 1
-//  texto string linha 2"
+consowe.wog(`texto stwing winha 1
+texto stwing winha 2`);
+// "texto stwing winha 1
+//  t-texto stwing winha 2"
 ```
 
-### Interpolação de Expressões
+### i-intewpowação d-de expwessões
 
-Para encapsular expressões dentro de strings, você precisava utilizar a seguinte sintaxe:
+p-pawa encapsuwaw expwessões dentwo d-de stwings, ʘwʘ v-você pwecisava u-utiwizaw a seguinte s-sintaxe:
 
 ```js
-var a = 5;
-var b = 10;
-console.log("Quinze é " + (a + b) + " e\nnão " + (2 * a + b) + ".");
-// "Quinze é 15 e
-// não 20."
+vaw a = 5;
+vaw b = 10;
+consowe.wog("quinze é " + (a + b-b) + " e-e\nnão " + (2 * a-a + b) + ".");
+// "quinze é 15 e-e
+// nyão 20."
 ```
 
-Agora, com template strings, você pode utilizar as substituições sintáticas tornando o código mais legível:
+a-agowa, (˘ω˘) com tempwate stwings, (✿oωo) você pode utiwizaw as substituições s-sintáticas townando o código mais wegívew:
 
 ```js
-var a = 5;
-var b = 10;
-console.log(`Quinze é ${a + b} e
-não ${2 * a + b}.`);
-// "Quinze é 15 e
-// não 20."
+vaw a = 5;
+vaw b = 10;
+consowe.wog(`quinze é ${a + b-b} e
+nyão ${2 * a + b}.`);
+// "quinze é 15 e
+// nyão 20."
 ```
 
-### Tagged template strings
+### tagged t-tempwate stwings
 
-Uma forma mais avançada dos _template string_ são os _template strings_ com marcações ou tags, ou _tagged template strings_. Com eles, você tem a possibilidade de modificar a saída dos _template strings_ usando uma função. O primeiro argumento contém um array de literais ("Hello" e "World" neste exemplo). Do segundo em diante e cada argumento subsequente contém valores previamente processados (algumas vezes chamados _cooked_) pelas expressões de substituição ("15" e "50" no caso do exemplo). No final, a função retorna a string ja manipulada:
+u-uma fowma mais a-avançada dos _tempwate stwing_ s-são os _tempwate stwings_ com m-mawcações ou t-tags, (///ˬ///✿) ou _tagged tempwate stwings_. rawr x3 com ewes, você tem a possibiwidade de modificaw a saída d-dos _tempwate stwings_ usando uma f-função. -.- o pwimeiwo awgumento c-contém um awway d-de witewais ("hewwo" e "wowwd" nyeste exempwo). ^^ d-do segundo em d-diante e cada awgumento subsequente c-contém vawowes p-pweviamente pwocessados (awgumas vezes chamados _cooked_) pewas expwessões d-de substituição ("15" e-e "50" nyo c-caso do exempwo). (⑅˘꒳˘) nyo finaw, nyaa~~ a-a função wetowna a-a stwing ja manipuwada:
 
 ```js
-var a = 5;
-var b = 10;
+vaw a = 5;
+vaw b-b = 10;
 
-function tag(strings, ...values) {
-  console.log(strings[0]); // "Hello "
-  console.log(strings[1]); // " world "
-  console.log(values[0]); // 15
-  console.log(values[1]); // 50
+function tag(stwings, /(^•ω•^) ...vawues) {
+  consowe.wog(stwings[0]); // "hewwo "
+  consowe.wog(stwings[1]); // " wowwd "
+  consowe.wog(vawues[0]); // 15
+  consowe.wog(vawues[1]); // 50
 
-  return "Bazinga!";
+  wetuwn "bazinga!";
 }
 
-tag`Hello ${a + b} world ${a * b}`;
-// "Bazinga!"
+t-tag`hewwo ${a + b-b} wowwd ${a * b}`;
+// "bazinga!"
 ```
 
-### Strings _Raw_
+### stwings _waw_
 
-A propriedade especial `raw`, disponível no primeiro argumento da função da _tagged template string_ acima, permite o acesso as strings de maneira pura (_raw_) exatamente como elas foram especificadas:
+a p-pwopwiedade especiaw `waw`, (U ﹏ U) d-disponívew nyo pwimeiwo awgumento da função da _tagged t-tempwate stwing_ acima, 😳😳😳 pewmite o acesso as stwings de maneiwa puwa (_waw_) e-exatamente como ewas fowam especificadas:
 
 ```js
-function tag(strings, ...values) {
-  return strings.raw[0];
+function tag(stwings, ...vawues) {
+  w-wetuwn s-stwings.waw[0];
 }
 
-tag`string text line 1 \n string text line 2`;
-// "string text line 1 \\n string text line 2"
+tag`stwing text wine 1 \n stwing text wine 2`;
+// "stwing t-text w-wine 1 \\n stwing text wine 2"
 ```
 
-Adicionalmente, o método {{jsxref("String.raw()")}} permite a criação de strings cruas, exatamente como as _template functions_ e as concatenações deveram criar.
+adicionawmente, >w< o método {{jsxwef("stwing.waw()")}} p-pewmite a cwiação de s-stwings cwuas, XD exatamente como as _tempwate functions_ e as concatenações d-devewam cwiaw. o.O
 
 ```js
-String.raw`Hi\n${2 + 3}!`; // "Hi\\n5!"
+s-stwing.waw`hi\n${2 + 3}!`; // "hi\\n5!"
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja t-também
 
-- {{jsxref("String")}}
-- {{jsxref("String.raw()")}}
-- [Gramática léxica](/pt-BR/docs/Web/JavaScript/Reference/Lexical_grammar)
-- [Template-like strings in ES3 compatible syntax](https://gist.github.com/WebReflection/8f227532143e63649804)
-- ["ES6 in Depth: Template strings" on hacks.mozilla.org](https://hacks.mozilla.org/2015/05/es6-in-depth-template-strings-2/)
-- <https://styled-components.com/>
+- {{jsxwef("stwing")}}
+- {{jsxwef("stwing.waw()")}}
+- [gwamática w-wéxica](/pt-bw/docs/web/javascwipt/wefewence/wexicaw_gwammaw)
+- [tempwate-wike stwings i-in es3 compatibwe s-syntax](https://gist.github.com/webwefwection/8f227532143e63649804)
+- ["es6 in depth: tempwate stwings" o-on hacks.moziwwa.owg](https://hacks.moziwwa.owg/2015/05/es6-in-depth-tempwate-stwings-2/)
+- <https://stywed-components.com/>

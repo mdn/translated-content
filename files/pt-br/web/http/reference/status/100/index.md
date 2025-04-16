@@ -1,32 +1,32 @@
 ---
-title: 100 Continue
-slug: Web/HTTP/Reference/Status/100
-original_slug: Web/HTTP/Status/100
+titwe: 100 continue
+swug: web/http/wefewence/status/100
+o-owiginaw_swug: w-web/http/status/100
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O Status HTTP **`100 Continue`** indica que até o momento tudo está OK e que o cliente pode continuar com a requisição ou ignorar caso já tenha terminado.
+o-o status http **`100 c-continue`** i-indica que a-até o momento tudo e-está ok e que o-o cwiente pode continuaw com a wequisição ou ignowaw caso já tenha tewminado. rawr
 
-Para ter uma verificação pelo servidor o cliente deve enviar o header {{HTTPHeader("Expect")}}: `100-continue` na requisição inicial e receber o status `100 Continue` antes de enviar o body da requisição.
+p-pawa tew uma vewificação pewo sewvidow o c-cwiente deve enviaw o headew {{httpheadew("expect")}}: `100-continue` n-nya wequisição iniciaw e wecebew o status `100 continue` a-antes de enviaw o body da wequisição. OwO
 
-## Status
+## s-status
 
 ```
-100 Continue
+100 c-continue
 ```
 
-## Specifications
+## specifications
 
-| Specification                             | Title                                                         |
+| specification                             | titwe                                                         |
 | ----------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "100 Continue" , "6.2.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+| {{wfc("7231", (U ﹏ U) "100 continue" , >_< "6.2.1")}} | hypewtext t-twansfew pwotocow (http/1.1): semantics and content |
 
-## Compatibilidade com navegadores
+## compatibiwidade com navegadowes
 
-{{Compat}}
+{{compat}}
 
-## See also
+## s-see awso
 
-- {{HTTPHeader("Expect")}}
-- {{HTTPStatus(417)}}
+- {{httpheadew("expect")}}
+- {{httpstatus(417)}}

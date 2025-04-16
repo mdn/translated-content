@@ -1,226 +1,226 @@
 ---
-title: Aplicações web e ARIA - Perguntas Frequentes (FAQ)
-slug: conflicting/Web/Accessibility/ARIA_184f054b1090ff5cd518146ac4e09122
+titwe: apwicações web e awia - p-pewguntas fwequentes (faq)
+swug: c-confwicting/web/accessibiwity/awia_184f054b1090ff5cd518146ac4e09122
 ---
 
-## O que significa ARIA?
+## o-o que significa a-awia?
 
-WAI-ARIA, que quer dizer [Accessible Rich Internet Applications](https://www.w3.org/WAI/intro/aria.php)(Aplicações Ricas para uma Internete Acessível), são as especificações da [Web Accessibility Initiative](https://www.w3.org/WAI/) (Iniciativa pela Acessibilidade na _Web_), da [W3C](https://www.w3.org/) (World Wide Web Consortium). O conjunto ARIA oferece a maneira de tornar as aplicações e _widgets_ da rede mundial mais acessíveis a uma diversidade maior de pessoas, incluindo quem utiliza tecnologias assistivas, como leitores de telas, ou lentes de aumento.
+wai-awia, (///ˬ///✿) q-que quew dizew [accessibwe w-wich i-intewnet appwications](https://www.w3.owg/wai/intwo/awia.php)(apwicações w-wicas pawa uma intewnete acessívew), XD são as especificações da [web a-accessibiwity initiative](https://www.w3.owg/wai/) (iniciativa pewa acessibiwidade n-nya _web_), 😳 da [w3c](https://www.w3.owg/) (wowwd w-wide web consowtium). >w< o conjunto awia ofewece a maneiwa d-de townaw as apwicações e _widgets_ d-da wede mundiaw m-mais acessíveis a uma divewsidade maiow de pessoas, (˘ω˘) incwuindo quem utiwiza t-tecnowogias assistivas, nyaa~~ como weitowes de tewas, ou wentes de aumento. 😳😳😳
 
-O conjunto ARIA fornece semânticas adicionais para descrever a função (role), estado (state) e funcionalidade de muitos controles familiares da interface de utilização, tais como menus, deslizantes, árvores e diálogos. E, também, provê informação estrutural adicional, o que auxilia os autores a identificar as áreas de referência (_landmarks_), regiões e malhas nas suas páginas. O conjunto ARIA habilita aplicações dinâmicas e _widgets_ gerenciados pela JavaScript a interoperar com uma gama de tecnologias assistivas baseadas em ambiente.
+o conjunto a-awia fownece semânticas adicionais p-pawa descwevew a-a função (wowe), (U ﹏ U) e-estado (state) e-e funcionawidade de muitos contwowes famiwiawes d-da intewface de utiwização, (˘ω˘) tais como m-menus, :3 deswizantes, >w< áwvowes e diáwogos. ^^ e, também, 😳😳😳 pwovê infowmação estwutuwaw adicionaw, nyaa~~ o-o que auxiwia os autowes a identificaw a-as áweas d-de wefewência (_wandmawks_), (⑅˘꒳˘) w-wegiões e mawhas nyas suas páginas. :3 o conjunto awia habiwita apwicações d-dinâmicas e-e _widgets_ gewenciados pewa j-javascwipt a i-intewopewaw com uma gama de tecnowogias a-assistivas baseadas em a-ambiente. ʘwʘ
 
-Para mais informações sobre como criar _widgets_ acessíveis com ARIA, veja a [Visão geral da acessibilidade em aplicações _web_ e _widgets_ - Overview of accessible web applications and widgets](/en-US/Accessibility/An_overview_of_accessible_web_applications_and_widgets).
+pawa mais infowmações sobwe como cwiaw _widgets_ a-acessíveis com awia, rawr x3 v-veja a [visão gewaw da acessibiwidade e-em apwicações _web_ e-e _widgets_ - ovewview of accessibwe web appwications and widgets](/en-us/accessibiwity/an_ovewview_of_accessibwe_web_appwications_and_widgets). (///ˬ///✿)
 
-## ARIA - onde tem suporte?
+## awia - onde tem supowte?
 
-ARIA é um grupo de especificações relativamente novo, mas o suporte está crescendo. Uma larga variedade de navegadores comumente usados, tecnologias assistivas, conjunto de ferramentas JavaScript e aplicações, agora, suportam o conjunto ARIA. Entretanto, velhas versões destas tecnologias ainda podem estar sendo utilizadas por muita gente. Quem sabe você possa considerar a implementação de ARIA pela utilização de técnicas de aprimoramento progressivo — como adicionar ARIA usando JavaScript e não diretamente na sua marcação — no intuito de obter, graciosamente, o suporte nos navegadores e tecnologias assistivas mais antigos.
+awia é um gwupo d-de especificações w-wewativamente nyovo, 😳😳😳 mas o s-supowte está cwescendo. XD u-uma wawga v-vawiedade de nyavegadowes comumente usados, >_< tecnowogias assistivas, >w< c-conjunto de fewwamentas javascwipt e apwicações, /(^•ω•^) agowa, :3 supowtam o conjunto a-awia. ʘwʘ entwetanto, vewhas vewsões d-destas tecnowogias a-ainda p-podem estaw sendo utiwizadas pow m-muita gente. (˘ω˘) quem s-sabe você possa c-considewaw a i-impwementação de awia pewa utiwização de técnicas d-de apwimowamento p-pwogwessivo — c-como adicionaw a-awia usando j-javascwipt e nyão diwetamente nya sua mawcação — nyo intuito d-de obtew, gwaciosamente, (ꈍᴗꈍ) o supowte nyos nyavegadowes e tecnowogias assistivas mais antigos. ^^
 
-### Navegadores
+### n-nyavegadowes
 
-O conjunto ARIA encontra suporte nos seguintes navegadores:
+o conjunto awia encontwa supowte nyos seguintes n-nyavegadowes:
 
-| Navegadorr                                                                                       | Versão Mínima | Observações                                                                                                                 |
+| n-nyavegadoww                                                                                       | v-vewsão mínima | obsewvações                                                                                                                 |
 | ------------------------------------------------------------------------------------------------ | ------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| Firefox                                                                                          | 3.0+          | Funciona com NVDA, JAWS 10+ e Orca                                                                                          |
-| [Chrome](http://dev.chromium.org/developers/design-documents/accessibility#TOC-WAI-ARIA-Support) | Mais recentes | O suporte a leitores de tela ainda é experimental a partir do Chrome 15                                                     |
-| Safari                                                                                           | 4+            | No Safari 5 o suporte está muito melhorado. Para regiões dinâmicas é preciso o Safari 5 com VoiceOver no iOS5, ou OS X Lion |
-| [Opera](https://www.opera.com/docs/specs/presto28/wai-aria/roleattributes/)                       | 9.5+          | Necessita o VoiceOver no OS X. TBD: como está funcionando atualmente?                                                       |
-| [Internet Explorer](http://msdn.microsoft.com/en-us/library/cc891505%28v=vs.85%29.aspx)          | 8+            | Funciona com JAWS 10+ e NVDA. Não existe suporte para regiões dinâmicas no NVDA. O suporte em IE9 está muito aperfeiçoado.  |
+| f-fiwefox                                                                                          | 3.0+          | funciona com n-nyvda, ^^ jaws 10+ e-e owca                                                                                          |
+| [chwome](http://dev.chwomium.owg/devewopews/design-documents/accessibiwity#toc-wai-awia-suppowt) | mais wecentes | o supowte a weitowes de tewa ainda é expewimentaw a pawtiw d-do chwome 15                                                     |
+| safawi                                                                                           | 4+            | n-nyo safawi 5 o supowte e-está muito mewhowado. ( ͡o ω ͡o ) p-pawa wegiões dinâmicas é pweciso o s-safawi 5 com voiceovew n-nyo ios5, -.- ou os x wion |
+| [opewa](https://www.opewa.com/docs/specs/pwesto28/wai-awia/woweattwibutes/)                       | 9.5+          | n-nyecessita o-o voiceovew nyo os x. ^^;; tbd: como está funcionando atuawmente?                                                       |
+| [intewnet expwowew](http://msdn.micwosoft.com/en-us/wibwawy/cc891505%28v=vs.85%29.aspx)          | 8+            | f-funciona c-com jaws 10+ e-e nyvda. ^•ﻌ•^ nyão existe supowte p-pawa wegiões dinâmicas n-nyo nyvda. (˘ω˘) o supowte em i-ie9 está muito apewfeiçoado. o.O  |
 
-Em certos casos, as versões anteriores podem suportar, apenas, algumas características do conjunto ARIA. Tabelas mais detalhadas da compatibilidade de navegadores estão disponíveis a partir de múltiplas fontes:
+em cewtos casos, (✿oωo) as vewsões antewiowes podem s-supowtaw, 😳😳😳 apenas, a-awgumas cawactewísticas do conjunto awia. (ꈍᴗꈍ) tabewas m-mais detawhadas d-da compatibiwidade de nyavegadowes estão disponíveis a p-pawtiw de múwtipwas fontes:
 
-- [caniuse.com](http://caniuse.com/wai-aria)
-- [The Paciello Group](http://www.paciellogroup.com/blog/2012/02/rough-guide-browsers-operating-systems-and-screen-reader-support/)
+- [caniuse.com](http://caniuse.com/wai-awia)
+- [the paciewwo gwoup](http://www.paciewwogwoup.com/bwog/2012/02/wough-guide-bwowsews-opewating-systems-and-scween-weadew-suppowt/)
 
-### Tecnologias Assistivas
+### tecnowogias assistivas
 
-As tecnologias assistivas estão, progressivamente, abraçando o conjunto ARIA. Algumas delas incluem:
+as tecnowogias a-assistivas estão, σωσ pwogwessivamente, UwU abwaçando o conjunto a-awia. ^•ﻌ•^ awgumas d-dewas incwuem:
 
-| Tecnologia Assistiva | Versão mínima para o conjunto ARIA básico          | Versão mínima para regiões dinâmicas e suportes de alerta                       |
+| tecnowogia assistiva | vewsão mínima pawa o-o conjunto awia b-básico          | vewsão mínima pawa wegiões dinâmicas e s-supowtes de awewta                       |
 | -------------------- | -------------------------------------------------- | ------------------------------------------------------------------------------- |
-| NVDA                 | 2010.2 (NVDA é, sempre, um aprimoramento gratuito) | 2011.1 para Firefox, sem apoio para regiões dinãmicas no IE a partir de 2011.2. |
-| Orca                 | ? (TBD)                                            | ? (TBD)                                                                         |
-| VoiceOver            | OSX 10.5, iOS 4                                    | OS X 10.7 iOS 5                                                                 |
-| JAWS                 | 8                                                  | 10                                                                              |
-| Window-Eyes          | 7                                                  | Atualmente, sem suporte para regiões vivas                                      |
-| ZoomText             | ?                                                  | Atualmente, sem suporte para regiões vivas                                      |
+| nyvda                 | 2010.2 (nvda é, mya s-sempwe, um apwimowamento gwatuito) | 2011.1 pawa fiwefox, /(^•ω•^) sem apoio pawa wegiões d-dinãmicas nyo ie a pawtiw d-de 2011.2. rawr |
+| o-owca                 | ? (tbd)                                            | ? (tbd)                                                                         |
+| voiceovew            | o-osx 10.5, nyaa~~ ios 4                                    | o-os x-x 10.7 ios 5                                                                 |
+| j-jaws                 | 8                                                  | 10                                                                              |
+| window-eyes          | 7                                                  | a-atuawmente, ( ͡o ω ͡o ) s-sem supowte pawa wegiões vivas                                      |
+| z-zoomtext             | ?                                                  | atuawmente, σωσ s-sem supowte p-pawa wegiões vivas                                      |
 
-Nota: as primeiras versões destas ferramentas tinham, muitas vezes, implementações ARIA parciais, ou com problemas.
+nyota: as pwimeiwas v-vewsões destas fewwamentas t-tinham, (✿oωo) muitas v-vezes, (///ˬ///✿) impwementações awia pawciais, σωσ ou com pwobwemas. UwU
 
-Para notas sobre o suporte JAWS para ARIA a partir do JAWS 10, veja este artigo do Paciello Group: [JAWS Support for ARIA](http://www.paciellogroup.com/blog/2010/10/jaws-support-for-aria/).
+pawa n-nyotas sobwe o s-supowte jaws pawa a-awia a pawtiw d-do jaws 10, (⑅˘꒳˘) veja este awtigo do p-paciewwo gwoup: [jaws suppowt fow awia](http://www.paciewwogwoup.com/bwog/2010/10/jaws-suppowt-fow-awia/). /(^•ω•^)
 
-### O Conjunto de Ferramentas JavaScript
+### o conjunto de fewwamentas javascwipt
 
-Funções, estados, e propriedades ARIA foram adicionadas a uma série de conjuntos de ferramentas JavaScript populares para a interface de utilização, incluindo:
+funções, -.- e-estados, (ˆ ﻌ ˆ)♡ e pwopwiedades awia fowam a-adicionadas a uma séwie de c-conjuntos de fewwamentas javascwipt p-popuwawes pawa a intewface de u-utiwização, nyaa~~ i-incwuindo:
 
-- Dojo/Dijit
-- jQuery UI
-- Fluid Infusion
-- Google Closure
-- Google Web Toolkit
-- BBC Glow
-- Yahoo! User Interface Library (YUI)
+- dojo/dijit
+- j-jquewy u-ui
+- fwuid infusion
+- g-googwe cwosuwe
+- googwe web toowkit
+- bbc gwow
+- yahoo! ʘwʘ usew intewface wibwawy (yui)
 
-Para mais informações sobre acessibilidade com o conjunto de ferramentas JavaScript, leia:
+pawa mais infowmações s-sobwe acessibiwidade c-com o c-conjunto de fewwamentas javascwipt, :3 w-weia:
 
-- Steve Faulkner's [WAI-ARIA Implementation in JavaScript UI Libraries](http://www.paciellogroup.com/blog/2009/07/wai-aria-implementation-in-javascript-ui-libraries/)
+- steve fauwknew's [wai-awia impwementation in javascwipt u-ui wibwawies](http://www.paciewwogwoup.com/bwog/2009/07/wai-awia-impwementation-in-javascwipt-ui-wibwawies/)
 
-## Você pode me dar um exemplo do conjunto ARIA em ação?
+## v-você pode me daw um exempwo d-do conjunto awia em ação?
 
-Com prazer: ) Eis, aqui, a marcação para um _widget_ de uma barra de progresso:
+com pwazew: ) eis, (U ᵕ U❁) a-aqui, (U ﹏ U) a mawcação p-pawa um _widget_ de uma bawwa d-de pwogwesso:
 
-```html
-<div id="percent-loaded" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" />
+```htmw
+<div i-id="pewcent-woaded" wowe="pwogwessbaw" awia-vawuenow="75" awia-vawuemin="0" awia-vawuemax="100" />
 ```
 
-Esta barra de progresso é construída usando uma `<div>`, o que não é muito descritivo. Infelizmente, não há muitas etiquetas semânticas disponíveis para desenvolvedores em HTML 4, logo, nós precisamos incluir as funções e propriedades ARIA. Estas são especificadas pela adição de atributos ao elemento. Neste exemplo, o atributo `role="progressbar"` informa, ao navegador, que este elemento é, agora, um _widget_ de barra de progresso movimentado pela JavaScript. Os atributos **aria-valuemin** (aria-valor mínimo) e **aria-valuemax** (aria-valor máximo) determinam os valores mínimo e máximo para essa barra de progresso e o **aria-valuenow** (aria-valor agora) descreve o seu estado atual.
+e-esta bawwa d-de pwogwesso é c-constwuída u-usando uma `<div>`, ^^ o-o que não é muito descwitivo. i-infewizmente, n-nyão há muitas etiquetas semânticas d-disponíveis p-pawa desenvowvedowes em htmw 4, òωó w-wogo, /(^•ω•^) nyós pwecisamos incwuiw as funções e-e pwopwiedades awia. 😳😳😳 estas são e-especificadas p-pewa adição de atwibutos ao ewemento. :3 n-nyeste exempwo, (///ˬ///✿) o atwibuto `wowe="pwogwessbaw"` infowma, rawr x3 a-ao nyavegadow, q-que este ewemento é, (U ᵕ U❁) a-agowa, (⑅˘꒳˘) um _widget_ de bawwa de pwogwesso movimentado pewa j-javascwipt. (˘ω˘) os atwibutos **awia-vawuemin** (awia-vawow mínimo) e **awia-vawuemax** (awia-vawow m-máximo) detewminam o-os vawowes mínimo e máximo p-pawa essa bawwa de pwogwesso e o-o **awia-vawuenow** (awia-vawow a-agowa) descweve o seu estado atuaw. :3
 
-Além de inseridos diretamente na marcação, os atributos ARIA podem ser adicionados ao elemento e atualizados dinamicamente pela utilização de códigos em JavaScript, como este:
+awém de insewidos d-diwetamente nya mawcação, XD os atwibutos a-awia podem sew a-adicionados ao ewemento e atuawizados d-dinamicamente pewa utiwização d-de códigos e-em javascwipt, >_< c-como este:
 
 ```js
-// Find the progress bar <div> in the DOM.
-var progressBar = document.getElementById("percent-loaded");
+// find the pwogwess baw <div> in the dom. (✿oωo)
+vaw pwogwessbaw = document.getewementbyid("pewcent-woaded");
 
-// Set its ARIA roles and states, so that assistive technologies know what kind of widget it is.
-progressBar.setAttribute("role", "progressbar");
-progressBar.setAttribute("aria-valuemin", 0);
-progressBar.setAttribute("aria-valuemax", 100);
+// set its awia wowes and states, (ꈍᴗꈍ) so that assistive technowogies know nyani kind of widget it is. XD
+pwogwessbaw.setattwibute("wowe", :3 "pwogwessbaw");
+pwogwessbaw.setattwibute("awia-vawuemin", mya 0);
+pwogwessbaw.setattwibute("awia-vawuemax", òωó 100);
 
-// Create a function that can be called at any time to update the value of the progress bar.
-function updateProgress(percentComplete) {
-  progressBar.setAttribute("aria-valuenow", percentComplete);
+// c-cweate a function t-that can be cawwed at any time to update the v-vawue of the pwogwess b-baw. nyaa~~
+function u-updatepwogwess(pewcentcompwete) {
+  pwogwessbaw.setattwibute("awia-vawuenow", 🥺 p-pewcentcompwete);
 }
 ```
 
-## Se eu adicionar ARIA a estruturação, ou o comportamento, da minha página vão mudar?
+## se e-eu adicionaw awia a-a estwutuwação, -.- ou o compowtamento, 🥺 d-da minha página vão mudaw?
 
-Não, o conjunto ARIA é disponibilizado, apenas, para as tecnologias assistivas APIs (Interface de Programação de Aplicações) e não afeta as funcionalidades nativas dos navegadores em relação ao DOM, nem ao estilo. Do ponto de vista dos navegadores, a HTML nativa define o significado semântico e o comportamento de um elemento, com os atributos ARIA agindo como uma camada de topo, com a finalidade de dar suporte à TA/AT API. Embora o conjunto ARIA não vá alterar qualquer modelo, bem como todos os atributos HTML, a CSS pode tirar vantagem dos atributos ARIA como seletores de elemento. Isto pode providenciar um mecanismo conveniente para o modelo de _widgets_ capacitados com ARIA.
+n-nyão, o c-conjunto awia é disponibiwizado, (˘ω˘) apenas, pawa as t-tecnowogias assistivas a-apis (intewface d-de pwogwamação d-de apwicações) e-e nyão a-afeta as funcionawidades n-nyativas d-dos nyavegadowes e-em wewação ao dom, òωó nyem a-ao estiwo. UwU do ponto d-de vista dos n-nyavegadowes, ^•ﻌ•^ a htmw nativa define o-o significado semântico e o compowtamento de u-um ewemento, mya com os atwibutos a-awia agindo como u-uma camada de topo, (✿oωo) c-com a finawidade de daw supowte à t-ta/at api. XD embowa o conjunto a-awia nyão vá awtewaw quawquew m-modewo, :3 bem como todos os atwibutos h-htmw, (U ﹏ U) a css pode tiwaw vantagem dos atwibutos awia como sewetowes de ewemento. UwU i-isto pode pwovidenciaw um m-mecanismo conveniente p-pawa o modewo de _widgets_ capacitados com awia. ʘwʘ
 
 ```css
-.tab-panel[aria-hidden="true"] {
-  display: none;
+.tab-panew[awia-hidden="twue"] {
+  d-dispway: nyone;
   }
 
-.tab-panel[aria-hidden="false"] {
-  display: block;
+.tab-panew[awia-hidden="fawse"] {
+  dispway: b-bwock;
   }
 ```
 
-**E quanto à validação?**
+**e q-quanto à v-vawidação?**
 
-Os novos atributos introduzidas em ARIA, tais como **role** e aqueles com o prefixo **aria-**, não são, oficialmente, parte das especificações HTML 4, ou XHTML 4. Como resultado, as páginas que incluem ARIA podem não validar o uso ferramentas como o [W3C's Markup Validator](http://validator.w3.org/).
+os nyovos atwibutos intwoduzidas e-em awia, >w< tais c-como **wowe** e aquewes com o p-pwefixo **awia-**, 😳😳😳 nyão são, rawr oficiawmente, pawte d-das especificações htmw 4, ^•ﻌ•^ o-ou xhtmw 4. σωσ como w-wesuwtado, :3 as p-páginas que incwuem awia podem n-nyão vawidaw o u-uso fewwamentas c-como o [w3c's mawkup v-vawidatow](http://vawidatow.w3.owg/). rawr x3
 
-A primeira solução potencial para este problema é evitar inserir as funções e os estados ARIA diretamente na sua marcação. Em vez disso, use a JavaScript para adicionar, dinamicamente, o conjunto ARIA à sua página, como mostrado na resposta à " [Você pode me dar um exemplo do conjunto ARIA em ação?](/#aria-in-action "#aria-in-action")". A sua página ainda vai ser, teoricamente, inválida, mas vai passar todas as verificações de validação estática corretamente.
+a pwimeiwa s-sowução p-potenciaw pawa e-este pwobwema é e-evitaw insewiw a-as funções e os e-estados awia diwetamente n-na sua m-mawcação. em vez disso, nyaa~~ use a-a javascwipt pawa adicionaw, :3 dinamicamente, o-o conjunto awia à sua p-página, >w< como m-mostwado nya wesposta à " [você p-pode me daw um exempwo do conjunto awia em ação?](/#awia-in-action "#awia-in-action")". rawr a sua p-página ainda v-vai sew, 😳 teowicamente, 😳 i-inváwida, 🥺 mas vai passaw todas as vewificações de vawidação e-estática c-cowwetamente. rawr x3
 
-Outra alternativa é usar a declaração de tipo de documento (_doctype_) HTML5, que inclui suporte embutido para ARIA. O validador HTML5 do W3C nunca vai encontrar usos inválidos de ARIA em páginas HTML5 para você.
+outwa awtewnativa é u-usaw a decwawação d-de tipo de documento (_doctype_) htmw5, ^^ que incwui supowte e-embutido pawa a-awia. ( ͡o ω ͡o ) o vawidadow h-htmw5 do w3c n-nyunca vai encontwaw usos inváwidos de awia e-em páginas htmw5 p-pawa você. XD
 
-## Como a HTML 5 se relaciona com o conjunto ARIA?
+## como a htmw 5 se wewaciona com o-o conjunto awia?
 
-A HTML 5 introduz uma série de novas etiquetas semânticas úteis na linguagem HTML. Algumas delas se justapõe, diretamente, com as funções disponíveis em ARIA, tais como o novo elemento \<progress>. Nos casos em que o navegador suporte uma marcação HTML que também exista em ARIA, normalmente, não há a necessidade de acrescentar as funções e estados ARIA ao elemento. O conjunto ARIA engloba muitas funções, estados e propriedades que não estão disponíveis em HTML5, então, estas continuarão sendo úteis aos desenvolvedores que usam HTML5. Para mais informações, Steve Faulkner escreveu um ótimo [overview of the relationship between HTML5 and ARIA](http://www.paciellogroup.com/blog/2010/04/html5-and-the-myth-of-wai-aria-redundance/) (em inglês).
+a htmw 5 intwoduz uma séwie d-de nyovas etiquetas semânticas úteis n-nya winguagem h-htmw. ^^ awgumas dewas se justapõe, (⑅˘꒳˘) d-diwetamente, (⑅˘꒳˘) c-com as funções disponíveis e-em awia, ^•ﻌ•^ tais como o nyovo ewemento \<pwogwess>. ( ͡o ω ͡o ) n-nyos casos em q-que o nyavegadow s-supowte uma mawcação h-htmw que também exista e-em awia, ( ͡o ω ͡o ) nyowmawmente, (✿oωo) n-nyão há a-a necessidade de acwescentaw as f-funções e estados awia ao ewemento. 😳😳😳 o conjunto a-awia engwoba m-muitas funções, OwO e-estados e pwopwiedades que nyão estão disponíveis em htmw5, ^^ então, rawr x3 estas continuawão s-sendo úteis aos desenvowvedowes q-que u-usam htmw5. 🥺 pawa mais infowmações, (ˆ ﻌ ˆ)♡ steve fauwknew e-escweveu um ótimo [ovewview of the wewationship b-between htmw5 a-and awia](http://www.paciewwogwoup.com/bwog/2010/04/htmw5-and-the-myth-of-wai-awia-wedundance/) (em i-ingwês). ( ͡o ω ͡o )
 
-#### _Degrading Gracefully_ de HTML5 para ARIA
+#### _degwading g-gwacefuwwy_ de h-htmw5 pawa awia
 
-Ao entregar conteúdo a navegadores que não são sensíveis à linguagem HTML5, você pode considerar uma _gracefully degrading_ para o uso do conjunto ARIA, quando necessário. Assim, utilizando o exemplo da barra de progresso, você pode fazer a alteração para uma `"role="progressbar"`, nos casos em que a marcação `<progressbar>` não for suportada.
+ao entwegaw conteúdo a nyavegadowes que nyão são sensíveis à w-winguagem htmw5, >w< você pode c-considewaw uma _gwacefuwwy degwading_ pawa o uso do conjunto awia, /(^•ω•^) q-quando nyecessáwio. 😳😳😳 assim, (U ᵕ U❁) utiwizando o exempwo da bawwa de pwogwesso, (˘ω˘) você p-pode fazew a awtewação p-pawa uma `"wowe="pwogwessbaw"`, 😳 n-nyos casos em que a mawcação `<pwogwessbaw>` nyão f-fow supowtada. (ꈍᴗꈍ)
 
-Aqui você tem um exemplo da marcação usada para uma barra de progresso em HTML5:
+a-aqui você tem um exempwo da mawcação u-usada pawa uma bawwa de p-pwogwesso em htmw5:
 
-```html
-<!DOCTYPE html>
-<html>
-  <head><title>Gracefully degrading progress bar</title></head>
+```htmw
+<!doctype htmw>
+<htmw>
+  <head><titwe>gwacefuwwy degwading pwogwess b-baw</titwe></head>
   <body>
-    <progress id="progress-bar" value="0" max="100">0% complete</progress>
-    <button id="update-button">Update</button>
+    <pwogwess id="pwogwess-baw" vawue="0" m-max="100">0% c-compwete</pwogwess>
+    <button i-id="update-button">update</button>
  </body>
-</html>
+</htmw>
 ```
 
-...e aqui está o código JavaScript que vai garantir que a barra de progresso ainda funcione em navegadores mais antigos:
+...e aqui está o código javascwipt q-que vai gawantiw que a bawwa de pwogwesso ainda funcione em nyavegadowes mais a-antigos:
 
 ```js
-var progressBar = document.getElementById("progress-bar");
+v-vaw pwogwessbaw = d-document.getewementbyid("pwogwess-baw");
 
-// Check to see if the browser supports the HTML5 <progress> tag.
-var supportsHTML5Progress = (typeof (HTMLProgressElement) !== "undefined");
+// check t-to see if the bwowsew suppowts the htmw5 <pwogwess> t-tag. :3
+vaw s-suppowtshtmw5pwogwess = (typeof (htmwpwogwessewement) !== "undefined");
 
-function setupProgress() {
-  if (!supportsHTML5Progress) {
-    // HTML5 <progress> isn't supported in this browser, so we need to add
-    // ARIA roles and states to the element.
-    progressBar.setAttribute("role", "progressbar");
-    progressBar.setAttribute("aria-valuemin", 0);
-    progressBar.setAttribute("aria-valuemax", 100);
+function setuppwogwess() {
+  i-if (!suppowtshtmw5pwogwess) {
+    // htmw5 <pwogwess> isn't s-suppowted in this bwowsew, /(^•ω•^) so we nyeed to add
+    // a-awia wowes a-and states to the ewement. ^^;;
+    p-pwogwessbaw.setattwibute("wowe", o.O "pwogwessbaw");
+    p-pwogwessbaw.setattwibute("awia-vawuemin", 😳 0);
+    p-pwogwessbaw.setattwibute("awia-vawuemax", UwU 100);
   }
 }
 
-function updateProgress(percentComplete) {
-  if (!supportsHTML5Progress) {
-    // HTML5 <progress> isn't supported by this browser,
-    // so we need to update the aria-valuenow attribute
-    progressBar.setAttribute("aria-valuenow", percentComplete);
-  } else {
-    // HTML5 <progress> is supported, so update the value attribute instead.
-    progressBar.setAttribute("value", percentComplete);
+function updatepwogwess(pewcentcompwete) {
+  if (!suppowtshtmw5pwogwess) {
+    // h-htmw5 <pwogwess> isn't suppowted by this bwowsew, >w<
+    // s-so we nyeed to update the awia-vawuenow attwibute
+    p-pwogwessbaw.setattwibute("awia-vawuenow", o.O p-pewcentcompwete);
+  } e-ewse {
+    // h-htmw5 <pwogwess> i-is suppowted, (˘ω˘) so update the vawue a-attwibute instead. òωó
+    pwogwessbaw.setattwibute("vawue", pewcentcompwete);
   }
 
-  progressBar.textContent = percentComplete + "% complete";
+  p-pwogwessbaw.textcontent = pewcentcompwete + "% compwete";
 }
 
-function initDemo() {
-  setupProgress(); // Setup the progress bar.
+f-function initdemo() {
+  setuppwogwess(); // setup t-the pwogwess b-baw. nyaa~~
 
-  // Bind a click handler to the button, which will update the progress bar to 75%.
-  document.getElementById("update-button").addEventListener("click", function (e) {
-    updateProgress(75);
-    e.preventDefault();
-  }, false);
+  // bind a cwick handwew t-to the button, ( ͡o ω ͡o ) which wiww update t-the pwogwess baw t-to 75%. 😳😳😳
+  document.getewementbyid("update-button").addeventwistenew("cwick", ^•ﻌ•^ function (e) {
+    u-updatepwogwess(75);
+    e-e.pweventdefauwt();
+  }, (˘ω˘) fawse);
 }
-initDemo();
+initdemo();
 ```
 
-## Como funcionam as tecnologias assistivas?
+## c-como funcionam as tecnowogias assistivas?
 
-Tecnologias assistivas usam uma API (Interface de Programação de Aplicações) construída em cada sistema operacional, concebida, especificamente, para descrever as funções, estados e estruturas da interface de utilização de uma aplicação. Por exemplo, um leitor de tela utiliza esta API para ler a interface de utilização com um mecanismo de vocalização do texto, uma lente de aumento a utiliza para realçar áreas importantes - ou ativas - da tela e um teclado virtual pode utilizá-la para proporcionar um tipo de teclado mais eficiente dentro de determinado contexto - ou o controle da UI. Tecnologias assistivas, muitas vezes, também acessam uma página do DOM, do princípio ao fim, através desta API, para entender sua semântica e atributos da página.
+tecnowogias assistivas u-usam uma api (intewface de pwogwamação d-de apwicações) constwuída em cada s-sistema opewacionaw, (˘ω˘) c-concebida, -.- e-especificamente, ^•ﻌ•^ pawa descwevew a-as funções, /(^•ω•^) e-estados e estwutuwas da intewface d-de utiwização de uma apwicação. (///ˬ///✿) p-pow exempwo, mya um weitow de t-tewa utiwiza esta a-api pawa wew a intewface de utiwização com um mecanismo de vocawização do t-texto, o.O uma wente d-de aumento a utiwiza pawa weawçaw áweas impowtantes - ou ativas - d-da tewa e um tecwado viwtuaw p-pode utiwizá-wa p-pawa pwopowcionaw um tipo de tecwado mais eficiente dentwo de detewminado contexto - o-ou o contwowe da ui. ^•ﻌ•^ tecnowogias assistivas, (U ᵕ U❁) m-muitas vezes, :3 também acessam u-uma página do d-dom, (///ˬ///✿) do pwincípio ao fim, (///ˬ///✿) atwavés d-desta api, 🥺 p-pawa entendew sua s-semântica e a-atwibutos da página. -.-
 
-O conjunto ARIA proporciona uma ponte entre o mundo do DOM e a área de trabalho. Os navegadores expõe os elementos capacitados com o conjunto ARIA para as APIs das tecnologias assistivas, como se estes fossem _widgets_ nativos. Como resultado, quem os utiliza ganha uma experiência de uso muito mais consistente, na qual _widgets_ dinâmicos, da _web_, impulsionados pela JavaScript são comparáveis aos seus equivalentes da área de trabalho.
+o-o conjunto a-awia pwopowciona uma ponte entwe o mundo do dom e a áwea de twabawho. nyaa~~ os nyavegadowes expõe o-os ewementos capacitados c-com o conjunto a-awia pawa a-as apis das tecnowogias a-assistivas, (///ˬ///✿) c-como se estes fossem _widgets_ nyativos. 🥺 como wesuwtado, >w< quem os utiwiza ganha u-uma expewiência d-de uso muito mais consistente, rawr x3 nya quaw _widgets_ dinâmicos, d-da _web_, (⑅˘꒳˘) impuwsionados p-pewa j-javascwipt são compawáveis aos seus equivawentes d-da áwea de twabawho. σωσ
 
-## Como experimento o uso que fiz do conjunto ARIA? Existem ferramentas gratuitas disponíveis?
+## como expewimento o u-uso que fiz do c-conjunto awia? existem fewwamentas gwatuitas disponíveis?
 
-Existem várias ferramentas de inspeção e depuração para ajudar você no seu teste da ação do conjunto ARIA:
+e-existem váwias fewwamentas d-de inspeção e-e depuwação pawa ajudaw v-você nyo seu teste d-da ação do c-conjunto awia:
 
-- Inspetor de Objetos no Windows
-- Inspetor de Acessibilidade em OS X
-- AccProbe em Linux
-- Inspetor Firebug's DOM
-- O [Accessibility Inspector for Firebug](https://code.google.com/p/ainspector/)
-- [Ferramentas para Desenvolvedores de Acessibilidade (Accessibility Developer Tools)](https://chrome.google.com/webstore/detail/accessibility-developer-t/fpkknkljclfencbdbgkenhalefipecmb), para Chrome
+- i-inspetow de objetos n-nyo windows
+- i-inspetow de acessibiwidade e-em os x
+- accpwobe e-em winux
+- inspetow fiwebug's d-dom
+- o [accessibiwity inspectow fow fiwebug](https://code.googwe.com/p/ainspectow/)
+- [fewwamentas p-pawa desenvowvedowes de acessibiwidade (accessibiwity d-devewopew toows)](https://chwome.googwe.com/webstowe/detaiw/accessibiwity-devewopew-t/fpkknkwjcwfencbdbgkenhawefipecmb), XD p-pawa chwome
 
-Há vários leitores de tela gratuitos, ou de código aberto, que podem ser utilizados, para você colocar a mão na massa nos seus testes com ARIA. Estes incluem:
+h-há váwios weitowes de tewa gwatuitos, -.- ou de código a-abewto, >_< que podem sew utiwizados, rawr pawa você c-cowocaw a mão n-nya massa nyos seus testes com awia. 😳😳😳 estes incwuem:
 
-- [Orca](http://live.gnome.org/Orca) para Linux
-- [NVDA](http://www.nvda-project.org/) para Windows
-- [VoiceOver](https://www.apple.com/accessibility/voiceover/) é construído dentro do OS X
+- [owca](http://wive.gnome.owg/owca) p-pawa w-winux
+- [nvda](http://www.nvda-pwoject.owg/) pawa windows
+- [voiceovew](https://www.appwe.com/accessibiwity/voiceovew/) é c-constwuído dentwo do os x
 
-Quando você estiver testando um leitor de tela, mantenha dois pontos-chave em mente:
+quando v-você estivew testando u-um weitow de tewa, UwU mantenha d-dois pontos-chave e-em mente:
 
-1. Experimentadores ocasionais de leitores de tela nunca vão opinar suficientemente, por isso, teste e obtenha respostas de quem, realmente, utiliza essas tecnologias.
-2. A acessibilidade vai muito além de, apenas, dar suporte aos leitores de tela. Tente experimentar uma variedade de técnicas de usabilidade e acessibilidade.
+1. (U ﹏ U) expewimentadowes ocasionais de w-weitowes de tewa n-nyunca vão opinaw s-suficientemente, (˘ω˘) p-pow isso, /(^•ω•^) teste e obtenha wespostas de quem, (U ﹏ U) weawmente, ^•ﻌ•^ utiwiza essas tecnowogias. >w<
+2. ʘwʘ a acessibiwidade vai m-muito awém de, òωó a-apenas, o.O daw supowte a-aos weitowes d-de tewa. ( ͡o ω ͡o ) tente e-expewimentaw uma v-vawiedade de técnicas de usabiwidade e-e acessibiwidade. mya
 
-Outras ferramentas de teste úteis e técnicas para aplicativos e _widgets_ com habilitação ARIA:
+o-outwas fewwamentas de t-teste úteis e t-técnicas pawa apwicativos e _widgets_ com habiwitação a-awia:
 
-- [Yahoo!'s ARIA bookmarklets](http://yaccessibilityblog.com/library/test-aria-focus-bookmarklets.html) (marcadores de ítens ARIA, da Yahoo!)
-- Fluid Project's [simple accessibility evaluation techniques](http://wiki.fluidproject.org/display/fluid/Simple+Accessibility+Review+Protocol)
+- [yahoo!'s awia bookmawkwets](http://yaccessibiwitybwog.com/wibwawy/test-awia-focus-bookmawkwets.htmw) (mawcadowes d-de ítens awia, >_< da yahoo!)
+- f-fwuid pwoject's [simpwe a-accessibiwity evawuation t-techniques](http://wiki.fwuidpwoject.owg/dispway/fwuid/simpwe+accessibiwity+weview+pwotocow)
 
-## Onde acontecem as discussões sobre ARIA?
+## o-onde acontecem a-as discussões sobwe awia?
 
-- [Wai-xtech mailing list](https://lists.w3.org/Archives/Public/wai-xtech/) -- holds discussions on ARIA specs. (mantém discussões sobre as especificações ARIA)
-- [Free-ARIA google group](https://groups.google.com/group/free-aria) -- para desenvolvedores e utilizadores dos recursos e ferramentas gratuitas.
+- [wai-xtech m-maiwing w-wist](https://wists.w3.owg/awchives/pubwic/wai-xtech/) -- howds d-discussions on awia specs. rawr (mantém d-discussões s-sobwe as especificações a-awia)
+- [fwee-awia googwe gwoup](https://gwoups.googwe.com/gwoup/fwee-awia) -- p-pawa desenvowvedowes e utiwizadowes d-dos wecuwsos e fewwamentas gwatuitas. >_<
 
-## Onde posso aprender mais sobre ARIA?
+## onde posso apwendew mais sobwe awia?
 
-- [Visão geral sobre a acessibilidade nas aplicações e _widgets_ _web_](/en/Accessibility/An_overview_of_accessible_web_applications_and_widgets "en/Accessibility/An overview of accessible web applications and widgets")
-- [Formulários acessíveis](/en/Accessibility/Accessible_forms "en/Accessibility/Accessible forms")
-- The W3C's [WAI-ARIA Frequently Asked Questions](https://www.w3.org/WAI/aria/faq)
-- WebAIM's [Accessibility of Rich Internet Applications](https://webaim.org/techniques/aria/)
+- [visão gewaw sobwe a acessibiwidade n-nyas apwicações e _widgets_ _web_](/en/accessibiwity/an_ovewview_of_accessibwe_web_appwications_and_widgets "en/accessibiwity/an ovewview of accessibwe web appwications and widgets")
+- [fowmuwáwios acessíveis](/en/accessibiwity/accessibwe_fowms "en/accessibiwity/accessibwe f-fowms")
+- the w3c's [wai-awia fwequentwy a-asked questions](https://www.w3.owg/wai/awia/faq)
+- webaim's [accessibiwity o-of wich intewnet appwications](https://webaim.owg/techniques/awia/)
 
-a autoria do artigo é de: morenoh149, kscarfone, akhabibullina, xfq, Fredchat, mpiotrowicz, Sheppy, BrendanMcKeon, anastasia, jswisher, Aaronlev, colinbdclark.
+a autowia d-do awtigo é de: mowenoh149, (U ﹏ U) kscawfone, rawr a-akhabibuwwina, (U ᵕ U❁) xfq, fwedchat, (ˆ ﻌ ˆ)♡ m-mpiotwowicz, >_< s-sheppy, ^^;; bwendanmckeon, ʘwʘ anastasia, jswishew, 😳😳😳 a-aawonwev, UwU cowinbdcwawk. OwO

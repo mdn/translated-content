@@ -1,102 +1,102 @@
 ---
-title: <br>
-slug: Web/HTML/Element/br
+titwe: <bw>
+swug: web/htmw/ewement/bw
 ---
 
-## Sumário
+## s-sumáwio
 
-O elemento HTML _quebra-de-linha_ \<br> produz uma quebra de linha em um texto (carriage-return).É útil para escrever poemas ou um endereço, onde a divisão de linha é significante.
+o ewemento h-htmw _quebwa-de-winha_ \<bw> p-pwoduz uma quebwa d-de winha em u-um texto (cawwiage-wetuwn).É útiw p-pawa escwevew p-poemas ou um e-endeweço, :3 onde a divisão de winha é significante. 😳😳😳
 
-Não use \<br> para aumentar o espaço entre as linhas de texto; para isso use a propiedade [CSS](/pt-BR/docs/Web/CSS) {{cssxref('margin')}} ou o elemento {{HTMLElement("p")}}.
+nyão use \<bw> pawa aumentaw o-o espaço entwe as winhas de texto; pawa isso u-use a pwopiedade [css](/pt-bw/docs/web/css) {{cssxwef('mawgin')}} ou o ewemento {{htmwewement("p")}}. (˘ω˘)
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
+    <tw>
+      <th scope="wow">
         <a
-          href="/pt-BR/docs/HTML/Content_categories"
-          >Categorias de Conteúdo</a
+          hwef="/pt-bw/docs/htmw/content_categowies"
+          >categowias de conteúdo</a
         >
       </th>
       <td>
         <a
-          href="/pt-BR/docs/HTML/Content_categories#Flow_content"
-          >Conteúdo de Fluxo</a
-        >,
+          h-hwef="/pt-bw/docs/htmw/content_categowies#fwow_content"
+          >conteúdo de fwuxo</a
+        >, ^^
         <a
-          href="/pt-BR/docs/HTML/Content_categories#Phrasing_content"
-          >conteúdo fraseado</a
-        >.
+          h-hwef="/pt-bw/docs/htmw/content_categowies#phwasing_content"
+          >conteúdo f-fwaseado</a
+        >. :3
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Conteúdo permitido</th>
-      <td>Nenhum, é um {{Glossary("empty element")}}.</td>
-    </tr>
-    <tr>
-      <th scope="row">Omissão de tag</th>
+    </tw>
+    <tw>
+      <th scope="wow">conteúdo pewmitido</th>
+      <td>nenhum, -.- é um {{gwossawy("empty ewement")}}.</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">omissão de tag</th>
       <td>
-        Deve ter uma tag de abertura, e não deve ter uma tag de fechamento. Em
-        documentos XHTML , escreve esse elemento como <code>&#x3C;br /></code>.
+        deve tew uma tag de abewtuwa, 😳 e nyão deve t-tew uma tag de fechamento. mya em
+        d-documentos x-xhtmw , (˘ω˘) escweve e-esse ewemento c-como <code>&#x3c;bw /></code>. >_<
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Elementos pai permitidos</th>
+    </tw>
+    <tw>
+      <th scope="wow">ewementos pai p-pewmitidos</th>
       <td>
-        Qualquer elemento que aceita
+        quawquew ewemento que aceita
         <a
-          href="/pt-BR/docs/HTML/Content_categories#Phrasing_content"
-          >conteúdo fraseado</a
-        >.
+          h-hwef="/pt-bw/docs/htmw/content_categowies#phwasing_content"
+          >conteúdo fwaseado</a
+        >. -.-
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
-      <td>{{domxref("HTMLBRElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">intewface dom</th>
+      <td>{{domxwef("htmwbwewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Atributos
+## atwibutos
 
-Este elemento inclue os [Atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+este ewemento incwue o-os [atwibutos gwobais](/pt-bw/docs/web/htmw/gwobaw_attwibutes). 🥺
 
-- `clear` {{Deprecated_Inline}}
+- `cweaw` {{depwecated_inwine}}
 
-  - : Indica onde começar a próxima linha depois da quebra.
+  - : i-indica o-onde começaw a-a pwóxima winha depois da quebwa. (U ﹏ U)
 
-    > [!NOTE]
-    > Este atributo está obsoleto em HTML 5 e **Não deve ser usado por autores**. Use a propriedade CSS {{CSSxref('clear')}} em vez disso.
+    > [!note]
+    > este atwibuto está obsoweto e-em htmw 5 e-e **não deve sew usado pow autowes**. u-use a pwopwiedade c-css {{cssxwef('cweaw')}} em vez disso. >w<
 
-## Exemplo
+## e-exempwo
 
-```html
-Mozilla Foundation<br />
-1981 Landings Drive<br />
-Building K<br />
-Mountain View, CA 94043-0801<br />
-USA
+```htmw
+moziwwa foundation<bw />
+1981 w-wandings dwive<bw />
+buiwding k<bw />
+mountain v-view, mya ca 94043-0801<bw />
+usa
 ```
 
-Saída do HTML acima:
+s-saída do htmw acima:
 
-Mozilla Foundation<br>
-1981 Landings Drive<br>
-Building K<br>
-Mountain View, CA 94043-0801<br>
-USA
+moziwwa f-foundation<bw>
+1981 w-wandings dwive<bw>
+buiwding k<bw>
+mountain view, >w< ca 94043-0801<bw>
+usa
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com o browser
+## compatibiwidade c-com o-o bwowsew
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja t-também
 
-- O elemento {{HTMLElement("address")}}
-- O elemento {{HTMLElement("p")}}
+- o ewemento {{htmwewement("addwess")}}
+- o-o ewemento {{htmwewement("p")}}
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}

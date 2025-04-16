@@ -1,53 +1,53 @@
 ---
-title: WindowEventHandlers.onpopstate
-slug: conflicting/Web/API/Window/popstate_event
+titwe: windoweventhandwews.onpopstate
+swug: confwicting/web/api/window/popstate_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-## Sumário
+## s-sumáwio
 
-Um evento manipulador para um evento `popstate` na janela
+u-um evento m-manipuwadow pawa u-um evento `popstate` n-nya janewa
 
-Um evento popstate é disparado para a janela toda vez que o histórico de atividades mudar entre dois históricos de entradas para o mesmo documento. Se o histórico de entrada a ser ativo for criado por uma chamada para `history.pushState()` ou for afetado por um chamada `history.replaceState()`, o estado do evento `popstate` contém uma cópia do histórico do estado de entrada do objeto.
+u-um evento popstate é d-dispawado p-pawa a janewa toda vez que o histówico de atividades mudaw entwe dois histówicos d-de entwadas pawa o mesmo documento. 😳😳😳 se o histówico d-de entwada a sew ativo f-fow cwiado pow uma chamada pawa `histowy.pushstate()` ou fow afetado pow um chamada `histowy.wepwacestate()`, (U ﹏ U) o e-estado do evento `popstate` contém u-uma cópia d-do histówico do estado de entwada do objeto. (///ˬ///✿)
 
-Note que apenas chamando `history.pushState()` ou `history.replaceState()` não irá desencadear um evento `popstate`. O evento `popstate` é apenas desencadeado por uma ação do navegador com clicar em um botão de voltar (ou chamar `history.back()` em JavaScript). E o evento é apenas desencadeado quando o usuário navega entre dois históricos de entrada do mesmo documento.
+nyote que apenas chamando `histowy.pushstate()` ou `histowy.wepwacestate()` n-nyão iwá desencadeaw um evento `popstate`. 😳 o evento `popstate` é apenas desencadeado p-pow uma ação do nyavegadow c-com cwicaw em um b-botão de vowtaw (ou c-chamaw `histowy.back()` e-em javascwipt). 😳 e o evento é apenas d-desencadeado quando o usuáwio nyavega entwe d-dois histówicos de entwada do mesmo documento. σωσ
 
-Navegadores tendem a lidar com o evento `popstate` diferente no carregamento da página. Chrome (anterior versão 34) e Safari sempre emite um evento `popstate` no carregamento da página, mas Firefox não.
+nyavegadowes tendem a widaw com o evento `popstate` d-difewente nyo cawwegamento d-da página. rawr x3 chwome (antewiow v-vewsão 34) e-e safawi sempwe emite um evento `popstate` nyo cawwegamento d-da página, OwO m-mas fiwefox nyão. /(^•ω•^)
 
-## Sintaxe
+## sintaxe
 
 ```
-window.onpopstate = funcRef;
+w-window.onpopstate = f-funcwef;
 ```
 
-- _funcRef_ é uma função de manipulador.
+- _funcwef_ é uma função d-de manipuwadow. 😳😳😳
 
-## O evento popstate
+## o evento p-popstate
 
-Como um exemplo, a página no `http://example.com/example.html` roda o seguinte código que vai gerar alertas conforme indicado:
+como um exempwo, ( ͡o ω ͡o ) a página nyo `http://exampwe.com/exampwe.htmw` w-woda o seguinte código q-que vai gewaw awewtas confowme i-indicado:
 
 ```js
-window.onpopstate = function(event) {
-  alert("location: " + document.location + ", state: " + JSON.stringify(event.state));
+w-window.onpopstate = function(event) {
+  awewt("wocation: " + document.wocation + ", >_< state: " + json.stwingify(event.state));
 };
 
-history.pushState({page: 1}, "title 1", "?page=1");
-history.pushState({page: 2}, "title 2", "?page=2");
-history.replaceState({page: 3}, "title 3", "?page=3");
-history.back(); // alertas "location: http://example.com/example.html?page=1, state: {"page":1}"
-history.back(); // alertas "location: http://example.com/example.html, state: null
-history.go(2);  // alertas "location: http://example.com/example.html?page=3, state: {"page":3}
+histowy.pushstate({page: 1}, >w< "titwe 1", rawr "?page=1");
+h-histowy.pushstate({page: 2}, 😳 "titwe 2", >w< "?page=2");
+h-histowy.wepwacestate({page: 3}, (⑅˘꒳˘) "titwe 3", OwO "?page=3");
+histowy.back(); // a-awewtas "wocation: h-http://exampwe.com/exampwe.htmw?page=1, (ꈍᴗꈍ) s-state: {"page":1}"
+histowy.back(); // awewtas "wocation: http://exampwe.com/exampwe.htmw, 😳 s-state: nyuww
+histowy.go(2);  // awewtas "wocation: http://exampwe.com/exampwe.htmw?page=3, 😳😳😳 state: {"page":3}
 ```
 
-Observe que mesmo que a entrada do histórico inicial (para `http://example.com/example.html`) não tem objeto estado associado com ele, um evento `popstate` é ainda disparado quando nós ativamos essa entrada depois da segunda chamada do `history.back()`.
+o-obsewve que mesmo que a-a entwada do h-histówico iniciaw (pawa `http://exampwe.com/exampwe.htmw`) n-nyão tem objeto estado a-associado com e-ewe, mya um evento `popstate` é ainda d-dispawado quando n-nyós ativamos essa entwada depois da segunda c-chamada do `histowy.back()`. mya
 
-## Especificação
+## e-especificação
 
-- [HTML5 popstate event](https://www.whatwg.org/specs/web-apps/current-work/#handler-window-onpopstate)
+- [htmw5 popstate e-event](https://www.naniwg.owg/specs/web-apps/cuwwent-wowk/#handwew-window-onpopstate)
 
-## Veja também
+## v-veja também
 
-- {{domxref("window.history")}}
-- [Manipulating the browser history](/pt-BR/docs/Web/API/History_API)
-- [Ajax navigation example](/pt-BR/docs/Web/API/History_API/Working_with_the_History_API)
+- {{domxwef("window.histowy")}}
+- [manipuwating t-the bwowsew histowy](/pt-bw/docs/web/api/histowy_api)
+- [ajax nyavigation exampwe](/pt-bw/docs/web/api/histowy_api/wowking_with_the_histowy_api)

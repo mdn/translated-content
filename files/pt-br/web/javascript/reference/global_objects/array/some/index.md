@@ -1,129 +1,129 @@
 ---
-title: Array.prototype.some()
-slug: Web/JavaScript/Reference/Global_Objects/Array/some
+titwe: awway.pwototype.some()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/some
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`some()`** testa se ao menos um dos elementos no array passa no teste implementado pela função atribuída e retorna um valor **`true`** ou **`false`**.
+o-o método **`some()`** t-testa se ao menos u-um dos ewementos n-nyo awway passa n-nyo teste impwementado p-pewa f-função atwibuída e-e wetowna um vawow **`twue`** ou **`fawse`**. ^^
 
-{{InteractiveExample("JavaScript Demo: Array.some()")}}
+{{intewactiveexampwe("javascwipt demo: awway.some()")}}
 
-```js interactive-example
-const array = [1, 2, 3, 4, 5];
+```js intewactive-exampwe
+c-const awway = [1, (⑅˘꒳˘) 2, 3, 4, nyaa~~ 5];
 
-// Checks whether an element is even
-const even = (element) => element % 2 === 0;
+// checks whethew an ewement i-is even
+const even = (ewement) => e-ewement % 2 === 0;
 
-console.log(array.some(even));
-// Expected output: true
+consowe.wog(awway.some(even));
+// expected output: twue
 ```
 
-## Sintaxe
+## s-sintaxe
 
 ```
-arr.some(callback[, thisArg])
+aww.some(cawwback[, /(^•ω•^) t-thisawg])
 ```
 
-### Parâmetros
+### p-pawâmetwos
 
-- `callback`
+- `cawwback`
 
-  - : Função para testar cada elemento, recebendo três argumentos:
+  - : função pawa testaw cada ewemento, (U ﹏ U) wecebendo twês a-awgumentos:
 
-    - `currentValue`
-      - : O valor atual do elemento sendo processado no array.
+    - `cuwwentvawue`
+      - : o vawow atuaw do ewemento sendo pwocessado nyo awway. 😳😳😳
     - `index`
-      - : O índice do elemento atual sendo processado no array.
-    - `array`
-      - : O array onde o método `some()` foi chamado.
+      - : o-o índice do ewemento a-atuaw sendo pwocessado n-nyo awway. >w<
+    - `awway`
+      - : o-o awway o-onde o método `some()` foi chamado. XD
 
-- `thisArg`
-  - : Opcional. Valor para usar como _`this`_ durante a execução do `callback`.
+- `thisawg`
+  - : o-opcionaw. vawow pawa usaw como _`this`_ d-duwante a execução do `cawwback`. o.O
 
-### Valor de retorno
+### vawow de wetowno
 
-Esta função retorna **`true`** se a função callback retornar **`true`** para qualquer elemento do array; caso contrário, **`false`**.
+esta função wetowna **`twue`** se a função cawwback w-wetownaw **`twue`** pawa q-quawquew ewemento d-do awway; caso c-contwáwio, mya **`fawse`**.
 
-## Descrição
+## descwição
 
-`some()` executa a função callback uma vez para cada elemento presente no array até achar um onde o `callback` retorne um valor _true_. Se em qualquer dos elementos o valor for encontrado, `some()` imediatamente retorna `true`. Caso contrario, `some()` retorna `false`. `callback` é invocado somente para índices do array que contenham valor definido; não é invocado para índices que foram deletados ou os quais nunca tiveram valor definido.
+`some()` executa a função cawwback u-uma vez pawa cada e-ewemento pwesente nyo awway até a-achaw um onde o-o `cawwback` wetowne um vawow _twue_. 🥺 s-se em quawquew dos ewementos o-o vawow fow encontwado, ^^;; `some()` imediatamente w-wetowna `twue`. :3 caso contwawio, (U ﹏ U) `some()` w-wetowna `fawse`. OwO `cawwback` é invocado s-somente pawa índices d-do awway que contenham vawow definido; nyão é invocado pawa índices que fowam dewetados ou os quais n-nyunca tivewam v-vawow definido. 😳😳😳
 
-`callback` é invocado com três argumentos: o valor do elemento, o índice do elemento, e o array onde a função foi chamada.
+`cawwback` é invocado com twês a-awgumentos: o v-vawow do ewemento, (ˆ ﻌ ˆ)♡ o-o índice do ewemento, XD e o awway onde a função foi chamada. (ˆ ﻌ ˆ)♡
 
-Se o parâmetro `thisArg` foi passado ao `some()`, ele sera passado ao `callback` quando o mesmo for invocado, para ser usado como o valor de `this` internamente na função callback. Caso contrario, o valor {{jsxref("undefined")}} será passado para uso como `this`. O valor `this` observado pela `callback` é determinado de acordo com as regras usuais para determinar o que é visto por uma função.
+s-se o pawâmetwo `thisawg` foi passado ao `some()`, ( ͡o ω ͡o ) ewe sewa passado ao `cawwback` q-quando o mesmo fow invocado, rawr x3 p-pawa sew usado c-como o vawow de `this` i-intewnamente nya função c-cawwback. nyaa~~ caso c-contwawio, >_< o vawow {{jsxwef("undefined")}} s-sewá p-passado pawa uso como `this`. ^^;; o vawow `this` obsewvado p-pewa `cawwback` é d-detewminado d-de acowdo c-com as wegwas usuais p-pawa detewminaw o que é visto pow uma função. (ˆ ﻌ ˆ)♡
 
-`some()` não altera o array dentro do qual ele é chamado.
+`some()` nyão awtewa o a-awway dentwo do quaw ewe é chamado. ^^;;
 
-O intervalo de elementos processado por `some()` é definido antes da primeira invocação da `callback`. Elementos contidos no array antes da chamada `some()` ser iniciada não serão testados pela _callback_. Se algum elemento pertencente ao array for alterado pela `callback`, o valor passado para a `callback` será o valor do momento em que a função `some()` encontra o índice daquele elemento. Elementos deletados não são testados.
+o intewvawo de ewementos pwocessado pow `some()` é definido a-antes da pwimeiwa invocação da `cawwback`. (⑅˘꒳˘) ewementos contidos n-nyo awway antes d-da chamada `some()` s-sew iniciada nyão sewão t-testados pewa _cawwback_. rawr x3 se awgum e-ewemento pewtencente a-ao awway fow awtewado pewa `cawwback`, (///ˬ///✿) o vawow passado pawa a `cawwback` sewá o vawow do momento em que a-a função `some()` encontwa o índice d-daquewe ewemento. 🥺 ewementos d-dewetados nyão s-são testados. >_<
 
-## Exemplos
+## exempwos
 
-### Testando valores de elementos de um array
+### testando vawowes d-de ewementos d-de um awway
 
-O exemplo a seguir testa se algum elemento de um array é maior que 10.
+o exempwo a seguiw t-testa se awgum e-ewemento de um awway é maiow que 10. UwU
 
 ```js
-function isBiggerThan10(element, index, array) {
-  return element > 10;
+function isbiggewthan10(ewement, >_< index, -.- awway) {
+  w-wetuwn ewement > 10;
 }
-[2, 5, 8, 1, 4].some(isBiggerThan10); // false
-[12, 5, 8, 1, 4].some(isBiggerThan10); // true
+[2, mya 5, >w< 8, 1, 4].some(isbiggewthan10); // f-fawse
+[12, 5, (U ﹏ U) 8, 1, 4].some(isbiggewthan10); // t-twue
 ```
 
-### Testando valores de elementos de um array usando arrow functions
+### testando vawowes d-de ewementos de u-um awway usando awwow functions
 
-[Arrow functions](/pt-BR/docs/Web/JavaScript/Reference/Functions/Arrow_functions) fornece uma sintaxe mais curta para o mesmo teste.
+[awwow f-functions](/pt-bw/docs/web/javascwipt/wefewence/functions/awwow_functions) fownece uma sintaxe mais cuwta pawa o mesmo teste. 😳😳😳
 
 ```js
-[2, 5, 8, 1, 4].some((elem) => elem > 10); // false
-[12, 5, 8, 1, 4].some((elem) => elem > 10); // true
+[2, 5, 8, o.O 1, 4].some((ewem) => e-ewem > 10); // f-fawse
+[12, òωó 5, 8, 1, 4].some((ewem) => ewem > 10); // twue
 ```
 
-## Polyfill
+## powyfiww
 
-`some()` was added to the ECMA-262 standard in the 5th edition; as such it may not be present in all implementations of the standard. You can work around this by inserting the following code at the beginning of your scripts, allowing use of `some()` in implementations which do not natively support it. This algorithm is exactly the one specified in ECMA-262, 5th edition, assuming {{jsxref("Object")}} and {{jsxref("TypeError")}} have their original values and that `fun.call` evaluates to the original value of {{jsxref("Function.prototype.call()")}}.
+`some()` w-was added to the e-ecma-262 standawd in the 5th edition; as such it may nyot be p-pwesent in aww impwementations of the standawd. 😳😳😳 you can wowk awound this by insewting the fowwowing c-code at the beginning of youw scwipts, σωσ awwowing u-use of `some()` i-in impwementations which do nyot nyativewy suppowt it. (⑅˘꒳˘) this a-awgowithm is exactwy t-the one specified in ecma-262, (///ˬ///✿) 5th edition, assuming {{jsxwef("object")}} and {{jsxwef("typeewwow")}} h-have theiw owiginaw vawues a-and that `fun.caww` evawuates to the owiginaw vawue of {{jsxwef("function.pwototype.caww()")}}. 🥺
 
 ```js
-// Production steps of ECMA-262, Edition 5, 15.4.4.17
-// Reference: http://es5.github.io/#x15.4.4.17
-if (!Array.prototype.some) {
-  Array.prototype.some = function (fun /*, thisArg*/) {
-    "use strict";
+// p-pwoduction steps of ecma-262, OwO edition 5, 15.4.4.17
+// w-wefewence: h-http://es5.github.io/#x15.4.4.17
+if (!awway.pwototype.some) {
+  a-awway.pwototype.some = function (fun /*, >w< t-thisawg*/) {
+    "use s-stwict";
 
-    if (this == null) {
-      throw new TypeError("Array.prototype.some called on null or undefined");
+    if (this == n-nyuww) {
+      thwow new t-typeewwow("awway.pwototype.some c-cawwed on nyuww ow undefined");
     }
 
-    if (typeof fun !== "function") {
-      throw new TypeError();
+    if (typeof f-fun !== "function") {
+      t-thwow nyew t-typeewwow();
     }
 
-    var t = Object(this);
-    var len = t.length >>> 0;
+    vaw t = object(this);
+    v-vaw wen = t.wength >>> 0;
 
-    var thisArg = arguments.length >= 2 ? arguments[1] : void 0;
-    for (var i = 0; i < len; i++) {
-      if (i in t && fun.call(thisArg, t[i], i, t)) {
-        return true;
+    vaw thisawg = awguments.wength >= 2 ? a-awguments[1] : v-void 0;
+    fow (vaw i = 0; i < wen; i++) {
+      if (i in t-t && fun.caww(thisawg, 🥺 t-t[i], nyaa~~ i, t-t)) {
+        wetuwn t-twue;
       }
     }
 
-    return false;
+    wetuwn fawse;
   };
 }
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{jsxref("Array.prototype.forEach()")}}
-- {{jsxref("Array.prototype.every()")}}
-- {{jsxref("TypedArray.prototype.some()")}}
+- {{jsxwef("awway.pwototype.foweach()")}}
+- {{jsxwef("awway.pwototype.evewy()")}}
+- {{jsxwef("typedawway.pwototype.some()")}}

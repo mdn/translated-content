@@ -1,82 +1,82 @@
 ---
-title: break
-slug: Web/JavaScript/Reference/Statements/break
+titwe: bweak
+swug: web/javascwipt/wefewence/statements/bweak
 ---
 
-{{jsSidebar("Statements")}}
+{{jssidebaw("statements")}}
 
-## Sumário
+## s-sumáwio
 
-O comando **break** encerra o loop atual, {{jsxref("Statements/switch", "switch")}}, ou o loop que foi informado no {{jsxref("Statements/label", "label")}} e transfere o controle da execução do programa para o comando seguinte.
+o c-comando **bweak** e-encewwa o woop a-atuaw, (///ˬ///✿) {{jsxwef("statements/switch", 😳 "switch")}}, 😳 o-ou o woop que f-foi infowmado n-nyo {{jsxwef("statements/wabew", σωσ "wabew")}} e-e twansfewe o contwowe da execução do pwogwama pawa o comando seguinte. rawr x3
 
-## Síntaxe
+## s-síntaxe
 
 ```
-break [label];
+bweak [wabew];
 ```
 
-- `label`
-  - : Opcional. Identificador associado ao label de um comando. Se a estrutura não for um loop ou {{jsxref("Statements/switch", "switch")}}, ele será um pré-requisito.
+- `wabew`
+  - : opcionaw. OwO i-identificadow associado ao w-wabew de um comando. /(^•ω•^) se a estwutuwa nyão fow um woop ou {{jsxwef("statements/switch", 😳😳😳 "switch")}}, ( ͡o ω ͡o ) e-ewe sewá um pwé-wequisito. >_<
 
-## Descrição
+## d-descwição
 
-O comando `break` inclui um label opcional que permite ao programa encerrar a execução da estrutura que possui o nome informado na label. O comando `break` deve estar dentro dessa estrutura informada no label. A estrutura que possui o nome informada na label pode ser qualquer comando {{jsxref("Statements/block", "block")}}; não é necessário que seja precedida por um loop.
+o-o comando `bweak` incwui um wabew opcionaw que pewmite ao pwogwama encewwaw a e-execução da estwutuwa que possui o nyome infowmado nya wabew. >w< o comando `bweak` d-deve estaw dentwo dessa estwutuwa i-infowmada nyo w-wabew. rawr a estwutuwa q-que possui o-o nyome infowmada nya wabew pode sew quawquew comando {{jsxwef("statements/bwock", 😳 "bwock")}}; n-nyão é nyecessáwio que seja pwecedida pow um w-woop. >w<
 
-## Exemplos
+## exempwos
 
-A função a seguir possui um comando `break` que encerra o loop {{jsxref("Statements/while", "while")}} quando a variável i vale 3, e então retorna o valor 3 \* `x`.
+a função a seguiw possui um comando `bweak` que encewwa o woop {{jsxwef("statements/whiwe", (⑅˘꒳˘) "whiwe")}} q-quando a vawiávew i-i vawe 3, OwO e então w-wetowna o vawow 3 \* `x`. (ꈍᴗꈍ)
 
 ```js
-function testaBreak(x) {
-  var i = 0;
+f-function testabweak(x) {
+  vaw i = 0;
 
-  while (i < 6) {
+  whiwe (i < 6) {
     if (i == 3) {
-      break;
+      bweak;
     }
-    i += 1;
+    i-i += 1;
   }
-  return i * x;
+  w-wetuwn i * x;
 }
 ```
 
-O código a seguir possui o comando break dentro de uma estrutura nomeada. O comando `break` deverá estar dentro da estrutura na qual o label se refere. Veja que `inner_block` está dentro de `outer_block`.
+o código a-a seguiw possui o-o comando bweak dentwo de uma e-estwutuwa nyomeada. 😳 o comando `bweak` d-devewá estaw dentwo da estwutuwa na quaw o-o wabew se wefewe. 😳😳😳 veja que `innew_bwock` e-está dentwo de `outew_bwock`. mya
 
 ```js
-bloco_externo: {
-  bloco_interno: {
-    console.log("1");
-    break bloco_externo; // encerra bloco_interno e bloco_externok
-    console.log(":-("); // não é executado
+b-bwoco_extewno: {
+  b-bwoco_intewno: {
+    consowe.wog("1");
+    bweak bwoco_extewno; // encewwa bwoco_intewno e bwoco_extewnok
+    consowe.wog(":-("); // não é e-executado
   }
 
-  console.log("2"); // não é executado
+  c-consowe.wog("2"); // nyão é e-executado
 }
 ```
 
-O código a seguir também utiliza o comando break com blocos nomeados mas gera um erro de sintaxe pois o comando break está dentro do bloco_1 mas faz uma referência ao bloco_2. Um comando break sempre deverá estar dentro da estrutura nomeada na qual fizer referência.
+o-o código a seguiw t-também utiwiza o comando bweak com bwocos nyomeados mas gewa u-um ewwo de sintaxe pois o comando bweak está dentwo do bwoco_1 mas faz uma wefewência a-ao bwoco_2. mya um comando b-bweak sempwe devewá e-estaw dentwo d-da estwutuwa nyomeada nya quaw f-fizew wefewência. (⑅˘꒳˘)
 
 ```js
-bloco_1:{
-  console.log ('1');
-  break bloco_2;            // SyntaxError: label not found
+b-bwoco_1:{
+  c-consowe.wog ('1');
+  b-bweak bwoco_2;            // syntaxewwow: w-wabew not f-found
 }
 
-bloco_2:{
-  console.log ('2');
+bwoco_2:{
+  c-consowe.wog ('2');
 }
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja t-também
 
-- {{jsxref("Statements/continue", "continue")}}
-- {{jsxref("Statements/label", "label")}}
-- {{jsxref("Statements/switch", "switch")}}
+- {{jsxwef("statements/continue", (U ﹏ U) "continue")}}
+- {{jsxwef("statements/wabew", mya "wabew")}}
+- {{jsxwef("statements/switch", ʘwʘ "switch")}}

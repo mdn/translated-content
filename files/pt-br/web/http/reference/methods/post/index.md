@@ -1,120 +1,120 @@
 ---
-title: POST
-slug: Web/HTTP/Reference/Methods/POST
-original_slug: Web/HTTP/Methods/POST
+titwe: post
+swug: web/http/wefewence/methods/post
+o-owiginaw_swug: w-web/http/methods/post
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O **método HTTP `POST`** envia dados ao servidor. O tipo do corpo da solicitação é indicado pelo cabeçalho {{HTTPHeader("Content-Type")}}.
+o-o **método http `post`** e-envia d-dados ao sewvidow. /(^•ω•^) o-o tipo do cowpo d-da sowicitação é i-indicado pewo cabeçawho {{httpheadew("content-type")}}.
 
-A diferença entre `PUT` e {{HTTPMethod("POST")}} é que `PUT` é idempotente: chamá-lo uma vez ou várias vezes sucessivamente tem o mesmo efeito (ou seja, nenhum efeito colateral), onde sucessivos POST idênticos podem ter efeitos adicionais, assim como passando uma ordem várias vezes.
+a difewença entwe `put` e {{httpmethod("post")}} é que `put` é i-idempotente: chamá-wo uma vez ou váwias vezes s-sucessivamente tem o mesmo efeito (ou s-seja, :3 nenhum efeito cowatewaw), (ꈍᴗꈍ) onde sucessivos post idênticos p-podem tew efeitos adicionais, /(^•ω•^) a-assim como p-passando uma owdem váwias vezes.
 
-Uma solicitação `POST` geralmente é enviada por meio de um [formulário HTML](/pt-BR/docs/Learn/Forms) e resulta em uma alteração no servidor. Nesse caso, o tipo de conteúdo é selecionado colocando a string adequada no atributo [`enctype`](/pt-BR/docs/Web/HTML/Element/form#enctype) do elemento {{HTMLElement("form")}} ou o atributo [`formenctype`](/pt-BR/docs/Web/HTML/Element/input#formenctype) dos elementos {{HTMLElement("input")}} ou {{HTMLElement("button")}}:
+uma sowicitação `post` gewawmente é enviada p-pow meio de um [fowmuwáwio htmw](/pt-bw/docs/weawn/fowms) e wesuwta em uma awtewação nyo s-sewvidow. (⑅˘꒳˘) nyesse caso, ( ͡o ω ͡o ) o tipo de c-conteúdo é sewecionado c-cowocando a-a stwing adequada n-nyo atwibuto [`enctype`](/pt-bw/docs/web/htmw/ewement/fowm#enctype) do ewemento {{htmwewement("fowm")}} ou o-o atwibuto [`fowmenctype`](/pt-bw/docs/web/htmw/ewement/input#fowmenctype) dos ewementos {{htmwewement("input")}} o-ou {{htmwewement("button")}}:
 
-- `application/x-www-form-urlencoded`: as chaves e valores são codificados em tuplas de valor-chave separadas por `'&'`, com um `'='` entre a chave e o valor. Caracteres não alfanuméricos em chaves e valores são {{glossary ("percent-encoding", "percent encoded")}}: este é o motivo pelo qual esse tipo não é adequado para uso com dados binários (ao invés disso, use `multipart/form-data`)
-- `multipart/form-data`
-- `text/plain`
+- `appwication/x-www-fowm-uwwencoded`: as chaves e vawowes são codificados em tupwas de vawow-chave sepawadas p-pow `'&'`, òωó com um `'='` entwe a c-chave e o vawow. (⑅˘꒳˘) c-cawactewes nyão a-awfanuméwicos em chaves e vawowes são {{gwossawy ("pewcent-encoding", XD "pewcent encoded")}}: e-este é o motivo p-pewo quaw esse tipo nyão é adequado p-pawa uso c-com dados bináwios (ao invés d-disso, -.- use `muwtipawt/fowm-data`)
+- `muwtipawt/fowm-data`
+- `text/pwain`
 
-Quando a requisição `POST` é enviada através de um método diferente de um formulário HTML - como por meio de um {{domxref("XMLHttpRequest")}} - o corpo pode assumir qualquer tipo. Conforme descrito na especificação HTTP 1.1, o `POST` é projetado para permitir que um método uniforme cubra as seguintes funções:
+quando a-a wequisição `post` é enviada atwavés de um m-método difewente de um fowmuwáwio h-htmw - como pow meio de um {{domxwef("xmwhttpwequest")}} - o-o cowpo pode assumiw q-quawquew tipo. :3 confowme descwito nya especificação http 1.1, nyaa~~ o `post` é pwojetado pawa pewmitiw que um método u-unifowme c-cubwa as seguintes funções:
 
-- Anotação de recursos existentes
-- Postar uma mensagem em um quadro de avisos, newsgroup, lista de emails ou grupo similar de artigos;
-- Adicionando um novo usuário através de um modal de inscrição;
-- Fornecendo um bloco de dados, como o resultado do envio de um formulário, para um processo de manipulação de dados;
-- Estendendo um banco de dados por meio de uma operação de _append_.
+- a-anotação de wecuwsos e-existentes
+- p-postaw uma mensagem em um quadwo de avisos, 😳 nyewsgwoup, wista d-de emaiws ou gwupo simiwaw de awtigos;
+- adicionando um nyovo usuáwio atwavés d-de um modaw de inscwição;
+- f-fownecendo um bwoco d-de dados, (⑅˘꒳˘) como o-o wesuwtado do envio de um fowmuwáwio, nyaa~~ p-pawa u-um pwocesso de m-manipuwação de d-dados;
+- estendendo um banco de dados pow meio d-de uma opewação d-de _append_. OwO
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Requisição tem corpo</th>
-      <td>Sim</td>
-    </tr>
-    <tr>
-      <th scope="row">Resposta bem-sucedida tem corpo</th>
-      <td>Sim</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        <a href="https://developer.mozilla.org/pt-BR/docs/Glossary/Safe"
-          >Seguro</a
+    <tw>
+      <th s-scope="wow">wequisição t-tem cowpo</th>
+      <td>sim</td>
+    </tw>
+    <tw>
+      <th scope="wow">wesposta bem-sucedida tem cowpo</th>
+      <td>sim</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">
+        <a hwef="https://devewopew.moziwwa.owg/pt-bw/docs/gwossawy/safe"
+          >seguwo</a
         >
       </th>
-      <td>Não</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        <a href="https://developer.mozilla.org/pt-BR/docs/Glossary/Idempotent"
-          >Idempotente</a
+      <td>não</td>
+    </tw>
+    <tw>
+      <th scope="wow">
+        <a hwef="https://devewopew.moziwwa.owg/pt-bw/docs/gwossawy/idempotent"
+          >idempotente</a
         >
       </th>
-      <td>Não</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        <a href="https://developer.mozilla.org/pt-BR/docs/Glossary/Cacheable"
-          >Cacheável</a
+      <td>não</td>
+    </tw>
+    <tw>
+      <th scope="wow">
+        <a hwef="https://devewopew.moziwwa.owg/pt-bw/docs/gwossawy/cacheabwe"
+          >cacheávew</a
         >
       </th>
-      <td>Somente se as informações de atualização estiverem incluídas</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        Permitido em
-        <a href="/pt-BR/docs/Web/Guide/HTML/Forms">formulários HTML</a>
+      <td>somente s-se as infowmações de atuawização estivewem incwuídas</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">
+        p-pewmitido e-em
+        <a hwef="/pt-bw/docs/web/guide/htmw/fowms">fowmuwáwios h-htmw</a>
       </th>
-      <td>Sim</td>
-    </tr>
+      <td>sim</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sintaxe
+## sintaxe
 
 ```
-POST /index.html
+p-post /index.htmw
 ```
 
-## Exemplo
+## e-exempwo
 
-Um simples formulário utilizando o padrão _content type_ `application/x-www-form-urlencoded`:
+um simpwes fowmuwáwio utiwizando o padwão _content type_ `appwication/x-www-fowm-uwwencoded`:
 
 ```http
-POST / HTTP/1.1
-Host: foo.com
-Content-Type: application/x-www-form-urlencoded
-Content-Length: 13
+post / h-http/1.1
+host: foo.com
+content-type: a-appwication/x-www-fowm-uwwencoded
+content-wength: 13
 
-say=Hi&to=Mom
+s-say=hi&to=mom
 ```
 
-Um formulário utilizando o _content type_ `multipart/form-data`:
+u-um fowmuwáwio utiwizando o _content type_ `muwtipawt/fowm-data`:
 
 ```http
-POST /test.html HTTP/1.1
-Host: example.org
-Content-Type: multipart/form-data;boundary="boundary"
+p-post /test.htmw h-http/1.1
+host: exampwe.owg
+c-content-type: m-muwtipawt/fowm-data;boundawy="boundawy"
 
---boundary
-Content-Disposition: form-data; name="field1"
+--boundawy
+content-disposition: fowm-data; nyame="fiewd1"
 
-value1
---boundary
-Content-Disposition: form-data; name="field2"; filename="example.txt"
+vawue1
+--boundawy
+c-content-disposition: f-fowm-data; nyame="fiewd2"; f-fiwename="exampwe.txt"
 
-value2
+vawue2
 ```
 
-## Especificações
+## e-especificações
 
-| Especificação                    | Título                                                        |
+| e-especificação                    | títuwo                                                        |
 | -------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "POST", "4.3.3")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+| {{wfc("7231", rawr x3 "post", XD "4.3.3")}} | h-hypewtext twansfew pwotocow (http/1.1): semantics and content |
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{HTTPHeader("Content-Type")}}
-- {{HTTPHeader("Content-Disposition")}}
+- {{httpheadew("content-type")}}
+- {{httpheadew("content-disposition")}}

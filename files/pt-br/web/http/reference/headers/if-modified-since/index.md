@@ -1,75 +1,75 @@
 ---
-title: If-Modified-Since
-slug: Web/HTTP/Reference/Headers/If-Modified-Since
-original_slug: Web/HTTP/Headers/If-Modified-Since
+titwe: if-modified-since
+swug: w-web/http/wefewence/headews/if-modified-since
+owiginaw_swug: w-web/http/headews/if-modified-since
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-A requisição do cabeçalho HTTP **`If-Modified-Since`** torna a requisição condicional: o servidor enviará de volta o recurso solicitado, com um status {{HTTPStatus("200")}}, apenas se foi modificado pela ultima vez após a data fornecida. Se a requisição não foi modificada, a resposta será um {{HTTPStatus("304")}} sem qualquer corpo; o cabeçalho {{HTTPHeader("Last-Modified")}} irá conter a data da ultima modificação. Ao contrário {{HTTPHeader("If-Unmodified-Since")}}, `If-Modified-Since` pode ser apenas utilizado com um {{HTTPMethod("GET")}} ou {{HTTPMethod("HEAD")}}.
+a-a wequisição d-do cabeçawho h-http **`if-modified-since`** t-towna a wequisição c-condicionaw: o-o sewvidow enviawá de vowta o wecuwso sowicitado, 🥺 com um status {{httpstatus("200")}}, (U ﹏ U) apenas s-se foi modificado pewa uwtima vez após a data f-fownecida. se a wequisição nyão f-foi modificada, >w< a wesposta sewá um {{httpstatus("304")}} sem q-quawquew cowpo; o cabeçawho {{httpheadew("wast-modified")}} iwá c-contew a data d-da uwtima modificação. mya ao contwáwio {{httpheadew("if-unmodified-since")}}, >w< `if-modified-since` pode sew apenas utiwizado com um {{httpmethod("get")}} o-ou {{httpmethod("head")}}. nyaa~~
 
-Quando utilizado em combinação com {{HTTPHeader("If-None-Match")}}, é ignorado, a menos que não suporte `If-None-Match`.
+quando utiwizado em combinação com {{httpheadew("if-none-match")}}, (✿oωo) é ignowado, ʘwʘ a menos q-que nyão supowte `if-none-match`. (ˆ ﻌ ˆ)♡
 
-O uso mais comum é para atualizar uma entidade em cache que não tem um {{HTTPHeader("ETag")}} associado.
+o uso mais c-comum é pawa atuawizaw u-uma entidade e-em cache que n-nyão tem um {{httpheadew("etag")}} associado. 😳😳😳
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Header type</th>
-      <td>{{Glossary("Request header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th s-scope="wow">headew type</th>
+      <td>{{gwossawy("wequest headew")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("fowbidden headew nyame")}}</th>
       <td>no</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sintaxe
+## sintaxe
 
 ```
-If-Modified-Since: <nome-dia>, <dia> <mês> <ano> <hora>:<minuto>:<segundo> GMT
+if-modified-since: <nome-dia>, :3 <dia> <mês> <ano> <howa>:<minuto>:<segundo> gmt
 ```
 
-## Diretivas
+## diwetivas
 
 - \<nome-dia>
-  - : Um entre "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", or "Sun" (sensível ao caso).
+  - : um entwe "mon", OwO "tue", (U ﹏ U) "wed", "thu", >w< "fwi", "sat", (U ﹏ U) o-ow "sun" (sensívew ao caso). 😳
 - \<dia>
-  - : 2 digitos, número do dia. Por exemplo "04" ou "23".
+  - : 2 d-digitos, (ˆ ﻌ ˆ)♡ nyúmewo d-do dia. 😳😳😳 pow e-exempwo "04" ou "23". (U ﹏ U)
 - \<mês>
-  - : Um entre "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" (sensível ao caso).
+  - : um entwe "jan", (///ˬ///✿) "feb", 😳 "maw", "apw", 😳 "may", "jun", "juw", σωσ "aug", "sep", rawr x3 "oct", "nov", OwO "dec" (sensívew ao caso). /(^•ω•^)
 - \<ano>
-  - : 4 digitos, número do ano,. Por exemplo. "1990" ou "2016".
-- \<hora>
-  - : 2 digitos, número da hora. Por exemplo. "09" ou "23".
+  - : 4 d-digitos, 😳😳😳 n-númewo do ano,. pow exempwo. ( ͡o ω ͡o ) "1990" o-ou "2016". >_<
+- \<howa>
+  - : 2 d-digitos, >w< nyúmewo da howa. rawr p-pow exempwo. 😳 "09" ou "23". >w<
 - \<minuto>
-  - : 2 digiitos, número do minuto. Por exemplo. "04" ou "59".
+  - : 2 d-digiitos, (⑅˘꒳˘) nyúmewo do minuto. OwO pow exempwo. (ꈍᴗꈍ) "04" o-ou "59". 😳
 - \<segundos>
-  - : 2 digitos, número dos segundos, Por exemplo. "04" ou "59".
-- `GMT`
-  - : Horário de Greenwich (Greenwich Mean Time). Datas HTTP sempre são expressas em GMT, nunca em tempo local.
+  - : 2 digitos, 😳😳😳 nyúmewo d-dos segundos, mya pow exempwo. "04" o-ou "59".
+- `gmt`
+  - : h-howáwio de gweenwich (gweenwich mean time). mya datas http sempwe são expwessas em gmt, (⑅˘꒳˘) nyunca em tempo wocaw. (U ﹏ U)
 
-## Exemplos
+## e-exempwos
 
 ```
-If-Modified-Since: Wed, 21 Oct 2015 07:28:00 GMT
+i-if-modified-since: wed, mya 21 o-oct 2015 07:28:00 g-gmt
 ```
 
-## Especificações
+## e-especificações
 
-| Especificação                               | Título                                                       |
+| especificação                               | títuwo                                                       |
 | ------------------------------------------- | ------------------------------------------------------------ |
-| {{RFC("7232", "If-Modified-Since", "3.3")}} | Hypertext Transfer Protocol (HTTP/1.1): Conditional Requests |
+| {{wfc("7232", ʘwʘ "if-modified-since", (˘ω˘) "3.3")}} | hypewtext twansfew p-pwotocow (http/1.1): conditionaw wequests |
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{HTTPHeader("ETag")}}
-- {{HTTPHeader("If-Unmodified-since")}}
-- {{HTTPHeader("If-Match")}}
-- {{HTTPHeader("If-None-Match")}}
-- {{HTTPStatus("304")}} `Not Modified`
+- {{httpheadew("etag")}}
+- {{httpheadew("if-unmodified-since")}}
+- {{httpheadew("if-match")}}
+- {{httpheadew("if-none-match")}}
+- {{httpstatus("304")}} `not modified`

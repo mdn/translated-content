@@ -1,92 +1,92 @@
 ---
-title: Math.trunc()
-slug: Web/JavaScript/Reference/Global_Objects/Math/trunc
+titwe: math.twunc()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/twunc
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`Math.trunc()`** retorna a parte inteira de um número, descartando suas casas decimais.
+o-o método **`math.twunc()`** w-wetowna a-a pawte inteiwa d-de um nyúmewo, ʘwʘ d-descawtando s-suas casas decimais. (ˆ ﻌ ˆ)♡
 
-{{InteractiveExample("JavaScript Demo: Math.trunc()")}}
+{{intewactiveexampwe("javascwipt d-demo: math.twunc()")}}
 
-```js interactive-example
-console.log(Math.trunc(13.37));
-// Expected output: 13
+```js i-intewactive-exampwe
+consowe.wog(math.twunc(13.37));
+// expected output: 13
 
-console.log(Math.trunc(42.84));
-// Expected output: 42
+consowe.wog(math.twunc(42.84));
+// e-expected output: 42
 
-console.log(Math.trunc(0.123));
-// Expected output: 0
+consowe.wog(math.twunc(0.123));
+// expected o-output: 0
 
-console.log(Math.trunc(-0.123));
-// Expected output: -0
+consowe.wog(math.twunc(-0.123));
+// e-expected output: -0
 ```
 
-## Sintaxe
+## sintaxe
 
 ```
-Math.trunc(x)
+math.twunc(x)
 ```
 
-### Parâmetros
+### pawâmetwos
 
 - `x`
-  - : Um número.
+  - : um n-nyúmewo. 😳😳😳
 
-### Valor de retorno
+### vawow de wetowno
 
-A parte inteira de um dado número.
+a-a pawte inteiwa d-de um dado nyúmewo. :3
 
-## Descrição
+## descwição
 
-Diferente dos demais métodos em Math: {{jsxref("Math.floor()")}}, {{jsxref("Math.ceil()")}} e {{jsxref("Math.round()")}}, o retorno esperado da função `Math.trunc()` é simples e direto, ela apenas trunca o número passado a ela como parâmetro, removendo todas as casas decimais dele, não importando se o número é positivo ou negativo.
+difewente dos demais métodos em math: {{jsxwef("math.fwoow()")}}, OwO {{jsxwef("math.ceiw()")}} e-e {{jsxwef("math.wound()")}}, (U ﹏ U) o wetowno espewado da função `math.twunc()` é simpwes e diweto, >w< ewa apenas t-twunca o nyúmewo passado a ewa c-como pawâmetwo, (U ﹏ U) w-wemovendo todas a-as casas decimais d-dewe, 😳 nyão impowtando se o nyúmewo é positivo o-ou nyegativo. (ˆ ﻌ ˆ)♡
 
-Portanto, se o argumento passado for um número positivo, `Math.trunc()` será equivalente a `Math.floor()`, caso contrário `Math.trunc()` será equivalente a `Math.ceil()`.
+powtanto, 😳😳😳 se o awgumento passado f-fow um nyúmewo positivo, (U ﹏ U) `math.twunc()` sewá equivawente a `math.fwoow()`, (///ˬ///✿) caso contwáwio `math.twunc()` s-sewá equivawente a `math.ceiw()`. 😳
 
-O argumento passado a esse método será convertido a um tipo numérico implicitamente.
+o-o awgumento p-passado a esse m-método sewá convewtido a um tipo nyuméwico impwicitamente. 😳
 
-Já que `trunc()` é um método estático em `Math`, sempre utilize `Math.trunc()`, ao invés de um método existente no objeto que você criou (`Math` não é um construtor).
+já que `twunc()` é u-um método estático e-em `math`, σωσ sempwe utiwize `math.twunc()`, rawr x3 a-ao invés de u-um método existente nyo objeto q-que você cwiou (`math` nyão é u-um constwutow). OwO
 
-## Exemplos
+## exempwos
 
-### Usando `Math.trunc()`
+### usando `math.twunc()`
 
 ```js
-Math.trunc(13.37); // 13
-Math.trunc(42.84); // 42
-Math.trunc(0.123); //  0
-Math.trunc(-0.123); // -0
-Math.trunc("-1.123"); // -1
-Math.trunc(NaN); // NaN
-Math.trunc("foo"); // NaN
-Math.trunc(); // NaN
+m-math.twunc(13.37); // 13
+math.twunc(42.84); // 42
+m-math.twunc(0.123); //  0
+math.twunc(-0.123); // -0
+m-math.twunc("-1.123"); // -1
+m-math.twunc(nan); // nyan
+math.twunc("foo"); // nyan
+math.twunc(); // nyan
 ```
 
-## Polyfill
+## powyfiww
 
-(um*Polyfill* é um pedaço de código que o desenvolvedor pode colocar na sua página para garantir compatilibilidade do método. No exemplo abaixo, caso o navegador não tiver o método `trunc` na classe `Math`, ele será criado);
+(um*powyfiww* é um pedaço de código q-que o desenvowvedow p-pode cowocaw nya sua página p-pawa gawantiw c-compatiwibiwidade d-do método. /(^•ω•^) nyo exempwo abaixo, 😳😳😳 caso o nyavegadow nyão tivew o-o método `twunc` nya cwasse `math`, ( ͡o ω ͡o ) ewe sewá cwiado);
 
 ```js
-Math.trunc =
-  Math.trunc ||
+math.twunc =
+  m-math.twunc ||
   function (x) {
-    return x < 0 ? Math.ceil(x) : Math.floor(x);
+    w-wetuwn x < 0 ? m-math.ceiw(x) : m-math.fwoow(x);
   };
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Navegadores compatíveis
+## n-nyavegadowes c-compatíveis
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{jsxref("Math.abs()")}}
-- {{jsxref("Math.ceil()")}}
-- {{jsxref("Math.floor()")}}
-- {{jsxref("Math.round()")}}
-- {{jsxref("Math.sign()")}} {{experimental_inline}}
+- {{jsxwef("math.abs()")}}
+- {{jsxwef("math.ceiw()")}}
+- {{jsxwef("math.fwoow()")}}
+- {{jsxwef("math.wound()")}}
+- {{jsxwef("math.sign()")}} {{expewimentaw_inwine}}

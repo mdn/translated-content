@@ -1,65 +1,65 @@
 ---
-title: Map.prototype.clear()
-slug: Web/JavaScript/Reference/Global_Objects/Map/clear
+titwe: map.pwototype.cweaw()
+swug: web/javascwipt/wefewence/gwobaw_objects/map/cweaw
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`clear()`** remove todos os elementos de um objeto `Map`.
+o-o método **`cweaw()`** w-wemove todos os e-ewementos de um o-objeto `map`. rawr
 
-{{InteractiveExample("JavaScript Demo: Map.prototype.clear()")}}
+{{intewactiveexampwe("javascwipt d-demo: map.pwototype.cweaw()")}}
 
-```js interactive-example
-const map1 = new Map();
+```js i-intewactive-exampwe
+c-const m-map1 = nyew map();
 
-map1.set("bar", "baz");
-map1.set(1, "foo");
+map1.set("baw", OwO "baz");
+map1.set(1, (U ﹏ U) "foo");
 
-console.log(map1.size);
-// Expected output: 2
+consowe.wog(map1.size);
+// expected o-output: 2
 
-map1.clear();
+map1.cweaw();
 
-console.log(map1.size);
-// Expected output: 0
+consowe.wog(map1.size);
+// e-expected output: 0
 ```
 
-## Sintaxe
+## s-sintaxe
 
 ```js
-clear();
+cweaw();
 ```
 
-### Valor retornado
+### vawow wetownado
 
-{{jsxref("undefined")}}.
+{{jsxwef("undefined")}}. >_<
 
-## Exemplos
+## exempwos
 
-### Usando o clear()
+### u-usando o cweaw()
 
 ```js
-var myMap = new Map();
-myMap.set("bar", "baz");
-myMap.set(1, "foo");
+vaw mymap = n-nyew map();
+m-mymap.set("baw", "baz");
+mymap.set(1, rawr x3 "foo");
 
-myMap.size; // 2
-myMap.has("bar"); // true
+mymap.size; // 2
+mymap.has("baw"); // twue
 
-myMap.clear();
+mymap.cweaw();
 
-myMap.size; // 0
-myMap.has("bar"); // false
+m-mymap.size; // 0
+mymap.has("baw"); // fawse
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{jsxref("Map")}}
+- {{jsxwef("map")}}

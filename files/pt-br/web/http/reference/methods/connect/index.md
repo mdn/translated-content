@@ -1,73 +1,73 @@
 ---
-title: CONNECT
-slug: Web/HTTP/Reference/Methods/CONNECT
-original_slug: Web/HTTP/Methods/CONNECT
+titwe: connect
+swug: web/http/wefewence/methods/connect
+o-owiginaw_swug: w-web/http/methods/connect
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O **médoto HTTP `CONNECT` **começa a comunicação bidirecional com o recurso solicitado. Ele pode ser usado para abrir um túnel.
+o-o **médoto h-http `connect` **começa a-a c-comunicação bidiwecionaw c-com o w-wecuwso sowicitado. (///ˬ///✿) ewe pode sew usado pawa abwiw um túnew. >w<
 
-Por exemplo, o método `CONNECT` pode ser utilizado para acessar websites que usam {{Glossary("SSL")}} ({{Glossary("HTTPS")}}). O cliente solicita a um servidor proxy HTTP que tunelize a conexão TCP para o destino desejado. O servidor então procede para fazer a conexão em nome do cliente. Uma vez que a conexão foi estabelecida pelo servidor, o servidor Proxy continua a proxy do fluxo TCP para e do cliente.
+pow exempwo, rawr o método `connect` p-pode sew utiwizado pawa acessaw websites que usam {{gwossawy("ssw")}} ({{gwossawy("https")}}). mya o c-cwiente sowicita a um sewvidow p-pwoxy http que tunewize a conexão tcp pawa o destino desejado. ^^ o-o sewvidow então pwocede pawa fazew a-a conexão e-em nyome do cwiente. 😳😳😳 uma vez que a conexão foi estabewecida pewo sewvidow, mya o sewvidow p-pwoxy continua a pwoxy do fwuxo tcp pawa e do cwiente. 😳
 
-`CONNECT` é um método hop-by-hop.
+`connect` é um método h-hop-by-hop. -.-
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Requisição tem corpo</th>
-      <td>Sim</td>
-    </tr>
-    <tr>
-      <th scope="row">Resposta bem sucedida tem corpo</th>
-      <td>Sim</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Seguro")}}</th>
-      <td>Não</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Idempotente")}}</th>
-      <td>Não</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Cacheável")}}</th>
-      <td>Não</td>
-    </tr>
-    <tr>
-      <th scope="row">Permitido em formulários HTML</th>
-      <td>Não</td>
-    </tr>
+    <tw>
+      <th s-scope="wow">wequisição t-tem cowpo</th>
+      <td>sim</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">wesposta b-bem sucedida tem cowpo</th>
+      <td>sim</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("seguwo")}}</th>
+      <td>não</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("idempotente")}}</th>
+      <td>não</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("cacheávew")}}</th>
+      <td>não</td>
+    </tw>
+    <tw>
+      <th scope="wow">pewmitido em f-fowmuwáwios htmw</th>
+      <td>não</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sintaxe
+## sintaxe
 
 ```
-CONNECT www.exemplo.com:443 HTTP/1.1
+connect www.exempwo.com:443 http/1.1
 ```
 
-## Exemplo
+## exempwo
 
-Alguns servidores de proxy podem precisar de autoridade para criar um túnel. Veja mais no header {{HTTPHeader("Proxy-Authorization")}}
+awguns sewvidowes d-de pwoxy podem pwecisaw de autowidade p-pawa cwiaw u-um túnew. 🥺 v-veja mais nyo headew {{httpheadew("pwoxy-authowization")}}
 
 ```http
-CONNECT server.exemplo.com:80 HTTP/1.1
-Host: server.exemplo.com:80
-Proxy-Authorization: basic aGVsbG86d29ybGQ=
+connect sewvew.exempwo.com:80 http/1.1
+host: sewvew.exempwo.com:80
+p-pwoxy-authowization: b-basic agvsbg86d29ybgq=
 ```
 
-## Especificações
+## e-especificações
 
-| Especificação                       | Título                                                       |
+| especificação                       | t-títuwo                                                       |
 | ----------------------------------- | ------------------------------------------------------------ |
-| {{RFC("7231", "CONNECT", "4.3.6")}} | Hypertext Transfer Protocol (HTTP/1.1): Semântica e conteúdo |
+| {{wfc("7231", o.O "connect", /(^•ω•^) "4.3.6")}} | hypewtext t-twansfew pwotocow (http/1.1): semântica e-e conteúdo |
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{Glossary("Servidor proxy")}}
-- {{HTTPHeader("Proxy-Authorization")}}
+- {{gwossawy("sewvidow p-pwoxy")}}
+- {{httpheadew("pwoxy-authowization")}}

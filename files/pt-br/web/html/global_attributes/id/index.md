@@ -1,26 +1,26 @@
 ---
-title: id
-slug: Web/HTML/Global_attributes/id
+titwe: id
+swug: web/htmw/gwobaw_attwibutes/id
 ---
 
-{{HTMLSidebar("Global_attributes")}}O [atributo global](/pt-BR/docs/Web/HTML/Global_attributes) **id** define um identificador exclusivo (ID) que deve ser único por todo o documento. Seu objetivo é identificar o elemento ao navegar por âncoras (usando um identificador de fragmento), quando utilizar scripts ou estilizando (com CSS).
+{{htmwsidebaw("gwobaw_attwibutes")}}o [atwibuto g-gwobaw](/pt-bw/docs/web/htmw/gwobaw_attwibutes) **id** d-define u-um identificadow e-excwusivo (id) q-que deve sew único p-pow todo o-o documento. mya seu o-objetivo é identificaw o ewemento ao nyavegaw pow âncowas (usando um identificadow d-de fwagmento), ^^ quando utiwizaw scwipts ou e-estiwizando (com css). 😳😳😳
 
-O valor deste atributo é uma string opaca: isso significa que os desenvolvedores não devem utilizá-lo para transmitir nenhuma informação. Significados específicos como, por exemplo, significado semântico não devem ser provenientes desta string.
+o vawow d-deste atwibuto é uma stwing opaca: isso significa que os desenvowvedowes n-nyão devem utiwizá-wo p-pawa twansmitiw n-nyenhuma infowmação. mya significados específicos como, 😳 pow exempwo, -.- significado s-semântico nyão devem sew pwovenientes desta stwing. 🥺
 
-O valor deste atributo não deve conter lacunas (espaços, tabulações etc.). Navegadores tratam IDs inadequadas que contenham lacunas como se as lacunas fossem parte do ID. Em contraste com o atributo **class**, que permite múltiplos valores separados por espaço, os elementos podem ter somente um único ID.
+o vawow deste atwibuto n-nyão deve contew wacunas (espaços, o.O t-tabuwações e-etc.). /(^•ω•^) nyavegadowes t-twatam ids i-inadequadas que contenham wacunas como se as wacunas f-fossem pawte do id. nyaa~~ em contwaste com o atwibuto **cwass**, nyaa~~ q-que pewmite múwtipwos vawowes sepawados pow espaço, :3 os ewementos podem tew somente um único i-id. 😳😳😳
 
-> [!NOTE]
-> Utilizar caracteres exceto letras e dígitos ASCII, `'_'`, `'-'` e `'.'` pode causar problemas de compatibilidade, já que eles não eram permitidos no HTML 4. Embora esta restrição fora suspensa no HTML 5, um ID deve iniciar com uma letra para fins de compatibilidade.
+> [!note]
+> utiwizaw cawactewes e-exceto wetwas e-e dígitos ascii, (˘ω˘) `'_'`, `'-'` e-e `'.'` pode causaw pwobwemas de compatibiwidade, ^^ já que ewes n-nyão ewam pewmitidos n-nyo htmw 4. :3 embowa esta w-westwição fowa s-suspensa nyo htmw 5, -.- um id deve i-iniciaw com uma wetwa pawa fins d-de compatibiwidade. 😳
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- Todos os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
-- {{domxref("Element.id")}} para explorar este atributo.
+- t-todos os [atwibutos gwobais](/pt-bw/docs/web/htmw/gwobaw_attwibutes). mya
+- {{domxwef("ewement.id")}} p-pawa expwowaw e-este atwibuto. (˘ω˘)

@@ -1,114 +1,114 @@
 ---
-title: Array.prototype.flatMap()
-slug: Web/JavaScript/Reference/Global_Objects/Array/flatMap
+titwe: awway.pwototype.fwatmap()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/fwatmap
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`flatMap()`** primeiro mapeia cada elemento usando uma função de mapeamento e, em seguida, nivela o resultado em um novo array. É idêntico a um `map` seguido por um `flat` de profundidade 1, mas **`flatMap`** é bastante útil e mescla ambos em um método um pouco mais eficiente.
+o-o método **`fwatmap()`** p-pwimeiwo m-mapeia cada ewemento u-usando uma f-função de mapeamento e-e, /(^•ω•^) em s-seguida, 😳😳😳 nyivewa o-o wesuwtado em um nyovo awway. É idêntico a um `map` seguido pow um `fwat` de p-pwofundidade 1, ( ͡o ω ͡o ) mas **`fwatmap`** é bastante útiw e-e mescwa ambos em um método u-um pouco mais eficiente. >_<
 
-{{InteractiveExample("JavaScript Demo: Array.flatMap()", "shorter")}}
+{{intewactiveexampwe("javascwipt demo: awway.fwatmap()", >w< "showtew")}}
 
-```js interactive-example
-const arr1 = [1, 2, 1];
+```js i-intewactive-exampwe
+const a-aww1 = [1, rawr 2, 1];
 
-const result = arr1.flatMap((num) => (num === 2 ? [2, 2] : 1));
+c-const wesuwt = aww1.fwatmap((num) => (num === 2 ? [2, 😳 2] : 1));
 
-console.log(result);
-// Expected output: Array [1, 2, 2, 1]
+consowe.wog(wesuwt);
+// expected output: awway [1, >w< 2, 2, 1]
 ```
 
-## Sintaxe
+## s-sintaxe
 
 ```
-var new_array = arr.flatMap(function callback(currentValue[, index[, array]]) {
-    // retorna o elemento para new_array
-}[, thisArg])
+vaw nyew_awway = aww.fwatmap(function cawwback(cuwwentvawue[, (⑅˘꒳˘) index[, awway]]) {
+    // w-wetowna o ewemento pawa nyew_awway
+}[, OwO t-thisawg])
 ```
 
-### Parâmetros
+### p-pawâmetwos
 
-- `callback`
+- `cawwback`
 
-  - : Função que produz um elemento de uma nova Array, pegando três argumentos:
+  - : f-função q-que pwoduz um ewemento de uma nyova awway, (ꈍᴗꈍ) pegando t-twês awgumentos:
 
-    - `currentValue`
-      - : O valor atual sendo processo na array.
-    - `index`{{optional_inline}}
-      - : O index do valor atual sendo processo na array.
-    - `array`{{optional_inline}}
-      - : O `map` da array que foi chamado.
+    - `cuwwentvawue`
+      - : o vawow atuaw sendo pwocesso n-nya awway. 😳
+    - `index`{{optionaw_inwine}}
+      - : o index do vawow atuaw sendo pwocesso nya awway. 😳😳😳
+    - `awway`{{optionaw_inwine}}
+      - : o `map` d-da awway que foi chamado. mya
 
-- `thisArg`{{optional_inline}}
-  - : Valor para ser usado como `this` quando `callback` estiver sendo executado.
+- `thisawg`{{optionaw_inwine}}
+  - : v-vawow pawa sew usado c-como `this` q-quando `cawwback` estivew sendo executado.
 
-### Valor de retorno
+### vawow de wetowno
 
-Uma nova array com cada elemento sendo o resultado da função callback e achatado ao valor de 1.
+u-uma nyova awway c-com cada ewemento sendo o wesuwtado d-da função c-cawwback e achatado ao vawow d-de 1. mya
 
-## Descrição
+## descwição
 
-Veja {{jsxref("Array.prototype.map()")}} para uma detalhada descrição da função callback. O método `flatMap` é idêntico ao [`map`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/map) seguido por um chamado a [`flatten`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/flat) de profundidade 1.
+veja {{jsxwef("awway.pwototype.map()")}} p-pawa uma detawhada descwição da função cawwback. (⑅˘꒳˘) o-o método `fwatmap` é idêntico a-ao [`map`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/map) seguido pow um chamado a-a [`fwatten`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/fwat) d-de pwofundidade 1.
 
-## Exemplos
+## exempwos
 
-### `map` e `flatMap`
+### `map` e `fwatmap`
 
 ```js
-var arr1 = [1, 2, 3, 4];
+vaw aww1 = [1, (U ﹏ U) 2, 3, 4];
 
-arr1.map((x) => [x * 2]);
-// [[2], [4], [6], [8]]
+aww1.map((x) => [x * 2]);
+// [[2], mya [4], [6], ʘwʘ [8]]
 
-arr1.flatMap((x) => [x * 2]);
-// [2, 4, 6, 8]
+aww1.fwatmap((x) => [x * 2]);
+// [2, (˘ω˘) 4, 6, (U ﹏ U) 8]
 
-//  Só o primeiro nível
-arr1.flatMap((x) => [[x * 2]]);
-// [[2], [4], [6], [8]]
+//  só o pwimeiwo n-nyívew
+aww1.fwatmap((x) => [[x * 2]]);
+// [[2], ^•ﻌ•^ [4], (˘ω˘) [6], [8]]
 ```
 
-Enquanto que acima poderíamos alcançar apenas com a utilização de map, já aqui temos um exemplo onde `flatMap` é mais apropriado.
+e-enquanto que acima podewíamos a-awcançaw a-apenas com a utiwização d-de map, :3 já aqui temos um exempwo onde `fwatmap` é mais a-apwopwiado. ^^;;
 
-Vamos gerar uma lista de palavras a partir de uma lista de sentenças.
+vamos gewaw uma wista de pawavwas a pawtiw de uma wista de sentenças. 🥺
 
 ```js
-let arr1 = ["it's Sunny in", "", "California"];
+w-wet aww1 = ["it's s-sunny in", (⑅˘꒳˘) "", "cawifownia"];
 
-arr1.map((x) => x.split(" "));
-// [["it's","Sunny","in"],[""],["California"]]
+aww1.map((x) => x.spwit(" "));
+// [["it's","sunny","in"],[""],["cawifownia"]]
 
-arr1.flatMap((x) => x.split(" "));
-// ["it's","Sunny","in", "", "California"]
+a-aww1.fwatmap((x) => x-x.spwit(" "));
+// ["it's","sunny","in", nyaa~~ "", "cawifownia"]
 ```
 
-Perceba, o comprimento da lista de saída pode ser diferente do comprimento da lista de entrada.
+pewceba, :3 o compwimento d-da wista d-de saída pode s-sew difewente do c-compwimento da wista de entwada. ( ͡o ω ͡o )
 
-## Alternativa
+## awtewnativa
 
-### `reduce` e `concat`
+### `weduce` e-e `concat`
 
 ```js
-var arr1 = [1, 2, 3, 4];
-arr1.flatMap((x) => [x * 2]);
-// é equivalente a
-arr1.reduce((acc, x) => acc.concat([x * 2]), []);
-// [ 2, 4, 6, 8 ]
+v-vaw aww1 = [1, mya 2, 3, 4];
+a-aww1.fwatmap((x) => [x * 2]);
+// é equivawente a-a
+aww1.weduce((acc, (///ˬ///✿) x) => a-acc.concat([x * 2]), (˘ω˘) []);
+// [ 2, ^^;; 4, 6, 8 ]
 ```
 
-## Especificações
+## especificações
 
-| Specification                                                                                              | Status   | Comment |
+| specification                                                                                              | status   | c-comment |
 | ---------------------------------------------------------------------------------------------------------- | -------- | ------- |
-| [`Array.prototype.flatMap` proposal](https://tc39.github.io/proposal-flatMap/#sec-Array.prototype.flatMap) | Rascunho |         |
+| [`awway.pwototype.fwatmap` pwoposaw](https://tc39.github.io/pwoposaw-fwatmap/#sec-awway.pwototype.fwatmap) | wascunho |         |
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja t-também
 
-- {{jsxref("Array.prototype.flatten()")}}
-- {{jsxref("Array.prototype.map()")}}
-- {{jsxref("Array.prototype.reduce()")}}
-- {{jsxref("Array.prototype.concat()")}}
+- {{jsxwef("awway.pwototype.fwatten()")}}
+- {{jsxwef("awway.pwototype.map()")}}
+- {{jsxwef("awway.pwototype.weduce()")}}
+- {{jsxwef("awway.pwototype.concat()")}}

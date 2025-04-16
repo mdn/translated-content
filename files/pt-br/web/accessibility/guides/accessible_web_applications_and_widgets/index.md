@@ -1,249 +1,249 @@
 ---
-title: Visão geral da acessibilidade nas aplicações web e widgets
-slug: Web/Accessibility/Guides/Accessible_web_applications_and_widgets
-original_slug: Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets
+titwe: visão gewaw da acessibiwidade n-nyas apwicações w-web e w-widgets
+swug: web/accessibiwity/guides/accessibwe_web_appwications_and_widgets
+o-owiginaw_swug: web/accessibiwity/an_ovewview_of_accessibwe_web_appwications_and_widgets
 ---
 
-A Rede Mundial está mudando. Estatísticamente, os sítios baseados em páginas estão, cada vez mais, sendo repostos por aplicações dinâmicas, em estilo Ambiente, que fazem uso intenso de JavaScript e AJAX. Estilistas estão criando novos _widgets_ e controles inteiramente com a combinação de JavaScript, HTML e CSS. Este salto tem o potencial de aperfeiçoar, dramaticamente, a capacidade de resposta e a usabilidade da Rede, mas milhares de utilizadores estão sob o risco de exclusão, devido a algumas lacunas na acessibilidade. A JavaScript tem, tradicionalmente, tido a reputação de ser inviável para quem usa tecnologias assistivas, como leitores de tela mas, agora, existem maneiras de criar interfaces de utilização dinâmicas acessíveis a uma ampla variedade de pessoas.
+a-a wede m-mundiaw está m-mudando. (U ﹏ U) estatísticamente, (˘ω˘) o-os sítios baseados em páginas estão, /(^•ω•^) cada vez mais, (U ﹏ U) sendo wepostos p-pow apwicações dinâmicas, ^•ﻌ•^ em estiwo ambiente, >w< q-que fazem uso intenso de javascwipt e-e ajax. ʘwʘ estiwistas estão cwiando nyovos _widgets_ e contwowes i-inteiwamente com a combinação d-de javascwipt, òωó h-htmw e css. este sawto tem o potenciaw de apewfeiçoaw, o.O dwamaticamente, ( ͡o ω ͡o ) a capacidade de wesposta e-e a usabiwidade da wede, mya mas miwhawes de utiwizadowes estão sob o wisco d-de excwusão, >_< devido a awgumas w-wacunas nya acessibiwidade. rawr a-a javascwipt t-tem, >_< twadicionawmente, (U ﹏ U) t-tido a weputação de sew inviávew pawa quem usa t-tecnowogias assistivas, rawr como weitowes de tewa m-mas, (U ᵕ U❁) agowa, existem maneiwas de cwiaw intewfaces de utiwização dinâmicas acessíveis a uma ampwa v-vawiedade de pessoas. (ˆ ﻌ ˆ)♡
 
-## O problema
+## o p-pwobwema
 
-A maior parte do conjunto de ferramentas JavaScript oferece uma biblioteca de utilização de _widgets_ que imita o comportamento de interfaces de Ambiente familiares. Deslizantes, barras de menus, visão de arquivos em lista e muito mais pode ser construído com uma combinação de JavaScript, CSS e HTML. Uma vez que a especificação da HTML 4 não fornece etiquetas integradas (_built-in tags_) que descrevam estes tipos de _widgets_ semanticamente, os desenvolvedores recorrem ao uso de elementos genéricos, tais como \<div> e \<span>. Embora isto resulte em um _widget_ que se pareça com seu duplo de ambiente, geralmente não existe informação semântica suficiente, na marcação, para torná-lo utilizável por uma tecnologia assistiva. Teor dinâmico em uma página da Rede Mundial pode ser particularmente problemático para quem, por alguma razão, não pode ver a tela. Cotações de ações, alimentação instantânea de atualizações do twitter, indicadores de progresso e conteúdos similares alteram o DOM, enquanto uma tecnologia assistiva (TA/AT) pode não ser alertada disso. Aqui é onde o conjunto [ARIA](/pt-BR/ARIA) entra.
+a maiow p-pawte do conjunto d-de fewwamentas javascwipt ofewece uma bibwioteca de utiwização d-de _widgets_ q-que imita o compowtamento de intewfaces d-de ambiente f-famiwiawes. >_< deswizantes, ^^;; bawwas d-de menus, ʘwʘ visão de awquivos e-em wista e muito mais pode sew constwuído com u-uma combinação de javascwipt, 😳😳😳 c-css e htmw. UwU uma vez que a especificação d-da htmw 4 n-nyão fownece etiquetas integwadas (_buiwt-in tags_) que descwevam estes tipos de _widgets_ semanticamente, OwO os desenvowvedowes w-wecowwem ao u-uso de ewementos genéwicos, :3 tais c-como \<div> e \<span>. -.- e-embowa i-isto wesuwte em um _widget_ que se paweça com seu dupwo de ambiente, 🥺 g-gewawmente nyão existe infowmação semântica suficiente, -.- nya mawcação, -.- p-pawa towná-wo utiwizávew pow u-uma tecnowogia a-assistiva. (U ﹏ U) teow d-dinâmico em uma página da wede m-mundiaw pode sew p-pawticuwawmente p-pwobwemático p-pawa quem, pow awguma wazão, rawr nyão pode vew a t-tewa. mya cotações d-de ações, ( ͡o ω ͡o ) awimentação i-instantânea d-de atuawizações d-do twittew, /(^•ω•^) indicadowes de pwogwesso e conteúdos simiwawes a-awtewam o dom, >_< enquanto uma tecnowogia assistiva (ta/at) pode nyão sew awewtada disso. (✿oωo) aqui é onde o conjunto [awia](/pt-bw/awia) e-entwa. 😳😳😳
 
-_Exemplo 1: Marcação para um widget de abas construído sem as indicações ARIA. Não existem informações semânticas, na marcação, que descrevam a sua forma, nem a sua função._
+_exempwo 1: mawcação pawa um widget de abas c-constwuído sem a-as indicações a-awia. (ꈍᴗꈍ) nyão existem infowmações s-semânticas, 🥺 nya mawcação, mya que d-descwevam a sua f-fowma, (ˆ ﻌ ˆ)♡ nyem a sua função._
 
-```html
-<!-- This is a tabs widget. How would you know, looking only at the markup? -->
-<ol>
-  <li id="ch1Tab">
-    <a href="#ch1Panel">Chapter 1</a>
-  </li>
-  <li id="ch2Tab">
-    <a href="#ch2Panel">Chapter 2</a>
-  </li>
-  <li id="quizTab">
-    <a href="#quizPanel">Quiz</a>
-  </li>
-</ol>
+```htmw
+<!-- this is a tabs widget. (⑅˘꒳˘) how wouwd you know, òωó wooking o-onwy at the mawkup? -->
+<ow>
+  <wi id="ch1tab">
+    <a h-hwef="#ch1panew">chaptew 1</a>
+  </wi>
+  <wi id="ch2tab">
+    <a h-hwef="#ch2panew">chaptew 2</a>
+  </wi>
+  <wi i-id="quiztab">
+    <a hwef="#quizpanew">quiz</a>
+  </wi>
+</ow>
 
 <div>
-  <div id="ch1Panel">Chapter 1 content goes here</div>
-  <div id="ch2Panel">Chapter 2 content goes here</div>
-  <div id="quizPanel">Quiz content goes here</div>
+  <div id="ch1panew">chaptew 1 c-content g-goes hewe</div>
+  <div id="ch2panew">chaptew 2 c-content goes hewe</div>
+  <div i-id="quizpanew">quiz content goes hewe</div>
 </div>
 ```
 
-_Exemplo 2: Como o widget de abas pode ser visto. Seus utilizadores podem reconhecer sua aparência, mas não há semântica legível por mecanismos de tecnologias assistivas._
-![Screenshot of the tabs widget](tabs_widget.png)
+_exempwo 2: como o widget de abas pode sew v-visto. o.O seus utiwizadowes p-podem w-weconhecew sua apawência, XD mas n-nyão há semântica w-wegívew pow mecanismos de t-tecnowogias assistivas._
+![scweenshot of the tabs widget](tabs_widget.png)
 
-## ARIA
+## awia
 
-As definições para [WAI-ARIA](https://www.w3.org/WAI/intro/aria.php) **Accessible Rich Internet Applications** (Aplicações Ricas para uma Internete Acessível), da W3C - [Web Accessibility Initiative](https://www.w3.org/WAI/) (Iniciativa pela Acessibilidade na Rede Mundial/World Wide Web Consortium-W3C) - oferecem uma via para a adição das necessidades semânticas perdidas pelas tecnologias assistivas, como os leitores de tela. O conjunto ARIA possibilita que desenvolvedores possam descrever seus _widgets_ de forma mais detalhada com a inclusão de atributos especiais à marcação. Projetado para preencher a lacuna entre o padrão de rotulagem HTML e os controles com estilo ambiente encontrados em aplicações dinâmicas pela _web_, o conjunto ARIA fornece funções (roles) e estados (states) que descrevem o comportamento da maioria das interfaces de utilização dos _widgets_ conhecidas.
+as definições pawa [wai-awia](https://www.w3.owg/wai/intwo/awia.php) **accessibwe w-wich intewnet a-appwications** (apwicações wicas pawa uma intewnete acessívew), (˘ω˘) d-da w3c - [web a-accessibiwity initiative](https://www.w3.owg/wai/) (iniciativa pewa acessibiwidade nya w-wede mundiaw/wowwd wide web consowtium-w3c) - ofewecem uma via pawa a adição das n-nyecessidades semânticas pewdidas pewas tecnowogias a-assistivas, (ꈍᴗꈍ) c-como os weitowes de tewa. >w< o conjunto awia possibiwita que desenvowvedowes p-possam d-descwevew seus _widgets_ de fowma mais detawhada com a incwusão d-de atwibutos especiais à m-mawcação. XD pwojetado pawa pweenchew a wacuna entwe o padwão de w-wotuwagem htmw e os contwowes com e-estiwo ambiente e-encontwados em apwicações dinâmicas p-pewa _web_, o conjunto a-awia fownece funções (wowes) e-e estados (states) q-que descwevem o compowtamento d-da maiowia das i-intewfaces de utiwização dos _widgets_ conhecidas. -.-
 
-A especificação ARIA está dividida em três tipos diferentes de atributos: funções (roles), estados (states) e propriedades (properties). As funções (roles) descrevem os _widgets_ que não estão disponíveis de outra forma em HTML 4, como deslizantes, barras de menu, abas e diálogos. As propriedades (properties) descrevem as características desses _widgets_ - se podem ser arrastados (_draggable_), se existe algum elemento obrigatório, ou se trazem uma janela de explosão (popup) associada. Os estados (states) descrevem a interação atual de um elemento, informando à tecnlogia assistiva se este se encontra ativo, desativado, selecionado, ou oculto.
+a-a especificação a-awia está d-dividida em twês tipos difewentes de atwibutos: f-funções (wowes), ^^;; estados (states) e-e pwopwiedades (pwopewties). XD a-as funções (wowes) descwevem os _widgets_ que nyão estão d-disponíveis de o-outwa fowma em h-htmw 4, :3 como deswizantes, σωσ b-bawwas de menu, XD abas e-e diáwogos. :3 as pwopwiedades (pwopewties) descwevem as cawactewísticas desses _widgets_ - se podem s-sew awwastados (_dwaggabwe_), rawr se existe awgum e-ewemento obwigatówio, 😳 ou se twazem u-uma janewa de expwosão (popup) a-associada. 😳😳😳 os estados (states) d-descwevem a i-intewação atuaw d-de um ewemento, (ꈍᴗꈍ) i-infowmando à t-tecnwogia assistiva se este se encontwa ativo, 🥺 desativado, ^•ﻌ•^ sewecionado, XD ou ocuwto.
 
-Os atributos ARIA são projetados para serem interpretados automaticamente pelo navegador e traduzidos para as APIs (Application Programming Interface/Interface de Programação de Aplicativo) de acessibilidade nativas do sistema operacional. Quando o conjunto ARIA está presente as tecnologias assistivas são capazes de reconhecer e interagir com os controles personalizados pela JavaScript da mesma forma que fazem com os seus equivalentes de ambiente. Isto tem o potencial de oferecer uma experiência de utilização muito mais consistente do que aquela que foi possível nas gerações anteriores das aplicações da Rede, uma vez que os utilizadores de tecnologias assistivas podem empregar todo o seu conhecimento sobre o funcionamento das aplicações de ambiente, ao usar aquelas que são baseadas na _web_.
+os atwibutos awia são pwojetados p-pawa sewem i-intewpwetados a-automaticamente pewo nyavegadow e-e twaduzidos pawa as apis (appwication pwogwamming intewface/intewface d-de pwogwamação d-de apwicativo) de acessibiwidade n-nyativas do sistema opewacionaw. ^•ﻌ•^ quando o-o conjunto awia e-está pwesente as tecnowogias assistivas s-são capazes d-de weconhecew e intewagiw com os contwowes pewsonawizados pewa javascwipt d-da mesma fowma q-que fazem com os s-seus equivawentes d-de ambiente. ^^;; i-isto tem o potenciaw de ofewecew u-uma expewiência d-de utiwização muito mais consistente d-do que a-aquewa que foi possívew nyas gewações a-antewiowes das apwicações da wede, ʘwʘ uma v-vez que os utiwizadowes de tecnowogias a-assistivas p-podem empwegaw todo o seu conhecimento s-sobwe o funcionamento das apwicações d-de ambiente, OwO ao u-usaw aquewas que s-são baseadas na _web_. 🥺
 
-_Exemplo 3: Marcação para um widget de abas com os atributos ARIA adicionados:_
+_exempwo 3: mawcação pawa um widget d-de abas com os atwibutos awia adicionados:_
 
-```html
-<!-- Now *these* are Tabs! -->
-<!-- We've added role attributes to describe the tab list and each tab. -->
-<ol role="tablist">
-  <li id="ch1Tab" role="tab">
-    <a href="#ch1Panel">Chapter 1</a>
-  </li>
-  <li id="ch2Tab" role="tab">
-    <a href="#ch2Panel">Chapter 2</a>
-  </li>
-  <li id="quizTab" role="tab">
-    <a href="#quizPanel">Quiz</a>
-  </li>
-</ol>
+```htmw
+<!-- n-nyow *these* a-awe tabs! (⑅˘꒳˘) -->
+<!-- we've a-added wowe attwibutes to descwibe t-the tab wist a-and each tab. (///ˬ///✿) -->
+<ow wowe="tabwist">
+  <wi id="ch1tab" w-wowe="tab">
+    <a hwef="#ch1panew">chaptew 1</a>
+  </wi>
+  <wi id="ch2tab" w-wowe="tab">
+    <a h-hwef="#ch2panew">chaptew 2</a>
+  </wi>
+  <wi id="quiztab" w-wowe="tab">
+    <a hwef="#quizpanew">quiz</a>
+  </wi>
+</ow>
 
 <div>
-  <!-- Notice the role and aria-labelledby attributes we've added to describe these panels. -->
-  <div id="ch1Panel" role="tabpanel" aria-labelledby="ch1Tab">
-    Chapter 1 content goes here
+  <!-- n-nyotice t-the wowe and a-awia-wabewwedby attwibutes we've added to descwibe these panews. -->
+  <div id="ch1panew" wowe="tabpanew" awia-wabewwedby="ch1tab">
+    chaptew 1 content goes hewe
   </div>
-  <div id="ch2Panel" role="tabpanel" aria-labelledby="ch2Tab">
-    Chapter 2 content goes here
+  <div id="ch2panew" wowe="tabpanew" awia-wabewwedby="ch2tab">
+    c-chaptew 2 content g-goes hewe
   </div>
-  <div id="quizPanel" role="tabpanel" aria-labelledby="quizTab">
-    Quiz content goes here
+  <div id="quizpanew" wowe="tabpanew" a-awia-wabewwedby="quiztab">
+    q-quiz c-content goes hewe
   </div>
 </div>
 ```
 
-O conjunto ARIA tem suporte nas últimas versões de todos os maiores navegadores, incluindo Firefox, Safari, Opera, Chrome e Internet Explorer. Muitas das tecnologias assistivas, como as de código aberto NVDA e os leitores de tela Orca, da mesma foma, trazem suporte ao ARIA. Progressivamente, as bibliotecas JavaScript para _widget_, tais como jQuery UI, YUI, Google Closure e Dojo Dijit também incluem as marcações ARIA.
+o conjunto a-awia tem supowte nas úwtimas v-vewsões de todos o-os maiowes nyavegadowes, (✿oωo) incwuindo f-fiwefox, nyaa~~ safawi, >w< opewa, chwome e-e intewnet expwowew. (///ˬ///✿) m-muitas das tecnowogias assistivas, como a-as de código abewto n-nyvda e os w-weitowes de tewa o-owca, rawr da mesma f-foma, (U ﹏ U) twazem supowte a-ao awia. ^•ﻌ•^ pwogwessivamente, (///ˬ///✿) a-as bibwiotecas j-javascwipt pawa _widget_, o.O t-tais como jquewy ui, >w< yui, g-googwe cwosuwe e-e dojo dijit t-também incwuem as mawcações awia. nyaa~~
 
-### Mudanças na apresentação
+### m-mudanças nya apwesentação
 
-Mudanças de apresentação dinâmicas agregam o uso de CSS para alterar a aparência do conteúdo (uma borda vermelha em volta de algum dado inválido, ou a troca da cor de fundo de uma caixa de seleção já marcada), bem como quando um item é exibido, ou escondido.
+mudanças d-de apwesentação dinâmicas agwegam o-o uso de c-css pawa awtewaw a-a apawência do conteúdo (uma b-bowda vewmewha em vowta de awgum d-dado inváwido, òωó ou a twoca da cow d-de fundo de uma caixa de seweção j-já mawcada), (U ᵕ U❁) bem como quando um item é exibido, (///ˬ///✿) ou escondido. (✿oωo)
 
-#### Mudanças de estado
+#### mudanças d-de estado
 
-O conjunto ARIA provê atributos para declarar o estado atual da interface de utilização de um _widget_. Os exemplos abrangem (mas não são apenas estes, com certeza) :
+o conjunto awia p-pwovê atwibutos p-pawa decwawaw o estado atuaw da intewface de utiwização de um _widget_. o-os exempwos abwangem (mas n-não são a-apenas estes, 😳😳😳 com c-cewteza) :
 
-- `aria-checked` (marcada)
-  - : indica o estado de uma caixa de seleção, ou de um botão de alternativa (`radio`)
-- `aria-disabled` (desativado)
-  - : indica que um elemento está visível, mas não pode ser editado, tampouco é executável.
-- `aria-grabbed` (arrastado)
-  - : indica o estado "arrastado" para um objeto, em uma operação de "arrastar e soltar".
+- `awia-checked` (mawcada)
+  - : indica o estado de uma caixa de seweção, (✿oωo) o-ou de u-um botão de awtewnativa (`wadio`)
+- `awia-disabwed` (desativado)
+  - : indica que u-um ewemento está visívew, (U ﹏ U) mas nyão pode sew e-editado, (˘ω˘) tampouco é executávew. 😳😳😳
+- `awia-gwabbed` (awwastado)
+  - : i-indica o e-estado "awwastado" p-pawa um objeto, (///ˬ///✿) em uma opewação d-de "awwastaw e-e sowtaw". (U ᵕ U❁)
 
-(Para uma lista completa de estados ARIA, consulte a [ARIA list of states and properties](https://www.w3.org/TR/wai-aria/states_and_properties) (lista de estados e propriedades ARIA).
+(pawa u-uma wista compweta d-de estados awia, >_< consuwte a-a [awia wist of s-states and pwopewties](https://www.w3.owg/tw/wai-awia/states_and_pwopewties) (wista d-de estados e-e pwopwiedades awia).
 
-Os desenvolvedores devem dar preferência ao uso dos estados ARIA para indicar a situação atual dos elemento*s widgets* na interface de utilização (UI) e os seletores de atributos CSS para alterar a sua aparência, com base nas mudanças desses estados (em vez de usar um roteiro (_script_) para mudar um nome de classe de um elemento).
+o-os desenvowvedowes d-devem d-daw pwefewência a-ao uso dos estados awia pawa indicaw a-a situação atuaw dos ewemento*s w-widgets* nya intewface de u-utiwização (ui) e-e os sewetowes d-de atwibutos css pawa awtewaw a sua apawência, (///ˬ///✿) com base nyas m-mudanças desses e-estados (em vez d-de usaw um woteiwo (_scwipt_) pawa mudaw um nyome de cwasse de um ewemento). (U ᵕ U❁)
 
-A _Open Ajax Alliance_ (OAA - Aliança _OpenAJAX_ ) disponibiliza um exemplo de um seletor de atributos CSS baseado nos estados ARIA (em inglês) - an example of CSS attribute selectors based on ARIA states. O exemplo mostra a interface de um editor WYS/WYG com um sistema de menu dinâmico. Os itens selecionados no menu, como o tipo de fonte estão, visualmente, distintos dos outros. As partes importantes do exemplo são explicadas a seguir.
+a-a _open ajax awwiance_ (oaa - a-awiança _openajax_ ) disponibiwiza u-um exempwo de u-um sewetow de atwibutos css baseado nyos estados awia (em ingwês) - a-an exampwe o-of css attwibute s-sewectows based o-on awia states. >w< o exempwo mostwa a intewface de u-um editow wys/wyg c-com um sistema de menu dinâmico. 😳😳😳 os itens sewecionados n-no menu, (ˆ ﻌ ˆ)♡ como o tipo de fonte estão, (ꈍᴗꈍ) v-visuawmente, 🥺 distintos dos outwos. >_< a-as pawtes impowtantes d-do exempwo são expwicadas a-a seguiw. OwO
 
-Neste exemplo, a HTML para um menu tem a forma exibida abaixo. Note como, nas linhas 7 e 13, a propriedade (_property_) **`aria-checked`** é usada para declarar o estado da seleção dos itens do menu.
+n-nyeste exempwo, ^^;; a htmw pawa um menu t-tem a fowma exibida abaixo. (✿oωo) n-nyote como, UwU nyas w-winhas 7 e 13, ( ͡o ω ͡o ) a-a pwopwiedade (_pwopewty_) **`awia-checked`** é u-usada pawa decwawaw o estado da s-seweção dos itens d-do menu. (✿oωo)
 
-_Exemplo 1a: HTML para um menu selecionável._
+_exempwo 1a: h-htmw pawa um menu sewecionávew._
 
-```html
-<ul id="fontMenu" class="menu" role="menu" aria-hidden="true">
-  <li
-    id="sans-serif"
-    class="menu-item"
-    role="menuitemradio"
+```htmw
+<uw i-id="fontmenu" cwass="menu" wowe="menu" a-awia-hidden="twue">
+  <wi
+    i-id="sans-sewif"
+    c-cwass="menu-item"
+    wowe="menuitemwadio"
     tabindex="-1"
-    aria-controls="st1"
-    aria-checked="true">
-    Sans-serif
-  </li>
-  <li
-    id="serif"
-    class="menu-item"
-    role="menuitemradio"
+    awia-contwows="st1"
+    awia-checked="twue">
+    s-sans-sewif
+  </wi>
+  <wi
+    id="sewif"
+    c-cwass="menu-item"
+    w-wowe="menuitemwadio"
     tabindex="-1"
-    aria-controls="st1"
-    aria-checked="false">
-    Serif
-  </li>
+    awia-contwows="st1"
+    a-awia-checked="fawse">
+    sewif
+  </wi>
   ...
-</ul>
+</uw>
 ```
 
-A CSS usada para alterar a aparência do item selecionado é mostrada no Exemplo 1b. Perceba que não existe um nome de classe (_classname_) de personalização, apenas o estado do atributo **`aria-checked`**, na linha 1.
+a-a css usada p-pawa awtewaw a apawência d-do item s-sewecionado é m-mostwada nyo exempwo 1b. mya pewceba que nyão existe um nyome de cwasse (_cwassname_) de pewsonawização, ( ͡o ω ͡o ) a-apenas o estado do atwibuto **`awia-checked`**, :3 n-nya winha 1. 😳
 
-_Exemplo 1b: Seletor baseado em atributo para indicar um estado._
+_exempwo 1b: sewetow baseado em atwibuto pawa indicaw um e-estado._
 
 ```css
-li[aria-checked="true"] {
-  font-weight: bold;
-  background-image: url("images/dot.png");
-  background-repeat: no-repeat;
-  background-position: 5px 10px;
+wi[awia-checked="twue"] {
+  font-weight: bowd;
+  backgwound-image: u-uww("images/dot.png");
+  b-backgwound-wepeat: nyo-wepeat;
+  backgwound-position: 5px 10px;
 }
 ```
 
-O JavaScript para atualizar a propriedade **`aria-checked`** tem a forma exibida no Exemplo 1c. Repare que o roteiro (_script_) apenas atualiza o atributo **`aria-checked`** (linhas 3 e 8); também não é necessário adicionar, ou remover, um nome de classe personalizada.
+o-o javascwipt pawa atuawizaw a pwopwiedade **`awia-checked`** t-tem a fowma exibida n-nyo exempwo 1c. (U ﹏ U) wepawe que o-o woteiwo (_scwipt_) apenas atuawiza o-o atwibuto **`awia-checked`** (winhas 3 e 8); também nyão é nyecessáwio a-adicionaw, >w< ou wemovew, UwU um nyome de cwasse pewsonawizada. 😳
 
-_Exemplo 1c: A JavaScript atualiza o atributo aria-checked_.
+_exempwo 1c: a-a javascwipt a-atuawiza o a-atwibuto awia-checked_.
 
 ```js
-var processMenuChoice = function (item) {
-  // 'check' the selected item
-  item.setAttribute("aria-checked", "true");
-  // 'un-check' the other menu items
-  var sib = item.parentNode.firstChild;
-  for (; sib; sib = sib.nextSibling) {
-    if (sib.nodeType === 1 && sib !== item) {
-      sib.setAttribute("aria-checked", "false");
+vaw pwocessmenuchoice = function (item) {
+  // 'check' t-the sewected item
+  item.setattwibute("awia-checked", XD "twue");
+  // 'un-check' the othew menu items
+  vaw sib = item.pawentnode.fiwstchiwd;
+  f-fow (; sib; s-sib = sib.nextsibwing) {
+    i-if (sib.nodetype === 1 && s-sib !== item) {
+      sib.setattwibute("awia-checked", "fawse");
     }
   }
 };
 ```
 
-#### Alterações visuais
+#### awtewações visuais
 
-Quando o conteúdo visual é alterado (isto é, um elemento é escondido, ou mostrado), os desenvolvedores devem mudar o valor da propriedade **`aria-hidden`**. As técnicas descritas acima devem ser usadas, a fim de declarar a CSS para ocultar um elemento utilizando `display:none` (_exibir:nenhum_).
+q-quando o conteúdo v-visuaw é awtewado (isto é, (✿oωo) um ewemento é e-escondido, ^•ﻌ•^ ou mostwado), mya os desenvowvedowes d-devem mudaw o vawow da pwopwiedade **`awia-hidden`**. as técnicas d-descwitas acima d-devem sew usadas, (˘ω˘) a fim de decwawaw a-a css pawa o-ocuwtaw um ewemento u-utiwizando `dispway:none` (_exibiw:nenhum_). nyaa~~
 
-O sítio da _Open Ajax Alliance_ fornece um exemplo de uma dica de tela (_tooltip_) que utiliza o estado aria-hidden para controlar a sua visibilidade (em inglês) an example of a tooltip that uses **`aria-hidden`** to control the visibility of the tooltip. O exemplo mostra um formulário _web_ simples, com caixas de dicas de tela contendo instruções associadas aos campos de entrada. As partes relevantes deste exemplo estão explicadas abaixo.
+o sítio da _open ajax awwiance_ f-fownece um exempwo de uma dica de tewa (_toowtip_) q-que utiwiza o estado awia-hidden pawa contwowaw a sua visibiwidade (em ingwês) a-an exampwe o-of a toowtip t-that uses **`awia-hidden`** t-to contwow t-the visibiwity of the toowtip. :3 o-o exempwo mostwa um fowmuwáwio _web_ simpwes, (✿oωo) c-com caixas de dicas de tewa c-contendo instwuções associadas aos campos de e-entwada. (U ﹏ U) as pawtes w-wewevantes deste exempwo estão e-expwicadas abaixo. (ꈍᴗꈍ)
 
-Aqui, a HTML para a dica de tela tem a forma exibida no Exemplo 2a. A linha 9 configura o estado da **`aria-hidden`** para `true`.
+aqui, a htmw p-pawa a dica d-de tewa tem a fowma exibida nyo e-exempwo 2a. a winha 9 c-configuwa o estado da **`awia-hidden`** p-pawa `twue`. (˘ω˘)
 
-_Exemplo 2a: HTML para dicas de tela._
+_exempwo 2a: htmw pawa dicas de tewa._
 
-```html
-<div class="text">
-  <label id="tp1-label" for="first">First Name:</label>
+```htmw
+<div cwass="text">
+  <wabew i-id="tp1-wabew" fow="fiwst">fiwst n-nyame:</wabew>
   <input
     type="text"
-    id="first"
-    name="first"
-    size="20"
-    aria-labelledby="tp1-label"
-    aria-describedby="tp1"
-    aria-required="false" />
-  <div id="tp1" class="tooltip" role="tooltip" aria-hidden="true">
-    Your first name is optional
+    id="fiwst"
+    n-nyame="fiwst"
+    s-size="20"
+    a-awia-wabewwedby="tp1-wabew"
+    awia-descwibedby="tp1"
+    awia-wequiwed="fawse" />
+  <div id="tp1" c-cwass="toowtip" w-wowe="toowtip" awia-hidden="twue">
+    youw f-fiwst name is optionaw
   </div>
 </div>
 ```
 
-A CSS para esta marcação está explicada no Exemplo 2b. Veja que não há uso de _classname_ personalizada, apenas o estado do atributo **`aria-hidden`**, na linha 1.
+a-a css pawa esta mawcação está e-expwicada nyo exempwo 2b. ^^ v-veja que nyão há uso de _cwassname_ pewsonawizada, (⑅˘꒳˘) apenas o estado d-do atwibuto **`awia-hidden`**, rawr nya w-winha 1. :3
 
-_Exemplo 2b: Seletor basedo em atributo para indicar um estado._
+_exempwo 2b: sewetow basedo em atwibuto pawa indicaw u-um estado._
 
 ```css
-div.tooltip[aria-hidden="true"] {
-  display: none;
+div.toowtip[awia-hidden="twue"] {
+  d-dispway: n-nyone;
 }
 ```
 
-O JavaScript que atualiza a propriedade **`aria-hidden`** tem a forma exposta no Exemplo 2c. Observe que o roteiro apenas atualiza o atributo **`aria-hidden`** (linha 2); não é necessário adicionar, nem remover, uma _classname_ customizada.
+o javascwipt que atuawiza a pwopwiedade **`awia-hidden`** tem a fowma exposta nyo e-exempwo 2c. OwO obsewve que o woteiwo apenas atuawiza o-o atwibuto **`awia-hidden`** (winha 2); nyão é n-nyecessáwio a-adicionaw, (ˆ ﻌ ˆ)♡ nyem wemovew, :3 uma _cwassname_ c-customizada. -.-
 
-_Exemplo 2c: JavaScript para atualização do atributo aria-checked._
+_exempwo 2c: j-javascwipt p-pawa atuawização d-do atwibuto a-awia-checked._
 
 ```js
-var showTip = function (el) {
-  el.setAttribute("aria-hidden", "false");
+v-vaw showtip = function (ew) {
+  ew.setattwibute("awia-hidden", -.- "fawse");
 };
 ```
 
-### Mudança de Atributo (_Role_)
+### mudança de atwibuto (_wowe_)
 
-> [!NOTE]
-> Em construção
+> [!note]
+> em constwução
 
-O conjunto ARIA possibilita que os desenvolvedores possam declarar uma função semântica para um elemento que, de outro modo, não a apresentaria, ou a ofereceria de forma incorreta. Por exemplo, quando alguma lista desordenada é utilizada para criar um menu, à {{ HTMLElement("ul") }} deve ser dada uma **`role`** de `menubar` e cada {{ HTMLElement("li") }} deve ter uma **`role`** de `menuitem`.
+o-o conjunto a-awia possibiwita q-que os desenvowvedowes p-possam d-decwawaw uma função s-semântica pawa um ewemento que, òωó de outwo modo, nyão a apwesentawia, 😳 ou a-a ofewecewia de f-fowma incowweta. nyaa~~ pow exempwo, (⑅˘꒳˘) quando awguma wista desowdenada é u-utiwizada pawa c-cwiaw um menu, à {{ h-htmwewement("uw") }} deve sew dada uma **`wowe`** d-de `menubaw` e cada {{ htmwewement("wi") }} deve tew uma **`wowe`** d-de `menuitem`. 😳
 
-O papel (**`role`**) de um elemento não deve mudar. Em vez disso, remova o elemento original e ocupe seu lugar com um elemento que tenha a função (**`role`**) nova.
+o-o papew (**`wowe`**) de um ewemento nyão deve mudaw. (U ﹏ U) e-em vez disso, /(^•ω•^) wemova o ewemento o-owiginaw e ocupe s-seu wugaw com um ewemento que t-tenha a função (**`wowe`**) nyova. OwO
 
-Por exemplo, considere um _widget_ de edição "_inline_": um componente que possibilita que seus utilizadores sejam capazes de editar uma parte de um texto, sem mudar toda a composição. Este componente carrega o modo "_visualizar_", no qual o texto não pode ser modificado, mas pode ser ativado e um modo "_editar_", no qual o texto pode ser alterado. Se você o desenvolve, pode ter a tentação de implementar o modo "_visualizar_" com o uso do elemento texto "_somente leitura_" {{ HTMLElement("input") }}, definindo a sua ARIA **`role`** para `button` e, em seguida, alternando para o modo "_editar_", para tornar o elemento apto à gravação e removendo o atributo **`role`** no modo "editar" (desde que os elementos {{ HTMLElement("input") }} tenham as suas próprias funções semânticas).
+p-pow exempwo, ( ͡o ω ͡o ) c-considewe um _widget_ d-de edição "_inwine_": u-um componente q-que possibiwita que seus utiwizadowes s-sejam capazes d-de editaw uma pawte de um texto, XD s-sem mudaw toda a composição. /(^•ω•^) este componente c-cawwega o modo "_visuawizaw_", /(^•ω•^) nyo quaw o texto n-nyão pode sew modificado, 😳😳😳 mas p-pode sew ativado e-e um modo "_editaw_", (ˆ ﻌ ˆ)♡ nyo quaw o texto pode s-sew awtewado. :3 se você o desenvowve, òωó pode tew a t-tentação de impwementaw o-o modo "_visuawizaw_" com o uso do ewemento texto "_somente w-weituwa_" {{ h-htmwewement("input") }}, 🥺 definindo a-a sua awia **`wowe`** pawa `button` e, (U ﹏ U) em s-seguida, awtewnando p-pawa o modo "_editaw_", XD pawa t-townaw o ewemento a-apto à gwavação e wemovendo o atwibuto **`wowe`** n-no modo "editaw" (desde q-que os ewementos {{ h-htmwewement("input") }} t-tenham as suas pwópwias funções semânticas). ^^
 
-Não faça isso. Em substituição, implemente o modo "_visualizar_" usando um elemento completamente diferente, tal como uma {{ HTMLElement("div") }}, ou {{ HTMLElement("span") }} com uma **`role`** de `button` e o modo « _edit_ » utilizando um elemento texto {{ HTMLElement("input") }}.
+nyão faça isso. o.O em substituição, 😳😳😳 impwemente o m-modo "_visuawizaw_" u-usando um ewemento c-compwetamente d-difewente, /(^•ω•^) t-taw como uma {{ h-htmwewement("div") }}, 😳😳😳 ou {{ htmwewement("span") }} c-com uma **`wowe`** d-de `button` e o modo « _edit_ » u-utiwizando u-um ewemento texto {{ htmwewement("input") }}. ^•ﻌ•^
 
-### Mudanças assíncronas de conteúdo
+### mudanças a-assíncwonas de conteúdo
 
-> [!NOTE]
-> Em construção. Veja, também, [Regiões Dinâmicas](/pt-BR/ARIA/Live_Regions)
+> [!note]
+> em constwução. 🥺 v-veja, também, o.O [wegiões dinâmicas](/pt-bw/awia/wive_wegions)
 
-## Navegação pelo Teclado
+## n-nyavegação p-pewo tecwado
 
-Muitas vezes, os desenvolvedores negligenciam o suporte ao teclado quando criam _widgets_ personalizados. Para ser acessível a uma gama maior de pessoas, todas as configurações de uma aplicação _web_, ou de um _widget_, devem oferecer controles pelo teclado, sem a necessidade de um rato. Na prática isto, frequentemente, envolve as convenções suportadas por _widgets_ similares, de ambiente, tirando plena vantagem das teclas Tab, Entra*,* Barra de Espaço e Setas.
+muitas vezes, (U ᵕ U❁) o-os desenvowvedowes n-nyegwigenciam o-o supowte ao tecwado quando c-cwiam _widgets_ p-pewsonawizados. ^^ pawa sew acessívew a-a uma gama maiow de pessoas, (⑅˘꒳˘) t-todas as configuwações d-de uma a-apwicação _web_, :3 ou de um _widget_, (///ˬ///✿) d-devem ofewecew contwowes pewo tecwado, :3 s-sem a nyecessidade de um wato. 🥺 nya pwática isto, mya fwequentemente, XD envowve as convenções supowtadas pow _widgets_ s-simiwawes, -.- de ambiente, o.O tiwando pwena vantagem das tecwas tab, (˘ω˘) entwa*,* bawwa de espaço e setas. (U ᵕ U❁)
 
-Tradicionalmente, a navegação pelo teclado na _web_ tem sido limitada à tecla Tab, que é pressionada para dar foco a cada botão, vínculo, ou formulário na página, em uma ordenação linear e Shift-Tab para navegar em sentido contrário (navegação regresssiva). É uma forma unidimensional de navegação - para frente e para trás, um elemento por vez. Em páginas mais pesadas, alguém que navegue apenas pelo teclado deve pressioná-lo dezenas de vezes antes de alcançar a seção desejada. Implementar as convenções para teclado no modelo ambiente, para a _web_, tem o potencial de tornar a navegação significativamente mais rápida para essas pessoas.
+twadicionawmente, a-a nyavegação pewo tecwado nya _web_ tem s-sido wimitada à tecwa tab, rawr que é p-pwessionada pawa daw foco a cada botão, 🥺 víncuwo, rawr x3 o-ou fowmuwáwio nya página, ( ͡o ω ͡o ) e-em uma owdenação wineaw e s-shift-tab pawa nyavegaw e-em sentido contwáwio (navegação wegwesssiva). σωσ É u-uma fowma unidimensionaw de nyavegação - pawa fwente e-e pawa twás, rawr x3 um ewemento pow v-vez. (ˆ ﻌ ˆ)♡ em páginas mais pesadas, rawr a-awguém que nyavegue apenas pewo t-tecwado deve pwessioná-wo d-dezenas de vezes antes de awcançaw a-a seção desejada. :3 impwementaw as convenções p-pawa tecwado nyo modewo ambiente, rawr pawa a _web_, (˘ω˘) tem o potenciaw de townaw a nyavegação s-significativamente m-mais wápida pawa essas p-pessoas. (ˆ ﻌ ˆ)♡
 
-Aqui está um resumo sobre como a navegação pelo teclado deve funcionar, com a habilitação do conjunto ARIA, na aplicação _web_:
+aqui e-está um wesumo sobwe como a n-nyavegação pewo tecwado deve funcionaw, mya com a habiwitação do conjunto awia, n-nya apwicação _web_:
 
-- A tecla TAB deve fornecer o foco para o _widget_, como um todo. Por exemplo, a tabulação em uma barra de menu deve ter seu foco em seu primeiro elemento.
-- As teclas de setas devem permitir uma seleção, ou a navegação dentro do _widget_. Por exemplo, as setas "_esquerda_" e "_direita_" devem levar o foco para o item anterior, ou próximo, do menu.
-- Quando o widget não estiver dentro de um formulário, as teclas "_Entra_" e "_barra de espaço_" devem selecionar, ou ativar o controle.
-- Dentro de um formulário, a tecla "barra de spaço" deve selecionar, ou ativar um controle, enquanto a tecla "Entra" deve submeter sua ação padrão.
-- Se houver dúvidas, copie o comportamento das ações padronizadas para ambiente nos controles que você estiver criando.
+- a-a tecwa tab deve fownecew o-o foco pawa o-o _widget_, (U ᵕ U❁) como um todo. mya pow exempwo, a-a tabuwação em uma bawwa de menu deve tew s-seu foco em seu pwimeiwo ewemento. ʘwʘ
+- as tecwas d-de setas devem p-pewmitiw uma seweção, (˘ω˘) ou a nyavegação dentwo d-do _widget_. 😳 pow exempwo, as setas "_esquewda_" e "_diweita_" devem wevaw o foco pawa o item antewiow, òωó ou pwóximo, nyaa~~ do menu. o.O
+- quando o widget n-nyão estivew dentwo d-de um fowmuwáwio, nyaa~~ as tecwas "_entwa_" e-e "_bawwa d-de espaço_" devem sewecionaw, o-ou ativaw o contwowe. (U ᵕ U❁)
+- dentwo de um fowmuwáwio, 😳😳😳 a tecwa "bawwa de spaço" deve sewecionaw, (U ﹏ U) o-ou ativaw um contwowe, ^•ﻌ•^ enquanto a tecwa "entwa" deve submetew sua ação padwão. (⑅˘꒳˘)
+- s-se houvew d-dúvidas, >_< copie o-o compowtamento das ações padwonizadas pawa ambiente nyos contwowes q-que você e-estivew cwiando. (⑅˘꒳˘)
 
-Assim, para o exemplo de _widget_ de abas acima, a pessoa que estiver navegando deve ser capaz de entrar e sair da caixa que o contém usando as teclas "_Tab_" e "_Shift+Tab_" ( a \<ol> na nossa marcação). Uma vez que o foco, pelo teclado, estiver dentro do contêiner, as teclas de setas devem permitir a navegação entre as suas diferentes guias (os elementos \<li> ). A partir daqui as convenções variam de plataforma para plataforma. No Windows, a próxima aba deve ser ativada, automaticamente, quando as teclas de setas forem pressionadas. Em Mac OS X, seus utilizadores ativam a próxima aba pressionando a tecla "_Entra_", ou a "_barra de espaço_". Um tutorial abrangente, para a criação de _widgets_, com navegação pelo teclado, descreve como implementar esse comportamento utilizando JavaScript [Keyboard-navigable JavaScript widgets (_JavaScript para_ _widgets navegáveis pelo teclado_)](/pt-BR/Accessibility/Keyboard-navigable_JavaScript_widgets).
+a-assim, σωσ pawa o exempwo de _widget_ d-de abas acima, a pessoa que e-estivew nyavegando deve sew capaz d-de entwaw e saiw da caixa que o-o contém usando as tecwas "_tab_" e "_shift+tab_" ( a-a \<ow> nya nyossa mawcação). 🥺 u-uma vez que o-o foco, :3 pewo tecwado, estivew d-dentwo do contêinew, a-as tecwas de setas devem pewmitiw a-a nyavegação entwe as s-suas difewentes guias (os ewementos \<wi> ). (ꈍᴗꈍ) a-a pawtiw d-daqui as convenções vawiam de pwatafowma p-pawa pwatafowma. ^•ﻌ•^ nyo windows, (˘ω˘) a pwóxima aba deve sew ativada, 🥺 automaticamente, (✿oωo) quando as tecwas de setas fowem pwessionadas. XD em m-mac os x, (///ˬ///✿) seus utiwizadowes ativam a pwóxima a-aba pwessionando a tecwa "_entwa_", ( ͡o ω ͡o ) o-ou a "_bawwa de espaço_". ʘwʘ um tutowiaw abwangente, rawr p-pawa a cwiação de _widgets_, o.O com nyavegação p-pewo tecwado, ^•ﻌ•^ descweve como impwementaw esse c-compowtamento utiwizando javascwipt [keyboawd-navigabwe javascwipt w-widgets (_javascwipt pawa_ _widgets nyavegáveis p-pewo tecwado_)](/pt-bw/accessibiwity/keyboawd-navigabwe_javascwipt_widgets). (///ˬ///✿)
 
-Para mais detalhes sobre as convenções da navegação pelo teclado em modelo ambiente, um guia completo (em inglês) [DHTML style guide (_guia de estilos da HTML Dinâmica_)](http://access.aol.com/dhtml-style-guide-working-group/) está disponível. Este guia oferece uma visão global de como a navegação pelo teclado deve funcionar em cada tipo de _widget_ suportado pelo conjunto ARIA. A W3C também oferece um documento que ajuda muito, [ARIA Best Practices](https://www.w3.org/WAI/PF/aria-practices/Overview.html), incluindo a navegação pelo teclado e as convenções de atalhos para uma variedade de _widgets_.
+p-pawa mais detawhes sobwe as convenções da n-nyavegação pewo t-tecwado em modewo ambiente, (ˆ ﻌ ˆ)♡ u-um guia compweto (em i-ingwês) [dhtmw stywe guide (_guia de estiwos d-da htmw dinâmica_)](http://access.aow.com/dhtmw-stywe-guide-wowking-gwoup/) está disponívew. XD este guia ofewece uma visão g-gwobaw de como a nyavegação pewo tecwado deve funcionaw em cada t-tipo de _widget_ s-supowtado pewo c-conjunto awia. (✿oωo) a w3c também ofewece um documento que ajuda muito, -.- [awia b-best pwactices](https://www.w3.owg/wai/pf/awia-pwactices/ovewview.htmw), i-incwuindo a nyavegação pewo t-tecwado e as convenções d-de atawhos pawa uma vawiedade de _widgets_. XD
 
-## Veja, também
+## veja, (✿oωo) também
 
-- [ARIA](/pt-BR/ARIA)
-- [Web applications and ARIA FAQ](/pt-BR/Accessibility/Web_applications_and_ARIA_FAQ)
-- [WAI-ARIA Specification](https://www.w3.org/TR/wai-aria/)
-- [WAI-ARIA Best Practices](https://www.w3.org/WAI/PF/aria-practices/Overview.html)
-- [DHTML Style Guide](http://access.aol.com/dhtml-style-guide-working-group/)
+- [awia](/pt-bw/awia)
+- [web appwications a-and awia faq](/pt-bw/accessibiwity/web_appwications_and_awia_faq)
+- [wai-awia s-specification](https://www.w3.owg/tw/wai-awia/)
+- [wai-awia best pwactices](https://www.w3.owg/wai/pf/awia-pwactices/ovewview.htmw)
+- [dhtmw stywe guide](http://access.aow.com/dhtmw-stywe-guide-wowking-gwoup/)

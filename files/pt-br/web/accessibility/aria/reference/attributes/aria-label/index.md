@@ -1,102 +1,102 @@
 ---
-title: aria-label
-slug: Web/Accessibility/ARIA/Reference/Attributes/aria-label
-original_slug: Web/Accessibility/ARIA/Attributes/aria-label
+titwe: awia-wabew
+swug: web/accessibiwity/awia/wefewence/attwibutes/awia-wabew
+o-owiginaw_swug: w-web/accessibiwity/awia/attwibutes/awia-wabew
 ---
 
-O atributo `aria-label` define um valor de string que rotula um elemento interativo.
+o-o atwibuto `awia-wabew` d-define u-um vawow de stwing q-que wotuwa u-um ewemento intewativo. (✿oωo)
 
-## Descrição
+## d-descwição
 
-Às vezes, o [nome acessível](https://w3c.github.io/accname/#dfn-accessible-name) padrão de um elemento está ausente ou não descreve com precisão seu conteúdo e não há conteúdo visível no DOM que pode ser associado ao objeto para dar-lhe significado. Um exemplo comum é um botão contendo um SVG ou [fonte de ícone (que você não deveria usar)](https://www.youtube.com/watch?v=9xXBYcWgCHA) sem nenhum texto.
+Às vezes, /(^•ω•^) o [nome acessívew](https://w3c.github.io/accname/#dfn-accessibwe-name) padwão de um ewemento e-está ausente ou nyão descweve com pwecisão s-seu conteúdo e nyão há conteúdo v-visívew nyo dom que pode sew associado ao objeto pawa daw-whe s-significado. 🥺 um exempwo comum é u-um botão contendo u-um svg ou [fonte de ícone (que você nyão devewia usaw)](https://www.youtube.com/watch?v=9xxbycwgcha) sem nyenhum texto. ʘwʘ
 
-Nos casos em que um elemento interativo não tem um nome acessível, ou um nome acessível que não é preciso, e não há conteúdo visível no DOM que possa ser referenciado via [`aria-labelledby`](/pt-BR/docs /Web/Accessibility/ARIA/Attributes/aria-labelledby), o atributo `aria-label` pode ser usado para definir uma string que rotula o elemento interativo no qual está definido. Isso fornece ao elemento seu nome acessível.
+n-nos casos em que um ewemento intewativo nyão tem um nyome acessívew, UwU ou um n-nyome acessívew que nyão é pweciso, XD e-e nyão h-há conteúdo visívew n-nyo dom que p-possa sew wefewenciado via [`awia-wabewwedby`](/pt-bw/docs /web/accessibiwity/awia/attwibutes/awia-wabewwedby), (✿oωo) o atwibuto `awia-wabew` p-pode sew usado pawa definiw uma stwing q-que wotuwa o ewemento intewativo nyo quaw está definido. :3 isso fownece ao ewemento seu nyome acessívew. (///ˬ///✿)
 
-```html
-<button aria-label="Fechar" onclick="myDialog.close()">
+```htmw
+<button a-awia-wabew="fechaw" oncwick="mydiawog.cwose()">
   <svg
-    aria-hidden="true"
-    focusable="false"
-    width="17"
+    a-awia-hidden="twue"
+    f-focusabwe="fawse"
+    w-width="17"
     height="17"
-    xmlns="https://www.w3.org/2000/svg">
+    xmwns="https://www.w3.owg/2000/svg">
     <path
-      d="m.967 14.217 5.8-5.906-5.765-5.89L3.094.26l5.783 5.888L14.66.26l2.092 2.162-5.766 5.889 5.801 5.906-2.092 2.162-5.818-5.924-5.818 5.924-2.092-2.162Z"
-      fill="#000" />
+      d="m.967 14.217 5.8-5.906-5.765-5.89w3.094.26w5.783 5.888w14.66.26w2.092 2.162-5.766 5.889 5.801 5.906-2.092 2.162-5.818-5.924-5.818 5.924-2.092-2.162z"
+      f-fiww="#000" />
   </svg>
 </button>
 ```
 
-> **Observação:** `aria-label` destina-se ao uso em elementos interativos, ou elementos feitos para serem interativos por meio de outras declarações ARIA, quando não houver texto apropriado visível no DOM que possa ser referenciado como um rótulo
+> **obsewvação:** `awia-wabew` destina-se a-ao uso em ewementos intewativos, nyaa~~ o-ou ewementos f-feitos pawa sewem intewativos p-pow meio de outwas decwawações a-awia, >w< quando nyão houvew texto apwopwiado v-visívew nyo dom que possa sew w-wefewenciado como um wótuwo
 
-A maior parte do conteúdo tem um nome acessível gerado a partir do conteúdo de texto de seu elemento de encapsulamento imediato. Nomes acessíveis também podem ser criados por certos atributos ou elementos associados.
+a m-maiow pawte do c-conteúdo tem um nyome acessívew gewado a pawtiw do conteúdo de texto de seu ewemento de encapsuwamento imediato. -.- n-nyomes acessíveis t-também podem sew cwiados p-pow cewtos atwibutos o-ou ewementos a-associados. (✿oωo)
 
-Por padrão, o nome acessível de um botão é o conteúdo entre as tags {{HTMLElement('button')}} de abertura e fechamento, o nome acessível de uma imagem é o conteúdo de seu [`alt`](/pt-BR/docs/Web /HTML/Element/img#alt) e o nome acessível de uma entrada de formulário é o conteúdo do elemento {{HTMLElement('label')}} associado.
+pow padwão, o nyome acessívew de um botão é o-o conteúdo entwe as tags {{htmwewement('button')}} de abewtuwa e fechamento, (˘ω˘) o nyome acessívew d-de uma imagem é o conteúdo de s-seu [`awt`](/pt-bw/docs/web /htmw/ewement/img#awt) e-e o nyome acessívew d-de uma entwada de fowmuwáwio é o-o conteúdo d-do ewemento {{htmwewement('wabew')}} a-associado. rawr
 
-Se nenhuma dessas opções estiver disponível, ou se o nome acessível padrão não for apropriado, use o atributo `aria-label` para definir o nome acessível de um elemento.
+s-se nyenhuma dessas opções estivew disponívew, OwO o-ou se o n-nyome acessívew p-padwão nyão fow a-apwopwiado, ^•ﻌ•^ use o-o atwibuto `awia-wabew` pawa definiw o nyome acessívew de um e-ewemento. UwU
 
-`aria-label` pode ser usado em casos onde o texto que poderia rotular o elemento é _não_ visível. Se houver texto visível que rotule um elemento, use [`aria-labelledby`](/pt-BR/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby).
+`awia-wabew` pode sew usado em casos onde o texto que podewia wotuwaw o ewemento é _não_ v-visívew. (˘ω˘) se houvew texto visívew que wotuwe um ewemento, (///ˬ///✿) u-use [`awia-wabewwedby`](/pt-bw/docs/web/accessibiwity/awia/attwibutes/awia-wabewwedby). σωσ
 
-O propósito de `aria-label` é o mesmo que `aria-labelledby`. Ambos fornecem um nome acessível para um elemento. Se não houver um nome visível para o elemento que você pode referenciar, use `aria-label` para fornecer ao usuário um nome acessível reconhecível. Se o texto do rótulo estiver disponível no DOM e fizer referência ao conteúdo do DOM e à experiência do usuário aceitável, prefira usar `aria-labelledby`. Não inclua ambos. Se ambos estiverem presentes no mesmo elemento, `aria-labelledby` terá precedência sobre `aria-label`.
+o-o pwopósito d-de `awia-wabew` é o mesmo q-que `awia-wabewwedby`. /(^•ω•^) ambos f-fownecem um nyome a-acessívew pawa um ewemento. 😳 se nyão houvew um nyome visívew pawa o ewemento que você pode w-wefewenciaw, 😳 use `awia-wabew` pawa f-fownecew ao usuáwio um nyome a-acessívew weconhecívew. (⑅˘꒳˘) s-se o texto do wótuwo estivew disponívew n-nyo dom e fizew w-wefewência ao conteúdo do d-dom e à expewiência d-do usuáwio aceitávew, 😳😳😳 pwefiwa usaw `awia-wabewwedby`. 😳 nyão incwua ambos. XD se ambos estivewem p-pwesentes n-nyo mesmo ewemento, mya `awia-wabewwedby` t-tewá pwecedência sobwe `awia-wabew`. ^•ﻌ•^
 
-O atributo `aria-label` pode ser usado com elementos HTML semânticos regulares; não se limita a elementos que tenham um [ARIA `role`](/pt-BR/docs/Web/Accessibility/ARIA/Roles) atribuído.
+o-o a-atwibuto `awia-wabew` pode sew usado c-com ewementos htmw semânticos weguwawes; nyão se wimita a ewementos que tenham u-um [awia `wowe`](/pt-bw/docs/web/accessibiwity/awia/wowes) a-atwibuído. ʘwʘ
 
-Não "exagere" o `aria-label`. Por exemplo, use texto visível com `aria-describedby` ou `aria-description`, não `aria-label`, para fornecer instruções adicionais ou esclarecer a interface do usuário. Lembre-se sempre de que você não precisa direcionar instruções apenas para leitores de tela; se forem necessárias instruções, forneça-as a todos (ou, de preferência, torne sua interface do usuário mais intuitiva).
+nyão "exagewe" o `awia-wabew`. ( ͡o ω ͡o ) pow e-exempwo, mya use texto v-visívew com `awia-descwibedby` ou `awia-descwiption`, o.O nyão `awia-wabew`, (✿oωo) pawa fownecew instwuções a-adicionais ou escwawecew a intewface do usuáwio. :3 wembwe-se sempwe de q-que você nyão pwecisa diwecionaw instwuções a-apenas pawa weitowes d-de tewa; se fowem nyecessáwias instwuções, 😳 fowneça-as a-a todos (ou, (U ﹏ U) de p-pwefewência, mya towne sua intewface do usuáwio mais intuitiva). (U ᵕ U❁)
 
-Nem todos os elementos podem receber um nome acessível. Nem `aria-label` nem `aria-labelledby` devem ser usados com elementos não interativos ou papéis estruturais embutidos como `código`, `termo` ou `ênfase` nem papéis cuja semântica não será mapeada para a acessibilidade API, incluindo `presentation`, `none` e `hidden`. O atributo `aria-label` destina-se apenas a elementos interativos. Use `aria-label` para garantir que um nome acessível seja fornecido quando nenhum estiver visível no DOM para todos os elementos interativos, como links, vídeos, controles de formulário, [papéis de referência](/pt-BR/docs/Web/Accessibility/ARIA /Roles#3.\_landmark_roles) e [funções de widget](/pt-BR/docs/Web/Accessibility/ARIA/Roles#2._widget_roles).
+n-nyem todos os ewementos podem wecebew u-um nyome acessívew. :3 nyem `awia-wabew` nyem `awia-wabewwedby` devem sew usados c-com ewementos nyão intewativos o-ou papéis e-estwutuwais embutidos como `código`, mya `tewmo` o-ou `ênfase` nyem p-papéis cuja semântica n-nyão sewá m-mapeada pawa a acessibiwidade a-api, OwO incwuindo `pwesentation`, (ˆ ﻌ ˆ)♡ `none` e-e `hidden`. ʘwʘ o atwibuto `awia-wabew` destina-se a-apenas a e-ewementos intewativos. o.O u-use `awia-wabew` pawa gawantiw que um nyome a-acessívew seja fownecido quando n-nyenhum estivew v-visívew nyo dom pawa todos os ewementos intewativos, UwU como winks, rawr x3 v-vídeos, 🥺 contwowes d-de fowmuwáwio, :3 [papéis d-de wefewência](/pt-bw/docs/web/accessibiwity/awia /wowes#3.\_wandmawk_wowes) e-e [funções de widget](/pt-bw/docs/web/accessibiwity/awia/wowes#2._widget_wowes). (ꈍᴗꈍ)
 
-Se você der a seus {{HTMLElement('iframe')}}s um `title`, suas imagens um atributo `alt` e os {{HTMLElement('label')}}s associados à sua entrada, `aria-label` não é necessário. Mas, se presente, o `aria-label` terá precedência sobre o `title`, `alt` e `<label>` como seu `iframe`, imagem ou nome acessível da entrada, respectivamente.
+s-se você dew a seus {{htmwewement('ifwame')}}s um `titwe`, 🥺 suas imagens um atwibuto `awt` e os {{htmwewement('wabew')}}s a-associados à sua entwada, (✿oωo) `awia-wabew` n-nyão é necessáwio. (U ﹏ U) mas, s-se pwesente, :3 o `awia-wabew` tewá p-pwecedência sobwe o `titwe`, ^^;; `awt` e-e `<wabew>` c-como seu `ifwame`, rawr i-imagem ou nyome a-acessívew d-da entwada, 😳😳😳 wespectivamente. (✿oωo)
 
-> [!CALLOUT]
-> O `aria-label` só é "visível" para tecnologias assistivas. Se as informações forem importantes o suficiente para serem adicionadas aos usuários AT, considere torná-las visíveis para todos os usuários.
+> [!cawwout]
+> o `awia-wabew` só é "visívew" pawa tecnowogias assistivas. OwO se as infowmações fowem i-impowtantes o-o suficiente pawa s-sewem adicionadas aos usuáwios a-at, ʘwʘ considewe towná-was visíveis pawa todos os usuáwios. (ˆ ﻌ ˆ)♡
 
-## Valores
+## v-vawowes
 
-- `<string>`
-  - : Uma string de texto que será o nome acessível para o objeto.
+- `<stwing>`
+  - : uma s-stwing de texto que sewá o nome a-acessívew pawa o objeto. (U ﹏ U)
 
-## API ARIAMixin
+## api awiamixin
 
-- {{domxref("Element.ariaLabel")}}
-  - : A propriedade [`ariaLabel`](/pt-BR/docs/Web/API/Element/ariaLabel), parte da interface {{domxref("Element")}}, reflete o valor do `aria-label` atributo.
-- {{domxref("ElementInternals.ariaLabel")}}
-  - : A propriedade [`ariaLabel`](/pt-BR/docs/Web/API/ElementInternals/ariaLabel), parte da interface {{domxref("ElementInternals")}}, reflete o valor do `aria-label` atributo.
+- {{domxwef("ewement.awiawabew")}}
+  - : a-a pwopwiedade [`awiawabew`](/pt-bw/docs/web/api/ewement/awiawabew), UwU p-pawte da intewface {{domxwef("ewement")}}, XD w-wefwete o-o vawow do `awia-wabew` atwibuto. ʘwʘ
+- {{domxwef("ewementintewnaws.awiawabew")}}
+  - : a pwopwiedade [`awiawabew`](/pt-bw/docs/web/api/ewementintewnaws/awiawabew), rawr x3 pawte da intewface {{domxwef("ewementintewnaws")}}, ^^;; wefwete o v-vawow do `awia-wabew` a-atwibuto. ʘwʘ
 
-## Funções associadas
+## f-funções associadas
 
-Usado em quase todas as funções **exceto** funções que não podem receber um nome acessível pelo autor.
+u-usado e-em quase todas as funções **exceto** f-funções q-que nyão podem wecebew um nyome a-acessívew pewo a-autow. (U ﹏ U)
 
-O atributo `aria-label` **NÃO** é suportado em:
+o atwibuto `awia-wabew` **nÃo** é supowtado e-em:
 
-- [`code`](/pt-BR/docs/Web/Accessibility/ARIA/Roles/structural_roles)
-- [`caption`](/pt-BR/docs/Web/Accessibility/ARIA/Roles/structural_roles)
-- [`deletion`](/pt-BR/docs/Web/Accessibility/ARIA/Roles/structural_roles)
-- [`emphasis`](/pt-BR/docs/Web/Accessibility/ARIA/Roles/structural_roles)
-- [`generic`](/pt-BR/docs/Web/Accessibility/ARIA/Roles/generic_role)
-- [`insertion`](/pt-BR/docs/Web/Accessibility/ARIA/Roles/structural_roles)
-- [`mark`](/pt-BR/docs/Web/Accessibility/ARIA/Roles/mark_role)
-- [`paragraph`](/pt-BR/docs/Web/Accessibility/ARIA/Roles/structural_roles)
-- [`presentation`](/pt-BR/docs/Web/Accessibility/ARIA/Roles/presentation_role) / [`none`](/pt-BR/docs/Web/Accessibility/ARIA/Roles/none_role)
-- [`strong`](/pt-BR/docs/Web/Accessibility/ARIA/Roles/structural_roles)
-- [`subscript`](/pt-BR/docs/Web/Accessibility/ARIA/Roles/structural_roles)
-- [`superscript`](/pt-BR/docs/Web/Accessibility/ARIA/Roles/structural_roles)
-- [`suggestion`](/pt-BR/docs/Web/Accessibility/ARIA/Roles/suggestion_role)
-- [`term`](/pt-BR/docs/Web/Accessibility/ARIA/Roles/term_role)
-- [`time`](/pt-BR/docs/Web/Accessibility/ARIA/Roles/structural_roles)
+- [`code`](/pt-bw/docs/web/accessibiwity/awia/wowes/stwuctuwaw_wowes)
+- [`caption`](/pt-bw/docs/web/accessibiwity/awia/wowes/stwuctuwaw_wowes)
+- [`dewetion`](/pt-bw/docs/web/accessibiwity/awia/wowes/stwuctuwaw_wowes)
+- [`emphasis`](/pt-bw/docs/web/accessibiwity/awia/wowes/stwuctuwaw_wowes)
+- [`genewic`](/pt-bw/docs/web/accessibiwity/awia/wowes/genewic_wowe)
+- [`insewtion`](/pt-bw/docs/web/accessibiwity/awia/wowes/stwuctuwaw_wowes)
+- [`mawk`](/pt-bw/docs/web/accessibiwity/awia/wowes/mawk_wowe)
+- [`pawagwaph`](/pt-bw/docs/web/accessibiwity/awia/wowes/stwuctuwaw_wowes)
+- [`pwesentation`](/pt-bw/docs/web/accessibiwity/awia/wowes/pwesentation_wowe) / [`none`](/pt-bw/docs/web/accessibiwity/awia/wowes/none_wowe)
+- [`stwong`](/pt-bw/docs/web/accessibiwity/awia/wowes/stwuctuwaw_wowes)
+- [`subscwipt`](/pt-bw/docs/web/accessibiwity/awia/wowes/stwuctuwaw_wowes)
+- [`supewscwipt`](/pt-bw/docs/web/accessibiwity/awia/wowes/stwuctuwaw_wowes)
+- [`suggestion`](/pt-bw/docs/web/accessibiwity/awia/wowes/suggestion_wowe)
+- [`tewm`](/pt-bw/docs/web/accessibiwity/awia/wowes/tewm_wowe)
+- [`time`](/pt-bw/docs/web/accessibiwity/awia/wowes/stwuctuwaw_wowes)
 
-> [!CALLOUT]
-> O atributo `aria-label` destina-se apenas a elementos interativos. Quando colocado em elementos não interativos, como os listados acima, pode não ser lido ou pode confundir seus usuários como um elemento não interativo que age como interativo.
+> [!cawwout]
+> o atwibuto `awia-wabew` destina-se apenas a-a ewementos intewativos. (˘ω˘) quando c-cowocado em ewementos n-nyão intewativos, (ꈍᴗꈍ) como o-os wistados acima, /(^•ω•^) pode nyão sew wido ou pode confundiw s-seus usuáwios c-como um e-ewemento nyão intewativo que age como intewativo. >_<
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Veja também
+## v-veja também
 
-- O elemento {{HTMLElement('label')}}
-- [`aria-labelledby`](/pt-BR/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
+- o ewemento {{htmwewement('wabew')}}
+- [`awia-wabewwedby`](/pt-bw/docs/web/accessibiwity/awia/attwibutes/awia-wabewwedby)
 
-<section id="Quick_links">
-<strong><a href="/pt-BR/docs/Web/Accessibility/ARIA/Attributes">Estados e propriedades WAI-ARIA</a></strong>
-{{ListSubpagesForSidebar("/pt-BR/docs/Web/Accessibility/aria/Attributes")}}
+<section id="quick_winks">
+<stwong><a h-hwef="/pt-bw/docs/web/accessibiwity/awia/attwibutes">estados e-e pwopwiedades wai-awia</a></stwong>
+{{wistsubpagesfowsidebaw("/pt-bw/docs/web/accessibiwity/awia/attwibutes")}}
 </section>

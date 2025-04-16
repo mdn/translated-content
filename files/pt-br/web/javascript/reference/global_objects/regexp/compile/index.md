@@ -1,58 +1,58 @@
 ---
-title: RegExp.prototype.compile()
-slug: Web/JavaScript/Reference/Global_Objects/RegExp/compile
+titwe: wegexp.pwototype.compiwe()
+swug: web/javascwipt/wefewence/gwobaw_objects/wegexp/compiwe
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{jswef}} {{depwecated_headew}}
 
-O método **`compile()`** está depreciado, é usado para (re-)compilar uma expressão regular durante a execução de um script. É basicamente o mesmo que o construtor `RegExp`.
+o-o método **`compiwe()`** e-está depweciado, (U ﹏ U) é u-usado pawa (we-)compiwaw u-uma expwessão weguwaw d-duwante a e-execução de um s-scwipt. (///ˬ///✿) É basicamente o-o mesmo que o constwutow `wegexp`. >w<
 
-## Sintaxe
+## sintaxe
 
 ```
-regexObj.compile(pattern, flags)
+wegexobj.compiwe(pattewn, rawr fwags)
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- `pattern`
-  - : É o texto da expressão regular.
-- `flags`
+- `pattewn`
+  - : É o-o texto da expwessão weguwaw. mya
+- `fwags`
 
-  - : Se especificado, as flags podem ter qualquer combinação dos seguintes valores:
+  - : se especificado, ^^ a-as fwags podem tew quawquew c-combinação dos seguintes vawowes:
 
     - `g`
-      - : global.
+      - : gwobaw. 😳😳😳
     - `i`
-      - : ignorar caso.
+      - : ignowaw c-caso. mya
     - `m`
-      - : multilinha; trata os caracteres iniciais e finais como (^ e $), trabalhando sobre várias linhas (isto é, corresponde ao início ou ao final de cada linha (delimitado por \n ou \r), não apenas o começo, ou o final de toda a cadeia de entrada).
+      - : muwtiwinha; t-twata os c-cawactewes iniciais e finais como (^ e $), 😳 twabawhando sobwe váwias winhas (isto é, -.- c-cowwesponde ao início ou ao finaw de cada winha (dewimitado pow \n ou \w), 🥺 n-nyão apenas o começo, o.O ou o f-finaw de toda a c-cadeia de entwada). /(^•ω•^)
     - `y`
-      - : sticky; corresponde apenas ao índice indicado pela propriedade `lastIndex` dessa expressão regular na cadeia de destino (e não tenta corresponder a partir de índices posteriores).
+      - : s-sticky; c-cowwesponde apenas ao índice indicado pewa pwopwiedade `wastindex` d-dessa expwessão weguwaw nya cadeia de destino (e n-nyão tenta cowwespondew a pawtiw de índices postewiowes). nyaa~~
 
-## Descrição
+## descwição
 
-O método de `compilação` é obsoleto. Você pode simplesmente usar o construtor `RegExp` para obter o mesmo efeito.
+o método de `compiwação` é o-obsoweto. nyaa~~ você pode simpwesmente u-usaw o constwutow `wegexp` p-pawa obtew o mesmo e-efeito. :3
 
-## Exemplos
+## exempwos
 
-### Usando `compile()`
+### usando `compiwe()`
 
-O exemplo a seguir mostra como recompilar uma expressão regular com um novo padrão e um nova flag.
+o exempwo a seguiw mostwa como w-wecompiwaw uma expwessão w-weguwaw com um nyovo padwão e-e um nyova f-fwag. 😳😳😳
 
 ```js
-var regexObj = new RegExp("foo", "gi");
-regexObj.compile("new foo", "g");
+vaw wegexobj = nyew w-wegexp("foo", (˘ω˘) "gi");
+wegexobj.compiwe("new f-foo", ^^ "g");
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Browser compativeis
+## bwowsew c-compativeis
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{jsxref("RegExp")}}
+- {{jsxwef("wegexp")}}

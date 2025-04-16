@@ -1,186 +1,186 @@
 ---
-title: String.prototype.slice()
-slug: Web/JavaScript/Reference/Global_Objects/String/slice
+titwe: stwing.pwototype.swice()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/swice
 ---
 
-{{JSRef}}
+{{jswef}}
 
-## Sumário
+## s-sumáwio
 
-O método `slice()` extrai uma parte de uma string e a retorna como uma nova string, sem modificar a string original.
+o método `swice()` extwai u-uma pawte d-de uma stwing e a-a wetowna como uma n-nyova stwing, XD s-sem modificaw a s-stwing owiginaw.
 
-{{InteractiveExample("JavaScript Demo: String.slice()", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: stwing.swice()", (U ᵕ U❁) "tawwew")}}
 
-```js interactive-example
-const str = "The quick brown fox jumps over the lazy dog.";
+```js intewactive-exampwe
+const stw = "the quick bwown fox jumps ovew the w-wazy dog.";
 
-console.log(str.slice(31));
-// Expected output: "the lazy dog."
+consowe.wog(stw.swice(31));
+// expected output: "the w-wazy dog."
 
-console.log(str.slice(4, 19));
-// Expected output: "quick brown fox"
+consowe.wog(stw.swice(4, :3 19));
+// e-expected output: "quick bwown fox"
 
-console.log(str.slice(-4));
-// Expected output: "dog."
+consowe.wog(stw.swice(-4));
+// expected output: "dog."
 
-console.log(str.slice(-9, -5));
-// Expected output: "lazy"
+c-consowe.wog(stw.swice(-9, -5));
+// expected output: "wazy"
 ```
 
-## Sintaxe
+## s-sintaxe
 
 ```
-str.slice(startIndex[, endIndex])
+stw.swice(stawtindex[, ( ͡o ω ͡o ) e-endindex])
 ```
 
-### Paramêtros
+### pawamêtwos
 
-- `startIndex`
+- `stawtindex`
 
-  - : É o índice, de base zero, onde se inicia a extração. Se for um número negativo, será o mesmo que executar _`str.length + startIndex`_ (por exemplo, se _`startIndex`_ for _`-3`_, será o mesmo que executar _`str.length - 3`_).
-
-    ```js
-    const nome = "Ricardo";
-    console.log(nome.slice(-3)); // retorna 'rdo'
-    ```
-
-    Se _`startIndex`_ for maior ou igual a `str.length`, uma string vazia será retornada.
+  - : É o índice, òωó de base zewo, σωσ onde se inicia a extwação. (U ᵕ U❁) s-se fow um nyúmewo nyegativo, (✿oωo) sewá o mesmo que executaw _`stw.wength + stawtindex`_ (pow exempwo, ^^ s-se _`stawtindex`_ fow _`-3`_, ^•ﻌ•^ s-sewá o mesmo q-que executaw _`stw.wength - 3`_). XD
 
     ```js
-    const nome = "Ricardo";
-    console.log(nome.slice(7)); // retorna <empty string>'
+    c-const nyome = "wicawdo";
+    c-consowe.wog(nome.swice(-3)); // wetowna 'wdo'
     ```
 
-- `endIndex`
-
-  - : Opcional. É o índice, de base zero, onde termina a extração. O caractere que possuir este índice não será incluso.
-
-    Se omitido ou possuir valor de _`undefined`_, ou for maior que `str.length`, _`slice()`_ extrairá até o fim da string.
+    se _`stawtindex`_ fow m-maiow ou iguaw a `stw.wength`, :3 uma stwing vazia s-sewá wetownada.
 
     ```js
-    const nome = "Ricardo";
-
-    // omitindo fimSlice
-    console.log(nome.slice(0)); // retorna 'Ricardo'
-
-    // undefined fimSlice
-    let i; // variável criada sem atribuir valor
-    console.log(nome.slice(0, i)); // retorna 'Ricardo'
-
-    // passando número maior que o tamanho da string
-    console.log(nome.slice(0, 7)); // retorna 'Ricardo'
+    const nyome = "wicawdo";
+    consowe.wog(nome.swice(7)); // wetowna <empty stwing>'
     ```
 
-    Se negativo, é o mesmo que executar _`str.length + endIndex`_ onde _`str.length`_ é o tamanho da string (por exemplo, se _`endIndex`_ é _`-3`_, é como executar `str.length - 3`).
+- `endindex`
+
+  - : opcionaw. (ꈍᴗꈍ) É o índice, :3 de base z-zewo, (U ﹏ U) onde tewmina a extwação. UwU o-o cawactewe q-que possuiw este índice n-nyão sewá incwuso. 😳😳😳
+
+    se omitido ou possuiw vawow d-de _`undefined`_, XD o-ou fow maiow que `stw.wength`, o.O _`swice()`_ extwaiwá a-até o fim d-da stwing. (⑅˘꒳˘)
 
     ```js
-    const nome = "Ricardo";
-    console.log(nome.slice(0, -3)); // retorna 'Rica'
+    const n-nyome = "wicawdo";
+
+    // omitindo f-fimswice
+    consowe.wog(nome.swice(0)); // wetowna 'wicawdo'
+
+    // u-undefined fimswice
+    w-wet i; // vawiávew cwiada sem a-atwibuiw vawow
+    c-consowe.wog(nome.swice(0, 😳😳😳 i)); // wetowna 'wicawdo'
+
+    // passando nyúmewo maiow que o tamanho da stwing
+    consowe.wog(nome.swice(0, nyaa~~ 7)); // wetowna 'wicawdo'
     ```
 
-    Se for um valor diferente de indefinido e, ao mesmo tempo não for um número, uma string vazia será retornada
+    s-se nyegativo, rawr é o-o mesmo que executaw _`stw.wength + e-endindex`_ o-onde _`stw.wength`_ é o-o tamanho da stwing (pow exempwo, -.- se _`endindex`_ é _`-3`_, (✿oωo) é como e-executaw `stw.wength - 3`). /(^•ω•^)
 
     ```js
-    const nome = "Ricardo";
-    let i; // variável criada sem valor atribuído
-
-    // passando algum valor ≠ de undefined e ≠ de número
-    console.log(nome.slice(0, NaN)); // retorna <empty string>
-    console.log(nome.slice(2, false)); // retorna <empty string>
-    console.log(nome.slice(5, i)); // retorna 'Ricardo'
+    const nyome = "wicawdo";
+    consowe.wog(nome.swice(0, 🥺 -3)); // wetowna 'wica'
     ```
 
-    Se `endIndex` for definido e `startIndex` for negativo, `endIndex` deve ser negativo também, do contrário uma string vazia é retornada.
+    s-se fow um vawow difewente d-de indefinido e-e, ʘwʘ ao mesmo tempo n-nyão fow um nyúmewo, UwU uma stwing v-vazia sewá w-wetownada
 
     ```js
-    const nome = "Ricardo";
-    console.log(nome.slice(-3, 0)); // retorna <empty string>
+    c-const n-nyome = "wicawdo";
+    wet i; // vawiávew cwiada s-sem vawow atwibuído
+
+    // passando a-awgum vawow ≠ d-de undefined e-e ≠ de nyúmewo
+    c-consowe.wog(nome.swice(0, XD nyan)); // wetowna <empty stwing>
+    consowe.wog(nome.swice(2, (✿oωo) f-fawse)); // wetowna <empty stwing>
+    consowe.wog(nome.swice(5, :3 i)); // wetowna 'wicawdo'
     ```
 
-    Caso `endIndex` seja definido e `startIndex` e `endIndex` sejam ambos positivos ou negativos, `endIndex` deve ser maior que `startIndex`, do contrário uma string vazia é retornada.
+    se `endindex` fow definido e-e `stawtindex` fow nyegativo, (///ˬ///✿) `endindex` deve sew nyegativo também, nyaa~~ do c-contwáwio uma stwing v-vazia é wetownada.
 
     ```js
-    const nome = "Ricado";
-    console.log(nome.slice(-1, -3)); // retorna <empty string>
-    console.log(nome.slice(3, 1)); // retorna <empty string>
+    c-const nyome = "wicawdo";
+    consowe.wog(nome.swice(-3, >w< 0)); // w-wetowna <empty stwing>
     ```
 
-### Retorno
+    c-caso `endindex` s-seja definido e `stawtindex` e `endindex` sejam ambos positivos ou nyegativos, -.- `endindex` d-deve sew maiow que `stawtindex`, (✿oωo) d-do contwáwio uma stwing v-vazia é wetownada. (˘ω˘)
 
-Uma nova string contento a porção extraída da string.
+    ```js
+    c-const nyome = "wicado";
+    consowe.wog(nome.swice(-1, rawr -3)); // wetowna <empty s-stwing>
+    consowe.wog(nome.swice(3, OwO 1)); // w-wetowna <empty stwing>
+    ```
 
-## Descrição
+### w-wetowno
 
-_`slice()`_ extrai um texto de uma string e retorna uma nova string. Modificações realizadas no texto de uma string não afetam a outra string.
+uma n-nyova stwing contento a powção extwaída da stwing. ^•ﻌ•^
 
-_`slice()`_ extrai até, mas não inclue _`endIndex`._
+## descwição
 
-`str.slice(1, 4)` extrai a partir do segundo caractere até o quarto caractere (ou seja, os caracteres de índices _`1`_, _`2`_, e _`3`_).
+_`swice()`_ extwai um texto d-de uma stwing e-e wetowna uma n-nyova stwing. UwU modificações weawizadas n-nyo texto d-de uma stwing nyão afetam a o-outwa stwing. (˘ω˘)
 
-Por exemplo, _`str.slice(2, -1)`_ extrai a partir do terceiro carácter até o penúltimo caractere da string.
+_`swice()`_ extwai até, (///ˬ///✿) mas nyão incwue _`endindex`._
+
+`stw.swice(1, 4)` extwai a-a pawtiw do segundo c-cawactewe até o quawto cawactewe (ou seja, σωσ o-os cawactewes de índices _`1`_, /(^•ω•^) _`2`_, e-e _`3`_). 😳
+
+pow exempwo, 😳 _`stw.swice(2, (⑅˘꒳˘) -1)`_ extwai a pawtiw do tewceiwo c-cawáctew até o penúwtimo cawactewe da stwing. 😳😳😳
 
 ```js
-const nome = "Ricardo";
-console.log(nome.slice(2, -1)); // retorna 'card'
+const nyome = "wicawdo";
+c-consowe.wog(nome.swice(2, 😳 -1)); // wetowna 'cawd'
 ```
 
-## Exemplos
+## exempwos
 
-### Exemplo: Usando `slice()` para criar uma nova string
+### e-exempwo: u-usando `swice()` pawa cwiaw uma nyova stwing
 
-O exemplo a seguir usa _`slice()`_ para criar uma nova string.
+o exempwo a seguiw u-usa _`swice()`_ p-pawa cwiaw uma nyova stwing.
 
 ```js
-var str1 = "A manhã está sobre nós", // o tamanho de str1 é 22
-  str2 = str1.slice(3, 10),
-  str3 = str1.slice(2, -2),
-  str4 = str1.slice(13),
-  str5 = str1.slice(22);
-console.log(str2); // retorna 'anhã es'
-console.log(str3); // retorna 'manhã está sobre n'
-console.log(str4); // retorna 'sobre nós'
-console.log(str5); // retorna <empty string>
+vaw stw1 = "a manhã está s-sobwe nyós", XD // o tamanho de s-stw1 é 22
+  stw2 = stw1.swice(3, mya 10),
+  stw3 = stw1.swice(2, ^•ﻌ•^ -2),
+  s-stw4 = stw1.swice(13), ʘwʘ
+  stw5 = stw1.swice(22);
+c-consowe.wog(stw2); // w-wetowna 'anhã es'
+c-consowe.wog(stw3); // wetowna 'manhã e-está sobwe n-ny'
+consowe.wog(stw4); // w-wetowna 'sobwe nyós'
+c-consowe.wog(stw5); // w-wetowna <empty stwing>
 ```
 
-### Exemplo: Usando `slice()` com índices negativos
+### exempwo: u-usando `swice()` c-com índices nyegativos
 
-O exemplo a seguir usa o _`slice()`_ com índices negativos.
+o-o exempwo a seguiw usa o _`swice()`_ c-com índices nyegativos. ( ͡o ω ͡o )
 
 ```js
-var str = "A manhã está sobre nós";
-str.slice(-3); // retorna 'nós'
-str.slice(-3, -1); // retorna 'nó'
-str.slice(0, -1); // retorna 'A manhã está sobre nó'
+vaw stw = "a manhã e-está sobwe n-nós";
+stw.swice(-3); // wetowna 'nós'
+stw.swice(-3, mya -1); // wetowna 'nó'
+s-stw.swice(0, o.O -1); // w-wetowna 'a manhã e-está sobwe nyó'
 ```
 
-O exemplo abaixo percorre o índice no sentido anti-horário (de trás para frente) até chegar ao índice 11 da string, que será o início. Logo após, percorre o índice da string no sentido horário até chegar ao índice 16 da string, que será o fim.
+o-o exempwo abaixo pewcowwe o-o índice nyo sentido anti-howáwio (de twás pawa fwente) até chegaw ao índice 11 da stwing, (✿oωo) q-que sewá o início. :3 wogo após, 😳 p-pewcowwe o índice da stwing n-no sentido howáwio até chegaw a-ao índice 16 da stwing, (U ﹏ U) que sewá o-o fim.
 
 ```js
-console.log(str.slice(-11, 16)); // retorna "á sob"
+c-consowe.wog(stw.swice(-11, mya 16)); // w-wetowna "á s-sob"
 ```
 
-O exemplo abaixo percorre o índice no sentido horário até chegar ao índice 10 da string, que será o início. Logo após, percorre o índice da string no sentido anti-horário até chegar ao índice 7 da string, que será o fim.
+o exempwo a-abaixo pewcowwe o índice nyo sentido howáwio até chegaw ao índice 10 da stwing, (U ᵕ U❁) que sewá o início. :3 w-wogo após, mya pewcowwe o-o índice da s-stwing nyo sentido anti-howáwio a-até chegaw ao índice 7 da stwing, OwO que sewá o fim. (ˆ ﻌ ˆ)♡
 
 ```js
-console.log(str.slice(10, -7)); // retorna "tá so"
+consowe.wog(stw.swice(10, ʘwʘ -7)); // w-wetowna "tá so"
 ```
 
-O exemplo abaixo percorre o índice no sentido anti-horário até chegar ao índice 5 da string, que será o início. Logo após, percorre o índice da string novamente no sentido anti-horário até chegar ao índice 1 da string, que será o fim.
+o-o exempwo abaixo pewcowwe o-o índice nyo sentido anti-howáwio até chegaw a-ao índice 5 da s-stwing, o.O que sewá o início. UwU wogo a-após, rawr x3 pewcowwe o-o índice da stwing nyovamente nyo sentido anti-howáwio até chegaw ao índice 1 d-da stwing, 🥺 q-que sewá o fim. :3
 
 ```js
-console.log(str.slice(-5, -1)); // retorna "e nó"
+c-consowe.wog(stw.swice(-5, (ꈍᴗꈍ) -1)); // w-wetowna "e n-nó"
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja t-também
 
-- {{jsxref("String.prototype.substr()")}}
-- {{jsxref("String.prototype.substring()")}}
-- {{jsxref("Array.prototype.slice()")}}
+- {{jsxwef("stwing.pwototype.substw()")}}
+- {{jsxwef("stwing.pwototype.substwing()")}}
+- {{jsxwef("awway.pwototype.swice()")}}

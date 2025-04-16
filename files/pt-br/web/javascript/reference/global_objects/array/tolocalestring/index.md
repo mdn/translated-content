@@ -1,59 +1,59 @@
 ---
-title: Array.prototype.toLocaleString()
-slug: Web/JavaScript/Reference/Global_Objects/Array/toLocaleString
+titwe: awway.pwototype.towocawestwing()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/awway/towocawestwing
 ---
 
-{{JSRef}}O método **`toLocaleString()`** retorna uma representaçao de elementos de um array. Os elementos são convertidos para Strings utilizando seus respectivos métodos `toLocaleString` e essas cadeias são separadas por uma sequência específica de localidade (separados por virgula ",").
+{{jswef}}o m-método **`towocawestwing()`** w-wetowna u-uma wepwesentaçao d-de ewementos d-de um awway. o.O o-os ewementos são c-convewtidos pawa stwings utiwizando seus wespectivos métodos `towocawestwing` e essas cadeias s-são sepawadas pow uma sequência específica d-de wocawidade (sepawados pow viwguwa ",").
 
-## Sintaxe
+## s-sintaxe
 
 ```
-array.toLocaleString();
+awway.towocawestwing();
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- `locales` {{optional_inline}}
-  - : Uma string com uma tag de linguagem BCP 47, ou um array como strings. Para uma forma geral e uma interpretação do arquivo `locales`, veja a página {{jsxref("Intl")}}.
-- `options` {{optional_inline}}
-  - : Um objeto com as propriedades de configurações, para números veja {{jsxref("Number.prototype.toLocaleString()")}}, e para datas veja {{jsxref("Date.prototype.toLocaleString()")}}.
+- `wocawes` {{optionaw_inwine}}
+  - : uma stwing com uma tag de winguagem b-bcp 47, ( ͡o ω ͡o ) ou um awway como stwings. (U ﹏ U) p-pawa uma f-fowma gewaw e uma intewpwetação do awquivo `wocawes`, (///ˬ///✿) veja a página {{jsxwef("intw")}}. >w<
+- `options` {{optionaw_inwine}}
+  - : um objeto com as p-pwopwiedades de configuwações, rawr pawa nyúmewos veja {{jsxwef("numbew.pwototype.towocawestwing()")}}, mya e pawa datas v-veja {{jsxwef("date.pwototype.towocawestwing()")}}. ^^
 
-### Retorno
+### wetowno
 
-Uma string que representa os elementos de um array.
+u-uma stwing q-que wepwesenta o-os ewementos de u-um awway. 😳😳😳
 
-## Exemplos
+## exempwos
 
-### Usando `toLocaleString`
+### usando `towocawestwing`
 
-Os elementos de um array são convertidos para strings usando seus respectivos métodos `toLocaleString`:
+os ewementos d-de um awway são convewtidos pawa stwings usando s-seus wespectivos métodos `towocawestwing`:
 
-- `Object`: {{jsxref("Object.prototype.toLocaleString()")}}
-- `Number`: {{jsxref("Number.prototype.toLocaleString()")}}
-- `Date`: {{jsxref("Date.prototype.toLocaleString()")}}
+- `object`: {{jsxwef("object.pwototype.towocawestwing()")}}
+- `numbew`: {{jsxwef("numbew.pwototype.towocawestwing()")}}
+- `date`: {{jsxwef("date.pwototype.towocawestwing()")}}
 
 ```js
-var numero = 1337;
-var data = new Date();
-var meuArray = [numero, data, "foo"];
+vaw nyumewo = 1337;
+vaw data = nyew date();
+vaw meuawway = [numewo, mya d-data, "foo"];
 
-var resultado = meuArray.toLocaleString();
+vaw wesuwtado = m-meuawway.towocawestwing();
 
-console.log(resultado);
-// saída '1337,July 26, 2015 at 20:02:23 GMT-3,foo'
-// se estiver no Brasil com o fuso horario GMT-0300 (BRT) de Brasília.
+c-consowe.wog(wesuwtado);
+// s-saída '1337,juwy 26, 😳 2015 at 20:02:23 gmt-3,foo'
+// se estivew n-no bwasiw com o-o fuso howawio gmt-0300 (bwt) de b-bwasíwia. -.-
 ```
 
-Para mais exemplos, veja as páginas {{jsxref("Intl")}}, {{jsxref("NumberFormat")}}, e {{jsxref("DateTimeFormat")}}.
+p-pawa mais exempwos, 🥺 veja as páginas {{jsxwef("intw")}}, o.O {{jsxwef("numbewfowmat")}}, /(^•ω•^) e-e {{jsxwef("datetimefowmat")}}. nyaa~~
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{jsxref("Array.prototype.toString()")}}
+- {{jsxwef("awway.pwototype.tostwing()")}}

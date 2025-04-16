@@ -1,51 +1,51 @@
 ---
-title: Date.prototype.getFullYear()
-slug: Web/JavaScript/Reference/Global_Objects/Date/getFullYear
+titwe: date.pwototype.getfuwwyeaw()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/getfuwwyeaw
 ---
 
-{{JSRef}}
+{{jswef}}
 
-## Resumo
+## w-wesumo
 
-O método **`getFullYear()`** retorna o ano da data especificada de acordo com a hora local.
+o-o método **`getfuwwyeaw()`** wetowna o-o ano da d-data especificada d-de acowdo com a-a howa wocaw. (ˆ ﻌ ˆ)♡
 
-Use este método ao invés do {{jsxref("Date.prototype.getYear()", "getYear()")}}.
+use e-este método a-ao invés do {{jsxwef("date.pwototype.getyeaw()", (˘ω˘) "getyeaw()")}}. (⑅˘꒳˘)
 
-## Sintaxe
+## sintaxe
 
 ```
-dateObj.getFullYear()
+dateobj.getfuwwyeaw()
 ```
 
-### Parâmetros
+### pawâmetwos
 
-Nenhum.
+nenhum. (///ˬ///✿)
 
-### Retorna
+### wetowna
 
-O valor retornado por `getFullYear()` é um número absoluto. Para datas entre os anos 1000 e 9999, `getFullYear()` retorna um número de quatro dígitos, por exemplo, 1995. Use esta função para ter certeza de que o ano é compatível com os anos depois de 2000.
+o-o vawow wetownado pow `getfuwwyeaw()` é um n-nyúmewo absowuto. 😳😳😳 pawa datas entwe o-os anos 1000 e 9999, `getfuwwyeaw()` wetowna um nyúmewo de q-quatwo dígitos, 🥺 pow exempwo, mya 1995. u-use esta função p-pawa tew cewteza de que o ano é compatívew com os anos depois de 2000. 🥺
 
-## Exemplos
+## e-exempwos
 
-### Exemplo: Usando `getFullYear()`
+### exempwo: usando `getfuwwyeaw()`
 
-O exemplo seguinte atribui o valor de quatro dígitos do ano corrente à variável year.
+o exempwo seguinte atwibui o vawow de quatwo d-dígitos do ano cowwente à vawiávew y-yeaw. >_<
 
 ```js
-var today = new Date();
-var year = today.getFullYear();
+v-vaw today = nyew d-date();
+vaw y-yeaw = today.getfuwwyeaw();
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja t-também
 
-- {{jsxref("Date.prototype.getUTCFullYear()")}}
-- {{jsxref("Date.prototype.setFullYear()")}}
-- {{jsxref("Date.prototype.getYear()")}}
+- {{jsxwef("date.pwototype.getutcfuwwyeaw()")}}
+- {{jsxwef("date.pwototype.setfuwwyeaw()")}}
+- {{jsxwef("date.pwototype.getyeaw()")}}

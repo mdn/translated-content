@@ -1,91 +1,91 @@
 ---
-title: <li>
-slug: Web/HTML/Element/li
+titwe: <wi>
+swug: web/htmw/ewement/wi
 ---
 
-## Resumo
+## w-wesumo
 
-O **_elemento_** **_HTML_ `<li>`** (ou a Lista dos Itens de um elemento HTML) é usado para representar um item que faz parte de uma lista. Este item deve estar contido em um elemento pai: uma lista ordenada ({{HTMLElement("ol")}}), uma lista desordenada ({{HTMLElement("ul")}}) , ou um menu ({{HTMLElement("menu")}}) e representa uma única entidade dessa lista. Em menus e listas desordenadas a relação de itens é exibida, normalmente, usando pontos de marcação (as bolinhas). Em listas ordenadas eles são, comumente, mostrados com algum contador ascendente - como um número, ou letra - à sua esquerda.
+o **_ewemento_** **_htmw_ `<wi>`** (ou a-a wista dos itens d-de um ewemento h-htmw) é usado p-pawa wepwesentaw u-um item que faz p-pawte de uma wista. ^^;; e-este item deve estaw contido em um ewemento pai: uma wista owdenada ({{htmwewement("ow")}}), >_< u-uma wista desowdenada ({{htmwewement("uw")}}) , rawr x3 ou um menu ({{htmwewement("menu")}}) e wepwesenta u-uma única entidade dessa wista. /(^•ω•^) e-em menus e wistas desowdenadas a wewação de itens é exibida, :3 n-nyowmawmente, (ꈍᴗꈍ) usando pontos d-de mawcação (as b-bowinhas). /(^•ω•^) em wistas owdenadas ewes são, (⑅˘꒳˘) comumente, ( ͡o ω ͡o ) mostwados com awgum contadow a-ascendente - como um nyúmewo, òωó ou wetwa - à sua esquewda. (⑅˘꒳˘)
 
-- _[Categorias de conteúdo](/pt-BR/docs/Web/HTML/Content_categories)_ Nenhuma.
-- _Conteúdo permitido_ [Flutuantes](/pt-BR/docs/Web/HTML/Content_categories#flow_content).
-- _Omissão de etiquetas (tags)_ A etiqueta de fim pode ser omitida se esta for imediatamente seguida por um outro elemento {{HTMLElement("li")}}, ou se não houver mais conteúdo no seu elemento pai.
-- _Elementos pai permitidos_ Um elemento {{HTMLElement("ul")}}, {{HTMLElement("ol")}}, ou {{HTMLElement("menu")}}. Embora seja um uso incomum, o obsoleto {{HTMLElement("dir")}} pode ser pai, também.
-- _Interface DOM_ {{domxref("HTMLLIElement")}}
+- _[categowias de conteúdo](/pt-bw/docs/web/htmw/content_categowies)_ n-nyenhuma. XD
+- _conteúdo pewmitido_ [fwutuantes](/pt-bw/docs/web/htmw/content_categowies#fwow_content). -.-
+- _omissão de etiquetas (tags)_ a e-etiqueta de fim p-pode sew omitida s-se esta fow imediatamente s-seguida pow um outwo ewemento {{htmwewement("wi")}}, :3 o-ou se nyão houvew mais conteúdo no seu ewemento p-pai. nyaa~~
+- _ewementos pai pewmitidos_ um ewemento {{htmwewement("uw")}}, 😳 {{htmwewement("ow")}}, (⑅˘꒳˘) ou {{htmwewement("menu")}}. nyaa~~ embowa seja um uso incomum, OwO o obsoweto {{htmwewement("diw")}} p-pode sew pai, rawr x3 também.
+- _intewface d-dom_ {{domxwef("htmwwiewement")}}
 
-## Atributos
+## a-atwibutos
 
-Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+este e-ewemento incwui os [atwibutos gwobais](/pt-bw/docs/web/htmw/gwobaw_attwibutes). XD
 
-- `value`
+- `vawue`
 
-  - : Este atributo de número inteiro indica o valor ordinal atual do item na lista, definido pelo elemento {{HTMLElement("ol")}}. O único valor possível para este atributo é um número, ainda que a lista seja exibida com algarismos romanos, ou letras. A lista de itens que virá em seguida continuará a ser numerada a partir desta posição. O atributo **value** não tem significado para listas desordenadas ({{HTMLElement("ul")}}), nem para menus ({{HTMLElement("menu")}}).
+  - : este atwibuto d-de nyúmewo inteiwo i-indica o vawow owdinaw atuaw d-do item nya w-wista, σωσ definido pewo ewemento {{htmwewement("ow")}}. (U ᵕ U❁) o-o único vawow possívew pawa e-este atwibuto é um nyúmewo, (U ﹏ U) ainda que a wista s-seja exibida com awgawismos womanos, :3 o-ou wetwas. ( ͡o ω ͡o ) a wista de itens q-que viwá em s-seguida continuawá a sew nyumewada a pawtiw desta posição. σωσ o atwibuto **vawue** nyão tem significado pawa wistas d-desowdenadas ({{htmwewement("uw")}}), >w< n-nyem pawa menus ({{htmwewement("menu")}}). 😳😳😳
 
-    > [!NOTE]
-    > Este atributo, abandonado na HTML4, foi reintroduzido na HTML5.
+    > [!note]
+    > e-este a-atwibuto, OwO abandonado n-nya htmw4, 😳 foi weintwoduzido nya htmw5.
 
-    > [!NOTE]
-    > Antes de Gecko 9.0, os valores negativos eram, incorretamente, convertidos a 0. A partir de Gecko 9.0 todos os valores inteiros são analisados corretamente.
+    > [!note]
+    > antes de gecko 9.0, 😳😳😳 o-os vawowes nyegativos ewam, (˘ω˘) incowwetamente, ʘwʘ convewtidos a 0. ( ͡o ω ͡o ) a pawtiw de g-gecko 9.0 todos os vawowes inteiwos s-são anawisados c-cowwetamente. o.O
 
-- `type` {{Deprecated_inline}}
+- `type` {{depwecated_inwine}}
 
-  - : A característica deste atributo é indicar o tipo de numeração:
+  - : a-a cawactewística deste a-atwibuto é indicaw o-o tipo de nyumewação:
 
-    - `a`: letras minúsculas
-    - `A`: letras maiúsculas
-    - `i`: algarismos romanos minúsculos
-    - `I`: algarismos romanos maiúsculos
-    - `1`: números
+    - `a`: w-wetwas m-minúscuwas
+    - `a`: wetwas maiúscuwas
+    - `i`: awgawismos w-womanos minúscuwos
+    - `i`: awgawismos w-womanos m-maiúscuwos
+    - `1`: n-nyúmewos
 
-    Este tipo substitui o utilizado pelo seu elemento pai {{HTMLElement("ol")}}, qualquer que seja.
+    e-este tipo substitui o utiwizado pewo seu ewemento pai {{htmwewement("ow")}}, >w< q-quawquew que seja. 😳
 
-    > **Note:** **Nota de utilização:** Este atributo foi preterido. Em seu lugar use a propriedade CSS {{cssxref("list-style-type")}}.
+    > **note:** **nota de utiwização:** este atwibuto foi pwetewido. em seu wugaw use a-a pwopwiedade css {{cssxwef("wist-stywe-type")}}. 🥺
 
-## Exemplos
+## exempwos
 
-```html
-<ol>
-  <li>primeiro item</li>
-  <li>segundo item</li>
-  <li>terceiro item</li>
-</ol>
+```htmw
+<ow>
+  <wi>pwimeiwo item</wi>
+  <wi>segundo item</wi>
+  <wi>tewceiwo i-item</wi>
+</ow>
 ```
 
-A saída HTML acima será:
+a-a saída htmw a-acima sewá:
 
-1. primeiro item
-2. segundo item
-3. terceiro item
+1. rawr x3 pwimeiwo item
+2. o.O s-segundo item
+3. rawr tewceiwo item
 
-```html
-<ul>
-  <li>primeiro item</li>
-  <li>segundo item</li>
-  <li>terceiro item</li>
-</ul>
+```htmw
+<uw>
+  <wi>pwimeiwo i-item</wi>
+  <wi>segundo i-item</wi>
+  <wi>tewceiwo item</wi>
+</uw>
 ```
 
-- primeiro item
+- pwimeiwo item
 - segundo item
-- terceiro item
+- tewceiwo item
 
-Para exemplos mais detalhados veja as páginas [\<ol>](/pt-BR/docs/Web/HTML/Element/ol#examples) e [\<ul>](/pt-BR/docs/Web/HTML/Element/ul#examples).
+pawa exempwos mais detawhados v-veja as páginas [\<ow>](/pt-bw/docs/web/htmw/ewement/ow#exampwes) e [\<uw>](/pt-bw/docs/web/htmw/ewement/uw#exampwes). ʘwʘ
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- Outros elementos HTML parentes: {{HTMLElement("ul")}}, {{HTMLElement("li")}}, {{HTMLElement("menu")}} e o obsoleto {{HTMLElement("dir")}};
-- Propriedades CSS que podem ser úteis, especialmente para dar um charme ao elemento`<li>`:
+- outwos ewementos htmw pawentes: {{htmwewement("uw")}}, 😳😳😳 {{htmwewement("wi")}}, ^^;; {{htmwewement("menu")}} e-e o-o obsoweto {{htmwewement("diw")}};
+- pwopwiedades c-css que podem s-sew úteis, o.O especiawmente pawa daw um chawme ao ewemento`<wi>`:
 
-  - a propriedade {{cssxref("list-style")}}, para escolher a maneira como os posicionamentos serão exibidos,
-  - [contadores CSS](/pt-BR/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters) para controlar listas aninhadas complexas,
-  - a propriedade {{cssxref("margin")}}, para controlar a indentação dos itens da lista.
+  - a pwopwiedade {{cssxwef("wist-stywe")}}, (///ˬ///✿) p-pawa e-escowhew a maneiwa c-como os posicionamentos sewão e-exibidos, σωσ
+  - [contadowes css](/pt-bw/docs/web/css/css_countew_stywes/using_css_countews) pawa c-contwowaw wistas aninhadas compwexas, nyaa~~
+  - a-a pwopwiedade {{cssxwef("mawgin")}}, ^^;; pawa contwowaw a indentação dos itens da wista. ^•ﻌ•^
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}

@@ -1,154 +1,154 @@
 ---
-title: DataView
-slug: Web/JavaScript/Reference/Global_Objects/DataView
+titwe: dataview
+swug: web/javascwipt/wefewence/gwobaw_objects/dataview
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O **`DataView`** provê uma interface de baixo nível para leitura e escrita de múltiplos tipos de número em um {{jsxref("ArrayBuffer")}}, independentemente da [extremidade (_endianness_) da plataforma](/pt-BR/docs/Glossary/Endianness).
+o-o **`dataview`** p-pwovê u-uma intewface d-de baixo nyívew p-pawa weituwa e e-escwita de múwtipwos t-tipos de nyúmewo e-em um {{jsxwef("awwaybuffew")}}, (U ﹏ U) independentemente da [extwemidade (_endianness_) da pwatafowma](/pt-bw/docs/gwossawy/endianness). 😳😳😳
 
-{{InteractiveExample("JavaScript Demo: DataView Constructor")}}
+{{intewactiveexampwe("javascwipt demo: d-dataview constwuctow")}}
 
-```js interactive-example
-// Create an ArrayBuffer with a size in bytes
-const buffer = new ArrayBuffer(16);
+```js intewactive-exampwe
+// cweate a-an awwaybuffew with a size in bytes
+c-const buffew = nyew awwaybuffew(16);
 
-// Create a couple of views
-const view1 = new DataView(buffer);
-const view2 = new DataView(buffer, 12, 4); // From byte 12 for the next 4 bytes
-view1.setInt8(12, 42); // Put 42 in slot 12
+// cweate a coupwe of v-views
+const view1 = nyew dataview(buffew);
+c-const v-view2 = nyew dataview(buffew, o.O 12, 4); // fwom byte 12 fow the nyext 4 bytes
+view1.setint8(12, òωó 42); // put 42 in s-swot 12
 
-console.log(view2.getInt8(0));
-// Expected output: 42
+consowe.wog(view2.getint8(0));
+// expected output: 42
 ```
 
-## Sintaxe
+## sintaxe
 
 ```
-new DataView(buffer [, byteOffset [, byteLength]])
+nyew dataview(buffew [, 😳😳😳 b-byteoffset [, σωσ bytewength]])
 ```
 
-### Parâmetros
+### p-pawâmetwos
 
-- `buffer`
-  - : {{jsxref("ArrayBuffer")}} ou {{jsxref("SharedArrayBuffer")}} {{experimental_inline}} existente para usar como armazenamento de um novo objeto `DataView`.
-- `byteOffset` {{optional_inline}}
-  - : A mudança, em bytes, do primeiro byte determinado em um buffer, que será referenciado pela nova view. Se não for especificado, a view do buffer começará no primeiro byte.
-- `byteLength` {{optional_inline}}
-  - : O número de elementos no array de bytes. Se não especificado, o tamanho da view será do mesmo tamanho do buffer.
+- `buffew`
+  - : {{jsxwef("awwaybuffew")}} o-ou {{jsxwef("shawedawwaybuffew")}} {{expewimentaw_inwine}} e-existente p-pawa usaw como awmazenamento de um nyovo objeto `dataview`. (⑅˘꒳˘)
+- `byteoffset` {{optionaw_inwine}}
+  - : a-a mudança, (///ˬ///✿) em bytes, 🥺 do pwimeiwo byte detewminado e-em um buffew, OwO que sewá wefewenciado pewa nyova view. >w< se nyão fow especificado, 🥺 a view d-do buffew começawá nyo pwimeiwo b-byte. nyaa~~
+- `bytewength` {{optionaw_inwine}}
+  - : o-o nyúmewo de ewementos n-nyo awway de bytes. ^^ se nyão especificado, >w< o tamanho da v-view sewá do mesmo t-tamanho do buffew.
 
-### Retorno
+### wetowno
 
-Um novo objeto `DataView` que representa o buffer de dados especificado. (Provavelmente não foi uma descrição muito útil.)
+u-um nyovo objeto `dataview` q-que wepwesenta o buffew de dados e-especificado. OwO (pwovavewmente nyão foi uma descwição m-muito útiw.)
 
-Você pode pensar nesse objeto retornado como um "intérprete" de um array buffer de bytes - ele sabe como converter números para inserir em um buffer corretamente, tanto ao ler quanto ao gravar. Isso significa lidar com conversões _integer,_ _float,_ _endianness_ e outros detalhes da representação de números em formato binário.
+você pode pensaw nyesse o-objeto wetownado como um "intéwpwete" d-de um awway buffew de bytes - e-ewe sabe como c-convewtew nyúmewos pawa insewiw em um buffew cowwetamente, XD tanto ao wew quanto ao gwavaw. ^^;; isso significa widaw c-com convewsões _integew,_ _fwoat,_ _endianness_ e-e outwos detawhes da wepwesentação d-de nyúmewos e-em fowmato b-bináwio. 🥺
 
-### Exceções
+### exceções
 
-- `{{jsxref("RangeError")}}`
+- `{{jsxwef("wangeewwow")}}`
 
-  - : Lançado se o `byteOffset` ou `byteLength` especificados ultrapassarem o final do buffer.
+  - : wançado se o `byteoffset` ou `bytewength` e-especificados uwtwapassawem o finaw do buffew. XD
 
-    Por exemplo, se o buffer tem 16 bytes de comprimento, o `byteOffset` é 8 e o `byteLength` é 10, esse erro será lançado porque a view resultante tenta estender 2 bytes acima do comprimento total do buffer.
+    pow exempwo, (U ᵕ U❁) se o-o buffew tem 16 bytes de compwimento, :3 o-o `byteoffset` é 8 e-e o `bytewength` é 10, ( ͡o ω ͡o ) e-esse ewwo sewá wançado powque a-a view wesuwtante t-tenta estendew 2 b-bytes acima d-do compwimento totaw do buffew. òωó
 
-## Descrição
+## descwição
 
-### _Endianness_
+### _endianness_
 
-Formatos de números _Multi-byte_ são representados de maneira diferente na memória, dependendo da arquitetura da máquina, veja {{Glossary("Endianness")}} para mais informações. Assessores de `DataView` fornecem controle explícito de como o dado será acessado, independente do _endianness_ da arquitetura em execução.
+f-fowmatos de n-nyúmewos _muwti-byte_ s-são wepwesentados d-de maneiwa d-difewente nya memówia, σωσ dependendo da awquitetuwa da máquina, (U ᵕ U❁) v-veja {{gwossawy("endianness")}} pawa mais infowmações. (✿oωo) assessowes de `dataview` fownecem contwowe expwícito d-de como o dado sewá acessado, ^^ independente do _endianness_ da awquitetuwa em e-execução. ^•ﻌ•^
 
 ```js
-var littleEndian = (function () {
-  var buffer = new ArrayBuffer(2);
-  new DataView(buffer).setInt16(0, 256, true /* littleEndian */);
-  // Int16Array uses the platform's endianness.
-  return new Int16Array(buffer)[0] === 256;
+v-vaw wittweendian = (function () {
+  v-vaw buffew = nyew awwaybuffew(2);
+  n-nyew dataview(buffew).setint16(0, XD 256, t-twue /* wittweendian */);
+  // i-int16awway uses the pwatfowm's endianness. :3
+  wetuwn new int16awway(buffew)[0] === 256;
 })();
-console.log(littleEndian); // true or false
+consowe.wog(wittweendian); // twue ow fawse
 ```
 
-### Valores inteiros de 64 bits
+### v-vawowes inteiwos de 64 bits
 
-Como JavaScript atualmente não inclui suporte padrão para valores inteiros de 64 bits, `DataView` não oferece operações nativas de 64 bits. Como solução alternativa, você poderia implementar sua própria função getUint64() para obter um valor com a precisão de {{jsxref("Number.MAX_SAFE_INTEGER")}}, o que pode ser bom para determinados casos.
+c-como javascwipt atuawmente nyão i-incwui supowte p-padwão pawa vawowes inteiwos de 64 bits, (ꈍᴗꈍ) `dataview` n-nyão ofewece o-opewações nyativas de 64 bits. :3 c-como sowução a-awtewnativa, (U ﹏ U) você podewia impwementaw sua pwópwia função getuint64() pawa o-obtew um vawow c-com a pwecisão d-de {{jsxwef("numbew.max_safe_integew")}}, UwU o que p-pode sew bom pawa d-detewminados casos. 😳😳😳
 
 ```js
-function getUint64(dataview, byteOffset, littleEndian) {
-  // split 64-bit number into two 32-bit (4-byte) parts
-  const left = dataview.getUint32(byteOffset, littleEndian);
-  const right = dataview.getUint32(byteOffset + 4, littleEndian);
+function g-getuint64(dataview, XD byteoffset, o.O wittweendian) {
+  // spwit 64-bit numbew i-into two 32-bit (4-byte) p-pawts
+  const weft = dataview.getuint32(byteoffset, (⑅˘꒳˘) wittweendian);
+  c-const w-wight = dataview.getuint32(byteoffset + 4, 😳😳😳 wittweendian);
 
-  // combine the two 32-bit values
-  const combined = littleEndian
-    ? left + 2 ** 32 * right
-    : 2 ** 32 * left + right;
+  // combine the two 32-bit vawues
+  const combined = w-wittweendian
+    ? weft + 2 ** 32 * wight
+    : 2 ** 32 * weft + wight;
 
-  if (!Number.isSafeInteger(combined))
-    console.warn(combined, "exceeds MAX_SAFE_INTEGER. Precision may be lost");
+  if (!numbew.issafeintegew(combined))
+    c-consowe.wawn(combined, nyaa~~ "exceeds max_safe_integew. rawr pwecision m-may be wost");
 
-  return combined;
+  w-wetuwn combined;
 }
 ```
 
-Como alternativa, se você precisar de um intervalo completo de 64 bits, poderá criar um {{jsxref("BigInt")}}.
+como awtewnativa, -.- se você pwecisaw de um intewvawo c-compweto de 64 b-bits, (✿oωo) podewá cwiaw um {{jsxwef("bigint")}}. /(^•ω•^)
 
 ```js
-function getUint64BigInt(dataview, byteOffset, littleEndian) {
-  // split 64-bit number into two 32-bit (4-byte) parts
-  const left = dataview.getUint32(byteOffset, littleEndian);
-  const right = dataview.getUint32(byteOffset + 4, littleEndian);
+function getuint64bigint(dataview, 🥺 byteoffset, ʘwʘ w-wittweendian) {
+  // spwit 64-bit n-nyumbew into two 32-bit (4-byte) pawts
+  const weft = dataview.getuint32(byteoffset, UwU w-wittweendian);
+  const w-wight = dataview.getuint32(byteoffset + 4, XD w-wittweendian);
 
-  // combine the two 32-bit values as their hex string representations
-  const combined = littleEndian
-    ? right.toString(16) + left.toString(16).padStart(8, "0")
-    : left.toString(16) + right.toString(16).padStart(8, "0");
+  // combine the two 32-bit v-vawues as theiw hex stwing w-wepwesentations
+  c-const combined = w-wittweendian
+    ? wight.tostwing(16) + w-weft.tostwing(16).padstawt(8, "0")
+    : w-weft.tostwing(16) + wight.tostwing(16).padstawt(8, "0");
 
-  return BigInt(`0x${combined}`);
+  wetuwn bigint(`0x${combined}`);
 }
 ```
 
-## Propriedades
+## pwopwiedades
 
-Todas as instâncias de `DataView` herdam {{jsxref("DataView.prototype")}} e permitem a adição de propriedades a todos os objetos DataView.
+t-todas a-as instâncias d-de `dataview` hewdam {{jsxwef("dataview.pwototype")}} e pewmitem a-a adição de pwopwiedades a t-todos os objetos d-dataview. (✿oωo)
 
-<!-- TODO: page macro not supported: page('en-US/Web/JavaScript/Reference/Global_Objects/DataView/prototype','Properties') -->
+<!-- todo: page macwo nyot suppowted: page('en-us/web/javascwipt/wefewence/gwobaw_objects/dataview/pwototype','pwopewties') -->
 
-## Métodos
+## m-métodos
 
-<!-- TODO: page macro not supported: page('en-US/Web/JavaScript/Reference/Global_Objects/DataView/prototype','Methods') -->
+<!-- todo: p-page macwo n-nyot suppowted: p-page('en-us/web/javascwipt/wefewence/gwobaw_objects/dataview/pwototype','methods') -->
 
-## Exemplo
+## exempwo
 
 ```js
-var buffer = new ArrayBuffer(16);
-var dv = new DataView(buffer, 0);
+v-vaw buffew = nyew awwaybuffew(16);
+vaw dv = nyew dataview(buffew, :3 0);
 
-dv.setInt16(1, 42);
-dv.getInt16(1); //42
+dv.setint16(1, (///ˬ///✿) 42);
+dv.getint16(1); //42
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Notas de compatibilidade
+## nyotas d-de compatibiwidade
 
-Começando com o Firefox 40, `DataView` deve ser construído com o operador {{jsxref("Operators/new", "new")}} . Chamando `DataView()` como uma função sem o `new`, irá lançar um {{jsxref("TypeError")}} de agora em diante.
+começando c-com o fiwefox 40, nyaa~~ `dataview` deve sew constwuído c-com o opewadow {{jsxwef("opewatows/new", >w< "new")}} . c-chamando `dataview()` c-como u-uma função s-sem o `new`, -.- iwá wançaw um {{jsxwef("typeewwow")}} de agowa em diante. (✿oωo)
 
-```js example-bad
-var dv = DataView(buffer, 0);
-// TypeError: calling a builtin DataView constructor without new is forbidden
+```js exampwe-bad
+vaw dv = dataview(buffew, (˘ω˘) 0);
+// typeewwow: c-cawwing a-a buiwtin dataview c-constwuctow without nyew is fowbidden
 ```
 
-```js example-good
-var dv = new DataView(buffer, 0);
+```js e-exampwe-good
+vaw dv = nyew dataview(buffew, rawr 0);
 ```
 
-## Veja também
+## veja também
 
-- [jDataView](https://github.com/jDataView/jDataView): Biblioteca javascript que faz o polyfill e extende a API do `DataView` para todos os browsers e para o Node.js.
-- {{jsxref("ArrayBuffer")}}
-- {{jsxref("SharedArrayBuffer")}}
+- [jdataview](https://github.com/jdataview/jdataview): b-bibwioteca javascwipt q-que faz o powyfiww e extende a-a api do `dataview` pawa todos os bwowsews e p-pawa o nyode.js. OwO
+- {{jsxwef("awwaybuffew")}}
+- {{jsxwef("shawedawwaybuffew")}}

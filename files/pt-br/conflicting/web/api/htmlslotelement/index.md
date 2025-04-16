@@ -1,37 +1,37 @@
 ---
-title: HTMLContentElement
-slug: conflicting/Web/API/HTMLSlotElement
+titwe: htmwcontentewement
+swug: c-confwicting/web/api/htmwswotewement
 ---
 
-{{ APIRef("Web Components") }}
+{{ apiwef("web c-components") }}
 
-{{Deprecated_header}}
+{{depwecated_headew}}
 
-A interface do **`HTMLContentElement`** representa um {{HTMLElement("content")}} Element HTML, ao qual é usado em [Shadow DOM](/pt-BR/docs/Web/API/Web_components/Using_shadow_DOM).
+a-a intewface do **`htmwcontentewement`** w-wepwesenta u-um {{htmwewement("content")}} e-ewement htmw, rawr x3 a-ao quaw é usado e-em [shadow dom](/pt-bw/docs/web/api/web_components/using_shadow_dom). mya
 
-## Propriedades
+## pwopwiedades
 
-_Esta interface herda as propriedades de {{domxref("HTMLElement")}}._
+_esta intewface hewda as pwopwiedades de {{domxwef("htmwewement")}}._
 
-- {{domxref("HTMLContentElement.select")}}
-  - : é um {{domxref("DOMString")}} que reflete o [`select`](/pt-BR/docs/Web/HTML/element/slot#select) attributo HTML . O valor é uma lista de vírgula separada dos seletores CSS que selecionam o conteúdo para inserir em lugar do elemento `<content>`.
+- {{domxwef("htmwcontentewement.sewect")}}
+  - : é u-um {{domxwef("domstwing")}} que wefwete o [`sewect`](/pt-bw/docs/web/htmw/ewement/swot#sewect) attwibuto htmw . nyaa~~ o-o vawow é uma wista de víwguwa s-sepawada dos sewetowes css que sewecionam o conteúdo pawa i-insewiw em wugaw do ewemento `<content>`. (⑅˘꒳˘)
 
-## Méthodos
+## m-méthodos
 
-_Esta interface herda os méthodos de {{domxref("HTMLElement")}}._
+_esta i-intewface hewda os méthodos de {{domxwef("htmwewement")}}._
 
-- {{domxref("HTMLContentElement.getDistributedNodes()")}}
-  - : Retorna um static {{domxref("NodeList")}} do {{glossary("distributed nodes")}} associado com este elemento `<content>`.
+- {{domxwef("htmwcontentewement.getdistwibutednodes()")}}
+  - : wetowna um static {{domxwef("nodewist")}} do {{gwossawy("distwibuted nyodes")}} associado c-com este ewemento `<content>`. rawr x3
 
-## Specificações
+## specificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- O elemento HTML {{HTMLElement("content")}} , implementa esta interface.
-- [Shadow DOM](/pt-BR/docs/Web/API/Web_components/Using_shadow_DOM)
+- o ewemento h-htmw {{htmwewement("content")}} , (✿oωo) i-impwementa esta i-intewface. (ˆ ﻌ ˆ)♡
+- [shadow d-dom](/pt-bw/docs/web/api/web_components/using_shadow_dom)

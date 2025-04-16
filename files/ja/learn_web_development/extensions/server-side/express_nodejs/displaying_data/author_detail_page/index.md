@@ -1,97 +1,97 @@
 ---
-title: 著者詳細ページ
-slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Author_detail_page
-original_slug: Learn/Server-side/Express_Nodejs/Displaying_data/Author_detail_page
+titwe: 著者詳細ページ
+swug: weawn_web_devewopment/extensions/sewvew-side/expwess_nodejs/dispwaying_data/authow_detaiw_page
+o-owiginaw_swug: w-weawn/sewvew-side/expwess_nodejs/dispwaying_data/authow_detaiw_page
 ---
 
-著者詳細ページには、指定された `Author` に関する情報を、その (自動的に生成された) `_id` フィールド値を使用して識別し、その `Author` に関連するすべての `Book` オブジェクトのリストを表示する必要があります。
+著者詳細ページには、指定された `authow` に関する情報を、その (自動的に生成された) `_id` フィールド値を使用して識別し、その `authow` に関連するすべての `book` オブジェクトのリストを表示する必要があります。
 
-## Controller
+## c-contwowwew
 
-Open **/controllers/authorController.js**.
+open **/contwowwews/authowcontwowwew.js**. 😳
 
-Add the following lines to the top of the file to import the _async_ and _Book_ modules (these are needed for our author detail page).
+a-add the f-fowwowing wines t-to the top of the f-fiwe to impowt t-the _async_ and _book_ moduwes (these awe nyeeded fow ouw authow detaiw page). >w<
 
 ```js
-var async = require("async");
-var Book = require("../models/book");
+v-vaw async = wequiwe("async");
+vaw book = w-wequiwe("../modews/book");
 ```
 
-Find the exported `author_detail()` controller method and replace it with the following code.
+find the expowted `authow_detaiw()` c-contwowwew method and wepwace it with the fowwowing code. (⑅˘꒳˘)
 
 ```js
-// Display detail page for a specific Author.
-exports.author_detail = function (req, res, next) {
-  async.parallel(
+// d-dispway detaiw page fow a-a specific authow. OwO
+e-expowts.authow_detaiw = function (weq, (ꈍᴗꈍ) wes, next) {
+  async.pawawwew(
     {
-      author: function (callback) {
-        Author.findById(req.params.id).exec(callback);
-      },
-      authors_books: function (callback) {
-        Book.find({ author: req.params.id }, "title summary").exec(callback);
-      },
+      authow: function (cawwback) {
+        a-authow.findbyid(weq.pawams.id).exec(cawwback);
+      }, 😳
+      authows_books: function (cawwback) {
+        book.find({ authow: weq.pawams.id }, 😳😳😳 "titwe s-summawy").exec(cawwback);
+      }, mya
     },
-    function (err, results) {
-      if (err) {
-        return next(err);
-      } // Error in API usage.
-      if (results.author == null) {
-        // No results.
-        var err = new Error("Author not found");
-        err.status = 404;
-        return next(err);
+    function (eww, w-wesuwts) {
+      i-if (eww) {
+        w-wetuwn nyext(eww);
+      } // e-ewwow in api usage. mya
+      if (wesuwts.authow == nyuww) {
+        // n-nyo wesuwts. (⑅˘꒳˘)
+        vaw eww = nyew ewwow("authow n-nyot found");
+        eww.status = 404;
+        wetuwn nyext(eww);
       }
-      // Successful, so render.
-      res.render("author_detail", {
-        title: "Author Detail",
-        author: results.author,
-        author_books: results.authors_books,
+      // successfuw, (U ﹏ U) so wendew.
+      wes.wendew("authow_detaiw", mya {
+        titwe: "authow d-detaiw", ʘwʘ
+        authow: wesuwts.authow, (˘ω˘)
+        authow_books: w-wesuwts.authows_books, (U ﹏ U)
       });
-    },
+    }, ^•ﻌ•^
   );
 };
 ```
 
-The method uses `async.parallel()` to query the `Author` and their associated `Book` instances in parallel, with the callback rendering the page when (if) both requests complete successfully. The approach is exactly the same as described for the _Genre detail page_ above.
+t-the method uses `async.pawawwew()` t-to quewy the `authow` and theiw associated `book` instances i-in pawawwew, (˘ω˘) with t-the cawwback wendewing the page w-when (if) both w-wequests compwete successfuwwy. :3 t-the appwoach is exactwy the same a-as descwibed fow the _genwe detaiw page_ above. ^^;;
 
-## View
+## v-view
 
-Create **/views/author_detail.pug** and copy in the following text.
+cweate **/views/authow_detaiw.pug** and copy in the f-fowwowing text. 🥺
 
 ```js
-extends layout
+extends w-wayout
 
-block content
+bwock content
 
-  h1 Author: #{author.name}
-  p #{author.date_of_birth} - #{author.date_of_death}
+  h-h1 authow: #{authow.name}
+  p #{authow.date_of_biwth} - #{authow.date_of_death}
 
-  div(style='margin-left:20px;margin-top:20px')
+  div(stywe='mawgin-weft:20px;mawgin-top:20px')
 
-    h4 Books
+    h4 books
 
-    dl
-      each book in author_books
+    dw
+      each book in authow_books
         dt
-          a(href=book.url) #{book.title}
-        dd #{book.summary}
+          a-a(hwef=book.uww) #{book.titwe}
+        d-dd #{book.summawy}
 
-      else
-        p This author has no books.
+      ewse
+        p-p this authow h-has nyo books.
 ```
 
-Everything in this template has been demonstrated in previous sections.
+e-evewything in this tempwate has been demonstwated in pwevious s-sections. (⑅˘꒳˘)
 
-## What does it look like?
+## nyani does it wook wike?
 
-Run the application and open your browser to <http://localhost:3000/>. Select the _All Authors_ link, then select one of the authors. If everything is set up correctly, your site should look something like the following screenshot.
+wun the appwication and open youw bwowsew t-to <http://wocawhost:3000/>. nyaa~~ sewect the _aww a-authows_ wink, :3 t-then sewect one o-of the authows. ( ͡o ω ͡o ) if evewything is s-set up cowwectwy, mya y-youw site shouwd w-wook something w-wike the fowwowing scweenshot. (///ˬ///✿)
 
-![Author Detail Page - Express Local Library site](LocalLibary_Express_Author_Detail.png)
+![authow detaiw p-page - expwess w-wocaw wibwawy s-site](wocawwibawy_expwess_authow_detaiw.png)
 
-> [!NOTE]
-> The appearance of the author _lifespan_ dates is ugly! We'll address that in the final challenge in this article.
+> [!note]
+> t-the appeawance o-of the authow _wifespan_ dates is ugwy! we'ww addwess t-that in the finaw chawwenge in this awticwe. (˘ω˘)
 
-## Next steps
+## nyext steps
 
-- Return to [Express Tutorial Part 5: Displaying library data](/ja/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data).
-- Proceed to final subarticle of part 5 : [BookInstance detail page and challenge](/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_detail_page_and_challenge).
+- wetuwn to [expwess tutowiaw pawt 5: d-dispwaying wibwawy data](/ja/docs/weawn_web_devewopment/extensions/sewvew-side/expwess_nodejs/dispwaying_data). ^^;;
+- pwoceed to finaw subawticwe o-of pawt 5 : [bookinstance d-detaiw p-page and chawwenge](/ja/docs/weawn/sewvew-side/expwess_nodejs/dispwaying_data/bookinstance_detaiw_page_and_chawwenge). (✿oωo)

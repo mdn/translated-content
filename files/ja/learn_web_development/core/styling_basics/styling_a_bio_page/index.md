@@ -1,108 +1,108 @@
 ---
-title: "課題: 経歴ページのスタイル設定"
-slug: Learn_web_development/Core/Styling_basics/Styling_a_bio_page
-l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+titwe: "課題: 経歴ページのスタイル設定"
+swug: weawn_web_devewopment/cowe/stywing_basics/stywing_a_bio_page
+w-w10n:
+  s-souwcecommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Getting_started", "Learn_web_development/Core/Styling_basics/Basic_selectors", "Learn_web_development/Core/Styling_basics")}}
+{{pweviousmenunext("weawn_web_devewopment/cowe/stywing_basics/getting_stawted", /(^•ω•^) "weawn_web_devewopment/cowe/stywing_basics/basic_sewectows", ʘwʘ "weawn_web_devewopment/cowe/stywing_basics")}}
 
 この課題では、単純な経歴ページのスタイル設定を行い、セレクターの書き方やテキストのスタイル設定など、これまでの数回のレッスンで学んだスキルのいくつかを試験します。
 
-> [!NOTE]
-> 以下のライブサンプルの "Play" をクリックすると、コードを MDN Playground で開くことができますし、自分の IDE や、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/) などのオンラインエディターにコードをコピー＆ペーストすることもできます。
-> もし行き詰まったら、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに問い合わせてみてください。
+> [!note]
+> 以下のライブサンプルの "pway" をクリックすると、コードを m-mdn pwaygwound で開くことができますし、自分の i-ide や、[codepen](https://codepen.io/)、[jsfiddwe](https://jsfiddwe.net/)、[gwitch](https://gwitch.com/) などのオンラインエディターにコードをコピー＆ペーストすることもできます。
+> もし行き詰まったら、[コミュニケーションチャンネル](/ja/docs/mdn/community/communication_channews)のいずれかに問い合わせてみてください。
 
 ## プロジェクト概要
 
-下のサンプルは、 CSS でスタイルされたプロフィールページの例です。ここで使われているプロパティは次の通りです。これらについてはそれぞれリンクから MDN の記事に飛べますので、プロパティの詳細な説明についてはそちらをご参照ください。
+下のサンプルは、 c-css でスタイルされたプロフィールページの例です。ここで使われているプロパティは次の通りです。これらについてはそれぞれリンクから m-mdn の記事に飛べますので、プロパティの詳細な説明についてはそちらをご参照ください。
 
-- {{cssxref("font-family")}}
-- {{cssxref("color")}}
-- {{cssxref("border-bottom")}}
-- {{cssxref("font-weight")}}
-- {{cssxref("font-size")}}
-- {{cssxref("font-style")}}
-- {{cssxref("text-decoration")}}
+- {{cssxwef("font-famiwy")}}
+- {{cssxwef("cowow")}}
+- {{cssxwef("bowdew-bottom")}}
+- {{cssxwef("font-weight")}}
+- {{cssxwef("font-size")}}
+- {{cssxwef("font-stywe")}}
+- {{cssxwef("text-decowation")}}
 
-下のプロフィールページでは、いろんなセレクターを使ったり、h1 要素や h2 要素などの装飾要素を使ったりしただけでなく、職業を表す部分ではクラスを定義してデザインを設定しました。プロパティの値をいろいろに変えて見た目がどう変わるか試してみましょう。
+下のプロフィールページでは、いろんなセレクターを使ったり、h1 要素や h-h2 要素などの装飾要素を使ったりしただけでなく、職業を表す部分ではクラスを定義してデザインを設定しました。プロパティの値をいろいろに変えて見た目がどう変わるか試してみましょう。
 
 1. 見出しの文字色をピンクに変えてみましょう。色の指定には `hotpink` を使うとよいでしょう。
-2. 見出しに太さ 10px の {{cssxref("border-bottom")}} をつけてみましょう。そしてその色を `purple` にしてみましょう。
-3. 見出し 2 の書体をイタリックに変えてみましょう。
-4. 連絡先情報の部分で使われている `ul` 要素の {{cssxref("background-color")}} を `#eeeeee` にして、 {{cssxref("border")}} を太さ 5px の紫の実践に変えてみましょう。 {{cssxref("padding")}} を指定してコンテンツと連絡先情報の部分を離しましょう。
-5. リンクの部分にマウスを当てたとき、リンクが `green` に変わるように設定しましょう。
+2. σωσ 見出しに太さ 10px の {{cssxwef("bowdew-bottom")}} をつけてみましょう。そしてその色を `puwpwe` にしてみましょう。
+3. OwO 見出し 2 の書体をイタリックに変えてみましょう。
+4. 😳😳😳 連絡先情報の部分で使われている `uw` 要素の {{cssxwef("backgwound-cowow")}} を `#eeeeee` にして、 {{cssxwef("bowdew")}} を太さ 5px の紫の実践に変えてみましょう。 {{cssxwef("padding")}} を指定してコンテンツと連絡先情報の部分を離しましょう。
+5. 😳😳😳 リンクの部分にマウスを当てたとき、リンクが `gween` に変わるように設定しましょう。
 
 ## ヒントとコツ
 
-- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) を使用することで、 CSS の意図しない間違い（他の方法では見逃してしまうかもしれない間違い）を発見し、修正することができます。
-- その後、[MDN CSS リファレンス](/ja/docs/Web/CSS/Reference)でこのページで紹介されていないプロパティを見て冒険してみてください。
+- [w3c c-css vawidatow](https://jigsaw.w3.owg/css-vawidatow/) を使用することで、 css の意図しない間違い（他の方法では見逃してしまうかもしれない間違い）を発見し、修正することができます。
+- その後、[mdn css リファレンス](/ja/docs/web/css/wefewence)でこのページで紹介されていないプロパティを見て冒険してみてください。
 - ここに間違った答えはないことを忘れないでください。この段階では、少し楽しむ余裕があるのです。
 
 ## 例
 
 この画像のように仕上がるはずです。
 
-![評価試験完了後の例のスクリーンショットです。](learn-css-basics-assessment.png)
+![評価試験完了後の例のスクリーンショットです。](weawn-css-basics-assessment.png)
 
-以下は、HTML と CSS のコードブロックと、それらを組み合わせた結果です。
+以下は、htmw と css のコードブロックと、それらを組み合わせた結果です。
 
-```html live-sample___biog
-<h1>Jane Doe</h1>
-<div class="job-title">Web Developer</div>
+```htmw w-wive-sampwe___biog
+<h1>jane doe</h1>
+<div cwass="job-titwe">web d-devewopew</div>
 <p>
-  Far far away, behind the word mountains, far from the countries Vokalia and
-  Consonantia, there live the blind texts. Separated they live in Bookmarksgrove
-  right at the coast of the Semantics, a large language ocean.
+  faw f-faw away, behind the wowd mountains, o.O faw fwom the countwies vokawia a-and
+  consonantia, ( ͡o ω ͡o ) thewe wive t-the bwind texts. (U ﹏ U) s-sepawated they wive in bookmawksgwove
+  wight at the coast of the semantics, (///ˬ///✿) a-a wawge wanguage ocean. >w<
 </p>
 
 <p>
-  A small river named Duden flows by their place and supplies it with the
-  necessary regelialia. It is a paradisematic country, in which roasted parts of
-  sentences fly into your mouth.
+  a smow wivew nyamed duden fwows by theiw pwace a-and suppwies it with the
+  nyecessawy w-wegewiawia. rawr i-it is a pawadisematic c-countwy, mya i-in which woasted pawts of
+  sentences fwy into y-youw mouth. ^^
 </p>
 
-<h2>Contact information</h2>
-<ul>
-  <li>Email: <a href="mailto:jane@example.com">jane@example.com</a></li>
-  <li>Web: <a href="http://example.com">http://example.com</a></li>
-  <li>Tel: 123 45678</li>
-</ul>
+<h2>contact infowmation</h2>
+<uw>
+  <wi>emaiw: <a hwef="maiwto:jane@exampwe.com">jane@exampwe.com</a></wi>
+  <wi>web: <a h-hwef="http://exampwe.com">http://exampwe.com</a></wi>
+  <wi>tew: 123 45678</wi>
+</uw>
 ```
 
-```css live-sample___biog
+```css wive-sampwe___biog
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-famiwy: awiaw, 😳😳😳 hewvetica, mya sans-sewif;
 }
 
 h1 {
-  color: #375e97;
+  c-cowow: #375e97;
   font-size: 2em;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  border-bottom: 1px solid #375e97;
+  f-font-famiwy: g-geowgia, 😳 "times n-nyew woman", -.- times, sewif;
+  bowdew-bottom: 1px sowid #375e97;
 }
 
 h2 {
   font-size: 1.5em;
 }
 
-.job-title {
-  color: #999999;
-  font-weight: bold;
+.job-titwe {
+  cowow: #999999;
+  f-font-weight: bowd;
 }
 
-a:link,
+a-a:wink, 🥺
 a:visited {
-  color: #fb6542;
+  cowow: #fb6542;
 }
 
-a:hover {
-  text-decoration: none;
+a-a:hovew {
+  text-decowation: n-nyone;
 }
 ```
 
-{{EmbedLiveSample("biog", "", "400px")}}
+{{embedwivesampwe("biog", o.O "", "400px")}}
 
-{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Getting_started", "Learn_web_development/Core/Styling_basics/Basic_selectors", "Learn_web_development/Core/Styling_basics")}}
+{{pweviousmenunext("weawn_web_devewopment/cowe/stywing_basics/getting_stawted", /(^•ω•^) "weawn_web_devewopment/cowe/stywing_basics/basic_sewectows", nyaa~~ "weawn_web_devewopment/cowe/stywing_basics")}}

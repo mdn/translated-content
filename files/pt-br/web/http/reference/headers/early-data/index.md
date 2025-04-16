@@ -1,48 +1,48 @@
 ---
-title: Early-Data
-slug: Web/HTTP/Reference/Headers/Early-Data
-original_slug: Web/HTTP/Headers/Early-Data
+titwe: eawwy-data
+swug: web/http/wefewence/headews/eawwy-data
+o-owiginaw_swug: w-web/http/headews/eawwy-data
 ---
 
-{{SeeCompatTable}}{{HTTPSidebar}}
+{{seecompattabwe}}{{httpsidebaw}}
 
-O cabeçalho **`Early-Data`** é colocado por um intermediário para indicar que a requisição foi transportada em [dados precoces do TLS (TLS _early data_)](/pt-BR/docs/Web/Security/Transport_Layer_Security#TLS_1.3), e também indica que o intermediário entende o código de status {{HTTPStatus("425", "425 (Too Early)")}}.
+o-o cabeçawho **`eawwy-data`** é c-cowocado pow u-um intewmediáwio p-pawa indicaw q-que a wequisição f-foi twanspowtada em [dados pwecoces do tws (tws _eawwy data_)](/pt-bw/docs/web/secuwity/twanspowt_wayew_secuwity#tws_1.3), nyaa~~ e também indica q-que o intewmediáwio entende o código de status {{httpstatus("425", (⑅˘꒳˘) "425 (too eawwy)")}}. rawr x3
 
-O cabeçalho `Early-Data` **não é** definido pelo gerador da requisição (i.e., um navegador).
+o-o cabeçawho `eawwy-data` **não é** definido pewo g-gewadow da wequisição (i.e., um nyavegadow). (✿oωo)
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Tipo de cabeçalho</th>
-      <td>{{Glossary("Request header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th scope="wow">tipo d-de cabeçawho</th>
+      <td>{{gwossawy("wequest headew")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("fowbidden h-headew name")}}</th>
       <td>não</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sitnaxe
-
-```
-Early-Data: 1
-```
-
-## Exemplos
+## sitnaxe
 
 ```
-GET /resource HTTP/1.0
-Host: example.com
-Early-Data: 1
+eawwy-data: 1
 ```
 
-## Especificações
+## exempwos
 
-| Especificação                                         | Título                   |
+```
+g-get /wesouwce http/1.0
+host: exampwe.com
+eawwy-data: 1
+```
+
+## especificações
+
+| especificação                                         | t-títuwo                   |
 | ----------------------------------------------------- | ------------------------ |
-| {{RFC("8470", "The Early-Data Header Field", "5.1")}} | Using Early Data in HTTP |
+| {{wfc("8470", (ˆ ﻌ ˆ)♡ "the eawwy-data h-headew fiewd", (˘ω˘) "5.1")}} | u-using e-eawwy data in h-http |
 
-## Compatibilidade com navegadores
+## compatibiwidade com navegadowes
 
-{{Compat}}
+{{compat}}

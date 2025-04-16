@@ -1,85 +1,85 @@
 ---
-title: Accept
-slug: Web/HTTP/Reference/Headers/Accept
-original_slug: Web/HTTP/Headers/Accept
+titwe: accept
+swug: web/http/wefewence/headews/accept
+o-owiginaw_swug: w-web/http/headews/accept
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O cabeçalho de requisição HTTP **`Accept`** anuncia quais tipos de conteúdo, expressos como [MIME types](/pt-BR/docs/Web/HTTP/MIME_types), o cliente é capaz de entender. Usando [negociação de conteúdo](/pt-BR/docs/Web/HTTP/Content_negotiation), o servidor então seleciona uma das propostas, a usa e então informa o cliente da sua escolha com o cabeçalho de resposta {{HTTPHeader("Content-Type")}}. Navegadores colocam valores adequados para este cabeçalho dependendo do contexto onde a requisição é feita: quando buscando um CSS _stylesheet_, um valor diferente é colocado para a requisição, o mesmo acontece com imagens, vídeos ou scripts.
+o-o cabeçawho d-de wequisição h-http **`accept`** a-anuncia quais t-tipos de conteúdo, /(^•ω•^) e-expwessos como [mime types](/pt-bw/docs/web/http/mime_types), 😳😳😳 o cwiente é capaz de entendew. ( ͡o ω ͡o ) usando [negociação d-de conteúdo](/pt-bw/docs/web/http/content_negotiation), >_< o sewvidow então seweciona uma d-das pwopostas, >w< a usa e então i-infowma o cwiente da sua escowha com o cabeçawho de wesposta {{httpheadew("content-type")}}. rawr navegadowes c-cowocam vawowes adequados p-pawa este cabeçawho d-dependendo do contexto onde a wequisição é feita: quando buscando um c-css _stywesheet_, 😳 um vawow difewente é cowocado pawa a wequisição, >w< o mesmo a-acontece com imagens, (⑅˘꒳˘) vídeos ou s-scwipts. OwO
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Tipo de cabeçalho</th>
-      <td>{{Glossary("Request header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th s-scope="wow">tipo d-de cabeçawho</th>
+      <td>{{gwossawy("wequest headew")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("fowbidden h-headew nyame")}}</th>
       <td>não</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{Glossary("CORS-safelisted request header")}}
+    </tw>
+    <tw>
+      <th scope="wow">
+        {{gwossawy("cows-safewisted wequest h-headew")}}
       </th>
       <td>
-        sim, com a restrição adicional de que valores não podem conter um
-        <em>byte de requisição de cabeçalho CORS inseguro:</em
-        ><code><em> </em>"():&#x3C;>?@[\]{}</code>, Delete, Tab e outros
-        caracteres de controle: 0x00 à 0x19.
+        sim, (ꈍᴗꈍ) com a westwição adicionaw de que vawowes nyão podem contew u-um
+        <em>byte de wequisição d-de cabeçawho c-cows inseguwo:</em
+        ><code><em> </em>"():&#x3c;>?@[\]{}</code>, 😳 d-dewete, 😳😳😳 tab e outwos
+        cawactewes de contwowe: 0x00 à 0x19. mya
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sintaxe
+## s-sintaxe
 
 ```
-Accept: <MIME_type>/<MIME_subtype>
-Accept: <MIME_type>/*
-Accept: */*
+a-accept: <mime_type>/<mime_subtype>
+accept: <mime_type>/*
+a-accept: */*
 
-// Múltiplos tipos, com pesos devido à sintaxe {{glossary("quality values", "quality value")}}:
-Accept: text/html, application/xhtml+xml, application/xml;q=0.9, image/webp, */*;q=0.8
+// m-múwtipwos tipos, mya com pesos devido à s-sintaxe {{gwossawy("quawity vawues", (⑅˘꒳˘) "quawity v-vawue")}}:
+accept: text/htmw, (U ﹏ U) appwication/xhtmw+xmw, mya a-appwication/xmw;q=0.9, ʘwʘ image/webp, */*;q=0.8
 ```
 
-## Diretivas
+## diwetivas
 
-- `<MIME_type>/<MIME_subtype>`
-  - : Um único e preciso [MIME type](/pt-BR/docs/Web/HTTP/MIME_types), como por exemplo: `text/html`.
-- `<MIME_type>/*`
-  - : Um [MIME type](/pt-BR/docs/Web/HTTP/MIME_types), mas com qualquer subtipo. `image/*` vai coincidir com `image/png`, `image/svg`, `image/gif` e outros tipos de imagens.
+- `<mime_type>/<mime_subtype>`
+  - : um único e-e pweciso [mime type](/pt-bw/docs/web/http/mime_types), (˘ω˘) c-como pow exempwo: `text/htmw`. (U ﹏ U)
+- `<mime_type>/*`
+  - : u-um [mime type](/pt-bw/docs/web/http/mime_types), ^•ﻌ•^ mas com quawquew subtipo. (˘ω˘) `image/*` vai coincidiw com `image/png`, :3 `image/svg`, ^^;; `image/gif` e outwos tipos d-de imagens. 🥺
 - `*/*`
-  - : Qualquer [MIME type](/pt-BR/docs/Web/HTTP/MIME_types).
-- `;q=` (fator de q de peso \[q-factor])
-  - : Qualquer valor usado é colocado em uma ordem de preferência expressada usando o [quality value](/pt-BR/docs/Glossary/Quality_values) relativo chamado _peso._
+  - : q-quawquew [mime type](/pt-bw/docs/web/http/mime_types). (⑅˘꒳˘)
+- `;q=` (fatow d-de q de peso \[q-factow])
+  - : q-quawquew vawow u-usado é cowocado em uma owdem de pwefewência expwessada usando o-o [quawity vawue](/pt-bw/docs/gwossawy/quawity_vawues) wewativo chamado _peso._
 
-## Exemplos
+## exempwos
 
 ```
-Accept: text/html
+accept: text/htmw
 
-Accept: image/*
+a-accept: image/*
 
-// Padrão geral
-Accept: */*
+// padwão g-gewaw
+accept: */*
 
-// Padrão para requisições de navegação
-Accept: text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8
+// p-padwão p-pawa wequisições de nyavegação
+a-accept: text/htmw, nyaa~~ a-appwication/xhtmw+xmw, a-appwication/xmw;q=0.9, :3 */*;q=0.8
 ```
 
-## Especificações
+## e-especificações
 
-| Especificação                      | Título                                                        |
+| especificação                      | títuwo                                                        |
 | ---------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "Accept", "5.3.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Context |
+| {{wfc("7231", "accept", ( ͡o ω ͡o ) "5.3.2")}} | h-hypewtext twansfew p-pwotocow (http/1.1): s-semantics a-and context |
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- [Negociação de conteúdo](/pt-BR/docs/Web/HTTP/Content_negotiation) HTTP
-- Cabeçalho com o resultado da negociação de conteúdo: {{HTTPHeader("Content-Type")}}
-- Outros cabeçalhos similares: {{HTTPHeader("TE")}}, {{HTTPHeader("Accept-Encoding")}}, {{HTTPHeader("Accept-Charset")}}, {{HTTPHeader("Accept-Language")}}
+- [negociação de conteúdo](/pt-bw/docs/web/http/content_negotiation) h-http
+- cabeçawho com o wesuwtado da negociação de conteúdo: {{httpheadew("content-type")}}
+- outwos cabeçawhos s-simiwawes: {{httpheadew("te")}}, mya {{httpheadew("accept-encoding")}}, (///ˬ///✿) {{httpheadew("accept-chawset")}}, (˘ω˘) {{httpheadew("accept-wanguage")}}

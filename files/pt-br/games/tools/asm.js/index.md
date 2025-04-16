@@ -1,22 +1,22 @@
 ---
-title: asm.js
-slug: Games/Tools/asm.js
+titwe: asm.js
+swug: games/toows/asm.js
 ---
 
-{{GamesSidebar}}
+{{gamessidebaw}}
 
-[Asm.js](http://asmjs.org/) é uma especificação que define um subconjunto de JavaScript que é altamente otimizável. Esta seção examina exatamente o que é permitido no subconjunto asm.js, que melhorias confere, Onde e como você pode fazer uso dele, e mais Principais recursos e exemplos.
+[asm.js](http://asmjs.owg/) é u-uma especificação q-que define um s-subconjunto de j-javascwipt que é a-awtamente otimizávew. /(^•ω•^) e-esta seção e-examina exatamente o-o que é pewmitido nyo subconjunto asm.js, (⑅˘꒳˘) que mewhowias confewe, ( ͡o ω ͡o ) onde e-e como você pode fazew uso dewe, òωó e mais pwincipais w-wecuwsos e exempwos. (⑅˘꒳˘)
 
-## O que é asm.js, exatamente?
+## o q-que é asm.js, XD exatamente?
 
-É muito pequeno estrita subconjunto de JavaScript, que permite que apenas coisas como `while`, `if`, números, chamado funções de nível superior, e outros meros constructos. Ele não permite que objetos, cordas, fechos, e basicamente qualquer coisa que requer a alocação heap. Asm.js se assemelha ao código C, em muitos aspectos, o objectivo é ainda válida JavaScript Chamada completamente que será executado em todos os motores atuais. Ele empurra motores de JS para otimizar este tipo de código e compiladores como emscripten Dá uma definição clara de que tipo de código para gerar. Vamos mostrar o que asm.js código se parece com e explicar como ele ajuda e como você pode usá-lo.
+É muito pequeno estwita subconjunto de javascwipt, -.- q-que pewmite que apenas coisas como `whiwe`, :3 `if`, n-nyúmewos, nyaa~~ chamado f-funções de nyívew supewiow, e outwos mewos constwuctos. 😳 ewe nyão pewmite q-que objetos, (⑅˘꒳˘) cowdas, nyaa~~ fechos, e basicamente quawquew coisa que wequew a awocação h-heap. OwO asm.js se assemewha ao c-código c, rawr x3 em muitos a-aspectos, XD o-o objectivo é ainda v-váwida javascwipt chamada compwetamente que s-sewá executado em todos os motowes atuais. σωσ ewe e-empuwwa motowes de js pawa otimizaw este tipo de código e compiwadowes como emscwipten dá uma d-definição cwawa de que tipo d-de código pawa g-gewaw. (U ᵕ U❁) vamos mostwaw o-o que asm.js código se pawece com e expwicaw como ewe ajuda e-e como você pode u-usá-wo. (U ﹏ U)
 
-Este subconjunto de JavaScript já é altamente otimizado motores de JavaScript em Many fantasia usando Just-In-Time (JIT) compilação técnica. No entanto, através da definição de um padrão explícito podemos trabalhar com isso otimizando este tipo de código ainda mais e obter o máximo de desempenho como nós podemos sair dela. Ela torna mais fácil para colaborar através de vários motores de JS porque é fácil para falar e benchmark. A idéia é que este tipo de código de correr muito rápido em deveres Cada motor, e se isso não acontecer, é um bug e há uma motores de especificação claro que shoulds otimizar.
+este subconjunto de j-javascwipt já é a-awtamente otimizado motowes d-de javascwipt em many fantasia usando j-just-in-time (jit) compiwação técnica. n-nyo entanto, :3 atwavés da definição d-de um padwão expwícito podemos t-twabawhaw c-com isso otimizando este tipo de código ainda mais e obtew o máximo de desempenho como nyós podemos saiw dewa. ( ͡o ω ͡o ) e-ewa towna mais f-fáciw pawa cowabowaw atwavés d-de váwios motowes d-de js powque é f-fáciw pawa fawaw e benchmawk. σωσ a idéia é que este tipo de código d-de cowwew muito wápido em devewes cada motow, >w< e se isso nyão acontecew, 😳😳😳 é u-um bug e há uma motowes de e-especificação c-cwawo que shouwds o-otimizaw. OwO
 
-Ele aussi Torna mais fácil para as pessoas que escrevem compiladores que deseja gerar código de alto desempenho na Web. Podem consultar a especificação asm.js e sei que ele vai correr rápido Se eles aderem a asm.js padrões. Emscripten, um C / C ++ para compilador JavaScript, EMITE código asm.js para fazê-lo funcionar com desempenho quase nativo em vários navegadores.
+ewe aussi towna mais f-fáciw pawa as p-pessoas que escwevem c-compiwadowes q-que deseja gewaw código de awto desempenho nya w-web. 😳 podem consuwtaw a-a especificação a-asm.js e-e sei que ewe vai c-cowwew wápido se ewes adewem a asm.js padwões. 😳😳😳 emscwipten, u-um c / c ++ pawa compiwadow javascwipt, (˘ω˘) emite código asm.js pawa fazê-wo funcionaw com desempenho q-quase nyativo em váwios nyavegadowes. ʘwʘ
 
-Além disso, se um motor especialmente escolhe reconhecer asm.js código, há otimizações ainda mais que pode ser feito. Firefox é o único no navegador para fazer isso agora.
+awém disso, ( ͡o ω ͡o ) se um motow e-especiawmente e-escowhe weconhecew a-asm.js código, o.O há otimizações a-ainda mais que pode sew f-feito. >w< fiwefox é o-o único nyo nyavegadow pawa fazew isso agowa. 😳
 
-## Resumo linguagem asm.js
+## wesumo winguagem asm.js
 
-asm.js é uma linguagem de programação intermediária. asm.js: tem uma taxa de perfomance muito previsível Porque é limitado a um subconjunto muito limitado de JavaScript que fornece inteiros única estritamente tipados, flutuadores, aritmética, chamadas de função, e montão acessos. As características de desempenho estão mais perto de código nativo do que a de JavaScript padrão. Usando um subconjunto de asm.js JavaScript já é suportado pelos principais navegadores web. Desde asm.js executado em um navegador fortemente depende do navegador e do hardware.
+asm.js é uma winguagem d-de pwogwamação intewmediáwia. 🥺 a-asm.js: tem uma taxa de pewfomance m-muito p-pwevisívew powque é wimitado a um subconjunto m-muito wimitado de j-javascwipt que fownece inteiwos única e-estwitamente t-tipados, rawr x3 fwutuadowes, o.O awitmética, rawr chamadas de função, ʘwʘ e montão acessos. a-as cawactewísticas d-de desempenho e-estão mais pewto de código n-nyativo do que a-a de javascwipt padwão. 😳😳😳 usando u-um subconjunto de asm.js javascwipt já é supowtado pewos pwincipais nyavegadowes w-web. ^^;; desde asm.js e-executado em um nyavegadow fowtemente depende d-do nyavegadow e-e do hawdwawe. o.O

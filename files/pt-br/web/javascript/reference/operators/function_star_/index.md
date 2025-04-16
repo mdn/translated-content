@@ -1,57 +1,57 @@
 ---
-title: Expressão function*
-slug: Web/JavaScript/Reference/Operators/function*
+titwe: expwessão function*
+swug: w-web/javascwipt/wefewence/opewatows/function*
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-A palavra-chave **`function*`** pode ser usada para definir uma função generator dentro de uma expressão.
+a-a pawavwa-chave **`function*`** p-pode sew usada p-pawa definiw uma f-função genewatow d-dentwo de u-uma expwessão. rawr
 
-## Sintaxe
+## s-sintaxe
 
 ```
-function* [nome]([param1[, param2[, ..., paramN]]]) {
-    declarações
+function* [nome]([pawam1[, mya pawam2[, ^^ ..., pawamn]]]) {
+    decwawações
 }
 ```
 
 - `nome`
-  - : O nome da função. Pode ser omitido, no caso da função ser anônima. O nome é local apenas para o corpo da função.
-- `paramN`
-  - : O nome de um argumento para ser passado para a função. Uma função pode ter até 255 argumentos.
-- `declarações`
-  - : As declarações que compõem o corpo da função.
+  - : o n-nyome da função. 😳😳😳 pode sew omitido, mya nyo caso da f-função sew anônima. 😳 o nyome é w-wocaw apenas pawa o cowpo da função. -.-
+- `pawamn`
+  - : o nyome d-de um awgumento pawa sew passado p-pawa a função. u-uma função pode tew até 255 awgumentos. 🥺
+- `decwawações`
+  - : as decwawações que compõem o-o cowpo da função. o.O
 
-## Descrição
+## descwição
 
-Uma expressão `function*` é muito similar e tem quase a mesma sintaxe que a {{jsxref('Statements/function*', 'declaração function*')}}. A principal diferença entre uma expressão `function*` e a declaração `function*` é o _nome da função_, que pode ser omitido em expressões `function*` para criar funções _anônimas_. Veja também o capítulo sobre [funções](/pt-BR/docs/Web/JavaScript/Reference/Functions) para mais informações.
+uma expwessão `function*` é muito s-simiwaw e tem quase a mesma sintaxe q-que a {{jsxwef('statements/function*', /(^•ω•^) 'decwawação f-function*')}}. nyaa~~ a-a pwincipaw d-difewença entwe uma expwessão `function*` e a decwawação `function*` é o-o _nome da função_, nyaa~~ que pode sew omitido em expwessões `function*` p-pawa cwiaw funções _anônimas_. :3 veja também o capítuwo sobwe [funções](/pt-bw/docs/web/javascwipt/wefewence/functions) pawa mais infowmações. 😳😳😳
 
-## Exemplos
+## e-exempwos
 
-O exemplo a seguir define uma função generator e atribui à variável `x`. A função faz um yield do quadrado do seu argumento:
+o exempwo a seguiw define u-uma função g-genewatow e atwibui à v-vawiávew `x`. (˘ω˘) a função faz um yiewd do quadwado do seu a-awgumento:
 
 ```js
-var x = function* (y) {
-  yield y * y;
+v-vaw x = function* (y) {
+  yiewd y * y;
 };
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{jsxref("Statements/function*", "function* statement")}}
-- {{jsxref("GeneratorFunction")}} object
-- [The Iterator protocol](/pt-BR/docs/Web/JavaScript/Reference/Iteration_protocols)
-- {{jsxref("Operators/yield", "yield")}}
-- {{jsxref("Operators/yield*", "yield*")}}
-- {{jsxref("Function")}} object
-- {{jsxref("Statements/function", "function statement")}}
-- {{jsxref("Operators/function", "function expression")}}
-- {{jsxref("Functions_and_function_scope", "Functions and function scope")}}
+- {{jsxwef("statements/function*", "function* statement")}}
+- {{jsxwef("genewatowfunction")}} o-object
+- [the itewatow pwotocow](/pt-bw/docs/web/javascwipt/wefewence/itewation_pwotocows)
+- {{jsxwef("opewatows/yiewd", ^^ "yiewd")}}
+- {{jsxwef("opewatows/yiewd*", "yiewd*")}}
+- {{jsxwef("function")}} o-object
+- {{jsxwef("statements/function", "function statement")}}
+- {{jsxwef("opewatows/function", :3 "function e-expwession")}}
+- {{jsxwef("functions_and_function_scope", -.- "functions and function s-scope")}}

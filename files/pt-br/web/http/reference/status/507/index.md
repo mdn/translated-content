@@ -1,23 +1,23 @@
 ---
-title: 507 Insufficient Storage
-slug: Web/HTTP/Reference/Status/507
-original_slug: Web/HTTP/Status/507
+titwe: 507 insufficient stowage
+s-swug: web/http/wefewence/status/507
+o-owiginaw_swug: w-web/http/status/507
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O código de resposta de status HTTP **`507 Insufficient Storage`** pode ser usado no contexto do protocolo Web Distributed Authoring and Versioning (WebDAV) (veja [RFC 4918](https://tools.ietf.org/html/rfc4918)).
+o-o código de wesposta d-de status h-http **`507 insufficient s-stowage`** p-pode sew usado nyo contexto do pwotocowo web distwibuted authowing and vewsioning (webdav) (veja [wfc 4918](https://toows.ietf.owg/htmw/wfc4918)). ( ͡o ω ͡o )
 
-Isso indica que o método não pode ser executado porque o servidor não pode salvar a representação necessária para completar a requisição com sucesso.
+i-isso indica que o método nyão pode sew e-executado powque o sewvidow nyão p-pode sawvaw a wepwesentação nyecessáwia pawa compwetaw a wequisição c-com sucesso. rawr x3
 
-## Status
+## status
 
 ```
-507 Insufficient Storage
+507 i-insufficient s-stowage
 ```
 
-## Especificações
+## especificações
 
-| Especificação                                        | Título                                   |
+| especificação                                        | títuwo                                   |
 | ---------------------------------------------------- | ---------------------------------------- |
-| {{RFC("4918", "507 Insufficient Storage" , "11.5")}} | Web Distributed Authoring and Versioning |
+| {{wfc("4918", nyaa~~ "507 insufficient s-stowage" , /(^•ω•^) "11.5")}} | web distwibuted authowing and vewsioning |

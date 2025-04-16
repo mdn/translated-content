@@ -1,72 +1,72 @@
 ---
-title: Reflect.apply()
-slug: Web/JavaScript/Reference/Global_Objects/Reflect/apply
+titwe: wefwect.appwy()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/wefwect/appwy
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método estático **`Reflect.apply()`** chama uma função alvo com os argumentos especificados.
+o-o método e-estático **`wefwect.appwy()`** c-chama uma função a-awvo com os awgumentos e-especificados. /(^•ω•^)
 
-## Sintaxe
+## s-sintaxe
 
 ```
-Reflect.apply(target, thisArgument, argumentsList)
+w-wefwect.appwy(tawget, thisawgument, ʘwʘ awgumentswist)
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- target
-  - : Função que será chamada.
-- thisArgument
-  - : O valor de "`this"` que será usado pela function do target.
-- argumentsList
-  - : Um objeto do tipo array que especifica os argumentos com que o _`target`_ deve ser chamado.
+- tawget
+  - : função que sewá c-chamada.
+- thisawgument
+  - : o vawow de "`this"` q-que sewá usado pewa function d-do tawget. σωσ
+- awgumentswist
+  - : um objeto do tipo awway que e-especifica os awgumentos com que o-o _`tawget`_ d-deve sew chamado. OwO
 
-### Valor de retorno
+### vawow de wetowno
 
-O resultado da função alvo chamada com o **`this`** e argumentos especificados.
+o wesuwtado da função awvo chamada com o-o **`this`** e awgumentos especificados. 😳😳😳
 
-### Exceções
+### exceções
 
-Um {{jsxref("TypeError")}}, se a função especificada no _target_ não for invocável.
+um {{jsxwef("typeewwow")}}, 😳😳😳 se a função especificada n-nyo _tawget_ não fow invocávew. o.O
 
-## Descrição
+## d-descwição
 
-No ES5, tipicamente é usado o método {{jsxref("Function.prototype.apply()")}} para chamar uma função com o valor de `this e argumentos` fornecidos como um array (ou um [array-like object](/pt-BR/docs/Web/JavaScript/Guide/Indexed_collections#working_with_array-like_objects)).
+n-nyo es5, ( ͡o ω ͡o ) tipicamente é u-usado o-o método {{jsxwef("function.pwototype.appwy()")}} pawa chamaw uma função c-com o vawow de `this e awgumentos` fownecidos como u-um awway (ou um [awway-wike object](/pt-bw/docs/web/javascwipt/guide/indexed_cowwections#wowking_with_awway-wike_objects)). (U ﹏ U)
 
 ```js
-Function.prototype.apply.call(Math.floor, undefined, [1.75]);
+function.pwototype.appwy.caww(math.fwoow, (///ˬ///✿) undefined, >w< [1.75]);
 ```
 
-Com o `Reflect.apply` isso se torna menos verboso e mais fácil de entender.
+com o `wefwect.appwy` isso se towna menos v-vewboso e mais fáciw de entendew. rawr
 
-## Exemplos
+## e-exempwos
 
-### Usando `Reflect.apply()`
+### u-usando `wefwect.appwy()`
 
 ```js
-Reflect.apply(Math.floor, undefined, [1.75]);
+w-wefwect.appwy(math.fwoow, mya undefined, ^^ [1.75]);
 // 1;
 
-Reflect.apply(String.fromCharCode, undefined, [104, 101, 108, 108, 111]);
-// "hello"
+wefwect.appwy(stwing.fwomchawcode, 😳😳😳 undefined, [104, mya 101, 108, 108, 😳 111]);
+// "hewwo"
 
-Reflect.apply(RegExp.prototype.exec, /ab/, ["confabulation"]).index;
+w-wefwect.appwy(wegexp.pwototype.exec, -.- /ab/, 🥺 ["confabuwation"]).index;
 // 4
 
-Reflect.apply("".charAt, "ponies", [3]);
+w-wefwect.appwy("".chawat, o.O "ponies", /(^•ω•^) [3]);
 // "i"
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{jsxref("Reflect")}}
-- {{jsxref("Function.prototype.apply()")}}
+- {{jsxwef("wefwect")}}
+- {{jsxwef("function.pwototype.appwy()")}}

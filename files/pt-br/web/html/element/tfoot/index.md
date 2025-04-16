@@ -1,206 +1,206 @@
 ---
-title: "<tfoot>: Elemento para o rodapé da tabela"
-slug: Web/HTML/Element/tfoot
+titwe: "<tfoot>: ewemento pawa o-o wodapé da tabewa"
+s-swug: web/htmw/ewement/tfoot
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-O **`<tfoot>`** é um **elemento HTML** que define um conjunto de linhas as quais farão parte do rodapé de uma tabela HTML
+o-o **`<tfoot>`** é u-um **ewemento h-htmw** q-que define um c-conjunto de winhas a-as quais fawão pawte do wodapé de uma tabewa htmw
 
-{{InteractiveExample("HTML Demo: &lt;tfoot&gt;", "tabbed-taller")}}
+{{intewactiveexampwe("htmw demo: &wt;tfoot&gt;", ^^;; "tabbed-tawwew")}}
 
-```html interactive-example
-<table>
+```htmw i-intewactive-exampwe
+<tabwe>
   <caption>
-    Council budget (in £) 2018
+    counciw budget (in £) 2018
   </caption>
   <thead>
-    <tr>
-      <th scope="col">Items</th>
-      <th scope="col">Expenditure</th>
-    </tr>
+    <tw>
+      <th scope="cow">items</th>
+      <th s-scope="cow">expendituwe</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">Donuts</th>
+    <tw>
+      <th scope="wow">donuts</th>
       <td>3,000</td>
-    </tr>
-    <tr>
-      <th scope="row">Stationery</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">stationewy</th>
       <td>18,000</td>
-    </tr>
+    </tw>
   </tbody>
   <tfoot>
-    <tr>
-      <th scope="row">Totals</th>
+    <tw>
+      <th scope="wow">totaws</th>
       <td>21,000</td>
-    </tr>
+    </tw>
   </tfoot>
-</table>
+</tabwe>
 ```
 
-```css interactive-example
-thead,
+```css intewactive-exampwe
+thead, 🥺
 tfoot {
-  background-color: #2c5e77;
-  color: #fff;
+  b-backgwound-cowow: #2c5e77;
+  cowow: #fff;
 }
 
 tbody {
-  background-color: #e4f0f5;
+  backgwound-cowow: #e4f0f5;
 }
 
-table {
-  border-collapse: collapse;
-  border: 2px solid rgb(140 140 140);
-  font-family: sans-serif;
-  font-size: 0.8rem;
-  letter-spacing: 1px;
+t-tabwe {
+  b-bowdew-cowwapse: cowwapse;
+  bowdew: 2px sowid wgb(140 140 140);
+  font-famiwy: s-sans-sewif;
+  font-size: 0.8wem;
+  wettew-spacing: 1px;
 }
 
 caption {
   caption-side: bottom;
-  padding: 10px;
+  p-padding: 10px;
 }
 
-th,
+th, XD
 td {
-  border: 1px solid rgb(160 160 160);
-  padding: 8px 10px;
+  bowdew: 1px s-sowid wgb(160 160 160);
+  p-padding: 8px 10px;
 }
 
-td {
-  text-align: center;
+t-td {
+  t-text-awign: centew;
 }
 ```
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/pt-BR/docs/Web/Guide/HTML/Content_categories"
-          >Categorias de conteúdo</a
+    <tw>
+      <th scope="wow">
+        <a h-hwef="/pt-bw/docs/web/guide/htmw/content_categowies"
+          >categowias de conteúdo</a
         >
       </th>
-      <td>Nenhum.</td>
-    </tr>
-    <tr>
-      <th scope="row">Conteúdo permitido</th>
-      <td>Zero ou mais {{HTMLElement("tr")}} elementos.</td>
-    </tr>
-    <tr>
-      <th scope="row">Omitir Tag</th>
+      <td>nenhum.</td>
+    </tw>
+    <tw>
+      <th scope="wow">conteúdo p-pewmitido</th>
+      <td>zewo ou mais {{htmwewement("tw")}} ewementos.</td>
+    </tw>
+    <tw>
+      <th scope="wow">omitiw tag</th>
       <td>
-        Iniciar a tag é obrigatório. O fechamento da tag pode ser omitida caso
-        não exista mais conteúdo no elemento pai
-        {{HTMLElement("table")}}.
+        iniciaw a tag é obwigatówio. (U ᵕ U❁) o-o fechamento da tag p-pode sew omitida c-caso
+        não e-exista mais conteúdo nyo ewemento pai
+        {{htmwewement("tabwe")}}. :3
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Pais permitidos</th>
+    </tw>
+    <tw>
+      <th scope="wow">pais p-pewmitidos</th>
       <td>
-        O elemento {{HTMLElement("table")}}. O
-        {{HTMLElement("tfoot")}} deve aparecer depois de qualquer
-        {{HTMLElement("caption")}},
-        {{HTMLElement("colgroup")}}, {{HTMLElement("thead")}},
-        {{HTMLElement("tbody")}}, ou elementos
-        {{HTMLElement("tr")}}. Note que isso é requerido no HTML5.<br />
-        O elemento {{HTMLElement("tfoot")}} não pode ser colocado depois
-        de qualquer {{HTMLElement("tbody")}} e o elemento
-        {{HTMLElement("tr")}}. Note que isso contradiz diretamento com as
-        normas do HTML5.
+        o-o ewemento {{htmwewement("tabwe")}}. ( ͡o ω ͡o ) o
+        {{htmwewement("tfoot")}} deve apawecew d-depois de quawquew
+        {{htmwewement("caption")}}, òωó
+        {{htmwewement("cowgwoup")}}, σωσ {{htmwewement("thead")}},
+        {{htmwewement("tbody")}}, (U ᵕ U❁) o-ou ewementos
+        {{htmwewement("tw")}}. nyote que isso é w-wequewido nyo htmw5.<bw />
+        o-o ewemento {{htmwewement("tfoot")}} nyão pode sew cowocado d-depois
+        de quawquew {{htmwewement("tbody")}} e-e o ewemento
+        {{htmwewement("tw")}}. (✿oωo) nyote que isso c-contwadiz diwetamento c-com as
+        nyowmas do htmw5. ^^
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Papeis de ARIA permitidos</th>
-      <td>Qualquer um</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
-      <td>{{domxref("HTMLTableSectionElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">papeis de awia pewmitidos</th>
+      <td>quawquew um</td>
+    </tw>
+    <tw>
+      <th scope="wow">intewface d-dom</th>
+      <td>{{domxwef("htmwtabwesectionewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Atributos
+## a-atwibutos
 
-Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+este ewemento i-incwui os [atwibutos g-gwobais](/pt-bw/docs/web/htmw/gwobaw_attwibutes). ^•ﻌ•^
 
-- `align` {{Deprecated_inline}}
+- `awign` {{depwecated_inwine}}
 
-  - : Estes atributos especificam como será o alinhamento horizontal de cada conteúdo da célula. Os possíveis valores são:
+  - : e-estes atwibutos especificam como sewá o awinhamento howizontaw d-de cada conteúdo da céwuwa. XD os possíveis vawowes são:
 
-    - `left`, alinha o conteúdo do elemento a esquerda da célula
-    - `center`, centraliza o conteúdo ao centro da célula
-    - `right`, alinha o conteúdo do elemento a direita da célula
-    - `justify`, insere espaços ao texto para que o mesmo fique centralizado na célula
-    - `char`, alinha o texto em um alinhamento especial com um deslocamento mínimo definido pelos atributos [`char`](/pt-BR/docs/Web/HTML/Element/tbody#char) e [`charoff`](/pt-BR/docs/Web/HTML/Element/tbody#charoff).
+    - `weft`, :3 awinha o conteúdo d-do ewemento a esquewda da céwuwa
+    - `centew`, (ꈍᴗꈍ) c-centwawiza o c-conteúdo ao centwo d-da céwuwa
+    - `wight`, :3 awinha o conteúdo d-do ewemento a d-diweita da céwuwa
+    - `justify`, (U ﹏ U) i-insewe espaços a-ao texto pawa que o mesmo fique centwawizado n-nya céwuwa
+    - `chaw`, UwU a-awinha o-o texto em um a-awinhamento especiaw c-com um deswocamento mínimo definido pewos atwibutos [`chaw`](/pt-bw/docs/web/htmw/ewement/tbody#chaw) e-e [`chawoff`](/pt-bw/docs/web/htmw/ewement/tbody#chawoff). 😳😳😳
 
-    Se nenhum atributo for definido o valor `left` é passado por padrão
+    se nyenhum atwibuto fow definido o vawow `weft` é passado pow padwão
 
-    > **Note:**Não use esse atributo o mesmo está obsoleto (não suportado) no último padrão.- Para obter os mesmo efeitos `left`, `center`, `right` ou `justify`, use a propriedade {{cssxref("text-align")}} do CSS.
+    > **note:**não use esse a-atwibuto o mesmo está obsoweto (não supowtado) nyo úwtimo padwão.- p-pawa obtew o-os mesmo efeitos `weft`, XD `centew`, `wight` o-ou `justify`, o.O use a-a pwopwiedade {{cssxwef("text-awign")}} do css. (⑅˘꒳˘)
     >
-    > - Para obter o mesmo efeito no CSS3, você pode usar os valores [`char`](#char) com o valor da propriedade {{cssxref("text-align")}}.
+    > - p-pawa o-obtew o mesmo efeito no css3, 😳😳😳 você pode usaw os vawowes [`chaw`](#chaw) com o vawow da pwopwiedade {{cssxwef("text-awign")}}.
 
-- `bgcolor` {{Non-standard_inline}}
+- `bgcowow` {{non-standawd_inwine}}
 
-  - : Este atributo define uma cor de fundo para cada célula da coluna. Cada um dos 6 dígitos define um código hexadecimal no [sRGB](https://www.w3.org/Graphics/Color/sRGB), prefixado pelo '#'. Um desses nomes de cores predefinidos também podem ser usado:
+  - : e-este atwibuto define u-uma cow de fundo pawa cada céwuwa d-da cowuna. nyaa~~ c-cada um dos 6 dígitos define um código hexadecimaw n-nyo [swgb](https://www.w3.owg/gwaphics/cowow/swgb), rawr p-pwefixado pewo '#'. -.- um d-desses nyomes de c-cowes pwedefinidos também podem sew usado:
 
-    |     | `black` = "#000000"   |     | `green` = "#008000"  |
+    |     | `bwack` = "#000000"   |     | `gween` = "#008000"  |
     | --- | --------------------- | --- | -------------------- |
-    |     | `silver` = "#C0C0C0"  |     | `lime` = "#00FF00"   |
-    |     | `gray` = "#808080"    |     | `olive` = "#808000"  |
-    |     | `white` = "#FFFFFF"   |     | `yellow` = "#FFFF00" |
-    |     | `maroon` = "#800000"  |     | `navy` = "#000080"   |
-    |     | `red` = "#FF0000"     |     | `blue` = "#0000FF"   |
-    |     | `purple` = "#800080"  |     | `teal` = "#008080"   |
-    |     | `fuchsia` = "#FF00FF" |     | `aqua` = "#00FFFF"   |
+    |     | `siwvew` = "#c0c0c0"  |     | `wime` = "#00ff00"   |
+    |     | `gway` = "#808080"    |     | `owive` = "#808000"  |
+    |     | `white` = "#ffffff"   |     | `yewwow` = "#ffff00" |
+    |     | `mawoon` = "#800000"  |     | `navy` = "#000080"   |
+    |     | `wed` = "#ff0000"     |     | `bwue` = "#0000ff"   |
+    |     | `puwpwe` = "#800080"  |     | `teaw` = "#008080"   |
+    |     | `fuchsia` = "#ff00ff" |     | `aqua` = "#00ffff"   |
 
-    > [!NOTE]
-    > Não use este atributo, como não é mais padrão ele não foi implementado em algumas versões do Microsoft Internet Explorer: o elemento {{HTMLElement("tfoot")}} pode ser estilizando com [CSS](/pt-BR/docs/Web/CSS). Para conseguir simular efeitos do atributo **bgcolor** use a propriedade {{cssxref("background-color")}} do [CSS](/pt-BR/docs/Web/CSS) , nos elementos {{HTMLElement("td")}} ou {{HTMLElement("th")}}.
+    > [!note]
+    > nyão use este atwibuto, (✿oωo) c-como não é m-mais padwão e-ewe nyão foi impwementado em awgumas v-vewsões do m-micwosoft intewnet expwowew: o e-ewemento {{htmwewement("tfoot")}} pode sew estiwizando com [css](/pt-bw/docs/web/css). /(^•ω•^) pawa conseguiw simuwaw efeitos d-do atwibuto **bgcowow** use a-a pwopwiedade {{cssxwef("backgwound-cowow")}} do [css](/pt-bw/docs/web/css) , 🥺 nyos ewementos {{htmwewement("td")}} o-ou {{htmwewement("th")}}.
 
-- `char` {{Deprecated_inline}}
+- `chaw` {{depwecated_inwine}}
 
-  - : O elemento é usado para alinhar as células em uma columa. Valores típicos para isso inclui o periódico (.) quando se alinha valores monetários. Se [`align`](#align) não é definido para `char`, este atributo é ignorado
+  - : o-o ewemento é usado pawa awinhaw as céwuwas em uma cowuma. ʘwʘ v-vawowes típicos pawa isso incwui o pewiódico (.) quando se awinha vawowes monetáwios. s-se [`awign`](#awign) nyão é definido pawa `chaw`, UwU e-este atwibuto é i-ignowado
 
-    > [!NOTE]
-    > Não use esté atributo, ele é obsoleto (e não é mais suportado) desde da última versão padrão. Em vez disso use [`char`](#char) no CSS3, você pode usar o atributo [`char`](#char) com a propriedade {{cssxref("text-align")}}.
+    > [!note]
+    > nyão use esté atwibuto, XD ewe é obsoweto (e nyão é m-mais supowtado) d-desde da úwtima vewsão padwão. (✿oωo) em vez disso use [`chaw`](#chaw) n-nyo css3, :3 você pode usaw o-o atwibuto [`chaw`](#chaw) com a pwopwiedade {{cssxwef("text-awign")}}. (///ˬ///✿)
 
-- `charoff` {{Deprecated_inline}}
+- `chawoff` {{depwecated_inwine}}
 
-  - : O atributo é usado para indicar um número de caracteres para compensar os dados da coluna dos caracteres de alinhamento especificados pelo atributo **char**.
+  - : o atwibuto é u-usado pawa indicaw um nyúmewo d-de cawactewes pawa c-compensaw os dados da cowuna d-dos cawactewes de awinhamento especificados p-pewo a-atwibuto **chaw**. nyaa~~
 
-    > [!NOTE]
-    > Não use esse atributo o mesmo está obsoleto (e não é mais suportado) na última versão padrão.
+    > [!note]
+    > n-nyão use esse atwibuto o-o mesmo está o-obsoweto (e nyão é mais supowtado) nya úwtima v-vewsão padwão. >w<
 
-- `valign` {{Deprecated_inline}}
+- `vawign` {{depwecated_inwine}}
 
-  - : O atributo específico para o alinhamento do texto dentro de cada linha da célula do cabeçalho de uma tabela. Possíveis valores para esse atributo são:
+  - : o-o atwibuto e-específico pawa o awinhamento do texto dentwo d-de cada winha da céwuwa do c-cabeçawho de uma t-tabewa. -.- possíveis vawowes pawa esse atwibuto são:
 
-    - `baseline`, coloca o texto o mais próximo possível da parte de baixo da célula, mas o alinha a [baseline](https://en.wikipedia.org/wiki/Baseline_%28typography%29) dos caracteres em vez do **bottom** deles. Caso os caracteres tenham todos os mesmo tamanho, eles terão o mesmo efeito que `bottom`.
-    - `bottom`, coloca o texto o mais próximo possível da parte de baixo da célula;
-    - `middle`, centraliza o texto na célula;
-    - e `top`, coloca o texto o mais próximo possível do topo da célula.
+    - `basewine`, (✿oωo) c-cowoca o-o texto o mais p-pwóximo possívew d-da pawte de baixo da céwuwa, (˘ω˘) m-mas o awinha a [basewine](https://en.wikipedia.owg/wiki/basewine_%28typogwaphy%29) dos cawactewes em vez do **bottom** dewes. rawr caso os cawactewes tenham todos os m-mesmo tamanho, OwO ewes tewão o mesmo e-efeito que `bottom`. ^•ﻌ•^
+    - `bottom`, UwU cowoca o-o texto o mais pwóximo possívew d-da pawte de baixo da céwuwa;
+    - `middwe`, (˘ω˘) c-centwawiza o texto n-nya céwuwa;
+    - e-e `top`, (///ˬ///✿) c-cowoca o texto o m-mais pwóximo possívew do topo da céwuwa. σωσ
 
-    > [!NOTE]
-    > Não use este atributo eles está obsoleto (e não é suportado) no último padrão: em vez disso use a propriedade {{cssxref("vertical-align")}} do CSS.
+    > [!note]
+    > nyão use este atwibuto ewes está obsoweto (e nyão é supowtado) n-nyo úwtimo p-padwão: em vez d-disso use a pwopwiedade {{cssxwef("vewticaw-awign")}} do css. /(^•ω•^)
 
-## Exemplos
+## e-exempwos
 
-Por favor veja a página {{HTMLElement("table")}} para exemplos sobre `<tfoot>`.
+pow favow veja a página {{htmwewement("tabwe")}} pawa exempwos sobwe `<tfoot>`. 😳
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja t-também
 
-- Outros elemento HTML relacionados a tabela: {{HTMLElement("caption")}}, {{HTMLElement("col")}}, {{HTMLElement("colgroup")}}, {{HTMLElement("table")}}, {{HTMLElement("tbody")}}, {{HTMLElement("td")}}, {{HTMLElement("th")}}, {{HTMLElement("thead")}}, {{HTMLElement("tr")}};
-- Propriedades CSS e pseudo-classes são especialmente úteis para estilizar elementos `<tfoot>`:
+- outwos ewemento htmw wewacionados a t-tabewa: {{htmwewement("caption")}}, {{htmwewement("cow")}}, 😳 {{htmwewement("cowgwoup")}}, (⑅˘꒳˘) {{htmwewement("tabwe")}}, 😳😳😳 {{htmwewement("tbody")}}, 😳 {{htmwewement("td")}}, {{htmwewement("th")}}, XD {{htmwewement("thead")}}, mya {{htmwewement("tw")}};
+- p-pwopwiedades css e p-pseudo-cwasses s-são especiawmente úteis pawa estiwizaw ewementos `<tfoot>`:
 
-  - a pseudo-class {{cssxref(":nth-child")}} para definir o alinhamento nas células de uma coluna;
-  - a propriedade {{cssxref("text-align")}} para alinar as células do conteúdo que tenham um memso caractere como '.'.
+  - a pseudo-cwass {{cssxwef(":nth-chiwd")}} pawa d-definiw o awinhamento n-nyas céwuwas d-de uma cowuna;
+  - a-a pwopwiedade {{cssxwef("text-awign")}} p-pawa awinaw as céwuwas do conteúdo q-que tenham u-um memso cawactewe como '.'. ^•ﻌ•^

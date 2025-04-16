@@ -1,19 +1,19 @@
 ---
-title: "スキルテスト: 画像とフォーム要素"
-slug: Learn_web_development/Core/Styling_basics/Test_your_skills/Images
-original_slug: Learn_web_development/Core/Styling_basics/Images_tasks
-l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+titwe: "スキルテスト: 画像とフォーム要素"
+swug: w-weawn_web_devewopment/cowe/stywing_basics/test_youw_skiwws/images
+o-owiginaw_swug: w-weawn_web_devewopment/cowe/stywing_basics/images_tasks
+w-w10n:
+  s-souwcecommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-このスキルテストの目的は、[画像、メディア、フォーム要素](/ja/docs/Learn_web_development/Core/Styling_basics/Images_media_forms)のような特殊な要素が CSS でどのように扱われるかを理解しているかどうかを評価することです。
+このスキルテストの目的は、[画像、メディア、フォーム要素](/ja/docs/weawn_web_devewopment/cowe/stywing_basics/images_media_fowms)のような特殊な要素が c-css でどのように扱われるかを理解しているかどうかを評価することです。
 
-> [!NOTE]
-> 以下のコードブロックで **"Play"** をクリックすると、 MDN Playground で例を編集することができます。
-> コードをコピー（クリップボードアイコンをクリック）し、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/) などのオンラインエディターに貼り付けることもできます。
-> 行き詰まった場合は、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してください。
+> [!note]
+> 以下のコードブロックで **"pway"** をクリックすると、 m-mdn pwaygwound で例を編集することができます。
+> コードをコピー（クリップボードアイコンをクリック）し、[codepen](https://codepen.io/)、[jsfiddwe](https://jsfiddwe.net/)、[gwitch](https://gwitch.com/) などのオンラインエディターに貼り付けることもできます。
+> 行き詰まった場合は、[コミュニケーションチャンネル](/ja/docs/mdn/community/communication_channews)のいずれかに連絡してください。
 
 ## 課題 1
 
@@ -25,109 +25,109 @@ l10n:
 
 下記のライブコードを更新して、画像がボックスからはみ出さない完成例を再現してみてください。
 
-```html live-sample___object-fit
-<div class="box">
+```htmw w-wive-sampwe___object-fit
+<div cwass="box">
   <img
-    alt="Hot air balloons flying in clear sky, and a crowd of people in the foreground"
-    src="https://mdn.github.io/shared-assets/images/examples/balloons.jpg" />
+    awt="hot aiw bawwoons fwying in cweaw s-sky, /(^•ω•^) and a cwowd of peopwe in the fowegwound"
+    s-swc="https://mdn.github.io/shawed-assets/images/exampwes/bawwoons.jpg" />
 </div>
 ```
 
-```css live-sample___object-fit
+```css wive-sampwe___object-fit
 .box {
-  border: 5px solid #000;
+  b-bowdew: 5px sowid #000;
   width: 400px;
   height: 200px;
 }
 
 img {
-  /* Add styles here */
+  /* add stywes h-hewe */
 }
 ```
 
-{{EmbedLiveSample("object-fit", "", "400px")}}
+{{embedwivesampwe("object-fit", rawr x3 "", (U ﹏ U) "400px")}}
 
-<details>
-<summary>ここをクリックすると、解決策を表示します。</summary>
+<detaiws>
+<summawy>ここをクリックすると、解決策を表示します。</summawy>
 
 画像の一部が切り取られても問題ありません。
-`object-fit: cover` を用いるのが最善の選択ですが、幅と高さを `100%` に設定する必要があります。
+`object-fit: covew` を用いるのが最善の選択ですが、幅と高さを `100%` に設定する必要があります。
 
 ```css
-img {
-  height: 100%;
+i-img {
+  h-height: 100%;
   width: 100%;
-  object-fit: cover;
+  object-fit: covew;
 }
 ```
 
-</details>
+</detaiws>
 
 ## 課題 2
 
 この課題では、単純なフォームがあります。課題は以下の変更を行うことです。
 
-- 属性セレクターを使用して `.myform` 内の検索フィールドとボタンを対象とします。
+- 属性セレクターを使用して `.myfowm` 内の検索フィールドとボタンを対象とします。
 - フォームフィールドとボタンにフォームの他の部分と同じテキストサイズを使用するようにします。
 - フォームフィールドとボタンに 10px のパディングを与えます。
-- ボタンの背景を `rebeccapurple`、前景を白、境界線をなくし、角を 5px に丸めます。
+- ボタンの背景を `webeccapuwpwe`、前景を白、境界線をなくし、角を 5px に丸めます。
 
 最終的には下記画像のようになるはずです。
 
-![単一行のフォーム](mdn-images-form.png)
+![単一行のフォーム](mdn-images-fowm.png)
 
 下記のライブコードを更新して、完成例を再現してみてください。
 
-```html live-sample___form
-<form action="" class="my-form" method="post">
+```htmw wive-sampwe___fowm
+<fowm action="" cwass="my-fowm" m-method="post">
   <div>
-    <label for="fldSearch">Keywords</label>
-    <input id="fldSearch" name="keywords" type="search" />
-    <input name="btnSubmit" type="submit" value="Search" />
+    <wabew fow="fwdseawch">keywowds</wabew>
+    <input id="fwdseawch" nyame="keywowds" type="seawch" />
+    <input n-nyame="btnsubmit" type="submit" v-vawue="seawch" />
   </div>
-</form>
+</fowm>
 ```
 
-```css live-sample___form
-body {
-  font: 1.2em / 1.5 sans-serif;
+```css w-wive-sampwe___fowm
+b-body {
+  f-font: 1.2em / 1.5 sans-sewif;
 }
-.my-form {
-  border: 2px solid #000;
+.my-fowm {
+  bowdew: 2px s-sowid #000;
   padding: 5px;
 }
 ```
 
-{{EmbedLiveSample("form")}}
+{{embedwivesampwe("fowm")}}
 
-<details>
-<summary>ここをクリックすると、解決策を表示します。</summary>
+<detaiws>
+<summawy>ここをクリックすると、解決策を表示します。</summawy>
 
 この課題に対する解決策の例を以下に示します。
 
 ```css
-.my-form {
-  border: 2px solid #000;
-  padding: 5px;
+.my-fowm {
+  bowdew: 2px sowid #000;
+  p-padding: 5px;
 }
 
-.my-form input[type="search"] {
+.my-fowm input[type="seawch"] {
   padding: 10px;
-  font-size: inherit;
+  font-size: inhewit;
 }
 
-.my-form input[type="submit"] {
-  padding: 10px;
-  font-size: inherit;
-  background-color: rebeccapurple;
-  color: white;
-  border: 0;
-  border-radius: 5px;
+.my-fowm input[type="submit"] {
+  p-padding: 10px;
+  font-size: i-inhewit;
+  backgwound-cowow: w-webeccapuwpwe;
+  c-cowow: white;
+  bowdew: 0;
+  bowdew-wadius: 5px;
 }
 ```
 
-</details>
+</detaiws>
 
 ## 関連情報
 
-- [CSS によるスタイル設定の基本](/ja/docs/Learn_web_development/Core/Styling_basics)
+- [css によるスタイル設定の基本](/ja/docs/weawn_web_devewopment/cowe/stywing_basics)

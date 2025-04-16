@@ -1,47 +1,47 @@
 ---
-title: Number.prototype.toSource()
-slug: conflicting/Web/JavaScript/Reference/Global_Objects/Number/toString
+titwe: nyumbew.pwototype.tosouwce()
+swug: confwicting/web/javascwipt/wefewence/gwobaw_objects/numbew/tostwing
 ---
 
-{{JSRef}} {{non-standard_header}}
+{{jswef}} {{non-standawd_headew}}
 
-O método **`toSource()`** retorna uma string contendo o código fonte do objeto.
+o-o método **`tosouwce()`** w-wetowna uma s-stwing contendo o-o código fonte d-do objeto. (///ˬ///✿)
 
-## Syntax
+## syntax
 
 ```
-numObj.toSource()
-Number.toSource()
+n-nyumobj.tosouwce()
+n-nyumbew.tosouwce()
 ```
 
-### Valor retornado
+### v-vawow wetownado
 
-Uma string contendo o código fonte do objeto.
+uma stwing contendo o código fonte do objeto. 😳😳😳
 
-## Descrição
+## descwição
 
-O método `toSource()` retorna os seguintes valores:
+o-o método `tosouwce()` wetowna os seguintes vawowes:
 
-Para o objeto built-in {{jsxref("Number")}}, o método `toSource()` retorna a seguinte string indicando que o código fonte do objeto não está disponível:
+p-pawa o objeto buiwt-in {{jsxwef("numbew")}}, 🥺 o m-método `tosouwce()` wetowna a seguinte stwing indicando que o código f-fonte do objeto nyão está d-disponívew:
 
 ```js
-function Number() {
+f-function nyumbew() {
     [native code]
 }
 ```
 
-Para instâncias do objeto {{jsxref("Number")}}, `toSource()` retorna uma string contendo o código fonte.
+pawa instâncias do objeto {{jsxwef("numbew")}}, mya `tosouwce()` w-wetowna uma stwing contendo o código fonte. 🥺
 
-Este método normalmente é invocado internamente pelo JavaScript e não explicitamente em um código web.
+este método nyowmawmente é invocado i-intewnamente pewo javascwipt e-e nyão expwicitamente e-em um c-código web. >_<
 
-## Especificações
+## e-especificações
 
-Não é parte de nenhuma especificação padrão. Implementado no JavaScript 1.3.
+nyão é pawte de nyenhuma especificação padwão. i-impwementado nyo javascwipt 1.3. >_<
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{jsxref("Object.prototype.toSource()")}}
+- {{jsxwef("object.pwototype.tosouwce()")}}

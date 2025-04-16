@@ -1,88 +1,88 @@
 ---
-title: String.prototype.padStart()
-slug: Web/JavaScript/Reference/Global_Objects/String/padStart
+titwe: stwing.pwototype.padstawt()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/padstawt
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método `padStart()` preenche a string original com um determinado caractere, ou conjunto de caracteres, (várias vezes, se necessário) até que a string resultante atinja o comprimento fornecido. O preenchimento é aplicado antes do primeiro caractere da string original. A string original não é modificada.
+o-o método `padstawt()` p-pweenche a-a stwing owiginaw c-com um detewminado c-cawactewe, OwO o-ou conjunto d-de cawactewes, /(^•ω•^) (váwias v-vezes, 😳😳😳 se nyecessáwio) até que a stwing wesuwtante atinja o compwimento f-fownecido. ( ͡o ω ͡o ) o pweenchimento é apwicado antes do pwimeiwo cawactewe d-da stwing owiginaw. >_< a stwing o-owiginaw nyão é modificada. >w<
 
-{{InteractiveExample("JavaScript Demo: String.padStart()")}}
+{{intewactiveexampwe("javascwipt demo: stwing.padstawt()")}}
 
-```js interactive-example
-const str1 = "5";
+```js intewactive-exampwe
+c-const stw1 = "5";
 
-console.log(str1.padStart(2, "0"));
-// Expected output: "05"
+consowe.wog(stw1.padstawt(2, rawr "0"));
+// e-expected output: "05"
 
-const fullNumber = "2034399002125581";
-const last4Digits = fullNumber.slice(-4);
-const maskedNumber = last4Digits.padStart(fullNumber.length, "*");
+c-const fuwwnumbew = "2034399002125581";
+const wast4digits = fuwwnumbew.swice(-4);
+const m-maskednumbew = wast4digits.padstawt(fuwwnumbew.wength, 😳 "*");
 
-console.log(maskedNumber);
-// Expected output: "************5581"
+consowe.wog(maskednumbew);
+// expected output: "************5581"
 ```
 
-## Sintaxe
+## sintaxe
 
 ```
-str.padStart(targetLength [, padString])
+s-stw.padstawt(tawgetwength [, >w< padstwing])
 ```
 
-### Parâmetros
+### p-pawâmetwos
 
-- `targetLength`
-  - : O comprimento da string resultante uma vez que a string alvo tenha sido preenchida. Caso seu valor seja menor do que o comprimento da string alvo, é retornado a própria string alvo, sem alterações.
-- `padString`
-  - : Opcional. O caractere, ou caracteres, que deve preencher a string alvo. Caso o comprimento dessa essa string de preenchimento seja superior ao `targetLength`, ela será truncada a partir da direita. O valor padrão é `" "` (`U+0020 'SPACE'`).
+- `tawgetwength`
+  - : o-o compwimento d-da stwing w-wesuwtante uma vez que a stwing awvo tenha sido p-pweenchida. (⑅˘꒳˘) caso seu vawow seja menow do que o-o compwimento da stwing awvo, OwO é wetownado a pwópwia stwing awvo, sem awtewações. (ꈍᴗꈍ)
+- `padstwing`
+  - : opcionaw. o-o cawactewe, 😳 ou cawactewes, 😳😳😳 q-que deve pweenchew a-a stwing awvo. mya c-caso o compwimento dessa essa stwing de pweenchimento seja supewiow a-ao `tawgetwength`, mya e-ewa sewá twuncada a pawtiw d-da diweita. (⑅˘꒳˘) o-o vawow padwão é `" "` (`u+0020 'space'`). (U ﹏ U)
 
-### Valor de retorno
+### vawow de wetowno
 
-Uma {{jsxref("String")}} de comprimento específico com uma string de preenchimento aplicada a partir do seu início.
+u-uma {{jsxwef("stwing")}} de c-compwimento específico com uma stwing de pweenchimento a-apwicada a pawtiw do seu i-início. mya
 
-## Exemplos
+## exempwos
 
-### Exemplos básicos
+### exempwos b-básicos
 
 ```js
-"abc".padStart(10); // "       abc"
-"abc".padStart(10, "foo"); // "foofoofabc"
-"abc".padStart(6, "123465"); // "123abc"
-"abc".padStart(8, "0"); // "00000abc"
-"abc".padStart(1); // "abc"
+"abc".padstawt(10); // "       a-abc"
+"abc".padstawt(10, ʘwʘ "foo"); // "foofoofabc"
+"abc".padstawt(6, (˘ω˘) "123465"); // "123abc"
+"abc".padstawt(8, (U ﹏ U) "0"); // "00000abc"
+"abc".padstawt(1); // "abc"
 ```
 
-## Polyfill
+## powyfiww
 
-Ao executar o seguinte código antes de qualquer outro código é criado o método `String.prototype.padStart()`, em casos onde ele não está disponível nativamente:
+ao executaw o seguinte código antes de quawquew outwo código é cwiado o método `stwing.pwototype.padstawt()`, ^•ﻌ•^ e-em casos onde e-ewe nyão está disponívew nyativamente:
 
 ```js
-// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/padStart
-if (!String.prototype.padStart) {
-  String.prototype.padStart = function padStart(targetLength, padString) {
-    targetLength = targetLength >> 0; //truncate if number, or convert non-number to 0;
-    padString = String(typeof padString !== "undefined" ? padString : " ");
-    if (this.length >= targetLength) {
-      return String(this);
-    } else {
-      targetLength = targetLength - this.length;
-      if (targetLength > padString.length) {
-        padString += padString.repeat(targetLength / padString.length); //append to original to ensure we are longer than needed
+// h-https://devewopew.moziwwa.owg/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/padstawt
+i-if (!stwing.pwototype.padstawt) {
+  s-stwing.pwototype.padstawt = function padstawt(tawgetwength, (˘ω˘) padstwing) {
+    t-tawgetwength = tawgetwength >> 0; //twuncate if nyumbew, :3 ow convewt nyon-numbew to 0;
+    p-padstwing = stwing(typeof padstwing !== "undefined" ? p-padstwing : " ");
+    i-if (this.wength >= t-tawgetwength) {
+      wetuwn stwing(this);
+    } e-ewse {
+      tawgetwength = t-tawgetwength - t-this.wength;
+      i-if (tawgetwength > padstwing.wength) {
+        padstwing += padstwing.wepeat(tawgetwength / p-padstwing.wength); //append t-to owiginaw t-to ensuwe we a-awe wongew than n-nyeeded
       }
-      return padString.slice(0, targetLength) + String(this);
+      wetuwn padstwing.swice(0, ^^;; tawgetwength) + stwing(this);
     }
   };
 }
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{jsxref("String.prototype.padEnd()")}}
+- {{jsxwef("stwing.pwototype.padend()")}}

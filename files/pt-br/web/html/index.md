@@ -1,86 +1,86 @@
 ---
-title: "HTML: Linguagem de Marcação de Hipertexto"
-slug: Web/HTML
+titwe: "htmw: winguagem de mawcação d-de hipewtexto"
+s-swug: web/htmw
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**HTML** (Linguagem de Marcação de HiperTexto) é o bloco de construção mais básico da web. Define o significado e a estrutura do conteúdo da web. Outras tecnologias além do HTML geralmente são usadas para descrever a aparência/apresentação ([CSS](/pt-BR/docs/Web/CSS)) ou a funcionalidade/comportamento ([JavaScript](/pt-BR/docs/Web/JavaScript)) de uma página da web.
+**htmw** (winguagem d-de mawcação de h-hipewtexto) é o-o bwoco de constwução m-mais básico d-da web. ^•ﻌ•^ define o-o significado e a estwutuwa do conteúdo da web. (ꈍᴗꈍ) outwas tecnowogias awém do h-htmw gewawmente são usadas pawa descwevew a apawência/apwesentação ([css](/pt-bw/docs/web/css)) o-ou a funcionawidade/compowtamento ([javascwipt](/pt-bw/docs/web/javascwipt)) de uma página d-da web.
 
-"Hipertexto" refere-se aos _links_ que conectam páginas da Web entre si, seja dentro de um único site ou entre sites. Links são um aspecto fundamental da web. Ao carregar conteúdo na Internet e vinculá-lo a páginas criadas por outras pessoas, você se torna um participante ativo na world wide web.
+"hipewtexto" wefewe-se aos _winks_ que conectam páginas d-da web entwe si, (⑅˘꒳˘) seja dentwo d-de um único site o-ou entwe sites. (⑅˘꒳˘) winks são um aspecto fundamentaw da web. (ˆ ﻌ ˆ)♡ ao cawwegaw conteúdo n-nya intewnet e vincuwá-wo a páginas cwiadas pow outwas pessoas, /(^•ω•^) você se towna u-um pawticipante ativo nya wowwd w-wide web.
 
-O HTML usa "Marcação" para anotar texto, imagem e outros conteúdos para exibição em um navegador da Web. A marcação HTML inclui "elementos" especiais, como {{HTMLElement("head")}}, {{HTMLElement("title")}}, {{HTMLElement("body")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("p")}}, {{HTMLElement("div")}}, {{HTMLElement("span")}}, {{HTMLElement("img")}}, {{HTMLElement("aside")}}, {{HTMLElement("audio")}}, {{HTMLElement("canvas")}}, {{HTMLElement("datalist")}}, {{HTMLElement("details")}}, {{HTMLElement("embed")}}, {{HTMLElement("nav")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}}, {{HTMLElement("video")}}, {{HTMLElement("ul")}}, {{HTMLElement("ol")}}, {{HTMLElement("li")}} e muitos outros.
+o h-htmw usa "mawcação" p-pawa anotaw t-texto, òωó imagem e outwos conteúdos pawa exibição e-em um nyavegadow da web. (⑅˘꒳˘) a mawcação htmw i-incwui "ewementos" especiais, (U ᵕ U❁) como {{htmwewement("head")}}, >w< {{htmwewement("titwe")}}, σωσ {{htmwewement("body")}}, -.- {{htmwewement("headew")}}, o.O {{htmwewement("footew")}}, ^^ {{htmwewement("awticwe")}}, >_< {{htmwewement("section")}}, >w< {{htmwewement("p")}}, >_< {{htmwewement("div")}}, >w< {{htmwewement("span")}}, {{htmwewement("img")}}, rawr {{htmwewement("aside")}}, rawr x3 {{htmwewement("audio")}}, ( ͡o ω ͡o ) {{htmwewement("canvas")}}, (˘ω˘) {{htmwewement("datawist")}}, 😳 {{htmwewement("detaiws")}}, {{htmwewement("embed")}}, OwO {{htmwewement("nav")}}, (˘ω˘) {{htmwewement("output")}}, òωó {{htmwewement("pwogwess")}}, ( ͡o ω ͡o ) {{htmwewement("video")}}, UwU {{htmwewement("uw")}}, /(^•ω•^) {{htmwewement("ow")}}, (ꈍᴗꈍ) {{htmwewement("wi")}} e muitos outwos. 😳
 
-Um elemento HTML é separado de outro texto em um documento por "tags", que consistem no nome do elemento entre "`<`" e "`>`". O nome de um elemento dentro de uma tag é insensível a maiúsculas e minúsculas. Isto é, pode ser escrito em maiúsculas, minúsculas ou um mistura. Por exemplo, a tag `<title>` pode ser escrita como `<Title>`, `<TITLE>` ou de qualquer outra forma.
+um ewemento htmw é sepawado de outwo t-texto em um documento pow "tags", mya q-que consistem n-nyo nyome do e-ewemento entwe "`<`" e "`>`". mya o nyome de um ewemento dentwo de u-uma tag é insensívew a-a maiúscuwas e minúscuwas. /(^•ω•^) i-isto é, ^^;; pode s-sew escwito em maiúscuwas, 🥺 minúscuwas o-ou um mistuwa. ^^ pow exempwo, ^•ﻌ•^ a-a tag `<titwe>` pode sew escwita como `<titwe>`, /(^•ω•^) `<titwe>` o-ou de quawquew outwa fowma. ^^
 
-Os artigos abaixo podem ajudá-lo a aprender mais sobre HTML.
+os a-awtigos abaixo podem ajudá-wo a-a apwendew mais s-sobwe htmw. 🥺
 
-- Introdução ao HTML
+- intwodução ao htmw
 
-  Se você é novo no desenvolvimento web, não deixe de ler nosso artigo [O Básico do HTML](/pt-BR/docs/Learn/Getting_started_with_the_web/HTML_basics) para aprender o que é HTML e como usá-lo.
+  se você é nyovo nyo desenvowvimento web, (U ᵕ U❁) nyão deixe de wew nyosso awtigo [o b-básico do h-htmw](/pt-bw/docs/weawn/getting_stawted_with_the_web/htmw_basics) pawa apwendew o-o que é htmw e c-como usá-wo. 😳😳😳
 
-- Tutoriais HTML
+- t-tutowiais htmw
 
-  Para artigos sobre como usar o HTML, assim como tutoriais e exemplos completos, confira nossa [Área de Aprendizado de HTML](/pt-BR/docs/Learn/HTML).
+  pawa awtigos sobwe como usaw o htmw, nyaa~~ assim como t-tutowiais e exempwos compwetos, (˘ω˘) confiwa nyossa [Áwea de apwendizado de htmw](/pt-bw/docs/weawn/htmw). >_<
 
-- Referência do HTML
+- w-wefewência do htmw
 
-  Em nossa extensa seção de [Referência do HTML](/pt-BR/docs/Web/HTML/Reference), você encontrará os detalhes sobre cada elemento e atributo do HTML.
+  e-em nyossa extensa s-seção de [wefewência do h-htmw](/pt-bw/docs/web/htmw/wefewence), XD você encontwawá o-os detawhes s-sobwe cada e-ewemento e atwibuto d-do htmw. rawr x3
 
-## Tutoriais para iniciantes
+## tutowiais pawa iniciantes
 
-Nossa [Área de Aprendizado de HTML](/pt-BR/docs/Learn/HTML) apresenta vários módulos que ensinam HTML desde o início — sem necessidade de conhecimento prévio.
+nyossa [Áwea d-de apwendizado d-de htmw](/pt-bw/docs/weawn/htmw) a-apwesenta v-váwios móduwos q-que ensinam htmw desde o início — sem nyecessidade de c-conhecimento pwévio. ( ͡o ω ͡o )
 
-- [Introdução ao HTML](/pt-BR/docs/Learn/HTML/Introduction_to_HTML)
-  - : Este módulo fornece uma base de conhecimento, permitindo que você acostume-se com os conceitos e sintaxes importantes, tais como aplicar HTML para texto, como criar _hyperlinks_ e como usar HTML para estruturar uma página web.
-- [Multimídia e como incorporá-la](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding)
-  - : Este módulo explora como usar HTML para incluir multimídia em sua página web, incluindo as diferentes maneiras para incluir imagens, e como incorporar vídeos, áudios e até como colocar uma página inteira em outras páginas web.
-- [Tabelas HTML](/pt-BR/docs/Learn/HTML/Tables)
-  - : Representar dados tabulares em uma página web de maneira entendível e acessível pode ser um desafio. Este módulo cobre marcação tabular básica, junto com outras funcionalidades mais complexas como legendas e sumários.
-- [Formulários HTML](/pt-BR/docs/Learn/Forms)
-  - : Formulários são partes muito importantes na Web — proporcionam muitas das funcionalidades que você precisa para interagir em páginas web. Exemplos disso são registrar-se e conectar-se, enviar comentários, comprar produtos e muito mais. Este módulo lhe permite começar a criar as partes visíveis dos formulários, ou seja, as partes que os usuários interagem.
-- [Usando HTML para resolver problemas comuns](/pt-BR/docs/Learn/HTML/Howto)
-  - : Apresenta links para seções com conteúdo explicando como usar HTML para resolver problemas muito comuns, quando se cria uma página web: como trabalhar com títulos, agregar imagens ou vídeos, colocar ênfase em conteúdo, criar um formulário básico, etc.
+- [intwodução ao htmw](/pt-bw/docs/weawn/htmw/intwoduction_to_htmw)
+  - : este móduwo fownece uma base de conhecimento, :3 pewmitindo que v-você acostume-se com os conceitos e sintaxes impowtantes, mya tais c-como apwicaw htmw p-pawa texto, σωσ como c-cwiaw _hypewwinks_ e como usaw h-htmw pawa estwutuwaw uma página w-web. (ꈍᴗꈍ)
+- [muwtimídia e-e como incowpowá-wa](/pt-bw/docs/weawn/htmw/muwtimedia_and_embedding)
+  - : este móduwo expwowa como usaw htmw pawa incwuiw muwtimídia em sua página w-web, OwO incwuindo as difewentes maneiwas p-pawa incwuiw imagens, o.O e como i-incowpowaw vídeos, 😳😳😳 áudios e-e até como cowocaw uma página inteiwa em outwas p-páginas web. /(^•ω•^)
+- [tabewas h-htmw](/pt-bw/docs/weawn/htmw/tabwes)
+  - : wepwesentaw d-dados tabuwawes e-em uma página web de maneiwa entendívew e acessívew pode sew um desafio. OwO este m-móduwo cobwe m-mawcação tabuwaw b-básica, ^^ junto com outwas funcionawidades m-mais c-compwexas como wegendas e sumáwios.
+- [fowmuwáwios h-htmw](/pt-bw/docs/weawn/fowms)
+  - : fowmuwáwios são pawtes muito impowtantes nya web — p-pwopowcionam m-muitas das funcionawidades que você pwecisa pawa i-intewagiw em p-páginas web. exempwos disso são wegistwaw-se e conectaw-se, enviaw c-comentáwios, (///ˬ///✿) compwaw pwodutos e muito mais. (///ˬ///✿) este móduwo whe pewmite começaw a-a cwiaw as pawtes visíveis dos fowmuwáwios, (///ˬ///✿) o-ou seja, ʘwʘ as pawtes q-que os usuáwios intewagem. ^•ﻌ•^
+- [usando htmw pawa wesowvew pwobwemas c-comuns](/pt-bw/docs/weawn/htmw/howto)
+  - : a-apwesenta winks pawa seções com conteúdo expwicando como u-usaw htmw pawa wesowvew pwobwemas m-muito comuns, OwO quando se cwia uma página web: como twabawhaw com t-títuwos, (U ﹏ U) agwegaw imagens ou v-vídeos, (ˆ ﻌ ˆ)♡ cowocaw ênfase e-em conteúdo, (⑅˘꒳˘) cwiaw um f-fowmuwáwio básico, (U ﹏ U) etc. o.O
 
-## Tópicos avançados
+## tópicos a-avançados
 
-- [Habilitando Imagem CORS](/pt-BR/docs/Web/HTML/CORS_enabled_image)
-  - : O atributo [`crossorigin`](/pt-BR/docs/Web/HTML/Element/img#crossorigin), em combinação com um cabeçalho [CORS](/pt-BR/docs/Glossary/CORS) adequado, permite definir imagens pelo elemento {{HTMLElement("img")}} para ser carregado de outras fontes em um elemento {{HTMLElement("canvas")}} como se estivessem sendo carregados da fonte atual.
-- [Configuração de atributos CORS](/pt-BR/docs/Web/HTML/Attributes/crossorigin)
-  - : Alguns elementos em HTML que suportam [CORS](/pt-BR/docs/Web/HTTP/CORS), como por exemplo o {{HTMLElement("img")}} ou {{HTMLElement("video")}}, têm o atributo `crossorigin` (a propriedade `crossOrigin`), que permite configurar as requisições CORS para os dados recebidos pelo elemento.
-- [Gerenciamento de foco em HTML](/pt-BR/docs/Web/API/Document/hasFocus)
-  - : O atributo DOM [`activeElement`](/pt-BR/docs/Web/API/Document/activeElement) e o método DOM [`hasFocus()`](/pt-BR/docs/Web/API/Document/hasFocus) lhe ajudam a melhorar a interação entre o usuário e os elementos da página.
-- [Tipos de conexões](/pt-BR/docs/Web/HTML/Attributes/rel)
-  - : Em HTML, vários tipos de links podem ser utilizados para realizar conexões entre documentos, como por exemplo [`<a>`](/pt-BR/docs/Web/HTML/Element/a), [`<area>`](/pt-BR/docs/Web/HTML/Element/area) e [`<link>`](/pt-BR/docs/Web/HTML/Element/link).
-- [Formatos de arquivos suportados pelos elementos de áudio e vídeo em HTML](/pt-BR/docs/Web/Media/Formats)
-  - : Os elementos [`<audio>`](/pt-BR/docs/Web/HTML/Element/audio) e [`<video>`](/pt-BR/docs/Web/HTML/Element/video) permitem que você reproduza áudios e vídeos no seu HTML. Estes elementos fornecem uma alternativa nativa de recursos do navegador, parecidos com a do Adobe Flash Player e outros plug-ins.
-- [Usando o cachê de aplicação](/pt-BR/docs/Web/HTML/Using_the_application_cache)
-  - : O cachê de aplicação tem como o objetivo executar a aplicação offline. Você pode usar a interface **Application Cache** (_AppCache_) para escolher elementos que o browser possa guardar, deixando-os disponíveis para usuários desconectados. As aplicações que forem armazenadas em cache podem ser utilizadas sem nenhum problema, mesmo que o usuário clique no botão de atualizar a página enquanto estiver offline.
-- [Pré-carregando conteúdo com rel="preload"](/pt-BR/docs/Web/HTML/Attributes/rel/preload)
-  - : O valor `preload` do atributo [`rel`](/pt-BR/docs/Web/HTML/Element/link#rel) do elemento {{htmlelement("link")}} permite que você escreva solicitações de busca declarativas em seu elemento {{htmlelement("head")}} do HTML, especificando recursos que suas páginas vão utilizar logo após o carregamento. Você também pode necessitar que estes recursos sejam pré-carregados ao início do ciclo de execução da página e depois que o mecanismo de renderização do navegador comece a agir. Isso garante que estarão disponíveis mais cedo e que seja menos provável que sua página seja bloqueada do processo de renderizar. Isso aumenta a performance da página. Este artigo oferece um guia básico de como `preload` funciona.
+- [habiwitando i-imagem cows](/pt-bw/docs/web/htmw/cows_enabwed_image)
+  - : o-o atwibuto [`cwossowigin`](/pt-bw/docs/web/htmw/ewement/img#cwossowigin), mya e-em combinação c-com um cabeçawho [cows](/pt-bw/docs/gwossawy/cows) adequado, XD pewmite definiw i-imagens pewo e-ewemento {{htmwewement("img")}} p-pawa sew cawwegado de outwas fontes em um ewemento {{htmwewement("canvas")}} c-como se estivessem sendo cawwegados d-da fonte atuaw. òωó
+- [configuwação d-de atwibutos cows](/pt-bw/docs/web/htmw/attwibutes/cwossowigin)
+  - : awguns ewementos em h-htmw que supowtam [cows](/pt-bw/docs/web/http/cows), (˘ω˘) c-como pow exempwo o-o {{htmwewement("img")}} ou {{htmwewement("video")}}, :3 t-têm o atwibuto `cwossowigin` (a p-pwopwiedade `cwossowigin`), OwO que pewmite configuwaw as wequisições cows pawa os dados wecebidos pewo e-ewemento. mya
+- [gewenciamento de f-foco em htmw](/pt-bw/docs/web/api/document/hasfocus)
+  - : o atwibuto d-dom [`activeewement`](/pt-bw/docs/web/api/document/activeewement) e o método d-dom [`hasfocus()`](/pt-bw/docs/web/api/document/hasfocus) whe ajudam a mewhowaw a-a intewação e-entwe o usuáwio e-e os ewementos d-da página. (˘ω˘)
+- [tipos d-de conexões](/pt-bw/docs/web/htmw/attwibutes/wew)
+  - : em htmw, o.O váwios tipos de winks podem sew utiwizados pawa weawizaw conexões entwe documentos, (✿oωo) c-como pow exempwo [`<a>`](/pt-bw/docs/web/htmw/ewement/a), (ˆ ﻌ ˆ)♡ [`<awea>`](/pt-bw/docs/web/htmw/ewement/awea) e-e [`<wink>`](/pt-bw/docs/web/htmw/ewement/wink). ^^;;
+- [fowmatos d-de awquivos supowtados pewos e-ewementos de áudio e vídeo em htmw](/pt-bw/docs/web/media/fowmats)
+  - : os e-ewementos [`<audio>`](/pt-bw/docs/web/htmw/ewement/audio) e-e [`<video>`](/pt-bw/docs/web/htmw/ewement/video) pewmitem q-que você wepwoduza áudios e vídeos nyo seu htmw. OwO estes ewementos f-fownecem u-uma awtewnativa nyativa de wecuwsos d-do nyavegadow, 🥺 p-pawecidos com a do adobe fwash pwayew e outwos pwug-ins.
+- [usando o cachê d-de apwicação](/pt-bw/docs/web/htmw/using_the_appwication_cache)
+  - : o-o cachê d-de apwicação t-tem como o objetivo e-executaw a apwicação offwine. mya v-você pode u-usaw a intewface **appwication cache** (_appcache_) pawa escowhew e-ewementos que o-o bwowsew possa guawdaw, 😳 deixando-os d-disponíveis pawa usuáwios desconectados. òωó a-as apwicações que fowem awmazenadas e-em cache podem s-sew utiwizadas sem nyenhum p-pwobwema, /(^•ω•^) mesmo que o usuáwio cwique nyo botão d-de atuawizaw a p-página enquanto e-estivew offwine. -.-
+- [pwé-cawwegando conteúdo com wew="pwewoad"](/pt-bw/docs/web/htmw/attwibutes/wew/pwewoad)
+  - : o vawow `pwewoad` d-do atwibuto [`wew`](/pt-bw/docs/web/htmw/ewement/wink#wew) do ewemento {{htmwewement("wink")}} pewmite que v-você escweva s-sowicitações de busca decwawativas e-em seu ewemento {{htmwewement("head")}} do h-htmw, òωó especificando w-wecuwsos que suas páginas vão utiwizaw wogo a-após o cawwegamento. /(^•ω•^) você também pode nyecessitaw q-que estes w-wecuwsos sejam pwé-cawwegados a-ao início do cicwo de execução d-da página e depois q-que o mecanismo d-de wendewização do nyavegadow comece a agiw. /(^•ω•^) isso gawante que estawão disponíveis mais cedo e que seja menos pwovávew que sua página seja bwoqueada do pwocesso de wendewizaw. 😳 isso aumenta a pewfowmance d-da página. :3 e-este awtigo ofewece um guia básico de como `pwewoad` f-funciona. (U ᵕ U❁)
 
-## Referências
+## w-wefewências
 
-- [Referência do HTML](/pt-BR/docs/Web/HTML/Reference)
-  - : HTML é formado de **elementos**, onde cada um deles pode ser modificado por alguns **atributos**. Documentos HTML são interconectados através de [links](/pt-BR/docs/Web/HTML/Attributes/rel).
-- [Referência dos Elementos HTML](/pt-BR/docs/Web/HTML/Element)
-  - : Navegue em uma lista com todos os elementos [HTML](/pt-BR/docs/Glossary/HTML).
-- [Referência de atributos em HTML](/pt-BR/docs/Web/HTML/Attributes)
-  - : Elementos em HTML possuem atributos. Estes configuram ou ajustam o funcionamento e o comportamento dos seus elementos de muitas maneiras.
-- [Atributos Globais](/pt-BR/docs/Web/HTML/Global_attributes)
-  - : Os atributos globais podem ser utilizados em todos os [elementos HTML](/pt-BR/docs/Web/HTML/Element), _mesmo aqueles que não são especificados como padrão_. Isso significa que qualquer elemento não padrão vai permitir estes atributos, mesmo que este retorne um documento HTML5 incompatível.
-- [Elementos em linha](/pt-BR/docs/Glossary/Inline-level_content) e [Elementos em nível de bloco](/pt-BR/docs/Glossary/Block-level_content)
-  - : Elementos HTML são normalmente elementos _inline_ (em linha) ou _block-level_ (em nível de bloco). Um elemento em linha ocupa somente o espaço limitado pelas tags que o definem. Um elemento em nível de bloco ocupa o espaço inteiro do elemento pai (container), portanto criando um bloco.
-- [Tipos de Links](/pt-BR/docs/Web/HTML/Attributes/rel)
-  - : No HTML, vários tipos de links podem ser utilizados para estabelecer e definir o relacionamento entre dois documentos. Os tipos de elementos de link que podem ser incluídos são [`<a>`](/pt-BR/docs/Web/HTML/Element/a), [`<area>`](/pt-BR/docs/Web/HTML/Element/area) e [`<link>`](/pt-BR/docs/Web/HTML/Element/link).
-- [Formatos de mídia suportados pelos elementos vídeo e áudio do HTML](/pt-BR/docs/Web/Media/Formats)
-  - : Os elementos [`<audio>`](/pt-BR/docs/Web/HTML/Element/audio) e [`<video>`](/pt-BR/docs/Web/HTML/Element/video) permitem que você reproduza mídias de áudio e vídeo. Estes elementos fornecem uma alternativa nativa para o navegador reproduzir recursos similares aos encontrados no Adobe Flash e outros plug-ins.
-- [Tipos de conteúdo HTML](/pt-BR/docs/Web/HTML/Content_categories)
-  - : O HTML é composto de uma grande diversidade de conteúdos, e cada um pode ser usado em certos contextos e não ser permitido em outros. Da mesma forma, cada um tem um conjunto de outras categorias de conteúdos que podem ou não serem usadas dentro deles. Este é um guia destas categorias.
-- [Os Modos Quirks e o Modo Padrão](/pt-BR/docs/Web/HTML/Quirks_Mode_and_Standards_Mode)
-  - : Informações sobre a história dos Modos _Quirks_ e o Modo padrão.
+- [wefewência d-do htmw](/pt-bw/docs/web/htmw/wefewence)
+  - : htmw é fowmado d-de **ewementos**, ʘwʘ onde cada um d-dewes pode sew m-modificado pow awguns **atwibutos**. o.O documentos h-htmw são intewconectados atwavés d-de [winks](/pt-bw/docs/web/htmw/attwibutes/wew). ʘwʘ
+- [wefewência d-dos ewementos htmw](/pt-bw/docs/web/htmw/ewement)
+  - : nyavegue e-em uma wista c-com todos os ewementos [htmw](/pt-bw/docs/gwossawy/htmw). ^^
+- [wefewência d-de atwibutos e-em htmw](/pt-bw/docs/web/htmw/attwibutes)
+  - : e-ewementos e-em htmw possuem a-atwibutos. ^•ﻌ•^ estes c-configuwam ou a-ajustam o funcionamento e o compowtamento d-dos seus e-ewementos de m-muitas maneiwas. mya
+- [atwibutos gwobais](/pt-bw/docs/web/htmw/gwobaw_attwibutes)
+  - : o-os atwibutos gwobais podem sew utiwizados em t-todos os [ewementos htmw](/pt-bw/docs/web/htmw/ewement), UwU _mesmo a-aquewes que nyão s-são especificados c-como padwão_. >_< isso significa q-que quawquew ewemento nyão p-padwão vai pewmitiw estes atwibutos, /(^•ω•^) m-mesmo que este wetowne um d-documento htmw5 incompatívew. òωó
+- [ewementos em winha](/pt-bw/docs/gwossawy/inwine-wevew_content) e [ewementos em n-nyívew de bwoco](/pt-bw/docs/gwossawy/bwock-wevew_content)
+  - : ewementos htmw s-são nyowmawmente e-ewementos _inwine_ (em winha) ou _bwock-wevew_ (em nyívew d-de bwoco). σωσ um ewemento em winha o-ocupa somente o e-espaço wimitado p-pewas tags que o definem. ( ͡o ω ͡o ) um ewemento em nyívew d-de bwoco ocupa o-o espaço inteiwo do ewemento pai (containew), p-powtanto cwiando um bwoco. nyaa~~
+- [tipos de winks](/pt-bw/docs/web/htmw/attwibutes/wew)
+  - : n-nyo htmw, :3 váwios tipos d-de winks podem s-sew utiwizados pawa e-estabewecew e definiw o wewacionamento e-entwe d-dois documentos. o-os tipos de ewementos d-de wink que podem sew incwuídos s-são [`<a>`](/pt-bw/docs/web/htmw/ewement/a), UwU [`<awea>`](/pt-bw/docs/web/htmw/ewement/awea) e-e [`<wink>`](/pt-bw/docs/web/htmw/ewement/wink). o.O
+- [fowmatos d-de mídia supowtados p-pewos ewementos v-vídeo e áudio d-do htmw](/pt-bw/docs/web/media/fowmats)
+  - : o-os ewementos [`<audio>`](/pt-bw/docs/web/htmw/ewement/audio) e-e [`<video>`](/pt-bw/docs/web/htmw/ewement/video) pewmitem que v-você wepwoduza mídias de áudio e-e vídeo. (ˆ ﻌ ˆ)♡ estes ewementos fownecem u-uma awtewnativa n-nyativa pawa o-o nyavegadow wepwoduziw wecuwsos simiwawes aos encontwados nyo a-adobe fwash e o-outwos pwug-ins. ^^;;
+- [tipos d-de conteúdo htmw](/pt-bw/docs/web/htmw/content_categowies)
+  - : o htmw é composto de u-uma gwande divewsidade d-de conteúdos, ʘwʘ e cada um p-pode sew usado e-em cewtos contextos e nyão sew pewmitido em outwos. da mesma fowma, c-cada um tem u-um conjunto de o-outwas categowias d-de conteúdos que podem ou nyão sewem usadas d-dentwo dewes. σωσ este é u-um guia destas categowias. ^^;;
+- [os modos quiwks e-e o modo padwão](/pt-bw/docs/web/htmw/quiwks_mode_and_standawds_mode)
+  - : infowmações sobwe a histówia d-dos modos _quiwks_ e o modo padwão. ʘwʘ
 
-## Tópicos relacionados
+## t-tópicos w-wewacionados
 
-- [Aplicando cores em elementos HTML usando CSS](/pt-BR/docs/Web/CSS/CSS_colors/Applying_color)
-  - : Este artigo mostra as principais formas de se usar CSS para adicionar cores ao seu conteúdo HTML, mostrando que partes dos documentos HTML podem ser coloridas e quais propriedades utilizar. Inclui exemplos e links para ferramentas de _palette-building_, entre outros.
+- [apwicando cowes em ewementos h-htmw usando css](/pt-bw/docs/web/css/css_cowows/appwying_cowow)
+  - : e-este awtigo mostwa as pwincipais f-fowmas de se usaw css pawa a-adicionaw cowes a-ao seu conteúdo h-htmw, ^^ mostwando q-que pawtes dos documentos htmw p-podem sew cowowidas e-e quais p-pwopwiedades utiwizaw. nyaa~~ incwui exempwos e-e winks pawa fewwamentas de _pawette-buiwding_, (///ˬ///✿) e-entwe outwos. XD

@@ -1,678 +1,678 @@
 ---
-title: Entendendo o formato textual do WebAssembly
-slug: WebAssembly/Guides/Understanding_the_text_format
-original_slug: WebAssembly/Understanding_the_text_format
+titwe: entendendo o fowmato textuaw d-do webassembwy
+s-swug: webassembwy/guides/undewstanding_the_text_fowmat
+o-owiginaw_swug: w-webassembwy/undewstanding_the_text_fowmat
 ---
 
-{{WebAssemblySidebar}}
+{{webassembwysidebaw}}
 
-Para permitir que o WebAssembly seja lido e editado por humanos, existe uma representação textual do formato binário Wasm. Este é um formulário intermediário projetado para ser exposto em editores de texto, ferramentas de desenvolvedor de navegador etc. Este artigo explica como esse formato de texto funciona, em termos de sintaxe bruta, e como ele está relacionado ao bytecode subjacente que ele representa — e os objetos wrapper que representam Wasm em JavaScript.
+p-pawa pewmitiw q-que o webassembwy s-seja wido e editado p-pow humanos, ^^ existe uma wepwesentação textuaw do fowmato bináwio wasm. (⑅˘꒳˘) este é um fowmuwáwio i-intewmediáwio pwojetado pawa sew exposto e-em editowes de texto, ʘwʘ fewwamentas d-de desenvowvedow de nyavegadow etc. mya este awtigo expwica como e-esse fowmato de texto funciona, >w< e-em tewmos de sintaxe b-bwuta, o.O e como ewe está wewacionado ao bytecode subjacente que ewe wepwesenta — e-e os objetos wwappew que wepwesentam wasm em javascwipt. OwO
 
-> [!NOTE]
-> Isso pode ser um exagero se você for um desenvolvedor da Web que deseja apenas carregar um módulo Wasm em uma página e usá-lo em seu código (consulte [Usando a API JavaScript WebAssembly](/pt-BR/docs/WebAssembly/Using_the_JavaScript_API)), mas é mais útil se, por exemplo, você deseja escrever módulos Wasm para otimizar o desempenho de sua biblioteca JavaScript ou criar seu próprio compilador WebAssembly.
+> [!note]
+> isso p-pode sew um exagewo se você f-fow um desenvowvedow d-da web que d-deseja apenas cawwegaw u-um móduwo wasm em uma página e usá-wo e-em seu código (consuwte [usando a api javascwipt webassembwy](/pt-bw/docs/webassembwy/using_the_javascwipt_api)), -.- m-mas é mais útiw se, (U ﹏ U) pow exempwo, òωó você deseja escwevew móduwos wasm pawa otimizaw o desempenho d-de sua bibwioteca javascwipt o-ou cwiaw seu pwópwio c-compiwadow w-webassembwy. >w<
 
-## S-expressions
+## s-expwessions
 
-Nos formatos binário e textual, a unidade fundamental de código no WebAssembly é um módulo. No formato de texto, um módulo é representado como uma grande S-expression. As S-expressions são um formato textual muito antigo e muito simples para representar árvores e, portanto, podemos pensar em um módulo como uma árvore de nós que descreve a estrutura do módulo e seu código. Ao contrário da Abstract Syntax Tree de uma linguagem de programação, porém, a árvore do WebAssembly é bastante plana, consistindo principalmente em listas de instruções.
+nyos fowmatos bináwio e textuaw, ^•ﻌ•^ a-a unidade fundamentaw d-de código nyo webassembwy é u-um móduwo. /(^•ω•^) n-nyo fowmato de texto, ʘwʘ um móduwo é w-wepwesentado como uma gwande s-s-expwession. XD as s-expwessions são um fowmato t-textuaw muito antigo e muito s-simpwes pawa wepwesentaw áwvowes e, (U ᵕ U❁) powtanto, (ꈍᴗꈍ) p-podemos pensaw e-em um móduwo como uma áwvowe de nyós que descweve a estwutuwa do móduwo e seu código. rawr x3 ao contwáwio da abstwact s-syntax twee d-de uma winguagem de pwogwamação, p-powém, :3 a áwvowe d-do webassembwy é b-bastante pwana, (˘ω˘) consistindo pwincipawmente em wistas de i-instwuções. -.-
 
-Primeiro, vamos ver como é uma S-expression. Cada nó na árvore vai dentro de um par de parênteses — `( ... )`. O primeiro rótulo dentro dos parênteses informa que tipo de nó é e, depois disso, há uma lista separada por espaços de atributos ou nós filhos. Isso significa a S-expression do WebAssembly:
+pwimeiwo, vamos vew como é uma s-expwession. (ꈍᴗꈍ) cada nyó nya áwvowe v-vai dentwo de um paw de pawênteses — `( ... )`. UwU o-o pwimeiwo w-wótuwo dentwo d-dos pawênteses infowma que tipo d-de nyó é e, σωσ depois d-disso, ^^ há u-uma wista sepawada p-pow espaços de atwibutos ou nyós fiwhos. :3 isso s-significa a s-s-expwession do w-webassembwy:
 
 ```wasm
-(module (memory 1) (func))
+(moduwe (memowy 1) (func))
 ```
 
-representa uma árvore com o nó raiz "module" e dois nós filhos, um nó "memory" com o atributo "1" e um nó "func". Veremos em breve o que esses nós realmente significam.
+w-wepwesenta u-uma áwvowe com o nyó waiz "moduwe" e dois nyós fiwhos, ʘwʘ um nyó "memowy" c-com o atwibuto "1" e um nyó "func". 😳 vewemos em bweve o que esses nyós weawmente significam. ^^
 
-### O módulo mais simples
+### o m-móduwo mais simpwes
 
-Vamos começar com o módulo Wasm mais simples e mais curto possível.
+vamos começaw com o móduwo wasm mais simpwes e-e mais cuwto p-possívew. σωσ
 
 ```wasm
-(module)
+(moduwe)
 ```
 
-Este módulo está totalmente vazio, mas ainda é um módulo válido.
+e-este móduwo está totawmente v-vazio, /(^•ω•^) mas ainda é um móduwo v-váwido. 😳😳😳
 
-Se convertermos nosso módulo para binário agora (consulte [Convertendo o formato de texto WebAssembly para Wasm](/pt-BR/docs/WebAssembly/Text_format_to_Wasm)), veremos apenas o cabeçalho do módulo de 8 bytes descrito no [formato binário](https://webassembly.github.io/spec/core/binary/index.html#high-level-structure):
+se convewtewmos n-nyosso móduwo pawa bináwio agowa (consuwte [convewtendo o fowmato de texto webassembwy pawa wasm](/pt-bw/docs/webassembwy/text_fowmat_to_wasm)), 😳 vewemos a-apenas o cabeçawho do móduwo d-de 8 bytes descwito nyo [fowmato b-bináwio](https://webassembwy.github.io/spec/cowe/binawy/index.htmw#high-wevew-stwuctuwe):
 
 ```wasm
-0000000: 0061 736d              ; WASM_BINARY_MAGIC
-0000004: 0100 0000              ; WASM_BINARY_VERSION
+0000000: 0061 736d              ; w-wasm_binawy_magic
+0000004: 0100 0000              ; wasm_binawy_vewsion
 ```
 
-### Adicionando funcionalidade ao seu módulo
+### adicionando f-funcionawidade a-ao seu móduwo
 
-Ok, isso não é muito interessante, vamos adicionar algum código executável a este módulo.
+ok, OwO isso n-nyão é muito i-intewessante, :3 vamos adicionaw awgum código executávew a este móduwo. nyaa~~
 
-Todo o código em um módulo webassembly é agrupado em funções, que possuem a seguinte estrutura de pseudocódigo:
+todo o c-código em um móduwo w-webassembwy é a-agwupado em funções, OwO que p-possuem a seguinte e-estwutuwa de pseudocódigo:
 
 ```wasm
-( func <assinatura> <locais> <corpo> )
+( f-func <assinatuwa> <wocais> <cowpo> )
 ```
 
-- A **assinatura** declara o que a função recebe (parâmetros) e retorna (valores de retorno).
-- Os **locais** são como variáveis em JavaScript, mas com tipos explícitos declarados.
-- O **corpo** é apenas uma lista linear de instruções de baixo nível.
+- a **assinatuwa** decwawa o que a função wecebe (pawâmetwos) e-e wetowna (vawowes d-de wetowno). o.O
+- os **wocais** são como v-vawiáveis em javascwipt, (U ﹏ U) m-mas com tipos expwícitos decwawados. (⑅˘꒳˘)
+- o **cowpo** é a-apenas uma wista wineaw de instwuções de baixo nyívew. OwO
 
-Portanto, isso é semelhante a funções em outras linguagens, mesmo que pareça diferente porque é uma S-expression.
+powtanto, 😳 isso é semewhante a-a funções em outwas winguagens, :3 mesmo q-que paweça difewente p-powque é uma s-expwession. ( ͡o ω ͡o )
 
-## Assinaturas e parâmetros
+## assinatuwas e pawâmetwos
 
-A assinatura é uma sequência de declarações de tipo de parâmetro seguida por uma lista de declarações de tipo de retorno. Vale ressaltar aqui que:
+a-a assinatuwa é u-uma sequência de decwawações de tipo de pawâmetwo seguida p-pow uma wista de decwawações de t-tipo de wetowno. 🥺 vawe wessawtaw aqui que:
 
-- A ausência de um `(result)` significa que a função não retorna nada.
-- Na iteração atual, pode haver no máximo 1 tipo de retorno, mas [posteriormente isso será flexibilizado](https://webassembly.org/docs/future-features#multiple-return) para qualquer número.
+- a ausência de um `(wesuwt)` s-significa que a função n-nyão wetowna n-nyada. /(^•ω•^)
+- nya itewação atuaw, nyaa~~ p-pode havew nyo máximo 1 tipo d-de wetowno, (✿oωo) mas [postewiowmente i-isso sewá fwexibiwizado](https://webassembwy.owg/docs/futuwe-featuwes#muwtipwe-wetuwn) p-pawa quawquew nyúmewo.
 
-Cada parâmetro tem um tipo explicitamente declarado; Wasm [Tipos de número](#number_types), [Tipos de referência](#reference_types), [Tipos de vetor](#vector_types).
-Os tipos de números são:
+c-cada pawâmetwo t-tem um tipo expwicitamente decwawado; wasm [tipos d-de númewo](#numbew_types), (✿oωo) [tipos d-de wefewência](#wefewence_types), (ꈍᴗꈍ) [tipos d-de vetow](#vectow_types). OwO
+os tipos de númewos são:
 
-- `i32`: inteiro de 32 bits
-- `i64`: inteiro de 64 bits
-- `f32`: flutuante de 32 bits
-- `f64`: flutuante de 64 bits
+- `i32`: inteiwo d-de 32 bits
+- `i64`: inteiwo d-de 64 bits
+- `f32`: f-fwutuante de 32 bits
+- `f64`: fwutuante de 64 bits
 
-Um único parâmetro é escrito `(param i32)` e o tipo de retorno é escrito `(result i32)`, portanto, uma função binária que recebe dois inteiros de 32 bits e retorna um float de 64 bits seria escrita assim:
+um único p-pawâmetwo é e-escwito `(pawam i-i32)` e o tipo d-de wetowno é escwito `(wesuwt i-i32)`, :3 powtanto, uma função bináwia que wecebe dois inteiwos de 32 bits e wetowna um fwoat de 64 b-bits sewia escwita assim:
 
 ```wasm
-(func (param i32) (param i32) (result f64) ...)
+(func (pawam i-i32) (pawam i32) (wesuwt f64) ...)
 ```
 
-Após a assinatura, os locais são listados com seu tipo, por exemplo `(local i32)`. Parâmetros são basicamente apenas locais que são inicializados com o valor do argumento correspondente passado pelo chamador.
+a-após a assinatuwa, mya o-os wocais são wistados com seu t-tipo, >_< pow exempwo `(wocaw i-i32)`. (///ˬ///✿) p-pawâmetwos são b-basicamente apenas w-wocais que são iniciawizados com o vawow do awgumento cowwespondente passado pewo chamadow. (///ˬ///✿)
 
-## Obtendo e configurando locais e parâmetros
+## obtendo e c-configuwando wocais e-e pawâmetwos
 
-Locais/parâmetros podem ser lidos e escritos pelo corpo da função com as instruções `local.get` e `local.set`.
+w-wocais/pawâmetwos podem sew w-widos e escwitos pewo cowpo da função com as instwuções `wocaw.get` e-e `wocaw.set`. 😳😳😳
 
-Os comandos `local.get`/`local.set` referem-se ao item a ser obtido/definido por seu índice numérico: os parâmetros são referidos primeiro, na ordem de sua declaração, seguidos pelos locais na ordem de sua declaração. Assim, dada a seguinte função:
+o-os comandos `wocaw.get`/`wocaw.set` wefewem-se a-ao item a sew obtido/definido pow seu índice n-numéwico: o-os pawâmetwos são wefewidos pwimeiwo, (U ᵕ U❁) n-nya owdem d-de sua decwawação, (///ˬ///✿) seguidos pewos wocais nya owdem de sua decwawação. ( ͡o ω ͡o ) assim, (✿oωo) d-dada a seguinte f-função:
 
 ```wasm
-(func (param i32) (param f32) (local f64)
-  local.get 0
-  local.get 1
-  local.get 2)
+(func (pawam i-i32) (pawam f-f32) (wocaw f64)
+  w-wocaw.get 0
+  wocaw.get 1
+  wocaw.get 2)
 ```
 
-A instrução `local.get 0` obteria o parâmetro i32, `local.get 1` obteria o parâmetro f32 e `local.get 2` obteria o f64 local.
+a-a instwução `wocaw.get 0` o-obtewia o pawâmetwo i-i32, òωó `wocaw.get 1` o-obtewia o pawâmetwo f32 e `wocaw.get 2` o-obtewia o f64 wocaw. (ˆ ﻌ ˆ)♡
 
-Há outro problema aqui - usar índices numéricos para se referir a itens pode ser confuso e irritante, então o formato de texto permite que você nomeie parâmetros, locais e a maioria dos outros itens simplesmente incluindo um nome prefixado por um cifrão (`$`) logo antes da declaração de tipo.
+há outwo pwobwema a-aqui - usaw índices nyuméwicos p-pawa se w-wefewiw a itens pode sew confuso e-e iwwitante, :3 então o fowmato de texto pewmite q-que você nyomeie p-pawâmetwos, (ˆ ﻌ ˆ)♡ wocais e-e a maiowia dos outwos itens simpwesmente incwuindo um nyome p-pwefixado pow um cifwão (`$`) wogo antes da d-decwawação de t-tipo.
 
-Assim, você poderia reescrever nossa assinatura anterior assim:
+assim, (U ᵕ U❁) você podewia weescwevew n-nyossa assinatuwa antewiow a-assim:
 
 ```wasm
-(func (param $p1 i32) (param $p2 f32) (local $loc f64) …)
+(func (pawam $p1 i-i32) (pawam $p2 f32) (wocaw $woc f64) …)
 ```
 
-E então poderia escrever `local.get $p1` em vez de `local.get 0`, etc. (Observe que, quando este texto for convertido em binário, o binário conterá apenas o número inteiro).
+e-e então podewia escwevew `wocaw.get $p1` em v-vez de `wocaw.get 0`, (U ᵕ U❁) e-etc. XD (obsewve que, quando e-este texto fow convewtido em bináwio, nyaa~~ o-o bináwio c-contewá apenas o-o nyúmewo inteiwo). (ˆ ﻌ ˆ)♡
 
-## Máquinas de pilha
+## máquinas de piwha
 
-Antes de podermos escrever um corpo de função, temos que falar sobre mais uma coisa: **máquinas de pilha**. Embora o navegador o compile para algo mais eficiente, a execução do Wasm é definida em termos de uma máquina de pilha onde a ideia básica é que todo tipo de instrução empurra e/ou retira um certo número de valores `i32`/`i64`/`f32`/`f64` para/de uma pilha.
+antes de podewmos escwevew um cowpo de função, ʘwʘ temos que fawaw sobwe mais uma coisa: **máquinas de piwha**. ^•ﻌ•^ embowa o nyavegadow o compiwe pawa awgo mais eficiente, mya a execução d-do wasm é definida e-em tewmos de uma máquina de piwha onde a i-ideia básica é q-que todo tipo d-de instwução empuwwa e/ou wetiwa u-um cewto nyúmewo de vawowes `i32`/`i64`/`f32`/`f64` p-pawa/de u-uma piwha. (ꈍᴗꈍ)
 
-Por exemplo, `local.get` é definido para colocar o valor do local lido na pilha e `i32.add` empurra dois valores `i32` (ele implicitamente pega os dois valores anteriores colocados na pilha), calcula sua soma (módulo 2^32) e empurra o valor `i32` resultante.
+pow exempwo, (ˆ ﻌ ˆ)♡ `wocaw.get` é d-definido pawa cowocaw o v-vawow do wocaw wido n-nya piwha e `i32.add` empuwwa dois vawowes `i32` (ewe i-impwicitamente p-pega os d-dois vawowes antewiowes c-cowocados n-nya piwha), (ˆ ﻌ ˆ)♡ cawcuwa s-sua soma (móduwo 2^32) e e-empuwwa o vawow `i32` w-wesuwtante. ( ͡o ω ͡o )
 
-Quando uma função é chamada, ela começa com uma pilha vazia que é gradualmente preenchida e esvaziada conforme as instruções do corpo são executadas. Por exemplo, depois de executar a seguinte função:
+q-quando uma função é chamada, o.O e-ewa começa c-com uma piwha vazia q-que é gwaduawmente pweenchida e-e esvaziada confowme as instwuções do cowpo s-são executadas. 😳😳😳 pow exempwo, depois d-de executaw a-a seguinte função:
 
 ```wasm
-(func (param $p i32)
-  (result i32)
-  local.get $p
-  local.get $p
+(func (pawam $p i-i32)
+  (wesuwt i32)
+  wocaw.get $p
+  w-wocaw.get $p
   i32.add)
 ```
 
-A pilha contém exatamente um valor `i32` — o resultado da expressão (`$p + $p`), que é tratado por `i32.add`. O valor de retorno de uma função é apenas o valor final deixado na pilha.
+a-a piwha contém exatamente um v-vawow `i32` — o wesuwtado da expwessão (`$p + $p`), ʘwʘ q-que é twatado pow `i32.add`. :3 o vawow de wetowno de uma função é apenas o-o vawow finaw deixado nya piwha. UwU
 
-As regras de validação do WebAssembly garantem que a pilha corresponda exatamente: se você declarar um `(result f32)`, a pilha deve conter exatamente um `f32` no final. Se não houver nenhum tipo de resultado, a pilha deverá estar vazia.
+a-as wegwas de v-vawidação do webassembwy gawantem que a piwha cowwesponda exatamente: s-se você decwawaw um `(wesuwt f-f32)`, nyaa~~ a p-piwha deve contew e-exatamente um `f32` nyo finaw. :3 se nyão houvew n-nyenhum tipo de w-wesuwtado, nyaa~~ a piwha devewá estaw v-vazia. ^^
 
-## Nosso primeiro corpo funcional
+## nyosso pwimeiwo cowpo funcionaw
 
-Como mencionado anteriormente, o corpo da função é uma lista de instruções que são seguidas conforme a função é chamada. Juntando isso com o que já aprendemos, podemos finalmente definir um módulo contendo nossa própria função simples:
+como m-mencionado antewiowmente, nyaa~~ o cowpo d-da função é u-uma wista de i-instwuções que são seguidas c-confowme a função é c-chamada. 😳😳😳 j-juntando isso com o-o que já apwendemos, ^•ﻌ•^ podemos f-finawmente definiw u-um móduwo contendo n-nyossa pwópwia f-função s-simpwes:
 
 ```wasm
-(module
-  (func (param $lhs i32) (param $rhs i32) (result i32)
-    local.get $lhs
-    local.get $rhs
-    i32.add))
+(moduwe
+  (func (pawam $whs i-i32) (pawam $whs i32) (wesuwt i-i32)
+    w-wocaw.get $whs
+    wocaw.get $whs
+    i-i32.add))
 ```
 
-Esta função obtém dois parâmetros, soma-os e retorna o resultado.
+esta função o-obtém dois pawâmetwos, (⑅˘꒳˘) s-soma-os e wetowna o-o wesuwtado. (✿oωo)
 
-Há muito mais coisas que podem ser colocadas dentro dos corpos das funções, mas começaremos simples por enquanto, e você verá muito mais exemplos à medida que avança. Para obter uma lista completa dos opcodes disponíveis, consulte a [referência de semântica webassembly.org](https://webassembly.github.io/spec/core/exec/index.html).
+h-há muito mais coisas que podem sew cowocadas dentwo dos cowpos d-das funções, mya m-mas começawemos s-simpwes pow enquanto, (///ˬ///✿) e você vewá muito mais exempwos à medida q-que avança. ʘwʘ p-pawa obtew uma wista compweta dos o-opcodes disponíveis, c-consuwte a [wefewência de semântica webassembwy.owg](https://webassembwy.github.io/spec/cowe/exec/index.htmw). >w<
 
-### Chamando a função
+### chamando a-a função
 
-Nossa função não fará muito sozinha — agora precisamos chamá-la. Como fazemos isso? Como em um módulo ES, as funções Wasm devem ser explicitamente exportadas por uma instrução `export` dentro do módulo.
+n-nyossa função n-nyão fawá muito s-sozinha — agowa pwecisamos chamá-wa. o.O como f-fazemos isso? c-como em um móduwo es, ^^;; as funções wasm devem sew e-expwicitamente expowtadas pow uma instwução `expowt` d-dentwo do móduwo. :3
 
-Como os locais, as funções são identificadas por um índice por padrão, mas por conveniência, elas podem ser nomeadas. Vamos começar fazendo isso — primeiro, adicionaremos um nome precedido por um cifrão, logo após a palavra-chave `func`:
+como o-os wocais, (ꈍᴗꈍ) as f-funções são identificadas pow u-um índice pow p-padwão, XD mas pow conveniência, ^^;; e-ewas podem sew nyomeadas. (U ﹏ U) vamos c-começaw fazendo i-isso — pwimeiwo, (ꈍᴗꈍ) a-adicionawemos u-um nyome pwecedido pow um cifwão, 😳 w-wogo após a-a pawavwa-chave `func`:
 
 ```wasm
 (func $add …)
 ```
 
-Agora precisamos adicionar uma declaração de exportação — fica assim:
+a-agowa pwecisamos adicionaw u-uma decwawação de expowtação — fica assim:
 
 ```wasm
-(export "add" (func $add))
+(expowt "add" (func $add))
 ```
 
-Aqui, `add` é o nome pelo qual a função será identificada em JavaScript, enquanto `$add` seleciona qual função WebAssembly dentro do módulo está sendo exportada.
+a-aqui, rawr `add` é o-o nyome p-pewo quaw a função sewá identificada em javascwipt, ( ͡o ω ͡o ) enquanto `$add` seweciona q-quaw função webassembwy dentwo d-do móduwo e-está sendo expowtada. (ˆ ﻌ ˆ)♡
 
-Portanto, nosso módulo final (por enquanto) fica assim:
+powtanto, OwO nyosso móduwo f-finaw (pow enquanto) fica assim:
 
 ```wasm
-(module
-  (func $add (param $lhs i32) (param $rhs i32) (result i32)
-    local.get $lhs
-    local.get $rhs
+(moduwe
+  (func $add (pawam $whs i-i32) (pawam $whs i-i32) (wesuwt i-i32)
+    w-wocaw.get $whs
+    w-wocaw.get $whs
     i32.add)
-  (export "add" (func $add))
+  (expowt "add" (func $add))
 )
 ```
 
-Se você quiser seguir o exemplo, salve nosso módulo acima em um arquivo chamado `add.wat`, então converta-o em um arquivo binário chamado `add.wasm` usando wabt (consulte [Convertendo o formato de texto WebAssembly para Wasm](/pt-BR/docs/WebAssembly/Text_format_to_Wasm) para detalhes).
+se você quisew seguiw o exempwo, >_< sawve nyosso m-móduwo acima em um awquivo c-chamado `add.wat`, XD então convewta-o em um awquivo bináwio chamado `add.wasm` u-usando wabt (consuwte [convewtendo o fowmato de texto webassembwy pawa wasm](/pt-bw/docs/webassembwy/text_fowmat_to_wasm) pawa detawhes). (ˆ ﻌ ˆ)♡
 
-Em seguida, instanciaremos nosso binário de forma assíncrona (consulte [Carregando e executando o código WebAssembly](/pt-BR/docs/WebAssembly/Loading_and_running)) e executaremos nossa função `add` em JavaScript (agora podemos encontrar `add()` na propriedade [`exports`](/pt-BR/docs/WebAssembly/JavaScript_interface/Instance/exports) da instância):
+e-em seguida, (ꈍᴗꈍ) i-instanciawemos nyosso bináwio d-de fowma assíncwona (consuwte [cawwegando e executando o código webassembwy](/pt-bw/docs/webassembwy/woading_and_wunning)) e-e executawemos n-nyossa função `add` em javascwipt (agowa p-podemos encontwaw `add()` n-nya pwopwiedade [`expowts`](/pt-bw/docs/webassembwy/javascwipt_intewface/instance/expowts) da instância):
 
 ```js
-WebAssembly.instantiateStreaming(fetch("add.wasm")).then((obj) => {
-  console.log(obj.instance.exports.add(1, 2)); // "3"
+webassembwy.instantiatestweaming(fetch("add.wasm")).then((obj) => {
+  consowe.wog(obj.instance.expowts.add(1, (✿oωo) 2)); // "3"
 });
 ```
 
-> [!NOTE]
-> Você pode encontrar este exemplo no GitHub como [add.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/add.html) ([veja ao vivo também](https://mdn.github.io/webassembly-examples/understanding-text-format/add.html)). Consulte também [`WebAssembly.instantiateStreaming()`](/pt-BR/docs/WebAssembly/JavaScript_interface/instantiateStreaming_static) para obter mais detalhes sobre a função instanciar.
+> [!note]
+> você pode e-encontwaw este exempwo nyo github como [add.htmw](https://github.com/mdn/webassembwy-exampwes/bwob/mastew/undewstanding-text-fowmat/add.htmw) ([veja a-ao vivo t-também](https://mdn.github.io/webassembwy-exampwes/undewstanding-text-fowmat/add.htmw)). c-consuwte também [`webassembwy.instantiatestweaming()`](/pt-bw/docs/webassembwy/javascwipt_intewface/instantiatestweaming_static) pawa o-obtew mais detawhes sobwe a função instanciaw. UwU
 
-## Explorando fundamentos
+## expwowando fundamentos
 
-Agora que cobrimos o básico real, vamos ver alguns recursos mais avançados.
+agowa q-que cobwimos o-o básico weaw, (ꈍᴗꈍ) v-vamos vew awguns w-wecuwsos mais avançados. (U ﹏ U)
 
-### Chamando funções de outras funções no mesmo módulo
+### chamando funções d-de outwas funções n-nyo mesmo móduwo
 
-A instrução `call` chama uma única função, dado seu índice ou nome. Por exemplo, o seguinte módulo contém duas funções — uma apenas retorna o valor 42, a outra retorna o resultado da chamada do primeiro mais um:
+a instwução `caww` chama uma única f-função, >w< dado seu índice ou nyome. ^•ﻌ•^ pow exempwo, 😳 o-o seguinte móduwo contém duas funções — u-uma apenas wetowna o-o vawow 42, XD a outwa wetowna o-o wesuwtado da chamada d-do pwimeiwo m-mais um:
 
 ```wasm
-(module
-  (func $getAnswer (result i32)
+(moduwe
+  (func $getanswew (wesuwt i32)
     i32.const 42)
-  (func (export "getAnswerPlus1") (result i32)
-    call $getAnswer
+  (func (expowt "getanswewpwus1") (wesuwt i-i32)
+    caww $getanswew
     i32.const 1
-    i32.add))
+    i-i32.add))
 ```
 
-> **Nota:** `i32.const` apenas define um inteiro de 32 bits e o coloca na pilha. Você pode trocar o `i32` por qualquer um dos outros tipos disponíveis e alterar o valor do const para o que quiser (aqui definimos o valor para `42`).
+> **nota:** `i32.const` apenas define um inteiwo de 32 bits e-e o cowoca nya p-piwha. :3 você pode t-twocaw o `i32` p-pow quawquew um d-dos outwos tipos disponíveis e a-awtewaw o vawow do const pawa o que quisew (aqui d-definimos o vawow pawa `42`). rawr x3
 
-Neste exemplo, você notará uma seção `(export "getAnswerPlus1")`, declarada logo após a instrução `func` na segunda função — esta é uma forma abreviada de declarar que queremos exportar esta função e definir o nome como queremos exportá-la.
+n-nyeste exempwo, (⑅˘꒳˘) você nyotawá uma seção `(expowt "getanswewpwus1")`, ^^ d-decwawada w-wogo após a instwução `func` n-nya segunda função — esta é u-uma fowma abweviada d-de decwawaw que quewemos e-expowtaw esta função e-e definiw o nyome como quewemos e-expowtá-wa. >w<
 
-Isso é funcionalmente equivalente a incluir uma instrução de função separada fora da função, em outro lugar no módulo da mesma maneira que fizemos antes, por exemplo:
+isso é funcionawmente equivawente a incwuiw u-uma instwução de função sepawada f-fowa da função, 😳 em outwo wugaw no móduwo d-da mesma maneiwa q-que fizemos a-antes, rawr pow exempwo:
 
 ```wasm
-(export "getAnswerPlus1" (func $functionName))
+(expowt "getanswewpwus1" (func $functionname))
 ```
 
-O código JavaScript para chamar nosso módulo acima se parece com:
+o código javascwipt p-pawa chamaw n-nyosso móduwo acima se pawece c-com:
 
 ```js
-WebAssembly.instantiateStreaming(fetch("call.wasm")).then((obj) => {
-  console.log(obj.instance.exports.getAnswerPlus1()); // "43"
+webassembwy.instantiatestweaming(fetch("caww.wasm")).then((obj) => {
+  consowe.wog(obj.instance.expowts.getanswewpwus1()); // "43"
 });
 ```
 
-### Importando funções do JavaScript
+### i-impowtando funções d-do javascwipt
 
-Já vimos JavaScript chamando funções WebAssembly, mas e o WebAssembly chamando funções JavaScript? O WebAssembly não possui nenhum conhecimento interno de JavaScript, mas possui uma maneira geral de importar funções que podem aceitar funções JavaScript ou Wasm. Vejamos um exemplo:
+j-já vimos javascwipt chamando funções webassembwy, rawr x3 mas e o webassembwy chamando f-funções javascwipt? o-o webassembwy nyão possui nyenhum conhecimento intewno d-de javascwipt, (ꈍᴗꈍ) mas possui uma m-maneiwa gewaw de i-impowtaw funções que podem aceitaw funções javascwipt ou wasm. -.- vejamos um exempwo:
 
 ```wasm
-(module
-  (import "console" "log" (func $log (param i32)))
-  (func (export "logIt")
+(moduwe
+  (impowt "consowe" "wog" (func $wog (pawam i-i32)))
+  (func (expowt "wogit")
     i32.const 13
-    call $log))
+    caww $wog))
 ```
 
-WebAssembly tem um namespace de dois níveis, então a declaração de importação aqui está dizendo que estamos pedindo para importar a função `log` do módulo `console`. Você também pode ver que a função `logIt` exportada chama a função importada usando a instrução `call` que introduzimos acima.
+w-webassembwy tem um nyamespace d-de dois n-nyíveis, òωó então a decwawação d-de impowtação a-aqui está dizendo q-que estamos p-pedindo pawa impowtaw a-a função `wog` d-do móduwo `consowe`. (U ﹏ U) você também pode vew que a função `wogit` expowtada chama a função i-impowtada u-usando a instwução `caww` q-que i-intwoduzimos acima. ( ͡o ω ͡o )
 
-As funções importadas são como funções normais: elas têm uma assinatura que a validação do WebAssembly verifica estaticamente e recebem um índice e podem ser nomeadas e chamadas.
+a-as funções i-impowtadas são como funções nyowmais: ewas têm uma assinatuwa que a vawidação d-do webassembwy v-vewifica estaticamente e wecebem um índice e podem sew nyomeadas e-e chamadas. :3
 
-As funções JavaScript não têm noção de assinatura, portanto qualquer função JavaScript pode ser passada, independentemente da assinatura declarada na importação. Depois que um módulo declara uma importação, o chamador de [`WebAssembly.instantiate()`](/pt-BR/docs/WebAssembly/JavaScript_interface/instantiate_static) deve passar um objeto de importação que tenha as propriedades correspondentes.
+a-as funções j-javascwipt nyão têm nyoção de assinatuwa, >w< powtanto q-quawquew função javascwipt pode sew passada, ^^ i-independentemente d-da assinatuwa decwawada nya impowtação. 😳😳😳 d-depois que um móduwo decwawa u-uma impowtação, OwO o-o chamadow de [`webassembwy.instantiate()`](/pt-bw/docs/webassembwy/javascwipt_intewface/instantiate_static) deve passaw um objeto d-de impowtação q-que tenha a-as pwopwiedades c-cowwespondentes. XD
 
-Para o exposto acima, precisamos de um objeto (vamos chamá-lo de `importObject`) de modo que `importObject.console.log` seja uma função JavaScript.
+p-pawa o exposto a-acima, (⑅˘꒳˘) pwecisamos de um objeto (vamos c-chamá-wo d-de `impowtobject`) de modo que `impowtobject.consowe.wog` s-seja uma função javascwipt. OwO
 
-Isso ficaria parecido com o seguinte:
+isso ficawia p-pawecido com o seguinte:
 
 ```js
-const importObject = {
-  console: {
-    log(arg) {
-      console.log(arg);
-    },
-  },
+c-const impowtobject = {
+  consowe: {
+    wog(awg) {
+      c-consowe.wog(awg);
+    }, (⑅˘꒳˘)
+  }, (U ﹏ U)
 };
 
-WebAssembly.instantiateStreaming(fetch("logger.wasm"), importObject).then(
+w-webassembwy.instantiatestweaming(fetch("woggew.wasm"), (ꈍᴗꈍ) impowtobject).then(
   (obj) => {
-    obj.instance.exports.logIt();
-  },
+    obj.instance.expowts.wogit();
+  }, rawr
 );
 ```
 
-> [!NOTE]
-> Você pode encontrar este exemplo no GitHub como [logger.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/logger.html) ([veja ao vivo também](https://mdn.github.io/webassembly-examples/understanding-text-format/logger.html)).
+> [!note]
+> v-você pode encontwaw este exempwo nyo github c-como [woggew.htmw](https://github.com/mdn/webassembwy-exampwes/bwob/mastew/undewstanding-text-fowmat/woggew.htmw) ([veja a-ao vivo também](https://mdn.github.io/webassembwy-exampwes/undewstanding-text-fowmat/woggew.htmw)). XD
 
-### Declarando globais no WebAssembly
+### decwawando g-gwobais nyo webassembwy
 
-O WebAssembly tem a capacidade de criar instâncias de variáveis globais, acessíveis a partir de JavaScript e importáveis/exportáveis em uma ou mais instâncias [`WebAssembly.Module`](/pt-BR/docs/WebAssembly/JavaScript_interface/Module). Isso é muito útil, pois permite a vinculação dinâmica de vários módulos.
+o-o webassembwy tem a capacidade d-de cwiaw instâncias de vawiáveis gwobais, >w< a-acessíveis a-a pawtiw de javascwipt e impowtáveis/expowtáveis e-em uma ou mais i-instâncias [`webassembwy.moduwe`](/pt-bw/docs/webassembwy/javascwipt_intewface/moduwe). UwU isso é muito útiw, 😳 p-pois pewmite a vincuwação d-dinâmica d-de váwios m-móduwos. (ˆ ﻌ ˆ)♡
 
-No formato de texto WebAssembly, é mais ou menos assim (consulte [global.wat](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/global.wat) em nosso repositório GitHub; consulte também [global.html](https://mdn.github.io/webassembly-examples/js-api-examples/global.html) para uma transmissão ao vivo Exemplo de JavaScript):
+nyo fowmato de texto webassembwy, ^•ﻌ•^ é mais ou menos assim (consuwte [gwobaw.wat](https://github.com/mdn/webassembwy-exampwes/bwob/mastew/js-api-exampwes/gwobaw.wat) em nyosso wepositówio github; consuwte também [gwobaw.htmw](https://mdn.github.io/webassembwy-exampwes/js-api-exampwes/gwobaw.htmw) p-pawa uma twansmissão a-ao vivo e-exempwo de javascwipt):
 
 ```wasm
-(module
-   (global $g (import "js" "global") (mut i32))
-   (func (export "getGlobal") (result i32)
-        (global.get $g))
-   (func (export "incGlobal")
-        (global.set $g
-            (i32.add (global.get $g) (i32.const 1))))
+(moduwe
+   (gwobaw $g (impowt "js" "gwobaw") (mut i-i32))
+   (func (expowt "getgwobaw") (wesuwt i-i32)
+        (gwobaw.get $g))
+   (func (expowt "incgwobaw")
+        (gwobaw.set $g
+            (i32.add (gwobaw.get $g) (i32.const 1))))
 )
 ```
 
-Isso é semelhante ao que vimos antes, exceto que especificamos um valor global usando a palavra-chave `global` e também especificamos a palavra-chave `mut` junto com o tipo de dados do valor, se quisermos que ele seja mutável.
+i-isso é semewhante ao que vimos a-antes, ^^ exceto q-que especificamos um vawow gwobaw u-usando a pawavwa-chave `gwobaw` e-e também especificamos a pawavwa-chave `mut` junto com o tipo d-de dados do vawow, 😳 se quisewmos que ewe seja mutávew. :3
 
-Para criar um valor equivalente usando JavaScript, você usaria o construtor [`WebAssembly.Global()`](/pt-BR/docs/WebAssembly/JavaScript_interface/Global):
+p-pawa cwiaw um vawow equivawente u-usando j-javascwipt, (⑅˘꒳˘) você usawia o constwutow [`webassembwy.gwobaw()`](/pt-bw/docs/webassembwy/javascwipt_intewface/gwobaw):
 
 ```js
-const global = new WebAssembly.Global({ value: "i32", mutable: true }, 0);
+c-const g-gwobaw = nyew w-webassembwy.gwobaw({ vawue: "i32", ( ͡o ω ͡o ) m-mutabwe: twue }, :3 0);
 ```
 
-### Memória WebAssembly
+### m-memówia webassembwy
 
-O exemplo acima é uma função de registro terrível: ela imprime apenas um único inteiro! E se quiséssemos registrar uma string de texto? Para lidar com strings e outros tipos de dados mais complexos, o WebAssembly fornece **memory** (embora também tenhamos [tipos de referência](#reference_types) na implementação mais recente do WebAssembly). De acordo com o WebAssembly, a memória é apenas uma grande matriz de bytes que pode crescer com o tempo. O WebAssembly contém instruções como `i32.load` e `i32.store` para leitura e gravação de [memória linear](https://webassembly.github.io/spec/core/exec/index.html#linear-memory).
+o exempwo a-acima é uma função de wegistwo t-tewwívew: ewa i-impwime apenas u-um único inteiwo! (⑅˘꒳˘) e se quiséssemos w-wegistwaw uma stwing de texto? pawa widaw c-com stwings e outwos tipos de dados mais compwexos, >w< o webassembwy fownece **memowy** (embowa também tenhamos [tipos d-de wefewência](#wefewence_types) na impwementação mais wecente do webassembwy). OwO de acowdo com o webassembwy, 😳 a memówia é a-apenas uma gwande matwiz de bytes que pode cwescew c-com o tempo. o webassembwy c-contém instwuções como `i32.woad` e `i32.stowe` p-pawa weituwa e gwavação de [memówia w-wineaw](https://webassembwy.github.io/spec/cowe/exec/index.htmw#wineaw-memowy). OwO
 
-Do ponto de vista do JavaScript, é como se a memória estivesse toda dentro de um grande {{jsxref("ArrayBuffer")}} (redimensionável). Isso é literalmente tudo o que o asm.js tem para brincar (exceto que não é redimensionável; veja o asm.js [modelo de programação](http://asmjs.org/spec/latest/#programming-model)).
+do p-ponto de vista do j-javascwipt, 🥺 é como se a memówia estivesse toda d-dentwo de um gwande {{jsxwef("awwaybuffew")}} (wedimensionávew). (˘ω˘) isso é witewawmente tudo o q-que o asm.js tem pawa bwincaw (exceto q-que nyão é wedimensionávew; v-veja o asm.js [modewo de pwogwamação](http://asmjs.owg/spec/watest/#pwogwamming-modew)). 😳😳😳
 
-Portanto, uma string é apenas uma sequência de bytes em algum lugar dentro dessa memória linear. Vamos supor que escrevemos uma string adequada de bytes na memória; como passamos essa string para JavaScript?
+p-powtanto, mya uma s-stwing é apenas uma sequência de bytes em awgum w-wugaw dentwo dessa memówia wineaw. OwO vamos supow q-que escwevemos uma stwing adequada de bytes nya memówia; como passamos essa stwing p-pawa javascwipt?
 
-A chave é que o JavaScript pode criar instâncias de memória linear WebAssembly por meio da interface [`WebAssembly.Memory()`](/pt-BR/docs/WebAssembly/JavaScript_interface/Memory) e acessar uma instância de memória existente (atualmente, você só pode ter uma por instância de módulo) usando os métodos de instância associados. As instâncias de memória têm um getter [`buffer`](/pt-BR/docs/WebAssembly/JavaScript_interface/Memory/buffer), que retorna um `ArrayBuffer` que aponta para toda a memória linear.
+a-a chave é que o javascwipt p-pode cwiaw instâncias d-de memówia wineaw webassembwy p-pow meio da intewface [`webassembwy.memowy()`](/pt-bw/docs/webassembwy/javascwipt_intewface/memowy) e acessaw uma instância de memówia e-existente (atuawmente, >_< v-você só pode tew uma p-pow instância d-de móduwo) usando os métodos de i-instância associados. 😳 as instâncias de memówia t-têm um gettew [`buffew`](/pt-bw/docs/webassembwy/javascwipt_intewface/memowy/buffew), (U ᵕ U❁) que wetowna um `awwaybuffew` q-que aponta p-pawa toda a memówia wineaw.
 
-As instâncias de memória também podem aumentar, por exemplo, por meio do método [`Memory.grow()`](/pt-BR/docs/WebAssembly/JavaScript_interface/Memory/grow) em JavaScript. Quando o crescimento ocorre, já que `ArrayBuffer`s não podem mudar de tamanho, o `ArrayBuffer` atual é separado e um novo `ArrayBuffer` é criado para apontar para a memória maior e mais nova. Isso significa que tudo o que precisamos fazer para passar uma string para JavaScript é passar o deslocamento da string na memória linear junto com alguma forma de indicar o comprimento.
+as instâncias d-de memówia também podem aumentaw, 🥺 pow exempwo, (U ﹏ U) pow meio do método [`memowy.gwow()`](/pt-bw/docs/webassembwy/javascwipt_intewface/memowy/gwow) em javascwipt. (U ﹏ U) quando o cwescimento ocowwe, rawr x3 já que `awwaybuffew`s n-nyão podem m-mudaw de tamanho, :3 o `awwaybuffew` a-atuaw é sepawado e-e um nyovo `awwaybuffew` é cwiado pawa apontaw p-pawa a memówia maiow e mais nyova. rawr isso significa que tudo o que pwecisamos fazew pawa passaw u-uma stwing pawa javascwipt é passaw o deswocamento da stwing nya memówia wineaw j-junto com awguma f-fowma de indicaw o-o compwimento. XD
 
-Embora existam muitas maneiras de codificar o comprimento de uma string na própria string (por exemplo, strings C); para simplificar aqui, apenas passamos o deslocamento e o comprimento como parâmetros:
+embowa existam muitas maneiwas de codificaw o-o compwimento d-de uma stwing nya p-pwópwia stwing (pow exempwo, ^^ s-stwings c); pawa simpwificaw aqui, a-apenas passamos o deswocamento e-e o compwimento como pawâmetwos:
 
 ```wasm
-(import "console" "log" (func $log (param i32) (param i32)))
+(impowt "consowe" "wog" (func $wog (pawam i-i32) (pawam i32)))
 ```
 
-No lado do JavaScript, podemos usar a [API TextDecoder](/pt-BR/docs/Web/API/TextDecoder) para decodificar facilmente nossos bytes em uma string JavaScript. (Especificamos `utf8` aqui, mas muitas outras codificações são suportadas.)
+nyo wado do javascwipt, mya p-podemos usaw a [api textdecodew](/pt-bw/docs/web/api/textdecodew) p-pawa decodificaw f-faciwmente nyossos bytes e-em uma stwing j-javascwipt. (U ﹏ U) (especificamos `utf8` aqui, 😳 mas muitas o-outwas codificações são s-supowtadas.)
 
 ```js
-function consoleLogString(offset, length) {
-  const bytes = new Uint8Array(memory.buffer, offset, length);
-  const string = new TextDecoder("utf8").decode(bytes);
-  console.log(string);
+function consowewogstwing(offset, mya w-wength) {
+  c-const bytes = nyew uint8awway(memowy.buffew, 😳 offset, wength);
+  c-const stwing = nyew textdecodew("utf8").decode(bytes);
+  consowe.wog(stwing);
 }
 ```
 
-A última peça que falta do quebra-cabeça é onde `consoleLogString` obtém acesso à `memory` do WebAssembly. WebAssembly nos dá muita flexibilidade aqui: podemos criar um objeto [`Memory`](/pt-BR/docs/WebAssembly/JavaScript_interface/Memory) em JavaScript e fazer com que o módulo WebAssembly importe a memória, ou podemos fazer com que o módulo WebAssembly crie a memória e exporte-a para JavaScript.
+a úwtima peça que fawta do quebwa-cabeça é onde `consowewogstwing` obtém a-acesso à `memowy` do webassembwy. webassembwy n-nyos dá muita fwexibiwidade a-aqui: podemos cwiaw um objeto [`memowy`](/pt-bw/docs/webassembwy/javascwipt_intewface/memowy) em javascwipt e fazew c-com que o móduwo webassembwy impowte a memówia, ^^ o-ou podemos fazew com que o móduwo webassembwy c-cwie a memówia e expowte-a pawa javascwipt. :3
 
-Para simplificar, vamos criá-lo em JavaScript e depois importá-lo para o WebAssembly. Nossa instrução `import` é escrita da seguinte forma:
-
-```wasm
-(import "js" "mem" (memory 1))
-```
-
-O `1` indica que a memória importada deve ter pelo menos 1 página de memória (o WebAssembly define uma página como 64KB).
-
-Então vamos ver um módulo completo que imprime a string "Hi". Em um programa C compilado normal, você chamaria uma função para alocar um pouco de memória para a string, mas como estamos apenas escrevendo nosso próprio assembly aqui e possuímos toda a memória linear, podemos apenas escrever o conteúdo da string na memória global usando uma seção `data`. As seções de dados permitem que uma sequência de bytes seja escrita em um determinado deslocamento no tempo de instanciação e são semelhantes às seções `.data` em formatos executáveis nativos.
-
-Nosso módulo Wasm final se parece com isso:
+p-pawa simpwificaw, (U ﹏ U) vamos cwiá-wo em javascwipt e-e depois impowtá-wo p-pawa o webassembwy. UwU nyossa instwução `impowt` é e-escwita d-da seguinte fowma:
 
 ```wasm
-(module
-  (import "console" "log" (func $log (param i32 i32)))
-  (import "js" "mem" (memory 1))
-  (data (i32.const 0) "Hi")
-  (func (export "writeHi")
-    i32.const 0  ;; pass offset 0 to log
-    i32.const 2  ;; pass length 2 to log
-    call $log))
+(impowt "js" "mem" (memowy 1))
 ```
 
-> [!NOTE]
-> Acima, observe a sintaxe de ponto e vírgula dupla (`;;`) para permitir comentários em arquivos WebAssembly.
+o `1` indica q-que a memówia impowtada d-deve tew pewo menos 1 página de memówia (o w-webassembwy define uma página como 64kb). (ˆ ﻌ ˆ)♡
 
-Agora, a partir do JavaScript, podemos criar uma memória com 1 página e passá-la. Isso resulta em "Hi" sendo impresso no console:
+então vamos vew u-um móduwo compweto que impwime a stwing "hi". (ˆ ﻌ ˆ)♡ em um pwogwama c-c compiwado nyowmaw, ^^;; v-você chamawia u-uma função pawa awocaw um pouco de memówia pawa a stwing, rawr m-mas como estamos apenas escwevendo n-nyosso pwópwio assembwy aqui e-e possuímos t-toda a memówia wineaw, nyaa~~ podemos apenas escwevew o conteúdo da stwing nya memówia gwobaw usando u-uma seção `data`. rawr x3 a-as seções de dados pewmitem que uma sequência d-de bytes seja escwita em um detewminado deswocamento n-nyo tempo d-de instanciação e-e são semewhantes às s-seções `.data` em f-fowmatos executáveis n-nyativos. (⑅˘꒳˘)
+
+nyosso móduwo wasm finaw se p-pawece com isso:
+
+```wasm
+(moduwe
+  (impowt "consowe" "wog" (func $wog (pawam i-i32 i-i32)))
+  (impowt "js" "mem" (memowy 1))
+  (data (i32.const 0) "hi")
+  (func (expowt "wwitehi")
+    i-i32.const 0  ;; p-pass offset 0 t-to wog
+    i32.const 2  ;; pass w-wength 2 to wog
+    c-caww $wog))
+```
+
+> [!note]
+> a-acima, OwO obsewve a sintaxe de ponto e víwguwa d-dupwa (`;;`) pawa pewmitiw comentáwios em awquivos w-webassembwy. OwO
+
+agowa, ʘwʘ a pawtiw do javascwipt, :3 p-podemos cwiaw u-uma memówia com 1 página e passá-wa. mya isso wesuwta em "hi" sendo i-impwesso nyo c-consowe:
 
 ```js
-const memory = new WebAssembly.Memory({ initial: 1 });
+const memowy = nyew w-webassembwy.memowy({ i-initiaw: 1 });
 
-const importObject = {
-  console: { log: consoleLogString },
-  js: { mem: memory },
+const impowtobject = {
+  consowe: { wog: consowewogstwing }, OwO
+  j-js: { mem: m-memowy }, :3
 };
 
-WebAssembly.instantiateStreaming(fetch("logger2.wasm"), importObject).then(
+webassembwy.instantiatestweaming(fetch("woggew2.wasm"), >_< impowtobject).then(
   (obj) => {
-    obj.instance.exports.writeHi();
-  },
+    o-obj.instance.expowts.wwitehi();
+  }, σωσ
 );
 ```
 
-> [!NOTE]
-> Você pode encontrar a fonte completa no GitHub como [logger2.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/logger2.html) ([também veja ao vivo](https://mdn.github.io/webassembly-examples/understanding-text-format/logger2.html)).
+> [!note]
+> v-você pode encontwaw a fonte compweta no g-github como [woggew2.htmw](https://github.com/mdn/webassembwy-exampwes/bwob/mastew/undewstanding-text-fowmat/woggew2.htmw) ([também veja ao vivo](https://mdn.github.io/webassembwy-exampwes/undewstanding-text-fowmat/woggew2.htmw)). /(^•ω•^)
 
-### Tabelas WebAssembly
+### tabewas webassembwy
 
-Para terminar este tour pelo formato de texto do WebAssembly, vamos dar uma olhada na parte mais complexa e muitas vezes confusa do WebAssembly: **tables**. As tabelas são basicamente matrizes redimensionáveis de referências que podem ser acessadas por índice do código WebAssembly.
+pawa tewminaw este touw pewo fowmato d-de texto do webassembwy, mya vamos daw uma owhada n-nya pawte mais c-compwexa e muitas v-vezes confusa do webassembwy: **tabwes**. nyaa~~ a-as tabewas são b-basicamente matwizes w-wedimensionáveis d-de wefewências q-que podem sew acessadas pow índice do código w-webassembwy. 😳
 
-Para ver por que as tabelas são necessárias, precisamos primeiro observar que a instrução `call` que vimos anteriormente (consulte [Chamando funções de outras funções no mesmo módulo](#calling_functions_from_other_functions_in_the_same_module)) usa um índice de função estático e, portanto, só pode chamar uma função - mas e se o callee for um valor de tempo de execução?
+p-pawa vew pow q-que as tabewas são nyecessáwias, ^^;; p-pwecisamos pwimeiwo o-obsewvaw q-que a instwução `caww` que vimos a-antewiowmente (consuwte [chamando f-funções d-de outwas funções n-nyo mesmo móduwo](#cawwing_functions_fwom_othew_functions_in_the_same_moduwe)) u-usa um índice de função estático e-e, 😳😳😳 powtanto, só pode chamaw u-uma função - m-mas e se o cawwee fow um vawow de tempo de execução?
 
-- Em JavaScript, vemos isso o tempo todo: funções são valores de primeira classe.
-- Em C/C++, vemos isso com ponteiros de função.
-- Em C++, vemos isso com funções virtuais.
+- em j-javascwipt, nyaa~~ vemos i-isso o tempo todo: funções s-são vawowes de p-pwimeiwa cwasse. 🥺
+- em c/c++, XD vemos isso com ponteiwos d-de função. (ꈍᴗꈍ)
+- e-em c++, 😳😳😳 vemos i-isso com funções v-viwtuais. ( ͡o ω ͡o )
 
-O WebAssembly precisava de um tipo de instrução de chamada para conseguir isso, então demos a ela `call_indirect`, que recebe um operando de função dinâmica. O problema é que os únicos tipos que temos para dar operandos no WebAssembly são (atualmente) `i32`/`i64`/`f32`/`f64`.
+o-o webassembwy p-pwecisava de um tipo de instwução de chamada pawa c-conseguiw isso, nyaa~~ então demos a ewa `caww_indiwect`, XD que wecebe um opewando de f-função dinâmica. (ˆ ﻌ ˆ)♡ o-o pwobwema é que os únicos tipos que temos pawa daw opewandos n-nyo webassembwy s-são (atuawmente) `i32`/`i64`/`f32`/`f64`. rawr x3
 
-WebAssembly poderia adicionar um tipo `anyfunc` ("qualquer" porque o tipo poderia conter funções de qualquer assinatura), mas infelizmente este tipo `anyfunc` não poderia ser armazenado na memória linear por razões de segurança. A memória linear expõe o conteúdo bruto de valores armazenados como bytes e isso permitiria que o conteúdo do Wasm observasse e corrompesse arbitrariamente os endereços de funções brutas, algo que não pode ser permitido na web.
+webassembwy podewia adicionaw u-um tipo `anyfunc` ("quawquew" powque o-o tipo podewia c-contew funções d-de quawquew assinatuwa), OwO mas infewizmente este tipo `anyfunc` n-nyão podewia sew awmazenado n-nya memówia wineaw pow wazões d-de seguwança. UwU a memówia wineaw expõe o conteúdo b-bwuto de vawowes awmazenados c-como bytes e isso pewmitiwia que o conteúdo do w-wasm obsewvasse e cowwompesse awbitwawiamente os e-endeweços de funções bwutas, ^^ awgo que nyão pode sew pewmitido na web. (✿oωo)
 
-A solução foi armazenar as referências de função em uma tabela e, em vez disso, passar os índices da tabela, que são apenas valores i32. O operando de `call_indirect` pode, portanto, ser um valor de índice i32.
+a sowução foi awmazenaw as wefewências d-de função e-em uma tabewa e-e, 😳😳😳 em vez disso, 🥺 p-passaw os índices da tabewa, ʘwʘ que são apenas v-vawowes i32. 😳 o opewando de `caww_indiwect` pode, ^^;; powtanto, (///ˬ///✿) sew um v-vawow de índice i-i32. OwO
 
-#### Definindo uma tabela no Wasm
+#### definindo u-uma tabewa n-nyo wasm
 
-Então, como colocamos as funções Wasm em nossa tabela? Assim como as seções `data` podem ser usadas para inicializar regiões de memória linear com bytes, as seções `elem` podem ser usadas para inicializar regiões de tabelas com funções:
+então, -.- como cowocamos as funções wasm em nyossa tabewa? assim como a-as seções `data` p-podem sew usadas pawa iniciawizaw wegiões de memówia wineaw c-com bytes, ^^ as seções `ewem` p-podem sew usadas p-pawa iniciawizaw w-wegiões de tabewas com funções:
 
 ```wasm
-(module
-  (table 2 funcref)
-  (elem (i32.const 0) $f1 $f2)
-  (func $f1 (result i32)
+(moduwe
+  (tabwe 2 funcwef)
+  (ewem (i32.const 0) $f1 $f2)
+  (func $f1 (wesuwt i32)
     i32.const 42)
-  (func $f2 (result i32)
+  (func $f2 (wesuwt i32)
     i32.const 13)
   ...
 )
 ```
 
-- Em `(table 2 funcref)`, o 2 é o tamanho inicial da tabela (ou seja, irá armazenar duas referências) e `funcref` declara que o tipo de elemento dessas referências é referência de função.
-- As seções de funções (`func`) são como quaisquer outras funções declaradas do Wasm. Estas são as funções às quais vamos nos referir em nossa tabela (por exemplo, cada uma apenas retorna um valor constante). Observe que a ordem em que as seções são declaradas não importa aqui — você pode declarar suas funções em qualquer lugar e ainda se referir a elas em sua seção `elem`.
-- A seção `elem` pode listar qualquer subconjunto das funções em um módulo, em qualquer ordem, permitindo duplicatas. Esta é uma lista das funções que devem ser referenciadas pela tabela, na ordem em que devem ser referenciadas.
-- O valor `(i32.const 0)` dentro da seção `elem` é um deslocamento — isso precisa ser declarado no início da seção e especifica em qual índice na tabela as referências de função começam a ser preenchidas. Aqui especificamos 0 e um tamanho de 2 (veja acima), para que possamos preencher duas referências nos índices 0 e 1. Se quiséssemos começar a escrever nossas referências no deslocamento 1, teríamos que escrever `(i32.const 1)`, e o tamanho da tabela teria que ser 3.
+- e-em `(tabwe 2 funcwef)`, (ꈍᴗꈍ) o 2 é o t-tamanho iniciaw da tabewa (ou seja, ^^;; iwá awmazenaw duas wefewências) e-e `funcwef` decwawa que o t-tipo de ewemento dessas wefewências é wefewência d-de função. (˘ω˘)
+- a-as seções d-de funções (`func`) s-são como q-quaisquew outwas funções decwawadas d-do wasm. 🥺 estas s-são as funções às quais v-vamos nyos wefewiw em nossa tabewa (pow exempwo, ʘwʘ c-cada uma apenas wetowna um vawow c-constante). (///ˬ///✿) obsewve q-que a owdem em que as seções s-são decwawadas n-nyão impowta aqui — você pode decwawaw suas funções e-em quawquew wugaw e-e ainda se wefewiw a-a ewas em sua s-seção `ewem`. ^^;;
+- a seção `ewem` pode wistaw quawquew subconjunto d-das funções em um móduwo, em quawquew o-owdem, XD pewmitindo dupwicatas. (ˆ ﻌ ˆ)♡ esta é uma wista d-das funções que devem sew wefewenciadas pewa tabewa, (˘ω˘) nya owdem e-em que devem sew wefewenciadas. σωσ
+- o-o vawow `(i32.const 0)` d-dentwo d-da seção `ewem` é um deswocamento — i-isso p-pwecisa sew decwawado nyo início d-da seção e especifica e-em quaw índice n-na tabewa a-as wefewências de função c-começam a sew pweenchidas. 😳😳😳 a-aqui e-especificamos 0 e um tamanho de 2 (veja a-acima), ^•ﻌ•^ pawa que possamos pweenchew duas wefewências nyos índices 0 e 1. se quiséssemos começaw a escwevew n-nyossas w-wefewências nyo deswocamento 1, σωσ t-tewíamos que escwevew `(i32.const 1)`, (///ˬ///✿) e o tamanho da tabewa tewia q-que sew 3. XD
 
-> [!NOTE]
-> Os elementos não inicializados recebem um valor padrão de ativação.
+> [!note]
+> o-os e-ewementos nyão i-iniciawizados wecebem um vawow padwão d-de ativação. >_<
 
-Em JavaScript, as chamadas equivalentes para criar tal instância de tabela seriam mais ou menos assim:
+em javascwipt, òωó as chamadas e-equivawentes pawa c-cwiaw taw instância de tabewa sewiam mais ou menos assim:
 
 ```js
-function () {
-  // seção da tabela
-  const tbl = new WebAssembly.Table({initial: 2, element: "anyfunc"});
+f-function () {
+  // seção d-da tabewa
+  const tbw = nyew webassembwy.tabwe({initiaw: 2, (U ᵕ U❁) ewement: "anyfunc"});
 
-  // seções de função:
-  const f1 = ... /* alguma função WebAssembly importada */
-  const f2 = ... /* alguma função WebAssembly importada */
+  // s-seções de função:
+  c-const f1 = ... /* awguma função webassembwy impowtada */
+  c-const f2 = ... /* a-awguma função webassembwy impowtada */
 
-  // seção de elementos
-  tbl.set(0, f1);
-  tbl.set(1, f2);
+  // seção d-de ewementos
+  t-tbw.set(0, (˘ω˘) f1);
+  tbw.set(1, 🥺 f2);
 };
 ```
 
-#### Usando a tabela
+#### u-usando a tabewa
 
-Seguindo em frente, agora que definimos a tabela, precisamos usá-la de alguma forma. Vamos usar esta seção de código para fazer isso:
+seguindo em fwente, (✿oωo) agowa q-que definimos a t-tabewa, (˘ω˘) pwecisamos u-usá-wa de awguma fowma. (ꈍᴗꈍ) vamos usaw esta seção de código pawa fazew isso:
 
 ```wasm
-(type $return_i32 (func (result i32))) ;; se fosse f32, a verificação de tipo falharia
-(func (export "callByIndex") (param $i i32) (result i32)
-  local.get $i
-  call_indirect (type $return_i32))
+(type $wetuwn_i32 (func (wesuwt i32))) ;; s-se fosse f32, ( ͡o ω ͡o ) a vewificação de tipo fawhawia
+(func (expowt "cawwbyindex") (pawam $i i-i32) (wesuwt i-i32)
+  wocaw.get $i
+  caww_indiwect (type $wetuwn_i32))
 ```
 
-- O bloco `(type $return_i32 (func (result i32)))` especifica um tipo, com um nome de referência. Esse tipo é usado ao executar a verificação de tipo das chamadas de referência de função de tabela posteriormente. Aqui estamos dizendo que as referências precisam ser funções que retornam um `i32` como resultado.
-- Em seguida, definimos uma função que será exportada com o nome `callByIndex`. Isso levará um `i32` como parâmetro, que recebe o nome de argumento `$i`.
-- Dentro da função, adicionamos um valor à pilha — qualquer valor que seja passado como parâmetro `$i`.
-- Por fim, usamos `call_indirect` para chamar uma função da tabela — ela extrai implicitamente o valor de `$i` da pilha. O resultado líquido disso é que a função `callByIndex` invoca a função `$i`'th na tabela.
+- o bwoco `(type $wetuwn_i32 (func (wesuwt i-i32)))` e-especifica um tipo, (U ᵕ U❁) com um nyome de wefewência. ʘwʘ esse tipo é u-usado ao executaw a vewificação d-de tipo das chamadas de wefewência de função d-de tabewa p-postewiowmente. (ˆ ﻌ ˆ)♡ aqui estamos dizendo q-que as wefewências p-pwecisam sew funções q-que wetownam um `i32` como wesuwtado. /(^•ω•^)
+- e-em seguida, (ˆ ﻌ ˆ)♡ d-definimos uma f-função que sewá e-expowtada com o-o nyome `cawwbyindex`. (✿oωo) isso wevawá u-um `i32` c-como pawâmetwo, ^•ﻌ•^ que wecebe o nyome de awgumento `$i`. (ˆ ﻌ ˆ)♡
+- d-dentwo da função, XD adicionamos u-um vawow à piwha — quawquew vawow que seja passado como pawâmetwo `$i`. :3
+- pow fim, -.- usamos `caww_indiwect` p-pawa chamaw uma função d-da tabewa — ewa extwai impwicitamente o-o vawow d-de `$i` da piwha. ^^;; o wesuwtado wíquido d-disso é que a função `cawwbyindex` i-invoca a função `$i`'th n-nya tabewa. OwO
 
-Você também pode declarar o parâmetro `call_indirect` explicitamente durante a chamada do comando em vez de antes dele, assim:
+você também pode decwawaw o pawâmetwo `caww_indiwect` expwicitamente duwante a chamada do c-comando em vez de antes dewe, ^^;; assim:
 
 ```wasm
-(call_indirect (type $return_i32) (local.get $i))
+(caww_indiwect (type $wetuwn_i32) (wocaw.get $i))
 ```
 
-Em uma linguagem mais expressiva e de nível superior, como JavaScript, você pode imaginar fazer a mesma coisa com uma matriz (ou provavelmente, mais provavelmente, um objeto) contendo funções. O pseudocódigo seria algo como `tbl[i]()`.
+em uma winguagem m-mais expwessiva e de nyívew s-supewiow, 🥺 como javascwipt, ^^ você pode imaginaw fazew a mesma coisa com uma matwiz (ou pwovavewmente, o.O mais pwovavewmente, ( ͡o ω ͡o ) um objeto) contendo f-funções. nyaa~~ o pseudocódigo s-sewia a-awgo como `tbw[i]()`. (///ˬ///✿)
 
-Então, de volta à verificação de tipos. Como o WebAssembly é verificado quanto ao tipo e o `funcref` pode ser potencialmente qualquer assinatura de função, temos que fornecer a assinatura presumida do callee no callsite, portanto, incluímos o tipo `$return_i32`, para informar ao programa que uma função que retorna um `i32` é esperada. Se o receptor não tiver uma assinatura correspondente (digamos que um `f32` seja retornado), um [`WebAssembly.RuntimeError`](/pt-BR/docs/WebAssembly/JavaScript_interface/RuntimeError) será lançado.
+então, d-de vowta à vewificação d-de tipos. (ˆ ﻌ ˆ)♡ c-como o webassembwy é vewificado quanto ao t-tipo e o `funcwef` p-pode sew potenciawmente quawquew a-assinatuwa de f-função, XD temos q-que fownecew a a-assinatuwa pwesumida d-do cawwee nyo cawwsite, >_< powtanto, (U ﹏ U) i-incwuímos o-o tipo `$wetuwn_i32`, òωó p-pawa infowmaw a-ao pwogwama q-que uma função q-que wetowna u-um `i32` é espewada. >w< s-se o weceptow n-nyão tivew u-uma assinatuwa cowwespondente (digamos que um `f32` seja wetownado), ^•ﻌ•^ um [`webassembwy.wuntimeewwow`](/pt-bw/docs/webassembwy/javascwipt_intewface/wuntimeewwow) s-sewá wançado. 🥺
 
-Então, o que liga `call_indirect` à tabela que estamos chamando? A resposta é que há apenas uma tabela permitida agora por instância do módulo, e é isso que `call_indirect` está chamando implicitamente. No futuro, quando várias tabelas forem permitidas, também precisaremos especificar um identificador de tabela de algum tipo, nos moldes de
+então, o que wiga `caww_indiwect` à t-tabewa que estamos chamando? a wesposta é q-que há apenas u-uma tabewa pewmitida a-agowa pow instância do móduwo, (✿oωo) e-e é isso q-que `caww_indiwect` está chamando impwicitamente. UwU nyo futuwo, (˘ω˘) quando váwias tabewas fowem pewmitidas, ʘwʘ t-também pwecisawemos especificaw um identificadow de tabewa d-de awgum tipo, (ˆ ﻌ ˆ)♡ n-nyos mowdes de
 
 ```wasm
-call_indirect $my_spicy_table (type $i32_to_void)
+caww_indiwect $my_spicy_tabwe (type $i32_to_void)
 ```
 
-O módulo completo se parece com isso e pode ser encontrado em nosso arquivo de exemplo [wasm-table.wat](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/wasm-table.wat):
+o-o móduwo compweto s-se pawece c-com isso e pode s-sew encontwado em n-nyosso awquivo d-de exempwo [wasm-tabwe.wat](https://github.com/mdn/webassembwy-exampwes/bwob/mastew/undewstanding-text-fowmat/wasm-tabwe.wat):
 
 ```wasm
-(module
-  (table 2 funcref)
-  (func $f1 (result i32)
+(moduwe
+  (tabwe 2 f-funcwef)
+  (func $f1 (wesuwt i32)
     i32.const 42)
-  (func $f2 (result i32)
+  (func $f2 (wesuwt i-i32)
     i32.const 13)
-  (elem (i32.const 0) $f1 $f2)
-  (type $return_i32 (func (result i32)))
-  (func (export "callByIndex") (param $i i32) (result i32)
-    local.get $i
-    call_indirect (type $return_i32))
+  (ewem (i32.const 0) $f1 $f2)
+  (type $wetuwn_i32 (func (wesuwt i32)))
+  (func (expowt "cawwbyindex") (pawam $i i-i32) (wesuwt i32)
+    w-wocaw.get $i
+    c-caww_indiwect (type $wetuwn_i32))
 )
 ```
 
-Nós o carregamos em uma página da Web usando o seguinte JavaScript:
+nyós o-o cawwegamos em uma página da web usando o seguinte j-javascwipt:
 
 ```js
-WebAssembly.instantiateStreaming(fetch("wasm-table.wasm")).then((obj) => {
-  console.log(obj.instance.exports.callByIndex(0)); // retorna 42
-  console.log(obj.instance.exports.callByIndex(1)); // retorna 13
-  console.log(obj.instance.exports.callByIndex(2)); // retorna um erro, porque não há posição de índice 2 na tabela
+w-webassembwy.instantiatestweaming(fetch("wasm-tabwe.wasm")).then((obj) => {
+  c-consowe.wog(obj.instance.expowts.cawwbyindex(0)); // w-wetowna 42
+  consowe.wog(obj.instance.expowts.cawwbyindex(1)); // w-wetowna 13
+  c-consowe.wog(obj.instance.expowts.cawwbyindex(2)); // w-wetowna um ewwo, ( ͡o ω ͡o ) powque nyão há p-posição de índice 2 nya tabewa
 });
 ```
 
-> [!NOTE]
-> Você pode encontrar este exemplo no GitHub como [wasm-table.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/wasm-table.html) ([veja ao vivo também](https://mdn.github.io/webassembly-examples/understanding-text-format/wasm-table.html)).
+> [!note]
+> você pode encontwaw este exempwo nyo github como [wasm-tabwe.htmw](https://github.com/mdn/webassembwy-exampwes/bwob/mastew/undewstanding-text-fowmat/wasm-tabwe.htmw) ([veja ao vivo também](https://mdn.github.io/webassembwy-exampwes/undewstanding-text-fowmat/wasm-tabwe.htmw)).
 
-> [!NOTE]
-> Assim como a memória, as tabelas também podem ser criadas a partir de JavaScript (consulte [`WebAssembly.Table()`](/pt-BR/docs/WebAssembly/JavaScript_interface/Table)) bem como importadas de/para outro módulo Wasm.
+> [!note]
+> assim como a memówia, :3 a-as tabewas também p-podem sew cwiadas a pawtiw de javascwipt (consuwte [`webassembwy.tabwe()`](/pt-bw/docs/webassembwy/javascwipt_intewface/tabwe)) bem como impowtadas de/pawa o-outwo móduwo w-wasm. 😳
 
-### Tabelas mutantes e links dinâmicos
+### tabewas mutantes e winks dinâmicos
 
-Como o JavaScript tem acesso total às referências de função, o objeto Tabela pode sofrer mutação do JavaScript usando os métodos [`grow()`](/pt-BR/docs/WebAssembly/JavaScript_interface/Table/grow), [`get()`](/pt-BR/docs/WebAssembly/JavaScript_interface/Table/get) e [`set()`](/pt-BR/docs/WebAssembly/JavaScript_interface/Table/set). E o próprio código WebAssembly é capaz de manipular tabelas usando instruções adicionadas como parte de [Tipos de referência](#reference_types), como `table.get` e `table.set`.
+como o javascwipt t-tem acesso totaw às w-wefewências de função, (✿oωo) o-o objeto tabewa p-pode sofwew mutação do javascwipt u-usando os métodos [`gwow()`](/pt-bw/docs/webassembwy/javascwipt_intewface/tabwe/gwow), [`get()`](/pt-bw/docs/webassembwy/javascwipt_intewface/tabwe/get) e-e [`set()`](/pt-bw/docs/webassembwy/javascwipt_intewface/tabwe/set). /(^•ω•^) e-e o pwópwio código webassembwy é capaz de manipuwaw tabewas u-usando instwuções a-adicionadas c-como pawte de [tipos d-de wefewência](#wefewence_types), :3 como `tabwe.get` e-e `tabwe.set`. σωσ
 
-Como as tabelas são mutáveis, elas podem ser usadas para implementar [esquemas de vinculação dinâmica] sofisticados de tempo de carregamento e tempo de execução (https://github.com/WebAssembly/tool-conventions/blob/main/DynamicLinking.md). Quando um programa é vinculado dinamicamente, várias instâncias compartilham a mesma memória e tabela. Isso é simétrico para um aplicativo nativo onde vários `.dll`s compilados compartilham o espaço de endereço de um único processo.
+c-como a-as tabewas são m-mutáveis, σωσ ewas podem sew usadas pawa impwementaw [esquemas d-de v-vincuwação dinâmica] sofisticados de tempo de cawwegamento e tempo de execução (https://github.com/webassembwy/toow-conventions/bwob/main/dynamicwinking.md). 🥺 q-quando um pwogwama é v-vincuwado dinamicamente, rawr v-váwias instâncias compawtiwham a mesma memówia e tabewa. o.O isso é s-simétwico p-pawa um apwicativo n-nyativo onde váwios `.dww`s c-compiwados compawtiwham o-o espaço de endeweço de um único pwocesso. 😳😳😳
 
-Para ver isso em ação, criaremos um único objeto de importação contendo um objeto de memória e um objeto de tabela e passaremos esse mesmo objeto de importação para várias chamadas [`instantiate()`](/pt-BR/docs/WebAssembly/JavaScript_interface/instantiate_static).
+p-pawa vew i-isso em ação, c-cwiawemos um único o-objeto de i-impowtação contendo u-um objeto de memówia e um objeto de tabewa e passawemos esse mesmo objeto de impowtação p-pawa váwias chamadas [`instantiate()`](/pt-bw/docs/webassembwy/javascwipt_intewface/instantiate_static). /(^•ω•^)
 
-Nossos exemplos de `.wat` são assim:
+nyossos e-exempwos de `.wat` s-são assim:
 
-`shared0.wat`:
+`shawed0.wat`:
 
 ```wasm
-(module
-  (import "js" "memory" (memory 1))
-  (import "js" "table" (table 1 funcref))
-  (elem (i32.const 0) $shared0func)
-  (func $shared0func (result i32)
+(moduwe
+  (impowt "js" "memowy" (memowy 1))
+  (impowt "js" "tabwe" (tabwe 1 funcwef))
+  (ewem (i32.const 0) $shawed0func)
+  (func $shawed0func (wesuwt i32)
    i32.const 0
-   i32.load)
+   i32.woad)
 )
 ```
 
-`shared1.wat`:
+`shawed1.wat`:
 
 ```wasm
-(module
-  (import "js" "memory" (memory 1))
-  (import "js" "table" (table 1 funcref))
-  (type $void_to_i32 (func (result i32)))
-  (func (export "doIt") (result i32)
+(moduwe
+  (impowt "js" "memowy" (memowy 1))
+  (impowt "js" "tabwe" (tabwe 1 funcwef))
+  (type $void_to_i32 (func (wesuwt i-i32)))
+  (func (expowt "doit") (wesuwt i-i32)
    i32.const 0
    i32.const 42
-   i32.store  ;; store 42 at address 0
+   i-i32.stowe  ;; stowe 42 a-at addwess 0
    i32.const 0
-   call_indirect (type $void_to_i32))
+   caww_indiwect (type $void_to_i32))
 )
 ```
 
-Estes funcionam da seguinte forma:
+estes f-funcionam da seguinte fowma:
 
-1. A função `shared0func` é definida em `shared0.wat` e armazenada em nossa tabela importada.
-2. Esta função cria uma constante contendo o valor `0`, e então usa o comando `i32.load` para carregar o valor contido no índice de memória fornecido. O índice fornecido é `0` — novamente, ele extrai implicitamente o valor anterior da pilha. Então `shared0func` carrega e retorna o valor armazenado no índice de memória `0`.
-3. Em `shared1.wat`, exportamos uma função chamada `doIt` — esta função cria duas constantes contendo os valores `0` e `42`, então chama `i32.store` para armazenar um valor fornecido em um índice fornecido da memória importada. Novamente, ele extrai implicitamente esses valores da pilha, então o resultado é que ele armazena o valor `42` no índice de memória `0`,
-4. Na última parte da função, criamos uma constante com valor `0`, então chamamos a função neste índice 0 da tabela, que é `shared0func`, armazenado lá anteriormente pelo bloco `elem` em `shared0.wat`.
-5. Quando chamado, `shared0func` carrega o `42` que armazenamos na memória usando o comando `i32.store` em `shared1.wat`.
+1. σωσ a função `shawed0func` é definida em `shawed0.wat` e-e awmazenada e-em nyossa tabewa i-impowtada. OwO
+2. e-esta função cwia uma constante contendo o vawow `0`, OwO e-e então usa o comando `i32.woad` p-pawa cawwegaw o vawow contido nyo índice d-de memówia f-fownecido. òωó o índice f-fownecido é `0` — nyovamente, ewe extwai i-impwicitamente o vawow antewiow da piwha. :3 então `shawed0func` cawwega e wetowna o vawow awmazenado nyo índice de memówia `0`. σωσ
+3. σωσ e-em `shawed1.wat`, -.- e-expowtamos uma função chamada `doit` — esta função cwia duas constantes contendo o-os vawowes `0` e `42`, (///ˬ///✿) então chama `i32.stowe` pawa awmazenaw um v-vawow fownecido e-em um índice f-fownecido da memówia i-impowtada. rawr x3 nyovamente, (U ﹏ U) ewe extwai impwicitamente esses vawowes da piwha, òωó então o wesuwtado é q-que ewe awmazena o-o vawow `42` n-nyo índice de m-memówia `0`,
+4. OwO nya úwtima pawte d-da função, ^^ cwiamos uma constante c-com vawow `0`, /(^•ω•^) então chamamos a função nyeste índice 0 d-da tabewa, >_< que é `shawed0func`, -.- a-awmazenado wá a-antewiowmente p-pewo bwoco `ewem` em `shawed0.wat`. (˘ω˘)
+5. q-quando chamado, >_< `shawed0func` c-cawwega o `42` que awmazenamos nya memówia usando o comando `i32.stowe` em `shawed1.wat`. (˘ω˘)
 
-> [!NOTE]
-> As expressões acima novamente extraem valores da pilha implicitamente, mas você pode declará-los explicitamente dentro das chamadas de comando, por exemplo:
+> [!note]
+> a-as e-expwessões acima nyovamente extwaem vawowes da piwha impwicitamente, >w< m-mas você pode decwawá-wos e-expwicitamente d-dentwo das chamadas d-de comando, 😳😳😳 pow exempwo:
 >
 > ```wasm
-> (i32.store (i32.const 0) (i32.const 42))
-> (call_indirect (type $void_to_i32) (i32.const 0))
+> (i32.stowe (i32.const 0) (i32.const 42))
+> (caww_indiwect (type $void_to_i32) (i32.const 0))
 > ```
 
-Depois de converter para assembly, usamos `shared0.wasm` e `shared1.wasm` em JavaScript por meio do seguinte código:
+depois de convewtew pawa assembwy, usamos `shawed0.wasm` e `shawed1.wasm` e-em javascwipt pow meio d-do seguinte código:
 
 ```js
-const importObj = {
-  js: {
-    memory: new WebAssembly.Memory({ initial: 1 }),
-    table: new WebAssembly.Table({ initial: 1, element: "anyfunc" }),
-  },
+const impowtobj = {
+  j-js: {
+    memowy: nyew webassembwy.memowy({ i-initiaw: 1 }), 😳
+    t-tabwe: new webassembwy.tabwe({ i-initiaw: 1, XD ewement: "anyfunc" }), OwO
+  }, -.-
 };
 
-Promise.all([
-  WebAssembly.instantiateStreaming(fetch("shared0.wasm"), importObj),
-  WebAssembly.instantiateStreaming(fetch("shared1.wasm"), importObj),
-]).then((results) => {
-  console.log(results[1].instance.exports.doIt()); // prints 42
+p-pwomise.aww([
+  w-webassembwy.instantiatestweaming(fetch("shawed0.wasm"), o.O impowtobj),
+  w-webassembwy.instantiatestweaming(fetch("shawed1.wasm"), ^^ impowtobj), ^^
+]).then((wesuwts) => {
+  consowe.wog(wesuwts[1].instance.expowts.doit()); // pwints 42
 });
 ```
 
-Cada um dos módulos que está sendo compilado pode importar a mesma memória e objetos de tabela e, assim, compartilhar a mesma memória linear e "espaço de endereçamento" de tabela.
+cada um d-dos móduwos que está sendo compiwado pode impowtaw a-a mesma memówia e-e objetos d-de tabewa e, XD assim, compawtiwhaw a mesma memówia wineaw e "espaço de endeweçamento" d-de tabewa. >w<
 
-> [!NOTE]
-> Você pode encontrar este exemplo no GitHub como [shared-address-space.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/shared-address-space.html) ([veja ao vivo também](https://mdn.github.io/webassembly-examples/understanding-text-format/shared-address-space.html)).
+> [!note]
+> você p-pode encontwaw e-este exempwo n-nyo github como [shawed-addwess-space.htmw](https://github.com/mdn/webassembwy-exampwes/bwob/mastew/undewstanding-text-fowmat/shawed-addwess-space.htmw) ([veja ao vivo também](https://mdn.github.io/webassembwy-exampwes/undewstanding-text-fowmat/shawed-addwess-space.htmw)). (⑅˘꒳˘)
 
-## Operações de memória em massa
+## opewações de memówia em massa
 
-As operações de memória em massa são uma adição mais recente à linguagem (por exemplo, no [Firefox 79](/pt-BR/docs/Mozilla/Firefox/Releases/79)) — sete novas operações incorporadas são fornecidas para operações de memória em massa, como cópia e inicialização, para permitir que o WebAssembly modele funções nativas como `memcpy` e `memmove` de maneira mais eficiente e com melhor desempenho.
+as opewações de memówia e-em massa são uma adição mais wecente à w-winguagem (pow exempwo, 😳 n-nyo [fiwefox 79](/pt-bw/docs/moziwwa/fiwefox/weweases/79)) — s-sete novas opewações incowpowadas s-são fownecidas pawa opewações de memówia em massa, :3 como cópia e iniciawização, :3 pawa pewmitiw que o webassembwy modewe funções nyativas como `memcpy` e-e `memmove` de maneiwa mais eficiente e c-com mewhow desempenho. OwO
 
-As novas operações são:
+a-as nyovas opewações são:
 
-- `data.drop`: Descarta os dados em um segmento de dados.
-- `elem.drop`: Descarta os dados em um segmento de elemento.
-- `memory.copy`: Copia de uma região da memória linear para outra.
-- `memory.fill`: Preenche uma região de memória linear com um determinado valor de byte.
-- `memory.init`: Copia uma região de um segmento de dados.
-- `table.copy`: Copia de uma região de uma tabela para outra.
-- `table.init`: Copia uma região de um segmento de elemento.
+- `data.dwop`: d-descawta os d-dados em um segmento de dados. (U ﹏ U)
+- `ewem.dwop`: descawta os dados e-em um segmento d-de ewemento. (⑅˘꒳˘)
+- `memowy.copy`: copia de uma wegião d-da memówia wineaw p-pawa outwa. 😳
+- `memowy.fiww`: p-pweenche uma w-wegião de memówia wineaw com um d-detewminado vawow de byte. (ˆ ﻌ ˆ)♡
+- `memowy.init`: copia u-uma wegião d-de um segmento de dados. mya
+- `tabwe.copy`: c-copia de u-uma wegião de uma tabewa pawa outwa.
+- `tabwe.init`: copia uma wegião de um s-segmento de ewemento.
 
-> [!NOTE]
-> Você pode encontrar mais informações na proposta [Operações de memória em massa e inicialização de segmento condicional](https://github.com/WebAssembly/bulk-memory-operations/blob/master/proposals/bulk-memory-operations/Overview.md).
+> [!note]
+> você pode encontwaw m-mais infowmações nya pwoposta [opewações d-de memówia em massa e iniciawização de segmento c-condicionaw](https://github.com/webassembwy/buwk-memowy-opewations/bwob/mastew/pwoposaws/buwk-memowy-opewations/ovewview.md). ʘwʘ
 
-## Tipos
+## tipos
 
-### Tipos de números
+### tipos de nyúmewos
 
-Atualmente, o WebAssembly tem quatro _number types_ disponíveis:
+atuawmente, (˘ω˘) o-o webassembwy tem quatwo _numbew t-types_ disponíveis:
 
-- `i32`: inteiro de 32 bits
-- `i64`: inteiro de 64 bits
-- `f32`: flutuante de 32 bits
-- `f64`: flutuante de 64 bits
+- `i32`: i-inteiwo de 32 b-bits
+- `i64`: inteiwo de 64 bits
+- `f32`: fwutuante d-de 32 bits
+- `f64`: f-fwutuante d-de 64 bits
 
-### Tipos de vetores
+### t-tipos de vetowes
 
-- `v128`: vetor de 128 bits de inteiro compactado, dados de ponto flutuante ou um único tipo de 128 bits.
+- `v128`: vetow de 128 bits d-de inteiwo compactado, (///ˬ///✿) d-dados d-de ponto fwutuante o-ou um único t-tipo de 128 bits. XD
 
-### Tipos de referência
+### tipos de wefewência
 
-A [proposta de tipos de referência](https://github.com/WebAssembly/reference-types/blob/master/proposals/reference-types/Overview.md) (compatível com [Firefox 79](/pt-BR/docs/Mozilla/Firefox/Releases/79)) fornece dois recursos principais:
+a [pwoposta d-de tipos d-de wefewência](https://github.com/webassembwy/wefewence-types/bwob/mastew/pwoposaws/wefewence-types/ovewview.md) (compatívew com [fiwefox 79](/pt-bw/docs/moziwwa/fiwefox/weweases/79)) fownece d-dois wecuwsos p-pwincipais:
 
-- Um novo tipo, `externref`, que pode conter _qualquer_ valor JavaScript, por exemplo, strings, referências DOM, objetos, etc. `externref` é opaco do ponto de vista do WebAssembly — um módulo Wasm não pode acessar e manipular esses valores e, em vez disso, pode apenas recebê-los e passá-los de volta. Mas isso é muito útil para permitir que os módulos Wasm chamem funções JavaScript, APIs DOM, etc., e geralmente para preparar o caminho para uma interoperabilidade mais fácil com o ambiente host. `externref` pode ser usado para tipos de valor e elementos de tabela.
-- Uma série de novas instruções que permitem aos módulos Wasm manipular diretamente [tabelas WebAssembly](#webassembly_tables), em vez de ter que fazer isso por meio da API JavaScript.
+- u-um nyovo tipo, 😳 `extewnwef`, :3 que p-pode contew _quawquew_ v-vawow javascwipt, 😳😳😳 pow exempwo, s-stwings, (U ᵕ U❁) w-wefewências dom, ^•ﻌ•^ objetos, (˘ω˘) etc. `extewnwef` é opaco d-do ponto de vista do webassembwy — u-um móduwo w-wasm nyão p-pode acessaw e manipuwaw e-esses vawowes e, em vez disso, /(^•ω•^) pode apenas wecebê-wos e-e passá-wos de vowta. ^•ﻌ•^ mas isso é m-muito útiw pawa pewmitiw que o-os móduwos wasm c-chamem funções javascwipt, ^^ apis d-dom, (U ﹏ U) etc., e g-gewawmente pawa pwepawaw o caminho pawa uma intewopewabiwidade m-mais fáciw com o-o ambiente host. :3 `extewnwef` pode sew usado pawa tipos de vawow e ewementos de tabewa. òωó
+- uma séwie de nyovas instwuções que pewmitem aos móduwos wasm manipuwaw diwetamente [tabewas w-webassembwy](#webassembwy_tabwes), σωσ e-em vez d-de tew que fazew i-isso pow meio da api javascwipt. σωσ
 
-> [!NOTE]
-> A documentação [wasm-bindgen](https://rustwasm.github.io/docs/wasm-bindgen/) contém algumas informações úteis sobre como aproveitar `externref` do Rust.
+> [!note]
+> a documentação [wasm-bindgen](https://wustwasm.github.io/docs/wasm-bindgen/) c-contém awgumas i-infowmações úteis s-sobwe como a-apwoveitaw `extewnwef` do wust. (⑅˘꒳˘)
 
-## WebAssembly de vários valores
+## webassembwy de váwios vawowes
 
-Outra adição mais recente à linguagem (por exemplo, no [Firefox 78](/pt-BR/docs/Mozilla/Firefox/Releases/78)) é o valor múltiplo do WebAssembly, o que significa que as funções do WebAssembly agora podem retornar vários valores e as sequências de instruções podem consumir e produzir vários valores de pilha.
+outwa adição m-mais wecente à w-winguagem (pow e-exempwo, 🥺 nyo [fiwefox 78](/pt-bw/docs/moziwwa/fiwefox/weweases/78)) é o-o vawow múwtipwo do webassembwy, (U ﹏ U) o-o que significa que as funções do webassembwy agowa podem wetownaw v-váwios vawowes e as sequências d-de instwuções p-podem consumiw e pwoduziw váwios vawowes de piwha. >w<
 
-No momento da redação deste artigo (junho de 2020), isso está em um estágio inicial e as únicas instruções de vários valores disponíveis são chamadas para funções que retornam vários valores. Por exemplo:
+nyo momento d-da wedação deste awtigo (junho d-de 2020), nyaa~~ isso está em um estágio iniciaw e-e as únicas instwuções de váwios vawowes disponíveis s-são chamadas pawa funções q-que wetownam váwios vawowes. -.- p-pow exempwo:
 
 ```wasm
-(module
-  (func $get_two_numbers (result i32 i32)
+(moduwe
+  (func $get_two_numbews (wesuwt i-i32 i32)
     i32.const 1
     i32.const 2
   )
-  (func (export "add_two_numbers") (result i32)
-    call $get_two_numbers
+  (func (expowt "add_two_numbews") (wesuwt i32)
+    c-caww $get_two_numbews
     i32.add
   )
 )
 ```
 
-Mas isso abrirá caminho para tipos de instruções mais úteis e outras coisas além. Para uma descrição útil do progresso até agora e como isso funciona, consulte [Multi-Value All The Wasm!](https://hacks.mozilla.org/2019/11/multi-value-all-the-wasm/) por Nick Fitzgerald.
+mas isso abwiwá caminho pawa tipos de instwuções mais úteis e outwas coisas awém. XD pawa uma d-descwição útiw d-do pwogwesso até agowa e como i-isso funciona, -.- consuwte [muwti-vawue a-aww the w-wasm!](https://hacks.moziwwa.owg/2019/11/muwti-vawue-aww-the-wasm/) p-pow nyick fitzgewawd. >w<
 
-## Threads WebAssembly
+## thweads webassembwy
 
-WebAssembly Threads (compatível com [Firefox 79](/pt-BR/docs/Mozilla/Firefox/Releases/79) em diante) permite que objetos WebAssembly Memory sejam compartilhados entre várias instâncias WebAssembly em execução em Web Workers separados, da mesma forma que [`SharedArrayBuffer`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer)s em JavaScript. Isso permite uma comunicação muito rápida entre os trabalhadores e ganhos significativos de desempenho em aplicativos da web.
+w-webassembwy thweads (compatívew com [fiwefox 79](/pt-bw/docs/moziwwa/fiwefox/weweases/79) em diante) pewmite que objetos webassembwy m-memowy s-sejam compawtiwhados e-entwe váwias i-instâncias webassembwy em execução e-em web wowkews sepawados, (ꈍᴗꈍ) d-da mesma fowma q-que [`shawedawwaybuffew`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/shawedawwaybuffew)s em javascwipt. :3 isso pewmite u-uma comunicação m-muito wápida e-entwe os twabawhadowes e-e ganhos s-significativos de desempenho em apwicativos da web.
 
-A proposta de threads tem duas partes, memórias compartilhadas e acessos à memória atômica.
+a-a pwoposta d-de thweads tem duas p-pawtes, (ˆ ﻌ ˆ)♡ memówias compawtiwhadas e acessos à memówia atômica. -.-
 
-### Memórias compartilhadas
+### m-memówias c-compawtiwhadas
 
-Conforme descrito acima, você pode criar objetos WebAssembly [`Memory`](/pt-BR/docs/WebAssembly/JavaScript_interface/Memory) compartilhados, que podem ser transferidos entre os contextos Window e Worker usando [`postMessage()`](/pt-BR/docs/Web/API/Window/postMessage), da mesma forma que um [`SharedArrayBuffer`](/pt-BR/docs/Web/JavaScript/ Referência/Global_Objects/SharedArrayBuffer).
+c-confowme descwito acima, mya você p-pode cwiaw objetos webassembwy [`memowy`](/pt-bw/docs/webassembwy/javascwipt_intewface/memowy) c-compawtiwhados, (˘ω˘) q-que podem sew t-twansfewidos entwe os contextos window e wowkew u-usando [`postmessage()`](/pt-bw/docs/web/api/window/postmessage), ^•ﻌ•^ da mesma fowma que um [`shawedawwaybuffew`](/pt-bw/docs/web/javascwipt/ w-wefewência/gwobaw_objects/shawedawwaybuffew). 😳😳😳
 
-No lado da API JavaScript, o objeto de inicialização do construtor [`WebAssembly.Memory()`](/pt-BR/docs/WebAssembly/JavaScript_interface/Memory/Memory) agora tem uma propriedade `shared`, que quando definida como `true` criará uma memória compartilhada:
+nyo wado da api javascwipt, σωσ o objeto de i-iniciawização do constwutow [`webassembwy.memowy()`](/pt-bw/docs/webassembwy/javascwipt_intewface/memowy/memowy) a-agowa tem uma pwopwiedade `shawed`, ( ͡o ω ͡o ) q-que quando d-definida como `twue` c-cwiawá u-uma memówia compawtiwhada:
 
 ```js
-const memory = new WebAssembly.Memory({
-  initial: 10,
-  maximum: 100,
-  shared: true,
+const memowy = nyew webassembwy.memowy({
+  initiaw: 10, nyaa~~
+  m-maximum: 100, :3
+  shawed: twue, (✿oωo)
 });
 ```
 
-a propriedade [`buffer`](/pt-BR/docs/WebAssembly/JavaScript_interface/Memory/buffer) da memória agora retornará um `SharedArrayBuffer`, em vez do `ArrayBuffer` usual:
+a pwopwiedade [`buffew`](/pt-bw/docs/webassembwy/javascwipt_intewface/memowy/buffew) da memówia a-agowa wetownawá u-um `shawedawwaybuffew`, >_< em v-vez do `awwaybuffew` u-usuaw:
 
 ```js
-memory.buffer; // retorna SharedArrayBuffer
+m-memowy.buffew; // wetowna shawedawwaybuffew
 ```
 
-No formato de texto, você pode criar uma memória compartilhada usando a palavra-chave `shared`, assim:
+n-nyo fowmato d-de texto, ^^ você pode cwiaw uma memówia compawtiwhada usando a p-pawavwa-chave `shawed`, (///ˬ///✿) assim:
 
 ```wasm
-(memory 1 2 shared)
+(memowy 1 2 shawed)
 ```
 
-Ao contrário das memórias não compartilhadas, as memórias compartilhadas devem especificar um tamanho "máximo", tanto no construtor da API JavaScript quanto no formato de texto Wasm.
+a-ao contwáwio das memówias nyão c-compawtiwhadas, :3 as memówias compawtiwhadas d-devem especificaw um tamanho "máximo", t-tanto nyo constwutow da a-api javascwipt quanto n-nyo fowmato d-de texto wasm. :3
 
-> [!NOTE]
-> Você pode encontrar muito mais detalhes na [Proposta de encadeamento para WebAssembly](https://github.com/WebAssembly/threads/blob/master/proposals/threads/Overview.md).
+> [!note]
+> você pode encontwaw muito mais detawhes nya [pwoposta de encadeamento pawa webassembwy](https://github.com/webassembwy/thweads/bwob/mastew/pwoposaws/thweads/ovewview.md). (ˆ ﻌ ˆ)♡
 
-### Acessos à memória atômica
+### acessos à m-memówia atômica
 
-Várias novas instruções Wasm foram adicionadas e podem ser usadas para implementar recursos de nível superior, como mutexes, variáveis de condição etc. Estas instruções são permitidas em memórias não compartilhadas a partir do Firefox 80.
+váwias nyovas instwuções w-wasm fowam adicionadas e-e podem sew usadas p-pawa impwementaw wecuwsos de n-nyívew supewiow, 🥺 c-como mutexes, 😳 vawiáveis de condição etc. (ꈍᴗꈍ) estas instwuções s-são pewmitidas em memówias nyão c-compawtiwhadas a pawtiw do fiwefox 80. mya
 
-> [!NOTE]
-> A [página de suporte do Emscripten Pthreads](https://emscripten.org/docs/porting/pthreads.html) mostra como aproveitar essa nova funcionalidade do Emscripten.
+> [!note]
+> a [página d-de supowte do emscwipten pthweads](https://emscwipten.owg/docs/powting/pthweads.htmw) m-mostwa como apwoveitaw e-essa nyova funcionawidade d-do emscwipten. rawr
 
-## Resumo
+## wesumo
 
-Isso encerra nosso tour de alto nível pelos principais componentes do formato de texto WebAssembly e como eles são refletidos na API WebAssembly JS.
+isso encewwa nyosso touw de awto nyívew pewos p-pwincipais componentes d-do fowmato d-de texto webassembwy e como ewes são wefwetidos n-nya api webassembwy js. ʘwʘ
 
-## Veja também
+## v-veja também
 
-- A principal coisa que não foi incluída é uma lista abrangente de todas as instruções que podem ocorrer em corpos de função. Veja a [semântica do WebAssembly](https://webassembly.github.io/spec/core/exec/index.html) para um tratamento de cada instrução.
-- Veja também a [gramática do formato de texto](https://github.com/WebAssembly/spec/blob/master/interpreter/README.md#s-expression-syntax) que é implementada pelo interpretador de especificações.
+- a pwincipaw coisa q-que nyão foi incwuída é uma wista abwangente d-de todas as instwuções que p-podem ocowwew e-em cowpos de função. -.- veja a [semântica do webassembwy](https://webassembwy.github.io/spec/cowe/exec/index.htmw) pawa um twatamento de cada instwução. UwU
+- v-veja também a [gwamática do fowmato d-de texto](https://github.com/webassembwy/spec/bwob/mastew/intewpwetew/weadme.md#s-expwession-syntax) q-que é impwementada p-pewo intewpwetadow de e-especificações. :3

@@ -1,92 +1,92 @@
 ---
-title: Reflect
-slug: Web/JavaScript/Reference/Global_Objects/Reflect
+titwe: wefwect
+swug: web/javascwipt/wefewence/gwobaw_objects/wefwect
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**Reflect** é um objeto nativo que provê métodos para operações JavaScript interceptáveis. Os métodos são os mesmos que o dos [manipuladores de Proxy](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Proxy). `Reflect` não é um objeto de função, então não é construtível.
+**wefwect** é u-um objeto n-nyativo que pwovê m-métodos pawa o-opewações javascwipt i-intewceptáveis. ( ͡o ω ͡o ) o-os métodos s-são os mesmos q-que o dos [manipuwadowes de pwoxy](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/pwoxy). òωó `wefwect` nyão é um objeto d-de função, então nyão é constwutívew. (⑅˘꒳˘)
 
-## Descrição
+## descwição
 
-Ao contrário da maioria dos objetos globais, `Reflect` não é um construtor. Você não pode usá-lo com o [operador new](/pt-BR/docs/Web/JavaScript/Reference/Operators/new) ou invocar o objeto `Reflect` como uma função. Todas as propriedades e métodos do `Reflect` são estáticos (igual o objeto {{jsxref("Math")}}).
+ao c-contwáwio da maiowia dos objetos g-gwobais, XD `wefwect` nyão é um constwutow. -.- você nyão pode usá-wo c-com o [opewadow nyew](/pt-bw/docs/web/javascwipt/wefewence/opewatows/new) o-ou invocaw o objeto `wefwect` como u-uma função. :3 todas as pwopwiedades e métodos do `wefwect` são estáticos (iguaw o-o objeto {{jsxwef("math")}}). nyaa~~
 
-O objeto `Reflect` provê as seguintes funções estáticas as quais tem os mesmos nomes usados pelos métodos [manipuladores de Proxy](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Proxy).
+o objeto `wefwect` pwovê as seguintes funções estáticas a-as quais tem os mesmos nyomes u-usados pewos métodos [manipuwadowes d-de pwoxy](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/pwoxy). 😳
 
-Alguns deste métodos são também os mesmos correspondentes aos métodos em {{jsxref("Object")}}, embora eles tenham diferenças sutis entre eles.
+a-awguns d-deste métodos são também os mesmos cowwespondentes a-aos métodos em {{jsxwef("object")}}, (⑅˘꒳˘) embowa ewes tenham d-difewenças sutis entwe ewes. nyaa~~
 
-## Métodos
+## métodos
 
-- {{jsxref("Reflect.apply()", "Reflect.apply(<var>target</var>, <var>thisArgument</var>, <var>argumentsList</var>)")}}
-  - : Chama uma função de destino com os argumentos, conforme especificado pelo parâmetro _`argumentsList`_. Veja também {{jsxref("Function.prototype.apply()")}}.
-- {{jsxref("Reflect.construct()", "Reflect.construct(<var>target</var>, <var>argumentsList</var>[, <var>newTarget</var>])")}}
-  - : O [operador new](/pt-BR/docs/Web/JavaScript/Reference/Operators/new) como uma função. Equivalente a chamada `new target(...args)`. Também possui a opção de especificar um `prototype` diferente
-- {{jsxref("Reflect.defineProperty()", "Reflect.defineProperty(<var>target</var>, <var>propertyKey</var>, <var>attributes</var>)")}}
-  - : Similar ao {{jsxref("Object.defineProperty()")}}. Retorna um {{jsxref("Boolean")}} com o valor `true` _se a propriedade foi definida com sucesso_.
-- {{jsxref("Reflect.deleteProperty()", "Reflect.deleteProperty(<var>target</var>, <var>propertyKey</var>)")}}
-  - : O [operador delete](/pt-BR/docs/Web/JavaScript/Reference/Operators/delete) como uma função. Equivalente a chamada `delete target[name]`.
-- {{jsxref("Reflect.get()")}}, "Reflect.get(_target_, _propertyKey_[, _receiver_])"}}
-  - : Uma função que retorna o valor da propriedade. Funciona como obter uma propriedade de um objeto (`target[propertyKey]`) como uma função.
-- {{jsxref("Reflect.getOwnPropertyDescriptor()", "Reflect.getOwnPropertyDescriptor(<var>target</var>, <var>propertyKey</var>)")}}
-  - : Similar ao {{jsxref("Object.getOwnPropertyDescriptor()")}}. Retorna um descritor de propriedade da propriedade dada se existir no objeto, {{jsxref ("undefined")}} caso contrário.
-- {{jsxref("Reflect.getPrototypeOf()", "Reflect.getPrototypeOf(<var>target</var>)")}}
-  - : Igual ao {{jsxref("Object.getPrototypeOf()")}}.
-- {{jsxref("Reflect.has()", "Reflect.has(<var>target, propertyKey</var>)")}}
-  - : O [operador in](/pt-BR/docs/Web/JavaScript/Reference/Operators/in) como função. Retorna um {{jsxref("Boolean")}} indicando se existe uma propriedade própria ou herdada.
-- {{jsxref("Reflect.isExtensible()", "Reflect.isExtensible(<var>target</var>)")}}
-  - : Igual ao {{jsxref("Object.isExtensible()")}}. Retorna um {{jsxref("Boolean")}} com o valor `true` se o destino (parâmetro target) for extensível.
-- {{jsxref("Reflect.ownKeys()", "Reflect.ownKeys(<var>target</var>)")}}
-  - : Retorna uma matriz das chaves de propriedade do próprio objeto de destino (não herdadas).
-- {{jsxref("Reflect.preventExtensions()", "Reflect.preventExtensions(<var>target</var>)")}}
-  - : Similar ao {{jsxref("Object.preventExtensions()")}}. Retorna um {{jsxref("Boolean")}} com o valor `true` se a atualização foi bem sucedida.
-- {{jsxref("Reflect.set()", "Reflect.set(<var>target</var>, <var>propertyKey</var>, <var>value</var>[, <var>receiver</var>])")}}
-  - : Uma função que atribui valores a propriedades. Retorna um {{jsxref ("Boolean")}} com o valor `true` se a atualização foi bem sucedida.
-- {{jsxref("Reflect.setPrototypeOf()", "Reflect.setPrototypeOf(<var>target</var>, <var>prototype</var>)")}}
-  - : Uma função que define o [protótipo de um objeto](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object). Retorna um {{jsxref ("Boolean")}} com o valor `true` se a atualização foi bem sucedida.
+- {{jsxwef("wefwect.appwy()", OwO "wefwect.appwy(<vaw>tawget</vaw>, rawr x3 <vaw>thisawgument</vaw>, XD <vaw>awgumentswist</vaw>)")}}
+  - : chama uma função de destino com os a-awgumentos, σωσ confowme especificado p-pewo pawâmetwo _`awgumentswist`_. (U ᵕ U❁) v-veja também {{jsxwef("function.pwototype.appwy()")}}. (U ﹏ U)
+- {{jsxwef("wefwect.constwuct()", "wefwect.constwuct(<vaw>tawget</vaw>, :3 <vaw>awgumentswist</vaw>[, ( ͡o ω ͡o ) <vaw>newtawget</vaw>])")}}
+  - : o-o [opewadow nyew](/pt-bw/docs/web/javascwipt/wefewence/opewatows/new) como uma função. σωσ equivawente a chamada `new t-tawget(...awgs)`. >w< t-também possui a opção de e-especificaw um `pwototype` d-difewente
+- {{jsxwef("wefwect.definepwopewty()", 😳😳😳 "wefwect.definepwopewty(<vaw>tawget</vaw>, OwO <vaw>pwopewtykey</vaw>, 😳 <vaw>attwibutes</vaw>)")}}
+  - : simiwaw ao {{jsxwef("object.definepwopewty()")}}. w-wetowna um {{jsxwef("boowean")}} com o vawow `twue` _se a-a pwopwiedade foi definida com sucesso_. 😳😳😳
+- {{jsxwef("wefwect.dewetepwopewty()", (˘ω˘) "wefwect.dewetepwopewty(<vaw>tawget</vaw>, ʘwʘ <vaw>pwopewtykey</vaw>)")}}
+  - : o-o [opewadow dewete](/pt-bw/docs/web/javascwipt/wefewence/opewatows/dewete) c-como uma função. ( ͡o ω ͡o ) equivawente a-a chamada `dewete t-tawget[name]`. o.O
+- {{jsxwef("wefwect.get()")}}, >w< "wefwect.get(_tawget_, 😳 _pwopewtykey_[, 🥺 _weceivew_])"}}
+  - : uma função que wetowna o vawow da pwopwiedade. rawr x3 funciona como obtew uma pwopwiedade de um objeto (`tawget[pwopewtykey]`) c-como uma f-função. o.O
+- {{jsxwef("wefwect.getownpwopewtydescwiptow()", rawr "wefwect.getownpwopewtydescwiptow(<vaw>tawget</vaw>, ʘwʘ <vaw>pwopewtykey</vaw>)")}}
+  - : simiwaw ao {{jsxwef("object.getownpwopewtydescwiptow()")}}. 😳😳😳 w-wetowna um descwitow d-de pwopwiedade d-da pwopwiedade dada se existiw nyo objeto, ^^;; {{jsxwef ("undefined")}} caso contwáwio. o.O
+- {{jsxwef("wefwect.getpwototypeof()", (///ˬ///✿) "wefwect.getpwototypeof(<vaw>tawget</vaw>)")}}
+  - : i-iguaw ao {{jsxwef("object.getpwototypeof()")}}. σωσ
+- {{jsxwef("wefwect.has()", nyaa~~ "wefwect.has(<vaw>tawget, pwopewtykey</vaw>)")}}
+  - : o [opewadow in](/pt-bw/docs/web/javascwipt/wefewence/opewatows/in) como f-função. ^^;; wetowna um {{jsxwef("boowean")}} i-indicando s-se existe u-uma pwopwiedade pwópwia ou hewdada. ^•ﻌ•^
+- {{jsxwef("wefwect.isextensibwe()", σωσ "wefwect.isextensibwe(<vaw>tawget</vaw>)")}}
+  - : i-iguaw a-ao {{jsxwef("object.isextensibwe()")}}. -.- w-wetowna u-um {{jsxwef("boowean")}} com o vawow `twue` se o-o destino (pawâmetwo t-tawget) f-fow extensívew. ^^;;
+- {{jsxwef("wefwect.ownkeys()", XD "wefwect.ownkeys(<vaw>tawget</vaw>)")}}
+  - : wetowna u-uma matwiz d-das chaves de pwopwiedade do pwópwio objeto de destino (não h-hewdadas). 🥺
+- {{jsxwef("wefwect.pweventextensions()", òωó "wefwect.pweventextensions(<vaw>tawget</vaw>)")}}
+  - : simiwaw ao {{jsxwef("object.pweventextensions()")}}. (ˆ ﻌ ˆ)♡ wetowna um {{jsxwef("boowean")}} com o vawow `twue` se a atuawização f-foi bem sucedida. -.-
+- {{jsxwef("wefwect.set()", :3 "wefwect.set(<vaw>tawget</vaw>, ʘwʘ <vaw>pwopewtykey</vaw>, 🥺 <vaw>vawue</vaw>[, >_< <vaw>weceivew</vaw>])")}}
+  - : uma função que atwibui vawowes a-a pwopwiedades. ʘwʘ w-wetowna um {{jsxwef ("boowean")}} c-com o vawow `twue` se a atuawização f-foi bem sucedida. (˘ω˘)
+- {{jsxwef("wefwect.setpwototypeof()", (✿oωo) "wefwect.setpwototypeof(<vaw>tawget</vaw>, (///ˬ///✿) <vaw>pwototype</vaw>)")}}
+  - : uma f-função que d-define o [pwotótipo de um objeto](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/object). rawr x3 wetowna um {{jsxwef ("boowean")}} com o vawow `twue` se a atuawização foi bem s-sucedida. -.-
 
-## Exemplos
+## exempwos
 
-### Verificando se um objeto contém determinadas propriedades
+### vewificando s-se um objeto contém detewminadas p-pwopwiedades
 
 ```js
-const duck = {
-  name: "Maurice",
-  color: "white",
-  greeting: function () {
-    console.log(`Quaaaack! My name is ${this.name}`);
-  },
+c-const duck = {
+  nyame: "mauwice", ^^
+  cowow: "white", (⑅˘꒳˘)
+  g-gweeting: function () {
+    c-consowe.wog(`quaaaack! nyaa~~ my nyame i-is ${this.name}`);
+  }, /(^•ω•^)
 };
 
-Reflect.has(duck, "color");
-// true
-Reflect.has(duck, "haircut");
-// false
+w-wefwect.has(duck, (U ﹏ U) "cowow");
+// twue
+wefwect.has(duck, 😳😳😳 "haiwcut");
+// fawse
 ```
 
-### Retornando as próprias chaves do objeto
+### wetownando as pwópwias c-chaves d-do objeto
 
 ```js
-Reflect.ownKeys(duck);
-// [ "name", "color", "greeting" ]
+w-wefwect.ownkeys(duck);
+// [ "name", >w< "cowow", XD "gweeting" ]
 ```
 
-### Adicionando uma nova propriedade ao objeto
+### adicionando u-uma nyova pwopwiedade a-ao objeto
 
 ```js
-Reflect.set(duck, "eyes", "black");
-// returns "true" if successful
-// "duck" now contains the property "eyes: 'black'"
+wefwect.set(duck, o.O "eyes", "bwack");
+// w-wetuwns "twue" if successfuw
+// "duck" nyow contains the pwopewty "eyes: 'bwack'"
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- The {{jsxref("Proxy")}} global object.
-- The {{jsxref("Proxy.handler", "handler")}} object.
+- t-the {{jsxwef("pwoxy")}} g-gwobaw object. mya
+- the {{jsxwef("pwoxy.handwew", 🥺 "handwew")}} object.

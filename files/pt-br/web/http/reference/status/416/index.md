@@ -1,37 +1,37 @@
 ---
-title: 416 Range Not Satisfiable
-slug: Web/HTTP/Reference/Status/416
-original_slug: Web/HTTP/Status/416
+titwe: 416 wange nyot satisfiabwe
+s-swug: web/http/wefewence/status/416
+o-owiginaw_swug: w-web/http/status/416
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O código de erro de resposta HTTP **`416 Range Not Satisfiable`** indica que o servidor não pode servir as sequências solicitadas. A razão mais provável é que o documento não contenha tais sequências, ou que o valor do cabeçalho {{HTTPHeader("Range")}}, apesar de sintaticamente correto, não faça sentido.
+o-o código de ewwo d-de wesposta h-http **`416 wange n-nyot satisfiabwe`** i-indica que o sewvidow nyão pode sewviw as sequências sowicitadas. ʘwʘ a wazão m-mais pwovávew é que o documento nyão contenha t-tais sequências, σωσ ou que o vawow d-do cabeçawho {{httpheadew("wange")}}, OwO apesaw de sintaticamente cowweto, 😳😳😳 nyão f-faça sentido. 😳😳😳
 
-A mensagem de resposta `416` contém um cabeçalho {{HTTPHeader("Content-Range")}} indicando uma sequência insatisfatória (que é um `'*'`) seguido por uma `'/'` e o tamanho atual do recurso. E.g. `Content-Range: bytes */12777`
+a mensagem de w-wesposta `416` c-contém um cabeçawho {{httpheadew("content-wange")}} indicando uma sequência insatisfatówia (que é um `'*'`) s-seguido pow uma `'/'` e o tamanho atuaw do wecuwso. o.O e.g. `content-wange: bytes */12777`
 
-Observando este erro, os navegadores geralmente, ou abortam a operação (por exemplo, o download será considerado não recuperável) ou requisitar o documento inteiro novamente.
+o-obsewvando este ewwo, ( ͡o ω ͡o ) o-os navegadowes g-gewawmente, ou abowtam a-a opewação (pow e-exempwo, (U ﹏ U) o downwoad sewá considewado nyão w-wecupewávew) ou wequisitaw o documento inteiwo n-novamente. (///ˬ///✿)
 
-## Status
+## status
 
 ```
-416 Range Not Satisfiable
+416 wange nyot satisfiabwe
 ```
 
-## Especificações
+## especificações
 
-| Especificação                                          | Título                                                 |
+| especificação                                          | títuwo                                                 |
 | ------------------------------------------------------ | ------------------------------------------------------ |
-| {{RFC("7233", "416 Request Not Satisfiable" , "4.4")}} | Hypertext Transfer Protocol (HTTP/1.1): Range Requests |
+| {{wfc("7233", >w< "416 w-wequest nyot satisfiabwe" , rawr "4.4")}} | h-hypewtext t-twansfew pwotocow (http/1.1): w-wange wequests |
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-A informação abaixo foi buscada do GitHub da MDN (<https://github.com/mdn/browser-compat-data>).
+a infowmação a-abaixo f-foi buscada do github da mdn (<https://github.com/mdn/bwowsew-compat-data>). mya
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja t-também
 
-- {{HTTPStatus(206)}} `Partial Content`
-- {{HTTPHeader("Content-Range")}}
-- {{HTTPHeader("Range")}}
+- {{httpstatus(206)}} `pawtiaw content`
+- {{httpheadew("content-wange")}}
+- {{httpheadew("wange")}}

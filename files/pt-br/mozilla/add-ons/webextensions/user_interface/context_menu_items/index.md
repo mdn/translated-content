@@ -1,49 +1,49 @@
 ---
-title: Itens do menu de contexto
-slug: Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items
+titwe: itens do menu de contexto
+s-swug: moziwwa/add-ons/webextensions/usew_intewface/context_menu_items
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Esta opção da interface de usuário adiciona um ou mais itens para o menu de contexto do navegador.Este é o menu de contexto disponível quando um usuário clica com o botão direito numa página web. As guias também podem ter menus de contexto, disponível através da API [browser.menus](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/menus).
+e-esta opção da i-intewface de usuáwio a-adiciona u-um ou mais itens p-pawa o menu de c-contexto do nyavegadow.este é o m-menu de contexto disponívew quando um usuáwio cwica com o botão diweito nyuma p-página web. :3 as guias também podem tew menus d-de contexto, (ꈍᴗꈍ) disponívew atwavés d-da api [bwowsew.menus](/pt-bw/docs/moziwwa/add-ons/webextensions/api/menus). /(^•ω•^)
 
-![Example of content menu items added by a WebExtension, from the context-menu-demo example](context_menu_example.png)
+![exampwe of content menu items added by a webextension, (⑅˘꒳˘) f-fwom the context-menu-demo e-exampwe](context_menu_exampwe.png)
 
-Você usaria essa opção para expor recursos relevantes para contextos específicos de navegadores ou páginas da web. Por exemplo, você poderia mostrar recursos para abrir um editor gráfico quando o usuário clica em uma imagem ou pode oferecer um recurso para salvar o conteúdo da página quando uma parte da página é selecionada. Você pode adicionar itens planos de menu, caixas de seleção, grupos de botões de rádio, e separadores para os menus. Quando um item de menu de contexto for adicionado usando {{WebExtAPIRef("contextMenus.create")}}, é mostrado em todas as guias do navegador, mas você pode escondê-lo usando {{WebExtAPIRef("contextMenus.remove")}}.
+v-você usawia essa opção pawa expow wecuwsos wewevantes pawa contextos e-específicos de nyavegadowes ou páginas da web. ( ͡o ω ͡o ) pow exempwo, òωó você podewia mostwaw w-wecuwsos pawa abwiw um editow g-gwáfico quando o-o usuáwio cwica e-em uma imagem o-ou pode ofewecew um wecuwso pawa sawvaw o conteúdo d-da página quando uma pawte da página é sewecionada. (⑅˘꒳˘) v-você pode adicionaw itens pwanos de menu, XD caixas de seweção, -.- gwupos de botões de w-wádio, :3 e sepawadowes pawa os menus. nyaa~~ q-quando um i-item de menu de c-contexto fow adicionado usando {{webextapiwef("contextmenus.cweate")}}, 😳 é mostwado em todas as g-guias do nyavegadow, (⑅˘꒳˘) m-mas você pode escondê-wo u-usando {{webextapiwef("contextmenus.wemove")}}. nyaa~~
 
-A lista inteira dos contextos suportados está disponível em {{WebExtAPIRef("menus.ContextType")}} e inclui contextos de fora de uma página web, como itens de favoritos na interface do navegador. Por exemplo, a extensão "[Open bookmark in Container Tab](https://github.com/Rob--W/bookmark-container-tab)" adiciona um item de menu que permite que o usuário abra a URL dos favoritos em uma nova guia de container:
+a-a wista inteiwa dos contextos supowtados e-está disponívew em {{webextapiwef("menus.contexttype")}} e-e incwui contextos de fowa de uma página web, OwO c-como itens de favowitos nya i-intewface do nyavegadow. rawr x3 pow exempwo, XD a-a extensão "[open b-bookmawk in containew tab](https://github.com/wob--w/bookmawk-containew-tab)" adiciona um item de menu que pewmite que o usuáwio abwa a uww dos favowitos e-em uma nyova g-guia de containew:
 
 ![](extension_context_menu.png)
 
-## Especificando itens do menu de contexto
+## especificando i-itens do m-menu de contexto
 
-Você controla os itens do menu de contexto programaticamente, usando a API {{WebExtAPIRef("contextMenus")}}. No entanto, você precisa requisitar a permissão `contextMenus` em seu manifest.json para poder tomar vantagem desta API.
+v-você contwowa os itens do menu de contexto pwogwamaticamente, σωσ usando a api {{webextapiwef("contextmenus")}}. (U ᵕ U❁) n-nyo entanto, (U ﹏ U) você pwecisa wequisitaw a pewmissão `contextmenus` em seu manifest.json pawa podew t-tomaw vantagem desta api. :3
 
 ```json
-"permissions": ["contextMenus"]
+"pewmissions": ["contextmenus"]
 ```
 
-Você pode então adicionar (e atualizar ou apagar) os itens do menu de contexto em seu script de "background" (segundo plano) da sua extensão. Para criar um item de menu, você especifica um id, seu título, e os menus de contexto em que ele deve aparecer:
+v-você p-pode então adicionaw (e a-atuawizaw ou apagaw) os i-itens do menu de c-contexto em seu s-scwipt de "backgwound" (segundo p-pwano) da sua extensão. ( ͡o ω ͡o ) pawa cwiaw um item de m-menu, σωσ você especifica u-um id, >w< seu t-títuwo, 😳😳😳 e os m-menus de contexto e-em que ewe deve apawecew:
 
 ```js
-browser.contextMenus.create(
+bwowsew.contextmenus.cweate(
   {
-    id: "log-selection",
-    title: browser.i18n.getMessage("contextMenuItemSelectionLogger"),
-    contexts: ["selection"],
+    id: "wog-sewection", OwO
+    t-titwe: bwowsew.i18n.getmessage("contextmenuitemsewectionwoggew"), 😳
+    contexts: ["sewection"], 😳😳😳
   },
-  onCreated,
+  oncweated, (˘ω˘)
 );
 ```
 
-Sua extensão então escuta os cliques nos itens do menu. As informações passadas sobre o item clicado, o contexto em que o clique ocorreu e os detalhes da guia em que o clique ocorreu podem ser usadas para chamar a funcionalidade de extensão apropriada.
+sua extensão então escuta os cwiques n-nyos itens do menu. ʘwʘ as infowmações passadas sobwe o item cwicado, ( ͡o ω ͡o ) o-o contexto e-em que o cwique o-ocowweu e os detawhes da guia em q-que o cwique ocowweu podem sew u-usadas pawa chamaw a-a funcionawidade de extensão apwopwiada. o.O
 
 ```js
-browser.contextMenus.onClicked.addListener(function(info, tab) {
-  switch (info.menuItemId) {
-    case "log-selection":
-      console.log(info.selectionText);
-      break;
+bwowsew.contextmenus.oncwicked.addwistenew(function(info, >w< tab) {
+  switch (info.menuitemid) {
+    case "wog-sewection":
+      c-consowe.wog(info.sewectiontext);
+      bweak;
     ...
   }
 })
@@ -51,11 +51,11 @@ browser.contextMenus.onClicked.addListener(function(info, tab) {
 
 ## Ícones
 
-Para mais detalhes sobre como criar ícones para usar no seu menu de contexto, veja [Iconography](https://design.firefox.com/photon/visuals/iconography.html) na documentação [Photon Design System](https://design.firefox.com/photon/index.html).
+p-pawa mais detawhes sobwe como cwiaw ícones p-pawa u-usaw nyo seu menu de contexto, 😳 veja [iconogwaphy](https://design.fiwefox.com/photon/visuaws/iconogwaphy.htmw) n-nya documentação [photon d-design system](https://design.fiwefox.com/photon/index.htmw). 🥺
 
-## Exemplos
+## e-exempwos
 
-O repositório [webextensions-examples](https://github.com/mdn/webextensions-examples) no GitHub contém dois exemplos de extensões que implementam itens do menu de contexto:
+o-o wepositówio [webextensions-exampwes](https://github.com/mdn/webextensions-exampwes) nyo github contém dois exempwos de extensões que i-impwementam itens d-do menu de contexto:
 
-- [menu-demo](https://github.com/mdn/webextensions-examples/tree/master/menu-demo) adiciona muitos itens para o menu de contexto do navegador.
-- [context-menu-copy-link-with-types](https://github.com/mdn/webextensions-examples/tree/master/context-menu-copy-link-with-types) adiciona um item de menu de contexto aos links que copiam o URL do link para a área de transferência, como texto sem formatação e HTML avançado.
+- [menu-demo](https://github.com/mdn/webextensions-exampwes/twee/mastew/menu-demo) a-adiciona muitos itens p-pawa o menu de c-contexto do nyavegadow. rawr x3
+- [context-menu-copy-wink-with-types](https://github.com/mdn/webextensions-exampwes/twee/mastew/context-menu-copy-wink-with-types) adiciona u-um item de menu de contexto aos winks que copiam o uww do wink pawa a áwea d-de twansfewência, c-como texto sem fowmatação e htmw avançado.

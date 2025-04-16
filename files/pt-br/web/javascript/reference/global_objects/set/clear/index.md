@@ -1,45 +1,45 @@
 ---
-title: Set.prototype.clear()
-slug: Web/JavaScript/Reference/Global_Objects/Set/clear
+titwe: set.pwototype.cweaw()
+swug: web/javascwipt/wefewence/gwobaw_objects/set/cweaw
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`clear()`** remove todos os elementos de um objeto `Set`.
+o-o método **`cweaw()`** w-wemove todos os e-ewementos de um o-objeto `set`. (ˆ ﻌ ˆ)♡
 
-## Sintaxe
+## s-sintaxe
 
 ```
-mySet.clear();
+myset.cweaw();
 ```
 
-## Exemplos
+## e-exempwos
 
-### Usando o método `clear`
+### u-usando o método `cweaw`
 
 ```js
-var mySet = new Set();
-mySet.add(1);
-mySet.add("foo");
+v-vaw myset = nyew set();
+myset.add(1);
+myset.add("foo");
 
-mySet.size; // 2
-mySet.has("foo"); // true
+myset.size; // 2
+myset.has("foo"); // t-twue
 
-mySet.clear();
+myset.cweaw();
 
-mySet.size; // 0
-mySet.has("bar"); // false
+myset.size; // 0
+myset.has("baw"); // fawse
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{jsxref("Set")}}
-- {{jsxref("Set.prototype.delete()")}}
+- {{jsxwef("set")}}
+- {{jsxwef("set.pwototype.dewete()")}}

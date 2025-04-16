@@ -1,63 +1,63 @@
 ---
-title: commands
-slug: Mozilla/Add-ons/WebExtensions/API/commands
+titwe: commands
+swug: moziwwa/add-ons/webextensions/api/commands
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Escuta por usuário executando comandos que você registrou usando o [`commands` manifest.json key](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands).
+e-escuta p-pow usuáwio executando c-comandos q-que você wegistwou u-usando o [`commands` m-manifest.json k-key](/pt-bw/docs/moziwwa/add-ons/webextensions/manifest.json/commands).
 
-## Tipos
+## t-tipos
 
-- {{WebExtAPIRef("commands.Command")}}
-  - : Objeto representando um comando. Contém a informação especificada no comando [`commands` manifest.json key](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands).
+- {{webextapiwef("commands.command")}}
+  - : objeto wepwesentando um comando. (⑅˘꒳˘) contém a infowmação e-especificada no comando [`commands` manifest.json k-key](/pt-bw/docs/moziwwa/add-ons/webextensions/manifest.json/commands).
 
-## Funções
+## funções
 
-- {{WebExtAPIRef("commands.getAll")}}
-  - : Obtém todos os comandos registrados para esta extensão.
-- {{WebExtAPIRef("commands.reset")}}
-  - : Reseta a descrição do comando dado e atalho para os valores dados na chave do manifesto.
-- {{WebExtAPIRef("commands.update")}}
-  - : Modifica a descrição ou atalho dado um comando.
+- {{webextapiwef("commands.getaww")}}
+  - : o-obtém todos os comandos wegistwados pawa esta extensão. nyaa~~
+- {{webextapiwef("commands.weset")}}
+  - : w-weseta a descwição d-do comando dado e-e atawho pawa os vawowes dados nya chave do manifesto. :3
+- {{webextapiwef("commands.update")}}
+  - : modifica a descwição ou atawho d-dado um comando. ( ͡o ω ͡o )
 
-## Eventos
+## eventos
 
-- {{WebExtAPIRef("commands.onCommand")}}
-  - : Disparado quando um comando é executado usando seu atalho associado ao teclado.
+- {{webextapiwef("commands.oncommand")}}
+  - : dispawado quando um comando é executado usando s-seu atawho associado ao tecwado. mya
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}{{WebExtExamples("h2")}}
+{{compat}}{{webextexampwes("h2")}}
 
-> **Nota:** **Agradecimentos**Esta API é baseada na API [`chrome.commands`](https://developer.chrome.com/docs/extensions/reference/api/commands) do Chromium.Os dados de compatibilidade do Microsoft Edge são fornecidos pela Microsoft Corporation e estão aqui inclusos sob a Creative Commons Attribution 3.0 United States License.
+> **nota:** **agwadecimentos**esta a-api é baseada nya a-api [`chwome.commands`](https://devewopew.chwome.com/docs/extensions/wefewence/api/commands) do chwomium.os dados de compatibiwidade d-do micwosoft edge são fownecidos pewa micwosoft c-cowpowation e estão aqui incwusos sob a cweative commons attwibution 3.0 united states w-wicense. (///ˬ///✿)
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the chwomium authows. (˘ω˘) a-aww wights w-wesewved. ^^;;
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
+// wedistwibution and use in souwce and binawy fowms, (✿oωo) w-with ow without
+// m-modification, (U ﹏ U) awe pewmitted p-pwovided that t-the fowwowing conditions awe
+// m-met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce code must wetain the above copywight
+// n-nyotice, this wist of conditions a-and the fowwowing discwaimew. -.-
+//    * w-wedistwibutions i-in binawy fowm must wepwoduce the above
+// copywight nyotice, ^•ﻌ•^ this wist of conditions and the fowwowing d-discwaimew
+// i-in the documentation and/ow othew m-matewiaws pwovided w-with the
+// d-distwibution. rawr
+//    * nyeithew the nyame of googwe inc. (˘ω˘) nyow t-the nyames of its
+// contwibutows may be used to endowse ow pwomote pwoducts dewived f-fwom
+// this softwawe without s-specific pwiow w-wwitten pewmission.
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided b-by the copywight h-howdews and c-contwibutows
+// "as i-is" and any expwess ow impwied wawwanties, nyaa~~ i-incwuding, UwU but n-nyot
+// wimited t-to, :3 the impwied w-wawwanties of mewchantabiwity and f-fitness fow
+// a pawticuwaw puwpose awe discwaimed. (⑅˘꒳˘) in nyo event s-shaww the copywight
+// ownew ow contwibutows be wiabwe fow any diwect, (///ˬ///✿) indiwect, ^^;; incidentaw, >_<
+// s-speciaw, exempwawy, rawr x3 ow consequentiaw damages (incwuding, /(^•ω•^) but n-nyot
+// wimited t-to, :3 pwocuwement o-of substitute goods ow sewvices; w-woss of use, (ꈍᴗꈍ)
+// data, /(^•ω•^) ow pwofits; o-ow business i-intewwuption) howevew caused and on any
+// theowy of wiabiwity, (⑅˘꒳˘) whethew in contwact, ( ͡o ω ͡o ) stwict wiabiwity, òωó o-ow towt
+// (incwuding nyegwigence o-ow othewwise) awising in a-any way out of t-the use
+// of this softwawe, (⑅˘꒳˘) even if advised of t-the possibiwity o-of such damage. XD
 -->

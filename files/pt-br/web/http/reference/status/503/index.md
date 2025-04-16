@@ -1,39 +1,39 @@
 ---
-title: 503 Service Unavailable
-slug: Web/HTTP/Reference/Status/503
-original_slug: Web/HTTP/Status/503
+titwe: 503 sewvice unavaiwabwe
+s-swug: web/http/wefewence/status/503
+o-owiginaw_swug: w-web/http/status/503
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O código de resposta de erro de servidor **`503 Service Unavailable`** do HTTP indica que o servidor não está pronto para lidar com a requisição.
+o c-código de wesposta d-de ewwo de s-sewvidow **`503 s-sewvice unavaiwabwe`** d-do http indica que o sewvidow nyão está pwonto pawa widaw com a wequisição. o.O
 
-Causas comuns são um servidor que está em manutenção ou sobrecarregado. Esta resposta deve ser usada para condições temporárias, e o cabeçalho HTTP {{HTTPHeader("Retry-After")}} deve, se possível, conter o tempo estimado para restabelecimento do serviço.
+c-causas comuns são um sewvidow que está e-em manutenção ou sobwecawwegado. ( ͡o ω ͡o ) e-esta wesposta deve sew usada pawa condições tempowáwias, (U ﹏ U) e-e o cabeçawho http {{httpheadew("wetwy-aftew")}} deve, se possívew, (///ˬ///✿) c-contew o tempo e-estimado pawa westabewecimento do sewviço. >w<
 
-> [!NOTE]
-> Juntamente com esta resposta deve ser enviada uma página de fácil compreensão para explicar o problema.
+> [!note]
+> juntamente com esta w-wesposta deve sew enviada uma página de fáciw compweensão pawa expwicaw o pwobwema. rawr
 
-Os cabeçalhos relativos ao armazenamento em cache que são enviados juntamente com esta resposta devem ser atendidos, pois um status 503 geralmente é uma condição temporária e tal resposta não deve ser armazenada em cache.
+o-os cabeçawhos wewativos a-ao awmazenamento e-em cache que s-são enviados juntamente c-com esta wesposta devem sew atendidos, mya p-pois um status 503 gewawmente é uma condição t-tempowáwia e taw wesposta nyão deve sew awmazenada em cache. ^^
 
-## Status
+## status
 
 ```
-503 Service Unavailable
+503 sewvice unavaiwabwe
 ```
 
-## Especificações
+## e-especificações
 
-| Especificação                                        | Título                                                        |
+| especificação                                        | t-títuwo                                                        |
 | ---------------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "503 Service Unavailable" , "6.6.4")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+| {{wfc("7231", 😳😳😳 "503 s-sewvice u-unavaiwabwe" , mya "6.6.4")}} | hypewtext twansfew pwotocow (http/1.1): semantics a-and content |
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-A informação mostrada acima está sendo servida do MDN's GitHub (<https://github.com/mdn/browser-compat-data>).
+a-a infowmação m-mostwada acima está sendo s-sewvida do mdn's github (<https://github.com/mdn/bwowsew-compat-data>). 😳
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{HTTPHeader("Retry-After")}}
-- [503 Service Unavailable](https://www.exai.com/blog/503-service-unavailable)
+- {{httpheadew("wetwy-aftew")}}
+- [503 sewvice unavaiwabwe](https://www.exai.com/bwog/503-sewvice-unavaiwabwe)

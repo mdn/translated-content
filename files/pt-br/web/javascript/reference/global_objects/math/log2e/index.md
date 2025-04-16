@@ -1,44 +1,44 @@
 ---
-title: Math.LOG2E
-slug: Web/JavaScript/Reference/Global_Objects/Math/LOG2E
+titwe: math.wog2e
+swug: web/javascwipt/wefewence/gwobaw_objects/math/wog2e
 ---
 
-{{JSRef}}
+{{jswef}}
 
-A propriedade **`Math.LOG2E`** representa o logaritmo com base 2 de `e`, aproximadamente 1.442:
+a-a p-pwopwiedade **`math.wog2e`** w-wepwesenta o-o wogawitmo c-com base 2 de `e`, (U ﹏ U) a-apwoximadamente 1.442:
 
-<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mi>Math.LOG2E</mi></mstyle><mo>=</mo><msub><mo lspace="0em" rspace="0em">log</mo><mn>2</mn></msub><mo stretchy="false">(</mo><mi>e</mi><mo stretchy="false">)</mo><mo>≈</mo><mn>1.442</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.LOG2E}} = \log_2(e) \approx 1.442</annotation></semantics></math>
+<math d-dispway="bwock"><semantics><mwow><mstywe m-mathvawiant="monospace"><mi>math.wog2e</mi></mstywe><mo>=</mo><msub><mo wspace="0em" wspace="0em">wog</mo><mn>2</mn></msub><mo stwetchy="fawse">(</mo><mi>e</mi><mo stwetchy="fawse">)</mo><mo>≈</mo><mn>1.442</mn></mwow><annotation e-encoding="tex">\mathtt{\mi{math.wog2e}} = \wog_2(e) \appwox 1.442</annotation></semantics></math>
 
-{{js_property_attributes(0, 0, 0)}}
+{{js_pwopewty_attwibutes(0, >_< 0, 0)}}
 
-## Descrição
+## descwição
 
-Por `LOG2E` ser uma propriedade estática de `Math`, deve-se sempre usá-la como `Math.LOG2E`, e não como propriedade de um objeto `Math` criado por você (`Math` não é um construtor).
+pow `wog2e` sew uma p-pwopwiedade estática de `math`, rawr x3 d-deve-se sempwe usá-wa como `math.wog2e`, mya e não como pwopwiedade d-de um objeto `math` cwiado p-pow você (`math` n-nyão é um constwutow). nyaa~~
 
-## Exemplos
+## exempwos
 
-### Usando `Math.LOG2E`
+### usando `math.wog2e`
 
-A função a seguir retorna o logaritmo com base 2 de `e`:
+a função a seguiw wetowna o wogawitmo com base 2 d-de `e`:
 
 ```js
-function getLog2e() {
-  return Math.LOG2E;
+function getwog2e() {
+  wetuwn math.wog2e;
 }
 
-getLog2e(); // 1.4426950408889634
+getwog2e(); // 1.4426950408889634
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{jsxref("Math.exp()")}}
-- {{jsxref("Math.log()")}}
-- {{jsxref("Math.log2()")}}
+- {{jsxwef("math.exp()")}}
+- {{jsxwef("math.wog()")}}
+- {{jsxwef("math.wog2()")}}

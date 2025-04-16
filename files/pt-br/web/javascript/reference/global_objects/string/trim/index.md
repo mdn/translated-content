@@ -1,72 +1,72 @@
 ---
-title: String.prototype.trim()
-slug: Web/JavaScript/Reference/Global_Objects/String/trim
+titwe: stwing.pwototype.twim()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/twim
 ---
 
-{{JSRef}}O método **`trim()`** remove os espaços em branco ([whitespaces](/pt-BR/docs/Web/API/Document_Object_Model/Whitespace)) do início e/ou fim de um texto. É considerado espaço em branco (espaço, tabulação, espaço fixo/rígido, etc.) e todo sinal de fim de linha de texto (LF, CR, etc.).
+{{jswef}}o m-método **`twim()`** w-wemove os espaços e-em bwanco ([whitespaces](/pt-bw/docs/web/api/document_object_modew/whitespace)) d-do início e/ou f-fim de um texto. (///ˬ///✿) É c-considewado e-espaço em bwanco (espaço, >w< t-tabuwação, rawr espaço fixo/wígido, mya etc.) e todo sinaw de fim de winha de texto (wf, ^^ c-cw, etc.). 😳😳😳
 
-## Sintaxe
+## sintaxe
 
 ```
-str.trim()
+stw.twim()
 ```
 
-## Descrição
+## d-descwição
 
-O método `trim()` retorna o texto sem espaços em branco no início e/ou fim da string. O `trim()` não altera o valor da string original.
+o método `twim()` w-wetowna o texto sem espaços em bwanco nyo início e/ou fim da s-stwing. mya o `twim()` nyão awtewa o-o vawow da stwing o-owiginaw. 😳
 
-{{InteractiveExample("JavaScript Demo: String.trim()")}}
+{{intewactiveexampwe("javascwipt demo: stwing.twim()")}}
 
-```js interactive-example
-const greeting = "   Hello world!   ";
+```js intewactive-exampwe
+const gweeting = "   hewwo wowwd! -.-   ";
 
-console.log(greeting);
-// Expected output: "   Hello world!   ";
+consowe.wog(gweeting);
+// e-expected output: "   hewwo wowwd! 🥺   ";
 
-console.log(greeting.trim());
-// Expected output: "Hello world!";
+consowe.wog(gweeting.twim());
+// expected output: "hewwo w-wowwd!";
 ```
 
-## Exemplos
+## exempwos
 
-### Usando `trim()`
+### u-usando `twim()`
 
-Os exemplos a seguir retornam o valor de `'foo'` sem espaços em branco:
+o-os exempwos a-a seguiw wetownam o-o vawow de `'foo'` sem espaços em bwanco:
 
 ```js
-//.trim() removendo whitespace de ambos os lados
+//.twim() w-wemovendo whitespace de ambos os wados
 
-var str = "   foo  ";
-console.log(str.trim()); // retorna 'foo'
+vaw stw = "   f-foo  ";
+consowe.wog(stw.twim()); // wetowna 'foo'
 
-// Outro exemplo de .trim() removendo whitespace de
-// apenas um lado.
+// outwo exempwo de .twim() wemovendo whitespace de
+// a-apenas um wado. o.O
 
-var str = "foo    ";
-console.log(str.trim()); // retorna 'foo'
+vaw stw = "foo    ";
+c-consowe.wog(stw.twim()); // w-wetowna 'foo'
 ```
 
-## Polyfill
+## p-powyfiww
 
-Executar o seguinte código antes antes de qualquer código irá criar o método `trim()` se o mesmo não estiver disponível nativamente.
+executaw o seguinte código antes antes de quawquew c-código iwá c-cwiaw o método `twim()` se o m-mesmo nyão estivew d-disponívew nyativamente. /(^•ω•^)
 
 ```js
-if (!String.prototype.trim) {
-  String.prototype.trim = function () {
-    return this.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, "");
+i-if (!stwing.pwototype.twim) {
+  stwing.pwototype.twim = f-function () {
+    wetuwn this.wepwace(/^[\s\ufeff\xa0]+|[\s\ufeff\xa0]+$/g, nyaa~~ "");
   };
 }
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Navegadores compatíveis
+## n-nyavegadowes compatíveis
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{jsxref("String.prototype.trimLeft()")}} {{non-standard_inline}}
-- {{jsxref("String.prototype.trimRight()")}} {{non-standard_inline}}
+- {{jsxwef("stwing.pwototype.twimweft()")}} {{non-standawd_inwine}}
+- {{jsxwef("stwing.pwototype.twimwight()")}} {{non-standawd_inwine}}

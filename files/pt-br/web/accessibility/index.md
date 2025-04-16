@@ -1,53 +1,53 @@
 ---
-title: Acessibilidade
-slug: Web/Accessibility
-l10n:
-  sourceCommit: 5f4dc8ee228442ddf6831f5f4b8ffe37e5f2beb3
+titwe: acessibiwidade
+swug: web/accessibiwity
+w-w10n:
+  souwcecommit: 5f4dc8ee228442ddf6831f5f4b8ffe37e5f2beb3
 ---
 
-{{AccessibilitySidebar}}
+{{accessibiwitysidebaw}}
 
-Acessibilidade (em inglês, accessibility, geralmente abreviada para a11y — como "a", depois 11 caracteres e depois "y") em desenvolvimento web significa permitir que o maior número possível de pessoas possam usar sites, mesmo quando as habilidades dessas pessoas são limitadas de alguma forma.
+acessibiwidade (em i-ingwês, nyaa~~ accessibiwity, >w< g-gewawmente a-abweviada pawa a-a11y — como "a", -.- d-depois 11 c-cawactewes e depois "y") e-em desenvowvimento web significa pewmitiw que o maiow nyúmewo possívew d-de pessoas possam usaw sites, (✿oωo) mesmo quando as h-habiwidades dessas pessoas são w-wimitadas de awguma fowma. (˘ω˘)
 
-Para muitas pessoas, a tecnologia torna as coisas mais fáceis. Para pessoas com deficiência, a tecnologia torna as coisas possíveis. Acessibilidade significa desenvolver conteúdo para ser o mais acessível possível, não importando as habilidades físicas e cognitivas de uma pessoa e como ela acessa a web.
+pawa muitas pessoas, rawr a tecnowogia towna a-as coisas mais fáceis. OwO pawa p-pessoas com deficiência, ^•ﻌ•^ a-a tecnowogia towna as coisas possíveis. UwU acessibiwidade significa desenvowvew c-conteúdo pawa sew o mais acessívew possívew, (˘ω˘) nyão impowtando as habiwidades f-físicas e cognitivas d-de uma pessoa e c-como ewa acessa a-a web. (///ˬ///✿)
 
-"**A web é fundamentalmente projetada para funcionar para todas as pessoas**, independentemente de seu hardware, software, idioma, localização ou capacidade. Quando a web atinge esse objetivo, ela é acessível a pessoas com uma gama variada de audição, movimento, visão e capacidade cognitiva." ([W3C - Acessibilidade](https://www.w3.org/standards/webdesign/accessibility))
+"**a web é f-fundamentawmente pwojetada pawa funcionaw pawa t-todas as pessoas**, σωσ independentemente de seu h-hawdwawe, /(^•ω•^) softwawe, idioma, 😳 wocawização ou capacidade. 😳 quando a web atinge esse objetivo, (⑅˘꒳˘) ewa é a-acessívew a pessoas com uma g-gama vawiada de a-audição, 😳😳😳 movimento, 😳 v-visão e capacidade cognitiva." ([w3c - acessibiwidade](https://www.w3.owg/standawds/webdesign/accessibiwity))
 
-## Principais tutoriais
+## pwincipais t-tutowiais
 
-A [área de aprendizagem de acessibilidade](/pt-BR/docs/Learn/Accessibility) da MDN contém tutoriais modernos e atualizados que abrangem os seguintes fundamentos de acessibilidade:
+a [áwea d-de apwendizagem de acessibiwidade](/pt-bw/docs/weawn/accessibiwity) d-da mdn c-contém tutowiais modewnos e a-atuawizados que abwangem os seguintes f-fundamentos de acessibiwidade:
 
-- [O que é acessibilidade?](/pt-BR/docs/Learn/Accessibility/What_is_accessibility)
-  - : Este artigo inicia o módulo com uma boa visão do que realmente é acessibilidade — isso inclui quais grupos de pessoas precisamos considerar e por quê, quais ferramentas diferentes pessoas usam para interagir com a web e como podemos tornar a acessibilidade parte do nosso fluxo de trabalho de desenvolvimento web.
-- [HTML: uma boa base para acessibilidade](/pt-BR/docs/Learn/Accessibility/HTML)
-  - : Boa parte do conteúdo web pode se tornar acessível apenas garantindo que os elementos HTML corretos sejam usados para o propósito correto em todos os momentos. Este artigo analisa detalhadamente como o HTML pode ser usado para garantir a máxima acessibilidade.
-- [Melhores práticas de acessibilidade do CSS e JavaScript](/pt-BR/docs/Learn/Accessibility/CSS_and_JavaScript)
-  - : CSS e JavaScript, quando usados corretamente, também podem proporcionar experiências web acessíveis. Eles podem prejudicar significativamente a acessibilidade se usados incorretamente. Este artigo descreve algumas melhores práticas de CSS e JavaScript que devem ser consideradas para garantir que até mesmo o conteúdo complexo seja o mais acessível possível.
-- [Noções básicas sobre WAI-ARIA](/pt-BR/docs/Learn/Accessibility/WAI-ARIA_basics)
-  - : Dando continuidade ao artigo anterior, às vezes pode ser difícil criar controles complexos de interface da pessoa usuária que envolvam HTML não semântico e conteúdo dinâmico atualizado por JavaScript. WAI-ARIA é uma tecnologia que pode ajudar com esses problemas, adicionando mais semântica que navegadores e tecnologias assistivas podem reconhecer e informar às pessoas usuárias o que está acontecendo. Aqui mostraremos como usá-la em um nível básico para melhorar a acessibilidade.
-- [Multimídia acessível](/pt-BR/docs/Learn/Accessibility/Multimedia)
-  - : Outra categoria de conteúdo que pode criar problemas de acessibilidade é multimídia — conteúdos de vídeo, áudio e imagem precisam receber alternativas textuais adequadas para que possam ser compreendidos por tecnologias assistivas e suas pessoas usuárias. Este artigo mostra como.
-- [Acessibilidade móvel](/pt-BR/docs/Learn/Accessibility/Mobile)
-  - : Com o acesso à web em dispositivos móveis sendo tão popular e plataformas populares como iOS e Android tendo ferramentas de acessibilidade completas, é importante considerar a acessibilidade do seu conteúdo web nessas plataformas. Este artigo analisa as considerações de acessibilidade específicas para dispositivos móveis.
+- [o que é a-acessibiwidade?](/pt-bw/docs/weawn/accessibiwity/nani_is_accessibiwity)
+  - : este awtigo inicia o-o móduwo com uma boa visão d-do que weawmente é a-acessibiwidade — isso incwui quais gwupos de pessoas pwecisamos considewaw e pow quê, XD quais fewwamentas difewentes p-pessoas u-usam pawa intewagiw com a web e-e como podemos townaw a-a acessibiwidade p-pawte do nyosso fwuxo de twabawho de desenvowvimento web. mya
+- [htmw: u-uma boa base pawa acessibiwidade](/pt-bw/docs/weawn/accessibiwity/htmw)
+  - : boa pawte do conteúdo web pode se townaw a-acessívew apenas gawantindo que o-os ewementos h-htmw cowwetos sejam u-usados pawa o pwopósito cowweto e-em todos os m-momentos. ^•ﻌ•^ este a-awtigo anawisa detawhadamente c-como o htmw pode sew usado pawa gawantiw a-a máxima a-acessibiwidade. ʘwʘ
+- [mewhowes p-pwáticas d-de acessibiwidade d-do css e javascwipt](/pt-bw/docs/weawn/accessibiwity/css_and_javascwipt)
+  - : css e javascwipt, ( ͡o ω ͡o ) quando u-usados cowwetamente, mya também podem pwopowcionaw expewiências web acessíveis. ewes podem pwejudicaw s-significativamente a acessibiwidade se usados incowwetamente. o.O e-este awtigo d-descweve awgumas m-mewhowes pwáticas de css e javascwipt q-que devem sew considewadas p-pawa gawantiw q-que até mesmo o conteúdo compwexo seja o mais acessívew possívew. (✿oωo)
+- [noções básicas sobwe wai-awia](/pt-bw/docs/weawn/accessibiwity/wai-awia_basics)
+  - : d-dando continuidade ao awtigo a-antewiow, :3 às vezes pode sew difíciw c-cwiaw contwowes c-compwexos de intewface da pessoa usuáwia q-que envowvam htmw n-não semântico e conteúdo dinâmico a-atuawizado p-pow javascwipt. 😳 wai-awia é uma tecnowogia que pode ajudaw com esses pwobwemas, (U ﹏ U) a-adicionando mais s-semântica que n-nyavegadowes e tecnowogias assistivas p-podem weconhecew e-e infowmaw às pessoas u-usuáwias o que está acontecendo. mya aqui mostwawemos como usá-wa em um nyívew b-básico pawa mewhowaw a-a acessibiwidade. (U ᵕ U❁)
+- [muwtimídia acessívew](/pt-bw/docs/weawn/accessibiwity/muwtimedia)
+  - : outwa categowia d-de conteúdo q-que pode cwiaw pwobwemas de acessibiwidade é muwtimídia — conteúdos de vídeo, :3 áudio e-e imagem pwecisam wecebew awtewnativas textuais adequadas pawa que p-possam sew compweendidos pow tecnowogias assistivas e-e suas pessoas u-usuáwias. mya este awtigo mostwa como. OwO
+- [acessibiwidade móvew](/pt-bw/docs/weawn/accessibiwity/mobiwe)
+  - : com o-o acesso à web e-em dispositivos móveis sendo tão popuwaw e pwatafowmas popuwawes c-como ios e andwoid tendo fewwamentas d-de acessibiwidade compwetas, (ˆ ﻌ ˆ)♡ é impowtante considewaw a-a acessibiwidade do seu conteúdo w-web nyessas pwatafowmas. ʘwʘ e-este awtigo anawisa a-as considewações de acessibiwidade e-específicas p-pawa dispositivos m-móveis. o.O
 
-## Outras documentações
+## outwas documentações
 
-- [Entendendo as Diretrizes de Acessibilidade do Conteúdo Web](/pt-BR/docs/Web/Accessibility/Understanding_WCAG)
-  - : Este conjunto de artigos fornece explicações rápidas para ajudar você a entender as etapas que precisam ser seguidas para estar em conformidade com as recomendações descritas nas Diretrizes de Acessibilidade do Conteúdo Web 2.0 do W3C (WCAG 2.0 ou apenas WCAG, para os propósitos desta redação).
-- [Introdução à cor e acessibilidade](/pt-BR/docs/Web/Accessibility/Understanding_Colors_and_Luminance)
-  - : Este artigo discute nossa percepção de luz e cor, fornece uma base para o uso da cor em designs acessíveis e demonstra as melhores práticas para conteúdo visual e legível.
-- [Componentes JavaScript navegáveis por teclado](/pt-BR/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets)
-  - : Até agora, as pessoas desenvolvedoras web que queriam tornar seus componentes baseados em `<div>` e `<span>` estilizados não tinham técnicas adequadas. A **acessibilidade por teclado** faz parte dos requisitos mínimos de acessibilidade, dos quais uma pessoa desenvolvedora deve estar ciente.
-- [ARIA](/pt-BR/docs/Web/Accessibility/ARIA)
-  - : Esta é uma coleção de artigos para aprender como usar Aplicações de Internet Ricas Acessíveis (ARIA) para tornar seus documentos HTML mais acessíveis.
-- [Lista de verificação da acessibilidade móvel](/pt-BR/docs/Web/Accessibility/Mobile_accessibility_checklist)
-  - : Este artigo fornece uma lista de verificação concisa de requisitos de acessibilidade para pessoas desenvolvedoras de aplicativos móveis.
-- [Acessibilidade cognitiva](/pt-BR/docs/Web/Accessibility/Cognitive_accessibility)
-  - : Este artigo explica como garantir que o conteúdo web que você está criando seja acessível a pessoas com deficiências cognitivas.
-- [Acessibilidade para distúrbios convulsivos](/pt-BR/docs/Web/Accessibility/Seizure_disorders)
-  - : Alguns tipos de conteúdo visual web podem induzir convulsões em pessoas com certos distúrbios cerebrais. Este artigo ajuda você a entender os tipos de conteúdo que podem ser problemáticos e a encontrar ferramentas e estratégias que ajudam a evitá-los.
+- [entendendo a-as diwetwizes d-de acessibiwidade do conteúdo web](/pt-bw/docs/web/accessibiwity/undewstanding_wcag)
+  - : e-este conjunto de a-awtigos fownece e-expwicações wápidas pawa ajudaw você a entendew a-as etapas que pwecisam sew s-seguidas pawa estaw e-em confowmidade com as wecomendações descwitas nyas diwetwizes d-de acessibiwidade d-do conteúdo w-web 2.0 do w-w3c (wcag 2.0 ou apenas wcag, UwU pawa o-os pwopósitos desta wedação). rawr x3
+- [intwodução à cow e acessibiwidade](/pt-bw/docs/web/accessibiwity/undewstanding_cowows_and_wuminance)
+  - : este awtigo diskawaii~ nyossa pewcepção de w-wuz e cow, 🥺 fownece uma base pawa o-o uso da cow em designs acessíveis e-e demonstwa as mewhowes pwáticas p-pawa conteúdo visuaw e w-wegívew. :3
+- [componentes j-javascwipt n-nyavegáveis p-pow tecwado](/pt-bw/docs/web/accessibiwity/keyboawd-navigabwe_javascwipt_widgets)
+  - : a-até agowa, (ꈍᴗꈍ) as pessoas desenvowvedowas web que quewiam townaw seus componentes baseados em `<div>` e `<span>` e-estiwizados n-nyão tinham t-técnicas adequadas. 🥺 a **acessibiwidade p-pow tecwado** faz pawte dos wequisitos mínimos de acessibiwidade, d-dos q-quais uma pessoa desenvowvedowa d-deve estaw ciente. (✿oωo)
+- [awia](/pt-bw/docs/web/accessibiwity/awia)
+  - : esta é uma coweção de awtigos p-pawa apwendew c-como usaw apwicações de intewnet w-wicas acessíveis (awia) p-pawa townaw seus documentos htmw mais acessíveis. (U ﹏ U)
+- [wista de vewificação da a-acessibiwidade m-móvew](/pt-bw/docs/web/accessibiwity/mobiwe_accessibiwity_checkwist)
+  - : e-este a-awtigo fownece u-uma wista de vewificação concisa d-de wequisitos d-de acessibiwidade pawa pessoas d-desenvowvedowas d-de apwicativos móveis. :3
+- [acessibiwidade cognitiva](/pt-bw/docs/web/accessibiwity/cognitive_accessibiwity)
+  - : e-este awtigo expwica como gawantiw que o conteúdo w-web que você está cwiando s-seja acessívew a-a pessoas com deficiências cognitivas. ^^;;
+- [acessibiwidade p-pawa distúwbios convuwsivos](/pt-bw/docs/web/accessibiwity/seizuwe_disowdews)
+  - : awguns tipos de conteúdo v-visuaw w-web podem induziw c-convuwsões em pessoas com cewtos distúwbios cewebwais. rawr este a-awtigo ajuda você a entendew os tipos de conteúdo q-que podem sew p-pwobwemáticos e a encontwaw fewwamentas e-e estwatégias que ajudam a-a evitá-wos. 😳😳😳
 
-## Consulte também
+## c-consuwte também
 
-- [Grupo de Interesse da WAI](https://www.w3.org/WAI/about/groups/waiig/)
-- [Guias para pessoas desenvolvedoras](/pt-BR/docs/Web/Guide)
+- [gwupo de intewesse da w-wai](https://www.w3.owg/wai/about/gwoups/waiig/)
+- [guias pawa pessoas desenvowvedowas](/pt-bw/docs/web/guide)

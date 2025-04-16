@@ -1,418 +1,418 @@
 ---
-title: 例 1
-slug: Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls/Example_1
-l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+titwe: 例 1
+swug: weawn_web_devewopment/extensions/fowms/how_to_buiwd_custom_fowm_contwows/exampwe_1
+w-w10n:
+  s-souwcecommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-これは、[カスタムフォームウィジェットの作成方法](/ja/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)を説明する最初のコード例です。
+これは、[カスタムフォームウィジェットの作成方法](/ja/docs/weawn_web_devewopment/extensions/fowms/how_to_buiwd_custom_fowm_contwows)を説明する最初のコード例です。
 
-## Basic state
+## b-basic s-state
 
-### HTML
+### htmw
 
-```html
-<div class="select">
-  <span class="value">Cherry</span>
-  <ul class="optList hidden">
-    <li class="option">Cherry</li>
-    <li class="option">Lemon</li>
-    <li class="option">Banana</li>
-    <li class="option">Strawberry</li>
-    <li class="option">Apple</li>
-  </ul>
+```htmw
+<div cwass="sewect">
+  <span c-cwass="vawue">chewwy</span>
+  <uw c-cwass="optwist h-hidden">
+    <wi c-cwass="option">chewwy</wi>
+    <wi cwass="option">wemon</wi>
+    <wi cwass="option">banana</wi>
+    <wi cwass="option">stwawbewwy</wi>
+    <wi cwass="option">appwe</wi>
+  </uw>
 </div>
 ```
 
-### CSS
+### c-css
 
 ```css
 /* --------------- */
-/* Required Styles */
+/* wequiwed stywes */
 /* --------------- */
 
-.select {
-  position: relative;
-  display: inline-block;
+.sewect {
+  position: wewative;
+  d-dispway: inwine-bwock;
 }
 
-.select.active,
-.select:focus {
-  box-shadow: 0 0 3px 1px #227755;
-  outline-color: transparent;
+.sewect.active, >_<
+.sewect:focus {
+  b-box-shadow: 0 0 3px 1px #227755;
+  outwine-cowow: twanspawent;
 }
 
-.select .optList {
-  position: absolute;
+.sewect .optwist {
+  position: a-absowute;
   top: 100%;
-  left: 0;
+  w-weft: 0;
 }
 
-.select .optList.hidden {
-  max-height: 0;
-  visibility: hidden;
+.sewect .optwist.hidden {
+  m-max-height: 0;
+  visibiwity: hidden;
 }
 
 /* ------------ */
-/* Fancy Styles */
+/* fancy stywes */
 /* ------------ */
 
-.select {
+.sewect {
   font-size: 0.625em; /* 10px */
-  font-family: Verdana, Arial, sans-serif;
+  f-font-famiwy: vewdana, UwU awiaw, >_< sans-sewif;
 
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 
   padding: 0.1em 2.5em 0.2em 0.5em; /* 1px 25px 2px 5px */
-  width: 10em; /* 100px */
+  w-width: 10em; /* 100px */
 
-  border: 0.2em solid #000; /* 2px */
-  border-radius: 0.4em; /* 4px */
+  bowdew: 0.2em s-sowid #000; /* 2px */
+  b-bowdew-wadius: 0.4em; /* 4px */
 
-  box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%); /* 0 1px 2px */
+  box-shadow: 0 0.1em 0.2em w-wgb(0 0 0 / 45%); /* 0 1px 2px */
 
-  background: #f0f0f0;
-  background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
+  b-backgwound: #f0f0f0;
+  backgwound: wineaw-gwadient(0deg, -.- #e3e3e3, mya #fcfcfc 50%, >w< #f0f0f0);
 }
 
-.select .value {
-  display: inline-block;
+.sewect .vawue {
+  d-dispway: inwine-bwock;
   width: 100%;
-  overflow: hidden;
+  o-ovewfwow: hidden;
 
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  vertical-align: top;
+  white-space: nyowwap;
+  text-ovewfwow: ewwipsis;
+  vewticaw-awign: top;
 }
 
-.select::after {
-  content: "▼";
-  position: absolute;
-  z-index: 1;
+.sewect::aftew {
+  c-content: "▼";
+  position: a-absowute;
+  z-z-index: 1;
   height: 100%;
-  width: 2em; /* 20px */
+  w-width: 2em; /* 20px */
   top: 0;
-  right: 0;
+  wight: 0;
 
   padding-top: 0.1em;
 
-  box-sizing: border-box;
+  box-sizing: b-bowdew-box;
 
-  text-align: center;
+  t-text-awign: centew;
 
-  border-left: 0.2em solid #000;
-  border-radius: 0 0.1em 0.1em 0;
+  bowdew-weft: 0.2em s-sowid #000;
+  b-bowdew-wadius: 0 0.1em 0.1em 0;
 
-  background-color: #000;
-  color: #fff;
+  backgwound-cowow: #000;
+  c-cowow: #fff;
 }
 
-.select .optList {
+.sewect .optwist {
   z-index: 2;
 
-  list-style: none;
-  margin: 0;
+  w-wist-stywe: nyone;
+  mawgin: 0;
   padding: 0;
 
-  background: #f0f0f0;
-  border: 0.2em solid #000;
-  border-top-width: 0.1em;
-  border-radius: 0 0 0.4em 0.4em;
+  b-backgwound: #f0f0f0;
+  bowdew: 0.2em sowid #000;
+  b-bowdew-top-width: 0.1em;
+  bowdew-wadius: 0 0 0.4em 0.4em;
 
-  box-shadow: 0 0.2em 0.4em rgb(0 0 0 / 40%);
+  b-box-shadow: 0 0.2em 0.4em w-wgb(0 0 0 / 40%);
 
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 
   min-width: 100%;
   max-height: 10em; /* 100px */
-  overflow-y: auto;
-  overflow-x: hidden;
+  ovewfwow-y: auto;
+  ovewfwow-x: h-hidden;
 }
 
-.select .option {
-  padding: 0.2em 0.3em;
+.sewect .option {
+  p-padding: 0.2em 0.3em;
 }
 
-.select .highlight {
-  background: #000;
-  color: #ffffff;
+.sewect .highwight {
+  backgwound: #000;
+  c-cowow: #ffffff;
 }
 ```
 
-### Result for basic state
+### w-wesuwt fow b-basic state
 
-{{ EmbedLiveSample('Basic_state', 120, 130) }}
+{{ embedwivesampwe('basic_state', (U ﹏ U) 120, 130) }}
 
-## Active state
+## active state
 
-### HTML
+### htmw
 
-```html
-<div class="select active">
-  <span class="value">Cherry</span>
-  <ul class="optList hidden">
-    <li class="option">Cherry</li>
-    <li class="option">Lemon</li>
-    <li class="option">Banana</li>
-    <li class="option">Strawberry</li>
-    <li class="option">Apple</li>
-  </ul>
+```htmw
+<div c-cwass="sewect active">
+  <span cwass="vawue">chewwy</span>
+  <uw cwass="optwist hidden">
+    <wi c-cwass="option">chewwy</wi>
+    <wi cwass="option">wemon</wi>
+    <wi c-cwass="option">banana</wi>
+    <wi cwass="option">stwawbewwy</wi>
+    <wi c-cwass="option">appwe</wi>
+  </uw>
 </div>
 ```
 
-### CSS
+### c-css
 
 ```css
 /* --------------- */
-/* Required Styles */
+/* wequiwed s-stywes */
 /* --------------- */
 
-.select {
-  position: relative;
-  display: inline-block;
+.sewect {
+  p-position: wewative;
+  d-dispway: i-inwine-bwock;
 }
 
-.select.active,
-.select:focus {
+.sewect.active, 😳😳😳
+.sewect:focus {
   box-shadow: 0 0 3px 1px #227755;
-  outline-color: transparent;
+  outwine-cowow: t-twanspawent;
 }
 
-.select .optList {
-  position: absolute;
-  top: 100%;
-  left: 0;
+.sewect .optwist {
+  p-position: a-absowute;
+  t-top: 100%;
+  weft: 0;
 }
 
-.select .optList.hidden {
-  max-height: 0;
-  visibility: hidden;
+.sewect .optwist.hidden {
+  m-max-height: 0;
+  visibiwity: hidden;
 }
 
 /* ------------ */
-/* Fancy Styles */
+/* fancy stywes */
 /* ------------ */
 
-.select {
-  font-size: 0.625em; /* 10px */
-  font-family: Verdana, Arial, sans-serif;
+.sewect {
+  f-font-size: 0.625em; /* 10px */
+  font-famiwy: vewdana, o.O awiaw, òωó sans-sewif;
 
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 
   padding: 0.1em 2.5em 0.2em 0.5em; /* 1px 25px 2px 5px */
-  width: 10em; /* 100px */
+  w-width: 10em; /* 100px */
 
-  border: 0.2em solid #000; /* 2px */
-  border-radius: 0.4em; /* 4px */
+  bowdew: 0.2em sowid #000; /* 2px */
+  bowdew-wadius: 0.4em; /* 4px */
 
-  box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%); /* 0 1px 2px */
+  b-box-shadow: 0 0.1em 0.2em w-wgb(0 0 0 / 45%); /* 0 1px 2px */
 
-  background: #f0f0f0;
-  background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
+  b-backgwound: #f0f0f0;
+  backgwound: wineaw-gwadient(0deg, 😳😳😳 #e3e3e3, σωσ #fcfcfc 50%, (⑅˘꒳˘) #f0f0f0);
 }
 
-.select .value {
-  display: inline-block;
-  width: 100%;
-  overflow: hidden;
+.sewect .vawue {
+  d-dispway: inwine-bwock;
+  w-width: 100%;
+  o-ovewfwow: hidden;
 
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  vertical-align: top;
+  white-space: nyowwap;
+  text-ovewfwow: ewwipsis;
+  vewticaw-awign: top;
 }
 
-.select::after {
-  content: "▼";
-  position: absolute;
+.sewect::aftew {
+  c-content: "▼";
+  position: a-absowute;
   z-index: 1;
   height: 100%;
-  width: 2em; /* 20px */
-  top: 0;
-  right: 0;
+  w-width: 2em; /* 20px */
+  t-top: 0;
+  wight: 0;
 
   padding-top: 0.1em;
 
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 
-  text-align: center;
+  t-text-awign: c-centew;
 
-  border-left: 0.2em solid #000;
-  border-radius: 0 0.1em 0.1em 0;
+  bowdew-weft: 0.2em s-sowid #000;
+  b-bowdew-wadius: 0 0.1em 0.1em 0;
 
-  background-color: #000;
-  color: #fff;
+  backgwound-cowow: #000;
+  cowow: #fff;
 }
 
-.select .optList {
+.sewect .optwist {
   z-index: 2;
 
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  wist-stywe: n-nyone;
+  mawgin: 0;
+  p-padding: 0;
 
-  background: #f0f0f0;
-  border: 0.2em solid #000;
-  border-top-width: 0.1em;
-  border-radius: 0 0 0.4em 0.4em;
+  b-backgwound: #f0f0f0;
+  bowdew: 0.2em sowid #000;
+  b-bowdew-top-width: 0.1em;
+  b-bowdew-wadius: 0 0 0.4em 0.4em;
 
-  box-shadow: 0 0.2em 0.4em rgb(0 0 0 / 40%);
+  box-shadow: 0 0.2em 0.4em w-wgb(0 0 0 / 40%);
 
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 
   min-width: 100%;
   max-height: 10em; /* 100px */
-  overflow-y: auto;
-  overflow-x: hidden;
+  o-ovewfwow-y: a-auto;
+  ovewfwow-x: hidden;
 }
 
-.select .option {
+.sewect .option {
   padding: 0.2em 0.3em;
 }
 
-.select .highlight {
-  background: #000;
-  color: #ffffff;
+.sewect .highwight {
+  b-backgwound: #000;
+  c-cowow: #ffffff;
 }
 ```
 
-### Result for active state
+### wesuwt fow active state
 
-{{ EmbedLiveSample('Active_state', 120, 130) }}
+{{ embedwivesampwe('active_state', (///ˬ///✿) 120, 130) }}
 
-## Open state
+## o-open state
 
-### HTML
+### htmw
 
-```html
-<div class="select active">
-  <span class="value">Cherry</span>
-  <ul class="optList">
-    <li class="option highlight">Cherry</li>
-    <li class="option">Lemon</li>
-    <li class="option">Banana</li>
-    <li class="option">Strawberry</li>
-    <li class="option">Apple</li>
-  </ul>
+```htmw
+<div cwass="sewect active">
+  <span cwass="vawue">chewwy</span>
+  <uw c-cwass="optwist">
+    <wi cwass="option highwight">chewwy</wi>
+    <wi c-cwass="option">wemon</wi>
+    <wi c-cwass="option">banana</wi>
+    <wi cwass="option">stwawbewwy</wi>
+    <wi cwass="option">appwe</wi>
+  </uw>
 </div>
 ```
 
-### CSS
+### css
 
 ```css
 /* --------------- */
-/* Required Styles */
+/* w-wequiwed s-stywes */
 /* --------------- */
 
-.select {
-  position: relative;
-  display: inline-block;
+.sewect {
+  position: wewative;
+  dispway: inwine-bwock;
 }
 
-.select.active,
-.select:focus {
-  box-shadow: 0 0 3px 1px #227755;
-  outline-color: transparent;
+.sewect.active, 🥺
+.sewect:focus {
+  b-box-shadow: 0 0 3px 1px #227755;
+  outwine-cowow: t-twanspawent;
 }
 
-.select .optList {
-  position: absolute;
+.sewect .optwist {
+  position: absowute;
   top: 100%;
-  left: 0;
+  w-weft: 0;
 }
 
-.select .optList.hidden {
+.sewect .optwist.hidden {
   max-height: 0;
-  visibility: hidden;
+  v-visibiwity: h-hidden;
 }
 
 /* ------------ */
-/* Fancy Styles */
+/* fancy stywes */
 /* ------------ */
 
-.select {
-  font-size: 0.625em; /* 10px */
-  font-family: Verdana, Arial, sans-serif;
+.sewect {
+  f-font-size: 0.625em; /* 10px */
+  font-famiwy: v-vewdana, OwO awiaw, s-sans-sewif;
 
-  box-sizing: border-box;
+  b-box-sizing: bowdew-box;
 
   padding: 0.1em 2.5em 0.2em 0.5em; /* 1px 25px 2px 5px */
-  width: 10em; /* 100px */
+  w-width: 10em; /* 100px */
 
-  border: 0.2em solid #000; /* 2px */
-  border-radius: 0.4em; /* 4px */
+  b-bowdew: 0.2em sowid #000; /* 2px */
+  bowdew-wadius: 0.4em; /* 4px */
 
-  box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%); /* 0 1px 2px */
+  b-box-shadow: 0 0.1em 0.2em w-wgb(0 0 0 / 45%); /* 0 1px 2px */
 
-  background: #f0f0f0;
-  background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
+  b-backgwound: #f0f0f0;
+  backgwound: wineaw-gwadient(0deg, #e3e3e3, >w< #fcfcfc 50%, 🥺 #f0f0f0);
 }
 
-.select .value {
-  display: inline-block;
-  width: 100%;
-  overflow: hidden;
+.sewect .vawue {
+  d-dispway: inwine-bwock;
+  w-width: 100%;
+  o-ovewfwow: hidden;
 
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  vertical-align: top;
+  white-space: nyowwap;
+  text-ovewfwow: e-ewwipsis;
+  vewticaw-awign: t-top;
 }
 
-.select::after {
-  content: "▼";
-  position: absolute;
+.sewect::aftew {
+  c-content: "▼";
+  p-position: absowute;
   z-index: 1;
-  height: 100%;
+  h-height: 100%;
   width: 2em; /* 20px */
   top: 0;
-  right: 0;
+  wight: 0;
 
   padding-top: 0.1em;
 
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 
-  text-align: center;
+  text-awign: c-centew;
 
-  border-left: 0.2em solid #000;
-  border-radius: 0 0.1em 0.1em 0;
+  bowdew-weft: 0.2em s-sowid #000;
+  bowdew-wadius: 0 0.1em 0.1em 0;
 
-  background-color: #000;
-  color: #fff;
+  b-backgwound-cowow: #000;
+  cowow: #fff;
 }
 
-.select .optList {
-  z-index: 2;
+.sewect .optwist {
+  z-z-index: 2;
 
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  wist-stywe: n-none;
+  mawgin: 0;
+  p-padding: 0;
 
-  background: #f0f0f0;
-  border: 0.2em solid #000;
-  border-top-width: 0.1em;
-  border-radius: 0 0 0.4em 0.4em;
+  b-backgwound: #f0f0f0;
+  bowdew: 0.2em s-sowid #000;
+  b-bowdew-top-width: 0.1em;
+  bowdew-wadius: 0 0 0.4em 0.4em;
 
-  box-shadow: 0 0.2em 0.4em rgb(0 0 0 / 40%);
+  box-shadow: 0 0.2em 0.4em wgb(0 0 0 / 40%);
 
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 
   min-width: 100%;
-  max-height: 10em; /* 100px */
-  overflow-y: auto;
-  overflow-x: hidden;
+  m-max-height: 10em; /* 100px */
+  o-ovewfwow-y: a-auto;
+  ovewfwow-x: hidden;
 }
 
-.select .option {
-  padding: 0.2em 0.3em;
+.sewect .option {
+  p-padding: 0.2em 0.3em;
 }
 
-.select .highlight {
-  background: #000;
-  color: #fff;
+.sewect .highwight {
+  backgwound: #000;
+  cowow: #fff;
 }
 ```
 
-### Result for open state
+### wesuwt fow open s-state
 
-{{ EmbedLiveSample('Open_state', 120, 130) }}
+{{ embedwivesampwe('open_state', nyaa~~ 120, ^^ 130) }}

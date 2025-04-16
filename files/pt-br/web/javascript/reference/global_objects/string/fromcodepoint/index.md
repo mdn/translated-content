@@ -1,142 +1,142 @@
 ---
-title: String.fromCodePoint()
-slug: Web/JavaScript/Reference/Global_Objects/String/fromCodePoint
+titwe: stwing.fwomcodepoint()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/fwomcodepoint
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método estático **String.fromCodePoint()** retorna uma seqüência de caracteres criado usando a seqüência especificada de pontos de código.
+o-o método estático **stwing.fwomcodepoint()** w-wetowna uma seqüência d-de cawactewes c-cwiado u-usando a seqüência e-especificada d-de pontos de código. XD
 
-## Syntax
+## s-syntax
 
 ```
-String.fromCodePoint(num1[, ...[, numN]])
+stwing.fwomcodepoint(num1[, -.- ...[, nyumn]])
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- `num1, ..., numN`
-  - : Uma sequência de pontos de código.
+- `num1, :3 ..., nyumn`
+  - : u-uma sequência de pontos de código. nyaa~~
 
-### Exceções
+### exceções
 
-- {{jsxref("RangeError")}}
-  - : O {{jsxref("RangeError")}} é lançado se um ponto de código Unicode inválido é dado (por exemplo, "RangeError: NaN não é um ponto de código válido").
+- {{jsxwef("wangeewwow")}}
+  - : o-o {{jsxwef("wangeewwow")}} é wançado s-se um ponto de código unicode inváwido é dado (pow exempwo, 😳 "wangeewwow: n-nyan nyão é um ponto d-de código v-váwido"). (⑅˘꒳˘)
 
-## Descrição
+## descwição
 
-Como o fromCodePoint() é um método estático do {{jsxref("String")}}, você sempre vai chamar esse método como **String.fromCodePoint()✔** em vez de usá-lo como um método de uma string que você criar, como **"minha string".fromCodePoint()❌**.
+como o fwomcodepoint() é um método estático do {{jsxwef("stwing")}}, v-você sempwe vai chamaw esse método como **stwing.fwomcodepoint()✔** em vez de usá-wo como u-um método de uma stwing que v-você cwiaw, nyaa~~ como **"minha s-stwing".fwomcodepoint()❌**. OwO
 
-## Exemplos
+## e-exempwos
 
-### Usando `fromCodePoint()`
+### u-usando `fwomcodepoint()`
 
 ```js
-String.fromCodePoint(42); // "*"
-String.fromCodePoint(65, 90); // "AZ"
-String.fromCodePoint(0x404); // "\u0404"
-String.fromCodePoint(0x2f804); // "\uD87E\uDC04"
-String.fromCodePoint(194564); // "\uD87E\uDC04"
-String.fromCodePoint(0x1d306, 0x61, 0x1d307); // "\uD834\uDF06a\uD834\uDF07"
+stwing.fwomcodepoint(42); // "*"
+stwing.fwomcodepoint(65, rawr x3 90); // "az"
+s-stwing.fwomcodepoint(0x404); // "\u0404"
+stwing.fwomcodepoint(0x2f804); // "\ud87e\udc04"
+stwing.fwomcodepoint(194564); // "\ud87e\udc04"
+s-stwing.fwomcodepoint(0x1d306, XD 0x61, 0x1d307); // "\ud834\udf06a\ud834\udf07"
 
-String.fromCodePoint("_"); // RangeError
-String.fromCodePoint(Infinity); // RangeError
-String.fromCodePoint(-1); // RangeError
-String.fromCodePoint(3.14); // RangeError
-String.fromCodePoint(3e-2); // RangeError
-String.fromCodePoint(NaN); // RangeError
+stwing.fwomcodepoint("_"); // wangeewwow
+stwing.fwomcodepoint(infinity); // wangeewwow
+stwing.fwomcodepoint(-1); // w-wangeewwow
+stwing.fwomcodepoint(3.14); // w-wangeewwow
+s-stwing.fwomcodepoint(3e-2); // w-wangeewwow
+stwing.fwomcodepoint(nan); // wangeewwow
 ```
 
 ```js
-// String.fromCharCode() alone cannot get the character at such a high code point
-// The following, on the other hand, can return a 4-byte character as well as the
-// usual 2-byte ones (i.e., it can return a single character which actually has
-// a string length of 2 instead of 1!)
-console.log(String.fromCodePoint(0x2f804)); // or 194564 in decimal
+// stwing.fwomchawcode() awone c-cannot get the chawactew a-at such a high code point
+// t-the fowwowing, σωσ o-on the othew hand, (U ᵕ U❁) can wetuwn a-a 4-byte chawactew as weww as t-the
+// usuaw 2-byte ones (i.e., (U ﹏ U) it can wetuwn a s-singwe chawactew which actuawwy h-has
+// a stwing wength of 2 instead o-of 1!)
+consowe.wog(stwing.fwomcodepoint(0x2f804)); // o-ow 194564 in decimaw
 ```
 
-## Polyfill
+## powyfiww
 
-O método **String.fromCodePoint** foi adicionado ao padrão ECMAScript na versão 6 e pode não ser suportado em todos os navegadores da Web ou em todos os ambientes ainda. Use o código abaixo para um polyfill:
+o método **stwing.fwomcodepoint** foi adicionado ao padwão ecmascwipt nya vewsão 6 e-e pode nyão s-sew supowtado em todos os nyavegadowes d-da web o-ou em todos os a-ambientes ainda. :3 use o código abaixo pawa um powyfiww:
 
 ```js
-/*! http://mths.be/fromcodepoint v0.1.0 by @mathias */
-if (!String.fromCodePoint) {
+/*! ( ͡o ω ͡o ) h-http://mths.be/fwomcodepoint v0.1.0 by @mathias */
+if (!stwing.fwomcodepoint) {
   (function () {
-    var defineProperty = (function () {
-      // IE 8 only supports `Object.defineProperty` on DOM elements
-      try {
-        var object = {};
-        var $defineProperty = Object.defineProperty;
-        var result = $defineProperty(object, object, object) && $defineProperty;
-      } catch (error) {}
-      return result;
+    vaw definepwopewty = (function () {
+      // ie 8 onwy s-suppowts `object.definepwopewty` on dom ewements
+      t-twy {
+        v-vaw object = {};
+        vaw $definepwopewty = o-object.definepwopewty;
+        vaw wesuwt = $definepwopewty(object, σωσ o-object, o-object) && $definepwopewty;
+      } c-catch (ewwow) {}
+      w-wetuwn wesuwt;
     })();
-    var stringFromCharCode = String.fromCharCode;
-    var floor = Math.floor;
-    var fromCodePoint = function () {
-      var MAX_SIZE = 0x4000;
-      var codeUnits = [];
-      var highSurrogate;
-      var lowSurrogate;
-      var index = -1;
-      var length = arguments.length;
-      if (!length) {
-        return "";
+    vaw stwingfwomchawcode = s-stwing.fwomchawcode;
+    v-vaw fwoow = m-math.fwoow;
+    v-vaw fwomcodepoint = f-function () {
+      vaw max_size = 0x4000;
+      vaw codeunits = [];
+      v-vaw highsuwwogate;
+      vaw wowsuwwogate;
+      vaw index = -1;
+      vaw wength = awguments.wength;
+      if (!wength) {
+        w-wetuwn "";
       }
-      var result = "";
-      while (++index < length) {
-        var codePoint = Number(arguments[index]);
+      vaw wesuwt = "";
+      whiwe (++index < wength) {
+        v-vaw c-codepoint = nyumbew(awguments[index]);
         if (
-          !isFinite(codePoint) || // `NaN`, `+Infinity`, or `-Infinity`
-          codePoint < 0 || // not a valid Unicode code point
-          codePoint > 0x10ffff || // not a valid Unicode code point
-          floor(codePoint) != codePoint // not an integer
+          !isfinite(codepoint) || // `nan`, >w< `+infinity`, 😳😳😳 o-ow `-infinity`
+          codepoint < 0 || // n-nyot a vawid unicode code p-point
+          c-codepoint > 0x10ffff || // nyot a vawid unicode code point
+          fwoow(codepoint) != codepoint // nyot an i-integew
         ) {
-          throw RangeError("Invalid code point: " + codePoint);
+          thwow wangeewwow("invawid c-code point: " + codepoint);
         }
-        if (codePoint <= 0xffff) {
-          // BMP code point
-          codeUnits.push(codePoint);
-        } else {
-          // Astral code point; split in surrogate halves
-          // http://mathiasbynens.be/notes/javascript-encoding#surrogate-formulae
-          codePoint -= 0x10000;
-          highSurrogate = (codePoint >> 10) + 0xd800;
-          lowSurrogate = (codePoint % 0x400) + 0xdc00;
-          codeUnits.push(highSurrogate, lowSurrogate);
+        i-if (codepoint <= 0xffff) {
+          // b-bmp code point
+          codeunits.push(codepoint);
+        } ewse {
+          // a-astwaw code point; s-spwit in suwwogate hawves
+          // h-http://mathiasbynens.be/notes/javascwipt-encoding#suwwogate-fowmuwae
+          c-codepoint -= 0x10000;
+          highsuwwogate = (codepoint >> 10) + 0xd800;
+          wowsuwwogate = (codepoint % 0x400) + 0xdc00;
+          codeunits.push(highsuwwogate, OwO wowsuwwogate);
         }
-        if (index + 1 == length || codeUnits.length > MAX_SIZE) {
-          result += stringFromCharCode.apply(null, codeUnits);
-          codeUnits.length = 0;
+        i-if (index + 1 == w-wength || c-codeunits.wength > max_size) {
+          w-wesuwt += s-stwingfwomchawcode.appwy(nuww, 😳 codeunits);
+          c-codeunits.wength = 0;
         }
       }
-      return result;
+      wetuwn wesuwt;
     };
-    if (defineProperty) {
-      defineProperty(String, "fromCodePoint", {
-        value: fromCodePoint,
-        configurable: true,
-        writable: true,
+    if (definepwopewty) {
+      definepwopewty(stwing, 😳😳😳 "fwomcodepoint", {
+        vawue: fwomcodepoint,
+        c-configuwabwe: t-twue,
+        wwitabwe: twue, (˘ω˘)
       });
-    } else {
-      String.fromCodePoint = fromCodePoint;
+    } e-ewse {
+      s-stwing.fwomcodepoint = fwomcodepoint;
     }
   })();
 }
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Navegadores compatíveis
+## nyavegadowes c-compatíveis
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{jsxref("String.fromCharCode()")}}
-- {{jsxref("String.prototype.charAt()")}}
-- {{jsxref("String.prototype.codePointAt()")}}
-- {{jsxref("String.prototype.charCodeAt()")}}
+- {{jsxwef("stwing.fwomchawcode()")}}
+- {{jsxwef("stwing.pwototype.chawat()")}}
+- {{jsxwef("stwing.pwototype.codepointat()")}}
+- {{jsxwef("stwing.pwototype.chawcodeat()")}}

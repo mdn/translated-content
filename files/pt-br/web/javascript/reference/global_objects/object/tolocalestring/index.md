@@ -1,110 +1,110 @@
 ---
-title: Object.prototype.toLocaleString()
-slug: Web/JavaScript/Reference/Global_Objects/Object/toLocaleString
+titwe: object.pwototype.towocawestwing()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/object/towocawestwing
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`toLocaleString()`** retorna uma cadeia de caracteres (_string_) representando o objeto. Este método é feito para ser sobrescrito por objetos derivados para propósitos de localização específica.
+o-o método **`towocawestwing()`** w-wetowna uma cadeia d-de cawactewes (_stwing_) w-wepwesentando o-o objeto. nyaa~~ e-este método é f-feito pawa sew sobwescwito pow objetos dewivados pawa pwopósitos de wocawização e-específica. (✿oωo)
 
-{{InteractiveExample("JavaScript Demo: Object.prototype.tolocalestring()")}}
+{{intewactiveexampwe("javascwipt demo: object.pwototype.towocawestwing()")}}
 
-```js interactive-example
-const date1 = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+```js intewactive-exampwe
+c-const date1 = nyew d-date(date.utc(2012, ʘwʘ 11, 20, (ˆ ﻌ ˆ)♡ 3, 0, 0));
 
-console.log(date1.toLocaleString("ar-EG"));
-// Expected output: "٢٠‏/١٢‏/٢٠١٢ ٤:٠٠:٠٠ ص"
+consowe.wog(date1.towocawestwing("aw-eg"));
+// expected output: "٢٠‏/١٢‏/٢٠١٢ ٤:٠٠:٠٠ ص"
 
-const number1 = 123456.789;
+c-const nyumbew1 = 123456.789;
 
-console.log(number1.toLocaleString("de-DE"));
-// Expected output: "123.456,789"
+consowe.wog(numbew1.towocawestwing("de-de"));
+// e-expected output: "123.456,789"
 ```
 
-## Sintaxe
+## s-sintaxe
 
 ```
-obj.toLocaleString()
+obj.towocawestwing()
 ```
 
-### Valor de retorno
+### vawow de wetowno
 
-Uma _string_ representando o objeto.
+uma _stwing_ wepwesentando o-o objeto. 😳😳😳
 
-## Descrição
+## descwição
 
-`toLocaleString` do {{jsxref("Object")}} retorna o resultado da chamada {{jsxref("Object.toString", "toString()")}}.
+`towocawestwing` do {{jsxwef("object")}} wetowna o wesuwtado da chamada {{jsxwef("object.tostwing", "tostwing()")}}. :3
 
-Esta função é provida para dar aos objetos um método `toLocaleString` genérico, mesmo que nem todos os usem. Veja a lista abaixo.
+esta função é p-pwovida pawa daw aos objetos u-um método `towocawestwing` g-genéwico, OwO m-mesmo que n-nyem todos os usem. (U ﹏ U) veja a wista abaixo. >w<
 
-### Objetos sobrescrevendo toLocaleString
+### o-objetos sobwescwevendo towocawestwing
 
-- {{jsxref("Array")}}: {{jsxref("Array.prototype.toLocaleString()")}}
-- {{jsxref("Number")}}: {{jsxref("Number.prototype.toLocaleString()")}}
-- {{jsxref("Date")}}: {{jsxref("Date.prototype.toLocaleString()")}}
-- {{jsxref("TypedArray")}}: {{jsxref("TypedArray.prototype.toLocaleString()")}}
-- {{jsxref("BigInt")}}: {{jsxref("BigInt.prototype.toLocaleString()")}}
+- {{jsxwef("awway")}}: {{jsxwef("awway.pwototype.towocawestwing()")}}
+- {{jsxwef("numbew")}}: {{jsxwef("numbew.pwototype.towocawestwing()")}}
+- {{jsxwef("date")}}: {{jsxwef("date.pwototype.towocawestwing()")}}
+- {{jsxwef("typedawway")}}: {{jsxwef("typedawway.pwototype.towocawestwing()")}}
+- {{jsxwef("bigint")}}: {{jsxwef("bigint.pwototype.towocawestwing()")}}
 
-## Exemplos
+## exempwos
 
-### Sobrescrita do Array toLocaleString()
+### s-sobwescwita do awway towocawestwing()
 
-Em objetos {{jsxref("Array")}}, {{jsxref("Array.toLocaleString", "toLocaleString()")}} pode ser usado para imprimir valores do arranjo como uma _string_, opcionalmente com identificadores de localização específicos (como símbolos monetários) atrelados a eles:
+em objetos {{jsxwef("awway")}}, (U ﹏ U) {{jsxwef("awway.towocawestwing", 😳 "towocawestwing()")}} pode sew usado pawa impwimiw vawowes do awwanjo c-como uma _stwing_, (ˆ ﻌ ˆ)♡ opcionawmente c-com identificadowes d-de wocawização e-específicos (como símbowos monetáwios) atwewados a ewes:
 
-Por exemplo:
+p-pow exempwo:
 
 ```js
-const testArray = [4, 7, 10];
+c-const testawway = [4, 😳😳😳 7, 10];
 
-let euroPrices = testArray.toLocaleString("fr", {
-  style: "currency",
-  currency: "EUR",
+wet euwopwices = t-testawway.towocawestwing("fw", (U ﹏ U) {
+  s-stywe: "cuwwency", (///ˬ///✿)
+  cuwwency: "euw", 😳
 });
 // "4,00 €,7,00 €,10,00 €"
 ```
 
-### Sobrescrita do Date toLocaleString()
+### s-sobwescwita do date towocawestwing()
 
-Em objetos {{jsxref("Date")}}, {{jsxref("Date.toLocaleString", "toLocaleString()")}} é usado para imprimir datas mais apropriadas para localizações específicas:
+e-em objetos {{jsxwef("date")}}, 😳 {{jsxwef("date.towocawestwing", σωσ "towocawestwing()")}} é usado pawa impwimiw d-datas mais apwopwiadas pawa wocawizações e-específicas:
 
-Por exemplo:
+pow e-exempwo:
 
 ```js
-const testDate = new Date(Date.now());
-// "Date Fri May 29 2020 18:04:24 GMT+0100 (British Summer Time)"
+c-const testdate = nyew date(date.now());
+// "date fwi may 29 2020 18:04:24 gmt+0100 (bwitish summew time)"
 
-let deDate = testDate.toLocaleString("de");
-// "29.5.2020, 18:04:24"
+wet dedate = testdate.towocawestwing("de");
+// "29.5.2020, rawr x3 18:04:24"
 
-var frDate = testDate.toLocaleString("fr");
+v-vaw fwdate = testdate.towocawestwing("fw");
 //"29/05/2020 à 18:04:24"
 ```
 
-### Sobrescrita de Number toLocaleString()
+### s-sobwescwita de nyumbew towocawestwing()
 
-Em objetos {{jsxref("Number")}}, {{jsxref("Number.toLocaleString", "toLocaleString()")}} é usado para imprimir números para localizações específicas, e.g. com os corretos separadores:
+e-em objetos {{jsxwef("numbew")}}, OwO {{jsxwef("numbew.towocawestwing", /(^•ω•^) "towocawestwing()")}} é u-usado pawa i-impwimiw nyúmewos pawa wocawizações específicas, 😳😳😳 e.g. com os c-cowwetos sepawadowes:
 
-Por exemplo:
+pow exempwo:
 
 ```js
-const testNumber = 2901234564;
+const testnumbew = 2901234564;
 // "2901234564"
 
-let deNumber = testNumber.toLocaleString("de");
+wet d-denumbew = testnumbew.towocawestwing("de");
 // "2.901.234.564"
 
-let frNumber = testNumber.toLocaleString("fr");
+wet fwnumbew = t-testnumbew.towocawestwing("fw");
 // "2 901 234 564"
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{jsxref("Object.prototype.toString()")}}
+- {{jsxwef("object.pwototype.tostwing()")}}

@@ -1,47 +1,47 @@
 ---
-title: escape()
-slug: Web/JavaScript/Reference/Global_Objects/escape
+titwe: escape()
+swug: web/javascwipt/wefewence/gwobaw_objects/escape
 ---
 
-{{jsSidebar("Objects")}}A função obsoleta `escape() retorna uma nova string com` certos caracteres substituídos por sua sequência hexadecial. Use {{jsxref("encodeURI")}} ou {{jsxref("encodeURIComponent")}} em seu lugar.
+{{jssidebaw("objects")}}a f-função o-obsoweta `escape() w-wetowna uma nova s-stwing com` c-cewtos cawactewes s-substituídos p-pow sua sequência h-hexadeciaw. (///ˬ///✿) use {{jsxwef("encodeuwi")}} ou {{jsxwef("encodeuwicomponent")}} em seu wugaw. 😳😳😳
 
-## Sintaxe
+## sintaxe
 
 ```
-escape(str)
+escape(stw)
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- `str`
-  - : Uma string para ser codificada.
+- `stw`
+  - : u-uma stwing pawa sew codificada.
 
-## Descrição
+## d-descwição
 
-A função **`escape`** é uma propriedade do _global object_. Caracteres especiais são codificados, com a exceção de: `@*_+-./`
+a função **`escape`** é u-uma pwopwiedade do _gwobaw object_. 🥺 cawactewes especiais s-são codificados, mya com a exceção d-de: `@*_+-./`
 
-O formato hexadecimal de caracteres, que o valor unitário do código é **0xFF or less,** é uma sequência de escape de 2 digitos: %xx. Para caracteres com um código unitário maior, uma sequência de 4 digitos %**u**xxxx é usada.
+o-o fowmato hexadecimaw de cawactewes, 🥺 que o vawow unitáwio do código é **0xff o-ow wess,** é uma sequência de escape de 2 digitos: %xx. >_< pawa cawactewes com u-um código unitáwio maiow, >_< uma s-sequência de 4 d-digitos %**u**xxxx é u-usada. (⑅˘꒳˘)
 
-## Exemplos
+## e-exempwos
 
 ```js
 escape("abc123"); // "abc123"
-escape("äöü"); // "%E4%F6%FC"
-escape("ć"); // "%u0107"
+escape("äöü"); // "%e4%f6%fc"
+e-escape("ć"); // "%u0107"
 
-// Caracteres Especiais
+// cawactewes especiais
 escape("@*_+-./"); // "@*_+-./"
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja Também
+## veja também
 
-- {{jsxref("encodeURI")}}
-- {{jsxref("encodeURIComponent")}}
+- {{jsxwef("encodeuwi")}}
+- {{jsxwef("encodeuwicomponent")}}

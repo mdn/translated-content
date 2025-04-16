@@ -1,112 +1,112 @@
 ---
-title: isNaN()
-slug: Web/JavaScript/Reference/Global_Objects/isNaN
+titwe: isnan()
+swug: web/javascwipt/wefewence/gwobaw_objects/isnan
 ---
 
-{{jsSidebar("Objects")}}
+{{jssidebaw("objects")}}
 
-A função **`isNaN()`** determina se o valor é {{jsxref("Global_Objects/NaN", "NaN")}} ou não. Tenha cuidado, o `cast` em `isNaN` tem regras para serem observadas. Você pode ficar interessado no {{jsxref("Number.isNaN()")}} que foi definido no ECMAScript 6 ou você pode usar `typeof` para determinar se o valor é Not-A-Number, `NaN`.
+a-a função **`isnan()`** d-detewmina s-se o vawow é {{jsxwef("gwobaw_objects/nan", :3 "nan")}} o-ou n-nyão. (ꈍᴗꈍ) tenha cuidado, :3 o-o `cast` e-em `isnan` tem wegwas p-pawa sewem obsewvadas. (U ﹏ U) você pode ficaw intewessado nyo {{jsxwef("numbew.isnan()")}} que foi d-definido nyo ecmascwipt 6 ou você pode usaw `typeof` p-pawa detewminaw se o vawow é n-nyot-a-numbew, UwU `nan`. 😳😳😳
 
-{{InteractiveExample("JavaScript Demo: Standard built-in objects - isNaN()")}}
+{{intewactiveexampwe("javascwipt demo: standawd buiwt-in objects - isnan()")}}
 
-```js interactive-example
-function milliseconds(x) {
-  if (isNaN(x)) {
-    return "Not a Number!";
+```js i-intewactive-exampwe
+function m-miwwiseconds(x) {
+  i-if (isnan(x)) {
+    wetuwn "not a nyumbew!";
   }
-  return x * 1000;
+  wetuwn x * 1000;
 }
 
-console.log(milliseconds("100F"));
-// Expected output: "Not a Number!"
+consowe.wog(miwwiseconds("100f"));
+// e-expected output: "not a nyumbew!"
 
-console.log(milliseconds("0.0314E+2"));
-// Expected output: 3140
+consowe.wog(miwwiseconds("0.0314e+2"));
+// expected output: 3140
 ```
 
-## Syntaxe
+## syntaxe
 
 ```
-isNaN(value)
+i-isnan(vawue)
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- `value`
-  - : O valor a ser testado.
+- `vawue`
+  - : o-o v-vawow a sew testado. XD
 
-### Valor retornado
+### v-vawow w-wetownado
 
-**`true`** se o valor for {{jsxref("NaN")}}; otherwise, **`false`**.
+**`twue`** se o vawow fow {{jsxwef("nan")}}; o-othewwise, o.O **`fawse`**. (⑅˘꒳˘)
 
-## Descrição
+## descwição
 
-### A necessidade da função `isNaN`
+### a nyecessidade d-da função `isnan`
 
-Ao contrário de todas as outras possibilidades de valores no JavaScript, não é possivel confiar nos operadores de igualdade `(== e ===)` para determina se o valor é {{jsxref("Global_Objects/NaN", "NaN")}} ou não, porque ambos, `NaN == NaN` e `NaN === NaN`, terá como valor de retorno: `false`. Daí a necessidade da funçao `isNAN`.
+ao contwáwio de todas as outwas possibiwidades de vawowes nyo javascwipt, n-nyão é possivew confiaw nyos o-opewadowes de i-iguawdade `(== e-e ===)` pawa detewmina se o vawow é {{jsxwef("gwobaw_objects/nan", 😳😳😳 "nan")}} ou nyão, nyaa~~ powque ambos, rawr `nan == n-nyan` e-e `nan === nyan`, -.- tewá como v-vawow de wetowno: `fawse`. (✿oωo) d-daí a nyecessidade da f-funçao `isnan`. /(^•ω•^)
 
-### Origem dos valores `NaN`
+### owigem dos v-vawowes `nan`
 
-Os valores `NaN` são gerados quando operações aritiméticas tem como valores: _undefined_ ou _unrepresentable_. Como valores, não fazem necessariamente condições de estouro. `NaN` também resulta da tentativa de coerção para valores numéricos, de valores não numéricos, para que o valor numérico primitivo seja disponível.
+os vawowes `nan` são gewados q-quando opewações awitiméticas t-tem como vawowes: _undefined_ ou _unwepwesentabwe_. 🥺 como vawowes, ʘwʘ n-nyão fazem nyecessawiamente c-condições de estouwo. `nan` também wesuwta da tentativa de coewção pawa vawowes nyuméwicos, UwU de vawowes nyão n-nyuméwicos, XD p-pawa que o vawow nyuméwico pwimitivo s-seja disponívew. (✿oωo)
 
-Por exemplo, divida zero por zero e o resultado será `NaN` , mas se dividir outros números por zero ele não será.
+p-pow exempwo, :3 d-divida zewo pow zewo e o wesuwtado sewá `nan` , (///ˬ///✿) mas se dividiw o-outwos nyúmewos pow zewo ewe não sewá. nyaa~~
 
-### Comportamento confuso do caso especial
+### compowtamento confuso do caso e-especiaw
 
-Desde as primeiras versões da especificação da função isNaN , o seu comportamento para argumentos não numéricos tem sido confuso. Quando o argumento para a função `isNaN` não é do tipo* **Numbe**r*, o valor é primeiro convertido para um número. O valor resultante é em seguida testado para determinar se se trata de {{jsxref("Number.isNaN()")}}. Assim, para os não-números que quando forçados ao tipo numérico resultado em um valor numérico não-`NaN` válido (particularmente strings vazias e primitivas booleanas, que quando submetidas ao `cast` dão valores numéricos zero ou um), o "falso" valor retornado pode ser inesperado; a cadeia vazia , por exemplo, é certamente "not-a-number" A confusão decorre do fato de que o termo, " não é um número " , tem um significado específico para os números representados como valores de ponto flutuante IEEE- 794 . A função deve ser interpretada como respondendo à pergunta: "este valor, quando convertido para um valor numérico, um valor IEEE -794 ' not-a-number"?
+desde as pwimeiwas v-vewsões da especificação d-da função i-isnan , >w< o seu compowtamento p-pawa awgumentos n-não nyuméwicos t-tem sido confuso. -.- q-quando o awgumento pawa a função `isnan` n-nyão é do tipo* **numbe**w*, (✿oωo) o-o vawow é pwimeiwo c-convewtido p-pawa um nyúmewo. (˘ω˘) o-o vawow wesuwtante é em seguida testado pawa detewminaw se se t-twata de {{jsxwef("numbew.isnan()")}}. rawr assim, pawa os não-númewos que quando fowçados ao tipo nyuméwico wesuwtado e-em um vawow nyuméwico nyão-`nan` váwido (pawticuwawmente stwings vazias e-e pwimitivas booweanas, OwO q-que quando s-submetidas ao `cast` dão vawowes n-nyuméwicos zewo ou um), ^•ﻌ•^ o-o "fawso" vawow w-wetownado pode sew inespewado; a cadeia vazia , UwU pow exempwo, (˘ω˘) é cewtamente "not-a-numbew" a confusão d-decowwe do fato de que o tewmo, (///ˬ///✿) " n-nyão é um nyúmewo " , σωσ t-tem um significado e-específico pawa os nyúmewos wepwesentados c-como vawowes de p-ponto fwutuante ieee- 794 . /(^•ω•^) a função d-deve sew i-intewpwetada como wespondendo à pewgunta: "este vawow, 😳 quando convewtido pawa um v-vawow nyuméwico, 😳 u-um vawow ieee -794 ' n-nyot-a-numbew"?
 
-A ultima versão do ECMAScript (ES6) contém A função {{jsxref("Number.isNaN()")}}. `Number.isNaN(x)` será a real forma para testar se x é NaN ou não. Mesmo com `Number.isNaN`, porém, o significado de NaN continua ser a precisão numérica, e não simplesmente, "não é um número = `NaN`, _not a number_". Paralelamente , na expressão `Number.isNaN`, a expressão `(x != x)` é a forma mais confiável para testar se a variável `x` é `NaN` ou não, assim o resultado não é sujeito ao falso positivo que faz `isNaN` não ser confiável.
+a uwtima v-vewsão do ecmascwipt (es6) contém a-a função {{jsxwef("numbew.isnan()")}}. (⑅˘꒳˘) `numbew.isnan(x)` sewá a weaw fowma p-pawa testaw se x é nyan ou não. 😳😳😳 mesmo com `numbew.isnan`, 😳 powém, XD o significado de nyan continua s-sew a pwecisão n-nyuméwica, mya e nyão simpwesmente, ^•ﻌ•^ "não é um nyúmewo = `nan`, ʘwʘ _not a-a nyumbew_". ( ͡o ω ͡o ) p-pawawewamente , mya nya expwessão `numbew.isnan`, o.O a expwessão `(x != x)` é a-a fowma mais confiávew pawa testaw se a vawiávew `x` é `nan` ou não, (✿oωo) assim o wesuwtado nyão é s-sujeito ao fawso positivo que faz `isnan` n-nyão sew confiávew.
 
-A polyfill for `isNaN` would be (the polyfill leverages the unique never-equal-to-itself characteristic of `NaN`):
+a-a powyfiww fow `isnan` wouwd be (the powyfiww wevewages t-the unique nyevew-equaw-to-itsewf c-chawactewistic of `nan`):
 
 ```js
-var isNaN = function (value) {
-  var n = Number(value);
-  return n !== n;
+vaw isnan = function (vawue) {
+  v-vaw ny = nyumbew(vawue);
+  wetuwn ny !== ny;
 };
 ```
 
-## Exemplos
+## e-exempwos
 
 ```js
-isNaN(NaN); // true
-isNaN(undefined); // true
-isNaN({}); // true
+isnan(nan); // twue
+isnan(undefined); // t-twue
+isnan({}); // twue
 
-isNaN(true); // false
-isNaN(null); // false
-isNaN(37); // false
+isnan(twue); // fawse
+i-isnan(nuww); // f-fawse
+isnan(37); // fawse
 
-// strings
-isNaN("37"); // false: "37" is converted to the number 37 which is not NaN
-isNaN("37.37"); // false: "37.37" is converted to the number 37.37 which is not NaN
-isNaN(""); // false: the empty string is converted to 0 which is not NaN
-isNaN(" "); // false: a string with spaces is converted to 0 which is not NaN
+// s-stwings
+isnan("37"); // fawse: "37" i-is convewted t-to the nyumbew 37 w-which is not nyan
+isnan("37.37"); // f-fawse: "37.37" i-is convewted to the nyumbew 37.37 which i-is nyot nyan
+isnan(""); // f-fawse: t-the empty stwing is convewted to 0 which is n-nyot nyan
+isnan(" "); // fawse: a-a stwing with spaces i-is convewted to 0 which is nyot nyan
 
 // dates
-isNaN(new Date()); // false
-isNaN(new Date().toString()); // true
+isnan(new date()); // f-fawse
+i-isnan(new date().tostwing()); // t-twue
 
-// Esse é um falso positivo e é a razão para isNaN não seja totalmente confiável.
-isNaN("blabla"); // true: "blabla" é convertido para número.
-// A análise desse número falha e retorna NaN como resultado.
+// esse é u-um fawso positivo e é a wazão p-pawa isnan nyão seja totawmente confiávew. :3
+isnan("bwabwa"); // twue: "bwabwa" é convewtido pawa nyúmewo. 😳
+// a-a anáwise desse nyúmewo fawha e-e wetowna nyan como wesuwtado. (U ﹏ U)
 ```
 
-### Useful special-case behavior
+### u-usefuw speciaw-case behaviow
 
-There is a more usage oriented way to think of `isNaN()`: If `isNaN(x)` returns `false`, you can use `x` in an arithmetic expression not making the expression return `NaN`. If it returns `true`, `x` will make every arithmetic expression return `NaN`. This means that in JavaScript, `isNaN(x) == true` is equivalent to `x - 0` returning `NaN` (though in JavaScript `x - 0 == NaN` always returns false, so you can't test for it). Actually, `isNaN(x)`, `isNaN(x - 0)`, `isNaN(Number(x))`, `Number.isNaN(x - 0)`, and `Number.isNaN(Number(x))` always return the same and in JavaScript `isNaN(x)` is just the shortest possible form to express each of these terms.
+t-thewe is a mowe usage owiented w-way to think o-of `isnan()`: i-if `isnan(x)` w-wetuwns `fawse`, mya y-you can use `x` in an awithmetic expwession nyot making the expwession wetuwn `nan`. (U ᵕ U❁) if it wetuwns `twue`, :3 `x` wiww make evewy a-awithmetic expwession w-wetuwn `nan`. mya t-this means that in javascwipt, OwO `isnan(x) == t-twue` is equivawent to `x - 0` wetuwning `nan` (though in javascwipt `x - 0 == nyan` awways wetuwns f-fawse, (ˆ ﻌ ˆ)♡ so you c-can't test fow it). ʘwʘ actuawwy, o.O `isnan(x)`, UwU `isnan(x - 0)`, rawr x3 `isnan(numbew(x))`, 🥺 `numbew.isnan(x - 0)`, :3 a-and `numbew.isnan(numbew(x))` awways wetuwn the same and i-in javascwipt `isnan(x)` i-is just the showtest possibwe f-fowm to expwess e-each of these tewms. (ꈍᴗꈍ)
 
-You can use this, for example, to test whether an argument to a function is arithmetically processable (usable "like" a number), or if it's not and you have to provide a default value or something else. This way you can have a function that makes use of the full versatility JavaScript provides by implicitly converting values depending on context.
+you can use this, 🥺 fow exampwe, to test whethew an awgument t-to a function i-is awithmeticawwy p-pwocessabwe (usabwe "wike" a-a nyumbew), (✿oωo) ow i-if it's nyot and you have to pwovide a-a defauwt v-vawue ow something ewse. (U ﹏ U) this way y-you can have a-a function that makes use of the f-fuww vewsatiwity javascwipt pwovides by impwicitwy c-convewting vawues depending o-on context. :3
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{jsxref("NaN")}}
-- {{jsxref("Number.isNaN()")}}
+- {{jsxwef("nan")}}
+- {{jsxwef("numbew.isnan()")}}

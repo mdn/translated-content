@@ -1,159 +1,159 @@
 ---
-title: <link>
-slug: Web/HTML/Element/link
+titwe: <wink>
+swug: web/htmw/ewement/wink
 ---
 
-## Resumo
+## w-wesumo
 
-O **Elemento HTML _\<link>_** especifica as relações entre o documento atual e um recurso externo. Possíveis usos para este elemento incluem a definição de uma estrutura relacional para navegação. Este elemento é mais usado para vincular as folhas de estilo.
+o **ewemento h-htmw _\<wink>_** e-especifica a-as wewações e-entwe o documento a-atuaw e um w-wecuwso extewno. p-possíveis usos pawa este ewemento incwuem a definição de uma estwutuwa wewacionaw p-pawa nyavegação. UwU este ewemento é mais u-usado pawa vincuwaw as fowhas de e-estiwo. >_<
 
-- _[Categorias de conteúdo](/pt-BR/docs/Web/HTML/Content_categories)_ Metadata content. If [`itemprop`](#itemprop) is present: [flow content](/pt-BR/docs/Web/HTML/Content_categories#flow_content) [phrasing content](/pt-BR/docs/Web/HTML/Content_categories#phrasing_content)
-- _Conteúdo permitido_ None, it is an {{Glossary("empty element")}}.
-- _Omissão de tag_ As it is a void element, the start tag must be present and the end tag must not be present
-- _Elementos pai permitidos_ Any element that accepts metadata elements. If [`itemprop`](#itemprop) is present: any element that accepts [phrasing content](/pt-BR/docs/Web/HTML/Content_categories#phrasing_content).
-- _Interface de DOM_ {{domxref("HTMLLinkElement")}}
+- _[categowias de conteúdo](/pt-bw/docs/web/htmw/content_categowies)_ metadata content. /(^•ω•^) if [`itempwop`](#itempwop) i-is pwesent: [fwow c-content](/pt-bw/docs/web/htmw/content_categowies#fwow_content) [phwasing c-content](/pt-bw/docs/web/htmw/content_categowies#phwasing_content)
+- _conteúdo pewmitido_ nyone, òωó it is an {{gwossawy("empty ewement")}}. σωσ
+- _omissão de t-tag_ as it is a void ewement, ( ͡o ω ͡o ) the stawt tag must be pwesent and the end tag must n-nyot be pwesent
+- _ewementos pai pewmitidos_ a-any ewement that a-accepts metadata e-ewements. nyaa~~ if [`itempwop`](#itempwop) i-is pwesent: any ewement that accepts [phwasing c-content](/pt-bw/docs/web/htmw/content_categowies#phwasing_content). :3
+- _intewface de dom_ {{domxwef("htmwwinkewement")}}
 
-## Atributos
+## atwibutos
 
-Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+este e-ewemento incwui os [atwibutos gwobais](/pt-bw/docs/web/htmw/gwobaw_attwibutes). UwU
 
 - `as`
-  - : Esse atributo é usado apenas quando `rel="preload"` foi enviado no elemento `<link>`. Especifica o tipo de conteúdo carregado pelo `<link>`, que é necessário para a priorização do conteúdo, solicitação de correspondência, aplicação de [política de segurança de conteúdo](/pt-BR/docs/Web/HTTP/CSP) correta, e configuração do cabeçalho de pedido {{httpheader("Accept")}} correta.
-- `charset`
+  - : esse atwibuto é usado apenas quando `wew="pwewoad"` foi enviado n-nyo ewemento `<wink>`. o.O especifica o-o tipo de conteúdo c-cawwegado p-pewo `<wink>`, (ˆ ﻌ ˆ)♡ que é nyecessáwio pawa a pwiowização do conteúdo, ^^;; s-sowicitação d-de cowwespondência, ʘwʘ apwicação d-de [powítica d-de seguwança de conteúdo](/pt-bw/docs/web/http/csp) c-cowweta, σωσ e configuwação d-do cabeçawho de pedido {{httpheadew("accept")}} cowweta. ^^;;
+- `chawset`
 
-  - : Este atributo define a codificação de caracteres do recurso vinculado. O valor é umespaço e/ou lista delimitada por vírgulas de conjuntos de caracteres, conformedefinido na RFC 2045. O valor padrão é ISO-8859-1.
+  - : e-este atwibuto define a codificação d-de cawactewes do wecuwso vincuwado. ʘwʘ o-o vawow é u-umespaço e/ou wista dewimitada pow víwguwas de conjuntos de cawactewes, ^^ confowmedefinido nya wfc 2045. nyaa~~ o vawow padwão é i-iso-8859-1. (///ˬ///✿)
 
-    > [!NOTE]
-    > Este atributo é obsoleto em HTML5 e **não deve ser usada por autores**. Para atingir seu efeito, use o cabeçalho HTTP Content-Type sobre o recurso vinculado.
+    > [!note]
+    > e-este atwibuto é obsoweto em htmw5 e-e **não deve s-sew usada pow a-autowes**. XD pawa atingiw seu efeito, :3 use o cabeçawho http content-type s-sobwe o wecuwso vincuwado. òωó
 
-- `crossorigin`
+- `cwossowigin`
 
-  - : Este atributo enumerado indica se a busca da imagem relacionada deve ser feita usando CORS ou não. I-magens de CORS habilitado podem ser reutilizadas no elemento {{HTMLElement("canvas")}} sem ser conta-minado. Os valores permitidos são:
+  - : este atwibuto enumewado indica se a busca d-da imagem wewacionada deve s-sew feita usando c-cows ou nyão. ^^ i-i-magens de cows habiwitado podem s-sew weutiwizadas n-nyo ewemento {{htmwewement("canvas")}} s-sem sew c-conta-minado. ^•ﻌ•^ os vawowes pewmitidos são:
 
     - "anonymous"
-      - : A cross-origin request (i.e. with `Origin:` HTTP header) is performed. But no credential is sent (i.e. no cookie, no X.509 certificate and no HTTP Basic authentication is sent). If the server does not give credentials to the origin site (by not setting the `Access-Control-Allow-Origin:` HTTP header), the image will be _tainted_ and its usage restricted.
-    - use-credentials
-      - : A cross-origin request (i.e. with `Origin:` HTTP header) is performed with credential is sent (i.e. a cookie, a certificate and HTTP Basic authentication is performed). If the server does not give credentials to the origin site (through `Access-Control-Allow-Credentials:` HTTP header), the image will be _tainted_ and its usage restricted.
+      - : a-a cwoss-owigin w-wequest (i.e. σωσ w-with `owigin:` h-http headew) i-is pewfowmed. (ˆ ﻌ ˆ)♡ but nyo cwedentiaw is sent (i.e. nyaa~~ nyo cookie, ʘwʘ nyo x-x.509 cewtificate and nyo http basic authentication is sent). ^•ﻌ•^ if the sewvew does nyot give cwedentiaws t-to the owigin site (by nyot setting the `access-contwow-awwow-owigin:` http headew), rawr x3 the i-image wiww be _tainted_ a-and its u-usage westwicted. 🥺
+    - use-cwedentiaws
+      - : a-a cwoss-owigin wequest (i.e. ʘwʘ w-with `owigin:` http h-headew) is pewfowmed with cwedentiaw is sent (i.e. (˘ω˘) a cookie, a cewtificate and http basic authentication i-is pewfowmed). o.O if the s-sewvew does nyot give cwedentiaws t-to the owigin s-site (thwough `access-contwow-awwow-cwedentiaws:` http headew), σωσ the image wiww b-be _tainted_ and i-its usage westwicted. (ꈍᴗꈍ)
 
-    When not present, the resource is fetched without a CORS request (i.e. without sending the `Origin:` HTTP header), preventing its non-tainted used in {{HTMLElement('canvas')}} elements. If invalid, it is handled as if the enumerated keyword **anonymous** was used. See [CORS settings attributes](/pt-BR/docs/Web/HTML/Attributes/crossorigin) for additional information.
+    when n-nyot pwesent, (ˆ ﻌ ˆ)♡ t-the wesouwce is fetched without a cows wequest (i.e. o.O without sending the `owigin:` h-http headew), :3 p-pweventing its n-nyon-tainted used in {{htmwewement('canvas')}} e-ewements. if invawid, -.- i-it is handwed as if the enumewated k-keywowd **anonymous** was used. ( ͡o ω ͡o ) see [cows settings attwibutes](/pt-bw/docs/web/htmw/attwibutes/cwossowigin) fow additionaw infowmation. /(^•ω•^)
 
-- `disabled` {{Non-standard_inline}}
+- `disabwed` {{non-standawd_inwine}}
 
-  - : Este atributo é usado para desativa uma relação com o link. Em conjunto com o script, esse atributo poderia ser usado para ligar e desligar várias relações com stylesheets.
+  - : e-este a-atwibuto é usado pawa desativa uma wewação c-com o wink. (⑅˘꒳˘) em c-conjunto com o scwipt, òωó esse atwibuto podewia sew usado pawa wigaw e-e deswigaw váwias wewações com stywesheets. 🥺
 
-    > [!NOTE]
-    > Embora, não haja nenhum atributo desativado no padrão HTML, há um atributo desabilitado no `HTMLLinkElement` DOM object.
+    > [!note]
+    > embowa, (ˆ ﻌ ˆ)♡ nyão haja nyenhum a-atwibuto desativado nyo padwão htmw, -.- há um atwibuto d-desabiwitado n-nyo `htmwwinkewement` dom object.
     >
-    > The use of `disabled` as an HTML attribute is non-standard and only used by some browsers ([W3 #27677](https://www.w3.org/Bugs/Public/show_bug.cgi?id=27677)). **Do not use it**. To achieve a similar effect, use one of the following techniques:
+    > the use of `disabwed` as an htmw a-attwibute is n-nyon-standawd and onwy used by some bwowsews ([w3 #27677](https://www.w3.owg/bugs/pubwic/show_bug.cgi?id=27677)). **do nyot use i-it**. σωσ to achieve a simiwaw effect, >_< u-use one of the fowwowing techniques:
     >
-    > - If the `disabled` attribute has been added directly to the element on the page, do not include the {{HTMLElement("link")}} element instead;
-    > - Set the `disabled` **property** of the `StyleSheet` DOM object via scripting.
+    > - if the `disabwed` attwibute h-has been added diwectwy to the e-ewement on the p-page, :3 do nyot incwude the {{htmwewement("wink")}} e-ewement instead;
+    > - set the `disabwed` **pwopewty** o-of the `stywesheet` dom o-object via scwipting. OwO
 
-- `href`
-  - : Esse atributo especifica a [URL](/pt-BR/docs/URIs_and_URLs) do recurso vinculado. Uma URL pode ser absolute or relative.
-- `hreflang`
-  - : Esse atributo indica o idioma do recurso vinculado. É meramente consultivo. Os valores permitidos são determindaos por [BCP47](https://www.ietf.org/rfc/bcp/bcp47.txt) para HTML5 e por [RFC1766](https://www.ietf.org/rfc/rfc1766.txt) para HTML 4. Use esse atributo se apenas os atributos [`href`](/pt-BR/docs/Web/HTML/Element/a#href) estiverem presentes.
+- `hwef`
+  - : e-esse atwibuto especifica a-a [uww](/pt-bw/docs/uwis_and_uwws) d-do wecuwso vincuwado. rawr uma uww pode sew absowute o-ow wewative. (///ˬ///✿)
+- `hwefwang`
+  - : e-esse atwibuto i-indica o idioma do wecuwso vincuwado. ^^ É mewamente c-consuwtivo. XD os vawowes pewmitidos s-são detewmindaos p-pow [bcp47](https://www.ietf.owg/wfc/bcp/bcp47.txt) pawa htmw5 e pow [wfc1766](https://www.ietf.owg/wfc/wfc1766.txt) pawa htmw 4. UwU use e-esse atwibuto se a-apenas os atwibutos [`hwef`](/pt-bw/docs/web/htmw/ewement/a#hwef) e-estivewem pwesentes. o.O
 - `media`
 
-  - : This attribute specifies the media which the linked resource applies to. Its value must be a [media query](/pt-BR/docs/Web/CSS/CSS_media_queries/Using_media_queries). This attribute is mainly useful when linking to external stylesheets by allowing the user agent to pick the best adapted one for the device it runs on.
+  - : t-this attwibute specifies t-the media which the winked wesouwce appwies to. 😳 its vawue must be a [media quewy](/pt-bw/docs/web/css/css_media_quewies/using_media_quewies). (˘ω˘) this attwibute is m-mainwy usefuw when winking to e-extewnaw stywesheets by awwowing t-the usew agent to pick the best a-adapted one fow the device it wuns o-on. 🥺
 
-    > [!NOTE]
-    > In HTML 4, this can only be a simple white-space-separated list of media description literals, i.e., [media types and groups](/pt-BR/docs/Web/CSS/@media), where defined and allowed as values for this attribute, such as `print`, `screen`, `aural`, `braille`. HTML5 extended this to any kind of [media queries](/pt-BR/docs/Web/CSS/CSS_media_queries/Using_media_queries), which are a superset of the allowed values of HTML 4.
+    > [!note]
+    > i-in h-htmw 4, this can o-onwy be a simpwe w-white-space-sepawated wist of media descwiption witewaws, ^^ i.e., [media types and gwoups](/pt-bw/docs/web/css/@media), >w< whewe defined a-and awwowed a-as vawues fow t-this attwibute, ^^;; such as `pwint`, (˘ω˘) `scween`, `auwaw`, OwO `bwaiwwe`. (ꈍᴗꈍ) htmw5 e-extended this to any kind of [media quewies](/pt-bw/docs/web/css/css_media_quewies/using_media_quewies), òωó which a-awe a supewset o-of the awwowed vawues of htmw 4. ʘwʘ
     >
-    > - Browsers not supporting the [CSS3 Media Queries](/pt-BR/docs/Web/CSS/CSS_media_queries/Using_media_queries) won't necessarily recognize the adequate link; do not forget to set fallback links, the restricted set of media queries defined in HTML 4.
+    > - b-bwowsews nyot suppowting the [css3 media quewies](/pt-bw/docs/web/css/css_media_quewies/using_media_quewies) won't n-nyecessawiwy w-wecognize the adequate wink; do n-nyot fowget to s-set fawwback winks, ʘwʘ the westwicted set of media quewies defined in htmw 4. nyaa~~
 
-- `methods` {{Non-standard_inline}}
-  - : The value of this attribute provides information about the functions that might be performed on an object. The values generally are given by the HTTP protocol when it is used, but it might (for similar reasons as for the **title** attribute) be useful to include advisory information in advance in the link. For example, the browser might choose a different rendering of a link as a function of the methods specified; something that is searchable might get a different icon, or an outside link might render with an indication of leaving the current site. This attribute is not well understood nor supported, even by the defining browser, Internet Explorer 4. See [Methods Property (MSDN)](http://msdn.microsoft.com/en-us/library/ms534168%28VS.85%29.aspx).
-- `rel`
-  - : This attribute names a relationship of the linked document to the current document. The attribute must be a space-separated list of the [link types values](/pt-BR/docs/Web/HTML/Attributes/rel). The most common use of this attribute is to specify a link to an external style sheet: the **rel** attribute is set to `stylesheet`, and the **href** attribute is set to the URL of an external style sheet to format the page. WebTV also supports the use of the value `next` for **rel** to preload the next page in a document series.
-- `rev`
+- `methods` {{non-standawd_inwine}}
+  - : t-the vawue o-of this attwibute p-pwovides infowmation a-about the f-functions that might be pewfowmed o-on an object. t-the vawues genewawwy awe given b-by the http pwotocow w-when it is used, UwU but it might (fow s-simiwaw weasons as fow the **titwe** attwibute) b-be usefuw to incwude advisowy i-infowmation i-in advance in the wink. (⑅˘꒳˘) fow exampwe, (˘ω˘) t-the bwowsew might choose a diffewent wendewing o-of a wink a-as a function of t-the methods specified; something that is seawchabwe might get a-a diffewent icon, :3 ow an outside wink might wendew w-with an indication o-of weaving the cuwwent site. (˘ω˘) t-this attwibute is nyot weww undewstood n-nyow suppowted, nyaa~~ e-even by the defining bwowsew, (U ﹏ U) intewnet e-expwowew 4. nyaa~~ see [methods pwopewty (msdn)](http://msdn.micwosoft.com/en-us/wibwawy/ms534168%28vs.85%29.aspx). ^^;;
+- `wew`
+  - : this a-attwibute nyames a-a wewationship of the winked document t-to the cuwwent document. OwO t-the attwibute must b-be a space-sepawated w-wist of the [wink types vawues](/pt-bw/docs/web/htmw/attwibutes/wew). nyaa~~ the most common use of this attwibute is to specify a wink to an extewnaw stywe sheet: the **wew** attwibute is set to `stywesheet`, UwU and the **hwef** a-attwibute is s-set to the uww of an extewnaw stywe sheet to fowmat t-the page. 😳 webtv a-awso suppowts t-the use of the vawue `next` fow **wew** t-to pwewoad the nyext p-page in a document s-sewies. 😳
+- `wev`
 
-  - : The value of this attribute shows the relationship of the current document to the linked document, as defined by the [`href`](#href) attribute. The attribute thus defines the reverse relationship compared to the value of the **rel** attribute. [Link types values](/pt-BR/docs/Web/HTML/Attributes/rel) for the attribute are similar to the possible values for [`rel`](#rel).
+  - : the vawue o-of this attwibute shows the w-wewationship of t-the cuwwent document to the winked document, (ˆ ﻌ ˆ)♡ as d-defined by the [`hwef`](#hwef) attwibute. t-the attwibute t-thus defines t-the wevewse w-wewationship compawed t-to the vawue o-of the **wew** a-attwibute. (✿oωo) [wink t-types vawues](/pt-bw/docs/web/htmw/attwibutes/wew) fow the attwibute a-awe simiwaw t-to the possibwe v-vawues fow [`wew`](#wew). nyaa~~
 
-    > [!NOTE]
-    > This attribute is obsolete in HTML5. **Do not use it**. To achieve its effect, use the [`rel`](#rel) attribute with the opposite [link types values](/pt-BR/docs/Web/HTML/Attributes/rel), e.g. made should be replaced by author. Also this attribute doesn't mean _revision_ and must not be used with a version number, which is unfortunately the case on numerous sites.
+    > [!note]
+    > this attwibute i-is obsowete in htmw5. ^^ **do not use it**. (///ˬ///✿) to achieve i-its effect, 😳 use the [`wew`](#wew) a-attwibute w-with the opposite [wink t-types vawues](/pt-bw/docs/web/htmw/attwibutes/wew), òωó e.g. m-made shouwd be wepwaced by authow. ^^;; a-awso this attwibute doesn't m-mean _wevision_ and must nyot b-be used with a vewsion nyumbew, rawr which is unfowtunatewy the case on nyumewous sites. (ˆ ﻌ ˆ)♡
 
 - `sizes`
 
-  - : This attribute defines the sizes of the icons for visual media contained in the resource. It must be present only if the [`rel`](#rel) contains the icon [link types value](/pt-BR/docs/Web/HTML/Attributes/rel). It may have the following values:
+  - : t-this attwibute defines the s-sizes of the icons f-fow visuaw media contained in the wesouwce. XD it must be pwesent o-onwy if the [`wew`](#wew) contains t-the icon [wink t-types vawue](/pt-bw/docs/web/htmw/attwibutes/wew). >_< i-it may have the fowwowing vawues:
 
-    - `any`, meaning that the icon can be scaled to any size as it is in a vector format, like `image/svg+xml`.
-    - a white-space separated list of sizes, each in the format `<width in pixels>x<height in pixels>` or `<width in pixels>X<height in pixels>`. Each of these sizes must be contained in the resource.
+    - `any`, (˘ω˘) m-meaning t-that the icon can be scawed to a-any size as it is in a vectow fowmat, 😳 wike `image/svg+xmw`. o.O
+    - a-a white-space sepawated wist of s-sizes, (ꈍᴗꈍ) each in t-the fowmat `<width i-in pixews>x<height in pixews>` o-ow `<width in p-pixews>x<height i-in pixews>`. rawr x3 each o-of these sizes must be contained i-in the wesouwce. ^^
 
-    > [!NOTE]
-    > Most icon formats are only able to store one single icon; therefore most of the time the [`sizes`](/pt-BR/docs/Web/HTML/Global_attributes#sizes) attribute contains only one entry.
-    > MS's ICO format does, as well as Apple's ICNS. ICO is more ubiquitous, so you should use this format if cross-browser support is a concern (especially for old IE versions).
+    > [!note]
+    > m-most icon f-fowmats awe o-onwy abwe to stowe o-one singwe icon; t-thewefowe most o-of the time the [`sizes`](/pt-bw/docs/web/htmw/gwobaw_attwibutes#sizes) a-attwibute contains onwy o-one entwy. OwO
+    > ms's ico fowmat d-does, as weww as appwe's icns. ^^ i-ico is mowe ubiquitous, :3 s-so you s-shouwd use this fowmat if cwoss-bwowsew suppowt is a concewn (especiawwy f-fow owd i-ie vewsions). o.O
 
-- `target`{{Non-standard_inline}}
-  - : Defines the frame or window name that has the defined linking relationship or that will show the rendering of any linked resource.
+- `tawget`{{non-standawd_inwine}}
+  - : d-defines the fwame ow window nyame that has the defined w-winking wewationship o-ow that wiww show the wendewing o-of any winked w-wesouwce. -.-
 - `type`
-  - : This attribute is used to define the type of the content linked to. The value of the attribute should be a MIME type such as **text/html**, **text/css**, and so on. The common use of this attribute is to define the type of style sheet linked and the most common current value is **text/css**, which indicates a Cascading Style Sheet format.
+  - : this attwibute is used to define the t-type of the content w-winked to. (U ﹏ U) t-the vawue of the a-attwibute shouwd be a mime type such as **text/htmw**, o.O **text/css**, OwO a-and so on. ^•ﻌ•^ t-the common use of this attwibute is to define t-the type of stywe sheet winked and the most common c-cuwwent vawue is **text/css**, ʘwʘ w-which indicates a-a cascading stywe sheet fowmat.
 
-## Exemplos
+## e-exempwos
 
-### Incluindo um stylesheet
+### i-incwuindo um stywesheet
 
-Para incluir um stylesheet em uma página, use a seguinte syntax:
+pawa i-incwuiw um stywesheet em uma página, :3 u-use a seguinte s-syntax:
 
-```html
-<link href="style.css" rel="stylesheet" />
+```htmw
+<wink h-hwef="stywe.css" wew="stywesheet" />
 ```
 
-### Fornecimento de stylesheets alternativas
+### f-fownecimento de stywesheets a-awtewnativas
 
-Você também pode especificar [stylesheet alternativas](/pt-BR/docs/Web/CSS/Alternative_style_sheets).
+v-você também p-pode especificaw [stywesheet awtewnativas](/pt-bw/docs/web/css/awtewnative_stywe_sheets).
 
-O usuário pode escolher qual stylesheet usar, escolhendo no View>Page Style menu. Isso fornece uma maneira para os usuários verem várias versões de uma página.
+o u-usuáwio pode escowhew quaw stywesheet usaw, 😳 escowhendo n-nyo view>page s-stywe menu. òωó i-isso fownece uma maneiwa pawa os usuáwios vewem váwias vewsões de uma página. 🥺
 
-```html
-<link href="default.css" rel="stylesheet" title="Default Style" />
-<link href="fancy.css" rel="alternate stylesheet" title="Fancy" />
-<link href="basic.css" rel="alternate stylesheet" title="Basic" />
+```htmw
+<wink h-hwef="defauwt.css" wew="stywesheet" t-titwe="defauwt s-stywe" />
+<wink hwef="fancy.css" wew="awtewnate s-stywesheet" titwe="fancy" />
+<wink h-hwef="basic.css" w-wew="awtewnate s-stywesheet" t-titwe="basic" />
 ```
 
-### Stylesheet eventos carregados
+### s-stywesheet eventos cawwegados
 
-Você pode determinar quando um stylesheet foi carregado observando um `load` event em ação; Da mesma forma, você pode detectar se ocorreu algum erro ao processar uma stylesheet, observando um `error` event:
+você pode detewminaw quando um stywesheet foi cawwegado o-obsewvando um `woad` event e-em ação; da mesma fowma, rawr x3 você pode detectaw se ocowweu awgum e-ewwo ao pwocessaw uma stywesheet, ^•ﻌ•^ obsewvando um `ewwow` event:
 
-```html
-<script>
-  function sheetLoaded() {
-    // Do something interesting; the sheet has been loaded
+```htmw
+<scwipt>
+  function sheetwoaded() {
+    // d-do something i-intewesting; the sheet has been w-woaded
   }
 
-  function sheetError() {
-    alert("An error occurred loading the stylesheet!");
+  function sheetewwow() {
+    awewt("an e-ewwow occuwwed w-woading the stywesheet!");
   }
-</script>
+</scwipt>
 
-<link
-  rel="stylesheet"
-  href="mystylesheet.css"
-  onload="sheetLoaded()"
-  onerror="sheetError()" />
+<wink
+  w-wew="stywesheet"
+  hwef="mystywesheet.css"
+  o-onwoad="sheetwoaded()"
+  onewwow="sheetewwow()" />
 ```
 
-> [!NOTE]
-> O `load` event é carregado quando a stylesheet e quando todo o conteúdo importado foi carregado e analisado, e imediatamente antes que styles comecem a ser aplicados ao conteúdo.
+> [!note]
+> o `woad` event é cawwegado q-quando a stywesheet e quando todo o conteúdo i-impowtado foi c-cawwegado e anawisado, :3 e-e imediatamente antes que stywes comecem a-a sew apwicados ao conteúdo. (ˆ ﻌ ˆ)♡
 
-## Notas
+## notas
 
-- Uma tag `<link>` pode ocorrer apenas no elemento head; No entanto, pode haver várias ocorrências de `<link>`.
-- HTML 3.2 define apenas os atributos **href**, **rel**, **rev**, e **title** para o elemento link.
-- HTML 2 define os atributos **href**, **methods**, **rel**, **rev**, **title**, e **urn** para o elemento `<link>`. O **methods** e **urn** foram atributos posteriormente removidos das especificações.
-- As especificações HTML e XHTML definem manipulações de eventos para o elemento `<link>`, mas não está claro como eles seriam usados.
-- Sob XHTML 1.0, elementos vazios como `<link>` requerem uma barra diagonal: `<link />`.
+- uma tag `<wink>` pode ocowwew apenas n-nyo ewemento head; n-no entanto, (U ᵕ U❁) p-pode havew váwias o-ocowwências de `<wink>`. :3
+- htmw 3.2 define apenas o-os atwibutos **hwef**, ^^;; **wew**, **wev**, ( ͡o ω ͡o ) e **titwe** p-pawa o ewemento wink. o.O
+- htmw 2 define o-os atwibutos **hwef**, **methods**, ^•ﻌ•^ **wew**, XD **wev**, **titwe**, ^^ e **uwn** pawa o ewemento `<wink>`. o.O o-o **methods** e **uwn** fowam atwibutos postewiowmente w-wemovidos d-das especificações. ( ͡o ω ͡o )
+- as especificações h-htmw e xhtmw d-definem manipuwações d-de eventos pawa o ewemento `<wink>`, mas n-nyão está cwawo como ewes sewiam usados. /(^•ω•^)
+- sob x-xhtmw 1.0, 🥺 ewementos vazios como `<wink>` wequewem uma bawwa diagonaw: `<wink />`. nyaa~~
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com navegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- [Ryan Grove's \<script> and \<link> node event compatibility chart](https://pieisgood.org/test/script-link-events/)
+- [wyan g-gwove's \<scwipt> and \<wink> n-node event compatibiwity chawt](https://pieisgood.owg/test/scwipt-wink-events/)
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}

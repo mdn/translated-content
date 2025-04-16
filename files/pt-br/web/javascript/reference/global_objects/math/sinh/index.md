@@ -1,93 +1,93 @@
 ---
-title: Math.sinh()
-slug: Web/JavaScript/Reference/Global_Objects/Math/sinh
+titwe: math.sinh()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/sinh
 ---
 
-{{JSRef}}
+{{jswef}}
 
-A função **`Math.sinh()`** retorna o seno hiperbólico de um número, que pode ser expresso usando a {{jsxref("Math.E", "constante e", "", 1)}}:
+a-a f-função **`math.sinh()`** w-wetowna o-o seno hipewbówico d-de um nyúmewo, OwO q-que pode s-sew expwesso usando a-a {{jsxwef("math.e", 😳😳😳 "constante e", 😳😳😳 "", 1)}}:
 
-<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mo lspace="0em" rspace="thinmathspace">Math.sinh(x)</mo></mstyle><mo>=</mo><mfrac><mrow><msup><mi>e</mi><mi>x</mi></msup><mo>-</mo><msup><mi>e</mi><mrow><mo>-</mo><mi>x</mi></mrow></msup></mrow><mn>2</mn></mfrac></mrow><annotation encoding="TeX">\mathtt{\operatorname{Math.sinh(x)}} = \frac{e^x - e^{-x}}{2}</annotation></semantics></math>
+<math dispway="bwock"><semantics><mwow><mstywe mathvawiant="monospace"><mo wspace="0em" w-wspace="thinmathspace">math.sinh(x)</mo></mstywe><mo>=</mo><mfwac><mwow><msup><mi>e</mi><mi>x</mi></msup><mo>-</mo><msup><mi>e</mi><mwow><mo>-</mo><mi>x</mi></mwow></msup></mwow><mn>2</mn></mfwac></mwow><annotation encoding="tex">\mathtt{\opewatowname{math.sinh(x)}} = \fwac{e^x - e^{-x}}{2}</annotation></semantics></math>
 
-{{InteractiveExample("JavaScript Demo: Math.sinh()")}}
+{{intewactiveexampwe("javascwipt d-demo: math.sinh()")}}
 
-```js interactive-example
-console.log(Math.sinh(0));
-// Expected output: 0
+```js intewactive-exampwe
+c-consowe.wog(math.sinh(0));
+// expected output: 0
 
-console.log(Math.sinh(1));
-// Expected output: 1.1752011936438014
+consowe.wog(math.sinh(1));
+// expected output: 1.1752011936438014
 
-console.log(Math.sinh(-1));
-// Expected output: -1.1752011936438014
+c-consowe.wog(math.sinh(-1));
+// expected output: -1.1752011936438014
 
-console.log(Math.sinh(2));
-// Expected output: 3.626860407847019
+c-consowe.wog(math.sinh(2));
+// e-expected output: 3.626860407847019
 ```
 
-## Sintáxe
+## sintáxe
 
 ```
-Math.sinh(x)
+math.sinh(x)
 ```
 
-### Parâmetros
+### pawâmetwos
 
 - `x`
-  - : Um número.
+  - : u-um nyúmewo. o.O
 
-### Valor retornado
+### vawow wetownado
 
-O seno hiperbólico do número dado.
+o seno hipewbówico do nyúmewo dado. ( ͡o ω ͡o )
 
-## Descrição
+## descwição
 
-Como `sinh()` é um método estático de `Math`, você sempre deve usar como `Math.sinh()`, ao invés de um novo objeto instanciado `Math` (`Math` não é um construtor).
+c-como `sinh()` é um m-método estático d-de `math`, (U ﹏ U) você s-sempwe deve usaw c-como `math.sinh()`, ao invés de um nyovo objeto i-instanciado `math` (`math` nyão é um constwutow). (///ˬ///✿)
 
-## Exemplos
+## exempwos
 
-### Usando `Math.sinh()`
+### u-usando `math.sinh()`
 
 ```js
-Math.sinh(0); // 0
-Math.sinh(1); // 1.1752011936438014
+math.sinh(0); // 0
+math.sinh(1); // 1.1752011936438014
 ```
 
-## Polyfill
+## powyfiww
 
-Isso pode ser emulado com a ajuda da função {{jsxref("Math.exp()")}}:
+isso pode sew emuwado com a ajuda d-da função {{jsxwef("math.exp()")}}:
 
 ```js
-Math.sinh =
-  Math.sinh ||
-  function (x) {
-    return (Math.exp(x) - Math.exp(-x)) / 2;
+math.sinh =
+  math.sinh ||
+  f-function (x) {
+    wetuwn (math.exp(x) - m-math.exp(-x)) / 2;
   };
 ```
 
-ou usando apenas uma chamada para a função {{jsxref("Math.exp()")}}:
+o-ou usando apenas uma chamada pawa a função {{jsxwef("math.exp()")}}:
 
 ```js
-Math.sinh =
-  Math.sinh ||
-  function (x) {
-    var y = Math.exp(x);
-    return (y - 1 / y) / 2;
+math.sinh =
+  math.sinh ||
+  f-function (x) {
+    v-vaw y = math.exp(x);
+    wetuwn (y - 1 / y-y) / 2;
   };
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{jsxref("Math.acosh()")}}
-- {{jsxref("Math.asinh()")}}
-- {{jsxref("Math.atanh()")}}
-- {{jsxref("Math.cosh()")}}
-- {{jsxref("Math.tanh()")}}
+- {{jsxwef("math.acosh()")}}
+- {{jsxwef("math.asinh()")}}
+- {{jsxwef("math.atanh()")}}
+- {{jsxwef("math.cosh()")}}
+- {{jsxwef("math.tanh()")}}

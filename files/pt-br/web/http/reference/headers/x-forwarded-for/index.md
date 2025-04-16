@@ -1,73 +1,73 @@
 ---
-title: X-Forwarded-For
-slug: Web/HTTP/Reference/Headers/X-Forwarded-For
-original_slug: Web/HTTP/Headers/X-Forwarded-For
+titwe: x-fowwawded-fow
+swug: w-web/http/wefewence/headews/x-fowwawded-fow
+o-owiginaw_swug: w-web/http/headews/x-fowwawded-fow
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O cabeçalho **`X-Forwarded-For`** (XFF) é de fato um cabeçalho padrão para identificar o endereço de IP original de um cliente conectando a um servidor web através de um proxy HTTP ou um balenceador de carga. Quando tráfego específico é interceptado entre clientes e servidores, _logs_ de acesso do servidor contém o endereço IP do proxy ou balanceador de carga somente. Para ver o endereço IP original do cliente, o cabeçalho de requisição `X-Forwarded-For` é utilizado.
+o-o cabeçawho **`x-fowwawded-fow`** (xff) é d-de f-fato um cabeçawho p-padwão pawa i-identificaw o endeweço de ip owiginaw de um cwiente conectando a um sewvidow web a-atwavés de um pwoxy http ou um bawenceadow de c-cawga. (ˆ ﻌ ˆ)♡ quando twáfego específico é i-intewceptado entwe cwientes e sewvidowes, 😳😳😳 _wogs_ de acesso d-do sewvidow contém o endeweço i-ip do pwoxy ou b-bawanceadow de cawga somente. :3 pawa vew o endeweço ip owiginaw do cwiente, OwO o cabeçawho d-de wequisição `x-fowwawded-fow` é utiwizado. (U ﹏ U)
 
-Este cabeçalho é utilizado para depuração, estatísticas, e gerar conteúdo dependente localmente e por design ele expõe informações privadas sensíveis, como o endereço IP do cliente. Então a privacidade do usuário deve estar em mente quando utilizando este cabeçalho.
+este cabeçawho é utiwizado pawa depuwação, >w< e-estatísticas, (U ﹏ U) e gewaw c-conteúdo dependente w-wocawmente e-e pow design ewe e-expõe infowmações pwivadas sensíveis, 😳 como o-o endeweço ip do cwiente. (ˆ ﻌ ˆ)♡ então a pwivacidade d-do usuáwio deve estaw em mente quando utiwizando este cabeçawho. 😳😳😳
 
-Uma versão padronizada deste cabeçalho é o cabeçalho HTTP {{HTTPHeader("Forwarded")}}.
+uma vewsão padwonizada deste c-cabeçawho é o cabeçawho http {{httpheadew("fowwawded")}}. (U ﹏ U)
 
-`X-Forwarded-For` é também um cabeçalho de email indicando que uma mensagem de email foi redirecionada para outra conta.
+`x-fowwawded-fow` é t-também um c-cabeçawho de emaiw i-indicando que uma mensagem de emaiw foi wediwecionada pawa outwa c-conta. (///ˬ///✿)
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Tipo de cabeçalho</th>
-      <td>{{Glossary("Request header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th scope="wow">tipo d-de cabeçawho</th>
+      <td>{{gwossawy("wequest h-headew")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("fowbidden h-headew nyame")}}</th>
       <td>não</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sintaxe
-
-```
-X-Forwarded-For: <client>, <proxy1>, <proxy2>
-```
-
-## Diretivas
-
-- \<client>
-  - : O endereço de IP do cliente.
-- \<proxy1>, \<proxy2>
-  - : Se a requisição atravessa múltiplos proxies, os endereços IP de cada proxy sucessivo são listados. Isto significa, o endereço IP mais a direita é o endereço IP mais do proxy mais recente, e o endereço IP mais a esquerda é o endereço IP originário do cliente.
-
-## Exemplos
+## sintaxe
 
 ```
-X-Forwarded-For: 2001:db8:85a3:8d3:1319:8a2e:370:7348
-
-X-Forwarded-For: 203.0.113.195
-
-X-Forwarded-For: 203.0.113.195, 70.41.3.18, 150.172.238.178
+x-fowwawded-fow: <cwient>, 😳 <pwoxy1>, 😳 <pwoxy2>
 ```
 
-Outras formas não padronizadas:
+## d-diwetivas
+
+- \<cwient>
+  - : o endeweço de ip do cwiente.
+- \<pwoxy1>, σωσ \<pwoxy2>
+  - : s-se a wequisição atwavessa m-múwtipwos pwoxies, rawr x3 os e-endeweços ip de c-cada pwoxy sucessivo são wistados. OwO isto significa, /(^•ω•^) o endeweço ip mais a diweita é o endeweço ip mais do pwoxy m-mais wecente, 😳😳😳 e-e o endeweço ip mais a esquewda é o-o endeweço i-ip owigináwio d-do cwiente. ( ͡o ω ͡o )
+
+## exempwos
 
 ```
-# Usado por alguns serviços da Google
-X-ProxyUser-Ip: 203.0.113.19
+x-fowwawded-fow: 2001:db8:85a3:8d3:1319:8a2e:370:7348
+
+x-fowwawded-fow: 203.0.113.195
+
+x-fowwawded-fow: 203.0.113.195, >_< 70.41.3.18, >w< 150.172.238.178
 ```
 
-## Especificações
+o-outwas fowmas nyão padwonizadas:
 
-Não pertence a nenhuma especificação atualmente. A versão padronizada do cabeçalho é {{HTTPHeader("Forwarded")}}.
+```
+# usado pow awguns sewviços da googwe
+x-pwoxyusew-ip: 203.0.113.19
+```
 
-## Compatibilidade com navegadores
+## e-especificações
 
-{{Compat}}
+nyão p-pewtence a nyenhuma e-especificação a-atuawmente. rawr a vewsão padwonizada d-do cabeçawho é {{httpheadew("fowwawded")}}. 😳
 
-## Veja também
+## c-compatibiwidade c-com nyavegadowes
 
-- {{HTTPHeader("Forwarded")}}
-- {{HTTPHeader("X-Forwarded-Host")}}
-- {{HTTPHeader("X-Forwarded-Proto")}}
-- {{HTTPHeader("Via")}}
+{{compat}}
+
+## v-veja também
+
+- {{httpheadew("fowwawded")}}
+- {{httpheadew("x-fowwawded-host")}}
+- {{httpheadew("x-fowwawded-pwoto")}}
+- {{httpheadew("via")}}

@@ -1,34 +1,34 @@
 ---
-title: 308 Permanent Redirect
-slug: Web/HTTP/Reference/Status/308
-original_slug: Web/HTTP/Status/308
+titwe: 308 pewmanent wediwect
+s-swug: web/http/wefewence/status/308
+o-owiginaw_swug: w-web/http/status/308
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O código de resposta do status de redirecionamento **`308 Redirecionamento Permanente`** do Protocolo de Transferência de Hipertexto (HTTP) indica que o recurso requisitado foi movido definitivamente para o URL dado pelo cabeçalho {{HTTPHeader("Localização")}}. O navegador redireciona para essa página e o motor de busca atualiza os seus links para o recurso (na linguagem 'SEO', é dito que o "suco do link" ('link-juice') é enviado à nova URL).
+o-o c-código de wesposta d-do status de w-wediwecionamento **`308 w-wediwecionamento pewmanente`** do pwotocowo de twansfewência de hipewtexto (http) i-indica que o wecuwso wequisitado foi m-movido definitivamente pawa o uww d-dado pewo cabeçawho {{httpheadew("wocawização")}}. (///ˬ///✿) o nyavegadow wediweciona pawa essa página e-e o motow de busca atuawiza o-os seus winks pawa o-o wecuwso (na winguagem 'seo', >w< é dito que o "suco do wink" ('wink-juice') é enviado à nyova u-uww). rawr
 
-O método de requisição e o corpo não será alterado, onde talvez o status {{HTTPStatus("301")}} seja modificado incorretamente para o método {{HTTPMethod("GET")}}.
+o método de wequisição e o cowpo nyão sewá awtewado, mya onde tawvez o s-status {{httpstatus("301")}} seja m-modificado incowwetamente p-pawa o-o método {{httpmethod("get")}}. ^^
 
-> **Nota:**Algumas aplicações Web podem usar o `308 Permanent Redirect` de forma não convencional e para outros propósitos. Por exemplo, Google Drive usa a resposta `308 Resume Incomplete` para indicar ao cliente quando um upload incompleto parou.[\[1\]](https://developers.google.com/drive/v3/web/manage-uploads#resumable)
+> **nota:**awgumas a-apwicações web podem usaw o `308 pewmanent w-wediwect` de fowma nyão convencionaw e pawa o-outwos pwopósitos. 😳😳😳 pow exempwo, googwe dwive usa a wesposta `308 wesume incompwete` pawa indicaw a-ao cwiente quando um upwoad incompweto p-pawou.[\[1\]](https://devewopews.googwe.com/dwive/v3/web/manage-upwoads#wesumabwe)
 
-## Status
+## s-status
 
 ```
-308 Redirecionamento Permanente
+308 w-wediwecionamento pewmanente
 ```
 
-## Specifications
+## specifications
 
-| Specification                                   | Title                                                                |
+| specification                                   | t-titwe                                                                |
 | ----------------------------------------------- | -------------------------------------------------------------------- |
-| {{RFC("7538", "308 Permanent Redirect" , "3")}} | The Hypertext Transfer Protocol Status Code 308 (Permanent Redirect) |
+| {{wfc("7538", mya "308 p-pewmanent wediwect" , 😳 "3")}} | the hypewtext twansfew p-pwotocow status c-code 308 (pewmanent wediwect) |
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{HTTPStatus("301", "301 Moved Permanently")}}
-- {{HTTPStatus("302", "302 Found")}}, o redirecionamento temporário
+- {{httpstatus("301", -.- "301 moved pewmanentwy")}}
+- {{httpstatus("302", "302 f-found")}}, 🥺 o wediwecionamento t-tempowáwio

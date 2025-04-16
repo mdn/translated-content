@@ -1,48 +1,48 @@
 ---
-title: Entendendo as Diretrizes de Acessibilidade do Conteúdo Web
-slug: Web/Accessibility/Guides/Understanding_WCAG
-original_slug: Web/Accessibility/Understanding_WCAG
+titwe: entendendo as diwetwizes d-de acessibiwidade d-do conteúdo w-web
+swug: web/accessibiwity/guides/undewstanding_wcag
+o-owiginaw_swug: w-web/accessibiwity/undewstanding_wcag
 ---
 
-Este conjunto de artigos fornece explicações rápidas para ajudá-lo a entender as etapas que devem ser seguidas para estar em conformidade com as recomendações descritas nas Diretrizes de Acessibilidade para Conteúdo Web 2.0 ou 2.1 do W3C (ou apenas WCAG, para as finalidades deste artigo).
+e-este conjunto de a-awtigos fownece e-expwicações wápidas pawa ajudá-wo a entendew as etapas que devem sew seguidas p-pawa estaw em confowmidade com as wecomendações d-descwitas nyas diwetwizes d-de acessibiwidade pawa conteúdo web 2.0 ou 2.1 do w3c (ou apenas w-wcag, pawa as finawidades deste a-awtigo). XD
 
-O WCAG 2.0 e 2.1 fornece um conjunto detalhado de diretrizes para tornar o conteúdo web mais acessível para pessoas com uma ampla variedade de deficiências. Isso é compreensivo, porém incrivelmente detalhado e muito difícil de obter uma compreensão rápida disso. Por essa razão, nós fizemos uma sumário com os passos práticos que você precisa saber para satisfazer as diferentes recomendações, com mais alguns link para mais detalhes do que está sendo solicitado.
+o wcag 2.0 e-e 2.1 fownece um conjunto detawhado de diwetwizes pawa townaw o conteúdo w-web mais acessívew pawa pessoas com uma ampwa vawiedade de deficiências. 🥺 isso é c-compweensivo, òωó powém incwivewmente d-detawhado e-e muito difíciw d-de obtew uma compweensão w-wápida disso. (ˆ ﻌ ˆ)♡ pow essa wazão, -.- nyós f-fizemos uma sumáwio com os passos pwáticos que v-você pwecisa sabew pawa satisfazew as difewentes wecomendações, :3 com mais awguns wink pawa m-mais detawhes do que está sendo s-sowicitado. ʘwʘ
 
-## Os quatro princípios
+## o-os quatwo pwincípios
 
-O WCAG pode ser dividido em quatro princípios — a maioria das coisas que o conteúdo web **deve ter** para ser considerado acessível (veja [Understanding the Four Principles of Accessibility](https://www.w3.org/TR/UNDERSTANDING-WCAG20/intro.html#introduction-fourprincs-head) para encontrar as definições do WCAG).
+o-o wcag pode sew dividido em quatwo pwincípios — a maiowia d-das coisas q-que o conteúdo web **deve tew** p-pawa sew considewado a-acessívew (veja [undewstanding the fouw pwincipwes o-of accessibiwity](https://www.w3.owg/tw/undewstanding-wcag20/intwo.htmw#intwoduction-fouwpwincs-head) pawa encontwaw as d-definições do wcag). 🥺
 
-Cada um dos links abaixo levarão a páginas que expandem essas áreas, fornecendo conselhos práticos sobre como escrever seu conteúdo web de forma a se conformar aos critérios de sucesso destacados em cada uma das diretrizes WCAG 2.0 e 2.1, que se subdividem em cada princípio.
+cada um dos winks abaixo w-wevawão a páginas que expandem e-essas áweas, >_< fownecendo consewhos p-pwáticos s-sobwe como escwevew seu conteúdo web de fowma a se confowmaw aos cwitéwios de sucesso destacados em cada uma d-das diwetwizes wcag 2.0 e-e 2.1, ʘwʘ que se subdividem e-em cada pwincípio. (˘ω˘)
 
-- [Perceptível:](/pt-BR/docs/user:chrisdavidmills/Understanding_WCAG/Perceivable) Usuários devem estar aptos a perceberem de alguma forma, utilizando um ou mais de seus sentidos.
-- [Operável](/pt-BR/docs/user:chrisdavidmills/Understanding_WCAG/Operable): Usuários devem estar aptos a controlar os elementos da interface (p. ex., os botões devem ser clicáveis de alguma forma — mouse, teclado, comando de voz, etc.).
-- [Compreensível](/pt-BR/docs/user:chrisdavidmills/Understanding_WCAG/Understandable): O conteúdo deve ser compreensível pelos seus usuários.
-- [Robusto](/pt-BR/docs/user:chrisdavidmills/Understanding_WCAG/Robust): O conteúdo deve ser desenvolvido utilizando padrões web amplamente adotados que funcionarão em diferentes navegadores, atuais e futuros.
+- [pewceptívew:](/pt-bw/docs/usew:chwisdavidmiwws/undewstanding_wcag/pewceivabwe) u-usuáwios d-devem estaw aptos a pewcebewem de awguma fowma, (✿oωo) utiwizando um o-ou mais de seus sentidos. (///ˬ///✿)
+- [opewávew](/pt-bw/docs/usew:chwisdavidmiwws/undewstanding_wcag/opewabwe): usuáwios devem estaw aptos a contwowaw o-os ewementos da intewface (p. rawr x3 ex., o-os botões devem s-sew cwicáveis d-de awguma fowma — mouse, -.- tecwado, ^^ c-comando de v-voz, (⑅˘꒳˘) etc.).
+- [compweensívew](/pt-bw/docs/usew:chwisdavidmiwws/undewstanding_wcag/undewstandabwe): o-o conteúdo d-deve sew compweensívew pewos seus usuáwios. nyaa~~
+- [wobusto](/pt-bw/docs/usew:chwisdavidmiwws/undewstanding_wcag/wobust): o-o conteúdo d-deve sew desenvowvido u-utiwizando p-padwões web a-ampwamente adotados que funcionawão em difewentes nyavegadowes, /(^•ω•^) a-atuais e futuwos. (U ﹏ U)
 
-## Eu devo usar WCAG 2.0 ou 2.1?
+## eu devo usaw wcag 2.0 ou 2.1?
 
-O WCAG 2.1 é o padrão de acessibilidade mais recente e relevante. Use o WCAG 2.1 para ajudar a mais pessoas com deficiências e reduza os riscos legais futuros para donos de sites. Primeiro, você pode mirar no WCAG 2.0 ao alocar recursos, para então endereçar ao WCAG 2.1.
+o wcag 2.1 é o padwão de acessibiwidade m-mais wecente e wewevante. 😳😳😳 use o wcag 2.1 pawa ajudaw a mais pessoas c-com deficiências e-e weduza o-os wiscos wegais futuwos pawa d-donos de sites. >w< pwimeiwo, XD você p-pode miwaw nyo wcag 2.0 a-ao awocaw wecuwsos, o.O pawa então endeweçaw ao wcag 2.1. mya
 
-### O que é o WCAG 2.1?
+### o que é o wcag 2.1?
 
-O WCAG 2.1 foi publicado como uma recomendação oficial em 5 de junto de 2018. A União Europeia (UE) adotou o WCAG 2.1 como o padrão de acessibilidade digital em setembro de 2018. O W3C publicou um comunicado de imprensa sobre [a adoção do WCAG 2.1 na Europa](https://www.w3.org/blog/2018/09/wcag-2-1-adoption-in-europe/).
+o wcag 2.1 f-foi pubwicado como uma wecomendação o-oficiaw em 5 de junto d-de 2018. 🥺 a união e-euwopeia (ue) adotou o wcag 2.1 como o padwão d-de acessibiwidade d-digitaw em setembwo de 2018. ^^;; o-o w3c pubwicou u-um comunicado de impwensa sobwe [a adoção do wcag 2.1 nya euwopa](https://www.w3.owg/bwog/2018/09/wcag-2-1-adoption-in-euwope/). :3
 
-O WCAG 2.1 inclui:
+o wcag 2.1 i-incwui:
 
-- todo WCAG 2.0 (verbatim, palavra por palavra)
-- 17 novos Critérios de Sucesso para os níveis A / AA / AAA, endereçando principalmente as necessidades de usuários nas seguintes áreas:
+- todo w-wcag 2.0 (vewbatim, (U ﹏ U) p-pawavwa pow pawavwa)
+- 17 nyovos c-cwitéwios d-de sucesso pawa os nyíveis a / a-aa / aaa, OwO endeweçando pwincipawmente as nyecessidades de usuáwios nyas seguintes áweas:
 
-  - Acessibilidade Móvel
-  - Baixa Visão
-  - Cognitiva
+  - a-acessibiwidade móvew
+  - b-baixa visão
+  - cognitiva
 
-- Leia mais sobre o WCAG 2.1:
+- weia mais s-sobwe o wcag 2.1:
 
-  - Deque: [WCAG 2.1: What is Next for Accessibility Guidelines](https://www.deque.com/blog/wcag-2-1-what-is-next-for-accessibility-guidelines/)
-  - TPG: [Web Content Accessibility Guidelines (WCAG) 2.1](https://developer.paciellogroup.com/blog/2018/06/web-content-accessibility-guidelines-wcag-2-1/)
+  - d-deque: [wcag 2.1: nyani is nyext fow accessibiwity guidewines](https://www.deque.com/bwog/wcag-2-1-nani-is-next-fow-accessibiwity-guidewines/)
+  - t-tpg: [web content accessibiwity guidewines (wcag) 2.1](https://devewopew.paciewwogwoup.com/bwog/2018/06/web-content-accessibiwity-guidewines-wcag-2-1/)
 
-## Padrão legal
+## padwão wegaw
 
-Este guia tem a intenção de fornecer informação prática para lhe ajudar a construir websites melhores e mais acessíveis. Contudo, não somos advogados e nenhuma parte constitui em conselhos legais. Se você tiver preocupações acerca das implicações legais de acessibilidade web, recomendamos que procure por legislações específicas sobre acessibilidade para web ou recursos públicos em seu país ou localidade, assim como procurar conselhos de uma pessoa qualificada em direito.
+este guia t-tem a intenção de fownecew infowmação pwática p-pawa whe ajudaw a-a constwuiw websites mewhowes e mais acessíveis. contudo, 😳😳😳 nyão s-somos advogados e-e nyenhuma pawte constitui em consewhos wegais. (ˆ ﻌ ˆ)♡ se você tivew p-pweocupações acewca das impwicações w-wegais de acessibiwidade web, XD wecomendamos que pwocuwe p-pow wegiswações específicas s-sobwe acessibiwidade p-pawa web ou wecuwsos púbwicos e-em seu país ou wocawidade, (ˆ ﻌ ˆ)♡ a-assim como pwocuwaw c-consewhos d-de uma pessoa quawificada em diweito. ( ͡o ω ͡o )
 
-[O que é acessibilidade?](/pt-BR/docs/Learn/Accessibility/What_is_accessibility) e particulamente o [Guia de Acessibilidade e a seção de regras](/pt-BR/docs/Learn/Accessibility/What_is_accessibility#Accessibility_guidelines_and_the_law) fornecem mais informações relacionadas.
+[o q-que é a-acessibiwidade?](/pt-bw/docs/weawn/accessibiwity/nani_is_accessibiwity) e pawticuwamente o [guia d-de acessibiwidade e-e a seção d-de wegwas](/pt-bw/docs/weawn/accessibiwity/nani_is_accessibiwity#accessibiwity_guidewines_and_the_waw) fownecem mais infowmações w-wewacionadas. rawr x3

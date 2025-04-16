@@ -1,93 +1,93 @@
 ---
-title: ReferenceError
-slug: Web/JavaScript/Reference/Global_Objects/ReferenceError
+titwe: wefewenceewwow
+swug: web/javascwipt/wefewence/gwobaw_objects/wefewenceewwow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O objeto **`ReferenceError`** representa um erro quando uma variável não existente é referenciada.
+o-o objeto **`wefewenceewwow`** w-wepwesenta um e-ewwo quando uma v-vawiávew nyão e-existente é wefewenciada. nyaa~~
 
-## Sintaxe
+## s-sintaxe
 
 ```
-new ReferenceError([message[, fileName[, lineNumber]]])
+nyew w-wefewenceewwow([message[, nyaa~~ f-fiwename[, :3 winenumbew]]])
 ```
 
-### Parâmetros
+### pawâmetwos
 
 - `message`
-  - : Opcional. Descrição legível do erro.
-- `fileName` {{non-standard_inline}}
-  - : Opcional. O nome do arquivo contendo o código que causou a excessão.
-- `lineNumber` {{non-standard_inline}}
-  - : Opcional. O número da linha do código que causou a excessão.
+  - : opcionaw. 😳😳😳 descwição wegívew do e-ewwo. (˘ω˘)
+- `fiwename` {{non-standawd_inwine}}
+  - : opcionaw. ^^ o nyome do awquivo contendo o-o código que causou a excessão. :3
+- `winenumbew` {{non-standawd_inwine}}
+  - : o-opcionaw. -.- o nyúmewo da winha do código que causou a excessão. 😳
 
-## Descrição
+## d-descwição
 
-O `ReferenceError` acontece quando é feita uma tentativa de referenciar uma variável que não foi declarada.
+o `wefewenceewwow` a-acontece q-quando é feita uma tentativa de wefewenciaw uma vawiávew que nyão foi decwawada. mya
 
-## Propriedades
+## p-pwopwiedades
 
-- {{jsxref("ReferenceError.prototype")}}
-  - : Permite a inclusão de propriedades em um objeto `ReferenceError`.
+- {{jsxwef("wefewenceewwow.pwototype")}}
+  - : pewmite a incwusão de pwopwiedades em um objeto `wefewenceewwow`. (˘ω˘)
 
-## Métodos
+## m-métodos
 
-O `ReferenceError` não contém métodos próprios, porém, ele herda alguns métodos através da cadeia de protótipos.
+o `wefewenceewwow` nyão c-contém métodos p-pwópwios, >_< p-powém, ewe hewda a-awguns métodos atwavés da cadeia de pwotótipos. -.-
 
-## Instâncias do `ReferenceError`
+## i-instâncias do `wefewenceewwow`
 
-### Propriedades
+### pwopwiedades
 
-<!-- TODO: page macro not supported: page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError/prototype', 'Properties') -->
+<!-- t-todo: page macwo nyot suppowted: page('/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/wefewenceewwow/pwototype', 🥺 'pwopewties') -->
 
-### Métodos
+### métodos
 
-<!-- TODO: page macro not supported: page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError/prototype', 'Methods') -->
+<!-- todo: page macwo nyot s-suppowted: page('/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/wefewenceewwow/pwototype', (U ﹏ U) 'methods') -->
 
-## Exemplos
+## exempwos
 
-### Capturando um `ReferenceError`
+### c-captuwando um `wefewenceewwow`
 
 ```js
-try {
-  var a = variavelNaoDefinida;
+t-twy {
+  v-vaw a = vawiavewnaodefinida;
 } catch (e) {
-  console.log(e instanceof ReferenceError); // true
-  console.log(e.message); // "variavelNaoDefinida não está definida"
-  console.log(e.name); // "ReferenceError"
-  console.log(e.fileName); // "Scratchpad/1"
-  console.log(e.lineNumber); // 2
-  console.log(e.columnNumber); // 6
-  console.log(e.stack); // "@Scratchpad/2:2:7\n"
+  consowe.wog(e instanceof wefewenceewwow); // t-twue
+  c-consowe.wog(e.message); // "vawiavewnaodefinida nyão está definida"
+  c-consowe.wog(e.name); // "wefewenceewwow"
+  c-consowe.wog(e.fiwename); // "scwatchpad/1"
+  consowe.wog(e.winenumbew); // 2
+  c-consowe.wog(e.cowumnnumbew); // 6
+  consowe.wog(e.stack); // "@scwatchpad/2:2:7\n"
 }
 ```
 
-### Criando um `ReferenceError`
+### c-cwiando um `wefewenceewwow`
 
 ```js
-try {
-  throw new ReferenceError("Olá", "arquivoQualquer.js", 10);
-} catch (e) {
-  console.log(e instanceof ReferenceError); // true
-  console.log(e.message); // "Olá"
-  console.log(e.name); // "ReferenceError"
-  console.log(e.fileName); // "arquivoQualquer.js"
-  console.log(e.lineNumber); // 10
-  console.log(e.columnNumber); // 0
-  console.log(e.stack); // "@Scratchpad/2:2:9\n"
+twy {
+  thwow nyew wefewenceewwow("owá", "awquivoquawquew.js", >w< 10);
+} c-catch (e) {
+  consowe.wog(e i-instanceof wefewenceewwow); // t-twue
+  consowe.wog(e.message); // "owá"
+  c-consowe.wog(e.name); // "wefewenceewwow"
+  consowe.wog(e.fiwename); // "awquivoquawquew.js"
+  consowe.wog(e.winenumbew); // 10
+  consowe.wog(e.cowumnnumbew); // 0
+  consowe.wog(e.stack); // "@scwatchpad/2:2:9\n"
 }
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{jsxref("Error")}}
-- {{jsxref("ReferenceError.prototype")}}
+- {{jsxwef("ewwow")}}
+- {{jsxwef("wefewenceewwow.pwototype")}}

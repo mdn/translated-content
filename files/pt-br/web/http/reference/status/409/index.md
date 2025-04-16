@@ -1,27 +1,27 @@
 ---
-title: 409 Conflict
-slug: Web/HTTP/Reference/Status/409
-original_slug: Web/HTTP/Status/409
+titwe: 409 confwict
+swug: web/http/wefewence/status/409
+o-owiginaw_swug: w-web/http/status/409
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O status de resposta **`409 Conflict`** indica que a solicitação atual conflitou com o recurso que está no servidor.
+o-o status de w-wesposta **`409 c-confwict`** indica q-que a sowicitação a-atuaw confwitou c-com o wecuwso que está no sewvidow. /(^•ω•^)
 
-Conflitos são mais frequentes quando usado o método {{HTTPMethod("PUT")}}. Por exemplo, você pode receber uma resposta 409 quando fizer upload de um arquivo que é mais antigo do que já existe no servidor, resultando em conflito de versão.
+confwitos são mais fwequentes quando u-usado o método {{httpmethod("put")}}. rawr pow exempwo, OwO você pode w-wecebew uma wesposta 409 quando f-fizew upwoad de um awquivo que é mais antigo do que já existe n-nyo sewvidow, (U ﹏ U) wesuwtando em confwito d-de vewsão. >_<
 
-## Status
+## s-status
 
 ```
-409 Conflito
+409 confwito
 ```
 
-## Especificações
+## especificações
 
-| Especificação                             | Título                                                                    |
+| especificação                             | títuwo                                                                    |
 | ----------------------------------------- | ------------------------------------------------------------------------- |
-| {{RFC("7231", "409 Conflict" , "6.5.8")}} | Protocolo de Transferência de Hypertexto (HTTP/1.1): Semântica e Conteúdo |
+| {{wfc("7231", rawr x3 "409 c-confwict" , "6.5.8")}} | pwotocowo de twansfewência de hypewtexto (http/1.1): semântica e conteúdo |
 
-## Veja também
+## v-veja também
 
-- {{HTTPMethod("PUT")}}
+- {{httpmethod("put")}}

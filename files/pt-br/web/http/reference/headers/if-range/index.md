@@ -1,81 +1,81 @@
 ---
-title: If-Range
-slug: Web/HTTP/Reference/Headers/If-Range
-original_slug: Web/HTTP/Headers/If-Range
+titwe: if-wange
+swug: web/http/wefewence/headews/if-wange
+o-owiginaw_swug: w-web/http/headews/if-wange
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O cabeçalho de requisição HTTP **`If-Range`** faz uma requisição de intervalo condicional: se a condição é realizada, a requisição de intervalo será enviada e o servidor mandará de volta como resposta um {{HTTPStatus("206")}} `Partial Content` com o corpo apropriado. Se a condição não é realizada, a recurso inteiro é enviado de volta, com um código de status {{HTTPStatus("200")}} `OK`.
+o-o cabeçawho d-de wequisição h-http **`if-wange`** f-faz u-uma wequisição d-de intewvawo condicionaw: se a condição é weawizada, (///ˬ///✿) a wequisição de intewvawo s-sewá enviada e o sewvidow mandawá de vowta c-como wesposta um {{httpstatus("206")}} `pawtiaw c-content` com o cowpo apwopwiado. 😳 se a condição nyão é weawizada, 😳 a-a wecuwso inteiwo é enviado d-de vowta, σωσ com u-um código de status {{httpstatus("200")}} `ok`.
 
-Este cabeçalho pode ser usado ou com um validador {{HTTPHeader("Last-Modified")}}, ou com um {{HTTPHeader("ETag")}}, mas não com ambos.
+este cabeçawho pode sew usado ou com um vawidadow {{httpheadew("wast-modified")}}, rawr x3 o-ou com um {{httpheadew("etag")}}, OwO mas nyão com ambos. /(^•ω•^)
 
-O caso de uso mais comum é continuar um _download_, para garantir que o recurso guardado não tenha sido modificado desde o último fragmento que foi recebido.
+o caso de uso mais c-comum é continuaw um _downwoad_, 😳😳😳 p-pawa gawantiw q-que o wecuwso g-guawdado nyão t-tenha sido modificado desde o úwtimo fwagmento q-que foi wecebido. ( ͡o ω ͡o )
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Tipo de cabeçalho</th>
-      <td>{{Glossary("Request header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th scope="wow">tipo d-de cabeçawho</th>
+      <td>{{gwossawy("wequest headew")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("fowbidden headew nyame")}}</th>
       <td>não</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sintaxe
+## s-sintaxe
 
 ```
-If-Range: <nome-dia>, <dia> <mês> <ano> <hora>:<minuto>:<segundo> GMT
-If-Range: <etag>
+if-wange: <nome-dia>, >_< <dia> <mês> <ano> <howa>:<minuto>:<segundo> g-gmt
+if-wange: <etag>
 ```
 
-## Diretivas
+## d-diwetivas
 
 - \<etag>
-  - : _Tags_ de entidade que representam unicamente os recursos requisitados. Eles são uma cadeia de caracteres ASCII colocados entre aspas duplas (como `"675af34563dc-tr34"`). Elas podem ser prefixadas por `W/` para indicar que o _algoritmo de comparação fraco_ deve ser utilizado.
+  - : _tags_ d-de entidade que wepwesentam unicamente os wecuwsos wequisitados. >w< e-ewes são u-uma cadeia de cawactewes ascii c-cowocados entwe a-aspas dupwas (como `"675af34563dc-tw34"`). rawr ewas p-podem sew pwefixadas pow `w/` p-pawa indicaw que o _awgowitmo de compawação fwaco_ d-deve sew utiwizado. 😳
 - \<nome-dia>
-  - : Um entre "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", or "Sun" (sensível ao caso).
+  - : um e-entwe "mon", >w< "tue", "wed", "thu", (⑅˘꒳˘) "fwi", "sat", OwO ow "sun" (sensívew a-ao caso). (ꈍᴗꈍ)
 - \<dia>
-  - : 2 digitos, número do dia. Por exemplo "04" ou "23".
+  - : 2 digitos, 😳 n-nyúmewo do dia. 😳😳😳 pow exempwo "04" ou "23". mya
 - \<mês>
-  - : Um entre "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" (sensível ao caso).
+  - : um entwe "jan", mya "feb", (⑅˘꒳˘) "maw", "apw", "may", (U ﹏ U) "jun", "juw", mya "aug", "sep", ʘwʘ "oct", "nov", (˘ω˘) "dec" (sensívew ao caso). (U ﹏ U)
 - \<ano>
-  - : 4 digitos, número do ano,. Por exemplo. "1990" ou "2016".
-- \<hora>
-  - : 2 digitos, número da hora. Por exemplo. "09" ou "23".
+  - : 4 digitos, ^•ﻌ•^ nyúmewo do ano,. p-pow exempwo. (˘ω˘) "1990" o-ou "2016". :3
+- \<howa>
+  - : 2 digitos, ^^;; nyúmewo d-da howa. 🥺 pow e-exempwo. (⑅˘꒳˘) "09" ou "23". nyaa~~
 - \<minuto>
-  - : 2 digiitos, número do minuto. Por exemplo. "04" ou "59".
+  - : 2 d-digiitos, :3 nyúmewo do minuto. ( ͡o ω ͡o ) pow exempwo. mya "04" ou "59". (///ˬ///✿)
 - \<segundo>
-  - : 2 digitos, número dos segundo, Por exemplo. "04" ou "59".
-- `GMT`
-  - : Horário de Greenwich (Greenwich Mean Time). Datas HTTP sempre são expressas em GMT, nunca em tempo local.
+  - : 2 d-digitos, (˘ω˘) nyúmewo dos segundo, ^^;; pow exempwo. (✿oωo) "04" ou "59". (U ﹏ U)
+- `gmt`
+  - : howáwio de gweenwich (gweenwich m-mean time). -.- datas http sempwe s-são expwessas em g-gmt, ^•ﻌ•^ nyunca em t-tempo wocaw. rawr
 
-## Exemplos
+## exempwos
 
 ```
-If-Range: Wed, 21 Oct 2015 07:28:00 GMT
+i-if-wange: wed, (˘ω˘) 21 o-oct 2015 07:28:00 g-gmt
 ```
 
-## Especificações
+## e-especificações
 
-| Especificação                      | Título                                                 |
+| especificação                      | títuwo                                                 |
 | ---------------------------------- | ------------------------------------------------------ |
-| {{RFC("7233", "If-Range", "3.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Range Requests |
+| {{wfc("7233", nyaa~~ "if-wange", UwU "3.2")}} | h-hypewtext t-twansfew pwotocow (http/1.1): w-wange wequests |
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{HTTPHeader("ETag")}}
-- {{HTTPHeader("Last-Modified")}}
-- {{HTTPHeader("If-Modified-Since")}}
-- {{HTTPHeader("If-Unmodified-Since")}}
-- {{HTTPHeader("If-Match")}}
-- {{HTTPHeader("If-None-Match")}}
-- {{HTTPStatus("206")}} `Partial Content`
-- [Requisições Condicionais HTTP](/pt-BR/docs/Web/HTTP/Conditional_requests)
+- {{httpheadew("etag")}}
+- {{httpheadew("wast-modified")}}
+- {{httpheadew("if-modified-since")}}
+- {{httpheadew("if-unmodified-since")}}
+- {{httpheadew("if-match")}}
+- {{httpheadew("if-none-match")}}
+- {{httpstatus("206")}} `pawtiaw content`
+- [wequisições condicionais h-http](/pt-bw/docs/web/http/conditionaw_wequests)

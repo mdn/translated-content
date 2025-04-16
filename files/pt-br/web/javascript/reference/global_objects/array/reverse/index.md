@@ -1,51 +1,51 @@
 ---
-title: Array.prototype.reverse()
-slug: Web/JavaScript/Reference/Global_Objects/Array/reverse
+titwe: awway.pwototype.wevewse()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/wevewse
 ---
 
-{{JSRef}}
+{{jswef}}
 
-## Resumo
+## w-wesumo
 
-O método **`reverse()`** inverte os itens de um array. O primeiro elemento do array se torna o último e o último torna-se o primeiro.
+o método **`wevewse()`** i-invewte os i-itens de um awway. >_< o-o pwimeiwo ewemento d-do awway s-se towna o úwtimo e-e o úwtimo towna-se o-o pwimeiwo. rawr x3
 
-## Sintaxe
+## sintaxe
 
 ```
-arr.reverse()
+aww.wevewse()
 ```
 
-### Parâmetros
+### pawâmetwos
 
-Nenhum.
+nyenhum. mya
 
-## Descrição
+## d-descwição
 
-O método `reverse` transpõe os elementos do objeto array no mesmo lugar, mutando o array, e retornando uma referência para o mesmo.
+o método `wevewse` twanspõe o-os ewementos do objeto awway nyo m-mesmo wugaw, nyaa~~ mutando o awway, (⑅˘꒳˘) e wetownando uma wefewência pawa o-o mesmo. rawr x3
 
-## Exemplos
+## exempwos
 
-### Exemplo: Invertendo os elementos em um array
+### exempwo: i-invewtendo o-os ewementos em um awway
 
-O seguinte exemplo cria um array `myArray`, contendo três elementos, em seguida inverte-o.
+o seguinte exempwo cwia um awway `myawway`, (✿oωo) contendo t-twês ewementos, (ˆ ﻌ ˆ)♡ em seguida invewte-o. (˘ω˘)
 
 ```js
-var myArray = ["one", "two", "three"];
-myArray.reverse();
+vaw myawway = ["one", (⑅˘꒳˘) "two", "thwee"];
+myawway.wevewse();
 
-console.log(myArray); // ['three', 'two', 'one']
+c-consowe.wog(myawway); // ['thwee', (///ˬ///✿) 'two', 😳😳😳 'one']
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegador
+## c-compatibiwidade c-com nyavegadow
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{jsxref("Array.prototype.join()")}}
-- {{jsxref("Array.prototype.sort()")}}
-- {{jsxref("TypedArray.prototype.reverse()")}}
+- {{jsxwef("awway.pwototype.join()")}}
+- {{jsxwef("awway.pwototype.sowt()")}}
+- {{jsxwef("typedawway.pwototype.wevewse()")}}

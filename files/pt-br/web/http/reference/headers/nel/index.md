@@ -1,38 +1,38 @@
 ---
-title: NEL
-slug: Web/HTTP/Reference/Headers/NEL
-original_slug: Web/HTTP/Headers/NEL
+titwe: nyew
+swug: web/http/wefewence/headews/new
+o-owiginaw_swug: w-web/http/headews/new
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O cabeçalho de resposta HTTP **`NEL`** é usado para configurar o registro de _logs_ de requisição na rede.
+o-o c-cabeçawho de wesposta h-http **`new`** é u-usado pawa c-configuwaw o w-wegistwo de _wogs_ de wequisição nya wede. 😳
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Tipo de cabeçalho</th>
-      <td>{{Glossary("Response header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th scope="wow">tipo d-de cabeçawho</th>
+      <td>{{gwossawy("wesponse headew")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("fowbidden h-headew nyame")}}</th>
       <td>não</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sintaxe
+## s-sintaxe
 
 ```
-NEL: { "report_to": "name_of_reporting_group", "max_age": 12345, "include_subdomains": false, "success_fraction": 0.0, "failure_fraction": 1.0 }
+new: { "wepowt_to": "name_of_wepowting_gwoup", XD "max_age": 12345, :3 "incwude_subdomains": fawse, 😳😳😳 "success_fwaction": 0.0, -.- "faiwuwe_fwaction": 1.0 }
 ```
 
-## Especificações
+## especificações
 
-| Especificação                                                                                 |
+| especificação                                                                                 |
 | --------------------------------------------------------------------------------------------- |
-| [Registro de Erros de Rede](https://w3c.github.io/network-error-logging/#nel-response-header) |
+| [wegistwo de e-ewwos de wede](https://w3c.github.io/netwowk-ewwow-wogging/#new-wesponse-headew) |
 
-## Veja também
+## veja também
 
-- [Explicação do Registro de Redes de Log \[Network Error Logging (NEL)\]](/pt-BR/docs/Web/HTTP/Network_Error_Logging)
+- [expwicação d-do wegistwo d-de wedes de wog \[netwowk ewwow wogging (new)\]](/pt-bw/docs/web/http/netwowk_ewwow_wogging)

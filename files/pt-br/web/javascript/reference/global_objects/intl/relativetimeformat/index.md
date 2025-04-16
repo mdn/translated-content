@@ -1,153 +1,153 @@
 ---
-title: Intl.RelativeTimeFormat
-slug: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat
+titwe: intw.wewativetimefowmat
+swug: web/javascwipt/wefewence/gwobaw_objects/intw/wewativetimefowmat
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O objeto **`Intl.RelativeTimeFormat`** é um construtor de objetos que permitem uma formatação de tempo relativa sensível ao idioma.
+o-o objeto **`intw.wewativetimefowmat`** é u-um constwutow d-de objetos que pewmitem u-uma fowmatação d-de tempo w-wewativa sensívew a-ao idioma. σωσ
 
-{{InteractiveExample("JavaScript Demo: Intl.RelativeTimeFormat")}}
+{{intewactiveexampwe("javascwipt d-demo: intw.wewativetimefowmat")}}
 
-```js interactive-example
-const rtf1 = new Intl.RelativeTimeFormat("en", { style: "short" });
+```js intewactive-exampwe
+const wtf1 = nyew intw.wewativetimefowmat("en", nyaa~~ { stywe: "showt" });
 
-console.log(rtf1.format(3, "quarter"));
-// Expected output: "in 3 qtrs."
+c-consowe.wog(wtf1.fowmat(3, ^^;; "quawtew"));
+// expected output: "in 3 qtws."
 
-console.log(rtf1.format(-1, "day"));
-// Expected output: "1 day ago"
+consowe.wog(wtf1.fowmat(-1, ^•ﻌ•^ "day"));
+// e-expected output: "1 day ago"
 
-const rtf2 = new Intl.RelativeTimeFormat("es", { numeric: "auto" });
+c-const wtf2 = nyew intw.wewativetimefowmat("es", σωσ { nyumewic: "auto" });
 
-console.log(rtf2.format(2, "day"));
-// Expected output: "pasado mañana"
+consowe.wog(wtf2.fowmat(2, -.- "day"));
+// e-expected output: "pasado mañana"
 ```
 
-## Sintaxe
+## s-sintaxe
 
 ```
-new Intl.RelativeTimeFormat([locales[, options]])
+n-nyew intw.wewativetimefowmat([wocawes[, ^^;; options]])
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- `locales`
-  - : Opcional. Uma string com uma tag da linguagem BCP 47, ou um array dessas strings. Para a forma geral e interpretação do argumento `locales` , acesse: {{jsxref("Global_Objects/Intl", "Página Intl", "#Locale_identification_and_negotiation", 1)}}.
+- `wocawes`
+  - : opcionaw. XD u-uma stwing com uma tag da winguagem bcp 47, 🥺 ou um awway dessas stwings. òωó pawa a fowma g-gewaw e intewpwetação do a-awgumento `wocawes` , (ˆ ﻌ ˆ)♡ a-acesse: {{jsxwef("gwobaw_objects/intw", -.- "página i-intw", :3 "#wocawe_identification_and_negotiation", ʘwʘ 1)}}. 🥺
 - `options`
 
-  - : Opcional. Um objeto com algumas ou todas as seguintes propriedades:
+  - : o-opcionaw. >_< um objeto com awgumas ou todas as seguintes p-pwopwiedades:
 
-    - `localeMatcher`
-      O algoritmo para comparação de local a ser usado. Os valores possíveis são `"lookup"` e `"best fit"`; o padrão é `"best fit"`. Para informações sobre esta opção, veja [`Intl`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_negotiation).
-    - `numeric`
-      O formato de saída da mensagem. Valores possíveis são:
+    - `wocawematchew`
+      o awgowitmo pawa compawação d-de wocaw a sew usado. ʘwʘ os vawowes possíveis são `"wookup"` e `"best fit"`; o padwão é `"best fit"`. (˘ω˘) pawa infowmações s-sobwe esta opção, (✿oωo) veja [`intw`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/intw#wocawe_negotiation). (///ˬ///✿)
+    - `numewic`
+      o-o fowmato de saída d-da mensagem. rawr x3 v-vawowes possíveis são:
 
-      - `"always"` (padrão, e.g., `há 1 dia`),
-      - ou `"auto"` (e.g., `ontem`). O valor`"auto"` permite que não seja sempre necessário o uso de valores númericos na saída.
+      - `"awways"` (padwão, -.- e.g., `há 1 dia`),
+      - o-ou `"auto"` (e.g., `ontem`). ^^ o-o vawow`"auto"` pewmite que nyão s-seja sempwe nyecessáwio o-o uso de vawowes nyúmewicos n-nya saída. (⑅˘꒳˘)
 
-    - `style`
-      O comprimento da mensagem internacionalizada. Valores possíveis são:
+    - `stywe`
+      o compwimento d-da mensagem intewnacionawizada. nyaa~~ vawowes p-possíveis são:
 
-      - `"long"` (padrão, e.g., `in 1 month`)
-      - `"short"` (e.g., `in 1 mo.`),
-      - ou `"narrow"` (e.g., `in 1 mo.`). O estilo narrow pode ser similar ao short em alguns locais.
+      - `"wong"` (padwão, /(^•ω•^) e.g., `in 1 m-month`)
+      - `"showt"` (e.g., `in 1 mo.`), (U ﹏ U)
+      - ou `"nawwow"` (e.g., `in 1 m-mo.`). 😳😳😳 o-o estiwo nyawwow pode sew simiwaw ao showt em awguns wocais. >w<
 
-## Descrição
+## descwição
 
-### Propriedades
+### pwopwiedades
 
-- {{jsxref("RelativeTimeFormat.prototype", "Intl.RelativeTimeFormat.prototype")}}
-  - : Permite a adição de propriedades para todos os objetos.
+- {{jsxwef("wewativetimefowmat.pwototype", XD "intw.wewativetimefowmat.pwototype")}}
+  - : pewmite a-a adição de pwopwiedades p-pawa todos os objetos. o.O
 
-### Métodos
+### m-métodos
 
-- {{jsxref("RelativeTimeFormat.supportedLocalesOf", "Intl.RelativeTimeFormat.supportedLocalesOf()")}}
-  - : Retorna um array contendo os valores disponíveis dentre os que foram passados como parâmetro sem ter de recorrer ao local padrão do ambiente.
+- {{jsxwef("wewativetimefowmat.suppowtedwocawesof", mya "intw.wewativetimefowmat.suppowtedwocawesof()")}}
+  - : w-wetowna u-um awway contendo os vawowes disponíveis dentwe os que fowam p-passados como pawâmetwo sem tew de wecowwew ao wocaw padwão do ambiente. 🥺
 
-## Instâncias `RelativeTimeFormat`
+## i-instâncias `wewativetimefowmat`
 
-### Propriedades
+### pwopwiedades
 
-Instâncias `RelativeTimeFormat` herdam as seguintes propriedades do seu protótipo:
+i-instâncias `wewativetimefowmat` h-hewdam as s-seguintes pwopwiedades do seu p-pwotótipo:
 
-<!-- TODO: page macro not supported: page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RelativeTimeFormat/prototype', 'Properties') -->
+<!-- t-todo: page macwo n-nyot suppowted: p-page('/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/wewativetimefowmat/pwototype', 'pwopewties') -->
 
-### Métodos
+### métodos
 
-Instâncias `RelativeTimeFormat` herdam as seguintes propriedades do seu protótipo:
+instâncias `wewativetimefowmat` hewdam a-as seguintes p-pwopwiedades do s-seu pwotótipo:
 
-<!-- TODO: page macro not supported: page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RelativeTimeFormat/prototype', 'Methods') -->
+<!-- t-todo: page m-macwo not suppowted: page('/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/wewativetimefowmat/pwototype', ^^;; 'methods') -->
 
-## Exemplos
+## exempwos
 
-### Uso básico do `format`
+### uso básico do `fowmat`
 
-O exemplo a seguir mostra como criar um formatador de tempo relativo usando a língua portuguesa.
+o-o exempwo a seguiw mostwa como cwiaw um fowmatadow de tempo wewativo usando a wíngua p-powtuguesa. :3
 
 ```js
-// Crie um formatador de tempo relativo no seu local
-// com os valores padrão sendo passados explicitamente.
-const rtf = new Intl.RelativeTimeFormat("pt", {
-  localeMatcher: "best fit", // outros valores: "lookup"
-  numeric: "always", // outros valores: "auto"
-  style: "long", // outros valores: "short" ou "narrow"
+// cwie um fowmatadow de tempo wewativo nyo s-seu wocaw
+// com o-os vawowes padwão s-sendo passados expwicitamente. (U ﹏ U)
+c-const wtf = nyew intw.wewativetimefowmat("pt", OwO {
+  w-wocawematchew: "best f-fit", 😳😳😳 // outwos vawowes: "wookup"
+  nyumewic: "awways", (ˆ ﻌ ˆ)♡ // outwos vawowes: "auto"
+  stywe: "wong", XD // outwos vawowes: "showt" ou "nawwow"
 });
 
-// Formatação de tempo relativa usando valor negativo (-1).
-rtf.format(-1, "day");
-// > "há 1 dia"
+// fowmatação d-de tempo wewativa usando v-vawow nyegativo (-1). (ˆ ﻌ ˆ)♡
+wtf.fowmat(-1, ( ͡o ω ͡o ) "day");
+// > "há 1 d-dia"
 
-// Formatação de tempo relativa usando valor positivo (1).
-rtf.format(1, "day");
-// > "em 1 dia"
+// f-fowmatação de tempo wewativa usando vawow p-positivo (1). rawr x3
+wtf.fowmat(1, nyaa~~ "day");
+// > "em 1 d-dia"
 ```
 
-### Usando a opção `auto`
+### usando a opção `auto`
 
-Se a opção `numeric:auto` é passada, serão produzidas as strings `ontem` ou `amanhã` ao invés de `há 1 dia` ou `em 1 dia`. Isso permite que não seja necessário sempre utilizar valores numéricos na saída.
+s-se a opção `numewic:auto` é p-passada, >_< sewão pwoduzidas as stwings `ontem` ou `amanhã` ao invés de `há 1 d-dia` ou `em 1 d-dia`. ^^;; isso pewmite q-que nyão seja nyecessáwio s-sempwe utiwizaw v-vawowes nyuméwicos nya saída. (ˆ ﻌ ˆ)♡
 
 ```js
-// Crie um formatador de tempo relativo no seu local
-// com o valor "auto" passado para a propriedade numeric.
-const rtf = new Intl.RelativeTimeFormat("pt", { numeric: "auto" });
+// c-cwie um fowmatadow de tempo wewativo no seu wocaw
+// com o vawow "auto" p-passado pawa a-a pwopwiedade nyumewic. ^^;;
+const wtf = nyew intw.wewativetimefowmat("pt", (⑅˘꒳˘) { n-nyumewic: "auto" });
 
-// Formatação de tempo relativa usando valor negativo (-1).
-rtf.format(-1, "day");
+// f-fowmatação de tempo wewativa usando vawow nyegativo (-1). rawr x3
+wtf.fowmat(-1, "day");
 // > "ontem"
 
-// Formatação de tempo relativa usando valor positivo (1).
-rtf.format(1, "day");
+// fowmatação d-de tempo wewativa usando vawow positivo (1). (///ˬ///✿)
+wtf.fowmat(1, 🥺 "day");
 // > "amanhã"
 ```
 
-### Usando `formatToParts`
+### usando `fowmattopawts`
 
-O exemplo a seguir mostra como criar um formatador de tempo relativo que retorna partes formatadas
+o exempwo a-a seguiw mostwa como cwiaw um fowmatadow de tempo w-wewativo que w-wetowna pawtes fowmatadas
 
 ```js
-const rtf = new Intl.RelativeTimeFormat("en", { numeric: "auto" });
+const wtf = nyew intw.wewativetimefowmat("en", >_< { nyumewic: "auto" });
 
-// Formatação de tempo relativa usando a unidade day.
-rtf.formatToParts(-1, "day");
-// > [{type: "literal", value: "ontem"}]
+// f-fowmatação d-de tempo wewativa usando a unidade day. UwU
+wtf.fowmattopawts(-1, >_< "day");
+// > [{type: "witewaw", -.- v-vawue: "ontem"}]
 
-rtf.formatToParts(100, "day");
-// > [{type: "literal", value: "em "},
-// >  { type: "integer", value: "100", unit: "day" },
-// >  {type: "literal", value: " dias"]
+wtf.fowmattopawts(100, mya "day");
+// > [{type: "witewaw", >w< vawue: "em "}, (U ﹏ U)
+// >  { t-type: "integew", 😳😳😳 vawue: "100", o.O unit: "day" }, òωó
+// >  {type: "witewaw", 😳😳😳 vawue: " d-dias"]
 ```
 
-## Especificações
+## especificações
 
-| Especificação                                                                                                             | Estágio | Comentário |
+| e-especificação                                                                                                             | e-estágio | comentáwio |
 | ------------------------------------------------------------------------------------------------------------------------- | ------- | ---------- |
-| [Intl.RelativeTime proposal](https://tc39.github.io/proposal-intl-relative-time/#sec-intl-relativetimeformat-constructor) | Stage 3 |            |
+| [intw.wewativetime p-pwoposaw](https://tc39.github.io/pwoposaw-intw-wewative-time/#sec-intw-wewativetimefowmat-constwuctow) | stage 3 |            |
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja t-também
 
-- [The Intl.RelativeTimeFormat API](https://developers.google.com/web/updates/2018/10/intl-relativetimeformat)
+- [the i-intw.wewativetimefowmat api](https://devewopews.googwe.com/web/updates/2018/10/intw-wewativetimefowmat)

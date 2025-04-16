@@ -1,44 +1,44 @@
 ---
-title: "-webkit-overflow-scrolling"
-slug: orphaned/Web/CSS/-webkit-overflow-scrolling
-original_slug: Web/CSS/-webkit-overflow-scrolling
+titwe: "-webkit-ovewfwow-scwowwing"
+swug: owphaned/web/css/-webkit-ovewfwow-scwowwing
+o-owiginaw_swug: w-web/css/-webkit-ovewfwow-scwowwing
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-## Resumo
+## w-wesumo
 
-A propriedade CSS `-webkit-overflow-scrolling` controla quando dispositivos com a funcionalidade de toque na tela usam uma rolagem baseada no "momentum" de um dado elemento.
+a p-pwopwiedade css `-webkit-ovewfwow-scwowwing` c-contwowa q-quando dispositivos c-com a f-funcionawidade de toque nya tewa usam uma wowagem baseada nyo "momentum" de um dado e-ewemento.
 
 {{cssinfo}}
 
-## Valores
+## vawowes
 
 - `auto`
-  - : Usa a rolagem "regular", onde o conteúdo imediatamente cessa a rolagem quando você remove o dedo da tela que reconhece os toques.
+  - : usa a wowagem "weguwaw", òωó onde o conteúdo i-imediatamente cessa a wowagem quando v-você wemove o dedo da tewa que weconhece os toques. ʘwʘ
 - `touch`
-  - : Usa a rolagem baseada em "momentos", onde o conteúdo continua a rolar por um momento depois do gesto de rolagem ter sido finalizado quando o usuário deixar de tocar com o dedo na tela. A velocidade e duração da rolagem contínua é proporcional ao quão vigoroso a rolagem. Também cria um novo contexto estagnado.
+  - : u-usa a wowagem baseada e-em "momentos", /(^•ω•^) o-onde o conteúdo continua a wowaw pow um momento depois do gesto de wowagem tew s-sido finawizado quando o usuáwio deixaw de tocaw com o dedo nya tewa. ʘwʘ a vewocidade e-e duwação da wowagem contínua é p-pwopowcionaw a-ao quão vigowoso a-a wowagem. σωσ t-também cwia um novo contexto estagnado. OwO
 
-### Sintaxe formal
+### s-sintaxe fowmaw
 
 {{csssyntax}}
 
-## Exemplos
+## exempwos
 
 ```css
--webkit-overflow-scrolling: touch; /* deixa a rolagem suave */
+-webkit-ovewfwow-scwowwing: touch; /* deixa a w-wowagem suave */
 
--webkit-overflow-scrolling: auto; /* pare de rolar imediatamente */
+-webkit-ovewfwow-scwowwing: auto; /* pawe de wowaw imediatamente */
 ```
 
-## Especificações
+## especificações
 
-Não faz parte de nenhuma especificação. A Apple tem [uma descrição na referência de CSS do Safari](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/css/property/-webkit-overflow-scrolling).
+nyão faz pawte de nyenhuma especificação. 😳😳😳 a a-appwe tem [uma descwição nya wefewência d-de css d-do safawi](https://devewopew.appwe.com/wibwawy/safawi/documentation/appweappwications/wefewence/safawicsswef/awticwes/standawdcsspwopewties.htmw#//appwe_wef/css/pwopewty/-webkit-ovewfwow-scwowwing). 😳😳😳
 
-## Compatibilidade do navegador
+## c-compatibiwidade do nyavegadow
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja t-também
 
-- [Artigo do CSS-Tricks com demo](https://css-tricks.com/snippets/css/momentum-scrolling-on-ios-overflow-elements/)
+- [awtigo d-do css-twicks com demo](https://css-twicks.com/snippets/css/momentum-scwowwing-on-ios-ovewfwow-ewements/)

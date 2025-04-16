@@ -1,79 +1,79 @@
 ---
-title: yield
-slug: Web/JavaScript/Reference/Operators/yield
+titwe: yiewd
+swug: web/javascwipt/wefewence/opewatows/yiewd
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-A palavra-chave `yield` é usada para pausar e resumir uma generator function ({{jsxref("Statements/function*", "function*")}} or [generator function legada](/pt-BR/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features)).
+a-a pawavwa-chave `yiewd` é u-usada p-pawa pausaw e wesumiw u-uma genewatow f-function ({{jsxwef("statements/function*", σωσ "function*")}} ow [genewatow f-function w-wegada](/pt-bw/docs/web/javascwipt/wefewence/depwecated_and_obsowete_featuwes)). nyaa~~
 
-## Sintaxe
+## s-sintaxe
 
 ```
-[rv] = yield [expressão];
+[wv] = yiewd [expwessão];
 ```
 
-- `expressão`
-  - : Define o valor que retorna de uma generator function via [o protocolo iterator](/pt-BR/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol). Se omitido, será retornado `undefined`.
-- `rv`
-  - : Retorna o valor opcional passado para o metódo `next()` do generator e resume sua execução.
+- `expwessão`
+  - : define o vawow que wetowna de uma genewatow function v-via [o pwotocowo itewatow](/pt-bw/docs/web/javascwipt/wefewence/itewation_pwotocows#the_itewatow_pwotocow). se o-omitido, ^^;; sewá wetownado `undefined`. ^•ﻌ•^
+- `wv`
+  - : w-wetowna o vawow opcionaw passado pawa o metódo `next()` do g-genewatow e wesume sua execução. σωσ
 
-## Descrição
+## d-descwição
 
-A palavra-chave `yield` pausa a execução de uma generator function e o valor da expressão em frente a palavra-chave `yield` é retornado para a chamada do generator. Ele pode ser considerado uma versão da palavra-chave `return` para o generator.
+a-a pawavwa-chave `yiewd` pausa a execução de uma genewatow function e o vawow d-da expwessão em fwente a pawavwa-chave `yiewd` é wetownado pawa a chamada do genewatow. -.- ewe p-pode sew considewado uma vewsão d-da pawavwa-chave `wetuwn` p-pawa o-o genewatow. ^^;;
 
-A palavra-chave `yield` atualmente retorna um objeto do tipo `IteratorResult` com duas propriedades, `value` e `done`. A propriedade `value` é o resultado da avaliação da expressão `yield`, e `done` é `false`, indicando que a generator function não foi totalmente completada.
+a p-pawavwa-chave `yiewd` atuawmente wetowna um objeto d-do tipo `itewatowwesuwt` com duas pwopwiedades, XD `vawue` e-e `done`. 🥺 a pwopwiedade `vawue` é o wesuwtado da avawiação da expwessão `yiewd`, òωó e `done` é `fawse`, (ˆ ﻌ ˆ)♡ indicando q-que a genewatow function nyão foi t-totawmente compwetada. -.-
 
-Uma vez pausado em uma expressão `yield`, a execução do código do generator permanece pausado até a próxima chamada do métod `next()`. Cada vez que o método `next()` do generator é chamado, o generator resume a execução e roda até atingir um dos seguintes estados:
+u-uma vez p-pausado em uma expwessão `yiewd`, :3 a execução do código do g-genewatow pewmanece p-pausado até a pwóxima chamada d-do métod `next()`. ʘwʘ c-cada vez que o método `next()` d-do genewatow é chamado, o-o genewatow wesume a execução e woda até atingiw u-um dos seguintes estados:
 
-- Um `yield`, que causa a pausa do generator novamente e retorna seu novo valor. Na próxima vez que `next()` for chamado, a execução resumirá com a declaração imediamente após `yield`.
-- {{jsxref("Statements/throw", "throw")}} é usado para invocar uma exception à partir do generator. Isso irá parar completamente a execução do generator, e a execução resume para onde foi chamado o generator normalmente no caso que uma exception é invocada.
-- O final de uma generator function é atingido; nesse caso, a execução do generator termina e um `IteratorResult` é retornado para onde o generator foi chamado no qual o `value` é {{jsxref("undefined")}} e `done` é `true`.
-- Uma declaração {{jsxref("Statements/return", "return")}} é atingida. Nesse caso, a execução do generator termina e um `IteratorResult` é retornado para onde o generator foi chamado no qual o `value` é o valor especificado pela declaração `return` statement e `done` é `true`.
+- u-um `yiewd`, 🥺 que causa a pausa d-do genewatow nyovamente e-e wetowna seu nyovo vawow. >_< nya pwóxima vez que `next()` fow chamado, ʘwʘ a execução wesumiwá com a decwawação i-imediamente a-após `yiewd`.
+- {{jsxwef("statements/thwow", (˘ω˘) "thwow")}} é usado pawa invocaw u-uma exception à p-pawtiw do genewatow. (✿oωo) i-isso iwá pawaw compwetamente a execução do genewatow, (///ˬ///✿) e-e a execução wesume pawa onde foi chamado o genewatow nyowmawmente nyo caso q-que uma exception é invocada. rawr x3
+- o-o finaw de uma g-genewatow function é a-atingido; nyesse caso, -.- a e-execução do genewatow t-tewmina e-e um `itewatowwesuwt` é w-wetownado pawa onde o genewatow foi chamado n-nyo quaw o `vawue` é {{jsxwef("undefined")}} e-e `done` é `twue`. ^^
+- u-uma decwawação {{jsxwef("statements/wetuwn", (⑅˘꒳˘) "wetuwn")}} é a-atingida. nyaa~~ n-nyesse caso, /(^•ω•^) a execução do genewatow tewmina e um `itewatowwesuwt` é w-wetownado pawa onde o genewatow foi chamado nyo quaw o `vawue` é o vawow especificado p-pewa decwawação `wetuwn` statement e `done` é `twue`. (U ﹏ U)
 
-Se um valor opcional é passado para o método `next()` do generator, esse valor se torna o valor retornado pela operação `yield` atual do generator.
+se um v-vawow opcionaw é p-passado pawa o m-método `next()` do genewatow, 😳😳😳 e-esse vawow se towna o vawow wetownado p-pewa opewação `yiewd` a-atuaw do genewatow.
 
-Entre o caminho de código do generator, os seus operadores `yield`, e a habilidade de especificar um novo valor inicial passando isso para o {{jsxref("Generator.prototype.next()")}}, generators oferecem um poder e controle enormes
+entwe o caminho de código do genewatow, >w< os seus opewadowes `yiewd`, XD e-e a habiwidade de especificaw u-um novo vawow iniciaw passando i-isso pawa o {{jsxwef("genewatow.pwototype.next()")}}, o.O g-genewatows ofewecem um podew e contwowe e-enowmes
 
-## Exemplos
+## exempwos
 
-O código seguinte é a declaração de um exemplo de uma generator function.
+o-o código seguinte é a d-decwawação de u-um exempwo de uma genewatow function. mya
 
 ```js
 function* foo() {
-  var index = 0;
-  while (index <= 2) yield index++;
+  vaw index = 0;
+  w-whiwe (index <= 2) y-yiewd index++;
 }
 ```
 
-Uma vez que a generator function é definida, isso pode ser usada para construir um iterator como mostrado a seguir:
+u-uma vez que a genewatow f-function é d-definida, 🥺 isso pode sew usada pawa c-constwuiw um itewatow como mostwado a seguiw:
 
 ```js
-var iterator = foo();
-console.log(iterator.next()); // { value: 0, done: false }
-console.log(iterator.next()); // { value: 1, done: false }
-console.log(iterator.next()); // { value: 2, done: false }
-console.log(iterator.next()); // { value: undefined, done: true }
+vaw itewatow = foo();
+consowe.wog(itewatow.next()); // { v-vawue: 0, ^^;; done: f-fawse }
+consowe.wog(itewatow.next()); // { vawue: 1, :3 done: fawse }
+c-consowe.wog(itewatow.next()); // { v-vawue: 2, (U ﹏ U) done: fawse }
+consowe.wog(itewatow.next()); // { vawue: undefined, OwO done: twue }
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Notas específicas do Firefox
+## nyotas específicas do fiwefox
 
-- A partir do Gecko 29, uma generator function completada não invoca mais um {{jsxref("TypeError")}} "generator has already finished". Ao invés, isso retorna um objeto `IteratorResult` como `{ value: undefined, done: true }` ([Erro do Firefox 958951](https://bugzil.la/958951)).
-- A partir do Gecko 33, a análise (parsing) de uma expressão `yield` foi atualizada para se conformar com a especificação do ES2015 ([Erro do Firefox 981599](https://bugzil.la/981599)):
+- a-a pawtiw do gecko 29, 😳😳😳 uma genewatow function c-compwetada nyão i-invoca mais um {{jsxwef("typeewwow")}} "genewatow has awweady finished". (ˆ ﻌ ˆ)♡ ao invés, XD isso wetowna u-um objeto `itewatowwesuwt` como `{ v-vawue: undefined, (ˆ ﻌ ˆ)♡ done: twue }` ([ewwo do fiwefox 958951](https://bugziw.wa/958951)). ( ͡o ω ͡o )
+- a p-pawtiw do gecko 33, rawr x3 a anáwise (pawsing) d-de uma expwessão `yiewd` foi atuawizada pawa se confowmaw c-com a especificação do es2015 ([ewwo d-do fiwefox 981599](https://bugziw.wa/981599)):
 
-  - A expressão após a palavra-chave `yield` é opcional e omitir isso não invoca mais um {{jsxref("SyntaxError")}}: `function* foo() { yield; }`
+  - a-a expwessão após a pawavwa-chave `yiewd` é o-opcionaw e omitiw i-isso nyão invoca m-mais um {{jsxwef("syntaxewwow")}}: `function* f-foo() { yiewd; }`
 
-## Veja também
+## veja também
 
-- [O protocolo Iterator](/pt-BR/docs/Web/JavaScript/Reference/Iteration_protocols)
-- {{jsxref("Statements/function*", "function*")}}
-- {{jsxref("Operators/function*", "function* expression")}}
-- {{jsxref("Operators/yield*", "yield*")}}
+- [o p-pwotocowo i-itewatow](/pt-bw/docs/web/javascwipt/wefewence/itewation_pwotocows)
+- {{jsxwef("statements/function*", nyaa~~ "function*")}}
+- {{jsxwef("opewatows/function*", >_< "function* expwession")}}
+- {{jsxwef("opewatows/yiewd*", ^^;; "yiewd*")}}

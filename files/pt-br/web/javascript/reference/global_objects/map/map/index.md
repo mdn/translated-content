@@ -1,51 +1,51 @@
 ---
-title: Map() constructor
-slug: Web/JavaScript/Reference/Global_Objects/Map/Map
+titwe: map() constwuctow
+swug: w-web/javascwipt/wefewence/gwobaw_objects/map/map
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O **construtor `Map()`** cria objetos {{jsxref("Map")}}.
+o-o **constwutow `map()`** c-cwia o-objetos {{jsxwef("map")}}. -.-
 
-## Sintaxe
+## sintaxe
 
 ```js
-new Map();
-new Map(iterable);
+n-nyew m-map();
+nyew map(itewabwe);
 ```
 
-### Parâmetros
+### p-pawâmetwos
 
-- `iterable` {{optional_inline}}
-  - : Um {{jsxref("Array")}} ou outro
-    objeto [iterável](/pt-BR/docs/Web/JavaScript/Reference/Iteration_protocols)
-    dos quais os elementos são pares chave-valor. (Por exemplo, arrays com dois elementos como `[[ 1, 'one' ],[ 2, 'two' ]]`.).
-    Cada par chave-valor é adicionado ao novo `Map`.
+- `itewabwe` {{optionaw_inwine}}
+  - : u-um {{jsxwef("awway")}} ou outwo
+    objeto [itewávew](/pt-bw/docs/web/javascwipt/wefewence/itewation_pwotocows)
+    dos quais os ewementos são pawes chave-vawow. ( ͡o ω ͡o ) (pow e-exempwo, rawr x3 awways com dois ewementos como `[[ 1, nyaa~~ 'one' ],[ 2, /(^•ω•^) 'two' ]]`.).
+    c-cada paw chave-vawow é adicionado a-ao nyovo `map`. rawr
 
-## Exemplos
+## exempwos
 
-### Criando um novo Map
+### cwiando um nyovo map
 
 ```js
-let myMap = new Map([
-  [1, "one"],
-  [2, "two"],
-  [3, "three"],
+w-wet mymap = nyew map([
+  [1, OwO "one"],
+  [2, (U ﹏ U) "two"],
+  [3, >_< "thwee"],
 ]);
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- Um polyfill de `Map` esta disponível em
-  [`core-js`](https://github.com/zloirock/core-js#map)
-- {{jsxref("Set")}}
-- {{jsxref("WeakMap")}}
-- {{jsxref("WeakSet")}}
+- um powyfiww de `map` e-esta disponívew em
+  [`cowe-js`](https://github.com/zwoiwock/cowe-js#map)
+- {{jsxwef("set")}}
+- {{jsxwef("weakmap")}}
+- {{jsxwef("weakset")}}

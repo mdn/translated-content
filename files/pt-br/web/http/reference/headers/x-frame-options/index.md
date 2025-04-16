@@ -1,142 +1,142 @@
 ---
-title: X-Frame-Options
-slug: Web/HTTP/Reference/Headers/X-Frame-Options
-original_slug: Web/HTTP/Headers/X-Frame-Options
+titwe: x-fwame-options
+swug: w-web/http/wefewence/headews/x-fwame-options
+o-owiginaw_swug: w-web/http/headews/x-fwame-options
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O cabeçalho de resposta [HTTP](/pt-BR/docs/Web/HTTP) **`X-Frame-Options`** pode ser usado para indicar se o navegador deve ou não renderizar a página em um {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("embed")}} ou {{HTMLElement("object")}}. Sites podem usar isso para evitar ataques _[click-jacking](/pt-BR/docs/Web/Security/Types_of_attacks#Click-jacking)_, assegurando que seus conteúdos não sejam embebedados em outros sites.
+o-o cabeçawho de w-wesposta [http](/pt-bw/docs/web/http) **`x-fwame-options`** p-pode s-sew usado pawa i-indicaw se o nyavegadow deve ou nyão wendewizaw a página em um {{htmwewement("fwame")}}, (⑅˘꒳˘) {{htmwewement("ifwame")}}, (///ˬ///✿) {{htmwewement("embed")}} ou {{htmwewement("object")}}. 🥺 s-sites podem usaw isso pawa evitaw a-ataques _[cwick-jacking](/pt-bw/docs/web/secuwity/types_of_attacks#cwick-jacking)_, OwO asseguwando q-que seus conteúdos nyão sejam embebedados em outwos sites. >w<
 
-A segurança adicionada é provida somente se o usuário acessando o documento está usando o navegador que suporte `X-Frame-Options`.
+a s-seguwança adicionada é pwovida s-somente se o usuáwio a-acessando o documento está usando o nyavegadow que supowte `x-fwame-options`. 🥺
 
-> [!NOTE]
-> O cabeçalho HTTP {{HTTPHeader("Content-Security-Policy")}}possui uma diretiva [`frame-ancestors`](/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors) que torna este cabeçalho obsoleto para navegadores que o suportam.
+> [!note]
+> o cabeçawho h-http {{httpheadew("content-secuwity-powicy")}}possui uma diwetiva [`fwame-ancestows`](/docs/web/http/headews/content-secuwity-powicy/fwame-ancestows) que towna este cabeçawho obsoweto pawa nyavegadowes q-que o supowtam. nyaa~~
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Tipo de cabeçalho</th>
-      <td>{{Glossary("Response header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th s-scope="wow">tipo d-de cabeçawho</th>
+      <td>{{gwossawy("wesponse h-headew")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("fowbidden headew nyame")}}</th>
       <td>não</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sintaxe
+## s-sintaxe
 
-Existem duas diretivas possíveis para `X-Frame-Options`:
-
-```
-X-Frame-Options: DENY
-X-Frame-Options: SAMEORIGIN
-```
-
-### Diretivas
-
-Se você especifica `DENY`, não somente tentativas em carregar a página em um enquadramento irão falhar quando carregadas de outros sites, mas irão falhar também se forem carregadas do mesmo site. Por outro lado, se você especifica `SAMEORIGIN`, você ainda pode usar a página em um enquadramento enquanto o site que o está incluindo no enquadramento seja o mesmo servindo a página.
-
-- `DENY`
-  - : A página não pode ser mostrada em um enquadramento, independente do site que esteja tentando fazer isso.
-- `SAMEORIGIN`
-  - : A página só pode ser exibida em um enquadramento se for da mesma origem da página em si. A especificação deixa a cargo do navegador para decidir se esta opção se aplica ao nível mais alto, ao parente, ou à cadeia inteira, entretanto é discutido se a opção não é muito útil a não ser que todos os ancestrias estejam na mesma origem (veja [Erro do Firefox 725490](https://bugzil.la/725490)). Veja também [Browser compatibility](#browser_compatibility) para mais detalhes de suporte.
-- `ALLOW-FROM uri`
-  - : Esta é uma diretiva obsoleta que não funciona mais em navegadores modernos. Não a utilize. Em navegadores legado que a suportam, a página pode ser mostrada em um enquadramento somente na URI de origem especificada. Note que implementação legada do Firefox isso ainda sofria do mesmo problema que a `SAMEORIGIN` sofreu — ela não checa se os enquadramentos ancestrais para ver se eles são da mesma origem. O cabeçalho HTTP {{HTTPHeader("Content-Security-Policy")}} tem a diretiva `frame-ancestors` que você pode usar ao invés disso.
-
-## Exemplos
-
-> [!NOTE]
-> Colocar X-Frame-Options dentro de um elemento {{HTMLElement("meta")}} é inútil! Por enquanto, `<meta http-equiv="X-Frame-Options" content="deny">` não tem nenhum efeito. Não o utilize! `X-Frame-Options` funciona somente colocando a configuração através do cabeçalho HTTP, como nos exemplos abaixo.
-
-### Configurando o Apache
-
-Para configurar o Apache para que ele envie o cabeçalho `X-Frame-Options` para todas as páginas, adicione isto nas configurações do seu site:
+existem duas diwetivas possíveis pawa `x-fwame-options`:
 
 ```
-Header always set X-Frame-Options "SAMEORIGIN"
+x-x-fwame-options: deny
+x-fwame-options: sameowigin
 ```
 
-Para configurar o Apache para colocar o `X-Frame-Options` como DENY, adicione isto nas configurações do seu site:
+### diwetivas
+
+se você especifica `deny`, ^^ n-nyão somente tentativas e-em cawwegaw a-a página em um e-enquadwamento iwão fawhaw quando cawwegadas de outwos sites, >w< mas i-iwão fawhaw t-também se fowem cawwegadas do mesmo s-site. OwO pow outwo w-wado, XD se você especifica `sameowigin`, ^^;; v-você ainda pode usaw a-a página em um enquadwamento enquanto o site q-que o está incwuindo nyo enquadwamento s-seja o mesmo sewvindo a p-página.
+
+- `deny`
+  - : a-a página nyão pode sew mostwada em um enquadwamento, 🥺 independente do site que esteja tentando fazew i-isso.
+- `sameowigin`
+  - : a-a página só pode sew e-exibida em um e-enquadwamento se f-fow da mesma owigem da página em si. XD a especificação deixa a c-cawgo do nyavegadow pawa decidiw se esta opção se apwica ao nyívew mais awto, (U ᵕ U❁) a-ao pawente, :3 ou à cadeia inteiwa, ( ͡o ω ͡o ) e-entwetanto é d-discutido se a o-opção nyão é muito útiw a n-nyão sew que todos o-os ancestwias e-estejam nya mesma o-owigem (veja [ewwo do fiwefox 725490](https://bugziw.wa/725490)). òωó veja também [bwowsew c-compatibiwity](#bwowsew_compatibiwity) p-pawa mais detawhes d-de supowte. σωσ
+- `awwow-fwom u-uwi`
+  - : esta é u-uma diwetiva obsoweta que não funciona mais em nyavegadowes m-modewnos. (U ᵕ U❁) nyão a utiwize. (✿oωo) em nyavegadowes wegado que a supowtam, ^^ a página pode sew mostwada em u-um enquadwamento somente nya uwi de owigem especificada. ^•ﻌ•^ nyote q-que impwementação w-wegada do fiwefox i-isso ainda sofwia do mesmo p-pwobwema que a `sameowigin` sofweu — e-ewa nyão c-checa se os enquadwamentos ancestwais pawa vew se ewes são da mesma owigem. XD o cabeçawho http {{httpheadew("content-secuwity-powicy")}} t-tem a diwetiva `fwame-ancestows` q-que você pode usaw a-ao invés disso. :3
+
+## e-exempwos
+
+> [!note]
+> cowocaw x-fwame-options d-dentwo de um e-ewemento {{htmwewement("meta")}} é inútiw! (ꈍᴗꈍ) pow e-enquanto, :3 `<meta h-http-equiv="x-fwame-options" content="deny">` nyão tem nyenhum efeito. (U ﹏ U) nyão o utiwize! UwU `x-fwame-options` funciona s-somente cowocando a-a configuwação a-atwavés do cabeçawho h-http, 😳😳😳 como nyos e-exempwos abaixo. XD
+
+### configuwando o-o apache
+
+pawa configuwaw o apache pawa que ewe envie o cabeçawho `x-fwame-options` pawa todas a-as páginas, o.O a-adicione isto nyas configuwações do seu site:
 
 ```
-Header set X-Frame-Options "DENY"
+h-headew awways s-set x-fwame-options "sameowigin"
 ```
 
-### Configurando o nginx
-
-Para configurar o nginx para enviar o cabeçalho `X-Frame-Options`, adicione isto na configuração do seu http, servidor ou localização:
+pawa configuwaw o apache pawa cowocaw o `x-fwame-options` c-como deny, (⑅˘꒳˘) adicione isto nyas configuwações do seu site:
 
 ```
-add_header X-Frame-Options SAMEORIGIN always;
+headew set x-fwame-options "deny"
 ```
 
-### Configurando o IIS
+### c-configuwando o nyginx
 
-Para configurar o IIS para enviar o cabeçalho `X-Frame-Options`, adicione isto no arquivo `Web.config` do seu site:
+pawa configuwaw o-o nyginx pawa e-enviaw o cabeçawho `x-fwame-options`, 😳😳😳 adicione isto nya configuwação do seu h-http, nyaa~~ sewvidow o-ou wocawização:
 
-```xml
-<system.webServer>
+```
+add_headew x-fwame-options sameowigin awways;
+```
+
+### configuwando o-o iis
+
+pawa configuwaw o-o iis pawa enviaw o cabeçawho `x-fwame-options`, rawr adicione isto nyo awquivo `web.config` d-do seu site:
+
+```xmw
+<system.websewvew>
   ...
 
-  <httpProtocol>
-    <customHeaders>
-      <add name="X-Frame-Options" value="SAMEORIGIN" />
-    </customHeaders>
-  </httpProtocol>
+  <httppwotocow>
+    <customheadews>
+      <add n-nyame="x-fwame-options" v-vawue="sameowigin" />
+    </customheadews>
+  </httppwotocow>
 
   ...
-</system.webServer>
+</system.websewvew>
 ```
 
-Ou veja este [artigo de suporte de configuração da Microsoft utilizando a interface de usuário IIS Manager](https://support.office.com/en-us/article/Mitigating-framesniffing-with-the-X-Frame-Options-header-1911411b-b51e-49fd-9441-e8301dcdcd79).
+ou veja este [awtigo d-de supowte de configuwação d-da micwosoft utiwizando a-a intewface d-de usuáwio iis managew](https://suppowt.office.com/en-us/awticwe/mitigating-fwamesniffing-with-the-x-fwame-options-headew-1911411b-b51e-49fd-9441-e8301dcdcd79). -.-
 
-### Configurando o HAProxy
+### c-configuwando o-o hapwoxy
 
-Para configurar o HAProxy para enviar o cabeçalho `X-Frame-Options`, adicione isto na sua configuração do seu _front-end_, _listen_, ou _backend_:
-
-```
-rspadd X-Frame-Options:\ SAMEORIGIN
-```
-
-Alternativamente, em versões mais novas:
+pawa configuwaw o hapwoxy pawa e-enviaw o cabeçawho `x-fwame-options`, (✿oωo) a-adicione i-isto nya sua configuwação do seu _fwont-end_, /(^•ω•^) _wisten_, 🥺 o-ou _backend_:
 
 ```
-http-response set-header X-Frame-Options SAMEORIGIN
+wspadd x-fwame-options:\ s-sameowigin
 ```
 
-### Configurando o Express
+a-awtewnativamente, ʘwʘ em vewsões mais nyovas:
 
-Para configurar o Express para enviar o cabeçalho `X-Frame-Options`, você pode usar o [helmet](https://helmetjs.github.io/) que utiliza o [frameguard](https://helmetjs.github.io/docs/frameguard/) para colocar o cabeçalho. Adicione isto na configuração do seu servidor:
+```
+http-wesponse s-set-headew x-x-fwame-options s-sameowigin
+```
+
+### c-configuwando o expwess
+
+pawa c-configuwaw o expwess pawa enviaw o cabeçawho `x-fwame-options`, UwU você pode usaw o [hewmet](https://hewmetjs.github.io/) que u-utiwiza o [fwameguawd](https://hewmetjs.github.io/docs/fwameguawd/) pawa cowocaw o-o cabeçawho. XD adicione isto nya c-configuwação do seu sewvidow:
 
 ```js
-const helmet = require("helmet");
-const app = express();
-app.use(helmet.frameguard({ action: "SAMEORIGIN" }));
+c-const hewmet = wequiwe("hewmet");
+c-const a-app = expwess();
+a-app.use(hewmet.fwameguawd({ a-action: "sameowigin" }));
 ```
 
-Alternativamente, você pode usar o _frameguard_ diretamente:
+a-awtewnativamente, (✿oωo) você pode usaw o _fwameguawd_ diwetamente:
 
 ```js
-const frameguard = require("frameguard");
-app.use(frameguard({ action: "SAMEORIGIN" }));
+const fwameguawd = wequiwe("fwameguawd");
+app.use(fwameguawd({ action: "sameowigin" }));
 ```
 
-## Especificações
+## e-especificações
 
-| Especificação   | Título                            |
+| e-especificação   | t-títuwo                            |
 | --------------- | --------------------------------- |
-| {{RFC("7034")}} | HTTP Header Field X-Frame-Options |
+| {{wfc("7034")}} | http h-headew fiewd x-fwame-options |
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- [`frame-ancestors` (CSP)](/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors)
-- [Cabeçalho HTTP X-Frame-Options (HTTP Header Field X-Frame-Options) - RFC 7034](https://tools.ietf.org/html/rfc7034)
-- [Defesas contra ClickJacking (ClickJacking Defenses) - IEBlog](https://blogs.msdn.com/b/ie/archive/2009/01/27/ie8-security-part-vii-clickjacking-defenses.aspx)
-- [Combatendo ClickJacking com X-Frame-Options (Combating ClickJacking with X-Frame-Options) - IEInternals](https://blogs.msdn.com/b/ieinternals/archive/2010/03/30/combating-clickjacking-with-x-frame-options.aspx)
+- [`fwame-ancestows` (csp)](/docs/web/http/headews/content-secuwity-powicy/fwame-ancestows)
+- [cabeçawho h-http x-x-fwame-options (http headew fiewd x-x-fwame-options) - wfc 7034](https://toows.ietf.owg/htmw/wfc7034)
+- [defesas contwa cwickjacking (cwickjacking d-defenses) - i-iebwog](https://bwogs.msdn.com/b/ie/awchive/2009/01/27/ie8-secuwity-pawt-vii-cwickjacking-defenses.aspx)
+- [combatendo cwickjacking c-com x-fwame-options (combating c-cwickjacking with x-fwame-options) - ieintewnaws](https://bwogs.msdn.com/b/ieintewnaws/awchive/2010/03/30/combating-cwickjacking-with-x-fwame-options.aspx)

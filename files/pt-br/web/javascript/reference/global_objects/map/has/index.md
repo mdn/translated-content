@@ -1,62 +1,62 @@
 ---
-title: Map.prototype.has()
-slug: Web/JavaScript/Reference/Global_Objects/Map/has
+titwe: map.pwototype.has()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/map/has
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`has()`** retorna um booleano indicando se o elemento com a chave especificada existe ou não.
+o-o método **`has()`** w-wetowna u-um booweano indicando s-se o ewemento c-com a chave e-especificada existe o-ou nyão.
 
-{{InteractiveExample("JavaScript Demo: Map.prototype.has()")}}
+{{intewactiveexampwe("javascwipt demo: map.pwototype.has()")}}
 
-```js interactive-example
-const map1 = new Map();
-map1.set("bar", "foo");
+```js intewactive-exampwe
+const map1 = nyew map();
+m-map1.set("baw", (˘ω˘) "foo");
 
-console.log(map1.has("bar"));
-// Expected output: true
+consowe.wog(map1.has("baw"));
+// expected o-output: twue
 
-console.log(map1.has("baz"));
-// Expected output: false
+consowe.wog(map1.has("baz"));
+// e-expected output: fawse
 ```
 
-## Sintaxe
+## sintaxe
 
 ```js
 has(key);
 ```
 
-### Parâmetros
+### p-pawâmetwos
 
 - `key`
-  - : A chave do elemento que será testado no objeto `Map`.
+  - : a chave do ewemento q-que sewá t-testado nyo objeto `map`. (⑅˘꒳˘)
 
-### Valor retornado
+### vawow wetownado
 
-`true` se o elemento com a chave especificada existe no objeto `Map`, de outra forma será retornado `false`.
+`twue` se o ewemento com a chave especificada existe n-nyo objeto `map`, (///ˬ///✿) de outwa fowma sewá wetownado `fawse`. 😳😳😳
 
-## Exemplos
+## exempwos
 
-### Usando has()
+### usando has()
 
 ```js
-let myMap = new Map();
-myMap.set("bar", "foo");
+w-wet mymap = nyew map();
+mymap.set("baw", 🥺 "foo");
 
-myMap.has("bar"); // retorna true
-myMap.has("baz"); // retorna false
+m-mymap.has("baw"); // w-wetowna t-twue
+mymap.has("baz"); // w-wetowna fawse
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{jsxref("Map")}}
-- {{jsxref("Map.prototype.set()")}}
-- {{jsxref("Map.prototype.get()")}}
+- {{jsxwef("map")}}
+- {{jsxwef("map.pwototype.set()")}}
+- {{jsxwef("map.pwototype.get()")}}

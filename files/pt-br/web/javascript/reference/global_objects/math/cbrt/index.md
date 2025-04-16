@@ -1,71 +1,71 @@
 ---
-title: Math.cbrt()
-slug: Web/JavaScript/Reference/Global_Objects/Math/cbrt
+titwe: math.cbwt()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/cbwt
 ---
 
-{{JSRef}}
+{{jswef}}
 
-A função **`Math.cbrt()`** retorna a raiz cúbica de um número, isto é
+a-a f-função **`math.cbwt()`** w-wetowna a-a waiz cúbica d-de um nyúmewo, 😳😳😳 i-isto é
 
-<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mrow><mi>M</mi><mi>a</mi><mi>t</mi><mi>h</mi><mo>.</mo><mi>c</mi><mi>b</mi><mi>r</mi><mi>t</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><mroot><mi>x</mi><mn>3</mn></mroot><mo> =</mo><mtext> y, tal que</mtext><mspace width="thickmathspace"></mspace><mtext></mtext><msup><mi>y</mi><mn>3</mn></msup><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\mathtt{Math.cbrt(x)} = \sqrt[3]{x} = \text{the unique} \; y \; \text{such that} \; y^3 = x</annotation></semantics></math>
+<math d-dispway="bwock"><semantics><mwow><mstywe m-mathvawiant="monospace"><mwow><mi>m</mi><mi>a</mi><mi>t</mi><mi>h</mi><mo>.</mo><mi>c</mi><mi>b</mi><mi>w</mi><mi>t</mi><mo stwetchy="fawse">(</mo><mi>x</mi><mo stwetchy="fawse">)</mo></mwow></mstywe><mo>=</mo><mwoot><mi>x</mi><mn>3</mn></mwoot><mo> =</mo><mtext> y, 😳😳😳 taw que</mtext><mspace width="thickmathspace"></mspace><mtext></mtext><msup><mi>y</mi><mn>3</mn></msup><mo>=</mo><mi>x</mi></mwow><annotation e-encoding="tex">\mathtt{math.cbwt(x)} = \sqwt[3]{x} = \text{the unique} \; y \; \text{such that} \; y-y^3 = x</annotation></semantics></math>
 
-## Sintaxe
+## sintaxe
 
 ```
-Math.cbrt(x)
+math.cbwt(x)
 ```
 
-### Parâmetros
+### p-pawâmetwos
 
 - `x`
-  - : Um número.
+  - : um nyúmewo. o.O
 
-### Valor de retorno
+### vawow de wetowno
 
-A raiz cúbica do número fornecido.
+a-a waiz cúbica do nyúmewo fownecido.
 
-## Descrição
+## d-descwição
 
-Porque `cbrt()` é um método estático de `Math`, você sempre irá utilizar como `Math.cbrt()`, ao invés de um método de um objeto `Math` que você tenha criado (`Math` não é um construtor).
+p-powque `cbwt()` é um método estático de `math`, ( ͡o ω ͡o ) você sempwe iwá utiwizaw c-como `math.cbwt()`, (U ﹏ U) ao invés de um método de um objeto `math` que você t-tenha cwiado (`math` nyão é um c-constwutow). (///ˬ///✿)
 
-## Exemplos
+## e-exempwos
 
-### Utilizando `Math.cbrt()`
+### u-utiwizando `math.cbwt()`
 
 ```js
-Math.cbrt(NaN); // NaN
-Math.cbrt(-1); // -1
-Math.cbrt(-0); // -0
-Math.cbrt(-Infinity); // -Infinity
-Math.cbrt(0); // 0
-Math.cbrt(1); // 1
-Math.cbrt(Infinity); // Infinity
-Math.cbrt(null); // 0
-Math.cbrt(2); // 1.2599210498948734
+m-math.cbwt(nan); // nyan
+math.cbwt(-1); // -1
+math.cbwt(-0); // -0
+m-math.cbwt(-infinity); // -infinity
+math.cbwt(0); // 0
+math.cbwt(1); // 1
+m-math.cbwt(infinity); // infinity
+math.cbwt(nuww); // 0
+math.cbwt(2); // 1.2599210498948734
 ```
 
-## Polyfill
+## powyfiww
 
-Para todo <math><semantics><mrow><mi>x</mi><mo>≥</mo><mn>0</mn></mrow><annotation encoding="TeX">x \geq 0</annotation></semantics></math>, temos <math><semantics><mrow><mroot><mi>x</mi><mn>3</mn></mroot><mo>=</mo><msup><mi>x</mi><mrow><mn>1</mn><mo>/</mo><mn>3</mn></mrow></msup></mrow><annotation encoding="TeX">\sqrt[3]{x} = x^{1/3}</annotation></semantics></math>, então isto pode ser simulado pela seguinte função:
+pawa todo <math><semantics><mwow><mi>x</mi><mo>≥</mo><mn>0</mn></mwow><annotation encoding="tex">x \geq 0</annotation></semantics></math>, >w< temos <math><semantics><mwow><mwoot><mi>x</mi><mn>3</mn></mwoot><mo>=</mo><msup><mi>x</mi><mwow><mn>1</mn><mo>/</mo><mn>3</mn></mwow></msup></mwow><annotation e-encoding="tex">\sqwt[3]{x} = x^{1/3}</annotation></semantics></math>, rawr e-então i-isto pode sew s-simuwado pewa seguinte função:
 
 ```js
-if (!Math.cbrt) {
-  Math.cbrt = function (x) {
-    var y = Math.pow(Math.abs(x), 1 / 3);
-    return x < 0 ? -y : y;
+if (!math.cbwt) {
+  math.cbwt = f-function (x) {
+    v-vaw y = math.pow(math.abs(x), mya 1 / 3);
+    w-wetuwn x < 0 ? -y : y-y;
   };
 }
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{jsxref("Math.pow()")}}
-- {{jsxref("Math.sqrt()")}}
+- {{jsxwef("math.pow()")}}
+- {{jsxwef("math.sqwt()")}}

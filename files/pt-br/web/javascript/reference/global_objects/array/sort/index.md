@@ -1,218 +1,218 @@
 ---
-title: Array.prototype.sort()
-slug: Web/JavaScript/Reference/Global_Objects/Array/sort
+titwe: awway.pwototype.sowt()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/sowt
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`sort()`** ordena os elementos do próprio array e retorna o array. A ordenação não é necessariamente [estável](https://pt.wikipedia.org/wiki/Ordena%C3%A7%C3%A3o_est%C3%A1vel). A ordenação padrão é de acordo com a pontuação de código unicode.
+o-o método **`sowt()`** o-owdena os ewementos d-do pwópwio a-awway e wetowna o-o awway. 😳😳😳 a owdenação n-nyão é n-nyecessawiamente [estávew](https://pt.wikipedia.owg/wiki/owdena%c3%a7%c3%a3o_est%c3%a1vew). rawr x3 a-a owdenação padwão é de acowdo com a pontuação de código unicode. (✿oωo)
 
-A complexidade do tempo de execução ou a quantidade de memória utilizada pela ordenação não pode ser garantido e depende da implementação realizada.
+a-a compwexidade do tempo de execução ou a-a quantidade de memówia utiwizada p-pewa owdenação nyão pode sew gawantido e depende da impwementação w-weawizada. (ˆ ﻌ ˆ)♡
 
-## Sintaxe
+## sintaxe
 
 ```
-arr.sort(funcaoDeComparacao)
+a-aww.sowt(funcaodecompawacao)
 ```
 
-### Parâmetros
+### p-pawâmetwos
 
-- `funcaoDeComparacao` {{optional_inline}}
-  - : Especifica uma função que define a ordenação. Se omitido, o array é ordenado de acordo com a pontuação de código [Unicode](/pt-BR/docs/Web/JavaScript/Guide/Grammar_and_types#unicode) de cada um dos caracteres, de acordo com a conversão de cada elemento para string.
-- `primeiroElemento`
-  - : O primeiro elemento para a comparação.
-- `segundoElemento`
-  - : O segundo elemento para comparação.
+- `funcaodecompawacao` {{optionaw_inwine}}
+  - : especifica uma função que define a owdenação. :3 se o-omitido, (U ᵕ U❁) o awway é owdenado de acowdo com a pontuação de código [unicode](/pt-bw/docs/web/javascwipt/guide/gwammaw_and_types#unicode) de cada u-um dos cawactewes, ^^;; de acowdo com a-a convewsão d-de cada ewemento p-pawa stwing. mya
+- `pwimeiwoewemento`
+  - : o-o pwimeiwo ewemento pawa a compawação. 😳😳😳
+- `segundoewemento`
+  - : o-o segundo ewemento pawa compawação. OwO
 
-### Valor de Retorno
+### v-vawow de wetowno
 
-O array ordenado. Note que o array é ordenado de acordo com a pontuação de código [Unicode](/pt-BR/docs/Web/JavaScript/Guide/Grammar_and_types#unicode) de cada um dos caracteres, e nenhuma cópia é feita.
+o awway owdenado. rawr nyote que o awway é owdenado de acowdo com a pontuação d-de código [unicode](/pt-bw/docs/web/javascwipt/guide/gwammaw_and_types#unicode) de cada um d-dos cawactewes, XD e-e nenhuma cópia é f-feita.
 
-## Descrição
+## descwição
 
-Se **`funcaoDeComparacao`** não for informado, os elementos serão ordenados de acordo com a sua conversão para texto e o texto comparado na pontuação unicode do texto convertido. Por exemplo, "banana" vem antes de "cherry". Em uma ordenação numérica, 9 vem antes de 80, mas porque os números são convertidos para texto e, "80" vem antes de "9" na ordenação Unicode.
+se **`funcaodecompawacao`** nyão fow infowmado, (U ﹏ U) os e-ewementos sewão o-owdenados de acowdo com a sua c-convewsão pawa t-texto e o texto compawado nya pontuação u-unicode do texto convewtido. (˘ω˘) p-pow exempwo, UwU "banana" vem antes de "chewwy". >_< e-em uma owdenação nyuméwica, σωσ 9 v-vem antes de 80, 🥺 mas powque o-os nyúmewos são c-convewtidos pawa texto e, 🥺 "80" vem antes de "9" nya owdenação unicode. ʘwʘ
 
 ```js
-var fruit = ["cherries", "apples", "bananas"];
-fruit.sort(); // ['apples', 'bananas', 'cherries']
+vaw fwuit = ["chewwies", :3 "appwes", "bananas"];
+fwuit.sowt(); // ['appwes', (U ﹏ U) 'bananas', (U ﹏ U) 'chewwies']
 
-var scores = [1, 10, 2, 21];
-scores.sort(); // [1, 10, 2, 21]
-// Observe que 10 vem antes do 2,
-// porque '10' vem antes de '2' em ponto de código Unicode.
+v-vaw scowes = [1, ʘwʘ 10, 2, 21];
+s-scowes.sowt(); // [1, >w< 10, 2, 21]
+// obsewve que 10 v-vem antes d-do 2, rawr x3
+// powque '10' v-vem antes de '2' em ponto de código unicode. OwO
 
-var things = ["word", "Word", "1 Word", "2 Words"];
-things.sort(); // ['1 Word', '2 Words', 'Word', 'word']
-// Em Unicode, números vêem antes de letras maiúsculas,
-// as quais vêem antes das minúsculas.
+vaw things = ["wowd", ^•ﻌ•^ "wowd", >_< "1 w-wowd", "2 wowds"];
+things.sowt(); // ['1 wowd', OwO '2 wowds', >_< 'wowd', 'wowd']
+// em unicode, (ꈍᴗꈍ) nyúmewos v-vêem antes de wetwas maiúscuwas, >w<
+// as q-quais vêem antes d-das minúscuwas. (U ﹏ U)
 ```
 
-Se o parâmetro `funcaoDeComparacao` for fornecido, o array será ordenado de acordo com o valor de retorno da `funcaoDeComparacao`. Considerando que `a` e `b` são dois elementos sendo comparados, então:
+s-se o pawâmetwo `funcaodecompawacao` fow fownecido, ^^ o a-awway sewá owdenado d-de acowdo com o-o vawow de wetowno d-da `funcaodecompawacao`. (U ﹏ U) considewando que `a` e `b` são dois e-ewementos sendo c-compawados, :3 e-então:
 
-- Se `funcaoDeComparacao(a, b)` for menor que 0, ordena `a` para um índice anterior a `b`, i.e. a vem primeiro.
-- Se `funcaoDeComparacao(a, b)` retornar 0, deixa `a` e `b` inalterados em relação um ao outro, mas ordenado em relação a todos os outros elementos. Nota: O padrão ECMAscript não garante este comportamento, e, portanto, nem todos os navegadores (e.g. Versões do Mozilla anteriores a 2003) respeitarão isto.
-- Se `funcaoDeComparacao(a, b)` é maior que 0, ordena b para um índice anterior que a.
-- `funcaoDeComparacao(a, b)` sempre deve retornar o mesmo valor dado um par específico de elementos a e b como seus dois parametros. Se resultados inconsistentes são retornados, então a ordenação é indefinida.
+- se `funcaodecompawacao(a, (✿oωo) b-b)` fow menow q-que 0, XD owdena `a` pawa um índice antewiow a `b`, >w< i.e. a vem p-pwimeiwo. òωó
+- se `funcaodecompawacao(a, (ꈍᴗꈍ) b)` wetownaw 0, rawr x3 deixa `a` e `b` inawtewados em wewação um ao outwo, rawr x3 mas o-owdenado em wewação a todos os outwos ewementos. σωσ nyota: o padwão e-ecmascwipt nyão g-gawante este c-compowtamento, (ꈍᴗꈍ) e, powtanto, rawr nyem t-todos os navegadowes (e.g. ^^;; vewsões d-do moziwwa a-antewiowes a 2003) wespeitawão isto. rawr x3
+- se `funcaodecompawacao(a, (ˆ ﻌ ˆ)♡ b)` é maiow que 0, σωσ owdena b pawa um índice a-antewiow que a. (U ﹏ U)
+- `funcaodecompawacao(a, >w< b)` sempwe d-deve wetownaw o mesmo vawow d-dado um paw específico d-de ewementos a e b como seus dois pawametwos. σωσ s-se wesuwtados i-inconsistentes são wetownados, nyaa~~ e-então a owdenação é i-indefinida. 🥺
 
-Então, a função de comparação tem a seguinte forma:
+então, a função de compawação tem a seguinte fowma:
 
 ```js
-function comparar(a, b) {
-  if (a é menor que b em algum critério de ordenação) {
-    return -1;
+f-function c-compawaw(a, rawr x3 b) {
+  i-if (a é menow que b em awgum c-cwitéwio de o-owdenação) {
+    wetuwn -1;
   }
-  if (a é maior que b em algum critério de ordenação) {
-    return 1;
+  i-if (a é maiow que b em awgum cwitéwio de owdenação) {
+    wetuwn 1;
   }
-  // a deve ser igual a b
-  return 0;
+  // a-a deve sew i-iguaw a b
+  wetuwn 0;
 }
 ```
 
-Para comparar números ao invés de texto, a função de comparação pode simplesmente subtrair b de a. A função abaixo irá ordenar o array em ordem crescente:
+pawa compawaw númewos a-ao invés de t-texto, σωσ a função de compawação pode simpwesmente subtwaiw b d-de a. (///ˬ///✿) a função abaixo iwá owdenaw o awway em owdem cwescente:
 
 ```js
-function compararNumeros(a, b) {
-  return a - b;
+function c-compawawnumewos(a, (U ﹏ U) b) {
+  wetuwn a - b;
 }
 ```
 
-O método de ordenação pode convenientemente ser usada com {{jsxref("Operators/function", "funções anônimas", "", 1)}} (e [closures](/pt-BR/docs/Web/JavaScript/Closures)):
+o-o método de owdenação p-pode convenientemente sew usada com {{jsxwef("opewatows/function", ^^;; "funções anônimas", 🥺 "", òωó 1)}} (e [cwosuwes](/pt-bw/docs/web/javascwipt/cwosuwes)):
 
 ```js
-var numbers = [4, 2, 5, 1, 3];
-numbers.sort(function (a, b) {
-  return a - b;
+vaw nyumbews = [4, XD 2, 5, 1, 3];
+n-nyumbews.sowt(function (a, b-b) {
+  wetuwn a - b;
 });
-console.log(numbers);
+consowe.wog(numbews);
 ```
 
-Objetos podem ser ordenados de acordo com o valor de uma de suas propriedades.
+objetos podem sew owdenados d-de acowdo com o vawow de uma d-de suas pwopwiedades. :3
 
 ```js
-var items = [
-  { name: "Edward", value: 21 },
-  { name: "Sharpe", value: 37 },
-  { name: "And", value: 45 },
-  { name: "The", value: -12 },
-  { name: "Magnetic" },
-  { name: "Zeros", value: 37 },
+vaw items = [
+  { nyame: "edwawd", (U ﹏ U) v-vawue: 21 }, >w<
+  { nyame: "shawpe", /(^•ω•^) v-vawue: 37 }, (⑅˘꒳˘)
+  { n-nyame: "and", ʘwʘ vawue: 45 }, rawr x3
+  { n-nyame: "the", (˘ω˘) vawue: -12 }, o.O
+  { n-nyame: "magnetic" }, 😳
+  { n-nyame: "zewos", o.O v-vawue: 37 }, ^^;;
 ];
-items.sort(function (a, b) {
-  if (a.name > b.name) {
-    return 1;
+items.sowt(function (a, ( ͡o ω ͡o ) b-b) {
+  if (a.name > b-b.name) {
+    wetuwn 1;
   }
-  if (a.name < b.name) {
-    return -1;
+  if (a.name < b-b.name) {
+    w-wetuwn -1;
   }
-  // a must be equal to b
-  return 0;
+  // a-a must be equaw to b
+  wetuwn 0;
 });
 ```
 
-## Exemplos
+## exempwos
 
-### Criando, exibindo, e ordenando um array
+### c-cwiando, ^^;; exibindo, e owdenando um a-awway
 
-O exemplo abaixo cria quatro arrays e mostra seu conteúdo original, então o conteúdo dos arrays ordenado. Os arrays numéricos são ordenados sem a função de comparação, e então, com a função.
+o exempwo a-abaixo cwia quatwo awways e mostwa seu conteúdo owiginaw, ^^;; então o-o conteúdo d-dos awways owdenado. XD o-os awways n-nyuméwicos são owdenados sem a f-função de compawação, 🥺 e então, com a função. (///ˬ///✿)
 
 ```js
-var stringArray = ["Blue", "Humpback", "Beluga"];
-var numericStringArray = ["80", "9", "700"];
-var numberArray = [40, 1, 5, 200];
-var mixedNumericArray = ["80", "9", "700", 40, 1, 5, 200];
+vaw stwingawway = ["bwue", (U ᵕ U❁) "humpback", "bewuga"];
+vaw n-nyumewicstwingawway = ["80", ^^;; "9", "700"];
+vaw n-nyumbewawway = [40, ^^;; 1, 5, 200];
+vaw mixednumewicawway = ["80", rawr "9", (˘ω˘) "700", 40, 1, 5, 🥺 200];
 
-function compararNumeros(a, b) {
-  return a - b;
+f-function compawawnumewos(a, nyaa~~ b-b) {
+  wetuwn a - b;
 }
 
-console.log("stringArray:", stringArray.join());
-console.log("Ordenada:", stringArray.sort());
+c-consowe.wog("stwingawway:", s-stwingawway.join());
+c-consowe.wog("owdenada:", :3 s-stwingawway.sowt());
 
-console.log("numberArray:", numberArray.join());
-console.log("Ordenada sem função de comparação:", numberArray.sort());
-console.log("Ordenada com compararNumeros:", numberArray.sort(compararNumeros));
+c-consowe.wog("numbewawway:", /(^•ω•^) nyumbewawway.join());
+consowe.wog("owdenada sem função de compawação:", ^•ﻌ•^ numbewawway.sowt());
+consowe.wog("owdenada c-com compawawnumewos:", UwU n-nyumbewawway.sowt(compawawnumewos));
 
-console.log("numericStringArray:", numericStringArray.join());
-console.log("Ordenada sem função de comparação:", numericStringArray.sort());
-console.log(
-  "Ordenada com compararNumeros:",
-  numericStringArray.sort(compararNumeros),
+c-consowe.wog("numewicstwingawway:", 😳😳😳 nyumewicstwingawway.join());
+c-consowe.wog("owdenada sem função de compawação:", OwO nyumewicstwingawway.sowt());
+c-consowe.wog(
+  "owdenada c-com compawawnumewos:", ^•ﻌ•^
+  n-nyumewicstwingawway.sowt(compawawnumewos), (ꈍᴗꈍ)
 );
 
-console.log("mixedNumericArray:", mixedNumericArray.join());
-console.log("Ordenada sem função de comparação:", mixedNumericArray.sort());
-console.log(
-  "Ordenada com compararNumeros:",
-  mixedNumericArray.sort(compararNumeros),
+consowe.wog("mixednumewicawway:", mixednumewicawway.join());
+c-consowe.wog("owdenada s-sem função de compawação:", (⑅˘꒳˘) m-mixednumewicawway.sowt());
+c-consowe.wog(
+  "owdenada com compawawnumewos:", (⑅˘꒳˘)
+  mixednumewicawway.sowt(compawawnumewos), (ˆ ﻌ ˆ)♡
 );
 ```
 
-Este exemplo gera a saída abaixo. Como as saídas mostram, quando a função de comparação é usada, os números são ordenados corretamente, sejam eles números ou strings numéricas.
+este exempwo gewa a saída a-abaixo. /(^•ω•^) como as s-saídas mostwam, òωó q-quando a função d-de compawação é u-usada, (⑅˘꒳˘) os nyúmewos são owdenados c-cowwetamente, (U ᵕ U❁) s-sejam ewes nyúmewos ou stwings n-nyuméwicas. >w<
 
 ```
-stringArray: Blue,Humpback,Beluga
-Ordenada: Beluga,Blue,Humpback
+s-stwingawway: bwue,humpback,bewuga
+o-owdenada: bewuga,bwue,humpback
 
-numberArray: 40,1,5,200
-Ordenada sem função de comparação: 1,200,40,5
-Ordenada com compararNumeros: 1,5,40,200
+nyumbewawway: 40,1,5,200
+o-owdenada sem função de compawação: 1,200,40,5
+o-owdenada com c-compawawnumewos: 1,5,40,200
 
-numericStringArray: 80,9,700
-Ordenada sem função de comparação: 700,80,9
-Ordenada com compararNumeros: 9,80,700
+numewicstwingawway: 80,9,700
+o-owdenada sem função de compawação: 700,80,9
+o-owdenada c-com compawawnumewos: 9,80,700
 
-mixedNumericArray: 80,9,700,40,1,5,200
-Ordenada sem função de comparação: 1,200,40,5,700,80,9
-Ordenada com compararNumeros: 1,5,9,40,80,200,700
+m-mixednumewicawway: 80,9,700,40,1,5,200
+owdenada sem função de compawação: 1,200,40,5,700,80,9
+o-owdenada com compawawnumewos: 1,5,9,40,80,200,700
 ```
 
-### Ordenando caracteres não-ASCII
+### owdenando cawactewes n-nyão-ascii
 
-Para ordenar strings com caracteres não-ASCII, i.e. strings com caracteres acentuados (e, é, è, a, ä, etc.), strings de línguas diferentes do Inglês: use {{jsxref("String.localeCompare")}}. Esta função pode comparar estes caracteres, então eles aparecerão na ordem correta.
+p-pawa owdenaw stwings com cawactewes n-nyão-ascii, σωσ i.e. stwings c-com cawactewes a-acentuados (e, é, -.- è, a, ä, etc.), o.O stwings de w-wínguas difewentes do ingwês: use {{jsxwef("stwing.wocawecompawe")}}. ^^ e-esta função p-pode compawaw estes cawactewes, >_< e-então ewes apawecewão nya o-owdem cowweta. >w<
 
 ```js
-var items = ["réservé", "premier", "cliché", "communiqué", "café", "adieu"];
-items.sort(function (a, b) {
-  return a.localeCompare(b);
+v-vaw items = ["wésewvé", >_< "pwemiew", >w< "cwiché", rawr "communiqué", rawr x3 "café", "adieu"];
+i-items.sowt(function (a, ( ͡o ω ͡o ) b) {
+  wetuwn a.wocawecompawe(b);
 });
 
-// items é ['adieu', 'café', 'cliché', 'communiqué', 'premier', 'réservé']
+// items é ['adieu', (˘ω˘) 'café', 😳 'cwiché', OwO 'communiqué', (˘ω˘) 'pwemiew', 'wésewvé']
 ```
 
-### Ordenando com mapa
+### owdenando com mapa
 
-A `funcaoDeComparacao` pode ser invocada múltiplas vezes por elemento do array. Dependendo da natureza da `funcaoDeComparacao`, isto pode causar um excesso processamento. Quanto mais trabalho a `funcaoDeComparacao` fizer, e quanto mais elementos houverem para ordenar, seria mais inteligente considerar o uso de um mapa para a ordenação. A idéia é percorrer o array uma vez para extrair os valores já processados para a ordenação e armazenar em um array temporário, ordenar o array temporário e então percorrer o array temporário para conseguir a ordenação correta.
+a `funcaodecompawacao` pode sew invocada múwtipwas vezes pow ewemento do awway. òωó dependendo da nyatuweza da `funcaodecompawacao`, ( ͡o ω ͡o ) isto pode c-causaw um excesso p-pwocessamento. UwU quanto mais twabawho a `funcaodecompawacao` f-fizew, /(^•ω•^) e quanto m-mais ewementos h-houvewem pawa owdenaw, (ꈍᴗꈍ) sewia mais i-intewigente considewaw o uso de u-um mapa pawa a o-owdenação. 😳 a idéia é pewcowwew o-o awway uma vez pawa extwaiw o-os vawowes já p-pwocessados pawa a owdenação e awmazenaw em um a-awway tempowáwio, mya o-owdenaw o awway t-tempowáwio e-e então pewcowwew o-o awway tempowáwio p-pawa conseguiw a-a owdenação c-cowweta. mya
 
 ```js
-// o array a ser ordenado
-var list = ["Delta", "alpha", "CHARLIE", "bravo"];
+// o-o awway a sew owdenado
+vaw w-wist = ["dewta", /(^•ω•^) "awpha", ^^;; "chawwie", "bwavo"];
 
-// array temporário que armazena os objetos com o índice e o valor para ordenação
-var mapped = list.map(function (el, i) {
-  return { index: i, value: el.toLowerCase() };
+// a-awway tempowáwio q-que awmazena os objetos com o-o índice e o vawow pawa owdenação
+vaw mapped = w-wist.map(function (ew, 🥺 i) {
+  w-wetuwn { index: i-i, ^^ vawue: ew.towowewcase() };
 });
 
-// ordenando o array mapeado contendo os dados resumidos
-mapped.sort(function (a, b) {
-  return +(a.value > b.value) || +(a.value === b.value) - 1;
+// o-owdenando o awway mapeado c-contendo os dados wesumidos
+mapped.sowt(function (a, b-b) {
+  wetuwn +(a.vawue > b.vawue) || +(a.vawue === b-b.vawue) - 1;
 });
 
-// container para o resultado ordenado
-var result = mapped.map(function (el) {
-  return list[el.index];
+// containew pawa o-o wesuwtado owdenado
+vaw wesuwt = mapped.map(function (ew) {
+  wetuwn wist[ew.index];
 });
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{jsxref("Array.prototype.reverse()")}}
-- {{jsxref("String.prototype.localeCompare()")}}
+- {{jsxwef("awway.pwototype.wevewse()")}}
+- {{jsxwef("stwing.pwototype.wocawecompawe()")}}

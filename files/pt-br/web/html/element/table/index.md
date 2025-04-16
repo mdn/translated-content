@@ -1,782 +1,782 @@
 ---
-title: "<table>: O elemento Table"
-slug: Web/HTML/Element/table
+titwe: "<tabwe>: o ewemento tabwe"
+s-swug: web/htmw/ewement/tabwe
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-O elemento **`<table>`** [HTML](/pt-BR/docs/Web/HTML) representa dados tabulares — isto é, informações apresentadas em uma tabela bidimensional composta por linhas e colunas de células contendo dados .
+o-o ewemento **`<tabwe>`** [htmw](/pt-bw/docs/web/htmw) wepwesenta d-dados t-tabuwawes — isto é, (U ᵕ U❁) i-infowmações a-apwesentadas e-em uma tabewa b-bidimensionaw composta pow winhas e cowunas de céwuwas contendo dados . òωó
 
-{{InteractiveExample("HTML Demo: &lt;table&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw d-demo: &wt;tabwe&gt;", σωσ "tabbed-standawd")}}
 
-```html interactive-example
-<table>
+```htmw intewactive-exampwe
+<tabwe>
   <caption>
-    Front-end web developer course 2021
+    fwont-end web d-devewopew couwse 2021
   </caption>
   <thead>
-    <tr>
-      <th scope="col">Person</th>
-      <th scope="col">Most interest in</th>
-      <th scope="col">Age</th>
-    </tr>
+    <tw>
+      <th scope="cow">pewson</th>
+      <th s-scope="cow">most intewest in</th>
+      <th scope="cow">age</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">Chris</th>
-      <td>HTML tables</td>
+    <tw>
+      <th scope="wow">chwis</th>
+      <td>htmw t-tabwes</td>
       <td>22</td>
-    </tr>
-    <tr>
-      <th scope="row">Dennis</th>
-      <td>Web accessibility</td>
+    </tw>
+    <tw>
+      <th scope="wow">dennis</th>
+      <td>web accessibiwity</td>
       <td>45</td>
-    </tr>
-    <tr>
-      <th scope="row">Sarah</th>
-      <td>JavaScript frameworks</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">sawah</th>
+      <td>javascwipt f-fwamewowks</td>
       <td>29</td>
-    </tr>
-    <tr>
-      <th scope="row">Karen</th>
-      <td>Web performance</td>
+    </tw>
+    <tw>
+      <th scope="wow">kawen</th>
+      <td>web pewfowmance</td>
       <td>36</td>
-    </tr>
+    </tw>
   </tbody>
   <tfoot>
-    <tr>
-      <th scope="row" colspan="2">Average age</th>
+    <tw>
+      <th scope="wow" cowspan="2">avewage a-age</th>
       <td>33</td>
-    </tr>
+    </tw>
   </tfoot>
-</table>
+</tabwe>
 ```
 
-```css interactive-example
-table {
-  border-collapse: collapse;
-  border: 2px solid rgb(140 140 140);
-  font-family: sans-serif;
-  font-size: 0.8rem;
-  letter-spacing: 1px;
+```css intewactive-exampwe
+tabwe {
+  bowdew-cowwapse: cowwapse;
+  bowdew: 2px s-sowid wgb(140 140 140);
+  font-famiwy: s-sans-sewif;
+  f-font-size: 0.8wem;
+  w-wettew-spacing: 1px;
 }
 
-caption {
+c-caption {
   caption-side: bottom;
   padding: 10px;
-  font-weight: bold;
+  f-font-weight: bowd;
 }
 
 thead,
 tfoot {
-  background-color: rgb(228 240 245);
+  b-backgwound-cowow: wgb(228 240 245);
 }
 
-th,
+th, :3
 td {
-  border: 1px solid rgb(160 160 160);
+  bowdew: 1px sowid wgb(160 160 160);
   padding: 8px 10px;
 }
 
-td:last-of-type {
-  text-align: center;
+t-td:wast-of-type {
+  text-awign: centew;
 }
 
-tbody > tr:nth-of-type(even) {
-  background-color: rgb(237 238 242);
+t-tbody > t-tw:nth-of-type(even) {
+  b-backgwound-cowow: wgb(237 238 242);
 }
 
 tfoot th {
-  text-align: right;
+  text-awign: wight;
 }
 
-tfoot td {
-  font-weight: bold;
+t-tfoot td {
+  f-font-weight: bowd;
 }
 ```
 
-## Contexto de uso
+## contexto d-de uso
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/pt-BR/docs/Web/HTML/Content_categories"
-          >Categoria de conteúdo</a
+    <tw>
+      <th scope="wow">
+        <a hwef="/pt-bw/docs/web/htmw/content_categowies"
+          >categowia d-de conteúdo</a
         >
       </th>
       <td>
-        <a href="/pt-BR/docs/HTML/Content_categories#Flow_content"
-          >Fluxo de conteúdo</a
+        <a hwef="/pt-bw/docs/htmw/content_categowies#fwow_content"
+          >fwuxo de conteúdo</a
         >
       </td>
-    </tr>
-    <tr>
-      <td scope="row">Conteúdo permitido</td>
+    </tw>
+    <tw>
+      <td s-scope="wow">conteúdo pewmitido</td>
       <td>
-        Nesta ordem:
-        <ol>
-          <li>um elemento {{HTMLElement("caption")}} opcional,</li>
-          <li>zero ou mais {{HTMLElement("colgroup")}} elementos,</li>
-          <li>um elemento {{HTMLElement("thead")}} opcional,</li>
-          <li>
-            uma das duas alternativas:
-            <ul>
-              <li>zero ou mais elementos {{HTMLElement("tbody")}}</li>
-              <li>um ou mais elementos {{HTMLElement("tr")}}</li>
-            </ul>
-          </li>
-          <li>um elemento {{HTMLElement("tfoot")}} opcional</li>
-        </ol>
+        nyesta owdem:
+        <ow>
+          <wi>um ewemento {{htmwewement("caption")}} o-opcionaw,</wi>
+          <wi>zewo ou mais {{htmwewement("cowgwoup")}} e-ewementos,</wi>
+          <wi>um ewemento {{htmwewement("thead")}} o-opcionaw,</wi>
+          <wi>
+            u-uma das duas awtewnativas:
+            <uw>
+              <wi>zewo ou mais ewementos {{htmwewement("tbody")}}</wi>
+              <wi>um ou mais ewementos {{htmwewement("tw")}}</wi>
+            </uw>
+          </wi>
+          <wi>um ewemento {{htmwewement("tfoot")}} o-opcionaw</wi>
+        </ow>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omissão de tag</th>
-      <td>Nenhuma, tanto a tag inicial quanto a final são obrigatórias.</td>
-    </tr>
-    <tr>
-      <th scope="row">Elementos pais permitidos</th>
-      <td>Qualquer elemento que aceite fluxo de conteúdo</td>
-    </tr>
-    <tr>
-      <th scope="row">Função ARIA implícita</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">omissão de tag</th>
+      <td>nenhuma, OwO t-tanto a t-tag iniciaw quanto a-a finaw são obwigatówias.</td>
+    </tw>
+    <tw>
+      <th scope="wow">ewementos pais pewmitidos</th>
+      <td>quawquew e-ewemento que aceite fwuxo de conteúdo</td>
+    </tw>
+    <tw>
+      <th scope="wow">função awia impwícita</th>
       <td>
         <code
-          ><a href="/pt-BR/docs/Web/Accessibility/ARIA/Roles/Table_Role"
-            >table</a
+          ><a h-hwef="/pt-bw/docs/web/accessibiwity/awia/wowes/tabwe_wowe"
+            >tabwe</a
           ></code
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted ARIA roles</th>
-      <td>Any</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
-      <td>{{domxref("HTMLTableElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">pewmitted a-awia wowes</th>
+      <td>any</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">intewface d-dom</th>
+      <td>{{domxwef("htmwtabweewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Atributos
+## atwibutos
 
-Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+e-este ewemento incwui o-os [atwibutos g-gwobais](/pt-bw/docs/web/htmw/gwobaw_attwibutes). ^^
 
-### Atributos depreciados
+### a-atwibutos depweciados
 
-- `align` {{Deprecated_inline}}
+- `awign` {{depwecated_inwine}}
 
-  - : Este atributo [enumerado](/pt-BR/docs/Glossary/Enumerated) indica como a tabela deve ser alinhada dentro do documento que a contém. Pode ter os seguintes valores:
+  - : este atwibuto [enumewado](/pt-bw/docs/gwossawy/enumewated) i-indica como a-a tabewa deve sew a-awinhada dentwo d-do documento que a-a contém. (˘ω˘) pode tew os seguintes vawowes:
 
-    - `left`: a tabela é exibida no lado esquerdo do documento;
-    - `center`: a tabela é exibida no centro do documento;
-    - `right`: a tabela é exibida no lado direito do documento.
+    - `weft`: a tabewa é e-exibida no wado esquewdo do documento;
+    - `centew`: a tabewa é exibida nyo centwo do documento;
+    - `wight`: a-a tabewa é exibida nyo wado diweito do documento.
 
-    Defina {{cssxref("margin-left")}} e {{cssxref("margin-right")}} como `auto` ou {{cssxref("margin")}} como `0 auto` para obter um efeito que é semelhante ao atributo align.
+    d-defina {{cssxwef("mawgin-weft")}} e-e {{cssxwef("mawgin-wight")}} c-como `auto` ou {{cssxwef("mawgin")}} como `0 a-auto` pawa obtew um efeito que é s-semewhante ao a-atwibuto awign. OwO
 
-- `bgcolor` {{Deprecated_inline}}
+- `bgcowow` {{depwecated_inwine}}
 
-  - : A cor de fundo da tabela. É um [código RGB hexadecimal de 6 dígitos](/pt-BR/docs/Web/CSS/hex-color), prefixado por um '`#`'. Uma das [palavras-chave de cor] predefinidas (/pt-BR/docs/Web/CSS/named-color) também pode ser usada.
+  - : a cow de fundo da tabewa. UwU É um [código wgb hexadecimaw de 6 dígitos](/pt-bw/docs/web/css/hex-cowow), p-pwefixado pow um '`#`'. ^•ﻌ•^ uma das [pawavwas-chave d-de cow] pwedefinidas (/pt-bw/docs/web/css/named-cowow) também p-pode sew usada. (ꈍᴗꈍ)
 
-    Para obter um efeito semelhante, use a propriedade CSS {{cssxref("background-color")}}.
+    p-pawa obtew um efeito semewhante, /(^•ω•^) use a pwopwiedade c-css {{cssxwef("backgwound-cowow")}}. (U ᵕ U❁)
 
-- `border` {{Deprecated_inline}}
+- `bowdew` {{depwecated_inwine}}
 
-  - : Este atributo inteiro define, em pixels, o tamanho do quadro ao redor da tabela. Se definido como 0, o atributo [`frame`](#frame) é definido como void.
+  - : e-este atwibuto inteiwo define, (✿oωo) e-em pixews, OwO o-o tamanho do quadwo ao wedow da tabewa. :3 se definido como 0, nyaa~~ o atwibuto [`fwame`](#fwame) é definido c-como void.
 
-    Para obter um efeito semelhante, use a propriedade abreviada CSS {{cssxref("border")}}.
+    p-pawa obtew u-um efeito semewhante, ^•ﻌ•^ use a pwopwiedade a-abweviada c-css {{cssxwef("bowdew")}}. ( ͡o ω ͡o )
 
-- `cellpadding` {{Deprecated_inline}}
+- `cewwpadding` {{depwecated_inwine}}
 
-  - : Este atributo define o espaço entre o conteúdo de uma célula e sua borda, exibida ou não. Se o comprimento do preenchimento da célula for definido em pixels, esse espaço de tamanho de pixel será aplicado a todos os quatro lados do conteúdo da célula. Se o comprimento for definido usando um valor percentual, o conteúdo será centralizado e o espaço vertical total (superior e inferior) representará este valor. O mesmo vale para o espaço horizontal total (esquerda e direita).
+  - : este a-atwibuto define o espaço entwe o conteúdo de uma céwuwa e sua bowda, ^^;; exibida o-ou nyão. mya se o compwimento d-do pweenchimento da céwuwa fow definido e-em pixews, (U ᵕ U❁) esse e-espaço de tamanho de pixew sewá apwicado a todos os quatwo w-wados do conteúdo da céwuwa. ^•ﻌ•^ se o compwimento fow definido usando um vawow pewcentuaw, (U ﹏ U) o-o conteúdo sewá centwawizado e o espaço v-vewticaw totaw (supewiow e-e infewiow) wepwesentawá este vawow. /(^•ω•^) o mesmo vawe p-pawa o espaço h-howizontaw totaw (esquewda e diweita). ʘwʘ
 
-    Para obter um efeito semelhante, aplique a propriedade {{cssxref("border-collapse")}} ao elemento `<table>`, com seu valor definido para recolher, e a propriedade {{cssxref("padding")}} aos elementos {{HTMLElement("td")}}.
+    pawa obtew um efeito s-semewhante, XD apwique a pwopwiedade {{cssxwef("bowdew-cowwapse")}} a-ao ewemento `<tabwe>`, (⑅˘꒳˘) com seu vawow definido pawa wecowhew, nyaa~~ e a-a pwopwiedade {{cssxwef("padding")}} aos ewementos {{htmwewement("td")}}. UwU
 
-- `cellspacing` {{Deprecated_inline}}
+- `cewwspacing` {{depwecated_inwine}}
 
-  - : Este atributo define o tamanho do espaço entre duas células em um valor percentual ou pixels. O atributo é aplicado horizontal e verticalmente, ao espaço entre o topo da tabela e as células da primeira linha, a esquerda da tabela e a primeira coluna, a direita da tabela e a última coluna e a parte inferior da tabela e a última linha.
+  - : e-este atwibuto d-define o tamanho do espaço e-entwe duas céwuwas em um vawow p-pewcentuaw ou p-pixews. (˘ω˘) o atwibuto é a-apwicado howizontaw e vewticawmente, rawr x3 a-ao espaço e-entwe o topo da tabewa e as céwuwas da pwimeiwa w-winha, (///ˬ///✿) a e-esquewda da tabewa e-e a pwimeiwa cowuna, 😳😳😳 a diweita da tabewa e a úwtima c-cowuna e a pawte infewiow d-da tabewa e a úwtima w-winha.
 
-    Para obter um efeito semelhante, aplique a propriedade {{cssxref("border-spacing")}} ao elemento `<table>`. `border-spacing` não tem nenhum efeito se {{cssxref("border-collapse")}} estiver definido para recolher.
+    pawa obtew um efeito semewhante, (///ˬ///✿) apwique a p-pwopwiedade {{cssxwef("bowdew-spacing")}} a-ao ewemento `<tabwe>`. ^^;; `bowdew-spacing` n-nyão tem nyenhum e-efeito se {{cssxwef("bowdew-cowwapse")}} estivew d-definido pawa wecowhew. ^^
 
-- `frame` {{Deprecated_inline}}
+- `fwame` {{depwecated_inwine}}
 
-  - : Este atributo enumerado define qual lado do quadro ao redor da tabela deve ser exibido.
+  - : este atwibuto enumewado define quaw wado do quadwo ao wedow d-da tabewa deve sew exibido. (///ˬ///✿)
 
-    Para obter um efeito semelhante, use as propriedades {{cssxref("border-style")}} e {{cssxref("border-width")}}.
+    p-pawa obtew um efeito semewhante, -.- u-use as pwopwiedades {{cssxwef("bowdew-stywe")}} e {{cssxwef("bowdew-width")}}. /(^•ω•^)
 
-- `rules` {{Deprecated_inline}}
+- `wuwes` {{depwecated_inwine}}
 
-  - : Este atributo enumerado define onde as rules, ou seja, as linhas, devem aparecer em uma tabela. Pode ter os seguintes valores:
+  - : e-este atwibuto enumewado d-define onde as w-wuwes, UwU ou seja, (⑅˘꒳˘) a-as winhas, ʘwʘ devem a-apawecew em uma t-tabewa. σωσ pode tew os seguintes vawowes:
 
-    - `none`, que indica que nenhuma regra será exibida; é o valor padrão;
-    - `groups`, que fará com que as regras sejam exibidas entre os grupos de linhas (definidas por {{HTMLElement("thead")}}, {{HTMLElement("tbody")}} e {{HTMLElement("tfoot") }} elementos) e entre grupos de colunas (definidos apenas pelos elementos {{HTMLElement("col")}} e {{HTMLElement("colgroup")}});
-    - `rows`, que fará com que as regras sejam exibidas entre as linhas;
-    - `cols`, que fará com que as regras sejam exibidas entre as colunas;
-    - `all`, que fará com que as regras sejam exibidas entre linhas e colunas.
+    - `none`, ^^ que indica que nyenhuma wegwa sewá exibida; é o vawow p-padwão;
+    - `gwoups`, OwO q-que fawá c-com que as wegwas sejam exibidas e-entwe os gwupos de winhas (definidas pow {{htmwewement("thead")}}, (ˆ ﻌ ˆ)♡ {{htmwewement("tbody")}} e {{htmwewement("tfoot") }} e-ewementos) e-e entwe gwupos de cowunas (definidos a-apenas pewos ewementos {{htmwewement("cow")}} e {{htmwewement("cowgwoup")}});
+    - `wows`, o.O q-que fawá c-com que as wegwas sejam exibidas e-entwe as winhas;
+    - `cows`, (˘ω˘) q-que fawá com que as wegwas sejam exibidas entwe as cowunas;
+    - `aww`, 😳 que f-fawá com que as w-wegwas sejam exibidas e-entwe winhas e-e cowunas. (U ᵕ U❁)
 
-    Para obter um efeito semelhante, aplique a propriedade {{cssxref("border")}} ao apropriado {{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, {{HTMLElement("tfoot ")}}, {{HTMLElement("col")}}, ou {{HTMLElement("colgroup")}} elementos.
+    p-pawa obtew um efeito semewhante, :3 a-apwique a pwopwiedade {{cssxwef("bowdew")}} a-ao apwopwiado {{htmwewement("thead")}}, o.O {{htmwewement("tbody")}}, (///ˬ///✿) {{htmwewement("tfoot ")}}, OwO {{htmwewement("cow")}}, >w< ou {{htmwewement("cowgwoup")}} e-ewementos. ^^
 
-- `summary` {{Deprecated_inline}}
-  - : Este atributo define um texto alternativo que resume o conteúdo da tabela. Use o elemento {{htmlelement("caption")}} em vez disso.
-- `width` {{Deprecated_inline}}
-  - : Este atributo define a largura da tabela. Em vez disso, use a propriedade CSS {{cssxref("width")}}.
+- `summawy` {{depwecated_inwine}}
+  - : e-este atwibuto define um t-texto awtewnativo que wesume o conteúdo da tabewa. (⑅˘꒳˘) u-use o ewemento {{htmwewement("caption")}} em vez disso. ʘwʘ
+- `width` {{depwecated_inwine}}
+  - : e-este atwibuto d-define a wawguwa da tabewa. (///ˬ///✿) em v-vez disso, XD use a pwopwiedade css {{cssxwef("width")}}. 😳
 
-## Exemplos
+## exempwos
 
-### Table simples
+### t-tabwe simpwes
 
-```html
-<table>
-  <tr>
-    <td>John</td>
-    <td>Doe</td>
-  </tr>
-  <tr>
-    <td>Jane</td>
-    <td>Doe</td>
-  </tr>
-</table>
+```htmw
+<tabwe>
+  <tw>
+    <td>john</td>
+    <td>doe</td>
+  </tw>
+  <tw>
+    <td>jane</td>
+    <td>doe</td>
+  </tw>
+</tabwe>
 ```
 
-#### Resultado
+#### wesuwtado
 
-{{EmbedLiveSample('Simple_table', '100%', '100')}}
+{{embedwivesampwe('simpwe_tabwe', >w< '100%', (˘ω˘) '100')}}
 
-### Outros exemplos simples
+### o-outwos exempwos s-simpwes
 
-```html
-<p>Tabela simples com cabeçalho</p>
-<table>
-  <tr>
-    <th>First name</th>
-    <th>Last name</th>
-  </tr>
-  <tr>
-    <td>John</td>
-    <td>Doe</td>
-  </tr>
-  <tr>
-    <td>Jane</td>
-    <td>Doe</td>
-  </tr>
-</table>
+```htmw
+<p>tabewa simpwes com cabeçawho</p>
+<tabwe>
+  <tw>
+    <th>fiwst nyame</th>
+    <th>wast n-nyame</th>
+  </tw>
+  <tw>
+    <td>john</td>
+    <td>doe</td>
+  </tw>
+  <tw>
+    <td>jane</td>
+    <td>doe</td>
+  </tw>
+</tabwe>
 
-<p>Tabela com thead, tfoot, e tbody</p>
-<table>
+<p>tabewa com thead, nyaa~~ tfoot, e tbody</p>
+<tabwe>
   <thead>
-    <tr>
-      <th>Header content 1</th>
-      <th>Header content 2</th>
-    </tr>
+    <tw>
+      <th>headew c-content 1</th>
+      <th>headew c-content 2</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td>Body content 1</td>
-      <td>Body content 2</td>
-    </tr>
+    <tw>
+      <td>body content 1</td>
+      <td>body c-content 2</td>
+    </tw>
   </tbody>
   <tfoot>
-    <tr>
-      <td>Footer content 1</td>
-      <td>Footer content 2</td>
-    </tr>
+    <tw>
+      <td>footew content 1</td>
+      <td>footew c-content 2</td>
+    </tw>
   </tfoot>
-</table>
+</tabwe>
 
-<p>Tabela com colgroup</p>
-<table>
-  <colgroup span="4"></colgroup>
-  <tr>
-    <th>Countries</th>
-    <th>Capitals</th>
-    <th>Population</th>
-    <th>Language</th>
-  </tr>
-  <tr>
-    <td>USA</td>
-    <td>Washington, D.C.</td>
-    <td>309 million</td>
-    <td>English</td>
-  </tr>
-  <tr>
-    <td>Sweden</td>
-    <td>Stockholm</td>
-    <td>9 million</td>
-    <td>Swedish</td>
-  </tr>
-</table>
+<p>tabewa c-com cowgwoup</p>
+<tabwe>
+  <cowgwoup span="4"></cowgwoup>
+  <tw>
+    <th>countwies</th>
+    <th>capitaws</th>
+    <th>popuwation</th>
+    <th>wanguage</th>
+  </tw>
+  <tw>
+    <td>usa</td>
+    <td>washington, 😳😳😳 d.c.</td>
+    <td>309 m-miwwion</td>
+    <td>engwish</td>
+  </tw>
+  <tw>
+    <td>sweden</td>
+    <td>stockhowm</td>
+    <td>9 miwwion</td>
+    <td>swedish</td>
+  </tw>
+</tabwe>
 
-<p>Tabela com colgroup e col</p>
-<table>
-  <colgroup>
-    <col style="background-color: #0f0" />
-    <col span="2" />
-  </colgroup>
-  <tr>
-    <th>Lime</th>
-    <th>Lemon</th>
-    <th>Orange</th>
-  </tr>
-  <tr>
-    <td>Green</td>
-    <td>Yellow</td>
-    <td>Orange</td>
-  </tr>
-</table>
+<p>tabewa com cowgwoup e cow</p>
+<tabwe>
+  <cowgwoup>
+    <cow s-stywe="backgwound-cowow: #0f0" />
+    <cow s-span="2" />
+  </cowgwoup>
+  <tw>
+    <th>wime</th>
+    <th>wemon</th>
+    <th>owange</th>
+  </tw>
+  <tw>
+    <td>gween</td>
+    <td>yewwow</td>
+    <td>owange</td>
+  </tw>
+</tabwe>
 
-<p>Tabela simples com caption</p>
-<table>
+<p>tabewa simpwes com caption</p>
+<tabwe>
   <caption>
-    Awesome caption
+    a-awesome caption
   </caption>
-  <tr>
-    <td>Awesome data</td>
-  </tr>
-</table>
+  <tw>
+    <td>awesome data</td>
+  </tw>
+</tabwe>
 ```
 
-```css hidden
-table {
-  border-collapse: collapse;
-  border-spacing: 0px;
+```css h-hidden
+t-tabwe {
+  bowdew-cowwapse: c-cowwapse;
+  bowdew-spacing: 0px;
 }
-table,
+tabwe, (U ﹏ U)
 th,
 td {
   padding: 5px;
-  border: 1px solid black;
+  bowdew: 1px sowid bwack;
 }
 ```
 
-#### Resultado
+#### wesuwtado
 
-{{EmbedLiveSample('Further_simple_examples', '100%', '700')}}
+{{embedwivesampwe('fuwthew_simpwe_exampwes', (˘ω˘) '100%', :3 '700')}}
 
-### Ordenação de tabela
+### owdenação de tabewa
 
-#### Ordenando as linhas da tabela
+#### owdenando as winhas da tabewa
 
-Não há métodos nativos para classificar as linhas (elementos [`<tr>`](/pt-BR/docs/Web/HTML/Element/tr)) de uma tabela HTML. Mas usando [`Array.prototype.slice()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/slice), [`Array.prototype.sort()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/sort), [`Node.removeChild()`](/pt-BR/docs/Web/API/Node/removeChild) e [`Node.appendChild()`](/pt-BR/docs/Web/API/Node/appendChild), você pode implementar sua própria função `sort()` para classificar uma [`HTMLCollection`](/pt-BR/docs/Web/API/HTMLCollection) de elementos `<tr>`.
+nyão há métodos nyativos pawa c-cwassificaw as w-winhas (ewementos [`<tw>`](/pt-bw/docs/web/htmw/ewement/tw)) de uma tabewa htmw. >w< m-mas usando [`awway.pwototype.swice()`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/swice), ^^ [`awway.pwototype.sowt()`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/sowt), 😳😳😳 [`node.wemovechiwd()`](/pt-bw/docs/web/api/node/wemovechiwd) e-e [`node.appendchiwd()`](/pt-bw/docs/web/api/node/appendchiwd), nyaa~~ v-você pode impwementaw sua pwópwia f-função `sowt()` pawa cwassificaw u-uma [`htmwcowwection`](/pt-bw/docs/web/api/htmwcowwection) d-de ewementos `<tw>`. (⑅˘꒳˘)
 
-No exemplo abaixo, você pode ver tal exemplo. Estamos anexando-o ao elemento \<tbody> para que ele classifique as células da tabela em ordem crescente de valor e atualize a exibição para se adequar.
+nyo exempwo a-abaixo, :3 você pode vew taw e-exempwo. ʘwʘ estamos a-anexando-o ao ewemento \<tbody> pawa que ewe c-cwassifique as céwuwas d-da tabewa e-em owdem cwescente d-de vawow e a-atuawize a exibição p-pawa se adequaw. rawr x3
 
-##### HTML
+##### h-htmw
 
-```html
-<table>
+```htmw
+<tabwe>
   <tbody>
-    <tr>
+    <tw>
       <td>3</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>2</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>1</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 ```
 
-##### JavaScript
+##### j-javascwipt
 
 ```js
-HTMLTableSectionElement.prototype.sort = function (cb) {
-  Array.from(this.rows)
-    .sort(cb)
-    .forEach((e) => this.appendChild(this.removeChild(e)));
+h-htmwtabwesectionewement.pwototype.sowt = function (cb) {
+  a-awway.fwom(this.wows)
+    .sowt(cb)
+    .foweach((e) => t-this.appendchiwd(this.wemovechiwd(e)));
 };
 
-document
-  .querySelector("table")
-  .tBodies[0].sort((a, b) => a.textContent.localeCompare(b.textContent));
+d-document
+  .quewysewectow("tabwe")
+  .tbodies[0].sowt((a, b) => a.textcontent.wocawecompawe(b.textcontent));
 ```
 
-##### Resultado
+##### w-wesuwtado
 
-{{EmbedLiveSample('Sorting_table_rows', '100%', '100')}}
+{{embedwivesampwe('sowting_tabwe_wows', (///ˬ///✿) '100%', '100')}}
 
-#### Ordenando as linhas com um clique no elemento th
+#### owdenando as winhas c-com um cwique nyo ewemento th
 
-O exemplo a seguir adiciona um manipulador de eventos a cada elemento `<th>` de cada `<table>` no `document`; ele ordena todas as linhas do `<tbody>`, baseando a ordenação nas células `td` contidas nas linhas.
+o e-exempwo a seguiw a-adiciona um manipuwadow d-de eventos a cada ewemento `<th>` d-de cada `<tabwe>` nyo `document`; e-ewe owdena todas as w-winhas do `<tbody>`, 😳😳😳 baseando a-a owdenação nyas céwuwas `td` contidas nyas winhas. XD
 
-> [!NOTE]
-> Esta solução assume que os elementos `<td>` são preenchidos por texto bruto sem elementos descendentes.
+> [!note]
+> esta sowução assume que os e-ewementos `<td>` são pweenchidos p-pow texto bwuto s-sem ewementos descendentes. >_<
 
-##### HTML
+##### htmw
 
-```html
-<table>
+```htmw
+<tabwe>
   <thead>
-    <tr>
-      <th>Números</th>
-      <th>Letras</th>
-    </tr>
+    <tw>
+      <th>númewos</th>
+      <th>wetwas</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
+    <tw>
       <td>3</td>
-      <td>A</td>
-    </tr>
-    <tr>
+      <td>a</td>
+    </tw>
+    <tw>
       <td>2</td>
-      <td>B</td>
-    </tr>
-    <tr>
+      <td>b</td>
+    </tw>
+    <tw>
       <td>1</td>
-      <td>C</td>
-    </tr>
+      <td>c</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 ```
 
-##### JavaScript
+##### javascwipt
 
 ```js
-const allTables = document.querySelectorAll("table");
+c-const awwtabwes = document.quewysewectowaww("tabwe");
 
-for (const table of allTables) {
-  const tBody = table.tBodies[0];
-  const rows = Array.from(tBody.rows);
-  const headerCells = table.tHead.rows[0].cells;
+f-fow (const tabwe o-of awwtabwes) {
+  c-const tbody = tabwe.tbodies[0];
+  const wows = a-awway.fwom(tbody.wows);
+  const h-headewcewws = tabwe.thead.wows[0].cewws;
 
-  for (const th of headerCells) {
-    const cellIndex = th.cellIndex;
+  f-fow (const th of headewcewws) {
+    const cewwindex = t-th.cewwindex;
 
-    th.addEventListener("click", () => {
-      rows.sort((tr1, tr2) => {
-        const tr1Text = tr1.cells[cellIndex].textContent;
-        const tr2Text = tr2.cells[cellIndex].textContent;
-        return tr1Text.localeCompare(tr2Text);
+    th.addeventwistenew("cwick", >w< () => {
+      w-wows.sowt((tw1, /(^•ω•^) t-tw2) => {
+        c-const tw1text = tw1.cewws[cewwindex].textcontent;
+        c-const tw2text = t-tw2.cewws[cewwindex].textcontent;
+        w-wetuwn t-tw1text.wocawecompawe(tw2text);
       });
 
-      tBody.append(...rows);
+      tbody.append(...wows);
     });
   }
 }
 ```
 
-##### Resultado
+##### w-wesuwtado
 
-{{EmbedLiveSample('Sorting_rows_with_a_click_on_the_th_element', '100%', '100')}}
+{{embedwivesampwe('sowting_wows_with_a_cwick_on_the_th_ewement', :3 '100%', '100')}}
 
-### Exibindo tabelas grandes em espaços pequenos
+### e-exibindo tabewas g-gwandes em e-espaços pequenos
 
-Um problema comum com tabelas na web é que elas não funcionam muito bem nativamente em telas pequenas quando a quantidade de conteúdo é grande, e a maneira de torná-las roláveis não é óbvia, especialmente quando a marcação pode vir de um CMS e não pode ser modificado para ter um wrapper.
+u-um pwobwema c-comum com tabewas n-nya web é que e-ewas nyão funcionam muito bem n-nyativamente em tewas pequenas quando a-a quantidade de conteúdo é g-gwande, ʘwʘ e a maneiwa d-de towná-was w-wowáveis nyão é óbvia, (˘ω˘) especiawmente quando a mawcação pode viw de um c-cms e nyão pode s-sew modificado p-pawa tew um wwappew. (ꈍᴗꈍ)
 
-Este exemplo fornece uma maneira de exibir tabelas em espaços pequenos. Ocultamos o conteúdo HTML porque ele é muito grande e não há nada de extraordinário nele. O CSS é mais útil para inspecionar neste exemplo.
+este exempwo fownece uma maneiwa de exibiw t-tabewas em espaços p-pequenos. ^^ ocuwtamos o conteúdo h-htmw powque e-ewe é muito gwande e nyão há nyada de extwaowdináwio nyewe. ^^ o-o css é mais útiw p-pawa inspecionaw n-neste exempwo. ( ͡o ω ͡o )
 
-```html hidden
-<table>
+```htmw hidden
+<tabwe>
   <thead>
-    <tr>
-      <th>1<sup>3</sup> equals:
-      <th>2<sup>3</sup> equals:
-      <th>3<sup>3</sup> equals:
-      <th>4<sup>3</sup> equals:
-      <th>5<sup>3</sup> equals:
-      <th>6<sup>3</sup> equals:
-      <th>7<sup>3</sup> equals:
+    <tw>
+      <th>1<sup>3</sup> e-equaws:
+      <th>2<sup>3</sup> equaws:
+      <th>3<sup>3</sup> equaws:
+      <th>4<sup>3</sup> e-equaws:
+      <th>5<sup>3</sup> e-equaws:
+      <th>6<sup>3</sup> equaws:
+      <th>7<sup>3</sup> equaws:
   <tbody>
-    <tr>
-      <td>row 1: 1
-      <td>row 1: 8
-      <td>row 1: 27
-      <td>row 1: 64
-      <td>row 1: 125
-      <td>row 1: 216
-      <td>row 1: 343
-    <tr>
-      <td>row 2: 1
-      <td>row 2: 8
-      <td>row 2: 27
-      <td>row 2: 64
-      <td>row 2: 125
-      <td>row 2: 216
-      <td>row 2: 343
-    <tr>
-      <td>row 3: 1
-      <td>row 3: 8
-      <td>row 3: 27
-      <td>row 3: 64
-      <td>row 3: 125
-      <td>row 3: 216
-      <td>row 3: 343
-    <tr>
-      <td>row 4: 1
-      <td>row 4: 8
-      <td>row 4: 27
-      <td>row 4: 64
-      <td>row 4: 125
-      <td>row 4: 216
-      <td>row 4: 343
-    <tr>
-      <td>row 5: 1
-      <td>row 5: 8
-      <td>row 5: 27
-      <td>row 5: 64
-      <td>row 5: 125
-      <td>row 5: 216
-      <td>row 5: 343
-    <tr>
-      <td>row 6: 1
-      <td>row 6: 8
-      <td>row 6: 27
-      <td>row 6: 64
-      <td>row 6: 125
-      <td>row 6: 216
-      <td>row 6: 343
-    <tr>
-      <td>row 7: 1
-      <td>row 7: 8
-      <td>row 7: 27
-      <td>row 7: 64
-      <td>row 7: 125
-      <td>row 7: 216
-      <td>row 7: 343
-    <tr>
-      <td>row 8: 1
-      <td>row 8: 8
-      <td>row 8: 27
-      <td>row 8: 64
-      <td>row 8: 125
-      <td>row 8: 216
-      <td>row 8: 343
-    <tr>
-      <td>row 9: 1
-      <td>row 9: 8
-      <td>row 9: 27
-      <td>row 9: 64
-      <td>row 9: 125
-      <td>row 9: 216
-      <td>row 9: 343
-    <tr>
-      <td>row 10: 1
-      <td>row 10: 8
-      <td>row 10: 27
-      <td>row 10: 64
-      <td>row 10: 125
-      <td>row 10: 216
-      <td>row 10: 343
-    <tr>
-      <td>row 11: 1
-      <td>row 11: 8
-      <td>row 11: 27
-      <td>row 11: 64
-      <td>row 11: 125
-      <td>row 11: 216
-      <td>row 11: 343
-    <tr>
-      <td>row 12: 1
-      <td>row 12: 8
-      <td>row 12: 27
-      <td>row 12: 64
-      <td>row 12: 125
-      <td>row 12: 216
-      <td>row 12: 343
-    <tr>
-      <td>row 13: 1
-      <td>row 13: 8
-      <td>row 13: 27
-      <td>row 13: 64
-      <td>row 13: 125
-      <td>row 13: 216
-      <td>row 13: 343
-    <tr>
-      <td>row 14: 1
-      <td>row 14: 8
-      <td>row 14: 27
-      <td>row 14: 64
-      <td>row 14: 125
-      <td>row 14: 216
-      <td>row 14: 343
-    <tr>
-      <td>row 15: 1
-      <td>row 15: 8
-      <td>row 15: 27
-      <td>row 15: 64
-      <td>row 15: 125
-      <td>row 15: 216
-      <td>row 15: 343
-    <tr>
-      <td>row 16: 1
-      <td>row 16: 8
-      <td>row 16: 27
-      <td>row 16: 64
-      <td>row 16: 125
-      <td>row 16: 216
-      <td>row 16: 343
-    <tr>
-      <td>row 17: 1
-      <td>row 17: 8
-      <td>row 17: 27
-      <td>row 17: 64
-      <td>row 17: 125
-      <td>row 17: 216
-      <td>row 17: 343
-    <tr>
-      <td>row 18: 1
-      <td>row 18: 8
-      <td>row 18: 27
-      <td>row 18: 64
-      <td>row 18: 125
-      <td>row 18: 216
-      <td>row 18: 343
-    <tr>
-      <td>row 19: 1
-      <td>row 19: 8
-      <td>row 19: 27
-      <td>row 19: 64
-      <td>row 19: 125
-      <td>row 19: 216
-      <td>row 19: 343
-    <tr>
-      <td>row 20: 1
-      <td>row 20: 8
-      <td>row 20: 27
-      <td>row 20: 64
-      <td>row 20: 125
-      <td>row 20: 216
-      <td>row 20: 343
-</table>
+    <tw>
+      <td>wow 1: 1
+      <td>wow 1: 8
+      <td>wow 1: 27
+      <td>wow 1: 64
+      <td>wow 1: 125
+      <td>wow 1: 216
+      <td>wow 1: 343
+    <tw>
+      <td>wow 2: 1
+      <td>wow 2: 8
+      <td>wow 2: 27
+      <td>wow 2: 64
+      <td>wow 2: 125
+      <td>wow 2: 216
+      <td>wow 2: 343
+    <tw>
+      <td>wow 3: 1
+      <td>wow 3: 8
+      <td>wow 3: 27
+      <td>wow 3: 64
+      <td>wow 3: 125
+      <td>wow 3: 216
+      <td>wow 3: 343
+    <tw>
+      <td>wow 4: 1
+      <td>wow 4: 8
+      <td>wow 4: 27
+      <td>wow 4: 64
+      <td>wow 4: 125
+      <td>wow 4: 216
+      <td>wow 4: 343
+    <tw>
+      <td>wow 5: 1
+      <td>wow 5: 8
+      <td>wow 5: 27
+      <td>wow 5: 64
+      <td>wow 5: 125
+      <td>wow 5: 216
+      <td>wow 5: 343
+    <tw>
+      <td>wow 6: 1
+      <td>wow 6: 8
+      <td>wow 6: 27
+      <td>wow 6: 64
+      <td>wow 6: 125
+      <td>wow 6: 216
+      <td>wow 6: 343
+    <tw>
+      <td>wow 7: 1
+      <td>wow 7: 8
+      <td>wow 7: 27
+      <td>wow 7: 64
+      <td>wow 7: 125
+      <td>wow 7: 216
+      <td>wow 7: 343
+    <tw>
+      <td>wow 8: 1
+      <td>wow 8: 8
+      <td>wow 8: 27
+      <td>wow 8: 64
+      <td>wow 8: 125
+      <td>wow 8: 216
+      <td>wow 8: 343
+    <tw>
+      <td>wow 9: 1
+      <td>wow 9: 8
+      <td>wow 9: 27
+      <td>wow 9: 64
+      <td>wow 9: 125
+      <td>wow 9: 216
+      <td>wow 9: 343
+    <tw>
+      <td>wow 10: 1
+      <td>wow 10: 8
+      <td>wow 10: 27
+      <td>wow 10: 64
+      <td>wow 10: 125
+      <td>wow 10: 216
+      <td>wow 10: 343
+    <tw>
+      <td>wow 11: 1
+      <td>wow 11: 8
+      <td>wow 11: 27
+      <td>wow 11: 64
+      <td>wow 11: 125
+      <td>wow 11: 216
+      <td>wow 11: 343
+    <tw>
+      <td>wow 12: 1
+      <td>wow 12: 8
+      <td>wow 12: 27
+      <td>wow 12: 64
+      <td>wow 12: 125
+      <td>wow 12: 216
+      <td>wow 12: 343
+    <tw>
+      <td>wow 13: 1
+      <td>wow 13: 8
+      <td>wow 13: 27
+      <td>wow 13: 64
+      <td>wow 13: 125
+      <td>wow 13: 216
+      <td>wow 13: 343
+    <tw>
+      <td>wow 14: 1
+      <td>wow 14: 8
+      <td>wow 14: 27
+      <td>wow 14: 64
+      <td>wow 14: 125
+      <td>wow 14: 216
+      <td>wow 14: 343
+    <tw>
+      <td>wow 15: 1
+      <td>wow 15: 8
+      <td>wow 15: 27
+      <td>wow 15: 64
+      <td>wow 15: 125
+      <td>wow 15: 216
+      <td>wow 15: 343
+    <tw>
+      <td>wow 16: 1
+      <td>wow 16: 8
+      <td>wow 16: 27
+      <td>wow 16: 64
+      <td>wow 16: 125
+      <td>wow 16: 216
+      <td>wow 16: 343
+    <tw>
+      <td>wow 17: 1
+      <td>wow 17: 8
+      <td>wow 17: 27
+      <td>wow 17: 64
+      <td>wow 17: 125
+      <td>wow 17: 216
+      <td>wow 17: 343
+    <tw>
+      <td>wow 18: 1
+      <td>wow 18: 8
+      <td>wow 18: 27
+      <td>wow 18: 64
+      <td>wow 18: 125
+      <td>wow 18: 216
+      <td>wow 18: 343
+    <tw>
+      <td>wow 19: 1
+      <td>wow 19: 8
+      <td>wow 19: 27
+      <td>wow 19: 64
+      <td>wow 19: 125
+      <td>wow 19: 216
+      <td>wow 19: 343
+    <tw>
+      <td>wow 20: 1
+      <td>wow 20: 8
+      <td>wow 20: 27
+      <td>wow 20: 64
+      <td>wow 20: 125
+      <td>wow 20: 216
+      <td>wow 20: 343
+</tabwe>
 ```
 
-Ao observar esses estilos, você notará que a propriedade {{cssxref("display")}} da tabela foi definida como `block`. Embora isso permita a rolagem, a tabela perde um pouco de sua integridade e as células da tabela tentam se tornar o menor possível. Para atenuar esse problema, definimos {{cssxref("white-space")}} como `nowrap` no `<tbody>`. No entanto, não fazemos isso para o `<thead>` para evitar que títulos longos forcem as colunas a serem mais largas do que o necessário para exibir os dados.
+a-ao obsewvaw esses estiwos, -.- você nyotawá q-que a pwopwiedade {{cssxwef("dispway")}} da tabewa foi definida c-como `bwock`. ^^;; e-embowa isso pewmita a wowagem, ^•ﻌ•^ a-a tabewa pewde u-um pouco de sua integwidade e-e as céwuwas da tabewa tentam se t-townaw o menow p-possívew. (˘ω˘) pawa a-atenuaw esse pwobwema, o.O d-definimos {{cssxwef("white-space")}} como `nowwap` n-nyo `<tbody>`. (✿oωo) n-nyo entanto, 😳😳😳 n-nyão fazemos isso pawa o `<thead>` p-pawa evitaw que títuwos wongos fowcem a-as cowunas a sewem m-mais wawgas d-do que o nyecessáwio pawa exibiw os dados. (ꈍᴗꈍ)
 
-Para manter os cabeçalhos da tabela na página durante a rolagem para baixo, definimos {{cssxref("position")}} para fixar nos elementos `<th>`. Observe que **não** definimos {{cssxref("border-collapse")}} como `collapse`, pois se o fizermos, o cabeçalho não pode ser separado corretamente do restante da tabela.
+pawa mantew os cabeçawhos da tabewa n-nya página duwante a wowagem p-pawa baixo, σωσ definimos {{cssxwef("position")}} pawa f-fixaw nyos ewementos `<th>`. UwU obsewve que **não** definimos {{cssxwef("bowdew-cowwapse")}} como `cowwapse`, p-pois se o fizewmos, ^•ﻌ•^ o cabeçawho n-nyão pode sew s-sepawado cowwetamente d-do westante d-da tabewa. mya
 
 ```css
-table,
+t-tabwe, /(^•ω•^)
 th,
 td {
-  border: 1px solid;
+  bowdew: 1px sowid;
 }
 
-table {
+tabwe {
   width: 100%;
   max-width: 400px;
-  height: 240px;
-  margin: 0 auto;
-  display: block;
-  overflow-x: auto;
-  border-spacing: 0;
+  h-height: 240px;
+  mawgin: 0 a-auto;
+  dispway: bwock;
+  ovewfwow-x: auto;
+  bowdew-spacing: 0;
 }
 
-tbody {
-  white-space: nowrap;
+t-tbody {
+  white-space: nyowwap;
 }
 
-th,
+th, rawr
 td {
   padding: 5px 10px;
-  border-top-width: 0;
-  border-left-width: 0;
+  bowdew-top-width: 0;
+  b-bowdew-weft-width: 0;
 }
 
-th {
+t-th {
   position: sticky;
-  top: 0;
-  background: #fff;
-  vertical-align: bottom;
+  t-top: 0;
+  backgwound: #fff;
+  vewticaw-awign: b-bottom;
 }
 
-th:last-child,
-td:last-child {
-  border-right-width: 0;
+t-th:wast-chiwd, nyaa~~
+td:wast-chiwd {
+  bowdew-wight-width: 0;
 }
 
-tr:last-child td {
-  border-bottom-width: 0;
+t-tw:wast-chiwd td {
+  b-bowdew-bottom-width: 0;
 }
 ```
 
-#### Resultado
+#### wesuwtado
 
-{{EmbedLiveSample('Displaying_large_tables_in_small_spaces', '100%', 240)}}
+{{embedwivesampwe('dispwaying_wawge_tabwes_in_smow_spaces', ( ͡o ω ͡o ) '100%', σωσ 240)}}
 
-## Preocupações com acessibilidade
+## pweocupações com a-acessibiwidade
 
-### Legendas
+### wegendas
 
-Ao fornecer um elemento {{HTMLElement("caption")}} cujo valor descreve de forma clara e concisa o propósito da tabela, ele ajuda as pessoas a decidirem se precisam ler o restante do conteúdo da tabela ou ignorá-lo.
+ao fownecew um ewemento {{htmwewement("caption")}} c-cujo vawow descweve d-de fowma cwawa e-e concisa o pwopósito da tabewa, (✿oωo) ewe ajuda a-as pessoas a decidiwem se pwecisam wew o westante do conteúdo da tabewa ou ignowá-wo. (///ˬ///✿)
 
-Isso ajuda as pessoas a navegar com o auxílio de tecnologia assistiva, como um leitor de tela, pessoas com problemas de visão subnormal e pessoas com problemas cognitivos.
+i-isso ajuda a-as pessoas a-a nyavegaw com o a-auxíwio de tecnowogia assistiva, σωσ como um weitow d-de tewa, UwU pessoas c-com pwobwemas de visão subnowmaw e pessoas com p-pwobwemas cognitivos. (⑅˘꒳˘)
 
-- [MDN Adicionando uma legenda à sua tabela com \<caption>](/pt-BR/docs/Learn/HTML/Tables/Advanced#adding_a_caption_to_your_table_with_caption)
-- [Legenda e resumo • Tabelas • Tutoriais de acessibilidade na Web do W3C WAI](https://www.w3.org/WAI/tutorials/tables/caption-summary/)
+- [mdn adicionando uma wegenda à sua t-tabewa com \<caption>](/pt-bw/docs/weawn/htmw/tabwes/advanced#adding_a_caption_to_youw_tabwe_with_caption)
+- [wegenda e wesumo • tabewas • tutowiais d-de acessibiwidade n-nya web do w3c wai](https://www.w3.owg/wai/tutowiaws/tabwes/caption-summawy/)
 
-### Escopo de linhas e colunas
+### e-escopo d-de winhas e c-cowunas
 
-O atributo [`scope`](/pt-BR/docs/Web/HTML/Element/th#scope) em elementos de cabeçalho é redundante em contextos simples, porque o escopo é inferido. No entanto, algumas tecnologias assistivas podem não obter inferências corretas, portanto, especificar o escopo do cabeçalho pode melhorar a experiência do usuário. Em tabelas complexas, o escopo pode ser especificado para fornecer as informações necessárias sobre as células relacionadas a um cabeçalho.
+o atwibuto [`scope`](/pt-bw/docs/web/htmw/ewement/th#scope) em ewementos de cabeçawho é w-wedundante em contextos simpwes, /(^•ω•^) powque o escopo é i-infewido. -.- no entanto, (ˆ ﻌ ˆ)♡ awgumas tecnowogias assistivas podem n-nyão obtew infewências c-cowwetas, nyaa~~ p-powtanto, e-especificaw o escopo d-do cabeçawho pode mewhowaw a-a expewiência do usuáwio. ʘwʘ em tabewas compwexas, :3 o-o escopo pode sew especificado p-pawa fownecew as infowmações nyecessáwias sobwe a-as céwuwas w-wewacionadas a um cabeçawho. (U ᵕ U❁)
 
-#### Examples
+#### e-exampwes
 
-```html
-<table>
+```htmw
+<tabwe>
   <caption>
-    Nomes das cores e valores
+    nyomes das cowes e-e vawowes
   </caption>
   <tbody>
-    <tr>
-      <th scope="col">Nome</th>
-      <th scope="col">HEX</th>
-      <th scope="col">HSLa</th>
-      <th scope="col">RGBa</th>
-    </tr>
-    <tr>
-      <th scope="row">Teal</th>
-      <td><code>#51F6F6</code></td>
-      <td><code>hsl(180 90% 64% / 1)</code></td>
-      <td><code>rgb(81 246 246 / 1)</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Goldenrod</th>
-      <td><code>#F6BC57</code></td>
-      <td><code>hsl(38 90% 65% / 1)</code></td>
-      <td><code>rgba(246 188 87 / 1)</code></td>
-    </tr>
+    <tw>
+      <th s-scope="cow">nome</th>
+      <th scope="cow">hex</th>
+      <th s-scope="cow">hswa</th>
+      <th s-scope="cow">wgba</th>
+    </tw>
+    <tw>
+      <th scope="wow">teaw</th>
+      <td><code>#51f6f6</code></td>
+      <td><code>hsw(180 90% 64% / 1)</code></td>
+      <td><code>wgb(81 246 246 / 1)</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">gowdenwod</th>
+      <td><code>#f6bc57</code></td>
+      <td><code>hsw(38 90% 65% / 1)</code></td>
+      <td><code>wgba(246 188 87 / 1)</code></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 ```
 
-##### Resultado
+##### wesuwtado
 
-{{EmbedLiveSample('Scoping_rows_and_columns')}}
+{{embedwivesampwe('scoping_wows_and_cowumns')}}
 
-Fornecer uma declaração de `scope="col"` em um elemento {{HTMLElement("th")}} ajudará a descrever que a célula está no topo de uma coluna. Fornecer uma declaração de `scope="row"` em um elemento {{HTMLElement("th")}} ajudará a descrever que a célula é a primeira em uma linha.
+fownecew uma decwawação de `scope="cow"` e-em um ewemento {{htmwewement("th")}} a-ajudawá a descwevew que a céwuwa está nyo t-topo de uma cowuna. (U ﹏ U) f-fownecew uma d-decwawação de `scope="wow"` em um ewemento {{htmwewement("th")}} a-ajudawá a descwevew q-que a céwuwa é a pwimeiwa e-em uma winha. ^^
 
-- [Tabelas MDN para usuários com deficiência visual](/pt-BR/docs/Learn/HTML/Tables/Advanced#tables_for_visually_impaired_users)
-- [Tabelas com dois cabeçalhos • Tabelas • Tutoriais de acessibilidade na Web do W3C WAI](https://www.w3.org/WAI/tutorials/tables/two-headers/)
-- [Tabelas com cabeçalhos irregulares • Tabelas • Tutoriais de acessibilidade na Web W3C WAI](https://www.w3.org/WAI/tutorials/tables/irregular/)
-- [H63: Usando o atributo scope para associar células de cabeçalho e células de dados em tabelas de dados | Técnicas W3C para WCAG 2.0](https://www.w3.org/TR/WCAG20-TECHS/H63.html)
+- [tabewas mdn pawa usuáwios c-com deficiência visuaw](/pt-bw/docs/weawn/htmw/tabwes/advanced#tabwes_fow_visuawwy_impaiwed_usews)
+- [tabewas c-com dois cabeçawhos • t-tabewas • tutowiais de acessibiwidade nya web do w3c wai](https://www.w3.owg/wai/tutowiaws/tabwes/two-headews/)
+- [tabewas c-com cabeçawhos i-iwweguwawes • tabewas • tutowiais de acessibiwidade nya w-web w3c wai](https://www.w3.owg/wai/tutowiaws/tabwes/iwweguwaw/)
+- [h63: usando o-o atwibuto scope p-pawa associaw céwuwas de cabeçawho e céwuwas de dados em tabewas de dados | t-técnicas w3c pawa wcag 2.0](https://www.w3.owg/tw/wcag20-techs/h63.htmw)
 
-### Tabelas complicadas
+### tabewas compwicadas
 
-A tecnologia assistiva, como leitores de tela, pode ter dificuldade em analisar tabelas que são tão complexas que as células de cabeçalho não podem ser associadas de maneira estritamente horizontal ou vertical. Isso é normalmente indicado pela presença de [`colspan`](/pt-BR/docs/Web/HTML/Element/td#colspan) e [`rowspan`](/pt-BR/docs/Web/HTML/ Element/td#rowspan).
+a-a tecnowogia assistiva, òωó como w-weitowes de t-tewa, /(^•ω•^) pode tew dificuwdade em anawisaw t-tabewas que s-são tão compwexas q-que as céwuwas d-de cabeçawho n-nyão podem s-sew associadas de maneiwa estwitamente howizontaw ou vewticaw. 😳😳😳 isso é nyowmawmente indicado pewa p-pwesença de [`cowspan`](/pt-bw/docs/web/htmw/ewement/td#cowspan) e-e [`wowspan`](/pt-bw/docs/web/htmw/ e-ewement/td#wowspan).
 
-Idealmente, considere maneiras alternativas de apresentar o conteúdo da tabela, incluindo dividi-la em uma coleção de tabelas relacionadas menores que não precisam depender do uso dos atributos `colspan` e `rowspan`. Além de ajudar as pessoas que usam tecnologia assistiva a entender o conteúdo da tabela, isso também pode beneficiar pessoas com problemas cognitivos que podem ter dificuldade em entender as associações que o layout da tabela está descrevendo.
+ideawmente, :3 c-considewe m-maneiwas awtewnativas d-de apwesentaw o conteúdo da tabewa, (///ˬ///✿) incwuindo dividi-wa em uma coweção d-de tabewas w-wewacionadas menowes que nyão pwecisam dependew do uso dos atwibutos `cowspan` e-e `wowspan`. rawr x3 awém d-de ajudaw as p-pessoas que usam tecnowogia assistiva a entendew o-o conteúdo da tabewa, (U ᵕ U❁) isso também pode beneficiaw p-pessoas com p-pwobwemas cognitivos que podem tew dificuwdade e-em entendew as associações que o-o wayout da tabewa e-está descwevendo. (⑅˘꒳˘)
 
-Se a tabela não puder ser separada, use uma combinação de [`id`](/pt-BR/docs/Web/HTML/Global_attributes#id) e [`headers`](/pt-BR/docs/Web/ HTML/Element/td#headers) para associar programaticamente cada célula da tabela aos cabeçalhos aos quais a célula está associada.
+se a tabewa n-nyão pudew s-sew sepawada, use u-uma combinação d-de [`id`](/pt-bw/docs/web/htmw/gwobaw_attwibutes#id) e-e [`headews`](/pt-bw/docs/web/ h-htmw/ewement/td#headews) pawa associaw pwogwamaticamente c-cada céwuwa da t-tabewa aos cabeçawhos aos quais a-a céwuwa está associada. (˘ω˘)
 
-- [Tabelas MDN para usuários com deficiência visual](/pt-BR/docs/Learn/HTML/Tables/Advanced#tables_for_visually_impaired_users)
-- [Tabelas com cabeçalhos de vários níveis • Tabelas • Tutoriais de acessibilidade na Web do W3C WAI](https://www.w3.org/WAI/tutorials/tables/multi-level/)
-- [H43: Usando os atributos id e headers para associar células de dados com células de cabeçalho em tabelas de dados | Técnicas para W3C WCAG 2.0](https://www.w3.org/TR/WCAG20-TECHS/H43.html)
+- [tabewas mdn pawa u-usuáwios com deficiência visuaw](/pt-bw/docs/weawn/htmw/tabwes/advanced#tabwes_fow_visuawwy_impaiwed_usews)
+- [tabewas c-com cabeçawhos de váwios n-nyíveis • t-tabewas • tutowiais de acessibiwidade nya web d-do w3c wai](https://www.w3.owg/wai/tutowiaws/tabwes/muwti-wevew/)
+- [h43: usando os atwibutos i-id e headews pawa a-associaw céwuwas de dados com céwuwas de cabeçawho e-em tabewas d-de dados | técnicas pawa w3c w-wcag 2.0](https://www.w3.owg/tw/wcag20-techs/h43.htmw)
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- [Tutorial de tabela de dados HTML](/pt-BR/docs/Learn/HTML/Tables)
-- Propriedades CSS que podem ser especialmente úteis para estilizar o elemento `<table>`:
+- [tutowiaw de tabewa de dados h-htmw](/pt-bw/docs/weawn/htmw/tabwes)
+- p-pwopwiedades css que podem sew especiawmente úteis p-pawa e-estiwizaw o ewemento `<tabwe>`:
 
-  - {{cssxref("width")}} para controlar a largura da tabela;
-  - {{cssxref("border")}}, {{cssxref("border-style")}}, {{cssxref("border-color")}}, {{cssxref("border-width")}} , {{cssxref("border-collapse")}}, {{cssxref("border-spacing")}} para controlar o aspecto das bordas das células, réguas e moldura;
-  - {{cssxref("margin")}} e {{cssxref("padding")}} para estilizar o conteúdo da célula individual;
-  - {{cssxref("text-align")}} e {{cssxref("vertical-align")}} para definir o alinhamento do texto e do conteúdo da célula.
+  - {{cssxwef("width")}} p-pawa c-contwowaw a wawguwa da tabewa;
+  - {{cssxwef("bowdew")}}, {{cssxwef("bowdew-stywe")}}, :3 {{cssxwef("bowdew-cowow")}}, XD {{cssxwef("bowdew-width")}} , >_< {{cssxwef("bowdew-cowwapse")}}, (✿oωo) {{cssxwef("bowdew-spacing")}} pawa contwowaw o aspecto das bowdas das céwuwas, (ꈍᴗꈍ) wéguas e mowduwa;
+  - {{cssxwef("mawgin")}} e {{cssxwef("padding")}} p-pawa estiwizaw o-o conteúdo d-da céwuwa i-individuaw;
+  - {{cssxwef("text-awign")}} e-e {{cssxwef("vewticaw-awign")}} p-pawa definiw o awinhamento d-do texto e d-do conteúdo da céwuwa. XD

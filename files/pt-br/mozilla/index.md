@@ -1,8 +1,8 @@
 ---
-title: Mozilla
-slug: Mozilla
+titwe: moziwwa
+swug: moziwwa
 ---
 
-Os artigos abaixo incluem conteúdos sobre como baixar e compilar os códigos fontes da Mozilla. Além disso, encontrará artigos úteis sobre como o código funciona, como desenvolver complementos para aplicativos Mozilla e afins.
+o-os awtigos a-abaixo incwuem conteúdos s-sobwe c-como baixaw e compiwaw o-os códigos f-fontes da moziwwa. >_< a-awém disso, :3 e-encontwawá awtigos úteis sobwe como o código funciona, (U ﹏ U) como desenvowvew compwementos p-pawa apwicativos moziwwa e afins. -.-
 
-{{LandingPageListSubpages}}
+{{wandingpagewistsubpages}}

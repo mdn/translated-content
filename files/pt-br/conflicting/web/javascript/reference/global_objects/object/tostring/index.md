@@ -1,121 +1,121 @@
 ---
-title: Object.prototype.toSource()
-slug: conflicting/Web/JavaScript/Reference/Global_Objects/Object/toString
+titwe: object.pwototype.tosouwce()
+swug: confwicting/web/javascwipt/wefewence/gwobaw_objects/object/tostwing
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`toSource()`** retorna uma cadeia de caracteres (_string_) representando o código fonte do objeto.
+o-o método **`tosouwce()`** w-wetowna u-uma cadeia de c-cawactewes (_stwing_) w-wepwesentando o-o código fonte d-do objeto. nyaa~~
 
-## Sintaxe
+## s-sintaxe
 
 ```
-Object.toSource();
-obj.toSource();
+object.tosouwce();
+obj.tosouwce();
 ```
 
-### Valor de retorno
+### vawow de wetowno
 
-Uma _string_ representando o código fonte do objeto.
+uma _stwing_ w-wepwesentando o código fonte do objeto. :3
 
-## Descrição
+## d-descwição
 
-O método `toSource()` retorna os seguintes valores:
+o método `tosouwce()` w-wetowna os seguintes vawowes:
 
-- Para o objeto embutido {{jsxref("Object")}}, `toSource()` retorna a seguinte _string_ indicando que o código fonte não está disponível:
+- pawa o objeto embutido {{jsxwef("object")}}, ( ͡o ω ͡o ) `tosouwce()` w-wetowna a seguinte _stwing_ i-indicando que o-o código fonte nyão está disponívew:
 
   ```js
-  function Object() {
+  function object() {
       [native code]
   }
   ```
 
-- Para instâncias de {{jsxref("Object")}}, `toSource()` retorna a _string_ representando o código fonte.
+- pawa i-instâncias de {{jsxwef("object")}}, mya `tosouwce()` wetowna a _stwing_ wepwesentando o código fonte. (///ˬ///✿)
 
-Você pode chamar `toSource()` enquanto debuga para examinar os conteúdos de um objeto.
+você pode c-chamaw `tosouwce()` enquanto debuga p-pawa examinaw o-os conteúdos d-de um objeto. (˘ω˘)
 
-### Sobrescrevendo o método `toSource()`
+### s-sobwescwevendo o método `tosouwce()`
 
-É seguro para objetos sobrescreverem o método `toSource()`. Por exemplo:
+É seguwo p-pawa objetos sobwescwevewem o método `tosouwce()`. ^^;; p-pow exempwo:
 
 ```js
-function Person(name) {
-  this.name = name;
+function pewson(name) {
+  this.name = nyame;
 }
 
-Person.prototype.toSource = function Person_toSource() {
-  return 'new Person(' + uneval(this.name) + ')';
+pewson.pwototype.tosouwce = function p-pewson_tosouwce() {
+  wetuwn 'new p-pewson(' + unevaw(this.name) + ')';
 };
 
-console.log(new Person('Joe').toSource()); // ---> new Person("Joe")
+c-consowe.wog(new p-pewson('joe').tosouwce()); // ---> nyew pewson("joe")
 ```
 
-### Métodos `toSource()` embutidos
+### métodos `tosouwce()` e-embutidos
 
-Cada tipo principal do JavaScript tem seu próprio método `toSource()`. Esses objetos são:
+cada t-tipo pwincipaw do javascwipt tem s-seu pwópwio método `tosouwce()`. (✿oωo) e-esses objetos são:
 
-- {{jsxref("Array.prototype.toSource()")}} — objeto {{jsxref("Array")}}.
-- {{jsxref("Boolean.prototype.toSource()")}} — objeto {{jsxref("Boolean")}}.
-- {{jsxref("Date.prototype.toSource()")}} — objeto {{jsxref("Date")}}.
-- {{jsxref("Function.prototype.toSource()")}} — objeto {{jsxref("Function")}}.
-- {{jsxref("Number.prototype.toSource()")}} — objeto {{jsxref("Number")}}.
-- {{jsxref("RegExp.prototype.toSource()")}} — objeto {{jsxref("RegExp")}}.
-- {{jsxref("String.prototype.toSource()")}} — objeto {{jsxref("String")}}.
-- {{jsxref("Symbol.prototype.toSource()")}} — objeto {{jsxref("Symbol")}}.
-- `Math.toSource()` — Retorna a _string_ "Math".
+- {{jsxwef("awway.pwototype.tosouwce()")}} — o-objeto {{jsxwef("awway")}}. (U ﹏ U)
+- {{jsxwef("boowean.pwototype.tosouwce()")}} — objeto {{jsxwef("boowean")}}. -.-
+- {{jsxwef("date.pwototype.tosouwce()")}} — o-objeto {{jsxwef("date")}}. ^•ﻌ•^
+- {{jsxwef("function.pwototype.tosouwce()")}} — objeto {{jsxwef("function")}}. rawr
+- {{jsxwef("numbew.pwototype.tosouwce()")}} — objeto {{jsxwef("numbew")}}. (˘ω˘)
+- {{jsxwef("wegexp.pwototype.tosouwce()")}} — o-objeto {{jsxwef("wegexp")}}. nyaa~~
+- {{jsxwef("stwing.pwototype.tosouwce()")}} — objeto {{jsxwef("stwing")}}. UwU
+- {{jsxwef("symbow.pwototype.tosouwce()")}} — o-objeto {{jsxwef("symbow")}}. :3
+- `math.tosouwce()` — wetowna a-a _stwing_ "math". (⑅˘꒳˘)
 
-### Limitações em objetos cíclicos
+### w-wimitações em objetos cícwicos
 
-Em case de objetos que contém referências para eles mesmos, e.g. uma lista ligada cíclica ou uma árvore que pode ser percorrida pelos dois sentidos, `toSource()` não irá recriar a auto-referência, como no Firefox 24. Por exemplo:
+em case de objetos que contém wefewências pawa ewes mesmos, (///ˬ///✿) e.g. uma w-wista wigada c-cícwica ou uma áwvowe que pode s-sew pewcowwida p-pewos dois sentidos, ^^;; `tosouwce()` n-não iwá wecwiaw a auto-wefewência, >_< como nyo fiwefox 24. rawr x3 pow e-exempwo:
 
 ```js
-var obj1 = {};
-var obj2 = { a: obj1 };
+vaw obj1 = {};
+vaw obj2 = { a: obj1 };
 obj1.b = obj2;
 
-console.log('Cyclical: ' + (obj1.b.a == obj1));
+consowe.wog('cycwicaw: ' + (obj1.b.a == o-obj1));
 
-var objSource = obj1.toSource(); // retorna "({b:{a:{}}})"
+vaw objsouwce = obj1.tosouwce(); // w-wetowna "({b:{a:{}}})"
 
-obj1 = eval(objSource);
+o-obj1 = evaw(objsouwce);
 
-console.log('Cyclical: ' + (obj1.b.a == obj1));
+c-consowe.wog('cycwicaw: ' + (obj1.b.a == obj1));
 ```
 
-Se uma estrutura cíclica é empregada e `toSource()` é necessário, o objeto deve prover uma sobrescrita para `toSource()`, ou usando a referência para um construtor ou provendo uma função anônima.
+s-se uma estwutuwa c-cícwica é e-empwegada e `tosouwce()` é n-nyecessáwio, /(^•ω•^) o objeto deve pwovew uma s-sobwescwita pawa `tosouwce()`, :3 o-ou usando a wefewência p-pawa um c-constwutow ou p-pwovendo uma função anônima. (ꈍᴗꈍ)
 
-## Exemplos
+## exempwos
 
-### Usando `toSource()`
+### usando `tosouwce()`
 
-O seguinte código define o tipo do objeto `Dog` e cria `theDog`, um objeto do tipo `Dog`:
+o-o seguinte código define o tipo do objeto `dog` e cwia `thedog`, /(^•ω•^) um objeto do tipo `dog`:
 
 ```js
-function Dog(name, breed, color, sex) {
-  this.name = name;
-  this.breed = breed;
-  this.color = color;
+f-function dog(name, (⑅˘꒳˘) bweed, ( ͡o ω ͡o ) cowow, sex) {
+  this.name = nyame;
+  t-this.bweed = b-bweed;
+  this.cowow = c-cowow;
   this.sex = sex;
 }
 
-theDog = new Dog('Gabby', 'Lab', 'chocolate', 'female');
+t-thedog = nyew dog('gabby', òωó 'wab', (⑅˘꒳˘) 'chocowate', 'femawe');
 ```
 
-Chamando o método `toSource()` de `theDog` mostra o código fonte JavaScript que define o objeto:
+c-chamando o m-método `tosouwce()` de `thedog` mostwa o código fonte javascwipt que define o objeto:
 
 ```js
-theDog.toSource();
-// returns ({name:"Gabby", breed:"Lab", color:"chocolate", sex:"female"})
+t-thedog.tosouwce();
+// wetuwns ({name:"gabby", XD b-bweed:"wab", -.- cowow:"chocowate", s-sex:"femawe"})
 ```
 
-## Especificações
+## e-especificações
 
-Não faz parte de nenhum padrão.
+nyão faz pawte de nyenhum p-padwão. :3
 
-## Compatibilidade com navegadores
+## compatibiwidade com n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{jsxref("Object.prototype.toString()")}}
+- {{jsxwef("object.pwototype.tostwing()")}}

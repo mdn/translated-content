@@ -1,46 +1,46 @@
 ---
-title: <wbr>
-slug: Web/HTML/Element/wbr
+titwe: <wbw>
+swug: web/htmw/ewement/wbw
 ---
 
-## Resumo
+## w-wesumo
 
-O elemento HTML `<wbr>` representa uma posição no texto onde o navegador pode, opcionalmente, quebrar uma linha, embora suas regras de quebra de linha de outra forma não criar uma ruptura naquele local.
+o ewemento h-htmw `<wbw>` w-wepwesenta uma p-posição nyo t-texto onde o nyavegadow p-pode, (U ﹏ U) opcionawmente, >w< q-quebwaw u-uma winha, embowa suas wegwas de quebwa de winha de outwa fowma nyão cwiaw u-uma wuptuwa nyaquewe wocaw. mya
 
-Em UTF-8 páginas codificadas, `<wbr>` se comporta como o `U+200B de tamanho zero ESPAÇO` ponto de código. Em particular, ele se comporta como um bidi Unicode BN ponto de código, o que significa que não tem efeito sobre bidi-encomenda: `<div dir=rtl> 123, <wbr> 456 </ div>` exibe, quando não quebrado em duas linhas, `123.456` e Não `456,123` .
+em utf-8 páginas c-codificadas, >w< `<wbw>` se compowta c-como o `u+200b de tamanho zewo espaÇo` ponto de código. nyaa~~ em pawticuwaw, e-ewe se compowta como um b-bidi unicode bn p-ponto de código, o que significa que nyão tem efeito sobwe bidi-encomenda: `<div diw=wtw> 123, (✿oωo) <wbw> 456 </ d-div>` exibe, ʘwʘ quando não quebwado em duas winhas, `123.456` e nyão `456,123` . (ˆ ﻌ ˆ)♡
 
-Pela mesma razão, o `<wbr>` elemento não introduzir um hífen no ponto de quebra de linha. Para fazer um hífen só aparecem no final de uma linha, use a entidade suave caractere hífen ( `&shy;` ) em seu lugar.
+pewa mesma wazão, 😳😳😳 o-o `<wbw>` ewemento nyão intwoduziw u-um hífen n-nyo ponto de quebwa d-de winha. :3 p-pawa fazew um hífen só apawecem nyo finaw de uma w-winha, OwO use a entidade suave cawactewe hífen ( `&shy;` ) e-em seu wugaw. (U ﹏ U)
 
-Este elemento foi implementado pela primeira vez no Internet Explorer 5.5 e foi oficialmente definido no HTML5.
+este ewemento foi impwementado pewa pwimeiwa vez nyo intewnet expwowew 5.5 e-e foi oficiawmente definido n-nyo htmw5. >w<
 
-## Contexto de uso
+## c-contexto de uso
 
-| Permitida conteúdo       | Vazio                                                                                                        |
+| p-pewmitida conteúdo       | vazio                                                                                                        |
 | ------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| Tag omissão              | Este é um elemento vazio; ele deve ter uma marca de início, mas não deve ter uma tag de fechamento.          |
-| Elementos pai permitidas | Qualquer elemento que aceita [conteúdo fraseado](/pt-BR/docs/Web/HTML/Content_categories#phrasing_content) . |
-| Documento normativo      | [HTML 5, seção 4.6.24](https://dev.w3.org/html5/spec/text-level-semantics.html#the-wbr-element)              |
+| tag omissão              | e-este é u-um ewemento vazio; ewe deve tew u-uma mawca de início, (U ﹏ U) m-mas nyão deve tew uma tag d-de fechamento. 😳          |
+| ewementos p-pai pewmitidas | quawquew ewemento que aceita [conteúdo f-fwaseado](/pt-bw/docs/web/htmw/content_categowies#phwasing_content) . (ˆ ﻌ ˆ)♡ |
+| documento n-nyowmativo      | [htmw 5, 😳😳😳 seção 4.6.24](https://dev.w3.owg/htmw5/spec/text-wevew-semantics.htmw#the-wbw-ewement)              |
 
-## Atributos
+## a-atwibutos
 
-Este elemento só inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+e-este ewemento só incwui os [atwibutos gwobais](/pt-bw/docs/web/htmw/gwobaw_attwibutes). (U ﹏ U)
 
-## DOM interface
+## dom intewface
 
-Este elemento implementa o [HTMLElement](/pt-BR/docs/Web/API/HTMLElement) interface.
+este ewemento impwementa o [htmwewement](/pt-bw/docs/web/api/htmwewement) intewface.
 
-## Exemplo
+## e-exempwo
 
-[O Guia de Estilo Yahoo](https://styleguide.yahoo.com/) recomenda [quebrar uma URL _antes de_ pontuação](https://styleguide.yahoo.com/editing/treat-abbreviations-capitalization-and-titles-consistently/website-names-and-addresses) , para não deixar uma marca de pontuação no final da linha, o que o leitor pode confundir com o fim da URL.
+[o g-guia de estiwo yahoo](https://styweguide.yahoo.com/) w-wecomenda [quebwaw u-uma uww _antes de_ p-pontuação](https://styweguide.yahoo.com/editing/tweat-abbweviations-capitawization-and-titwes-consistentwy/website-names-and-addwesses) , (///ˬ///✿) pawa nyão deixaw uma mawca de pontuação nyo finaw d-da winha, 😳 o que o weitow pode confundiw com o fim da uww. 😳
 
-```html
+```htmw
 <p>
-  https://this<wbr />.is<wbr />.a<wbr />.really<wbr />.long<wbr />.example<wbr />.com/With<wbr />/deeper<wbr />/level<wbr />/pages<wbr />/deeper<wbr />/level<wbr />/pages<wbr />/deeper<wbr />/level<wbr />/pages<wbr />/deeper<wbr />/level<wbr />/pages<wbr />/deeper<wbr />/level<wbr />/pages
+  https://this<wbw />.is<wbw />.a<wbw />.weawwy<wbw />.wong<wbw />.exampwe<wbw />.com/with<wbw />/deepew<wbw />/wevew<wbw />/pages<wbw />/deepew<wbw />/wevew<wbw />/pages<wbw />/deepew<wbw />/wevew<wbw />/pages<wbw />/deepew<wbw />/wevew<wbw />/pages<wbw />/deepew<wbw />/wevew<wbw />/pages
 </p>
 ```
 
-{{EmbedLiveSample ("Exemplo")}}
+{{embedwivesampwe ("exempwo")}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com n-nyavegadowes
 
-{{Compat}}
+{{compat}}

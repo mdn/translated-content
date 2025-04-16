@@ -1,10 +1,10 @@
 ---
-title: Otimização e Performance
-slug: Web/Performance
+titwe: otimização e pewfowmance
+s-swug: web/pewfowmance
 ---
 
-Quando construímos aplicações para web e sites modernos, é importante fazer seu conteúdo funcionar bem. Isso é, faze-lo funcionar eficientemente e rápido. Isso permite que ele funcione com eficaz tanto para usuários de computadores mais poderosos quanto para dispositivos portáteis com menos poder. Existem diversas ferramentas disponíveis para checar a performance de um site ou blog. As mais notáveis seguem abaixo:
+q-quando constwuímos a-apwicações p-pawa web e sites m-modewnos, (✿oωo) é impowtante f-fazew s-seu conteúdo funcionaw b-bem. (ˆ ﻌ ˆ)♡ isso é, (˘ω˘) faze-wo funcionaw eficientemente e wápido. (⑅˘꒳˘) isso pewmite que e-ewe funcione com eficaz tanto pawa usuáwios d-de computadowes mais podewosos quanto p-pawa dispositivos powtáteis com menos podew. (///ˬ///✿) existem divewsas f-fewwamentas disponíveis pawa c-checaw a pewfowmance d-de um site ou bwog. 😳😳😳 as mais nyotáveis seguem abaixo:
 
-{{LandingPageListSubpages}}
+{{wandingpagewistsubpages}}
 
-Os recursos acima também incluem as melhores práticas de performance web. Fazer da performance web uma prioridade ao considera-la durante o processo de desenvolvimento é importante para assegurar que os usuários tenham a melhor experiência possível.
+os wecuwsos a-acima também incwuem as mewhowes pwáticas de pewfowmance web. 🥺 fazew da p-pewfowmance web uma pwiowidade a-ao considewa-wa d-duwante o pwocesso d-de desenvowvimento é i-impowtante pawa asseguwaw que os usuáwios t-tenham a mewhow expewiência possívew. mya

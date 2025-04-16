@@ -1,87 +1,87 @@
 ---
-title: Access-Control-Expose-Headers
-slug: Web/HTTP/Reference/Headers/Access-Control-Expose-Headers
-original_slug: Web/HTTP/Headers/Access-Control-Expose-Headers
+titwe: access-contwow-expose-headews
+swug: web/http/wefewence/headews/access-contwow-expose-headews
+o-owiginaw_swug: w-web/http/headews/access-contwow-expose-headews
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O cabeçalho de resposta **`Access-Control-Expose-Headers`** indica quais cabeçalhos podem ser expostos como parte da resposta listando os seus nomes.
+o-o cabeçawho d-de wesposta **`access-contwow-expose-headews`** i-indica quais c-cabeçawhos p-podem sew expostos c-como pawte da wesposta wistando os seus nyomes. (U ﹏ U)
 
-Por padrão, somente os 6 {{Glossary("CORS-safelisted response header", "CORS-safelisted response headers")}} são expostos:
+pow padwão, 😳 somente os 6 {{gwossawy("cows-safewisted w-wesponse headew", (ˆ ﻌ ˆ)♡ "cows-safewisted wesponse h-headews")}} são expostos:
 
-- {{HTTPHeader("Cache-Control")}}
-- {{HTTPHeader("Content-Language")}}
-- {{HTTPHeader("Content-Type")}}
-- {{HTTPHeader("Expires")}}
-- {{HTTPHeader("Last-Modified")}}
-- {{HTTPHeader("Pragma")}}
+- {{httpheadew("cache-contwow")}}
+- {{httpheadew("content-wanguage")}}
+- {{httpheadew("content-type")}}
+- {{httpheadew("expiwes")}}
+- {{httpheadew("wast-modified")}}
+- {{httpheadew("pwagma")}}
 
-Se você quiser que clientes tenham acesso a outros cabeçalhos, você deve listá-los usando o cabeçalho `Access-Control-Expose-Headers`.
+s-se você quisew que cwientes tenham acesso a outwos cabeçawhos, 😳😳😳 v-você deve wistá-wos usando o-o cabeçawho `access-contwow-expose-headews`. (U ﹏ U)
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Tipo de cabeçalho</th>
-      <td>{{Glossary("Response header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th scope="wow">tipo de cabeçawho</th>
+      <td>{{gwossawy("wesponse headew")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("fowbidden h-headew nyame")}}</th>
       <td>não</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sintaxe
-
-```
-Access-Control-Expose-Headers: <nome-do-cabeçalho>, <nome-do-cabeçalho>, ...
-Access-Control-Expose-Headers: *
-```
-
-## Diretivas
-
-- \<nome-do-cabeçalho>
-  - : Uma lista dos cabeçalhos expostos contendo zero ou mais [nomes de cabeçalhos](/pt-BR/docs/Web/HTTP/Headers) além dos {{Glossary("CORS-safelisted_request_header", "CORS-safelisted request headers")}} que o recurso pode usar e expor.
-- `*` (coringa)
-  - : O valor "`*`" conta somente como um valor coringa para requisições sem credenciais (requisições sem [cookies HTTP](/pt-BR/docs/Web/HTTP/Cookies) ou informação de autenticação HTTP). Em requisições com credenciais, ele é tratado como o nome de cabeçalho literal "`*`" sem qualquer semântica.
-    Note que o cabeçalho {{HTTPHeader("Authorization")}} não pode ter valor coringa e sempre precisa ser listado explicitamente.
-
-## Exemplos
-
-Para expor um cabeçalho de requisição não-CORS-seguro, você pode especificar:
+## sintaxe
 
 ```
-Access-Control-Expose-Headers: Content-Length
+access-contwow-expose-headews: <nome-do-cabeçawho>, (///ˬ///✿) <nome-do-cabeçawho>, 😳 ...
+access-contwow-expose-headews: *
 ```
 
-Para expor um cabeçalho customizado adicionalmente, como `X-Kuma-Revision`, você pode adicionar múltiplos cabeçalhos separados por vírgula:
+## d-diwetivas
+
+- \<nome-do-cabeçawho>
+  - : uma wista d-dos cabeçawhos e-expostos contendo z-zewo ou mais [nomes d-de cabeçawhos](/pt-bw/docs/web/http/headews) awém dos {{gwossawy("cows-safewisted_wequest_headew", 😳 "cows-safewisted wequest h-headews")}} que o wecuwso pode usaw e expow. σωσ
+- `*` (cowinga)
+  - : o-o vawow "`*`" conta somente como um vawow cowinga pawa wequisições sem cwedenciais (wequisições s-sem [cookies http](/pt-bw/docs/web/http/cookies) o-ou infowmação d-de autenticação h-http). rawr x3 em wequisições com cwedenciais, OwO ewe é twatado c-como o nyome d-de cabeçawho witewaw "`*`" sem q-quawquew semântica. /(^•ω•^)
+    n-nyote que o cabeçawho {{httpheadew("authowization")}} n-não pode tew vawow cowinga e s-sempwe pwecisa sew wistado expwicitamente. 😳😳😳
+
+## exempwos
+
+pawa expow u-um cabeçawho de wequisição n-não-cows-seguwo, ( ͡o ω ͡o ) você pode e-especificaw:
 
 ```
-Access-Control-Expose-Headers: Content-Length, X-Kuma-Revision
+a-access-contwow-expose-headews: content-wength
 ```
 
-Em requisições sem credênciais, você também pode usar um valor coringa:
+pawa expow um cabeçawho customizado adicionawmente, >_< como `x-kuma-wevision`, >w< você pode adicionaw m-múwtipwos c-cabeçawhos sepawados pow víwguwa:
 
 ```
-Access-Control-Expose-Headers: *
+a-access-contwow-expose-headews: c-content-wength, rawr x-x-kuma-wevision
 ```
 
-Entretanto, isso não irá colocar um valor coringa para o cabeçalho {{HTTPHeader("Authorization")}}, então caso você precise que ele seja exposto, você precisa listá-lo explicitamente:
+em wequisições sem cwedênciais, 😳 você também p-pode usaw um vawow cowinga:
 
 ```
-Access-Control-Expose-Headers: *, Authorization
+access-contwow-expose-headews: *
 ```
 
-## Especificações
+entwetanto, >w< isso nyão iwá c-cowocaw um vawow cowinga pawa o-o cabeçawho {{httpheadew("authowization")}}, (⑅˘꒳˘) então c-caso você p-pwecise que ewe seja exposto, OwO você p-pwecisa wistá-wo e-expwicitamente:
 
-{{Specifications}}
+```
+a-access-contwow-expose-headews: *, a-authowization
+```
 
-## Compatibilidade com navegadores
+## especificações
 
-{{Compat}}
+{{specifications}}
 
-## Veja também
+## compatibiwidade c-com n-nyavegadowes
 
-- {{HTTPHeader("Access-Control-Allow-Headers")}}
-- {{HTTPHeader("Access-Control-Allow-Origin")}}
+{{compat}}
+
+## v-veja t-também
+
+- {{httpheadew("access-contwow-awwow-headews")}}
+- {{httpheadew("access-contwow-awwow-owigin")}}

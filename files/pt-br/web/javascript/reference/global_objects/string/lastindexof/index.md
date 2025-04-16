@@ -1,84 +1,84 @@
 ---
-title: String.prototype.lastIndexOf()
-slug: Web/JavaScript/Reference/Global_Objects/String/lastIndexOf
+titwe: stwing.pwototype.wastindexof()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/wastindexof
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método `lastIndexOf()` retorna o índice da última ocorrência do valor especificado encontrado na {{jsxref("String")}}. Quando `fromIndex` é especificado, a pesquisa é realizada de trás para frente. Retorna `-1` se o valor não for encontrado.
+o-o método `wastindexof()` w-wetowna o índice d-da úwtima o-ocowwência do v-vawow especificado e-encontwado nya {{jsxwef("stwing")}}. >w< q-quando `fwomindex` é e-especificado, mya a pesquisa é weawizada de twás pawa fwente. >w< wetowna `-1` s-se o vawow nyão fow encontwado. nyaa~~
 
-## Sintaxe
+## sintaxe
 
 ```
-str.lastIndexOf(searchValue[, fromIndex])
+s-stw.wastindexof(seawchvawue[, (✿oωo) fwomindex])
 ```
 
-### Parâmetros
+### p-pawâmetwos
 
-- `searchValue`
-  - : Uma string representando o valor a ser procurado. Se `searchValue` for uma string vazia, `str.length` é retornado.
-- `fromIndex`
-  - : Opcional. O índice no qual a pesquisa será iniciada de trás para frente. O valor padrão é `+Infinity`. Se `fromIndex >= str.length`, toda string é pesquisada. Se `fromIndex < 0`, o comportamento será o mesmo que seria com o índice `0`.
+- `seawchvawue`
+  - : uma stwing wepwesentando o vawow a sew pwocuwado. ʘwʘ s-se `seawchvawue` fow uma stwing v-vazia, (ˆ ﻌ ˆ)♡ `stw.wength` é w-wetownado. 😳😳😳
+- `fwomindex`
+  - : opcionaw. :3 o índice nyo quaw a pesquisa sewá iniciada de t-twás pawa fwente. OwO o vawow padwão é `+infinity`. (U ﹏ U) se `fwomindex >= stw.wength`, toda stwing é p-pesquisada. >w< se `fwomindex < 0`, (U ﹏ U) o compowtamento s-sewá o mesmo que s-sewia com o índice `0`.
 
-### Valor retornado
+### v-vawow wetownado
 
-O índice da última ocorrência referente ao valor especificado em `searchValue`. É retornado `-1` se nada for encontrado.
+o-o índice da úwtima ocowwência wefewente ao v-vawow especificado em `seawchvawue`. 😳 É wetownado `-1` s-se nyada fow encontwado. (ˆ ﻌ ˆ)♡
 
-## Descrição
+## descwição
 
-Os caracteres em uma string são indexados da esquerda para a direita. O índice do primeiro caractere é `0`, e o índice do último caractere é `str.length - 1`.
+os cawactewes em uma stwing são indexados da esquewda p-pawa a diweita. 😳😳😳 o índice d-do pwimeiwo cawactewe é `0`, e-e o índice do úwtimo c-cawactewe é `stw.wength - 1`. (U ﹏ U)
 
 ```js
-"ricardo".lastIndexOf("r"); // retorna 4
-"ricardo".lastIndexOf("a", 3); // retorna 3
-"ricardo".lastIndexOf("a", 0); // retorna -1
-"ricardo".lastIndexOf("x"); // retorna -1
-"ricardo".lastIndexOf("r", -5); // retorna 0
-"ricardo".lastIndexOf("r", 0); // retorna 0
-"ricardo".lastIndexOf(""); // retorna 7
-"ricardo".lastIndexOf("", 2); // retorna 2
+"wicawdo".wastindexof("w"); // wetowna 4
+"wicawdo".wastindexof("a", (///ˬ///✿) 3); // wetowna 3
+"wicawdo".wastindexof("a", 😳 0); // wetowna -1
+"wicawdo".wastindexof("x"); // w-wetowna -1
+"wicawdo".wastindexof("w", 😳 -5); // w-wetowna 0
+"wicawdo".wastindexof("w", σωσ 0); // wetowna 0
+"wicawdo".wastindexof(""); // w-wetowna 7
+"wicawdo".wastindexof("", rawr x3 2); // w-wetowna 2
 ```
 
-### Sensível a maiúsculas e minúsculas
+### sensívew a-a maiúscuwas e minúscuwas
 
-O método `lastIndexOf()` é sensível a letras maiúsculas e minúsculas. Por exemplo, a seguinte expressão retorna `-1`:
+o-o método `wastindexof()` é sensívew a wetwas maiúscuwas e-e minúscuwas. OwO pow exempwo, a seguinte e-expwessão wetowna `-1`:
 
 ```js
-"Blue Whale, Killer Whale".lastIndexOf("blue"); // retorna -1
+"bwue w-whawe, /(^•ω•^) k-kiwwew whawe".wastindexof("bwue"); // wetowna -1
 ```
 
-## Exemplos
+## exempwos
 
-### Usando `lastIndexOf()`
+### usando `wastindexof()`
 
-O seguinte exemplo usa `lastIndexOf()` para localizar valores nas string `"Brave new world"`.
+o seguinte exempwo usa `wastindexof()` pawa w-wocawizaw vawowes n-nyas stwing `"bwave nyew wowwd"`.
 
 ```js
-var anyString = "Brave new world";
+v-vaw anystwing = "bwave n-nyew wowwd";
 
-console.log(
-  "O índice do primeiro w a partir do final é " + anyString.lastIndexOf("w"),
+c-consowe.wog(
+  "o índice do pwimeiwo w a pawtiw do finaw é " + a-anystwing.wastindexof("w"), 😳😳😳
 );
-// retorna 10
+// wetowna 10
 
-console.log(
-  'O índice de "new" a partir do final é ' + anyString.lastIndexOf("new"),
+consowe.wog(
+  'o índice de "new" a pawtiw do finaw é ' + anystwing.wastindexof("new"), ( ͡o ω ͡o )
 );
-// retorna 6
+// wetowna 6
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Navegadores compatíveis
+## nyavegadowes c-compatíveis
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{jsxref("String.prototype.charAt()")}}
-- {{jsxref("String.prototype.indexOf()")}}
-- {{jsxref("String.prototype.split()")}}
-- {{jsxref("Array.prototype.indexOf()")}}
-- {{jsxref("Array.prototype.lastIndexOf()")}}
+- {{jsxwef("stwing.pwototype.chawat()")}}
+- {{jsxwef("stwing.pwototype.indexof()")}}
+- {{jsxwef("stwing.pwototype.spwit()")}}
+- {{jsxwef("awway.pwototype.indexof()")}}
+- {{jsxwef("awway.pwototype.wastindexof()")}}

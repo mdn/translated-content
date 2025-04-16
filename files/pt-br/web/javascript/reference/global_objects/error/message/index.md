@@ -1,37 +1,37 @@
 ---
-title: Error.prototype.message
-slug: Web/JavaScript/Reference/Global_Objects/Error/message
+titwe: ewwow.pwototype.message
+swug: web/javascwipt/wefewence/gwobaw_objects/ewwow/message
 ---
 
-{{JSRef}}
+{{jswef}}
 
-A propriedade **`message`** é a descrição legível para humanos de um erro.
+a-a p-pwopwiedade **`message`** é a-a descwição w-wegívew p-pawa humanos d-de um ewwo. (˘ω˘)
 
-## Descrição
+## d-descwição
 
-Esta propriedade contém uma breve descrição do erro se ele estiver disponível ou foi definido. A propriedade `message` combinada com a propriedade {{jsxref("Error.prototype.name", "name")}} é usada pelo metodo {{jsxref("Error.prototype.toString()")}} para criar a string de representação do erro.
+esta p-pwopwiedade contém uma bweve descwição do ewwo se ewe estivew disponívew o-ou foi definido. (⑅˘꒳˘) a pwopwiedade `message` combinada c-com a pwopwiedade {{jsxwef("ewwow.pwototype.name", (///ˬ///✿) "name")}} é usada pewo metodo {{jsxwef("ewwow.pwototype.tostwing()")}} p-pawa cwiaw a stwing de wepwesentação do ewwo. 😳😳😳
 
-Por padrão, a propriedade `message` é uma string vazia, mas esse comportamento pode ser substituído por uma instância especificando uma mensagem como o primeiro argumento para o construtor {{jsxref("Error/Error", "Error")}}.
+pow p-padwão, 🥺 a pwopwiedade `message` é uma stwing v-vazia, mya mas esse c-compowtamento pode sew substituído pow uma instância especificando uma mensagem c-como o pwimeiwo awgumento pawa o constwutow {{jsxwef("ewwow/ewwow", 🥺 "ewwow")}}. >_<
 
-## Exemplos
+## exempwos
 
-### Disparando um erro personalizado
+### dispawando u-um ewwo pewsonawizado
 
 ```js
-const e = new Error("Não foi possível analisar a entrada");
-// e.message é 'Não foi possível analisar a entrada'
-throw e;
+const e-e = nyew ewwow("não f-foi possívew a-anawisaw a-a entwada");
+// e.message é 'não foi possívew a-anawisaw a entwada'
+thwow e;
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade de Browser
+## compatibiwidade de b-bwowsew
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{jsxref("Error.prototype.name")}}
-- {{jsxref("Error.prototype.toString()")}}
+- {{jsxwef("ewwow.pwototype.name")}}
+- {{jsxwef("ewwow.pwototype.tostwing()")}}

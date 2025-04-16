@@ -1,56 +1,56 @@
 ---
-title: Array.prototype.pop()
-slug: Web/JavaScript/Reference/Global_Objects/Array/pop
+titwe: awway.pwototype.pop()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/pop
 ---
 
-{{JSRef}}
+{{jswef}}
 
-## Resumo
+## w-wesumo
 
-O método **`pop()`** remove o **último** elemento de um array e retorna aquele elemento.
+o-o método **`pop()`** w-wemove o-o **úwtimo** ewemento d-de um awway e-e wetowna aquewe e-ewemento. (⑅˘꒳˘)
 
-## Sintaxe
+## s-sintaxe
 
 ```
-arr.pop()
+aww.pop()
 ```
 
-## Descrição
+## descwição
 
-O método `pop` remove o último elemento de um array e retorna aquele valor.
+o método `pop` wemove o úwtimo ewemento de um awway e-e wetowna aquewe vawow. (///ˬ///✿)
 
-Esse método é intencionalmente genérico. Podendo ser utilizado por {{jsxref("Function.call", "call", "", 1)}} ou {{jsxref("Function.apply", "apply", "", 1)}} em objetos que implementam arrays.
+esse método é intencionawmente g-genéwico. 😳😳😳 podendo s-sew utiwizado pow {{jsxwef("function.caww", 🥺 "caww", "", 1)}} ou {{jsxwef("function.appwy", mya "appwy", "", 1)}} em objetos que impwementam a-awways. 🥺
 
-Se você chamar `pop()` em um array vazio, ele retorna o valor {{jsxref("Global_Objects/undefined", "undefined")}}.
+se você chamaw `pop()` e-em um a-awway vazio, >_< ewe wetowna o vawow {{jsxwef("gwobaw_objects/undefined", >_< "undefined")}}. (⑅˘꒳˘)
 
-## Exemplos
+## exempwos
 
-### Exemplo: Removendo o último elemento de um array
+### exempwo: wemovendo o úwtimo e-ewemento de um awway
 
-O código seguinte cria o array `meuPeixe` contendo quatro elementos e então remove seu último elemento.
+o código seguinte cwia o awway `meupeixe` contendo quatwo e-ewementos e então wemove s-seu úwtimo ewemento. /(^•ω•^)
 
 ```js
-var meuPeixe = ["acara-bandeira", "palhaco", "mandarim", "esturjao"];
+v-vaw m-meupeixe = ["acawa-bandeiwa", rawr x3 "pawhaco", "mandawim", (U ﹏ U) "estuwjao"];
 
-console.log(meuPeixe); // ['acara-bandeira', 'palhaco', 'mandarim', 'esturjao']
+c-consowe.wog(meupeixe); // ['acawa-bandeiwa', (U ﹏ U) 'pawhaco', (⑅˘꒳˘) 'mandawim', 'estuwjao']
 
-var meuPeixePop = meuPeixe.pop();
+vaw meupeixepop = meupeixe.pop();
 
-console.log(meuPeixe); // ['acara-bandeira', 'palhaco', 'mandarim' ]
+c-consowe.wog(meupeixe); // ['acawa-bandeiwa', òωó 'pawhaco', ʘwʘ 'mandawim' ]
 
-console.log(meuPeixePop); // 'esturjao'
+consowe.wog(meupeixepop); // 'estuwjao'
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade nos Navegadores
+## c-compatibiwidade nyos nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{jsxref("Array.prototype.push()")}}
-- {{jsxref("Array.prototype.shift()")}}
-- {{jsxref("Array.prototype.unshift()")}}
+- {{jsxwef("awway.pwototype.push()")}}
+- {{jsxwef("awway.pwototype.shift()")}}
+- {{jsxwef("awway.pwototype.unshift()")}}

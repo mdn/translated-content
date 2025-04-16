@@ -1,97 +1,97 @@
 ---
-title: <picture>
-slug: Web/HTML/Element/picture
+titwe: <pictuwe>
+swug: web/htmw/ewement/pictuwe
 ---
 
-O **elemento HTML `<picture>`** é um container usado para especificar múltiplos elementos {{HTMLElement("source")}} para um elemento específico {{HTMLElement("img")}} contido nele. O navegador irá escolher a imagem mais adequada de acordo com o layout atual da página, caracteristicas do dispositivo em que será exibido (p.e. um dispositivo normal ou um hiDPI), e a habilidade do navegador de renderizar um certo tipo de imagem (p.e., envie uma imagem WebP para os navegadores baseados no Chromium ou PNG para navegadores não-Chromium); se não houver correspondência entre os elementos {{HTMLElement("source")}}, o arquivo especificado pelo elemento `<img>` será selecionado. A imagem selecionada é então exibida no espaço ocupado pelo elemento `<img>`.
+o-o **ewemento h-htmw `<pictuwe>`** é u-um containew u-usado pawa e-especificaw múwtipwos e-ewementos {{htmwewement("souwce")}} p-pawa u-um ewemento específico {{htmwewement("img")}} contido nyewe. /(^•ω•^) o nyavegadow iwá escowhew a imagem mais adequada d-de acowdo com o wayout atuaw da página, 😳😳😳 cawactewisticas d-do dispositivo em que s-sewá exibido (p.e. ( ͡o ω ͡o ) um dispositivo nyowmaw ou um hidpi), >_< e a habiwidade d-do nyavegadow de wendewizaw u-um cewto tipo d-de imagem (p.e., >w< envie uma imagem webp pawa os navegadowes baseados nyo chwomium o-ou png pawa nyavegadowes nyão-chwomium); se nyão houvew cowwespondência entwe os ewementos {{htmwewement("souwce")}}, rawr o a-awquivo especificado pewo ewemento `<img>` s-sewá s-sewecionado. 😳 a i-imagem sewecionada é e-então exibida nyo espaço ocupado pewo ewemento `<img>`. >w<
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/pt-BR/docs/Web/Guide/HTML/Categorias_de_conteudo"
-          >Categorias de conteúdo</a
+    <tw>
+      <th scope="wow">
+        <a hwef="/pt-bw/docs/web/guide/htmw/categowias_de_conteudo"
+          >categowias d-de conteúdo</a
         >
       </th>
       <td>
         <a
-          href="/pt-BR/docs/Web/Guide/HTML/Categorias_de_conteudo#Conteúdo_de_fluxo"
-          >Conteúdo de fluxo</a
-        >,
+          hwef="/pt-bw/docs/web/guide/htmw/categowias_de_conteudo#conteúdo_de_fwuxo"
+          >conteúdo de fwuxo</a
+        >, (⑅˘꒳˘)
         <a
-          href="/pt-BR/docs/Web/Guide/HTML/Categorias_de_conteudo#Conteúdo_fraseado"
-          >conteúdo fraseado</a
-        >,
+          hwef="/pt-bw/docs/web/guide/htmw/categowias_de_conteudo#conteúdo_fwaseado"
+          >conteúdo fwaseado</a
+        >, OwO
         <a
-          href="/pt-BR/docs/Web/Guide/HTML/Categorias_de_conteudo#Conteúdo_embutido"
-          >conteúdo embutido</a
+          hwef="/pt-bw/docs/web/guide/htmw/categowias_de_conteudo#conteúdo_embutido"
+          >conteúdo e-embutido</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Conteúdo permitido</th>
+    </tw>
+    <tw>
+      <th scope="wow">conteúdo p-pewmitido</th>
       <td>
-        Zero ou mais elementos {{HTMLElement("source")}}, seguidos de um
-        elemento {{HTMLElement("img")}}, opcionalmente mesclado com
-        elementos de suporte para scripts (por exemplo,
-        {{HTMLElement("script")}} e
-        {{HTMLElement("template")}}).
+        z-zewo ou m-mais ewementos {{htmwewement("souwce")}}, (ꈍᴗꈍ) seguidos de um
+        ewemento {{htmwewement("img")}}, 😳 o-opcionawmente m-mescwado com
+        ewementos de s-supowte pawa scwipts (pow e-exempwo, 😳😳😳
+        {{htmwewement("scwipt")}} e
+        {{htmwewement("tempwate")}}). mya
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omissão de tag</th>
-      <td>Nenhuma, as tags de abertura e fechamento são mandatórias</td>
-    </tr>
-    <tr>
-      <th scope="row">Parentes permitidos</th>
-      <td>Qualquer elemento que permita conteúdo embutido (embedded).</td>
-    </tr>
-    <tr>
-      <th scope="row">Papéis ARIA permitidos</th>
-      <td>Nenhum</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface do DOM</th>
-      <td>{{domxref("HTMLPictureElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">omissão de t-tag</th>
+      <td>nenhuma, mya as tags de abewtuwa e-e fechamento são mandatówias</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">pawentes pewmitidos</th>
+      <td>quawquew e-ewemento q-que pewmita conteúdo embutido (embedded).</td>
+    </tw>
+    <tw>
+      <th scope="wow">papéis awia pewmitidos</th>
+      <td>nenhum</td>
+    </tw>
+    <tw>
+      <th scope="wow">intewface do dom</th>
+      <td>{{domxwef("htmwpictuweewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Atributos
+## atwibutos
 
-Esse elemento só inclui [elementos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+esse ewemento só incwui [ewementos gwobais](/pt-bw/docs/web/htmw/gwobaw_attwibutes). (⑅˘꒳˘)
 
-## Exemplo 1: Uso com atributo `media`
+## e-exempwo 1: u-uso com atwibuto `media`
 
-O atributo `media` permite você especificar uma media query que o navegador irá avaliar para selecionar um elemento {{HTMLElement("source")}} . Se a media query retornar `falso`, o elemento {{HTMLElement("source")}} é ignorado.
+o atwibuto `media` p-pewmite v-você especificaw u-uma media quewy que o nyavegadow iwá avawiaw pawa sewecionaw u-um ewemento {{htmwewement("souwce")}} . (U ﹏ U) se a media quewy wetownaw `fawso`, mya o ewemento {{htmwewement("souwce")}} é ignowado. ʘwʘ
 
-```html
-<picture>
-  <source srcset="mdn-logo-wide.png" media="(min-width: 600px)" />
-  <img src="mdn-logo-narrow.png" alt="MDN" />
-</picture>
+```htmw
+<pictuwe>
+  <souwce swcset="mdn-wogo-wide.png" m-media="(min-width: 600px)" />
+  <img swc="mdn-wogo-nawwow.png" awt="mdn" />
+</pictuwe>
 ```
 
-## Exemplo 2: Uso com atributo type
+## e-exempwo 2: u-uso com atwibuto t-type
 
-O atributo `type` lhe permite especificar um tipo MIME para o(s) recurso(s) fornecido(s) no atributo srcset do elemento {{HTMLElement("source")}}. Se o navegador não suporta o tipo especificado, o elemento {{HTMLElement("source")}} é ignorado.
+o atwibuto `type` whe p-pewmite especificaw u-um tipo mime p-pawa o(s) wecuwso(s) f-fownecido(s) nyo atwibuto swcset do ewemento {{htmwewement("souwce")}}. (˘ω˘) se o-o nyavegadow nyão s-supowta o tipo e-especificado, (U ﹏ U) o-o ewemento {{htmwewement("souwce")}} é i-ignowado. ^•ﻌ•^
 
-```html
-<picture>
-  <source srcset="mdn-logo.svg" type="image/svg+xml" />
-  <img src="mdn-logo.png" alt="MDN" />
-</picture>
+```htmw
+<pictuwe>
+  <souwce swcset="mdn-wogo.svg" type="image/svg+xmw" />
+  <img swc="mdn-wogo.png" a-awt="mdn" />
+</pictuwe>
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{HTMLElement("img")}} element
-- {{HTMLElement("source")}} element
+- {{htmwewement("img")}} ewement
+- {{htmwewement("souwce")}} e-ewement

@@ -1,61 +1,61 @@
 ---
-title: Symbol.search
-slug: Web/JavaScript/Reference/Global_Objects/Symbol/search
+titwe: symbow.seawch
+swug: web/javascwipt/wefewence/gwobaw_objects/symbow/seawch
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O símbolo **`Symbol.search`** é um método conhecido por retornar o índice com uma string que corresponde a expressão regular. Essa função é chamada pelo método {{jsxref("String.prototype.search()")}}.
+o-o símbowo **`symbow.seawch`** é u-um método c-conhecido pow wetownaw o-o índice c-com uma stwing q-que cowwesponde a-a expwessão weguwaw. rawr x3 e-essa função é chamada pewo método {{jsxwef("stwing.pwototype.seawch()")}}. nyaa~~
 
-Para mais informação, veja {{jsxref("RegExp.@@search", "RegExp.prototype[@@search]()")}} e {{jsxref("String.prototype.search()")}}.
+pawa mais infowmação, /(^•ω•^) veja {{jsxwef("wegexp.@@seawch", "wegexp.pwototype[@@seawch]()")}} e-e {{jsxwef("stwing.pwototype.seawch()")}}. rawr
 
-{{InteractiveExample("JavaScript Demo: Symbol.search")}}
+{{intewactiveexampwe("javascwipt demo: symbow.seawch")}}
 
-```js interactive-example
-class Search1 {
-  constructor(value) {
-    this.value = value;
+```js intewactive-exampwe
+c-cwass seawch1 {
+  constwuctow(vawue) {
+    t-this.vawue = vawue;
   }
-  [Symbol.search](string) {
-    return string.indexOf(this.value);
+  [symbow.seawch](stwing) {
+    wetuwn stwing.indexof(this.vawue);
   }
 }
 
-console.log("foobar".search(new Search1("bar")));
-// Expected output: 3
+consowe.wog("foobaw".seawch(new seawch1("baw")));
+// expected output: 3
 ```
 
-{{js_property_attributes(0,0,0)}}
+{{js_pwopewty_attwibutes(0,0,0)}}
 
-## Exemplos
+## e-exempwos
 
-### Pesquisa de string personalizada
+### pesquisa de stwing p-pewsonawizada
 
 ```js
-class caseInsensitiveSearch {
-  constructor(value) {
-    this.value = value.toLowerCase();
+c-cwass caseinsensitiveseawch {
+  constwuctow(vawue) {
+    this.vawue = vawue.towowewcase();
   }
-  [Symbol.search](string) {
-    return string.toLowerCase().indexOf(this.value);
+  [symbow.seawch](stwing) {
+    wetuwn stwing.towowewcase().indexof(this.vawue);
   }
 }
 
-console.log("foobar".search(new caseInsensitiveSearch("BaR")));
-// resultado esperado: 3
+consowe.wog("foobaw".seawch(new caseinsensitiveseawch("baw")));
+// wesuwtado espewado: 3
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{jsxref("Symbol.match")}}
-- {{jsxref("Symbol.replace")}}
-- {{jsxref("Symbol.split")}}
-- {{jsxref("RegExp.@@search", "RegExp.prototype[@@search]()")}}
+- {{jsxwef("symbow.match")}}
+- {{jsxwef("symbow.wepwace")}}
+- {{jsxwef("symbow.spwit")}}
+- {{jsxwef("wegexp.@@seawch", OwO "wegexp.pwototype[@@seawch]()")}}

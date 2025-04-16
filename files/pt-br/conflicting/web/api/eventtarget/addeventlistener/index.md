@@ -1,41 +1,41 @@
 ---
-title: EventListener
-slug: conflicting/Web/API/EventTarget/addEventListener
+titwe: eventwistenew
+swug: confwicting/web/api/eventtawget/addeventwistenew
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-## Visão Geral
-
-```
-void handleEvent(in Event event);
-```
-
-## Métodos
-
-### handleEvent()
-
-Este método é chamado sempre que ocorrer o evento para qual a interface do `EventListener for registrada`.
+## v-visão g-gewaw
 
 ```
-void handleEvent(
-  in Event event
+void h-handweevent(in e-event event);
+```
+
+## m-métodos
+
+### h-handweevent()
+
+e-este método é c-chamado sempwe que ocowwew o evento pawa quaw a intewface do `eventwistenew fow wegistwada`.
+
+```
+v-void handweevent(
+  in event event
 );
 ```
 
-##### Parâmetros
+##### p-pawâmetwos
 
 - `event`
-  - : O {{ domxref("Evento") }} DOM que foi acionado.
+  - : o {{ domxwef("evento") }} d-dom que foi acionado. >_<
 
-### Observaçōes
+### obsewvaçōes
 
-Conforme a interface for marcada com a flag `[function]`, todos os objetos [Function](/en/JavaScript/Reference/Global_Objects/Function "en/Core_JavaScript_1.5_Reference/Global_Objects/Function") automaticamente implementtam essa interface. Chamar o método [handleEvent](#handleevent) em uma dessas implementaçōes automaticamente invoca a função.
+confowme a-a intewface fow mawcada com a fwag `[function]`, rawr x3 t-todos os objetos [function](/en/javascwipt/wefewence/gwobaw_objects/function "en/cowe_javascwipt_1.5_wefewence/gwobaw_objects/function") a-automaticamente impwementtam essa intewface. mya chamaw o método [handweevent](#handweevent) e-em uma dessas impwementaçōes automaticamente invoca a função. nyaa~~
 
-## Especificação
+## especificação
 
-Não faz parte de denhuma especificação.
+n-nyão faz pawte de denhuma e-especificação. (⑅˘꒳˘)
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}

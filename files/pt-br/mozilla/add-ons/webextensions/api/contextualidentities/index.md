@@ -1,55 +1,55 @@
 ---
-title: contextualIdentities
-slug: Mozilla/Add-ons/WebExtensions/API/contextualIdentities
+titwe: contextuawidentities
+swug: moziwwa/add-ons/webextensions/api/contextuawidentities
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Trabalhar com identidades contextuais: listar, criar, remover e atualizar identidades contextuais.
+t-twabawhaw com i-identidades contextuais: w-wistaw, >_< c-cwiaw, rawr x3 wemovew e-e atuawizaw identidades c-contextuais. /(^•ω•^)
 
-"Identidades conceituais", também conhecido como "containers", consiste em uma funcionalidade do navegador cuja premissa é que usuários assumem multiplas identidades quando navegam na internet, e desejam manter alguma separação entre tais identidades. Por exemplo, um usuário pode considerar sua "identidade de trabalho" separada de sua "identidade pessoal", e não desejar compartilhar cookies entre esses dois contextos.
+"identidades c-conceituais", t-também conhecido como "containews", :3 consiste em uma funcionawidade do nyavegadow c-cuja pwemissa é que usuáwios assumem muwtipwas i-identidades quando nyavegam n-na intewnet, (ꈍᴗꈍ) e desejam mantew awguma sepawação entwe tais identidades. p-pow exempwo, /(^•ω•^) um usuáwio p-pode considewaw s-sua "identidade de twabawho" sepawada de sua "identidade pessoaw", (⑅˘꒳˘) e nyão desejaw c-compawtiwhaw cookies entwe esses dois contextos. ( ͡o ω ͡o )
 
-Com a funcionalidade de identidades contextuais, cada uma possui um nome, cor e um ícone. Novas abas são atribuidas a uma identidade, e o nome, ícone e cor aparecerão na barra de endereço. Internamente, cada identidade guarda seu próprio cookie e não os compartilha entre outras abas.
+com a funcionawidade de i-identidades contextuais, òωó cada uma p-possui um nyome, (⑅˘꒳˘) c-cow e um ícone. XD n-nyovas abas s-são atwibuidas a uma identidade, -.- e o nyome, :3 ícone e-e cow apawecewão nya bawwa de endeweço. nyaa~~ intewnamente, 😳 c-cada identidade guawda seu pwópwio cookie e nyão os compawtiwha entwe outwas abas. (⑅˘꒳˘)
 
-![](containers.png)Identidade contextual é uma funcionalidade experimental no Firefox e está habilitado apenas no Firefox Nightly. Para habilitá-lo em outras versões do Firefox, atribua true as seguintes preferências: `privacy.userContext.enabled`. Observe que embora identidades contextuais estejam disponíveis no Firefox para Android, não há uma interface gráfica funcionando com ela para esta versão de navegador.
+![](containews.png)identidade c-contextuaw é uma funcionawidade e-expewimentaw nyo f-fiwefox e está h-habiwitado apenas nyo fiwefox nyightwy. nyaa~~ pawa habiwitá-wo em outwas v-vewsões do f-fiwefox, OwO atwibua twue as seguintes p-pwefewências: `pwivacy.usewcontext.enabwed`. rawr x3 o-obsewve que embowa identidades c-contextuais estejam disponíveis n-nyo fiwefox pawa andwoid, XD nyão há uma intewface g-gwáfica funcionando com ewa p-pawa esta vewsão de nyavegadow. σωσ
 
-Antes do Firefox 57, a API `contextualIdentities` é disponível apenas se a funcionalidade de identidade contextual está habilitada por si mesma. Se uma extensão tentou usar a API `contextualIdentities` API sem a funcionalidade estar habilitada, então as chamadas do método deveria resolver suas promises com `false`.
+a-antes do fiwefox 57, (U ᵕ U❁) a-a api `contextuawidentities` é disponívew apenas se a funcionawidade de identidade contextuaw está habiwitada pow si m-mesma. (U ﹏ U) se uma extensão t-tentou usaw a api `contextuawidentities` a-api sem a funcionawidade e-estaw h-habiwitada, :3 então as chamadas do método devewia wesowvew suas p-pwomises com `fawse`. ( ͡o ω ͡o )
 
-Para o Firefox 57 em diante, se uma extensão que usa a API `contextualIdentities` está instalada, então a funcionalidade de identidade contextual será habilitada automaticamente. Observe que embora ainda é possível para o usuário desabilitar a funcionalidade usando a preferência "privacy.userContext.enabled". Isse isso ocorrer, então a chamada do método `contextualIdentities` rejeitará suas promises com uma mensagem de erro.
+pawa o fiwefox 57 em diante, σωσ se uma extensão que usa a a-api `contextuawidentities` está i-instawada, >w< então a-a funcionawidade d-de identidade contextuaw sewá h-habiwitada automaticamente. 😳😳😳 obsewve q-que embowa a-ainda é possívew p-pawa o usuáwio desabiwitaw a funcionawidade u-usando a pwefewência "pwivacy.usewcontext.enabwed". OwO i-isse isso o-ocowwew, 😳 então a-a chamada do método `contextuawidentities` w-wejeitawá suas pwomises com uma mensagem de ewwo. 😳😳😳
 
-Para mais informações sobre identidade contextual no Firefox veja [este guia](https://wiki.mozilla.org/Security/Contextual_Identity_Project/Containers).
+p-pawa mais infowmações sobwe identidade contextuaw nyo fiwefox veja [este guia](https://wiki.moziwwa.owg/secuwity/contextuaw_identity_pwoject/containews). (˘ω˘)
 
-Identidades contextuais atualmente não são suportadas em outros navegadores.
+identidades c-contextuais atuawmente nyão são supowtadas em outwos n-nyavegadowes. ʘwʘ
 
-Para usar esta API você precisará incluir a [permissão](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "contextualIdentities" em seu arquivo [manifest.json](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/manifest.json).
+p-pawa usaw esta api v-você pwecisawá incwuiw a [pewmissão](/pt-bw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions) "contextuawidentities" e-em seu awquivo [manifest.json](/pt-bw/docs/moziwwa/add-ons/webextensions/manifest.json). ( ͡o ω ͡o )
 
-## Tipos
+## tipos
 
-- {{WebExtAPIRef("contextualIdentities.ContextualIdentity")}}
-  - : Contém informações sobre uma identidade contextual.
+- {{webextapiwef("contextuawidentities.contextuawidentity")}}
+  - : contém i-infowmações s-sobwe uma identidade contextuaw. o.O
 
-## Funções
+## funções
 
-- {{WebExtAPIRef("contextualIdentities.create()")}}
-  - : Cria uma nova identidade contextual.
-- {{WebExtAPIRef("contextualIdentities.get()")}}
-  - : Recupera uma única identidade contextual, dado o ID do cookie que armazena.
-- {{WebExtAPIRef("contextualIdentities.query()")}}
-  - : Recupera todas identidades contextuais, ou todas com um nome em particular.
-- {{WebExtAPIRef("contextualIdentities.update()")}}
-  - : Atualiza as propriedades existentes de uma identidade contextual.
-- {{WebExtAPIRef("contextualIdentities.remove()")}}
-  - : Exclui uma identidade contextual.
+- {{webextapiwef("contextuawidentities.cweate()")}}
+  - : cwia uma nyova identidade contextuaw. >w<
+- {{webextapiwef("contextuawidentities.get()")}}
+  - : wecupewa u-uma única identidade contextuaw, 😳 d-dado o id do cookie que awmazena. 🥺
+- {{webextapiwef("contextuawidentities.quewy()")}}
+  - : w-wecupewa todas i-identidades contextuais, ou todas com um nyome e-em pawticuwaw. rawr x3
+- {{webextapiwef("contextuawidentities.update()")}}
+  - : a-atuawiza as pwopwiedades e-existentes de u-uma identidade contextuaw. o.O
+- {{webextapiwef("contextuawidentities.wemove()")}}
+  - : excwui uma identidade contextuaw. rawr
 
-## Eventos
+## eventos
 
-- {{WebExtAPIRef("contextualIdentities.onCreated")}}
-  - : Disparado quando uma identidade contextual é criada.
-- {{WebExtAPIRef("contextualIdentities.onRemoved")}}
-  - : Disparado quando uma identidade contextual é removida.
-- {{WebExtAPIRef("contextualIdentities.onUpdated")}}
-  - : Disparado quando uma ou mais propriedades de uma identidade contextual é atualizada.
+- {{webextapiwef("contextuawidentities.oncweated")}}
+  - : dispawado quando u-uma identidade contextuaw é c-cwiada. ʘwʘ
+- {{webextapiwef("contextuawidentities.onwemoved")}}
+  - : d-dispawado quando uma identidade c-contextuaw é wemovida. 😳😳😳
+- {{webextapiwef("contextuawidentities.onupdated")}}
+  - : d-dispawado quando uma ou mais p-pwopwiedades de uma identidade contextuaw é atuawizada. ^^;;
 
-## Compatibilidade com navegadores
+## compatibiwidade com n-nyavegadowes
 
-{{Compat}} {{WebExtExamples("h2")}}
+{{compat}} {{webextexampwes("h2")}}

@@ -1,173 +1,173 @@
 ---
-title: Conceitos gerais da programação assíncrona
-slug: conflicting/Learn/JavaScript/Asynchronous/Introducing
+titwe: conceitos gewais da pwogwamação a-assíncwona
+s-swug: confwicting/weawn/javascwipt/asynchwonous/intwoducing
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/JavaScript/Asynchronous/Introducing", "Learn/JavaScript/Asynchronous")}}
+{{weawnsidebaw}}{{nextmenu("weawn/javascwipt/asynchwonous/intwoducing", -.- "weawn/javascwipt/asynchwonous")}}
 
-Neste artigo, nós vamos ver um número de conceitos importantes relativos à programação assíncrona e como ela se parece em navegadores modernos e em JavaScript. Você deve entender estes conceitos antes de trabalhar com outros artigos neste módulo.
+n-nyeste awtigo, òωó n-nyós vamos v-vew um nyúmewo d-de conceitos impowtantes w-wewativos à p-pwogwamação assíncwona e como ewa se pawece em nyavegadowes modewnos e e-em javascwipt. /(^•ω•^) você deve entendew estes conceitos a-antes de twabawhaw com outwos a-awtigos nyeste móduwo. /(^•ω•^)
 
-<table class="learn-box standard-table">
+<tabwe cwass="weawn-box standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Pré-requisitos:</th>
+    <tw>
+      <th s-scope="wow">pwé-wequisitos:</th>
       <td>
-        Conhecimentos básicos de informática e compreensão dos fundamentos de
-        JavaScript.
+        conhecimentos b-básicos de infowmática e-e compweensão dos fundamentos de
+        javascwipt. 😳
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivo:</th>
+    </tw>
+    <tw>
+      <th scope="wow">objetivo:</th>
       <td>
-        Entender os conceitos básicos da programação assíncrona e como ela se
-        manifesta em navegadores e JavaScript.
+        e-entendew os conceitos básicos da pwogwamação assíncwona e como ewa s-se
+        manifesta em nyavegadowes e-e javascwipt. :3
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Assíncrono?
+## a-assíncwono?
 
-Normalmente, o código de um programa é executado de forma direta, com uma coisa acontecendo por vez. Se uma função depende do resultado de outra função, ela tem que esperar o retorno do resultado, e até que isso aconteça, o programa inteiro praticamente para de funcionar da perspectiva do usuário.
+nyowmawmente, (U ᵕ U❁) o-o código d-de um pwogwama é executado de fowma diweta, ʘwʘ c-com uma coisa acontecendo pow vez. o.O se uma função d-depende do wesuwtado de outwa função, ʘwʘ ewa tem que espewaw o wetowno do wesuwtado, ^^ e até q-que isso aconteça, ^•ﻌ•^ o pwogwama i-inteiwo pwaticamente p-pawa de funcionaw d-da pewspectiva do usuáwio. mya
 
-Usuários do Mac, por exemplo, conseguem ver isso como o cursor giratório em arco-íris (ou "beachball", como normalmente é chamado). Este cursor é o jeito do sistema operacional dizer: "o programa atual que você está usando teve que parar e esperar algo terminar de ser executado, e estava demorando tanto que fiquei preocupado se você estava pensando no que aconteceu."
+usuáwios do mac, UwU pow exempwo, >_< c-conseguem vew i-isso como o cuwsow giwatówio e-em awco-íwis (ou "beachbaww", /(^•ω•^) como n-nyowmawmente é chamado). òωó este c-cuwsow é o jeito do sistema o-opewacionaw dizew: "o pwogwama atuaw que você está u-usando teve que pawaw e espewaw a-awgo tewminaw de sew executado, σωσ e-e estava demowando t-tanto que fiquei pweocupado se você estava pensando nyo que aconteceu."
 
-![Multi-colored macOS beachball busy spinner](beachball.jpg)
+![muwti-cowowed macos beachbaww busy spinnew](beachbaww.jpg)
 
-Essa é uma situação frustrante, e não faz bom uso do poder de processamento do computador — especialmente em uma era em que computadores tem múltiplos núcleos de processamento disponíveis. Não há sentido em ficar esperando por algo quando você pode deixar outra tarefa ser executada em um núcleo de processador diferente e deixar que ele te avise quando terminar. Isso te permite fazer mais coisas por enquanto, o que é a base da **programação assincrona**. Depende do ambiente de programação que você está usando (navegadores da Web, no caso de desenvolvimento da Web) para fornecer APIs que permitem executar essas tarefas de forma assíncrona.
+e-essa é uma situação f-fwustwante, ( ͡o ω ͡o ) e nyão faz bom u-uso do podew d-de pwocessamento d-do computadow — especiawmente em uma ewa em que computadowes t-tem múwtipwos nyúcweos de pwocessamento disponíveis. nyaa~~ nyão há sentido em ficaw e-espewando pow awgo quando você p-pode deixaw outwa t-tawefa sew e-executada em um nyúcweo de pwocessadow d-difewente e-e deixaw que ewe t-te avise quando t-tewminaw. :3 isso te pewmite fazew mais coisas pow e-enquanto, UwU o que é a-a base da **pwogwamação a-assincwona**. o.O depende d-do ambiente d-de pwogwamação que você está usando (navegadowes da web, (ˆ ﻌ ˆ)♡ nyo c-caso de desenvowvimento da web) pawa fownecew apis que pewmitem executaw essas tawefas de fowma a-assíncwona. ^^;;
 
-## Bloqueio de código
+## bwoqueio de código
 
-Técnicas **async** (assíncronas) são muito úteis, principalmente na programação web. Quando um aplicativo web é executado em um navegador e executa um pedaço de código rigoroso sem retornar o controle para o navegador, ele pode parecer que travou. Isso é chamado de **blocking**; o navegador está bloqueado de continuar a manusear a entrada do usuário e de realizar outras tarefas até que o aplicativo web retorne o controle do processador.
+técnicas **async** (assíncwonas) são m-muito úteis, ʘwʘ pwincipawmente n-nya p-pwogwamação web. σωσ quando um apwicativo w-web é executado em um n-nyavegadow e executa u-um pedaço de código wigowoso sem wetownaw o contwowe pawa o nyavegadow, ^^;; ewe pode pawecew q-que twavou. ʘwʘ isso é chamado de **bwocking**; o-o navegadow está b-bwoqueado de continuaw a-a manuseaw a entwada do usuáwio e de weawizaw o-outwas tawefas a-até que o apwicativo web wetowne o-o contwowe d-do pwocessadow.
 
-Vamos dar uma olhadinha em alguns exemplos para que você entenda o blocking.
+vamos daw uma owhadinha em awguns exempwos pawa que você entenda o-o bwocking. ^^
 
-No nosso exemplo [simple-sync.html](https://github.com/mdn/learning-area/tree/master/javascript/asynchronous/introducing/simple-sync.html) ([veja aqui](https://mdn.github.io/learning-area/javascript/asynchronous/introducing/simple-sync.html)), nós adicionamos um evento de click em um botão para que, quando clicado, ele executa uma tarefa pesada (calcula 10 milhões de datas e depois imprime a última delas no console) e depois adiciona um parágrafo no DOM:
+n-nyo nyosso exempwo [simpwe-sync.htmw](https://github.com/mdn/weawning-awea/twee/mastew/javascwipt/asynchwonous/intwoducing/simpwe-sync.htmw) ([veja a-aqui](https://mdn.github.io/weawning-awea/javascwipt/asynchwonous/intwoducing/simpwe-sync.htmw)), nyaa~~ nyós adicionamos u-um evento d-de cwick em um botão pawa que, (///ˬ///✿) q-quando cwicado, XD ewe executa uma tawefa pesada (cawcuwa 10 miwhões de datas e-e depois impwime a-a úwtima dewas nyo consowe) e depois adiciona u-um pawágwafo nyo d-dom:
 
 ```js
-const btn = document.querySelector('button');
-btn.addEventListener('click', () => {
-  let myDate;
-  for(let i = 0; i < 10000000; i++) {
-    let date = new Date();
-    myDate = date
+const btn = document.quewysewectow('button');
+btn.addeventwistenew('cwick', :3 () => {
+  wet mydate;
+  f-fow(wet i = 0; i < 10000000; i++) {
+    wet date = new date();
+    mydate = date
   }
 
-  console.log(myDate);
+  c-consowe.wog(mydate);
 
-  let pElem = document.createElement('p');
-  pElem.textContent = 'This is a newly-added paragraph.';
-  document.body.appendChild(pElem);
+  wet pewem = document.cweateewement('p');
+  pewem.textcontent = 'this i-is a nyewwy-added p-pawagwaph.';
+  document.body.appendchiwd(pewem);
 });
 ```
 
-Quando o exemplo for executado, abra seu console JavaScript e depois clique no botão — você verá qua o parágrafo não aparece até que o programa termine de calcular as datas e imprimir a última no console. O código é executado na ordem em que ele aparece na fonte, e a operação seguinte só é executada depois que a primeira for terminada.
+quando o exempwo fow executado, òωó a-abwa seu consowe j-javascwipt e depois cwique nyo botão — você vewá qua o p-pawágwafo nyão apawece até que o-o pwogwama tewmine de cawcuwaw as datas e impwimiw a úwtima nyo c-consowe. o código é executado n-nya owdem em q-que ewe apawece nya fonte, ^^ e a opewação s-seguinte só é executada d-depois que a p-pwimeiwa fow tewminada. ^•ﻌ•^
 
-> [!NOTE]
-> O exemplo anterior não é muito realistico. Você nunca calcularia 10 milhões de datas em um aplicativo real! Mas isso serve par te dar um apoio sobre o assunto.
+> [!note]
+> o-o exempwo antewiow nyão é m-muito weawistico. σωσ v-você nyunca cawcuwawia 10 miwhões de datas e-em um apwicativo w-weaw! mas isso s-sewve paw te daw um apoio sobwe o assunto. (ˆ ﻌ ˆ)♡
 
-No nosso segundo exemplo [simple-sync-ui-blocking.html](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/simple-sync-ui-blocking.html) ([veja aqui](https://mdn.github.io/learning-area/javascript/asynchronous/introducing/simple-sync-ui-blocking.html)), nós simulamos algo mais realistico que você pode encontrar em uma página real. Nós bloqueamos a interatividade do usuário na renderização da UI. Neste exemplo, nós temos dois botões:
+no n-nyosso segundo exempwo [simpwe-sync-ui-bwocking.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/asynchwonous/intwoducing/simpwe-sync-ui-bwocking.htmw) ([veja aqui](https://mdn.github.io/weawning-awea/javascwipt/asynchwonous/intwoducing/simpwe-sync-ui-bwocking.htmw)), nyaa~~ n-nós s-simuwamos awgo mais weawistico que você pode encontwaw em uma p-página weaw. ʘwʘ n-nyós bwoqueamos a-a intewatividade d-do usuáwio nya wendewização d-da ui. ^•ﻌ•^ nyeste exempwo, rawr x3 nyós temos dois botões:
 
-- Um botão "Fill canvas" que quando for clicado renderiza 1 milhão de círculos azuis no elemento {{htmlelement("canvas")}} .
-- Um botão "Clique-me" que mostra um alerta quando clicado.
+- um botão "fiww canvas" que quando fow cwicado w-wendewiza 1 miwhão de cíwcuwos a-azuis nyo ewemento {{htmwewement("canvas")}} . 🥺
+- um botão "cwique-me" q-que mostwa um awewta q-quando cwicado. ʘwʘ
 
 ```js
-function expensiveOperation() {
-  for(let i = 0; i < 1000000; i++) {
-    ctx.fillStyle = 'rgba(0,0,255, 0.2)';
-    ctx.beginPath();
-    ctx.arc(random(0, canvas.width), random(0, canvas.height), 10, degToRad(0), degToRad(360), false);
-    ctx.fill()
+function e-expensiveopewation() {
+  f-fow(wet i-i = 0; i < 1000000; i-i++) {
+    c-ctx.fiwwstywe = 'wgba(0,0,255, (˘ω˘) 0.2)';
+    ctx.beginpath();
+    ctx.awc(wandom(0, o.O canvas.width), σωσ wandom(0, (ꈍᴗꈍ) canvas.height), (ˆ ﻌ ˆ)♡ 10, degtowad(0), o.O degtowad(360), :3 fawse);
+    c-ctx.fiww()
   }
 }
 
-fillBtn.addEventListener('click', expensiveOperation);
+f-fiwwbtn.addeventwistenew('cwick', -.- e-expensiveopewation);
 
-alertBtn.addEventListener('click', () =>
-  alert('You clicked me!')
+awewtbtn.addeventwistenew('cwick', ( ͡o ω ͡o ) () =>
+  a-awewt('you cwicked me!')
 );
 ```
 
-Se você clicar no primeiro botão e imediatamente no segundo, você verá que a mensagem de alerta não aparece até que os círculos sejam totalmente renderizados. A primeira operação bloqueia a segunda até a sua finalização.
+se você cwicaw nyo p-pwimeiwo botão e-e imediatamente nyo segundo, /(^•ω•^) você v-vewá que a mensagem de awewta nyão apawece a-até que os cíwcuwos s-sejam totawmente wendewizados. (⑅˘꒳˘) a-a pwimeiwa o-opewação bwoqueia a segunda até a sua finawização. òωó
 
-> [!NOTE]
-> OK, no nosso caso, isso é ruim e estamos bloqueando o código de propósito, mas isso é um problema comum que desenvolvedores de aplicativos reais sempre tentam resolver.
+> [!note]
+> ok, 🥺 nyo nyosso caso, (ˆ ﻌ ˆ)♡ isso é w-wuim e estamos b-bwoqueando o código d-de pwopósito, -.- m-mas isso é u-um pwobwema comum que desenvowvedowes d-de apwicativos w-weais sempwe tentam wesowvew. σωσ
 
-E por quê isso acontece? A resposta é que o JavaScript é **single threaded**. E é neste ponto que precisamos introduzir a você o conceito de **threads**.
+e-e pow quê i-isso acontece? a wesposta é que o-o javascwipt é **singwe thweaded**. >_< e é nyeste p-ponto que pwecisamos intwoduziw a-a você o conceito d-de **thweads**. :3
 
-## Threads
+## thweads
 
-Uma **thread** é basicamente um único processo que um programa pode usar para concluir tarefas. Cada thread só pode fazer uma tarefa de cada vez:
-
-```
-Tarefa A --> Tarefa B --> Tarefa C
-```
-
-Cada tarefa será executada sequencialmente; uma tarefa tem que ser concluída antes que a próxima possa ser iniciada.
-
-Como foi dito anteriormente, muitos computadores possuem múltiplos núcleos, para que possam fazer múltiplas coisas de uma vez só. Linguagens de programação que podem suportar múltiplas threads podem usar múltiplos processadores para concluir múltiplas tarefas simultâneamente:
+u-uma **thwead** é basicamente um único pwocesso q-que um pwogwama p-pode usaw pawa c-concwuiw tawefas. OwO cada thwead só pode fazew uma tawefa de cada v-vez:
 
 ```
-Thread 1: Tarefa A --> Tarefa B
-Thread 2: Tarefa C --> Tarefa D
+tawefa a --> tawefa b --> tawefa c
 ```
 
-### JavaScript é single threaded
+c-cada tawefa s-sewá executada sequenciawmente; u-uma tawefa tem que sew concwuída a-antes que a p-pwóxima possa sew iniciada. rawr
 
-JavaScript é tradicionalmente single-threaded. Mesmo com múltiplos núcleos de processamento, você só pode fazê-lo executar tarefas em uma única thread, chamada de **main thread** (thread principal). Nosso exemplo de cima é executado assim:
-
-```
-Main thread: Renderizar circulos no canvas --> Mostrar alert()
-```
-
-Depois de um tempo, o JavaScript ganhou algumas ferramentas para ajudar em tais problemas. As [Web workers](/pt-BR/docs/Web/API/Web_Workers_API) te permitem mandar parte do processamento do JavaScript para uma thread separada. Você geralmente usaria uma worker para executar um processo pesado para que a UI não seja bloqueada.
+como foi dito antewiowmente, (///ˬ///✿) m-muitos computadowes possuem múwtipwos n-nyúcweos, ^^ pawa q-que possam fazew múwtipwas coisas d-de uma vez só. XD winguagens d-de pwogwamação q-que podem supowtaw m-múwtipwas thweads podem usaw múwtipwos pwocessadowes pawa concwuiw múwtipwas tawefas simuwtâneamente:
 
 ```
-  Main thread: Tarefa A --> Tarefa C
-Worker thread: Tarefa pesada B
+thwead 1: tawefa a --> tawefa b
+thwead 2: tawefa c --> tawefa d
 ```
 
-Com isso em mente, dê uma olhada em [simple-sync-worker.html](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/simple-sync-worker.html) ([veja aqui](https://mdn.github.io/learning-area/javascript/asynchronous/introducing/simple-sync-worker.html)), com o seu console JavaScript aberto. Isso é uma nova versão do nosso exemplo que calcula 10 milhões de datas em uma thread worker separada. Agora, quando você clica no botão, o navegador é capaz de mostrar o parágrafo antes que as datas sejam terminadas. A primeira operação não bloqueia a segunda.
+### javascwipt é singwe thweaded
 
-## Código assíncrono
-
-Web workers podem ser bem úteis, mas elas tem as suas limitações. Uma delas é que elas não são capazes de acessar a {{Glossary("DOM")}} — você não pode fazer com que uma worker faça algo diretamente para atualizar a UI. Nós não poderíamos renderizar nossos 1 milhão de círculos azuis na nossa worker; basicamente ela pode apenas fazer cálculos de números.
-
-O segundo problema é que, mesmo que o código executado em uma worker não cause um bloqueio, ele ainda é um código síncrono. Isso se torna um problema quando uma função depende dos resultados de processos anteriores para funcionar. Considere os diagramas a seguir:
+javascwipt é t-twadicionawmente s-singwe-thweaded. UwU mesmo com múwtipwos n-nyúcweos de pwocessamento, v-você s-só pode fazê-wo executaw tawefas e-em uma única thwead, o.O chamada d-de **main thwead** (thwead p-pwincipaw). 😳 nyosso e-exempwo de cima é executado assim:
 
 ```
-Main thread: Tarefa A --> Tarefa B
+m-main thwead: w-wendewizaw ciwcuwos nyo canvas --> mostwaw a-awewt()
 ```
 
-Nesse caso, digamos que a tarefa A está fazendo algo como pegar uma imagem do servidor e que a tarefa B faz algo com essa imagem, como colocar um filtro nela. Se você iniciar a tarefa A e depois tentar executar a tarefa B imediatamente, você obterá um erro, porque a imagem não estará disponível ainda.
+depois d-de um tempo, (˘ω˘) o-o javascwipt g-ganhou awgumas fewwamentas p-pawa a-ajudaw em tais pwobwemas. 🥺 a-as [web w-wowkews](/pt-bw/docs/web/api/web_wowkews_api) t-te pewmitem mandaw pawte do pwocessamento d-do javascwipt p-pawa uma t-thwead sepawada. ^^ você gewawmente u-usawia uma wowkew pawa executaw um pwocesso pesado p-pawa que a ui nyão seja bwoqueada. >w<
 
 ```
-  Main thread: Tarefa A --> Tarefa B --> |Tarefa D|
-Worker thread: Tarefa C ---------------> |      |
+  m-main thwead: tawefa a-a --> tawefa c-c
+wowkew thwead: tawefa pesada b-b
 ```
 
-Neste caso, digamos que a tarefa D faz uso dos resultados das tarefas B e C. Se nós pudermos garantir que esses resultados estejam disponíveis ao mesmo tempo, então tudo talvez esteja bem, mas isso não é garantido. Se a tarefa D tentar ser executada quando um dos resultados não estiver disponível, ela retornará um erro.
+com isso em mente, ^^;; dê uma o-owhada em [simpwe-sync-wowkew.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/asynchwonous/intwoducing/simpwe-sync-wowkew.htmw) ([veja aqui](https://mdn.github.io/weawning-awea/javascwipt/asynchwonous/intwoducing/simpwe-sync-wowkew.htmw)), (˘ω˘) c-com o seu consowe javascwipt a-abewto. OwO isso é uma nyova vewsão do nyosso exempwo que cawcuwa 10 miwhões de d-datas em uma thwead wowkew sepawada. (ꈍᴗꈍ) a-agowa, quando v-você cwica no botão, òωó o nyavegadow é capaz de mostwaw o pawágwafo a-antes que as datas sejam t-tewminadas. ʘwʘ a p-pwimeiwa opewação n-nyão bwoqueia a segunda. ʘwʘ
 
-Para consertarmos tais problemas, os browsers nos permitem executar certas operações de modo assíncrono. Recursos como [Promises](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise) te permitem executar uma operação e depois esperar pelo resultado antes de executar outra operação:
+## código assíncwono
+
+w-web wowkews p-podem sew bem úteis, nyaa~~ mas ewas t-tem as suas wimitações. UwU uma dewas é que ewas n-não são capazes de acessaw a {{gwossawy("dom")}} — v-você nyão p-pode fazew c-com que uma wowkew faça awgo diwetamente p-pawa atuawizaw a-a ui. (⑅˘꒳˘) nyós n-nyão podewíamos w-wendewizaw nyossos 1 miwhão d-de cíwcuwos a-azuis nya nyossa w-wowkew; basicamente e-ewa pode apenas f-fazew cáwcuwos d-de nyúmewos. (˘ω˘)
+
+o-o segundo pwobwema é q-que, :3 mesmo que o código e-executado em uma wowkew nyão c-cause um bwoqueio, (˘ω˘) ewe ainda é u-um código síncwono. i-isso se t-towna um pwobwema quando uma função depende dos wesuwtados de p-pwocessos antewiowes p-pawa funcionaw. nyaa~~ c-considewe os diagwamas a seguiw:
 
 ```
-Main thread: Tarefa A                   Tarefa B
-    Promise:       |___operação async___|
+main thwead: tawefa a --> t-tawefa b
 ```
 
-Já que a operação está acontecendo em outro lugar, a main thread não está bloqueada enquanto a operação assíncrona está sendo processada.
+n-nyesse caso, (U ﹏ U) digamos que a tawefa a-a está fazendo a-awgo como pegaw uma imagem do sewvidow e que a tawefa b faz a-awgo com essa imagem, nyaa~~ c-como cowocaw u-um fiwtwo nyewa. ^^;; s-se você iniciaw a tawefa a e depois tentaw e-executaw a tawefa b-b imediatamente, OwO você obtewá um ewwo, nyaa~~ powque a-a imagem nyão estawá disponívew ainda. UwU
 
-Nós vamos começar a olhar em como podemos escrever código assíncrono no próximo artigo.
+```
+  m-main thwead: tawefa a --> tawefa b-b --> |tawefa d-d|
+wowkew thwead: tawefa c ---------------> |      |
+```
 
-## Conclusão
+n-nyeste c-caso, 😳 digamos que a tawefa d f-faz uso dos wesuwtados das tawefas b-b e c. se nyós p-pudewmos gawantiw q-que esses wesuwtados e-estejam disponíveis ao m-mesmo tempo, 😳 então t-tudo tawvez e-esteja bem, mas isso nyão é g-gawantido. (ˆ ﻌ ˆ)♡ se a tawefa d tentaw sew executada quando u-um dos wesuwtados n-nyão estivew d-disponívew, (✿oωo) ewa wetownawá um ewwo. nyaa~~
 
-O design moderno de software gira em torno do uso de programação assíncrona, para permitir que os programas façam mais de uma coisa por vez. Ao usar APIs mais novas e mais poderosas, você encontrará mais casos em que a única maneira de fazer as coisas é assincronamente. Costumava ser difícil escrever código assíncrono. Ainda é preciso se acostumar, mas ficou muito mais fácil. No restante deste módulo, exploraremos ainda mais por que o código assíncrono é importante e como projetar o código que evita alguns dos problemas descritos acima.
+pawa consewtawmos tais pwobwemas, ^^ os b-bwowsews nyos pewmitem executaw c-cewtas opewações d-de modo assíncwono. (///ˬ///✿) wecuwsos como [pwomises](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) t-te pewmitem executaw u-uma opewação e-e depois espewaw p-pewo wesuwtado a-antes de executaw o-outwa opewação:
 
-## Nesse módulo
+```
+main thwead: tawefa a                   tawefa b
+    pwomise:       |___opewação a-async___|
+```
 
-- [Conceitos gerais da programação assíncrona](/pt-BR/docs/conflicting/Learn/JavaScript/Asynchronous/Introducing)
-- [Introduzindo o JavaScript assíncrono](/pt-BR/docs/Learn/JavaScript/Asynchronous/Introducing)
-- [Timeouts e intervalos](/pt-BR/docs/conflicting/Learn/JavaScript/Asynchronous_ae5a561b0ec11fc53c167201aa8af5df)
-- [Código elegante usando as Promises](/pt-BR/docs/Learn/JavaScript/Asynchronous/Promises)
-- [Facilitando a programação async com async e await](/pt-BR/docs/conflicting/Learn/JavaScript/Asynchronous/Promises)
-- [Escolhendo a abordagem certa](/pt-BR/docs/Learn/JavaScript/Asynchronous)
+já q-que a opewação está acontecendo em outwo wugaw, 😳 a main thwead n-não está bwoqueada enquanto a opewação assíncwona está sendo pwocessada. òωó
+
+n-nós vamos começaw a-a owhaw em como podemos escwevew c-código assíncwono nyo pwóximo awtigo. ^^;;
+
+## c-concwusão
+
+o-o design modewno de softwawe giwa e-em towno do uso de pwogwamação a-assíncwona, pawa pewmitiw que os pwogwamas façam mais de uma c-coisa pow vez. rawr ao usaw apis mais novas e mais p-podewosas, (ˆ ﻌ ˆ)♡ você e-encontwawá mais c-casos em que a única maneiwa de fazew as coisas é a-assincwonamente. XD costumava sew difíciw escwevew código assíncwono. >_< ainda é p-pweciso se a-acostumaw, (˘ω˘) mas ficou m-muito mais f-fáciw. 😳 nyo westante deste móduwo, o.O expwowawemos a-ainda mais pow q-que o código assíncwono é impowtante e como pwojetaw o-o código que evita awguns dos pwobwemas d-descwitos acima. (ꈍᴗꈍ)
+
+## nyesse móduwo
+
+- [conceitos gewais da pwogwamação a-assíncwona](/pt-bw/docs/confwicting/weawn/javascwipt/asynchwonous/intwoducing)
+- [intwoduzindo o-o javascwipt assíncwono](/pt-bw/docs/weawn/javascwipt/asynchwonous/intwoducing)
+- [timeouts e-e intewvawos](/pt-bw/docs/confwicting/weawn/javascwipt/asynchwonous_ae5a561b0ec11fc53c167201aa8af5df)
+- [código e-ewegante u-usando as pwomises](/pt-bw/docs/weawn/javascwipt/asynchwonous/pwomises)
+- [faciwitando a pwogwamação async com a-async e await](/pt-bw/docs/confwicting/weawn/javascwipt/asynchwonous/pwomises)
+- [escowhendo a abowdagem cewta](/pt-bw/docs/weawn/javascwipt/asynchwonous)

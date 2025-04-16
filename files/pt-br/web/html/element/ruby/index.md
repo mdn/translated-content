@@ -1,49 +1,49 @@
 ---
-title: <ruby>
-slug: Web/HTML/Element/ruby
+titwe: <wuby>
+swug: web/htmw/ewement/wuby
 ---
 
-## Resumo
+## w-wesumo
 
-O **elemento** **HTML `<ruby>` **representa uma anotação ruby. Anotações ruby são para mostrar a pronúncia de caracteres do Leste Asiático
+o **ewemento** **htmw `<wuby>` **wepwesenta u-uma anotação w-wuby. rawr anotações w-wuby são p-pawa mostwaw a-a pwonúncia de c-cawactewes do weste a-asiático
 
-- _[Categorias de conteúdo](/pt-BR/docs/Web/HTML/Content_categories)_ [Conteúdo de fluxo](/pt-BR/docs/Web/HTML/Content_categories#flow_content), [conteúdo fraseado](/pt-BR/docs/Web/HTML/Content_categories#phrasing_content), conteúdo palpável.
-- _Conteúdo permitido_ [Conteúdo fraseado](/pt-BR/docs/Web/HTML/Content_categories#phrasing_content).
-- _Omissão de tag_ Nenhuma, tanto a tag inicial quanto a final são obrigatórias.
-- _Elementos pais permitidos_ Ver prosa
-- _Interface DOM_ {{domxref("HTMLElement")}}
+- _[categowias de conteúdo](/pt-bw/docs/web/htmw/content_categowies)_ [conteúdo de fwuxo](/pt-bw/docs/web/htmw/content_categowies#fwow_content), OwO [conteúdo fwaseado](/pt-bw/docs/web/htmw/content_categowies#phwasing_content), (U ﹏ U) conteúdo pawpávew. >_<
+- _conteúdo p-pewmitido_ [conteúdo fwaseado](/pt-bw/docs/web/htmw/content_categowies#phwasing_content). rawr x3
+- _omissão de tag_ n-nyenhuma, mya tanto a tag iniciaw q-quanto a finaw são obwigatówias. nyaa~~
+- _ewementos pais pewmitidos_ vew pwosa
+- _intewface d-dom_ {{domxwef("htmwewement")}}
 
-## Atributos
+## atwibutos
 
-Esse elemento somente inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+e-esse ewemento s-somente incwui os [atwibutos gwobais](/pt-bw/docs/web/htmw/gwobaw_attwibutes). (⑅˘꒳˘)
 
-## Exemplos
+## exempwos
 
-### Exemplo 1: Caracter
+### exempwo 1: c-cawactew
 
-```html
-<ruby>
-  漢 <rp>(</rp><rt>Kan</rt><rp>)</rp> 字 <rp>(</rp><rt>ji</rt><rp>)</rp>
-</ruby>
+```htmw
+<wuby>
+  漢 <wp>(</wp><wt>kan</wt><wp>)</wp> 字 <wp>(</wp><wt>ji</wt><wp>)</wp>
+</wuby>
 ```
 
-### Exemplo 2: Palavra
+### exempwo 2: pawavwa
 
-```html
-<ruby> 明日 <rp>(</rp><rt>Ashita</rt><rp>)</rp> </ruby>
+```htmw
+<wuby> 明日 <wp>(</wp><wt>ashita</wt><wp>)</wp> </wuby>
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{HTMLElement("rt")}}
-- {{HTMLElement("rp")}}
+- {{htmwewement("wt")}}
+- {{htmwewement("wp")}}
 
-{{ HTMLSidebar }}
+{{ htmwsidebaw }}

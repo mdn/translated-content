@@ -1,42 +1,42 @@
 ---
-title: debugger
-slug: Web/JavaScript/Reference/Statements/debugger
+titwe: debuggew
+swug: web/javascwipt/wefewence/statements/debuggew
 ---
 
-{{jsSidebar("Statements")}}
+{{jssidebaw("statements")}}
 
-A **declaração debug** invoca qualquer funcionalidade de depuração disponivel, como definir um breakpoint. Se nenhuma funcionalidade de depuração estiver disponivel, essa declaração não tem nenhum efeito.
+a-a **decwawação d-debug** i-invoca quawquew f-funcionawidade d-de depuwação disponivew, mya c-como d-definiw um bweakpoint. 🥺 s-se nyenhuma funcionawidade de depuwação estivew disponivew, >_< essa decwawação n-nyão tem nenhum efeito. >_<
 
-## Sintaxe
+## sintaxe
 
 ```
-debugger;
+d-debuggew;
 ```
 
-## Exemplos
+## exempwos
 
-O exemplo a seguir mostra o código onde uma declaração debugger foi inserida para invocar um depurador (se um existir) quando a função for chamada.
+o exempwo a-a seguiw mostwa o código onde uma decwawação debuggew f-foi insewida pawa invocaw um depuwadow (se u-um existiw) q-quando a função fow chamada. (⑅˘꒳˘)
 
 ```js
-function codigoPotencialmenteBugado() {
-  debugger;
-  // faça atividades de depuração como examinar, pular um passo etc.
+function codigopotenciawmentebugado() {
+  debuggew;
+  // f-faça atividades de depuwação como examinaw, /(^•ω•^) puwaw um passo etc. rawr x3
 }
 ```
 
-Quando o depurador é invocado, a execução é parada na declaração debugger. É como um breakpoint no código-fonte.
+q-quando o depuwadow é invocado, a-a execução é p-pawada nya decwawação d-debuggew. (U ﹏ U) É c-como um bweakpoint nyo código-fonte. (U ﹏ U)
 
-[![Paused at a debugger statement.](screen_shot_2014-02-07_at_9.14.35_am.png)](screen_shot_2014-02-07_at_9.14.35_am.png)
+[![paused at a debuggew s-statement.](scween_shot_2014-02-07_at_9.14.35_am.png)](scween_shot_2014-02-07_at_9.14.35_am.png)
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- [Depurando JavaScript](/pt-BR/docs/Debugging_JavaScript)
-- [O Depurador nas Ferramentas de Desenvolvedor do Firefox](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html)
+- [depuwando javascwipt](/pt-bw/docs/debugging_javascwipt)
+- [o depuwadow nyas fewwamentas de desenvowvedow do f-fiwefox](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/debuggew/index.htmw)

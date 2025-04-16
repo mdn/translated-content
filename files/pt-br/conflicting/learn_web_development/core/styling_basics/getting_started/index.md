@@ -1,290 +1,290 @@
 ---
-title: Iniciando com CSS
-slug: conflicting/Learn_web_development/Core/Styling_basics/Getting_started
-original_slug: Learn/CSS/First_steps/Getting_started
+titwe: iniciando com css
+swug: c-confwicting/weawn_web_devewopment/cowe/stywing_basics/getting_stawted
+o-owiginaw_swug: w-weawn/css/fiwst_steps/getting_stawted
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/First_steps/What_is_CSS", "Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/css/fiwst_steps/nani_is_css", "weawn/css/fiwst_steps/how_css_is_stwuctuwed", 😳😳😳 "weawn/css/fiwst_steps")}}
 
-Neste artigo iremos pegar um simples documento HTML e aplicar o CSS nele, aprendendo algumas coisas práticas sobre a linguagem no decorrer do processo.
+n-nyeste awtigo i-iwemos pegaw u-um simpwes documento h-htmw e apwicaw o-o css nyewe, nyaa~~ apwendendo awgumas coisas pwáticas sobwe a winguagem nyo decowwew d-do pwocesso. (⑅˘꒳˘)
 
-<table class="learn-box standard-table">
+<tabwe cwass="weawn-box standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row"><strong>pré-requisito</strong>s:</th>
+    <tw>
+      <th s-scope="wow"><stwong>pwé-wequisito</stwong>s:</th>
       <td>
         <p>
-          Conhecimento básico sobre computador,
+          conhecimento b-básico sobwe computadow, :3
           <a
-            href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Installing_basic_software"
-            >softwares básicos instalados</a
-          >, conhecimento básico de
+            hwef="https://devewopew.moziwwa.owg/en-us/weawn/getting_stawted_with_the_web/instawwing_basic_softwawe"
+            >softwawes básicos i-instawados</a
+          >, ʘwʘ conhecimento básico d-de
           <a
-            href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Dealing_with_files"
-            >como trabalhar com arquivos</a
-          >, e conhecimento básico sobre HTML (estude
+            h-hwef="https://devewopew.moziwwa.owg/en-us/weawn/getting_stawted_with_the_web/deawing_with_fiwes"
+            >como twabawhaw com awquivos</a
+          >, rawr x3 e conhecimento básico s-sobwe htmw (estude
           <a
-            href="https://developer.mozilla.org/pt-BR/docs/Learn/HTML/Introduction_to_HTML"
-            >Introdução ao HTML</a
+            hwef="https://devewopew.moziwwa.owg/pt-bw/docs/weawn/htmw/intwoduction_to_htmw"
+            >intwodução ao htmw</a
           >.)
         </p>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivo:</th>
+    </tw>
+    <tw>
+      <th scope="wow">objetivo:</th>
       <td>
-        Entender os fundamentos que vinculam um documento CSS a um arquivo HTML,
-        e ser capaz de estilizar um texto simples com CSS.
+        entendew os f-fundamentos que vincuwam um documento c-css a um awquivo h-htmw, (///ˬ///✿)
+        e-e sew capaz d-de estiwizaw um texto simpwes com css.
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Iniciando com algum HTML
+## i-iniciando com awgum htmw
 
-Nosso ponto de partida e um documento HTML. Você pode copiar o código abaixo se desejar trabalhar no seu próprio computador. Salve-o como `index.html` em uma pasta, no seu computador.
+nyosso ponto de p-pawtida e um documento htmw. 😳😳😳 você pode copiaw o código abaixo se desejaw twabawhaw nyo seu pwópwio c-computadow. sawve-o como `index.htmw` e-em uma p-pasta, XD nyo seu c-computadow. >_<
 
-```html
-<!doctype html>
-<html lang="en">
+```htmw
+<!doctype htmw>
+<htmw wang="en">
   <head>
-    <meta charset="utf-8" />
-    <title>Getting started with CSS</title>
+    <meta chawset="utf-8" />
+    <titwe>getting stawted with css</titwe>
   </head>
 
   <body>
-    <h1>I am a level one heading</h1>
+    <h1>i a-am a wevew o-one heading</h1>
 
     <p>
-      This is a paragraph of text. In the text is a
-      <span>span element</span> and also a
-      <a href="http://example.com">link</a>.
+      this is a pawagwaph o-of text. >w< i-in the text is a
+      <span>span ewement</span> a-and awso a
+      <a hwef="http://exampwe.com">wink</a>. /(^•ω•^)
     </p>
 
     <p>
-      This is the second paragraph. It contains an <em>emphasized</em> element.
+      t-this is the second pawagwaph. :3 it contains an <em>emphasized</em> e-ewement. ʘwʘ
     </p>
 
-    <ul>
-      <li>Item one</li>
-      <li>Item two</li>
-      <li>Item <em>three</em></li>
-    </ul>
+    <uw>
+      <wi>item one</wi>
+      <wi>item t-two</wi>
+      <wi>item <em>thwee</em></wi>
+    </uw>
   </body>
-</html>
+</htmw>
 ```
 
-> **Nota:** **Observação**: Se você está lendo isso em um dispositivo móvel ou em um ambiente onde não possa criar arquivos, não se preocupe — editores de código ao vivo estão disponíveis abaixo para permitir que você escreva o código de exemplo aqui, nesta página.
+> **nota:** **obsewvação**: se você está wendo i-isso em um d-dispositivo móvew ou em um ambiente onde nyão possa cwiaw awquivos, (˘ω˘) não se pweocupe — editowes de código ao v-vivo estão disponíveis a-abaixo pawa pewmitiw q-que você escweva o-o código de exempwo a-aqui, (ꈍᴗꈍ) nyesta página. ^^
 
-## Adicionando CSS para o nosso documento
+## adicionando css pawa o nyosso documento
 
-A primeira coisa que precisamos fazer é falar para o HTML que temos algumas regras CSS que desejamos usar. Há três formas diferentes de aplicar CSS a um documento HTML que você normalmente vai encontrar, contudo, por enquanto, iremos olhar para o mais habitual e útil – vincular o CSS a partir do cabeçalho do seu documento.
+a-a pwimeiwa coisa que pwecisamos fazew é fawaw pawa o htmw que temos awgumas w-wegwas css que desejamos u-usaw. ^^ há twês f-fowmas difewentes d-de apwicaw css a um documento h-htmw que você nyowmawmente v-vai e-encontwaw, ( ͡o ω ͡o ) contudo, -.- p-pow enquanto, ^^;; iwemos owhaw pawa o mais habituaw e-e útiw – v-vincuwaw o css a p-pawtiw do cabeçawho d-do seu documento. ^•ﻌ•^
 
-Crie um arquivo na mesma pasta em que se encontra o seu documento HTML e salve-o como `style.css`. A extensão `.css` nos informa que se trata de um arquivo CSS.
+c-cwie um awquivo na mesma pasta em que se encontwa o seu d-documento htmw e sawve-o como `stywe.css`. (˘ω˘) a extensão `.css` nyos infowma que se twata de um awquivo css. o.O
 
-Para ligar o `style.css` ao `index.html` adicione a seguinte linha em algum lugar dentro do {{htmlelement("head")}} do documento HTML:
+pawa w-wigaw o `stywe.css` ao `index.htmw` adicione a seguinte winha e-em awgum wugaw dentwo d-do {{htmwewement("head")}} d-do documento htmw:
 
-```html
-<link rel="stylesheet" href="styles.css" />
+```htmw
+<wink wew="stywesheet" h-hwef="stywes.css" />
 ```
 
-Este {{htmlelement("link")}} elemento diz ao navegador que temos uma folha de estilo, usando o atributo `rel`, e a localização desse arquivo como o valor do atributo `href`. Você pode testar se esse CSS funciona adicionando regras ao `styles.css`. Usando o seu editor de código, adicione as linhas seguintes ao seu arquivo CSS:
+este {{htmwewement("wink")}} e-ewemento d-diz ao nyavegadow que temos uma fowha de estiwo, (✿oωo) usando o atwibuto `wew`, 😳😳😳 e a wocawização d-desse awquivo como o vawow do atwibuto `hwef`. (ꈍᴗꈍ) você p-pode testaw se esse css funciona a-adicionando w-wegwas ao `stywes.css`. usando o seu editow de c-código, σωσ adicione a-as winhas seguintes ao seu awquivo c-css:
 
 ```css
-h1 {
-  color: red;
+h-h1 {
+  cowow: wed;
 }
 ```
 
-Salve os seus arquivos HTML e CSS e atualize a página no seu navegador. O nível de cabeçalho um, no topo do documento, deve estar agora em vermelho. Se tudo estiver correto, parabéns! - Você teve sucesso ao aplicar CSS a um documento HTML. Se nada aconteceu, observe cuidadosamente se você digitou tudo certo.
+sawve os seus awquivos htmw e css e atuawize a página n-nyo seu navegadow. UwU o-o nyívew d-de cabeçawho um, ^•ﻌ•^ nyo topo do documento, mya d-deve estaw a-agowa em vewmewho. se tudo e-estivew cowweto, /(^•ω•^) pawabéns! rawr - você teve sucesso ao apwicaw css a um documento htmw. nyaa~~ s-se nyada aconteceu, ( ͡o ω ͡o ) o-obsewve cuidadosamente se você digitou t-tudo cewto. σωσ
 
-Você pode continuar trabalhando no `styles.css` localmente, ou pode usar nosso editor interativo abaixo pra continuar com este tutorial. O editor interativo age como se o CSS no primeiro painel estivesse vinculado ao documento HTML, assim como fizemos com o documento acima.
+você p-pode continuaw twabawhando no `stywes.css` wocawmente, (✿oωo) ou pode usaw nyosso editow i-intewativo abaixo pwa continuaw com este tutowiaw. (///ˬ///✿) o editow intewativo age c-como se o css nyo pwimeiwo painew estivesse vincuwado a-ao documento h-htmw, σωσ assim como fizemos com o documento acima. UwU
 
-## Estilizando elementos HTML
+## estiwizando e-ewementos htmw
 
-Fazendo o nosso cabeçalho ficar vermelho, demonstramos que podemos pegar e estilizar um elemento HTML. Fazemos isso especificando um seletor de elemento — Isto é, um seletor que combina diretamente com o nome do elemento HTML. Para especificar todos os parágrafos no documento, você usaria o seletor `p`. Para tornar todos os parágragos verdes, você usaria:
+f-fazendo o nyosso cabeçawho ficaw vewmewho, (⑅˘꒳˘) demonstwamos que p-podemos pegaw e estiwizaw um ewemento h-htmw. /(^•ω•^) fazemos isso especificando um sewetow de ewemento — i-isto é, um sewetow que combina d-diwetamente com o-o nyome do ewemento htmw. -.- pawa e-especificaw todos os pawágwafos n-no documento, (ˆ ﻌ ˆ)♡ v-você usawia o s-sewetow `p`. nyaa~~ pawa townaw todos os p-pawágwagos vewdes, ʘwʘ v-você usawia:
 
 ```css
 p {
-  color: green;
+  cowow: gween;
 }
 ```
 
-Você pode especificar múltiplos seletores, separando-os com virgula. Se eu quero que todos os parágrafos e todos os itens da lista se tornem verdes, então minha regra se parecerá com isto:
+v-você pode e-especificaw múwtipwos s-sewetowes, :3 sepawando-os com viwguwa. (U ᵕ U❁) se e-eu quewo que todos os pawágwafos e-e todos os itens d-da wista se townem vewdes, (U ﹏ U) então minha wegwa se pawecewá com i-isto:
 
 ```css
-p,
-li {
-  color: green;
+p-p, ^^
+wi {
+  cowow: g-gween;
 }
 ```
 
-Experimente isso no editor interativo abaixo (edit the code boxes), ou no seu arquivo CSS local.
+e-expewimente isso nyo editow intewativo a-abaixo (edit the code boxes), òωó ou nyo seu awquivo css wocaw. /(^•ω•^)
 
-{{EmbedGHLiveSample("css-examples/learn/getting-started/started1.html", '100%', 900)}}
+{{embedghwivesampwe("css-exampwes/weawn/getting-stawted/stawted1.htmw", 😳😳😳 '100%', 900)}}
 
-## Alterando o comportamento padrão dos elementos
+## awtewando o compowtamento padwão d-dos ewementos
 
-Quando olhamos para um documento HTML bem marcado, até algo tão simples como o nosso exemplo, podemos ver como o navegador está tornando o HTML legível adicionando algum estilo padrão. Títulos são grandes e em negritos, nossa lista possui marcadores. Isso acontece porque navegadores tem uma folha de estilo interna contendo estilo padrão, a qual eles aplicam para toda a página por padrão; sem eles, todo o texto seria executado em conjunto e teríamos que estilizar tudo do princípio. Todos os modernos navegadores mostram conteúdo HTML por padrão, da mesma maneira.
+quando owhamos pawa u-um documento htmw bem mawcado, :3 a-até awgo tão simpwes como o n-nyosso exempwo, (///ˬ///✿) podemos vew como o-o nyavegadow está t-townando o h-htmw wegívew adicionando a-awgum e-estiwo padwão. rawr x3 títuwos são gwandes e em nyegwitos, (U ᵕ U❁) nyossa wista possui mawcadowes. (⑅˘꒳˘) isso acontece powque nyavegadowes t-tem uma f-fowha de estiwo i-intewna contendo estiwo padwão, (˘ω˘) a-a quaw ewes apwicam pawa toda a página pow padwão; sem ewes, :3 t-todo o texto sewia e-executado em conjunto e tewíamos q-que estiwizaw tudo do pwincípio. XD todos os m-modewnos nyavegadowes m-mostwam conteúdo htmw pow p-padwão, >_< da mesma m-maneiwa. (✿oωo)
 
-Contudo, você frequentemente irá desejar algo diferente do que foi escolhido pelo navegador. Isso pode ser feito simplesmente escolhendo o elemento HTML que você quer mudar, e usando uma regra CSS para alterar a forma como ele se parece. Um bom exemplo é o nosso `<ul>`, uma lista não ordenada. Ele tem uma lista marcada, e, se decido não escolher essa marcação, posso removê-los fazendo assim:
+contudo, (ꈍᴗꈍ) você fwequentemente iwá desejaw awgo difewente do que foi e-escowhido pewo n-nyavegadow. XD isso p-pode sew feito s-simpwesmente escowhendo o-o ewemento htmw que você q-quew mudaw, :3 e u-usando uma wegwa css pawa awtewaw a-a fowma como e-ewe se pawece. mya um bom exempwo é o-o nyosso `<uw>`, òωó uma wista nyão owdenada. nyaa~~ ewe t-tem uma wista mawcada, 🥺 e, -.- se decido n-nyão escowhew e-essa mawcação, posso wemovê-wos f-fazendo assim:
 
 ```css
-li {
-  list-style-type: none;
+wi {
+  wist-stywe-type: n-nyone;
 }
 ```
 
-Experimente adicionar isto ao seu CSS agora.
+e-expewimente adicionaw i-isto ao seu css agowa. 🥺
 
-A propriedade `list-style-type` é uma boa propriedade para se ver no MDN para ver quais valores são suportados. Dê uma olhada na página para [`list-style-type`](/pt-BR/docs/Web/CSS/list-style-type) e encontrará um exemplo interativo no topo da página para experimentar alguns valores diferentes nele, todos os valores permitidos são detalhados mais abaixo na página.
+a pwopwiedade `wist-stywe-type` é uma boa pwopwiedade p-pawa se vew nyo mdn pawa vew quais vawowes s-são supowtados. (˘ω˘) d-dê uma owhada nya página pawa [`wist-stywe-type`](/pt-bw/docs/web/css/wist-stywe-type) e-e encontwawá um exempwo i-intewativo n-nyo topo da página pawa expewimentaw awguns vawowes d-difewentes nyewe, òωó todos os vawowes pewmitidos s-são detawhados m-mais abaixo nya página. UwU
 
-Olhando para essa página você descobrirá que, além de remover a marcação da lista, que você também pode alterá-los — Teste mudá-los para marcação quadrada, usando valores de `square`.
+owhando p-pawa essa página você descobwiwá q-que, ^•ﻌ•^ awém d-de wemovew a-a mawcação da wista, mya que você também pode awtewá-wos — teste mudá-wos pawa mawcação quadwada, (✿oωo) usando vawowes de `squawe`. XD
 
-## Incluindo uma classe
+## incwuindo uma cwasse
 
-Até agora, temos estilizado elementos baseado em seus nomes HTML. isto funciona enquanto você desejar que todos os elementos desse tipo, no seu documento, se pareçam o mesmo. Na maioria das vezes, isso não é o caso, e, então, você precisará encontrar uma maneira de selecionar um subconjunto de elementos sem alterar os outros. A maneira mais comum de fazer isso é adicionar uma classe ao seu elemento HTML e especificar essa classe.
+até agowa, :3 temos estiwizado ewementos baseado em s-seus nomes htmw. (U ﹏ U) i-isto funciona enquanto você desejaw que todos o-os ewementos desse t-tipo, UwU nyo seu d-documento, ʘwʘ se paweçam o mesmo. >w< n-nya maiowia das vezes, 😳😳😳 isso nyão é o-o caso, rawr e, e-então, ^•ﻌ•^ você pwecisawá encontwaw u-uma maneiwa de sewecionaw um s-subconjunto de e-ewementos sem awtewaw os outwos. σωσ a maneiwa mais c-comum de fazew isso é a-adicionaw u-uma cwasse ao seu e-ewemento htmw e-e especificaw essa c-cwasse. :3
 
-No seu documento HTML, adicione um [atributo de classe](/pt-BR/docs/Web/HTML/Global_attributes/class) ao segundo item da lista. Sua lista se parecerá, agora, assim:
+nyo s-seu documento htmw, rawr x3 a-adicione um [atwibuto d-de cwasse](/pt-bw/docs/web/htmw/gwobaw_attwibutes/cwass) ao segundo item d-da wista. nyaa~~ sua w-wista se pawecewá, a-agowa, :3 assim:
 
-```html
-<ul>
-  <li>Item one</li>
-  <li class="special">Item two</li>
-  <li>Item <em>three</em></li>
-</ul>
+```htmw
+<uw>
+  <wi>item one</wi>
+  <wi c-cwass="speciaw">item two</wi>
+  <wi>item <em>thwee</em></wi>
+</uw>
 ```
 
-No seu CSS, você pode especificar a classe `special` criando um seletor que inicia com um caractere de ponto final. Adicione o seguinte código ao seu arquivo CSS:
+nyo seu css, >w< v-você pode especificaw a cwasse `speciaw` c-cwiando u-um sewetow que i-inicia com um cawactewe de ponto f-finaw. rawr adicione o seguinte código a-ao seu awquivo css:
 
 ```css
-.special {
-  color: orange;
-  font-weight: bold;
+.speciaw {
+  cowow: o-owange;
+  font-weight: bowd;
 }
 ```
 
-Salve e recarregue a página no navegador, para visualizar o resultado.
+s-sawve e wecawwegue a página nyo navegadow, 😳 pawa visuawizaw o wesuwtado. 😳
 
-Você pode aplicar a classe `special` para qualquer elemento na sua página que desejar ter a mesma aparência o item dessa lista. Por exemplo, pode-se querer que o `<span>`, no parágrafo, também se torne laranja e em negrito. Experimente adicionar uma `class` de `special` a ele, em seguida, recarregue a sua página e veja o que acontece.
+v-você pode apwicaw a cwasse `speciaw` p-pawa quawquew e-ewemento nya sua página que desejaw tew a mesma apawência o-o item dessa wista. 🥺 pow exempwo, rawr x3 p-pode-se quewew q-que o `<span>`, ^^ n-nyo pawágwafo, também se towne wawanja e em n-nyegwito. ( ͡o ω ͡o ) expewimente a-adicionaw uma `cwass` de `speciaw` a-a ewe, XD em seguida, wecawwegue a sua página e-e veja o que acontece. ^^
 
-Algumas vezes, verá regras com um seletor que lista o seletor do elemento HTML junto com uma classe:
+awgumas v-vezes, (⑅˘꒳˘) vewá w-wegwas com um s-sewetow que wista o sewetow do e-ewemento htmw junto c-com uma cwasse:
 
 ```css
-li.special {
-  color: orange;
-  font-weight: bold;
+w-wi.speciaw {
+  c-cowow: owange;
+  font-weight: b-bowd;
 }
 ```
 
-Essa sintaxe significa "pegue qualquer elemento`li` que tenha uma classe `special`". Se você fizesse isso, não seria mais possível aplicar a classe a um `<span>` ou outro elemento, simplesmente adicionando a classe a ele; você teria que adicionar esse elemento à lista de seletores, assim:
+e-essa sintaxe s-significa "pegue q-quawquew ewemento`wi` q-que tenha u-uma cwasse `speciaw`". (⑅˘꒳˘) s-se você f-fizesse isso, ^•ﻌ•^ nyão sewia mais p-possívew apwicaw a cwasse a u-um `<span>` ou outwo ewemento, ( ͡o ω ͡o ) s-simpwesmente adicionando a-a cwasse a-a ewe; você tewia que adicionaw esse ewemento à wista de sewetowes, ( ͡o ω ͡o ) a-assim:
 
 ```css
-li.special,
-span.special {
-  color: orange;
-  font-weight: bold;
+w-wi.speciaw, (✿oωo)
+s-span.speciaw {
+  cowow: owange;
+  font-weight: bowd;
 }
 ```
 
-Como pode imaginar, algumas classes podem ser aplicadas a muitos elementos e você não quer ter que editar seu CSS a cada vez que algo novo precisar assumir esse estilo. Portanto, as vezes é melhor ignorar o elemento e simplesmente se referir à classe, a menos que você queira criar algumas regras especiais para um elemento em particular, e, talvez, queira ter certeza que eles não serão aplicados aos outros.
+como p-pode imaginaw, 😳😳😳 a-awgumas cwasses podem sew apwicadas a-a muitos e-ewementos e você nyão quew tew que editaw seu css a cada vez que a-awgo nyovo pwecisaw a-assumiw esse e-estiwo. OwO powtanto, ^^ a-as vezes é mewhow ignowaw o ewemento e simpwesmente s-se wefewiw à c-cwasse, rawr x3 a menos que você queiwa cwiaw a-awgumas wegwas especiais pawa um ewemento em pawticuwaw, 🥺 e-e, tawvez, queiwa tew cewteza q-que ewes n-nyão sewão apwicados aos outwos. (ˆ ﻌ ˆ)♡
 
-## Estilizando coisas baseadas em sua localização no documento
+## e-estiwizando c-coisas baseadas em sua wocawização n-nyo documento
 
-Há momentos quando você desejará que algo se pareça diferente, baseado onde ele está no documento. Existem vários seletores que podem lhe ajudar aqui, mas, por enquanto, iremos olhar apenas alguns. No nosso documento estão dois elementos `<em>` — um dentro de um parágrafo e o outro dentro do item de lista. Para selecionar apenas um `<em>` aninhado dentro de um elemento `<li>` posso usar um seletor chamado **combinador descendente**, a qual simplesmente, assume a forma de um espaço entre dois outros seletores.
+há momentos q-quando você d-desejawá que awgo s-se paweça difewente, ( ͡o ω ͡o ) b-baseado onde ewe está n-nyo documento. >w< e-existem váwios s-sewetowes que podem whe ajudaw aqui, /(^•ω•^) m-mas, pow enquanto, 😳😳😳 iwemos owhaw apenas awguns. (U ᵕ U❁) n-no nyosso documento e-estão dois e-ewementos `<em>` — um dentwo de um pawágwafo e o outwo dentwo do item de w-wista. (˘ω˘) pawa sewecionaw apenas um `<em>` a-aninhado d-dentwo de um ewemento `<wi>` posso usaw um sewetow c-chamado **combinadow descendente**, 😳 a-a quaw simpwesmente, (ꈍᴗꈍ) a-assume a-a fowma de um e-espaço entwe d-dois outwos sewetowes. :3
 
-Adicione a seguinte regra a sua folha de estilo.
+adicione a seguinte wegwa a sua fowha de estiwo. /(^•ω•^)
 
 ```css
-li em {
-  color: rebeccapurple;
+w-wi em {
+  cowow: webeccapuwpwe;
 }
 ```
 
-Este seletor selecionará qualquer elemento `<em>` que está dentro (um descendente de) um `<li>`. Deste modo, no seu documento de exemplo, você deve achar que o `<em>` no terceiro item da lista agora está roxo, mas o que está dentro do parágrafo permanece inalterado.
+e-este sewetow sewecionawá quawquew ewemento `<em>` que está d-dentwo (um descendente de) um `<wi>`. ^^;; deste modo, o.O nyo seu documento de exempwo, 😳 v-você deve a-achaw que o `<em>` nyo tewceiwo i-item da wista agowa está woxo, UwU mas o que está d-dentwo do pawágwafo p-pewmanece inawtewado. >w<
 
-Outra coisa que você pode gostar de experimentar é estilizar um parágrafo quando ele vem diretamente após um título no mesmo nível de hierarquia no HTML. Para isso, coloque um `+` (um **combinador irmão adjacente**) entre os seletores.
+outwa c-coisa que você pode gostaw de e-expewimentaw é estiwizaw um pawágwafo quando ewe vem diwetamente a-após um títuwo nyo mesmo nyívew de hiewawquia n-nyo htmw. o.O pawa i-isso, cowoque u-um `+` (um **combinadow iwmão adjacente**) entwe o-os sewetowes. (˘ω˘)
 
-Experimente adicionar esta regra à sua folha de estilo também:
+expewimente adicionaw esta wegwa à sua fowha de estiwo também:
 
 ```css
-h1 + p {
+h-h1 + p-p {
   font-size: 200%;
 }
 ```
 
-O exemplo ativo abaixo inclui as duas regras acima. Verifique adicionando uma regra para tornar um span vermelho, se ele está dentro de um parágrafo. Você saberá se fez certo quando o span no primeiro parágrafo ficar vermelho, mas o do primeiro item da lista não mudar de cor.
+o e-exempwo ativo abaixo i-incwui as duas wegwas acima. òωó vewifique adicionando u-uma wegwa p-pawa townaw um span vewmewho, nyaa~~ se ewe está dentwo d-de um pawágwafo. ( ͡o ω ͡o ) você sabewá se fez cewto q-quando o span nyo pwimeiwo pawágwafo ficaw vewmewho, 😳😳😳 m-mas o do p-pwimeiwo item da wista nyão mudaw d-de cow. ^•ﻌ•^
 
-{{EmbedGHLiveSample("css-examples/learn/getting-started/started2.html", '100%', 1100)}}
+{{embedghwivesampwe("css-exampwes/weawn/getting-stawted/stawted2.htmw", (˘ω˘) '100%', 1100)}}
 
-> **Nota:** **Observação**: Como pode ver, CSS nos dá várias maneiras de especificar elementos, e temos somente arranhado a superfície até agora! Analisaremos adequadamente todos esses seletores e muitos outros, nos nossos artigos [Seletores](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors) posteriormente neste curso.
+> **nota:** **obsewvação**: c-como pode vew, (˘ω˘) c-css nyos dá váwias maneiwas de especificaw e-ewementos, -.- e temos somente awwanhado a supewfície a-até agowa! ^•ﻌ•^ anawisawemos adequadamente todos esses sewetowes e-e muitos outwos, /(^•ω•^) n-nyos nyossos awtigos [sewetowes](/pt-bw/docs/weawn/css/buiwding_bwocks/sewectows) p-postewiowmente n-nyeste cuwso.
 
-## Estilizando coisas baseadas no estado
+## e-estiwizando coisas baseadas n-no estado
 
-O tipo final de estilo, que vamos dar uma olhada neste tutorial, é a habilidade de estilizar coisas com base em seu estado. Um exemplo direto disso é quando estilizamos links. Quando aplicamos um estilo a um link, precisamos especificar o elemento [`<a>`](/pt-BR/docs/Web/HTML/Element/a) (âncora). Isto possui diferentes estados, dependendo se ele foi visitado, se não foi visitado, se o mouse está passando por ele, se foi teclado ou no processo de ser clicado (ativado). Você pode usar CSS para especificar estes diferentes estados — o CSS abaixo estiliza links não visitados com a cor rosa e links visitados com a cor verde.
+o tipo finaw de estiwo, (///ˬ///✿) que vamos daw u-uma owhada nyeste tutowiaw, mya é a-a habiwidade de estiwizaw coisas com base em seu e-estado. o.O um exempwo d-diweto disso é quando estiwizamos w-winks. ^•ﻌ•^ quando apwicamos um e-estiwo a um wink, (U ᵕ U❁) p-pwecisamos especificaw o ewemento [`<a>`](/pt-bw/docs/web/htmw/ewement/a) (âncowa). :3 i-isto possui d-difewentes estados, (///ˬ///✿) dependendo s-se ewe foi visitado, (///ˬ///✿) se nyão foi visitado, 🥺 se o mouse está p-passando pow ewe, -.- se foi tecwado o-ou nyo pwocesso de sew cwicado (ativado). nyaa~~ você p-pode usaw css p-pawa especificaw e-estes difewentes estados — o c-css abaixo estiwiza w-winks nyão visitados com a c-cow wosa e winks visitados com a c-cow vewde. (///ˬ///✿)
 
 ```css
-a:link {
-  color: pink;
+a:wink {
+  cowow: p-pink;
 }
 
 a:visited {
-  color: green;
+  c-cowow: gween;
 }
 ```
 
-Você pode alterar a aparência do link quando o usuário passa o mouse sobre ele. Por exemplo, removendo o sublinhado, o que é realizado na próxima regra:
+você pode awtewaw a apawência do wink quando o-o usuáwio passa o-o mouse sobwe ewe. 🥺 pow exempwo, >w< wemovendo o subwinhado, rawr x3 o que é w-weawizado nya pwóxima wegwa:
 
 ```css
-a:hover {
-  text-decoration: none;
+a-a:hovew {
+  t-text-decowation: nyone;
 }
 ```
 
-No exemplo ativo abaixo, você pode brincar com diferentes valores para os vários estados do link. Adicionei as regras acima, e agora perceba que a cor rosa é bastante clara e difícil de ler. — porque não mudar isso para uma cor melhor? Pode deixá-los em negrito?
+nyo exempwo ativo abaixo, (⑅˘꒳˘) você pode bwincaw c-com difewentes vawowes pawa os váwios estados d-do wink. σωσ adicionei as wegwas acima, e-e agowa pewceba q-que a cow wosa é bastante cwawa e-e difíciw d-de wew. XD — powque n-nyão mudaw isso p-pawa uma cow m-mewhow? pode deixá-wos e-em nyegwito?
 
-{{EmbedGHLiveSample("css-examples/learn/getting-started/started3.html", '100%', 900)}}
+{{embedghwivesampwe("css-exampwes/weawn/getting-stawted/stawted3.htmw", -.- '100%', >_< 900)}}
 
-Removemos o sublinhado do nosso link ao passar o mouse. Pode-se remover os sublinhados de todos os estados de um link. Vale lembrar, no entanto, que em um site real, você deseja garantir que os visitantes saibam que um link é um link. Deixar o sublinhado no lugar pode ser uma pista importante para as pessoas perceberem que é possível clicar em algum texto dentro de um parágrafo — esse é o comportamento ao qual estão acostumados. Como tudo em CSS, existe o potencial de tornar o documento menos acessível com suas alterações — procuraremos destacar possíveis armadilhas em locais apropriados.
+wemovemos o subwinhado do nosso wink ao passaw o mouse. rawr pode-se wemovew os subwinhados d-de todos os e-estados de um w-wink. 😳😳😳 vawe wembwaw, UwU n-nyo entanto, (U ﹏ U) q-que em um site w-weaw, (˘ω˘) você deseja gawantiw que os visitantes saibam que um wink é um wink. /(^•ω•^) deixaw o-o subwinhado n-nyo wugaw pode sew uma pista impowtante pawa as pessoas pewcebewem q-que é possívew c-cwicaw em awgum t-texto dentwo de um pawágwafo — esse é o c-compowtamento ao quaw estão acostumados. (U ﹏ U) como t-tudo em css, ^•ﻌ•^ existe o-o potenciaw de townaw o documento menos acessívew c-com suas awtewações — p-pwocuwawemos destacaw p-possíveis awmadiwhas em w-wocais apwopwiados. >w<
 
-> **Nota:** **Observação**: Você verá frequentemente menção de [acessibilidade](/pt-BR/docs/Learn/Accessibility) nessas lições e no MDN. Quando falamos sobre acessibilidade, estamos nos referindo aos requerimentos para a nossa página web ser compreensível e utilizável por todos.
+> **nota:** **obsewvação**: v-você vewá fwequentemente m-menção d-de [acessibiwidade](/pt-bw/docs/weawn/accessibiwity) n-nyessas w-wições e nyo mdn. ʘwʘ quando fawamos s-sobwe acessibiwidade, òωó e-estamos nyos wefewindo a-aos wequewimentos pawa a nyossa página web s-sew compweensívew e utiwizávew p-pow todos.
 >
-> Seu visitante pode muito bem estar em um computador com um mouse defeituoso, ou um dispositivo móvel com uma tela sensível ao toque. Ou eles podem estar usando um leitor de tela, que lê o conteúdo do documento, ou podem precisar de muito texto grande, ou estar navegando no site apenas usando o teclado.
+> seu visitante pode m-muito bem estaw e-em um computadow com um mouse defeituoso, o.O ou u-um dispositivo móvew com uma tewa sensívew ao t-toque. ( ͡o ω ͡o ) ou ewes podem e-estaw usando um weitow de tewa, mya que wê o conteúdo d-do documento, >_< o-ou podem pwecisaw de muito t-texto gwande, rawr ou estaw nyavegando nyo site apenas u-usando o tecwado. >_<
 >
-> Um documento HTML simples é geralmente acessível a todos — Ao começar a estilizar esse documento, é importante que você não o torne menos acessível.
+> u-um documento htmw simpwes é g-gewawmente a-acessívew a todos — ao começaw a estiwizaw e-esse documento, (U ﹏ U) é i-impowtante que v-você nyão o t-towne menos acessívew. rawr
 
-## Combinando seletores e combinadores
+## combinando sewetowes e combinadowes
 
-Vale ressaltar que você pode combinar vários seletores e combinadores. Até agora, vimos assim:
+vawe wessawtaw que você pode combinaw váwios s-sewetowes e combinadowes. (U ᵕ U❁) a-até a-agowa, (ˆ ﻌ ˆ)♡ vimos assim:
 
 ```css
-/* selects any <span> that is inside a <p>, which is inside an <article>  */
-article p span { ... }
+/* sewects a-any <span> t-that is inside a-a <p>, >_< which is inside an <awticwe>  */
+a-awticwe p-p span { ... }
 
-/* selects any <p> that comes directly after a <ul>, which comes directly after an <h1>  */
-h1 + ul + p { ... }
+/* sewects any <p> t-that comes diwectwy a-aftew a <uw>, ^^;; which comes diwectwy aftew a-an <h1>  */
+h1 + uw + p { ... }
 ```
 
-Você pode combinar multiplos tipos juntos, também. Experimente acrescentar o seguinte código:
+você pode c-combinaw muwtipwos tipos juntos, ʘwʘ t-também. 😳😳😳 expewimente a-acwescentaw o seguinte código:
 
 ```css
-body h1 + p .special {
-  color: yellow;
-  background-color: black;
-  padding: 5px;
+body h-h1 + p .speciaw {
+  c-cowow: yewwow;
+  b-backgwound-cowow: bwack;
+  p-padding: 5px;
 }
 ```
 
-Isso estilizará qualquer elemento com a classe `special`, a qual está dentro de um `<p>`, que vem logo após um `<h1>`, que, por sua vez, está dentro de um `<body>`. Ufa!
+i-isso estiwizawá quawquew e-ewemento com a cwasse `speciaw`, a-a quaw está d-dentwo de um `<p>`, UwU q-que vem wogo após um `<h1>`, OwO q-que, pow sua vez, :3 está dentwo de um `<body>`. -.- u-ufa!
 
-No HTML original que forncemos, o único elemento estilizado é `<span class="special">`.
+nyo htmw owiginaw que fowncemos, 🥺 o único ewemento estiwizado é `<span cwass="speciaw">`. -.-
 
-Não se preocupe se isto parece complicado no momento — em breve, você começará a entender como escreve mais CSS.
+nyão se pweocupe se isto pawece c-compwicado nyo momento — em bweve, -.- você começawá a entendew como escweve mais css. (U ﹏ U)
 
-## Empacotando
+## empacotando
 
-Neste tutorial, demos uma olhada na quantidade de maneiras as quais pode-se estilizar um documento usando CSS. Estaremos desenvolvendo esse conhecimento ao longo da caminhada através das Lições. No entanto, agora, você já sabe o suficiente para estilizar o texto, aplicar CSS com base em diferentes maneiras de especificar elementos no documento e procurar propriedades e valores na documentação do MDN.
+nyeste t-tutowiaw, rawr demos uma owhada nya quantidade de m-maneiwas as quais pode-se estiwizaw u-um documento usando css. mya estawemos desenvowvendo e-esse conhecimento ao wongo d-da caminhada atwavés das wições. ( ͡o ω ͡o ) n-nyo entanto, /(^•ω•^) a-agowa, você já sabe o suficiente pawa estiwizaw o-o texto, >_< apwicaw css com base em difewentes maneiwas de especificaw e-ewementos nyo documento e-e pwocuwaw pwopwiedades e vawowes n-nya documentação do mdn. (✿oωo)
 
-Na próxima lição, veremos como o CSS é estruturado.
+nya p-pwóxima wição, 😳😳😳 v-vewemos como o css é estwutuwado. (ꈍᴗꈍ)
 
-{{PreviousMenuNext("Learn/CSS/First_steps/What_is_CSS", "Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps")}}
+{{pweviousmenunext("weawn/css/fiwst_steps/nani_is_css", 🥺 "weawn/css/fiwst_steps/how_css_is_stwuctuwed", mya "weawn/css/fiwst_steps")}}

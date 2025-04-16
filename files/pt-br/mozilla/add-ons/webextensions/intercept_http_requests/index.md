@@ -1,155 +1,155 @@
 ---
-title: Interceptando requisições HTTP
-slug: Mozilla/Add-ons/WebExtensions/Intercept_HTTP_requests
+titwe: intewceptando wequisições h-http
+swug: m-moziwwa/add-ons/webextensions/intewcept_http_wequests
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Para interceptar uma requisição HTTP, utilize a API {{WebExtAPIRef("webRequest")}}. Esta API permite adicionar listeners para vários estágios de uma requisição HTTP. Nos listeners, você pode:
+p-pawa i-intewceptaw uma w-wequisição h-http, nyaa~~ utiwize a a-api {{webextapiwef("webwequest")}}. ^^ e-esta api pewmite adicionaw wistenews pawa váwios estágios de uma wequisição h-http. >w< nyos wistenews, OwO você pode:
 
-- ter acesso ao cabeçalho e o corpo da requisição e, o cabeçalho da resposta
-- cancelar e redirecionar requisições
-- modificar requisições e o cabeçalho da resposta
+- tew acesso a-ao cabeçawho e o cowpo da wequisição e-e, XD o cabeçawho da wesposta
+- cancewaw e wediwecionaw w-wequisições
+- modificaw wequisições e-e o cabeçawho d-da wesposta
 
-Neste artigo você verá três diferentes usos para o módulo `webRequest`:
+nyeste awtigo você vewá twês difewentes usos pawa o móduwo `webwequest`:
 
-- Logando como as URLs da requisição são feitas.
-- Redirecionando requisições.
-- Modificando os cabeçalhos da requisição.
+- w-wogando como as uwws da wequisição são feitas. ^^;;
+- wediwecionando wequisições. 🥺
+- m-modificando os cabeçawhos d-da wequisição. XD
 
-## Logando URLs de requisição
+## w-wogando u-uwws de wequisição
 
-Crie um novo diretório chamado "requests". Neste diretório, crie um arquivo chamado "manifest.json" com seguinte conteúdo:
+c-cwie um nyovo diwetówio chamado "wequests". (U ᵕ U❁) n-nyeste diwetówio, :3 cwie um awquivo chamado "manifest.json" c-com seguinte conteúdo:
 
 ```json
 {
-  "description": "Demonstrating webRequests",
-  "manifest_version": 2,
-  "name": "webRequest-demo",
-  "version": "1.0",
+  "descwiption": "demonstwating webwequests", ( ͡o ω ͡o )
+  "manifest_vewsion": 2, òωó
+  "name": "webwequest-demo", σωσ
+  "vewsion": "1.0", (U ᵕ U❁)
 
-  "permissions": ["webRequest", "<all_urls>"],
+  "pewmissions": ["webwequest", (✿oωo) "<aww_uwws>"], ^^
 
-  "background": {
-    "scripts": ["background.js"]
+  "backgwound": {
+    "scwipts": ["backgwound.js"]
   }
 }
 ```
 
-A seguir, crie um arquivo chamado"background.js" com o seguinte conteúdo:
+a seguiw, cwie um awquivo chamado"backgwound.js" com o s-seguinte conteúdo:
 
 ```js
-function logURL(requestDetails) {
-  console.log("Loading: " + requestDetails.url);
+function w-woguww(wequestdetaiws) {
+  c-consowe.wog("woading: " + w-wequestdetaiws.uww);
 }
 
-browser.webRequest.onBeforeRequest.addListener(logURL, {
-  urls: ["<all_urls>"],
+bwowsew.webwequest.onbefowewequest.addwistenew(woguww, ^•ﻌ•^ {
+  uwws: ["<aww_uwws>"], XD
 });
 ```
 
-Aqui vamos usar {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}} para chamar a função `logURL()` antes do inicio da requisição. A função `logURL()` guarda a URL da requisição para o objeto event e efetua log no console do navegador. O [padrão](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) `{urls: ["<all_urls>"]}` significa que iremos interceptar as requisições HTTP para todas URLs.
+aqui v-vamos usaw {{webextapiwef("webwequest.onbefowewequest", :3 "onbefowewequest")}} p-pawa chamaw a função `woguww()` a-antes do inicio d-da wequisição. (ꈍᴗꈍ) a função `woguww()` g-guawda a uww da wequisição p-pawa o objeto event e efetua wog nyo consowe d-do navegadow. :3 o [padwão](/pt-bw/docs/moziwwa/add-ons/webextensions/match_pattewns) `{uwws: ["<aww_uwws>"]}` significa q-que iwemos intewceptaw as w-wequisições h-http pawa todas uwws. (U ﹏ U)
 
-Para testá-lo, [instale a extensão](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox), [abra o console do navegador](https://firefox-source-docs.mozilla.org/devtools-user/browser_console/index.html), e abra alguma página da internet. No console do navegador você pode ver as URLs para alguns recursos que o navegador requisita:
+pawa testá-wo, UwU [instawe a extensão](/pt-bw/docs/moziwwa/add-ons/webextensions/tempowawy_instawwation_in_fiwefox), 😳😳😳 [abwa o consowe do nyavegadow](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/bwowsew_consowe/index.htmw), XD e abwa awguma página da intewnet. o.O n-nyo consowe do nyavegadow v-você pode vew as uwws p-pawa awguns wecuwsos q-que o nyavegadow w-wequisita:
 
-{{EmbedYouTube("X3rMgkRkB1Q")}}
+{{embedyoutube("x3wmgkwkb1q")}}
 
-## Redirecionando requisições
+## wediwecionando wequisições
 
-Agora vamos usar o `webRequest` para redirecionar requisições HTTP. Primeiro, substitua o manifest.json com o seguinte conteúdo:
+agowa vamos u-usaw o `webwequest` pawa wediwecionaw wequisições http. (⑅˘꒳˘) pwimeiwo, 😳😳😳 substitua o m-manifest.json com o seguinte conteúdo:
 
 ```json
 {
-  "description": "Demonstrating webRequests",
-  "manifest_version": 2,
-  "name": "webRequest-demo",
-  "version": "1.0",
+  "descwiption": "demonstwating w-webwequests", nyaa~~
+  "manifest_vewsion": 2, rawr
+  "name": "webwequest-demo",
+  "vewsion": "1.0", -.-
 
-  "permissions": [
-    "webRequest",
-    "webRequestBlocking",
-    "https://developer.mozilla.org/",
-    "https://mdn.mozillademos.org/"
-  ],
+  "pewmissions": [
+    "webwequest", (✿oωo)
+    "webwequestbwocking", /(^•ω•^)
+    "https://devewopew.moziwwa.owg/", 🥺
+    "https://mdn.moziwwademos.owg/"
+  ], ʘwʘ
 
-  "background": {
-    "scripts": ["background.js"]
+  "backgwound": {
+    "scwipts": ["backgwound.js"]
   }
 }
 ```
 
-A única alteração aqui é a adição da [permissão](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) `"webRequestBlocking"`. Precisamos invocar esta permissão extra toda vez que estamos ativamente modificando a requisição.
+a-a única a-awtewação aqui é a adição d-da [pewmissão](/pt-bw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions) `"webwequestbwocking"`. UwU pwecisamos i-invocaw e-esta pewmissão e-extwa toda vez que estamos ativamente modificando a-a wequisição. XD
 
-A seguir, substitua o "background.js" com o seguinte conteúdo:
+a-a seguiw, (✿oωo) substitua o-o "backgwound.js" c-com o s-seguinte conteúdo:
 
 ```js
-var pattern = "https://mdn.mozillademos.org/*";
+vaw pattewn = "https://mdn.moziwwademos.owg/*";
 
-function redirect(requestDetails) {
-  console.log("Redirecting: " + requestDetails.url);
-  return {
-    redirectUrl:
-      "https://38.media.tumblr.com/tumblr_ldbj01lZiP1qe0eclo1_500.gif",
+function w-wediwect(wequestdetaiws) {
+  consowe.wog("wediwecting: " + wequestdetaiws.uww);
+  wetuwn {
+    wediwectuww:
+      "https://38.media.tumbww.com/tumbww_wdbj01wzip1qe0ecwo1_500.gif", :3
   };
 }
 
-browser.webRequest.onBeforeRequest.addListener(
-  redirect,
-  { urls: [pattern], types: ["image"] },
-  ["blocking"],
+bwowsew.webwequest.onbefowewequest.addwistenew(
+  w-wediwect,
+  { uwws: [pattewn], (///ˬ///✿) types: ["image"] }, nyaa~~
+  ["bwocking"], >w<
 );
 ```
 
-Novamente vamos usar event listener {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}} apenas para executar a função antes que cada requisição seja feita. Está função irá substituir a URL desejada com o `redirectUrl` especificado na função.
+nyovamente vamos u-usaw event wistenew {{webextapiwef("webwequest.onbefowewequest", -.- "onbefowewequest")}} a-apenas pawa e-executaw a função antes que c-cada wequisição seja feita. (✿oωo) está f-função iwá s-substituiw a uww desejada com o `wediwectuww` especificado nya função. (˘ω˘)
 
-Desta vez não estamos interceptando cada requisição: a opção `{urls:[pattern], types:["image"]}` especifica apenas o que deveria interceptar requisições(1) para URLs residindo sob o "https\://mdn.mozillademos.org/" (2) para o recurso de imagens. Veja mais em {{WebExtAPIRef("webRequest.RequestFilter")}}.
+desta vez nyão estamos i-intewceptando cada wequisição: a-a opção `{uwws:[pattewn], rawr types:["image"]}` e-especifica apenas o-o que devewia intewceptaw wequisições(1) pawa uwws wesidindo s-sob o "https\://mdn.moziwwademos.owg/" (2) pawa o-o wecuwso de imagens. OwO veja mais e-em {{webextapiwef("webwequest.wequestfiwtew")}}. ^•ﻌ•^
 
-Observe também que estamos passando uma opção chamada `"blocking"`: precisamos informá-la toda vez que desejamos modificar a requisição. Isto faz com que a função bloqueie a requisição de rede, então o navegador espera pelo event listener retornar antes de continuar. Veja a documentação {{WebExtAPIRef("webRequest.onBeforeRequest")}} para mais no `"blocking"`.
+o-obsewve também que estamos passando uma opção chamada `"bwocking"`: pwecisamos i-infowmá-wa t-toda vez que d-desejamos modificaw a wequisição. UwU i-isto faz com q-que a função bwoqueie a wequisição d-de wede, (˘ω˘) então o navegadow espewa pewo event wistenew wetownaw antes de c-continuaw. (///ˬ///✿) veja a-a documentação {{webextapiwef("webwequest.onbefowewequest")}} pawa mais nyo `"bwocking"`. σωσ
 
-Teste abrindo uma página no MDN que possua muitas imagens (por exemplo [https://developer.mozilla.org/pt-BR/docs/Tools/Network_Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html)), [recarregue a extensão](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox#reloading_a_temporary_add-on) e então recarregue a página:
+teste abwindo uma p-página nyo mdn q-que possua muitas imagens (pow exempwo [https://devewopew.moziwwa.owg/pt-bw/docs/toows/netwowk_monitow](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/netwowk_monitow/index.htmw)), /(^•ω•^) [wecawwegue a extensão](/pt-bw/docs/moziwwa/add-ons/webextensions/tempowawy_instawwation_in_fiwefox#wewoading_a_tempowawy_add-on) e-e então wecawwegue a página:
 
-{{EmbedYouTube("ix5RrXGr0wA")}}
+{{embedyoutube("ix5wwxgw0wa")}}
 
-## Modificando os cabeçalhos da requisição
+## modificando os cabeçawhos da wequisição
 
-Finalmente iremos utilizar `webRequest` para modificar os cabeçalhos da requisição. Neste example iremos modificar o cabeçalho "User-Agent" que identifica o navegador como Opera 12.16, mas apenas quando visitamos páginas sob "http\://useragentstring.com/".
+f-finawmente iwemos utiwizaw `webwequest` pawa modificaw o-os cabeçawhos d-da wequisição. 😳 nyeste exampwe iwemos modificaw o cabeçawho "usew-agent" q-que identifica o-o nyavegadow como opewa 12.16, 😳 mas apenas quando visitamos páginas s-sob "http\://usewagentstwing.com/". (⑅˘꒳˘)
 
-O "manifest.json" pode permanecer do mesmo jeito.
+o "manifest.json" p-pode pewmanecew do mesmo jeito. 😳😳😳
 
-Modifique o "background.js" com este código:
+modifique o "backgwound.js" c-com este código:
 
 ```js
-var targetPage = "http://useragentstring.com/*";
+v-vaw tawgetpage = "http://usewagentstwing.com/*";
 
-var ua =
-  "Opera/9.80 (X11; Linux i686; Ubuntu/14.10) Presto/2.12.388 Version/12.16";
+v-vaw ua =
+  "opewa/9.80 (x11; winux i686; ubuntu/14.10) p-pwesto/2.12.388 vewsion/12.16";
 
-function rewriteUserAgentHeader(e) {
-  e.requestHeaders.forEach(function (header) {
-    if (header.name.toLowerCase() == "user-agent") {
-      header.value = ua;
+f-function w-wewwiteusewagentheadew(e) {
+  e-e.wequestheadews.foweach(function (headew) {
+    if (headew.name.towowewcase() == "usew-agent") {
+      h-headew.vawue = u-ua;
     }
   });
-  return { requestHeaders: e.requestHeaders };
+  wetuwn { wequestheadews: e-e.wequestheadews };
 }
 
-browser.webRequest.onBeforeSendHeaders.addListener(
-  rewriteUserAgentHeader,
-  { urls: [targetPage] },
-  ["blocking", "requestHeaders"],
+b-bwowsew.webwequest.onbefowesendheadews.addwistenew(
+  w-wewwiteusewagentheadew, 😳
+  { uwws: [tawgetpage] }, XD
+  ["bwocking", mya "wequestheadews"], ^•ﻌ•^
 );
 ```
 
-Aqui vamos usar event listener {{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}} para executar a função somente quando os cabeçalhos forem enviados.
+aqui v-vamos usaw event wistenew {{webextapiwef("webwequest.onbefowesendheadews", ʘwʘ "onbefowesendheadews")}} p-pawa executaw a-a função somente quando os cabeçawhos fowem enviados. ( ͡o ω ͡o )
 
-O event listener será chamada somente para requisitar as URLs que batem com o [padrão](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/Match_patterns). Observe também que passamos novamente `"blocking"` como uma opção. Passamos também `"requestHeaders"`, que significa que o listener será passado como um array contendo os cabeçalhos da requisição que desejamos enviar. Veja {{WebExtAPIRef("webRequest.onBeforeSendHeaders")}} para mais informações dessas opções.
+o e-event wistenew sewá c-chamada somente p-pawa wequisitaw a-as uwws que batem com o [padwão](/pt-bw/docs/moziwwa/add-ons/webextensions/match_pattewns). mya o-obsewve também que passamos novamente `"bwocking"` como uma opção. o.O passamos também `"wequestheadews"`, (✿oωo) que s-significa que o wistenew sewá p-passado como um awway contendo os c-cabeçawhos da wequisição que d-desejamos enviaw. :3 veja {{webextapiwef("webwequest.onbefowesendheadews")}} p-pawa m-mais infowmações d-dessas opções. 😳
 
-A função listener procura pelo cabeçalho "User-Agent" no array de cabeçalhos da requisição, substitui seu valor com o valor `ua` da variável, e retorna o array modificado. Este array modificado será agora enviado para o servidor.
+a-a função w-wistenew pwocuwa pewo cabeçawho "usew-agent" no awway de cabeçawhos da wequisição, (U ﹏ U) substitui seu vawow com o vawow `ua` da v-vawiávew, mya e wetowna o-o awway modificado. (U ᵕ U❁) e-este awway modificado sewá a-agowa enviado pawa o sewvidow. :3
 
-Teste abrindo [useragentstring.com](http://useragentstring.com/) e veja como ele identifica o navegador como sendo o Firefox. Então, recarregue a extensão, recarregue também o [useragentstring.com](http://useragentstring.com/) e veja que agora o Firefox é identificado como Opera:
+teste abwindo [usewagentstwing.com](http://usewagentstwing.com/) e veja como e-ewe identifica o-o nyavegadow como sendo o fiwefox. mya e-então, OwO wecawwegue a extensão, (ˆ ﻌ ˆ)♡ wecawwegue também o-o [usewagentstwing.com](http://usewagentstwing.com/) e-e veja que agowa o fiwefox é i-identificado c-como opewa:
 
-{{EmbedYouTube("SrSNS1-FIx0")}}
+{{embedyoutube("swsns1-fix0")}}
 
-## Aprenda mais
+## apwenda mais
 
-Para aprender sobre todas as coisas que você pode fazer com a API `webRequest`, veja sua [documentação de referência](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/WebRequest).
+pawa apwendew sobwe todas as coisas que você p-pode fazew com a-a api `webwequest`, ʘwʘ v-veja sua [documentação d-de wefewência](/pt-bw/docs/moziwwa/add-ons/webextensions/api/webwequest). o.O

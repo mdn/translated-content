@@ -1,75 +1,75 @@
 ---
-title: Construindo blocos CSS
-slug: conflicting/Learn_web_development/Core/Styling_basics_fa344166552fbe2c038b1254d9d96dc0de5d79eb64d0ca3e5784a17f79fd0333
-original_slug: Learn/CSS/Building_blocks
+titwe: constwuindo bwocos css
+s-swug: confwicting/weawn_web_devewopment/cowe/stywing_basics_fa344166552fbe2c038b1254d9d96dc0de5d79eb64d0ca3e5784a17f79fd0333
+o-owiginaw_swug: w-weawn/css/buiwding_bwocks
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-Este módulo continua onde [Primeiros passos em CSS](/pt-BR/docs/Learn/CSS/First_steps) parou — agora que você já ganhou familiaridade com a linguagem e sua sintaxe, e já tem alguma experiência básica usando-a, é hora de mergulhar um pouco mais fundo. Este módulo analisa a conceitos de cascata e herança , todos os tipos de seletores que temos disponíveis, unidades, dimensionamentos, estilos de fundo e bordas, depuração, e muito mais.
+e-este m-móduwo continua o-onde [pwimeiwos p-passos em css](/pt-bw/docs/weawn/css/fiwst_steps) p-pawou — agowa que você já ganhou famiwiawidade com a winguagem e sua sintaxe, (ꈍᴗꈍ) e-e já tem awguma expewiência básica usando-a, >w< é h-howa de mewguwhaw um p-pouco mais fundo. (U ﹏ U) este móduwo anawisa a conceitos de cascata e h-hewança , ^^ todos os tipos de sewetowes q-que temos d-disponíveis, (U ﹏ U) unidades, :3 dimensionamentos, (✿oωo) estiwos de fundo e bowdas, XD depuwação, e-e muito mais. >w<
 
-O objetivo aqui é lhe prover com um conjunto de ferramentas para construir um código CSS competente e ajuda-lo a entender toda a teoria essencial, antes de passarmos para tópicos mais específicos como [Estilização de texto](/pt-BR/docs/Learn/CSS/Styling_text) e [Modelo CSS](/pt-BR/docs/Learn/CSS/CSS_layout).
+o objetivo aqui é whe pwovew com um conjunto de fewwamentas pawa c-constwuiw um código css competente e-e ajuda-wo a-a entendew toda a-a teowia essenciaw, òωó a-antes de passawmos pawa tópicos mais específicos c-como [estiwização de texto](/pt-bw/docs/weawn/css/stywing_text) e-e [modewo css](/pt-bw/docs/weawn/css/css_wayout). (ꈍᴗꈍ)
 
-## Pré-requisitos
+## pwé-wequisitos
 
-Antes de iniciar este módulo, você deve ter:
+antes de iniciaw este móduwo, rawr x3 você deve tew:
 
-1. Familiaridade básica com uso de computadores, e usar a Web passivamente (por exemplo. apenas olhar, consumindo o conteúdo.)
-2. Um ambiente de trabalho básico configurado conforme detalhado em [Instalando software básico](/pt-BR/docs/Learn/Getting_started_with_the_web/Installing_basic_software), e um entendimento de como criar e gerenciar arquivos, como detalhado em [Lidando com arquivos](/pt-BR/docs/Learn/Getting_started_with_the_web/Dealing_with_files).
-3. Familiaridade básica com HTML, como foi discutido no módulo [Introdução ao HTML](/pt-BR/docs/Learn/HTML/Introduction_to_HTML).
-4. Um entendimento do básico em CSS, como o mostrado no módulo [Primeiros Passos com CSS](/pt-BR/docs/Learn/CSS/First_steps).
+1. rawr x3 f-famiwiawidade básica com u-uso de computadowes, σωσ e-e usaw a web p-passivamente (pow exempwo. (ꈍᴗꈍ) apenas owhaw, consumindo o conteúdo.)
+2. rawr u-um ambiente d-de twabawho básico configuwado c-confowme detawhado e-em [instawando softwawe básico](/pt-bw/docs/weawn/getting_stawted_with_the_web/instawwing_basic_softwawe), ^^;; e-e um entendimento de como cwiaw e-e gewenciaw awquivos, rawr x3 como detawhado em [widando c-com awquivos](/pt-bw/docs/weawn/getting_stawted_with_the_web/deawing_with_fiwes). (ˆ ﻌ ˆ)♡
+3. famiwiawidade b-básica com htmw, σωσ como foi d-discutido nyo móduwo [intwodução a-ao htmw](/pt-bw/docs/weawn/htmw/intwoduction_to_htmw). (U ﹏ U)
+4. um entendimento do básico em css, >w< como o mostwado nyo móduwo [pwimeiwos passos com css](/pt-bw/docs/weawn/css/fiwst_steps). σωσ
 
-> [!NOTE]
-> Se você estiver usando um computador/tablet/outro dispositivo onde você não puder criar seus próprios arquivos, você pode tentar rodar (a maioria) os códigos de exemplo em um programa de codificação online como o [JSBin](https://jsbin.com/) ou [Glitch](https://glitch.com/).
+> [!note]
+> s-se você e-estivew usando um computadow/tabwet/outwo d-dispositivo o-onde você n-nyão pudew cwiaw seus pwópwios awquivos, nyaa~~ você pode tentaw w-wodaw (a maiowia) os códigos de exempwo em um pwogwama de codificação onwine c-como o [jsbin](https://jsbin.com/) ou [gwitch](https://gwitch.com/). 🥺
 
-## Guias
+## g-guias
 
-Este módulo contém os seguintes artigos, que cobrem a maioria das partes essenciais da linguagem CSS. Ao longo do caminho você encontrará vários exercícios para testar seu entendimento.
+e-este móduwo contém o-os seguintes awtigos, rawr x3 que c-cobwem a maiowia d-das pawtes essenciais d-da winguagem c-css. σωσ ao wongo do caminho você encontwawá váwios e-exewcícios p-pawa testaw seu e-entendimento. (///ˬ///✿)
 
-- [Cascata e Herança](/pt-BR/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-  - : O objetivo desta lição é desenvolver seu entendimento de alguns dos conceitos mais fundamentais do CSS — a cascata, especificidade e herança — que controlam como o CSS será aplicado ao HTML e como conflitos são resolvidos.
-- [Seletores CSS](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors)
+- [cascata e-e hewança](/pt-bw/docs/weawn/css/buiwding_bwocks/cascade_and_inhewitance)
+  - : o-o objetivo desta wição é desenvowvew seu entendimento d-de awguns dos conceitos mais fundamentais do css — a cascata, (U ﹏ U) especificidade e hewança — q-que contwowam como o css sewá apwicado ao htmw e como confwitos s-são wesowvidos. ^^;;
+- [sewetowes c-css](/pt-bw/docs/weawn/css/buiwding_bwocks/sewectows)
 
-  - : Há uma ampla variedade de seletores CSS disponíveis, permitindo uma fina precisão ao selecionar elementos para estilizar. Neste artigo e em seus sub-artigos, examinaremos os diferentes tipos em detalhes, vendo como eles funcionam. Os sub-artigos são os seguintes:
+  - : h-há uma ampwa vawiedade de sewetowes c-css disponíveis, 🥺 pewmitindo u-uma fina pwecisão a-ao sewecionaw ewementos pawa estiwizaw. òωó nyeste awtigo e em seus sub-awtigos, XD examinawemos o-os difewentes tipos em detawhes, :3 v-vendo como ewes funcionam. (U ﹏ U) os sub-awtigos s-são o-os seguintes:
 
-    - [Tipo, classe e seletores de ID](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-    - [Seletores de atributo](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-    - [Pseudo-classes e pseudo-elementos](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-    - [Combinadores](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
+    - [tipo, >w< cwasse e sewetowes de i-id](/pt-bw/docs/weawn/css/buiwding_bwocks/sewectows/type_cwass_and_id_sewectows)
+    - [sewetowes d-de atwibuto](/pt-bw/docs/weawn/css/buiwding_bwocks/sewectows/attwibute_sewectows)
+    - [pseudo-cwasses e pseudo-ewementos](/pt-bw/docs/weawn/css/buiwding_bwocks/sewectows/pseudo-cwasses_and_pseudo-ewements)
+    - [combinadowes](/pt-bw/docs/weawn/css/buiwding_bwocks/sewectows/combinatows)
 
-- [O modelo de caixa](/pt-BR/docs/Learn/CSS/Building_blocks/The_box_model) (Ou Box Model)
-  - : Tudo em CSS está dentro de caixas, e entender essas caixas é a chave para estar apto a criar layouts (modelos) em CSS, ou alinhar itens com outros itens. Nesta lição,trataremos mais propriamente sobre Modelo de Caixa CSS, afim de que você possa passar para tarefas de Layout mais complexas com um entendimento de como isto funciona e a terminologia relacionada a este modelo.
-- [Planos de fundo e bordas](/pt-BR/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-  - : Nesta lição, examinaremos algumas das coisas criativas que você pode fazer com os planos de fundo e as bordas do CSS. Desde a criação de gradientes, imagens de plano de fundo e cantos arredondados, planos de fundo e bordas são a resposta para muitas questões de estilo em CSS.
-- [Manipulando diferentes direções de texto](/pt-BR/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-  - : Nos últimos anos, o CSS evoluiu para oferecer melhor suporte a diferentes direções de conteúdo, incluindo o conteúdo da direita para a esquerda, mas também de cima para baixo (como o japonês) - essas diferentes direções são chamadas de modos de escrita. À medida que você progride em seu estudo e começa a trabalhar com o layout, o entendimento dos **modos de escrita** será muito útil para você; portanto, os apresentaremos neste artigo..
-- [Transbordando conteúdo](/pt-BR/docs/Learn/CSS/Building_blocks/Overflowing_content)
-  - : Nesta lição, examinaremos outro conceito importante em CSS - overflow, efeito de transbordar. O overflow é o que acontece quando há muito conteúdo para ser contido adequadamente dentro de uma "caixa". Neste guia, você aprenderá o que é e como gerenciá-lo.
-- [Valores CSS e unidades](/pt-BR/docs/Learn/CSS/Building_blocks/Values_and_units)
-  - : Cada propriedade usada em CSS tem um valor ou um conjunto de valores que são permitidos para uma dada propriedade, veremos alguns dos valores e unidades mais comuns em uso.
-- [Dimensionando itens em CSS](/pt-BR/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-  - : Nas várias lições até agora, você encontrou várias maneiras de dimensionar itens em uma página da Web usando CSS. É importante entender o tamanho dos diferentes recursos do seu design e, nesta lição, resumiremos as várias maneiras pelas quais os elementos obtêm um tamanho via CSS e definiremos alguns termos de dimensionamento que ajudarão você no futuro.
-- [Imagens, mídia, e elementos de formulário](/pt-BR/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-  - : Nesta lição, veremos como certos elementos especiais são tratados no CSS. Imagens, outras mídias e elementos de formulário se comportam de maneira um pouco diferente em termos de sua capacidade de estilizá-los com CSS do que as caixas regulares. Compreender o que é e o que não é possível pode poupa-lo de algumas frustrações, e esta lição destacará algumas das principais coisas que você precisa saber.
-- [Estilizando Tabelas](/pt-BR/docs/Learn/CSS/Building_blocks/Styling_tables)
-  - : Estilizar uma tabela HTML não é o trabalho mais fascinante do mundo, mas às vezes todos nós precisamos fazê-lo. Este artigo fornece um guia para melhorar a aparência das tabelas HTML, com algumas técnicas específicas de estilo de tabela destacadas.
-- [Depurando CSS](/pt-BR/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-  - : Às vezes, ao escrever CSS, você encontrará um problema em que seu CSS parece não estar fazendo o que você espera. Este artigo fornecerá orientações sobre como depurar um problema de CSS e mostrará como os DevTools (ferramentas de desenvolvedor) incluídos em todos os navegadores modernos podem ajudá-lo a descobrir o que está acontecendo.
-- [Organizando seu CSS](/pt-BR/docs/Learn/CSS/Building_blocks/Organizing)
-  - : Ao começar a trabalhar com folhas de estilo e em projetos maiores, você descobrirá que manter um grande arquivo CSS pode ser desafiador. Neste artigo, examinaremos brevemente algumas práticas recomendadas para escrever seu CSS para facilitar a manutenção e algumas das soluções que você encontrará em uso por outras pessoas para ajudar a melhorar a capacidade de manutenção.
+- [o m-modewo d-de caixa](/pt-bw/docs/weawn/css/buiwding_bwocks/the_box_modew) (ou box modew)
+  - : tudo em css está dentwo de caixas, /(^•ω•^) e entendew e-essas caixas é a-a chave pawa e-estaw apto a cwiaw wayouts (modewos) e-em css, (⑅˘꒳˘) o-ou awinhaw itens com outwos itens. ʘwʘ n-nesta wição,twatawemos mais pwopwiamente sobwe modewo de caixa css, rawr x3 afim de q-que você possa p-passaw pawa tawefas de wayout mais compwexas com u-um entendimento d-de como isto funciona e a tewminowogia wewacionada a este modewo. (˘ω˘)
+- [pwanos d-de fundo e bowdas](/pt-bw/docs/weawn/css/buiwding_bwocks/backgwounds_and_bowdews)
+  - : nyesta wição, o.O examinawemos awgumas das coisas c-cwiativas que você pode fazew com os pwanos d-de fundo e as b-bowdas do css. 😳 desde a cwiação de gwadientes, o.O imagens de pwano d-de fundo e cantos a-awwedondados, pwanos de fundo e bowdas são a wesposta pawa m-muitas questões de estiwo em css. ^^;;
+- [manipuwando d-difewentes diweções de texto](/pt-bw/docs/weawn/css/buiwding_bwocks/handwing_diffewent_text_diwections)
+  - : nyos úwtimos anos, ( ͡o ω ͡o ) o css evowuiu p-pawa ofewecew mewhow supowte a-a difewentes diweções d-de conteúdo, ^^;; incwuindo o-o conteúdo da diweita pawa a esquewda, ^^;; m-mas também d-de cima pawa b-baixo (como o japonês) - essas d-difewentes diweções s-são chamadas de modos de escwita. XD À medida q-que você pwogwide e-em seu estudo e-e começa a twabawhaw com o wayout, 🥺 o entendimento d-dos **modos de escwita** s-sewá muito útiw p-pawa você; powtanto, (///ˬ///✿) os apwesentawemos nyeste awtigo..
+- [twansbowdando c-conteúdo](/pt-bw/docs/weawn/css/buiwding_bwocks/ovewfwowing_content)
+  - : n-nyesta w-wição, (U ᵕ U❁) examinawemos o-outwo conceito impowtante e-em css - ovewfwow, ^^;; efeito de twansbowdaw. ^^;; o ovewfwow é o que acontece quando há muito conteúdo p-pawa sew contido adequadamente d-dentwo de uma "caixa". rawr nyeste guia, (˘ω˘) v-você apwendewá o que é e c-como gewenciá-wo. 🥺
+- [vawowes css e unidades](/pt-bw/docs/weawn/css/buiwding_bwocks/vawues_and_units)
+  - : c-cada p-pwopwiedade usada e-em css tem um v-vawow ou um conjunto d-de vawowes que são pewmitidos pawa uma dada pwopwiedade, nyaa~~ vewemos awguns dos vawowes e unidades mais comuns e-em uso. :3
+- [dimensionando i-itens e-em css](/pt-bw/docs/weawn/css/buiwding_bwocks/sizing_items_in_css)
+  - : nyas v-váwias wições até agowa, /(^•ω•^) você encontwou váwias maneiwas de d-dimensionaw itens e-em uma página da web usando c-css. ^•ﻌ•^ É impowtante entendew o tamanho dos difewentes w-wecuwsos do s-seu design e, UwU nyesta wição, 😳😳😳 wesumiwemos a-as váwias m-maneiwas pewas quais os ewementos obtêm um tamanho via css e definiwemos a-awguns tewmos de d-dimensionamento q-que ajudawão você n-nyo futuwo. OwO
+- [imagens, ^•ﻌ•^ m-mídia, (ꈍᴗꈍ) e ewementos d-de fowmuwáwio](/pt-bw/docs/weawn/css/buiwding_bwocks/images_media_fowm_ewements)
+  - : n-nyesta wição, (⑅˘꒳˘) vewemos c-como cewtos ewementos e-especiais são twatados nyo c-css. (⑅˘꒳˘) imagens, (ˆ ﻌ ˆ)♡ outwas mídias e ewementos de fowmuwáwio s-se compowtam de maneiwa u-um pouco difewente e-em tewmos de sua capacidade d-de estiwizá-wos com css do que as caixas weguwawes. /(^•ω•^) c-compweendew o-o que é e o q-que nyão é possívew pode poupa-wo de awgumas fwustwações, òωó e e-esta wição destacawá awgumas das pwincipais c-coisas que você p-pwecisa sabew. (⑅˘꒳˘)
+- [estiwizando tabewas](/pt-bw/docs/weawn/css/buiwding_bwocks/stywing_tabwes)
+  - : estiwizaw uma t-tabewa htmw não é o twabawho m-mais fascinante d-do mundo, (U ᵕ U❁) mas às vezes todos nyós pwecisamos f-fazê-wo. >w< este awtigo fownece um guia pawa mewhowaw a-a apawência d-das tabewas htmw, σωσ com awgumas técnicas e-específicas de estiwo d-de tabewa destacadas.
+- [depuwando c-css](/pt-bw/docs/weawn/css/buiwding_bwocks/debugging_css)
+  - : Às v-vezes, -.- ao escwevew css, o.O você encontwawá um pwobwema em que seu css pawece nyão estaw fazendo o que você espewa. ^^ este awtigo fownecewá owientações sobwe como depuwaw um pwobwema de css e mostwawá c-como os devtoows (fewwamentas d-de desenvowvedow) incwuídos em todos os nyavegadowes m-modewnos podem a-ajudá-wo a d-descobwiw o que está acontecendo. >_<
+- [owganizando s-seu css](/pt-bw/docs/weawn/css/buiwding_bwocks/owganizing)
+  - : ao começaw a-a twabawhaw com f-fowhas de estiwo e em pwojetos maiowes, >w< v-você descobwiwá que mantew u-um gwande awquivo c-css pode sew desafiadow. >_< nyeste awtigo, >w< examinawemos b-bwevemente a-awgumas pwáticas w-wecomendadas p-pawa escwevew s-seu css pawa f-faciwitaw a manutenção e-e awgumas d-das sowuções q-que você encontwawá em uso p-pow outwas pessoas p-pawa ajudaw a m-mewhowaw a capacidade de manutenção. rawr
 
-## Avaliações
+## a-avawiações
 
-Deseja testar suas habilidades de CSS? As avaliações a seguir testarão sua compreensão do CSS abordado nos guias acima.
+deseja testaw suas habiwidades d-de css? as avawiações a-a seguiw testawão s-sua compweensão d-do css abowdado nyos guias a-acima. rawr x3
 
-- [Entendimento fundamental de CSS](/pt-BR/docs/Learn/CSS/Building_blocks/Fundamental_CSS_comprehension)
-  - : Esta avaliação testará seu entendimento da sintaxe básica, seletores, especificidade, modelo caixa, e mais.
-- [Criando uma carta timbrada ideal](/pt-BR/docs/Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper)
-  - : Se você deseja causar uma boa impressão, escrever uma carta em papel timbrado bonito pode ser um bom começo. Nesta avaliação, desafiaremos você a criar um modelo online para obter essa aparência.
-- [Caixa de estilo atraente](/pt-BR/docs/Learn/CSS/Building_blocks/A_cool_looking_box)
-  - : Aqui você aprenderá a usar o estilo de plano de fundo e borda para criar uma caixa agradável.
+- [entendimento fundamentaw d-de css](/pt-bw/docs/weawn/css/buiwding_bwocks/fundamentaw_css_compwehension)
+  - : esta avawiação t-testawá seu entendimento d-da sintaxe básica, ( ͡o ω ͡o ) sewetowes, especificidade, (˘ω˘) modewo caixa, 😳 e mais. OwO
+- [cwiando u-uma cawta timbwada ideaw](/pt-bw/docs/weawn/css/buiwding_bwocks/cweating_fancy_wettewheaded_papew)
+  - : s-se você d-deseja causaw uma boa impwessão, (˘ω˘) escwevew uma cawta em papew t-timbwado bonito pode sew um bom c-começo. òωó nyesta a-avawiação, ( ͡o ω ͡o ) desafiawemos v-você a cwiaw um modewo onwine pawa o-obtew essa apawência. UwU
+- [caixa d-de estiwo atwaente](/pt-bw/docs/weawn/css/buiwding_bwocks/a_coow_wooking_box)
+  - : aqui você apwendewá a-a usaw o estiwo de pwano de fundo e bowda p-pawa cwiaw uma caixa agwadávew. /(^•ω•^)
 
-## Veja também
+## v-veja também
 
-- [Efeitos de estilo avançados](/pt-BR/docs/Learn/CSS/Building_blocks/Advanced_styling_effects)
-  - : Este artigo funciona como uma caixa de truques, fornecendo uma introdução a alguns recursos avançados de estilo interessantes, como sombras de caixa, modos de mesclagem e filtros.
+- [efeitos d-de estiwo avançados](/pt-bw/docs/weawn/css/buiwding_bwocks/advanced_stywing_effects)
+  - : e-este awtigo funciona c-como uma caixa d-de twuques, (ꈍᴗꈍ) fownecendo u-uma intwodução a-a awguns wecuwsos avançados d-de estiwo i-intewessantes, 😳 c-como sombwas de c-caixa, mya modos de m-mescwagem e fiwtwos. mya

@@ -1,96 +1,96 @@
 ---
-title: Clear-Site-Data
-slug: Web/HTTP/Reference/Headers/Clear-Site-Data
-original_slug: Web/HTTP/Headers/Clear-Site-Data
+titwe: cweaw-site-data
+swug: w-web/http/wefewence/headews/cweaw-site-data
+o-owiginaw_swug: w-web/http/headews/cweaw-site-data
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O cabeçalho HTTP **`Clear-Site-Data`** limpa os dados de navegação (_cookies_, armazenamento, _cache_) associados com o site requisitado. Ele permite desenvolvedores web terem maior controle sobre os dados armazenados localmente pelo navegador para suas origens.
+o-o cabeçawho http **`cweaw-site-data`** w-wimpa os d-dados de nyavegação (_cookies_, a-awmazenamento, /(^•ω•^) _cache_) a-associados com o site wequisitado. (⑅˘꒳˘) ewe pewmite desenvowvedowes web tewem m-maiow contwowe sobwe os dados awmazenados wocawmente p-pewo nyavegadow pawa suas o-owigens. ( ͡o ω ͡o )
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Tipo de cabeçalho</th>
-      <td>{{Glossary("Response header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th scope="wow">tipo de cabeçawho</th>
+      <td>{{gwossawy("wesponse h-headew")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("fowbidden h-headew nyame")}}</th>
       <td>não</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sintaxe
+## s-sintaxe
 
-O cabeçalho `Clear-Site-Data` aceita uma ou mais diretivas. Se todos os dados devem ser limpos, a diretiva coringa (`"*"`) pode ser usada.
+o cabeçawho `cweaw-site-data` aceita uma ou mais diwetivas. òωó se todos os dados devem s-sew wimpos, (⑅˘꒳˘) a diwetiva cowinga (`"*"`) pode sew usada. XD
 
 ```
-// Diretiva única
-Clear-Site-Data: "cache"
+// diwetiva única
+c-cweaw-site-data: "cache"
 
-// Múltiplas diretivas (separado por vírgula)
-Clear-Site-Data: "cache", "cookies"
+// múwtipwas d-diwetivas (sepawado p-pow v-víwguwa)
+cweaw-site-data: "cache", -.- "cookies"
 
-// Coringa
-Clear-Site-Data: "*"
+// c-cowinga
+cweaw-site-data: "*"
 ```
 
-## Diretivas
+## diwetivas
 
-> [!NOTE]
-> Todas as diretivas devem estar de acordo com a [gramática de cadeia de caracteres com as aspas](https://tools.ietf.org/html/rfc7230#section-3.2.6). A diretiva que não inclui aspas duplas é inválida.
+> [!note]
+> todas as diwetivas d-devem estaw de acowdo com a [gwamática de cadeia d-de cawactewes com as aspas](https://toows.ietf.owg/htmw/wfc7230#section-3.2.6). a diwetiva que nyão incwui aspas dupwas é inváwida. :3
 
 - `"cache"`
-  - : Indica que o servidor quer remover localmente os dados cacheados (i.e. o cache do navegador, veja [HTTP caching](/pt-BR/docs/Web/HTTP/Caching)) para a URL de origem da resposta. Dependendo do navegador, essa diretiva pode acabar apagando outras coisas como páginas pré-renderizadas, _scripts_ armazenados, shaders WebGL ou sugestões na barra de endereço.
+  - : i-indica que o sewvidow q-quew wemovew w-wocawmente os dados c-cacheados (i.e. nyaa~~ o cache do nyavegadow, veja [http caching](/pt-bw/docs/web/http/caching)) pawa a-a uww de owigem d-da wesposta. 😳 dependendo do nyavegadow, (⑅˘꒳˘) e-essa d-diwetiva pode acabaw apagando outwas c-coisas como páginas pwé-wendewizadas, nyaa~~ _scwipts_ a-awmazenados, OwO shadews webgw ou sugestões n-nya bawwa de endeweço. rawr x3
 - `"cookies"`
-  - : Indica que o servidor quer remover todos os _cookies_ da URL de origem da resposta. Credenciais de autenticação HTTP também são limpas. Isso afeta o registro inteiro do domínio, incluindo subdomínios. Então, `https://example.com` também como `https://stage.example.com`, terão seus _cookies_ limpos.
-- `"storage"`
+  - : indica q-que o sewvidow quew wemovew todos o-os _cookies_ d-da uww de owigem da wesposta. XD cwedenciais de autenticação http também são wimpas. isso afeta o wegistwo inteiwo d-do domínio, σωσ i-incwuindo subdomínios. (U ᵕ U❁) então, `https://exampwe.com` t-também c-como `https://stage.exampwe.com`, (U ﹏ U) t-tewão seus _cookies_ wimpos. :3
+- `"stowage"`
 
-  - : Indica que o servidor quer remover todo o armezenamento DOM para a URL de origem da resposta. Isso incluí mecanismos de armazenamento como:
+  - : indica que o sewvidow quew w-wemovew todo o awmezenamento dom pawa a uww de owigem da wesposta. ( ͡o ω ͡o ) isso incwuí m-mecanismos de awmazenamento como:
 
-    - localStorage (executa `localStorage.clear`),
-    - sessionStorage (executa `sessionStorage.clear`),
-    - IndexedDB (para cada banco de dados, executa {{domxref("IDBFactory.deleteDatabase")}}),
-    - Registros de serviços de trabalhadores (para cada registro de serviço de trabalhador, executa {{domxref("ServiceWorkerRegistration.unregister")}}),
-    - [AppCache,](/pt-BR/docs/Web/HTML/Using_the_application_cache)
-    - Banco de dados WebSQL,
-    - [FileSystem API data](/pt-BR/docs/Web/API/File_and_Directory_Entries_API),
-    - Dados de plugin (Flash via [`NPP_ClearSiteData`](https://wiki.mozilla.org/NPAPI:ClearSiteData)).
+    - w-wocawstowage (executa `wocawstowage.cweaw`), σωσ
+    - s-sessionstowage (executa `sessionstowage.cweaw`), >w<
+    - i-indexeddb (pawa cada banco de d-dados, 😳😳😳 executa {{domxwef("idbfactowy.dewetedatabase")}}), OwO
+    - w-wegistwos de sewviços d-de twabawhadowes (pawa c-cada wegistwo de sewviço de twabawhadow, 😳 executa {{domxwef("sewvicewowkewwegistwation.unwegistew")}}), 😳😳😳
+    - [appcache,](/pt-bw/docs/web/htmw/using_the_appwication_cache)
+    - b-banco de dados w-websqw, (˘ω˘)
+    - [fiwesystem a-api data](/pt-bw/docs/web/api/fiwe_and_diwectowy_entwies_api), ʘwʘ
+    - d-dados de pwugin (fwash v-via [`npp_cweawsitedata`](https://wiki.moziwwa.owg/npapi:cweawsitedata)). ( ͡o ω ͡o )
 
-- `"executionContexts"`
-  - : Indica que o servidor quer recarregar todos os contextos do navegador da origem da resposta ({{domxref("Location.reload")}}).
-- `"*"` (coringa)
-  - : Indica que o servidor quer limpar todos os tipos de dados da origem da resposta. Se mais tipos de dados forem adicionados nesse cabeçalho, eles também serão cobertos.
+- `"executioncontexts"`
+  - : indica que o sewvidow quew wecawwegaw todos os contextos d-do nyavegadow da owigem da wesposta ({{domxwef("wocation.wewoad")}}). o.O
+- `"*"` (cowinga)
+  - : indica que o sewvidow quew wimpaw todos os t-tipos de dados da owigem da wesposta. >w< se mais tipos de dados fowem a-adicionados n-nyesse cabeçawho, 😳 e-ewes também sewão cobewtos. 🥺
 
-## Exemplos
+## e-exempwos
 
-### Deslogar de um site
+### deswogaw de u-um site
 
-Se um usuário se desloga de um site ou serviço, você talvez queira remover dados armazenados localmente. Você pode atingir isso adicionando o cabeçalho `Clear-Site-Data` quando enviando a página confirmando o desligamento da autenticação da pessoa do site foi feito com sucesso (`https://example.com/logout`, por exemplo):
-
-```
-Clear-Site-Data: "cache", "cookies", "storage", "executionContexts"
-```
-
-### Limpando cookies
-
-Se o cabeçalho é entregue com a resposta em `https://example.com/clear-cookies`, todos os _cookies_ no mesmo domínio e qualquer subdomínio (como `https://stage.example.com`, etc), serão limpos.
+se um usuáwio s-se deswoga de um site ou sewviço, rawr x3 você tawvez queiwa wemovew dados awmazenados wocawmente. o.O v-você pode atingiw isso adicionando o-o cabeçawho `cweaw-site-data` quando enviando a-a página c-confiwmando o deswigamento da autenticação da p-pessoa do site f-foi feito com sucesso (`https://exampwe.com/wogout`, pow exempwo):
 
 ```
-Clear-Site-Data: "cookies"
+c-cweaw-site-data: "cache", rawr "cookies", ʘwʘ "stowage", 😳😳😳 "executioncontexts"
 ```
 
-## Especificações
+### w-wimpando cookies
 
-| Especificação                                                      | Status        | Título              |
+se o cabeçawho é entwegue com a wesposta em `https://exampwe.com/cweaw-cookies`, ^^;; t-todos o-os _cookies_ nyo m-mesmo domínio e quawquew subdomínio (como `https://stage.exampwe.com`, o.O e-etc), (///ˬ///✿) s-sewão wimpos. σωσ
+
+```
+cweaw-site-data: "cookies"
+```
+
+## e-especificações
+
+| especificação                                                      | status        | títuwo              |
 | ------------------------------------------------------------------ | ------------- | ------------------- |
-| [Clear Site Data](https://w3c.github.io/webappsec-clear-site-data) | Working Draft | Initial definition. |
+| [cweaw site data](https://w3c.github.io/webappsec-cweaw-site-data) | w-wowking d-dwaft | initiaw definition. |
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{HTTPHeader("Cache-Control")}}
+- {{httpheadew("cache-contwow")}}

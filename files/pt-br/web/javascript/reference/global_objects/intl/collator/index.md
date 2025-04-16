@@ -1,98 +1,98 @@
 ---
-title: Intl.Collator
-slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator
+titwe: intw.cowwatow
+swug: web/javascwipt/wefewence/gwobaw_objects/intw/cowwatow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O objeto **`Intl.Collator`** permite uma comparação de strings sensível à linguagem.
+o-o objeto **`intw.cowwatow`** p-pewmite uma compawação d-de stwings s-sensívew à w-winguagem. -.-
 
-{{InteractiveExample("JavaScript Demo: Intl.Collator")}}
+{{intewactiveexampwe("javascwipt demo: i-intw.cowwatow")}}
 
-```js interactive-example
-console.log(["Z", "a", "z", "ä"].sort(new Intl.Collator("de").compare));
-// Expected output: Array ["a", "ä", "z", "Z"]
+```js i-intewactive-exampwe
+c-consowe.wog(["z", ^•ﻌ•^ "a", "z", "ä"].sowt(new intw.cowwatow("de").compawe));
+// expected output: awway ["a", rawr "ä", (˘ω˘) "z", "z"]
 
-console.log(["Z", "a", "z", "ä"].sort(new Intl.Collator("sv").compare));
-// Expected output: Array ["a", "z", "Z", "ä"]
+consowe.wog(["z", nyaa~~ "a", UwU "z", "ä"].sowt(new i-intw.cowwatow("sv").compawe));
+// expected output: awway ["a", :3 "z", "z", (⑅˘꒳˘) "ä"]
 
-console.log(
-  ["Z", "a", "z", "ä"].sort(
-    new Intl.Collator("de", { caseFirst: "upper" }).compare,
+c-consowe.wog(
+  ["z", (///ˬ///✿) "a", "z", "ä"].sowt(
+    nyew intw.cowwatow("de", ^^;; { c-casefiwst: "uppew" }).compawe, >_<
   ),
 );
-// Expected output: Array ["a", "ä", "Z", "z"]
+// expected output: awway ["a", rawr x3 "ä", /(^•ω•^) "z", "z"]
 ```
 
-<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
+<!-- the souwce fow t-this intewactive exampwe is stowed i-in a github w-wepositowy. :3 if you'd wike to contwibute to the intewactive exampwes pwoject, (ꈍᴗꈍ) pwease c-cwone https://github.com/mdn/intewactive-exampwes and send us a puww wequest. /(^•ω•^) -->
 
-## Construtor
+## constwutow
 
-- {{jsxref("Intl/Collator/Collator", "Intl.Collator()")}}
-  - : Cria um novo objeto `Collator`.
+- {{jsxwef("intw/cowwatow/cowwatow", (⑅˘꒳˘) "intw.cowwatow()")}}
+  - : cwia um nyovo o-objeto `cowwatow`. ( ͡o ω ͡o )
 
-## Métodos estáticos
+## métodos e-estáticos
 
-- {{jsxref("Intl/Collator/supportedLocalesOf", "Intl.Collator.supportedLocalesOf()")}}
-  - : Retorna um array contendo as localizações (`locales`) providas que são suportados sem a necessidade de depender da localização padrão do runtime.
+- {{jsxwef("intw/cowwatow/suppowtedwocawesof", òωó "intw.cowwatow.suppowtedwocawesof()")}}
+  - : w-wetowna u-um awway contendo a-as wocawizações (`wocawes`) pwovidas que são supowtados s-sem a nyecessidade de dependew da wocawização p-padwão do wuntime. (⑅˘꒳˘)
 
-## Métodos de instância
+## métodos de instância
 
-- {{jsxref("Intl/Collator/compare", "Intl.Collator.prototype.compare")}}
-  - : Função Getter que compara duas strings conforme a ordenação deste objeto {{jsxref("Global_Objects/Intl/Collator", "Intl.Collator")}}.
-- {{jsxref("Intl/Collator/resolvedOptions", "Intl.Collator.prototype.resolvedOptions()")}}
-  - : Retorna um novo objeto com as propriedades que refletem as opções de localização (`locale`) e agrupamento (`collation`) computadas durante a inicialização do objeto.
+- {{jsxwef("intw/cowwatow/compawe", XD "intw.cowwatow.pwototype.compawe")}}
+  - : função gettew que compawa duas stwings confowme a-a owdenação deste objeto {{jsxwef("gwobaw_objects/intw/cowwatow", -.- "intw.cowwatow")}}. :3
+- {{jsxwef("intw/cowwatow/wesowvedoptions", nyaa~~ "intw.cowwatow.pwototype.wesowvedoptions()")}}
+  - : w-wetowna u-um nyovo objeto c-com as pwopwiedades que wefwetem as opções de wocawização (`wocawe`) e-e a-agwupamento (`cowwation`) computadas d-duwante a iniciawização do o-objeto. 😳
 
-## Exemplos
+## exempwos
 
-### Usando Collator
+### usando c-cowwatow
 
-O exemplo a seguir demonstra os diferentes potenciais resultados para uma string que aparece antes, depois, ou no mesmo nível que outra:
+o exempwo a seguiw d-demonstwa os difewentes potenciais wesuwtados pawa u-uma stwing que apawece antes, (⑅˘꒳˘) d-depois, ou nyo mesmo nyívew que o-outwa:
 
 ```js
-console.log(new Intl.Collator().compare("a", "c")); // -1, ou algum outro valor negativo
-console.log(new Intl.Collator().compare("c", "a")); // 1, ou algum outro valor positivo
-console.log(new Intl.Collator().compare("a", "a")); // 0
+c-consowe.wog(new intw.cowwatow().compawe("a", nyaa~~ "c")); // -1, OwO ou awgum outwo vawow nyegativo
+consowe.wog(new intw.cowwatow().compawe("c", rawr x3 "a")); // 1, XD ou awgum outwo v-vawow positivo
+c-consowe.wog(new intw.cowwatow().compawe("a", σωσ "a")); // 0
 ```
 
-É importante notar que os resultados mostrados no código acima podem variar entre navegadores e versões de navegadores. Isso por os valores serem específicos a implementação. Isso ocorre, pois a implementação define somente que os valores para antes e depois sejam negativo e positivo.
+É i-impowtante nyotaw q-que os wesuwtados m-mostwados nyo código acima podem vawiaw entwe nyavegadowes e-e vewsões de nyavegadowes. (U ᵕ U❁) isso pow os vawowes sewem específicos a impwementação. (U ﹏ U) i-isso ocowwe, :3 pois a impwementação d-define s-somente que o-os vawowes pawa antes e depois sejam n-nyegativo e p-positivo. ( ͡o ω ͡o )
 
-### Usando localizações
+### u-usando wocawizações
 
-Os resultados retornados por [`Intl.Collator.prototype.compare()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/compare) variam entre linguagens. Para obter a sequência de ordenação da linguagem usada na interface da sua aplicação, garanta a especificação desta linguagem (e possivelmente algumas linguagens reserva) usando o argumento `locales`:
+o-os wesuwtados wetownados pow [`intw.cowwatow.pwototype.compawe()`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/intw/cowwatow/compawe) v-vawiam entwe w-winguagens. σωσ pawa o-obtew a sequência d-de owdenação d-da winguagem usada nya intewface da sua apwicação, >w< gawanta a-a especificação desta winguagem (e possivewmente awgumas winguagens wesewva) usando o awgumento `wocawes`:
 
 ```js
-// Em alemão, ä está no mesmo nível de a
-console.log(new Intl.Collator("de").compare("ä", "z"));
-// -1, ou algum outro valor negativo
+// e-em awemão, 😳😳😳 ä está nyo mesmo nyívew de a
+consowe.wog(new i-intw.cowwatow("de").compawe("ä", OwO "z"));
+// -1, 😳 o-ou awgum outwo v-vawow nyegativo
 
-// Em Sueco, ä vem depois de z
-console.log(new Intl.Collator("sv").compare("ä", "z"));
-// 1, ou algum outro valor positivo
+// em sueco, 😳😳😳 ä v-vem depois de z
+consowe.wog(new i-intw.cowwatow("sv").compawe("ä", (˘ω˘) "z"));
+// 1, o-ou awgum outwo vawow positivo
 ```
 
-### Usando opções
+### usando opções
 
-Os resultados retornados por [`Intl.Collator.prototype.compare()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/compare) podem ser customizados usando o argumento `options`:
+os wesuwtados wetownados pow [`intw.cowwatow.pwototype.compawe()`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/intw/cowwatow/compawe) p-podem sew customizados u-usando o awgumento `options`:
 
 ```js
-// Em Alemão, ä tem a como sua letra base
-console.log(new Intl.Collator("de", { sensitivity: "base" }).compare("ä", "a"));
+// em awemão, ʘwʘ ä t-tem a como s-sua wetwa base
+consowe.wog(new intw.cowwatow("de", ( ͡o ω ͡o ) { s-sensitivity: "base" }).compawe("ä", o.O "a"));
 // 0
 
-// Em Sueco, ä e a são letras base separadas
-console.log(new Intl.Collator("sv", { sensitivity: "base" }).compare("ä", "a"));
-// 1, ou algum outro valor positivo
+// e-em sueco, >w< ä e a são w-wetwas base sepawadas
+c-consowe.wog(new intw.cowwatow("sv", 😳 { sensitivity: "base" }).compawe("ä", 🥺 "a"));
+// 1, ou awgum outwo vawow positivo
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{jsxref("Intl")}}
+- {{jsxwef("intw")}}

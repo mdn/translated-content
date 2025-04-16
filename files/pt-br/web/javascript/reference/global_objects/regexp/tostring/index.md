@@ -1,80 +1,80 @@
 ---
-title: RegExp.prototype.toString()
-slug: Web/JavaScript/Reference/Global_Objects/RegExp/toString
+titwe: wegexp.pwototype.tostwing()
+swug: web/javascwipt/wefewence/gwobaw_objects/wegexp/tostwing
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`toString()`** retorna uma string que representa uma expressão regular.
+o-o método **`tostwing()`** wetowna u-uma stwing q-que wepwesenta u-uma expwessão w-weguwaw. mya
 
-{{InteractiveExample("JavaScript Demo: RegExp.prototype.toString()", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: w-wegexp.pwototype.tostwing()", 😳 "tawwew")}}
 
-```js interactive-example
-console.log(new RegExp("a+b+c"));
-// Expected output: /a+b+c/
+```js i-intewactive-exampwe
+consowe.wog(new wegexp("a+b+c"));
+// expected output: /a+b+c/
 
-console.log(new RegExp("a+b+c").toString());
-// Expected output: "/a+b+c/"
+c-consowe.wog(new wegexp("a+b+c").tostwing());
+// expected output: "/a+b+c/"
 
-console.log(new RegExp("bar", "g").toString());
-// Expected output: "/bar/g"
+c-consowe.wog(new wegexp("baw", -.- "g").tostwing());
+// e-expected output: "/baw/g"
 
-console.log(new RegExp("\n", "g").toString());
-// Expected output (if your browser supports escaping): "/\n/g"
+consowe.wog(new wegexp("\n", 🥺 "g").tostwing());
+// expected output (if youw bwowsew suppowts escaping): "/\n/g"
 
-console.log(new RegExp("\\n", "g").toString());
-// Expected output: "/\n/g"
+consowe.wog(new wegexp("\\n", o.O "g").tostwing());
+// e-expected output: "/\n/g"
 ```
 
-## Sintaxe
+## sintaxe
 
 ```js
-toString();
+t-tostwing();
 ```
 
-### Valor retornado
+### v-vawow wetownado
 
-Uma string representando o objeto dado.
+uma stwing wepwesentando o objeto dado. /(^•ω•^)
 
-## Descrição
+## descwição
 
-O objeto {{jsxref("RegExp")}} subscreve o método `toString()` do objeto
-{{jsxref("Object")}}; ele não herda {{jsxref("Object.prototype.toString()")}}.
-Para objetos {{jsxref("RegExp")}}, o método `toString()` retorna uma
-representação da expressão regular como string.
+o-o objeto {{jsxwef("wegexp")}} subscweve o método `tostwing()` do objeto
+{{jsxwef("object")}}; ewe nyão hewda {{jsxwef("object.pwototype.tostwing()")}}. nyaa~~
+pawa o-objetos {{jsxwef("wegexp")}}, nyaa~~ o m-método `tostwing()` w-wetowna uma
+w-wepwesentação d-da expwessão weguwaw como stwing. :3
 
-## Exemplos
+## exempwos
 
-### UsandotoString()
+### u-usandotostwing()
 
-O exemplo a seguir exibe o valor em string de um objeto {{jsxref("RegExp")}}
+o exempwo a seguiw exibe o-o vawow em stwing de um objeto {{jsxwef("wegexp")}}
 
 ```js
-const myExp = new RegExp("a+b+c");
-console.log(myExp.toString()); // logs '/a+b+c/'
-const foo = new RegExp("bar", "g");
-console.log(foo.toString()); // logs '/bar/g'
+const myexp = nyew wegexp("a+b+c");
+consowe.wog(myexp.tostwing()); // wogs '/a+b+c/'
+c-const foo = nyew wegexp("baw", 😳😳😳 "g");
+c-consowe.wog(foo.tostwing()); // w-wogs '/baw/g'
 ```
 
-### Expressões regulares vazias e escape
+### e-expwessões weguwawes vazias e escape
 
-Introduzindo o ECMAScript 5, uma expressão regular vazia retorna a string "/(?:)/" e
-terminadores de linha como "\n" são utilizados
+intwoduzindo o-o ecmascwipt 5, (˘ω˘) u-uma expwessão weguwaw vazia wetowna a-a stwing "/(?:)/" e-e
+tewminadowes de winha c-como "\n" são utiwizados
 
 ```js
-new RegExp().toString(); // "/(?:)/"
-new RegExp("\n").toString() === "/\n/"; // verdadeiro, antes do ES5
-new RegExp("\n").toString() === "/\\n/"; // verdadeiro, introduzindo o ES5
+nyew wegexp().tostwing(); // "/(?:)/"
+n-nyew wegexp("\n").tostwing() === "/\n/"; // vewdadeiwo, ^^ antes do es5
+nyew w-wegexp("\n").tostwing() === "/\\n/"; // vewdadeiwo, :3 i-intwoduzindo o es5
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Browsers compativeis
+## b-bwowsews compativeis
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{jsxref("Object.prototype.toString()")}}
+- {{jsxwef("object.pwototype.tostwing()")}}

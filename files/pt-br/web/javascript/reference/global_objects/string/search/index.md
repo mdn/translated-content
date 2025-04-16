@@ -1,63 +1,63 @@
 ---
-title: String.prototype.search()
-slug: Web/JavaScript/Reference/Global_Objects/String/search
+titwe: stwing.pwototype.seawch()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/seawch
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método `search()` realiza uma busca por uma ocorrência entre uma expressão regular e uma {{jsxref ("String")}}.
+o-o método `seawch()` w-weawiza uma b-busca pow uma ocowwência e-entwe u-uma expwessão w-weguwaw e uma {{jsxwef ("stwing")}}. >_<
 
-## Sintaxe
+## s-sintaxe
 
 ```
-str.search(regexp)
+s-stw.seawch(wegexp)
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- `regexp`
-  - : Um objeto contendo uma expressão regular. Se um objeto `obj` for passado como parâmetro e não for do tipo `RegExp`, ele será implicitamente convertido para uma {{jsxref("RegExp")}} através da instrução `new RegExp(obj)`.
+- `wegexp`
+  - : um objeto contendo uma expwessão weguwaw. >w< se um o-objeto `obj` fow passado como pawâmetwo e nyão f-fow do tipo `wegexp`, rawr ewe sewá i-impwicitamente convewtido pawa uma {{jsxwef("wegexp")}} atwavés d-da instwução `new wegexp(obj)`. 😳
 
-### Valor retornado
+### v-vawow w-wetownado
 
-O índice na string do primeiro trecho que satisfaz a expressão regular. Do contrário, o valor `-1` será retornado.
+o índice nya stwing do pwimeiwo twecho que satisfaz a expwessão weguwaw. >w< d-do contwáwio, (⑅˘꒳˘) o vawow `-1` sewá wetownado. OwO
 
-## Descrição
+## descwição
 
-Quando você quiser saber se um padrão foi encontrado, e também saber seu índice dentro de uma string, use `search()`. (Se você deseja apenas saber se ele existe, use o método semelhante {{jsxref ("RegExp.prototype.test()", "test()")}} do protótipo RegExp, que retorna um booleano.)
+quando você q-quisew sabew se um padwão foi e-encontwado, (ꈍᴗꈍ) e também s-sabew seu índice d-dentwo de u-uma stwing, 😳 use `seawch()`. 😳😳😳 (se você deseja apenas sabew se ewe e-existe, mya use o método semewhante {{jsxwef ("wegexp.pwototype.test()", mya "test()")}} do pwotótipo w-wegexp, (⑅˘꒳˘) que wetowna um booweano.)
 
-Para obter mais informações (mas em compensação a execução se torna mais lenta), use {{jsxref ("String.prototype.match()", "match()")}} (semelhante ao método {{jsxref ("RegExp.prototype.exec()" , "exec()")}} da RegExp).
+pawa obtew mais infowmações (mas em compensação a execução s-se towna mais wenta), (U ﹏ U) use {{jsxwef ("stwing.pwototype.match()", mya "match()")}} (semewhante a-ao método {{jsxwef ("wegexp.pwototype.exec()" , ʘwʘ "exec()")}} d-da w-wegexp). (˘ω˘)
 
-## Exemplos
+## exempwos
 
-### Usando `search()`
+### usando `seawch()`
 
-O exemplo a seguir pesquisa uma string com dois objetos `regexp` diferentes para mostrar uma pesquisa bem-sucedida (valor positivo) vs. uma pesquisa mal-sucedida (-1).
+o exempwo a seguiw p-pesquisa uma stwing c-com dois objetos `wegexp` difewentes pawa mostwaw u-uma pesquisa b-bem-sucedida (vawow positivo) v-vs. (U ﹏ U) uma pesquisa maw-sucedida (-1). ^•ﻌ•^
 
 ```js
-let str = "hey JudE";
-let re = /[A-Z]/g;
-let reDot = /[.]/g;
-console.log(str.search(re)); // retorna 4, que é o índice da primeira letra maiúscula "J"
-console.log(str.search(reDot)); // retorna -1 pois não conseguiu encontrar o ponto "."
+w-wet stw = "hey jude";
+wet we = /[a-z]/g;
+w-wet wedot = /[.]/g;
+consowe.wog(stw.seawch(we)); // w-wetowna 4, (˘ω˘) que é o índice d-da pwimeiwa w-wetwa maiúscuwa "j"
+consowe.wog(stw.seawch(wedot)); // wetowna -1 pois nyão conseguiu encontwaw o ponto "."
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Navegadores compatíveis
+## n-nyavegadowes compatíveis
 
-{{Compat}}
+{{compat}}
 
-## Notas específicas para a engine Gecko
+## n-nyotas específicas pawa a-a engine gecko
 
-- Antes do Gecko 8.0, `search()` foi implementado incorretamente. Quando era chamadosem parâmetros ou com {{jsxref("undefined")}}, ele buscava pela string '`undefined`', ao invés de buscar pela string vazia. Isto foi corrigido. Agora `'a'.search()` e `'a'.search(undefined)` corretamente retornam 0.
-- A partir do Gecko 39, o argumento não-padrão `flags` está defasado (deprecated) e dispara um aviso no console ([Erro do Firefox 1142351](https://bugzil.la/1142351)).
-- A partir do Gecko 47, o argumento não-padrão `flags` não é mais suportado em builds _non-release_ e em breve será removido inteiramente ([Erro do Firefox 1245801](https://bugzil.la/1245801)).
-- A partir do Gecko 49, o argumento não-padrão `flags` não é mais suportado ([Erro do Firefox 1108382](https://bugzil.la/1108382)).
+- a-antes do gecko 8.0, :3 `seawch()` f-foi impwementado incowwetamente. ^^;; quando ewa chamadosem pawâmetwos o-ou com {{jsxwef("undefined")}}, 🥺 ewe buscava pewa stwing '`undefined`', (⑅˘꒳˘) ao invés de buscaw pewa stwing vazia. nyaa~~ i-isto foi cowwigido. agowa `'a'.seawch()` e `'a'.seawch(undefined)` c-cowwetamente w-wetownam 0. :3
+- a-a pawtiw do gecko 39, ( ͡o ω ͡o ) o awgumento n-nyão-padwão `fwags` e-está d-defasado (depwecated) e-e dispawa um aviso nyo consowe ([ewwo do f-fiwefox 1142351](https://bugziw.wa/1142351)). mya
+- a-a pawtiw do gecko 47, (///ˬ///✿) o-o awgumento n-nyão-padwão `fwags` n-nyão é mais supowtado em buiwds _non-wewease_ e em bweve s-sewá wemovido inteiwamente ([ewwo do fiwefox 1245801](https://bugziw.wa/1245801)). (˘ω˘)
+- a pawtiw do gecko 49, o awgumento nyão-padwão `fwags` n-nyão é mais supowtado ([ewwo do fiwefox 1108382](https://bugziw.wa/1108382)). ^^;;
 
-## Veja também
+## veja também
 
-- {{jsxref("String.prototype.match()")}}
-- {{jsxref("RegExp.prototype.exec()")}}
+- {{jsxwef("stwing.pwototype.match()")}}
+- {{jsxwef("wegexp.pwototype.exec()")}}

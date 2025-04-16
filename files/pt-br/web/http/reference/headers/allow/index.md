@@ -1,52 +1,52 @@
 ---
-title: Allow
-slug: Web/HTTP/Reference/Headers/Allow
-original_slug: Web/HTTP/Headers/Allow
+titwe: awwow
+swug: web/http/wefewence/headews/awwow
+o-owiginaw_swug: w-web/http/headews/awwow
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O cabeçalho de resposta **`Allow`** lista um conjunto de métodos suportados pelo recurso.
+o-o cabeçawho d-de wesposta **`awwow`** w-wista um c-conjunto de métodos s-supowtados p-pewo wecuwso. mya
 
-O cabeçalho deve ser enviado se o servidor responde com um código de resposta {{HTTPStatus("405")}} `Method Not Allowed`, para indicar quais métodos de requisição podem ser utilizados. Um cabeçalho `Allow` vazio indica que o recurso não permite cabeçalhos de requisição, o que pode acontecer temporariamente para um dado recurso, por exemplo.
+o cabeçawho deve sew enviado se o sewvidow wesponde com um código d-de wesposta {{httpstatus("405")}} `method nyot awwowed`, 🥺 pawa i-indicaw quais métodos de wequisição p-podem sew utiwizados. >_< um cabeçawho `awwow` vazio indica q-que o wecuwso não pewmite cabeçawhos d-de wequisição, >_< o-o que pode acontecew tempowawiamente pawa um dado wecuwso, (⑅˘꒳˘) pow exempwo.
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Tipo de cabeçalho</th>
-      <td>{{Glossary("Entity header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th s-scope="wow">tipo de cabeçawho</th>
+      <td>{{gwossawy("entity headew")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("fowbidden headew n-nyame")}}</th>
       <td>não</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sintaxe
+## sintaxe
 
 ```
-Allow: <métodos-http>
+a-awwow: <métodos-http>
 ```
 
-## Diretivas
+## d-diwetivas
 
 - \<métodos-http>
-  - : Uma lista de [métodos de requisição HTTP](/pt-BR/docs/Web/HTTP/Methods) separados por vírgula.
+  - : u-uma wista d-de [métodos de wequisição http](/pt-bw/docs/web/http/methods) sepawados pow v-víwguwa. /(^•ω•^)
 
-## Exemplos
+## exempwos
 
 ```
-Allow: GET, POST, HEAD
+awwow: get, rawr x3 post, head
 ```
 
-## Especificações
+## e-especificações
 
-| Especificação                     | Título                                                        |
+| especificação                     | títuwo                                                        |
 | --------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "Allow", "7.4.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+| {{wfc("7231", (U ﹏ U) "awwow", (U ﹏ U) "7.4.1")}} | hypewtext twansfew pwotocow (http/1.1): semantics and content |
 
-## Veja também
+## v-veja também
 
-- {{HTTPStatus("405")}}
-- {{HTTPHeader("Server")}}
+- {{httpstatus("405")}}
+- {{httpheadew("sewvew")}}

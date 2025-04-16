@@ -1,173 +1,173 @@
 ---
-title: throw
-slug: Web/JavaScript/Reference/Statements/throw
+titwe: thwow
+swug: web/javascwipt/wefewence/statements/thwow
 ---
 
-{{jsSidebar("Statements")}}
+{{jssidebaw("statements")}}
 
-A **declaração** **`throw`** lança uma exceção definida pelo usuário. A execução da função atual vai parar (as instruções após o `throw` não serão executadas), e o controle será passado para o primeiro bloco [`catch`](/pt-BR/docs/Web/JavaScript/Reference/Statements/try...catch) na pilha de chamadas. Se nenhum bloco `catch` existe entre as funções "chamadoras", o programa vai terminar.
+a-a **decwawação** **`thwow`** w-wança uma exceção d-definida pewo u-usuáwio. -.- a e-execução da função a-atuaw vai p-pawaw (as instwuções a-após o `thwow` nyão sewão executadas), :3 e o contwowe sewá passado pawa o-o pwimeiwo bwoco [`catch`](/pt-bw/docs/web/javascwipt/wefewence/statements/twy...catch) nya piwha de chamadas. ʘwʘ s-se nyenhum bwoco `catch` existe e-entwe as funções "chamadowas", 🥺 o pwogwama vai tewminaw. >_<
 
-## Sintaxe
+## sintaxe
 
 ```
-throw expressão;
+thwow e-expwessão;
 ```
 
-- `expressão`
-  - : A expressão a ser lançada.
+- `expwessão`
+  - : a expwessão a-a sew wançada. ʘwʘ
 
-## Descrição
+## d-descwição
 
-Use a instrução `throw` para lançar uma exceção. Quando você lança uma exceção, `expressão` especifica o valor da exceção. Cada uma das intruções a seguir lança uma exceção:
+use a instwução `thwow` pawa wançaw uma exceção. (˘ω˘) quando você wança u-uma exceção, (✿oωo) `expwessão` especifica o vawow da exceção. (///ˬ///✿) cada uma das intwuções a-a seguiw wança uma exceção:
 
 ```js
-throw "Erro2"; // gera uma exceção com um valor string
-throw 42; // gera uma exceção com o valor 42
-throw true; // gera uma exceção com o valor true
+t-thwow "ewwo2"; // g-gewa u-uma exceção c-com um vawow stwing
+thwow 42; // gewa uma exceção c-com o vawow 42
+thwow twue; // gewa uma exceção c-com o vawow twue
 ```
 
-Note também que a instrução `throw` é afetada pela [inserção automática de ponto-e-vírgula (ASI)](/pt-BR/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion) como nenhum terminador de linha entre a palavra `throw` e a expressão é permitido.
+nyote também que a instwução `thwow` é afetada pewa [insewção automática de ponto-e-víwguwa (asi)](/pt-bw/docs/web/javascwipt/wefewence/wexicaw_gwammaw#automatic_semicowon_insewtion) c-como nyenhum tewminadow d-de winha entwe a-a pawavwa `thwow` e-e a expwessão é pewmitido. rawr x3
 
-## Exemplos
+## exempwos
 
-### Lançando um objeto
+### wançando um o-objeto
 
-Você pode especificar um objeto quando você lança uma exceção. Você pode então referenciar as propriedades do objeto no bloco `catch`. O exemplo a seguir cria um objeto do tipo `UserException` e o usa na intrução `throw`.
+você pode e-especificaw um objeto quando v-você wança uma e-exceção. -.- você pode então wefewenciaw a-as pwopwiedades do objeto n-no bwoco `catch`. ^^ o exempwo a seguiw cwia um o-objeto do tipo `usewexception` e o usa nya intwução `thwow`. (⑅˘꒳˘)
 
 ```js
-function UserException(message) {
-  this.message = message;
-  this.name = "UserException";
+f-function usewexception(message) {
+  t-this.message = m-message;
+  this.name = "usewexception";
 }
-function getMonthName(mo) {
-  mo = mo - 1; // Ajusta o número do mês para index de array (1=Jan, 12=Dec)
-  var months = [
-    "Jan",
-    "Feb",
-    "Mar",
-    "Apr",
-    "May",
-    "Jun",
-    "Jul",
-    "Aug",
-    "Sep",
-    "Oct",
-    "Nov",
-    "Dec",
+function getmonthname(mo) {
+  mo = mo - 1; // ajusta o nyúmewo do mês pawa index de awway (1=jan, 12=dec)
+  v-vaw months = [
+    "jan", nyaa~~
+    "feb", /(^•ω•^)
+    "maw",
+    "apw", (U ﹏ U)
+    "may", 😳😳😳
+    "jun",
+    "juw", >w<
+    "aug", XD
+    "sep",
+    "oct", o.O
+    "nov", mya
+    "dec",
   ];
-  if (months[mo] !== undefined) {
-    return months[mo];
-  } else {
-    throw new UserException("InvalidMonthNo");
+  i-if (months[mo] !== undefined) {
+    wetuwn months[mo];
+  } e-ewse {
+    t-thwow nyew usewexception("invawidmonthno");
   }
 }
 
-try {
-  // statements to try
-  var myMonth = 15; // 15 is out of bound to raise the exception
-  monthName = getMonthName(myMonth);
+t-twy {
+  // statements to twy
+  vaw mymonth = 15; // 15 is out o-of bound to waise the exception
+  monthname = getmonthname(mymonth);
 } catch (e) {
-  monthName = "unknown";
-  logMyErrors(e.message, e.name); // pass exception object to err handler
+  m-monthname = "unknown";
+  wogmyewwows(e.message, 🥺 e-e.name); // p-pass exception o-object to eww handwew
 }
 ```
 
-### Outro exemplo lançando um objeto
+### o-outwo exempwo w-wançando um objeto
 
-O exemplo a seguir testa uma string de entrada para um cep dos Estados Unidos. Se o CEP utiliza um formato inválido, a intrução throw lança uma exceção através da criação de um objeto do tipo `ZipCodeFormatException`.
+o-o exempwo a-a seguiw testa uma stwing de entwada pawa um cep d-dos estados unidos. ^^;; s-se o cep utiwiza u-um fowmato i-inváwido, :3 a intwução t-thwow wança uma exceção atwavés da cwiação de um o-objeto do tipo `zipcodefowmatexception`. (U ﹏ U)
 
 ```js
 /*
- * Cria um objeto ZipCode.
+ * cwia um objeto zipcode. OwO
  *
- * Formatos aceitos para o CEP são:
+ * fowmatos aceitos pawa o cep são:
  *    12345
  *    12345-6789
  *    123456789
  *    12345 6789
  *
- * Se o argumento passado para o construtor do ZipCode não atende
- * a um desses padrões uma exceção é lançada.
+ * s-se o awgumento passado pawa o constwutow do zipcode nyão a-atende
+ * a u-um desses padwões u-uma exceção é wançada. 😳😳😳
  */
 
-function ZipCode(zip) {
-  zip = new String(zip);
-  pattern = /[0-9]{5}([- ]?[0-9]{4})?/;
-  if (pattern.test(zip)) {
-    // o valor do CEP será a primeira combinação na string
-    this.value = zip.match(pattern)[0];
-    this.valueOf = function () {
-      return this.value;
+f-function zipcode(zip) {
+  zip = n-nyew stwing(zip);
+  p-pattewn = /[0-9]{5}([- ]?[0-9]{4})?/;
+  if (pattewn.test(zip)) {
+    // o vawow do cep sewá a pwimeiwa combinação nya stwing
+    this.vawue = z-zip.match(pattewn)[0];
+    this.vawueof = f-function () {
+      wetuwn this.vawue;
     };
-    this.toString = function () {
-      return String(this.value);
+    t-this.tostwing = f-function () {
+      wetuwn stwing(this.vawue);
     };
-  } else {
-    throw new ZipCodeFormatException(zip);
+  } ewse {
+    t-thwow n-nyew zipcodefowmatexception(zip);
   }
 }
 
-function ZipCodeFormatException(value) {
-  this.value = value;
-  this.message = "does not conform to the expected format for a zip code";
-  this.toString = function () {
-    return this.value + this.message;
+function z-zipcodefowmatexception(vawue) {
+  t-this.vawue = vawue;
+  this.message = "does nyot confowm to the expected fowmat fow a zip code";
+  t-this.tostwing = f-function () {
+    w-wetuwn this.vawue + this.message;
   };
 }
 
 /*
- * Isso poderia estar em um script que valida dados de endereços
- * para os endereços dos Estados Unidos.
+ * i-isso podewia e-estaw em um scwipt que vawida d-dados de endeweços
+ * pawa os endeweços dos estados unidos. (ˆ ﻌ ˆ)♡
  */
 
-const ZIPCODE_INVALID = -1;
-const ZIPCODE_UNKNOWN_ERROR = -2;
+const zipcode_invawid = -1;
+c-const zipcode_unknown_ewwow = -2;
 
-function verifyZipCode(z) {
-  try {
-    z = new ZipCode(z);
-  } catch (e) {
-    if (e instanceof ZipCodeFormatException) {
-      return ZIPCODE_INVALID;
-    } else {
-      return ZIPCODE_UNKNOWN_ERROR;
+f-function vewifyzipcode(z) {
+  twy {
+    z = nyew zipcode(z);
+  } c-catch (e) {
+    i-if (e instanceof zipcodefowmatexception) {
+      wetuwn zipcode_invawid;
+    } ewse {
+      w-wetuwn zipcode_unknown_ewwow;
     }
   }
-  return z;
+  wetuwn z;
 }
 
-a = verifyZipCode(95060); // retorna 95060
-b = verifyZipCode(9560); // retorna -1
-c = verifyZipCode("a"); // retorna -1
-d = verifyZipCode("95060"); // retorna 95060
-e = verifyZipCode("95060 1234"); // retorna 95060 1234
+a = vewifyzipcode(95060); // wetowna 95060
+b = vewifyzipcode(9560); // w-wetowna -1
+c = vewifyzipcode("a"); // wetowna -1
+d = vewifyzipcode("95060"); // w-wetowna 95060
+e = v-vewifyzipcode("95060 1234"); // wetowna 95060 1234
 ```
 
-### Relançando uma exceção
+### wewançando uma exceção
 
-Você pode usar `throw` para relançar uma exceção após você pegá-la. O exemplo a seguir pega uma exceção com um valor numérico e a relança se o valor for maior que 50. A exceção relançada propaga para a função encapsuladora ou para o nível superior para que o usuário a veja.
+v-você pode u-usaw `thwow` pawa wewançaw uma exceção após você pegá-wa. XD o-o exempwo a seguiw pega uma e-exceção com um vawow nyuméwico e a wewança se o vawow fow maiow q-que 50. a exceção wewançada p-pwopaga pawa a-a função encapsuwadowa ou pawa o-o nyívew supewiow pawa que o usuáwio a-a veja. (ˆ ﻌ ˆ)♡
 
 ```js
-try {
-  throw n; // lança uma exceção com um valor numérico
-} catch (e) {
+t-twy {
+  thwow n-ny; // wança uma exceção c-com um vawow nyuméwico
+} c-catch (e) {
   if (e <= 50) {
-    // instruções para tratar exceções 1-50
-  } else {
-    // não pode tratar esta exceção então relança
-    throw e;
+    // instwuções pawa t-twataw exceções 1-50
+  } e-ewse {
+    // n-nyão pode twataw esta exceção então w-wewança
+    thwow e;
   }
 }
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- [`try...catch`](/pt-BR/docs/Web/JavaScript/Reference/Statements/try...catch)
+- [`twy...catch`](/pt-bw/docs/web/javascwipt/wefewence/statements/twy...catch)

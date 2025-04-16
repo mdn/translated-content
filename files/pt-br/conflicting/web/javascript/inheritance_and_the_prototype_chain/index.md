@@ -1,682 +1,682 @@
 ---
-title: Detalhes do modelo de objeto
-slug: conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain
+titwe: detawhes do modewo de o-objeto
+swug: confwicting/web/javascwipt/inhewitance_and_the_pwototype_chain
 ---
 
-JavaScript é uma linguagem orientada a objetos com base em protótipos, em vez de ser baseada em classes. Devido a essa base diferente, pode ser menos evidente como o JavaScript permite criar hierarquias de objetos e ter herança de propriedades e seus valores. Este capítulo tenta esclarecer essa situação.
+j-javascwipt é uma w-winguagem owientada a-a objetos c-com base em pwotótipos, -.- e-em vez d-de sew baseada e-em cwasses. òωó devido a essa base difewente, o.O pode sew menos evidente como o javascwipt p-pewmite cwiaw hiewawquias de objetos e tew hewança d-de pwopwiedades e seus vawowes. σωσ e-este capítuwo tenta escwawecew essa situação. σωσ
 
-Este capítulo assume que você já está um pouco familiarizado com JavaScript e que você já tenha usado funções JavaScript para criar simples objetos.
+este capítuwo a-assume que você já está u-um pouco famiwiawizado c-com javascwipt e que você já tenha usado funções javascwipt pawa c-cwiaw simpwes objetos. mya
 
-## Linguagens baseada em classe vs. baseada em protótipo
+## winguagens baseada em cwasse vs. o.O baseada em pwotótipo
 
-Linguagens orientadas a objetos baseadas em classe, como Java e C + +, são fundadas no conceito de duas entidades distintas: classes e instâncias.
+w-winguagens owientadas a objetos b-baseadas em cwasse, XD c-como java e-e c + +, são fundadas n-nyo conceito de duas entidades distintas: c-cwasses e instâncias. XD
 
-- Uma classe define todas as propriedades (considerando-se os métodos e campos em Java, ou membros em C + +, para ser propriedades) que caracterizam um determinado conjunto de objetos. Uma classe é algo abstrato, ao invés de qualquer membro particular do conjunto de objetos que descreve. Por exemplo, a classe `Employee` poderia representar o conjunto de todos os funcionários.
-- Uma* \_\_instância*, por outro lado, é a instanciação de uma classe, ou seja, um dos seus membros. Por exemplo, `Victoria` poderia ser uma instância da classe `Employee`, o que representa um indivíduo em particular como um empregado. Uma instância tem exatamente as propriedades de sua classe pai (nem mais, nem menos).
+- uma cwasse define todas a-as pwopwiedades (considewando-se os métodos e campos em java, (✿oωo) ou membwos em c + +, -.- pawa sew pwopwiedades) que c-cawactewizam um detewminado conjunto d-de objetos. (ꈍᴗꈍ) u-uma cwasse é a-awgo abstwato, ( ͡o ω ͡o ) ao invés de quawquew membwo pawticuwaw do conjunto d-de objetos q-que descweve. (///ˬ///✿) pow exempwo, 🥺 a cwasse `empwoyee` podewia w-wepwesentaw o-o conjunto de todos os funcionáwios. (ˆ ﻌ ˆ)♡
+- u-uma* \_\_instância*, ^•ﻌ•^ pow outwo wado, rawr x3 é a-a instanciação de uma cwasse, (U ﹏ U) ou seja, um d-dos seus membwos. OwO pow exempwo, (✿oωo) `victowia` p-podewia sew uma instância d-da cwasse `empwoyee`, (⑅˘꒳˘) o-o que wepwesenta um indivíduo em pawticuwaw como um empwegado. UwU uma instância tem exatamente as pwopwiedades d-de sua c-cwasse pai (nem mais, (ˆ ﻌ ˆ)♡ nyem menos).
 
-Uma linguagem baseada em protótipo, como JavaScript, não faz essa distinção: ele simplesmente tem objetos. Uma linguagem baseada em protótipo tem a idéia de um _objeto\_\_ prototípico_, um objeto usado como um modelo do qual obtém as propriedades iniciais para um novo objeto. Qualquer objeto pode especificar suas próprias propriedades, quando você o cria ou em tempo de execução. Além disso, qualquer objeto pode ser associado como um protótipo de outro objeto, permitindo ao segundo objeto compartilhar as propriedades do primeiro objeto.
+u-uma winguagem b-baseada em pwotótipo, /(^•ω•^) c-como javascwipt, (˘ω˘) nyão faz essa distinção: ewe simpwesmente t-tem objetos. XD uma winguagem baseada em pwotótipo tem a idéia de um _objeto\_\_ p-pwototípico_, òωó um objeto u-usado como um modewo d-do quaw obtém a-as pwopwiedades iniciais pawa u-um nyovo objeto. UwU q-quawquew objeto p-pode especificaw s-suas pwópwias pwopwiedades, -.- quando você o c-cwia ou em tempo d-de execução. (ꈍᴗꈍ) a-awém disso, (⑅˘꒳˘) quawquew o-objeto pode s-sew associado como um pwotótipo de outwo objeto, 🥺 pewmitindo ao s-segundo objeto compawtiwhaw as pwopwiedades do pwimeiwo objeto. òωó
 
-### Definindo uma classe
+### definindo uma cwasse
 
-Em linguagens baseadas em classe, você define uma classe em uma _definição de classe_ separada. Nessa definição, você pode especificar métodos especiais, chamados de _construtores_, para criar instâncias da classe. Um método _construtor_ pode especificar valores iniciais para as propriedades da instância e executar outros processamentos apropriados no momento da criação. Você pode usar o operador `new`, em associação com o método construtor para criar instâncias de classe.
+em w-winguagens baseadas em cwasse, 😳 você define uma cwasse em uma _definição d-de cwasse_ s-sepawada. òωó n-nyessa definição, 🥺 você pode especificaw m-métodos especiais, ( ͡o ω ͡o ) chamados d-de _constwutowes_, UwU p-pawa cwiaw instâncias da cwasse. 😳😳😳 um método _constwutow_ pode especificaw vawowes iniciais p-pawa as pwopwiedades da instância e-e executaw outwos pwocessamentos a-apwopwiados n-nyo momento da cwiação. ʘwʘ você pode usaw o-o opewadow `new`, ^^ e-em associação com o método c-constwutow pawa c-cwiaw instâncias de cwasse. >_<
 
-O JavaScript segue um modelo semelhante, mas não têm uma definição da classe separada do construtor. Em vez disso, você define uma função de construtor para criar objetos com um conjunto inicial particular de propriedades e valores. Qualquer função JavaScript pode ser usado como um construtor. Você pode usar o operador `new` com uma função de construtor para criar um novo objeto.
+o javascwipt segue um modewo semewhante, (ˆ ﻌ ˆ)♡ mas nyão t-têm uma definição d-da cwasse s-sepawada do constwutow. (ˆ ﻌ ˆ)♡ em vez d-disso, 🥺 você define u-uma função de constwutow pawa c-cwiaw objetos com um conjunto iniciaw pawticuwaw de pwopwiedades e vawowes. ( ͡o ω ͡o ) q-quawquew função j-javascwipt pode sew usado como um constwutow. (ꈍᴗꈍ) v-você pode usaw o-o opewadow `new` com uma função de constwutow pawa cwiaw um nyovo o-objeto.
 
-### Subclasses e herança
+### subcwasses e hewança
 
-Em uma linguagem baseada em classe, você cria a hierárquia de classes através de sua definição. Em uma definição de classes, você pode especificar que a nova classe é uma _subclasse_ de outra já existente. A subclasse herda todas as propriedades da superclasse e pode adicionar novas propriedades ou modificar propriedades herdadas. Por exemplo, assuma que a classe `Employee` tem somente duas propriedades `name` e `dept` , e `Manager` é uma subclasse of `Employee` que adiciona a propriedade `reports`. Neste caso, uma instância da classe `Manager` terá todas as três propiedades: `name`, `dept`, and `reports`.
+em uma winguagem baseada em cwasse, você c-cwia a hiewáwquia de cwasses atwavés de sua d-definição. :3 em u-uma definição de cwasses, (✿oωo) você pode especificaw que a nyova cwasse é u-uma _subcwasse_ d-de outwa já existente. (U ᵕ U❁) a subcwasse hewda todas as pwopwiedades d-da supewcwasse e pode adicionaw n-nyovas pwopwiedades ou modificaw pwopwiedades hewdadas. UwU p-pow exempwo, ^^ assuma que a cwasse `empwoyee` t-tem s-somente duas pwopwiedades `name` e `dept` , /(^•ω•^) e `managew` é u-uma subcwasse of `empwoyee` q-que adiciona a-a pwopwiedade `wepowts`. (˘ω˘) n-nyeste caso, OwO uma instância d-da cwasse `managew` t-tewá todas as twês pwopiedades: `name`, (U ᵕ U❁) `dept`, (U ﹏ U) a-and `wepowts`. mya
 
-Em JavaScript, a herança é implementada associando um objeto prototípico a qualquer função de construtor. Então, você pode criar exatamente o mesmo exemplo: `Employee` — `Manager`, mas utilizando uma terminologia ligeramente diferente. Primeiro, define-se a função de construtor de `Employee`, especificando as propriedades `name` e `dept`. Depois, define-se a função de construtor de `Manager`, especificando a propriedade `reports`. Finalmente, associa-se um objeto new `Employee` como `prototype` para a função de construtor `Manager`. Então, quando vocẽ criar um objeto new `Manager`, ele herdará as propriedades `name` e `dept` do objeto `Employee`.
+e-em javascwipt, (⑅˘꒳˘) a h-hewança é impwementada associando um objeto pwototípico a-a quawquew função d-de constwutow. (U ᵕ U❁) então, /(^•ω•^) v-você pode cwiaw exatamente o mesmo exempwo: `empwoyee` — `managew`, ^•ﻌ•^ mas u-utiwizando uma t-tewminowogia wigewamente d-difewente. (///ˬ///✿) p-pwimeiwo, o.O define-se a função d-de constwutow de `empwoyee`, (ˆ ﻌ ˆ)♡ especificando as pwopwiedades `name` e `dept`. 😳 depois, òωó define-se a-a função de constwutow de `managew`, (⑅˘꒳˘) e-especificando a pwopwiedade `wepowts`. rawr f-finawmente, (ꈍᴗꈍ) associa-se um objeto n-nyew `empwoyee` como `pwototype` p-pawa a função d-de constwutow `managew`. ^^ e-então, q-quando vocẽ c-cwiaw um objeto nyew `managew`, (ˆ ﻌ ˆ)♡ ewe hewdawá as pwopwiedades `name` e `dept` do objeto `empwoyee`.
 
-### Adicionando e removendo propriedades
+### adicionando e-e wemovendo p-pwopwiedades
 
-Em uma linguagem baseada em classe, você normalmente cria uma classe em tempo de compilação e então vincula as instâncias da classe em tempo de compilação, ou tempo de execução. Você não pode alterar o número ou o tipo de propriedade de uma classe após definí-la. Em javaScript, no entanto, você pode adicionar ou remover propriedades de qualquer objeto. Se você adiciona uma propriedade a um objeto que é usado como o protótipo para um conjunto de objetos, os objetos no qual ele é protótipo herdarão as novas propriedades.
+em u-uma winguagem baseada em cwasse, /(^•ω•^) v-você nyowmawmente cwia uma cwasse em tempo de compiwação e e-então vincuwa a-as instâncias da cwasse em tempo d-de compiwação, ^^ ou tempo de execução. o.O você n-nyão pode awtewaw o-o nyúmewo ou o tipo de pwopwiedade d-de uma cwasse a-após definí-wa. 😳😳😳 em javascwipt, XD nyo entanto, nyaa~~ você pode adicionaw ou wemovew p-pwopwiedades d-de quawquew objeto. ^•ﻌ•^ s-se você adiciona u-uma pwopwiedade a-a um objeto que é usado c-como o pwotótipo p-pawa um conjunto de objetos, :3 os o-objetos nyo quaw e-ewe é pwotótipo hewdawão as n-nyovas pwopwiedades. ^^
 
-### Sumário das diferenças
+### sumáwio das difewenças
 
-A tabela a seguir apresenta um breve resumo de algumas dessas diferenças. O restante deste capítulo descreve os detalhes do uso de construtores e protótipos JavaScript para criar uma hierarquia de objetos e compara isso à maneira como você faria em Java.
+a-a tabewa a seguiw apwesenta u-um bweve wesumo d-de awgumas dessas difewenças. o.O o-o westante deste capítuwo descweve os detawhes d-do uso de constwutowes e-e pwotótipos j-javascwipt pawa cwiaw uma hiewawquia de objetos e compawa i-isso à maneiwa como você fawia em java.
 
-| **Baseados em classes (Java)**                                                                                                                                       | **Baseados em protótipos (JavaScript)**                                                                                                                                                                |
+| **baseados e-em cwasses (java)**                                                                                                                                       | **baseados em p-pwotótipos (javascwipt)**                                                                                                                                                                |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Classes e instancias são entidades distintas.                                                                                                                        | Todos os objetos são instancias.                                                                                                                                                                       |
-| Define uma classe com uma definição de classe; cria um objeto - como instância da classe - com o método constructor.                                                 | Define e cria um conjunto de objetos com funções construtoras.                                                                                                                                         |
-| Cria um único objeto com o operador `new`.                                                                                                                           | Faz o mesmo.                                                                                                                                                                                           |
-| Constroi uma hierarquia de objetos usando definição de classe para definir subclasses de classes existentes.                                                         | Constrói uma hierarquia de objetos, atribuindo um objeto como o protótipo associado com uma função de construtor.                                                                                      |
-| Herda propriedade seguindo a cadeia de classe.                                                                                                                       | Herda propriedade seguindo a cadeia de protótipo.                                                                                                                                                      |
-| Definição de classe especifica todas as propriedades de todas as instâncias de uma classe. Não é possível adicionar propriedades dinamicamente em tempo de execução. | Função construtor ou protótipo especifica um conjunto _inicial_ de propriedades. Pode adicionar ou remover propriedades de forma dinâmica para objetos individuais ou para todo o conjunto de objetos. |
+| cwasses e instancias s-são entidades distintas. ^^                                                                                                                        | t-todos o-os objetos são instancias. (⑅˘꒳˘)                                                                                                                                                                       |
+| define uma c-cwasse com uma definição de cwasse; cwia um objeto - c-como instância d-da cwasse - com o método c-constwuctow. ʘwʘ                                                 | define e cwia um c-conjunto de objetos c-com funções c-constwutowas.                                                                                                                                         |
+| cwia um único objeto com o opewadow `new`. mya                                                                                                                           | faz o mesmo. >w<                                                                                                                                                                                           |
+| constwoi uma hiewawquia de objetos usando definição de cwasse pawa definiw subcwasses de cwasses existentes. o.O                                                         | constwói u-uma hiewawquia d-de objetos, OwO atwibuindo um objeto como o pwotótipo a-associado c-com uma função d-de constwutow. -.-                                                                                      |
+| hewda pwopwiedade s-seguindo a cadeia de c-cwasse. (U ﹏ U)                                                                                                                       | h-hewda pwopwiedade seguindo a cadeia d-de pwotótipo. òωó                                                                                                                                                      |
+| definição d-de cwasse e-especifica todas as pwopwiedades de todas as instâncias d-de uma c-cwasse. >w< nyão é p-possívew adicionaw p-pwopwiedades d-dinamicamente e-em tempo de execução. ^•ﻌ•^ | f-função c-constwutow o-ou pwotótipo especifica um conjunto _iniciaw_ de p-pwopwiedades. /(^•ω•^) p-pode adicionaw ou w-wemovew pwopwiedades de fowma d-dinâmica pawa objetos individuais ou pawa todo o-o conjunto de objetos. ʘwʘ |
 
-## O exemplo employee
+## o exempwo e-empwoyee
 
-O restante deste capítulo usa a hierarquia employee como mostrado na figura abaixo.
+o-o westante deste c-capítuwo usa a hiewawquia empwoyee c-como mostwado nya figuwa abaixo. XD
 
-Uma simples hierarquia de objetos:
+u-uma simpwes hiewawquia de o-objetos:
 
-![](figure8.1.png)
+![](figuwe8.1.png)
 
-- `Employee` tem a propriedade `name` (cujo valor padrão é uma string vazia) e `dept` (cujo valor padrão e o "general").
-- `Manager` é baseado no `Employee`. É adicionada a propriedade `reports` (cujo valor padrão é um array vazio, planejado para ter um array do objeto `Employee como valor`).
-- `WorkerBee` também é baseado no `Employee`. É adicionada a propriedade `projects` (cujo valor padrão é um array vazio, pretende-se ter um array de strings como valor).
-- `SalesPerson` é baseado no `WorkerBee`. É adicionada a propriedade `quota` (cujo valor padrão é 100). E também controla a propriedade `dept` com o valor "sales", indicando que todos os salespersons são o mesmo departamento.
-- `Engineer` é baseado no `WorkerBee`. É adicionada a propriedade `machine` (cujo valor padrão é uma string vazia) e também controla a propriedade `dept` com o valor "engineering".
+- `empwoyee` tem a-a pwopwiedade `name` (cujo vawow padwão é uma stwing vazia) e `dept` (cujo vawow p-padwão e o "genewaw"). (U ᵕ U❁)
+- `managew` é baseado n-nyo `empwoyee`. (ꈍᴗꈍ) É a-adicionada a pwopwiedade `wepowts` (cujo vawow padwão é um awway vazio, rawr x3 p-pwanejado pawa tew um awway do objeto `empwoyee c-como vawow`). :3
+- `wowkewbee` t-também é b-baseado nyo `empwoyee`. (˘ω˘) É adicionada a pwopwiedade `pwojects` (cujo vawow p-padwão é um a-awway vazio, -.- pwetende-se tew um a-awway de stwings como vawow).
+- `sawespewson` é baseado nyo `wowkewbee`. (ꈍᴗꈍ) É a-adicionada a pwopwiedade `quota` (cujo v-vawow padwão é 100). UwU e-e também c-contwowa a pwopwiedade `dept` c-com o vawow "sawes", σωσ i-indicando q-que todos os sawespewsons s-são o mesmo depawtamento. ^^
+- `engineew` é b-baseado nyo `wowkewbee`. :3 É a-adicionada a p-pwopwiedade `machine` (cujo v-vawow p-padwão é uma s-stwing vazia) e t-também contwowa a-a pwopwiedade `dept` com o vawow "engineewing". ʘwʘ
 
-## Criando a hierarquia
+## c-cwiando a hiewawquia
 
-Há muitas formas de definir funções construtoras apropriadas para implementar a hierarquia `Employee`. Como escolher defini-las depende amplamente do que você quer ser capaz de fazer em sua aplicação.
+há m-muitas fowmas de definiw funções c-constwutowas a-apwopwiadas pawa i-impwementaw a hiewawquia `empwoyee`. 😳 como escowhew defini-was depende ampwamente d-do que você quew s-sew capaz de f-fazew em sua apwicação. ^^
 
-Esta seção mostra definições simples de como trabalhar com heranças. Nestas definições, você não pode especificar nenhum valor de propriedade quando criar um objeto. O recém-criado objeto terá os valores padrão, que você poderá alterar mais tarde.
+esta seção mostwa definições simpwes d-de como twabawhaw c-com hewanças. σωσ nyestas definições, /(^•ω•^) v-você n-nyão pode especificaw nyenhum vawow de pwopwiedade quando cwiaw u-um objeto. 😳😳😳 o w-wecém-cwiado objeto t-tewá os vawowes p-padwão, 😳 que você podewá awtewaw mais tawde. OwO
 
-Na aplicação real, você poderia definir construtores que permitem que você forneça valores de propriedade no momento da criação do objeto (veja [Construtores flexíveis](#construtores_flexíveis) para saber mais). Por enquanto, estas simples definições demonstram como a herança ocorre.
+n-nya apwicação w-weaw, :3 você podewia definiw constwutowes que p-pewmitem que você fowneça vawowes de pwopwiedade n-nyo momento da cwiação do o-objeto (veja [constwutowes f-fwexíveis](#constwutowes_fwexíveis) pawa sabew mais). nyaa~~ p-pow enquanto, OwO e-estas simpwes definições demonstwam c-como a hewança ocowwe. o.O
 
-As seguintes definições Java e JavaScript `Employee` são similares. A única diferença é que você precisa especificar o tipo de cada propriedade em Java, mas não em JavaScript (devido ao Java ser uma [linguagem fortemente tipada](http://en.wikipedia.org/wiki/Strong_and_weak_typing) enquanto o JavaScript é linguagem fracamente tipada).
+a-as seguintes definições j-java e-e javascwipt `empwoyee` s-são simiwawes. (U ﹏ U) a única d-difewença é q-que você pwecisa e-especificaw o tipo de cada pwopwiedade e-em java, (⑅˘꒳˘) mas nyão em javascwipt (devido ao java sew uma [winguagem f-fowtemente t-tipada](http://en.wikipedia.owg/wiki/stwong_and_weak_typing) e-enquanto o javascwipt é winguagem fwacamente tipada). OwO
 
-#### JavaScript
+#### javascwipt
 
 ```js
-function Employee() {
+f-function empwoyee() {
   this.name = "";
-  this.dept = "general";
+  t-this.dept = "genewaw";
 }
 ```
 
-#### Java
+#### j-java
 
 ```java
-public class Employee {
-   public String name = "";
-   public String dept = "general";
+pubwic cwass empwoyee {
+   pubwic s-stwing nyame = "";
+   pubwic stwing d-dept = "genewaw";
 }
 ```
 
-As definições `Manager` e `WorkerBee` mostram a diferença na forma de especificar o próximo objeto mais alto na cadeia de herança. Em JavaScript, você adiciona uma instância prototípica como o valor da propriedade `prototype` da função construtora. Você pode fazer isso a qualquer momento depois de definir o construtor. Em Java, você especifica a superclasse dentro da classe definida. Você não pode alterar a superclasse fora da classe definida.
+a-as d-definições `managew` e-e `wowkewbee` m-mostwam a difewença nya fowma de especificaw o pwóximo objeto mais awto n-na cadeia de hewança. 😳 em javascwipt, :3 v-você adiciona uma instância pwototípica como o vawow da p-pwopwiedade `pwototype` da função constwutowa. ( ͡o ω ͡o ) você pode fazew isso a quawquew m-momento depois d-de definiw o constwutow. 🥺 em java, v-você especifica a supewcwasse dentwo da cwasse d-definida. /(^•ω•^) você n-nyão pode awtewaw a supewcwasse f-fowa da cwasse definida. nyaa~~
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-function Manager() {
-  Employee.call(this);
-  this.reports = [];
+function managew() {
+  empwoyee.caww(this);
+  this.wepowts = [];
 }
-Manager.prototype = Object.create(Employee.prototype);
+m-managew.pwototype = object.cweate(empwoyee.pwototype);
 
-function WorkerBee() {
-  Employee.call(this);
-  this.projects = [];
+function wowkewbee() {
+  e-empwoyee.caww(this);
+  t-this.pwojects = [];
 }
-WorkerBee.prototype = Object.create(Employee.prototype);
+w-wowkewbee.pwototype = object.cweate(empwoyee.pwototype);
 ```
 
-#### Java
+#### java
 
 ```java
-public class Manager extends Employee {
-   public Employee[] reports = new Employee[0];
+p-pubwic cwass managew extends empwoyee {
+   pubwic empwoyee[] wepowts = nyew e-empwoyee[0];
 }
 
 
 
-public class WorkerBee extends Employee {
-   public String[] projects = new String[0];
+p-pubwic cwass w-wowkewbee extends e-empwoyee {
+   pubwic stwing[] pwojects = nyew s-stwing[0];
 }
 ```
 
-As definições `Engineer` e `SalesPerson` criam objetos que descendem de `WorkerBee` e consequentemente de `Employee`. Objetos destes tipos tem propriedades de todos os objetos acima de sua cadeia. Em adição, estas definições substituem o valor herdado da propriedade `dept` com novos valores específicos para esses objetos.
+a-as definições `engineew` e `sawespewson` cwiam objetos que d-descendem de `wowkewbee` e consequentemente de `empwoyee`. (✿oωo) o-objetos destes tipos tem pwopwiedades d-de todos os objetos a-acima de sua cadeia. (✿oωo) em adição, (ꈍᴗꈍ) e-estas definições s-substituem o-o vawow hewdado da pwopwiedade `dept` com n-nyovos vawowes específicos pawa esses objetos. OwO
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-function SalesPerson() {
-   WorkerBee.call(this);
-   this.dept = "sales";
-   this.quota = 100;
+function sawespewson() {
+   wowkewbee.caww(this);
+   t-this.dept = "sawes";
+   t-this.quota = 100;
 }
-SalesPerson.prototype = Object.create(WorkerBee.prototype);
+s-sawespewson.pwototype = o-object.cweate(wowkewbee.pwototype);
 
-function Engineer() {
-   WorkerBee.call(this);
-   this.dept = "engineering";
+f-function engineew() {
+   w-wowkewbee.caww(this);
+   this.dept = "engineewing";
    this.machine = "";
 }
-Engineer.prototype = Object.create(WorkerBee.prototype);
+e-engineew.pwototype = object.cweate(wowkewbee.pwototype);
 ```
 
-#### Java
+#### java
 
 ```java
-public class SalesPerson extends WorkerBee {
-   public double quota;
-   public dept = "sales";
-   public quota = 100.0;
+p-pubwic cwass sawespewson extends wowkewbee {
+   p-pubwic d-doubwe quota;
+   pubwic dept = "sawes";
+   pubwic q-quota = 100.0;
 }
 
 
-public class Engineer extends WorkerBee {
-   public String machine;
-   public dept = "engineering";
-   public machine = "";
+pubwic c-cwass engineew extends w-wowkewbee {
+   pubwic stwing m-machine;
+   p-pubwic dept = "engineewing";
+   pubwic machine = "";
 }
 ```
 
-Usando estas definições, você pode criar instâncias desses objetos que obterão valores padrão para suas propriedades. A próxima imagem mostra o uso destas definições JavaScript para criar novos objetos e mostrar os valores das propriedades dos novos objetos.
+u-usando estas definições, :3 você pode cwiaw instâncias d-desses objetos que obtewão v-vawowes padwão pawa suas pwopwiedades. mya a pwóxima i-imagem mostwa o-o uso destas definições j-javascwipt pawa cwiaw n-nyovos objetos e-e mostwaw os vawowes das pwopwiedades d-dos nyovos objetos. >_<
 
-> [!NOTE]
-> O termo _instancia_ tem significado específicamente técnico em linguagens baseadas em classe. Nessas linguagens, uma instância é uma instanciação individual de uma classe e é fundamentalmente diferente de uma classe. Em JavaScript, "instância" não tem esse significado técnico porque JavaScript não tem essa diferença entre classes e instâncias. No entanto, falando sobre JavaScript, "instância" pode ser usada informalmente para significar um objeto criado usando uma função construtora particular. Então, neste exemplo, você pode informalmente dizer que `jane` é uma instância de `Engineer`. Similarmente, embora os termos **parent*, \_child*, \_ancestor**, e **descendant** não tenham significados formais em JavaScript; você pode usá-los informalmente para referir a objetos altos ou baixos na cadeia de protótipos.
+> [!note]
+> o-o tewmo _instancia_ tem significado e-específicamente t-técnico em winguagens baseadas em cwasse. (///ˬ///✿) nyessas winguagens, (///ˬ///✿) uma instância é u-uma i-instanciação individuaw de uma cwasse e é fundamentawmente difewente de uma c-cwasse. 😳😳😳 em javascwipt, (U ᵕ U❁) "instância" nyão tem esse s-significado técnico p-powque javascwipt nyão tem essa difewença entwe cwasses e instâncias. (///ˬ///✿) n-nyo entanto, ( ͡o ω ͡o ) fawando sobwe javascwipt, (✿oωo) "instância" pode sew usada i-infowmawmente pawa significaw u-um objeto cwiado u-usando uma função constwutowa p-pawticuwaw. òωó então, n-nyeste exempwo, (ˆ ﻌ ˆ)♡ v-você pode i-infowmawmente d-dizew que `jane` é u-uma instância de `engineew`. :3 simiwawmente, (ˆ ﻌ ˆ)♡ embowa os tewmos **pawent*, (U ᵕ U❁) \_chiwd*, (U ᵕ U❁) \_ancestow**, e **descendant** nyão tenham s-significados fowmais e-em javascwipt; v-você pode u-usá-wos infowmawmente p-pawa wefewiw a-a objetos awtos ou baixos nya cadeia de pwotótipos. XD
 
-### Criando objetos com definições simples
+### cwiando objetos com definições s-simpwes
 
-#### Hierarquia do Objeto
+#### hiewawquia d-do objeto
 
-A hierarquia abaixo foi criada utilizando o código ao lado.
+a hiewawquia abaixo foi cwiada utiwizando o c-código ao wado. nyaa~~
 
-![](=figure8.3.png)
+![](=figuwe8.3.png)
 
-#### Objetos individuais = Jim, Sally, Mark, Fred, Jane, etc. "Instancias" criadas a partir do construtor.
+#### o-objetos i-individuais = jim, (ˆ ﻌ ˆ)♡ sawwy, mawk, ʘwʘ fwed, jane, ^•ﻌ•^ e-etc. "instancias" cwiadas a pawtiw do constwutow. mya
 
 ```js
-var jim = new Employee;
+v-vaw jim = n-nyew empwoyee;
 // jim.name is ''
-// jim.dept is 'general'
+// jim.dept i-is 'genewaw'
 
-var sally = new Manager;
-// sally.name is ''
-// sally.dept is 'general'
-// sally.reports is []
+vaw sawwy = nyew managew;
+// s-sawwy.name i-is ''
+// sawwy.dept is 'genewaw'
+// s-sawwy.wepowts i-is []
 
-var mark = new WorkerBee;
-// mark.name is ''
-// mark.dept is 'general'
-// mark.projects is []
+vaw m-mawk = nyew wowkewbee;
+// m-mawk.name i-is ''
+// m-mawk.dept is 'genewaw'
+// mawk.pwojects i-is []
 
-var fred = new SalesPerson;
-// fred.name is ''
-// fred.dept is 'sales'
-// fred.projects is []
-// fred.quota is 100
+vaw f-fwed = nyew sawespewson;
+// fwed.name is ''
+// f-fwed.dept is 'sawes'
+// fwed.pwojects is []
+// f-fwed.quota is 100
 
-var jane = new Engineer;
+vaw jane = nyew e-engineew;
 // jane.name is ''
-// jane.dept is 'engineering'
-// jane.projects is []
+// j-jane.dept is 'engineewing'
+// j-jane.pwojects is []
 // jane.machine is ''
 ```
 
-## Propriedades do Objeto
+## p-pwopwiedades do objeto
 
-Esta seção discute como objetos herdam propriedades de outros objetos na cadeia de protótipos e o que acontece quando você adiciona uma propriedade em tempo de execução.
+esta seção diskawaii~ c-como objetos h-hewdam pwopwiedades de outwos objetos nya cadeia d-de pwotótipos e-e o que acontece quando você adiciona u-uma pwopwiedade em tempo de execução. (ꈍᴗꈍ)
 
-### Herdando Propriedades
+### h-hewdando pwopwiedades
 
-Suponha que você criou o objeto `mark` como um `WorkerBee` com a seguinte declaração:
+s-suponha que você cwiou o-o objeto `mawk` c-como um `wowkewbee` com a seguinte decwawação:
 
 ```js
-var mark = new WorkerBee;
+v-vaw m-mawk = nyew wowkewbee;
 ```
 
-Quando o JavaScript vê o operador `new`, ele cria um novo objeto genérico e implicitamente define o valor da propriedade interna \[\[Protótipo]] para o valor de `WorkerBee.prototype` passando este novo objeto como o valor da palavra-chave `this` para a função construtora de `WorkerBee`. A propriedade interna \[\[\_\_proto\_\_]] determina a cadeia de protótipos usada para retornar os valores das propriedades. Uma vez que essas propriedades são definidas, o JavaScript retorna o novo objeto e a declaração de atribuição define a variável `mark` para este objeto.
+q-quando o-o javascwipt vê o opewadow `new`, (ˆ ﻌ ˆ)♡ ewe cwia um nyovo objeto genéwico e impwicitamente define o vawow da pwopwiedade i-intewna \[\[pwotótipo]] p-pawa o vawow de `wowkewbee.pwototype` p-passando e-este novo objeto c-como o vawow da p-pawavwa-chave `this` pawa a função c-constwutowa d-de `wowkewbee`. (ˆ ﻌ ˆ)♡ a pwopwiedade i-intewna \[\[\_\_pwoto\_\_]] d-detewmina a cadeia de pwotótipos usada p-pawa wetownaw os vawowes das pwopwiedades. ( ͡o ω ͡o ) uma v-vez que essas pwopwiedades são d-definidas, o.O o j-javascwipt wetowna o novo objeto e-e a decwawação d-de atwibuição d-define a vawiávew `mawk` pawa e-este objeto. 😳😳😳
 
-Este processo não põe explicitamente valores no objeto `mark` (valores _locais_) para as propriedades que `mark` herdou da cadeia de protótipo. Quando você solicita o valor de uma propriedade, o JavaScript primeiro verifica se o valor existe nesse objeto. Caso exista, esse valor é retornado. Se o valor não existe localmente, JavaScript verifica a cadeia de protótipos (usando a propriedade interna \_\_proto\_\_). Se um objeto na cadeia de protótipos possui um valor para a propriedade, este valor é retornado. Se nenhuma propriedade é encontrada, o Javascript avisa que o objeto não possui a propriedade. Deste modo, o objeto `mark` possui as seguintes propriedades e valores:
+este p-pwocesso nyão põe expwicitamente v-vawowes nyo objeto `mawk` (vawowes _wocais_) p-pawa as pwopwiedades q-que `mawk` h-hewdou da cadeia de pwotótipo. ʘwʘ q-quando você sowicita o vawow de uma pwopwiedade, :3 o-o javascwipt pwimeiwo vewifica se o vawow existe nesse objeto. UwU caso exista, nyaa~~ esse vawow é wetownado. :3 se o v-vawow nyão existe wocawmente, nyaa~~ javascwipt vewifica a cadeia de pwotótipos (usando a pwopwiedade intewna \_\_pwoto\_\_). ^^ se um objeto n-nya cadeia de pwotótipos possui um vawow p-pawa a pwopwiedade, este vawow é w-wetownado. nyaa~~ se nyenhuma pwopwiedade é encontwada, 😳😳😳 o-o javascwipt avisa que o objeto n-nyão possui a pwopwiedade. ^•ﻌ•^ d-deste modo, o objeto `mawk` p-possui as seguintes pwopwiedades e vawowes:
 
 ```js
-mark.name = "";
-mark.dept = "general";
-mark.projects = [];
+mawk.name = "";
+mawk.dept = "genewaw";
+m-mawk.pwojects = [];
 ```
 
-The `mark` object inherits values for the `name` and `dept` properties from the prototypical object in `mark.__proto__`. It is assigned a local value for the `projects` property by the `WorkerBee` constructor. This gives you inheritance of properties and their values in JavaScript. Some subtleties of this process are discussed in [Property inheritance revisited](#property_inheritance_revisited).
+the `mawk` object inhewits vawues fow the `name` a-and `dept` pwopewties fwom the pwototypicaw o-object in `mawk.__pwoto__`. (⑅˘꒳˘) i-it is assigned a wocaw vawue f-fow the `pwojects` p-pwopewty by the `wowkewbee` constwuctow. (✿oωo) t-this gives you inhewitance of pwopewties and theiw v-vawues in javascwipt. some subtweties of this pwocess awe discussed in [pwopewty i-inhewitance w-wevisited](#pwopewty_inhewitance_wevisited). mya
 
-Because these constructors do not let you supply instance-specific values, this information is generic. The property values are the default ones shared by all new objects created from `WorkerBee`. You can, of course, change the values of any of these properties. So, you could give specific information for `mark` as follows:
+because these constwuctows d-do nyot w-wet you suppwy instance-specific v-vawues, (///ˬ///✿) this infowmation is genewic. ʘwʘ the pwopewty vawues awe the defauwt ones s-shawed by aww nyew o-objects cweated fwom `wowkewbee`. >w< y-you can, o.O of c-couwse, ^^;; change the vawues of any o-of these pwopewties. :3 so, you couwd give specific i-infowmation fow `mawk` as fowwows:
 
 ```js
-mark.name = "Doe, Mark";
-mark.dept = "admin";
-mark.projects = ["navigator"];
+mawk.name = "doe, (ꈍᴗꈍ) m-mawk";
+mawk.dept = "admin";
+m-mawk.pwojects = ["navigatow"];
 ```
 
-### Adding properties
+### adding pwopewties
 
-In JavaScript, you can add properties to any object at run time. You are not constrained to use only the properties provided by the constructor function. To add a property that is specific to a single object, you assign a value to the object, as follows:
+in javascwipt, XD y-you can add pwopewties to any object at wun time. ^^;; you awe nyot constwained to use onwy the pwopewties pwovided by the constwuctow f-function. (U ﹏ U) t-to add a pwopewty that is specific t-to a singwe o-object, (ꈍᴗꈍ) you assign a vawue to the o-object, 😳 as fowwows:
 
 ```js
-mark.bonus = 3000;
+mawk.bonus = 3000;
 ```
 
-Now, the `mark` object has a `bonus` property, but no other `WorkerBee` has this property.
+nyow, rawr the `mawk` object has a `bonus` pwopewty, ( ͡o ω ͡o ) but nyo othew `wowkewbee` h-has this pwopewty. (ˆ ﻌ ˆ)♡
 
-If you add a new property to an object that is being used as the prototype for a constructor function, you add that property to all objects that inherit properties from the prototype. For example, you can add a `specialty` property to all employees with the following statement:
+if you add a nyew pwopewty to an object that is being used as t-the pwototype f-fow a constwuctow f-function, you add that pwopewty to aww objects that inhewit pwopewties f-fwom the p-pwototype. OwO fow e-exampwe, >_< you can add a `speciawty` p-pwopewty to aww empwoyees with t-the fowwowing statement:
 
 ```js
-Employee.prototype.specialty = "none";
+e-empwoyee.pwototype.speciawty = "none";
 ```
 
-As soon as JavaScript executes this statement, the `mark` object also has the `specialty` property with the value of `"none"`. The following figure shows the effect of adding this property to the `Employee` prototype and then overriding it for the `Engineer` prototype.
+as soon as javascwipt e-exekawaii~s this statement, XD the `mawk` object a-awso has the `speciawty` pwopewty w-with the vawue o-of `"none"`. (ˆ ﻌ ˆ)♡ the fowwowing figuwe s-shows the e-effect of adding this pwopewty to t-the `empwoyee` pwototype and then o-ovewwiding it fow the `engineew` p-pwototype. (ꈍᴗꈍ)
 
-![](figure8.4.png)
-**Adding properties**
+![](figuwe8.4.png)
+**adding p-pwopewties**
 
-## More flexible constructors
+## mowe fwexibwe constwuctows
 
-The constructor functions shown so far do not let you specify property values when you create an instance. As with Java, you can provide arguments to constructors to initialize property values for instances. The following figure shows one way to do this.
+t-the constwuctow functions shown so faw do nyot wet you specify pwopewty vawues when you cweate an instance. (✿oωo) as with java, UwU y-you can pwovide awguments to constwuctows to i-initiawize pwopewty vawues fow i-instances. (ꈍᴗꈍ) the fowwowing figuwe shows one way to d-do this. (U ﹏ U)
 
-![](figure8.5.png)
-**Specifying properties in a constructor, take 1**
+![](figuwe8.5.png)
+**specifying pwopewties in a constwuctow, >w< t-take 1**
 
-The following table shows the Java and JavaScript definitions for these objects.
+the fowwowing tabwe shows the j-java and javascwipt definitions fow these objects. ^•ﻌ•^
 
-#### JavaScript
+#### j-javascwipt
 
-#### Java
+#### java
 
 ```js
-function Employee (name, dept) {
-  this.name = name || "";
-  this.dept = dept || "general";
+function empwoyee (name, 😳 dept) {
+  t-this.name = n-nyame || "";
+  this.dept = dept || "genewaw";
 }
 ```
 
 ```java
-public class Employee {
-   public String name;
-   public String dept;
-   public Employee () {
-      this("", "general");
+p-pubwic cwass empwoyee {
+   p-pubwic stwing nyame;
+   p-pubwic stwing d-dept;
+   pubwic empwoyee () {
+      this("", "genewaw");
    }
-   public Employee (String name) {
-      this(name, "general");
+   p-pubwic empwoyee (stwing nyame) {
+      this(name, XD "genewaw");
    }
-   public Employee (String name, String dept) {
-      this.name = name;
-      this.dept = dept;
+   pubwic e-empwoyee (stwing nyame, :3 stwing dept) {
+      this.name = nyame;
+      t-this.dept = d-dept;
    }
 }
 ```
 
 ```js
-function WorkerBee (projs) {
+f-function wowkewbee (pwojs) {
 
- this.projects = projs || [];
+ this.pwojects = pwojs || [];
 }
-WorkerBee.prototype = new Employee;
+w-wowkewbee.pwototype = nyew empwoyee;
 ```
 
 ```java
-public class WorkerBee extends Employee {
-   public String[] projects;
-   public WorkerBee () {
-      this(new String[0]);
+p-pubwic cwass wowkewbee e-extends empwoyee {
+   p-pubwic stwing[] pwojects;
+   pubwic wowkewbee () {
+      this(new stwing[0]);
    }
-   public WorkerBee (String[] projs) {
-      projects = projs;
+   pubwic wowkewbee (stwing[] p-pwojs) {
+      p-pwojects = pwojs;
    }
 }
 ```
 
 ```js
-function Engineer (mach) {
-   this.dept = "engineering";
-   this.machine = mach || "";
+function e-engineew (mach) {
+   this.dept = "engineewing";
+   this.machine = m-mach || "";
 }
-Engineer.prototype = new WorkerBee;
+e-engineew.pwototype = n-nyew wowkewbee;
 ```
 
 ```java
-public class Engineer extends WorkerBee {
-   public String machine;
-   public Engineer () {
-      dept = "engineering";
-      machine = "";
+p-pubwic cwass e-engineew extends w-wowkewbee {
+   pubwic stwing machine;
+   pubwic e-engineew () {
+      d-dept = "engineewing";
+      m-machine = "";
    }
-   public Engineer (String mach) {
-      dept = "engineering";
-      machine = mach;
+   p-pubwic e-engineew (stwing m-mach) {
+      dept = "engineewing";
+      m-machine = m-mach;
    }
 }
 ```
 
-These JavaScript definitions use a special idiom for setting default values:
+t-these javascwipt definitions use a speciaw i-idiom fow setting defauwt vawues:
 
 ```js
-this.name = name || "";
+this.name = n-name || "";
 ```
 
-The JavaScript logical OR operator (`||`) evaluates its first argument. If that argument converts to true, the operator returns it. Otherwise, the operator returns the value of the second argument. Therefore, this line of code tests to see if `name` has a useful value for the `name` property. If it does, it sets `this.name` to that value. Otherwise, it sets `this.name` to the empty string. This chapter uses this idiom for brevity; however, it can be puzzling at first glance.
+the javascwipt wogicaw o-ow opewatow (`||`) e-evawuates its fiwst awgument. if that awgument convewts to twue, rawr x3 t-the opewatow w-wetuwns it. othewwise, (⑅˘꒳˘) the opewatow w-wetuwns the v-vawue of the second awgument. ^^ thewefowe, >w< this wine of code tests t-to see if `name` h-has a usefuw vawue fow the `name` pwopewty. 😳 i-if it does, rawr it sets `this.name` t-to that vawue. rawr x3 othewwise, (ꈍᴗꈍ) it sets `this.name` to t-the empty stwing. -.- this chaptew uses this idiom fow bwevity; howevew, òωó it can be puzzwing at fiwst g-gwance. (U ﹏ U)
 
-> [!NOTE]
-> This may not work as expected if the constructor function is called with arguments which convert to `false` (like `0` (zero) and empty string (`""`). In this case the default value will be chosen.
+> [!note]
+> this may nyot wowk as expected i-if the constwuctow f-function i-is cawwed with awguments which c-convewt to `fawse` (wike `0` (zewo) a-and empty stwing (`""`). ( ͡o ω ͡o ) i-in t-this case the defauwt v-vawue wiww be chosen. :3
 
-With these definitions, when you create an instance of an object, you can specify values for the locally defined properties. You can use the following statement to create a new `Engineer`:
+with these definitions, >w< w-when you cweate a-an instance o-of an object, ^^ you can specify v-vawues fow the wocawwy d-defined pwopewties. 😳😳😳 y-you can use the fowwowing s-statement to c-cweate a nyew `engineew`:
 
 ```js
-var jane = new Engineer("belau");
+v-vaw jane = nyew e-engineew("bewau");
 ```
 
-`Jane`'s properties are now:
+`jane`'s p-pwopewties awe nyow:
 
 ```js
-jane.name == "";
-jane.dept == "engineering";
-jane.projects == [];
-jane.machine == "belau"
+j-jane.name == "";
+jane.dept == "engineewing";
+j-jane.pwojects == [];
+j-jane.machine == "bewau"
 ```
 
-Notice that with these definitions, you cannot specify an initial value for an inherited property such as `name`. If you want to specify an initial value for inherited properties in JavaScript, you need to add more code to the constructor function.
+nyotice that with these definitions, OwO you cannot specify a-an initiaw v-vawue fow an inhewited pwopewty s-such as `name`. XD i-if you want to specify an initiaw vawue fow inhewited p-pwopewties i-in javascwipt, (⑅˘꒳˘) y-you nyeed to add m-mowe code to t-the constwuctow f-function. OwO
 
-So far, the constructor function has created a generic object and then specified local properties and values for the new object. You can have the constructor add more properties by directly calling the constructor function for an object higher in the prototype chain. The following figure shows these new definitions.
+so faw, (⑅˘꒳˘) the constwuctow function has c-cweated a genewic object and then specified wocaw pwopewties and vawues fow the n-nyew object. (U ﹏ U) you c-can have the constwuctow add mowe pwopewties by diwectwy cawwing t-the constwuctow f-function fow an object highew in the pwototype c-chain. (ꈍᴗꈍ) the fowwowing figuwe shows t-these nyew definitions. rawr
 
-![](figure8.6.png)
-**Specifying properties in a constructor, take 2**
+![](figuwe8.6.png)
+**specifying p-pwopewties i-in a constwuctow, XD take 2**
 
-Let's look at one of these definitions in detail. Here's the new definition for the `Engineer` constructor:
+wet's wook at one of these definitions i-in detaiw. >w< hewe's the n-nyew definition fow the `engineew` c-constwuctow:
 
 ```js
-function Engineer (name, projs, mach) {
-  this.base = WorkerBee;
-  this.base(name, "engineering", projs);
+function engineew (name, UwU p-pwojs, 😳 mach) {
+  this.base = wowkewbee;
+  t-this.base(name, (ˆ ﻌ ˆ)♡ "engineewing", ^•ﻌ•^ pwojs);
+  this.machine = m-mach || "";
+}
+```
+
+suppose you c-cweate a nyew `engineew` object as fowwows:
+
+```js
+vaw jane = nyew engineew("doe, ^^ jane", ["navigatow", 😳 "javascwipt"], :3 "bewau");
+```
+
+javascwipt f-fowwows these steps:
+
+1. (⑅˘꒳˘) t-the `new` o-opewatow cweates a-a genewic object and sets its `__pwoto__` pwopewty to `engineew.pwototype`. ( ͡o ω ͡o )
+2. t-the `new` opewatow passes the nyew object to the `engineew` c-constwuctow as the v-vawue of the `this` k-keywowd. :3
+3. t-the constwuctow cweates a nyew pwopewty cawwed `base` fow that object and assigns t-the vawue of t-the `wowkewbee` constwuctow to the `base` pwopewty. (⑅˘꒳˘) this makes t-the `wowkewbee` constwuctow a method o-of the `engineew` o-object.the n-nyame of the `base` pwopewty is nyot speciaw. >w< you can use any wegaw pwopewty nyame; `base` is s-simpwy evocative of its puwpose. OwO
+4. t-the constwuctow cawws the `base` method, 😳 passing as its awguments t-two of the awguments passed t-to the constwuctow (`"doe, OwO jane"` and `["navigatow", "javascwipt"]`) a-and awso t-the stwing `"engineewing"`. 🥺 e-expwicitwy u-using `"engineewing"` i-in the constwuctow i-indicates that a-aww `engineew` objects have the s-same vawue fow the inhewited `dept` pwopewty, (˘ω˘) and t-this vawue ovewwides the vawue i-inhewited fwom `empwoyee`. 😳😳😳
+5. because `base` i-is a method of `engineew`, mya w-within t-the caww to `base`, OwO javascwipt binds the `this` keywowd to the object c-cweated in s-step 1. >_< thus, 😳 the `wowkewbee` function i-in tuwn p-passes the `"doe, (U ᵕ U❁) jane"` and `"engineewing"` awguments to the `empwoyee` c-constwuctow function. 🥺 upon wetuwn fwom t-the `empwoyee` constwuctow function, (U ﹏ U) the `wowkewbee` f-function uses the wemaining awgument to set the `pwojects` p-pwopewty. (U ﹏ U)
+6. upon wetuwn fwom the `base` m-method, rawr x3 t-the `engineew` c-constwuctow initiawizes the object's `machine` pwopewty t-to `"bewau"`.
+7. :3 u-upon wetuwn fwom the constwuctow, rawr j-javascwipt a-assigns the n-nyew object to t-the `jane` vawiabwe. XD
+
+you might t-think that, ^^ having c-cawwed the `wowkewbee` c-constwuctow fwom inside t-the `engineew` constwuctow, mya you have set up inhewitance appwopwiatewy fow `engineew` objects. (U ﹏ U) t-this is nyot the c-case. 😳 cawwing the `wowkewbee` c-constwuctow ensuwes that an `engineew` object stawts o-out with the p-pwopewties specified i-in aww constwuctow f-functions that awe cawwed. mya h-howevew, 😳 if you watew add pwopewties to the `empwoyee` o-ow `wowkewbee` p-pwototypes, ^^ those pwopewties awe nyot inhewited by the `engineew` o-object. :3 fow exampwe, (U ﹏ U) a-assume you have the fowwowing statements:
+
+```js
+f-function engineew (name, UwU pwojs, m-mach) {
+  this.base = wowkewbee;
+  this.base(name, (ˆ ﻌ ˆ)♡ "engineewing", (ˆ ﻌ ˆ)♡ p-pwojs);
   this.machine = mach || "";
 }
+v-vaw jane = nyew engineew("doe, ^^;; j-jane", ["navigatow", rawr "javascwipt"], nyaa~~ "bewau");
+e-empwoyee.pwototype.speciawty = "none";
 ```
 
-Suppose you create a new `Engineer` object as follows:
+the `jane` object does nyot i-inhewit the `speciawty` pwopewty. rawr x3 you stiww nyeed t-to expwicitwy s-set up the pwototype t-to ensuwe dynamic inhewitance. (⑅˘꒳˘) assume instead you have these statements:
 
 ```js
-var jane = new Engineer("Doe, Jane", ["navigator", "javascript"], "belau");
-```
-
-JavaScript follows these steps:
-
-1. The `new` operator creates a generic object and sets its `__proto__` property to `Engineer.prototype`.
-2. The `new` operator passes the new object to the `Engineer` constructor as the value of the `this` keyword.
-3. The constructor creates a new property called `base` for that object and assigns the value of the `WorkerBee` constructor to the `base` property. This makes the `WorkerBee` constructor a method of the `Engineer` object.The name of the `base` property is not special. You can use any legal property name; `base` is simply evocative of its purpose.
-4. The constructor calls the `base` method, passing as its arguments two of the arguments passed to the constructor (`"Doe, Jane"` and `["navigator", "javascript"]`) and also the string `"engineering"`. Explicitly using `"engineering"` in the constructor indicates that all `Engineer` objects have the same value for the inherited `dept` property, and this value overrides the value inherited from `Employee`.
-5. Because `base` is a method of `Engineer`, within the call to `base`, JavaScript binds the `this` keyword to the object created in Step 1. Thus, the `WorkerBee` function in turn passes the `"Doe, Jane"` and `"engineering"` arguments to the `Employee` constructor function. Upon return from the `Employee` constructor function, the `WorkerBee` function uses the remaining argument to set the `projects` property.
-6. Upon return from the `base` method, the `Engineer` constructor initializes the object's `machine` property to `"belau"`.
-7. Upon return from the constructor, JavaScript assigns the new object to the `jane` variable.
-
-You might think that, having called the `WorkerBee` constructor from inside the `Engineer` constructor, you have set up inheritance appropriately for `Engineer` objects. This is not the case. Calling the `WorkerBee` constructor ensures that an `Engineer` object starts out with the properties specified in all constructor functions that are called. However, if you later add properties to the `Employee` or `WorkerBee` prototypes, those properties are not inherited by the `Engineer` object. For example, assume you have the following statements:
-
-```js
-function Engineer (name, projs, mach) {
-  this.base = WorkerBee;
-  this.base(name, "engineering", projs);
-  this.machine = mach || "";
+function engineew (name, OwO pwojs, m-mach) {
+  this.base = wowkewbee;
+  this.base(name, OwO "engineewing", ʘwʘ p-pwojs);
+  t-this.machine = mach || "";
 }
-var jane = new Engineer("Doe, Jane", ["navigator", "javascript"], "belau");
-Employee.prototype.specialty = "none";
+engineew.pwototype = nyew wowkewbee;
+v-vaw jane = nyew e-engineew("doe, :3 jane", ["navigatow", mya "javascwipt"], OwO "bewau");
+empwoyee.pwototype.speciawty = "none";
 ```
 
-The `jane` object does not inherit the `specialty` property. You still need to explicitly set up the prototype to ensure dynamic inheritance. Assume instead you have these statements:
+nyow t-the vawue of the `jane` object's `speciawty` pwopewty i-is "none". :3
+
+anothew way of inhewiting is b-by using the [`caww()`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/function/caww "en-us/docs/javascwipt/wefewence/gwobaw o-objects/function/caww") / [`appwy()`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/function/appwy "en-us/docs/javascwipt/wefewence/gwobaw objects/function/appwy") m-methods. >_< b-bewow awe equivawent:
 
 ```js
-function Engineer (name, projs, mach) {
-  this.base = WorkerBee;
-  this.base(name, "engineering", projs);
-  this.machine = mach || "";
-}
-Engineer.prototype = new WorkerBee;
-var jane = new Engineer("Doe, Jane", ["navigator", "javascript"], "belau");
-Employee.prototype.specialty = "none";
-```
-
-Now the value of the `jane` object's `specialty` property is "none".
-
-Another way of inheriting is by using the [`call()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function/call "en-US/docs/JavaScript/Reference/Global Objects/Function/call") / [`apply()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function/apply "en-US/docs/JavaScript/Reference/Global Objects/Function/apply") methods. Below are equivalent:
-
-```js
-function Engineer (name, projs, mach) {
-  this.base = WorkerBee;
-  this.base(name, "engineering", projs);
-  this.machine = mach || "";
+f-function engineew (name, σωσ pwojs, /(^•ω•^) m-mach) {
+  this.base = w-wowkewbee;
+  t-this.base(name, mya "engineewing", nyaa~~ p-pwojs);
+  this.machine = m-mach || "";
 }
 ```
 
 ```js
-function Engineer (name, projs, mach) {
-  WorkerBee.call(this, name, "engineering", projs);
-  this.machine = mach || "";
+function e-engineew (name, 😳 p-pwojs, ^^;; mach) {
+  wowkewbee.caww(this, 😳😳😳 nyame, "engineewing", nyaa~~ p-pwojs);
+  this.machine = m-mach || "";
 }
 ```
 
-Using the javascript `call()` method makes a cleaner implementation because the `base` is not needed anymore.
+using the javascwipt `caww()` method makes a cweanew impwementation because the `base` is n-nyot nyeeded anymowe. 🥺
 
-## Property inheritance revisited
+## pwopewty i-inhewitance wevisited
 
-The preceding sections described how JavaScript constructors and prototypes provide hierarchies and inheritance. This section discusses some subtleties that were not necessarily apparent in the earlier discussions.
+the p-pweceding sections d-descwibed how javascwipt constwuctows a-and pwototypes pwovide h-hiewawchies and inhewitance. XD this s-section discusses some subtweties that wewe nyot nyecessawiwy appawent in the eawwiew discussions. (ꈍᴗꈍ)
 
-### Local versus inherited values
+### wocaw v-vewsus inhewited vawues
 
-When you access an object property, JavaScript performs these steps, as described earlier in this chapter:
+when you access an object p-pwopewty, 😳😳😳 javascwipt pewfowms t-these steps, ( ͡o ω ͡o ) as descwibed eawwiew in this chaptew:
 
-1. Check to see if the value exists locally. If it does, return that value.
-2. If there is not a local value, check the prototype chain (using the `__proto__` property).
-3. If an object in the prototype chain has a value for the specified property, return that value.
-4. If no such property is found, the object does not have the property.
+1. nyaa~~ check to see if the vawue exists wocawwy. XD if it does, (ˆ ﻌ ˆ)♡ wetuwn that vawue. rawr x3
+2. if thewe is n-nyot a wocaw vawue, OwO c-check the pwototype c-chain (using the `__pwoto__` p-pwopewty). UwU
+3. ^^ i-if an object i-in the pwototype chain has a vawue fow the specified p-pwopewty, (✿oωo) wetuwn t-that vawue. 😳😳😳
+4. if no such p-pwopewty is found, 🥺 t-the object does n-nyot have the p-pwopewty. ʘwʘ
 
-The outcome of these steps depends on how you define things along the way. The original example had these definitions:
+the o-outcome of these steps depends on h-how you define t-things awong the w-way. 😳 the owiginaw e-exampwe had t-these definitions:
 
 ```js
-function Employee () {
-  this.name = "";
-  this.dept = "general";
+f-function e-empwoyee () {
+  t-this.name = "";
+  t-this.dept = "genewaw";
 }
 
-function WorkerBee () {
-  this.projects = [];
+function w-wowkewbee () {
+  this.pwojects = [];
 }
-WorkerBee.prototype = new Employee;
+wowkewbee.pwototype = nyew empwoyee;
 ```
 
-With these definitions, suppose you create `amy` as an instance of `WorkerBee` with the following statement:
+with these d-definitions, ^^;; suppose you cweate `amy` a-as an instance of `wowkewbee` with the f-fowwowing statement:
 
 ```js
-var amy = new WorkerBee;
+v-vaw a-amy = nyew wowkewbee;
 ```
 
-The `amy` object has one local property, `projects`. The values for the `name` and `dept` properties are not local to `amy` and so are gotten from the `amy` object's `__proto__` property. Thus, `amy` has these property values:
+the `amy` o-object has o-one wocaw pwopewty, (///ˬ///✿) `pwojects`. OwO the vawues fow the `name` and `dept` pwopewties awe nyot wocaw to `amy` and so a-awe gotten fwom the `amy` object's `__pwoto__` pwopewty. -.- thus, ^^ `amy` has these pwopewty v-vawues:
 
 ```js
-amy.name == "";
-amy.dept == "general";
-amy.projects == [];
+a-amy.name == "";
+amy.dept == "genewaw";
+a-amy.pwojects == [];
 ```
 
-Now suppose you change the value of the `name` property in the prototype associated with `Employee`:
+n-nyow suppose y-you change the v-vawue of the `name` p-pwopewty i-in the pwototype a-associated with `empwoyee`:
 
 ```js
-Employee.prototype.name = "Unknown"
+empwoyee.pwototype.name = "unknown"
 ```
 
-At first glance, you might expect that new value to propagate down to all the instances of `Employee`. However, it does not.
+at f-fiwst gwance, (ꈍᴗꈍ) you might expect that n-nyew vawue to pwopagate down t-to aww the instances o-of `empwoyee`. ^^;; howevew, it d-does nyot. (˘ω˘)
 
-When you create _any_ instance of the `Employee` object, that instance gets a local value for the `name` property (the empty string). This means that when you set the `WorkerBee` prototype by creating a new `Employee` object, `WorkerBee.prototype` has a local value for the `name` property. Therefore, when JavaScript looks up the `name` property of the `amy` object (an instance of `WorkerBee`), JavaScript finds the local value for that property in `WorkerBee.prototype`. It therefore does not look farther up the chain to `Employee.prototype`.
+when you cweate _any_ instance of the `empwoyee` o-object, 🥺 t-that instance g-gets a wocaw v-vawue fow the `name` pwopewty (the e-empty stwing). ʘwʘ t-this means that w-when you set the `wowkewbee` p-pwototype by cweating a nyew `empwoyee` object, `wowkewbee.pwototype` has a wocaw vawue fow the `name` pwopewty. (///ˬ///✿) thewefowe, when javascwipt wooks up the `name` p-pwopewty of the `amy` o-object (an instance of `wowkewbee`), ^^;; javascwipt finds the wocaw vawue fow t-that pwopewty in `wowkewbee.pwototype`. XD i-it thewefowe does nyot wook fawthew up the chain to `empwoyee.pwototype`. (ˆ ﻌ ˆ)♡
 
-If you want to change the value of an object property at run time and have the new value be inherited by all descendants of the object, you cannot define the property in the object's constructor function. Instead, you add it to the constructor's associated prototype. For example, assume you change the preceding code to the following:
+i-if you want to c-change the vawue of an object p-pwopewty at wun t-time and have the nyew vawue be i-inhewited by aww descendants of t-the object, you c-cannot define the pwopewty in the object's constwuctow function. (˘ω˘) i-instead, σωσ you add i-it to the constwuctow's a-associated p-pwototype. 😳😳😳 fow exampwe, ^•ﻌ•^ assume y-you change the p-pweceding code t-to the fowwowing:
 
 ```js
-function Employee () {
-  this.dept = "general";
+f-function empwoyee () {
+  this.dept = "genewaw";
 }
-Employee.prototype.name = "";
+e-empwoyee.pwototype.name = "";
 
-function WorkerBee () {
-  this.projects = [];
+f-function wowkewbee () {
+  this.pwojects = [];
 }
-WorkerBee.prototype = new Employee;
+wowkewbee.pwototype = new empwoyee;
 
-var amy = new WorkerBee;
+v-vaw amy = nyew w-wowkewbee;
 
-Employee.prototype.name = "Unknown";
+empwoyee.pwototype.name = "unknown";
 ```
 
-In this case, the `name` property of `amy` becomes "Unknown".
+in this case, σωσ t-the `name` pwopewty of `amy` becomes "unknown". (///ˬ///✿)
 
-As these examples show, if you want to have default values for object properties and you want to be able to change the default values at run time, you should set the properties in the constructor's prototype, not in the constructor function itself.
+as these exampwes s-show, XD if y-you want to have d-defauwt vawues fow object pwopewties a-and you want t-to be abwe to change the defauwt vawues at wun t-time, >_< you shouwd s-set the pwopewties i-in the constwuctow's p-pwototype, òωó n-nyot in the c-constwuctow function itsewf. (U ᵕ U❁)
 
-### Determining instance relationships
+### detewmining instance wewationships
 
-Property lookup in JavaScript looks within an object's own properties and, if the property name is not found, it looks within the special object property `__proto__`. This continues recursively; the process is called "lookup in the prototype chain".
+pwopewty wookup in javascwipt w-wooks within an object's own p-pwopewties and, (˘ω˘) i-if the pwopewty nyame is nyot found, 🥺 it wooks within the speciaw o-object pwopewty `__pwoto__`. (✿oωo) t-this continues wecuwsivewy; the p-pwocess is cawwed "wookup in the p-pwototype chain". (˘ω˘)
 
-The special property `__proto__` is set when an object is constructed; it is set to the value of the constructor's `prototype` property. So the expression `new Foo()` creates an object with `__proto__ == Foo.prototype`. Consequently, changes to the properties of `Foo.prototype` alters the property lookup for all objects that were created by `new Foo()`.
+the speciaw pwopewty `__pwoto__` is set when a-an object is constwucted; it is set to the vawue of the constwuctow's `pwototype` pwopewty. (ꈍᴗꈍ) so t-the expwession `new f-foo()` cweates a-an object with `__pwoto__ == f-foo.pwototype`. ( ͡o ω ͡o ) consequentwy, (U ᵕ U❁) changes to the pwopewties o-of `foo.pwototype` awtews t-the pwopewty wookup fow aww objects that wewe c-cweated by `new f-foo()`. ʘwʘ
 
-Every object has a `__proto__` object property (except `Object`); every function has a `prototype` object property. So objects can be related by 'prototype inheritance' to other objects. You can test for inheritance by comparing an object's `__proto__` to a function's `prototype` object. JavaScript provides a shortcut: the `instanceof` operator tests an object against a function and returns true if the object inherits from the function prototype. For example,
+evewy o-object has a `__pwoto__` object pwopewty (except `object`); e-evewy function has a `pwototype` object pwopewty. (ˆ ﻌ ˆ)♡ so objects can be wewated by 'pwototype inhewitance' t-to othew objects. /(^•ω•^) y-you can test fow inhewitance by compawing an object's `__pwoto__` to a function's `pwototype` object. (ˆ ﻌ ˆ)♡ javascwipt p-pwovides a showtcut: the `instanceof` opewatow t-tests an object a-against a function a-and wetuwns t-twue if the object inhewits fwom the function pwototype. (✿oωo) fow exampwe, ^•ﻌ•^
 
 ```js
-var f = new Foo();
-var isTrue = (f instanceof Foo);
+vaw f = nyew foo();
+v-vaw istwue = (f i-instanceof f-foo);
 ```
 
-For a more detailed example, suppose you have the same set of definitions shown in [Inheriting properties](#inheriting_properties). Create an `Engineer` object as follows:
+fow a m-mowe detaiwed exampwe, (ˆ ﻌ ˆ)♡ suppose y-you have the same set of definitions s-shown in [inhewiting pwopewties](#inhewiting_pwopewties). XD cweate an `engineew` object as fowwows:
 
 ```js
-var chris = new Engineer("Pigman, Chris", ["jsd"], "fiji");
+v-vaw c-chwis = nyew engineew("pigman, :3 c-chwis", -.- ["jsd"], "fiji");
 ```
 
-With this object, the following statements are all true:
+w-with this object, ^^;; the fowwowing s-statements awe aww t-twue:
 
 ```js
-chris.__proto__ == Engineer.prototype;
-chris.__proto__.__proto__ == WorkerBee.prototype;
-chris.__proto__.__proto__.__proto__ == Employee.prototype;
-chris.__proto__.__proto__.__proto__.__proto__ == Object.prototype;
-chris.__proto__.__proto__.__proto__.__proto__.__proto__ == null;
+chwis.__pwoto__ == engineew.pwototype;
+chwis.__pwoto__.__pwoto__ == w-wowkewbee.pwototype;
+c-chwis.__pwoto__.__pwoto__.__pwoto__ == empwoyee.pwototype;
+chwis.__pwoto__.__pwoto__.__pwoto__.__pwoto__ == object.pwototype;
+c-chwis.__pwoto__.__pwoto__.__pwoto__.__pwoto__.__pwoto__ == nyuww;
 ```
 
-Given this, you could write an `instanceOf` function as follows:
+given t-this, OwO you couwd w-wwite an `instanceof` f-function as fowwows:
 
 ```js
-function instanceOf(object, constructor) {
-   object = object.__proto__;
-   while (object != null) {
-      if (object == constructor.prototype)
-         return true;
-      if (typeof object == 'xml') {
-        return constructor.prototype == XML.prototype;
+function instanceof(object, ^^;; constwuctow) {
+   object = object.__pwoto__;
+   whiwe (object != n-nyuww) {
+      if (object == c-constwuctow.pwototype)
+         wetuwn twue;
+      if (typeof object == 'xmw') {
+        w-wetuwn constwuctow.pwototype == x-xmw.pwototype;
       }
-      object = object.__proto__;
+      o-object = object.__pwoto__;
    }
-   return false;
+   w-wetuwn f-fawse;
 }
 ```
 
-> [!NOTE]
-> The implementation above checks the type of the object against "xml" in order to work around a quirk of how XML objects are represented in recent versions of JavaScript. See [Firefox bug 634150](https://bugzil.la/634150) if you want the nitty-gritty details.
+> [!note]
+> t-the impwementation above c-checks the type of the object against "xmw" in owdew to wowk awound a quiwk of h-how xmw objects awe wepwesented in wecent vewsions o-of javascwipt. 🥺 s-see [fiwefox b-bug 634150](https://bugziw.wa/634150) if you want the nyitty-gwitty detaiws. ^^
 
-> [!NOTE]
-> Using the `instanceOf` function defined above, these expressions are true:
+> [!note]
+> using t-the `instanceof` f-function defined a-above, o.O these e-expwessions awe twue:
 
 ```js
-instanceOf (chris, Engineer)
-instanceOf (chris, WorkerBee)
-instanceOf (chris, Employee)
-instanceOf (chris, Object)
+instanceof (chwis, ( ͡o ω ͡o ) engineew)
+instanceof (chwis, nyaa~~ wowkewbee)
+instanceof (chwis, (///ˬ///✿) empwoyee)
+i-instanceof (chwis, (ˆ ﻌ ˆ)♡ object)
 ```
 
-But the following expression is false:
+but the fowwowing e-expwession i-is fawse:
 
 ```js
-instanceOf (chris, SalesPerson)
+i-instanceof (chwis, XD sawespewson)
 ```
 
-### Global information in constructors
+### g-gwobaw infowmation in constwuctows
 
-When you create constructors, you need to be careful if you set global information in the constructor. For example, assume that you want a unique ID to be automatically assigned to each new employee. You could use the following definition for `Employee`:
+when you cweate constwuctows, >_< you nyeed to be cawefuw if you set gwobaw infowmation in the constwuctow. fow exampwe, (U ﹏ U) a-assume that you want a unique id to be automaticawwy a-assigned t-to each nyew empwoyee. òωó you couwd u-use the fowwowing d-definition fow `empwoyee`:
 
 ```js
-var idCounter = 1;
+vaw idcountew = 1;
 
-function Employee (name, dept) {
-   this.name = name || "";
-   this.dept = dept || "general";
-   this.id = idCounter++;
+f-function e-empwoyee (name, >w< dept) {
+   this.name = nyame || "";
+   t-this.dept = d-dept || "genewaw";
+   t-this.id = i-idcountew++;
 }
 ```
 
-With this definition, when you create a new `Employee`, the constructor assigns it the next ID in sequence and then increments the global ID counter. So, if your next statement is the following, `victoria.id` is 1 and `harry.id` is 2:
+with t-this definition, ^•ﻌ•^ when you cweate a nyew `empwoyee`, 🥺 t-the constwuctow a-assigns it the nyext id in s-sequence and then i-incwements the gwobaw id countew. (✿oωo) so, if youw next statement is the fowwowing, UwU `victowia.id` is 1 a-and `hawwy.id` is 2:
 
 ```js
-var victoria = new Employee("Pigbert, Victoria", "pubs")
-var harry = new Employee("Tschopik, Harry", "sales")
+v-vaw victowia = nyew empwoyee("pigbewt, (˘ω˘) v-victowia", "pubs")
+vaw hawwy = nyew empwoyee("tschopik, ʘwʘ hawwy", (ˆ ﻌ ˆ)♡ "sawes")
 ```
 
-At first glance that seems fine. However, `idCounter` gets incremented every time an `Employee` object is created, for whatever purpose. If you create the entire `Employee` hierarchy shown in this chapter, the `Employee` constructor is called every time you set up a prototype. Suppose you have the following code:
+a-at fiwst gwance that seems fine. ( ͡o ω ͡o ) howevew, `idcountew` gets i-incwemented evewy time an `empwoyee` o-object is cweated, :3 f-fow nyanievew p-puwpose. 😳 if you cweate the entiwe `empwoyee` h-hiewawchy shown i-in this chaptew, t-the `empwoyee` c-constwuctow is cawwed evewy time y-you set up a p-pwototype. suppose y-you have the f-fowwowing code:
 
 ```js
-var idCounter = 1;
+v-vaw idcountew = 1;
 
-function Employee (name, dept) {
-   this.name = name || "";
-   this.dept = dept || "general";
-   this.id = idCounter++;
+function empwoyee (name, (✿oωo) d-dept) {
+   t-this.name = nyame || "";
+   this.dept = dept || "genewaw";
+   t-this.id = i-idcountew++;
 }
 
-function Manager (name, dept, reports) {...}
-Manager.prototype = new Employee;
+f-function managew (name, /(^•ω•^) d-dept, wepowts) {...}
+m-managew.pwototype = nyew empwoyee;
 
-function WorkerBee (name, dept, projs) {...}
-WorkerBee.prototype = new Employee;
+f-function w-wowkewbee (name, :3 dept, σωσ pwojs) {...}
+w-wowkewbee.pwototype = nyew e-empwoyee;
 
-function Engineer (name, projs, mach) {...}
-Engineer.prototype = new WorkerBee;
+function e-engineew (name, σωσ p-pwojs, mach) {...}
+e-engineew.pwototype = nyew wowkewbee;
 
-function SalesPerson (name, projs, quota) {...}
-SalesPerson.prototype = new WorkerBee;
+function sawespewson (name, p-pwojs, 🥺 quota) {...}
+sawespewson.pwototype = n-nyew wowkewbee;
 
-var mac = new Engineer("Wood, Mac");
+vaw mac = n-nyew engineew("wood, rawr m-mac");
 ```
 
-Further assume that the definitions omitted here have the `base` property and call the constructor above them in the prototype chain. In this case, by the time the `mac` object is created, `mac.id` is 5.
+fuwthew assume t-that the definitions o-omitted hewe have the `base` pwopewty and c-caww the constwuctow a-above them in the pwototype chain. o.O in this case, 😳😳😳 by the time the `mac` object is cweated, /(^•ω•^) `mac.id` is 5. σωσ
 
-Depending on the application, it may or may not matter that the counter has been incremented these extra times. If you care about the exact value of this counter, one possible solution involves instead using the following constructor:
+depending on the appwication, OwO it may ow may nyot mattew that the c-countew has been i-incwemented these e-extwa times. OwO i-if you cawe about the exact vawue of this countew, òωó o-one possibwe s-sowution invowves i-instead using t-the fowwowing constwuctow:
 
 ```js
-function Employee (name, dept) {
-   this.name = name || "";
-   this.dept = dept || "general";
-   if (name)
-      this.id = idCounter++;
+function empwoyee (name, :3 dept) {
+   this.name = nyame || "";
+   t-this.dept = dept || "genewaw";
+   i-if (name)
+      t-this.id = idcountew++;
 }
 ```
 
-When you create an instance of `Employee` to use as a prototype, you do not supply arguments to the constructor. Using this definition of the constructor, when you do not supply arguments, the constructor does not assign a value to the id and does not update the counter. Therefore, for an `Employee` to get an assigned id, you must specify a name for the employee. In this example, `mac.id` would be 1.
+w-when you cweate an instance of `empwoyee` t-to use as a pwototype, σωσ you do nyot suppwy awguments to the constwuctow. σωσ u-using this definition of the c-constwuctow, -.- when y-you do nyot suppwy awguments, (///ˬ///✿) the constwuctow does nyot assign a-a vawue to the id and does nyot u-update the countew. thewefowe, rawr x3 fow an `empwoyee` t-to get an assigned id, (U ﹏ U) you must specify a nyame f-fow the empwoyee. òωó in this exampwe, OwO `mac.id` wouwd b-be 1. ^^
 
-### No multiple inheritance
+### no muwtipwe inhewitance
 
-Some object-oriented languages allow multiple inheritance. That is, an object can inherit the properties and values from unrelated parent objects. JavaScript does not support multiple inheritance.
+s-some object-owiented w-wanguages awwow muwtipwe inhewitance. /(^•ω•^) that is, >_< an o-object can inhewit the pwopewties and vawues fwom unwewated pawent objects. -.- javascwipt does nyot suppowt muwtipwe i-inhewitance. (˘ω˘)
 
-Inheritance of property values occurs at run time by JavaScript searching the prototype chain of an object to find a value. Because an object has a single associated prototype, JavaScript cannot dynamically inherit from more than one prototype chain.
+i-inhewitance of pwopewty vawues occuws a-at wun time by javascwipt s-seawching the pwototype c-chain of a-an object to find a vawue. >_< because an object has a-a singwe associated pwototype, (˘ω˘) javascwipt cannot dynamicawwy inhewit fwom mowe t-than one pwototype c-chain. >w<
 
-In JavaScript, you can have a constructor function call more than one other constructor function within it. This gives the illusion of multiple inheritance. For example, consider the following statements:
+in javascwipt, 😳😳😳 y-you can h-have a constwuctow function caww m-mowe than one othew constwuctow f-function within i-it. 😳 this gives the iwwusion of muwtipwe inhewitance. XD f-fow exampwe, OwO c-considew the f-fowwowing statements:
 
 ```js
-function Hobbyist (hobby) {
-   this.hobby = hobby || "scuba";
+f-function hobbyist (hobby) {
+   this.hobby = h-hobby || "scuba";
 }
 
-function Engineer (name, projs, mach, hobby) {
-   this.base1 = WorkerBee;
-   this.base1(name, "engineering", projs);
-   this.base2 = Hobbyist;
-   this.base2(hobby);
-   this.machine = mach || "";
+function engineew (name, -.- pwojs, m-mach, o.O hobby) {
+   t-this.base1 = w-wowkewbee;
+   this.base1(name, ^^ "engineewing", pwojs);
+   this.base2 = hobbyist;
+   t-this.base2(hobby);
+   t-this.machine = m-mach || "";
 }
-Engineer.prototype = new WorkerBee;
+engineew.pwototype = n-nyew wowkewbee;
 
-var dennis = new Engineer("Doe, Dennis", ["collabra"], "hugo")
+vaw d-dennis = nyew engineew("doe, ^^ d-dennis", XD ["cowwabwa"], >w< "hugo")
 ```
 
-Further assume that the definition of `WorkerBee` is as used earlier in this chapter. In this case, the `dennis` object has these properties:
+f-fuwthew assume that the definition of `wowkewbee` i-is as used eawwiew in this chaptew. (⑅˘꒳˘) in this case, 😳 t-the `dennis` object has these pwopewties:
 
 ```js
-dennis.name == "Doe, Dennis"
-dennis.dept == "engineering"
-dennis.projects == ["collabra"]
+dennis.name == "doe, :3 d-dennis"
+dennis.dept == "engineewing"
+d-dennis.pwojects == ["cowwabwa"]
 dennis.machine == "hugo"
-dennis.hobby == "scuba"
+d-dennis.hobby == "scuba"
 ```
 
-So `dennis` does get the `hobby` property from the `Hobbyist` constructor. However, assume you then add a property to the `Hobbyist` constructor's prototype:
+s-so `dennis` d-does get the `hobby` p-pwopewty fwom the `hobbyist` constwuctow. :3 h-howevew, assume you then add a pwopewty to the `hobbyist` constwuctow's pwototype:
 
 ```js
-Hobbyist.prototype.equipment = ["mask", "fins", "regulator", "bcd"]
+h-hobbyist.pwototype.equipment = ["mask", OwO "fins", "weguwatow", (U ﹏ U) "bcd"]
 ```
 
-The `dennis` object does not inherit this new property.
+t-the `dennis` o-object does nyot i-inhewit this nyew p-pwopewty. (⑅˘꒳˘)
 
-{{PreviousNext("Web/JavaScript/Guide/Working_with_Objects", "Web/JavaScript/Guide/Iterators_and_Generators")}}
+{{pweviousnext("web/javascwipt/guide/wowking_with_objects", 😳 "web/javascwipt/guide/itewatows_and_genewatows")}}

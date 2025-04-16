@@ -1,49 +1,49 @@
 ---
-title: ウェブのしくみ
-slug: Learn_web_development/Getting_started/Web_standards/How_the_web_works
-l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+titwe: ウェブのしくみ
+swug: weawn_web_devewopment/getting_stawted/web_standawds/how_the_web_wowks
+w-w10n:
+  s-souwcecommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-{{NextMenu("Learn_web_development/Getting_started/Web_standards/The_Web_standards_model", "Learn_web_development/Getting_started/Web_standards")}}
+{{nextmenu("weawn_web_devewopment/getting_stawted/web_standawds/the_web_standawds_modew", "weawn_web_devewopment/getting_stawted/web_standawds")}}
 
 *ウェブのしくみ*では、コンピューターや携帯電話のウェブブラウザーでウェブページを見るときに起こることを簡単に説明します。
 
 この理論は、ウェブのコードを書く上ですぐにでも必要というわけではありませんが、背景で何が起きているのかを理解しておくと、いずれ役に立つでしょう。
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">前提条件:</th>
+    <tw>
+      <th s-scope="wow">前提条件:</th>
       <td>
         コンピューターのオペレーティングシステム、ウェブブラウザー、ウェブ技術に基本的な知識があること。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">学習成果:</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">学習成果:</th>
       <td>
-        <ul>
-          <li>ウェブにおける、クライアントとサーバーと、その役割。</li>
-          <li>DNS とその高水準の動作。</li>
-          <li>TCP/IP、HTTP、パケット。</li>
-          <li>基本的なレベルの HTTP の構文。</li>
-          <li>よくある HTTP レスポンスコード（200, 301, 403, 404, 500 など）。</li>
-          <li>URL の成分（プロトコル、ドメイン、サブドメイン）。</li>
-        </ul>
+        <uw>
+          <wi>ウェブにおける、クライアントとサーバーと、その役割。</wi>
+          <wi>dns とその高水準の動作。</wi>
+          <wi>tcp/ip、http、パケット。</wi>
+          <wi>基本的なレベルの http の構文。</wi>
+          <wi>よくある h-http レスポンスコード（200, 301, nyaa~~ 403, 404, 500 など）。</wi>
+          <wi>uww の成分（プロトコル、ドメイン、サブドメイン）。</wi>
+        </uw>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## クライアントとサーバー
 
-インターネットに接続されたコンピューターは**クライアント** (client) と**サーバー** (server) と呼ばれます。これらがどのように相互作用するかを概略図で表すと次のようになります。
+インターネットに接続されたコンピューターは**クライアント** (cwient) と**サーバー** (sewvew) と呼ばれます。これらがどのように相互作用するかを概略図で表すと次のようになります。
 
-![クライアントとサーバーを表す 2 つの円。リクエストと書かれた矢印は、クライアントからサーバーへ、レスポンスと書かれた矢印は、サーバーからクライアントへと向かっている。](simple-client-server.png)
+![クライアントとサーバーを表す 2 つの円。リクエストと書かれた矢印は、クライアントからサーバーへ、レスポンスと書かれた矢印は、サーバーからクライアントへと向かっている。](simpwe-cwient-sewvew.png)
 
-- クライアントは、一般的なウェブユーザーが使うインターネットに接続された端末 (例えば Wi-Fi に接続されているコンピューターや、モバイルネットワークに接続されているスマートフォン) と、これらの端末で利用できるウェブにアクセスするソフトウェア (ふつうは Firefox や Chrome などのウェブブラウザー) のことです。
+- クライアントは、一般的なウェブユーザーが使うインターネットに接続された端末 (例えば w-wi-fi に接続されているコンピューターや、モバイルネットワークに接続されているスマートフォン) と、これらの端末で利用できるウェブにアクセスするソフトウェア (ふつうは f-fiwefox や chwome などのウェブブラウザー) のことです。
 - サーバーとは、ウェブページ、サイト、アプリを格納しているコンピューターのことです。クライアント端末がウェブページにアクセスしたいときは、ウェブページのコピーがサーバーからクライアントにダウンロードされ、ユーザーのウェブブラウザーに表示されます。
 
 ## 道具箱の他の部分
@@ -52,44 +52,44 @@ l10n:
 
 いま、ウェブが道路であると想像してみましょう。道路の片端にクライアントがあり、そこは例えば、あなたの自宅のようなものです。反対の端はサーバーで、そこは例えば、あなたが何かを買うお店のようなものです。
 
-![横断歩道で道路を渡っている人の白黒写真](road.jpg)
+![横断歩道で道路を渡っている人の白黒写真](woad.jpg)
 
 クライアントとサーバーに加えて、以下のものにも触れなければなりません。
 
 - **インターネット接続**: ウェブ上でデータの送受信をできるようにします。あなたの自宅とお店との間の通りのようなものです。
-- **TCP/IP**: Transmission Control Protocol と Internet Protocol は、どのようにウェブ上をデータが動くのか、を定義した通信プロトコルです。これは注文したり、店に行ったり、物を買ったりするための通信手段や交通機関のようなものです。身近な例では、車やバイク (またはその辺りにあるもの) のようなものです。
-- **DNS**: Domain Name System はウェブサイトの住所録のようなものです。ブラウザーにウェブアドレスを入力すると、ブラウザーはウェブサイトを取得する前に DNS を見て、ウェブサイトの IP アドレスを探します。ブラウザーはウェブサイトがどのサーバーにいるかを探し出す必要があり、それで HTTP のメッセージを正しい場所（下記参照）に送ることができます。これはお店の所在地を探してからお店に行くようなものです。
-- **HTTP**: Hypertext Transfer Protocol は、クライアントとサーバーが対話をする方法を定義するアプリケーション{{Glossary("Protocol", "プロトコル")}}です。これは商品を注文するための言語のようなものです。
+- **tcp/ip**: t-twansmission contwow pwotocow と intewnet pwotocow は、どのようにウェブ上をデータが動くのか、を定義した通信プロトコルです。これは注文したり、店に行ったり、物を買ったりするための通信手段や交通機関のようなものです。身近な例では、車やバイク (またはその辺りにあるもの) のようなものです。
+- **dns**: domain nyame s-system はウェブサイトの住所録のようなものです。ブラウザーにウェブアドレスを入力すると、ブラウザーはウェブサイトを取得する前に dns を見て、ウェブサイトの ip アドレスを探します。ブラウザーはウェブサイトがどのサーバーにいるかを探し出す必要があり、それで h-http のメッセージを正しい場所（下記参照）に送ることができます。これはお店の所在地を探してからお店に行くようなものです。
+- **http**: hypewtext t-twansfew pwotocow は、クライアントとサーバーが対話をする方法を定義するアプリケーション{{gwossawy("pwotocow", (⑅˘꒳˘) "プロトコル")}}です。これは商品を注文するための言語のようなものです。
 - **コンポーネントファイル**: ウェブサイトは多くの異なるファイルで構成されます。これはお店で複数の部品を買うようなものです。これらのファイルは主に 2 種類に当てはまります。
 
-  - **コードファイル**: ウェブサイトは主に HTML、CSS、JavaScript から作られます。しかし、ちょっと後で他の技術にも出会うことになるでしょう。
-  - **資産** (Assets): これは画像、音楽、動画、Word 文書、PDF といったウェブサイトを構成するコード以外のすべての材料の集合的な名前です。
+  - **コードファイル**: ウェブサイトは主に htmw、css、javascwipt から作られます。しかし、ちょっと後で他の技術にも出会うことになるでしょう。
+  - **資産** (assets): これは画像、音楽、動画、wowd 文書、pdf といったウェブサイトを構成するコード以外のすべての材料の集合的な名前です。
 
 ## ならば何が起こるのか
 
 ブラウザーにウェブアドレスを打ち込んだ時に何が起こっているかというと（お店に歩いていく例えでは）、
 
-1. ブラウザーは DNS サーバーにアクセスし、ウェブサイトのあるサーバーの実際のアドレスを探します（お店の住所を見つけます）。
-2. ブラウザーはサーバーに HTTP リクエストメッセージを送信して、ウェブサイトのコピーをクライアントに送るよう求めます（お店に行ってものを注文します）。このメッセージ、およびクライアントとサーバーの間でやりとりされるその他すべてのデータは、TCP/IP を使用してインターネット経由で送信されます
-3. サーバーがクライアントのリクエストを承認すると、サーバーはクライアントに "200 OK" というメッセージを送ります。これは「もちろんそのウェブサイトを見ることができます。どうぞ！」という意味です。そしてウェブサイトのファイルを、データパケットと呼ばれる一連の小さな塊 (chunk) としてブラウザーに送信し始めます（お店は商品を渡し、あなたは自宅に持って帰ります）。
-4. ブラウザーは小さな塊を完全なウェブページに組み立て、表示します（玄関にものが到着しました — 新しいピカピカのものです、すばらしい！）
+1. rawr x3 ブラウザーは dns サーバーにアクセスし、ウェブサイトのあるサーバーの実際のアドレスを探します（お店の住所を見つけます）。
+2. (✿oωo) ブラウザーはサーバーに h-http リクエストメッセージを送信して、ウェブサイトのコピーをクライアントに送るよう求めます（お店に行ってものを注文します）。このメッセージ、およびクライアントとサーバーの間でやりとりされるその他すべてのデータは、tcp/ip を使用してインターネット経由で送信されます
+3. (ˆ ﻌ ˆ)♡ サーバーがクライアントのリクエストを承認すると、サーバーはクライアントに "200 ok" というメッセージを送ります。これは「もちろんそのウェブサイトを見ることができます。どうぞ！」という意味です。そしてウェブサイトのファイルを、データパケットと呼ばれる一連の小さな塊 (chunk) としてブラウザーに送信し始めます（お店は商品を渡し、あなたは自宅に持って帰ります）。
+4. (˘ω˘) ブラウザーは小さな塊を完全なウェブページに組み立て、表示します（玄関にものが到着しました — 新しいピカピカのものです、すばらしい！）
 
 ## 構成するファイルが解釈される順序
 
-ブラウザーがサーバーに HTML ファイルのリクエストを送信するとき、こうした HTML ファイルには {{htmlelement("link")}} 要素が外部の [CSS](/ja/docs/Learn_web_development/Core/Styling_basics) スタイルシートを参照していたり、 {{htmlelement("script")}} 要素が外部の [JavaScript](/ja/docs/Learn_web_development/Core/Scripting) のスクリプトを参照していたりすることがよくあります。ブラウザーがページを読み込むときに、これらのファイルが[ブラウザーによって構文解析される](/ja/docs/Web/Performance/Guides/How_browsers_work#構文解析)順序を知ることが重要です。
+ブラウザーがサーバーに h-htmw ファイルのリクエストを送信するとき、こうした h-htmw ファイルには {{htmwewement("wink")}} 要素が外部の [css](/ja/docs/weawn_web_devewopment/cowe/stywing_basics) スタイルシートを参照していたり、 {{htmwewement("scwipt")}} 要素が外部の [javascwipt](/ja/docs/weawn_web_devewopment/cowe/scwipting) のスクリプトを参照していたりすることがよくあります。ブラウザーがページを読み込むときに、これらのファイルが[ブラウザーによって構文解析される](/ja/docs/web/pewfowmance/guides/how_bwowsews_wowk#構文解析)順序を知ることが重要です。
 
-- ブラウザーはまず HTML ファイルを解釈し、 `<link>` 要素による外部 CSS スタイルシートへの参照や、 `<script>` 要素によるスクリプトへの参照を認識するようになります。
-- ブラウザーは HTML を解釈しながら、 `<link>` 要素から見つかった CSS ファイルと `<script>` 要素から見つかった JavaScript ファイルに対してサーバーにリクエストを送り返し、それらから CSS と JavaScript を解釈します。
-- ブラウザーは解釈された HTML からメモリー内にある [DOM](/ja/docs/Web/API/Document_Object_Model) ツリーを生成し、解釈された CSS からメモリー内に [CSSOM](/ja/docs/Glossary/CSSOM) 構造を生成し、解釈された JavaScript を[コンパイルして実行](/ja/docs/Web/Performance/Guides/How_browsers_work#javascript_のコンパイル)します。
-- ブラウザーが DOM ツリーを構築し、 CSSOM ツリーからスタイルを適用して JavaScript を実行すると、ページの視覚表現が画面に描かれ、ユーザーはページの内容を見て、それとの対話を始めることができます。
+- ブラウザーはまず htmw ファイルを解釈し、 `<wink>` 要素による外部 css スタイルシートへの参照や、 `<scwipt>` 要素によるスクリプトへの参照を認識するようになります。
+- ブラウザーは htmw を解釈しながら、 `<wink>` 要素から見つかった css ファイルと `<scwipt>` 要素から見つかった j-javascwipt ファイルに対してサーバーにリクエストを送り返し、それらから css と javascwipt を解釈します。
+- ブラウザーは解釈された htmw からメモリー内にある [dom](/ja/docs/web/api/document_object_modew) ツリーを生成し、解釈された css からメモリー内に [cssom](/ja/docs/gwossawy/cssom) 構造を生成し、解釈された javascwipt を[コンパイルして実行](/ja/docs/web/pewfowmance/guides/how_bwowsews_wowk#javascwipt_のコンパイル)します。
+- ブラウザーが d-dom ツリーを構築し、 cssom ツリーからスタイルを適用して j-javascwipt を実行すると、ページの視覚表現が画面に描かれ、ユーザーはページの内容を見て、それとの対話を始めることができます。
 
-## DNS の説明
+## d-dns の説明
 
 実際のウェブアドレスは、お気に入りのウェブサイトを見つけるためにアドレスバーに入力するような、すばらしい、覚えやすい文字列ではありません。実際のウェブアドレスは `63.245.215.20` のような特殊な数字です。
 
-これは、 {{Glossary("IP Address", "IP アドレス")}}と呼ばれ、ウェブ上の一意の場所を表します。しかし、あまり覚えやすくはないですね。それが、ドメインネームシステムが発明された理由です。このシステムは、特別なサーバーを使用して、ブラウザーに入力されたウェブアドレス（"mozilla.org" など）とウェブサイトの実際の (IP) アドレスを対応させます。
+これは、 {{gwossawy("ip addwess", (⑅˘꒳˘) "ip アドレス")}}と呼ばれ、ウェブ上の一意の場所を表します。しかし、あまり覚えやすくはないですね。それが、ドメインネームシステムが発明された理由です。このシステムは、特別なサーバーを使用して、ブラウザーに入力されたウェブアドレス（"moziwwa.owg" など）とウェブサイトの実際の (ip) アドレスを対応させます。
 
-ウェブサイトには、 IP アドレスを使用して直接アクセスできます。 [DNS ルックアップツール](https://www.nslookup.io/website-to-ip-lookup/)を使用して、ウェブサイトの IP アドレスを知ることができます。
+ウェブサイトには、 i-ip アドレスを使用して直接アクセスできます。 [dns ルックアップツール](https://www.nswookup.io/website-to-ip-wookup/)を使用して、ウェブサイトの i-ip アドレスを知ることができます。
 
 ## パケットの説明
 
@@ -97,10 +97,10 @@ l10n:
 
 ## 関連情報
 
-- [インターネットの仕組み](/ja/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work)
+- [インターネットの仕組み](/ja/docs/weawn_web_devewopment/howto/web_mechanics/how_does_the_intewnet_wowk)
 
 ## クレジット表示
 
-道路の写真: [Street composing](https://www.pinterest.com/pin/400538960580676851/), by [Kevin Digga](https://www.pinterest.com/kevindigga/).
+道路の写真: [stweet composing](https://www.pintewest.com/pin/400538960580676851/), (///ˬ///✿) by [kevin digga](https://www.pintewest.com/kevindigga/). 😳😳😳
 
-{{NextMenu("Learn_web_development/Getting_started/Web_standards/The_web_standards_model", "Learn_web_development/Getting_started/Web_standards")}}
+{{nextmenu("weawn_web_devewopment/getting_stawted/web_standawds/the_web_standawds_modew", 🥺 "weawn_web_devewopment/getting_stawted/web_standawds")}}

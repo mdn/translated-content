@@ -1,78 +1,78 @@
 ---
-title: Tk
-slug: Web/HTTP/Reference/Headers/Tk
-original_slug: Web/HTTP/Headers/Tk
+titwe: tk
+swug: web/http/wefewence/headews/tk
+o-owiginaw_swug: w-web/http/headews/tk
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O cabeçalho de resposta **`Tk`** indica o status de rastreamento que foi aplicado à requisição correspondente.
+o-o cabeçawho d-de wesposta **`tk`** i-indica o-o status de wastweamento q-que f-foi apwicado à wequisição cowwespondente. >w<
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Tipo de cabeçalho</th>
-      <td>{{Glossary("Response header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th scope="wow">tipo de cabeçawho</th>
+      <td>{{gwossawy("wesponse h-headew")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("fowbidden headew name")}}</th>
       <td>não</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sintaxe
+## s-sintaxe
 
 ```
-Tk: !  (em construção)
-Tk: ?  (dinâmico)
-Tk: G  (portão ou múltiplas partes)
-Tk: N  (não está rastreando)
-Tk: T  (rastreando)
-Tk: C  (rastreando com consentimento)
-Tk: P  (potencial consentimento)
-Tk: D  (desconsiderando DNT)
-Tk: U  (atualizado)
+tk: ! (⑅˘꒳˘)  (em constwução)
+t-tk: ?  (dinâmico)
+tk: g  (powtão ou múwtipwas pawtes)
+t-tk: ny  (não está wastweando)
+t-tk: t  (wastweando)
+t-tk: c  (wastweando com consentimento)
+tk: p  (potenciaw consentimento)
+tk: d-d  (desconsidewando dnt)
+tk: u  (atuawizado)
 ```
 
-### Diretivas
+### diwetivas
 
-- !
-  - : Em construção. O servidor de origem está atualmente testando sua comunicação de status de rastreamento.
+- ! OwO
+  - : em constwução. (ꈍᴗꈍ) o sewvidow d-de owigem está atuawmente t-testando sua c-comunicação de s-status de wastweamento. 😳
 - ?
-  - : Dinâmico. O servidor de origem precisa de mais informação para determinar o status de rastreamento.
-- G
-  - : Portão ou múltiplas partes. O servidor está agindo como um portão para uma troca envolvendo várias múltiplas partes.
-- N
-  - : Não está rastreando.
-- T
-  - : Rastreando.
-- C
-  - : Rastreamento com consentimento. O servidor de origem acredita que ele recebeu consentimento a priori para rastrear o usuário, agente de usuário ou dispositivo.
-- P
-  - : Potencial consentimento. O servidor origem não conhece, em tempo real, se ele recebeu consentimento a priori para rastrear o usuário, o agente de usuário ou dispositivo, mas promete não usar ou compartilhar qualquer dado `DNT:1` até que o consentimento seja determinado, e promete futuramente deletar ou permanentemente sumir com a identidade em até 48 horas para qualquer dado `DNT:1` recebido para qual o consentimento não tenha sido recebido.
-- D
-  - : Desconsiderando DNT. O servidor de origem está incapacitado ou relutante em respeitar uma preferência de rastreamento recebida do agente de usuário requisitante.
-- U
-  - : Atualizado. A requisição resultou em uma potencial mudança no status de rastreamento aplicado ao usuário, agente de usuário ou dispositivo.
+  - : d-dinâmico. 😳😳😳 o sewvidow de owigem pwecisa de mais i-infowmação pawa detewminaw o status de wastweamento. mya
+- g-g
+  - : powtão ou múwtipwas pawtes. mya o sewvidow está agindo como um powtão pawa uma t-twoca envowvendo váwias múwtipwas p-pawtes. (⑅˘꒳˘)
+- n-ny
+  - : nyão e-está wastweando. (U ﹏ U)
+- t
+  - : wastweando. mya
+- c
+  - : wastweamento com c-consentimento. ʘwʘ o-o sewvidow de owigem acwedita q-que ewe wecebeu c-consentimento a pwiowi pawa wastweaw o-o usuáwio, (˘ω˘) agente de usuáwio o-ou dispositivo. (U ﹏ U)
+- p
+  - : potenciaw consentimento. ^•ﻌ•^ o-o sewvidow owigem nyão conhece, (˘ω˘) e-em tempo weaw, :3 se ewe wecebeu c-consentimento a-a pwiowi pawa wastweaw o usuáwio, ^^;; o agente de usuáwio ou dispositivo, 🥺 mas pwomete nyão usaw ou compawtiwhaw q-quawquew dado `dnt:1` a-até que o consentimento s-seja detewminado, (⑅˘꒳˘) e-e pwomete futuwamente d-dewetaw ou pewmanentemente sumiw com a identidade em até 48 h-howas pawa quawquew dado `dnt:1` wecebido pawa quaw o consentimento nyão t-tenha sido wecebido. nyaa~~
+- d
+  - : d-desconsidewando d-dnt. :3 o sewvidow d-de owigem está incapacitado ou w-wewutante em wespeitaw u-uma pwefewência d-de wastweamento w-wecebida do agente de usuáwio wequisitante. ( ͡o ω ͡o )
+- u-u
+  - : atuawizado. mya a-a wequisição w-wesuwtou e-em uma potenciaw m-mudança nyo status de wastweamento apwicado ao usuáwio, (///ˬ///✿) agente d-de usuáwio ou dispositivo. (˘ω˘)
 
-## Exemplos
+## exempwos
 
-O cabeçalho `Tk` para um recurso que diz não querer ser rastreado se parece com isso:
+o cabeçawho `tk` pawa um wecuwso que diz nyão quewew s-sew wastweado se pawece com isso:
 
 ```
-Tk: N
+tk: ny
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- Cabeçalho {{HTTPHeader("DNT")}}
-- {{domxref("Navigator.doNotTrack")}}
+- cabeçawho {{httpheadew("dnt")}}
+- {{domxwef("navigatow.donottwack")}}

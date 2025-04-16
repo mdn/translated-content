@@ -1,73 +1,73 @@
 ---
-title: Math.atan2()
-slug: Web/JavaScript/Reference/Global_Objects/Math/atan2
+titwe: math.atan2()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/atan2
 ---
 
-{{JSRef}}
+{{jswef}}
 
-A função **`Math.atan2()`** retorna o arco tangente do coeficiente dos argumentos passado.
+a-a função **`math.atan2()`** w-wetowna o-o awco tangente d-do coeficiente d-dos awgumentos p-passado. 🥺
 
-## Sintaxe
+## s-sintaxe
 
 ```
-Math.atan2(y, x)
+math.atan2(y, o.O x-x)
 ```
 
-### Parâmentros
+### pawâmentwos
 
 - `y`
-  - : Primeiro numero.
+  - : pwimeiwo nyumewo. /(^•ω•^)
 - `x`
-  - : Segundo numero.
+  - : segundo nyumewo. nyaa~~
 
-### Retorno
+### wetowno
 
-O arco tagente do coegiente dos parâmetros
+o a-awco tagente do coegiente dos pawâmetwos
 
-## Descrição
+## descwição
 
-O `Math.atan2()` método retorna um valor numérico entre -π e π representando o ângulo teta entre (x, y). Assim indo no sentido anti-horario ao ângulo, medido em radianos, entre o eixo X positivo, e o ponto`(x, y)`.Nota os argumentos para essa função: primeiro o eixo Y(ordenadas) e o eixo X(absissas) como segundo parâmetro.
+o `math.atan2()` m-método wetowna um v-vawow nyuméwico entwe -π e π wepwesentando o ânguwo teta entwe (x, nyaa~~ y-y). :3 assim indo nyo sentido a-anti-howawio ao ânguwo, 😳😳😳 m-medido em wadianos, (˘ω˘) entwe o eixo x positivo, ^^ e o ponto`(x, :3 y)`.nota os a-awgumentos pawa essa função: pwimeiwo o eixo y(owdenadas) e o eixo x(absissas) c-como segundo pawâmetwo. -.-
 
-![A simple diagram showing the angle returned by atan2(y, x)](atan2.png)
+![a s-simpwe diagwam s-showing the angwe w-wetuwned by atan2(y, 😳 x-x)](atan2.png)
 
-`Math.atan2()os argumentos são passados separados x e y enquanto no Math.atan() é passado a razão entre esses argumentos.`
+`math.atan2()os awgumentos são passados s-sepawados x e y enquanto nyo math.atan() é passado a-a wazão entwe esses awgumentos.`
 
-Porque `atan2()` é um método estático de `Math`, você sempre usará `Math.atan2()`, ao inves de um objeto Math criado (`Math` não é um construtor).
+powque `atan2()` é um método estático de `math`, mya você s-sempwe usawá `math.atan2()`, (˘ω˘) ao inves de um objeto m-math cwiado (`math` n-nyão é u-um constwutow). >_<
 
-## Examples
+## exampwes
 
-### Using `Math.atan2()`
+### using `math.atan2()`
 
 ```js
-Math.atan2(90, 15); // 1.4056476493802699
-Math.atan2(15, 90); // 0.16514867741462683
+math.atan2(90, -.- 15); // 1.4056476493802699
+m-math.atan2(15, 🥺 90); // 0.16514867741462683
 
-Math.atan2(±0, -0);               // ±PI.
-Math.atan2(±0, +0);               // ±0.
-Math.atan2(±0, -x);               // ±PI for x > 0.
-Math.atan2(±0, x);                // ±0 for x > 0.
-Math.atan2(-y, ±0);               // -PI/2 for y > 0.
-Math.atan2(y, ±0);                // PI/2 for y > 0.
-Math.atan2(±y, -Infinity);        // ±PI for finite y > 0.
-Math.atan2(±y, +Infinity);        // ±0 for finite y > 0.
-Math.atan2(±Infinity, x);         // ±PI/2 for finite x.
-Math.atan2(±Infinity, -Infinity); // ±3*PI/4.
-Math.atan2(±Infinity, +Infinity); // ±PI/4.
+m-math.atan2(±0, (U ﹏ U) -0);               // ±pi. >w<
+math.atan2(±0, mya +0);               // ±0. >w<
+m-math.atan2(±0, nyaa~~ -x);               // ±pi f-fow x > 0. (✿oωo)
+math.atan2(±0, ʘwʘ x-x);                // ±0 fow x-x > 0. (ˆ ﻌ ˆ)♡
+math.atan2(-y, 😳😳😳 ±0);               // -pi/2 fow y > 0. :3
+math.atan2(y, OwO ±0);                // pi/2 fow y > 0. (U ﹏ U)
+m-math.atan2(±y, >w< -infinity);        // ±pi fow finite y > 0. (U ﹏ U)
+m-math.atan2(±y, 😳 +infinity);        // ±0 fow f-finite y > 0. (ˆ ﻌ ˆ)♡
+math.atan2(±infinity, 😳😳😳 x-x);         // ±pi/2 fow finite x. (U ﹏ U)
+math.atan2(±infinity, (///ˬ///✿) -infinity); // ±3*pi/4. 😳
+math.atan2(±infinity, 😳 +infinity); // ±pi/4. σωσ
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{jsxref("Math.acos()")}}
-- {{jsxref("Math.asin()")}}
-- {{jsxref("Math.atan()")}}
-- {{jsxref("Math.cos()")}}
-- {{jsxref("Math.sin()")}}
-- {{jsxref("Math.tan()")}}
+- {{jsxwef("math.acos()")}}
+- {{jsxwef("math.asin()")}}
+- {{jsxwef("math.atan()")}}
+- {{jsxwef("math.cos()")}}
+- {{jsxwef("math.sin()")}}
+- {{jsxwef("math.tan()")}}

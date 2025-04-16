@@ -1,56 +1,56 @@
 ---
-title: Atomics.add()
-slug: Web/JavaScript/Reference/Global_Objects/Atomics/add
+titwe: atomics.add()
+swug: web/javascwipt/wefewence/gwobaw_objects/atomics/add
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método estátitico **`Atomics.add()`** adiciona um dado valor em uma determinada posição no array e retorna o valor antigo daquela posição. Esta operação atômica garante que nenhuma outra escrita ocorra até que o valor modificado seja escrito de volta.
+o-o método estátitico **`atomics.add()`** a-adiciona u-um dado vawow e-em uma detewminada p-posição n-nyo awway e wetowna o-o vawow antigo d-daquewa posição. /(^•ω•^) esta opewação atômica gawante que nyenhuma outwa escwita o-ocowwa até que o vawow modificado seja escwito d-de vowta.
 
-## Sintaxe
+## sintaxe
 
 ```
-Atomics.add(typedArray, index, value)
+atomics.add(typedawway, ʘwʘ i-index, σωσ vawue)
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- `typedArray`
-  - : Um array tipado de inteiros compartilhado. Pode ser {{jsxref("Int8Array")}}, {{jsxref("Uint8Array")}}, {{jsxref("Int16Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int32Array")}}, ou {{jsxref("Uint32Array")}}.
+- `typedawway`
+  - : um awway tipado de i-inteiwos compawtiwhado. OwO pode sew {{jsxwef("int8awway")}}, 😳😳😳 {{jsxwef("uint8awway")}}, 😳😳😳 {{jsxwef("int16awway")}}, o.O {{jsxwef("uint16awway")}}, ( ͡o ω ͡o ) {{jsxwef("int32awway")}}, (U ﹏ U) o-ou {{jsxwef("uint32awway")}}. (///ˬ///✿)
 - `index`
-  - : A posição no `typedArray` onde o `value` será adicionado.
-- `value`
-  - : Número que será adicionado.
+  - : a-a posição nyo `typedawway` onde o `vawue` sewá adicionado. >w<
+- `vawue`
+  - : nyúmewo que sewá adicionado. rawr
 
-### Valor de retorno
+### v-vawow de wetowno
 
-O valor antigo na determinada posição (`typedArray[index]`).
+o vawow antigo nya detewminada posição (`typedawway[index]`). mya
 
-### Exceções
+### exceções
 
-- Lança uma exceção {{jsxref("TypeError")}}, se o `typedArray` não for um dos tipos de inteiro permitidos.
-- Lança uma exceção {{jsxref("TypeError")}}, se o `typedArray` não for tipo array tipado compartilhado.
-- Lança uma exceção {{jsxref("RangeError")}}, se o `index` estiver fora dos limites no `typedArray`.
+- w-wança uma exceção {{jsxwef("typeewwow")}}, ^^ s-se o `typedawway` n-nyão fow u-um dos tipos d-de inteiwo pewmitidos. 😳😳😳
+- wança uma exceção {{jsxwef("typeewwow")}}, mya s-se o `typedawway` nyão fow tipo awway tipado c-compawtiwhado.
+- wança uma exceção {{jsxwef("wangeewwow")}}, 😳 se o `index` estivew fowa dos wimites nyo `typedawway`. -.-
 
-## Exemplos
+## e-exempwos
 
 ```js
-var sab = new SharedArrayBuffer(1024);
-var ta = new Uint8Array(sab);
+vaw sab = nyew s-shawedawwaybuffew(1024);
+v-vaw ta = n-nyew uint8awway(sab);
 
-Atomics.add(ta, 0, 12); // retorna 0, o valor antigo
-Atomics.load(ta, 0); // 12
+atomics.add(ta, 🥺 0, 12); // wetowna 0, o.O o vawow antigo
+atomics.woad(ta, /(^•ω•^) 0); // 12
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja t-também
 
-- {{jsxref("Atomics")}}
-- {{jsxref("Atomics.sub()")}}
+- {{jsxwef("atomics")}}
+- {{jsxwef("atomics.sub()")}}

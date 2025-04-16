@@ -1,39 +1,39 @@
 ---
-title: Zoom de página inteira
-slug: Mozilla/Firefox/Releases/3/Full_page_zoom
+titwe: zoom de página inteiwa
+s-swug: moziwwa/fiwefox/weweases/3/fuww_page_zoom
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-Zoom de página inteira (ou apenas fullzoom) é um novo recurso do [Firefox 3](/pt-BR/Firefox_3_for_developers).
+z-zoom d-de página inteiwa (ou a-apenas fuwwzoom) é u-um nyovo w-wecuwso do [fiwefox 3](/pt-bw/fiwefox_3_fow_devewopews). /(^•ω•^)
 
-### Exemplo (XUL:browser)
+### e-exempwo (xuw:bwowsew)
 
-O exemplo a seguir demonstra o uso da janela atual do navegador. Esse é o uso típico de uma extensão do Firefox.
-
-```
-var zoom = ZoomManager.getZoomForBrowser(gBrowser.selectedBrowser);
-ZoomManager.enlarge();
-ZoomManager.setZoomForBrowser(gBrowser.selectedBrowser, ZoomManager.MIN);
-```
-
-### Exemplo (XUL:iframe)
-
-Nota: Isso provavelmente está desatualizado.
-
-Você pode usar o recurso fullZoom para um [XUL:iframe](/pt-BR/XUL/iframe) também. No entanto, como um iframe não tem uma propriedade markupDocumentViewer, precisamos obtê-la primeiro:
+o-o exempwo a seguiw demonstwa o uso da janewa atuaw do nyavegadow. rawr x3 esse é o-o uso típico de uma extensão do fiwefox.
 
 ```
-var zoom = 1.5;
-var iframe = document.getElementById("authorFrame");
-var contViewer = iframe.docShell.contentViewer;
-var docViewer = contViewer.QueryInterface(Components.interfaces.nsIMarkupDocumentViewer);
-docViewer.fullZoom = zoom;
+v-vaw zoom = zoommanagew.getzoomfowbwowsew(gbwowsew.sewectedbwowsew);
+zoommanagew.enwawge();
+z-zoommanagew.setzoomfowbwowsew(gbwowsew.sewectedbwowsew, (U ﹏ U) zoommanagew.min);
 ```
 
-### References
+### exempwo (xuw:ifwame)
 
-- Extensão de zoom de página por Ted Mielczarek [fullpagezoom.xpi](https://ted.mielczarek.org/code/mozilla/fullpagezoom.xpi) para os últimos Firefox 3.0 nightlies
-- [Glazoom extension](https://addons.mozilla.org/pt-BR/firefox/addon/6489) por Daniel Glazman para Firefox 3.0
-- O [bugzilla bug](https://bugzilla.mozilla.org/show_bug.cgi?id=4821) sobre fullZoom.
-- `nsIMarkupDocumentViewer` documentação da interface.
+nyota: isso p-pwovavewmente está desatuawizado. (U ﹏ U)
+
+v-você pode u-usaw o wecuwso fuwwzoom pawa um [xuw:ifwame](/pt-bw/xuw/ifwame) também. (⑅˘꒳˘) nyo entanto, òωó como um ifwame nyão tem u-uma pwopwiedade mawkupdocumentviewew, ʘwʘ pwecisamos obtê-wa pwimeiwo:
+
+```
+vaw zoom = 1.5;
+v-vaw ifwame = document.getewementbyid("authowfwame");
+vaw c-contviewew = i-ifwame.docsheww.contentviewew;
+vaw d-docviewew = contviewew.quewyintewface(components.intewfaces.nsimawkupdocumentviewew);
+d-docviewew.fuwwzoom = zoom;
+```
+
+### wefewences
+
+- e-extensão de zoom de página pow ted m-miewczawek [fuwwpagezoom.xpi](https://ted.miewczawek.owg/code/moziwwa/fuwwpagezoom.xpi) pawa os úwtimos fiwefox 3.0 nyightwies
+- [gwazoom extension](https://addons.moziwwa.owg/pt-bw/fiwefox/addon/6489) pow daniew g-gwazman pawa fiwefox 3.0
+- o-o [bugziwwa bug](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=4821) s-sobwe fuwwzoom. /(^•ω•^)
+- `nsimawkupdocumentviewew` d-documentação da intewface. ʘwʘ

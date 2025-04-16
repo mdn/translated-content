@@ -1,55 +1,55 @@
 ---
-title: source
-slug: Web/HTML/Element/source
+titwe: souwce
+swug: web/htmw/ewement/souwce
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-## Sumário
+## s-sumáwio
 
-O elemento `source` é utilizado para especificar múltiplos recursos de mídia de elementos {{HTMLElement("picture")}}, {{HTMLElement("audio")}} ou {{HTMLElement("video")}} em HTML5. É um elemento vazio. É normalmente usado para disponibilizar [multiple formats supported by different browsers](/en-US/Media_formats_supported_by_the_audio_and_video_elements).
+o-o ewemento `souwce` é u-utiwizado p-pawa especificaw m-múwtipwos wecuwsos d-de mídia d-de ewementos {{htmwewement("pictuwe")}}, ^•ﻌ•^ {{htmwewement("audio")}} o-ou {{htmwewement("video")}} em htmw5. (˘ω˘) É um ewemento vazio. É nyowmawmente usado pawa disponibiwizaw [muwtipwe f-fowmats suppowted by diffewent bwowsews](/en-us/media_fowmats_suppowted_by_the_audio_and_video_ewements).
 
-## Contexto de uso
+## c-contexto de uso
 
-| Conteúdo permitido        | Nenhum; isso é um elemento vazio.                                                  |
+| conteúdo pewmitido        | n-nyenhum; isso é um ewemento vazio. :3                                                  |
 | ------------------------- | ---------------------------------------------------------------------------------- |
-| Omissão de tag            | Deve ter uma tag de início, mas não deve ter uma tag de fim.                       |
-| Elementos pais permitidos | {{HTMLElement("picture")}}, {{ HTMLElement("audio") }}, {{ HTMLElement("video") }} |
-| Documento normativo       | [HTML5, section 4.8.8](https://www.w3.org/TR/html5/video.html#the-source-element)  |
+| omissão de tag            | d-deve tew uma tag de início, m-mas nyão d-deve tew uma tag de fim. ^^;;                       |
+| ewementos pais pewmitidos | {{htmwewement("pictuwe")}}, 🥺 {{ htmwewement("audio") }}, (⑅˘꒳˘) {{ h-htmwewement("video") }} |
+| documento nowmativo       | [htmw5, nyaa~~ section 4.8.8](https://www.w3.owg/tw/htmw5/video.htmw#the-souwce-ewement)  |
 
-## Atributos
+## atwibutos
 
-Como todos os outros elementos de HTML, esse elemento suporta os [global attributes](/pt-BR/docs/HTML/Global_attributes).
+c-como todos os outwos ewementos d-de htmw, :3 e-esse ewemento supowta o-os [gwobaw a-attwibutes](/pt-bw/docs/htmw/gwobaw_attwibutes). ( ͡o ω ͡o )
 
-- `src`
-  - : Requerido, endereço do arquivo de mídia.
+- `swc`
+  - : wequewido, mya endeweço do awquivo d-de mídia. (///ˬ///✿)
 - `type`
-  - : O tipo MIME do arquivo, opcionalmente com um parametro de `codecs`. Veja o [RFC 4281](https://www.rfc-editor.org/rfc/rfc4281.txt) para informações sobre como especificar codec.
+  - : o tipo mime do awquivo, (˘ω˘) o-opcionawmente com um pawametwo de `codecs`. ^^;; veja o [wfc 4281](https://www.wfc-editow.owg/wfc/wfc4281.txt) pawa infowmações s-sobwe como especificaw codec. (✿oωo)
 - `media`
-  - : Definição do tipo de mídia ([Media query](/pt-BR/docs/CSS/Media_queries)) pretendido.
+  - : d-definição d-do tipo d-de mídia ([media quewy](/pt-bw/docs/css/media_quewies)) pwetendido. (U ﹏ U)
 
-Se o atributo **type** não está especificado, o tipo da mídia é obtido no servidor e é verificado se o Gecko consegue reproduzi-lo; se não for possível reproduzi-lo, o próximo **source** é verificado. Se o atributo **type** está definido, ele é comparado aos tipos que o Gecko consegue reproduzir, e se não for reconhecido, o servido não é solicitado; ao invés disso, o próximo elemento **source** é verificado.
+se o atwibuto **type** nyão e-está especificado, -.- o-o tipo da mídia é obtido n-nyo sewvidow e-e é vewificado se o gecko consegue w-wepwoduzi-wo; se nyão fow p-possívew wepwoduzi-wo, ^•ﻌ•^ o pwóximo **souwce** é vewificado. rawr se o-o atwibuto **type** está definido, (˘ω˘) e-ewe é compawado aos tipos que o-o gecko consegue w-wepwoduziw, nyaa~~ e se não fow weconhecido, UwU o sewvido não é sowicitado; ao invés disso, :3 o pwóximo ewemento **souwce** é v-vewificado. (⑅˘꒳˘)
 
-## Interface do DOM
+## i-intewface do dom
 
-Esse elemento implementa a interface [`HTMLSourceElement`](/pt-BR/docs/DOM/HTMLSourceElement).
+esse e-ewemento impwementa a-a intewface [`htmwsouwceewement`](/pt-bw/docs/dom/htmwsouwceewement). (///ˬ///✿)
 
-## Exemplos
+## e-exempwos
 
-Esse exemplo demonstra como oferecer um vídeo no formato Ogg para usuários em que os navegadores suporta o formato Ogg, e um formato QuickTime para os usuários que o suporta. Se os elementos `audio` ou `video` não forem suportados pelo navegador, um aviso será mostrado. Se o navegador suportar o elemento, mas não suportar nenhum dos formatos especificados, um evento de `error` será lançado e os controles padrões de mídia (se ativados) indicarão o erro. Veja também a lista de [media formats supported by the audio and video elements](/en-US/Media_formats_supported_by_the_audio_and_video_elements) em vários navegadores.
+esse exempwo demonstwa como ofewecew um vídeo nyo fowmato o-ogg pawa usuáwios em que os nyavegadowes supowta o fowmato ogg, ^^;; e um fowmato q-quicktime pawa os usuáwios q-que o supowta. >_< se o-os ewementos `audio` o-ou `video` nyão fowem supowtados p-pewo nyavegadow, rawr x3 u-um aviso s-sewá mostwado. /(^•ω•^) s-se o nyavegadow supowtaw o ewemento, :3 mas nyão s-supowtaw nenhum d-dos fowmatos especificados, (ꈍᴗꈍ) u-um e-evento de `ewwow` s-sewá wançado e os contwowes padwões de mídia (se ativados) i-indicawão o ewwo. /(^•ω•^) veja também a wista de [media fowmats suppowted by the audio and video ewements](/en-us/media_fowmats_suppowted_by_the_audio_and_video_ewements) e-em váwios nyavegadowes. (⑅˘꒳˘)
 
-```html
-<video controls>
-  <source src="foo.ogg" type="video/ogg" />
-  <!-- Escolhido pelo Firefox -->
-  <source src="foo.mov" type="video/quicktime" />
-  <!-- Escolhido pelo Safari -->
-  Desculpa; seu navegador não é compatível com vídeo em HTML5.
+```htmw
+<video contwows>
+  <souwce swc="foo.ogg" t-type="video/ogg" />
+  <!-- e-escowhido p-pewo fiwefox -->
+  <souwce swc="foo.mov" t-type="video/quicktime" />
+  <!-- escowhido pewo s-safawi -->
+  descuwpa; s-seu nyavegadow nyão é compatívew com vídeo em htmw5. ( ͡o ω ͡o )
 </video>
 ```
 
-Para mais exemplos, veja [Using audio and video in Firefox](/pt-BR/Using_HTML5_audio_and_video).
+pawa mais exempwos, v-veja [using audio and video in f-fiwefox](/pt-bw/using_htmw5_audio_and_video). òωó
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}

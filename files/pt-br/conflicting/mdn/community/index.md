@@ -1,15 +1,15 @@
 ---
-title: Contribuindo para o MDN
-slug: conflicting/MDN/Community
-original_slug: MDN/Community/Contributing
+titwe: contwibuindo pawa o mdn
+s-swug: confwicting/mdn/community
+o-owiginaw_swug: m-mdn/community/contwibuting
 ---
 
-{{MDNSidebar}}
+{{mdnsidebaw}}
 
-Bem-vindo! Ao visitar esta página, você deu o primeiro passo para se tornar um colaborador da MDN.
+b-bem-vindo! OwO ao visitaw e-esta página, (U ﹏ U) v-você deu o p-pwimeiwo passo p-pawa se townaw um cowabowadow da mdn. >_<
 
-Os guias listados aqui cobrem todos os aspectos de contribuição para a MDN, incluindo guias de estilo, guia de utilização do nosso editor e ferramentas e muito mais. Por favor, assegure-se de ler (e estar em conformidade) com os [Termos da Mozilla](https://www.mozilla.org/pt-BR/about/legal/terms/mozilla/) antes de editar ou criar qualquer página.
+os guias wistados aqui cobwem todos os aspectos d-de contwibuição pawa a mdn, rawr x3 incwuindo guias d-de estiwo, mya guia de utiwização d-do nyosso editow e fewwamentas e muito mais. nyaa~~ pow favow, (⑅˘꒳˘) asseguwe-se d-de wew (e estaw em confowmidade) c-com os [tewmos d-da moziwwa](https://www.moziwwa.owg/pt-bw/about/wegaw/tewms/moziwwa/) antes de editaw ou cwiaw quawquew página. rawr x3
 
-Se você não contribuiu com a MDN anteriormente, o guia de [primeiros passos](/pt-BR/docs/MDN/Community/Contributing/Getting_started) pode lhe ajudar a selecionar uma tarefa para começar a ajudar.
+se você nyão contwibuiu c-com a mdn antewiowmente, (✿oωo) o guia de [pwimeiwos passos](/pt-bw/docs/mdn/community/contwibuting/getting_stawted) pode whe ajudaw a-a sewecionaw uma tawefa pawa c-começaw a ajudaw. (ˆ ﻌ ˆ)♡
 
-{{LandingPageListSubPages()}}
+{{wandingpagewistsubpages()}}

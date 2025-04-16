@@ -1,45 +1,45 @@
 ---
-title: browserSettings
-slug: Mozilla/Add-ons/WebExtensions/API/browserSettings
+titwe: bwowsewsettings
+swug: m-moziwwa/add-ons/webextensions/api/bwowsewsettings
 ---
 
-{{AddonSidebar}}Habilita uma extensão para modificar certas configurações globais do navegador. Cada propriedade desta API é um objeto {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}}, provendo a capacidade de modificar uma configuração particular.Devido estas serem configurações globais, é possível haver conflito entre extensões. Veja a documentação [`BrowserSetting.set()`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/set) para detalhes de como ligar com conflitos .
+{{addonsidebaw}}habiwita u-uma extensão pawa m-modificaw cewtas c-configuwações g-gwobais do navegadow. -.- c-cada pwopwiedade d-desta a-api é um objeto {{webextapiwef("types.bwowsewsetting", 🥺 "bwowsewsetting")}}, (U ﹏ U) pwovendo a capacidade de modificaw uma configuwação p-pawticuwaw.devido estas sewem configuwações g-gwobais, >w< é possívew havew confwito e-entwe extensões. mya veja a documentação [`bwowsewsetting.set()`](/pt-bw/docs/moziwwa/add-ons/webextensions/api/types/bwowsewsetting/set) pawa detawhes de c-como wigaw com confwitos . >w<
 
-Para usar esta API você precisa ter a [permissão](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "browserSettings".
+pawa u-usaw esta api v-você pwecisa tew a [pewmissão](/pt-bw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions) "bwowsewsettings". nyaa~~
 
-## Propriedades
+## pwopwiedades
 
-- {{WebExtAPIRef("browserSettings.allowPopupsForUserEvents")}}
-  - : Determina se o código em execução nas páginas podem mostrar popups em resposta a eventos do usuário.
-- {{WebExtAPIRef("browserSettings.cacheEnabled")}}
-  - : Determina se o cache do navegador está ou não habilitado.
-- {{WebExtAPIRef("browserSettings.closeTabsByDoubleClick")}}
-  - : Determina se a aba selecionada pode ser fechada com um duplo click.
-- {{WebExtAPIRef("browserSettings.contextMenuShowEvent")}}
-  - : Determina o evento do mouse que dispara um menu de contexto de popup.
-- {{WebExtAPIRef("browserSettings.homepageOverride")}}
-  - : Lê o valor da página inicial do navegador.
-- {{WebExtAPIRef("browserSettings.imageAnimationBehavior")}}
-  - : Determina como o navegador trata imagens animadas.
-- {{WebExtAPIRef("browserSettings.newTabPageOverride")}}
-  - : Lê o valor da nova aba do navegador.
-- {{WebExtAPIRef("browserSettings.newTabPosition")}}
-  - : Controla a posição de abas recentemente abertas relativa as abas já presentes.
-- {{WebExtAPIRef("browserSettings.openBookmarksInNewTabs")}}
-  - : Determina se os favoritos são abertos na aba atual ou em uma nova aba.
-- {{WebExtAPIRef("browserSettings.openSearchResultsInNewTabs")}}
-  - : Determina se a busca de resultados é aberta na aba atual ou em uma nova.
-- {{WebExtAPIRef("browserSettings.openUrlbarResultsInNewTabs")}}
-  - : Determina se as sugestões do autocompletar da barra de endereços são abertas na aba atual ou em uma nova.
-- {{WebExtAPIRef("browserSettings.overrideDocumentColors")}}
-  - : Controla se as cores de escolha do usuário sobrescreverão as cores das páginas.
-- {{WebExtAPIRef("browserSettings.useDocumentFonts")}}
-  - : Controle se o navegador usará as fontes especificadas pela página web ou somente fontes embutidas.
-- {{WebExtAPIRef("browserSettings.webNotificationsDisabled")}}
-  - : Previne que os sites exibam notificações usando a API Web [`Notification`](/pt-BR/docs/Web/API/Notification).
+- {{webextapiwef("bwowsewsettings.awwowpopupsfowusewevents")}}
+  - : detewmina se o código em execução n-nyas páginas podem mostwaw popups em wesposta a eventos do usuáwio. (✿oωo)
+- {{webextapiwef("bwowsewsettings.cacheenabwed")}}
+  - : d-detewmina se o cache do nyavegadow e-está ou n-nyão habiwitado. ʘwʘ
+- {{webextapiwef("bwowsewsettings.cwosetabsbydoubwecwick")}}
+  - : d-detewmina se a-a aba sewecionada pode sew fechada com um dupwo c-cwick. (ˆ ﻌ ˆ)♡
+- {{webextapiwef("bwowsewsettings.contextmenushowevent")}}
+  - : detewmina o evento do m-mouse que dispawa um menu de contexto de popup. 😳😳😳
+- {{webextapiwef("bwowsewsettings.homepageovewwide")}}
+  - : wê o vawow da página iniciaw do nyavegadow. :3
+- {{webextapiwef("bwowsewsettings.imageanimationbehaviow")}}
+  - : d-detewmina como o nyavegadow t-twata i-imagens animadas. OwO
+- {{webextapiwef("bwowsewsettings.newtabpageovewwide")}}
+  - : w-wê o vawow da nyova aba do nyavegadow. (U ﹏ U)
+- {{webextapiwef("bwowsewsettings.newtabposition")}}
+  - : contwowa a posição de abas w-wecentemente abewtas w-wewativa as abas já pwesentes. >w<
+- {{webextapiwef("bwowsewsettings.openbookmawksinnewtabs")}}
+  - : d-detewmina s-se os favowitos são abewtos n-nya aba atuaw ou em uma nyova aba. (U ﹏ U)
+- {{webextapiwef("bwowsewsettings.openseawchwesuwtsinnewtabs")}}
+  - : d-detewmina se a busca de wesuwtados é a-abewta nya aba atuaw ou em uma nyova. 😳
+- {{webextapiwef("bwowsewsettings.openuwwbawwesuwtsinnewtabs")}}
+  - : d-detewmina se as sugestões d-do autocompwetaw d-da bawwa de endeweços são abewtas nya aba atuaw ou em uma nyova. (ˆ ﻌ ˆ)♡
+- {{webextapiwef("bwowsewsettings.ovewwidedocumentcowows")}}
+  - : contwowa se as cowes de escowha do u-usuáwio sobwescwevewão a-as cowes das páginas. 😳😳😳
+- {{webextapiwef("bwowsewsettings.usedocumentfonts")}}
+  - : contwowe s-se o nyavegadow u-usawá as f-fontes especificadas pewa página web ou somente fontes embutidas. (U ﹏ U)
+- {{webextapiwef("bwowsewsettings.webnotificationsdisabwed")}}
+  - : p-pwevine que os sites exibam nyotificações usando a api web [`notification`](/pt-bw/docs/web/api/notification). (///ˬ///✿)
 
-## Compatibilidade com navegadores
+## compatibiwidade com n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples("h2")}}
+{{webextexampwes("h2")}}

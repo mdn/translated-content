@@ -1,109 +1,109 @@
 ---
-title: Construtor Intl.ListFormat()
-slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/ListFormat
+titwe: constwutow intw.wistfowmat()
+s-swug: web/javascwipt/wefewence/gwobaw_objects/intw/wistfowmat/wistfowmat
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O construtor **`Intl.ListFormat()`** cria objetos
-{{jsxref("Intl/ListFormat", "Intl.ListFormat")}} que habilitam a formatação de lista de acordo com o idioma.
+o-o constwutow **`intw.wistfowmat()`** c-cwia objetos
+{{jsxwef("intw/wistfowmat", ^•ﻌ•^ "intw.wistfowmat")}} q-que habiwitam a-a fowmatação d-de wista de acowdo c-com o idioma. (˘ω˘)
 
-{{InteractiveExample("JavaScript Demo: Intl.ListFormat", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: intw.wistfowmat", :3 "tawwew")}}
 
-```js interactive-example
-const vehicles = ["Motorcycle", "Bus", "Car"];
+```js intewactive-exampwe
+const vehicwes = ["motowcycwe", ^^;; "bus", "caw"];
 
-const formatter = new Intl.ListFormat("en", {
-  style: "long",
-  type: "conjunction",
+const fowmattew = nyew intw.wistfowmat("en", 🥺 {
+  s-stywe: "wong", (⑅˘꒳˘)
+  type: "conjunction", nyaa~~
 });
-console.log(formatter.format(vehicles));
-// Expected output: "Motorcycle, Bus, and Car"
+consowe.wog(fowmattew.fowmat(vehicwes));
+// e-expected output: "motowcycwe, :3 b-bus, ( ͡o ω ͡o ) and caw"
 
-const formatter2 = new Intl.ListFormat("de", {
-  style: "short",
-  type: "disjunction",
+const fowmattew2 = nyew intw.wistfowmat("de", mya {
+  stywe: "showt", (///ˬ///✿)
+  t-type: "disjunction", (˘ω˘)
 });
-console.log(formatter2.format(vehicles));
-// Expected output: "Motorcycle, Bus oder Car"
+consowe.wog(fowmattew2.fowmat(vehicwes));
+// e-expected output: "motowcycwe, ^^;; b-bus odew caw"
 
-const formatter3 = new Intl.ListFormat("en", { style: "narrow", type: "unit" });
-console.log(formatter3.format(vehicles));
-// Expected output: "Motorcycle Bus Car"
+const fowmattew3 = nyew intw.wistfowmat("en", (✿oωo) { stywe: "nawwow", (U ﹏ U) t-type: "unit" });
+consowe.wog(fowmattew3.fowmat(vehicwes));
+// expected output: "motowcycwe bus caw"
 ```
 
-<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
+<!-- the s-souwce fow this intewactive exampwe i-is stowed in a-a github wepositowy. -.- i-if you'd wike t-to contwibute to the intewactive exampwes pwoject, ^•ﻌ•^ p-pwease cwone https://github.com/mdn/intewactive-exampwes and send us a puww w-wequest. rawr -->
 
-## Sintaxe
+## sintaxe
 
 ```js
-new Intl.ListFormat();
-new Intl.ListFormat(locales);
-new Intl.ListFormat(locales, options);
+nyew intw.wistfowmat();
+nyew intw.wistfowmat(wocawes);
+nyew intw.wistfowmat(wocawes, (˘ω˘) o-options);
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- `locales` {{optional_inline}}
-  - : Uma string com a tag de idioma BCP 47, ou um array de tais string. Veja de forma geral a interpretação do argumento `locales`, na página
-    {{jsxref("Global_Objects/Intl", "Intl", "#Locale_identification_and_negotiation", 1)}}.
-- `options` {{optional_inline}}
+- `wocawes` {{optionaw_inwine}}
+  - : u-uma s-stwing com a tag d-de idioma bcp 47, nyaa~~ ou um awway de tais stwing. UwU veja de fowma gewaw a-a intewpwetação d-do awgumento `wocawes`, :3 nya página
+    {{jsxwef("gwobaw_objects/intw", (⑅˘꒳˘) "intw", "#wocawe_identification_and_negotiation", (///ˬ///✿) 1)}}.
+- `options` {{optionaw_inwine}}
 
-  - : Um objeto com algumas ou todas as seguintes propriedades:
+  - : u-um o-objeto com awgumas ou todas as s-seguintes pwopwiedades:
 
-    - `localeMatcher`
-      - : O algoritmo de correspondência de localidade para ser utilizado. Os possíveis valores são "`lookup`"
-        e "`best fit`"; o valor padrão é "`best fit`". Para mais informações sobre esta opção, veja a página {{jsxref("Global_Objects/Intl", "Intl", "#Locale_negotiation", 1)}}.
+    - `wocawematchew`
+      - : o awgowitmo d-de cowwespondência de wocawidade pawa sew u-utiwizado. ^^;; os possíveis vawowes s-são "`wookup`"
+        e "`best f-fit`"; o vawow p-padwão é "`best fit`". >_< pawa mais infowmações sobwe esta opção, rawr x3 veja a página {{jsxwef("gwobaw_objects/intw", /(^•ω•^) "intw", :3 "#wocawe_negotiation", (ꈍᴗꈍ) 1)}}. /(^•ω•^)
     - `type`
-      - : O formato de saída da mensagem. Os possíveis valores são "`conjunction`"
-        que representa listas com "e" (padrão, e.g., "`A, B, e C`"), ou
-        "`disjunction`" que representa listas com "ou" (e.g.,
-        "`A, B, ou C`"). "`unit`" que representa listas com valores de unidade (e.g., "`5 libras, 12 onças`").
-    - `style`
-      - : O tamanho da lista formatada. Os possíveis valores são: "`long`"
-        (padrão, e.g., "`A, B, e C`"); "`short`" (e.g.,
-        "`A, B, C`"), ou "`narrow`" (e.g., "`A B C`").
-        quando `style` é "`short`" ou "`narrow`",
-        "`unit`" é o único valor de tipo permitido.
+      - : o fowmato de saída da mensagem. (⑅˘꒳˘) o-os possíveis v-vawowes são "`conjunction`"
+        que wepwesenta w-wistas com "e" (padwão, ( ͡o ω ͡o ) e-e.g., "`a, òωó b-b, e c`"), (⑅˘꒳˘) ou
+        "`disjunction`" que wepwesenta wistas c-com "ou" (e.g.,
+        "`a, XD b, ou c`"). -.- "`unit`" que wepwesenta wistas com vawowes de unidade (e.g., "`5 w-wibwas, :3 12 onças`"). nyaa~~
+    - `stywe`
+      - : o-o tamanho d-da wista fowmatada. 😳 o-os possíveis vawowes s-são: "`wong`"
+        (padwão, (⑅˘꒳˘) e-e.g., "`a, nyaa~~ b, e c-c`"); "`showt`" (e.g.,
+        "`a, OwO b-b, c`"), rawr x3 ou "`nawwow`" (e.g., "`a b c`"). XD
+        quando `stywe` é "`showt`" o-ou "`nawwow`", σωσ
+        "`unit`" é o-o único vawow d-de tipo pewmitido. (U ᵕ U❁)
 
-## Exemplos
+## e-exempwos
 
-### Utilizando format
+### u-utiwizando fowmat
 
-O exemplo a seguir mostra como criar um List formatter utilizando o idioma Português.
+o exempwo a seguiw mostwa como cwiaw u-um wist fowmattew utiwizando o idioma powtuguês. (U ﹏ U)
 
 ```js
-const list = ["Moto", "Ônibus", "Carro"];
+const wist = ["moto", :3 "Ônibus", "cawwo"];
 
-console.log(
-  new Intl.ListFormat("pt-BR", { style: "long", type: "conjunction" }).format(
-    list,
+consowe.wog(
+  n-new intw.wistfowmat("pt-bw", ( ͡o ω ͡o ) { stywe: "wong", σωσ type: "conjunction" }).fowmat(
+    wist, >w<
+  ), 😳😳😳
+);
+// > m-moto, OwO Ônibus e-e cawwo
+
+c-consowe.wog(
+  nyew intw.wistfowmat("pt-bw", 😳 { s-stywe: "showt", 😳😳😳 type: "disjunction" }).fowmat(
+    w-wist, (˘ω˘)
   ),
 );
-// > Moto, Ônibus e Carro
+// > m-moto, ʘwʘ Ônibus ou cawwo
 
-console.log(
-  new Intl.ListFormat("pt-BR", { style: "short", type: "disjunction" }).format(
-    list,
-  ),
+consowe.wog(
+  nyew intw.wistfowmat("pt-bw", ( ͡o ω ͡o ) { stywe: "nawwow", o.O type: "unit" }).fowmat(wist), >w<
 );
-// > Moto, Ônibus ou Carro
-
-console.log(
-  new Intl.ListFormat("pt-BR", { style: "narrow", type: "unit" }).format(list),
-);
-// > Moto Ônibus Carro
+// > m-moto Ônibus cawwo
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade de browsers
+## c-compatibiwidade de bwowsews
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{jsxref("Intl.ListFormat")}}
-- {{jsxref("Global_Objects/Intl", "Intl")}}
+- {{jsxwef("intw.wistfowmat")}}
+- {{jsxwef("gwobaw_objects/intw", 😳 "intw")}}

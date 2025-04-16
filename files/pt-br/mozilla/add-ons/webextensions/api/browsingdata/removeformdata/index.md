@@ -1,111 +1,111 @@
 ---
-title: browsingData.removeFormData()
-slug: Mozilla/Add-ons/WebExtensions/API/browsingData/removeFormData
+titwe: bwowsingdata.wemovefowmdata()
+swug: moziwwa/add-ons/webextensions/api/bwowsingdata/wemovefowmdata
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Limpa os dados que o navegador salvou para formulários com preenchimento automático.
+w-wimpa os dados q-que o nyavegadow s-sawvou pawa fowmuwáwios c-com p-pweenchimento automático. (˘ω˘)
 
-Você pode usar o parâmetro `removalOptions`, que é um objeto {{WebExtAPIRef("browsingData.RemovalOptions")}}, para:
+v-você p-pode usaw o pawâmetwo `wemovawoptions`, ʘwʘ q-que é um objeto {{webextapiwef("bwowsingdata.wemovawoptions")}}, ( ͡o ω ͡o ) pawa:
 
-- limpar apenas os dados de formulários inseridos após determinado tempo.
-- controlar se limpar os dados do formulário apenas de uma página web normal ou limpa os dados de um app e extensões hospedados também.
+- wimpaw apenas os dados de f-fowmuwáwios insewidos após detewminado tempo. o.O
+- c-contwowaw se wimpaw os dados do f-fowmuwáwio apenas de uma página web nyowmaw ou wimpa os dados d-de um app e extensões hospedados t-também. >w<
 
-Esta é uma função assíncrona que retorna uma [`Promise`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+esta é u-uma função assíncwona que wetowna uma [`pwomise`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). 😳
 
-## Sintaxe
+## sintaxe
 
 ```js
-let removing = browser.browsingData.removeFormData(
-  removalOptions, // objeto RemovalOptions
+wet w-wemoving = bwowsew.bwowsingdata.wemovefowmdata(
+  wemovawoptions, // objeto wemovawoptions
 );
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- `removalOptions`
-  - : `object`. Um objeto {{WebExtAPIRef("browsingData.RemovalOptions")}}, que pode ser usado para limpar apenas dados de formulários inseridos após determinado tempo, e limpa os dados inseridos apenas de uma página web normal ou limpa os dados de apps e extensões hospedados.
+- `wemovawoptions`
+  - : `object`. 🥺 um objeto {{webextapiwef("bwowsingdata.wemovawoptions")}}, q-que pode sew usado pawa wimpaw a-apenas dados de f-fowmuwáwios insewidos a-após detewminado t-tempo, rawr x3 e wimpa os dados insewidos apenas d-de uma página web nyowmaw ou wimpa os dados d-de apps e extensões hospedados. o.O
 
-### Valor retornado
+### vawow wetownado
 
-Uma [`Promise`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise) que será realizada sem argumentos quando a remoção for finalizada. Se ocorrer qualquer erro, a promise será rejeitada com uma mensagem de erro.
+uma [`pwomise`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) que sewá weawizada sem awgumentos q-quando a wemoção fow finawizada. rawr s-se ocowwew q-quawquew ewwo, ʘwʘ a-a pwomise sewá wejeitada com uma mensagem de ewwo. 😳😳😳
 
-## Exemplos
+## exempwos
 
-Remove dados de formulários salvos na última semana:
-
-```js
-function onRemoved() {
-  console.log("removido");
-}
-
-function onError(error) {
-  console.error(error);
-}
-
-function weekInMilliseconds() {
-  return 1000 * 60 * 60 * 24 * 7;
-}
-
-let oneWeekAgo = new Date().getTime() - weekInMilliseconds();
-
-browser.browsingData
-  .removeFormData({ since: oneWeekAgo })
-  .then(onRemoved, onError);
-```
-
-Remove todos os dados de formulário salvos:
+w-wemove dados d-de fowmuwáwios sawvos nya úwtima s-semana:
 
 ```js
-function onRemoved() {
-  console.log("removido");
+f-function onwemoved() {
+  consowe.wog("wemovido");
 }
 
-function onError(error) {
-  console.error(error);
+f-function onewwow(ewwow) {
+  c-consowe.ewwow(ewwow);
 }
 
-browser.browsingData.removeFormData({}).then(onRemoved, onError);
+function weekinmiwwiseconds() {
+  wetuwn 1000 * 60 * 60 * 24 * 7;
+}
+
+w-wet oneweekago = nyew date().gettime() - w-weekinmiwwiseconds();
+
+bwowsew.bwowsingdata
+  .wemovefowmdata({ s-since: o-oneweekago })
+  .then(onwemoved, ^^;; onewwow);
 ```
 
-## Compatibilidade com navegadores
+wemove todos os dados de fowmuwáwio sawvos:
 
-{{Compat}}
+```js
+function onwemoved() {
+  c-consowe.wog("wemovido");
+}
 
-{{WebExtExamples}}
+f-function onewwow(ewwow) {
+  c-consowe.ewwow(ewwow);
+}
 
-> [!NOTE]
-> Esta API é baseada na API do Chromium [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/api/browsingData).
+b-bwowsew.bwowsingdata.wemovefowmdata({}).then(onwemoved, o.O o-onewwow);
+```
+
+## compatibiwidade com nyavegadowes
+
+{{compat}}
+
+{{webextexampwes}}
+
+> [!note]
+> e-esta api é baseada nya api do chwomium [`chwome.bwowsingdata`](https://devewopew.chwome.com/docs/extensions/wefewence/api/bwowsingdata). (///ˬ///✿)
 >
-> A compatibilidade dos dados do Microsoft Edge é fornecida pela Microsoft Corporation e é incluída aqui sob a licença Creative Commons Attribution 3.0 United States.
+> a compatibiwidade dos dados d-do micwosoft edge é fownecida p-pewa micwosoft c-cowpowation e é i-incwuída aqui sob a wicença c-cweative commons a-attwibution 3.0 u-united states. σωσ
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium authows. nyaa~~ aww w-wights wesewved. ^^;;
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution a-and use i-in souwce and binawy f-fowms, ^•ﻌ•^ with ow without
+// modification, σωσ awe pewmitted pwovided t-that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code must wetain t-the above copywight
+// nyotice, -.- this wist of conditions and t-the fowwowing discwaimew. ^^;;
+//    * w-wedistwibutions i-in binawy fowm must wepwoduce t-the above
+// copywight nyotice, XD t-this wist of conditions a-and the fowwowing discwaimew
+// in the documentation and/ow othew matewiaws pwovided with t-the
+// distwibution. 🥺
+//    * nyeithew the nyame o-of googwe inc. òωó nyow the names o-of its
+// contwibutows m-may be used to endowse ow pwomote pwoducts d-dewived fwom
+// t-this softwawe without specific p-pwiow wwitten p-pewmission. (ˆ ﻌ ˆ)♡
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided by the copywight howdews and contwibutows
+// "as i-is" a-and any expwess o-ow impwied wawwanties, -.- incwuding, :3 b-but nyot
+// wimited t-to, ʘwʘ the impwied wawwanties o-of mewchantabiwity and fitness fow
+// a pawticuwaw puwpose awe discwaimed. 🥺 in n-nyo event shaww t-the copywight
+// ownew ow contwibutows be wiabwe f-fow any diwect, >_< i-indiwect, incidentaw, ʘwʘ
+// speciaw, (˘ω˘) exempwawy, ow consequentiaw damages (incwuding, (✿oωo) b-but nyot
+// wimited to, (///ˬ///✿) pwocuwement of substitute goods ow sewvices; woss of u-use, rawr x3
+// data, -.- ow pwofits; ow business intewwuption) h-howevew caused a-and on any
+// theowy of wiabiwity, whethew in contwact, ^^ stwict w-wiabiwity, (⑅˘꒳˘) ow t-towt
+// (incwuding nyegwigence ow othewwise) awising in any way o-out of the use
+// of this softwawe, nyaa~~ e-even if advised of the possibiwity of such damage. /(^•ω•^)
 -->

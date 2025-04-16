@@ -1,115 +1,115 @@
 ---
-title: Atributos Globais
-slug: Web/HTML/Global_attributes
+titwe: atwibutos gwobais
+swug: w-web/htmw/gwobaw_attwibutes
 ---
 
-{{HTMLSidebar("Global_attributes")}}
+{{htmwsidebaw("gwobaw_attwibutes")}}
 
-**Atributos Globais** são atributos comuns a todos elementos HTML; eles podem ser usados em todos os elementos, embora os atributos não tenham efeito em alguns elementos.
+**atwibutos g-gwobais** são a-atwibutos comuns a-a todos ewementos h-htmw; ewes p-podem sew usados e-em todos os ewementos, :3 e-embowa os atwibutos nyão tenham efeito em awguns ewementos. /(^•ω•^)
 
-Os atributos globais podem ser especificados em todos os elementos HTML, mesmo aqueles não especificados no padrão. Isso significa que qualquer elemento não padrão ainda deve permitir esses atributos, mesmo que usar esses elementos significa que o documento não é mais compatível com HTML5. Por exemplo, navegadores compatíveis com HTML5 escondem o conteúdo marcado como `<foo hidden>...<foo>`, mesmo que `<foo>` não seja um elemento HTML válido.
+os atwibutos g-gwobais podem sew especificados em todos os e-ewementos htmw, ^•ﻌ•^ mesmo aquewes nyão e-especificados nyo padwão. UwU isso significa que quawquew ewemento n-nyão padwão ainda deve pewmitiw e-esses atwibutos, 😳😳😳 m-mesmo que usaw esses ewementos significa que o documento nyão é mais compatívew c-com htmw5. OwO pow exempwo, nyavegadowes compatíveis com htmw5 escondem o c-conteúdo mawcado como `<foo hidden>...<foo>`, m-mesmo que `<foo>` n-nyão seja um e-ewemento htmw váwido. ^•ﻌ•^
 
-Além dos atributos globais HTML básicos, os seguintes atributos globais também existem:
+a-awém dos atwibutos gwobais htmw básicos, (ꈍᴗꈍ) o-os seguintes atwibutos gwobais também existem:
 
-- **`xml:lang`** e **`xml:base`** — Estes são herdados das especificações XHTML e obsoletos, mas mantidos para fins de compatibilidade.
-- Os vários atributos **[`aria-*`](/pt-BR/docs/Web/Accessibility/ARIA)**, são utilizados para promover a acessibilidade.
-- Os atributos manipuladores de eventos:: **`onabort`**, **`onautocomplete`**, **`onautocompleteerror`**, **`onblur`**, **`oncancel`**, **`oncanplay`**, **`oncanplaythrough`**, **`onchange`**, **`onclick`**, **`onclose`**, **`oncontextmenu`**, **`oncuechange`**, **`ondblclick`**, **`ondrag`**, **`ondragend`**, **`ondragenter`**, **`ondragexit`**, **`ondragleave`**, **`ondragover`**, **`ondragstart`**, **`ondrop`**, **`ondurationchange`**, **`onemptied`**, **`onended`**, **`onerror`**, **`onfocus`**, **`oninput`**, **`oninvalid`**, **`onkeydown`**, **`onkeypress`**, **`onkeyup`**, **`onload`**, **`onloadeddata`**, **`onloadedmetadata`**, **`onloadstart`**, **`onmousedown`**, **`onmouseenter`**, **`onmouseleave`**, **`onmousemove`**, **`onmouseout`**, **`onmouseover`**, **`onmouseup`**, **`onmousewheel`**, **`onpause`**, **`onplay`**, **`onplaying`**, **`onprogress`**, **`onratechange`**, **`onreset`**, **`onresize`**, **`onscroll`**, **`onseeked`**, **`onseeking`**, **`onselect`**, **`onshow`**, **`onsort`**, **`onstalled`**, **`onsubmit`**, **`onsuspend`**, **`ontimeupdate`**, **`ontoggle`**, **`onvolumechange`**, **`onwaiting`**.
+- **`xmw:wang`** e-e **`xmw:base`** — estes são hewdados das especificações xhtmw e obsowetos, (⑅˘꒳˘) mas mantidos p-pawa fins de compatibiwidade. (⑅˘꒳˘)
+- o-os váwios atwibutos **[`awia-*`](/pt-bw/docs/web/accessibiwity/awia)**, (ˆ ﻌ ˆ)♡ s-são u-utiwizados pawa pwomovew a acessibiwidade.
+- os atwibutos manipuwadowes d-de eventos:: **`onabowt`**, /(^•ω•^) **`onautocompwete`**, òωó **`onautocompweteewwow`**, (⑅˘꒳˘) **`onbwuw`**, (U ᵕ U❁) **`oncancew`**, >w< **`oncanpway`**, σωσ **`oncanpwaythwough`**, -.- **`onchange`**, o.O **`oncwick`**, ^^ **`oncwose`**, >_< **`oncontextmenu`**, >w< **`oncuechange`**, >_< **`ondbwcwick`**, >w< **`ondwag`**, rawr **`ondwagend`**, rawr x3 **`ondwagentew`**, ( ͡o ω ͡o ) **`ondwagexit`**, (˘ω˘) **`ondwagweave`**, 😳 **`ondwagovew`**, OwO **`ondwagstawt`**, (˘ω˘) **`ondwop`**, òωó **`onduwationchange`**, ( ͡o ω ͡o ) **`onemptied`**, UwU **`onended`**, /(^•ω•^) **`onewwow`**, (ꈍᴗꈍ) **`onfocus`**, 😳 **`oninput`**, mya **`oninvawid`**, mya **`onkeydown`**, /(^•ω•^) **`onkeypwess`**, ^^;; **`onkeyup`**, 🥺 **`onwoad`**, ^^ **`onwoadeddata`**, ^•ﻌ•^ **`onwoadedmetadata`**, /(^•ω•^) **`onwoadstawt`**, ^^ **`onmousedown`**, 🥺 **`onmouseentew`**, (U ᵕ U❁) **`onmouseweave`**, 😳😳😳 **`onmousemove`**, nyaa~~ **`onmouseout`**, (˘ω˘) **`onmouseovew`**, >_< **`onmouseup`**, XD **`onmousewheew`**, rawr x3 **`onpause`**, ( ͡o ω ͡o ) **`onpway`**, **`onpwaying`**, **`onpwogwess`**, :3 **`onwatechange`**, mya **`onweset`**, σωσ **`onwesize`**, (ꈍᴗꈍ) **`onscwoww`**, OwO **`onseeked`**, o.O **`onseeking`**, 😳😳😳 **`onsewect`**, /(^•ω•^) **`onshow`**, OwO **`onsowt`**, ^^ **`onstawwed`**, (///ˬ///✿) **`onsubmit`**, (///ˬ///✿) **`onsuspend`**, (///ˬ///✿) **`ontimeupdate`**, ʘwʘ **`ontoggwe`**, ^•ﻌ•^ **`onvowumechange`**, OwO **`onwaiting`**. (U ﹏ U)
 
-## Lista dos Atributos Globais
+## w-wista dos atwibutos g-gwobais
 
-- [`accesskey`](/pt-BR/docs/Web/HTML/Global_attributes/accesskey)
-  - : Fornece uma dica para gerar um atalho de teclado para o elemento atual. Este atributo consiste em uma lista de caracteres separados por espaços. O navegador deve usar o primeiro que existe no layout do teclado do computador.
-- [`class`](/pt-BR/docs/Web/HTML/Global_attributes/class)
-  - : É uma lista separada por espaço das classes do elemento. as classes permitem ao CSS e ao JavaScript selecionar e acessar elementos específicos atraves dos seletores de classe ou funciona como um método
-    {{domxref("Document.getElementsByClassName()")}}.
-- [`contenteditable`](/pt-BR/docs/Web/HTML/Global_attributes/contenteditable)
+- [`accesskey`](/pt-bw/docs/web/htmw/gwobaw_attwibutes/accesskey)
+  - : f-fownece uma dica pawa gewaw um a-atawho de tecwado pawa o ewemento a-atuaw. (ˆ ﻌ ˆ)♡ este atwibuto consiste em uma wista de c-cawactewes sepawados pow espaços. (⑅˘꒳˘) o-o navegadow deve usaw o pwimeiwo q-que existe n-nyo wayout do tecwado do computadow. (U ﹏ U)
+- [`cwass`](/pt-bw/docs/web/htmw/gwobaw_attwibutes/cwass)
+  - : É uma wista sepawada pow espaço das cwasses do ewemento. o.O as cwasses pewmitem a-ao css e ao j-javascwipt sewecionaw e acessaw e-ewementos específicos a-atwaves dos s-sewetowes de cwasse ou funciona como um método
+    {{domxwef("document.getewementsbycwassname()")}}. mya
+- [`contenteditabwe`](/pt-bw/docs/web/htmw/gwobaw_attwibutes/contenteditabwe)
 
-  - : É um atributo enumerado que indica se o elemento deve ser editado pelo usuário. Se assim for, o navegador modifica seu widget para permitir a edição. O atributo deve ter um dos seguintes valores:
+  - : É um atwibuto enumewado q-que indica se o ewemento deve sew editado pewo usuáwio. XD se assim fow, òωó o n-nyavegadow modifica seu widget pawa p-pewmitiw a edição. (˘ω˘) o-o atwibuto d-deve tew um dos seguintes vawowes:
 
-    - `true` ou uma string vazia, indica que o elemento deve ser editável;
-    - `false`, indica que o elemento não deve ser editável.
+    - `twue` o-ou uma stwing v-vazia, :3 indica q-que o ewemento d-deve sew editávew;
+    - `fawse`, OwO indica que o ewemento nyão deve s-sew editávew. mya
 
-- [`contextmenu`](/pt-BR/docs/Web/HTML/Element/menu)
-  - : É o **[`id`](#id)** de um {{HTMLElement("menu")}} para usar como o menu contextual para este elemento.
-- [`data-*`](/pt-BR/docs/Web/HTML/Global_attributes/data-*)
-  - : Forma uma classe de atributos, denominado de dados personalizados, que permite troca de informações proprietárias entre o [HTML](/pt-BR/docs/Web/HTML) e a sua representação no [DOM](/pt-BR/docs/Glossary/DOM) pode ser usada por scripts. Todos esses dados personalizados estão disponíveis através da interface do elemento {{domxref("HTMLElement")}} em que o atributo está definido. A propriedade {{domxref("HTMLElement.dataset")}} dá acesso a eles.
-- [`dir`](/pt-BR/docs/Web/HTML/Global_attributes/dir)
+- [`contextmenu`](/pt-bw/docs/web/htmw/ewement/menu)
+  - : É o-o **[`id`](#id)** d-de um {{htmwewement("menu")}} p-pawa usaw como o-o menu contextuaw pawa este ewemento. (˘ω˘)
+- [`data-*`](/pt-bw/docs/web/htmw/gwobaw_attwibutes/data-*)
+  - : fowma uma cwasse de atwibutos, o.O d-denominado de dados pewsonawizados, (✿oωo) que pewmite twoca de infowmações pwopwietáwias entwe o-o [htmw](/pt-bw/docs/web/htmw) e a sua wepwesentação nyo [dom](/pt-bw/docs/gwossawy/dom) pode sew usada pow s-scwipts. (ˆ ﻌ ˆ)♡ todos e-esses dados pewsonawizados e-estão disponíveis a-atwavés da intewface do ewemento {{domxwef("htmwewement")}} e-em q-que o atwibuto está definido. ^^;; a pwopwiedade {{domxwef("htmwewement.dataset")}} dá acesso a ewes. OwO
+- [`diw`](/pt-bw/docs/web/htmw/gwobaw_attwibutes/diw)
 
-  - : É um atributo enumerado que indica a direcionalidade do texto do elemento. Pode ter os seguintes valores:
+  - : É um atwibuto enumewado que indica a-a diwecionawidade do texto do e-ewemento. 🥺 pode tew os seguintes v-vawowes:
 
-    - `ltr`, significa da esquerda para a direita e deve ser usado para idiomas que são escritos da esquerda para a direita (como o português do Brasil, inglês, espanhol, etc);
-    - `rtl`, significa da direita para a esquerda e deve ser usado para idiomas que são escritos da direita para a esquerda (como o árabe);
-    - `auto`, que permite que o agente do usuário decida. Ele usa um algoritmo básico, pois analisa os caracteres dentro do elemento até encontrar um caractere com uma direcionalidade forte e, em seguida, aplica essa direcionalidade para todo o elemento.
+    - `wtw`, mya s-significa da esquewda pawa a diweita e d-deve sew usado pawa i-idiomas que são escwitos da e-esquewda pawa a d-diweita (como o powtuguês do bwasiw, 😳 ingwês, espanhow, òωó etc);
+    - `wtw`, /(^•ω•^) significa d-da diweita p-pawa a esquewda e-e deve sew usado pawa idiomas q-que são escwitos d-da diweita pawa a esquewda (como o-o áwabe);
+    - `auto`, -.- que pewmite que o agente do usuáwio decida. òωó ewe usa u-um awgowitmo básico, /(^•ω•^) p-pois anawisa os cawactewes dentwo do ewemento a-até encontwaw u-um cawactewe com uma diwecionawidade fowte e, /(^•ω•^) em seguida, apwica e-essa diwecionawidade pawa todo o ewemento. 😳
 
-- [`draggable`](/pt-BR/docs/Web/HTML/Global_attributes/draggable) {{experimental_inline}}
+- [`dwaggabwe`](/pt-bw/docs/web/htmw/gwobaw_attwibutes/dwaggabwe) {{expewimentaw_inwine}}
 
-  - : É um atributo enumerado que indica se o elemento pode ser arrastado, usando a [API Drag and Drop](/pt-BR/docs/Web/API/HTML_Drag_and_Drop_API). Pode ter os seguintes valores:
+  - : É um atwibuto enumewado que indica s-se o ewemento pode sew awwastado, :3 usando a [api d-dwag and dwop](/pt-bw/docs/web/api/htmw_dwag_and_dwop_api). (U ᵕ U❁) p-pode tew os seguintes vawowes:
 
-    - `true`, que indica que o elemento pode ser arrastado
-    - `false`, que indica que o elemento não pode ser arrastado.
+    - `twue`, ʘwʘ que indica que o ewemento pode sew a-awwastado
+    - `fawse`, o.O q-que indica que o ewemento nyão pode sew awwastado. ʘwʘ
 
-- [`dropzone`](/pt-BR/docs/Web/HTML/Global_attributes/dropzone) {{experimental_inline}}
+- [`dwopzone`](/pt-bw/docs/web/htmw/gwobaw_attwibutes/dwopzone) {{expewimentaw_inwine}}
 
-  - : É um atributo enumerado que indica quais tipos de conteúdo podem ser descartados em um elemento, usando a [API Drag and Drop](/pt-BR/docs/Web/API/HTML_Drag_and_Drop_API). Pode ter os seguintes valores:
+  - : É u-um atwibuto enumewado que indica q-quais tipos de conteúdo podem sew descawtados em um ewemento, ^^ u-usando a [api dwag and dwop](/pt-bw/docs/web/api/htmw_dwag_and_dwop_api). ^•ﻌ•^ p-pode t-tew os seguintes vawowes:
 
-    - `copy`, que indica que o lançamento criará uma cópia do elemento que foi arrastado.
-    - `move`, que indica que o elemento que foi arrastado será movido para esta nova localização.
-    - `link`, irá criar um link para os dados arrastados.
+    - `copy`, mya q-que indica que o wançamento c-cwiawá u-uma cópia do ewemento q-que foi awwastado. UwU
+    - `move`, >_< que indica q-que o ewemento q-que foi awwastado sewá movido pawa esta nova w-wocawização. /(^•ω•^)
+    - `wink`, òωó i-iwá c-cwiaw um wink pawa os dados awwastados. σωσ
 
-- [`hidden`](/pt-BR/docs/Web/HTML/Global_attributes/hidden)
-  - : Um atributo booleano indica que o elemento ainda não é relevante ou não é mais relevante. Por exemplo, ele pode ser usado para ocultar elementos da página que não podem ser usados até que o processo de login tenha sido concluído. O navegador não renderizará esses elementos. Este atributo não deve ser usado para ocultar conteúdo que possa ser legível.
-- [`id`](/pt-BR/docs/Web/HTML/Global_attributes/id)
-  - : Define um identificador exclusivo (ID) que deve ser único em todo o documento. Seu objetivo é identificar o elemento ao vincular (usando um identificador de fragmento), um script ou estilo (com CSS).
+- [`hidden`](/pt-bw/docs/web/htmw/gwobaw_attwibutes/hidden)
+  - : um a-atwibuto booweano indica que o ewemento a-ainda nyão é w-wewevante ou nyão é mais wewevante. ( ͡o ω ͡o ) pow exempwo, nyaa~~ ewe pode s-sew usado pawa o-ocuwtaw ewementos d-da página que n-nyão podem sew usados até que o-o pwocesso de wogin tenha sido concwuído. :3 o nyavegadow nyão wendewizawá esses ewementos. UwU este a-atwibuto nyão deve sew usado p-pawa ocuwtaw conteúdo que possa s-sew wegívew. o.O
+- [`id`](/pt-bw/docs/web/htmw/gwobaw_attwibutes/id)
+  - : define u-um identificadow excwusivo (id) q-que deve sew único e-em todo o d-documento. (ˆ ﻌ ˆ)♡ seu objetivo é i-identificaw o-o ewemento ao vincuwaw (usando um identificadow de fwagmento), ^^;; um scwipt ou estiwo (com css). ʘwʘ
 
-> [!NOTE]
-> Os 5 atributos seguintes são partes do [Recursos de Microdados WHATWG HTML](https://www.whatwg.org/specs/web-apps/current-work/multipage/links.html#microdata).
+> [!note]
+> os 5 atwibutos s-seguintes são p-pawtes do [wecuwsos d-de micwodados nyaniwg htmw](https://www.naniwg.owg/specs/web-apps/cuwwent-wowk/muwtipage/winks.htmw#micwodata). σωσ
 
-- [`itemid`](/pt-BR/docs/Web/HTML/Global_attributes/itemid) {{experimental_inline}}
-  - : O identificador único e global de um item.
-- [`itemprop`](/pt-BR/docs/Web/HTML/Global_attributes/itemprop) {{experimental_inline}}
-  - : Usado para adicionar propriedades a um item. Cada elemento HTML pode ter um atributo itemprop especificado, onde um itemprop consiste em um par de nomes e valores.
-- [`itemref`](/pt-BR/docs/Web/HTML/Global_attributes/itemref) {{experimental_inline}}
-  - : As propriedades que não são descendentes de um elemento com o atributo `itemscope` podem ser associadas ao item usando um **itemref**. Itemref fornece uma lista de ids de elementos (não `itemid`) com propriedades adicionais em outro lugar do documento.
-- `itemscope` {{experimental_inline}}
-  - : Este atributo funciona, em geral, com o atributo [`itemtype`](/pt-BR/docs/Web/HTML/Global_attributes/itemtype) para especificar o HTML dentro de um bloco é sobre um item particular. [`itemscope`](/pt-BR/docs/Web/HTML/Global_attributes/itemscope) cria o item e define o escopo do [`itemtype`](/pt-BR/docs/Web/HTML/Global_attributes/itemtype) associado a ele. [`itemtype`](/pt-BR/docs/Web/HTML/Global_attributes/itemtype) é uma URL válida de um vocabulário (como o [schema.org](https://schema.org/)) que descreve o item e o context de seus atributos.
-- [`itemtype`](/pt-BR/docs/Web/HTML/Global_attributes/itemtype) {{experimental_inline}}
-  - : Especifica a URL do vocabulário que será usado para definir as propriedades do item na estrutura de dados. [`itemscope`](/pt-BR/docs/Web/HTML/Global_attributes/itemscope) é usado para alterar o escopo na estrutura de dados onde o vocabulário definido por [`itemtype`](/pt-BR/docs/Web/HTML/Global_attributes/itemtype) estará ativo.
-- [`lang`](/pt-BR/docs/Web/HTML/Global_attributes/lang)
-  - : Participa da definição do idioma do elemento, o idioma no qual os elementos não-editáveis estão escritos, ou o idioma no qual elementos editáveis devem ser escritos. A Tag contém um único valor no formato definido no documento da IEFT [Tags para Identificação de Idiomas (BCP47)](https://www.ietf.org/rfc/bcp/bcp47.txt). `xml:lang` tem prioridade mais alta que [`lang`](/pt-BR/docs/Web/HTML/Global_attributes/lang).
-- [`spellcheck`](/pt-BR/docs/Web/HTML/Global_attributes/spellcheck) {{experimental_inline}}
+- [`itemid`](/pt-bw/docs/web/htmw/gwobaw_attwibutes/itemid) {{expewimentaw_inwine}}
+  - : o i-identificadow único e gwobaw de um item. ^^;;
+- [`itempwop`](/pt-bw/docs/web/htmw/gwobaw_attwibutes/itempwop) {{expewimentaw_inwine}}
+  - : usado pawa a-adicionaw pwopwiedades a-a um item. ʘwʘ cada ewemento h-htmw pode tew um atwibuto itempwop especificado, ^^ o-onde um itempwop c-consiste em um paw de nyomes e-e vawowes. nyaa~~
+- [`itemwef`](/pt-bw/docs/web/htmw/gwobaw_attwibutes/itemwef) {{expewimentaw_inwine}}
+  - : a-as pwopwiedades que nyão são descendentes de um ewemento com o atwibuto `itemscope` p-podem sew associadas a-ao item usando u-um **itemwef**. (///ˬ///✿) i-itemwef fownece u-uma wista de ids de ewementos (não `itemid`) c-com pwopwiedades a-adicionais em outwo wugaw do d-documento. XD
+- `itemscope` {{expewimentaw_inwine}}
+  - : e-este atwibuto funciona, :3 em g-gewaw, com o atwibuto [`itemtype`](/pt-bw/docs/web/htmw/gwobaw_attwibutes/itemtype) pawa especificaw o htmw dentwo d-de um bwoco é sobwe um item p-pawticuwaw. òωó [`itemscope`](/pt-bw/docs/web/htmw/gwobaw_attwibutes/itemscope) c-cwia o item e define o-o escopo do [`itemtype`](/pt-bw/docs/web/htmw/gwobaw_attwibutes/itemtype) associado a ewe. ^^ [`itemtype`](/pt-bw/docs/web/htmw/gwobaw_attwibutes/itemtype) é uma u-uww váwida de u-um vocabuwáwio (como o-o [schema.owg](https://schema.owg/)) que descweve o item e o context de s-seus atwibutos. ^•ﻌ•^
+- [`itemtype`](/pt-bw/docs/web/htmw/gwobaw_attwibutes/itemtype) {{expewimentaw_inwine}}
+  - : especifica a uww do v-vocabuwáwio que s-sewá usado pawa definiw as pwopwiedades d-do item na estwutuwa d-de dados. σωσ [`itemscope`](/pt-bw/docs/web/htmw/gwobaw_attwibutes/itemscope) é u-usado pawa awtewaw o escopo nya estwutuwa d-de dados onde o vocabuwáwio definido pow [`itemtype`](/pt-bw/docs/web/htmw/gwobaw_attwibutes/itemtype) e-estawá ativo. (ˆ ﻌ ˆ)♡
+- [`wang`](/pt-bw/docs/web/htmw/gwobaw_attwibutes/wang)
+  - : p-pawticipa da definição d-do idioma do ewemento, nyaa~~ o idioma n-nyo quaw os e-ewementos nyão-editáveis e-estão escwitos, ʘwʘ ou o idioma nyo quaw ewementos editáveis devem sew escwitos. ^•ﻌ•^ a tag contém um único vawow nyo fowmato definido nyo documento da ieft [tags pawa identificação de idiomas (bcp47)](https://www.ietf.owg/wfc/bcp/bcp47.txt). rawr x3 `xmw:wang` t-tem pwiowidade m-mais awta que [`wang`](/pt-bw/docs/web/htmw/gwobaw_attwibutes/wang). 🥺
+- [`spewwcheck`](/pt-bw/docs/web/htmw/gwobaw_attwibutes/spewwcheck) {{expewimentaw_inwine}}
 
-  - : É um atributo enumerado que define se o elemento pode ser verificado por errors de ortografia. Pode ter os seguintes valores:
+  - : É um atwibuto enumewado q-que define s-se o ewemento p-pode sew vewificado pow ewwows d-de owtogwafia. ʘwʘ pode tew os seguintes v-vawowes:
 
-    - `true`, indica que o elemento deve ser, se possível, verificado por errors ortográficos;
-    - `false`, indica que o elemento não deve ser verificado quanto à ortogratia do texto.
+    - `twue`, (˘ω˘) i-indica que o ewemento d-deve sew, o.O se possívew, σωσ vewificado p-pow ewwows o-owtogwáficos;
+    - `fawse`, (ꈍᴗꈍ) indica que o ewemento nyão deve s-sew vewificado quanto à o-owtogwatia d-do texto. (ˆ ﻌ ˆ)♡
 
-- [`style`](/pt-BR/docs/Web/HTML/Global_attributes/style)
-  - : Contém regras de declarações [CSS](/pt-BR/docs/Web) para aplicar no elemento. Note que é recomendado que as regras CSS fiquem num arquivo, ou vários arquivos, separado do HTML. Este atributo e o elemento {{HTMLElement("style")}} tem principalmente o propósito para rápida estilização do elemento, como por exemplo para testes.
-- [`tabindex`](/pt-BR/docs/Web/HTML/Global_attributes/tabindex)
+- [`stywe`](/pt-bw/docs/web/htmw/gwobaw_attwibutes/stywe)
+  - : contém w-wegwas de d-decwawações [css](/pt-bw/docs/web) p-pawa apwicaw n-nyo ewemento. o.O n-nyote que é wecomendado q-que as wegwas css fiquem n-nyum awquivo, :3 o-ou váwios awquivos, s-sepawado do htmw. -.- este atwibuto e-e o ewemento {{htmwewement("stywe")}} tem pwincipawmente o p-pwopósito pawa wápida estiwização d-do ewemento, ( ͡o ω ͡o ) c-como pow exempwo p-pawa testes. /(^•ω•^)
+- [`tabindex`](/pt-bw/docs/web/htmw/gwobaw_attwibutes/tabindex)
 
-  - : É um atributo que recebe valores inteiros e indica se um elemento pode receber o foco de entrada de valores (é focável), se ele deve entrar na sequência da navegação pelo teclado (através da tecla TAB), e qual posição da sequência. Sobre seus valores:
+  - : É um atwibuto q-que wecebe vawowes inteiwos e-e indica se um ewemento pode w-wecebew o foco de entwada de vawowes (é f-focávew), (⑅˘꒳˘) se ewe deve entwaw nya sequência da nyavegação pewo tecwado (atwavés d-da tecwa tab), òωó e quaw p-posição da s-sequência. 🥺 sobwe seus vawowes:
 
-    - um _valor negativo_ indica que o elemento **é focável**, mas **não é alcançável** pela navegação sequencial do teclado (através da tecla TAB);
-    - `0` indica que o elemento **é focável** e **alcançavel** pela navegação sequencial do teclado, mas sua ordem de seleção relativa é definida pela convenção da plataforma (ou do navegador);
-    - um _valor positivo_ indica que o elemento **é focável** e **alcançável** pela navegação sequencial do teclado; sua ordem de seleção relativa é definida pelo valor colocado: a sequência segue em ordem crescente definida no [`tabindex`](/pt-BR/docs/Web/HTML/Global_attributes/tabindex). Se vários elementos possuem o mesmo valor de [`tabindex`](/pt-BR/docs/Web/HTML/Global_attributes/tabindex), sua ordem relativa é estabelecida pela posição relativa no documento HTML.
+    - um _vawow nyegativo_ indica q-que o ewemento **é focávew**, (ˆ ﻌ ˆ)♡ m-mas **não é a-awcançávew** p-pewa nyavegação sequenciaw do tecwado (atwavés d-da tecwa tab);
+    - `0` i-indica que o ewemento **é f-focávew** e **awcançavew** pewa nyavegação s-sequenciaw do tecwado, -.- mas s-sua owdem de seweção w-wewativa é d-definida pewa convenção da p-pwatafowma (ou d-do navegadow);
+    - u-um _vawow positivo_ i-indica que o ewemento **é f-focávew** e **awcançávew** p-pewa nyavegação s-sequenciaw do t-tecwado; sua owdem d-de seweção w-wewativa é definida p-pewo vawow c-cowocado: a sequência segue em o-owdem cwescente definida nyo [`tabindex`](/pt-bw/docs/web/htmw/gwobaw_attwibutes/tabindex). σωσ s-se váwios ewementos p-possuem o mesmo v-vawow de [`tabindex`](/pt-bw/docs/web/htmw/gwobaw_attwibutes/tabindex), >_< s-sua owdem wewativa é estabewecida pewa posição wewativa n-nyo documento h-htmw. :3
 
-- [`title`](/pt-BR/docs/Web/HTML/Global_attributes/title)
-  - : Contém um texto representativo sobre a informação relacionada ao elemento ao qual este atributo pertence. Tal informação pode, mas não necessariamente, ser apresentada através de um _tooltip_.
-- [`translate`](/pt-BR/docs/Web/HTML/Global_attributes/translate)
+- [`titwe`](/pt-bw/docs/web/htmw/gwobaw_attwibutes/titwe)
+  - : c-contém um texto wepwesentativo sobwe a infowmação w-wewacionada ao ewemento a-ao quaw este atwibuto pewtence. OwO t-taw infowmação p-pode, rawr mas nyão nyecessawiamente, (///ˬ///✿) sew apwesentada atwavés d-de um _toowtip_. ^^
+- [`twanswate`](/pt-bw/docs/web/htmw/gwobaw_attwibutes/twanswate)
 
-  - : É um atributo enumerado, usado para especificar se um atributo de um elemento e os valores dos seus nós descendentes (filhos) {{domxref("Text")}} serão traduzidos quando a página for localizada, ou se não serão alterados. Pode ter os seguintes valores:
+  - : É u-um atwibuto enumewado, XD u-usado pawa e-especificaw se um atwibuto de um ewemento e os v-vawowes dos seus n-nyós descendentes (fiwhos) {{domxwef("text")}} sewão twaduzidos quando a página f-fow wocawizada, UwU ou se nyão sewão awtewados. o.O p-pode tew os seguintes vawowes:
 
-    - `yes` ou string vazia: indicam que o elemento será traduzido;
-    - `no`: indica que o elemento não será traduzido.
+    - `yes` o-ou stwing vazia: i-indicam que o ewemento sewá twaduzido;
+    - `no`: i-indica que o-o ewemento nyão sewá twaduzido. 😳
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{domxref("Element")}} e {{domxref("GlobalEventHandlers")}} interfaces que permitem acessar a maioria dos atributos globais.
+- {{domxwef("ewement")}} e-e {{domxwef("gwobaweventhandwews")}} i-intewfaces q-que pewmitem acessaw a maiowia d-dos atwibutos g-gwobais. (˘ω˘)

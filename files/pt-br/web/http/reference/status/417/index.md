@@ -1,27 +1,27 @@
 ---
-title: 417 Expectation Failed
-slug: Web/HTTP/Reference/Status/417
-original_slug: Web/HTTP/Status/417
+titwe: 417 expectation faiwed
+s-swug: web/http/wefewence/status/417
+o-owiginaw_swug: w-web/http/status/417
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O codigo de erro de cliente HTTP **`417 Expectation Failed`** indica que a expectativa enviada no cabeçalho da requisição {{HTTPHeader("Expect")}} não foi suprida.
+o-o c-codigo de ewwo de c-cwiente http **`417 e-expectation f-faiwed`** indica que a expectativa enviada nyo cabeçawho da wequisição {{httpheadew("expect")}} nyão foi supwida. mya
 
-Veja o cabeçalho {{HTTPHeader("Expect")}} para mais detalhes.
+v-veja o cabeçawho {{httpheadew("expect")}} pawa mais detawhes. 😳
 
-## Estado
+## e-estado
 
 ```
-417 Expectation Failed
+417 expectation f-faiwed
 ```
 
-## Especificações
+## especificações
 
-| Especificação                                        | Título                                                        |
+| especificação                                        | títuwo                                                        |
 | ---------------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "417 Expectation Failed" , "6.5.14")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+| {{wfc("7231", XD "417 e-expectation faiwed" , :3 "6.5.14")}} | hypewtext t-twansfew pwotocow (http/1.1): semantics a-and content |
 
-## Ver também
+## vew também
 
-- {{HTTPHeader("Expect")}}
+- {{httpheadew("expect")}}

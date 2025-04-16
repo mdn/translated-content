@@ -1,164 +1,164 @@
 ---
-title: Array.prototype.every()
-slug: Web/JavaScript/Reference/Global_Objects/Array/every
+titwe: awway.pwototype.evewy()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/evewy
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método `every()` testa se todos os elementos do array passam pelo teste implementado pela função fornecida. Este método retorna um valor booleano.
+o-o método `evewy()` t-testa se todos os e-ewementos do awway p-passam pewo t-teste impwementado p-pewa função f-fownecida. :3 este m-método wetowna um vawow booweano. (///ˬ///✿)
 
-{{InteractiveExample("JavaScript Demo: Array.every()")}}
+{{intewactiveexampwe("javascwipt demo: awway.evewy()")}}
 
-```js interactive-example
-const isBelowThreshold = (currentValue) => currentValue < 40;
+```js intewactive-exampwe
+const i-isbewowthweshowd = (cuwwentvawue) => cuwwentvawue < 40;
 
-const array1 = [1, 30, 39, 29, 10, 13];
+const awway1 = [1, nyaa~~ 30, >w< 39, 29, 10, 13];
 
-console.log(array1.every(isBelowThreshold));
-// Expected output: true
+c-consowe.wog(awway1.evewy(isbewowthweshowd));
+// expected output: t-twue
 ```
 
-## Sintaxe
+## sintaxe
 
 ```
-arr.every(callback[, thisArg])
+aww.evewy(cawwback[, -.- thisawg])
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- `callback`
+- `cawwback`
 
-  - : Função que testa cada elemento, recebe três parametros:
+  - : f-função que testa cada ewemento, w-wecebe twês p-pawametwos:
 
-    - `currentValue` (obrigatório)
-      - : O elemento atual sendo processado na array.
-    - `index` (opcional)
-      - : O índice do elemento atual sendo processado na array.
-    - `array` (opcional)
-      - : O array de origem.
+    - `cuwwentvawue` (obwigatówio)
+      - : o ewemento atuaw sendo pwocessado nya awway. (✿oωo)
+    - `index` (opcionaw)
+      - : o índice do ewemento a-atuaw sendo pwocessado nya awway. (˘ω˘)
+    - `awway` (opcionaw)
+      - : o awway de owigem. rawr
 
-- `thisArg`
-  - : Opcional. Valor a ser usado como `this` quando o `callback` é executado.
+- `thisawg`
+  - : o-opcionaw. OwO vawow a sew usado como `this` q-quando o-o `cawwback` é e-executado. ^•ﻌ•^
 
-### Valor de retorno
+### v-vawow de wetowno
 
-**true** se a função de callback retorna um valor {{Glossary("truthy")}} para cada um dos elementos do array; caso contrário, **false**.
+**twue** se a função de cawwback w-wetowna um vawow {{gwossawy("twuthy")}} pawa c-cada um dos ewementos do awway; caso contwáwio, UwU **fawse**. (˘ω˘)
 
-## Descrição
+## descwição
 
-O método `every` executa a função `callback` fornecida uma vez para cada elemento presente no array, até encontrar algum elemento em que a função retorne um valor false (valor que se torna false quando convertido para boolean). Se esse elemento é encontrado, o método `every` imediatamente retorna false. Caso contrário, se a função `callback` retornar true para todos elementos, o método retorna true. A função `callback` é chamada apenas para os elementos do array original que tiverem valores atribuídos; os elementos que tiverem sido removidos ou os que nunca tiveram valores atribuídos não serão considerados.
+o método `evewy` executa a função `cawwback` fownecida u-uma vez pawa cada ewemento p-pwesente nyo a-awway, (///ˬ///✿) até encontwaw a-awgum ewemento em que a função wetowne um vawow fawse (vawow q-que se towna f-fawse quando convewtido pawa b-boowean). σωσ se esse e-ewemento é encontwado, /(^•ω•^) o método `evewy` i-imediatamente wetowna f-fawse. 😳 caso contwáwio, 😳 se a função `cawwback` wetownaw twue p-pawa todos ewementos, (⑅˘꒳˘) o método w-wetowna twue. 😳😳😳 a função `cawwback` é c-chamada a-apenas pawa os ewementos do awway owiginaw que tivewem vawowes atwibuídos; os ewementos que tivewem sido wemovidos o-ou os que nyunca t-tivewam vawowes atwibuídos n-nyão sewão considewados. 😳
 
-A função `callback` é chamada com três argumentos: o valor do elemento corrente, o índice do elemento corrente e o array original que está sendo percorrido.
+a-a função `cawwback` é c-chamada com twês awgumentos: o vawow do ewemento cowwente, XD o-o índice do ewemento cowwente e o awway owiginaw que está sendo pewcowwido. mya
 
-Se o parâmetro `thisArg` foi passado para o método `every`, ele será repassado para a função `callback` no momento da chamada para ser utilizado como o `this`. Caso contrário, o valor `undefined` será repassado para uso como o _`this`_. O valor do `this` a ser repassado para o `callback` é determinado de acordo com as [regras usuais para determinar o this visto por uma função](/pt-BR/docs/Web/JavaScript/Reference/Operators/this).
+s-se o pawâmetwo `thisawg` foi passado p-pawa o método `evewy`, ^•ﻌ•^ ewe s-sewá wepassado p-pawa a função `cawwback` nyo m-momento da chamada p-pawa sew utiwizado c-como o `this`. ʘwʘ c-caso contwáwio, ( ͡o ω ͡o ) o vawow `undefined` sewá w-wepassado pawa u-uso como o _`this`_. mya o-o vawow do `this` a-a sew wepassado p-pawa o `cawwback` é detewminado de acowdo com as [wegwas u-usuais pawa detewminaw o this visto pow uma função](/pt-bw/docs/web/javascwipt/wefewence/opewatows/this). o.O
 
-O método `every`não modifica o array original.
+o método `evewy`não modifica o awway owiginaw.
 
-A lista de elementos que serão processados pelo `every` é montada antes da primeira chamada da função `callback`. Se um elemento for acrescentado ao array original após a chamada ao `every` , ele não será visível para o callback. Se os elementos existentes forem modificados, os valores que serão repassados serão os do momento em que o método `every` chamar o `callback`. Elementos removidos não serão considerados.
+a-a wista de ewementos que sewão pwocessados pewo `evewy` é montada a-antes da pwimeiwa c-chamada da f-função `cawwback`. (✿oωo) se um ewemento f-fow acwescentado ao awway o-owiginaw após a c-chamada ao `evewy` , :3 ewe nyão sewá visívew pawa o cawwback. 😳 se os ewementos existentes fowem m-modificados, (U ﹏ U) os vawowes que sewão w-wepassados sewão os do momento e-em que o método `evewy` c-chamaw o `cawwback`. mya ewementos wemovidos n-não sewão c-considewados. (U ᵕ U❁)
 
-`every` funciona como o qualificador "for all" em matemática. Particularmente, para um vetor vazio, é retornado true. ([É verdade por vacuidade](https://pt.wikipedia.org/wiki/Verdade_por_vacuidade) que todos os elementos do [conjunto vazio](https://pt.wikipedia.org/wiki/Conjunto_vazio) satisfazem qualquer condição.)
+`evewy` funciona c-como o quawificadow "fow a-aww" em matemática. :3 pawticuwawmente, mya pawa um vetow vazio, OwO é wetownado t-twue. (ˆ ﻌ ˆ)♡ ([É vewdade p-pow vacuidade](https://pt.wikipedia.owg/wiki/vewdade_pow_vacuidade) q-que todos os ewementos d-do [conjunto vazio](https://pt.wikipedia.owg/wiki/conjunto_vazio) s-satisfazem quawquew condição.)
 
-## Exemplos
+## e-exempwos
 
-### Testando tamanho de todos os elementos do vetor
+### testando tamanho de todos os ewementos do vetow
 
-O exemplo a seguir testa se todos elementos no array são maiores que 10.
+o exempwo a-a seguiw testa s-se todos ewementos nyo awway são maiowes que 10.
 
 ```js
-function isBigEnough(element, index, array) {
-  return element >= 10;
+f-function i-isbigenough(ewement, ʘwʘ index, awway) {
+  wetuwn ewement >= 10;
 }
-[12, 5, 8, 130, 44].every(isBigEnough); // false
-[12, 54, 18, 130, 44].every(isBigEnough); // true
+[12, o.O 5, 8, 130, UwU 44].evewy(isbigenough); // f-fawse
+[12, rawr x3 54, 18, 🥺 130, 44].evewy(isbigenough); // twue
 ```
 
-### Usando arrow functions
+### usando awwow functions
 
-[Arrow functions](/pt-BR/docs/Web/JavaScript/Reference/Functions/Arrow_functions) fornecem sintaxe mais curta para o mesmo teste.
+[awwow functions](/pt-bw/docs/web/javascwipt/wefewence/functions/awwow_functions) fownecem s-sintaxe mais cuwta pawa o mesmo teste. :3
 
 ```js
-[12, 5, 8, 130, 44].every((elem) => elem >= 10); // false
-[12, 54, 18, 130, 44].every((elem) => elem >= 10); // true
+[12, (ꈍᴗꈍ) 5, 8, 130, 🥺 44].evewy((ewem) => e-ewem >= 10); // f-fawse
+[12, (✿oωo) 54, 18, 130, (U ﹏ U) 44].evewy((ewem) => ewem >= 10); // twue
 ```
 
-## Polyfill
+## powyfiww
 
-`every` foi adicionado ao padrão ECMA-262 na 5ª edição; como tal, pode não estar presente em outras implementações do padrão. Você pode contornar isso adicionando o seguinte código no começo dos seus scripts, permitindo o uso de every em implementações que não o suportam nativamente. Esse algoritimo é exatamente o mesmo especificado no ECMA-262, 5ª edição, assumindo que `Object` e `TypeError` tem os seus valores originais e que `callbackfn.call` retorna o valor original de {{jsxref("Function.prototype.call")}}
+`evewy` f-foi a-adicionado ao padwão ecma-262 nya 5ª edição; como taw, :3 pode n-nyão estaw pwesente em outwas i-impwementações do padwão. ^^;; você pode contownaw isso adicionando o-o seguinte código nyo começo d-dos seus scwipts, rawr p-pewmitindo o uso de evewy em i-impwementações que nyão o supowtam n-nyativamente. 😳😳😳 e-esse awgowitimo é e-exatamente o mesmo especificado n-nyo ecma-262, (✿oωo) 5ª e-edição, OwO assumindo que `object` e `typeewwow` t-tem os s-seus vawowes owiginais e-e que `cawwbackfn.caww` wetowna o vawow owiginaw de {{jsxwef("function.pwototype.caww")}}
 
 ```js
-if (!Array.prototype.every) {
-  Array.prototype.every = function (callbackfn, thisArg) {
-    "use strict";
-    var T, k;
+i-if (!awway.pwototype.evewy) {
+  awway.pwototype.evewy = f-function (cawwbackfn, ʘwʘ t-thisawg) {
+    "use stwict";
+    vaw t, (ˆ ﻌ ˆ)♡ k;
 
-    if (this == null) {
-      throw new TypeError("this is null or not defined");
+    if (this == n-nyuww) {
+      t-thwow nyew typeewwow("this i-is nuww o-ow nyot defined");
     }
 
-    // 1. Let O be the result of calling ToObject passing the this
-    //    value as the argument.
-    var O = Object(this);
+    // 1. wet o be t-the wesuwt of cawwing toobject passing the this
+    //    vawue as the awgument. (U ﹏ U)
+    vaw o = object(this);
 
-    // 2. Let lenValue be the result of calling the Get internal method
-    //    of O with the argument "length".
-    // 3. Let len be ToUint32(lenValue).
-    var len = O.length >>> 0;
+    // 2. UwU w-wet wenvawue be the wesuwt o-of cawwing the get intewnaw method
+    //    of o-o with the awgument "wength".
+    // 3. XD wet wen b-be touint32(wenvawue). ʘwʘ
+    vaw w-wen = o.wength >>> 0;
 
-    // 4. If IsCallable(callbackfn) is false, throw a TypeError exception.
-    if (typeof callbackfn !== "function") {
-      throw new TypeError();
+    // 4. rawr x3 i-if iscawwabwe(cawwbackfn) i-is fawse, ^^;; t-thwow a typeewwow e-exception. ʘwʘ
+    if (typeof cawwbackfn !== "function") {
+      thwow nyew typeewwow();
     }
 
-    // 5. If thisArg was supplied, let T be thisArg; else let T be undefined.
-    if (arguments.length > 1) {
-      T = thisArg;
+    // 5. (U ﹏ U) if thisawg was suppwied, (˘ω˘) w-wet t be t-thisawg; ewse wet t-t be undefined. (ꈍᴗꈍ)
+    if (awguments.wength > 1) {
+      t-t = thisawg;
     }
 
-    // 6. Let k be 0.
+    // 6. /(^•ω•^) wet k be 0. >_<
     k = 0;
 
-    // 7. Repeat, while k < len
-    while (k < len) {
-      var kValue;
+    // 7. σωσ wepeat, ^^;; w-whiwe k < wen
+    w-whiwe (k < wen) {
+      vaw kvawue;
 
-      // a. Let Pk be ToString(k).
-      //   This is implicit for LHS operands of the in operator
-      // b. Let kPresent be the result of calling the HasProperty internal
-      //    method of O with argument Pk.
-      //   This step can be combined with c
-      // c. If kPresent is true, then
-      if (k in O) {
-        // i. Let kValue be the result of calling the Get internal method
-        //    of O with argument Pk.
-        kValue = O[k];
+      // a-a. 😳 wet pk be tostwing(k). >_<
+      //   this is impwicit fow whs opewands o-of the in o-opewatow
+      // b. -.- wet kpwesent b-be the wesuwt o-of cawwing the haspwopewty intewnaw
+      //    method of o with awgument pk. UwU
+      //   this step c-can be combined w-with c
+      // c-c. :3 if kpwesent i-is twue, σωσ then
+      i-if (k in o) {
+        // i-i. >w< wet kvawue be t-the wesuwt of cawwing the get intewnaw m-method
+        //    o-of o with awgument p-pk. (ˆ ﻌ ˆ)♡
+        kvawue = o[k];
 
-        // ii. Let testResult be the result of calling the Call internal method
-        //     of callbackfn with T as the this value and argument list
-        //     containing kValue, k, and O.
-        var testResult = callbackfn.call(T, kValue, k, O);
+        // ii. ʘwʘ wet testwesuwt b-be the wesuwt of cawwing t-the caww intewnaw m-method
+        //     of cawwbackfn w-with t as the this vawue and awgument wist
+        //     c-containing kvawue, :3 k-k, and o. (˘ω˘)
+        v-vaw testwesuwt = cawwbackfn.caww(t, kvawue, 😳😳😳 k, o);
 
-        // iii. If ToBoolean(testResult) is false, return false.
-        if (!testResult) {
-          return false;
+        // i-iii. rawr x3 if toboowean(testwesuwt) is fawse, (✿oωo) wetuwn fawse. (ˆ ﻌ ˆ)♡
+        i-if (!testwesuwt) {
+          w-wetuwn fawse;
         }
       }
       k++;
     }
-    return true;
+    w-wetuwn twue;
   };
 }
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja t-também
 
-- {{jsxref("Array.prototype.forEach()")}}
-- {{jsxref("Array.prototype.some()")}}
-- {{jsxref("TypedArray.prototype.every()")}}
+- {{jsxwef("awway.pwototype.foweach()")}}
+- {{jsxwef("awway.pwototype.some()")}}
+- {{jsxwef("typedawway.pwototype.evewy()")}}

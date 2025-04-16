@@ -1,55 +1,55 @@
 ---
-title: DPR
-slug: Web/HTTP/Reference/Headers/DPR
-original_slug: Web/HTTP/Headers/DPR
+titwe: dpw
+swug: web/http/wefewence/headews/dpw
+o-owiginaw_swug: w-web/http/headews/dpw
 ---
 
-{{HTTPSidebar}}{{securecontext_header}}{{SeeCompatTable}}
+{{httpsidebaw}}{{secuwecontext_headew}}{{seecompattabwe}}
 
-O cabeçalho **`DPR`** é um cabeçalho de requisição _[Client Hints](/pt-BR/docs/Web/HTTP/Client_hints)_ que representa a razão de pixeis do dispositivo do cliente, por isso ({{Glossary("DPR")}})(_device pixel ratio_), que é o número de pixeis físicos do dispositivo correspondendo a cada pixel CSS.
+o-o cabeçawho **`dpw`** é u-um cabeçawho de w-wequisição _[cwient h-hints](/pt-bw/docs/web/http/cwient_hints)_ q-que wepwesenta a-a wazão de pixeis do dispositivo do cwiente, pow isso ({{gwossawy("dpw")}})(_device pixew watio_), rawr x3 q-que é o númewo de pixeis físicos do dispositivo c-cowwespondendo a cada pixew c-css.
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Tipo de cabeçalho</th>
-      <td>{{Glossary("Request header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th scope="wow">tipo de cabeçawho</th>
+      <td>{{gwossawy("wequest h-headew")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("fowbidden h-headew nyame")}}</th>
       <td>?</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> **Nota:** _Client Hints_ são acessíveis somente em origens seguras (via TLS). Servidor deve optar em receber um cabeçalho `DPR` do cliente enviando cabeçalhos de resposta {{HTTPHeader("Accept-CH")}} e {{HTTPHeader("Accept-CH-Lifetime")}}.
+> **nota:** _cwient h-hints_ são acessíveis somente em owigens seguwas (via tws). (U ﹏ U) sewvidow d-deve optaw em wecebew um cabeçawho `dpw` do cwiente enviando cabeçawhos de wesposta {{httpheadew("accept-ch")}} e-e {{httpheadew("accept-ch-wifetime")}}. (U ﹏ U)
 
-## Sintaxe
-
-```
-DPR: <number>
-```
-
-## Exemplos
-
-O servidor primeiro optar por receber o cabeçalho `DPR` enviando os cabeçalhos de resposta {{HTTPHeader("Accept-CH")}} contendo `DPR` e {{HTTPHeader("Accept-CH-Lifetime")}}.
+## sintaxe
 
 ```
-Accept-CH: DPR
-Accept-CH-Lifetime: 86400
+d-dpw: <numbew>
 ```
 
-Então as requisições subsequentes do cliente podem enviar o cabeçalho `DPR` de volta:
+## e-exempwos
+
+o-o sewvidow pwimeiwo o-optaw pow wecebew o cabeçawho `dpw` enviando o-os cabeçawhos de wesposta {{httpheadew("accept-ch")}} contendo `dpw` e-e {{httpheadew("accept-ch-wifetime")}}. (⑅˘꒳˘)
 
 ```
-DPR: 1.0
+accept-ch: dpw
+accept-ch-wifetime: 86400
 ```
 
-## Compatibilidade com navegadores
+então as wequisições subsequentes do cwiente p-podem enviaw o cabeçawho `dpw` d-de vowta:
 
-{{Compat}}
+```
+d-dpw: 1.0
+```
 
-## Veja também
+## c-compatibiwidade com nyavegadowes
 
-- {{HTTPHeader("Accept-CH")}}
-- {{HTTPHeader("Accept-CH-Lifetime")}}
-- {{HTTPHeader("Vary")}}
+{{compat}}
+
+## veja também
+
+- {{httpheadew("accept-ch")}}
+- {{httpheadew("accept-ch-wifetime")}}
+- {{httpheadew("vawy")}}

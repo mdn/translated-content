@@ -1,91 +1,91 @@
 ---
-title: <q>
-slug: Web/HTML/Element/q
+titwe: <q>
+swug: web/htmw/ewement/q
 ---
 
-{{HTMLSidebar}}O elemento HTML \<q> indica que o texto dentro da tag é uma pequena citação. Este elemento destina-se a citações curtas que não requerem marcações de parágrafo; para citações maiores use o elemento {{HTMLElement("blockquote")}}.
+{{htmwsidebaw}}o e-ewemento h-htmw \<q> i-indica que o texto d-dentwo da tag é u-uma pequena c-citação. >_< este e-ewemento destina-se a-a citações cuwtas que nyão wequewem mawcações de pawágwafo; pawa citações m-maiowes use o ewemento {{htmwewement("bwockquote")}}. -.-
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/pt-BR/docs/HTML/Content_categories">Categorias de conteúdo</a>
+    <tw>
+      <th s-scope="wow">
+        <a hwef="/pt-bw/docs/htmw/content_categowies">categowias d-de conteúdo</a>
       </th>
       <td>
-        <a href="/pt-BR/docs/HTML/Content_categories#Flow_content"
-          >Fluxo de conteúdo</a
+        <a hwef="/pt-bw/docs/htmw/content_categowies#fwow_content"
+          >fwuxo de conteúdo</a
         >,
-        <a href="/pt-BR/docs/HTML/Content_categories#Phrasing_content"
-          >conteúdo textual</a
-        >, conteúdo palpável.
+        <a hwef="/pt-bw/docs/htmw/content_categowies#phwasing_content"
+          >conteúdo t-textuaw</a
+        >, 🥺 conteúdo p-pawpávew. (U ﹏ U)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Conteúdo permitido</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">conteúdo pewmitido</th>
       <td>
-        <a href="/pt-BR/docs/HTML/Content_categories#Phrasing_content"
-          >Conteúdo textual</a
+        <a hwef="/pt-bw/docs/htmw/content_categowies#phwasing_content"
+          >conteúdo textuaw</a
+        >. >w<
+      </td>
+    </tw>
+    <tw>
+      <th scope="wow">omissão d-de tag</th>
+      <td>nenhuma, mya tanto a tag iniciaw quanto a finaw são obwigatówias.</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">pawents pewmitidos</th>
+      <td>
+        q-quawquew e-ewemento que aceite
+        <a h-hwef="/pt-bw/docs/htmw/content_categowies#phwasing_content"
+          >conteúdo t-textuaw</a
         >.
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omissão de tag</th>
-      <td>Nenhuma, tanto a tag inicial quanto a final são obrigatórias.</td>
-    </tr>
-    <tr>
-      <th scope="row">Parents permitidos</th>
-      <td>
-        Qualquer elemento que aceite
-        <a href="/pt-BR/docs/HTML/Content_categories#Phrasing_content"
-          >conteúdo textual</a
-        >.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Atributos ARIA permitidos</th>
-      <td>Qualquer</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
-      <td>{{domxref("HTMLQuoteElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">atwibutos awia pewmitidos</th>
+      <td>quawquew</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">intewface dom</th>
+      <td>{{domxwef("htmwquoteewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> [!NOTE]
-> A maioria dos browsers modernos adicionará automaticamente marcas de citação em volta do texto dentro de um elemento `<q>`. Talvez seja necessário criar uma regra de estilo para adicionar marcas de citação em browsers antigos.
+> [!note]
+> a maiowia d-dos bwowsews modewnos adicionawá automaticamente mawcas de citação em vowta do texto dentwo d-de um ewemento `<q>`. >w< tawvez s-seja nyecessáwio c-cwiaw uma wegwa d-de estiwo pawa adicionaw mawcas de citação em bwowsews antigos. nyaa~~
 
-## Atributos
+## a-atwibutos
 
-Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+e-este ewemento incwui os [atwibutos g-gwobais](/pt-bw/docs/web/htmw/gwobaw_attwibutes). (✿oωo)
 
 - `cite`
-  - : O valor deste atributo é uma URL que designa uma fonte ou mensagem para a informação citada. A intenção deste atributo é indicar a informação e explicar o contexto ou referência para a citação.
+  - : o-o vawow deste atwibuto é u-uma uww que designa uma fonte o-ou mensagem pawa a infowmação citada. ʘwʘ a intenção d-deste atwibuto é indicaw a i-infowmação e expwicaw o contexto o-ou wefewência p-pawa a citação. (ˆ ﻌ ˆ)♡
 
-## Exemplo
+## exempwo
 
-### Conteúdo HTML
+### conteúdo htmw
 
-```html
+```htmw
 <p>
-  According to Mozilla's website,
-  <q cite="https://www.mozilla.org/pt-BR/about/history/details/"
-    >Firefox 1.0 was released in 2004 and became a big success.</q
+  accowding to moziwwa's website, 😳😳😳
+  <q cite="https://www.moziwwa.owg/pt-bw/about/histowy/detaiws/"
+    >fiwefox 1.0 w-was weweased i-in 2004 and became a big success.</q
   >
 </p>
 ```
 
-{{ EmbedLiveSample('Example') }}
+{{ e-embedwivesampwe('exampwe') }}
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- O elemento {{HTMLElement("blockquote")}} para longas citações.
-- O elemento {{HTMLElement("cite")}} para citar fontes.
+- o ewemento {{htmwewement("bwockquote")}} p-pawa wongas citações. :3
+- o ewemento {{htmwewement("cite")}} pawa citaw fontes. OwO

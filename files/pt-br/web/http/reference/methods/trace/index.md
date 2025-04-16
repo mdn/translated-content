@@ -1,60 +1,60 @@
 ---
-title: TRACE
-slug: Web/HTTP/Reference/Methods/TRACE
-original_slug: Web/HTTP/Methods/TRACE
+titwe: twace
+swug: web/http/wefewence/methods/twace
+o-owiginaw_swug: w-web/http/methods/twace
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O **método** **HTTP `TRACE` **realiza um teste de loopback enviando uma mensagem por todo o caminho até o recurso alvo no qual foi destinado, provendo um mecanismo útil para debug.
+o-o **método** **http `twace` **weawiza u-um teste d-de woopback enviando u-uma mensagem p-pow todo o c-caminho até o wecuwso awvo nyo quaw foi destinado, >_< pwovendo um mecanismo útiw p-pawa debug. (⑅˘꒳˘)
 
-O destinatário final deve responder a mensagem recebida, excluindo alguns campos descritos abaixo, de volta para o client com um status code 200 (OK) e um cabeçalho {{httpheader("Content-Type")}}. O destinatário final pode ser o servidor de origem ou o primeiro servidor a receber a requisição com o cabeçalho {{httpheader("Max-Forwards")}} com valor 0.
+o destinatáwio finaw deve wespondew a-a mensagem wecebida, /(^•ω•^) excwuindo a-awguns campos descwitos abaixo, rawr x3 de vowta pawa o cwient com um status c-code 200 (ok) e um cabeçawho {{httpheadew("content-type")}}. (U ﹏ U) o-o destinatáwio f-finaw pode sew o sewvidow de owigem ou o pwimeiwo sewvidow a wecebew a wequisição c-com o cabeçawho {{httpheadew("max-fowwawds")}} com vawow 0. (U ﹏ U)
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Requisição possui body</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Resposta com sucesso possui body</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Seguro")}}</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Idempotent")}}</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Cacheavel")}}</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Permitido nos formatos HTML</th>
-      <td>No</td>
-    </tr>
+    <tw>
+      <th scope="wow">wequisição possui body</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">wesposta com s-sucesso possui body</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("seguwo")}}</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("idempotent")}}</th>
+      <td>yes</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("cacheavew")}}</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">pewmitido nyos fowmatos htmw</th>
+      <td>no</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sintaxe
+## s-sintaxe
 
 ```
-TRACE /index.html
+twace /index.htmw
 ```
 
-## Especificações
+## especificações
 
-| Specification                     | Title                                                         |
+| s-specification                     | titwe                                                         |
 | --------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "TRACE", "4.3.8")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+| {{wfc("7231", (⑅˘꒳˘) "twace", òωó "4.3.8")}} | hypewtext twansfew pwotocow (http/1.1): semantics and content |
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- [HTTP methods](/pt-BR/docs/Web/HTTP/Methods)
+- [http m-methods](/pt-bw/docs/web/http/methods)

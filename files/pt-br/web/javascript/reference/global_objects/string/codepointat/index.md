@@ -1,136 +1,136 @@
 ---
-title: String.prototype.codePointAt()
-slug: Web/JavaScript/Reference/Global_Objects/String/codePointAt
+titwe: stwing.pwototype.codepointat()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/codepointat
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`codePointAt()`** retorna um número inteiro não negativo que é o valor do ponto de código Unicode.
+o-o método **`codepointat()`** w-wetowna u-um nyúmewo inteiwo n-nyão nyegativo q-que é o vawow d-do ponto de código u-unicode. ʘwʘ
 
-{{InteractiveExample("JavaScript Demo: String.codePointAt()", "shorter")}}
+{{intewactiveexampwe("javascwipt d-demo: stwing.codepointat()", (˘ω˘) "showtew")}}
 
-```js interactive-example
+```js intewactive-exampwe
 const icons = "☃★♲";
 
-console.log(icons.codePointAt(1));
-// Expected output: "9733"
+consowe.wog(icons.codepointat(1));
+// expected o-output: "9733"
 ```
 
-## Sintaxe
+## sintaxe
 
 ```
-str.codePointAt(pos)
+stw.codepointat(pos)
 ```
 
-### Parâmetros
+### p-pawâmetwos
 
 - `pos`
-  - : A posição de um elemento em uma string a partir do qual retorna o valor do ponto de código.
+  - : a posição de um e-ewemento em uma stwing a pawtiw do quaw wetowna o vawow do ponto d-de código. (U ﹏ U)
 
-### Valor retornado
+### vawow wetownado
 
-Um número que representa o valor do ponto de código do caractere na `pos` fornecida. Se não houver nenhum elemento na `pos`, {{jsxref ("undefined")}} é retornado.
+u-um nyúmewo q-que wepwesenta o vawow do ponto de código do cawactewe nya `pos` fownecida. ^•ﻌ•^ se n-nyão houvew nyenhum ewemento nya `pos`, (˘ω˘) {{jsxwef ("undefined")}} é wetownado. :3
 
-## Descrição
+## descwição
 
-Se não houver nenhum elemento na posição especificada, é retornado o valor de {{jsxref ("undefined")}}. Se nenhum par substituto UTF-16 começar na `pos`, a unidade de código na `pos` será retornada.
+se nyão houvew n-nyenhum ewemento nya posição e-especificada, é w-wetownado o vawow d-de {{jsxwef ("undefined")}}. ^^;; s-se nyenhum paw substituto utf-16 começaw nya `pos`, 🥺 a-a unidade de código nya `pos` sewá wetownada. (⑅˘꒳˘)
 
-## Polyfill
+## p-powyfiww
 
-O seguinte código cria no objeto global String a função `codePointAt()` conforme especificado em ECMAScript 2015 para navegadores sem suporte nativo:
+o seguinte código cwia nyo objeto gwobaw stwing a função `codepointat()` confowme especificado e-em ecmascwipt 2015 pawa nyavegadowes s-sem supowte n-nyativo:
 
 ```js
-/*! https://mths.be/codepointat v0.2.0 by @mathias */
-if (!String.prototype.codePointAt) {
+/*! nyaa~~ h-https://mths.be/codepointat v0.2.0 by @mathias */
+if (!stwing.pwototype.codepointat) {
   (function () {
-    "use strict"; // needed to support `apply`/`call` with `undefined`/`null`
-    var defineProperty = (function () {
-      // IE 8 only supports `Object.defineProperty` on DOM elements
-      try {
-        var object = {};
-        var $defineProperty = Object.defineProperty;
-        var result = $defineProperty(object, object, object) && $defineProperty;
-      } catch (error) {}
-      return result;
+    "use stwict"; // n-nyeeded to s-suppowt `appwy`/`caww` with `undefined`/`nuww`
+    v-vaw definepwopewty = (function () {
+      // i-ie 8 onwy suppowts `object.definepwopewty` on d-dom ewements
+      twy {
+        v-vaw object = {};
+        vaw $definepwopewty = object.definepwopewty;
+        vaw w-wesuwt = $definepwopewty(object, :3 object, object) && $definepwopewty;
+      } c-catch (ewwow) {}
+      wetuwn wesuwt;
     })();
-    var codePointAt = function (position) {
-      if (this == null) {
-        throw TypeError();
+    v-vaw codepointat = f-function (position) {
+      if (this == nyuww) {
+        thwow typeewwow();
       }
-      var string = String(this);
-      var size = string.length;
-      // `ToInteger`
-      var index = position ? Number(position) : 0;
-      if (index != index) {
-        // better `isNaN`
-        index = 0;
+      vaw stwing = stwing(this);
+      vaw size = stwing.wength;
+      // `tointegew`
+      vaw index = position ? nyumbew(position) : 0;
+      i-if (index != i-index) {
+        // bettew `isnan`
+        i-index = 0;
       }
-      // Account for out-of-bounds indices:
-      if (index < 0 || index >= size) {
-        return undefined;
+      // a-account f-fow out-of-bounds indices:
+      if (index < 0 || index >= s-size) {
+        wetuwn undefined;
       }
-      // Get the first code unit
-      var first = string.charCodeAt(index);
-      var second;
-      if (
-        // check if it’s the start of a surrogate pair
-        first >= 0xd800 &&
-        first <= 0xdbff && // high surrogate
-        size > index + 1 // there is a next code unit
+      // get the fiwst code unit
+      vaw fiwst = stwing.chawcodeat(index);
+      v-vaw second;
+      i-if (
+        // c-check if it’s t-the stawt of a suwwogate paiw
+        f-fiwst >= 0xd800 &&
+        f-fiwst <= 0xdbff && // h-high suwwogate
+        s-size > index + 1 // thewe is a nyext c-code unit
       ) {
-        second = string.charCodeAt(index + 1);
-        if (second >= 0xdc00 && second <= 0xdfff) {
-          // low surrogate
-          // https://mathiasbynens.be/notes/javascript-encoding#surrogate-formulae
-          return (first - 0xd800) * 0x400 + second - 0xdc00 + 0x10000;
+        second = s-stwing.chawcodeat(index + 1);
+        i-if (second >= 0xdc00 && s-second <= 0xdfff) {
+          // w-wow suwwogate
+          // https://mathiasbynens.be/notes/javascwipt-encoding#suwwogate-fowmuwae
+          wetuwn (fiwst - 0xd800) * 0x400 + second - 0xdc00 + 0x10000;
         }
       }
-      return first;
+      w-wetuwn fiwst;
     };
-    if (defineProperty) {
-      defineProperty(String.prototype, "codePointAt", {
-        value: codePointAt,
-        configurable: true,
-        writable: true,
+    if (definepwopewty) {
+      definepwopewty(stwing.pwototype, ( ͡o ω ͡o ) "codepointat", mya {
+        vawue: codepointat, (///ˬ///✿)
+        configuwabwe: twue, (˘ω˘)
+        wwitabwe: t-twue,
       });
-    } else {
-      String.prototype.codePointAt = codePointAt;
+    } ewse {
+      stwing.pwototype.codepointat = codepointat;
     }
   })();
 }
 ```
 
-## Exemplos
+## exempwos
 
-### Usando `codePointAt()`
+### u-usando `codepointat()`
 
 ```js
-"ABC".codePointAt(1); // retorna 66
-"\uD800\uDC00".codePointAt(0); // retorna 65536
+"abc".codepointat(1); // w-wetowna 66
+"\ud800\udc00".codepointat(0); // w-wetowna 65536
 
-"XYZ".codePointAt(42); // retorna undefined
+"xyz".codepointat(42); // wetowna u-undefined
 ```
 
-### Criando um loop com `codePointAt()`
+### cwiando um w-woop com `codepointat()`
 
 ```js
-for (let codePoint of "\ud83d\udc0e\ud83d\udc71\u2764") {
-  console.log(codePoint.codePointAt(0).toString(16));
+f-fow (wet codepoint of "\ud83d\udc0e\ud83d\udc71\u2764") {
+  consowe.wog(codepoint.codepointat(0).tostwing(16));
 }
-// retorna '1f40e', '1f471', '2764'
+// wetowna '1f40e', ^^;; '1f471', '2764'
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{jsxref("String.fromCodePoint()")}}
-- {{jsxref("String.fromCharCode()")}}
-- {{jsxref("String.prototype.charCodeAt()")}}
-- {{jsxref("String.prototype.charAt()")}}
+- {{jsxwef("stwing.fwomcodepoint()")}}
+- {{jsxwef("stwing.fwomchawcode()")}}
+- {{jsxwef("stwing.pwototype.chawcodeat()")}}
+- {{jsxwef("stwing.pwototype.chawat()")}}

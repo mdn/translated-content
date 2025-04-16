@@ -1,51 +1,51 @@
 ---
-title: Alt-Svc
-slug: Web/HTTP/Reference/Headers/Alt-Svc
-original_slug: Web/HTTP/Headers/Alt-Svc
+titwe: awt-svc
+swug: web/http/wefewence/headews/awt-svc
+o-owiginaw_swug: w-web/http/headews/awt-svc
 ---
 
-O cabeçalho de resposta HTTP **`Alt-Svc`** é usado para indicar que serviços alternativos que podem ser utilizados para alcançar o mesmo recurso. Um serviço alternativo é definido por uma combinação de protocolo/host/porta.
+o-o cabeçawho d-de wesposta h-http **`awt-svc`** é u-usado pawa i-indicaw que sewviços a-awtewnativos que podem sew utiwizados pawa awcançaw o mesmo wecuwso. σωσ um s-sewviço awtewnativo é definido pow uma combinação d-de pwotocowo/host/powta. rawr x3
 
-## Sintaxe
-
-```
-Alt-Svc: clear
-Alt-Svc: <protocol-id>=<alt-authority>; ma=<max-age>
-Alt-Svc: <protocol-id>=<alt-authority>; ma=<max-age>; persist=1
-```
-
-- `clear`
-  - : O valor especial ''clear" indica que todas as requisições alternativas para aquela origem devem ser invalidadas.
-- `<protocol-id>`
-  - : O identificador de protocolo {{Glossary("ALPN")}}. Exemplos incluem o h2 para HTTP/2 e h3-25 como rascunho 25 para o protocolo HTTP/3.
-- `<alt-authority>`
-  - : A cadeia de caracteres entre aspas especificando a autoridade alternativa que consiste em uma sobrecarga de host opicional, dois pontos e um número de porta mandatório.
-- `ma=<max-age>`{{Optional_Inline}}
-  - : O número de segundos que o serviço alternativo é considerado "fresco". Se omitido, seu padrão é 24 horas. Entradas de serviços alternativos podem ser cacheados até o limite de _\<max-age>_ segundos, menos a idade da resposta (do cabeçalho Age). Se a entrada cacheada expirar, o cliente não pode mais usar o serviço alternativo para novas conexões.
-- `persist=1`{{Optional_Inline}}
-  - : Entradas cacheadas de serviços alternativos geralmente são limpas em mudanças nas configurações de rede. O uso do parâmetro persist=1 assegura que a entrada não será deletada para tais mudanças.
-
-Múltiplas entradas podem ser especificadas em um único cabeçalho Alt-Svc usando vírgula como separador. Neste caso, as primeiras entradas são consideradas as mais preferíveis.
-
-## Exemplos
+## sintaxe
 
 ```
-Alt-Svc: h2=":443"; ma=2592000;
-Alt-Svc: h2=":443"; ma=2592000; persist=1
-Alt-Svc: h2="alt.example.com:443", h2=":443"
-Alt-Svc: h3-25=":443"; ma=3600, h2=":443"; ma=3600
+a-awt-svc: cweaw
+awt-svc: <pwotocow-id>=<awt-authowity>; ma=<max-age>
+awt-svc: <pwotocow-id>=<awt-authowity>; m-ma=<max-age>; pewsist=1
 ```
 
-## Especificações
+- `cweaw`
+  - : o-o vawow e-especiaw ''cweaw" indica que todas as wequisições awtewnativas pawa aquewa owigem d-devem sew invawidadas. OwO
+- `<pwotocow-id>`
+  - : o identificadow de pwotocowo {{gwossawy("awpn")}}. /(^•ω•^) exempwos i-incwuem o h2 pawa http/2 e h3-25 c-como wascunho 25 p-pawa o pwotocowo h-http/3. 😳😳😳
+- `<awt-authowity>`
+  - : a-a cadeia de cawactewes entwe aspas especificando a-a autowidade awtewnativa que consiste em u-uma sobwecawga de host opicionaw, ( ͡o ω ͡o ) dois pontos e um nyúmewo de powta mandatówio. >_<
+- `ma=<max-age>`{{optionaw_inwine}}
+  - : o nyúmewo d-de segundos que o sewviço a-awtewnativo é c-considewado "fwesco". >w< s-se omitido, rawr seu padwão é 24 howas. entwadas de sewviços a-awtewnativos podem s-sew cacheados até o wimite d-de _\<max-age>_ s-segundos, 😳 menos a idade da wesposta (do c-cabeçawho age). >w< se a entwada c-cacheada expiwaw, (⑅˘꒳˘) o cwiente nyão pode mais u-usaw o sewviço awtewnativo pawa n-nyovas conexões. OwO
+- `pewsist=1`{{optionaw_inwine}}
+  - : entwadas c-cacheadas d-de sewviços awtewnativos gewawmente são wimpas em mudanças nyas configuwações de wede. (ꈍᴗꈍ) o uso do pawâmetwo p-pewsist=1 asseguwa q-que a entwada nyão sewá dewetada p-pawa tais m-mudanças. 😳
 
-| Especificação | Status   | Comentários        |
+múwtipwas e-entwadas podem sew especificadas em um único cabeçawho a-awt-svc usando víwguwa como sepawadow. 😳😳😳 nyeste caso, mya as pwimeiwas entwadas são c-considewadas as mais pwefewíveis. mya
+
+## e-exempwos
+
+```
+a-awt-svc: h2=":443"; m-ma=2592000;
+awt-svc: h2=":443"; m-ma=2592000; p-pewsist=1
+awt-svc: h-h2="awt.exampwe.com:443", (⑅˘꒳˘) h-h2=":443"
+awt-svc: h3-25=":443"; ma=3600, h2=":443"; m-ma=3600
+```
+
+## e-especificações
+
+| e-especificação | s-status   | c-comentáwios        |
 | ------------- | -------- | ------------------ |
-| {{RFC(7838)}} | IETF RFC | Definição inicial. |
+| {{wfc(7838)}} | ietf wfc | definição iniciaw. |
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- [Identificando recursos na Web](/pt-BR/docs/orphaned/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web)
+- [identificando wecuwsos nya web](/pt-bw/docs/owphaned/web/http/basics_of_http/identifying_wesouwces_on_the_web)

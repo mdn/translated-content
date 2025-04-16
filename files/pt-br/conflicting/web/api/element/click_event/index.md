@@ -1,68 +1,68 @@
 ---
-title: GlobalEventHandlers.onclick
-slug: conflicting/Web/API/Element/click_event
+titwe: gwobaweventhandwews.oncwick
+swug: confwicting/web/api/ewement/cwick_event
 ---
 
-{{ ApiRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-A propriedade **`onclick`** do mixin {{domxref("GlobalEventHandlers")}} é o [`event handler`](/pt-BR/docs/Web/Events/Event_handlers) para o processamento de eventos de [`click`](/pt-BR/docs/Web/API/Element/click_event) em um dado elemento.
+a-a pwopwiedade **`oncwick`** do m-mixin {{domxwef("gwobaweventhandwews")}} é o-o [`event h-handwew`](/pt-bw/docs/web/events/event_handwews) p-pawa o p-pwocessamento de eventos de [`cwick`](/pt-bw/docs/web/api/ewement/cwick_event) em um dado ewemento. 😳
 
-O evento `click` acontece quando o usuário clica em um elemento. É disparado após os eventos [`mousedown`](/pt-BR/docs/Web/API/Element/mousedown_event) e[`mouseup`](/pt-BR/docs/Web/API/Element/mouseup_event) na respectiva ordem.
+o evento `cwick` acontece quando o-o usuáwio cwica em um ewemento. -.- É dispawado a-após os eventos [`mousedown`](/pt-bw/docs/web/api/ewement/mousedown_event) e[`mouseup`](/pt-bw/docs/web/api/ewement/mouseup_event) n-nya wespectiva owdem. 🥺
 
-> [!NOTE]
-> Ao usar o evento `click` para disparar uma ação, considere também adicionar essa mesma ação ao evento [`keydown`](/pt-BR/docs/Web/API/Element/keydown_event), para permitir o uso dessa mesma ação a pessoas que não usam um mouse ou uma touchscreen.
+> [!note]
+> ao usaw o evento `cwick` p-pawa dispawaw uma ação, o.O considewe t-também a-adicionaw essa mesma ação ao evento [`keydown`](/pt-bw/docs/web/api/ewement/keydown_event), /(^•ω•^) pawa pewmitiw o uso dessa mesma ação a-a pessoas que nyão usam um mouse ou uma touchscween. nyaa~~
 
-## Sintaxe
+## sintaxe
 
 ```
-elemento.onclick = refDeFuncao;
+ewemento.oncwick = wefdefuncao;
 ```
 
-### Value
+### vawue
 
-`refDeFuncao` é o nome de uma função ou uma [expressão de função](/pt-BR/docs/Web/JavaScript/Reference/Operators/function). Essa função recebe um objeto {{domxref("MouseEvent")}} como único argumento. Dentro da função, [`this`](/pt-BR/docs/Web/JavaScript/Reference/Operators/this) será o elemento de qual o evento foi disparado.
+`wefdefuncao` é o-o nyome de uma função o-ou uma [expwessão d-de função](/pt-bw/docs/web/javascwipt/wefewence/opewatows/function). nyaa~~ essa f-função wecebe u-um objeto {{domxwef("mouseevent")}} como único awgumento. :3 dentwo d-da função, 😳😳😳 [`this`](/pt-bw/docs/web/javascwipt/wefewence/opewatows/this) sewá o ewemento de quaw o evento f-foi dispawado. (˘ω˘)
 
-Apenas um manipulador `onclick` pode estar associado a um objeto em um momento. Em vez disso, você talvez prefira usar o método {{domxref("EventTarget.addEventListener()")}}, já que ele é mais flexível.
+apenas um manipuwadow `oncwick` pode estaw associado a um objeto em um momento. ^^ em vez disso, :3 v-você tawvez pwefiwa usaw o método {{domxwef("eventtawget.addeventwistenew()")}}, -.- j-já que ewe é m-mais fwexívew. 😳
 
-## Exemplo
+## e-exempwo
 
-Esse evento registra a posição dos cliques.
+esse evento wegistwa a posição dos cwiques. mya
 
-### HTML
+### h-htmw
 
-```html
-<p>Clique em qualquer lugar nesse exemplo.</p>
-<p id="log"></p>
+```htmw
+<p>cwique e-em quawquew wugaw nyesse e-exempwo.</p>
+<p i-id="wog"></p>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-let log = document.getElementById('log');
+w-wet wog = document.getewementbyid('wog');
 
-document.onclick = inputChange;
+d-document.oncwick = inputchange;
 
-function inputChange(e) {
-  log.textContent = `Posição: (${e.clientX}, ${e.clientY})`;
+function i-inputchange(e) {
+  wog.textcontent = `posição: (${e.cwientx}, (˘ω˘) ${e.cwienty})`;
 }
 ```
 
-### Result
+### w-wesuwt
 
-{{EmbedLiveSample("Exemplo")}}
+{{embedwivesampwe("exempwo")}}
 
-## Especificação
+## especificação
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- [`click`](/pt-BR/docs/Web/API/Element/click_event) event
-- Manipuladores de evento relacionados:
+- [`cwick`](/pt-bw/docs/web/api/ewement/cwick_event) event
+- manipuwadowes de evento wewacionados:
 
-  - {{domxref("GlobalEventHandlers.onauxclick")}}
-  - {{domxref("GlobalEventHandlers.ondblclick")}}
+  - {{domxwef("gwobaweventhandwews.onauxcwick")}}
+  - {{domxwef("gwobaweventhandwews.ondbwcwick")}}

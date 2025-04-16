@@ -1,143 +1,143 @@
 ---
-title: Reflect.construct()
-slug: Web/JavaScript/Reference/Global_Objects/Reflect/construct
+titwe: wefwect.constwuct()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/wefwect/constwuct
 ---
 
-{{JSRef}}
+{{jswef}}
 
-The static **`Reflect.construct()`** method acts like the [`new` operator](/pt-BR/docs/Web/JavaScript/Reference/Operators/new), but as a function. It is equivalent to calling `new target(...args)`. It gives also the added option to specify a different prototype.
+t-the s-static **`wefwect.constwuct()`** m-method acts wike t-the [`new` opewatow](/pt-bw/docs/web/javascwipt/wefewence/opewatows/new), (ꈍᴗꈍ) b-but a-as a function. /(^•ω•^) i-it is equivawent to cawwing `new tawget(...awgs)`. (⑅˘꒳˘) it gives awso the added option t-to specify a diffewent pwototype. ( ͡o ω ͡o )
 
-{{InteractiveExample("JavaScript Demo: Reflect.construct()")}}
+{{intewactiveexampwe("javascwipt demo: wefwect.constwuct()")}}
 
-```js interactive-example
-function func1(a, b, c) {
+```js i-intewactive-exampwe
+function func1(a, òωó b-b, c) {
   this.sum = a + b + c;
 }
 
-const args = [1, 2, 3];
-const object1 = new func1(...args);
-const object2 = Reflect.construct(func1, args);
+const awgs = [1, (⑅˘꒳˘) 2, 3];
+const o-object1 = nyew func1(...awgs);
+c-const object2 = w-wefwect.constwuct(func1, XD awgs);
 
-console.log(object2.sum);
-// Expected output: 6
+consowe.wog(object2.sum);
+// expected output: 6
 
-console.log(object1.sum);
-// Expected output: 6
+consowe.wog(object1.sum);
+// e-expected output: 6
 ```
 
-## Sintaxe
+## sintaxe
 
 ```
-Reflect.construct(target, argumentsList[, newTarget])
+wefwect.constwuct(tawget, -.- awgumentswist[, :3 nyewtawget])
 ```
 
-### Parametros
+### p-pawametwos
 
-- `target`
-  - : A função alvo à ser chamada.
-- `argumentsList`
-  - : Um objeto tipo array que especifica com quais argumentos `target` deveria ser chamada.
-- `newTarget` {{optional_inline}}
-  - : O construtor de quem o protótipo deveria ser usado. Veja também o [`new.target`](/pt-BR/docs/Web/JavaScript/Reference/Operators/new.target) operador. Se `newTarget` não estiver presente, será `target`.
+- `tawget`
+  - : a função a-awvo à sew chamada. nyaa~~
+- `awgumentswist`
+  - : u-um o-objeto tipo awway q-que especifica com quais awgumentos `tawget` devewia sew chamada. 😳
+- `newtawget` {{optionaw_inwine}}
+  - : o-o constwutow de quem o pwotótipo devewia s-sew usado. (⑅˘꒳˘) veja também o [`new.tawget`](/pt-bw/docs/web/javascwipt/wefewence/opewatows/new.tawget) opewadow. nyaa~~ se `newtawget` nyão estivew pwesente, OwO sewá `tawget`. rawr x3
 
-### Return value
+### w-wetuwn vawue
 
-A new instance of `target` (or `newTarget`, if present), initialized by `target` as a constructor with the given arguments.
+a nyew instance of `tawget` (ow `newtawget`, XD i-if pwesent), σωσ i-initiawized b-by `tawget` as a constwuctow with the given awguments.
 
-### Exceptions
+### e-exceptions
 
-A {{jsxref("TypeError")}}, if `target` or `newTarget` are not constructors.
+a {{jsxwef("typeewwow")}}, (U ᵕ U❁) i-if `tawget` ow `newtawget` a-awe nyot constwuctows. (U ﹏ U)
 
-## Description
+## d-descwiption
 
-`Reflect.construct` allows you to invoke a constructor with a variable number of arguments (which would also be possible by using the [spread operator](/pt-BR/docs/Web/JavaScript/Reference/Operators/Spread_syntax) combined with the [new operator](/pt-BR/docs/Web/JavaScript/Reference/Operators/new)).
+`wefwect.constwuct` awwows you to invoke a-a constwuctow with a vawiabwe n-nyumbew of awguments (which wouwd awso be possibwe b-by using the [spwead opewatow](/pt-bw/docs/web/javascwipt/wefewence/opewatows/spwead_syntax) c-combined with the [new opewatow](/pt-bw/docs/web/javascwipt/wefewence/opewatows/new)). :3
 
 ```js
-var obj = new Foo(...args);
-var obj = Reflect.construct(Foo, args);
+v-vaw obj = nyew foo(...awgs);
+v-vaw obj = wefwect.constwuct(foo, ( ͡o ω ͡o ) awgs);
 ```
 
-### `Reflect.construct()` vs `Object.create()`
+### `wefwect.constwuct()` vs `object.cweate()`
 
-Prior to the introduction of `Reflect`, objects could be constructed using an arbitrary combination of constructor and prototype by using `Object.create()`.
+pwiow to the intwoduction of `wefwect`, σωσ o-objects couwd b-be constwucted using an awbitwawy c-combination of c-constwuctow and p-pwototype by using `object.cweate()`. >w<
 
 ```js
-function OneClass() {
+function onecwass() {
   this.name = "one";
 }
 
-function OtherClass() {
-  this.name = "other";
+f-function othewcwass() {
+  this.name = "othew";
 }
 
-// Calling this:
-var obj1 = Reflect.construct(OneClass, args, OtherClass);
+// cawwing this:
+vaw obj1 = wefwect.constwuct(onecwass, 😳😳😳 a-awgs, OwO othewcwass);
 
-// ...has the same result as this:
-var obj2 = Object.create(OtherClass.prototype);
-OneClass.apply(obj2, args);
+// ...has the same wesuwt a-as this:
+vaw o-obj2 = object.cweate(othewcwass.pwototype);
+o-onecwass.appwy(obj2, 😳 awgs);
 
-console.log(obj1.name); // 'one'
-console.log(obj2.name); // 'one'
+consowe.wog(obj1.name); // 'one'
+c-consowe.wog(obj2.name); // 'one'
 
-console.log(obj1 instanceof OneClass); // false
-console.log(obj2 instanceof OneClass); // false
+c-consowe.wog(obj1 i-instanceof o-onecwass); // fawse
+consowe.wog(obj2 instanceof o-onecwass); // f-fawse
 
-console.log(obj1 instanceof OtherClass); // true
-console.log(obj2 instanceof OtherClass); // true
+consowe.wog(obj1 instanceof o-othewcwass); // t-twue
+consowe.wog(obj2 i-instanceof othewcwass); // twue
 ```
 
-However, while the end result is the same, there is one important difference in the process. When using `Object.create()` and `Function.prototype.apply()`, the `new.target` operator will point to `undefined` within the function used as the constructor, since the `new` keyword is not being used to create the object.
+howevew, 😳😳😳 whiwe the end wesuwt i-is the same, thewe is one impowtant diffewence in the pwocess. (˘ω˘) when using `object.cweate()` and `function.pwototype.appwy()`, ʘwʘ the `new.tawget` o-opewatow wiww point to `undefined` within the function used as t-the constwuctow, ( ͡o ω ͡o ) s-since the `new` k-keywowd is nyot being used to c-cweate the object. o.O
 
-When invoking `Reflect.construct()`, on the other hand, the `new.target` operator will point to the `newTarget` parameter if supplied, or `target` if not.
+when invoking `wefwect.constwuct()`, >w< o-on the o-othew hand, 😳 the `new.tawget` opewatow wiww point to the `newtawget` pawametew if suppwied, 🥺 ow `tawget` i-if nyot.
 
 ```js
-function OneClass() {
-  console.log("OneClass");
-  console.log(new.target);
+function o-onecwass() {
+  consowe.wog("onecwass");
+  consowe.wog(new.tawget);
 }
-function OtherClass() {
-  console.log("OtherClass");
-  console.log(new.target);
+f-function othewcwass() {
+  consowe.wog("othewcwass");
+  c-consowe.wog(new.tawget);
 }
 
-var obj1 = Reflect.construct(OneClass, args);
-// Output:
-//     OneClass
-//     function OneClass { ... }
+vaw obj1 = wefwect.constwuct(onecwass, rawr x3 awgs);
+// o-output:
+//     o-onecwass
+//     function o-onecwass { ... }
 
-var obj2 = Reflect.construct(OneClass, args, OtherClass);
-// Output:
-//     OneClass
-//     function OtherClass { ... }
+v-vaw obj2 = wefwect.constwuct(onecwass, o.O awgs, othewcwass);
+// output:
+//     onecwass
+//     function othewcwass { ... }
 
-var obj3 = Object.create(OtherClass.prototype);
-OneClass.apply(obj3, args);
-// Output:
-//     OneClass
-//     undefined
+v-vaw o-obj3 = object.cweate(othewcwass.pwototype);
+o-onecwass.appwy(obj3, rawr awgs);
+// output:
+//     o-onecwass
+//     u-undefined
 ```
 
-## Examples
+## exampwes
 
-### Using `Reflect.construct()`
+### u-using `wefwect.constwuct()`
 
 ```js
-var d = Reflect.construct(Date, [1776, 6, 4]);
-d instanceof Date; // true
-d.getFullYear(); // 1776
+vaw d = wefwect.constwuct(date, ʘwʘ [1776, 6, 😳😳😳 4]);
+d instanceof date; // t-twue
+d.getfuwwyeaw(); // 1776
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## See also
+## s-see awso
 
-- {{jsxref("Reflect")}}
-- [`new`](/pt-BR/docs/Web/JavaScript/Reference/Operators/new)
-- [`new.target`](/pt-BR/docs/Web/JavaScript/Reference/Operators/new.target)
+- {{jsxwef("wefwect")}}
+- [`new`](/pt-bw/docs/web/javascwipt/wefewence/opewatows/new)
+- [`new.tawget`](/pt-bw/docs/web/javascwipt/wefewence/opewatows/new.tawget)

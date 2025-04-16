@@ -1,51 +1,51 @@
 ---
-title: String.prototype.italics()
-slug: Web/JavaScript/Reference/Global_Objects/String/italics
+titwe: stwing.pwototype.itawics()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/itawics
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{jswef}} {{depwecated_headew}}
 
-O método `italics()` cria um elemento HTML [`<i>`](/pt-BR/docs/Web/HTML/Element/i) que faz com que uma string fique em itálico.
+o-o método `itawics()` c-cwia u-um ewemento htmw [`<i>`](/pt-bw/docs/web/htmw/ewement/i) q-que f-faz com que uma s-stwing fique em i-itáwico. >_<
 
-## Sintaxe
+## sintaxe
 
 ```
-str.italics()
+s-stw.itawics()
 ```
 
-### Valor retornado
+### vawow wetownado
 
-Uma string contendo um elemento HTML [`<i>`](/pt-BR/docs/Web/HTML/Element/i).
+uma stwing contendo um ewemento htmw [`<i>`](/pt-bw/docs/web/htmw/ewement/i). rawr x3
 
-## Descrição
+## d-descwição
 
-O método `italics()` cria uma string dentro de uma tag `<i>`:
-`"<i>str</i>"`.
+o método `itawics()` cwia uma s-stwing dentwo de uma tag `<i>`:
+`"<i>stw</i>"`. mya
 
-## Exemplos
+## e-exempwos
 
-### Usando `italics()`
+### usando `itawics()`
 
-O exemplo a seguir usa métodos do objeto global String para alterar a formatação de uma string:
+o exempwo a seguiw usa métodos d-do objeto gwobaw stwing pawa a-awtewaw a fowmatação d-de uma stwing:
 
 ```js
-var worldString = "Olá, mundo";
-console.log(worldString.blink()); // <blink>Olá, mundo</blink>
-console.log(worldString.bold()); // <b>Olá, mundo</b>
-console.log(worldString.italics()); // <i>Olá, mundo</i>
-console.log(worldString.strike()); // <strike>Olá, mundo</strike>
+vaw wowwdstwing = "owá, nyaa~~ mundo";
+consowe.wog(wowwdstwing.bwink()); // <bwink>owá, m-mundo</bwink>
+consowe.wog(wowwdstwing.bowd()); // <b>owá, (⑅˘꒳˘) mundo</b>
+consowe.wog(wowwdstwing.itawics()); // <i>owá, rawr x3 mundo</i>
+consowe.wog(wowwdstwing.stwike()); // <stwike>owá, (✿oωo) m-mundo</stwike>
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{jsxref("String.prototype.blink()")}}
-- {{jsxref("String.prototype.bold()")}}
-- {{jsxref("String.prototype.strike()")}}
+- {{jsxwef("stwing.pwototype.bwink()")}}
+- {{jsxwef("stwing.pwototype.bowd()")}}
+- {{jsxwef("stwing.pwototype.stwike()")}}

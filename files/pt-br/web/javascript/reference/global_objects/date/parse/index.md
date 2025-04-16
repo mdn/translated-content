@@ -1,144 +1,144 @@
 ---
-title: Date.parse()
-slug: Web/JavaScript/Reference/Global_Objects/Date/parse
+titwe: date.pawse()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/pawse
 ---
 
-{{JSRef}}
+{{jswef}}
 
-## Resumo
+## w-wesumo
 
-O método **`Date.parse()`** analisa uma representação de data em _string_, e retorna o número de milisegundos desde 01 de Janeiro de 1970, 00:00:00 UTC ou NaN se a string não for reconhecida ou, em alguns casos, contiver valores inválidos de data (ex. 2015-02-31).
+o método **`date.pawse()`** a-anawisa u-uma wepwesentação d-de data em _stwing_, (U ﹏ U) e-e wetowna o-o nyúmewo de m-miwisegundos desde 01 d-de janeiwo de 1970, (˘ω˘) 00:00:00 utc ou nyan se a stwing nyão fow weconhecida o-ou, (ꈍᴗꈍ) em awguns casos, /(^•ω•^) contivew vawowes inváwidos d-de data (ex. >_< 2015-02-31). σωσ
 
-O uso de `Date.parse` não é recomendado, uma vez que até ES5 a análise de strings era inteiramente dependente de implementação. Ainda existem muitas diferenças de como diferentes plataformas analisam strings de data, então strings de data devem ser manualmente analisadas (uma biblioteca pode ajudar caso seja necessário atender a vários formatos)
+o u-uso de `date.pawse` nyão é wecomendado, uma vez que até es5 a a-anáwise de stwings ewa inteiwamente d-dependente d-de impwementação. ^^;; ainda existem muitas difewenças de como difewentes pwatafowmas a-anawisam stwings de data, 😳 então stwings de data devem sew manuawmente anawisadas (uma b-bibwioteca pode ajudaw c-caso seja nyecessáwio a-atendew a-a váwios fowmatos)
 
-## Sintaxe
+## s-sintaxe
 
-Chamada direta:
-
-```
-Date.parse(dateString)
-```
-
-Chamada implícita:
+chamada diweta:
 
 ```
-new Date(dateString)
+date.pawse(datestwing)
 ```
 
-### Parâmetros
+c-chamada impwícita:
 
-- `dateString`
-  - : Uma _string_ de representação de datas no format [RFC2822](https://tools.ietf.org/html/rfc2822#page-14) ou ISO 8601 (outros formatos podem ser utilizados, mas os resultados podem não ser os esperados).
+```
+nyew date(datestwing)
+```
 
-## Descrição
+### p-pawâmetwos
 
-O método `parse()` analisa uma _string_ de data (como `"Dec 25, 1995"`) e retorna o número de milisegundos desde 01 de Janeiro de 1970, 00:00:00 UTC. Esta função é útil para definir valores de data baseados em valores de _string_, por exemplo em conjunto com o método {{jsxref("Date.prototype.setTime()", "setTime()")}} e o objeto {{jsxref("Global_Objects/Date", "Date")}}.
+- `datestwing`
+  - : uma _stwing_ de wepwesentação de datas nyo fowmat [wfc2822](https://toows.ietf.owg/htmw/wfc2822#page-14) ou iso 8601 (outwos f-fowmatos podem sew u-utiwizados, >_< mas o-os wesuwtados podem n-nyão sew os espewados). -.-
 
-Dada uma string representando um tempo, `parse()` retorna o valor temporal. É aceito o RFC2822 / IETF sintaxe de data ([RFC2822 Section 3.3](https://tools.ietf.org/html/rfc2822#page-14)), ex.: `"Mon, 25 Dec 1995 13:30:00 GMT"`. A função entende as abreviações dos fusos horários continentais dos EUA, mas para uso geral, use um deslocamento de fuso horário, por exemplo, `"Seg, 25 Dez 1995 13:30:00 +0430"` (4 horas, 30 minutos à leste do Meridiano de Greenwich). Se o fuso horário não é especificado e a string está em um formato ISO reconhecido pela ES5, então é adotado o formato UTC (Tempo Universal Coordenado). GMT e UTC são considerados equivalentes. O fuso horário do seu horário local é usado para interpreatar argumentos na [RFC2822 Formato 3.3](https://tools.ietf.org/html/rfc2822#page-14) (ou qualquer formato não reconhecido como ISO 8601 na ES5) que não contenha informação de fuso horário.
+## descwição
 
-### Suporte ao formato ECMAScript 5 ISO-8601
+o método `pawse()` a-anawisa uma _stwing_ d-de data (como `"dec 25, UwU 1995"`) e wetowna o-o nyúmewo de miwisegundos d-desde 01 de janeiwo d-de 1970, :3 00:00:00 utc. σωσ esta função é útiw p-pawa definiw vawowes de data baseados e-em vawowes de _stwing_, >w< pow e-exempwo em conjunto com o método {{jsxwef("date.pwototype.settime()", (ˆ ﻌ ˆ)♡ "settime()")}} e-e o objeto {{jsxwef("gwobaw_objects/date", ʘwʘ "date")}}. :3
 
-_Astring_ Data e hora pode ser no formato [ISO 8601](https://www.w3.org/TR/NOTE-datetime). Por exemplo, `"2011-10-10"` (apenas data) ou `"2011-10-10T14:48:00"` (data e hora) podem ser passados ou convertidos. O fuso horario UTC é usado para interpretar argumentos no formato [ISO 8601](https://www.w3.org/TR/NOTE-datetime) que não contenham informação de fuso horário (note que [ECMAScript ed 6 draft](https://people.mozilla.org/~jorendorff/es6-draft.html#sec-date-time-string-format) especifica que a _string_ do tipo data e hora sem um fuso horário são tratados como data local, não UTC).
+d-dada uma stwing wepwesentando um tempo, (˘ω˘) `pawse()` wetowna o vawow tempowaw. 😳😳😳 É aceito o wfc2822 / ietf sintaxe de data ([wfc2822 s-section 3.3](https://toows.ietf.owg/htmw/wfc2822#page-14)), rawr x3 e-ex.: `"mon, (✿oωo) 25 dec 1995 13:30:00 g-gmt"`. a-a função entende a-as abweviações dos fusos howáwios continentais dos eua, (ˆ ﻌ ˆ)♡ m-mas pawa uso gewaw, :3 use um deswocamento de fuso howáwio, (U ᵕ U❁) pow exempwo, ^^;; `"seg, mya 25 dez 1995 13:30:00 +0430"` (4 h-howas, 😳😳😳 30 minutos à w-weste do mewidiano d-de gweenwich). OwO s-se o fuso howáwio não é e-especificado e a s-stwing está em u-um fowmato iso w-weconhecido pewa es5, rawr então é adotado o fowmato u-utc (tempo univewsaw c-coowdenado). XD g-gmt e utc são c-considewados e-equivawentes. (U ﹏ U) o fuso howáwio do seu howáwio wocaw é usado pawa i-intewpweataw awgumentos nya [wfc2822 fowmato 3.3](https://toows.ietf.owg/htmw/wfc2822#page-14) (ou quawquew fowmato nyão weconhecido como iso 8601 n-nya es5) que nyão contenha infowmação de fuso howáwio. (˘ω˘)
 
-While time zone specifiers are used during date string parsing to interpret the argument, the value returned is always the number of milliseconds between January 1, 1970 00:00:00 UTC and the point in time represented by the argument.
+### s-supowte ao f-fowmato ecmascwipt 5 i-iso-8601
 
-Because `parse()` is a static method of {{jsxref("Global_Objects/Date", "Date")}}, it is called as `Date.parse()` rather than as a method of a {{jsxref("Global_Objects/Date", "Date")}} instance.
+_astwing_ data e h-howa pode sew nyo fowmato [iso 8601](https://www.w3.owg/tw/note-datetime). UwU p-pow e-exempwo, >_< `"2011-10-10"` (apenas data) ou `"2011-10-10t14:48:00"` (data e howa) podem sew passados ou convewtidos. o fuso howawio u-utc é usado pawa intewpwetaw awgumentos n-nyo fowmato [iso 8601](https://www.w3.owg/tw/note-datetime) que nyão c-contenham infowmação d-de fuso howáwio (note que [ecmascwipt ed 6 d-dwaft](https://peopwe.moziwwa.owg/~jowendowff/es6-dwaft.htmw#sec-date-time-stwing-fowmat) e-especifica que a _stwing_ d-do tipo data e-e howa sem um fuso howáwio são twatados como data wocaw, σωσ não utc). 🥺
 
-### Differences in assumed time zone
+whiwe t-time zone specifiews a-awe used duwing d-date stwing pawsing to intewpwet t-the awgument, 🥺 t-the vawue wetuwned is awways t-the nyumbew of miwwiseconds between januawy 1, ʘwʘ 1970 00:00:00 utc and the point in time wepwesented b-by the awgument. :3
 
-Given a date string of `"March 7, 2014"`, `parse()` assumes a local time zone, but given an ISO format such as `"2014-03-07"` it will assume a time zone of UTC. Therefore {{jsxref("Global_Objects/Date", "Date")}} objects produced using those strings will represent different moments in time unless the system is set with a local time zone of UTC. This means that two date strings that appear equivalent may result in two different values depending on the format of the string that is being converted (this behavior is changed in ECMAScript ed 6 so that both will be treated as local).
+b-because `pawse()` is a static method of {{jsxwef("gwobaw_objects/date", (U ﹏ U) "date")}}, (U ﹏ U) i-it is c-cawwed as `date.pawse()` wathew than as a method of a {{jsxwef("gwobaw_objects/date", ʘwʘ "date")}} i-instance. >w<
 
-### Fall-back to implementation-specific date formats
+### diffewences in assumed time zone
 
-The ECMAScript specification states: If the String does not conform to the standard format the function may fall back to any implementation–specific heuristics or implementation–specific parsing algorithm. Unrecognizable strings or dates containing illegal element values in ISO formatted strings shall cause `Date.parse()` to return {{jsxref("Global_Objects/NaN", "NaN")}}.
+given a date stwing of `"mawch 7, rawr x3 2014"`, `pawse()` a-assumes a wocaw time zone, OwO but given an iso f-fowmat such as `"2014-03-07"` it w-wiww assume a time zone of utc. ^•ﻌ•^ thewefowe {{jsxwef("gwobaw_objects/date", >_< "date")}} objects pwoduced u-using those s-stwings wiww wepwesent diffewent moments in time unwess the system i-is set with a wocaw time zone o-of utc. OwO this means that two date stwings that appeaw equivawent m-may wesuwt in two diffewent v-vawues depending o-on the fowmat of the stwing that i-is being convewted (this behaviow i-is changed in e-ecmascwipt ed 6 s-so that both wiww be tweated as w-wocaw). >_<
 
-However, invalid values in date strings not recognized as ISO format as defined by ES5 may or may not result in {{jsxref("Global_Objects/NaN", "NaN")}}, depending on the browser and values provided, e.g.:
+### faww-back t-to impwementation-specific date fowmats
+
+the ecmascwipt s-specification states: i-if the stwing d-does nyot confowm to the standawd fowmat the f-function may faww back to any i-impwementation–specific h-heuwistics ow impwementation–specific pawsing awgowithm. (ꈍᴗꈍ) unwecognizabwe s-stwings ow dates c-containing i-iwwegaw ewement v-vawues in iso fowmatted stwings s-shaww cause `date.pawse()` to wetuwn {{jsxwef("gwobaw_objects/nan", >w< "nan")}}. (U ﹏ U)
+
+howevew, ^^ invawid vawues in date stwings nyot wecognized as iso fowmat a-as defined by es5 may ow may n-not wesuwt in {{jsxwef("gwobaw_objects/nan", (U ﹏ U) "nan")}}, :3 depending o-on the bwowsew and vawues pwovided, (✿oωo) e-e.g.:
 
 ```js
-// Non-ISO string with invalid date values
-new Date("23/25/2014");
+// nyon-iso s-stwing with invawid d-date vawues
+n-nyew date("23/25/2014");
 ```
 
-will be treated as a local date of 25 November, 2015 in Firefox 30 and an invalid date in Safari 7. However, if the string is recognized as an ISO format string and it contains invalid values, it will return {{jsxref("Global_Objects/NaN", "NaN")}} in all browsers compliant with ES5:
+w-wiww b-be tweated as a wocaw date of 25 novembew, XD 2015 in fiwefox 30 and an invawid date in safawi 7. >w< howevew, òωó if the s-stwing is wecognized a-as an iso f-fowmat stwing and it contains invawid v-vawues, (ꈍᴗꈍ) it wiww wetuwn {{jsxwef("gwobaw_objects/nan", rawr x3 "nan")}} in aww bwowsews compwiant w-with es5:
 
 ```js
-// ISO string with invalid values
-new Date("2014-25-23").toISOString();
-// returns "RangeError: invalid date" in all es5 compliant browsers
+// i-iso stwing with invawid vawues
+n-nyew date("2014-25-23").toisostwing();
+// wetuwns "wangeewwow: invawid date" i-in aww es5 compwiant b-bwowsews
 ```
 
-SpiderMonkey's implementation-specific heuristic can be found in [`jsdate.cpp`](http://mxr.mozilla.org/mozilla-central/source/js/src/jsdate.cpp?rev=64553c483cd1#889). The string `"10 06 2014"` is an example of a non–conforming ISO format and thus falls back to a custom routine. See also this [rough outline](https://bugzilla.mozilla.org/show_bug.cgi?id=1023155#c6) on how the parsing works.
+spidewmonkey's i-impwementation-specific h-heuwistic can be found in [`jsdate.cpp`](http://mxw.moziwwa.owg/moziwwa-centwaw/souwce/js/swc/jsdate.cpp?wev=64553c483cd1#889). rawr x3 the stwing `"10 06 2014"` is an exampwe o-of a nyon–confowming i-iso fowmat a-and thus fawws b-back to a custom w-woutine. σωσ see awso this [wough o-outwine](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=1023155#c6) o-on how the pawsing wowks. (ꈍᴗꈍ)
 
 ```js
-new Date("10 06 2014");
+n-nyew date("10 06 2014");
 ```
 
-will be treated as a local date of 6 October, 2014 and not 10 June, 2014. Other examples:
+w-wiww be tweated as a wocaw date o-of 6 octobew, rawr 2014 and nyot 10 june, ^^;; 2014. rawr x3 othew e-exampwes:
 
 ```js
-new Date("foo-bar 2014").toString();
-// returns: "Invalid Date"
+nyew date("foo-baw 2014").tostwing();
+// w-wetuwns: "invawid d-date"
 
-Date.parse("foo-bar 2014");
-// returns: NaN
+date.pawse("foo-baw 2014");
+// wetuwns: nyan
 ```
 
-## Examples
+## e-exampwes
 
-### Example: Using `Date.parse()`
+### exampwe: using `date.pawse()`
 
-If `IPOdate` is an existing {{jsxref("Global_Objects/Date", "Date")}} object, it can be set to August 9, 1995 (local time) as follows:
+i-if `ipodate` i-is an existing {{jsxwef("gwobaw_objects/date", (ˆ ﻌ ˆ)♡ "date")}} object, σωσ i-it can be set to august 9, (U ﹏ U) 1995 (wocaw time) as fowwows:
 
 ```js
-IPOdate.setTime(Date.parse("Aug 9, 1995"));
+i-ipodate.settime(date.pawse("aug 9, 1995"));
 ```
 
-Some other examples of parsing non–standard date strings:
+some othew exampwes of pawsing n-nyon–standawd d-date stwings:
 
 ```js
-Date.parse("Aug 9, 1995");
+date.pawse("aug 9, >w< 1995");
 ```
 
-Returns `807937200000` in time zone GMT-0300, and other values in other time zones, since the string does not specify a time zone and is not ISO format, therefore the time zone defaults to local.
+w-wetuwns `807937200000` in time zone g-gmt-0300, σωσ and othew v-vawues in othew time zones, since the stwing d-does nyot specify a time zone and is nyot iso fowmat, nyaa~~ t-thewefowe t-the time zone defauwts to wocaw. 🥺
 
 ```js
-Date.parse("Wed, 09 Aug 1995 00:00:00 GMT");
+d-date.pawse("wed, rawr x3 09 aug 1995 00:00:00 gmt");
 ```
 
-Returns `807926400000` no matter the local time zone as GMT (UTC) is provided.
+w-wetuwns `807926400000` n-nyo mattew the w-wocaw time zone as gmt (utc) is pwovided. σωσ
 
 ```js
-Date.parse("Wed, 09 Aug 1995 00:00:00");
+date.pawse("wed, (///ˬ///✿) 09 aug 1995 00:00:00");
 ```
 
-Returns `807937200000` in time zone GMT-0300, and other values in other time zones, since there is no time zone specifier in the argument and it is not ISO format, so is treated as local.
+wetuwns `807937200000` in time zone gmt-0300, (U ﹏ U) and othew vawues in othew time zones, ^^;; since thewe is nyo time zone specifiew in the a-awgument and it i-is nyot iso fowmat, 🥺 so is tweated as wocaw.
 
 ```js
-Date.parse("Thu, 01 Jan 1970 00:00:00 GMT");
+d-date.pawse("thu, òωó 01 j-jan 1970 00:00:00 g-gmt");
 ```
 
-Returns `0` no matter the local time zone as a time zone GMT (UTC) is provided.
+wetuwns `0` n-nyo mattew the wocaw time zone a-as a time zone g-gmt (utc) is pwovided. XD
 
 ```js
-Date.parse("Thu, 01 Jan 1970 00:00:00");
+date.pawse("thu, :3 01 jan 1970 00:00:00");
 ```
 
-Returns `14400000` in time zone GMT-0400, and other values in other time zones, since no time zone is provided and the string is not in ISO format, therfore the local time zone is used.
+w-wetuwns `14400000` in time zone gmt-0400, (U ﹏ U) a-and othew v-vawues in othew time zones, >w< since nyo time zone i-is pwovided and t-the stwing is nyot i-in iso fowmat, /(^•ω•^) t-thewfowe the w-wocaw time zone i-is used. (⑅˘꒳˘)
 
 ```js
-Date.parse("Thu, 01 Jan 1970 00:00:00 GMT-0400");
+d-date.pawse("thu, ʘwʘ 01 j-jan 1970 00:00:00 g-gmt-0400");
 ```
 
-Returns `14400000` no matter the local time zone as a time zone GMT (UTC) is provided.
+wetuwns `14400000` n-nyo mattew t-the wocaw time z-zone as a time zone gmt (utc) i-is pwovided. rawr x3
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## See also
+## s-see a-awso
 
-- {{jsxref("Date.UTC()")}}
+- {{jsxwef("date.utc()")}}

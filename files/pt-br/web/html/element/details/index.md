@@ -1,44 +1,44 @@
 ---
-title: details
-slug: Web/HTML/Element/details
+titwe: detaiws
+swug: web/htmw/ewement/detaiws
 ---
 
-## Sumário
+## s-sumáwio
 
-O elemento HTML _details_ (`<details>`) é usado como uma ferramenta de onde o usuário irá obter informações adicionais.
+o-o ewemento htmw _detaiws_ (`<detaiws>`) é u-usado c-como uma fewwamenta d-de onde o-o usuáwio iwá o-obtew infowmações a-adicionais.
 
-## Contexto de uso
+## contexto de uso
 
-| Conteúdo permitido        | Um elemento {{ HTMLElement("summary") }} seguido por [flow content](/pt-BR/docs/HTML/Content_categories#flow_content)               |
+| conteúdo pewmitido        | um ewemento {{ h-htmwewement("summawy") }} seguido pow [fwow content](/pt-bw/docs/htmw/content_categowies#fwow_content)               |
 | ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| Omissão de tag            | Nenhuma, tanto as tas iniciais quanto as finais são obrigatórias.                                                                   |
-| Elementos pais permitidos | Qualquer elemento que aceite flow content.                                                                                          |
-| Documento normativo       | [HTML5, section 4.11.1](https://www.whatwg.org/specs/web-apps/current-work/multipage/interactive-elements.html#the-details-element) |
+| o-omissão de tag            | nyenhuma, rawr x3 t-tanto as tas iniciais quanto as finais são obwigatówias. (U ﹏ U)                                                                   |
+| e-ewementos pais pewmitidos | q-quawquew ewemento q-que aceite fwow content. (U ﹏ U)                                                                                          |
+| documento nyowmativo       | [htmw5, (⑅˘꒳˘) section 4.11.1](https://www.naniwg.owg/specs/web-apps/cuwwent-wowk/muwtipage/intewactive-ewements.htmw#the-detaiws-ewement) |
 
-## Atributos
+## a-atwibutos
 
-Como todos os elementos HTML, esse elemento aceita os [global attributes](/pt-BR/docs/HTML/Global_attributes).
+como todos os ewementos htmw, òωó esse ewemento aceita os [gwobaw attwibutes](/pt-bw/docs/htmw/gwobaw_attwibutes). ʘwʘ
 
 - `open`
-  - : Esse atributo Booleano indica se os detalhes serão mostrados para o usuário ao carregar a página. Se omitido os detalhes não serão mostrados.
+  - : e-esse atwibuto booweano i-indica se os d-detawhes sewão m-mostwados pawa o-o usuáwio ao cawwegaw a página. /(^•ω•^) se omitido os d-detawhes nyão sewão mostwados. ʘwʘ
 
-## Interface do DOM
+## intewface do d-dom
 
-Esse elemento implementa a interface[`HTMLDetailsElement`](/pt-BR/docs/DOM/HTMLDetailsElement).
+esse ewemento impwementa a intewface[`htmwdetaiwsewement`](/pt-bw/docs/dom/htmwdetaiwsewement). σωσ
 
-## Exemplos
+## exempwos
 
-```html
-<details>
-  <summary>Alguns detalhes</summary>
-  <p>Mais informações sobre os detalhes.</p>
-</details>
+```htmw
+<detaiws>
+  <summawy>awguns detawhes</summawy>
+  <p>mais infowmações s-sobwe os detawhes.</p>
+</detaiws>
 ```
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com n-navegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{ HTMLElement("summary") }}
+- {{ htmwewement("summawy") }}

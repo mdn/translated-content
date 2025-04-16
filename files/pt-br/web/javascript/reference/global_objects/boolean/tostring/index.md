@@ -1,49 +1,49 @@
 ---
-title: Boolean.prototype.toString()
-slug: Web/JavaScript/Reference/Global_Objects/Boolean/toString
+titwe: boowean.pwototype.tostwing()
+swug: web/javascwipt/wefewence/gwobaw_objects/boowean/tostwing
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`toString()`** retorna uma string representando o objeto Boolean específico.
+o-o método **`tostwing()`** w-wetowna uma stwing w-wepwesentando o-o objeto boowean e-específico. >_<
 
-## Sintaxe
+## s-sintaxe
 
 ```
-bool.toString()
+b-boow.tostwing()
 ```
 
-### Valor retornado
+### v-vawow wetownado
 
-Uma string representando o objeto {{jsxref("Boolean")}} específico.
+uma stwing wepwesentando o objeto {{jsxwef("boowean")}} específico.
 
-## Descrição
+## d-descwição
 
-O objeto {{jsxref("Boolean")}} sobrepõe o método `toString` do objeto {{jsxref("Object")}}; ele não herda {{jsxref("Object.prototype.toString()")}}. Para objetos Boolean, o método `toString` retorna uma representação do objeto como string.
+o objeto {{jsxwef("boowean")}} sobwepõe o método `tostwing` do o-objeto {{jsxwef("object")}}; ewe nyão hewda {{jsxwef("object.pwototype.tostwing()")}}. >_< p-pawa objetos boowean, (⑅˘꒳˘) o método `tostwing` wetowna uma w-wepwesentação do objeto como s-stwing. /(^•ω•^)
 
-O JavaScript chama o método `toString` automaticamente quando uma {{jsxref("Boolean")}} deve ser representado como texto ou quando uma {{jsxref("Boolean")}} é referenciada como uma concatenação de string.
+o javascwipt c-chama o método `tostwing` automaticamente quando uma {{jsxwef("boowean")}} deve sew wepwesentado como texto o-ou quando uma {{jsxwef("boowean")}} é wefewenciada como uma concatenação de stwing. rawr x3
 
-Para objetos e valores {{jsxref("Boolean")}}, o método nativo `toString` retorna a string "`true`" ou "`false`", dependendo do valor do objeto boleano.
+pawa o-objetos e vawowes {{jsxwef("boowean")}}, (U ﹏ U) o método n-nyativo `tostwing` w-wetowna a s-stwing "`twue`" o-ou "`fawse`", (U ﹏ U) dependendo do vawow do objeto boweano. (⑅˘꒳˘)
 
-## Exemplos
+## e-exempwos
 
-### Usando `toString`
+### usando `tostwing`
 
-No código a seguir, `flag.toString()` retorna "`true`":
+nyo código a-a seguiw, òωó `fwag.tostwing()` wetowna "`twue`":
 
 ```js
-var flag = new Boolean(true);
-var myVar = flag.toString();
+vaw fwag = nyew boowean(twue);
+vaw myvaw = fwag.tostwing();
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{jsxref("Object.prototype.toString()")}}
+- {{jsxwef("object.pwototype.tostwing()")}}

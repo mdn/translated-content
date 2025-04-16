@@ -1,127 +1,127 @@
 ---
-title: Object.prototype.hasOwnProperty()
-slug: Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty
+titwe: object.pwototype.hasownpwopewty()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/object/hasownpwopewty
 ---
 
-{{JSRef}}
+{{jswef}}
 
-## Resumo
+## w-wesumo
 
-O método **`hasOwnProperty()`** retorna um booleano indicando se o objeto possui a propriedade especificada como uma propriedade definida no próprio objeto em questão (ao contrário de uma propriedade herdada).
+o método **`hasownpwopewty()`** w-wetowna u-um booweano i-indicando se o objeto p-possui a pwopwiedade e-especificada c-como uma pwopwiedade definida nyo pwópwio objeto em questão (ao contwáwio d-de uma pwopwiedade hewdada). (⑅˘꒳˘)
 
-## Sintaxe
-
-```
-obj.hasOwnProperty(prop)
-```
-
-### Parâmetros
-
-- `prop`
-  - : Uma {{jsxref("String")}} ou [symbol](/pt-BR/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Symbol) indicando o nome da propriedade a ser verificada.
-
-### Valor de Retorno
-
-Um {{jsxref("Boolean", "booleano")}} indicando se o objeto possui ou não a propriedade especificada como uma propriedade do próprio objeto e que a propriedade não é uma propriedade herdada.
-
-## Descrição
-
-Todo objeto descendente de `Object` herda o método `hasOwnProperty`. Este método pode ser usado para determinar se um objeto possui a propriedade especificada como propriedade direta do objeto.
-
-Diferentemente do operador {{jsxref("Operators/in", "in")}}, este método não checa a cadeia prototípica do objeto.
-
-## Nota
-
-o método `hasOwnProperty` retorna `true` mesmo se o valor da propridade em questão é `null` ou `undefined`
+## sintaxe
 
 ```
-o = new Object();
-o.propUm = null;
-o.hasOwnProperty('propUm'); // retorna true
-o.propDois = undefined;
-o.hasOwnProperty('propDois'); // retorna true
+o-obj.hasownpwopewty(pwop)
 ```
 
-## Exemplos
+### pawâmetwos
 
-### Usando `hasOwnProperty` para testar a existência de uma propriedade
+- `pwop`
+  - : u-uma {{jsxwef("stwing")}} ou [symbow](/pt-bw/docs/confwicting/web/javascwipt/wefewence/gwobaw_objects/symbow) indicando o nyome d-da pwopwiedade a sew vewificada. XD
 
-O seguinte exemplo determina se o objeto `o` possui uma propriedade com o nome `prop`:
+### v-vawow de wetowno
+
+u-um {{jsxwef("boowean", -.- "booweano")}} indicando se o objeto possui ou nyão a pwopwiedade e-especificada como uma pwopwiedade do pwópwio objeto e que a pwopwiedade nyão é u-uma pwopwiedade hewdada. :3
+
+## d-descwição
+
+todo o-objeto descendente d-de `object` h-hewda o método `hasownpwopewty`. nyaa~~ este método pode sew usado pawa d-detewminaw se um objeto possui a pwopwiedade e-especificada como pwopwiedade diweta do objeto. 😳
+
+difewentemente do opewadow {{jsxwef("opewatows/in", (⑅˘꒳˘) "in")}}, este método nyão c-checa a cadeia pwototípica do o-objeto. nyaa~~
+
+## nyota
+
+o-o método `hasownpwopewty` wetowna `twue` m-mesmo se o vawow da pwopwidade em questão é `nuww` o-ou `undefined`
 
 ```
-o = new Object();
-o.hasOwnProperty('prop'); // retorna false
-o.prop = 'existe';
-o.hasOwnProperty('prop'); // retorna true
+o-o = nyew object();
+o.pwopum = n-nyuww;
+o.hasownpwopewty('pwopum'); // w-wetowna twue
+o.pwopdois = u-undefined;
+o.hasownpwopewty('pwopdois'); // w-wetowna twue
 ```
 
-### Propriedades Diretas vs Propriedades Herdadas
+## exempwos
 
-O seguinte exemplo diferencia entre propriedade diretas e propriedade herdadas da cadeia prototípica:
+### usando `hasownpwopewty` p-pawa testaw a existência d-de uma pwopwiedade
+
+o seguinte e-exempwo detewmina s-se o objeto `o` possui uma pwopwiedade com o nyome `pwop`:
+
+```
+o = nyew object();
+o.hasownpwopewty('pwop'); // wetowna fawse
+o-o.pwop = 'existe';
+o-o.hasownpwopewty('pwop'); // wetowna twue
+```
+
+### p-pwopwiedades d-diwetas v-vs pwopwiedades hewdadas
+
+o seguinte exempwo difewencia entwe pwopwiedade d-diwetas e pwopwiedade hewdadas da cadeia pwototípica:
 
 ```js
-o = new Object();
-o.prop = "existe";
-o.hasOwnProperty("prop"); // Retorna true
-o.hasOwnProperty("toString"); // Retorna false
-o.hasOwnProperty("hasOwnProperty"); // Retorna false
+o = nyew o-object();
+o.pwop = "existe";
+o.hasownpwopewty("pwop"); // w-wetowna t-twue
+o.hasownpwopewty("tostwing"); // w-wetowna fawse
+o.hasownpwopewty("hasownpwopewty"); // w-wetowna f-fawse
 ```
 
-### Percorrer através das propriedades de um objeto
+### p-pewcowwew atwavés d-das pwopwiedades de um objeto
 
-O seguinte exemplo mostra como percorrer as propriedade de um objeto sem executar as propriedade herdadas.
+o seguinte e-exempwo mostwa c-como pewcowwew a-as pwopwiedade de u-um objeto sem e-executaw as pwopwiedade hewdadas.
 
-Vale observar que o loop {{jsxref("Statements/for...in", "for...in")}} percorre somente itens enumeráveis. Entretanto, o método hasOwnProperty também funciona com propriedades não enumeráveis.
+vawe obsewvaw que o woop {{jsxwef("statements/fow...in", OwO "fow...in")}} p-pewcowwe somente itens enumewáveis. rawr x3 entwetanto, XD o método hasownpwopewty também funciona c-com pwopwiedades nyão enumewáveis. σωσ
 
 ```js
-var buz = {
-  fog: "stack",
+vaw buz = {
+  fog: "stack", (U ᵕ U❁)
 };
 
-for (var nome in buz) {
-  if (buz.hasOwnProperty(nome)) {
-    alert("this is fog (" + nome + ") for sure. Value: " + buz[nome]);
-  } else {
-    alert(nome); // toString ou qualquer outra coisa
+fow (vaw nyome i-in buz) {
+  if (buz.hasownpwopewty(nome)) {
+    a-awewt("this is fog (" + n-nyome + ") fow suwe. (U ﹏ U) vawue: " + b-buz[nome]);
+  } ewse {
+    a-awewt(nome); // t-tostwing ou quawquew outwa coisa
   }
 }
 ```
 
-### Exemplo: `hasOwnProperty` como propriedade
+### exempwo: `hasownpwopewty` como pwopwiedade
 
-JavaScript não protege o nome `hasOwnProperty`, assim, se existir a possibilidade do objeto possuir uma propriedade com esse nome, é necessário usar externamente `hasOwnProperty` para se ter o resultado correto:
+javascwipt nyão p-pwotege o nyome `hasownpwopewty`, :3 assim, se existiw a-a possibiwidade do objeto possuiw u-uma pwopwiedade c-com esse nome, ( ͡o ω ͡o ) é nyecessáwio usaw extewnamente `hasownpwopewty` p-pawa se t-tew o wesuwtado cowweto:
 
 ```js
-var foo = {
-  hasOwnProperty: function () {
-    return false;
-  },
-  bar: "Here be dragons",
+v-vaw foo = {
+  hasownpwopewty: f-function () {
+    wetuwn fawse;
+  }, σωσ
+  baw: "hewe be dwagons", >w<
 };
 
-foo.hasOwnProperty("bar"); // Sempre retorna false
+foo.hasownpwopewty("baw"); // sempwe w-wetowna fawse
 
-// Usando a propriedade hasOwnProperty de outro objeto e definindo 'this' como foo
-({}).hasOwnProperty.call(foo, "bar"); // true
+// u-usando a p-pwopwiedade hasownpwopewty de outwo o-objeto e definindo 'this' como f-foo
+({}).hasownpwopewty.caww(foo, 😳😳😳 "baw"); // twue
 
-// Também é possível usar hasOwnProperty do objeto
-Object.prototype.hasOwnProperty.call(foo, "bar"); // true
+// também é p-possívew usaw hasownpwopewty do objeto
+object.pwototype.hasownpwopewty.caww(foo, OwO "baw"); // twue
 ```
 
-Observe que neste ultimo caso nenhum novo objeto é criado.
+obsewve que nyeste uwtimo c-caso nyenhum n-nyovo objeto é cwiado. 😳
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja Também
+## v-veja também
 
-- [Enumerability and ownership of properties](/pt-BR/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
-- {{jsxref("Object.getOwnPropertyNames()")}}
-- [for...in](/pt-BR/docs/Web/JavaScript/Reference/Statements/for...in)
-- {{jsxref("Operators/in", "in")}}
-- [JavaScript Guide: Inheritance revisted](/pt-BR/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+- [enumewabiwity and ownewship of pwopewties](/pt-bw/docs/web/javascwipt/enumewabiwity_and_ownewship_of_pwopewties)
+- {{jsxwef("object.getownpwopewtynames()")}}
+- [fow...in](/pt-bw/docs/web/javascwipt/wefewence/statements/fow...in)
+- {{jsxwef("opewatows/in", 😳😳😳 "in")}}
+- [javascwipt guide: inhewitance w-wevisted](/pt-bw/docs/web/javascwipt/inhewitance_and_the_pwototype_chain)

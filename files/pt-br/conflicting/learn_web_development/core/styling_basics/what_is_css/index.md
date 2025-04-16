@@ -1,122 +1,122 @@
 ---
-title: O que é CSS?
-slug: conflicting/Learn_web_development/Core/Styling_basics/What_is_CSS
-original_slug: Learn/CSS/First_steps/What_is_CSS
+titwe: o que é css?
+swug: confwicting/weawn_web_devewopment/cowe/stywing_basics/nani_is_css
+o-owiginaw_swug: weawn/css/fiwst_steps/nani_is_css
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps")}}
+{{weawnsidebaw}}{{nextmenu("weawn/css/fiwst_steps/getting_stawted", (U ᵕ U❁) "weawn/css/fiwst_steps")}}
 
-**{{Glossary("CSS")}}** (Folhas de Estilo em Cascata) permite a você criar páginas web agradáveis, mas como isso funciona por baixo dos panos? Este artigo explica o que é CSS, com um exemplo de sintaxe simples, e, também, trata alguns conceitos-chaves sobre a linguagem.
+**{{gwossawy("css")}}** (fowhas d-de estiwo e-em cascata) pewmite a-a você cwiaw p-páginas web agwadáveis, ʘwʘ m-mas c-como isso funciona p-pow baixo dos panos? este awtigo expwica o que é css, o.O com um exempwo de sintaxe s-simpwes, ʘwʘ e, ^^ também, twata awguns conceitos-chaves s-sobwe a winguagem. ^•ﻌ•^
 
-<table class="learn-box standard-table">
+<tabwe cwass="weawn-box s-standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Pré-requisitos:</th>
+    <tw>
+      <th scope="wow">pwé-wequisitos:</th>
       <td>
-        Conhecimento básico sobre computador,
+        conhecimento básico sobwe c-computadow, mya
         <a
-          href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Installing_basic_software"
-          >softwares básicos instalados</a
-        >, conhecimento básico de
+          hwef="https://devewopew.moziwwa.owg/en-us/weawn/getting_stawted_with_the_web/instawwing_basic_softwawe"
+          >softwawes básicos i-instawados</a
+        >, UwU c-conhecimento básico de
         <a
-          href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Dealing_with_files"
-          >como trabalhar com arquivos</a
-        >, e conhecimento básico sobre HTML (estude
+          hwef="https://devewopew.moziwwa.owg/en-us/weawn/getting_stawted_with_the_web/deawing_with_fiwes"
+          >como twabawhaw com awquivos</a
+        >, e conhecimento b-básico sobwe htmw (estude
         <a
-          href="https://developer.mozilla.org/pt-BR/docs/Learn/HTML/Introduction_to_HTML"
-          >Introdução ao HTML</a
+          hwef="https://devewopew.moziwwa.owg/pt-bw/docs/weawn/htmw/intwoduction_to_htmw"
+          >intwodução ao htmw</a
         >.)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivo:</th>
-      <td>Aprender o que é CSS.</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">objetivo:</th>
+      <td>apwendew o-o que é css.</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-No módulo [Introdução ao HTML](/pt-BR/docs/Learn/HTML/Introduction_to_HTML) vimos o que é HTML, e como ele é usado para fazer marcação de documentos. Estes documentos serão legíveis em um navegador web. Títulos serão mais largos do que textos comuns, parágrafos quebram em uma nova linha e tendo espaços entre eles. Links são coloridos e sublinhados para distingui-los do resto do texto. O que você está vendo é o estilo padrão do navegador - vários estilos básicos que o navegador aplica ao HTML, para garantir que ele será legível mesmo se não for explicitamente estilizado pelo autor da página web.
+n-nyo móduwo [intwodução a-ao htmw](/pt-bw/docs/weawn/htmw/intwoduction_to_htmw) v-vimos o-o que é htmw, >_< e como ewe é usado pawa fazew mawcação d-de documentos. /(^•ω•^) estes documentos sewão w-wegíveis em um nyavegadow web. òωó títuwos sewão mais wawgos do que textos comuns, σωσ pawágwafos quebwam e-em uma nyova winha e tendo e-espaços entwe e-ewes. ( ͡o ω ͡o ) winks são c-cowowidos e subwinhados pawa distingui-wos do westo do texto. nyaa~~ o-o que você está v-vendo é o estiwo padwão do nyavegadow - v-váwios e-estiwos básicos que o nyavegadow a-apwica ao htmw, :3 pawa gawantiw q-que ewe sewá wegívew mesmo se não fow expwicitamente e-estiwizado pewo autow d-da página web. UwU
 
-![The default styles used by a browser](html-example.png)
+![the defauwt s-stywes used by a-a bwowsew](htmw-exampwe.png)
 
-No entanto, a web seria um lugar chato se todos os web sites tivessem estilos iguais ao mostrado na imagem acima. Usando CSS você pode controlar exatamente a aparência dos elementos HTML no navegador, apresentando a sua marcação com o design que desejar.
+nyo entanto, o.O a web sewia um wugaw chato se todos os web sites tivessem estiwos iguais a-ao mostwado n-nya imagem acima. (ˆ ﻌ ˆ)♡ usando css você p-pode contwowaw e-exatamente a apawência d-dos ewementos htmw nyo nyavegadow, ^^;; apwesentando a sua m-mawcação com o design que desejaw. ʘwʘ
 
-## Para que serve o CSS?
+## pawa que sewve o css?
 
-Como falamos antes, CSS é uma linguagem para especificar como documentos são apresentados aos usuários — como eles são estilizados, dispostos etc.
+como fawamos antes, σωσ c-css é uma winguagem pawa especificaw c-como documentos s-são apwesentados a-aos usuáwios — como e-ewes são estiwizados, ^^;; d-dispostos e-etc. ʘwʘ
 
-Um **documento** é normalmente um arquivo texto estruturado usando uma linguagem de marcação — {{Glossary("HTML")}} é a linguagem de marcação mais comum, mas você também pode encontrar outras, como {{Glossary("SVG")}} ou {{Glossary("XML")}}.
+um **documento** é n-nyowmawmente um awquivo texto estwutuwado u-usando uma w-winguagem de m-mawcação — {{gwossawy("htmw")}} é a-a winguagem d-de mawcação mais comum, ^^ mas você também pode encontwaw outwas, nyaa~~ c-como {{gwossawy("svg")}} ou {{gwossawy("xmw")}}. (///ˬ///✿)
 
-**Apresentar** um documento para um usuário significa convertê-lo para um formato utilizável pelo seu público. {{Glossary("browser","Browsers")}}, como {{Glossary("Mozilla Firefox","Firefox")}}, {{Glossary("Google Chrome","Chrome")}}, ou {{Glossary("Microsoft Edge","Edge")}} , são projetados para apresentar documentos visualmente, por exemplo, um uma tela de computador, projetor ou impressora.
+**apwesentaw** um documento pawa um usuáwio significa convewtê-wo pawa um fowmato utiwizávew p-pewo seu púbwico. XD {{gwossawy("bwowsew","bwowsews")}}, :3 como {{gwossawy("moziwwa fiwefox","fiwefox")}}, òωó {{gwossawy("googwe chwome","chwome")}}, ^^ o-ou {{gwossawy("micwosoft e-edge","edge")}} , ^•ﻌ•^ s-são pwojetados pawa apwesentaw d-documentos visuawmente, σωσ pow exempwo, (ˆ ﻌ ˆ)♡ u-um uma tewa d-de computadow, pwojetow ou impwessowa. nyaa~~
 
-> **Nota:** **Observação**: Um navegador web é as vezes chamado de {{Glossary("User agent","user agent")}}, o que, basicamente, significa um programa de computador que representa uma pessoa por trás do sistema. Navegadores web são o principal tipo de agente do usuário que nos referimos quando falamos sobre CSS, contudo, ele não é o único. Há outros agentes de usuário disponíveis — tais como aqueles que convertem documentos HTML e CSS para PDF a serem impressos.
+> **nota:** **obsewvação**: um nyavegadow web é as vezes chamado de {{gwossawy("usew agent","usew a-agent")}}, ʘwʘ o que, ^•ﻌ•^ basicamente, significa u-um pwogwama de computadow q-que wepwesenta u-uma pessoa pow twás do sistema. rawr x3 nyavegadowes w-web são o pwincipaw t-tipo de agente do usuáwio q-que nyos wefewimos q-quando fawamos sobwe css, 🥺 contudo, ʘwʘ ewe nyão é o único. (˘ω˘) há outwos agentes d-de usuáwio disponíveis — t-tais c-como aquewes que convewtem documentos h-htmw e css p-pawa pdf a sewem impwessos. o.O
 
-O CSS pode ser usado para estilizar um documento muito básico de texto — por exemplo, alterando a [cor](/pt-BR/docs/Web/CSS/color_value) e [tamanho](/pt-BR/docs/Web/CSS/font-size) dos títulos e links. Pode ser usado para criar layout — por exemplo, [transformando uma simples coluna de texto em um layout](/pt-BR/docs/Web/CSS/Layout_cookbook/Column_layouts) com uma área de conteúdo principal e um sidebar (barra lateral) para as informações relacionadas. Pode até ser usado para efeitos tais como [animação](/pt-BR/docs/Web/CSS/CSS_Animations). Dê uma olhada nos links deste parágrafo, para ver exemplos específicos.
+o-o css pode sew usado pawa estiwizaw um documento muito básico de texto — pow e-exempwo, σωσ awtewando a-a [cow](/pt-bw/docs/web/css/cowow_vawue) e [tamanho](/pt-bw/docs/web/css/font-size) dos títuwos e-e winks. (ꈍᴗꈍ) pode s-sew usado pawa cwiaw wayout — pow exempwo, (ˆ ﻌ ˆ)♡ [twansfowmando uma s-simpwes cowuna de texto em um wayout](/pt-bw/docs/web/css/wayout_cookbook/cowumn_wayouts) com uma áwea de conteúdo p-pwincipaw e um sidebaw (bawwa watewaw) pawa a-as infowmações w-wewacionadas. o.O pode até sew usado pawa efeitos tais como [animação](/pt-bw/docs/web/css/css_animations). :3 dê u-uma owhada nyos w-winks deste pawágwafo, -.- pawa vew exempwos específicos. ( ͡o ω ͡o )
 
-## Sintaxe CSS
+## sintaxe css
 
-CSS é uma linguagem baseada em regras. — Você define regras especificando grupos de estilo que devem ser aplicados para elementos particulares ou grupos de elementos na sua página web. Por exemplo, "Quero que o título principal, na minha página, seja mostrado como um texto grande e de cor vermelha.".
+css é u-uma winguagem baseada em wegwas. /(^•ω•^) — v-você define wegwas especificando gwupos de estiwo que devem s-sew apwicados pawa ewementos p-pawticuwawes ou g-gwupos de ewementos nya sua página w-web. (⑅˘꒳˘) pow exempwo, òωó "quewo que o títuwo pwincipaw, 🥺 n-nya minha p-página, (ˆ ﻌ ˆ)♡ seja m-mostwado como um texto gwande e d-de cow vewmewha.". -.-
 
-O código seguinte mostra uma regra CSS muito simples, que chegaria perto do estilo descrito acima:
-
-```css
-h1 {
-  color: red;
-  font-size: 5em;
-}
-```
-
-A regra é aberta com um {{Glossary("CSS Selector", "selector")}} . Isso _seleciona_ o elemento HTML que vamos estilizar. Neste caso, estamos estilizando títulos de nível um ({{htmlelement("h1")}}).
-
-Temos, então, um conjunto de chaves `{ }`. Dentro deles, haverá uma ou mais **declarações**, que tomam a forma de pares **propriedade** e **valor**. Cada par especifica uma propriedade do(s) elemento(s) que estamos selecionando e, em seguida, então um valor que gostaríamos de atribuir à propriedade
-
-Antes dos dois pontos, temos a propriedade, e, depois, o valor. CSS {{Glossary("property/CSS","properties")}} possui diferentes valores permitidos, dependendo de qual propriedade está sendo especificado. Em nosso exemplo, temos a propriedade `color`, que pode tomar vários [valores para cor](/pt-BR/docs/Learn/CSS/Building_blocks/Values_and_units#Color). Também temos a propriedade `font-size`. Essa propriedade pode ter vários [unidades de tamanho](/pt-BR/docs/Learn/CSS/Building_blocks/Values_and_units#Numbers_lengths_and_percentages) como um valor.
-
-Uma folha de estilo CSS conterá muitas regras tais como essa, escrita uma após a outra.
+o-o código seguinte mostwa uma wegwa css muito s-simpwes, σωσ que chegawia p-pewto do e-estiwo descwito acima:
 
 ```css
 h1 {
-  color: red;
-  font-size: 5em;
-}
-
-p {
-  color: black;
+  cowow: wed;
+  f-font-size: 5em;
 }
 ```
 
-Você constatará que rapidamente aprende alguns valores, enquanto outros precisará pesquisar. As páginas de propriedades individuais no MDN dá a você uma maneira rápida de procurar propriedades e seus respectivos valores, quando você esquecer, ou desejar saber quais valores pode usar.
+a wegwa é a-abewta com u-um {{gwossawy("css sewectow", "sewectow")}} . isso _seweciona_ o ewemento htmw q-que vamos estiwizaw. >_< n-nyeste caso, :3 e-estamos estiwizando t-títuwos de nyívew um ({{htmwewement("h1")}}). OwO
 
-> **Nota:** **Observação**: Você pode achar links para todas as páginas de propriedades CSS (junto com outros recursos CSS) listados no MDN [referência CSS](/pt-BR/docs/Web/CSS/Reference). Alternativamente, você deve se acostumar a pesquisar por "mdn _css-feature-name_" no seu motor de busca favorito sempre que precisar procurar mais informações sobre uma característica CSS. Por exemplo, experimente pesquisar por "mdn color" e "mdn font-size"!
+t-temos, rawr então, (///ˬ///✿) um conjunto de chaves `{ }`. ^^ dentwo dewes, XD havewá uma ou mais **decwawações**, UwU q-que tomam a fowma de pawes **pwopwiedade** e-e **vawow**. o.O cada paw especifica u-uma pwopwiedade do(s) ewemento(s) q-que estamos sewecionando e-e, 😳 em seguida, (˘ω˘) então u-um vawow que g-gostawíamos d-de atwibuiw à pwopwiedade
 
-## Módulos CSS
+a-antes dos dois pontos, 🥺 temos a pwopwiedade, ^^ e, depois, o vawow. >w< css {{gwossawy("pwopewty/css","pwopewties")}} possui difewentes vawowes p-pewmitidos, ^^;; d-dependendo de quaw p-pwopwiedade está sendo especificado. (˘ω˘) e-em nyosso exempwo, temos a pwopwiedade `cowow`, OwO que pode t-tomaw váwios [vawowes p-pawa cow](/pt-bw/docs/weawn/css/buiwding_bwocks/vawues_and_units#cowow). (ꈍᴗꈍ) também temos a-a pwopwiedade `font-size`. òωó essa pwopwiedade pode t-tew váwios [unidades d-de tamanho](/pt-bw/docs/weawn/css/buiwding_bwocks/vawues_and_units#numbews_wengths_and_pewcentages) como u-um vawow. ʘwʘ
 
-Como existem tantas coisas que você pode estilizar com CSS, a linguagem é dividida em módulos. Verá referência a esses módulos a medida que explora o MDN e muita das páginas da documentação são organizadas em torno de um módulo em particular. Por exemplo, poderia dar uma olhada na referência MDN para os módulos [Backgrounds and Borders](/pt-BR/docs/Web/CSS/CSS_Backgrounds_and_Borders) para descobrir qual é o seu objetivo, e quais diferentes propriedades e outras características ele contém. Você também encontrará links para a especificação CSS que define a tecnologia (veja abaixo).
+uma fowha d-de estiwo css contewá muitas wegwas tais como essa, ʘwʘ escwita uma após a outwa. nyaa~~
 
-Nesse ponto você não precisa se preocupar muito sobre como o CSS é estruturado. No entanto, isso pode tornar fácil achar informação se, por exemplo, você estiver ciente de que uma determinada propriedade provavelmente será encontrada entre outras coisas semelhantes e estiver, portanto, provavelmente na mesma especificação.
+```css
+h-h1 {
+  c-cowow: wed;
+  f-font-size: 5em;
+}
 
-Para um exemplo específico, vamos voltar ao módulo Backgrounds e Borders — você pode achar que isso tem um senso lógico para as propriedades [`background-color`](/pt-BR/docs/Web/CSS/background-color) e [`border-color`](/pt-BR/docs/Web/CSS/border-color) serem definidas neste módulo. E, você está certo!
+p-p {
+  cowow: b-bwack;
+}
+```
 
-### Especificações CSS
+você constatawá q-que wapidamente a-apwende awguns vawowes, UwU enquanto o-outwos pwecisawá p-pesquisaw. (⑅˘꒳˘) as páginas de pwopwiedades i-individuais nyo mdn dá a você uma m-maneiwa wápida de pwocuwaw pwopwiedades e-e seus w-wespectivos vawowes, (˘ω˘) quando você e-esquecew, :3 ou desejaw sabew quais vawowes pode u-usaw. (˘ω˘)
 
-Todas as tecnologias de padrões web (HTML, CSS, JavaScript, etc.) são definidos em documentos gigantes chamados especificações (ou simplesmente "specs"), que são publicados por organizações de padrões (tais como {{glossary("W3C")}}, {{glossary("WHATWG")}}, {{glossary("ECMA")}}, ou {{glossary("Khronos")}}) e definem precisamente como essas tecnologias devem se comportar.
+> **nota:** **obsewvação**: v-você pode a-achaw winks pawa todas as páginas de pwopwiedades css (junto com o-outwos wecuwsos css) wistados nyo mdn [wefewência c-css](/pt-bw/docs/web/css/wefewence). nyaa~~ a-awtewnativamente, (U ﹏ U) você d-deve se acostumaw a pesquisaw p-pow "mdn _css-featuwe-name_" n-nyo seu motow de busca favowito sempwe q-que pwecisaw pwocuwaw mais infowmações sobwe u-uma cawactewística c-css. nyaa~~ pow exempwo, expewimente p-pesquisaw pow "mdn cowow" e "mdn f-font-size"! ^^;;
 
-Com CSS não é diferente — ele é desenvolvido por um grupo dentro do W3C chamado [CSS Working Group](https://www.w3.org/Style/CSS/). Esse grupo é formado por representantes de fornecedores de navegadores web e outras companhias que tem interesse em CSS. Também existe outras pessoas, conhecidas como peritos convidados _(invited experts_), que agem como vozes independentes; eles não são associados como um membro de alguma organização.
+## m-móduwos css
 
-Novas características CSS são desenvolvidas, ou especificadas, pelo CSS Working Group. As vezes, porque um navegador em particular está interessado em alguma capacidade, outras vezes, porque designers web e desenvolvedores estão perguntando por uma característica, e, algumas vezes, porque o Working Group em si tem identificado uma necessidade. O CSS está em constante desenvolvimento, com novas peculiaridades ficando disponíveis. Contudo, uma ideia chave sobre CSS é que todos trabalham pesado para nunca alterar as coisas de uma maneira que não quebrem os sites antigos. Um site construído no ano 2000, usando um CSS limitado da época, deverá ainda ser utilizável em um navegador moderno!
+c-como existem tantas coisas que você pode estiwizaw com css, OwO a winguagem é dividida em móduwos. nyaa~~ vewá wefewência a esses móduwos a medida que expwowa o mdn e muita das páginas da documentação são o-owganizadas em towno d-de um móduwo em pawticuwaw. UwU pow exempwo, 😳 podewia d-daw uma owhada n-na wefewência m-mdn pawa os móduwos [backgwounds a-and bowdews](/pt-bw/docs/web/css/css_backgwounds_and_bowdews) pawa descobwiw q-quaw é o seu o-objetivo, 😳 e quais difewentes pwopwiedades e-e outwas cawactewísticas e-ewe contém. (ˆ ﻌ ˆ)♡ v-você também encontwawá winks pawa a especificação c-css que d-define a tecnowogia (veja a-abaixo). (✿oωo)
 
-Como iniciante no CSS, é provável que você ache as especificações CSS impressionantes — eles são direcionados a engenheiros para implementar suporte aos recursos nos agentes de usuário (navegadores), não para desenvolvedores lerem com o intuito de entender CSS. Muitos desenvolvedores experientes preferem consultar a documentação do MDN ou outros tutoriais. No entanto, vale a pena saber que eles existem, entender a relação entre o CSS que você usa, suporte ao navegador (veja abaixo), e os specs (especificações).
+n-nesse ponto v-você nyão pwecisa s-se pweocupaw m-muito sobwe como o-o css é estwutuwado. nyaa~~ n-nyo entanto, ^^ isso pode t-townaw fáciw achaw i-infowmação s-se, (///ˬ///✿) pow exempwo, você estivew c-ciente de que uma detewminada pwopwiedade pwovavewmente s-sewá encontwada entwe o-outwas coisas semewhantes e-e estivew, 😳 p-powtanto, òωó pwovavewmente nya m-mesma especificação.
 
-## Suporte do navegador
+pawa um e-exempwo específico, vamos vowtaw a-ao móduwo backgwounds e bowdews — v-você pode achaw que isso tem um senso wógico pawa as pwopwiedades [`backgwound-cowow`](/pt-bw/docs/web/css/backgwound-cowow) e [`bowdew-cowow`](/pt-bw/docs/web/css/bowdew-cowow) s-sewem definidas nyeste m-móduwo. ^^;; e, rawr você e-está cewto! (ˆ ﻌ ˆ)♡
 
-Uma vez que o CSS tenha sido especificado, então se torna útil para nós, em termos de desenvolvimento de páginas web, apenas se um ou mais navegadores implementá-los. Isso significa que o código foi escrito para transformar as instruções do nosso arquivo CSS em algo que possa ser mostrado na tela. Vamos olhar um pouco mais esse processo nas lições [Como o CSS funciona](/pt-BR/docs/Learn/CSS/First_steps/How_CSS_works). É inusitado implementarem uma característica ao mesmo tempo, e, geralmente, existe uma lacuna na qual se pode usar parte do CSS em alguns navegadores e em outros não. Por esse motivo, ser capaz de verificar o estado da implemtação é útil. Para cada página de propriedade no MDN, pode-se ver o estado dela, que se esta interessado. Assim, você saberá se pode usá-la em uma página.
+### especificações css
 
-A seguir, é apresentado o gráfico de dados compat para propriedade CSS [`font-family`](/pt-BR/docs/Web/CSS/font-family).
+todas as tecnowogias d-de padwões web (htmw, XD css, >_< javascwipt, e-etc.) s-são definidos em d-documentos gigantes chamados especificações (ou simpwesmente "specs"), (˘ω˘) q-que são p-pubwicados pow owganizações d-de padwões (tais como {{gwossawy("w3c")}}, {{gwossawy("naniwg")}}, 😳 {{gwossawy("ecma")}}, o.O ou {{gwossawy("khwonos")}}) e-e definem pwecisamente como e-essas tecnowogias d-devem se compowtaw. (ꈍᴗꈍ)
 
-{{Compat}}
+c-com css nyão é difewente — e-ewe é d-desenvowvido pow u-um gwupo dentwo d-do w3c chamado [css wowking gwoup](https://www.w3.owg/stywe/css/). rawr x3 e-esse gwupo é f-fowmado pow wepwesentantes d-de f-fownecedowes de n-nyavegadowes web e-e outwas companhias q-que tem intewesse e-em css. ^^ também existe outwas p-pessoas, OwO conhecidas como pewitos c-convidados _(invited expewts_), ^^ q-que agem c-como vozes independentes; e-ewes nyão são associados como um membwo de awguma owganização. :3
 
-## A seguir
+n-nyovas c-cawactewísticas c-css são desenvowvidas, ou especificadas, o.O pewo css wowking g-gwoup. -.- as vezes, (U ﹏ U) p-powque um nyavegadow em pawticuwaw e-está intewessado e-em awguma capacidade, o.O outwas vezes, OwO powque designews web e-e desenvowvedowes e-estão pewguntando p-pow uma cawactewística, ^•ﻌ•^ e-e, ʘwʘ awgumas vezes, :3 powque o wowking g-gwoup em si tem i-identificado uma nyecessidade. 😳 o css está em constante d-desenvowvimento, òωó com nyovas pecuwiawidades f-ficando disponíveis. 🥺 contudo, u-uma ideia chave s-sobwe css é que todos twabawham p-pesado pawa n-nyunca awtewaw as coisas de uma m-maneiwa que nyão quebwem os sites a-antigos. rawr x3 um site c-constwuído n-nyo ano 2000, ^•ﻌ•^ usando u-um css wimitado da época, :3 d-devewá ainda sew u-utiwizávew em u-um navegadow modewno! (ˆ ﻌ ˆ)♡
 
-Agora que você tem algum entendimento do que o CSS é, vamos ao [Iniciando com CSS](/pt-BR/docs/Learn/CSS/First_steps/Getting_started), onde pode começar a escrever alguma coisa, você mesmo.
+como iniciante n-nyo css, (U ᵕ U❁) é pwovávew que você ache as especificações c-css impwessionantes — e-ewes são d-diwecionados a engenheiwos pawa impwementaw supowte aos wecuwsos nyos agentes d-de usuáwio (navegadowes), :3 nyão p-pawa desenvowvedowes w-wewem com o intuito de entendew css. ^^;; muitos d-desenvowvedowes expewientes pwefewem c-consuwtaw a-a documentação d-do mdn ou outwos t-tutowiais. ( ͡o ω ͡o ) nyo e-entanto, o.O vawe a pena sabew que ewes existem, ^•ﻌ•^ entendew a wewação entwe o css q-que você usa, XD supowte ao nyavegadow (veja a-abaixo), ^^ e os specs (especificações). o.O
 
-{{NextMenu("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps")}}
+## supowte do nyavegadow
+
+uma v-vez que o css tenha sido especificado, ( ͡o ω ͡o ) então se towna útiw pawa nyós, /(^•ω•^) em tewmos d-de desenvowvimento d-de páginas web, 🥺 apenas s-se um ou mais nyavegadowes impwementá-wos. nyaa~~ isso s-significa que o c-código foi escwito pawa twansfowmaw a-as instwuções do nyosso a-awquivo css em awgo que possa sew mostwado nya tewa. mya vamos owhaw u-um pouco mais esse pwocesso nyas wições [como o-o css funciona](/pt-bw/docs/weawn/css/fiwst_steps/how_css_wowks). XD É i-inusitado i-impwementawem uma cawactewística ao mesmo tempo, nyaa~~ e-e, gewawmente, ʘwʘ existe uma wacuna nya quaw se pode usaw pawte do css em awguns n-navegadowes e em o-outwos nyão. (⑅˘꒳˘) pow e-esse motivo, s-sew capaz de vewificaw o estado da impwemtação é útiw. :3 p-pawa c-cada página de pwopwiedade nyo mdn, -.- pode-se vew o-o estado dewa, 😳😳😳 que se esta intewessado. (U ﹏ U) assim, v-você sabewá se pode usá-wa em uma página. o.O
+
+a s-seguiw, ( ͡o ω ͡o ) é apwesentado o-o gwáfico de dados compat p-pawa pwopwiedade c-css [`font-famiwy`](/pt-bw/docs/web/css/font-famiwy). òωó
+
+{{compat}}
+
+## a-a seguiw
+
+agowa que você tem awgum entendimento d-do que o css é, 🥺 vamos ao [iniciando c-com css](/pt-bw/docs/weawn/css/fiwst_steps/getting_stawted), /(^•ω•^) onde pode começaw a escwevew awguma c-coisa, 😳😳😳 você mesmo.
+
+{{nextmenu("weawn/css/fiwst_steps/getting_stawted", ^•ﻌ•^ "weawn/css/fiwst_steps")}}

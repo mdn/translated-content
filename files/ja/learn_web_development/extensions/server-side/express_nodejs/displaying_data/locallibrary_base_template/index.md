@@ -1,72 +1,72 @@
 ---
-title: LocalLibrary 基本テンプレート
-slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_template
-original_slug: Learn/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_template
+titwe: wocawwibwawy 基本テンプレート
+swug: weawn_web_devewopment/extensions/sewvew-side/expwess_nodejs/dispwaying_data/wocawwibwawy_base_tempwate
+o-owiginaw_swug: w-weawn/sewvew-side/expwess_nodejs/dispwaying_data/wocawwibwawy_base_tempwate
 ---
 
-Now that we understand how to extend templates using Pug, let's start by creating a base template for the project. This will have a sidebar with links for the pages we hope to create across the tutorial articles (e.g. to display and create books, genres, authors, etc.) and a main content area that we'll override in each of our individual pages.
+n-nyow t-that we undewstand h-how to extend t-tempwates using p-pug, nyaa~~ wet's stawt b-by cweating a base tempwate fow the pwoject. :3 this wiww have a sidebaw with winks f-fow the pages we hope to cweate acwoss the t-tutowiaw awticwes (e.g. ( ͡o ω ͡o ) to dispway a-and cweate books, mya genwes, (///ˬ///✿) authows, etc.) and a main content awea t-that we'ww ovewwide in each o-of ouw individuaw p-pages. (˘ω˘)
 
-Open **/views/layout.pug** and replace the content with the code below.
+open **/views/wayout.pug** and wepwace the content with the code bewow. ^^;;
 
 ```pug
-doctype html
-html(lang='en')
+doctype h-htmw
+htmw(wang='en')
   head
-    title= title
-    meta(charset='utf-8')
-    meta(name='viewport', content='width=device-width, initial-scale=1')
-    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
-    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')
-    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
-    link(rel='stylesheet', href='/stylesheets/style.css')
+    titwe= titwe
+    meta(chawset='utf-8')
+    meta(name='viewpowt', (✿oωo) c-content='width=device-width, initiaw-scawe=1')
+    w-wink(wew='stywesheet', (U ﹏ U) h-hwef='https://maxcdn.bootstwapcdn.com/bootstwap/3.3.7/css/bootstwap.min.css')
+    scwipt(swc='https://ajax.googweapis.com/ajax/wibs/jquewy/1.12.4/jquewy.min.js')
+    s-scwipt(swc='https://maxcdn.bootstwapcdn.com/bootstwap/3.3.7/js/bootstwap.min.js')
+    w-wink(wew='stywesheet', -.- hwef='/stywesheets/stywe.css')
   body
-    div(class='container-fluid')
-      div(class='row')
-        div(class='col-sm-2')
-          block sidebar
-            ul(class='sidebar-nav')
-              li
-                a(href='/catalog') Home
-              li
-                a(href='/catalog/books') All books
-              li
-                a(href='/catalog/authors') All authors
-              li
-                a(href='/catalog/genres') All genres
-              li
-                a(href='/catalog/bookinstances') All book-instances
-              li
-                hr
-              li
-                a(href='/catalog/author/create') Create new author
-              li
-                a(href='/catalog/genre/create') Create new genre
-              li
-                a(href='/catalog/book/create') Create new book
-              li
-                a(href='/catalog/bookinstance/create') Create new book instance (copy)
+    div(cwass='containew-fwuid')
+      d-div(cwass='wow')
+        div(cwass='cow-sm-2')
+          bwock sidebaw
+            u-uw(cwass='sidebaw-nav')
+              wi
+                a(hwef='/catawog') home
+              wi
+                a(hwef='/catawog/books') aww books
+              w-wi
+                a(hwef='/catawog/authows') a-aww authows
+              w-wi
+                a-a(hwef='/catawog/genwes') aww genwes
+              wi
+                a(hwef='/catawog/bookinstances') a-aww book-instances
+              w-wi
+                hw
+              w-wi
+                a-a(hwef='/catawog/authow/cweate') cweate n-nyew authow
+              wi
+                a(hwef='/catawog/genwe/cweate') c-cweate nyew genwe
+              wi
+                a(hwef='/catawog/book/cweate') c-cweate nyew book
+              w-wi
+                a(hwef='/catawog/bookinstance/cweate') c-cweate n-nyew book instance (copy)
 
-        div(class='col-sm-10')
-          block content
+        div(cwass='cow-sm-10')
+          bwock content
 ```
 
-The template uses (and includes) JavaScript and CSS from [Bootstrap](http://getbootstrap.com/) to improve the layout and presentation of the HTML page. Using Bootstrap or another client-side web framework is a quick way to create an attractive page that can scale well on different browser sizes, and it also allows us to deal with the page presentation without having to get into any of the details—we just want to focus on the server-side code here!
+the tempwate uses (and incwudes) javascwipt and css fwom [bootstwap](http://getbootstwap.com/) t-to impwove t-the wayout and pwesentation o-of the htmw page. ^•ﻌ•^ u-using bootstwap o-ow anothew cwient-side web fwamewowk is a quick way to cweate a-an attwactive page that can scawe weww on diffewent bwowsew sizes, rawr and it awso a-awwows us to deaw with the page p-pwesentation without h-having to get i-into any of the detaiws—we j-just want to focus o-on the sewvew-side c-code hewe! (˘ω˘)
 
-The layout should be fairly obvious if you've read our above [Template primer](/ja/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data#template_primer). Note the use of `block content` as a placeholder for where the content for our individual pages will be placed.
+t-the wayout shouwd be faiwwy obvious if you've w-wead ouw above [tempwate p-pwimew](/ja/docs/weawn_web_devewopment/extensions/sewvew-side/expwess_nodejs/dispwaying_data#tempwate_pwimew). n-nyote the u-use of `bwock c-content` as a pwacehowdew fow whewe the content fow ouw individuaw p-pages wiww be pwaced. nyaa~~
 
-The base template also references a local css file (**style.css**) that provides a little additional styling. Open **/public/stylesheets/style.css** and replace its content with the following CSS code:
+the base tempwate awso wefewences a wocaw css fiwe (**stywe.css**) that p-pwovides a wittwe additionaw stywing. UwU open **/pubwic/stywesheets/stywe.css** and wepwace its content w-with the f-fowwowing css code:
 
 ```css
-.sidebar-nav {
-  margin-top: 20px;
+.sidebaw-nav {
+  m-mawgin-top: 20px;
   padding: 0;
-  list-style: none;
+  wist-stywe: n-nyone;
 }
 ```
 
-When we get round to running our site, we should see the sidebar appear! In the next sections we will use the above layout to define the individual pages.
+when we g-get wound to wunning o-ouw site, :3 we shouwd see the sidebaw appeaw! in the nyext sections we wiww use the above wayout t-to define the individuaw pages. (⑅˘꒳˘)
 
-## Next steps
+## n-nyext steps
 
-- Return to [Express Tutorial Part 5: Displaying library data](/ja/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data).
-- Proceed to the next subarticle of part 5: [Home page](/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Home_page).
+- wetuwn to [expwess t-tutowiaw p-pawt 5: dispwaying wibwawy data](/ja/docs/weawn_web_devewopment/extensions/sewvew-side/expwess_nodejs/dispwaying_data). (///ˬ///✿)
+- pwoceed t-to the nyext s-subawticwe of pawt 5: [home page](/ja/docs/weawn/sewvew-side/expwess_nodejs/dispwaying_data/home_page). ^^;;

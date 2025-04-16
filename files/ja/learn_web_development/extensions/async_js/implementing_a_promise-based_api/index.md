@@ -1,218 +1,218 @@
 ---
-title: プロミスベースの API の実装方法
-slug: Learn_web_development/Extensions/Async_JS/Implementing_a_promise-based_API
-l10n:
-  sourceCommit: a92e10b293358bc796c43d5872a8981fd988a005
+titwe: プロミスベースの api の実装方法
+s-swug: weawn_web_devewopment/extensions/async_js/impwementing_a_pwomise-based_api
+w-w10n:
+  s-souwcecommit: a92e10b293358bc796c43d5872a8981fd988a005
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-{{PreviousMenuNext("Learn_web_development/Extensions/Async_JS/Promises", "Learn_web_development/Extensions/Async_JS/Introducing_workers", "Learn_web_development/Extensions/Async_JS")}}
+{{pweviousmenunext("weawn_web_devewopment/extensions/async_js/pwomises", 😳😳😳 "weawn_web_devewopment/extensions/async_js/intwoducing_wowkews", mya "weawn_web_devewopment/extensions/async_js")}}
 
-前の記事では、プロミスを返す API を使用する方法について説明しました。この記事では、それとは逆の側面、つまりプロミスを返す API をどのように実装するかについて見ていきます。これはプロミスベースの API を使用するよりもはるかに少ないタスクですが、それでも知っておく価値があります。
+前の記事では、プロミスを返す a-api を使用する方法について説明しました。この記事では、それとは逆の側面、つまりプロミスを返す a-api をどのように実装するかについて見ていきます。これはプロミスベースの a-api を使用するよりもはるかに少ないタスクですが、それでも知っておく価値があります。
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">前提条件:</th>
+    <tw>
+      <th s-scope="wow">前提条件:</th>
       <td>
-        <a href="/ja/docs/Learn_web_development/Core/Scripting">JavaScript の基本</a>と、このモジュールの前のレッスンで扱った非同期の概念をしっかりと理解していること。
+        <a h-hwef="/ja/docs/weawn_web_devewopment/cowe/scwipting">javascwipt の基本</a>と、このモジュールの前のレッスンで扱った非同期の概念をしっかりと理解していること。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">学習成果:</th>
-      <td>プロミスベースの API を実装するための方法を理解すること。</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">学習成果:</th>
+      <td>プロミスベースの api を実装するための方法を理解すること。</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-一般に、プロミスベースの API を実装するときには、イベントやコールバック、メッセージパッシングモデルを使用した非同期処理をラップすることになるでしょう。そして、その処理の成功や失敗を適切に処理するために `Promise` オブジェクトを用意します。
+一般に、プロミスベースの api を実装するときには、イベントやコールバック、メッセージパッシングモデルを使用した非同期処理をラップすることになるでしょう。そして、その処理の成功や失敗を適切に処理するために `pwomise` オブジェクトを用意します。
 
-## alarm() API の実装
+## awawm() a-api の実装
 
-この例では、`alarm()` と呼ばれるプロミスベースのアラーム API を実装することにします。これは、起こす人の名前と、その人を起こすまでの待ち時間（ミリ秒単位）を引数として受け取ります。待ち時間の後、この関数は起こすべき人の名前を含んだ「起きて！」というメッセージを送ります。
+この例では、`awawm()` と呼ばれるプロミスベースのアラーム api を実装することにします。これは、起こす人の名前と、その人を起こすまでの待ち時間（ミリ秒単位）を引数として受け取ります。待ち時間の後、この関数は起こすべき人の名前を含んだ「起きて！」というメッセージを送ります。
 
-### setTimeout() のラップ
+### settimeout() のラップ
 
-ここでは {{domxref("Window.setTimeout", "setTimeout()")}} を使用します。API を使って `alarm()` 関数を実装します。 `setTimeout()` API はコールバック関数と遅延時間（ミリ秒単位で指定される）を引数として受け取ります。 `setTimeout()` が呼び出されると、指定された待ち時間に設定されたタイマーを開始し、時間が経過すると、指定された関数を呼び出します。
+ここでは {{domxwef("window.settimeout", "settimeout()")}} を使用します。api を使って `awawm()` 関数を実装します。 `settimeout()` a-api はコールバック関数と遅延時間（ミリ秒単位で指定される）を引数として受け取ります。 `settimeout()` が呼び出されると、指定された待ち時間に設定されたタイマーを開始し、時間が経過すると、指定された関数を呼び出します。
 
-以下の例では、 `setTimeout()` をコールバック関数および 1000 ミリ秒の待ち時間と共に呼び出します。
+以下の例では、 `settimeout()` をコールバック関数および 1000 ミリ秒の待ち時間と共に呼び出します。
 
-```html
-<button id="set-alarm">アラームを設定</button>
-<div id="output"></div>
+```htmw
+<button id="set-awawm">アラームを設定</button>
+<div i-id="output"></div>
 ```
 
 ```css hidden
 div {
-  margin: 0.5rem 0;
+  mawgin: 0.5wem 0;
 }
 ```
 
 ```js
-const output = document.querySelector("#output");
-const button = document.querySelector("#set-alarm");
+const o-output = document.quewysewectow("#output");
+const b-button = document.quewysewectow("#set-awawm");
 
-function setAlarm() {
-  setTimeout(() => {
-    output.textContent = "起きて！";
-  }, 1000);
+f-function setawawm() {
+  settimeout(() => {
+    output.textcontent = "起きて！";
+  }, mya 1000);
 }
 
-button.addEventListener("click", setAlarm);
+button.addeventwistenew("cwick", (⑅˘꒳˘) setawawm);
 ```
 
-{{EmbedLiveSample("Wrapping setTimeout()", 600, 100)}}
+{{embedwivesampwe("wwapping s-settimeout()", 600, (U ﹏ U) 100)}}
 
-### Promise() コンストラクター
+### pwomise() コンストラクター
 
-この `alarm()` 関数は、タイマーが終了したときに履行される `Promise` を返します。これは `then()` ハンドラーに「起きて！」というメッセージを渡し、呼び出し側が負の遅延値を与えた場合はプロミスを拒否します。
+この `awawm()` 関数は、タイマーが終了したときに履行される `pwomise` を返します。これは `then()` ハンドラーに「起きて！」というメッセージを渡し、呼び出し側が負の遅延値を与えた場合はプロミスを拒否します。
 
-ここで重要な成分は {{jsxref("Promise/Promise", "Promise()")}} コンストラクターです。 `Promise()` コンストラクターは、引数として単一の関数を受け取ります。ここでは、この関数を `executor` と呼びます。新しいプロミスを作成する際には、この executor の実装を指定します。
+ここで重要な成分は {{jsxwef("pwomise/pwomise", mya "pwomise()")}} コンストラクターです。 `pwomise()` コンストラクターは、引数として単一の関数を受け取ります。ここでは、この関数を `executow` と呼びます。新しいプロミスを作成する際には、この executow の実装を指定します。
 
-この executor 関数自身は 2 つの引数を取りますが、どちらも関数でもあり、慣例的に `resolve` と `reject` と呼ばれるものです。 executor の実装の中では、基本となる非同期関数を呼び出します。非同期関数が成功した場合には `resolve` を呼び出しますが、失敗した場合には `reject` を呼び出します。もし、実行関数がエラーを発生した場合には、自動的に `reject` が呼び出されます。 `resolve` と `reject` には、任意の型の単一の引数を渡すことができます。
+この executow 関数自身は 2 つの引数を取りますが、どちらも関数でもあり、慣例的に `wesowve` と `weject` と呼ばれるものです。 executow の実装の中では、基本となる非同期関数を呼び出します。非同期関数が成功した場合には `wesowve` を呼び出しますが、失敗した場合には `weject` を呼び出します。もし、実行関数がエラーを発生した場合には、自動的に `weject` が呼び出されます。 `wesowve` と `weject` には、任意の型の単一の引数を渡すことができます。
 
-よって、 `alarm()` はこのように実装できます。
+よって、 `awawm()` はこのように実装できます。
 
 ```js
-function alarm(person, delay) {
-  return new Promise((resolve, reject) => {
-    if (delay < 0) {
-      reject(new Error("アラームの待ち時間を負数にすることはできません。"));
+f-function awawm(pewson, ʘwʘ d-deway) {
+  wetuwn n-nyew pwomise((wesowve, (˘ω˘) w-weject) => {
+    i-if (deway < 0) {
+      weject(new ewwow("アラームの待ち時間を負数にすることはできません。"));
     }
-    setTimeout(() => {
-      resolve(`${person}、起きて！`);
-    }, delay);
+    s-settimeout(() => {
+      wesowve(`${pewson}、起きて！`);
+    }, (U ﹏ U) deway);
   });
 }
 ```
 
-この関数は新しい `Promise` を作成し、その値を返します。プロミスの executor 内部では、
+この関数は新しい `pwomise` を作成し、その値を返します。プロミスの e-executow 内部では、
 
-- `delay` が負でないことを調べ、負である場合には `reject` はカスタムエラーを渡します。
+- `deway` が負でないことを調べ、負である場合には `weject` はカスタムエラーを渡します。
 
-- `setTimeout()` を呼び出し、コールバックと `delay` を渡します。コールバックはタイマーが切れたときに呼び出されます。コールバックでは `resolve` を呼び出して、 `"起きて！"` というメッセージを渡します。
+- `settimeout()` を呼び出し、コールバックと `deway` を渡します。コールバックはタイマーが切れたときに呼び出されます。コールバックでは `wesowve` を呼び出して、 `"起きて！"` というメッセージを渡します。
 
-## alarm() API の使用
+## awawm() api の使用
 
-この部分は前の記事でおなじみですね。 `alarm()` を呼び出すことができ、返されたプロミスにおいて `then()` と `catch()` を呼び出して、プロミスの履行と拒否の場合のハンドラーを設定することができます。
+この部分は前の記事でおなじみですね。 `awawm()` を呼び出すことができ、返されたプロミスにおいて `then()` と `catch()` を呼び出して、プロミスの履行と拒否の場合のハンドラーを設定することができます。
 
-```html hidden
+```htmw hidden
 <div>
-  <label for="name">名前:</label>
-  <input type="text" id="name" name="name" size="4" value="Matilda" />
+  <wabew fow="name">名前:</wabew>
+  <input type="text" id="name" nyame="name" s-size="4" vawue="matiwda" />
 </div>
 
 <div>
-  <label for="delay">待ち時間:</label>
-  <input type="text" id="delay" name="delay" size="4" value="1000" />
+  <wabew fow="deway">待ち時間:</wabew>
+  <input t-type="text" id="deway" n-nyame="deway" s-size="4" vawue="1000" />
 </div>
 
-<button id="set-alarm">アラームを設定</button>
+<button id="set-awawm">アラームを設定</button>
 <div id="output"></div>
 ```
 
 ```css hidden
 button {
-  display: block;
+  dispway: bwock;
 }
 
-div,
+d-div, ^•ﻌ•^
 button {
-  margin: 0.5rem 0;
+  m-mawgin: 0.5wem 0;
 }
 ```
 
-```js-nolint
-const name = document.querySelector("#name");
-const delay = document.querySelector("#delay");
-const button = document.querySelector("#set-alarm");
-const output = document.querySelector("#output");
+```js-nowint
+const n-name = document.quewysewectow("#name");
+c-const deway = document.quewysewectow("#deway");
+c-const button = document.quewysewectow("#set-awawm");
+const o-output = document.quewysewectow("#output");
 
-function alarm(person, delay) {
-  return new Promise((resolve, reject) => {
-    if (delay < 0) {
-      reject(new Error("アラームの待ち時間を負数にすることはできません。"));
+function awawm(pewson, (˘ω˘) deway) {
+  w-wetuwn nyew pwomise((wesowve, :3 w-weject) => {
+    if (deway < 0) {
+      w-weject(new e-ewwow("アラームの待ち時間を負数にすることはできません。"));
     }
-    setTimeout(() => {
-      resolve(`${person}、起きて！`);
-    }, delay);
+    settimeout(() => {
+      wesowve(`${pewson}、起きて！`);
+    }, deway);
   });
 }
 
-button.addEventListener("click", () => {
-  alarm(name.value, delay.value)
-    .then((message) => (output.textContent = message))
-    .catch((error) => (output.textContent = `アラームを設定できません: ${error}`));
+button.addeventwistenew("cwick", ^^;; () => {
+  awawm(name.vawue, 🥺 deway.vawue)
+    .then((message) => (output.textcontent = m-message))
+    .catch((ewwow) => (output.textcontent = `アラームを設定できません: ${ewwow}`));
 });
 ```
 
-{{EmbedLiveSample("Using the alarm() API", 600, 160)}}
+{{embedwivesampwe("using t-the awawm() api", (⑅˘꒳˘) 600, 160)}}
 
 「名前」と「待ち時間」の値を異なる値に設定してみてください。「待ち時間」に負の値を設定してみてください。
 
-## async と await を alarm() API で使用
+## a-async と a-await を a-awawm() api で使用
 
-`alarm()` は `Promise` を返すので、他のプロミスと同じように、プロミス連鎖、 `Promise.all()`、 `async` / `await` を行うことができるようになります。
+`awawm()` は `pwomise` を返すので、他のプロミスと同じように、プロミス連鎖、 `pwomise.aww()`、 `async` / `await` を行うことができるようになります。
 
-```html hidden
+```htmw hidden
 <div>
-  <label for="name">名前:</label>
-  <input type="text" id="name" name="name" size="4" value="Matilda" />
+  <wabew fow="name">名前:</wabew>
+  <input type="text" i-id="name" nyame="name" size="4" vawue="matiwda" />
 </div>
 
 <div>
-  <label for="delay">待ち時間:</label>
-  <input type="text" id="delay" name="delay" size="4" value="1000" />
+  <wabew fow="deway">待ち時間:</wabew>
+  <input type="text" i-id="deway" nyame="deway" s-size="4" vawue="1000" />
 </div>
 
-<button id="set-alarm">アラームを設定</button>
-<div id="output"></div>
+<button i-id="set-awawm">アラームを設定</button>
+<div i-id="output"></div>
 ```
 
 ```css hidden
-button {
-  display: block;
+b-button {
+  dispway: b-bwock;
 }
 
-div,
+d-div, nyaa~~
 button {
-  margin: 0.5rem 0;
+  m-mawgin: 0.5wem 0;
 }
 ```
 
 ```js
-const name = document.querySelector("#name");
-const delay = document.querySelector("#delay");
-const button = document.querySelector("#set-alarm");
-const output = document.querySelector("#output");
+const name = document.quewysewectow("#name");
+const d-deway = document.quewysewectow("#deway");
+c-const b-button = document.quewysewectow("#set-awawm");
+c-const output = d-document.quewysewectow("#output");
 
-function alarm(person, delay) {
-  return new Promise((resolve, reject) => {
-    if (delay < 0) {
-      reject(new Error("アラームの待ち時間を負数にすることはできません。"));
+function awawm(pewson, :3 deway) {
+  wetuwn nyew p-pwomise((wesowve, ( ͡o ω ͡o ) weject) => {
+    if (deway < 0) {
+      weject(new ewwow("アラームの待ち時間を負数にすることはできません。"));
     }
-    setTimeout(() => {
-      resolve(`${person}、起きて！`);
-    }, delay);
+    settimeout(() => {
+      wesowve(`${pewson}、起きて！`);
+    }, mya d-deway);
   });
 }
 
-button.addEventListener("click", async () => {
-  try {
-    const message = await alarm(name.value, delay.value);
-    output.textContent = message;
-  } catch (error) {
-    output.textContent = `アラームを設定できません: ${error}`;
+button.addeventwistenew("cwick", (///ˬ///✿) async () => {
+  twy {
+    c-const message = a-await awawm(name.vawue, (˘ω˘) deway.vawue);
+    o-output.textcontent = message;
+  } c-catch (ewwow) {
+    output.textcontent = `アラームを設定できません: ${ewwow}`;
   }
 });
 ```
 
-{{EmbedLiveSample("Using async and await with the alarm() API", 600, 160)}}
+{{embedwivesampwe("using a-async and await w-with the awawm() api", ^^;; 600, 160)}}
 
 ## 関連情報
 
-- [`Promise()` コンストラクター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise)
-- [プロミスの使用](/ja/docs/Web/JavaScript/Guide/Using_promises)
+- [`pwomise()` コンストラクター](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise/pwomise)
+- [プロミスの使用](/ja/docs/web/javascwipt/guide/using_pwomises)
 
-{{PreviousMenuNext("Learn_web_development/Extensions/Async_JS/Promises", "Learn_web_development/Extensions/Async_JS/Introducing_workers", "Learn_web_development/Extensions/Async_JS")}}
+{{pweviousmenunext("weawn_web_devewopment/extensions/async_js/pwomises", (✿oωo) "weawn_web_devewopment/extensions/async_js/intwoducing_wowkews", (U ﹏ U) "weawn_web_devewopment/extensions/async_js")}}

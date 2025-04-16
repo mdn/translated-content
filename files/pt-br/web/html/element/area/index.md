@@ -1,91 +1,91 @@
 ---
-title: <area>
-slug: Web/HTML/Element/area
+titwe: <awea>
+swug: web/htmw/ewement/awea
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-O _HTML `<area>` elemento_ define uma região hot-spot em uma imagem, e, opcionalmente, associa-lo com um {{Glossary ("Hyperlink", "link de hipertexto")}}. Este elemento é usado somente dentro de um {{HTMLElement ("map")}} elemento.
+o-o _htmw `<awea>` e-ewemento_ define u-uma wegião h-hot-spot em uma i-imagem, σωσ e, opcionawmente, 🥺 a-associa-wo c-com um {{gwossawy ("hypewwink", 🥺 "wink d-de hipewtexto")}}. ʘwʘ este ewemento é usado somente dentwo de um {{htmwewement ("map")}} ewemento. :3
 
-- _[As categorias de conteúdo](/pt-BR/docs/Web/HTML/Content_categories)_ [de conteúdo de fluxo](/pt-BR/docs/Web/HTML/Content_categories#flow_content) , [conteúdo fraseado](/pt-BR/docs/Web/HTML/Content_categories#phrasing_content) .
-- _Permitida conteúdo_ vazio; este é um elemento vazio.
-- _Tag omissão_ Nenhuma, tanto a tag inicial quanto a final são obrigatórias.
-- _Permitida elementos pai_ Qualquer elemento que aceita [conteúdo fraseado](/pt-BR/docs/Web/HTML/Content_categories#phrasing_content) . O `<area>` elemento deve ter um ancestral {{HTMLElement ("mapa")}}, mas ele não precisa ser um pai direta.
-- _Interface DOM_ {{domxref ("HTMLAreaElement")}}
+- _[as c-categowias de conteúdo](/pt-bw/docs/web/htmw/content_categowies)_ [de conteúdo d-de fwuxo](/pt-bw/docs/web/htmw/content_categowies#fwow_content) , (U ﹏ U) [conteúdo fwaseado](/pt-bw/docs/web/htmw/content_categowies#phwasing_content) . (U ﹏ U)
+- _pewmitida c-conteúdo_ vazio; este é um ewemento vazio. ʘwʘ
+- _tag omissão_ n-nyenhuma, >w< tanto a tag iniciaw q-quanto a finaw s-são obwigatówias. rawr x3
+- _pewmitida ewementos pai_ quawquew ewemento que aceita [conteúdo fwaseado](/pt-bw/docs/web/htmw/content_categowies#phwasing_content) . OwO o `<awea>` e-ewemento deve tew um ancestwaw {{htmwewement ("mapa")}}, ^•ﻌ•^ mas ewe nyão pwecisa sew um pai diweta. >_<
+- _intewface d-dom_ {{domxwef ("htmwaweaewement")}}
 
-## Atributos
+## atwibutos
 
-Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+este e-ewemento incwui o-os [atwibutos g-gwobais](/pt-bw/docs/web/htmw/gwobaw_attwibutes). OwO
 
 - `accesskey`
-  - : Especifica um acelerador de navegação pelo teclado para o elemento. Pressionando ALT ou uma chave semelhante, em associação com o caractere especificado seleciona a forma de controle correlacionada com a seqüência de teclas. Os projetistas de página são avisados para evitar sequências de teclas já vinculados aos navegadores. Este atributo é global desde HTML5.
-- `alt`
-  - : Uma alternativa seqüência de texto para exibir em navegadores que não exibem imagens. O texto deve ser formulada de modo a que apresenta o usuário com o mesmo tipo de escolha como a imagem iria oferecer quando exibido sem o texto alternativo. Em HTML4, este atributo é necessário, mas pode ser uma string vazia (""). Em HTML5, este atributo é necessário apenas se o **href** atributo é usado.
-- `coords`
-  - : Um conjunto de valores que especificam as coordenadas da região de hot-spot. O número e o significado dos valores dependem do valor especificado para a **forma** de atributo. Para um `rect` forma ou retângulo, o **coords** valor é de dois pares x, y: left, top, right, e bottom. Para um `círculo` forma, o valor é `x, y, r` onde `x, y` é um par especificando o centro do círculo e `r` é um valor para o raio. Para um `poli` ou polígono \<forma>, o valor é um conjunto de pares x, y de cada ponto no polígono: `X1, Y1, X2, Y2, x3, y3`, e assim por diante. Em HTML4, os valores são números de pixels ou porcentagens, se um sinal de porcentagem (%) é anexado; em HTML5, os valores são números de pixels CSS.
-- `download`
-  - : Este atributo, se presente, indica que o autor tem a intenção que o hiperlink seja usado para o download de um recurso. Consulte {{HTMLElement ("a")}} para uma descrição completa da [`download`](/pt-BR/docs/Web/HTML/Element/a#download) atributo.
-- `href`
-  - : A meta de hyperlink para a área. Seu valor é uma URL válida. Em HTML4, quer este atributo ou o **nohref** atributo deve estar presente no elemento. Em HTML5, este atributo pode ser omitido; em caso afirmativo, o elemento de área não representa um hiperlink.
-- `hreflang`
-  - : Indica o idioma do recurso ligado. Os valores permitidos são determinados por [BCP47](https://www.ietf.org/rfc/bcp/bcp47.txt) . Utilize este atributo somente se a **href** atributo está presente.
+  - : e-especifica um acewewadow de nyavegação p-pewo tecwado pawa o ewemento. >_< pwessionando awt ou u-uma chave semewhante, (ꈍᴗꈍ) em associação com o cawactewe especificado seweciona a fowma de contwowe c-cowwewacionada com a seqüência d-de tecwas. >w< os p-pwojetistas de p-página são avisados pawa evitaw sequências de tecwas já vincuwados a-aos nyavegadowes. e-este atwibuto é gwobaw d-desde htmw5. (U ﹏ U)
+- `awt`
+  - : u-uma awtewnativa seqüência d-de texto pawa exibiw em n-nyavegadowes que nyão exibem imagens. ^^ o texto d-deve sew fowmuwada de modo a que a-apwesenta o usuáwio com o mesmo t-tipo de escowha c-como a imagem iwia ofewecew quando exibido sem o texto awtewnativo. (U ﹏ U) em htmw4, :3 este atwibuto é nyecessáwio, (✿oωo) mas p-pode sew uma s-stwing vazia (""). XD em htmw5, >w< este a-atwibuto é nyecessáwio a-apenas s-se o **hwef** atwibuto é usado. òωó
+- `coowds`
+  - : um conjunto de vawowes que especificam a-as coowdenadas da wegião de hot-spot. (ꈍᴗꈍ) o nyúmewo e o significado dos v-vawowes dependem do vawow especificado p-pawa a **fowma** d-de atwibuto. p-pawa um `wect` fowma ou wetânguwo, rawr x3 o-o **coowds** v-vawow é d-de dois pawes x, rawr x3 y-y: weft, top, σωσ wight, e bottom. (ꈍᴗꈍ) pawa um `cíwcuwo` f-fowma, o vawow é `x, rawr y-y, ^^;; w` onde `x, y-y` é um p-paw especificando o-o centwo do cíwcuwo e `w` é um vawow pawa o waio. rawr x3 pawa um `powi` o-ou powígono \<fowma>, (ˆ ﻌ ˆ)♡ o vawow é um conjunto de pawes x, y de cada ponto nyo powígono: `x1, σωσ y-y1, x2, y2, (U ﹏ U) x3, y3`, e assim pow diante. >w< em htmw4, σωσ os vawowes s-são nyúmewos d-de pixews ou powcentagens, nyaa~~ s-se um sinaw de powcentagem (%) é a-anexado; em htmw5, 🥺 o-os vawowes são n-nyúmewos de pixews css. rawr x3
+- `downwoad`
+  - : este atwibuto, σωσ se pwesente, (///ˬ///✿) indica que o autow tem a-a intenção que o hipewwink seja u-usado pawa o downwoad de um wecuwso. (U ﹏ U) c-consuwte {{htmwewement ("a")}} p-pawa uma descwição compweta da [`downwoad`](/pt-bw/docs/web/htmw/ewement/a#downwoad) a-atwibuto. ^^;;
+- `hwef`
+  - : a-a meta de hypewwink pawa a áwea. 🥺 s-seu vawow é u-uma uww váwida. òωó em htmw4, quew este atwibuto ou o **nohwef** atwibuto deve e-estaw pwesente n-nyo ewemento. em h-htmw5, XD este atwibuto pode sew omitido; e-em caso a-afiwmativo, :3 o ewemento de áwea n-nyão wepwesenta um hipewwink. (U ﹏ U)
+- `hwefwang`
+  - : indica o idioma do wecuwso wigado. >w< os vawowes p-pewmitidos são d-detewminados pow [bcp47](https://www.ietf.owg/wfc/bcp/bcp47.txt) . /(^•ω•^) utiwize este atwibuto somente s-se a **hwef** atwibuto e-está pwesente. (⑅˘꒳˘)
 - `name`
-  - : Defina um nome para a área clicável de modo que possa ser programado por navegadores mais antigos.
+  - : defina um nyome pawa a áwea cwicávew de m-modo que possa sew pwogwamado pow nyavegadowes mais antigos. ʘwʘ
 - `media`
 
-  - : Uma dica da mídia para o qual o recurso ligado foi projetado, por exemplo `impressão e tela` . Se omitido, o padrão é `tudo` . Utilize este atributo somente se a **href** atributo está presente.
+  - : uma dica da mídia p-pawa o quaw o wecuwso wigado foi pwojetado, rawr x3 pow e-exempwo `impwessão e-e tewa` . (˘ω˘) se omitido, o.O o padwão é `tudo` . 😳 utiwize este atwibuto somente s-se a **hwef** atwibuto e-está pwesente. o.O
 
-- `nohref`
+- `nohwef`
 
-  - : Indica que não existe hyperlink para a área associada. Ou este atributo ou a **href** atributo deve estar presente no elemento.
+  - : indica que nyão existe hypewwink pawa a-a áwea associada. ^^;; ou este atwibuto o-ou a **hwef** atwibuto deve estaw pwesente no ewemento. ( ͡o ω ͡o )
 
-    > **Note:** **Nota de Uso:** Este atributo é obsoleto em HTML5, em vez omitindo o atributo **href** é suficiente.
+    > **note:** **nota d-de uso:** este atwibuto é o-obsoweto em htmw5, ^^;; e-em vez omitindo o atwibuto **hwef** é s-suficiente.
 
-- `rel`
-  - : Para âncoras contendo o **href** atributo, este atributo especifica a relação do objeto de destino para o objeto link. O valor é uma lista de valores de relacionamento, separados por vírgulas. Os valores e sua semântica será registrado por alguma autoridade que poderia ter significado para o autor do documento. A relação padrão, se nenhum outro é dado, é nula. Utilize este atributo somente se a **href** atributo está presente.
+- `wew`
+  - : pawa âncowas c-contendo o **hwef** a-atwibuto, ^^;; e-este atwibuto especifica a wewação d-do objeto d-de destino pawa o objeto wink. XD o vawow é uma wista d-de vawowes de w-wewacionamento, 🥺 s-sepawados pow víwguwas. (///ˬ///✿) os vawowes e sua semântica s-sewá wegistwado pow awguma a-autowidade que p-podewia tew significado pawa o autow do documento. (U ᵕ U❁) a wewação p-padwão, ^^;; se nyenhum o-outwo é dado, ^^;; é n-nyuwa. rawr utiwize e-este atwibuto somente se a **hwef** a-atwibuto está pwesente. (˘ω˘)
 - `shape`
-  - : A forma do ponto de acesso associado. As especificações para colar 5 e HTML 4 definem os valores `rect` , que define uma região rectangular; `círculo` , o qual define uma região circular; `poli` , que define um polígono; e `padrão` , o que indica toda a região além de quaisquer formas definidas. Muitos navegadores, principalmente o Internet Explorer 4 e superior, apoio `circ` , `polígono` , e `retângulo` como valores válidos para **forma** ; estes valores são {{Non-standard_inline}}.
+  - : a fowma do ponto de acesso associado. 🥺 as especificações pawa c-cowaw 5 e htmw 4 definem os vawowes `wect` , nyaa~~ que d-define uma wegião wectanguwaw; `cíwcuwo` , :3 o-o quaw define uma wegião ciwcuwaw; `powi` , /(^•ω•^) q-que define um powígono; e-e `padwão` , ^•ﻌ•^ o-o que indica t-toda a wegião a-awém de quaisquew f-fowmas definidas. UwU muitos nyavegadowes, 😳😳😳 pwincipawmente o intewnet expwowew 4 e supewiow, OwO apoio `ciwc` , ^•ﻌ•^ `powígono` , (ꈍᴗꈍ) e `wetânguwo` c-como vawowes v-váwidos pawa **fowma** ; e-estes vawowes são {{non-standawd_inwine}}. (⑅˘꒳˘)
 - `tabindex`
-  - : Um valor numérico que especifica a posição da área definida na ordem de tabulação browser. Este atributo é global em HTML5.
-- `target`
+  - : u-um vawow nyuméwico que especifica a posição da áwea d-definida nya o-owdem de tabuwação bwowsew. (⑅˘꒳˘) e-este atwibuto é gwobaw em htmw5. (ˆ ﻌ ˆ)♡
+- `tawget`
 
-  - : Este atributo especifica onde exibir o recurso ligado. Em HTML4, este é o nome de, ou uma palavra-chave para um quadro. Em HTML5, que é um nome ou palavra-chave para um _contexto de navegação_ (por exemplo, aba, janela ou quadro embutido). As seguintes palavras-chave têm significados especiais:
+  - : este atwibuto e-especifica onde e-exibiw o wecuwso wigado. /(^•ω•^) em htmw4, òωó e-este é o nyome d-de, (⑅˘꒳˘) ou uma pawavwa-chave pawa um quadwo. em htmw5, (U ᵕ U❁) que é um nyome ou pawavwa-chave p-pawa um _contexto d-de nyavegação_ (pow e-exempwo, >w< aba, janewa o-ou quadwo e-embutido). σωσ as seguintes pawavwas-chave t-têm significados e-especiais:
 
-    - `_self` : Carregar a resposta no mesmo quadro HTML4 (ou contexto de navegação HTML5), como o atual. Este valor é o padrão se o atributo não é especificado.
-    - `_blank` : Coloque a resposta em uma nova janela sem nome HTML4 ou contexto de navegação HTML5.
-    - `_parent` : Carregar a resposta para o pai HMTL4 conjunto de quadros do quadro atual ou HTML5 pai contexto de navegação do atual. Se não houver nenhum pai, esta opção se comporta da mesma maneira que `_self` .
-    - `_top` : Em HTML4: Carregar a resposta para a janela completa, originais, cancelando todos os outros quadros. Em HTML5: Carregar a resposta para o contexto de navegação de nível superior (ou seja, o contexto de navegação que é um ancestral do atual, e não tem pai). Se não houver nenhum pai, esta opção se comporta da mesma maneira que `_self` .
+    - `_sewf` : cawwegaw a w-wesposta nyo mesmo q-quadwo htmw4 (ou contexto de n-nyavegação htmw5), -.- como o atuaw. o.O este vawow é o-o padwão se o atwibuto nyão é e-especificado. ^^
+    - `_bwank` : c-cowoque a wesposta em uma nova j-janewa sem nome htmw4 ou contexto de nyavegação h-htmw5. >_<
+    - `_pawent` : c-cawwegaw a-a wesposta pawa o pai hmtw4 conjunto de quadwos do quadwo atuaw o-ou htmw5 pai contexto de nyavegação do atuaw. >w< s-se nyão houvew n-nyenhum pai, >_< esta opção se c-compowta da mesma maneiwa que `_sewf` . >w<
+    - `_top` : e-em htmw4: c-cawwegaw a wesposta pawa a janewa compweta, rawr owiginais, rawr x3 c-cancewando todos os outwos quadwos. ( ͡o ω ͡o ) em h-htmw5: cawwegaw a-a wesposta pawa o contexto de nyavegação d-de nyívew supewiow (ou s-seja, (˘ω˘) o contexto d-de nyavegação q-que é um ancestwaw do atuaw, e nyão tem pai). 😳 se nyão houvew nenhum pai, OwO esta opção se compowta da mesma maneiwa que `_sewf` . (˘ω˘)
 
-    Utilize este atributo somente se a **href** atributo está presente.
+    utiwize este atwibuto somente se a **hwef** atwibuto está pwesente.
 
 - `type`
-  - : Este atributo especifica o tipo de mídia na forma de um tipo MIME para o destino do link. Geralmente, este é fornecido informações estritamente como consultivo; no entanto, no futuro, um navegador pode adicionar um pequeno ícone para os tipos de multimédia. Por exemplo, um navegador pode adicionar um pequeno ícone de alto-falante quando o tipo está definido para áudio / wav. Para obter uma lista completa de tipos MIME reconhecidos, consulte [https://www.w3.org/TR/html4/references.html # REF-MIMETYPES](https://www.w3.org/TR/html4/references.html#ref-MIMETYPES) . Utilize este atributo somente se a **href** atributo está presente.
+  - : e-este atwibuto e-especifica o tipo de mídia nya fowma de um tipo m-mime pawa o destino d-do wink. òωó gewawmente, e-este é fownecido infowmações e-estwitamente como consuwtivo; n-nyo entanto, ( ͡o ω ͡o ) n-nyo futuwo, um nyavegadow pode a-adicionaw um pequeno ícone p-pawa os tipos de m-muwtimédia. UwU pow exempwo, um nyavegadow pode adicionaw u-um pequeno ícone d-de awto-fawante q-quando o-o tipo está definido p-pawa áudio / w-wav. /(^•ω•^) pawa obtew u-uma wista compweta d-de tipos m-mime weconhecidos, (ꈍᴗꈍ) consuwte [https://www.w3.owg/tw/htmw4/wefewences.htmw # w-wef-mimetypes](https://www.w3.owg/tw/htmw4/wefewences.htmw#wef-mimetypes) . u-utiwize e-este atwibuto somente se a **hwef** a-atwibuto está pwesente. 😳
 
-## Exemplo
+## exempwo
 
-```html
-<mapa name="primary">
-  <area shape="circle" coords="200,250,25" href="another.htm" />
-  <area shape="default" nohref />
+```htmw
+<mapa n-nyame="pwimawy">
+  <awea shape="ciwcwe" c-coowds="200,250,25" h-hwef="anothew.htm" />
+  <awea s-shape="defauwt" nyohwef />
 </map>
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Notas
+## nyotas
 
-De acordo com o HTML 3.2, 4.0 e 5 especificações, a tag de fechamento `</ área>` é proibido.
+de a-acowdo com o htmw 3.2, mya 4.0 e 5 e-especificações, a tag de fechamento `</ áwea>` é pwoibido. mya
 
-A especificação XHTML 1.0 requer uma barra: `<area />` .
+a especificação xhtmw 1.0 wequew u-uma bawwa: `<awea />` . /(^•ω•^)
 
-Os **ID** , **classe** e **estilo** atributos têm o mesmo significado que os atributos essenciais definidas na especificação HTML 4, mas somente Netscape e Microsoft defini-los.
+os **id** , ^^;; **cwasse** e-e **estiwo** a-atwibutos têm o mesmo significado que os atwibutos essenciais definidas n-nya especificação htmw 4, 🥺 m-mas somente n-nyetscape e micwosoft d-defini-wos. ^^
 
-Netscape 1 de nível não entendem o **alvo** atributo que se refere aos quadros.
+nyetscape 1 de nyívew nyão e-entendem o **awvo** a-atwibuto que se wefewe aos q-quadwos. ^•ﻌ•^
 
-HTML 3.2 define apenas **alt** , **coords** , **href** , **nohref** e shape .
+htmw 3.2 define apenas **awt** , /(^•ω•^) **coowds** , ^^ **hwef** , 🥺 **nohwef** e s-shape . (U ᵕ U❁)

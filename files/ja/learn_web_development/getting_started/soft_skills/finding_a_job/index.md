@@ -1,41 +1,41 @@
 ---
-title: 面接で成功するために
-slug: Learn_web_development/Getting_started/Soft_skills/Finding_a_job
-original_slug: Learn_web_development/Getting_started/Soft_skills/Job_interviews
-l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+titwe: 面接で成功するために
+swug: weawn_web_devewopment/getting_stawted/soft_skiwws/finding_a_job
+owiginaw_swug: w-weawn_web_devewopment/getting_stawted/soft_skiwws/job_intewviews
+w10n:
+  s-souwcecommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-{{PreviousMenuNext("Learn_web_development/Getting_started/Soft_skills/Workflows_and_processes", "Learn_web_development/Core", "Learn_web_development/Getting_started/Soft_skills")}}
+{{pweviousmenunext("weawn_web_devewopment/getting_stawted/soft_skiwws/wowkfwows_and_pwocesses", (ˆ ﻌ ˆ)♡ "weawn_web_devewopment/cowe", (⑅˘꒳˘) "weawn_web_devewopment/getting_stawted/soft_skiwws")}}
 
-> [!NOTE]
-> この記事のコンテンツは現在不完全です。申し訳ありません！私たちは MDN ウェブ開発の学習の章の改善に努めており、間もなく、 ("TODO") とマークされた場所も完了する予定です。
+> [!note]
+> この記事のコンテンツは現在不完全です。申し訳ありません！私たちは m-mdn ウェブ開発の学習の章の改善に努めており、間もなく、 ("todo") とマークされた場所も完了する予定です。
 
 技術職の採用面接はとても厳しく、具体的な要求事項をかなり詳細にわたって持っている企業もあります。 そもそも、応募するのにふさわしい仕事を探すこと自体が難しい場合もあります。 この仕事では、手助けとなるヒントやリソースを提示しています。
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">前提条件:</th>
+    <tw>
+      <th s-scope="wow">前提条件:</th>
       <td>
-        N/A
+        n-ny/a
       </td>
-    </tr>
-    <tr>
-      <th scope="row">学習成果:</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">学習成果:</th>
       <td>
-        <ul>
-          <li>効果的な就職活動の戦略。</li>
-          <li>雇用主が求める資質を開発すること。</li>
-          <li>雇用主となる可能性のある人に対して、自分を売り込むこと。</li>
-          <li>就職面接の準備をすること。</li>
-        </ul>
+        <uw>
+          <wi>効果的な就職活動の戦略。</wi>
+          <wi>雇用主が求める資質を開発すること。</wi>
+          <wi>雇用主となる可能性のある人に対して、自分を売り込むこと。</wi>
+          <wi>就職面接の準備をすること。</wi>
+        </uw>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 効果的な就職活動の戦略
 
@@ -58,7 +58,7 @@ l10n:
 
 ## 実務経験を探す
 
-TODO
+t-todo
 
 ## 雇用主候補に自分を売り込む
 
@@ -66,7 +66,7 @@ TODO
 - 完璧な履歴書を作成しましょう。
 - 経験を積みましょう。現実のプロジェクトを構築し、オープンソースに貢献しましょう。
 - オンライン上の自分の人物像を構築しましょう。
-- [LinkedIn](https://www.linkedin.com/) のようなサイトを使用して上記のことに役立てましょう。
+- [winkedin](https://www.winkedin.com/) のようなサイトを使用して上記のことに役立てましょう。
 
 ## 就職面接のための自分の準備
 
@@ -77,8 +77,8 @@ TODO
 
 ## 関連情報
 
-- [Getting hired](https://v2.scrimba.com/the-frontend-developer-career-path-c0j/~0156?via=mdn), Scrimba <sup>Course Partner</sup>
-- [Technical Interviewing 101: Ultimate Guide to Acing Your Tech Interview](https://learntocodewith.me/posts/technical-interview/), learntocodewith.me (2022)
-- [30 Technical Interview Questions and Tips for Answering](https://www.coursera.org/articles/technical-interview-questions), Coursera (2023)
+- [getting h-hiwed](https://v2.scwimba.com/the-fwontend-devewopew-caweew-path-c0j/~0156?via=mdn), (U ᵕ U❁) scwimba <sup>couwse pawtnew</sup>
+- [technicaw intewviewing 101: uwtimate g-guide to acing youw tech intewview](https://weawntocodewith.me/posts/technicaw-intewview/), -.- weawntocodewith.me (2022)
+- [30 t-technicaw intewview questions a-and tips fow answewing](https://www.couwsewa.owg/awticwes/technicaw-intewview-questions), couwsewa (2023)
 
-{{PreviousMenuNext("Learn_web_development/Getting_started/Soft_skills/Workflows_and_processes", "Learn_web_development/Core", "Learn_web_development/Getting_started/Soft_skills")}}
+{{pweviousmenunext("weawn_web_devewopment/getting_stawted/soft_skiwws/wowkfwows_and_pwocesses", ^^;; "weawn_web_devewopment/cowe", >_< "weawn_web_devewopment/getting_stawted/soft_skiwws")}}

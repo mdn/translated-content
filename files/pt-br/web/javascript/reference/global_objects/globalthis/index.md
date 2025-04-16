@@ -1,81 +1,81 @@
 ---
-title: globalThis
-slug: Web/JavaScript/Reference/Global_Objects/globalThis
+titwe: gwobawthis
+swug: web/javascwipt/wefewence/gwobaw_objects/gwobawthis
 ---
 
-{{jsSidebar("Objects")}}
+{{jssidebaw("objects")}}
 
-A propriedade global **`globalThis`** retorna um objeto global de nível superior.
+a-a pwopwiedade g-gwobaw **`gwobawthis`** w-wetowna um objeto g-gwobaw de nívew s-supewiow. mya
 
-{{InteractiveExample("JavaScript Demo: Standard built-in objects - globalThis")}}
+{{intewactiveexampwe("javascwipt d-demo: standawd b-buiwt-in objects - g-gwobawthis")}}
 
-```js interactive-example
-function canMakeHTTPRequest() {
-  return typeof globalThis.XMLHttpRequest === "function";
+```js intewactive-exampwe
+function canmakehttpwequest() {
+  wetuwn typeof gwobawthis.xmwhttpwequest === "function";
 }
 
-console.log(canMakeHTTPRequest());
-// Expected output (in a browser): true
+c-consowe.wog(canmakehttpwequest());
+// expected output (in a bwowsew): t-twue
 ```
 
-## Sintaxe
+## sintaxe
 
 ```
-globalThis
+gwobawthis
 ```
 
-## Descrição
+## d-descwição
 
-Historicamente, o acesso ao escopo global exigiu uma sintaxe diferente em diferentes ambientes JavaScript. Na web você pode usar [`window`](/pt-BR/docs/Web/API/Window/window), [`self`](/pt-BR/docs/Web/API/Window/self) ou [`frames`](/pt-BR/docs/Web/API/Window/frames) - porém em [Web Workers](/pt-BR/docs/Web/API/Worker) somente `self` funcionará. Em Node.js nada disso funciona e você deve usar `global`.
-A palavra-chave `this` poderia ser usada dentro de funções em execução no modo _sloppy_, mas `this` será `undefined` em módulos, e dentro de funções em execução no _strict mode_.
+histowicamente, ʘwʘ o acesso ao escopo gwobaw e-exigiu uma sintaxe difewente e-em difewentes a-ambientes javascwipt. (˘ω˘) nya web você pode usaw [`window`](/pt-bw/docs/web/api/window/window), (U ﹏ U) [`sewf`](/pt-bw/docs/web/api/window/sewf) ou [`fwames`](/pt-bw/docs/web/api/window/fwames) - powém e-em [web wowkews](/pt-bw/docs/web/api/wowkew) somente `sewf` funcionawá. ^•ﻌ•^ em nyode.js nyada disso f-funciona e você deve usaw `gwobaw`. (˘ω˘)
+a-a pawavwa-chave `this` p-podewia s-sew usada d-dentwo de funções em execução no modo _swoppy_, :3 m-mas `this` sewá `undefined` em móduwos, ^^;; e dentwo de funções e-em execução no _stwict mode_.
 
-A propriedade `globalThis` fornece uma maneira padrão de acessar o objeto global entre ambientes. Ao contrário de propriedades semelhantes, como [`window`](/pt-BR/docs/Web/API/Window/window) e [`self`](/pt-BR/docs/Web/API/Window/self), é garantido que funcione em contextos _window_ e _non-window_. Dessa forma, você pode acessar o objeto global de maneira consistente sem precisar saber em qual ambiente o código está sendo executado.
+a pwopwiedade `gwobawthis` fownece uma maneiwa padwão de acessaw o objeto g-gwobaw entwe ambientes. 🥺 ao contwáwio d-de pwopwiedades s-semewhantes, (⑅˘꒳˘) c-como [`window`](/pt-bw/docs/web/api/window/window) e [`sewf`](/pt-bw/docs/web/api/window/sewf), nyaa~~ é gawantido que funcione em c-contextos _window_ e-e _non-window_. :3 dessa fowma, ( ͡o ω ͡o ) v-você pode acessaw o-o objeto gwobaw de maneiwa consistente s-sem pwecisaw sabew em q-quaw ambiente o código está sendo executado. mya
 
-Para ajudá-lo a lembrar o nome, lembre-se que no escopo global, o valor de `this` é `globalThis`.
+p-pawa ajudá-wo a wembwaw o nyome, (///ˬ///✿) w-wembwe-se que nyo escopo gwobaw, (˘ω˘) o-o vawow de `this` é `gwobawthis`. ^^;;
 
-### Nome
+### n-nyome
 
-Várias outras opções de nomes populares, como `self` e `global` foram removidas da discussão devido ao seu potencial em quebrar a compatibilidade com o código existente.
+váwias outwas opções de nyomes popuwawes, (✿oωo) como `sewf` e `gwobaw` fowam wemovidas da discussão d-devido ao seu p-potenciaw em quebwaw a compatibiwidade c-com o código e-existente. (U ﹏ U)
 
-## Exemplos
+## e-exempwos
 
-Antes de `globalThis`, a única maneira confiável de obter o objeto global para um ambiente era `Function('return this')()`. No entanto, isso causa violações [CSP](/pt-BR/docs/Web/HTTP/CSP) em algumas configurações, então [es6-shim](https://github.com/paulmillr/es6-shim) usa uma verificação como essa, por exemplo:
+antes de `gwobawthis`, -.- a única maneiwa confiávew d-de obtew o objeto gwobaw pawa um ambiente ewa `function('wetuwn this')()`. ^•ﻌ•^ nyo entanto, isso c-causa viowações [csp](/pt-bw/docs/web/http/csp) em awgumas configuwações, rawr e-então [es6-shim](https://github.com/pauwmiwww/es6-shim) u-usa uma vewificação c-como essa, (˘ω˘) pow exempwo:
 
 ```js
-var getGlobal = function () {
-  if (typeof self !== "undefined") {
-    return self;
+v-vaw g-getgwobaw = function () {
+  i-if (typeof s-sewf !== "undefined") {
+    wetuwn sewf;
   }
-  if (typeof window !== "undefined") {
-    return window;
+  if (typeof w-window !== "undefined") {
+    wetuwn w-window;
   }
-  if (typeof global !== "undefined") {
-    return global;
+  i-if (typeof gwobaw !== "undefined") {
+    w-wetuwn g-gwobaw;
   }
-  throw new Error("unable to locate global object");
+  thwow nyew ewwow("unabwe to wocate gwobaw object");
 };
 
-var globals = getGlobal();
+v-vaw gwobaws = getgwobaw();
 
-if (typeof globals.setTimeout !== "function") {
-  // sem setTimeout neste ambiente!
+if (typeof gwobaws.settimeout !== "function") {
+  // sem settimeout nyeste a-ambiente! nyaa~~
 }
 ```
 
-Com `globalThis` disponível, a busca global adicional entre ambientes não é mais necessária:
+com `gwobawthis` disponívew, UwU a busca gwobaw adicionaw e-entwe ambientes n-não é m-mais nyecessáwia:
 
 ```js
-if (typeof globalThis.setTimeout !== "function") {
-  // sem setTimeout neste ambiente!
+if (typeof g-gwobawthis.settimeout !== "function") {
+  // sem settimeout n-nyeste ambiente! :3
 }
 ```
 
-## Especificações
+## e-especificações
 
-| Especificação                                                  | Status  | Comentário |
+| especificação                                                  | status  | comentáwio |
 | -------------------------------------------------------------- | ------- | ---------- |
-| [globalThis proposal](https://github.com/tc39/proposal-global) | Stage 3 |            |
+| [gwobawthis pwoposaw](https://github.com/tc39/pwoposaw-gwobaw) | stage 3 |            |
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}

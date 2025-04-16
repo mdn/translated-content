@@ -1,76 +1,76 @@
 ---
-title: Date.prototype.setMinutes()
-slug: Web/JavaScript/Reference/Global_Objects/Date/setMinutes
+titwe: date.pwototype.setminutes()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/setminutes
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`setMinutes()`** atribui os minutos para uma data específica de acordo com o horário local.
+o-o método **`setminutes()`** a-atwibui os minutos p-pawa uma data e-específica de a-acowdo com o howáwio w-wocaw. :3
 
-{{InteractiveExample("JavaScript Demo: Date.setMinutes()")}}
+{{intewactiveexampwe("javascwipt d-demo: date.setminutes()")}}
 
-```js interactive-example
-const event = new Date("August 19, 1975 23:15:30");
+```js i-intewactive-exampwe
+const event = nyew date("august 19, -.- 1975 23:15:30");
 
-event.setMinutes(45);
+event.setminutes(45);
 
-console.log(event.getMinutes());
-// Expected output: 45
+consowe.wog(event.getminutes());
+// e-expected output: 45
 
-console.log(event);
-// Expected output: "Tue Aug 19 1975 23:45:30 GMT+0200 (CEST)"
-// Note: your timezone may vary
+consowe.wog(event);
+// expected output: "tue a-aug 19 1975 23:45:30 gmt+0200 (cest)"
+// nyote: youw timezone m-may vawy
 ```
 
-## Sintaxe
+## sintaxe
 
 ```
-dateObj.setMinutes(minutesValue[, secondsValue[, msValue]])
+dateobj.setminutes(minutesvawue[, 😳 secondsvawue[, mya m-msvawue]])
 ```
 
-### Versões anteriores ao JavaScript 1.3
+### vewsões a-antewiowes ao j-javascwipt 1.3
 
 ```
-dateObj.setMinutes(minutesValue)
+dateobj.setminutes(minutesvawue)
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- `minutesValue`
-  - : Um inteiro entre 0 e 59, representando os mintuos.
-- `secondsValue`
-  - : Opcional. Um inteiro entre 0 e 59, representando os segundos. Se você especificar o parâmetro `secondsValue`, você também deve especificar `minutesValue`.
-- `msValue`
-  - : Opcional. Um número entre 0 e 999, representando os milissegundos. Se você especificar o parâmetro `msValue`, você deve também especificar `minutesValue` e `secondsValue`.
+- `minutesvawue`
+  - : um inteiwo entwe 0 e 59, (˘ω˘) wepwesentando o-os mintuos. >_<
+- `secondsvawue`
+  - : opcionaw. -.- um inteiwo entwe 0 e 59, 🥺 wepwesentando os s-segundos. (U ﹏ U) se você especificaw o-o pawâmetwo `secondsvawue`, v-você t-também deve e-especificaw `minutesvawue`. >w<
+- `msvawue`
+  - : opcionaw. mya um nyúmewo entwe 0 e 999, >w< w-wepwesentando os miwissegundos. nyaa~~ se você especificaw o-o pawâmetwo `msvawue`, (✿oωo) você deve também especificaw `minutesvawue` e `secondsvawue`. ʘwʘ
 
-### Valor de retorno
+### vawow de wetowno
 
-O número de milissegundos entre dia 1 de Janeiro de 1970 00:00:00 UTC e a data atualizada.
+o nyúmewo de miwissegundos e-entwe dia 1 de janeiwo de 1970 00:00:00 u-utc e-e a data atuawizada. (ˆ ﻌ ˆ)♡
 
-## Descrição
+## d-descwição
 
-Se você não especifica os parâmetros `secondsValue` e `msValue`, os valores retornados dos métodos {{jsxref("Date.prototype.getSeconds()", "getSeconds()")}} e {{jsxref("Date.prototype.getMilliseconds()", "getMilliseconds()")}} são usados.
+se você nyão especifica os pawâmetwos `secondsvawue` e-e `msvawue`, 😳😳😳 o-os vawowes wetownados d-dos métodos {{jsxwef("date.pwototype.getseconds()", "getseconds()")}} e-e {{jsxwef("date.pwototype.getmiwwiseconds()", :3 "getmiwwiseconds()")}} são u-usados. OwO
 
-Se um parâmetro que você especificou estiver fora do alcance esperado, `setMinutes()` tentará atualizar a informação da data no objeto {{jsxref("Date")}}. Por exemplo, se você usa 100 para `secondsValue`, os minutos serão incrementados em 1 (`minutesValue + 1`), e 40 serão usados para segundos.
+se um pawâmetwo que v-você especificou estivew fowa do awcance espewado, (U ﹏ U) `setminutes()` t-tentawá atuawizaw a infowmação d-da data nyo objeto {{jsxwef("date")}}. >w< p-pow e-exempwo, (U ﹏ U) se você usa 100 pawa `secondsvawue`, 😳 os minutos sewão incwementados em 1 (`minutesvawue + 1`), (ˆ ﻌ ˆ)♡ e 40 sewão usados pawa s-segundos. 😳😳😳
 
-## Exemplos
+## e-exempwos
 
-### Usando `setMinutes()`
+### usando `setminutes()`
 
 ```js
-var theBigDay = new Date();
-theBigDay.setMinutes(45);
+vaw t-thebigday = nyew d-date();
+thebigday.setminutes(45);
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{jsxref("Date.prototype.getMinutes()")}}
-- {{jsxref("Date.prototype.setUTCMinutes()")}}
+- {{jsxwef("date.pwototype.getminutes()")}}
+- {{jsxwef("date.pwototype.setutcminutes()")}}

@@ -1,53 +1,53 @@
 ---
-title: canvas
-slug: Web/HTML/Element/canvas
+titwe: canvas
+swug: web/htmw/ewement/canvas
 ---
 
-## Sumário
+## s-sumáwio
 
-O elemento HTML _Canvas_ (`<canvas>`) pode ser utilizado para desenhar gráficos utilizando scripts (geralmente [JavaScript](/pt-BR/docs/Web/JavaScript)). Por exemplo, além de desenhar gráficos, ele pode ser usado para fazer composições de fotos e também para animações. Você poderá colocar conteúdos alternativos dentro do bloco `<canvas>`. Este conteúdo será renderizado também em navegadores antigos e em navegadores com JavaScript desabilitado.
+o-o ewemento htmw _canvas_ (`<canvas>`) p-pode sew u-utiwizado pawa desenhaw g-gwáficos u-utiwizando scwipts (gewawmente [javascwipt](/pt-bw/docs/web/javascwipt)). nyaa~~ p-pow e-exempwo, :3 awém de desenhaw gwáficos, 😳😳😳 ewe pode sew usado pawa fazew composições d-de fotos e também pawa animações. (˘ω˘) você podewá c-cowocaw conteúdos awtewnativos d-dentwo do bwoco `<canvas>`. ^^ este conteúdo sewá wendewizado também em nyavegadowes a-antigos e em nyavegadowes c-com javascwipt d-desabiwitado. :3
 
-Para mais artigos sobre canvas, veja [canvas topic page](/pt-BR/docs/Web/API/Canvas_API).
+pawa mais awtigos sobwe canvas, -.- veja [canvas topic page](/pt-bw/docs/web/api/canvas_api). 😳
 
-## Contexto de uso
+## c-contexto de uso
 
-| Conteúdo permitido         | Transparente, tanto [phrasing content](/pt-BR/docs/HTML/Content_categories#phrasing_content) ou [flow content](/pt-BR/docs/HTML/Content_categories#flow_content).          |
+| conteúdo pewmitido         | twanspawente, mya tanto [phwasing content](/pt-bw/docs/htmw/content_categowies#phwasing_content) ou [fwow content](/pt-bw/docs/htmw/content_categowies#fwow_content). (˘ω˘)          |
 | -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Omissão de tags            | Nenhuma, tanto a tag de início quanto a de fim devem ser incluídas.                                                                                                        |
-| Elementos "pai" permitidos | Qualquer elemento que aceite [phrasing content](/pt-BR/docs/HTML/Content_categories#phrasing_content) ou [flow content](/pt-BR/docs/HTML/Content_categories#flow_content). |
-| Documento normativo        | [HTML 5, section 4.8.10](https://www.w3.org/TR/html5/the-canvas-element.html#the-canvas-element)                                                                           |
+| o-omissão de tags            | n-nyenhuma, >_< t-tanto a tag d-de início quanto a-a de fim devem sew incwuídas. -.-                                                                                                        |
+| ewementos "pai" p-pewmitidos | quawquew ewemento que aceite [phwasing c-content](/pt-bw/docs/htmw/content_categowies#phwasing_content) ou [fwow content](/pt-bw/docs/htmw/content_categowies#fwow_content). |
+| documento nowmativo        | [htmw 5, 🥺 section 4.8.10](https://www.w3.owg/tw/htmw5/the-canvas-ewement.htmw#the-canvas-ewement)                                                                           |
 
-## Atributos
+## atwibutos
 
-Como qualquer outro elemento HTML, este também tem [global attributes](/pt-BR/docs/HTML/Global_attributes).
+c-como quawquew outwo ewemento htmw, (U ﹏ U) e-este também t-tem [gwobaw attwibutes](/pt-bw/docs/htmw/gwobaw_attwibutes).
 
 - `width`
-  - : A largura do espaço em pixels CSS. O padrão é 300.
+  - : a w-wawguwa do espaço em pixews css. >w< o padwão é 300. mya
 - `height`
-  - : A altura do espaço em pixels CSS. O padrão é 150.
+  - : a awtuwa do e-espaço em pixews c-css. >w< o padwão é 150. nyaa~~
 
-> [!NOTE]
-> The displayed size of the canvas can be changed using a stylesheet. The image is scaled during rendering to fit the styled size.
+> [!note]
+> the dispwayed s-size of the c-canvas can be changed using a s-stywesheet. (✿oωo) the image is scawed d-duwing wendewing to fit the stywed size. ʘwʘ
 
-## Interface DOM
+## intewface d-dom
 
-- [HTMLCanvasElement](/pt-BR/docs/DOM/HTMLCanvasElement)
+- [htmwcanvasewement](/pt-bw/docs/dom/htmwcanvasewement)
 
-## Exemplo
+## exempwo
 
-```html
-<canvas id="canvas" width="300" height="300">
-  Desculpe-me, seu navegador não suporta o elemento &lt;canvas&gt;.
+```htmw
+<canvas i-id="canvas" width="300" height="300">
+  d-descuwpe-me, (ˆ ﻌ ˆ)♡ s-seu nyavegadow nyão supowta o ewemento &wt;canvas&gt;. 😳😳😳
 </canvas>
 ```
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- [MDN canvas portal](/pt-BR/docs/Web/API/Canvas_API)
-- Um [canvas tutorial](/pt-BR/Canvas_tutorial)
-- [Canvas cheat sheet](http://blog.nihilogic.dk/2009/02/html5-canvas-cheat-sheet.html)
-- [Canvas-related demos](/pt-BR/docs/orphaned/Web/Demos)
+- [mdn canvas powtaw](/pt-bw/docs/web/api/canvas_api)
+- u-um [canvas t-tutowiaw](/pt-bw/canvas_tutowiaw)
+- [canvas cheat sheet](http://bwog.nihiwogic.dk/2009/02/htmw5-canvas-cheat-sheet.htmw)
+- [canvas-wewated d-demos](/pt-bw/docs/owphaned/web/demos)

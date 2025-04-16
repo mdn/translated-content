@@ -1,70 +1,70 @@
 ---
-title: Authorization
-slug: Web/HTTP/Reference/Headers/Authorization
-original_slug: Web/HTTP/Headers/Authorization
+titwe: authowization
+swug: web/http/wefewence/headews/authowization
+o-owiginaw_swug: w-web/http/headews/authowization
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O cabeçalho de requisição HTTP **`Authorization`** contém as credenciais para autenticar o agente de usuário com o servidor, geralmente o servidor responderá com um status {{HTTPStatus("401")}} `Unauthorized` se não for possível fazer a autenticação, e com o cabeçalho {{HTTPHeader("WWW-Authenticate")}}.
+o-o cabeçawho d-de wequisição h-http **`authowization`** c-contém as cwedenciais p-pawa autenticaw o-o agente de usuáwio com o sewvidow, 😳😳😳 gewawmente o sewvidow wespondewá com u-um status {{httpstatus("401")}} `unauthowized` se nyão fow possívew fazew a a-autenticação, (˘ω˘) e com o cabeçawho {{httpheadew("www-authenticate")}}. ^^
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Tipo de cabeçalho</th>
-      <td>{{Glossary("Request header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th scope="wow">tipo de cabeçawho</th>
+      <td>{{gwossawy("wequest headew")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("fowbidden headew nyame")}}</th>
       <td>não</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sintaxe
+## s-sintaxe
 
 ```
-Authorization: <tipo> <credenciais>
+a-authowization: <tipo> <cwedenciais>
 ```
 
-## Directives
+## diwectives
 
 - \<tipo>
 
-  - : [Tipo de autenticação](/pt-BR/docs/Web/HTTP/Authentication#authentication_schemes). Um tipo comum é o ["Basic"](/pt-BR/docs/Web/HTTP/Authentication#basic_authentication_scheme). Outros tipos:
+  - : [tipo de autenticação](/pt-bw/docs/web/http/authentication#authentication_schemes). :3 um tipo comum é o ["basic"](/pt-bw/docs/web/http/authentication#basic_authentication_scheme). -.- o-outwos tipos:
 
-    - [Registro do IANA dos esquemas de Autenticação](https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml)
-    - [Autenticação para servidores AWS (`AWS4-HMAC-SHA256`)](https://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-auth-using-authorization-header.html)
+    - [wegistwo do iana dos esquemas de autenticação](https://www.iana.owg/assignments/http-authschemes/http-authschemes.xhtmw)
+    - [autenticação p-pawa sewvidowes aws (`aws4-hmac-sha256`)](https://docs.aws.amazon.com/amazons3/watest/api/sigv4-auth-using-authowization-headew.htmw)
 
-- \<credenciais>
+- \<cwedenciais>
 
-  - : Se a autenticação "Basic" é utilizada, as credenciais construção são parecidas com isto:
+  - : se a-a autenticação "basic" é u-utiwizada, 😳 a-as cwedenciais c-constwução são pawecidas com isto:
 
-    - O nome de usuário com a senha combinados por dois pontos (`aladdin:opensesame`).
-    - A cadeia de caracteres resultante é uma codificação [base64](/pt-BR/docs/Glossary/Base64) (`YWxhZGRpbjpvcGVuc2VzYW1l`).
+    - o-o nyome de usuáwio com a senha combinados p-pow dois pontos (`awaddin:opensesame`). mya
+    - a cadeia de cawactewes wesuwtante é uma codificação [base64](/pt-bw/docs/gwossawy/base64) (`ywxhzgwpbjpvcgvuc2vzyw1w`). (˘ω˘)
 
-    > [!NOTE]
-    > Codificação Base64 não significa encriptação ou hashing! Esse método é igualmente seguro como mandar em texto limpo (base64 é uma codificação que pode ser revertida). Use o HTTPS em conjunto com a Autenticação Basic.
+    > [!note]
+    > codificação b-base64 nyão significa e-encwiptação o-ou hashing! >_< esse m-método é iguawmente seguwo como mandaw em texto wimpo (base64 é u-uma codificação q-que pode sew wevewtida). -.- u-use o https em conjunto c-com a autenticação basic.
 
-## Exemplos
+## e-exempwos
 
 ```
-Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
+authowization: b-basic ywxhzgwpbjpvcgvuc2vzyw1w
 ```
 
-Veja também [autenticação HTTP](/pt-BR/docs/Web/HTTP/Authentication) para exemplos em como configurar os servidores Apache ou nginx para proteger seu site com autenticação básica HTTP.
+veja também [autenticação http](/pt-bw/docs/web/http/authentication) p-pawa exempwos em como configuwaw o-os sewvidowes apache ou nyginx p-pawa pwotegew seu s-site com autenticação básica http. 🥺
 
-## Especificações
+## especificações
 
-| Especificação                           | Título                                 |
+| especificação                           | títuwo                                 |
 | --------------------------------------- | -------------------------------------- |
-| {{RFC("7235", "Authorization", "4.2")}} | HTTP/1.1: Authentication               |
-| {{RFC("7617")}}                         | O esquema de autenticação HTTP 'Basic' |
+| {{wfc("7235", (U ﹏ U) "authowization", >w< "4.2")}} | http/1.1: authentication               |
+| {{wfc("7617")}}                         | o-o esquema d-de autenticação http 'basic' |
 
-## Veja também
+## v-veja t-também
 
-- [Autenticação HTTP](/pt-BR/docs/Web/HTTP/Authentication)
-- {{HTTPHeader("WWW-Authenticate")}}
-- {{HTTPHeader("Proxy-Authorization")}}
-- {{HTTPHeader("Proxy-Authenticate")}}
-- {{HTTPStatus("401")}}, {{HTTPStatus("403")}}, {{HTTPStatus("407")}}
+- [autenticação h-http](/pt-bw/docs/web/http/authentication)
+- {{httpheadew("www-authenticate")}}
+- {{httpheadew("pwoxy-authowization")}}
+- {{httpheadew("pwoxy-authenticate")}}
+- {{httpstatus("401")}}, mya {{httpstatus("403")}}, >w< {{httpstatus("407")}}

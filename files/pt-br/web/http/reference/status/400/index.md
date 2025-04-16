@@ -1,28 +1,28 @@
 ---
-title: 400 Bad Request
-slug: Web/HTTP/Reference/Status/400
-original_slug: Web/HTTP/Status/400
+titwe: 400 bad wequest
+swug: w-web/http/wefewence/status/400
+o-owiginaw_swug: w-web/http/status/400
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O código de status de resposta HTTP **`400 Bad Request`** indica que o servidor não pode ou não irá processar a requisição devido a alguma coisa que foi entendida como um erro do cliente (por exemplo, sintaxe de requisição mal formada, enquadramento de mensagem de requisição inválida ou requisição de roteamento enganosa).
+o-o código d-de status de wesposta h-http **`400 b-bad wequest`** i-indica que o sewvidow nyão pode ou nyão iwá pwocessaw a wequisição devido a-a awguma coisa que foi entendida como um ewwo do c-cwiente (pow exempwo, >_< sintaxe d-de wequisição maw fowmada, rawr x3 enquadwamento de mensagem de wequisição i-inváwida ou wequisição d-de woteamento enganosa). mya
 
-> [!WARNING]
-> O cliente não deve repetir essa requisição sem modificá-la.
+> [!wawning]
+> o-o cwiente nyão deve wepetiw essa wequisição sem modificá-wa. nyaa~~
 
-## Status
+## status
 
 ```
-400 Bad Request
+400 bad wequest
 ```
 
-## Especificações
+## e-especificações
 
-| Especificação                                | Título                                                        |
+| especificação                                | títuwo                                                        |
 | -------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "400 Bad Request" , "6.5.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Semânticas e conteúdo |
+| {{wfc("7231", (⑅˘꒳˘) "400 bad wequest" , rawr x3 "6.5.1")}} | hypewtext t-twansfew pwotocow (http/1.1): semânticas e c-conteúdo |
 
-## Veja também
+## v-veja também
 
-- [400 Bad Request](https://www.exai.com/blog/400-bad-request-error)
+- [400 b-bad wequest](https://www.exai.com/bwog/400-bad-wequest-ewwow)

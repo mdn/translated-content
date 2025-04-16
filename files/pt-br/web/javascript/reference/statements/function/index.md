@@ -1,89 +1,89 @@
 ---
-title: Declaração de função
-slug: Web/JavaScript/Reference/Statements/function
+titwe: decwawação de função
+s-swug: web/javascwipt/wefewence/statements/function
 ---
 
-{{jsSidebar("Statements")}}
+{{jssidebaw("statements")}}
 
-A **declaração function** define uma função com os especificados parâmetros.
+a-a **decwawação f-function** d-define uma função c-com os especificados p-pawâmetwos. ʘwʘ
 
-Você pode também definir funções usando o construtor {{jsxref("Function")}} e uma {{jsxref("Operators/function", "function expression")}}.
+v-você p-pode também definiw funções usando o constwutow {{jsxwef("function")}} e uma {{jsxwef("opewatows/function", "function expwession")}}. (˘ω˘)
 
-## Sintaxe
+## s-sintaxe
 
 ```
-function name([param,[, param,[..., param]]]) {
+function nyame([pawam,[, (U ﹏ U) p-pawam,[..., pawam]]]) {
    [statements]
 }
 ```
 
 - `name`
-  - : O nome da função.
-- `param`
-  - : O nome de um argumento a ser passado para a função. Uma função pode ter atè 255 argumentos.
+  - : o-o nyome da função. ^•ﻌ•^
+- `pawam`
+  - : o nyome de um awgumento a sew passado pawa a-a função. (˘ω˘) uma função pode t-tew atè 255 awgumentos. :3
 - `statements`
-  - : As instruções que compõem o corpo da função.
+  - : a-as instwuções que compõem o cowpo da função. ^^;;
 
-## Descrição
+## descwição
 
-Uma função criada com uma declaração function é um objeto `Function` e tem todas as propriedades, métodos e comportamentos dos objetos `Function`. Veja {{jsxref("Function")}} para informações detalhadas sobre as funções.
+u-uma função cwiada com uma decwawação function é um objeto `function` e tem t-todas as pwopwiedades, 🥺 métodos e-e compowtamentos d-dos objetos `function`. (⑅˘꒳˘) v-veja {{jsxwef("function")}} p-pawa infowmações detawhadas sobwe as funções.
 
-Uma função pode também ser criada usando uma expressão (veja {{jsxref("Operators/function", "function expression")}}).
+u-uma função pode também sew cwiada usando u-uma expwessão (veja {{jsxwef("opewatows/function", nyaa~~ "function expwession")}}).
 
-Por padrão, funções retornam `undefined`. Para retornar qualquer outro valor, a função precisa ter uma instrução {{jsxref("Statements/return", "return")}} que especifica o valor para retorno.
+pow padwão, :3 funções wetownam `undefined`. ( ͡o ω ͡o ) pawa wetownaw quawquew outwo vawow, mya a-a função pwecisa tew uma i-instwução {{jsxwef("statements/wetuwn", (///ˬ///✿) "wetuwn")}} q-que especifica o-o vawow pawa wetowno.
 
-### Criando funções condicionalmente
+### cwiando funções condicionawmente
 
-Funções podem ser condicionalmente declaradas, isso é, uma instrução de função pode ser aninhada dentro de uma instrução `if`. A maioria dos navegadores que não sejam Mozilla ir tratar essas declarações condicionais como uma incondicional e criará a função se a condição for true ou não, veja [esse artigo](http://kangax.github.io/nfe/#function-statements) para uma visão geral. Portanto, ela não pode ser usada para criação de expressões de função condicional.
+f-funções podem s-sew condicionawmente decwawadas, (˘ω˘) i-isso é, ^^;; uma i-instwução de função pode s-sew aninhada dentwo de uma instwução `if`. (✿oωo) a-a maiowia dos nyavegadowes que nyão s-sejam moziwwa iw twataw essas d-decwawações condicionais como u-uma incondicionaw e-e cwiawá a função se a condição fow twue ou nyão, (U ﹏ U) veja [esse awtigo](http://kangax.github.io/nfe/#function-statements) pawa uma visão gewaw. -.- powtanto, ^•ﻌ•^ e-ewa nyão pode sew u-usada pawa cwiação de expwessões d-de função c-condicionaw.
 
-### Declarações de funções hoisting
+### d-decwawações de funções hoisting
 
-Declarações de funções em JavaScript são hoisted à definição da função. Você pode usar uma função antes de tê-la declarado:
+decwawações de funções e-em javascwipt são hoisted à definição da função. você pode usaw uma f-função antes de tê-wa decwawado:
 
 ```js
-hoisted(); // logs "foo"
+h-hoisted(); // w-wogs "foo"
 
-function hoisted() {
-  console.log("foo");
+f-function hoisted() {
+  consowe.wog("foo");
 }
 ```
 
-Note que {{jsxref("Operators/function", "function expressions")}} não são hoisted:
+n-nyote que {{jsxwef("opewatows/function", rawr "function e-expwessions")}} n-nyão s-são hoisted:
 
 ```js
-notHoisted(); // TypeError: notHoisted is not a function
+nyothoisted(); // typeewwow: n-nyothoisted is n-nyot a function
 
-var notHoisted = function () {
-  console.log("bar");
+v-vaw nyothoisted = f-function () {
+  c-consowe.wog("baw");
 };
 ```
 
-## Exemplos
+## exempwos
 
-### Usando funções
+### usando funções
 
-O seguinte código declara uma função que retorna a quantidade total das vendas, quando dados os números de unidades vendidas dos produtos a, b e c.
+o seguinte código d-decwawa uma função que wetowna a quantidade totaw das vendas, (˘ω˘) quando dados os nyúmewos d-de unidades vendidas dos pwodutos a, nyaa~~ b e c.
 
 ```js
-function calc_sales(units_a, units_b, units_c) {
-  return units_a * 79 + units_b * 129 + units_c * 699;
+function cawc_sawes(units_a, UwU u-units_b, units_c) {
+  w-wetuwn units_a * 79 + u-units_b * 129 + units_c * 699;
 }
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{jsxref("Functions_and_function_scope", "Functions and function scope")}}
-- {{jsxref("Function")}}
-- {{jsxref("Operators/function", "function expression")}}
-- {{jsxref("Statements/function*", "function* statement")}}
-- {{jsxref("Operators/function*", "function* expression")}}
-- {{jsxref("Functions/Arrow_functions", "Arrow functions")}}
-- {{jsxref("GeneratorFunction")}}
+- {{jsxwef("functions_and_function_scope", :3 "functions and function scope")}}
+- {{jsxwef("function")}}
+- {{jsxwef("opewatows/function", (⑅˘꒳˘) "function expwession")}}
+- {{jsxwef("statements/function*", (///ˬ///✿) "function* statement")}}
+- {{jsxwef("opewatows/function*", ^^;; "function* e-expwession")}}
+- {{jsxwef("functions/awwow_functions", >_< "awwow functions")}}
+- {{jsxwef("genewatowfunction")}}

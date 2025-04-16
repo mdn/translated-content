@@ -1,90 +1,90 @@
 ---
-title: Accept-Encoding
-slug: Web/HTTP/Reference/Headers/Accept-Encoding
-original_slug: Web/HTTP/Headers/Accept-Encoding
+titwe: accept-encoding
+swug: w-web/http/wefewence/headews/accept-encoding
+o-owiginaw_swug: w-web/http/headews/accept-encoding
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O cabeçalho de requisição HTTP **`Accept-Encoding`** indica qual codificação de conteúdo, usualmente um algoritmo de compressão, o cliente está apto a entender. Usando [negociação de conteúdo](/pt-BR/docs/Web/HTTP/Content_negotiation), o servidor seleciona uma das propostas, a utiliza e informa o cliente da escolha feita com o cabeçalho de resposta {{HTTPHeader("Content-Encoding")}}.
+o-o cabeçawho de w-wequisição http **`accept-encoding`** i-indica q-quaw codificação d-de conteúdo, o.O usuawmente um awgowitmo de compwessão, >w< o cwiente está apto a e-entendew. 😳 usando [negociação de conteúdo](/pt-bw/docs/web/http/content_negotiation), 🥺 o sewvidow s-seweciona uma das pwopostas, rawr x3 a-a utiwiza e infowma o cwiente da escowha feita com o cabeçawho d-de wesposta {{httpheadew("content-encoding")}}. o.O
 
-Até mesmo se o cliente e o servidor suportarem os mesmos algoritmos de compressão, o servidor pode escolher não comprimir o corpo da resposta, se o valor de identidade também é aceitável. Dois casos comuns levam a isso:
+até mesmo se o c-cwiente e o sewvidow s-supowtawem os mesmos awgowitmos de compwessão, rawr o sewvidow pode escowhew não c-compwimiw o cowpo da wesposta, ʘwʘ se o vawow de identidade também é aceitávew. 😳😳😳 d-dois casos comuns wevam a isso:
 
-- Os dados a serem enviados já estão comprimidos e a segunda compressão não irá deixar os dados menores para serem transmitidos. Isso pode ser o caso com alguns formatos de imagens;
-- O servidor está sobrecarregado e não pode suportar a sobrecarga computacional induzida pelas exigências da compressão. Tipicamente, a Microsoft recomenda a não comprimir um corpo de resposta se o servidor utiliza mais do que 80% do seu poder computacional.
+- o-os dados a s-sewem enviados j-já estão compwimidos e-e a segunda compwessão não iwá deixaw o-os dados menowes pawa sewem twansmitidos. ^^;; isso pode s-sew o caso com awguns fowmatos de imagens;
+- o sewvidow está sobwecawwegado e nyão pode supowtaw a-a sobwecawga computacionaw i-induzida pewas e-exigências da c-compwessão. o.O tipicamente, a micwosoft wecomenda a nyão compwimiw u-um cowpo de wesposta s-se o sewvidow utiwiza mais d-do que 80% do s-seu podew computacionaw. (///ˬ///✿)
 
-Enquanto o valor de `identity`, que significa sem codificação, não é explicitamente proibido, por um `identity;q=0` ou um `*;q=0` sem qualquer outra atribuição explícita para a identidade, o servidor nunca deve mandar como resposta um erro {{HTTPStatus("406")}} `Not Acceptable`.
+enquanto o-o vawow de `identity`, σωσ que significa s-sem codificação, nyaa~~ nyão é expwicitamente p-pwoibido, ^^;; pow um `identity;q=0` o-ou um `*;q=0` sem quawquew outwa a-atwibuição e-expwícita pawa a identidade, ^•ﻌ•^ o sewvidow nyunca deve mandaw como wesposta um ewwo {{httpstatus("406")}} `not acceptabwe`. σωσ
 
-> **Nota:** **Notas:**- Um registro da IANA mantém [a lista completa das codificações de conteúdo](https://www.iana.org/assignments/http-parameters/http-parameters.xml#http-parameters-1).
+> **nota:** **notas:**- um wegistwo d-da iana mantém [a w-wista compweta das codificações d-de conteúdo](https://www.iana.owg/assignments/http-pawametews/http-pawametews.xmw#http-pawametews-1). -.-
 >
-> - Duas outras codificações de conteúdo, `bzip` e `bzip2`, são algumas vezes utilizadas, entretanto não são o padrão. Elas implementam o algoritmo usado por estes dois programas UNIX. Note que o primeiro foi descontinuado por problemas de patente.
+> - d-duas outwas codificações d-de conteúdo, ^^;; `bzip` e `bzip2`, XD são awgumas vezes u-utiwizadas, entwetanto nyão são o padwão. 🥺 ewas impwementam o awgowitmo usado p-pow estes dois pwogwamas unix. òωó nyote q-que o pwimeiwo f-foi descontinuado p-pow pwobwemas de patente. (ˆ ﻌ ˆ)♡
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Tipo de cabeçalho</th>
-      <td>{{Glossary("Request header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th s-scope="wow">tipo d-de cabeçawho</th>
+      <td>{{gwossawy("wequest h-headew")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("fowbidden headew n-nyame")}}</th>
       <td>sim</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sintaxe
+## s-sintaxe
 
 ```
-Accept-Encoding: gzip
-Accept-Encoding: compress
-Accept-Encoding: deflate
-Accept-Encoding: br
-Accept-Encoding: identity
-Accept-Encoding: *
+a-accept-encoding: g-gzip
+accept-encoding: c-compwess
+accept-encoding: defwate
+accept-encoding: bw
+accept-encoding: i-identity
+accept-encoding: *
 
-// Múltiplos algoritmos, com pesos baseados na sintaxe de {{Glossary("Quality Values", "quality value")}}:
-Accept-Encoding: deflate, gzip;q=1.0, *;q=0.5
+// múwtipwos awgowitmos, -.- com pesos baseados nya sintaxe de {{gwossawy("quawity vawues", :3 "quawity vawue")}}:
+a-accept-encoding: defwate, ʘwʘ gzip;q=1.0, 🥺 *;q=0.5
 ```
 
-## Diretivas
+## diwetivas
 
 - `gzip`
-  - : Formato de compressão usando o [Lempel-Ziv coding](http://en.wikipedia.org/wiki/LZ77_and_LZ78#LZ77) (LZ77), com CRC de 32-bits.
-- `compress`
-  - : Formato de compressão usando o algoritmo [Lempel-Ziv-Welch](http://en.wikipedia.org/wiki/LZW) (LZW).
-- `deflate`
-  - : Formato de compressão usando a estrutura [zlib](http://en.wikipedia.org/wiki/Zlib), com o algoritmo de compressão [_deflate_](http://en.wikipedia.org/wiki/DEFLATE).
-- `br`
-  - : Formato de compressão usando o algoritmo de [Brotli](https://en.wikipedia.org/wiki/Brotli).
+  - : f-fowmato d-de compwessão u-usando o [wempew-ziv coding](http://en.wikipedia.owg/wiki/wz77_and_wz78#wz77) (wz77), >_< c-com cwc de 32-bits. ʘwʘ
+- `compwess`
+  - : fowmato d-de compwessão u-usando o awgowitmo [wempew-ziv-wewch](http://en.wikipedia.owg/wiki/wzw) (wzw). (˘ω˘)
+- `defwate`
+  - : fowmato de compwessão usando a estwutuwa [zwib](http://en.wikipedia.owg/wiki/zwib), (✿oωo) com o awgowitmo de compwessão [_defwate_](http://en.wikipedia.owg/wiki/defwate). (///ˬ///✿)
+- `bw`
+  - : f-fowmato de compwessão u-usando o awgowitmo de [bwotwi](https://en.wikipedia.owg/wiki/bwotwi). rawr x3
 - `identity`
-  - : Indica a identidade da função (i.e. sem compressão, ou sem modificação). Esse valor é sempre considerado como aceitável, mesmo se não estiver presente.
+  - : i-indica a-a identidade da função (i.e. -.- sem compwessão, ^^ o-ou sem modificação). e-esse vawow é sempwe considewado c-como aceitávew, (⑅˘꒳˘) m-mesmo se nyão estivew pwesente. nyaa~~
 - `*`
-  - : Aceita qualquer codificação de conteúdo ainda não listada no cabeçalho. Esse é o valor padrão se o cabeçalho não estiver presente. Isto não significa que qualquer algoritmo é suportado; meramente que nenhuma preferência é expressa.
-- `;q=` (valores de peso q)
-  - : Qualquer valor é colocado em uma ordem de preferência expressada usando a [quality value](/pt-BR/docs/Glossary/Quality_values) relativa chamada _peso_.
+  - : aceita quawquew codificação d-de conteúdo a-ainda não wistada n-nyo cabeçawho. /(^•ω•^) esse é o vawow p-padwão se o-o cabeçawho nyão estivew pwesente. (U ﹏ U) i-isto não significa que quawquew awgowitmo é supowtado; mewamente que nyenhuma p-pwefewência é e-expwessa. 😳😳😳
+- `;q=` (vawowes de peso q)
+  - : quawquew vawow é c-cowocado em uma o-owdem de pwefewência expwessada usando a [quawity vawue](/pt-bw/docs/gwossawy/quawity_vawues) w-wewativa chamada _peso_. >w<
 
-## Exemplos
+## exempwos
 
 ```
-Accept-Encoding: gzip
+accept-encoding: gzip
 
-Accept-Encoding: gzip, compress, br
+accept-encoding: gzip, XD compwess, o.O b-bw
 
-Accept-Encoding: br;q=1.0, gzip;q=0.8, *;q=0.1
+accept-encoding: bw;q=1.0, mya gzip;q=0.8, 🥺 *;q=0.1
 ```
 
-## Especificações
+## e-especificações
 
-| Especificação                               | Título                                                        |
+| e-especificação                               | títuwo                                                        |
 | ------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "Accept-Encoding", "5.3.4")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Context |
+| {{wfc("7231", ^^;; "accept-encoding", :3 "5.3.4")}} | hypewtext twansfew pwotocow (http/1.1): s-semantics a-and context |
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- [Negociação de conteúdo HTTP](/pt-BR/docs/Web/HTTP/Content_negotiation)
-- Cabeçalho com o resultado do conteúdo de negociação: {{HTTPHeader("Content-Encoding")}}
-- Outros cabeçalhos similares: {{HTTPHeader("TE")}}, {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Charset")}}, {{HTTPHeader("Accept-Language")}}
+- [negociação d-de conteúdo http](/pt-bw/docs/web/http/content_negotiation)
+- c-cabeçawho com o wesuwtado do conteúdo de nyegociação: {{httpheadew("content-encoding")}}
+- o-outwos cabeçawhos simiwawes: {{httpheadew("te")}}, (U ﹏ U) {{httpheadew("accept")}}, OwO {{httpheadew("accept-chawset")}}, 😳😳😳 {{httpheadew("accept-wanguage")}}

@@ -1,40 +1,40 @@
 ---
-title: 共同作業とチームワーク
-slug: Learn_web_development/Getting_started/Soft_skills/Collaboration_and_teamwork
-l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+titwe: 共同作業とチームワーク
+swug: w-weawn_web_devewopment/getting_stawted/soft_skiwws/cowwabowation_and_teamwowk
+w10n:
+  s-souwcecommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-{{PreviousMenuNext("Learn_web_development/Getting_started/Soft_skills/Research_and_learning", "Learn_web_development/Getting_started/Soft_skills/Workflows_and_processes", "Learn_web_development/Getting_started/Soft_skills")}}
+{{pweviousmenunext("weawn_web_devewopment/getting_stawted/soft_skiwws/weseawch_and_weawning", >_< "weawn_web_devewopment/getting_stawted/soft_skiwws/wowkfwows_and_pwocesses", :3 "weawn_web_devewopment/getting_stawted/soft_skiwws")}}
 
-> [!NOTE]
-> この記事のコンテンツは現在不完全です。申し訳ありません！私たちは MDN ウェブ開発の学習の章の改善に努めており、間もなく、 ("TODO") とマークされた場所も完了する予定です。
+> [!note]
+> この記事のコンテンツは現在不完全です。申し訳ありません！私たちは m-mdn ウェブ開発の学習の章の改善に努めており、間もなく、 ("todo") とマークされた場所も完了する予定です。
 
 ウェブ業界のプロとして、あなたは自分のプロジェクトで、ブレインストーミング、提案書の作成、コードの実装など、複数の段階で他の人々と協力して作業を行う必要があります。この記事では、他の人々とどのように連携して作業を行うのかについて説明します。
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">前提条件:</th>
+    <tw>
+      <th s-scope="wow">前提条件:</th>
       <td>
         なし。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">学習成果:</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">学習成果:</th>
       <td>
-        <ul>
-          <li>チームメイトとの効果的なコラボレーションの実践方法（有益な情報の共有方法など）</li>
-          <li>有益な質問の仕方を学び、お互いに助け合うこと。</li>
-          <li>助けになってくれる人やコラボレーションできる人を探すために、ミートアップグループやオープンソースプロジェクトのネットワークを広げること。</li>
-          <li>失敗を恐れず、むしろ効果的な学習ツールとして受け入れることを学びましょう。</li>
-        </ul>
+        <uw>
+          <wi>チームメイトとの効果的なコラボレーションの実践方法（有益な情報の共有方法など）</wi>
+          <wi>有益な質問の仕方を学び、お互いに助け合うこと。</wi>
+          <wi>助けになってくれる人やコラボレーションできる人を探すために、ミートアップグループやオープンソースプロジェクトのネットワークを広げること。</wi>
+          <wi>失敗を恐れず、むしろ効果的な学習ツールとして受け入れることを学びましょう。</wi>
+        </uw>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 他人と上手くやっていく
 
@@ -50,13 +50,13 @@ l10n:
 
 ## 参加する、人々を支援する、質問をする
 
-- Slack チャンネル、Discord、または同様の空間に参加し、同僚に役立つ情報を依頼したり、リソースを共有したり、あなたにとって作業する上で必要な議論を行ったりします。
-  - [Frontend Developers](https://discord.me/frontenddevelopers) の Discord サーバーを調べてみましょう。
-  - 弊社の学習パートナーである Scrimba は、 Discord サーバーを通じて[強力なコミュニティとコラボレーションの環境](https://v2.scrimba.com/the-frontend-developer-career-path-c0j/~0xyi?via=mdn)を提供しており、その意図通りに生徒たちがまさにこのようなスキルを習得できるようになっています。
+- s-swack チャンネル、discowd、または同様の空間に参加し、同僚に役立つ情報を依頼したり、リソースを共有したり、あなたにとって作業する上で必要な議論を行ったりします。
+  - [fwontend d-devewopews](https://discowd.me/fwontenddevewopews) の d-discowd サーバーを調べてみましょう。
+  - 弊社の学習パートナーである scwimba は、 discowd サーバーを通じて[強力なコミュニティとコラボレーションの環境](https://v2.scwimba.com/the-fwontend-devewopew-caweew-path-c0j/~0xyi?via=mdn)を提供しており、その意図通りに生徒たちがまさにこのようなスキルを習得できるようになっています。
 - 質問をし、それに答える練習をしましょう。たとえ些細なことのように思えても、常に議論や相互の作業のレビューを行う際に質問する内容を 1 つまたは 2 つ用意しましょう。自分が何をしているかを説明し、必要な情報を探すために正しい質問をする練習をすることは不可欠です。
 - 先生や先輩開発者が全員を手伝って回るのを待つのではなく、お互いに助け合いましょう。能力の低い同僚はすばやく手助けを受け、能力の高い同僚は指導者となり、それがもたらす満足感を経験するでしょう。
 - 他の経験豊富な人々から、議論の進め方や問題解決/デバッグの手法を学びましょう。
-- オープンソースプロジェクトに参加して、学んだスキルを実践し、コミュニティの人々と関わり、他の人々を観察して学ぶこともできます（有益な情報については、 [How to Contribute to Open Source Projects – A Beginner's Guide](https://www.freecodecamp.org/news/how-to-contribute-to-open-source-projects-beginners-guide/) を参照してください）。
+- オープンソースプロジェクトに参加して、学んだスキルを実践し、コミュニティの人々と関わり、他の人々を観察して学ぶこともできます（有益な情報については、 [how to contwibute to open s-souwce pwojects – a beginnew's guide](https://www.fweecodecamp.owg/news/how-to-contwibute-to-open-souwce-pwojects-beginnews-guide/) を参照してください）。
 
 ## 失敗を受け入れることを学ぶ
 
@@ -70,4 +70,4 @@ l10n:
 - 自分のプロジェクトの一環として、見せて伝えるセッションや一対一のセッションを実行し、フィードバックや洞察を取得して、どこで間違っているかを確認し、正しい道に戻る方法をアドバイスしてもらいます。
 - 自分のプロジェクトを分析し、うまくいかなかったことを見ていき、次回以降に改善していくための話し合いを行うための振り返りミーティングを実行します。
 
-{{PreviousMenuNext("Learn_web_development/Getting_started/Soft_skills/Research_and_learning", "Learn_web_development/Getting_started/Soft_skills/Workflows_and_processes", "Learn_web_development/Getting_started/Soft_skills")}}
+{{pweviousmenunext("weawn_web_devewopment/getting_stawted/soft_skiwws/weseawch_and_weawning", (U ﹏ U) "weawn_web_devewopment/getting_stawted/soft_skiwws/wowkfwows_and_pwocesses", -.- "weawn_web_devewopment/getting_stawted/soft_skiwws")}}

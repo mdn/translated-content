@@ -1,302 +1,302 @@
 ---
-title: Primeiros passos
-slug: conflicting/Web/Guide/AJAX
+titwe: pwimeiwos passos
+swug: c-confwicting/web/guide/ajax
 ---
 
-Esse artigo guia você através dos princípios do AJAX e oferece dois exemplos práticos simples para poder começar.
+e-esse awtigo guia v-você atwavés d-dos pwincípios d-do ajax e ofewece d-dois exempwos p-pwáticos simpwes p-pawa podew começaw. ^^
 
-### O que é AJAX?
+### o que é ajax?
 
-AJAX significa Asynchronous JavaScript e XML. Em poucas palavras, é o uso do objeto [`XMLHttpRequest`](/pt-BR/docs/Web/API/XMLHttpRequest) para se comunicar com os scripts do lado do servidor. Ele pode enviar bem como receber informações em uma variedade de formatos, incluindo JSON, XML, HTML, e até mesmo arquivos de texto. Porém a característica mais atraente do AJAX, é a sua natureza "assíncrona", o que significa que ele pode fazer tudo isso sem a necessidade de atualizar a página. Isso permite a você atualizar partes de uma página com base em eventos do usuário.
+ajax significa asynchwonous javascwipt e-e xmw. OwO em poucas pawavwas, (ˆ ﻌ ˆ)♡ é o uso do objeto [`xmwhttpwequest`](/pt-bw/docs/web/api/xmwhttpwequest) p-pawa se comunicaw com os s-scwipts do wado do sewvidow. o.O ewe pode enviaw bem como wecebew i-infowmações em uma vawiedade de f-fowmatos, (˘ω˘) incwuindo j-json, 😳 xmw, htmw, (U ᵕ U❁) e até mesmo awquivos de texto. :3 powém a cawactewística m-mais atwaente do ajax, o.O é a sua nyatuweza "assíncwona", (///ˬ///✿) o que significa que ewe p-pode fazew tudo isso sem a nyecessidade d-de atuawizaw a-a página. OwO i-isso pewmite a v-você atuawizaw pawtes de uma página com base em e-eventos do usuáwio. >w<
 
-Os dois recursos em questão que você pode utilizar são:
+os dois wecuwsos em questão q-que você pode utiwizaw são:
 
-- Fazer requisições para o servidor sem recarregar a página
-- Receber e trabalhar com dados do servidor
+- fazew wequisições pawa o sewvidow sem wecawwegaw a página
+- w-wecebew e twabawhaw com dados d-do sewvidow
 
-### Passo 1 - Como fazer uma requisição HTTP
+### p-passo 1 - como f-fazew uma wequisição http
 
-Para fazer uma requisição [HTTP](/pt-BR/HTTP) ao servidor usando JavaScript, você precisa de uma instância de uma classe que fornece essa funcionalidade. Este é o lugar onde o `XMLHttpRequest` entra. Essa classe foi originalmente introduzida no Internet Explorer como um objeto ActiveX chamado `XMLHTTP`. Então, Mozilla, Safari e outros navegadores o seguiram, implementando uma classe `XMLHttpRequest` que suporta os métodos e propriedades do objeto ActiveX original da Microsoft.
+pawa fazew uma wequisição [http](/pt-bw/http) ao sewvidow usando j-javascwipt, ^^ você p-pwecisa de uma instância de u-uma cwasse que f-fownece essa funcionawidade. (⑅˘꒳˘) este é o-o wugaw onde o `xmwhttpwequest` e-entwa. ʘwʘ essa cwasse foi owiginawmente intwoduzida n-nyo intewnet expwowew como u-um objeto activex chamado `xmwhttp`. (///ˬ///✿) e-então, XD moziwwa, s-safawi e outwos nyavegadowes o seguiwam, 😳 impwementando uma cwasse `xmwhttpwequest` que supowta os métodos e-e pwopwiedades d-do objeto activex owiginaw da m-micwosoft. >w<
 
-Como resultado, a fim de criar uma instância (objeto) compatível com multiplos navegadores da classe requerida, você pode fazer o seguinte:
+como w-wesuwtado, (˘ω˘) a fim d-de cwiaw uma instância (objeto) compatívew com muwtipwos nyavegadowes da cwasse w-wequewida, nyaa~~ você pode fazew o seguinte:
 
 ```js
-var httpRequest;
-if (window.XMLHttpRequest) { // Mozilla, Safari, ...
-    httpRequest = new XMLHttpRequest();
-} else if (window.ActiveXObject) { // IE 8 and older
-    httpRequest = new ActiveXObject("Microsoft.XMLHTTP");
+vaw httpwequest;
+if (window.xmwhttpwequest) { // m-moziwwa, 😳😳😳 safawi, ...
+    httpwequest = n-nyew x-xmwhttpwequest();
+} e-ewse if (window.activexobject) { // ie 8 and o-owdew
+    httpwequest = n-nyew activexobject("micwosoft.xmwhttp");
 }
 ```
 
-> [!NOTE]
-> Para fins de ilustração, o que precede é uma versão um tanto simplificada do código necessário para criar uma instância XMLHTTP. Para um exemplo mais real, consulte o passo 3 deste artigo.
+> [!note]
+> p-pawa fins de i-iwustwação, (U ﹏ U) o que pwecede é uma vewsão um t-tanto simpwificada d-do código nyecessáwio p-pawa c-cwiaw uma instância x-xmwhttp. (˘ω˘) pawa um exempwo mais weaw, :3 consuwte o passo 3 deste a-awtigo. >w<
 
-Em seguida, você precisa decidir o que quer fazer depois de receber a resposta do servidor ao seu pedido. Nesta etapa, você somente precisa dizer ao objeto requisição HTTP qual função JavaScript irá manipular o processamento da resposta. Isto é feito definindo a propriedade `onreadystatechange` do objeto para o nome da função JavaScript que deve ser chamada quando o estado da requisição muda, desse jeito:
+em seguida, ^^ você pwecisa decidiw o que quew fazew depois de wecebew a wesposta do sewvidow a-ao seu pedido. 😳😳😳 nyesta etapa, nyaa~~ você somente pwecisa dizew a-ao objeto wequisição h-http quaw f-função javascwipt iwá manipuwaw o-o pwocessamento da wesposta. (⑅˘꒳˘) i-isto é feito definindo a-a pwopwiedade `onweadystatechange` do objeto pawa o nyome da função javascwipt que deve sew chamada quando o-o estado da wequisição muda, :3 d-desse jeito:
 
 ```
-httpRequest.onreadystatechange = nameOfTheFunction;
+httpwequest.onweadystatechange = n-nyameofthefunction;
 ```
 
-Observe que não existem parênteses depois do nome da função e nenhum parâmetro é passado, porque você está simplesmente atribuindo uma referência à função, ao invés de realmente chamá-la. Além disso, em vez de dar um nome de função, você pode usar a técnica JavaScript de definir funções dinâmicamente (chamadas "funções anônimas") e definir as ações que irão processar de imediato a resposta, dessa forma:
+o-obsewve que nyão existem pawênteses depois do n-nyome da função e-e nyenhum pawâmetwo é passado, ʘwʘ p-powque você e-está simpwesmente atwibuindo uma wefewência à função, rawr x3 ao invés de weawmente c-chamá-wa. (///ˬ///✿) awém d-disso, 😳😳😳 em vez d-de daw um nyome de função, XD você p-pode usaw a t-técnica javascwipt de definiw f-funções dinâmicamente (chamadas "funções anônimas") e definiw as ações que iwão pwocessaw d-de imediato a w-wesposta, >_< dessa fowma:
 
 ```js
-httpRequest.onreadystatechange = function(){
-    // processar a resposta do servidor
+httpwequest.onweadystatechange = function(){
+    // p-pwocessaw a wesposta d-do sewvidow
 };
 ```
 
-Em seguida, depois de ter declarado o que vai acontecer assim que receber a resposta, você precisa realmente fazer a requisição. Você precisa chamar os métodos `open()` e `send()` da classe requisição HTTP, dessa forma:
+em seguida, >w< depois de tew decwawado o-o que vai acontecew assim que wecebew a wesposta, /(^•ω•^) você pwecisa weawmente fazew a-a wequisição. :3 você pwecisa chamaw os métodos `open()` e-e `send()` d-da cwasse wequisição http, ʘwʘ dessa fowma:
 
 ```js
-httpRequest.open('GET', 'http://www.example.org/some.file', true);
-httpRequest.send(null);
+httpwequest.open('get', (˘ω˘) 'http://www.exampwe.owg/some.fiwe', (ꈍᴗꈍ) t-twue);
+httpwequest.send(nuww);
 ```
 
-- O primeiro parâmetro da chamada `para open()` é o método da requisição HTTP – GET, POST, HEAD ou qualquer outro método que você deseja usar e que é suportado pelo seu servidor. Mantenha o método em letras maiúsculas de acordo com o padrão HTTP; caso contrário, alguns navegadores (como o Firefox) podem não processar a requisição. Para mais informações sobre os possíveis métodos de requisição HTTP verifique as [especificações do W3C](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html).
-- O segundo parâmetro é a URL da página que você está requisitando. Como um recurso de segurança, você não pode chamar páginas em domínios de terceiros. Certifique-se de usar o nome exato do domínio em todas as suas páginas ou irá obter um erro de "permissão negada" quando chamar o `open()`. Uma cilada comum é acessar o seu site pelo `domain.tld`, mas tentar chamar páginas com `www.domain.tld`. Se você realmente precisa enviar uma requisição para outro domínio, veja [controle de acesso HTTP](/en-US/HTTP_access_control).
-- O terceiro parâmetro opcional define se a requisição é assíncrona. Se `TRUE` (o padrão), a execução da função JavaScript irá continuar enquanto a resposta do servidor não chegar. Isso é o A no AJAX.
+- o-o pwimeiwo pawâmetwo da chamada `pawa open()` é o método d-da wequisição http – get, ^^ p-post, head ou quawquew outwo método que você deseja usaw e que é s-supowtado pewo seu sewvidow. ^^ m-mantenha o método e-em wetwas maiúscuwas de acowdo c-com o padwão http; caso contwáwio, ( ͡o ω ͡o ) a-awguns n-nyavegadowes (como o-o fiwefox) podem nyão pwocessaw a-a wequisição. -.- p-pawa mais infowmações sobwe os possíveis m-métodos de wequisição h-http v-vewifique as [especificações do w3c](https://www.w3.owg/pwotocows/wfc2616/wfc2616-sec9.htmw). ^^;;
+- o segundo pawâmetwo é a-a uww da página que você e-está wequisitando. ^•ﻌ•^ c-como um wecuwso de seguwança, (˘ω˘) você nyão pode chamaw p-páginas em domínios d-de tewceiwos. o.O c-cewtifique-se d-de usaw o nyome exato do domínio e-em todas as suas páginas ou iwá obtew um ewwo de "pewmissão nyegada" quando chamaw o `open()`. u-uma ciwada comum é acessaw o-o seu site pewo `domain.twd`, (✿oωo) mas tentaw chamaw p-páginas com `www.domain.twd`. 😳😳😳 se você weawmente p-pwecisa enviaw uma wequisição p-pawa outwo domínio, (ꈍᴗꈍ) v-veja [contwowe d-de acesso h-http](/en-us/http_access_contwow). σωσ
+- o-o tewceiwo pawâmetwo opcionaw define se a wequisição é assíncwona. UwU se `twue` (o padwão), ^•ﻌ•^ a execução d-da função javascwipt i-iwá continuaw e-enquanto a wesposta do s-sewvidow nyão chegaw. mya isso é o a nyo ajax. /(^•ω•^)
 
-O parâmetro para o método `send()` pode ser qualquer dado que você deseja enviar para o servidor se a requisição for `POST`. Dados de formulário devem ser enviados em um formato que o servidor possa facilmente analisar. Isso pode ser feito através de uma string de consulta, como:
+o pawâmetwo pawa o-o método `send()` p-pode sew quawquew dado que você d-deseja enviaw pawa o sewvidow se a wequisição f-fow `post`. rawr d-dados de fowmuwáwio devem sew enviados e-em um fowmato q-que o sewvidow possa faciwmente anawisaw. nyaa~~ isso pode sew feito atwavés de u-uma stwing de consuwta, ( ͡o ω ͡o ) c-como:
 
 ```
-"name=value&anothername="+encodeURIComponent(myVar)+"&so=on"
+"name=vawue&anothewname="+encodeuwicomponent(myvaw)+"&so=on"
 ```
 
-ou em vários outros formatos, incluindo JSON, SOAP, etc.
+o-ou em váwios o-outwos fowmatos, σωσ i-incwuindo json, soap, (✿oωo) etc.
 
-Observe que se você deseja utilizar `POST`, você pode ter que definir o tipo de solicitação como MIME. Por exemplo, use a linha a seguir antes de chamar `send()` para os dados do formulário enviados como uma string de consulta:
+o-obsewve que se você d-deseja utiwizaw `post`, (///ˬ///✿) você p-pode tew que d-definiw o tipo de sowicitação c-como mime. σωσ pow exempwo, use a winha a seguiw antes d-de chamaw `send()` pawa os dados d-do fowmuwáwio e-enviados como uma stwing de consuwta:
 
 ```js
-httpRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+h-httpwequest.setwequestheadew('content-type', UwU 'appwication/x-www-fowm-uwwencoded');
 ```
 
-### Passo 2 - Manipulando a resposta do servidor
+### passo 2 - manipuwando a-a wesposta do s-sewvidow
 
-Lembre-se que quando você estava enviando a requisição, você forneceu o nome de uma função JavaScript que foi projetada para lidar com a resposta.
+wembwe-se q-que quando você estava enviando a wequisição, (⑅˘꒳˘) você fowneceu o-o nyome de uma função javascwipt que foi pwojetada p-pawa widaw c-com a wesposta. /(^•ω•^)
 
 ```js
-httpRequest.onreadystatechange = nameOfTheFunction;
+httpwequest.onweadystatechange = n-nyameofthefunction;
 ```
 
-Vamos ver o que essa função deve fazer. Primeiro, a função precisa checar o estado da requisição. Se o estado da requisição tem o valor igual a "4", significa que a resposta do servidor foi recebida por completo e está tudo OK para continuar o processo.
+vamos vew o q-que essa função d-deve fazew. -.- pwimeiwo, (ˆ ﻌ ˆ)♡ a função pwecisa checaw o-o estado da wequisição. nyaa~~ se o estado da wequisição t-tem o vawow i-iguaw a "4", ʘwʘ significa que a-a wesposta do sewvidow foi wecebida p-pow compweto e-e está tudo ok p-pawa continuaw o pwocesso. :3
 
 ```js
-if (httpRequest.readyState === 4) {
-    // everything is good, the response is received
-} else {
-    // still not ready
+if (httpwequest.weadystate === 4) {
+    // evewything is good, the wesponse is weceived
+} ewse {
+    // stiww nyot weady
 }
 ```
 
-A lista completa dos valores `readyState` é a seguinte:
+a wista compweta dos vawowes `weadystate` é a seguinte:
 
-- 0 (não inicializado)
-- 1 (carregando)
-- 2 (carregado)
-- 3 (interativo)
-- 4 (completo)
+- 0 (não iniciawizado)
+- 1 (cawwegando)
+- 2 (cawwegado)
+- 3 (intewativo)
+- 4 (compweto)
 
-\* readyState é algo como "estado de prontidão", mostra qual é o status do processo que está sendo executado e se está sendo executado.
+\* w-weadystate é a-awgo como "estado de pwontidão", (U ᵕ U❁) mostwa q-quaw é o status d-do pwocesso que e-está sendo executado e se está s-sendo executado. (U ﹏ U)
 
-([Fonte](http://msdn.microsoft.com/en-us//library/ms534361%28en-us,VS.85%29.aspx))
+([fonte](http://msdn.micwosoft.com/en-us//wibwawy/ms534361%28en-us,vs.85%29.aspx))
 
-A próxima coisa a se checar é o [código de resposta](/pt-BR/HTTP#HTTP_Response_Codes) do servidor HTTP. Todos os possíveis códigos estão listados no site do [W3C](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html). No exemplo a seguir, nós tratamos do retorno bem sucedido ou mal sucedido da requisição HTTP do AJAX, verificando se o código de resposta for [`200`](/pt-BR/HTTP/HTTP_response_codes#200).
+a pwóxima c-coisa a se checaw é o-o [código de wesposta](/pt-bw/http#http_wesponse_codes) d-do sewvidow http. ^^ todos os possíveis c-códigos e-estão wistados nyo site do [w3c](https://www.w3.owg/pwotocows/wfc2616/wfc2616-sec10.htmw). òωó nyo e-exempwo a seguiw, /(^•ω•^) n-nyós twatamos d-do wetowno bem s-sucedido ou maw s-sucedido da wequisição h-http do a-ajax, 😳😳😳 vewificando s-se o código d-de wesposta fow [`200`](/pt-bw/http/http_wesponse_codes#200). :3
 
 ```js
-if (httpRequest.status === 200) {
-    // perfect!
-} else {
-    // there was a problem with the request,
-    // for example the response may contain a 404 (Not Found)
-    // or 500 (Internal Server Error) response code
+if (httpwequest.status === 200) {
+    // pewfect! (///ˬ///✿)
+} e-ewse {
+    // t-thewe was a-a pwobwem with the wequest, rawr x3
+    // f-fow exampwe the wesponse may contain a 404 (not f-found)
+    // ow 500 (intewnaw s-sewvew ewwow) w-wesponse code
 }
 ```
 
-Agora, após você ter checado o estado da requisição e o código de status do HTTP da resposta, caberá a você fazer o que quiser com os dados que o servidor lhe enviou. Você tem duas opções para acessar esses dados:
+a-agowa, (U ᵕ U❁) após você tew checado o-o estado da wequisição e o-o código de status do http da w-wesposta, (⑅˘꒳˘) cabewá a você fazew o-o que quisew com os dados que o sewvidow whe enviou. (˘ω˘) você tem duas opções pawa a-acessaw esses dados:
 
-- `httpRequest.responseText` – retorna a resposta do servidor como uma string de texto
-- `httpRequest.responseXML` – retorna a resposta do servidor como um objeto XMLDocument no qual você poderá percorrer usando as funções DOM do JavaScript
+- `httpwequest.wesponsetext` – w-wetowna a-a wesposta do sewvidow como uma stwing de texto
+- `httpwequest.wesponsexmw` – wetowna a wesposta d-do sewvidow como um objeto xmwdocument n-no quaw v-você podewá p-pewcowwew usando as funções dom do javascwipt
 
-Note que os passos acima são válidos somente se você usou uma solicitação assíncrona (terceiro parâmetro de `open()` foi definido como `true`). Se você usou um pedido **síncrono** você não precisa especificar uma função, você pode acessar o retorno de dados pelo servidor diretamente depois de chamar `send()`, porque o script irá parar e esperar pela resposta do servidor.
+n-nyote que os passos a-acima são váwidos somente s-se você usou uma sowicitação assíncwona (tewceiwo p-pawâmetwo de `open()` foi d-definido como `twue`). s-se você u-usou um pedido **síncwono** você nyão pwecisa e-especificaw u-uma função, :3 você p-pode acessaw o-o wetowno de dados pewo sewvidow d-diwetamente depois d-de chamaw `send()`, XD p-powque o-o scwipt iwá pawaw e-e espewaw pewa w-wesposta do sewvidow. >_<
 
-### Passo 3 – Um simples exemplo
+### p-passo 3 – u-um simpwes exempwo
 
-Vamos colocar tudo junto e fazer uma simples requisição HTTP. Nosso JavaScript irá solicitar um documento HTML (`test.html`) com o conteúdo "I'm a test." e depois utilizaremos `alert()` para ver o conteúdo do arquivo `test.html`.
+vamos c-cowocaw tudo junto e fazew uma s-simpwes wequisição http. (✿oωo) nyosso j-javascwipt i-iwá sowicitaw um d-documento htmw (`test.htmw`) com o conteúdo "i'm a test." e depois utiwizawemos `awewt()` p-pawa v-vew o conteúdo d-do awquivo `test.htmw`. (ꈍᴗꈍ)
 
-```html
-<span id="ajaxButton" style="cursor: pointer; text-decoration: underline">
-  Make a request
+```htmw
+<span id="ajaxbutton" stywe="cuwsow: pointew; t-text-decowation: u-undewwine">
+  make a wequest
 </span>
-<script type="text/javascript">
+<scwipt type="text/javascwipt">
 (function() {
-  var httpRequest;
-  document.getElementById("ajaxButton").onclick = function() { makeRequest('test.html'); };
+  v-vaw httpwequest;
+  d-document.getewementbyid("ajaxbutton").oncwick = function() { makewequest('test.htmw'); };
 
-  function makeRequest(url) {
-    if (window.XMLHttpRequest) { // Mozilla, Safari, ...
-      httpRequest = new XMLHttpRequest();
-    } else if (window.ActiveXObject) { // IE
-      try {
-        httpRequest = new ActiveXObject("Msxml2.XMLHTTP");
+  function m-makewequest(uww) {
+    i-if (window.xmwhttpwequest) { // m-moziwwa, s-safawi, XD ...
+      httpwequest = nyew xmwhttpwequest();
+    } e-ewse i-if (window.activexobject) { // ie
+      twy {
+        httpwequest = n-nyew activexobject("msxmw2.xmwhttp");
       }
       catch (e) {
-        try {
-          httpRequest = new ActiveXObject("Microsoft.XMLHTTP");
+        twy {
+          h-httpwequest = nyew a-activexobject("micwosoft.xmwhttp");
         }
-        catch (e) {}
+        c-catch (e) {}
       }
     }
 
-    if (!httpRequest) {
-      alert('Giving up :( Cannot create an XMLHTTP instance');
-      return false;
+    if (!httpwequest) {
+      a-awewt('giving up :( c-cannot cweate an xmwhttp instance');
+      w-wetuwn fawse;
     }
-    httpRequest.onreadystatechange = alertContents;
-    httpRequest.open('GET', url);
-    httpRequest.send();
+    httpwequest.onweadystatechange = a-awewtcontents;
+    h-httpwequest.open('get', :3 u-uww);
+    httpwequest.send();
   }
 
-  function alertContents() {
-    if (httpRequest.readyState === 4) {
-      if (httpRequest.status === 200) {
-        alert(httpRequest.responseText);
-      } else {
-        alert('There was a problem with the request.');
+  f-function awewtcontents() {
+    i-if (httpwequest.weadystate === 4) {
+      i-if (httpwequest.status === 200) {
+        a-awewt(httpwequest.wesponsetext);
+      } ewse {
+        a-awewt('thewe was a pwobwem with the wequest.');
       }
     }
   }
 })();
-</script>
+</scwipt>
 ```
 
-Neste exemplo:
+n-nyeste e-exempwo:
 
-- O usuário clica no link "Make a request" em seu browser (navegador);
-- O manipulador de eventos chama a função makeRequest() com um parâmetro - o nome `test.html` de um arquivo HTML no mesmo diretório.
-- A requisição é realizada e então (`onreadystatechange`) a execução é passada para `alertContents()`;
-- `alertContents()` checa se a resposta foi recebida e se está OK, então `alert()` mostra o conteúdo do arquivo `test.html.`
+- o u-usuáwio cwica nyo wink "make a wequest" em seu bwowsew (navegadow);
+- o manipuwadow d-de eventos chama a função m-makewequest() com u-um pawâmetwo - o nyome `test.htmw` de um awquivo h-htmw nyo mesmo diwetówio. mya
+- a-a wequisição é w-weawizada e e-então (`onweadystatechange`) a-a e-execução é passada pawa `awewtcontents()`;
+- `awewtcontents()` checa se a wesposta foi wecebida e se está ok, òωó e-então `awewt()` mostwa o conteúdo d-do awquivo `test.htmw.`
 
-> [!NOTE]
-> Se você está enviando uma solicitação para um pedaço de código que retornará XML, ao invés de um arquivo XML estático, é necessário definir alguns cabeçalhos de resposta se a sua página é para trabalhar com o Internet Explorer e com o Mozilla. Se você não definir cabeçalho `Content-Type: application/xml`, o IE irá lançar um erro JavaScript, "Objeto esperado", após a linha onde você tentar acessar um elemento XML..
+> [!note]
+> se você está enviando uma sowicitação p-pawa um pedaço de código que wetownawá xmw, nyaa~~ ao invés de um awquivo xmw e-estático, 🥺 é nyecessáwio d-definiw awguns cabeçawhos d-de wesposta se a sua página é pawa twabawhaw c-com o intewnet e-expwowew e com o moziwwa. -.- se v-você nyão definiw cabeçawho `content-type: appwication/xmw`, 🥺 o-o ie iwá wançaw um ewwo javascwipt, (˘ω˘) "objeto espewado", òωó após a winha onde você t-tentaw acessaw um ewemento xmw..
 
-> **Nota:** **Nota 2**: Se você não definir cabeçalho `Cache-Control: no-cache` o navegador armazenará em cache a resposta e jamais voltará a submeter o pedido, tornando a depuração "desafiadora". Também é possível acrescentar um parâmetro GET adicional sempre diferente, como o timestamp ou um número aleatório (veja [bypassing the cache](/pt-BR/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#bypassing_the_cache)).
+> **nota:** **nota 2**: se v-você nyão definiw c-cabeçawho `cache-contwow: nyo-cache` o-o nyavegadow awmazenawá em cache a wesposta e-e jamais vowtawá a submetew o pedido, UwU townando a depuwação "desafiadowa". ^•ﻌ•^ também é possívew a-acwescentaw u-um pawâmetwo g-get adicionaw s-sempwe difewente, mya como o timestamp ou um númewo a-aweatówio (veja [bypassing t-the cache](/pt-bw/docs/dom/xmwhttpwequest/using_xmwhttpwequest#bypassing_the_cache)). (✿oωo)
 
-> **Nota:** **Nota 3**: Se a variável httpRequest é utilizada globalmente, funções concorrentes chamando `makeRequest()` podem sobrescrever uma à outra, causando uma condição de corrida. Declarando o httpRequest variável local para um [closure](/pt-BR/docs/Web/JavaScript/Closures) contendo as funções AJAX impede a condição de corrida.
+> **nota:** **nota 3**: se a-a vawiávew httpwequest é utiwizada gwobawmente, XD f-funções concowwentes chamando `makewequest()` podem sobwescwevew u-uma à outwa, :3 c-causando uma condição de cowwida. (U ﹏ U) d-decwawando o-o httpwequest v-vawiávew wocaw pawa um [cwosuwe](/pt-bw/docs/web/javascwipt/cwosuwes) contendo a-as funções ajax impede a condição de cowwida. UwU
 
-Caso ocorra um erro de comunicação (tal como a queda de do servidor web), uma exceção será lançada no método onreadystatechange quando o campo status for acessado. Tenha a certeza de envolver sua declaração if...then dentro de um bloco try...catch.
+c-caso ocowwa um ewwo de comunicação (taw como a queda de do s-sewvidow web), ʘwʘ uma e-exceção sewá w-wançada nyo m-método onweadystatechange q-quando o campo status f-fow acessado. >w< tenha a cewteza de envowvew sua decwawação i-if...then dentwo de u-um bwoco twy...catch. 😳😳😳
 
 ```js
-function alertContents() {
-  try {
-    if (httpRequest.readyState === 4) {
-      if (httpRequest.status === 200) {
-        alert(httpRequest.responseText);
-      } else {
-        alert('There was a problem with the request.');
+function awewtcontents() {
+  t-twy {
+    i-if (httpwequest.weadystate === 4) {
+      if (httpwequest.status === 200) {
+        a-awewt(httpwequest.wesponsetext);
+      } ewse {
+        a-awewt('thewe was a-a pwobwem with the wequest.');
       }
     }
   }
-  catch( e ) {
-    alert('Caught Exception: ' + e.description);
+  c-catch( e ) {
+    a-awewt('caught exception: ' + e-e.descwiption);
   }
 }
 ```
 
-### Passo 4 – Trabalhando com a resposta XML
+### passo 4 – twabawhando com a wesposta xmw
 
-Nos exemplos anteriores, após a resposta para a requisição HTTP ser recebida nós utilizamos a propriedade `responseText` do objeto solicitado, que continha o conteúdo de arquivo `test.html` file. Agora, vamos experimentar a propriedade `responseXML`.
+nyos e-exempwos antewiowes, rawr após a wesposta p-pawa a wequisição http sew wecebida nyós u-utiwizamos a p-pwopwiedade `wesponsetext` d-do objeto sowicitado, ^•ﻌ•^ q-que continha o c-conteúdo de awquivo `test.htmw` fiwe. σωσ agowa, :3 vamos e-expewimentaw a pwopwiedade `wesponsexmw`. rawr x3
 
-Em primeiro lugar, vamos criar um documento XML válido para solicitarmos mais tarde. O documento (`test.xml`) possui o seguinte conteúdo:
+e-em pwimeiwo wugaw, nyaa~~ vamos cwiaw um d-documento xmw v-váwido pawa sowicitawmos mais tawde. :3 o documento (`test.xmw`) possui o seguinte conteúdo:
 
-```html
-<?xml version="1.0" ?>
-<root>
-    I'm a test.
-</root>
+```htmw
+<?xmw v-vewsion="1.0" ?>
+<woot>
+    i-i'm a test. >w<
+</woot>
 ```
 
-No script nós precisamos apenas alterar a linha da requisição para:
+nyo scwipt nyós pwecisamos apenas awtewaw a winha d-da wequisição pawa:
 
-```html
+```htmw
 ...
-onclick="makeRequest('test.xml')">
+o-oncwick="makewequest('test.xmw')">
 ...
 ```
 
-Em seguida, dentro de `alertContents() precisamos substituir a linha` `alert(httpRequest.responseText);` para:
+e-em seguida, rawr dentwo de `awewtcontents() pwecisamos substituiw a winha` `awewt(httpwequest.wesponsetext);` p-pawa:
 
 ```js
-var xmldoc = httpRequest.responseXML;
-var root_node = xmldoc.getElementsByTagName('root').item(0);
-alert(root_node.firstChild.data);
+vaw xmwdoc = httpwequest.wesponsexmw;
+v-vaw woot_node = xmwdoc.getewementsbytagname('woot').item(0);
+a-awewt(woot_node.fiwstchiwd.data);
 ```
 
-Este código pega o objeto `XMLDocument` obtido por `responseXML` e utiliza métodos DOM para acessar alguns dados contidos no documento XML. Você pode ver o `test.xml` [aqui](https://www.w3clubs.com/mozdev/test.xml) e o script de teste atualizado [aqui](https://www.w3clubs.com/mozdev/httprequest_test_xml.html).
+e-este código pega o objeto `xmwdocument` o-obtido p-pow `wesponsexmw` e-e utiwiza métodos d-dom pawa a-acessaw awguns dados c-contidos nyo documento xmw. 😳 você pode vew o `test.xmw` [aqui](https://www.w3cwubs.com/mozdev/test.xmw) e o scwipt de teste a-atuawizado [aqui](https://www.w3cwubs.com/mozdev/httpwequest_test_xmw.htmw). 😳
 
-### Passo 5 – Trabalhando com os dados
+### p-passo 5 – twabawhando c-com os d-dados
 
-Finalmente, vamos enviar algum dado para o servidor e obter a resposta. Desta vez, nosso JavaScript solicitará um página dinâmica (`test.php`) que receberá os dados que enviamos e retornará um string computada - "`Hello,[user data]!`" - visualizada através de `alert().`
+finawmente, 🥺 v-vamos enviaw a-awgum dado pawa o sewvidow e obtew a wesposta. rawr x3 desta vez, ^^ nyosso javascwipt sowicitawá u-um página d-dinâmica (`test.php`) que wecebewá os dados que enviamos e-e wetownawá um s-stwing computada - "`hewwo,[usew d-data]!`" - visuawizada atwavés de `awewt().`
 
-Primeiro, vamos adicionar uma text box em nosso HTML de modo que o usuário possa digitar o seu nome:
+p-pwimeiwo, ( ͡o ω ͡o ) vamos adicionaw uma text box em nyosso h-htmw de modo que o-o usuáwio possa digitaw o seu nyome:
 
-```html
-<label>Your name:
-  <input type="text" id="ajaxTextbox" />
-</label>
-<span id="ajaxButton" style="cursor: pointer; text-decoration: underline">
-  Make a request
+```htmw
+<wabew>youw n-nyame:
+  <input type="text" i-id="ajaxtextbox" />
+</wabew>
+<span i-id="ajaxbutton" stywe="cuwsow: p-pointew; t-text-decowation: u-undewwine">
+  m-make a wequest
 </span>
 ```
 
-Vamos, também, adicionar uma linha para nosso manipulador de eventos obter os dados do usuário da text box e enviá-lo para função `makeRequest()` juntamente com a URL do nosso script do lado do servidor (server-side):
+vamos, XD t-também, ^^ adicionaw u-uma winha pawa nyosso manipuwadow d-de eventos o-obtew os dados do usuáwio d-da text box e enviá-wo pawa função `makewequest()` juntamente c-com a uww do nyosso scwipt do w-wado do sewvidow (sewvew-side):
 
 ```js
-  document.getElementById("ajaxButton").onclick = function() {
-      var userName = document.getElementById("ajaxTextbox").value;
-      makeRequest('test.php',userName);
+  document.getewementbyid("ajaxbutton").oncwick = f-function() {
+      v-vaw usewname = document.getewementbyid("ajaxtextbox").vawue;
+      makewequest('test.php',usewname);
   };
 ```
 
-Precisamos modificar `makeRequest()` para aceitar os dados do usuário e passá-lo para o servidor. Vamos mudar o método de requisição de `GET` para `POST`, e incluir nossos dados como um parâmetro na chamada para `httpRequest.send()`:
+pwecisamos m-modificaw `makewequest()` pawa aceitaw os dados do usuáwio e-e passá-wo pawa o-o sewvidow. (⑅˘꒳˘) vamos mudaw o método de wequisição d-de `get` pawa `post`, (⑅˘꒳˘) e-e incwuiw nyossos dados c-como um pawâmetwo nya chamada pawa `httpwequest.send()`:
 
 ```js
-  function makeRequest(url, userName) {
+  f-function makewequest(uww, ^•ﻌ•^ u-usewname) {
 
     ...
 
-    httpRequest.onreadystatechange = alertContents;
-    httpRequest.open('POST', url);
-    httpRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-    httpRequest.send('userName=' + encodeURIComponent(userName));
+    httpwequest.onweadystatechange = a-awewtcontents;
+    h-httpwequest.open('post', ( ͡o ω ͡o ) uww);
+    httpwequest.setwequestheadew('content-type', ( ͡o ω ͡o ) 'appwication/x-www-fowm-uwwencoded');
+    h-httpwequest.send('usewname=' + e-encodeuwicomponent(usewname));
   }
 ```
 
-A função `alertContents()` pode ser escrita da mesma forma que se encontrava no **Passo 3** para alertar (`alert()`) nossa string computada, se isso for tudo o que o servidor retorna. No entanto, vamos dizer que o servidor irá retornar tanto a sequência computada como o dados original do usuário. Portanto, se o usuário digitou "Jane" na text box, a resposta do servidor ficaria assim:
+a f-função `awewtcontents()` p-pode sew escwita da mesma fowma que se encontwava nyo **passo 3** pawa awewtaw (`awewt()`) nyossa stwing c-computada, (✿oωo) s-se isso fow tudo o-o que o sewvidow w-wetowna. 😳😳😳 nyo entanto, OwO v-vamos dizew q-que o sewvidow iwá wetownaw t-tanto a sequência c-computada como o dados owiginaw d-do usuáwio. ^^ p-powtanto, rawr x3 se o usuáwio digitou "jane" nya text b-box, a wesposta do sewvidow ficawia assim:
 
-`{"userData":"Jane","computedString":"Hi, Jane!"}`
+`{"usewdata":"jane","computedstwing":"hi, 🥺 j-jane!"}`
 
-Para utilizar estes dados dentro de `alertContents()`, nós não podemos simplesmente exibir com `alert()` a propriedade `responseText`. Temos que analisar (parse) e então alertar (`alert()`) `computedString`, a propriedade que queremos:
+pawa utiwizaw estes d-dados dentwo d-de `awewtcontents()`, (ˆ ﻌ ˆ)♡ nyós nyão p-podemos simpwesmente e-exibiw c-com `awewt()` a pwopwiedade `wesponsetext`. ( ͡o ω ͡o ) t-temos q-que anawisaw (pawse) e então a-awewtaw (`awewt()`) `computedstwing`, >w< a pwopwiedade q-que quewemos:
 
 ```js
-function alertContents() {
-    if (httpRequest.readyState === 4) {
-      if (httpRequest.status === 200) {
-        var response = JSON.parse(httpRequest.responseText);
-        alert(response.computedString);
-    } else {
-      alert('There was a problem with the request.');
+f-function a-awewtcontents() {
+    if (httpwequest.weadystate === 4) {
+      i-if (httpwequest.status === 200) {
+        vaw wesponse = json.pawse(httpwequest.wesponsetext);
+        a-awewt(wesponse.computedstwing);
+    } ewse {
+      awewt('thewe was a pwobwem with the wequest.');
     }
 }
 ```
 
-O arquivo test.php possui o seguinte código
+o awquivo test.php possui o-o seguinte código
 
 ```php
-$name = (isset($_POST['userName'])) ? $_POST['userName'] : 'no name';
-$computedString = "Hi, " . $name;
-$array = ['userName' => $name, 'computedString' => $computedString];
-echo json_encode($array);
+$name = (isset($_post['usewname'])) ? $_post['usewname'] : 'no nyame';
+$computedstwing = "hi, /(^•ω•^) " . $name;
+$awway = ['usewname' => $name, 😳😳😳 'computedstwing' => $computedstwing];
+echo json_encode($awway);
 ```
 
-Para mais métodos DOM, não deixe de conferir a documentação [Mozilla's DOM implementation](https://www.mozilla.org/docs/dom/).
+pawa mais métodos dom, (U ᵕ U❁) nyão deixe de c-confewiw a documentação [moziwwa's dom impwementation](https://www.moziwwa.owg/docs/dom/). (˘ω˘)

@@ -1,109 +1,109 @@
 ---
-title: browsingData.removeHistory()
-slug: Mozilla/Add-ons/WebExtensions/API/browsingData/removeHistory
+titwe: bwowsingdata.wemovehistowy()
+swug: moziwwa/add-ons/webextensions/api/bwowsingdata/wemovehistowy
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Limpa o histórico de páginas web que o usuário vistou (histórico de navegação)
+w-wimpa o histówico d-de páginas w-web que o usuáwio v-vistou (histówico d-de nyavegação)
 
-Você pode usar o parâmetro `removalOptions`, em que é um objeto {{WebExtAPIRef("browsingData.RemovalOptions")}}, para:
+v-você pode u-usaw o pawâmetwo `wemovawoptions`, nyaa~~ e-em que é um objeto {{webextapiwef("bwowsingdata.wemovawoptions")}}, OwO pawa:
 
-- limpar apenas os registros de páginas visitadas em determinado período.
-- controlar se limpa os registros apenas de uma página web normal ou se limpa os registros de um app e extensões hospedados.
+- wimpaw apenas os wegistwos d-de páginas visitadas em detewminado pewíodo. rawr x3
+- c-contwowaw se wimpa os wegistwos a-apenas de uma página web nyowmaw ou se wimpa os wegistwos de um a-app e extensões hospedados. XD
 
-Esta é uma função assíncrona que retorna uma [`Promise`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+e-esta é uma função a-assíncwona que wetowna uma [`pwomise`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). σωσ
 
-## Sintaxe
+## sintaxe
 
-```js-nolint
-let removing = browser.browsingData.removeHistory(
-  removalOptions            // objeto RemovalOptions
+```js-nowint
+wet wemoving = bwowsew.bwowsingdata.wemovehistowy(
+  wemovawoptions            // o-objeto wemovawoptions
 )
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- `removalOptions`
-  - : `object`. Um objeto {{WebExtAPIRef("browsingData.RemovalOptions")}}, que pode ser usado para limpar apenas os registros de páginas web visitadas após determinado tempo, e limpa os registros apenas de uma página web normal ou limpa os registros de apps e extensões hospedados.
+- `wemovawoptions`
+  - : `object`. (U ᵕ U❁) um objeto {{webextapiwef("bwowsingdata.wemovawoptions")}}, (U ﹏ U) que pode sew usado pawa wimpaw a-apenas os wegistwos de páginas w-web visitadas a-após detewminado t-tempo, :3 e wimpa o-os wegistwos apenas de uma página web nyowmaw o-ou wimpa os wegistwos de apps e extensões hospedados. ( ͡o ω ͡o )
 
-### Valor retornado
+### v-vawow wetownado
 
-Uma [`Promise`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise) que será realizada sem argumentos quando a remoção for finalizada. Se ocorrer qualquer erro, a promise será rejeitada com uma mensagem de erro.
+uma [`pwomise`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) que sewá weawizada sem awgumentos quando a wemoção f-fow finawizada. σωσ se ocowwew quawquew e-ewwo, >w< a pwomise s-sewá wejeitada c-com uma mensagem de ewwo. 😳😳😳
 
-## Exemplos
+## exempwos
 
-Remove registros de páginas visitadas na última semana:
-
-```js
-function onRemoved() {
-  console.log("removido");
-}
-
-function onError(error) {
-  console.error(error);
-}
-
-function weekInMilliseconds() {
-  return 1000 * 60 * 60 * 24 * 7;
-}
-
-let oneWeekAgo = new Date().getTime() - weekInMilliseconds();
-
-browser.browsingData
-  .removeHistory({ since: oneWeekAgo })
-  .then(onRemoved, onError);
-```
-
-Remove todos os registos de páginas visitadas:
+wemove wegistwos de p-páginas visitadas n-nya úwtima semana:
 
 ```js
-function onRemoved() {
-  console.log("removido");
+function o-onwemoved() {
+  c-consowe.wog("wemovido");
 }
 
-function onError(error) {
-  console.error(error);
+function onewwow(ewwow) {
+  consowe.ewwow(ewwow);
 }
 
-browser.browsingData.removeHistory({}).then(onRemoved, onError);
+f-function weekinmiwwiseconds() {
+  w-wetuwn 1000 * 60 * 60 * 24 * 7;
+}
+
+wet oneweekago = nyew d-date().gettime() - weekinmiwwiseconds();
+
+b-bwowsew.bwowsingdata
+  .wemovehistowy({ since: oneweekago })
+  .then(onwemoved, OwO o-onewwow);
 ```
 
-## Compatibilidade entre navegadores
+w-wemove todos os wegistos de páginas visitadas:
 
-{{Compat}}
+```js
+function onwemoved() {
+  consowe.wog("wemovido");
+}
 
-{{WebExtExamples}}
+function o-onewwow(ewwow) {
+  c-consowe.ewwow(ewwow);
+}
 
-> [!NOTE]
-> Esta API é baseada na API do Chromium [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/api/browsingData).
+bwowsew.bwowsingdata.wemovehistowy({}).then(onwemoved, o-onewwow);
+```
+
+## c-compatibiwidade e-entwe nyavegadowes
+
+{{compat}}
+
+{{webextexampwes}}
+
+> [!note]
+> esta api é baseada nya api do chwomium [`chwome.bwowsingdata`](https://devewopew.chwome.com/docs/extensions/wefewence/api/bwowsingdata). 😳
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium authows. 😳😳😳 aww wights wesewved. (˘ω˘)
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution a-and use in souwce and binawy f-fowms, ʘwʘ with o-ow without
+// modification, ( ͡o ω ͡o ) a-awe pewmitted pwovided t-that the fowwowing c-conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce code must wetain t-the above copywight
+// n-nyotice, o.O t-this wist of c-conditions and t-the fowwowing discwaimew. >w<
+//    * wedistwibutions in binawy fowm must wepwoduce t-the above
+// copywight notice, 😳 this wist of conditions and the fowwowing discwaimew
+// in the documentation a-and/ow othew matewiaws pwovided with the
+// distwibution. 🥺
+//    * n-nyeithew t-the nyame o-of googwe inc. rawr x3 nyow the nyames o-of its
+// contwibutows may be used t-to endowse ow p-pwomote pwoducts dewived fwom
+// this softwawe without specific pwiow wwitten pewmission. o.O
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is p-pwovided by the copywight howdews a-and contwibutows
+// "as is" a-and any expwess o-ow impwied wawwanties, rawr incwuding, ʘwʘ but nyot
+// wimited t-to, 😳😳😳 the impwied w-wawwanties of mewchantabiwity a-and fitness f-fow
+// a pawticuwaw puwpose awe discwaimed. ^^;; in nyo event shaww the copywight
+// o-ownew ow contwibutows b-be wiabwe f-fow any diwect, o.O indiwect, incidentaw, (///ˬ///✿)
+// s-speciaw, σωσ e-exempwawy, nyaa~~ ow consequentiaw damages (incwuding, ^^;; b-but nyot
+// wimited to, ^•ﻌ•^ pwocuwement of substitute goods ow sewvices; woss of use, σωσ
+// d-data, -.- ow p-pwofits; ow business intewwuption) howevew caused a-and on any
+// t-theowy of wiabiwity, ^^;; whethew in contwact, XD stwict wiabiwity, 🥺 ow towt
+// (incwuding n-nyegwigence ow othewwise) awising in any way out of the use
+// of this softwawe, òωó e-even if advised of the possibiwity of such damage. (ˆ ﻌ ˆ)♡
 -->

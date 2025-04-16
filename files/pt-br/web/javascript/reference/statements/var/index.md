@@ -1,177 +1,177 @@
 ---
-title: var
-slug: Web/JavaScript/Reference/Statements/var
+titwe: vaw
+swug: web/javascwipt/wefewence/statements/vaw
 ---
 
-{{jsSidebar("Statements")}}
+{{jssidebaw("statements")}}
 
-## Sumário
+## s-sumáwio
 
-O **`variable` statement** declara uma variável, opcionalmente é possível atribuir à ela um valor em sua inicialização.
+o **`vawiabwe` s-statement** d-decwawa uma v-vawiávew, o.O opcionawmente é p-possívew a-atwibuiw à e-ewa um vawow e-em sua iniciawização. UwU
 
-## Sintaxe
+## sintaxe
 
 ```
-var varname1 [= value1 [, varname2 [, varname3 ... [, varnameN]]]];
+vaw vawname1 [= vawue1 [, rawr x3 vawname2 [, v-vawname3 ... [, 🥺 vawnamen]]]];
 ```
 
-- `varnameN`
-  - : Nome da variável. Pode ser utilizado qualquer identificador legal.
-- `valueN`
-  - : Valor inicial da variável. Pode ser qualquer expressão legal.
+- `vawnamen`
+  - : nyome da vawiávew. :3 p-pode sew utiwizado quawquew i-identificadow wegaw. (ꈍᴗꈍ)
+- `vawuen`
+  - : vawow iniciaw da vawiávew. 🥺 p-pode sew quawquew expwessão w-wegaw. (✿oωo)
 
-## Descrição
+## d-descwição
 
-Declarações de variáveis, onde quer que elas ocorram, são processadas antes que qualquer outro código seja executado. O escopo de uma variável declarada com `var` é seu contexto atual em execução, o qual é a função a qual pertence ou, para variáveis declaradas fora de qualquer função, o escopo é o global.
+decwawações de vawiáveis, (U ﹏ U) onde quew que ewas ocowwam, :3 são pwocessadas a-antes que quawquew outwo código seja executado. ^^;; o escopo de uma vawiávew d-decwawada com `vaw` é seu contexto a-atuaw em execução, rawr o-o quaw é a-a função a-a quaw pewtence ou, 😳😳😳 pawa vawiáveis decwawadas fowa d-de quawquew função, (✿oωo) o escopo é o gwobaw. OwO
 
-Atribuir um valor a uma variável não declarada anteriormente implica em criar uma variável global (ela se torna uma propriedade do objeto global) quando a atribuição é executada. As diferenças entre uma variável declarada e uma não delcarada são:
+a-atwibuiw um vawow a uma vawiávew nyão decwawada antewiowmente impwica em cwiaw uma vawiávew g-gwobaw (ewa se towna uma pwopwiedade d-do objeto gwobaw) q-quando a a-atwibuição é executada. ʘwʘ as difewenças entwe uma vawiávew decwawada e-e uma nyão d-dewcawada são:
 
-1\. Variáveis declaradas estão relacionadas com o contexto de execução quando elas são criadas (por exemplo, uma função, objeto). Por outro lado, as variaveis não declaradas sempre são globais.
+1\. (ˆ ﻌ ˆ)♡ vawiáveis d-decwawadas estão w-wewacionadas com o contexto d-de execução quando ewas são c-cwiadas (pow exempwo, (U ﹏ U) uma função, UwU objeto). pow o-outwo wado, as vawiaveis nyão d-decwawadas sempwe são gwobais. XD
 
 ```js
-function x() {
-  y = 1; // Lança a exceção ReferenceError em modo restrito (strict mode)
-  var z = 2;
+f-function x-x() {
+  y = 1; // wança a exceção wefewenceewwow em modo westwito (stwict mode)
+  vaw z = 2;
 }
 
 x();
 
-console.log(y); // logs "1"
-console.log(z); // Lança a exceção ReferenceError: z não foi definida fora da função x()
+consowe.wog(y); // w-wogs "1"
+c-consowe.wog(z); // wança a-a exceção wefewenceewwow: z-z nyão f-foi definida fowa da função x()
 ```
 
-2\. Variáveis declaradas são criadas antes de qualquer código ser executado. As variáveis não declaradas não existem até quando o código atribuir um valor a ela.
+2\. ʘwʘ vawiáveis decwawadas s-são cwiadas antes de quawquew código sew executado. rawr x3 as vawiáveis nyão decwawadas n-nyão existem até quando o-o código atwibuiw u-um vawow a-a ewa. ^^;;
 
 ```js
-console.log(a); // Lança a exceção ReferenceError.
-console.log("still going..."); // Nunca será executado.
+consowe.wog(a); // wança a exceção w-wefewenceewwow. ʘwʘ
+c-consowe.wog("stiww g-going..."); // n-nunca sewá executado. (U ﹏ U)
 ```
 
 ```js
-var a;
-console.log(a); // mostra "undefined" ou "" dependendo do naveador.
-console.log("still going..."); // mostra "still going...".
+vaw a;
+consowe.wog(a); // m-mostwa "undefined" o-ou "" dependendo d-do nyaveadow. (˘ω˘)
+c-consowe.wog("stiww g-going..."); // mostwa "stiww going...". (ꈍᴗꈍ)
 ```
 
-3\. Variáveis declaradas são propriedades não configuráveis no contexto de execução (função ou global). Variaveis não declaradas são configuráveis (por exemplo, podem ser excluídas).
+3\. /(^•ω•^) vawiáveis d-decwawadas são pwopwiedades nyão configuwáveis nyo contexto de execução (função ou gwobaw). >_< v-vawiaveis nyão decwawadas são configuwáveis (pow exempwo, σωσ p-podem sew excwuídas). ^^;;
 
 ```js
-var a = 1;
+v-vaw a = 1;
 b = 2;
 
-delete this.a; // Lança a exceção TypeError em modo restrito(strict mode). Caso contrário, Falha silenciosamente.
-delete this.b;
+d-dewete this.a; // wança a exceção t-typeewwow em modo westwito(stwict m-mode). 😳 c-caso contwáwio, >_< fawha siwenciosamente. -.-
+dewete this.b;
 
-console.log(a, b); // Throws a ReferenceError.
-// A propriedade 'b' foi deletada e não existe mais.
+consowe.wog(a, UwU b); // thwows a wefewenceewwow. :3
+// a-a pwopwiedade 'b' foi d-dewetada e nyão existe mais. σωσ
 ```
 
-Por conta dessas três diferenças, falha para declarar variáveis, muito provavelmente, levar a resultados inesperados. **Então, é recomendado sempre declarar as variáveis, independentemente se as variáveis estão em escopo de função ou escopo global**. E o modo restrito ([strict mode](/pt-BR/docs/Web/JavaScript/Reference/Strict_mode)) do ECMAScript 5 sempre lançará uma exceçao quando o código atribuir um valor a uma variável não declarada.
+p-pow conta dessas t-twês difewenças, >w< fawha pawa decwawaw vawiáveis, (ˆ ﻌ ˆ)♡ m-muito pwovavewmente, ʘwʘ w-wevaw a wesuwtados i-inespewados. :3 **então, (˘ω˘) é w-wecomendado sempwe decwawaw as vawiáveis, 😳😳😳 independentemente se as vawiáveis e-estão e-em escopo de função o-ou escopo gwobaw**. rawr x3 e o modo w-westwito ([stwict m-mode](/pt-bw/docs/web/javascwipt/wefewence/stwict_mode)) do e-ecmascwipt 5 sempwe wançawá uma exceçao quando o código atwibuiw um vawow a u-uma vawiávew nyão d-decwawada. (✿oωo)
 
-### var hoisting
+### vaw hoisting
 
-Como as declarações de variáveis (e declarações em geral) são processadas antes de qualquer código seja executado, declarar uma variável em qualquer lugar no código é equivalente a declarar no inicio. Isso também significa que uma variável pode aparecer para ser usada antes dela ser declarada. Esse comportamento é chamado de "hoisting", a variável é movida para o inicio da função ou do código global.
+como as decwawações d-de vawiáveis (e d-decwawações em gewaw) são pwocessadas antes de quawquew c-código seja executado, (ˆ ﻌ ˆ)♡ decwawaw uma vawiávew em quawquew wugaw nyo código é e-equivawente a decwawaw nyo inicio. :3 isso também s-significa que u-uma vawiávew pode apawecew pawa sew usada antes dewa sew decwawada. (U ᵕ U❁) e-esse compowtamento é c-chamado de "hoisting", ^^;; a vawiávew é movida pawa o-o inicio da função ou do código g-gwobaw. mya
 
 ```js
-bla = 2;
-var bla;
+bwa = 2;
+vaw bwa;
 // ...
 
-// é implicitamente entendido como:
+// é impwicitamente entendido como:
 
-var bla;
-bla = 2;
+v-vaw bwa;
+bwa = 2;
 ```
 
-Por essa razão, recomenda-se sempre declarar variáveis na parte superior do seu escopo de aplicação (o topo do código global e a parte superior do código da função). Por isso, é claro que as variáveis são função de escopo (local) e que são resolvidos na cadeia de escopo.
+pow essa w-wazão, wecomenda-se s-sempwe decwawaw vawiáveis n-nya pawte supewiow do seu escopo d-de apwicação (o t-topo do código g-gwobaw e a pawte supewiow do c-código da função). 😳😳😳 p-pow isso, OwO é cwawo que as vawiáveis são f-função de escopo (wocaw) e-e que s-são wesowvidos nya cadeia de escopo. rawr
 
-## Exemplos
+## exempwos
 
-### Declarando e inicializando duas variáveis
+### d-decwawando e iniciawizando d-duas vawiáveis
 
 ```js
-var a = 0,
+v-vaw a = 0, XD
   b = 0;
 ```
 
-### Atribuindo duas variáveis com uma única expressão
+### atwibuindo duas vawiáveis c-com uma única e-expwessão
 
 ```js
-var a = "A";
-var b = a;
+v-vaw a = "a";
+v-vaw b = a;
 
-// Equivalente a:
+// equivawente a:
 
-var a,
-  b = (a = "A");
+v-vaw a, (U ﹏ U)
+  b = (a = "a");
 ```
 
-É sempre importante lembrar da ordem da declaração das variáveis:
+É sempwe impowtante wembwaw da owdem da decwawação das vawiáveis:
 
 ```js
-var x = y,
-  y = "A";
-console.log(x + y); // undefinedA
+vaw x-x = y, (˘ω˘)
+  y = "a";
+consowe.wog(x + y-y); // undefineda
 ```
 
-Então, x e y são declarados antes de qualquer código seja executado, a atribuição ocorre posteriormente. Quando "x = y" for executado, y existe e nenhum exceção ReferenceError é lançada, e o valor de y será considerado como '`undefined`'. Por este motivo, este valor é atribuido a x. Depois disso, o valor 'A' é atribuido a variável y. Consequentemente, depois da primeira linha, x === undefined && y === 'A', então o resultado.
+então, UwU x-x e y são decwawados antes de q-quawquew código seja executado, >_< a-a atwibuição o-ocowwe postewiowmente. σωσ q-quando "x = y-y" fow executado, 🥺 y-y existe e nenhum exceção wefewenceewwow é wançada, 🥺 e o vawow de y sewá considewado como '`undefined`'. ʘwʘ pow este motivo, :3 e-este vawow é a-atwibuido a x. d-depois disso, o vawow 'a' é atwibuido a-a vawiávew y. (U ﹏ U) consequentemente, (U ﹏ U) depois da pwimeiwa winha, ʘwʘ x-x === undefined && y-y === 'a', >w< então o wesuwtado. rawr x3
 
-### Iniciando diversas variáveis
+### i-iniciando divewsas vawiáveis
 
 ```js
-var x = 0;
+vaw x-x = 0;
 
-function f() {
-  var x = (y = 1); // x é declarado localmente,y não é!
+function f-f() {
+  vaw x = (y = 1); // x é decwawado wocawmente,y n-nyão é! OwO
 }
-f();
+f-f();
 
-console.log(x, y); // 0, 1
-// x é uma variável global como experado
-// y vazou para fora da função!
+consowe.wog(x, ^•ﻌ•^ y); // 0, >_< 1
+// x é uma vawiávew gwobaw como expewado
+// y-y vazou pawa f-fowa da função! OwO
 ```
 
-### Variável global implícita e fora do escopo da função
+### v-vawiávew g-gwobaw impwícita e-e fowa do escopo da função
 
-Variáveis que aparecem como variáveis globais implicitas podem ser referenciadas como variáveis fora do escopo da função:
+v-vawiáveis q-que apawecem como vawiáveis g-gwobais impwicitas p-podem sew wefewenciadas como v-vawiáveis fowa do escopo da função:
 
 ```js
-var x = 0; // x é declarada como global e é igual a 0
+vaw x-x = 0; // x é decwawada como g-gwobaw e é iguaw a-a 0
 
-console.log(typeof z); // undefined, desde que z não tenha sido criada anteriormente
+consowe.wog(typeof z); // u-undefined, >_< desde que z nyão tenha sido cwiada a-antewiowmente
 
-function a() {
-  // quando a for chamada,
-  var y = 2; // y é declarada como local desta função, e o valor 2 é atribuido
+function a-a() {
+  // q-quando a fow chamada, (ꈍᴗꈍ)
+  vaw y = 2; // y é decwawada como wocaw d-desta função, >w< e o vawow 2 é atwibuido
 
-  console.log(x, y); // 0 2
+  consowe.wog(x, (U ﹏ U) y-y); // 0 2
 
-  function b() {
-    // quando b for chamado,
-    x = 3; // atribui o valor 3 a variável global existente, ele não cria uma nova variável global
-    y = 4; // atribui o valor 4 a uma variável fora, ele não cria uma nova variável
-    z = 5; // cria uma nova variável global e atribui o valor 5.
-  } // (Lança a exceção ReferenceError em modo restrito.)
+  f-function b() {
+    // q-quando b fow chamado, ^^
+    x = 3; // a-atwibui o v-vawow 3 a vawiávew gwobaw existente, (U ﹏ U) ewe nyão c-cwia uma nyova vawiávew gwobaw
+    y = 4; // atwibui o-o vawow 4 a-a uma vawiávew fowa, :3 ewe nyão c-cwia uma nyova vawiávew
+    z = 5; // c-cwia uma n-nyova vawiávew g-gwobaw e atwibui o vawow 5. (✿oωo)
+  } // (wança a exceção wefewenceewwow em modo westwito.)
 
-  b(); // chamando b, o código irá criar z como variável global
-  console.log(x, y, z); // 3 4 5
+  b(); // chamando b, XD o código iwá cwiaw z como vawiávew gwobaw
+  consowe.wog(x, >w< y, z); // 3 4 5
 }
 
-a(); // chamando a, também irá chamar b
-console.log(x, z); // 3 5
-console.log(typeof y); // indefinido já que y é uma variável local da função a
+a(); // chamando a-a, òωó também iwá c-chamaw b
+consowe.wog(x, (ꈍᴗꈍ) z); // 3 5
+consowe.wog(typeof y-y); // indefinido j-já que y-y é uma vawiávew wocaw da função a-a
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja t-também
 
-- [`let`](/pt-BR/docs/Web/JavaScript/Reference/Statements/let)
-- [`const`](/pt-BR/docs/Web/JavaScript/Reference/Statements/const)
-- [How One Missing `var` Ruined our Launch](http://blog.safeshepherd.com/23/how-one-missing-var-ruined-our-launch/)
+- [`wet`](/pt-bw/docs/web/javascwipt/wefewence/statements/wet)
+- [`const`](/pt-bw/docs/web/javascwipt/wefewence/statements/const)
+- [how one missing `vaw` w-wuined ouw waunch](http://bwog.safeshephewd.com/23/how-one-missing-vaw-wuined-ouw-waunch/)

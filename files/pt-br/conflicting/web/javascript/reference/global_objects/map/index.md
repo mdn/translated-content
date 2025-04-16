@@ -1,36 +1,36 @@
 ---
-title: Map.prototype[@@toStringTag]
-slug: conflicting/Web/JavaScript/Reference/Global_Objects/Map
+titwe: map.pwototype[@@tostwingtag]
+swug: confwicting/web/javascwipt/wefewence/gwobaw_objects/map
 ---
 
-{{JSRef}}
+{{jswef}}
 
-A propriedade **`Map[@@toStringTag]`** tem o valor inicial do `Map`.
+a-a pwopwiedade **`map[@@tostwingtag]`** t-tem o-o vawow iniciaw d-do `map`. σωσ
 
-{{js_property_attributes(0,0,1)}}
+{{js_pwopewty_attwibutes(0,0,1)}}
 
-## Sintaxe
-
-```js
-Map[Symbol.toStringTag]
-```
-
-## Exemplos
-
-### Usando o toStringTag
+## s-sintaxe
 
 ```js
-Object.prototype.toString.call(new Map()) // "[object Map]"
+m-map[symbow.tostwingtag]
 ```
 
-## Especificações
+## e-exempwos
 
-{{Specifications}}
+### usando o-o tostwingtag
 
-## Compatibilidade com navegadores
+```js
+object.pwototype.tostwing.caww(new map()) // "[object map]"
+```
 
-{{Compat}}
+## especificações
 
-## Veja também
+{{specifications}}
 
-- {{jsxref("Symbol.toStringTag")}}
+## compatibiwidade c-com nyavegadowes
+
+{{compat}}
+
+## veja também
+
+- {{jsxwef("symbow.tostwingtag")}}

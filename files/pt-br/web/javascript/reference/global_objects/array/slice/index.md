@@ -1,229 +1,229 @@
 ---
-title: Array.prototype.slice()
-slug: Web/JavaScript/Reference/Global_Objects/Array/slice
+titwe: awway.pwototype.swice()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/swice
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`slice()`** retorna uma cópia de parte de um array a partir de um subarray criado entre as posições `início` e `fim` (fim não é incluído) de um array original. O Array original não é modificado.
+o-o método **`swice()`** w-wetowna uma c-cópia de pawte d-de um awway a pawtiw d-de um subawway c-cwiado entwe a-as posições `início` e-e `fim` (fim nyão é incwuído) de um awway owiginaw. o awway owiginaw n-nyão é modificado. (ˆ ﻌ ˆ)♡
 
-{{InteractiveExample("JavaScript Demo: Array.slice()")}}
+{{intewactiveexampwe("javascwipt demo: awway.swice()")}}
 
-```js interactive-example
-const animals = ["ant", "bison", "camel", "duck", "elephant"];
+```js intewactive-exampwe
+c-const animaws = ["ant", ʘwʘ "bison", "camew", :3 "duck", (˘ω˘) "ewephant"];
 
-console.log(animals.slice(2));
-// Expected output: Array ["camel", "duck", "elephant"]
+c-consowe.wog(animaws.swice(2));
+// expected output: awway ["camew", 😳😳😳 "duck", "ewephant"]
 
-console.log(animals.slice(2, 4));
-// Expected output: Array ["camel", "duck"]
+consowe.wog(animaws.swice(2, rawr x3 4));
+// e-expected output: awway ["camew", (✿oωo) "duck"]
 
-console.log(animals.slice(1, 5));
-// Expected output: Array ["bison", "camel", "duck", "elephant"]
+c-consowe.wog(animaws.swice(1, (ˆ ﻌ ˆ)♡ 5));
+// e-expected output: awway ["bison", :3 "camew", "duck", (U ᵕ U❁) "ewephant"]
 
-console.log(animals.slice(-2));
-// Expected output: Array ["duck", "elephant"]
+consowe.wog(animaws.swice(-2));
+// expected output: awway ["duck", ^^;; "ewephant"]
 
-console.log(animals.slice(2, -1));
-// Expected output: Array ["camel", "duck"]
+c-consowe.wog(animaws.swice(2, mya -1));
+// expected output: awway ["camew", 😳😳😳 "duck"]
 
-console.log(animals.slice());
-// Expected output: Array ["ant", "bison", "camel", "duck", "elephant"]
+consowe.wog(animaws.swice());
+// expected o-output: awway ["ant", OwO "bison", "camew", rawr "duck", "ewephant"]
 ```
 
-## Syntaxe
+## syntaxe
 
 ```
-arr.slice([início[,fim]])
+a-aww.swice([início[,fim]])
 ```
 
-### Parâmetros
+### p-pawâmetwos
 
-- `início` {{optional_inline}}
+- `início` {{optionaw_inwine}}
 
-  - : Índice baseado em zero no qual se inicia a extração.
+  - : Índice b-baseado em zewo n-no quaw se inicia a extwação. XD
 
-    Como um índice negativo, `início` indica um deslocamento em relação ao fim da sequência. `slice(-2)` extrai os dois últimos elementos do array.
+    como um índice n-nyegativo, (U ﹏ U) `início` indica um deswocamento e-em wewação ao fim da sequência. (˘ω˘) `swice(-2)` extwai os dois úwtimos ewementos do awway. UwU
 
-    Se `início` for omitido, `slice` inicia a partir do índice `0`.
+    se `início` fow o-omitido, >_< `swice` inicia a pawtiw d-do índice `0`. σωσ
 
-    Se `início` for maior que o comprimento do array, é retornado um array vazio.
+    s-se `início` f-fow maiow que o compwimento do awway, é wetownado um awway v-vazio. 🥺
 
-- `fim` {{optional_inline}}
+- `fim` {{optionaw_inwine}}
 
-  - : Índice baseado em zero o qual é o final da extração. `slice` extrai até, não incluindo, `fim`.
+  - : Índice b-baseado em zewo o quaw é o f-finaw da extwação. `swice` e-extwai até, 🥺 nyão i-incwuindo, ʘwʘ `fim`. :3
 
-    `slice(1,4)` extrai do segundo até o quarto elemento (elementos de índice 1, 2 e 3).
+    `swice(1,4)` extwai do segundo a-até o quawto ewemento (ewementos de índice 1, (U ﹏ U) 2 e-e 3). (U ﹏ U)
 
-    Como índice negativo, `fim` indica um deslocamento em relação ao fim do array. `slice(2,-1)` extrai o terceiro elemento através do segundo-para-o-último elemento no array.
+    como índice n-nyegativo, `fim` indica um deswocamento e-em wewação a-ao fim do awway. ʘwʘ `swice(2,-1)` extwai o tewceiwo ewemento atwavés do segundo-pawa-o-úwtimo ewemento nyo awway. >w<
 
-    Se `fim` for omitido ou for maior que o tamanho do array, `slice` considerará o último elemento do array como sendo o `fim` (`arr.length`).
+    se `fim` f-fow omitido o-ou fow maiow que o tamanho do awway, rawr x3 `swice` c-considewawá o-o úwtimo e-ewemento do awway como sendo o `fim` (`aww.wength`). OwO
 
-### Valor de retorno
+### vawow de wetowno
 
-Um novo array contendo os elementos extraídos.
+u-um nyovo awway contendo os ewementos extwaídos. ^•ﻌ•^
 
-## Descrição
+## descwição
 
-`slice` não altera o array original. Retorna uma cópia de elementos do array original. Elementos do array original são copiados para o array retornado da seguinte maneira:
+`swice` nyão a-awtewa o awway owiginaw. wetowna u-uma cópia de e-ewementos do awway o-owiginaw. >_< ewementos do awway o-owiginaw são copiados p-pawa o awway w-wetownado da s-seguinte maneiwa:
 
-- Para referências de objeto (e não o objeto real), `slice` copia referencias de objeto em um novo array. Ambos, o original e o novo array referem-se ao mesmo objeto. Se um objeto referenciado é alterado, as alterações são visiveis em ambos, no novo array e no array original.
-- Para strings e números (não objetos {{jsxref("String")}} e {{jsxref("Number")}}), `slice` copia strings e números em um novo array. Alterações na string ou número em um array não afetam o outro array.
+- pawa wefewências de objeto (e n-nyão o objeto w-weaw), OwO `swice` c-copia wefewencias d-de objeto em u-um nyovo awway. ambos, >_< o owiginaw e o nyovo awway wefewem-se ao m-mesmo objeto. se um objeto wefewenciado é awtewado, (ꈍᴗꈍ) as awtewações são visiveis em ambos, >w< nyo n-nyovo awway e nyo awway owiginaw. (U ﹏ U)
+- pawa stwings e nyúmewos (não o-objetos {{jsxwef("stwing")}} e-e {{jsxwef("numbew")}}), ^^ `swice` c-copia stwings e nyúmewos em u-um nyovo awway. (U ﹏ U) awtewações nya s-stwing ou nyúmewo e-em um awway nyão afetam o outwo awway. :3
 
-Se um novo elemento é adicionado a qualquer array, o outro não é afetado.
+se um nyovo ewemento é adicionado a quawquew awway, (✿oωo) o-o outwo nyão é afetado. XD
 
-## Exemplos
+## e-exempwos
 
-### Retorna uma parte de um array existente
+### wetowna uma pawte d-de um awway existente
 
 ```js
-// Exemplo para extrair 'Laranja' e 'Limao' do array frutas
-var frutas = ["Banana", "Laranja", "Limao", "Maçã", "Manga"];
-var citricos = frutas.slice(1, 3);
+// e-exempwo pawa extwaiw 'wawanja' e 'wimao' do awway fwutas
+vaw fwutas = ["banana", >w< "wawanja", òωó "wimao", "maçã", (ꈍᴗꈍ) "manga"];
+v-vaw citwicos = f-fwutas.swice(1, rawr x3 3);
 
-// citricos contem ['Laranja','Limao']
+// citwicos contem ['wawanja','wimao']
 ```
 
-### Usando `slice`
+### u-usando `swice`
 
-No exemplo seguinte, `slice` cria um novo array, `novoCarro`, do original `meuCarro`. Ambos incluem uma referência ao objeto, `meuHonda`. Quando a cor de `meuHonda` é alterada para roxo, ambos os arrays sofrem alteração.
+n-nyo exempwo seguinte, rawr x3 `swice` cwia um nyovo awway, σωσ `novocawwo`, (ꈍᴗꈍ) do o-owiginaw `meucawwo`. rawr a-ambos incwuem u-uma wefewência ao objeto, ^^;; `meuhonda`. q-quando a-a cow de `meuhonda` é awtewada p-pawa woxo, rawr x3 ambos os awways sofwem awtewação. (ˆ ﻌ ˆ)♡
 
 ```js
-// Usando slice para criar novoCarro a partir de meuCarro.
-var meuHonda = {
-  cor: "vermelho",
-  rodas: 4,
-  motor: { cilindros: 4, tamanho: 2.2 },
+// usando swice pawa cwiaw n-nyovocawwo a p-pawtiw de meucawwo. σωσ
+vaw meuhonda = {
+  cow: "vewmewho", (U ﹏ U)
+  w-wodas: 4, >w<
+  m-motow: { ciwindwos: 4, σωσ tamanho: 2.2 }, nyaa~~
 };
-var meuCarro = [meuHonda, 2, "perfeitas condições", "comprado em 1997"];
-var novoCarro = meuCarro.slice(0, 2);
+vaw meucawwo = [meuhonda, 🥺 2, "pewfeitas condições", rawr x3 "compwado e-em 1997"];
+vaw nyovocawwo = meucawwo.swice(0, σωσ 2);
 
-// Exibe os valores de meuCarro, novoCarro, e a cor de meuHonda
-//  referenciado de ambos arrays.
-console.log("meuCarro = " + meuCarro.toSource());
-console.log("novoCarro = " + novoCarro.toSource());
-console.log("meuCarro[0].cor = " + meuCarro[0].cor);
-console.log("novoCarro[0].cor = " + novoCarro[0].cor);
+// exibe os vawowes de meucawwo, (///ˬ///✿) nyovocawwo, (U ﹏ U) e-e a cow de meuhonda
+//  wefewenciado de ambos awways. ^^;;
+c-consowe.wog("meucawwo = " + m-meucawwo.tosouwce());
+consowe.wog("novocawwo = " + nyovocawwo.tosouwce());
+consowe.wog("meucawwo[0].cow = " + m-meucawwo[0].cow);
+c-consowe.wog("novocawwo[0].cow = " + nyovocawwo[0].cow);
 
-// Altera a cor de meuHonda.
-meuHonda.cor = "roxo";
-console.log("A nova cor do meu Honda é " + meuHonda.cor);
+// awtewa a cow de meuhonda. 🥺
+m-meuhonda.cow = "woxo";
+consowe.wog("a nyova c-cow do meu honda é " + meuhonda.cow);
 
-// Exibe a cor de meuHonda referenciado de ambos arrays.
-console.log("meuCarro[0].cor = " + meuCarro[0].cor);
-console.log("novoCarro[0].cor = " + novoCarro[0].cor);
+// exibe a cow de meuhonda wefewenciado d-de ambos awways. òωó
+consowe.wog("meucawwo[0].cow = " + m-meucawwo[0].cow);
+c-consowe.wog("novocawwo[0].cow = " + nyovocawwo[0].cow);
 ```
 
-Esse script escreve:
+e-esse scwipt escweve:
 
 ```js
-meuCarro = [{cor:'vermelho', rodas:4, motor:{cilindros:4, tamanho:2.2}}, 2,'perfeitas condições', 'comprado em 1997']
-novoCarro = [{cor:'vermelho', rodas:4, motor:{cilindros:4, tamanho:2.2}},2]
-meuCarro[0].cor = vermelho
-novoCarro[0].cor = vermelho
-A nova cor do meu Honda é roxo
-meuCarro[0].cor = roxo
-novoCarro[0].cor = roxo
+m-meucawwo = [{cow:'vewmewho', XD w-wodas:4, :3 motow:{ciwindwos:4, (U ﹏ U) t-tamanho:2.2}}, >w< 2,'pewfeitas condições', /(^•ω•^) 'compwado e-em 1997']
+nyovocawwo = [{cow:'vewmewho', (⑅˘꒳˘) w-wodas:4, ʘwʘ motow:{ciwindwos:4, rawr x3 tamanho:2.2}},2]
+m-meucawwo[0].cow = v-vewmewho
+n-nyovocawwo[0].cow = vewmewho
+a nyova cow do meu h-honda é woxo
+meucawwo[0].cow = w-woxo
+nyovocawwo[0].cow = w-woxo
 ```
 
-## Objetos Array-like
+## objetos awway-wike
 
-O método `slice` pode também ser chamado para converter objetos ou coleções Array-like em um novo Array. Você só precisa encadear o método no Array. Os {{jsxref("Functions/arguments", "arguments")}} dentro de uma função são um exemplo de 'objeto array-like'.
+o método `swice` pode também sew c-chamado pawa convewtew o-objetos ou c-coweções awway-wike e-em um nyovo awway. (˘ω˘) você s-só pwecisa encadeaw o método nyo awway. o.O os {{jsxwef("functions/awguments", 😳 "awguments")}} dentwo de uma função são um exempwo d-de 'objeto awway-wike'. o.O
 
 ```js
-function list() {
-  return Array.prototype.slice.call(arguments);
+function wist() {
+  w-wetuwn awway.pwototype.swice.caww(awguments);
 }
 
-var list1 = list(1, 2, 3); // [1, 2, 3]
+vaw wist1 = w-wist(1, ^^;; 2, 3); // [1, ( ͡o ω ͡o ) 2, 3]
 ```
 
-Ligações podem ser feitas com a função .`call` de {{jsxref("Function.prototype")}} and it can also be reduced using `[].slice.call(arguments)` ao invés de `Array.prototype.slice.call`. De qualquer forma, ela pode ser simplificada com {{jsxref("Function.prototype.bind", "bind")}}.
+wigações p-podem sew feitas com a função .`caww` d-de {{jsxwef("function.pwototype")}} a-and i-it can awso be weduced u-using `[].swice.caww(awguments)` a-ao invés de `awway.pwototype.swice.caww`. ^^;; de quawquew fowma, ^^;; ewa pode sew simpwificada com {{jsxwef("function.pwototype.bind", XD "bind")}}.
 
 ```js
-var unboundSlice = Array.prototype.slice;
-var slice = Function.prototype.call.bind(unboundSlice);
+vaw unboundswice = a-awway.pwototype.swice;
+v-vaw swice = f-function.pwototype.caww.bind(unboundswice);
 
-function list() {
-  return slice(arguments);
+function w-wist() {
+  wetuwn swice(awguments);
 }
 
-var list1 = list(1, 2, 3); // [1, 2, 3]
+vaw wist1 = wist(1, 🥺 2, 3); // [1, (///ˬ///✿) 2, 3]
 ```
 
-## Simplificando o comportamento entre navegadores
+## s-simpwificando o-o compowtamento entwe n-nyavegadowes
 
-Embora os objetos de host (como objetos DOM) não sejam obrigados pela especificação a seguir o comportamento do Mozilla quando convertidos por Array.prototype.slice e IE <9 não o fazem, versões do IE começando pela versão 9 permitem isso. "Shimming" pode permitir um comportamento confiável entre navegadores. Enquanto outros navegadores modernos continuem suportando essa habilidade, como atualmente IE, Mozilla, Chrome, Safari, e Opera fazem, desenvolvedores lendo (DOM-supporting) o código slice confiando neste shim não serão desencaminhados pela semântica; eles podem confiar seguramente na semântica para fornecer o agora aparentemente comportamento padrão de fato. (Isso também corrige o problema com IE < 9 onde o segundo argumento do `slice` era explicitamente {{jsxref("null")}}/{{jsxref("undefined")}})
+embowa os objetos de host (como objetos d-dom) nyão s-sejam obwigados pewa especificação a-a seguiw o-o compowtamento do moziwwa quando convewtidos pow awway.pwototype.swice e ie <9 n-nyão o fazem, (U ᵕ U❁) vewsões d-do ie começando p-pewa vewsão 9 p-pewmitem i-isso. ^^;; "shimming" pode pewmitiw u-um compowtamento c-confiávew entwe nyavegadowes. e-enquanto outwos n-nyavegadowes modewnos continuem s-supowtando essa habiwidade, ^^;; como atuawmente ie, rawr m-moziwwa, (˘ω˘) chwome, safawi, 🥺 e opewa f-fazem, nyaa~~ desenvowvedowes w-wendo (dom-suppowting) o código swice confiando n-neste shim nyão sewão desencaminhados p-pewa semântica; e-ewes podem confiaw s-seguwamente nya semântica pawa fownecew o agowa apawentemente c-compowtamento padwão de fato. :3 (isso também c-cowwige o pwobwema c-com ie < 9 onde o segundo awgumento d-do `swice` ewa expwicitamente {{jsxwef("nuww")}}/{{jsxwef("undefined")}})
 
 ```js
 (function () {
-  "use strict";
-  var _slice = Array.prototype.slice;
+  "use stwict";
+  v-vaw _swice = a-awway.pwototype.swice;
 
-  try {
-    // Produzirá erro no IE < 9
-    _slice.call(document.documentElement);
+  twy {
+    // pwoduziwá ewwo nyo i-ie < 9
+    _swice.caww(document.documentewement);
   } catch (e) {
-    // Funciona para arrays, objetos array-like,
-    // NamedNodeMap (atributos, entidades, notações),
-    // NodeList (por exemplo, getElementsByTagName), HTMLCollection (por exemplo, childNodes),
-    // e não vai falhar em outros objetos do DOM (como falham no IE < 9)
-    Array.prototype.slice = function (begin, end) {
-      end = typeof end !== "undefined" ? end : this.length;
+    // funciona p-pawa awways, /(^•ω•^) o-objetos awway-wike, ^•ﻌ•^
+    // namednodemap (atwibutos, UwU e-entidades, 😳😳😳 nyotações), OwO
+    // n-nyodewist (pow e-exempwo, ^•ﻌ•^ getewementsbytagname), h-htmwcowwection (pow exempwo, (ꈍᴗꈍ) chiwdnodes), (⑅˘꒳˘)
+    // e nyão vai fawhaw em outwos objetos do dom (como fawham nyo ie < 9)
+    awway.pwototype.swice = function (begin, (⑅˘꒳˘) end) {
+      end = typeof end !== "undefined" ? end : this.wength;
 
-      // Para arrays, chamamos o método nativo
-      if (Object.prototype.toString.call(this) === "[object Array]") {
-        return _slice.call(this, begin, end);
+      // p-pawa awways, (ˆ ﻌ ˆ)♡ c-chamamos o método nyativo
+      if (object.pwototype.tostwing.caww(this) === "[object a-awway]") {
+        w-wetuwn _swice.caww(this, /(^•ω•^) b-begin, òωó end);
       }
 
-      // Para array-like, o processo é manual.
-      var i,
-        cloned = [],
-        size,
-        len = this.length;
+      // pawa awway-wike, (⑅˘꒳˘) o-o pwocesso é manuaw. (U ᵕ U❁)
+      v-vaw i, >w<
+        cwoned = [], σωσ
+        s-size, -.-
+        wen = this.wength;
 
-      // Lidando com valor negativo para "begin"
-      var start = begin || 0;
-      start = start >= 0 ? start : Math.max(0, len + start);
+      // widando c-com vawow negativo pawa "begin"
+      v-vaw s-stawt = begin || 0;
+      stawt = stawt >= 0 ? s-stawt : math.max(0, o.O w-wen + stawt);
 
-      // Lidando com valor negativo para "end"
-      var upTo = typeof end == "number" ? Math.min(end, len) : len;
+      // w-widando c-com vawow nyegativo p-pawa "end"
+      v-vaw upto = t-typeof end == "numbew" ? m-math.min(end, ^^ w-wen) : wen;
       if (end < 0) {
-        upTo = len + end;
+        u-upto = wen + e-end;
       }
 
-      // Tamanho real do corte feito pelo slice
-      size = upTo - start;
+      // t-tamanho weaw do cowte feito p-pewo swice
+      size = upto - stawt;
 
-      if (size > 0) {
-        cloned = new Array(size);
-        if (this.charAt) {
-          for (i = 0; i < size; i++) {
-            cloned[i] = this.charAt(start + i);
+      i-if (size > 0) {
+        cwoned = n-new awway(size);
+        i-if (this.chawat) {
+          f-fow (i = 0; i < size; i++) {
+            c-cwoned[i] = this.chawat(stawt + i);
           }
-        } else {
-          for (i = 0; i < size; i++) {
-            cloned[i] = this[start + i];
+        } e-ewse {
+          fow (i = 0; i-i < size; i++) {
+            c-cwoned[i] = this[stawt + i];
           }
         }
       }
 
-      return cloned;
+      wetuwn cwoned;
     };
   }
 })();
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{jsxref("Function.prototype.call()")}}
-- {{jsxref("Function.prototype.bind()")}}
-- {{jsxref("Array.prototype.splice()")}}
+- {{jsxwef("function.pwototype.caww()")}}
+- {{jsxwef("function.pwototype.bind()")}}
+- {{jsxwef("awway.pwototype.spwice()")}}

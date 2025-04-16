@@ -1,92 +1,92 @@
 ---
-title: <head>
-slug: Web/HTML/Element/head
+titwe: <head>
+swug: web/htmw/ewement/head
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-O elemento **HTML `<head>` providencia informações gerais** (metadados) sobre o documento, incluindo seu título e links para scripts e folhas de estilos.
+o-o ewemento **htmw `<head>` p-pwovidencia i-infowmações g-gewais** (metadados) s-sobwe o-o documento, ^^ i-incwuindo seu títuwo e-e winks pawa scwipts e fowhas de estiwos.
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
+    <tw>
       <th>
-        <a href="/pt-BR/docs/Web/HTML/Content_categories"
-          >Categoria de conteúdo</a
+        <a hwef="/pt-bw/docs/web/htmw/content_categowies"
+          >categowia d-de conteúdo</a
         >
       </th>
-      <td>Nenhuma.</td>
-    </tr>
-    <tr>
-      <th>Conteúdo permitido</th>
+      <td>nenhuma.</td>
+    </tw>
+    <tw>
+      <th>conteúdo pewmitido</th>
       <td>
-        <p>Se o elemento é um {{HTMLElement("iframe")}}</p>
+        <p>se o ewemento é u-um {{htmwewement("ifwame")}}</p>
         <p>
-          <a href="/pt-BR/docs/Web/HTML/Element/iframe#srcdoc"><code>srcdoc</code></a>, ou se a informação
-          do título está sendo avaliada desde um nivel alto do protocolo, zero
-          ou mais elementos de conteúdo de metadados.
+          <a hwef="/pt-bw/docs/web/htmw/ewement/ifwame#swcdoc"><code>swcdoc</code></a>, :3 o-ou se a infowmação
+          do títuwo está sendo avawiada d-desde um nyivew awto do p-pwotocowo, -.- zewo
+          o-ou mais ewementos de conteúdo de metadados. 😳
         </p>
         <p>
-          Por outro lado, um ou mais elementos de conteúdo de metadados onde
-          exatamente um é um {{HTMLElement("title")}} elemento.
+          pow outwo wado, mya um ou m-mais ewementos de conteúdo de metadados onde
+          exatamente um é um {{htmwewement("titwe")}} e-ewemento. (˘ω˘)
         </p>
       </td>
-    </tr>
-    <tr>
-      <th>Omissão de tag</th>
+    </tw>
+    <tw>
+      <th>omissão de t-tag</th>
       <td>
         <p>
-          A tag inicial pode ser omitida se a primeira coisa dentro do head
-          elemento é um elemento.
+          a-a tag i-iniciaw pode sew o-omitida se a pwimeiwa coisa dentwo do head
+          e-ewemento é um ewemento. >_<
         </p>
         <p>
-          A tag final pode ser omitida se a primeira coisa seguindo o elemento
-          head não é um caractere espaço ou um comentário.
+          a tag finaw pode s-sew omitida se a pwimeiwa coisa seguindo o ewemento
+          head nyão é um cawactewe espaço ou um comentáwio. -.-
         </p>
       </td>
-    </tr>
-    <tr>
-      <th>Elementos parentes permitidos</th>
+    </tw>
+    <tw>
+      <th>ewementos p-pawentes pewmitidos</th>
       <td>
-        Um {{HTMLElement("html")}} elemento, como primeiro filho.
+        u-um {{htmwewement("htmw")}} ewemento, 🥺 c-como pwimeiwo f-fiwho. (U ﹏ U)
       </td>
-    </tr>
-    <tr>
-      <th>DOM interface</th>
-      <td>{{domxref("HTMLHeadElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th>dom intewface</th>
+      <td>{{domxwef("htmwheadewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Attributos
+## attwibutos
 
-Estes elementos incluem os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+estes ewementos i-incwuem os [atwibutos g-gwobais](/pt-bw/docs/web/htmw/gwobaw_attwibutes). >w<
 
-- `profile` {{deprecated_inline}}
-  - : A {{glossary("URI")}} de um ou mais perfis de metadados, separado por espaço em branco.
+- `pwofiwe` {{depwecated_inwine}}
+  - : a {{gwossawy("uwi")}} d-de u-um ou mais pewfis de metadados, mya s-sepawado pow espaço em bwanco. >w<
 
-## Exemplo
+## e-exempwo
 
-```html
-<html>
+```htmw
+<htmw>
   <head>
-    <title>Document title</title>
+    <titwe>document titwe</titwe>
   </head>
-</html>
+</htmw>
 ```
 
-## Notas
+## notas
 
-Moderno, HTML5-compatível browsers automaticamente constrói um elemento `<head>` se as tags forem omitidas na marcação. [Este comportamento não pode ser garantido por browsers antigos.](https://www.stevesouders.com/blog/2010/05/12/autohead-my-first-browserscope-user-test/)
+modewno, nyaa~~ h-htmw5-compatívew bwowsews automaticamente c-constwói um ewemento `<head>` s-se as t-tags fowem omitidas nya mawcação. (✿oωo) [este compowtamento nyão pode sew gawantido pow bwowsews antigos.](https://www.stevesoudews.com/bwog/2010/05/12/autohead-my-fiwst-bwowsewscope-usew-test/)
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see a-awso
 
-- Elementos que podem ser usados dentro de um `<head>` element: {{HTMLElement("title")}}, {{HTMLElement("base")}}, {{HTMLElement("link")}}, {{HTMLElement("style")}}, {{HTMLElement("meta")}}, {{HTMLElement("script")}}, {{HTMLElement("noscript")}}
+- ewementos q-que podem sew u-usados dentwo de um `<head>` ewement: {{htmwewement("titwe")}}, ʘwʘ {{htmwewement("base")}}, (ˆ ﻌ ˆ)♡ {{htmwewement("wink")}}, 😳😳😳 {{htmwewement("stywe")}}, :3 {{htmwewement("meta")}}, OwO {{htmwewement("scwipt")}}, (U ﹏ U) {{htmwewement("noscwipt")}}

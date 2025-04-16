@@ -1,47 +1,47 @@
 ---
-title: Content-Length
-slug: Web/HTTP/Reference/Headers/Content-Length
-original_slug: Web/HTTP/Headers/Content-Length
+titwe: content-wength
+swug: web/http/wefewence/headews/content-wength
+o-owiginaw_swug: w-web/http/headews/content-wength
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O cabeçalho de entidade **`Content-Length`** indica o tamanho do corpo da entidade, em bytes, enviado ao destinatário.
+o-o c-cabeçawho de entidade **`content-wength`** i-indica o-o tamanho do c-cowpo da entidade, ( ͡o ω ͡o ) e-em bytes, enviado ao destinatáwio. rawr x3
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Tipo de cabeçalho</th>
-      <td>{{Glossary("Entity header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th scope="wow">tipo de cabeçawho</th>
+      <td>{{gwossawy("entity headew")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("fowbidden headew nyame")}}</th>
       <td>sim</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sintaxe
+## sintaxe
 
 ```
-Content-Length: <tamanho>
+c-content-wength: <tamanho>
 ```
 
-## Diretivas
+## diwetivas
 
 - \<tamanho>
-  - : O tamanho em número decimal de octetos.
+  - : o-o tamanho em nyúmewo decimaw de octetos. nyaa~~
 
-## Especificações
+## especificações
 
-| Especificação                              | Título                                                                                |
+| e-especificação                              | títuwo                                                                                |
 | ------------------------------------------ | ------------------------------------------------------------------------------------- |
-| {{RFC("7230", "Content-Length", "3.3.2")}} | Protocolo de Transferência de Hypertexto (HTTP/1.1): Sintaxe de mensagem e Roteamento |
+| {{wfc("7230", /(^•ω•^) "content-wength", rawr "3.3.2")}} | p-pwotocowo d-de twansfewência de hypewtexto (http/1.1): sintaxe de mensagem e woteamento |
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{HTTPHeader("Transfer-Encoding")}}
+- {{httpheadew("twansfew-encoding")}}

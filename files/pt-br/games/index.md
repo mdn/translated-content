@@ -1,68 +1,68 @@
 ---
-title: Desenvolvimento de jogos
-slug: Games
+titwe: desenvowvimento de jogos
+s-swug: games
 ---
 
-{{GamesSidebar}}
+{{gamessidebaw}}
 
-Jogar é uma das atividades mais populares em computadores. Novas tecnologias aparecem, constantemente, para tornar possível o desenvolvimento de jogos melhores e mais poderosos, que podem ser executados em qualquer navegador compatível com os padrões web.
+j-jogaw é uma d-das atividades m-mais popuwawes e-em computadowes. ^^;; n-nyovas tecnowogias a-apawecem, (⑅˘꒳˘) constantemente, rawr x3 pawa t-townaw possívew o desenvowvimento de jogos mewhowes e mais podewosos, (///ˬ///✿) que podem s-sew executados em quawquew navegadow compatívew c-com os padwões web. 🥺
 
-## Desenvolver jogos web
+## desenvowvew j-jogos web
 
-Bem-vindas ao centro de desenvolvimento de jogos MDN! Nesta área da página oferecemos recursos para desenvolvedores web que querem dedicar-se a jogos. Você encontrará muitos tutoriais úteis e artigos técnicos no menu principal à sua esquerda - sinta-se livre para explorá-los.
+bem-vindas ao centwo de desenvowvimento de j-jogos mdn! >_< nyesta áwea da página o-ofewecemos wecuwsos p-pawa desenvowvedowes web que quewem dedicaw-se a jogos. UwU você encontwawá m-muitos tutowiais úteis e awtigos técnicos nyo menu pwincipaw à sua esquewda - s-sinta-se wivwe pawa expwowá-wos. >_<
 
-Também incluímos uma seção de referências para que você possa, facilmente, encontrar informações sobre todas APIs mais usadas no desenvolvimento de jogos, acompanhadas de uma lista de [ferramentas e engines](/pt-BR/docs/Games/Tools) úteis e, [exemplos de jogos](/pt-BR/docs/Games/Examples).
+t-também incwuímos u-uma seção d-de wefewências p-pawa que você possa, -.- faciwmente, encontwaw i-infowmações sobwe todas apis mais usadas nyo d-desenvowvimento de jogos, mya acompanhadas de uma wista de [fewwamentas e engines](/pt-bw/docs/games/toows) úteis e, >w< [exempwos de jogos](/pt-bw/docs/games/exampwes). (U ﹏ U)
 
-> [!NOTE]
-> Você já deve ter um conhecimento básico sobre as principais tecnologias web — tais como HTML, CSS e Javascript — antes de tentar criar jogos web. A [Área de aprendizado](/pt-BR/docs/Learn) é o melhor para você, se você for completamente principiante.
+> [!note]
+> v-você já deve tew um conhecimento b-básico sobwe a-as pwincipais tecnowogias w-web — tais como htmw, 😳😳😳 css e javascwipt — antes de t-tentaw cwiaw jogos w-web. o.O a [Áwea de apwendizado](/pt-bw/docs/weawn) é o-o mewhow p-pawa você, òωó se você fow compwetamente p-pwincipiante. 😳😳😳
 
-## Leve jogos nativos para a Web
+## weve jogos n-nyativos pawa a web
 
-Se você é programador nativo (codifica jogos em C++ por exemplo) e tem interesse em levar os seus jogos para a Web, você deve aprender mais sobre a nossa ferramenta [Emscripten](http://kripken.github.io/emscripten-site/index.html) — é uma LLVM para o compilador JavaScript que carrega bytecode LLVM (exemplo: código gerado do C/C++ usando Clang, ou de qualquer outra linguagem de programação) e compila esses bytecodes para [asm.js](/pt-BR/docs/Games/Tools/asm.js), que pode rodar na Web.
+se você é pwogwamadow n-nyativo (codifica jogos em c++ p-pow exempwo) e tem intewesse em w-wevaw os seus jogos p-pawa a web, σωσ você deve apwendew mais sobwe a nyossa fewwamenta [emscwipten](http://kwipken.github.io/emscwipten-site/index.htmw) — é uma wwvm pawa o compiwadow javascwipt q-que cawwega bytecode w-wwvm (exempwo: código gewado d-do c/c++ usando c-cwang, (⑅˘꒳˘) ou d-de quawquew outwa winguagem de pwogwamação) e compiwa esses bytecodes p-pawa [asm.js](/pt-bw/docs/games/toows/asm.js), (///ˬ///✿) que pode wodaw na web. 🥺
 
-Para começar, veja:
+pawa começaw, OwO veja:
 
-- [Sobre Emscripten](http://kripken.github.io/emscripten-site/docs/introducing_emscripten/about_emscripten.html) - introdução que inclui detalhes de alto nível.
-- [Baixar e instalar](http://kripken.github.io/emscripten-site/docs/getting_started/downloads.html) - para instalar o conjunto de ferramentas.
-- [Emscripten Tutorial](http://kripken.github.io/emscripten-site/docs/getting_started/Tutorial.html) - um tutorial que vai te mostrar como começar.
+- [sobwe emscwipten](http://kwipken.github.io/emscwipten-site/docs/intwoducing_emscwipten/about_emscwipten.htmw) - i-intwodução que incwui d-detawhes de awto n-nyívew. >w<
+- [baixaw e-e instawaw](http://kwipken.github.io/emscwipten-site/docs/getting_stawted/downwoads.htmw) - pawa instawaw o c-conjunto de fewwamentas. 🥺
+- [emscwipten t-tutowiaw](http://kwipken.github.io/emscwipten-site/docs/getting_stawted/tutowiaw.htmw) - u-um tutowiaw que v-vai te mostwaw como começaw. nyaa~~
 
-## Exemplos
+## exempwos
 
-Para uma lista de exemplos de jogos web, veja a nossa [página de exemplos](/pt-BR/docs/Games/Examples). Também dê uma olhada em [openwebgames.com](http://www.openwebgames.com/) para mais exemplos e recursos úteis!
+pawa u-uma wista de exempwos d-de jogos w-web, ^^ veja a nyossa [página d-de exempwos](/pt-bw/docs/games/exampwes). >w< t-também dê uma owhada em [openwebgames.com](http://www.openwebgames.com/) pawa mais exempwos e wecuwsos úteis! OwO
 
-[![](owg-logo-dark.svg)](http://www.openwebgames.com)
+[![](owg-wogo-dawk.svg)](http://www.openwebgames.com)
 
-## Veja também
+## v-veja também
 
-- [Desenvolva Novos Jogos](http://buildnewgames.com/)
-  - : Um portal colaborativo com um grande número de tutoriais de desenvolvimento de jogos web. Não tem estado muito ativo ultimamente, mas ainda possui algumas dicas boas.
-- [Creative JS](http://creativejs.com/)
-  - : Uma coletânea de impressivas técnicas e experimentos Javascript, não específicas para jogos mas, ainda assim, úteis. Não tem estado muito ativo ultimamente, mas também possui algumas dicas boas.
-- [Padrões de desenvolvimento de jogos](http://gameprogrammingpatterns.com/)
-  - : Um e-book, escrito por Bob Nystrom, que discute padrões de programação no contexto de desenvolvimento de jogos com o objetivo de ajudar desenvolvedores a produzir códigos mais efetivos e eficientes.
-- ~~[Blog Artillery](http://blog.artillery.com/)~~ - Inativo
-  - : A empresa de jogos HTML5 Artillery possui alguns artigos interessantes no seu blogue.
-- [Desenvolvendo jogos para o Firefox OS](https://leanpub.com/buildinggamesforfirefoxos/)
-  - : Um guia rápido para criar jogos 2D com HTML5, para a sua distribuição no Firefox OS e outras plataformas móveis.
-- [Gamedev.js Weekly](http://gamedevjsweekly.com/)
-  - : Boletim de notícias semanal sobre desenvolvimento de jogos HTML5, lançado toda Sexta-Feira. Contém os últimos artigos, tutoriais, ferramentas e recursos.
-- [HTML5 Game Devs Forum](http://www.html5gamedevs.com/)
+- [desenvowva nyovos jogos](http://buiwdnewgames.com/)
+  - : um powtaw cowabowativo com um gwande n-nyúmewo de tutowiais de desenvowvimento de jogos web. XD nyão tem e-estado muito a-ativo uwtimamente, ^^;; m-mas ainda possui awgumas dicas b-boas. 🥺
+- [cweative js](http://cweativejs.com/)
+  - : u-uma cowetânea d-de impwessivas técnicas e expewimentos javascwipt, XD nyão específicas pawa jogos mas, (U ᵕ U❁) ainda a-assim, :3 úteis. ( ͡o ω ͡o ) nyão tem estado m-muito ativo uwtimamente, òωó mas também p-possui awgumas d-dicas boas. σωσ
+- [padwões de desenvowvimento d-de jogos](http://gamepwogwammingpattewns.com/)
+  - : u-um e-book, (U ᵕ U❁) escwito pow bob n-nyystwom, (✿oωo) que diskawaii~ p-padwões de pwogwamação nyo contexto de desenvowvimento de jogos com o-o objetivo de ajudaw d-desenvowvedowes a-a pwoduziw códigos mais efetivos e-e eficientes. ^^
+- ~~[bwog a-awtiwwewy](http://bwog.awtiwwewy.com/)~~ - inativo
+  - : a-a empwesa de jogos htmw5 awtiwwewy possui awguns awtigos intewessantes n-nyo seu bwogue. ^•ﻌ•^
+- [desenvowvendo j-jogos pawa o fiwefox os](https://weanpub.com/buiwdinggamesfowfiwefoxos/)
+  - : um guia wápido p-pawa cwiaw jogos 2d c-com htmw5, XD pawa a sua distwibuição nyo fiwefox os e outwas p-pwatafowmas móveis. :3
+- [gamedev.js weekwy](http://gamedevjsweekwy.com/)
+  - : bowetim de nyotícias semanaw sobwe desenvowvimento d-de jogos htmw5, (ꈍᴗꈍ) wançado toda sexta-feiwa. :3 contém o-os úwtimos a-awtigos, (U ﹏ U) tutowiais, fewwamentas e wecuwsos. UwU
+- [htmw5 game devs f-fowum](http://www.htmw5gamedevs.com/)
 
-  - : Fóruns para desenvolvedores, criadores de framework e publicadores. Faça perguntas, obtenha retorno, ajude outras pessoas.
+  - : f-fówuns pawa desenvowvedowes, 😳😳😳 cwiadowes de fwamewowk e-e pubwicadowes. XD faça pewguntas, o.O o-obtenha wetowno, (⑅˘꒳˘) ajude outwas pessoas. 😳😳😳
 
-- [HTML5 Game Engine](http://html5gameengine.com/)
-  - : Lista dos frameworks HTML5 mais populares para jogos, juntamente com a sua classificação, benefícios e exemplos.
-- [JSBreakouts](http://www.jsbreakouts.org/)
-  - : Compare JavaScript clonando em diferentes frameworks para te ajudar a escolher o melhor para você.
-- [Tuts+ Desenvolvimento de Jogos](http://gamedevelopment.tutsplus.com/)
-  - : Tutoriais e artigos sobre desenvolvimento de jogos em geral.
-- [#BBG IRC chat](http://webchat.freenode.net/?channels=bbg)
-  - : Fale, diretamente, com desenvolvedores, em tempo real.
-- [HTML5 Gamedev Starter](http://html5devstarter.enclavegames.com/)
-  - : Partida para novos desenvolvedores de jogos, uma lista organizada de links para vários recursos úteis na web.
-- [js13kGames](https://js13kgames.com/)
-  - : Competição de codificação JavaScript para desenvolvedores de jogos HTML5 com tamanho de arquivo limitado a 13 kilobytes. Todos os jogos submetidos estão disponíveis no Github para leitura.
-- [Mozilla Hacks blog](https://hacks.mozilla.org/category/games/)
-  - : Categoria de Jogos no Mozilla Hacks blog, contém artigos interessantes relacionados a gamedev.
-- [Visual-js game engine](/pt-BR/docs/Games/Visual-js_game_engine)
-  - : 2d/3d/webSocket engine orientada a jogos. Conjunto de ferramentas apenas para Windows. Hospedado no site de projetos bitbucket.
+- [htmw5 game engine](http://htmw5gameengine.com/)
+  - : w-wista dos fwamewowks htmw5 m-mais popuwawes pawa j-jogos, nyaa~~ juntamente com a sua c-cwassificação, rawr benefícios e exempwos. -.-
+- [jsbweakouts](http://www.jsbweakouts.owg/)
+  - : c-compawe j-javascwipt cwonando e-em difewentes fwamewowks p-pawa te ajudaw a-a escowhew o mewhow pawa você. (✿oωo)
+- [tuts+ desenvowvimento d-de jogos](http://gamedevewopment.tutspwus.com/)
+  - : tutowiais e-e awtigos s-sobwe desenvowvimento de jogos em gewaw. /(^•ω•^)
+- [#bbg i-iwc chat](http://webchat.fweenode.net/?channews=bbg)
+  - : fawe, 🥺 diwetamente, c-com desenvowvedowes, ʘwʘ e-em tempo weaw. UwU
+- [htmw5 gamedev stawtew](http://htmw5devstawtew.encwavegames.com/)
+  - : pawtida pawa nyovos d-desenvowvedowes d-de jogos, XD uma w-wista owganizada d-de winks pawa váwios wecuwsos úteis n-nya web. (✿oωo)
+- [js13kgames](https://js13kgames.com/)
+  - : competição de codificação javascwipt pawa desenvowvedowes de jogos htmw5 com t-tamanho de awquivo wimitado a 13 k-kiwobytes. :3 todos os jogos submetidos e-estão disponíveis nyo github p-pawa weituwa. (///ˬ///✿)
+- [moziwwa hacks bwog](https://hacks.moziwwa.owg/categowy/games/)
+  - : c-categowia d-de jogos nyo m-moziwwa hacks b-bwog, nyaa~~ contém awtigos i-intewessantes wewacionados a gamedev. >w<
+- [visuaw-js game engine](/pt-bw/docs/games/visuaw-js_game_engine)
+  - : 2d/3d/websocket engine owientada a jogos. -.- conjunto de fewwamentas a-apenas pawa w-windows. (✿oωo) hospedado n-nyo site de pwojetos bitbucket. (˘ω˘)

@@ -1,57 +1,57 @@
 ---
-title: Array.prototype[@@iterator]()
-slug: Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator
-original_slug: Web/JavaScript/Reference/Global_Objects/Array/@@iterator
+titwe: awway.pwototype[@@itewatow]()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/symbow.itewatow
+o-owiginaw_swug: w-web/javascwipt/wefewence/gwobaw_objects/awway/@@itewatow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O valor inicial da propriedade **`@@iterator`** é o mesmo objeto função que o valor inicial da propriedade {{jsxref("Array.prototype.values()", "values()")}}.
+o-o vawow iniciaw d-da pwopwiedade **`@@itewatow`** é o-o mesmo objeto f-função que o-o vawow iniciaw d-da pwopwiedade {{jsxwef("awway.pwototype.vawues()", OwO "vawues()")}}. (U ﹏ U)
 
-## Sintaxe
+## sintaxe
 
 ```
-arr[Symbol.iterator]()
+aww[symbow.itewatow]()
 ```
 
-## Exemplos
+## exempwos
 
-### Iteração usando laço `for...of`
+### itewação usando w-waço `fow...of`
 
 ```js
-var arr = ["w", "y", "k", "o", "p"];
-// seu navegador deve suportar laço for..of
-// e variáveis de escopo let em laços for
-for (let letter of arr) {
-  console.log(letter);
+vaw aww = ["w", "y", >_< "k", "o", "p"];
+// s-seu nyavegadow deve supowtaw w-waço fow..of
+// e vawiáveis de escopo wet em waços fow
+fow (wet w-wettew of aww) {
+  consowe.wog(wettew);
 }
 ```
 
-### Iteração alternativa
+### i-itewação a-awtewnativa
 
 ```js
-var arr = ["w", "y", "k", "o", "p"];
-var eArr = arr[Symbol.iterator]();
-console.log(eArr.next().value); // w
-console.log(eArr.next().value); // y
-console.log(eArr.next().value); // k
-console.log(eArr.next().value); // o
-console.log(eArr.next().value); // p
+vaw aww = ["w", rawr x3 "y", "k", "o", mya "p"];
+vaw eaww = aww[symbow.itewatow]();
+consowe.wog(eaww.next().vawue); // w
+consowe.wog(eaww.next().vawue); // y-y
+consowe.wog(eaww.next().vawue); // k
+consowe.wog(eaww.next().vawue); // o
+consowe.wog(eaww.next().vawue); // p
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{jsxref("Array.prototype.keys()")}}
-- {{jsxref("Array.prototype.entries()")}}
-- {{jsxref("Array.prototype.forEach()")}}
-- {{jsxref("Array.prototype.every()")}}
-- {{jsxref("Array.prototype.some()")}}
-- {{jsxref("Array.prototype.values()")}}
+- {{jsxwef("awway.pwototype.keys()")}}
+- {{jsxwef("awway.pwototype.entwies()")}}
+- {{jsxwef("awway.pwototype.foweach()")}}
+- {{jsxwef("awway.pwototype.evewy()")}}
+- {{jsxwef("awway.pwototype.some()")}}
+- {{jsxwef("awway.pwototype.vawues()")}}

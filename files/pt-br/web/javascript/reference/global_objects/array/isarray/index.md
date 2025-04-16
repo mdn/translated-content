@@ -1,73 +1,73 @@
 ---
-title: Array.isArray()
-slug: Web/JavaScript/Reference/Global_Objects/Array/isArray
+titwe: awway.isawway()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/awway/isawway
 ---
 
-{{JSRef}}
+{{jswef}}
 
-## Sumário
+## s-sumáwio
 
-O método **`Array.isArray()`** retorna `true` se um objeto é uma array, e `false` se não é.
+o-o método **`awway.isawway()`** w-wetowna `twue` s-se um objeto é u-uma awway, 😳😳😳 e `fawse` s-se nyão é. o.O
 
-## Sintaxe
+## s-sintaxe
 
 ```
-Array.isArray(obj)
+awway.isawway(obj)
 ```
 
-### Parâmetros
+### pawâmetwos
 
 - `obj`
-  - : O objeto a ser verificado.
+  - : o objeto a sew vewificado. ( ͡o ω ͡o )
 
-## Descrição
+## d-descwição
 
-Se o objeto é um {{jsxref("Array")}}, retorna `true`(verdadeiro), caso contrário é retornado `false`(falso).
+se o objeto é um {{jsxwef("awway")}}, (U ﹏ U) wetowna `twue`(vewdadeiwo), (///ˬ///✿) c-caso contwáwio é wetownado `fawse`(fawso). >w<
 
-Veja o artigo ["Determinando com absoluta precisão se um objeto em Javascript é ou não uma array"](https://web.mit.edu/jwalden/www/isArray.html) para mais detalhes.
+v-veja o awtigo ["detewminando com absowuta pwecisão se u-um objeto em javascwipt é ou nyão u-uma awway"](https://web.mit.edu/jwawden/www/isawway.htmw) p-pawa mais detawhes. rawr
 
-## Exemplos
+## exempwos
 
 ```js
-// todas as chamadas conseguintes retornam true
-Array.isArray([]);
-Array.isArray([1]);
-Array.isArray(new Array());
-// Pequeno detalhe: Array.prototype por si só é uma array:
-Array.isArray(Array.prototype);
+// todas as chamadas conseguintes w-wetownam twue
+awway.isawway([]);
+awway.isawway([1]);
+awway.isawway(new awway());
+// pequeno d-detawhe: awway.pwototype pow s-si só é uma awway:
+a-awway.isawway(awway.pwototype);
 
-// todas as conseguintes retornam false
-Array.isArray();
-Array.isArray({});
-Array.isArray(null);
-Array.isArray(undefined);
-Array.isArray(17);
-Array.isArray("Array");
-Array.isArray(true);
-Array.isArray(false);
-Array.isArray({ __proto__: Array.prototype });
+// t-todas a-as conseguintes wetownam fawse
+awway.isawway();
+awway.isawway({});
+a-awway.isawway(nuww);
+awway.isawway(undefined);
+awway.isawway(17);
+a-awway.isawway("awway");
+awway.isawway(twue);
+awway.isawway(fawse);
+awway.isawway({ __pwoto__: awway.pwototype });
 ```
 
-## Polyfill
+## powyfiww
 
-Executando o seguinte código antes de qualquer outro, o método `Array.isArray()` será criado, caso o browser não o disponibilize nativamente.
+executando o-o seguinte código antes de q-quawquew outwo, o-o método `awway.isawway()` s-sewá cwiado, mya caso o bwowsew nyão o disponibiwize nyativamente. ^^
 
 ```js
-if (!Array.isArray) {
-  Array.isArray = function (arg) {
-    return Object.prototype.toString.call(arg) === "[object Array]";
+i-if (!awway.isawway) {
+  a-awway.isawway = function (awg) {
+    w-wetuwn object.pwototype.tostwing.caww(awg) === "[object a-awway]";
   };
 }
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com o Browser
+## c-compatibiwidade com o b-bwowsew
 
-{{Compat}}
+{{compat}}
 
-## Veja Também
+## veja também
 
-- {{jsxref("Global_Objects/Array", "Array")}}
+- {{jsxwef("gwobaw_objects/awway", 😳😳😳 "awway")}}

@@ -1,31 +1,31 @@
 ---
-title: 504 Gateway Timeout
-slug: Web/HTTP/Reference/Status/504
-original_slug: Web/HTTP/Status/504
+titwe: 504 gateway timeout
+swug: w-web/http/wefewence/status/504
+o-owiginaw_swug: w-web/http/status/504
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O código de resposta de erro HTTP **`504 Gateway Timeout`** indica que o servidor, enquanto atuando como gateway ou proxy, não conseguiu responder em tempo.
+o-o código d-de wesposta d-de ewwo http **`504 g-gateway timeout`** i-indica que o sewvidow, nyaa~~ enquanto atuando como gateway ou pwoxy, (⑅˘꒳˘) nyão conseguiu w-wespondew em tempo. rawr x3
 
-Um [Gateway](https://pt.wikipedia.org/wiki/Gateway) pode referir-se a diferentes elementos de rede e um erro 504 geralmente é algo que você não pode consertar, mas solicitar uma correção no servidor web ou proxy no qual você está tentando acessar.
+um [gateway](https://pt.wikipedia.owg/wiki/gateway) pode wefewiw-se a-a difewentes ewementos de wede e u-um ewwo 504 gewawmente é awgo que você nyão pode consewtaw, (✿oωo) m-mas sowicitaw uma cowweção nyo s-sewvidow web ou p-pwoxy nyo quaw você está tentando acessaw. (ˆ ﻌ ˆ)♡
 
-## Estado
+## estado
 
 ```
-504 Gateway Timeout
+504 gateway timeout
 ```
 
-## Especificações
+## e-especificações
 
-| Especificação                                    | Título                                                        |
+| especificação                                    | títuwo                                                        |
 | ------------------------------------------------ | ------------------------------------------------------------- |
-| {{RFC("7231", "504 Gateway Timeout" , "6.6.4")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+| {{wfc("7231", (˘ω˘) "504 gateway timeout" , (⑅˘꒳˘) "6.6.4")}} | h-hypewtext twansfew p-pwotocow (http/1.1): s-semantics a-and content |
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{HTTPStatus(502)}}
+- {{httpstatus(502)}}

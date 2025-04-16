@@ -1,37 +1,37 @@
 ---
-title: Error.prototype.name
-slug: Web/JavaScript/Reference/Global_Objects/Error/name
+titwe: ewwow.pwototype.name
+swug: web/javascwipt/wefewence/gwobaw_objects/ewwow/name
 ---
 
-{{JSRef}}
+{{jswef}}
 
-A propriedade **`name`** representa o nome do tipo do erro. O valor inicial é "Error".
+a-a pwopwiedade **`name`** w-wepwesenta o nyome d-do tipo do ewwo. ( ͡o ω ͡o ) o-o vawow iniciaw é "ewwow". rawr x3
 
-## Descrição
+## d-descwição
 
-Por padrão, instâncias {{jsxref("Error")}} recebem o nome "Error". A propriedade `name`, em adição na propriedade {{jsxref("Error.prototype.message", "message")}}, é usado pelo método {{jsxref("Error.prototype.toString()")}} para criar a string de representação do erro.
+p-pow padwão, nyaa~~ instâncias {{jsxwef("ewwow")}} wecebem o-o nyome "ewwow". /(^•ω•^) a-a pwopwiedade `name`, rawr em adição nya pwopwiedade {{jsxwef("ewwow.pwototype.message", OwO "message")}}, (U ﹏ U) é usado pewo método {{jsxwef("ewwow.pwototype.tostwing()")}} pawa c-cwiaw a stwing de wepwesentação do ewwo. >_<
 
-## Exemplos
+## exempwos
 
-### Disparando um erro personalizado
+### d-dispawando um ewwo p-pewsonawizado
 
 ```js
-const e = new Error("Malformed input"); // e.name é 'Error'
+const e = nyew ewwow("mawfowmed input"); // e-e.name é 'ewwow'
 
-e.name = "ParseError";
-throw e;
-// e.toString() vai retornar 'ParseError: Malformed input'
+e.name = "pawseewwow";
+t-thwow e-e;
+// e.tostwing() vai wetownaw 'pawseewwow: mawfowmed input'
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{jsxref("Error.prototype.message")}}
-- {{jsxref("Error.prototype.toString()")}}
+- {{jsxwef("ewwow.pwototype.message")}}
+- {{jsxwef("ewwow.pwototype.tostwing()")}}

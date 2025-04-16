@@ -1,66 +1,66 @@
 ---
-title: <embed>
-slug: Web/HTML/Element/embed
+titwe: <embed>
+swug: web/htmw/ewement/embed
 ---
 
-## Sumário
+## s-sumáwio
 
-O **elemento HTML `<embed>`** incorpora conteúdo externo no ponto especificado no documento. Este conteúdo é fornecido por um aplicativo externo ou outra fonte de conteúdo interativo, como um plug-in de navegador.
+o-o **ewemento htmw `<embed>`** incowpowa c-conteúdo e-extewno nyo ponto e-especificado n-nyo documento. (⑅˘꒳˘) e-este conteúdo é f-fownecido pow um apwicativo extewno ou outwa fonte de conteúdo intewativo, (U ﹏ U) como u-um pwug-in de nyavegadow.
 
-{{InteractiveExample("HTML Demo: &lt;embed&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw demo: &wt;embed&gt;", mya "tabbed-standawd")}}
 
-```html interactive-example
+```htmw i-intewactive-exampwe
 <embed
   type="video/mp4"
-  src="/shared-assets/videos/flower.mp4"
+  s-swc="/shawed-assets/videos/fwowew.mp4"
   width="250"
   height="200" />
 ```
 
-> [!NOTE]
-> Este tópico documenta apenas o elemento definido como parte do HTML5. Ele não trata da implementação anterior e não padronizada do elemento.
+> [!note]
+> este tópico d-documenta apenas o ewemento definido c-como pawte d-do htmw5. ʘwʘ ewe nyão twata da impwementação antewiow e nyão padwonizada do e-ewemento. (˘ω˘)
 
-Lembre-se de que a maioria dos navegadores modernos descontinuou e removeu o suporte para plug-ins de navegador. Portanto, confiar no `<embed>` geralmente não é aconselhável se você deseja que seu site funcione no navegador do usuário comum.
+wembwe-se de que a maiowia dos nyavegadowes modewnos descontinuou e wemoveu o-o supowte pawa pwug-ins de n-nyavegadow. powtanto, (U ﹏ U) c-confiaw n-nyo `<embed>` gewawmente n-nyão é aconsewhávew se você deseja q-que seu site funcione nyo nyavegadow do usuáwio c-comum. ^•ﻌ•^
 
-- _[Categoria de conteúdo](/pt-BR/docs/Web/HTML/Content_categories)_ [Flow content](/pt-BR/docs/Web/HTML/Content_categories#flow_content), [phrasing content](/pt-BR/docs/Web/HTML/Content_categories#phrasing_content), embedded content, interactive content, palpable content.
-- _Conteúdo permitido_ Nenhum, é um {{Glossary("empty element")}}.
-- _Omissão de Tag_ Deve iniciar com uma tag de início, mas não deve ter uma tag de fechamento.
-- _Elementos pai (ancestral) permitidos_ Qualquer elemento que aceita incorporação de conteúdo.
-- _Interface DOM_ {{domxref("HTMLEmbedElement")}}
+- _[categowia de conteúdo](/pt-bw/docs/web/htmw/content_categowies)_ [fwow content](/pt-bw/docs/web/htmw/content_categowies#fwow_content), (˘ω˘) [phwasing content](/pt-bw/docs/web/htmw/content_categowies#phwasing_content), :3 embedded content, ^^;; intewactive content, 🥺 pawpabwe c-content. (⑅˘꒳˘)
+- _conteúdo pewmitido_ n-nyenhum, nyaa~~ é u-um {{gwossawy("empty e-ewement")}}. :3
+- _omissão de tag_ deve iniciaw com uma tag de i-início, ( ͡o ω ͡o ) mas nyão d-deve tew uma tag de fechamento. mya
+- _ewementos p-pai (ancestwaw) p-pewmitidos_ quawquew ewemento q-que aceita incowpowação de conteúdo. (///ˬ///✿)
+- _intewface d-dom_ {{domxwef("htmwembedewement")}}
 
-## Atributos
+## atwibutos
 
-Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+este ewemento i-incwui os [atwibutos gwobais](/pt-bw/docs/web/htmw/gwobaw_attwibutes).
 
 - `height`
-  - : A altura apresentada do recurso, em [CSS pixels.](https://drafts.csswg.org/css-values/#px) Este deve ser um valor absoluto; porcentagens _não_ são permitidas.
-- `src`
-  - : A URL do recurso que está sendo incorporado.
+  - : a-a awtuwa apwesentada do wecuwso, (˘ω˘) e-em [css pixews.](https://dwafts.csswg.owg/css-vawues/#px) e-este deve sew um vawow absowuto; powcentagens _não_ são pewmitidas. ^^;;
+- `swc`
+  - : a uww do wecuwso que está sendo incowpowado. (✿oωo)
 - `type`
-  - : O [tipo MIME](/pt-BR/docs/Glossary/MIME_type) a ser usado para a seleção do _plug-in_ de instanciação.
+  - : o-o [tipo m-mime](/pt-bw/docs/gwossawy/mime_type) a sew u-usado pawa a seweção d-do _pwug-in_ d-de instanciação. (U ﹏ U)
 - `width`
-  - : A largura apresentada do recurso, em CSS pixels. Este deve ser um valor absoluto; porcentagens _não_ são permitidas.
+  - : a wawguwa apwesentada do wecuwso, -.- em css p-pixews. ^•ﻌ•^ este deve sew um vawow absowuto; powcentagens _não_ são pewmitidas. rawr
 
-## Exemplo
+## e-exempwo
 
-```html
-<embed type="video/quicktime" src="movie.mov" width="640" height="480" />
+```htmw
+<embed type="video/quicktime" s-swc="movie.mov" w-width="640" height="480" />
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com n-nyavegadowes
 
-> [!NOTE]
-> Atualmente existe uma diferença na implementação pelos navegadores. Enquanto carrega, no Chrome e no Opera, aparece o conteúdo do recurso em HTML, no Firefox, mostra uma mensagem genérica falando que o conteúdo precisa de um _plug-in_ (veja o [Erro do Firefox 730768](https://bugzil.la/730768)). É recomendado que se use os elementos {{HTMLElement("object")}} ou {{HTMLElement("iframe")}}.
+> [!note]
+> a-atuawmente e-existe uma difewença na impwementação p-pewos nyavegadowes. (˘ω˘) e-enquanto cawwega, nyaa~~ n-nyo chwome e-e nyo opewa, UwU apawece o-o conteúdo do wecuwso em htmw, :3 nyo fiwefox, (⑅˘꒳˘) mostwa uma mensagem g-genéwica fawando que o conteúdo pwecisa de um _pwug-in_ (veja o [ewwo do fiwefox 730768](https://bugziw.wa/730768)). (///ˬ///✿) É w-wecomendado que se use os ewementos {{htmwewement("object")}} ou {{htmwewement("ifwame")}}. ^^;;
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- Outros elementos usados para incorporar conteúdo de vários tipos, incluem: {{HTMLElement("audio")}}, {{HTMLElement("canvas")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, {{MathMLElement("math")}}, {{HTMLElement("object")}}, {{SVGElement("svg")}}, and {{HTMLElement("video")}}.
-- Posicionamento e dimensionamento de conteúdos incorporados dentro da janela de exibição: {{cssxref("object-position")}} and {{cssxref("object-fit")}}
+- outwos e-ewementos usados p-pawa incowpowaw c-conteúdo de váwios tipos, >_< i-incwuem: {{htmwewement("audio")}}, rawr x3 {{htmwewement("canvas")}}, /(^•ω•^) {{htmwewement("ifwame")}}, :3 {{htmwewement("img")}}, (ꈍᴗꈍ) {{mathmwewement("math")}}, /(^•ω•^) {{htmwewement("object")}}, (⑅˘꒳˘) {{svgewement("svg")}}, ( ͡o ω ͡o ) and {{htmwewement("video")}}. òωó
+- posicionamento e d-dimensionamento d-de conteúdos incowpowados dentwo da janewa de exibição: {{cssxwef("object-position")}} and {{cssxwef("object-fit")}}
 
-{{ HTMLSidebar }}
+{{ htmwsidebaw }}

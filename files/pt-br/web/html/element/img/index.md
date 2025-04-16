@@ -1,209 +1,209 @@
 ---
-title: <img>
-slug: Web/HTML/Element/img
+titwe: <img>
+swug: web/htmw/ewement/img
 ---
 
-## Resumo
+## w-wesumo
 
-O **elemento** **HTML `<img>` **(or _HTML Image Element_) representa a inserção de imagem no documento, sendo implementado também pelo HTML5 para uma melhor experiência com o elemento {{HTMLElement("figure")}} e {{HTMLElement("figcaption")}}.
+o **ewemento** **htmw `<img>` **(ow _htmw i-image ewement_) w-wepwesenta a-a insewção de i-imagem nyo documento, s-sendo impwementado t-também p-pewo htmw5 pawa uma mewhow expewiência com o ewemento {{htmwewement("figuwe")}} e {{htmwewement("figcaption")}}. OwO
 
-## Exemplo da implementação do HTML5
+## exempwo da i-impwementação do htmw5
 
 ```
-<figure>
-  <img src="imagem.jpg" alt="Minha Figura">
-  <figcaption>Informações da Figura</figcaption>
-</figure>
+<figuwe>
+  <img swc="imagem.jpg" a-awt="minha figuwa">
+  <figcaption>infowmações da figuwa</figcaption>
+</figuwe>
 ```
 
-> **Note:** **Usage note:**
-> Navegadores nem sempre exibem a imagem referenciada pelo elemento. Este é o caso para navegadores não gráficos (incluindo aqueles usados por pessoas com deficiência de visão), ou se o usuário optar por não exibir imagens ou se o navegador não conseguir exibir a imagem porque é inválido ou um tipo não suportado. Nesses casos, o navegador pode substituir a imagem pelo texto definido no atributo **alt** deste elemento.
+> **note:** **usage n-nyote:**
+> nyavegadowes nyem sempwe exibem a imagem wefewenciada p-pewo ewemento. 🥺 este é o-o caso pawa nyavegadowes n-nyão gwáficos (incwuindo aquewes usados pow pessoas com deficiência d-de visão), mya ou se o usuáwio optaw pow nyão exibiw imagens ou se o nyavegadow n-nyão conseguiw exibiw a imagem p-powque é inváwido o-ou um tipo n-nyão supowtado. 😳 n-nyesses casos, òωó o nyavegadow pode substituiw a i-imagem pewo texto definido no atwibuto **awt** deste ewemento. /(^•ω•^)
 
-- _[Content categories](/pt-BR/docs/Web/HTML/Content_categories)_ [Flow content](/pt-BR/docs/Web/HTML/Content_categories#flow_content), [phrasing content](/pt-BR/docs/Web/HTML/Content_categories#phrasing_content), embedded content, palpable content. If the element has a [`usemap`](#usemap) attribute, it also is a part of the interactive content category.
-- _Permitted content_ None, it is an {{Glossary("empty element")}}.
-- _Tag omission_ Must have a start tag and must not have an end tag.
-- _Permitted parent elements_ Any element that accepts embedded content.
-- _DOM interface_ {{domxref("HTMLImageElement")}}
+- _[content c-categowies](/pt-bw/docs/web/htmw/content_categowies)_ [fwow content](/pt-bw/docs/web/htmw/content_categowies#fwow_content), -.- [phwasing content](/pt-bw/docs/web/htmw/content_categowies#phwasing_content), òωó embedded content, /(^•ω•^) pawpabwe content. /(^•ω•^) if the e-ewement has a [`usemap`](#usemap) attwibute, 😳 it a-awso is a pawt o-of the intewactive c-content categowy. :3
+- _pewmitted content_ none, (U ᵕ U❁) it is an {{gwossawy("empty ewement")}}. ʘwʘ
+- _tag o-omission_ must have a-a stawt tag and must nyot have a-an end tag. o.O
+- _pewmitted p-pawent ewements_ any e-ewement that accepts embedded content. ʘwʘ
+- _dom intewface_ {{domxwef("htmwimageewement")}}
 
-## Atributos
+## a-atwibutos
 
-Este Elemeto inlcui o [atributo global](/pt-BR/docs/Web/HTML/Global_attributes).
+este ewemeto inwcui o [atwibuto g-gwobaw](/pt-bw/docs/web/htmw/gwobaw_attwibutes). ^^
 
-- `align` {{deprecated_inline}}
-  - : The alignment of the image with respect to its surrounding context. Use the {{cssxref('vertical-align')}} CSS property.
-- `alt`
+- `awign` {{depwecated_inwine}}
+  - : the awignment of t-the image with wespect to its s-suwwounding context. ^•ﻌ•^ u-use the {{cssxwef('vewticaw-awign')}} css pwopewty. mya
+- `awt`
 
-  - : Este atributo define um texto alternativo que descreve a imagem. Os Usuários irão ver o texto se a URL da imagem estiver errado, a imagem não está em um dos [formatos suportados](#supported_image_formats) ou até a imagem ser baixada .
+  - : este atwibuto define um texto awtewnativo que descweve a imagem. UwU os usuáwios i-iwão vew o-o texto se a uww da imagem estivew e-ewwado, >_< a imagem n-nyão está e-em um dos [fowmatos supowtados](#suppowted_image_fowmats) ou até a imagem sew baixada . /(^•ω•^)
 
-    > **Note:** **Usage note:** Omitting this attribute indicates that the image _is_ a key part of the content, but no textual equivalent is available. Setting this attribute to the empty string indicates that this image is _not_ a key part of the content; non-visual browsers may omit it from rendering.
+    > **note:** **usage n-nyote:** omitting this attwibute indicates that the image _is_ a key pawt of the c-content, òωó but nyo textuaw equivawent i-is avaiwabwe. σωσ s-setting this a-attwibute to the empty stwing i-indicates that this i-image is _not_ a-a key pawt of t-the content; nyon-visuaw bwowsews may omit it fwom w-wendewing. ( ͡o ω ͡o )
 
-- `border` {{deprecated_inline}}
-  - : The width of a border around the image.
-- `crossorigin`
+- `bowdew` {{depwecated_inwine}}
+  - : t-the width o-of a bowdew awound t-the image. nyaa~~
+- `cwossowigin`
 
-  - : This enumerated attribute indicates if the fetching of the related image must be done using CORS or not. [CORS-enabled images](/pt-BR/docs/Web/HTML/CORS_enabled_image) can be reused in the {{HTMLElement("canvas")}} element without being _tainted_. The allowed values are:
+  - : t-this enumewated attwibute indicates if the fetching of the w-wewated image must be done using cows ow nyot. [cows-enabwed images](/pt-bw/docs/web/htmw/cows_enabwed_image) can be weused in the {{htmwewement("canvas")}} e-ewement without being _tainted_. :3 the awwowed vawues awe:
 
     - anonymous
-      - : A cross-origin request (i.e. with `Origin:` HTTP header) is performed. But no credential is sent (i.e. no cookie, no X.509 certificate and no HTTP Basic authentication is sent). If the server does not give credentials to the origin site (by not setting the `Access-Control-Allow-Origin:` HTTP header), the image will be _tainted_ and its usage restricted..
-    - use-credentials
-      - : A cross-origin request (i.e. with `Origin:` HTTP header) performed with credential is sent (i.e. a cookie, a certificate and HTTP Basic authentication is performed). If the server does not give credentials to the origin site (through `Access-Control-Allow-Credentials:` HTTP header), the image will be _tainted_ and its usage restricted.
+      - : a-a cwoss-owigin w-wequest (i.e. UwU with `owigin:` h-http headew) is pewfowmed. o.O b-but nyo cwedentiaw is sent (i.e. (ˆ ﻌ ˆ)♡ n-nyo cookie, ^^;; n-nyo x.509 cewtificate and nyo http basic authentication is sent). ʘwʘ if the sewvew does nyot g-give cwedentiaws to the owigin site (by n-nyot setting the `access-contwow-awwow-owigin:` h-http headew), σωσ t-the image wiww be _tainted_ and its usage w-westwicted..
+    - u-use-cwedentiaws
+      - : a cwoss-owigin w-wequest (i.e. ^^;; w-with `owigin:` http headew) pewfowmed with cwedentiaw is sent (i.e. ʘwʘ a c-cookie, ^^ a cewtificate a-and http basic a-authentication is pewfowmed). nyaa~~ i-if the sewvew d-does nyot give cwedentiaws to the o-owigin site (thwough `access-contwow-awwow-cwedentiaws:` http headew), (///ˬ///✿) the image wiww be _tainted_ and its usage w-westwicted. XD
 
-    When not present, the resource is fetched without a CORS request (i.e. without sending the `Origin:` HTTP header), preventing its non-tainted usage in {{HTMLElement('canvas')}} elements. If invalid, it is handled as if the enumerated keyword **anonymous** was used. See [CORS settings attributes](/pt-BR/docs/Web/HTML/Attributes/crossorigin) for additional information.
+    w-when nyot pwesent, :3 the wesouwce is fetched w-without a cows wequest (i.e. òωó w-without sending the `owigin:` http headew), ^^ pweventing i-its nyon-tainted usage in {{htmwewement('canvas')}} ewements. ^•ﻌ•^ if invawid, σωσ it is handwed as if t-the enumewated keywowd **anonymous** was used. (ˆ ﻌ ˆ)♡ s-see [cows settings a-attwibutes](/pt-bw/docs/web/htmw/attwibutes/cwossowigin) fow additionaw infowmation. nyaa~~
 
 - `height`
-  - : The height of the image in HTML 5 CSS pixels, or HTML 4 in pixels or as a percentage.
-- `hspace` {{deprecated_inline}}
-  - : The number of pixels of white space to insert to the left and right of the image.
+  - : the height o-of the image i-in htmw 5 css pixews, ʘwʘ ow htmw 4 in pixews ow as a pewcentage. ^•ﻌ•^
+- `hspace` {{depwecated_inwine}}
+  - : t-the nyumbew of pixews of w-white space to insewt to the weft and wight of the image. rawr x3
 - `ismap`
 
-  - : This Boolean attribute indicates that the image is part of a server-side map. If so, the precise coordinates of a click are sent to the server.
+  - : t-this boowean attwibute i-indicates that t-the image is pawt of a sewvew-side m-map. 🥺 if so, the pwecise coowdinates o-of a cwick a-awe sent to t-the sewvew. ʘwʘ
 
-    > **Note:** **Usage note:** This attribute is allowed only if the `<img>` element is a descendant of an {{htmlelement("a")}} element with a valid [`href`](/pt-BR/docs/Web/HTML/Element/a#href) attribute.
+    > **note:** **usage nyote:** this a-attwibute is a-awwowed onwy if the `<img>` ewement is a descendant o-of an {{htmwewement("a")}} ewement w-with a vawid [`hwef`](/pt-bw/docs/web/htmw/ewement/a#hwef) a-attwibute. (˘ω˘)
 
-- `longdesc` {{deprecated_inline}}
-  - : A link to a more detailed description of the image. Possible values are a {{glossary("URL")}} or an element [`id`](/pt-BR/docs/Web/HTML/Global_attributes#id).
-- `name` {{deprecated_inline}}
-  - : A name for the element. Use the [`id`](/pt-BR/docs/Web/HTML/Global_attributes#id) attribute instead.
-- `src`
-  - : Image URL, this attribute is obligatory for the `<img>` element. On browsers supporting **srcset**, **src** is ignored if this one is provided.
-- `srcset`
+- `wongdesc` {{depwecated_inwine}}
+  - : a wink to a mowe detaiwed d-descwiption of the image. o.O possibwe v-vawues awe a {{gwossawy("uww")}} o-ow an ewement [`id`](/pt-bw/docs/web/htmw/gwobaw_attwibutes#id). σωσ
+- `name` {{depwecated_inwine}}
+  - : a nyame fow the ewement. (ꈍᴗꈍ) use the [`id`](/pt-bw/docs/web/htmw/gwobaw_attwibutes#id) a-attwibute i-instead. (ˆ ﻌ ˆ)♡
+- `swc`
+  - : image u-uww, this attwibute i-is obwigatowy fow the `<img>` e-ewement. o.O on bwowsews suppowting **swcset**, :3 **swc** is ignowed if this one is pwovided. -.-
+- `swcset`
 
-  - : A list of one or more strings separated by commas indicating a set of possible images for the user agent to use. Each string is composed of:
+  - : a wist of one ow m-mowe stwings sepawated by commas i-indicating a set of possibwe i-images fow the usew agent to use. ( ͡o ω ͡o ) e-each stwing is composed of:
 
-    1. one URL to an image,
-    2. a width descriptor, that is a positive integer directly followed by `'w'`. The default value, if missing, is the infinity.
-    3. a pixel density descriptor, that is a positive floating number directly followed by `'x'`. The default value, if missing, is `1x`.
+    1. /(^•ω•^) o-one uww to a-an image, (⑅˘꒳˘)
+    2. a-a width descwiptow, òωó t-that is a p-positive integew diwectwy fowwowed by `'w'`. 🥺 the defauwt vawue, (ˆ ﻌ ˆ)♡ if missing, -.- is the infinity. σωσ
+    3. a pixew density d-descwiptow, >_< t-that is a positive f-fwoating nyumbew diwectwy fowwowed b-by `'x'`. :3 the defauwt vawue, OwO if missing, rawr is `1x`.
 
-    Each string in the list must have at least a width descriptor or a pixel density descriptor to be valid. Among the list, there must be only one string containing the same tuple of width descriptor and pixel density descriptor.
-    The browser chooses the most adequate image to display at a given point of time.
+    each s-stwing in the w-wist must have at weast a width d-descwiptow ow a pixew density descwiptow to be vawid. a-among the w-wist, (///ˬ///✿) thewe must be onwy one stwing c-containing the s-same tupwe of width descwiptow and pixew density descwiptow. ^^
+    the bwowsew c-chooses the most a-adequate image t-to dispway at a g-given point of time. XD
 
 - `width`
-  - : The width of the image in pixels or percent.
+  - : t-the width of the image in p-pixews ow pewcent. UwU
 - `usemap`
 
-  - : The partial URL (starting with '#') of an [image map](/pt-BR/docs/Web/HTML/Element/map) associated with the element.
+  - : t-the pawtiaw uww (stawting with '#') o-of an [image m-map](/pt-bw/docs/web/htmw/ewement/map) associated w-with the ewement.
 
-    > **Note:** **Usage note:** You cannot use this attribute if the `<img>` element is a descendant of an {{htmlelement("a")}} or {{HTMLElement("button")}} element.
+    > **note:** **usage nyote:** you c-cannot use this attwibute if the `<img>` e-ewement i-is a descendant of an {{htmwewement("a")}} o-ow {{htmwewement("button")}} ewement.
 
-- `vspace` {{deprecated_inline}}
-  - : The number of pixels of white space to insert above and below the image.
+- `vspace` {{depwecated_inwine}}
+  - : the nyumbew o-of pixews o-of white space to i-insewt above and bewow the image. o.O
 
-## Formato de imagens suportadas
+## fowmato de imagens supowtadas
 
-O padrão HTML não fornece uma lista de formatos de imagem que devem ser suportados, portanto, cada agente de usuário oferece suporte a um conjunto diferente de formatos. [Gecko](/pt-BR/docs/Mozilla/Gecko) suporta:
+o-o padwão htmw nyão fownece uma wista de f-fowmatos de imagem q-que devem sew supowtados, 😳 powtanto, (˘ω˘) c-cada agente de usuáwio o-ofewece supowte a-a um conjunto difewente de fowmatos. 🥺 [gecko](/pt-bw/docs/moziwwa/gecko) supowta:
 
-- [JPEG](http://en.wikipedia.org/wiki/JPEG)
-- [GIF](http://en.wikipedia.org/wiki/Graphics_Interchange_Format), incluindo GIFs animados
-- [PNG](http://en.wikipedia.org/wiki/Portable_Network_Graphics)
-- [APNG](/pt-BR/docs/Animated_PNG_graphics)
-- [SVG](/pt-BR/docs/Web/SVG)
-- [BMP](http://en.wikipedia.org/wiki/BMP_file_format)
-- [BMP ICO](http://en.wikipedia.org/wiki/ICO_%28file_format%29)
-- [PNG ICO](http://en.wikipedia.org/wiki/ICO_%28file_format%29)
+- [jpeg](http://en.wikipedia.owg/wiki/jpeg)
+- [gif](http://en.wikipedia.owg/wiki/gwaphics_intewchange_fowmat), ^^ i-incwuindo gifs animados
+- [png](http://en.wikipedia.owg/wiki/powtabwe_netwowk_gwaphics)
+- [apng](/pt-bw/docs/animated_png_gwaphics)
+- [svg](/pt-bw/docs/web/svg)
+- [bmp](http://en.wikipedia.owg/wiki/bmp_fiwe_fowmat)
+- [bmp ico](http://en.wikipedia.owg/wiki/ico_%28fiwe_fowmat%29)
+- [png ico](http://en.wikipedia.owg/wiki/ico_%28fiwe_fowmat%29)
 
-## Interação com CSS
+## intewação c-com css
 
-Em relação ao CSS, uma `<img>` é um [elemento substituído](/pt-BR/docs/Web/CSS/Replaced_element). Ele não tem linha de base, ou seja, quando usado em um contexto de formatação em linha (inline) com {{cssxref("vertical-align")}}: baseline, a base inferior da imagem será colocada na linha de base do contêiner.
+e-em wewação ao css, >w< uma `<img>` é u-um [ewemento substituído](/pt-bw/docs/web/css/wepwaced_ewement). ^^;; e-ewe nyão t-tem winha de base, o-ou seja, (˘ω˘) quando usado em um contexto de fowmatação em winha (inwine) com {{cssxwef("vewticaw-awign")}}: basewine, OwO a base infewiow da imagem sewá cowocada nya winha de base do contêinew.
 
-Depending of its type, an _image_ may have an intrinsic dimension, but this is not a necessary condition: a SVG image has no intrinsic dimension, a raster image has one.
+depending of its type, (ꈍᴗꈍ) an _image_ m-may have an i-intwinsic dimension, òωó but this is nyot a nyecessawy c-condition: a s-svg image has nyo i-intwinsic dimension, a wastew i-image has one. ʘwʘ
 
-## Exemplos
+## exempwos
 
-### Usando o texto alternativo
+### u-usando o texto a-awtewnativo
 
-O exemplo a seguir insere uma imagem na página e inclui o texto alternativo para acessibilidade, de forma que ele possa ser lido por programas leitores de tela ou exibido caso a imagem não carregue.
+o exempwo a seguiw i-insewe uma imagem nya página e i-incwui o texto a-awtewnativo pawa acessibiwidade, ʘwʘ de fowma que ewe p-possa sew wido p-pow pwogwamas weitowes d-de tewa o-ou exibido caso a-a imagem nyão cawwegue. nyaa~~
 
-```html
+```htmw
 <img
-  src="https://developer.mozilla.org/static/img/favicon144.png"
-  alt="MDN logo" />
+  s-swc="https://devewopew.moziwwa.owg/static/img/favicon144.png"
+  a-awt="mdn w-wogo" />
 ```
 
-{{ EmbedLiveSample('Alternative_text', '100%', '160') }}
+{{ e-embedwivesampwe('awtewnative_text', UwU '100%', (⑅˘꒳˘) '160') }}
 
-### Link em imagem
+### wink e-em imagem
 
-Esse exemplo mostra como transformar uma imagem em um link. Para isso, insira a tag `<img>` dentro da tag do link {{HTMLElement("a")}}. Nesse caso, é interessante fazer o texto alternativo descrever o site para o qual o link aponta, como se fosse o texto usado dentro da tag `<a>`.
+esse e-exempwo mostwa c-como twansfowmaw uma imagem em u-um wink. (˘ω˘) pawa isso, :3 insiwa a tag `<img>` dentwo d-da tag do wink {{htmwewement("a")}}. (˘ω˘) nyesse caso, nyaa~~ é i-intewessante f-fazew o texto a-awtewnativo descwevew o site pawa o-o quaw o wink aponta, (U ﹏ U) como se f-fosse o texto usado dentwo da tag `<a>`. nyaa~~
 
-```html
-<a href="https://developer.mozilla.org">
+```htmw
+<a h-hwef="https://devewopew.moziwwa.owg">
   <img
-    src="https://developer.mozilla.org/static/img/favicon144.png"
-    alt="Visit the MDN site" />
+    swc="https://devewopew.moziwwa.owg/static/img/favicon144.png"
+    a-awt="visit the mdn site" />
 </a>
 ```
 
-{{ EmbedLiveSample('Image_link', '100%', '160') }}
+{{ embedwivesampwe('image_wink', ^^;; '100%', OwO '160') }}
 
-### Usando o atributo `srcset`
+### usando o atwibuto `swcset`
 
-Nesse exemplo, o atributo `srcset` inclui uma versão do logotipo com maior resolução, a qual vai ser carregada no lugar de `src` em aparelhos de alta resolução e cujo navegador tenha suporte à `srcset`.
+n-nyesse exempwo, nyaa~~ o atwibuto `swcset` i-incwui uma v-vewsão do wogotipo com maiow wesowução, UwU a quaw vai sew cawwegada n-nyo wugaw de `swc` em apawewhos d-de awta wesowução e-e cujo n-nyavegadow tenha supowte à `swcset`. 😳
 
-A imagem presente no atributo `src` conta como um candidato `1x` em navegadores com suporte à `srcset`.
+a imagem p-pwesente nyo atwibuto `swc` c-conta como um candidato `1x` e-em navegadowes com supowte à `swcset`. 😳
 
-As imagens exibidas dependerão do tipo de tela.
+as imagens exibidas d-dependewão do tipo de tewa. (ˆ ﻌ ˆ)♡
 
-**`srcset`** define o conjunto de imagens que nós iremos permitir ao navegador escolher, e qual tamanho cada imagem tem.
+**`swcset`** d-define o conjunto d-de imagens que n-nyós iwemos pewmitiw ao nyavegadow e-escowhew, (✿oωo) e-e quaw tamanho c-cada imagem tem. nyaa~~
 
-```html
+```htmw
 <img
-  src="mdn-logo-sm.png"
-  alt="MD Logo"
-  srcset="mdn-logo-HD.png 2x, mdn-logo-small.png 15w, mdn-banner-HD.png 100w 2x" />
+  s-swc="mdn-wogo-sm.png"
+  awt="md w-wogo"
+  swcset="mdn-wogo-hd.png 2x, ^^ m-mdn-wogo-smow.png 15w, (///ˬ///✿) m-mdn-bannew-hd.png 100w 2x" />
 ```
 
-Antes de cada vírgula nós escrevemos:
+antes d-de cada víwguwa n-nyós escwevemos:
 
-1. Um **nome do arquivo da imagem** (`mdn-logo-HD.png`).
-2. Um espaço.
-3. A **largura da imagem** ou **sua densidade de pixels**.
+1. 😳 u-um **nome d-do awquivo d-da imagem** (`mdn-wogo-hd.png`). òωó
+2. um espaço. ^^;;
+3. a-a **wawguwa da imagem** ou **sua d-densidade de pixews**. rawr
 
-## Acessibilidade
+## a-acessibiwidade
 
-### Utilizando textos alternativos relevantes
+### u-utiwizando textos a-awtewnativos wewevantes
 
-O valor do atributo `alt` deve descrever de maneira clara e concisa o conteúdo da imagem. Evite descrever a própria presença da imagem ou o nome de seu arquivo. Se o atributo `alt` for propositalmente deixado vazio porque a imagem não possui nenhum equivalente em texto, considere métodos alternativos para indicar o que a imagem deseja comunicar.
+o vawow do atwibuto `awt` deve descwevew d-de maneiwa c-cwawa e concisa o-o conteúdo da imagem. (ˆ ﻌ ˆ)♡ evite descwevew a pwópwia pwesença da i-imagem ou o nyome d-de seu awquivo. XD se o atwibuto `awt` f-fow pwopositawmente d-deixado vazio powque a imagem nyão possui nyenhum equivawente e-em texto, >_< c-considewe métodos a-awtewnativos p-pawa indicaw o que a imagem deseja comunicaw. (˘ω˘)
 
-#### Evite
+#### e-evite
 
-```html example-bad
-<img alt="imagem" src="penguin.jpg" />
+```htmw e-exampwe-bad
+<img awt="imagem" swc="penguin.jpg" />
 ```
 
-#### Prefira
+#### p-pwefiwa
 
-```html example-good
-<img alt="Um pinguim-saltador-da-rocha em pé numa praia." src="penguin.jpg" />
+```htmw exampwe-good
+<img awt="um p-pinguim-sawtadow-da-wocha em pé n-nyuma pwaia." swc="penguin.jpg" />
 ```
 
-Quando o atributo `alt` não estiver presente em uma imagem, alguns programas leitores de tela vão narrar o nome do arquivo da imagem em seu lugar, o que pode ser confuso caso o nome do arquivo não seja representativo do conteúdo da imagem.
+q-quando o atwibuto `awt` n-nyão estivew pwesente e-em uma imagem, 😳 awguns pwogwamas w-weitowes de tewa vão nyawwaw o-o nyome do a-awquivo da imagem e-em seu wugaw, o.O o-o que pode sew confuso caso o nyome d-do awquivo n-nyão seja wepwesentativo d-do conteúdo da imagem. (ꈍᴗꈍ)
 
-- [An alt Decision Tree • Images • WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/images/decision-tree/)
-- [Alt-texts: The Ultimate Guide — Axess Lab](https://axesslab.com/alt-texts/)
-- [How to Design Great Alt Text: An Introduction | Deque](https://www.deque.com/blog/great-alt-text-introduction/)
-- [MDN Understanding WCAG, Guideline 1.1 explanations](/pt-BR/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.1_—_Providing_text_alternatives_for_non-text_content)
-- [Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv-all.html)
+- [an a-awt decision twee • images • wai web a-accessibiwity t-tutowiaws](https://www.w3.owg/wai/tutowiaws/images/decision-twee/)
+- [awt-texts: t-the uwtimate guide — axess wab](https://axesswab.com/awt-texts/)
+- [how to design gweat awt text: an intwoduction | d-deque](https://www.deque.com/bwog/gweat-awt-text-intwoduction/)
+- [mdn undewstanding w-wcag, g-guidewine 1.1 expwanations](/pt-bw/docs/web/accessibiwity/undewstanding_wcag/pewceivabwe#guidewine_1.1_—_pwoviding_text_awtewnatives_fow_non-text_content)
+- [undewstanding success cwitewion 1.1.1 | w-w3c undewstanding wcag 2.0](https://www.w3.owg/tw/undewstanding-wcag20/text-equiv-aww.htmw)
 
-### O atributo title
+### o-o atwibuto t-titwe
 
-O atributo [`title`](/pt-BR/docs/Web/HTML/Global_attributes#title) não é um substituto aceitável para o atributo `alt`. Além disso, evite duplicar o valor do atributo `alt` no atributo `title` para uma mesma imagem. Isso pode fazer com que alguns programas leitores de tela narrem duas vezes a descrição, o que pode criar uma experiência confusa para usuários.
+o atwibuto [`titwe`](/pt-bw/docs/web/htmw/gwobaw_attwibutes#titwe) n-nyão é um substituto a-aceitávew p-pawa o atwibuto `awt`. rawr x3 awém disso, ^^ evite dupwicaw o vawow do atwibuto `awt` nyo a-atwibuto `titwe` pawa uma mesma i-imagem. OwO isso pode fazew com que awguns pwogwamas weitowes de t-tewa nyawwem duas vezes a descwição, ^^ o que pode cwiaw uma expewiência confusa p-pawa usuáwios. :3
 
-Evite usar o atributo `title` como uma forma suplementar de legenda para a descrição do `alt`. Caso a imagem precise de uma legenda, prefisa os elementos [`figure`](/pt-BR/docs/Web/HTML/Element/figure) e [`figcaption`](/pt-BR/docs/Web/HTML/Element/figcaption).
+e-evite usaw o atwibuto `titwe` como uma fowma supwementaw d-de wegenda pawa a descwição do `awt`. o.O c-caso a imagem p-pwecise de uma wegenda, -.- pwefisa o-os ewementos [`figuwe`](/pt-bw/docs/web/htmw/ewement/figuwe) e [`figcaption`](/pt-bw/docs/web/htmw/ewement/figcaption). (U ﹏ U)
 
-O valor do atributo `title` é geralmente mostrado ao usuário como uma dica, que aparece após o usuário parar o cursor sobre a imagem. Apesar de _poder_ _prover_ informações adicionais ao usuário, não se deve assumir todos os usuários vão vê-lo, pois o mesmo pode possuir apenas um teclado ou uma tela de toque (touchscreen). Se você considera a informação particularmente importante para o usuário, prefira o uso de elementos inline.
+o-o vawow do atwibuto `titwe` é gewawmente mostwado ao u-usuáwio como uma dica, o.O que apawece após o usuáwio p-pawaw o cuwsow s-sobwe a imagem. OwO a-apesaw de _podew_ _pwovew_ infowmações adicionais ao usuáwio, ^•ﻌ•^ n-nyão se deve assumiw todos os usuáwios vão vê-wo, ʘwʘ pois o mesmo pode possuiw a-apenas um tecwado o-ou uma tewa d-de toque (touchscween). :3 s-se você considewa a infowmação pawticuwawmente i-impowtante p-pawa o usuáwio, 😳 pwefiwa o uso de ewementos i-inwine. òωó
 
-- [Using the HTML title attribute – updated | The Paciello Group](https://developer.paciellogroup.com/blog/2013/01/using-the-html-title-attribute-updated/)
+- [using the htmw titwe attwibute – u-updated | the paciewwo gwoup](https://devewopew.paciewwogwoup.com/bwog/2013/01/using-the-htmw-titwe-attwibute-updated/)
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade dos navegadores
+## compatibiwidade d-dos nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{HTMLElement("object")}} and {{HTMLElement("embed")}} elements
+- {{htmwewement("object")}} and {{htmwewement("embed")}} e-ewements
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}

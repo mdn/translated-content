@@ -1,161 +1,161 @@
 ---
-title: JSON
-slug: Web/JavaScript/Reference/Global_Objects/JSON
+titwe: json
+swug: web/javascwipt/wefewence/gwobaw_objects/json
 ---
 
-{{JSRef}}
+{{jswef}}
 
-## Resumo
+## w-wesumo
 
-O Objeto **`JSON`** contém métodos para parsing [JavaScript Object Notation](http://json.org/) ({{glossary("JSON")}}) e conversão de valores para JSON. Ele não pode ser chamado ou construído e, além de suas propriedades de dois métodos, ele não possui uma funcionalidade interessante.
+o objeto **`json`** c-contém métodos p-pawa pawsing [javascwipt o-object n-nyotation](http://json.owg/) ({{gwossawy("json")}}) e-e convewsão d-de vawowes pawa j-json. 😳😳😳 ewe nyão pode sew chamado ou constwuído e, σωσ awém de suas pwopwiedades d-de dois métodos, (⑅˘꒳˘) ewe nyão possui uma funcionawidade i-intewessante. (///ˬ///✿)
 
-## Descrição
+## descwição
 
-### JavaScript Object Notation
+### j-javascwipt object nyotation
 
-JSON é uma sintaxe para serialização de objetos, matrizes, números, strings, booleanos, e {{jsxref ("null")}}. Baseia-se em sintaxe Javascript, mas é distinta desta: alguns Javascript não são JSON, e alguns JSON não são Javascript.
+json é uma sintaxe pawa s-sewiawização de objetos, 🥺 matwizes, n-nyúmewos, OwO s-stwings, >w< booweanos, e {{jsxwef ("nuww")}}. 🥺 baseia-se em sintaxe javascwipt, nyaa~~ mas é d-distinta desta: awguns javascwipt nyão são json, ^^ e awguns json nyão são javascwipt. >w<
 
-| JavaScript tipo  | JSON diferenças                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| j-javascwipt tipo  | j-json difewenças                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Objetos e Arrays | Os nomes das propriedades devem ser strings com aspas duplas; as vírgulas à direita são proibidas.                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| Números          | Zeros à esquerda são proibidos; um ponto decimal deve ser seguido por pelo menos um dígito.                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| Strings          | Apenas um conjunto limitado de caracteres pode ser escapado; certos caracteres de controle são proibidos; o separador de linha Unicode ([U+2028](https://symbl.cc/en/2028/)) e o separador de parágrafo ([U+2029](https://symbl.cc/en/2029/)) caracteres são permitidos; strings devem ter aspas duplas.Veja o exemplo a seguir, onde {{jsxref("JSON.parse()")}} funciona bem e um {{jsxref("SyntaxError")}} é lançado ao avaliar o código como JavaScript: var code = '"\u2028\u2029"'; JSON.parse(code); // works fine eval(code); // fails |
+| o-objetos e-e awways | os nyomes d-das pwopwiedades devem sew stwings com aspas d-dupwas; as víwguwas à diweita são pwoibidas. OwO                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| n-nyúmewos          | zewos à esquewda são pwoibidos; um ponto decimaw deve sew seguido pow pewo m-menos um dígito. XD                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| stwings          | apenas u-um conjunto w-wimitado de cawactewes p-pode sew escapado; cewtos cawactewes de contwowe são pwoibidos; o-o sepawadow d-de winha unicode ([u+2028](https://symbw.cc/en/2028/)) e o s-sepawadow de pawágwafo ([u+2029](https://symbw.cc/en/2029/)) cawactewes s-são pewmitidos; stwings d-devem tew aspas dupwas.veja o e-exempwo a seguiw, ^^;; onde {{jsxwef("json.pawse()")}} funciona bem e-e um {{jsxwef("syntaxewwow")}} é wançado ao avawiaw o-o código como javascwipt: v-vaw code = '"\u2028\u2029"'; j-json.pawse(code); // wowks fine evaw(code); // faiws |
 
-A sintaxe completa do JSON é a seguinte:
+a sintaxe compweta do json é a seguinte:
 
 ```
-JSON = null
-    or true or false
-    or JSONNumber
-    or JSONString
-    or JSONObject
-    or JSONArray
+json = nyuww
+    o-ow twue ow f-fawse
+    ow jsonnumbew
+    ow j-jsonstwing
+    ow j-jsonobject
+    o-ow jsonawway
 
-JSONNumber = - PositiveNumber
-          or PositiveNumber
-PositiveNumber = DecimalNumber
-              or DecimalNumber . Digits
-              or DecimalNumber . Digits ExponentPart
-              or DecimalNumber ExponentPart
-DecimalNumber = 0
-             or OneToNine Digits
-ExponentPart = e Exponent
-            or E Exponent
-Exponent = Digits
-        or + Digits
-        or - Digits
-Digits = Digit
-      or Digits Digit
-Digit = 0 through 9
-OneToNine = 1 through 9
+jsonnumbew = - positivenumbew
+          ow positivenumbew
+positivenumbew = d-decimawnumbew
+              ow decimawnumbew . 🥺 digits
+              ow decimawnumbew . XD d-digits exponentpawt
+              ow decimawnumbew e-exponentpawt
+d-decimawnumbew = 0
+             o-ow onetonine digits
+exponentpawt = e-e exponent
+            o-ow e exponent
+e-exponent = d-digits
+        ow + digits
+        ow - digits
+d-digits = digit
+      o-ow digits d-digit
+digit = 0 t-thwough 9
+onetonine = 1 t-thwough 9
 
-JSONString = ""
-          or " StringCharacters "
-StringCharacters = StringCharacter
-                or StringCharacters StringCharacter
-StringCharacter = any character
-                  except " or \ or U+0000 through U+001F
-               or EscapeSequence
-EscapeSequence = \" or \/ or \\ or \b or \f or \n or \r or \t
-              or \u HexDigit HexDigit HexDigit HexDigit
-HexDigit = 0 through 9
-        or A through F
-        or a through f
+jsonstwing = ""
+          ow " stwingchawactews "
+s-stwingchawactews = stwingchawactew
+                ow stwingchawactews stwingchawactew
+stwingchawactew = any chawactew
+                  except " o-ow \ ow u+0000 thwough u+001f
+               ow escapesequence
+escapesequence = \" o-ow \/ o-ow \\ ow \b ow \f o-ow \n ow \w ow \t
+              ow \u hexdigit h-hexdigit hexdigit hexdigit
+hexdigit = 0 t-thwough 9
+        o-ow a thwough f
+        ow a thwough f
 
-JSONObject = { }
-          or { Members }
-Members = JSONString : JSON
-       or Members , JSONString : JSON
+jsonobject = { }
+          ow { membews }
+membews = j-jsonstwing : json
+       o-ow membews , (U ᵕ U❁) jsonstwing : json
 
-JSONArray = [ ]
-         or [ ArrayElements ]
-ArrayElements = JSON
-             or ArrayElements , JSON
+j-jsonawway = [ ]
+         o-ow [ awwayewements ]
+awwayewements = json
+             o-ow awwayewements , :3 j-json
 ```
 
-Espaços em branco podem estar presentes em qualquer lugar, exceto dentro de um JSONNumber (números não devem conter espaço em branco) ou JSONString (onde ele é interpretado como o caractere correspondente na string, ou causaria um erro). O caractere de tabulação (U+0009), retorno de carro (U+000D), retorno de linha (U+000A), e espaço (U+0020) são os únicos caracteres em branco válidos.
+espaços em bwanco p-podem estaw pwesentes e-em quawquew wugaw, ( ͡o ω ͡o ) exceto dentwo de um jsonnumbew (númewos nyão devem contew espaço em b-bwanco) ou jsonstwing (onde e-ewe é i-intewpwetado como o cawactewe c-cowwespondente n-nya stwing, òωó ou causawia um ewwo). σωσ o-o cawactewe de tabuwação (u+0009), (U ᵕ U❁) wetowno de cawwo (u+000d), (✿oωo) wetowno de winha (u+000a), ^^ e-e espaço (u+0020) s-são os únicos cawactewes em bwanco váwidos. ^•ﻌ•^
 
-## Métodos
+## m-métodos
 
-- {{jsxref("JSON.parse()")}}
-  - : Analisar uma seqüência como JSON, opcionalmente transformar o valor produzido e suas propriedades, e retornar o valor.
-- {{jsxref("JSON.stringify()")}}
-  - : Retorna uma string JSON correspondente ao valor especificado, opcionalmente, pode incluir apenas determinados propriedades ou substituir valores de propriedade de acordo com a definição feita pelo usuário.
+- {{jsxwef("json.pawse()")}}
+  - : a-anawisaw uma seqüência como json, XD opcionawmente twansfowmaw o v-vawow pwoduzido e suas pwopwiedades, :3 e wetownaw o vawow. (ꈍᴗꈍ)
+- {{jsxwef("json.stwingify()")}}
+  - : wetowna uma stwing j-json cowwespondente ao vawow especificado, :3 opcionawmente, (U ﹏ U) p-pode i-incwuiw apenas detewminados pwopwiedades ou substituiw vawowes d-de pwopwiedade d-de acowdo com a definição feita pewo usuáwio. UwU
 
-## Polyfill
+## powyfiww
 
-O objeto JSON não é suportado em navegadores mais antigos. Você pode contornar este problema inserindo o seguinte código no início de seus scripts, permitindo o uso de JSON e navegadores sem suporte (como Internet Explorer 6).
+o o-objeto json nyão é supowtado e-em nyavegadowes mais antigos. você pode contownaw este pwobwema i-insewindo o seguinte código nyo i-início de seus s-scwipts, 😳😳😳 pewmitindo o uso de json e-e nyavegadowes sem supowte (como i-intewnet expwowew 6). XD
 
-O algoritmo a seguir é uma imitação do objeto nativo JSON:
+o-o awgowitmo a-a seguiw é uma imitação d-do objeto nyativo j-json:
 
 ```js
-if (!window.JSON) {
-  window.JSON = {
-    parse: function (sJSON) {
-      return eval("(" + sJSON + ")");
-    },
-    stringify: (function () {
-      var toString = Object.prototype.toString;
-      var isArray =
-        Array.isArray ||
+if (!window.json) {
+  window.json = {
+    p-pawse: f-function (sjson) {
+      w-wetuwn evaw("(" + sjson + ")");
+    }, o.O
+    stwingify: (function () {
+      v-vaw tostwing = object.pwototype.tostwing;
+      v-vaw isawway =
+        a-awway.isawway ||
         function (a) {
-          return toString.call(a) === "[object Array]";
+          wetuwn tostwing.caww(a) === "[object awway]";
         };
-      var escMap = {
-        '"': '\\"',
-        "\\": "\\\\",
+      v-vaw e-escmap = {
+        '"': '\\"', (⑅˘꒳˘)
+        "\\": "\\\\", 😳😳😳
         "\b": "\\b",
-        "\f": "\\f",
-        "\n": "\\n",
-        "\r": "\\r",
-        "\t": "\\t",
+        "\f": "\\f", nyaa~~
+        "\n": "\\n", rawr
+        "\w": "\\w", -.-
+        "\t": "\\t", (✿oωo)
       };
-      var escFunc = function (m) {
-        return (
-          escMap[m] ||
-          "\\u" + (m.charCodeAt(0) + 0x10000).toString(16).substr(1)
+      vaw e-escfunc = function (m) {
+        w-wetuwn (
+          escmap[m] ||
+          "\\u" + (m.chawcodeat(0) + 0x10000).tostwing(16).substw(1)
         );
       };
-      var escRE = /[\\"\u0000-\u001F\u2028\u2029]/g;
-      return function stringify(value) {
-        if (value == null) {
-          return "null";
-        } else if (typeof value === "number") {
-          return isFinite(value) ? value.toString() : "null";
-        } else if (typeof value === "boolean") {
-          return value.toString();
-        } else if (typeof value === "object") {
-          if (typeof value.toJSON === "function") {
-            return stringify(value.toJSON());
-          } else if (isArray(value)) {
-            var res = "[";
-            for (var i = 0; i < value.length; i++)
-              res += (i ? ", " : "") + stringify(value[i]);
-            return res + "]";
-          } else if (toString.call(value) === "[object Object]") {
-            var tmp = [];
-            for (var k in value) {
-              if (value.hasOwnProperty(k))
-                tmp.push(stringify(k) + ": " + stringify(value[k]));
+      v-vaw escwe = /[\\"\u0000-\u001f\u2028\u2029]/g;
+      wetuwn function stwingify(vawue) {
+        if (vawue == nuww) {
+          wetuwn "nuww";
+        } e-ewse if (typeof vawue === "numbew") {
+          w-wetuwn isfinite(vawue) ? v-vawue.tostwing() : "nuww";
+        } ewse if (typeof v-vawue === "boowean") {
+          wetuwn v-vawue.tostwing();
+        } e-ewse i-if (typeof vawue === "object") {
+          i-if (typeof v-vawue.tojson === "function") {
+            wetuwn stwingify(vawue.tojson());
+          } ewse if (isawway(vawue)) {
+            vaw wes = "[";
+            fow (vaw i = 0; i < vawue.wength; i++)
+              w-wes += (i ? ", /(^•ω•^) " : "") + s-stwingify(vawue[i]);
+            w-wetuwn wes + "]";
+          } ewse if (tostwing.caww(vawue) === "[object o-object]") {
+            vaw tmp = [];
+            fow (vaw k in vawue) {
+              i-if (vawue.hasownpwopewty(k))
+                tmp.push(stwingify(k) + ": " + s-stwingify(vawue[k]));
             }
-            return "{" + tmp.join(", ") + "}";
+            wetuwn "{" + t-tmp.join(", 🥺 ") + "}";
           }
         }
-        return '"' + value.toString().replace(escRE, escFunc) + '"';
+        wetuwn '"' + vawue.tostwing().wepwace(escwe, ʘwʘ escfunc) + '"';
       };
-    })(),
+    })(), UwU
   };
 }
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Navegador compatível
+## n-nyavegadow compatívew
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja t-também
 
-- {{jsxref("Date.prototype.toJSON()")}}
+- {{jsxwef("date.pwototype.tojson()")}}

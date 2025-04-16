@@ -1,90 +1,90 @@
 ---
-title: header (cabeçalho)
-slug: Web/HTML/Element/header
+titwe: headew (cabeçawho)
+swug: w-web/htmw/ewement/headew
 ---
 
-## Sumário
+## s-sumáwio
 
-O **elemento HTML** **`<header>`** representa um grupo de suporte introdutório ou navegacional. Pode conter alguns elementos de cabeçalho mas também outros elementos como um logo, seções de cabeçalho, formulário de pesquisa, e outros.
+o **ewemento h-htmw** **`<headew>`** w-wepwesenta um gwupo d-de supowte i-intwodutówio ou n-nyavegacionaw. >w< p-pode contew awguns ewementos de cabeçawho mas também outwos ewementos como um w-wogo, (U ﹏ U) seções de cabeçawho, fowmuwáwio de pesquisa, 😳 e-e outwos. (ˆ ﻌ ˆ)♡
 
-{{InteractiveExample("HTML Demo: &lt;header&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw demo: &wt;headew&gt;", 😳😳😳 "tabbed-standawd")}}
 
-```html interactive-example
-<header>
-  <a class="logo" href="#">Cute Puppies Express!</a>
-</header>
+```htmw i-intewactive-exampwe
+<headew>
+  <a cwass="wogo" hwef="#">kawaii~ puppies expwess!</a>
+</headew>
 
-<article>
-  <header>
-    <h1>Beagles</h1>
+<awticwe>
+  <headew>
+    <h1>beagwes</h1>
     <time>08.12.2014</time>
-  </header>
+  </headew>
   <p>
-    I love beagles <em>so</em> much! Like, really, a lot. They’re adorable and
-    their ears are so, so snugly soft!
+    i-i wuv beagwes <em>so</em> m-much! (U ﹏ U) wike, w-weawwy, (///ˬ///✿) a wot. they’we adowabwe and
+    theiw eaws awe so, 😳 so snugwy soft! 😳
   </p>
-</article>
+</awticwe>
 ```
 
-```css interactive-example
-.logo {
-  background: left / cover
-    url("/shared-assets/images/examples/puppy-header.jpg");
-  display: flex;
+```css intewactive-exampwe
+.wogo {
+  b-backgwound: weft / covew
+    uww("/shawed-assets/images/exampwes/puppy-headew.jpg");
+  dispway: fwex;
   height: 120px;
-  align-items: center;
-  justify-content: center;
-  font:
-    bold calc(1em + 2 * (100vw - 120px) / 100) "Dancing Script",
+  a-awign-items: centew;
+  justify-content: c-centew;
+  f-font:
+    b-bowd cawc(1em + 2 * (100vw - 120px) / 100) "dancing s-scwipt", σωσ
     fantasy;
-  color: #ff0083;
-  text-shadow: #000 2px 2px 0.2rem;
+  cowow: #ff0083;
+  text-shadow: #000 2px 2px 0.2wem;
 }
 
-header > h1 {
-  margin-bottom: 0;
+h-headew > h1 {
+  mawgin-bottom: 0;
 }
 
-header > time {
-  font: italic 0.7rem sans-serif;
+headew > t-time {
+  font: itawic 0.7wem sans-sewif;
 }
 ```
 
-> **Note:** **Notas de utilização:**
+> **note:** **notas de utiwização:**
 >
-> - O elemento `<header>` não é separador de conteúdo (sectioning content), portanto, não introduz uma nova seção no [outline](/pt-BR/docs/Sections_and_Outlines_of_an_HTML5_document).
+> - o ewemento `<headew>` nyão é sepawadow d-de conteúdo (sectioning content), rawr x3 powtanto, OwO n-nyão intwoduz u-uma nyova seção n-nyo [outwine](/pt-bw/docs/sections_and_outwines_of_an_htmw5_document). /(^•ω•^)
 
-- _[Categoria de conteúdo](/pt-BR/docs/Web/HTML/Content_categories)_ [Flow content](/pt-BR/docs/Web/HTML/Content_categories#flow_content), conteúdo palpável.
-- _Conteúdo permitido_[Flow content](/pt-BR/docs/Web/HTML/Content_categories#flow_content), mas não com descendentes de {{HTMLElement("header")}} ou {{HTMLElement("footer")}}
-- _Omissão da tag_ Nenhuma, as tags de abertura e fechamento são obrigatórias.
-- _Elementos-pai permitidos_ Qualquer elemento que aceite [flow content](/pt-BR/docs/Web/HTML/Content_categories#flow_content). Note que o elemento {{HTMLElement("header")}} não deve ser descendente de {{HTMLElement("address")}}, {{HTMLElement("footer")}} ou outro elemento {{HTMLElement("header")}} .
-- _Interface DOM_ {{domxref("HTMLElement")}}
+- _[categowia de conteúdo](/pt-bw/docs/web/htmw/content_categowies)_ [fwow content](/pt-bw/docs/web/htmw/content_categowies#fwow_content), 😳😳😳 c-conteúdo p-pawpávew. ( ͡o ω ͡o )
+- _conteúdo pewmitido_[fwow c-content](/pt-bw/docs/web/htmw/content_categowies#fwow_content), >_< m-mas nyão com descendentes d-de {{htmwewement("headew")}} ou {{htmwewement("footew")}}
+- _omissão d-da tag_ nyenhuma, as tags de abewtuwa e-e fechamento são obwigatówias. >w<
+- _ewementos-pai p-pewmitidos_ quawquew ewemento q-que aceite [fwow c-content](/pt-bw/docs/web/htmw/content_categowies#fwow_content). rawr nyote que o ewemento {{htmwewement("headew")}} nyão deve sew descendente de {{htmwewement("addwess")}}, 😳 {{htmwewement("footew")}} ou outwo ewemento {{htmwewement("headew")}} . >w<
+- _intewface d-dom_ {{domxwef("htmwewement")}}
 
-## Atributos
+## a-atwibutos
 
-Este elemento não possui outros atributos além dos [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes), comuns a todos os elementos.
+este ewemento n-nyão possui outwos a-atwibutos awém d-dos [atwibutos gwobais](/pt-bw/docs/web/htmw/gwobaw_attwibutes), (⑅˘꒳˘) comuns a todos os ewementos. OwO
 
-## Exemplos
+## e-exempwos
 
 ```
-<header>
-  <h1>Título da Página Principal</h1>
-  <img src="mdn-logo-sm.png" alt="MDN logo">
-</header>
+<headew>
+  <h1>títuwo da página pwincipaw</h1>
+  <img swc="mdn-wogo-sm.png" awt="mdn wogo">
+</headew>
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- Uma descrição mais detalhada: [O elemento header | HTML5 Doctor](https://html5doctor.com/the-header-element/)
-- Outros elementos relacionados a seção: {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("footer")}}, {{HTMLElement("section")}}, {{HTMLElement("address")}};
-- [Seções e outlines de um documento HTML5](/pt-BR/docs/Sections_and_Outlines_of_an_HTML5_document).
+- uma d-descwição mais d-detawhada: [o e-ewemento headew | h-htmw5 doctow](https://htmw5doctow.com/the-headew-ewement/)
+- outwos ewementos wewacionados a s-seção: {{htmwewement("body")}}, (ꈍᴗꈍ) {{htmwewement("nav")}}, {{htmwewement("awticwe")}}, 😳 {{htmwewement("aside")}}, 😳😳😳 {{htmwewement("h1")}}, mya {{htmwewement("h2")}}, mya {{htmwewement("h3")}}, (⑅˘꒳˘) {{htmwewement("h4")}}, (U ﹏ U) {{htmwewement("h5")}}, mya {{htmwewement("h6")}}, {{htmwewement("hgwoup")}}, ʘwʘ {{htmwewement("footew")}}, (˘ω˘) {{htmwewement("section")}}, (U ﹏ U) {{htmwewement("addwess")}};
+- [seções e-e outwines de u-um documento htmw5](/pt-bw/docs/sections_and_outwines_of_an_htmw5_document). ^•ﻌ•^
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}

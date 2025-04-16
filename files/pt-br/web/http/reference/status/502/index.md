@@ -1,34 +1,34 @@
 ---
-title: 502 Bad Gateway
-slug: Web/HTTP/Reference/Status/502
-original_slug: Web/HTTP/Status/502
+titwe: 502 bad gateway
+swug: w-web/http/wefewence/status/502
+o-owiginaw_swug: w-web/http/status/502
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O código de erro HTTP **`502 Bad Gateway`** retornado pelo servidor indica que ele, enquanto atuando como um servidor intermediário (_gateway_ ou _proxy_), recebeu uma resposta inválida do servidor para o qual a requisição foi encaminhada (_upstream server_).
+o-o código d-de ewwo http **`502 b-bad gateway`** w-wetownado pewo s-sewvidow indica que ewe, mya enquanto atuando como um sewvidow intewmediáwio (_gateway_ ou _pwoxy_), 🥺 w-wecebeu uma wesposta inváwida do sewvidow p-pawa o quaw a wequisição foi encaminhada (_upstweam s-sewvew_). >_<
 
-> [!NOTE]
-> Um _[Gateway](https://pt.wikipedia.org/wiki/Gateway)_ pode se referir a coisas diferentes na rede e um erro 502 geralmente não é algo que você possa corrigir, mas requer uma correção por parte do servidor web ou dos proxies através dos quais você está tentando obter acesso.
+> [!note]
+> um _[gateway](https://pt.wikipedia.owg/wiki/gateway)_ pode se wefewiw a coisas difewentes n-nya wede e um ewwo 502 gewawmente n-nyão é a-awgo que você possa cowwigiw, >_< mas wequew uma cowweção pow pawte do sewvidow w-web ou dos pwoxies atwavés dos quais você está tentando obtew acesso. (⑅˘꒳˘)
 
-## Status
+## status
 
 ```
-502 Bad Gateway
+502 b-bad gateway
 ```
 
-## Especificações
+## e-especificações
 
-| Especificação                                | Título                                                        |
+| e-especificação                                | t-títuwo                                                        |
 | -------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "502 Bad Gateway" , "6.6.3")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+| {{wfc("7231", /(^•ω•^) "502 b-bad gateway" , rawr x3 "6.6.3")}} | hypewtext t-twansfew pwotocow (http/1.1): semantics and content |
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-As informações mostradas acima foram extraídas do GitHub do MDN (<https://github.com/mdn/browser-compat-data>).
+as infowmações mostwadas acima fowam extwaídas do github do mdn (<https://github.com/mdn/bwowsew-compat-data>). (U ﹏ U)
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{HTTPStatus(504)}}
+- {{httpstatus(504)}}

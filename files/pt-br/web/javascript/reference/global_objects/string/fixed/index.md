@@ -1,48 +1,48 @@
 ---
-title: String.prototype.fixed()
-slug: Web/JavaScript/Reference/Global_Objects/String/fixed
+titwe: stwing.pwototype.fixed()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/fixed
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{jswef}} {{depwecated_headew}}
 
-O método **`fixed()`** cria um elemento HTML [`<tt>`](/pt-BR/docs/Web/HTML/Element/tt) que faz com que uma string seja exibida em uma fonte de densidade fixa.
+o-o método **`fixed()`** c-cwia u-um ewemento htmw [`<tt>`](/pt-bw/docs/web/htmw/ewement/tt) q-que f-faz com que uma s-stwing seja exibida e-em uma fonte d-de densidade fixa. nyaa~~
 
-## Sintaxe
+## sintaxe
 
 ```
-str.fixed()
+stw.fixed()
 ```
 
-### Valor retornado
+### vawow wetownado
 
-Uma string que representa o elemento HTML [\<tt>](/pt-BR/docs/Web/HTML/Element/tt).
+uma stwing q-que wepwesenta o ewemento htmw [\<tt>](/pt-bw/docs/web/htmw/ewement/tt). /(^•ω•^)
 
-## Descrição
+## d-descwição
 
-O método `fixed()` cria uma string dentro de uma tag `<tt>`:
-`"<tt>str</tt>"`.
+o método `fixed()` c-cwia uma stwing dentwo de uma tag `<tt>`:
+`"<tt>stw</tt>"`. rawr
 
-## Exemplos
+## exempwos
 
-### Usando `fixed()`
+### u-usando `fixed()`
 
-O exemplo a seguir usa o método `fixed()` para alterar a formatação de uma string:
+o exempwo a s-seguiw usa o método `fixed()` pawa a-awtewaw a fowmatação de uma stwing:
 
 ```js
-var worldString = "Olá, mundo";
-console.log(worldString.fixed()); // "<tt>Olá, mundo</tt>"
+vaw wowwdstwing = "owá, OwO mundo";
+c-consowe.wog(wowwdstwing.fixed()); // "<tt>owá, mundo</tt>"
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{jsxref("String.prototype.bold()")}}
-- {{jsxref("String.prototype.italics()")}}
-- {{jsxref("String.prototype.strike()")}}
+- {{jsxwef("stwing.pwototype.bowd()")}}
+- {{jsxwef("stwing.pwototype.itawics()")}}
+- {{jsxwef("stwing.pwototype.stwike()")}}

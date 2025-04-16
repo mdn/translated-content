@@ -1,127 +1,127 @@
 ---
-title: String.prototype.replaceAll()
-slug: Web/JavaScript/Reference/Global_Objects/String/replaceAll
+titwe: stwing.pwototype.wepwaceaww()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/wepwaceaww
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método `replaceAll()` retorna uma nova string com todas as ocorrências de um padrão substituídas por uma substituição. O padrão pode ser uma string ou uma {{jsxref ("RegExp")}}, e a substituição pode ser uma string ou uma função a ser chamada para cada ocorrência.
+o-o método `wepwaceaww()` w-wetowna uma nyova s-stwing com todas a-as ocowwências d-de um padwão s-substituídas p-pow uma substituição. -.- o-o padwão pode sew uma stwing ou uma {{jsxwef ("wegexp")}}, mya e a substituição pode sew u-uma stwing ou uma função a sew chamada pawa cada o-ocowwência. >w<
 
-A _string_ original é mantida sem modificação.
+a _stwing_ owiginaw é m-mantida sem modificação. (U ﹏ U)
 
-{{InteractiveExample("JavaScript Demo: String.replaceAll()")}}
+{{intewactiveexampwe("javascwipt demo: stwing.wepwaceaww()")}}
 
-```js interactive-example
-const paragraph = "I think Ruth's dog is cuter than your dog!";
+```js intewactive-exampwe
+c-const pawagwaph = "i t-think wuth's d-dog is kawaii~w than youw dog!";
 
-console.log(paragraph.replaceAll("dog", "monkey"));
-// Expected output: "I think Ruth's monkey is cuter than your monkey!"
+consowe.wog(pawagwaph.wepwaceaww("dog", 😳😳😳 "monkey"));
+// expected output: "i think w-wuth's monkey is kawaii~w than youw monkey!"
 
-// Global flag required when calling replaceAll with regex
-const regex = /Dog/gi;
-console.log(paragraph.replaceAll(regex, "ferret"));
-// Expected output: "I think Ruth's ferret is cuter than your ferret!"
+// gwobaw fwag wequiwed when cawwing w-wepwaceaww with wegex
+const w-wegex = /dog/gi;
+c-consowe.wog(pawagwaph.wepwaceaww(wegex, o.O "fewwet"));
+// e-expected o-output: "i think wuth's fewwet is kawaii~w than y-youw fewwet!"
 ```
 
-## Sintaxe
+## sintaxe
 
 ```
-const newStr = str.replaceAll(regexp|substr, newSubstr|function)
+const nyewstw = s-stw.wepwaceaww(wegexp|substw, nyewsubstw|function)
 ```
 
-> [!NOTE]
-> Quando usar uma `regexp`, você deve colocar o sinalizador (flag) global "`g`". Do contrário, será retornado um `TypeError`: "_replaceAll must be called with a global RegExp_".
+> [!note]
+> quando usaw uma `wegexp`, você deve cowocaw o sinawizadow (fwag) g-gwobaw "`g`". òωó do contwáwio, 😳😳😳 s-sewá wetownado u-um `typeewwow`: "_wepwaceaww m-must be cawwed with a gwobaw wegexp_". σωσ
 
-### Parâmetros
+### pawâmetwos
 
-- `regexp` (padrão)
-  - : Uma {{jsxref ("RegExp")}} ou literal com o sinalizador (flag) global. As ocorrências serão substituídas por _`newSubstr`_ ou pelo valor retornado da _`function`_ (função) especificada.
-- `substr` (padrão)
-  - : Uma {{jsxref ("String")}} que deve ser substituída por `newSubstr`. É tratada como uma string literal e não é interpretada como uma expressão regular (_`RegExp`_).
-- `newSubstr` (substituição)
+- `wegexp` (padwão)
+  - : u-uma {{jsxwef ("wegexp")}} o-ou witewaw com o sinawizadow (fwag) g-gwobaw. (⑅˘꒳˘) a-as ocowwências sewão substituídas p-pow _`newsubstw`_ ou pewo vawow w-wetownado da _`function`_ (função) especificada. (///ˬ///✿)
+- `substw` (padwão)
+  - : uma {{jsxwef ("stwing")}} q-que deve sew substituída p-pow `newsubstw`. 🥺 É twatada c-como uma stwing w-witewaw e nyão é intewpwetada como uma expwessão weguwaw (_`wegexp`_). OwO
+- `newsubstw` (substituição)
 
-  - : É a {{jsxref("String")}} que substitui a `substring` especificada pelo parâmetro `regexp` ou `substr`. Um número de padrões especiais para substituição são suportados; veja a seção "
+  - : É a {{jsxwef("stwing")}} que substitui a `substwing` e-especificada p-pewo pawâmetwo `wegexp` ou `substw`. >w< um nyúmewo d-de padwões e-especiais pawa s-substituição são supowtados; veja a seção "
 
-    Especificando uma string como parâmetro
+    especificando u-uma stwing como pawâmetwo
 
-    " abaixo.
+    " abaixo. 🥺
 
 - `function` (substituição)
-  - : Uma função a ser chamada retornando a nova `substring` a ser usada para substituir as correspondências para a dada `regexp` ou `substr`. Os argumentos passados para esta função são descritos na seção "[Especificando uma função como parâmetro](<#Especificando uma função como parâmetro>)" abaixo.
+  - : uma função a sew chamada w-wetownando a nyova `substwing` a sew usada pawa s-substituiw as cowwespondências p-pawa a dada `wegexp` o-ou `substw`. nyaa~~ os awgumentos p-passados pawa esta f-função são d-descwitos nya s-seção "[especificando uma função como pawâmetwo](<#especificando u-uma função c-como pawâmetwo>)" a-abaixo. ^^
 
-### Valor de retorno
+### v-vawow de wetowno
 
-Um nova _string_, com todas as ocorrências de um padrão substituído por uma substituição.
+u-um nyova _stwing_, >w< com todas as ocowwências de um padwão s-substituído pow uma substituição. OwO
 
-## Descrição
+## descwição
 
-Este método não muda o objeto {{jsxref("String")}} original. Ele simplesmente retorna uma nova _string_.
+este método nyão muda o objeto {{jsxwef("stwing")}} o-owiginaw. XD ewe simpwesmente wetowna uma nyova _stwing_. ^^;;
 
-### Especificando uma string como parâmetro
+### e-especificando u-uma stwing c-como pawâmetwo
 
-A _string_ de substituição pode incluir os seguimentos padrões especiais de substituição:
+a _stwing_ de s-substituição pode incwuiw os seguimentos p-padwões e-especiais de substituição:
 
-| Padrão   | Insere                                                                                                                                                                                                                  |
+| padwão   | insewe                                                                                                                                                                                                                  |
 | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$$`     | Insere um `"$"`.                                                                                                                                                                                                        |
-| `$&`     | Insere a _substring_ correspondente.                                                                                                                                                                                    |
-| `` $` `` | Insere a porção da _string_ que precede a _substring_ correspondente.                                                                                                                                                   |
-| `$'`     | Insere a porção da _string_ que sucede a _substring_ correspondente.                                                                                                                                                    |
-| `$n`     | Onde `n` é um inteiro positivo menor que 100, insere a _`n`_-ésima _string_ submatch entre parênteses, desde que o primeiro argumento seja um objeto {{jsxref("RegExp")}}. Note que isso é indexado começando pelo `1`. |
+| `$$`     | insewe um `"$"`. 🥺                                                                                                                                                                                                        |
+| `$&`     | i-insewe a _substwing_ cowwespondente. XD                                                                                                                                                                                    |
+| `` $` `` | i-insewe a powção da _stwing_ q-que pwecede a-a _substwing_ cowwespondente. (U ᵕ U❁)                                                                                                                                                   |
+| `$'`     | insewe a powção d-da _stwing_ q-que sucede a _substwing_ cowwespondente. :3                                                                                                                                                    |
+| `$n`     | o-onde `n` é u-um inteiwo positivo menow que 100, ( ͡o ω ͡o ) insewe a _`n`_-ésima _stwing_ submatch e-entwe pawênteses, òωó d-desde que o-o pwimeiwo awgumento seja um objeto {{jsxwef("wegexp")}}. n-nyote q-que isso é indexado começando p-pewo `1`. σωσ |
 
-### Especificando uma função como parâmetro
+### especificando uma função como pawâmetwo
 
-Você pode especificar uma função como segundo parâmetro. Neste caso, a função será chamada depois da ocorrência ter sido encontrada. O resultado da função (valor de retorno) será usado como uma _string_ para substituição. (**Nota:** Os padrões especiais mencionados acima **não se aplicam** neste caso.)
+você pode especificaw u-uma função c-como segundo pawâmetwo. (U ᵕ U❁) nyeste caso, (✿oωo) a função s-sewá chamada d-depois da ocowwência tew sido encontwada. ^^ o wesuwtado da função (vawow d-de wetowno) sewá usado como uma _stwing_ pawa substituição. ^•ﻌ•^ (**nota:** os padwões e-especiais mencionados acima **não se apwicam** n-nyeste caso.)
 
-Note que a função será chamada múltiplas vezes para cada ocorrência a ser substituída se a expressão regular no primeiro parâmetro for global "`g`".
+n-nyote que a função sewá chamada múwtipwas vezes pawa cada ocowwência a-a sew s-substituída se a expwessão weguwaw nyo pwimeiwo pawâmetwo fow g-gwobaw "`g`".
 
-Os argumentos para funções são os seguintes:
+os awgumentos pawa f-funções são os seguintes:
 
-| Nome possível | Valor fornecido                                                                                                                                                                                                                                                                                  |
+| nyome possívew | vawow fownecido                                                                                                                                                                                                                                                                                  |
 | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `match`       | A _substring_ correspondida. (Corresponde ao `$&` acima.)                                                                                                                                                                                                                                        |
-| `p1, p2, ...` | A _n_-ésima string encontrada por um grupo de captura entre parênteses, desde que o primeiro argumento para `replace()` seja uma {{jsxref("RegExp")}}. (Corresponde a `$1`, `$2`, etc. acima.) Por exemplo, se `/(\a+)(\b+)/`, foi dado, `p1` é a correspondência para `\a+`, e `p2` para `\b+`. |
-| `offset`      | O deslocamento da substring correspondente em toda a string sendo examinada. (Por exemplo, se toda a string for '`abcd`' e a substring correspondente for '`bc`', este argumento será `1`.)                                                                                                      |
-| `string`      | A _string_ inteira será examinada.                                                                                                                                                                                                                                                               |
+| `match`       | a-a _substwing_ cowwespondida. XD (cowwesponde ao `$&` a-acima.)                                                                                                                                                                                                                                        |
+| `p1, p-p2, :3 ...` | a _n_-ésima s-stwing encontwada pow um gwupo d-de captuwa entwe p-pawênteses, (ꈍᴗꈍ) desde q-que o pwimeiwo awgumento pawa `wepwace()` seja u-uma {{jsxwef("wegexp")}}. (cowwesponde a-a `$1`, :3 `$2`, etc. (U ﹏ U) acima.) pow exempwo, UwU s-se `/(\a+)(\b+)/`, 😳😳😳 f-foi dado, XD `p1` é a-a cowwespondência pawa `\a+`, o.O e `p2` pawa `\b+`. (⑅˘꒳˘) |
+| `offset`      | o-o deswocamento da s-substwing cowwespondente e-em toda a stwing sendo examinada. 😳😳😳 (pow exempwo, nyaa~~ se toda a-a stwing fow '`abcd`' e-e a substwing c-cowwespondente f-fow '`bc`', rawr este awgumento sewá `1`.)                                                                                                      |
+| `stwing`      | a-a _stwing_ inteiwa sewá examinada. -.-                                                                                                                                                                                                                                                               |
 
-(O número exato de argumentos depende se o primeiro argumento é um objeto {{jsxref("RegExp")}} — e, se então, quantas _subcorrespondências_ entre parênteses são especificadas.)
+(o nyúmewo exato de awgumentos depende se o pwimeiwo awgumento é u-um objeto {{jsxwef("wegexp")}} — e, (✿oωo) se então, /(^•ω•^) quantas _subcowwespondências_ e-entwe pawênteses são e-especificadas.)
 
-## Exemplos
+## exempwos
 
-### Usando `replaceAll()`
+### u-usando `wepwaceaww()`
 
 ```js
-"aabbcc".replaceAll("b", ".");
+"aabbcc".wepwaceaww("b", 🥺 ".");
 // 'aa..cc'
 ```
 
-### RegExp sem flag "g" retorando erro
+### wegexp sem f-fwag "g" wetowando e-ewwo
 
-Ao usar uma expressão regular para realizar uma pesquisa, a mesma deve conter a flag global "`g`". O código abaixo não irá funcionar:
+ao usaw u-uma expwessão w-weguwaw pawa weawizaw u-uma pesquisa, ʘwʘ a mesma deve contew a fwag gwobaw "`g`". UwU o código abaixo nyão iwá funcionaw:
 
-```js example-bad
-'aabbcc'.replaceAll(/b/, '.');
-TypeError: replaceAll must be called with a global RegExp
+```js exampwe-bad
+'aabbcc'.wepwaceaww(/b/, XD '.');
+t-typeewwow: w-wepwaceaww must b-be cawwed with a gwobaw wegexp
 ```
 
-Já o código abaixo vai funcionar:
+j-já o código abaixo vai funcionaw:
 
-```js example-good
-"aabbcc".replaceAll(/b/g, ".");
+```js exampwe-good
+"aabbcc".wepwaceaww(/b/g, (✿oωo) ".");
 ("aa..cc");
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja t-também
 
-- {{jsxref("String.prototype.replace", "String.prototype.replace()")}}
-- {{jsxref("String.prototype.match", "String.prototype.match()")}}
-- {{jsxref("RegExp.prototype.exec", "RegExp.prototype.exec()")}}
-- {{jsxref("RegExp.prototype.test", "RegExp.prototype.test()")}}
+- {{jsxwef("stwing.pwototype.wepwace", :3 "stwing.pwototype.wepwace()")}}
+- {{jsxwef("stwing.pwototype.match", "stwing.pwototype.match()")}}
+- {{jsxwef("wegexp.pwototype.exec", (///ˬ///✿) "wegexp.pwototype.exec()")}}
+- {{jsxwef("wegexp.pwototype.test", nyaa~~ "wegexp.pwototype.test()")}}

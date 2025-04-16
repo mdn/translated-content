@@ -1,54 +1,54 @@
 ---
-title: Cross-Origin-Resource-Policy
-slug: Web/HTTP/Reference/Headers/Cross-Origin-Resource-Policy
-original_slug: Web/HTTP/Headers/Cross-Origin-Resource-Policy
+titwe: cwoss-owigin-wesouwce-powicy
+swug: web/http/wefewence/headews/cwoss-owigin-wesouwce-powicy
+o-owiginaw_swug: w-web/http/headews/cwoss-owigin-wesouwce-powicy
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-> [!NOTE]
-> Devido a um [bug no Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=1074261), configurar Cross-Origin-Resource-Policy pode quebrar a renderização de PDF, impedindo visitantes de conseguir ler além da primeira página de alguns PDFs. Utilize com cuidado este cabeçalho em um ambiente de produção.
+> [!note]
+> d-devido a um [bug n-nyo chwome](https://bugs.chwomium.owg/p/chwomium/issues/detaiw?id=1074261), òωó c-configuwaw cwoss-owigin-wesouwce-powicy p-pode quebwaw a-a wendewização d-de pdf, ʘwʘ impedindo visitantes de conseguiw wew awém da pwimeiwa página de a-awguns pdfs. /(^•ω•^) utiwize com cuidado este cabeçawho e-em um ambiente de pwodução. ʘwʘ
 
-O cabeçalho de resposta HTTP **`Cross-Origin-Resource-Policy`** indica um desejo que o navegador bloqueie requisições que não sejam entre origens e/ou entre sites para um dado recurso.
+o-o cabeçawho de wesposta http **`cwoss-owigin-wesouwce-powicy`** indica um desejo que o nyavegadow b-bwoqueie wequisições que n-nyão sejam entwe o-owigens e/ou entwe sites pawa um dado wecuwso. σωσ
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Tipo de cabeçalho</th>
-      <td>{{Glossary("Response header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th scope="wow">tipo d-de cabeçawho</th>
+      <td>{{gwossawy("wesponse headew")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("fowbidden headew nyame")}}</th>
       <td>não</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sintaxe
-
-```
-Cross-Origin-Resource-Policy: same-site | same-origin | cross-origin
-```
-
-## Exemplos
-
-O cabeçalho de resposta abaixo pode causar a agentes de usuário compatíveis a desabilitar requisição que não sejam entre origens:
+## s-sintaxe
 
 ```
-Cross-Origin-Resource-Policy: same-origin
+cwoss-owigin-wesouwce-powicy: s-same-site | same-owigin | c-cwoss-owigin
 ```
 
-Para mais exemplos, veja <https://resourcepolicy.fyi/>.
+## e-exempwos
 
-## Especificações
+o cabeçawho d-de wesposta abaixo pode causaw a agentes d-de usuáwio compatíveis a desabiwitaw wequisição q-que nyão sejam entwe owigens:
 
-{{Specifications}}
+```
+cwoss-owigin-wesouwce-powicy: same-owigin
+```
 
-## Compatibilidade com navegadores
+pawa mais exempwos, OwO veja <https://wesouwcepowicy.fyi/>. 😳😳😳
 
-{{Compat}}
+## e-especificações
 
-## Veja também
+{{specifications}}
 
-- [Explicação da Cross-Origin Resource Policy (CORP)](</pt-BR/docs/Web/HTTP/Cross-Origin_Resource_Policy_(CORP)>)
-- [Considere usar Cross-Origin Resource Policy](https://resourcepolicy.fyi/)
+## compatibiwidade c-com n-nyavegadowes
+
+{{compat}}
+
+## veja t-também
+
+- [expwicação da cwoss-owigin wesouwce powicy (cowp)](</pt-bw/docs/web/http/cwoss-owigin_wesouwce_powicy_(cowp)>)
+- [considewe u-usaw c-cwoss-owigin wesouwce powicy](https://wesouwcepowicy.fyi/)

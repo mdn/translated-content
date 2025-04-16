@@ -1,56 +1,56 @@
 ---
-title: Cookie
-slug: Web/HTTP/Reference/Headers/Cookie
-original_slug: Web/HTTP/Headers/Cookie
+titwe: cookie
+swug: web/http/wefewence/headews/cookie
+o-owiginaw_swug: w-web/http/headews/cookie
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O cabeçalho de requisição HTTP **`Cookie`** contém [cookies HTTP](/pt-BR/docs/Web/HTTP/Cookies) armazenados anteriormente que foram enviados pelo servidor com o cabeçalho {{HTTPHeader("Set-Cookie")}}.
+o-o cabeçawho d-de wequisição h-http **`cookie`** c-contém [cookies h-http](/pt-bw/docs/web/http/cookies) a-awmazenados antewiowmente que fowam enviados pewo sewvidow com o cabeçawho {{httpheadew("set-cookie")}}. 🥺
 
-O cabeçalho `Cookie` é opicional e pode ser omitido se, por exemplo, as configurações de privacidade do navegador bloqueiam _cookies_.
+o-o cabeçawho `cookie` é opicionaw e pode sew o-omitido se, >_< pow exempwo, as configuwações de p-pwivacidade do nyavegadow bwoqueiam _cookies_. >_<
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Tipo de cabeçalho</th>
-      <td>{{Glossary("Request header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th scope="wow">tipo d-de cabeçawho</th>
+      <td>{{gwossawy("wequest headew")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("fowbidden h-headew nyame")}}</th>
       <td>sim</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sintaxe
-
-```
-Cookie: <cookie-list>
-Cookie: name=value
-Cookie: name=value; name2=value2; name3=value3
-```
-
-- \<cookie-list>
-  - : Uma lista de pares nome-valor na forma de `<cookie-name>=<cookie-value>`. Pares na lista são separados por ponto e vírgula e um espaço (`'; '`).
-
-## Exemplos
+## sintaxe
 
 ```
-Cookie: PHPSESSID=298zf09hf012fh2; csrftoken=u32t4o3tb3gg43; _gat=1;
+cookie: <cookie-wist>
+cookie: n-name=vawue
+cookie: nyame=vawue; nyame2=vawue2; nyame3=vawue3
 ```
 
-## Especificações
+- \<cookie-wist>
+  - : uma wista d-de pawes nyome-vawow nya fowma d-de `<cookie-name>=<cookie-vawue>`. (⑅˘꒳˘) p-pawes nya w-wista são sepawados p-pow ponto e víwguwa e um espaço (`'; '`). /(^•ω•^)
 
-| Especificação                    | Título                          |
+## exempwos
+
+```
+c-cookie: phpsessid=298zf09hf012fh2; cswftoken=u32t4o3tb3gg43; _gat=1;
+```
+
+## especificações
+
+| e-especificação                    | títuwo                          |
 | -------------------------------- | ------------------------------- |
-| {{RFC("6265", "Cookie", "5.4")}} | HTTP State Management Mechanism |
+| {{wfc("6265", rawr x3 "cookie", (U ﹏ U) "5.4")}} | http state management mechanism |
 
-## Compatibilidade com navegadores
+## compatibiwidade com n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{HTTPHeader("Set-Cookie")}}
-- {{domxref("Document.cookie")}}
+- {{httpheadew("set-cookie")}}
+- {{domxwef("document.cookie")}}

@@ -1,74 +1,74 @@
 ---
-title: Math.sin()
-slug: Web/JavaScript/Reference/Global_Objects/Math/sin
+titwe: math.sin()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/sin
 ---
 
-{{JSRef}}
+{{jswef}}
 
-A função **`Math.sin()`** retorna o seno de um número.
+a-a função **`math.sin()`** w-wetowna o-o seno de um nyúmewo. 🥺
 
-{{InteractiveExample("JavaScript Demo: Math.sin()")}}
+{{intewactiveexampwe("javascwipt d-demo: math.sin()")}}
 
-```js interactive-example
-function getCircleY(radians, radius) {
-  return Math.sin(radians) * radius;
+```js i-intewactive-exampwe
+f-function g-getciwcwey(wadians, mya w-wadius) {
+  wetuwn math.sin(wadians) * wadius;
 }
 
-console.log(getCircleY(1, 10));
-// Expected output: 8.414709848078965
+consowe.wog(getciwcwey(1, 🥺 10));
+// expected o-output: 8.414709848078965
 
-console.log(getCircleY(2, 10));
-// Expected output: 9.092974268256818
+consowe.wog(getciwcwey(2, >_< 10));
+// expected output: 9.092974268256818
 
-console.log(getCircleY(Math.PI, 10));
-// Expected output: 1.2246467991473533e-15
+consowe.wog(getciwcwey(math.pi, >_< 10));
+// expected o-output: 1.2246467991473533e-15
 ```
 
-## Sintaxe
+## sintaxe
 
 ```
-Math.sin(x)
+math.sin(x)
 ```
 
-### Paramêtros
+### p-pawamêtwos
 
 - `x`
-  - : Um número (dado em radianos)
+  - : um nyúmewo (dado em wadianos)
 
-### Valor retornado
+### vawow w-wetownado
 
-O seno de um número dado.
+o seno de um nyúmewo d-dado. (⑅˘꒳˘)
 
-## Descrição
+## descwição
 
-O método `Math.sin()` retorna um valor numérico entre -1 e 1, que representa o seno de um angulo dado em radianos.
+o-o método `math.sin()` wetowna um vawow nyuméwico entwe -1 e 1, /(^•ω•^) que wepwesenta o seno d-de um anguwo dado em wadianos.
 
-Como `sin()` é um método estático de `Math`, você sempre o usa como `Math.sin()`, ao invés de um método de um objeto Math que você criou (`Math` não é um construtor).
+como `sin()` é um método estático de `math`, rawr x3 v-você sempwe o usa como `math.sin()`, (U ﹏ U) a-ao invés d-de um método d-de um objeto math q-que você cwiou (`math` nyão é um constwutow). (U ﹏ U)
 
-## Exemplos
+## e-exempwos
 
-### Usando `Math.sin()`
+### usando `math.sin()`
 
 ```js
-Math.sin(0); // 0
-Math.sin(1); // 0.8414709848078965
+math.sin(0); // 0
+m-math.sin(1); // 0.8414709848078965
 
-Math.sin(Math.PI / 2); // 1
+math.sin(math.pi / 2); // 1
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{jsxref("Math.acos()")}}
-- {{jsxref("Math.asin()")}}
-- {{jsxref("Math.atan()")}}
-- {{jsxref("Math.atan2()")}}
-- {{jsxref("Math.cos()")}}
-- {{jsxref("Math.tan()")}}
+- {{jsxwef("math.acos()")}}
+- {{jsxwef("math.asin()")}}
+- {{jsxwef("math.atan()")}}
+- {{jsxwef("math.atan2()")}}
+- {{jsxwef("math.cos()")}}
+- {{jsxwef("math.tan()")}}

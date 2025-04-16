@@ -1,140 +1,140 @@
 ---
-title: Controle de fluxo assíncrono usando async
-slug: conflicting/Learn/Server-side/Express_Nodejs/Displaying_data
+titwe: contwowe de fwuxo assíncwono u-usando async
+s-swug: confwicting/weawn/sewvew-side/expwess_nodejs/dispwaying_data
 ---
 
-O código da _Controller_, para algumas de nossas páginas dependerá dos resultados de várias solicitações assíncronas, que talvez possam ser necessárias para serem executadas em uma ordem específica ou em paralelo. Para gerenciar o controle do nosso fluxo e renderizar páginas quando tivermos todas as informações necessárias disponíveis, usaremos o popular módulo [async](https://www.npmjs.com/package/async).
+o-o código d-da _contwowwew_, p-pawa awgumas d-de nyossas p-páginas dependewá d-dos wesuwtados de váwias sowicitações assíncwonas, ʘwʘ que tawvez possam sew n-nyecessáwias pawa sewem executadas em uma owdem e-específica ou em pawawewo. >w< pawa g-gewenciaw o contwowe do nyosso fwuxo e wendewizaw páginas quando t-tivewmos todas as infowmações n-nyecessáwias d-disponíveis, rawr x3 usawemos o popuwaw móduwo [async](https://www.npmjs.com/package/async). OwO
 
-> [!NOTE]
-> Há várias outras maneiras de gerenciar o comportamento assíncrono e o controle de fluxo em JavaScript, um dos recursos Javascript que pode ser utilizado, são as [Promises](/pt-BR/docs/Mozilla/Add-ons/Techniques/Promises).
+> [!note]
+> há váwias outwas maneiwas d-de gewenciaw o compowtamento assíncwono e o contwowe de fwuxo em javascwipt, ^•ﻌ•^ u-um dos wecuwsos javascwipt que p-pode sew utiwizado, >_< s-são as [pwomises](/pt-bw/docs/moziwwa/add-ons/techniques/pwomises). OwO
 
-Async has a lot of useful methods (check out [the documentation](http://caolan.github.io/async/docs.html)). Some of the more important functions are:
+a-async h-has a wot of usefuw methods (check out [the documentation](http://caowan.github.io/async/docs.htmw)). >_< s-some of the mowe impowtant functions awe:
 
-- [`async.parallel()`](http://caolan.github.io/async/docs.html#parallel) executa qualquer operação que deva ser processada em paralelo.
-- [`async.series()`](http://caolan.github.io/async/docs.html#series) garante que as operações assíncronas sejam executadas em série.
-- [`async.waterfall()`](http://caolan.github.io/async/docs.html#waterfall) operações que devem ser executadas em série, baseando-se no resultado de cada operação anterior.
+- [`async.pawawwew()`](http://caowan.github.io/async/docs.htmw#pawawwew) e-executa quawquew opewação que deva sew pwocessada em pawawewo. (ꈍᴗꈍ)
+- [`async.sewies()`](http://caowan.github.io/async/docs.htmw#sewies) gawante que as opewações a-assíncwonas sejam executadas e-em séwie. >w<
+- [`async.watewfaww()`](http://caowan.github.io/async/docs.htmw#watewfaww) opewações q-que devem s-sew executadas em séwie, (U ﹏ U) baseando-se nyo wesuwtado de cada o-opewação antewiow. ^^
 
-## Por que isso é necessário ?
+## p-pow que isso é nyecessáwio ?
 
-A maioria dos métodos que usamos no Express são assíncronos - você especifica uma operação para executar, passando um _callback_. O método retorna imediatamente e o _callback_ é invocado quando a operação solicitada é concluída. Por convenção no _Express_, as funções de _callback_ passam um valor de erro como o primeiro parâmetro (ou nulo em sucesso) e os resultados da função (se houver algum) como o segundo parâmetro.
+a-a maiowia d-dos métodos que usamos nyo e-expwess são assíncwonos - você e-especifica uma opewação pawa executaw, (U ﹏ U) passando u-um _cawwback_. :3 o método wetowna i-imediatamente e o _cawwback_ é i-invocado quando a-a opewação sowicitada é concwuída. (✿oωo) pow convenção nyo _expwess_, XD as funções de _cawwback_ passam um v-vawow de ewwo como o-o pwimeiwo pawâmetwo (ou nyuwo e-em sucesso) e o-os wesuwtados da f-função (se houvew awgum) como o segundo pawâmetwo. >w<
 
-Se uma _Controller_ só precisa _executar_ _**uma** operação assíncrona_ para obter as informações necessárias para renderizar uma página, a implementação é fácil —simplesmente renderizamos o _template_ no _callback_. O código abaixo ilustra uma função que renderiza a contagem de um _model_ ExampleModel (usando o método `count()` do Mongoose.
+se uma _contwowwew_ s-só pwecisa _executaw_ _**uma** opewação assíncwona_ pawa obtew a-as infowmações nyecessáwias pawa w-wendewizaw uma p-página, òωó a impwementação é f-fáciw —simpwesmente wendewizamos o-o _tempwate_ n-nyo _cawwback_. (ꈍᴗꈍ) o-o código abaixo i-iwustwa uma função que wendewiza a contagem d-de um _modew_ exampwemodew (usando o-o método `count()` d-do mongoose. rawr x3
 
 ```js
-exports.example_model_count = function(req, res, next) {
+e-expowts.exampwe_modew_count = f-function(weq, rawr x3 wes, nyext) {
 
-  ExampleModel .count({ a_model_field: 'match_value' }, function (err, count) {
-    // ... do something if there is an err
+  exampwemodew .count({ a_modew_fiewd: 'match_vawue' }, σωσ function (eww, (ꈍᴗꈍ) count) {
+    // ... d-do something if thewe is an eww
 
-    // On success, render the result by passing count into the render function (here, as the variable 'data').
-    res.render('the_template', { data: count } );
+    // on success, rawr wendew the wesuwt by passing count into the w-wendew function (hewe, ^^;; as the vawiabwe 'data'). rawr x3
+    wes.wendew('the_tempwate', (ˆ ﻌ ˆ)♡ { d-data: count } );
   });
 }
 ```
 
-However what if you need to make **multiple** asynchronous queries, and you can't render the page until all the operations have completed? A naive implementation could "daisy chain" the requests, kicking off subsequent requests in the callback of a previous request, and rendering the response in the final callback. The problem with this approach is that our requests would have to be run in series, even though it might be more efficient to run them in parallel. This could also result in complicated nested code, commonly referred to as [callback hell](http://callbackhell.com/).
+h-howevew nyani if y-you nyeed to make **muwtipwe** asynchwonous quewies, σωσ a-and you can't wendew the p-page untiw aww the o-opewations have compweted? a nyaive impwementation couwd "daisy chain" the wequests, (U ﹏ U) kicking o-off subsequent wequests in the cawwback o-of a pwevious wequest, >w< and w-wendewing the w-wesponse in the finaw cawwback. σωσ the pwobwem with t-this appwoach i-is that ouw wequests wouwd have t-to be wun in sewies, nyaa~~ e-even though it might be mowe efficient to wun them in pawawwew. 🥺 this couwd a-awso wesuwt in compwicated n-nyested c-code, rawr x3 commonwy wefewwed to as [cawwback h-heww](http://cawwbackheww.com/). σωσ
 
-A much better solution would be to execute all the requests in parallel and then have a single callback that executes when all of the queries have completed. This is the sort of flow operation that the _Async_ module makes easy!
+a-a much bettew sowution w-wouwd be to exekawaii~ aww the wequests in pawawwew and then have a singwe cawwback t-that exekawaii~s w-when aww of the quewies have compweted. (///ˬ///✿) t-this is the sowt o-of fwow opewation that the _async_ moduwe makes easy! (U ﹏ U)
 
-## Operações assíncronas em paralelo
+## opewações a-assíncwonas em pawawewo
 
-The method [`async.parallel()`](http://caolan.github.io/async/docs.html#parallel) is used to run multiple asynchronous operations in parallel.
+the method [`async.pawawwew()`](http://caowan.github.io/async/docs.htmw#pawawwew) is used to wun muwtipwe asynchwonous o-opewations in pawawwew. ^^;;
 
-The first argument to `async.parallel()` is a collection of the asynchronous functions to run (an array, object or other iterable). Each function is passed a `callback(err, result)` which it must call on completion with an error `err` (which can be `null`) and an optional `results` value.
+the fiwst awgument t-to `async.pawawwew()` i-is a cowwection of the asynchwonous functions to wun (an a-awway, 🥺 object o-ow othew itewabwe). òωó each function is passed a `cawwback(eww, XD wesuwt)` which it m-must caww on compwetion with an e-ewwow `eww` (which can be `nuww`) and an optionaw `wesuwts` vawue. :3
 
-The optional second argument to `async.parallel()` is a callback that will be run when all the functions in the first argument have completed. The callback is invoked with an error argument and a result collection that contains the results of the individual asynchronous operations. The result collection is of the same type as the first argument (i.e. if you pass an array of asynchronous functions, the final callback will be invoked with an array of results). If any of the parallel functions reports an error the callback is invoked early (with the error value).
+t-the optionaw second awgument t-to `async.pawawwew()` i-is a cawwback that wiww b-be wun when aww the functions in t-the fiwst awgument h-have compweted. (U ﹏ U) t-the cawwback is invoked with a-an ewwow awgument a-and a wesuwt cowwection that contains the wesuwts o-of the individuaw a-asynchwonous o-opewations. >w< the wesuwt cowwection is of the s-same type as the fiwst awgument (i.e. /(^•ω•^) i-if you pass a-an awway of asynchwonous functions, (⑅˘꒳˘) the finaw cawwback wiww be i-invoked with an a-awway of wesuwts). ʘwʘ i-if any of the p-pawawwew functions wepowts an e-ewwow the cawwback is invoked eawwy (with the ewwow vawue). rawr x3
 
-The example below shows how this works when we pass an object as the first argument. As you can see, the results are _returned_ in an object with the same property names as the original functions that were passed in.
+the exampwe bewow shows how this wowks w-when we pass an object as the f-fiwst awgument. as you can see, t-the wesuwts awe _wetuwned_ in a-an object with the same pwopewty n-nyames as the owiginaw f-functions t-that wewe passed i-in. (˘ω˘)
 
 ```js
-async.parallel({
-  one: function(callback) { ... },
-  two: function(callback) { ... },
+async.pawawwew({
+  o-one: function(cawwback) { ... }, o.O
+  two: function(cawwback) { ... }, 😳
   ...
-  something_else: function(callback) { ... }
-  },
-  // optional callback
-  function(err, results) {
-    // 'results' is now equal to: {one: 1, two: 2, ..., something_else: some_value}
+  something_ewse: function(cawwback) { ... }
+  }, o.O
+  // optionaw cawwback
+  function(eww, wesuwts) {
+    // 'wesuwts' i-is nyow equaw to: {one: 1, ^^;; t-two: 2, ( ͡o ω ͡o ) ..., s-something_ewse: some_vawue}
   }
 );
 ```
 
-If you instead pass an array of functions as the first argument, the results will be an array (the array order results will match the original order that the functions were declared—not the order in which they completed).
+i-if you instead pass an awway of functions as the fiwst awgument, ^^;; t-the wesuwts wiww b-be an awway (the awway owdew wesuwts w-wiww match the owiginaw owdew that the functions w-wewe decwawed—not t-the owdew in which they c-compweted).
 
-## Operações assíncronas em série
+## o-opewações assíncwonas em séwie
 
-The method [`async.series()`](http://caolan.github.io/async/docs.html#series) is used to run multiple asynchronous operations in sequence, when subsequent functions do not depend on the output of earlier functions. It is essentially declared and behaves in the same way as `async.parallel()`.
+the method [`async.sewies()`](http://caowan.github.io/async/docs.htmw#sewies) is used to wun muwtipwe asynchwonous o-opewations i-in sequence, ^^;; w-when subsequent f-functions do n-nyot depend on the output of eawwiew f-functions. XD i-it is essentiawwy decwawed and behaves i-in the same w-way as `async.pawawwew()`. 🥺
 
 ```js
-async.series({
-  one: function(callback) { ... },
-  two: function(callback) { ... },
+async.sewies({
+  o-one: function(cawwback) { ... }, (///ˬ///✿)
+  two: function(cawwback) { ... },
   ...
-  something_else: function(callback) { ... }
-  },
-  // optional callback after the last asynchronous function completes.
-  function(err, results) {
-    // 'results' is now equals to: {one: 1, two: 2, ..., something_else: some_value}
+  something_ewse: f-function(cawwback) { ... }
+  }, (U ᵕ U❁)
+  // optionaw c-cawwback aftew the w-wast asynchwonous function compwetes. ^^;;
+  f-function(eww, ^^;; wesuwts) {
+    // 'wesuwts' is nyow equaws t-to: {one: 1, rawr t-two: 2, ..., something_ewse: s-some_vawue}
   }
 );
 ```
 
-> [!NOTE]
-> The ECMAScript (JavaScript) language specification states that the order of enumeration of an object is undefined, so it is possible that the functions will not be called in the same order as you specify them on all platforms. If the order really is important, then you should pass an array instead of an object, as shown below.
+> [!note]
+> the ecmascwipt (javascwipt) wanguage specification s-states that the owdew of enumewation of an o-object is undefined, (˘ω˘) s-so it is possibwe that the f-functions wiww nyot be cawwed in t-the same owdew a-as you specify them on aww pwatfowms. 🥺 if the owdew w-weawwy is impowtant, nyaa~~ then you shouwd pass an a-awway instead of a-an object, :3 as shown bewow. /(^•ω•^)
 
 ```js
-async.series([
-  function(callback) {
-    // do some stuff ...
-    callback(null, 'one');
+a-async.sewies([
+  function(cawwback) {
+    // d-do some stuff ...
+    c-cawwback(nuww, ^•ﻌ•^ 'one');
   },
-  function(callback) {
-    // do some more stuff ...
-    callback(null, 'two');
+  f-function(cawwback) {
+    // do some mowe stuff ...
+    cawwback(nuww, UwU 'two');
   }
- ],
-  // optional callback
-  function(err, results) {
-  // results is now equal to ['one', 'two']
+ ], 😳😳😳
+  // optionaw cawwback
+  function(eww, OwO wesuwts) {
+  // wesuwts is nyow equaw to ['one', 'two']
   }
 );
 ```
 
-## Operações assíncronas dependentes em série
+## opewações assíncwonas dependentes em séwie
 
-The method [`async.waterfall()`](http://caolan.github.io/async/docs.html#waterfall) is used to run multiple asynchronous operations in sequence when each operation is dependent on the result of the previous operation.
+the method [`async.watewfaww()`](http://caowan.github.io/async/docs.htmw#watewfaww) is used t-to wun muwtipwe a-asynchwonous opewations in sequence when each o-opewation is dependent o-on the w-wesuwt of the pwevious opewation. ^•ﻌ•^
 
-The callback invoked by each asynchronous function contains `null` for the first argument and results in subsequent arguments. Each function in the series takes the results arguments of the previous callback as the first parameters, and then a callback function. When all operations are complete, a final callback is invoked with the result of the last operation. The way this works is more clear when you consider the code fragment below (this example is from the _async_ documentation):
+t-the cawwback invoked by each a-asynchwonous function c-contains `nuww` fow the fiwst a-awgument and wesuwts in subsequent a-awguments. (ꈍᴗꈍ) e-each function in the sewies takes the wesuwts a-awguments of the p-pwevious cawwback a-as the fiwst p-pawametews, (⑅˘꒳˘) and t-then a cawwback f-function. (⑅˘꒳˘) when aww o-opewations awe c-compwete, a finaw c-cawwback is invoked with the w-wesuwt of the wast o-opewation. (ˆ ﻌ ˆ)♡ the w-way this wowks is mowe cweaw w-when you considew the code fwagment bewow (this e-exampwe is fwom the _async_ documentation):
 
 ```js
-async.waterfall([
-  function(callback) {
-    callback(null, 'one', 'two');
-  },
-  function(arg1, arg2, callback) {
-    // arg1 now equals 'one' and arg2 now equals 'two'
-    callback(null, 'three');
-  },
-  function(arg1, callback) {
-    // arg1 now equals 'three'
-    callback(null, 'done');
+a-async.watewfaww([
+  f-function(cawwback) {
+    c-cawwback(nuww, /(^•ω•^) 'one', 'two');
+  }, òωó
+  function(awg1, (⑅˘꒳˘) a-awg2, (U ᵕ U❁) cawwback) {
+    // awg1 n-nyow equaws 'one' and awg2 nyow e-equaws 'two'
+    cawwback(nuww, >w< 'thwee');
+  }, σωσ
+  f-function(awg1, cawwback) {
+    // awg1 nyow equaws 'thwee'
+    cawwback(nuww, -.- 'done');
   }
-], function (err, result) {
-  // result now equals 'done'
+], o.O function (eww, ^^ w-wesuwt) {
+  // wesuwt nyow equaws 'done'
 }
 );
 ```
 
-## Instalando o async
+## i-instawando o-o async
 
-Install the async module using the NPM package manager so that we can use it in our code. You do this in the usual way, by opening a prompt in the root of the _LocalLibrary_ project and enter the following command:
+instaww the async moduwe using the nypm package managew s-so that we can use it in ouw code. >_< y-you do this i-in the usuaw way, >w< b-by opening a pwompt in the woot of the _wocawwibwawy_ p-pwoject a-and entew the fowwowing command:
 
 ```bash
-npm install async
+n-nypm instaww async
 ```
 
-## Next steps
+## nyext steps
 
-- Return to [Express Tutorial Part 5: Displaying library data](/pt-BR/docs/Learn/Server-side/Express_Nodejs/Displaying_data).
-- Proceed to the next subarticle of Part 5: [Template primer](/pt-BR/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Template_primer).
+- w-wetuwn to [expwess tutowiaw p-pawt 5: dispwaying w-wibwawy data](/pt-bw/docs/weawn/sewvew-side/expwess_nodejs/dispwaying_data). >_<
+- p-pwoceed to the nyext subawticwe o-of pawt 5: [tempwate p-pwimew](/pt-bw/docs/weawn/sewvew-side/expwess_nodejs/dispwaying_data/tempwate_pwimew). >w<

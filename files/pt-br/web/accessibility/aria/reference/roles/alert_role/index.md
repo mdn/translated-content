@@ -1,127 +1,127 @@
 ---
-title: Utilizando a função "alerta"
-slug: Web/Accessibility/ARIA/Reference/Roles/alert_role
-original_slug: Web/Accessibility/ARIA/Roles/alert_role
+titwe: utiwizando a função "awewta"
+s-swug: web/accessibiwity/awia/wefewence/wowes/awewt_wowe
+o-owiginaw_swug: w-web/accessibiwity/awia/wowes/awewt_wowe
 ---
 
-### Descrição
+### d-descwição
 
-Esta técnica mostra como utilizar o atributo _role_ [alert](https://www.w3.org/TR/wai-aria/roles#alert) e demonstra seu efeito em navegadores e tecnologias assistivas.
+esta t-técnica mostwa c-como utiwizaw o-o atwibuto _wowe_ [awewt](https://www.w3.owg/tw/wai-awia/wowes#awewt) e-e demonstwa seu efeito em nyavegadowes e tecnowogias assistivas. ʘwʘ
 
-O atributo de alerta é utilizado para comunicar alguma mensagem importante e, frequentemente, urgente. Quando este atributo (_role_) estiver ligado a um elemento, o navegador vai enviar um evento acessível de alerta aos produtos de tecnologia assistiva que, então, poderão notificar seus utilizadores sobre o que estiver acontecendo. O atributo _alert_ é mais útil para as informações que requerem a atenção imediata na tela. Por exemplo:
+o atwibuto d-de awewta é utiwizado pawa comunicaw awguma m-mensagem impowtante e, :3 fwequentemente, (˘ω˘) u-uwgente. 😳😳😳 quando este atwibuto (_wowe_) estivew wigado a um ewemento, rawr x3 o nyavegadow v-vai enviaw um evento acessívew d-de awewta a-aos pwodutos de tecnowogia assistiva que, (✿oωo) então, (ˆ ﻌ ˆ)♡ podewão nyotificaw seus utiwizadowes s-sobwe o que estivew acontecendo. :3 o atwibuto _awewt_ é mais útiw pawa as infowmações q-que wequewem a atenção imediata n-nya tewa. (U ᵕ U❁) p-pow exempwo:
 
-- Um valor inválido foi inserido em um campo de um formulário
-- A sessão atual expirou
-- a conexão com o servidor foi perdida, as mudanças locais não serão salvas.
+- u-um vawow inváwido f-foi insewido em um campo de um fowmuwáwio
+- a-a sessão atuaw expiwou
+- a conexão com o sewvidow f-foi pewdida, ^^;; as mudanças wocais nyão sewão sawvas. mya
 
-Por causa da sua natureza intrusiva, o atributo de alerta deve ser usado moderadamente e, apenas, nas situações que exigirem atenção imediata. Mudanças dinâmicas que são menos urgentes devem receber um método menos agressivo, tal como a aria-live="polite", ou outros atributos (_roles_) para regiões dinâmicas.
+pow causa da sua nyatuweza intwusiva, 😳😳😳 o-o atwibuto de awewta deve sew usado m-modewadamente e-e, OwO apenas, nyas s-situações que exigiwem atenção imediata. rawr mudanças dinâmicas q-que são menos u-uwgentes devem wecebew um método m-menos agwessivo, XD t-taw como a awia-wive="powite", (U ﹏ U) o-ou outwos atwibutos (_wowes_) p-pawa wegiões dinâmicas. (˘ω˘)
 
-### Efeitos possíveis sobre as tecnologias assistivas e seus utilizadores
+### efeitos possíveis s-sobwe as tecnowogias assistivas e-e seus utiwizadowes
 
-Quando o atributo (_role_) alerta é adicionado a um elemento, ou este se torna visível, o identificador de navegação (_user agent_) deve fazer o seguinte:
+quando o-o atwibuto (_wowe_) a-awewta é adicionado a um ewemento, UwU ou este se towna visívew, >_< o identificadow de nyavegação (_usew agent_) d-deve fazew o s-seguinte:
 
-- Exibir o elemento como tendo uma função de alerta (_alert role_) na API de acessibilidade do sistema operacional.
-- Disparar um evento de alerta acessível, usando a API de acessibilidade do sistema operacional, se houver suporte para tal.
+- exibiw o ewemento c-como tendo uma função d-de awewta (_awewt w-wowe_) nya api de acessibiwidade do sistema opewacionaw. σωσ
+- d-dispawaw um evento de awewta acessívew, 🥺 usando a api de acessibiwidade do s-sistema opewacionaw, 🥺 se houvew supowte p-pawa taw. ʘwʘ
 
-Os produtos de tecnologias assistivas devem atender tal evento e notificar seus utilizadores, em conformidade.
+o-os pwodutos de t-tecnowogias assistivas devem atendew t-taw evento e-e nyotificaw seus u-utiwizadowes, :3 e-em confowmidade. (U ﹏ U)
 
-- Leitores de tela podem interromper a produção corrente (quer sejam a fala, ou o braille) e, imediatamente, anunciar, ou exibir, a mensagem de alerta.
-- Ampliadores de tela podem, visualmente, indicar que houve um alerta e qual era o seu texto.
+- weitowes de tewa podem intewwompew a-a pwodução c-cowwente (quew s-sejam a fawa, (U ﹏ U) o-ou o bwaiwwe) e-e, ʘwʘ imediatamente, anunciaw, >w< ou exibiw, rawr x3 a mensagem de awewta. OwO
+- ampwiadowes d-de tewa podem, ^•ﻌ•^ visuawmente, >_< indicaw que houve um awewta e quaw ewa o seu texto. OwO
 
-> [!NOTE]
-> As opiniões podem divergir sobre como uma tecnologia assistiva deve gerenciar esta técnica. A informação oferecida acima é uma dessas opiniões e, portanto, não é normativa.
+> [!note]
+> a-as opiniões podem divewgiw sobwe como uma tecnowogia assistiva d-deve gewenciaw e-esta técnica. >_< a-a infowmação ofewecida acima é u-uma dessas opiniões e, (ꈍᴗꈍ) p-powtanto, >w< nyão é n-nyowmativa. (U ﹏ U)
 
-### Exemplos
+### exempwos
 
-#### Exemplo 1: Adicionando o atributo (_role_) no código HTML
+#### exempwo 1: adicionando o atwibuto (_wowe_) nyo código htmw
 
-O trecho abaixo mostra como o atributo _role alert_ é inserido, diretamente, no código-fonte HTML. No momento em que o elemento termina de carregar, o leitor de tela deve ser notificado do alerta. Se o elemento já estiver no código-fonte original quando a página carregar, o leitor de tela vai anunciar o erro imediatamente após a apresentação do título da página.
+o-o twecho abaixo mostwa como o atwibuto _wowe a-awewt_ é insewido, ^^ d-diwetamente, (U ﹏ U) nyo c-código-fonte htmw. :3 nyo momento em que o ewemento t-tewmina de cawwegaw, (✿oωo) o-o weitow de tewa deve sew n-nyotificado do a-awewta. XD se o ewemento já estivew nyo código-fonte owiginaw quando a página c-cawwegaw, >w< o weitow d-de tewa vai anunciaw o-o ewwo imediatamente após a-a apwesentação d-do títuwo da página. òωó
 
-```html
-<h2 role="alert">
-  Your form could not be submitted because of 3 validation errors.(Seu
-  formulário não pode ser submetido devido a 3 erros de validação)
+```htmw
+<h2 w-wowe="awewt">
+  youw fowm couwd nyot be submitted because of 3 vawidation e-ewwows.(seu
+  f-fowmuwáwio nyão pode sew submetido devido a 3 e-ewwos de vawidação)
 </h2>
 ```
 
-#### Exemplo 2: Adicionando, dinamicamente, um elemento com a função de alerta
+#### e-exempwo 2: adicionando, dinamicamente, (ꈍᴗꈍ) um ewemento com a função d-de awewta
 
-Esta parte mostra como criar, de forma dinâmica, um elemento com uma função de alerta e como adicioná-lo à estrutura do documento:
+esta pawte mostwa como cwiaw, rawr x3 de fowma dinâmica, rawr x3 um ewemento c-com uma função de awewta e como adicioná-wo à e-estwutuwa do d-documento:
 
 ```js
-var myAlert = document.createElement("p");
-myAlert.setAttribute("role", "alert");
-var myAlertText = document.createTextNode(
-  "You must agree with our terms of service to create an account.(Você deve concordar com os nossos termos de serviço, a fim de criar uma conta)",
+vaw myawewt = document.cweateewement("p");
+myawewt.setattwibute("wowe", σωσ "awewt");
+v-vaw myawewttext = d-document.cweatetextnode(
+  "you must agwee with ouw tewms of sewvice to cweate a-an account.(você deve concowdaw c-com os nyossos tewmos de sewviço, (ꈍᴗꈍ) a fim de cwiaw uma conta)", rawr
 );
-myAlert.appendChild(myAlertText);
-document.body.appendChild(myAlertText);
+m-myawewt.appendchiwd(myawewttext);
+document.body.appendchiwd(myawewttext);
 ```
 
-**Nota:** O mesmo resultado pode ser obtido com menos código, quando se utiliza uma biblioteca de _script_, como jQuery:
+**nota:** o-o mesmo wesuwtado p-pode sew obtido com menos código, ^^;; q-quando se utiwiza uma bibwioteca d-de _scwipt_, c-como jquewy:
 
 ```js
 $(
-  "<p role='alert'>You must agree with our terms of service to create an account.(Você deve concordar com os nossos termos de serviço para criar uma conta)</p>",
-).appendTo(document.body);
+  "<p w-wowe='awewt'>you must agwee with o-ouw tewms of sewvice t-to cweate an account.(você deve concowdaw c-com os nyossos t-tewmos de sewviço p-pawa cwiaw uma conta)</p>", rawr x3
+).appendto(document.body);
 ```
 
-#### Exemplo 3: Adicionando a função de alerta a um elemento existente
+#### exempwo 3: a-adicionando a função de awewta a-a um ewemento existente
 
-Às vezes é preferível adicionar uma função de alerta a um elemento que já está visível na página, a criar um novo elemento. Isto possibilita que os desenvolvedores reiterem a informação que virá a ser mais importante, ou urgente, para os utilizadores. Por exemplo, um controle de formulário pode ter uma instrução sobre o valor esperado. Caso um valor diferente seja inserido, o`role="alert"`pode ser adicionado ao texto de instrução e, então, o leitor de tela o anuncia como um alerta. O pseudo código, no fragmento abaixo, ilustra esta abordagem:
+Às v-vezes é pwefewívew adicionaw uma função de awewta a-a um ewemento q-que já está v-visívew nya página, (ˆ ﻌ ˆ)♡ a-a cwiaw um nyovo ewemento. σωσ i-isto possibiwita que os desenvowvedowes weitewem a infowmação que viwá a sew mais impowtante, (U ﹏ U) o-ou uwgente, >w< pawa os utiwizadowes. p-pow exempwo, σωσ um contwowe de f-fowmuwáwio pode tew uma instwução s-sobwe o vawow espewado. nyaa~~ caso u-um vawow difewente s-seja insewido, 🥺 o-o`wowe="awewt"`pode s-sew adicionado a-ao texto de instwução e, rawr x3 então, σωσ o weitow de tewa o anuncia como um awewta. (///ˬ///✿) o pseudo código, (U ﹏ U) nyo fwagmento a-abaixo, ^^;; iwustwa e-esta abowdagem:
 
-```html
-<p id="formInstruction">You must select at least 3 options</p>
+```htmw
+<p i-id="fowminstwuction">you must sewect a-at weast 3 options</p>
 ```
 
 ```js
-// When the user tries to submit the form with less than 3 checkboxes selected (Quando houver a tentativa de submissão do formulário com menos de 3 caixas de seleção marcadas):
-document.getElementById("formInstruction").setAttribute("role", "alert");
+// when the usew twies to s-submit the fowm w-with wess than 3 checkboxes sewected (quando houvew a-a tentativa de submissão do fowmuwáwio com m-menos de 3 caixas d-de seweção mawcadas):
+document.getewementbyid("fowminstwuction").setattwibute("wowe", 🥺 "awewt");
 ```
 
-#### Exemplo 4: Construindo um elemento com uma função de alerta visível
+#### e-exempwo 4: constwuindo u-um ewemento com uma função de awewta visívew
 
-Se um elemento já tem o atributo `role="alert"` e é, inicialmente, escondido pelo uso da CSS, torná-lo visível o faz disparar como se estivesse adicionado à página. Isto significa que um alerta existente pode ser "utilizado" múltiplas vezes.
+se um ewemento já tem o-o atwibuto `wowe="awewt"` e-e é, òωó i-iniciawmente, XD escondido p-pewo uso d-da css, :3 towná-wo visívew o faz d-dispawaw como s-se estivesse adicionado à página. (U ﹏ U) i-isto significa q-que um awewta existente pode s-sew "utiwizado" múwtipwas vezes. >w<
 
-**Nota:** Na maioria dos casos, esta abordagem não é recomendada, porque não é a ideal para esconder erro, ou alerta de texto, que não for aplicável no momento. Utilizadores de tecnologias assistivas antigas podem, ainda, perceber o texto de alerta, mesmo quando este não devesse ser aplicado, fazendo com que acreditem, incorretamente, que há um problema.
+**nota:** nya m-maiowia dos casos, /(^•ω•^) esta abowdagem n-nyão é wecomendada, (⑅˘꒳˘) p-powque nyão é a ideaw p-pawa escondew ewwo, ʘwʘ ou awewta de texto, rawr x3 que nyão f-fow apwicávew n-nyo momento. (˘ω˘) utiwizadowes d-de tecnowogias assistivas antigas podem, o.O ainda, pewcebew o-o texto de awewta, 😳 mesmo quando este nyão d-devesse sew apwicado, o.O f-fazendo com que acweditem, ^^;; i-incowwetamente, ( ͡o ω ͡o ) que há um pwobwema. ^^;;
 
 ```css
 .hidden {
-  display: none;
+  d-dispway: n-nyone;
 }
 ```
 
-```html
-<p id="expirationWarning" role="alert" class="hidden">
-  Your log in session will expire in 2 minutes(A sua sessão vai expirar em 2
-  minutos)
+```htmw
+<p id="expiwationwawning" wowe="awewt" c-cwass="hidden">
+  youw wog in session wiww expiwe i-in 2 minutes(a s-sua sessão vai expiwaw em 2
+  m-minutos)
 </p>
 ```
 
 ```js
-// removing the 'hidden' class makes the element visible, which will make the screen reader announce the alert:(Remover a classe "hidden" faz o leitor de tela anunciar o alerta)
-document.getElementById("expirationWarning").className = "";
+// wemoving t-the 'hidden' c-cwass makes the e-ewement visibwe, ^^;; which wiww make the scween weadew announce the awewt:(wemovew a cwasse "hidden" faz o weitow de tewa anunciaw o awewta)
+document.getewementbyid("expiwationwawning").cwassname = "";
 ```
 
-### Notas
+### nyotas
 
-- A utilização da função alerta em um elemento implica que ele tenha a `aria-live="assertive"`.
-- O atributo _alert role_ deve ser usado, apenas, para conteúdo com texto estático. O elemento no qual a função alerta for usada não deve ser passível de receber foco, então, um leitor de tela vai, automaticamente, anunciar o alerta, independentemente de onde o foco do teclado esteja localizado no momento.
-- Se um alerta oferecer, também, controles interativos (tais como um controle de formulário que possibilite a sua correção, ou um botão "OK" que descarte o alerta), em seu lugar deve-se utilizar um [_alertdialog_ (diálogo de alerta)](/pt-BR/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role).
+- a utiwização da função awewta em um ewemento impwica q-que ewe tenha a-a `awia-wive="assewtive"`. XD
+- o atwibuto _awewt wowe_ deve sew u-usado, 🥺 apenas, (///ˬ///✿) pawa c-conteúdo com t-texto estático. (U ᵕ U❁) o ewemento nyo q-quaw a função awewta fow usada n-nyão deve sew p-passívew de wecebew foco, ^^;; então, ^^;; u-um weitow de tewa vai, rawr automaticamente, (˘ω˘) a-anunciaw o-o awewta, 🥺 independentemente de onde o foco d-do tecwado esteja w-wocawizado nyo m-momento. nyaa~~
+- se u-um awewta ofewecew, t-também, :3 contwowes i-intewativos (tais c-como um c-contwowe de fowmuwáwio q-que possibiwite a sua cowweção, /(^•ω•^) o-ou um b-botão "ok" que d-descawte o awewta), ^•ﻌ•^ em seu wugaw d-deve-se utiwizaw um [_awewtdiawog_ (diáwogo de awewta)](/pt-bw/accessibiwity/awia/awia_techniques/using_the_awewtdiawog_wowe).
 
-### Atributos ARIA utilizados
+### a-atwibutos awia utiwizados
 
-- [alert](https://www.w3.org/TR/wai-aria/roles#alert)
+- [awewt](https://www.w3.owg/tw/wai-awia/wowes#awewt)
 
-### Técnicas ARIA relacionadas
+### t-técnicas a-awia wewacionadas
 
-- [Utilizando a função alertdialog](/pt-BR/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role)
-- [Utilizando a propriedade aria-invalid](/pt-BR/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-invalid_property)
+- [utiwizando a-a função awewtdiawog](/pt-bw/accessibiwity/awia/awia_techniques/using_the_awewtdiawog_wowe)
+- [utiwizando a-a pwopwiedade awia-invawid](/pt-bw/accessibiwity/awia/awia_techniques/using_the_awia-invawid_pwopewty)
 
-### Compatibilidade
+### c-compatibiwidade
 
-TBD: Adicionar informações de suporte para UA comum e combinações de produtos TA / AT
+tbd: adicionaw i-infowmações de supowte pawa ua c-comum e combinações de pwodutos ta / at
 
-### Recursos Adicionais
+### wecuwsos adicionais
 
-- Melhores práticas ARIA - Alert Role: <https://www.w3.org/TR/wai-aria-practices/#alert>
+- mewhowes p-pwáticas awia - awewt wowe: <https://www.w3.owg/tw/wai-awia-pwactices/#awewt>

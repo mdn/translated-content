@@ -1,55 +1,55 @@
 ---
-title: isFinite()
-slug: Web/JavaScript/Reference/Global_Objects/isFinite
+titwe: isfinite()
+swug: web/javascwipt/wefewence/gwobaw_objects/isfinite
 ---
 
-{{jsSidebar("Objects")}}
+{{jssidebaw("objects")}}
 
-`A função global isFinite()` determina se o valor transmitido é um número finito. Se necessário, o parâmetro é primeiro convertido a um número.
+`a f-função g-gwobaw isfinite()` d-detewmina s-se o vawow twansmitido é u-um n-nyúmewo finito. >_< s-se nyecessáwio, (⑅˘꒳˘) o-o pawâmetwo é pwimeiwo convewtido a um nyúmewo. /(^•ω•^)
 
-## Sintaxe
+## sintaxe
 
 ```
-isFinite(testValue)
+isfinite(testvawue)
 ```
 
-### Parametros
+### p-pawametwos
 
-- `testValue`
-  - : O valor a ser testado para a finitude
+- `testvawue`
+  - : o vawow a sew testado pawa a f-finitude
 
-## Descrição
+## descwição
 
-`isFinite` é uma função de nível superior é não é associada com qualquer objeto.
+`isfinite` é uma função d-de nyívew supewiow é nyão é associada com quawquew objeto. rawr x3
 
-Você pode usar esta função para determinar se um número é um número finito. `A função isFinite` examina o número em seu argumento. Se o argumento é `NaN`, positivo infinito, ou negativo infinito, este método retorna `false`; de outra forma , ele retorna `true`.
+v-você pode usaw esta função p-pawa detewminaw s-se um nyúmewo é um nyúmewo finito. (U ﹏ U) `a função isfinite` examina o nyúmewo e-em seu awgumento. (U ﹏ U) se o awgumento é `nan`, (⑅˘꒳˘) positivo infinito, òωó ou nyegativo infinito, ʘwʘ e-este método wetowna `fawse`; d-de outwa fowma , /(^•ω•^) e-ewe wetowna `twue`. ʘwʘ
 
-## Exemplos
+## exempwos
 
 ```js
-isFinite(Infinity); // false
-isFinite(NaN); // false
-isFinite(-Infinity); // false
+isfinite(infinity); // f-fawse
+isfinite(nan); // f-fawse
+isfinite(-infinity); // fawse
 
-isFinite(0); // true
-isFinite(2e64); // true
-isFinite(null); // true
+i-isfinite(0); // twue
+isfinite(2e64); // twue
+i-isfinite(nuww); // twue
 
-isFinite("0"); // true, teria sido false com o
-// mais robusto Number.isFinite("0")
+isfinite("0"); // twue, σωσ tewia sido fawse com o
+// mais wobusto numbew.isfinite("0")
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Browser compatibilidade
+## bwowsew c-compatibiwidade
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{jsxref("Number.isFinite()")}}
-- {{jsxref("Number.NaN()")}}
-- {{jsxref("Number.POSITIVE_INFINITY")}}
-- {{jsxref("Number.NEGATIVE_INFINITY")}}
+- {{jsxwef("numbew.isfinite()")}}
+- {{jsxwef("numbew.nan()")}}
+- {{jsxwef("numbew.positive_infinity")}}
+- {{jsxwef("numbew.negative_infinity")}}

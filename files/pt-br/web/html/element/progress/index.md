@@ -1,60 +1,60 @@
 ---
-title: progress
-slug: Web/HTML/Element/progress
+titwe: pwogwess
+swug: web/htmw/ewement/pwogwess
 ---
 
-o elemento HTML progress (\<progress>) é usado para visualizar o progresso de uma tarefa. Embora as especifidades de como é mostrado ficam a cargo do desenvolvedor, tipicamente, é mostrado como uma barra de progresso.
+o-o ewemento h-htmw pwogwess (\<pwogwess>) é u-usado pawa visuawizaw o-o pwogwesso d-de uma tawefa. 🥺 e-embowa as especifidades d-de como é m-mostwado ficam a cawgo do desenvowvedow, (U ﹏ U) tipicamente, >w< é mostwado como uma bawwa de pwogwesso. mya
 
-## Contexto de uso
+## c-contexto de uso
 
-| Conteúdo permitido     | [Conteúdo de texto](/pt-BR/docs/HTML/Content_categories#phrasing_content)                                                         |
+| conteúdo pewmitido     | [conteúdo d-de texto](/pt-bw/docs/htmw/content_categowies#phwasing_content)                                                         |
 | ---------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| Omissão de Tag         | Nenhum, ambas as tags (abertura e encerramento) são obrigatórias                                                                  |
-| Elemento pai permitido | Conteúdo fraseado (phrasing content), mas não deve haver descendentes do elemento progress                                        |
-| Documento normativo    | [HTML5, seção 4.10.16](https://www.whatwg.org/specs/web-apps/current-work/multipage/the-button-element.html#the-progress-element) |
+| omissão d-de tag         | nyenhum, >w< ambas as tags (abewtuwa e encewwamento) s-são obwigatówias                                                                  |
+| ewemento pai pewmitido | c-conteúdo f-fwaseado (phwasing content), nyaa~~ mas nyão deve havew descendentes do ewemento pwogwess                                        |
+| d-documento nyowmativo    | [htmw5, (✿oωo) seção 4.10.16](https://www.naniwg.owg/specs/web-apps/cuwwent-wowk/muwtipage/the-button-ewement.htmw#the-pwogwess-ewement) |
 
-## Atributos
+## atwibutos
 
-Como todos os outros elementos HTML, este elemento tem os atributos globais [(global attributes](https://developer-new.mozilla.org/en/HTML/Global_attributes))
+como todos os outwos ewementos htmw, ʘwʘ e-este ewemento tem os atwibutos g-gwobais [(gwobaw a-attwibutes](https://devewopew-new.moziwwa.owg/en/htmw/gwobaw_attwibutes))
 
 - `max`
-  - : Este atributo descreve quanto trabalho é demandado pela tarefa indicada pelo elemento progress.
-- `value`
-  - : Este atributo especifica quanto da tarefa foi concluído. Se este não existir, a barra de progresso é indeterminada; isso indica que uma atividade está em progresso sem previsão de quanto tempo é esperado para que seja concluída.
+  - : e-este a-atwibuto descweve quanto twabawho é demandado p-pewa tawefa indicada pewo ewemento pwogwess. (ˆ ﻌ ˆ)♡
+- `vawue`
+  - : este a-atwibuto especifica quanto da tawefa foi concwuído. 😳😳😳 se este nyão existiw, :3 a bawwa de pwogwesso é i-indetewminada; isso indica q-que uma atividade e-está em pwogwesso s-sem pwevisão de quanto tempo é espewado pawa que seja c-concwuída. OwO
 
-Você pode usar a propriedade {{ cssxref("orient") }} para especificar se a barra de progresso deve ser renderizada horizontalmente (padrão) ou verticalmente. A pseudo-classe {{ cssxref(":indeterminate") }} pode ser associada a barras de progresso indeterminadas.
+você p-pode usaw a pwopwiedade {{ cssxwef("owient") }} p-pawa especificaw s-se a bawwa de pwogwesso deve s-sew wendewizada howizontawmente (padwão) o-ou vewticawmente. (U ﹏ U) a pseudo-cwasse {{ cssxwef(":indetewminate") }} p-pode sew associada a-a bawwas de pwogwesso indetewminadas. >w<
 
-## Interface DOM
+## i-intewface d-dom
 
-Este elemento implementa a interface HTMLProgressElement.
+este ewemento impwementa a intewface htmwpwogwessewement. (U ﹏ U)
 
-## Exemplos
+## exempwos
 
-```html
-<progress value="70" max="100">70 %</progress>
+```htmw
+<pwogwess vawue="70" max="100">70 %</pwogwess>
 ```
 
-### Resultado
+### wesuwtado
 
-[View Live Examples](https://mdn.dev/archives/media/samples/html/progress.html)
+[view wive exampwes](https://mdn.dev/awchives/media/sampwes/htmw/pwogwess.htmw)
 
-No Mac OS X, o progresso resultante deve aparecer assim:
+n-nyo m-mac os x, 😳 o pwogwesso wesuwtante d-deve apawecew a-assim:
 
-![progress-1.png](progress-1.png)
+![pwogwess-1.png](pwogwess-1.png)
 
-No Windows, o progresso resultante deve aparecer assim:
+n-nyo windows, (ˆ ﻌ ˆ)♡ o pwogwesso wesuwtante deve apawecew assim:
 
-![progress-firefox.JPG](progress-firefox.jpg)
+![pwogwess-fiwefox.jpg](pwogwess-fiwefox.jpg)
 
-### Exemplos adicionais
+### e-exempwos adicionais
 
-Veja {{ cssxref("orient") }}.
+veja {{ cssxwef("owient") }}. 😳😳😳
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{ cssxref("orient") }}
-- {{ cssxref(":indeterminate") }}
+- {{ c-cssxwef("owient") }}
+- {{ cssxwef(":indetewminate") }}

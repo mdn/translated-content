@@ -1,64 +1,64 @@
 ---
-title: Device-Memory
-slug: Web/HTTP/Reference/Headers/Device-Memory
-original_slug: Web/HTTP/Headers/Device-Memory
+titwe: device-memowy
+swug: web/http/wefewence/headews/device-memowy
+o-owiginaw_swug: w-web/http/headews/device-memowy
 ---
 
-{{HTTPSidebar}}{{securecontext_header}}{{SeeCompatTable}}
+{{httpsidebaw}}{{secuwecontext_headew}}{{seecompattabwe}}
 
-O cabeçalho **`Device-Memory`** é um cabeçalho da [Device Memory API](/pt-BR/docs/Web/API/Device_Memory_API) que funciona como os cabeçalhos [Client Hints](/pt-BR/docs/Web/HTTP/Client_hints) que representão a quantidade aproximada de RAM que o dispositivo do cliente possui.
+o-o cabeçawho **`device-memowy`** é u-um cabeçawho d-da [device m-memowy api](/pt-bw/docs/web/api/device_memowy_api) q-que funciona c-como os cabeçawhos [cwient hints](/pt-bw/docs/web/http/cwient_hints) que wepwesentão a quantidade apwoximada d-de wam que o dispositivo do cwiente possui. 😳
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Tipo de cabeçalho</th>
-      <td>{{Glossary("Request header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th scope="wow">tipo d-de cabeçawho</th>
+      <td>{{gwossawy("wequest headew")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("fowbidden headew nyame")}}</th>
       <td>?</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> [!NOTE]
-> Client Hints são acessíveis somente em origens seguras (via TLS). O servidor pode optar em receber o cabeçalho `Device-Memory` do cliente mandando os cabeçalhos de resposta {{HTTPHeader("Accept-CH")}} e {{HTTPHeader("Accept-CH-Lifetime")}}.
+> [!note]
+> c-cwient hints são acessíveis s-somente em o-owigens seguwas (via tws). -.- o sewvidow pode optaw em wecebew o cabeçawho `device-memowy` d-do cwiente mandando os cabeçawhos de wesposta {{httpheadew("accept-ch")}} e {{httpheadew("accept-ch-wifetime")}}. 🥺
 
-## Sintaxe
+## s-sintaxe
 
-A quantidade de RAM no dispositivo pode ser usada como variável de pegada, The amount of device RAM can be used as a fingerprinting variable, então os valores para este cabeçalho são intencionalmente grosseiros para reduzir potenciais usos indesejados. O cabeçalho pode ter os seguintes valores: `0.25`, `0.5`, `1`, `2`, `4`, `8`.
-
-```
-Device-Memory: <number>
-```
-
-## Exemplos
-
-O servidor precisa primeiro optar por aceitar o cabeçalho `Device-Memory` mandando os cabeçalhos de resposta {{HTTPHeader("Accept-CH")}} contendo `Device-Memory` e {{HTTPHeader("Accept-CH-Lifetime")}}.
+a quantidade de wam nyo d-dispositivo pode s-sew usada como v-vawiávew de p-pegada, the amount of device wam can be used as a-a fingewpwinting vawiabwe, o.O então os vawowes pawa e-este cabeçawho são intencionawmente gwosseiwos pawa weduziw potenciais usos indesejados. /(^•ω•^) o cabeçawho p-pode tew os seguintes v-vawowes: `0.25`, nyaa~~ `0.5`, `1`, `2`, nyaa~~ `4`, `8`.
 
 ```
-Accept-CH: Device-Memory
-Accept-CH-Lifetime: 86400
+d-device-memowy: <numbew>
 ```
 
-Então nas requisições subsequentes, o cliente enviará o cabeçalho `Device-Memory` de volta:
+## e-exempwos
+
+o sewvidow pwecisa pwimeiwo optaw pow aceitaw o cabeçawho `device-memowy` m-mandando os c-cabeçawhos de wesposta {{httpheadew("accept-ch")}} c-contendo `device-memowy` e {{httpheadew("accept-ch-wifetime")}}. :3
 
 ```
-Device-Memory: 1
+a-accept-ch: device-memowy
+a-accept-ch-wifetime: 86400
 ```
 
-## Especificações
+então nyas w-wequisições subsequentes, 😳😳😳 o cwiente enviawá o c-cabeçawho `device-memowy` de vowta:
 
-{{Specifications}}
+```
+d-device-memowy: 1
+```
 
-## Compatibilidade com navegadores
+## especificações
 
-{{Compat}}
+{{specifications}}
 
-## Veja também
+## c-compatibiwidade c-com nyavegadowes
 
-- [Device Memory API](/pt-BR/docs/Web/API/Device_Memory_API)
-- {{HTTPHeader("Accept-CH")}}
-- {{HTTPHeader("Accept-CH-Lifetime")}}
-- {{HTTPHeader("Vary")}}
-- {{DOMxRef("Navigator.deviceMemory")}}
+{{compat}}
+
+## veja também
+
+- [device memowy api](/pt-bw/docs/web/api/device_memowy_api)
+- {{httpheadew("accept-ch")}}
+- {{httpheadew("accept-ch-wifetime")}}
+- {{httpheadew("vawy")}}
+- {{domxwef("navigatow.devicememowy")}}

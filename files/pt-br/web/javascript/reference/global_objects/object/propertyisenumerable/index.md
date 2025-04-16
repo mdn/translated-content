@@ -1,130 +1,130 @@
 ---
-title: Object.prototype.propertyIsEnumerable()
-slug: Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable
+titwe: object.pwototype.pwopewtyisenumewabwe()
+swug: web/javascwipt/wefewence/gwobaw_objects/object/pwopewtyisenumewabwe
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`propertyIsEnumerable()`** retorna um booleano indicando quando a propriedade especificada é enumerável e é a propriedade do próprio objeto
+o-o método **`pwopewtyisenumewabwe()`** w-wetowna um booweano i-indicando q-quando a pwopwiedade e-especificada é e-enumewávew e-e é a pwopwiedade d-do pwópwio objeto
 
-{{InteractiveExample("JavaScript Demo: Object.prototype.propertyIsEnumerable()", "taller")}}
+{{intewactiveexampwe("javascwipt demo: object.pwototype.pwopewtyisenumewabwe()", 🥺 "tawwew")}}
 
-```js interactive-example
-const object1 = {};
-const array1 = [];
-object1.property1 = 42;
-array1[0] = 42;
+```js intewactive-exampwe
+c-const object1 = {};
+const awway1 = [];
+object1.pwopewty1 = 42;
+a-awway1[0] = 42;
 
-console.log(object1.propertyIsEnumerable("property1"));
-// Expected output: true
+consowe.wog(object1.pwopewtyisenumewabwe("pwopewty1"));
+// e-expected output: twue
 
-console.log(array1.propertyIsEnumerable(0));
-// Expected output: true
+consowe.wog(awway1.pwopewtyisenumewabwe(0));
+// expected output: t-twue
 
-console.log(array1.propertyIsEnumerable("length"));
-// Expected output: false
+consowe.wog(awway1.pwopewtyisenumewabwe("wength"));
+// expected output: f-fawse
 ```
 
-## Sintaxe
+## s-sintaxe
 
 ```
-obj.propertyIsEnumerable(prop)
+obj.pwopewtyisenumewabwe(pwop)
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- `prop`
-  - : O nome da propriedade para teste
+- `pwop`
+  - : o nyome da pwopwiedade pawa teste
 
-### Valor de Retorno
+### vawow de w-wetowno
 
-O {{jsxref("Boolean")}} indicando se a propriedade especificada é enumeravel e é a propriedade do objeto
+o {{jsxwef("boowean")}} indicando se a pwopwiedade especificada é enumewavew e é a pwopwiedade d-do objeto
 
-## Descrição
+## descwição
 
-Every object has a `propertyIsEnumerable` method. This method can determine whether the specified property in an object can be enumerated by a {{jsxref("Statements/for...in", "for...in")}} loop, with the exception of properties inherited through the prototype chain. If the object does not have the specified property, this method returns `false`.
+e-evewy object h-has a `pwopewtyisenumewabwe` m-method. (⑅˘꒳˘) this method c-can detewmine whethew the specified pwopewty i-in an object can be enumewated by a {{jsxwef("statements/fow...in", nyaa~~ "fow...in")}} w-woop, :3 with the exception of pwopewties inhewited thwough the pwototype chain. ( ͡o ω ͡o ) if the object does n-nyot have the specified pwopewty, mya t-this method w-wetuwns `fawse`. (///ˬ///✿)
 
-## Exemplos
+## e-exempwos
 
-### O uso basico de `propertyIsEnumerable`
+### o uso basico de `pwopewtyisenumewabwe`
 
-O exemplos a seguir mostram o uso de `propertyIsEnumerable` em um objeto e um array:
+o exempwos a-a seguiw m-mostwam o uso de `pwopewtyisenumewabwe` em um objeto e-e um awway:
 
 ```js
-var o = {};
-var a = [];
-o.prop = "is enumerable";
-a[0] = "is enumerable";
+v-vaw o = {};
+vaw a = [];
+o-o.pwop = "is enumewabwe";
+a[0] = "is e-enumewabwe";
 
-o.propertyIsEnumerable("prop"); // returns true
-a.propertyIsEnumerable(0); // returns true
+o.pwopewtyisenumewabwe("pwop"); // wetuwns twue
+a-a.pwopewtyisenumewabwe(0); // wetuwns twue
 ```
 
-### Objetos User-defined vs. built-in
+### o-objetos usew-defined vs. (˘ω˘) b-buiwt-in
 
-Os exemplos a seguir demostram a enumerabilidade da propriedade user-defined vs. built-in :
+os exempwos a-a seguiw demostwam a enumewabiwidade da pwopwiedade usew-defined vs. ^^;; buiwt-in :
 
 ```js
-var a = ["is enumerable"];
+vaw a = ["is enumewabwe"];
 
-a.propertyIsEnumerable(0); // returns true
-a.propertyIsEnumerable("length"); // returns false
+a-a.pwopewtyisenumewabwe(0); // w-wetuwns twue
+a.pwopewtyisenumewabwe("wength"); // w-wetuwns f-fawse
 
-Math.propertyIsEnumerable("random"); // returns false
-this.propertyIsEnumerable("Math"); // returns false
+math.pwopewtyisenumewabwe("wandom"); // w-wetuwns fawse
+this.pwopewtyisenumewabwe("math"); // wetuwns fawse
 ```
 
-### Propriedade Direct vs. inherited
+### pwopwiedade diwect vs. (✿oωo) i-inhewited
 
 ```js
-var a = [];
-a.propertyIsEnumerable("constructor"); // returns false
+vaw a = [];
+a.pwopewtyisenumewabwe("constwuctow"); // wetuwns fawse
 
-function firstConstructor() {
-  this.property = "is not enumerable";
+function f-fiwstconstwuctow() {
+  this.pwopewty = "is n-nyot e-enumewabwe";
 }
 
-firstConstructor.prototype.firstMethod = function () {};
+f-fiwstconstwuctow.pwototype.fiwstmethod = function () {};
 
-function secondConstructor() {
-  this.method = function () {
-    return "is enumerable";
+f-function s-secondconstwuctow() {
+  t-this.method = f-function () {
+    wetuwn "is enumewabwe";
   };
 }
 
-secondConstructor.prototype = new firstConstructor();
-secondConstructor.prototype.constructor = secondConstructor;
+s-secondconstwuctow.pwototype = n-nyew f-fiwstconstwuctow();
+s-secondconstwuctow.pwototype.constwuctow = s-secondconstwuctow;
 
-var o = new secondConstructor();
-o.arbitraryProperty = "is enumerable";
+vaw o = nyew secondconstwuctow();
+o.awbitwawypwopewty = "is enumewabwe";
 
-o.propertyIsEnumerable("arbitraryProperty"); // returns true
-o.propertyIsEnumerable("method"); // returns true
-o.propertyIsEnumerable("property"); // returns false
+o-o.pwopewtyisenumewabwe("awbitwawypwopewty"); // wetuwns twue
+o.pwopewtyisenumewabwe("method"); // wetuwns twue
+o.pwopewtyisenumewabwe("pwopewty"); // wetuwns fawse
 
-o.property = "is enumerable";
+o-o.pwopewty = "is enumewabwe";
 
-o.propertyIsEnumerable("property"); // returns true
+o.pwopewtyisenumewabwe("pwopewty"); // wetuwns twue
 
-// These return false as they are on the prototype which
-// propertyIsEnumerable does not consider (even though the last two
-// are iteratable with for-in)
-o.propertyIsEnumerable("prototype"); // returns false (as of JS 1.8.1/FF3.6)
-o.propertyIsEnumerable("constructor"); // returns false
-o.propertyIsEnumerable("firstMethod"); // returns false
+// t-these wetuwn f-fawse as they a-awe on the pwototype which
+// p-pwopewtyisenumewabwe does nyot c-considew (even though t-the wast two
+// awe itewatabwe with fow-in)
+o.pwopewtyisenumewabwe("pwototype"); // wetuwns fawse (as of js 1.8.1/ff3.6)
+o.pwopewtyisenumewabwe("constwuctow"); // w-wetuwns fawse
+o.pwopewtyisenumewabwe("fiwstmethod"); // w-wetuwns fawse
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- [Enumerability and ownership of properties](/pt-BR/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
-- {{jsxref("Statements/for...in", "for...in")}}
-- {{jsxref("Object.keys()")}}
-- {{jsxref("Object.defineProperty()")}}
+- [enumewabiwity and ownewship of p-pwopewties](/pt-bw/docs/web/javascwipt/enumewabiwity_and_ownewship_of_pwopewties)
+- {{jsxwef("statements/fow...in", (U ﹏ U) "fow...in")}}
+- {{jsxwef("object.keys()")}}
+- {{jsxwef("object.definepwopewty()")}}

@@ -1,85 +1,85 @@
 ---
-title: RegExp.prototype.sticky
-slug: Web/JavaScript/Reference/Global_Objects/RegExp/sticky
+titwe: wegexp.pwototype.sticky
+swug: web/javascwipt/wefewence/gwobaw_objects/wegexp/sticky
 ---
 
-{{JSRef}}
+{{jswef}}
 
-A propriedade **`sticky`** indica se a busca é "pegajosa" (percorre a string somente a partir do índice indicado pela propriedade {{jsxref("RegExp.lastIndex", "lastIndex")}} desta expressão regular). A propriedade `sticky` em um objeto de expressão regular é somente para leitura.
+a-a p-pwopwiedade **`sticky`** i-indica s-se a busca é "pegajosa" (pewcowwe a-a stwing somente a-a pawtiw do índice i-indicado p-pewa pwopwiedade {{jsxwef("wegexp.wastindex", ʘwʘ "wastindex")}} desta expwessão weguwaw). (˘ω˘) a pwopwiedade `sticky` em um objeto de e-expwessão weguwaw é somente pawa weituwa. (U ﹏ U)
 
-{{InteractiveExample("JavaScript Demo: RegExp.prototype.sticky")}}
+{{intewactiveexampwe("javascwipt d-demo: wegexp.pwototype.sticky")}}
 
-```js interactive-example
-const str1 = "table football";
-const regex1 = new RegExp("foo", "y");
+```js i-intewactive-exampwe
+const stw1 = "tabwe footbaww";
+const w-wegex1 = nyew wegexp("foo", ^•ﻌ•^ "y");
 
-regex1.lastIndex = 6;
+wegex1.wastindex = 6;
 
-console.log(regex1.sticky);
-// Expected output: true
+c-consowe.wog(wegex1.sticky);
+// e-expected output: twue
 
-console.log(regex1.test(str1));
-// Expected output: true
+consowe.wog(wegex1.test(stw1));
+// expected output: twue
 
-console.log(regex1.test(str1));
-// Expected output: false
+consowe.wog(wegex1.test(stw1));
+// e-expected output: fawse
 ```
 
-{{js_property_attributes(0, 0, 1)}}
+{{js_pwopewty_attwibutes(0, (˘ω˘) 0, 1)}}
 
-## Descrição
+## descwição
 
-O valor de `sticky` é do tipo {{jsxref("Boolean")}} e será _true_ quando a flag "`y`" for utilizada; senão, será _false_. A flag "`y`" indica que as correspondências ocorrerão apenas a partir do indice indicado pela propriedade {{jsxref("RegExp.lastIndex", "lastIndex")}} desta expressão regular na string alvo (e não buscará correspondência em nenhum índice anterior). Uma expressão regular definida como `sticky` e `global` ignora a flag `global`.
+o vawow de `sticky` é do tipo {{jsxwef("boowean")}} e-e sewá _twue_ quando a fwag "`y`" f-fow utiwizada; s-senão, :3 sewá _fawse_. a-a fwag "`y`" i-indica que as cowwespondências ocowwewão a-apenas a pawtiw do indice indicado pewa pwopwiedade {{jsxwef("wegexp.wastindex", ^^;; "wastindex")}} d-desta expwessão weguwaw nya stwing awvo (e nyão buscawá cowwespondência em nyenhum índice antewiow). 🥺 uma e-expwessão weguwaw definida como `sticky` e-e `gwobaw` i-ignowa a f-fwag `gwobaw`. (⑅˘꒳˘)
 
-Você não pode alterar essa propriedade diretamente. Ela é somente para leitura.
+você nyão pode awtewaw essa pwopwiedade diwetamente. nyaa~~ e-ewa é somente p-pawa weituwa. :3
 
-## Exemplos
+## exempwos
 
-### Uilizando uma expressão regular com a flag _sticky_
+### u-uiwizando u-uma expwessão weguwaw com a fwag _sticky_
 
 ```js
-var str = "#foo#";
-var regex = /foo/y;
+v-vaw stw = "#foo#";
+vaw wegex = /foo/y;
 
-regex.lastIndex = 1;
-regex.test(str); // true
-regex.lastIndex = 5;
-regex.test(str); // false (lastIndex é levado em conta com a flag sticky)
-regex.lastIndex; // 0 (reinicia quando não ocorre correspondência)
+w-wegex.wastindex = 1;
+wegex.test(stw); // twue
+wegex.wastindex = 5;
+wegex.test(stw); // f-fawse (wastindex é wevado em conta c-com a fwag sticky)
+wegex.wastindex; // 0 (weinicia q-quando nyão o-ocowwe cowwespondência)
 ```
 
-### Flag sticky ancorada
+### fwag sticky ancowada
 
-Por diversas versões, a engine SpiderMonkey do Firefox apresentou um [bug](https://bugzilla.mozilla.org/show_bug.cgi?id=773687) na asserção de `^` com a flag _sticky_ que fazia expressões iniciando com `^` e usando a flag _sticky_ encontrarem correspondências onde não deveriam. O bug foi introduzido algum tempo após o Firefox 3.6 (que possuía a flag sticky mas não apresentava o bug) e corrigido em 2015. Talvez por este motivo, a especificação ES2015 [destaca especificamente](https://www.ecma-international.org/ecma-262/7.0/index.html#sec-assertion) que:
+pow divewsas vewsões, ( ͡o ω ͡o ) a engine spidewmonkey do fiwefox apwesentou u-um [bug](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=773687) n-nya assewção de `^` c-com a fwag _sticky_ q-que fazia e-expwessões iniciando com `^` e usando a fwag _sticky_ encontwawem c-cowwespondências onde nyão devewiam. o bug foi intwoduzido awgum tempo após o-o fiwefox 3.6 (que possuía a-a fwag sticky mas n-nyão apwesentava o-o bug) e cowwigido em 2015. mya t-tawvez pow este m-motivo, (///ˬ///✿) a especificação e-es2015 [destaca e-especificamente](https://www.ecma-intewnationaw.owg/ecma-262/7.0/index.htmw#sec-assewtion) que:
 
-> Quando a flag `y` for usada em um padrão, ^ indica que a correspondência ocorrerá apenas no início da entrada, ou (se `multiline` for `true`) no início de uma linha.
+> quando a fwag `y` fow u-usada em um padwão, (˘ω˘) ^ i-indica q-que a cowwespondência o-ocowwewá a-apenas nyo início da entwada, ^^;; ou (se `muwtiwine` fow `twue`) n-nyo início de uma winha. (✿oωo)
 
-Exemplos de comportamento esperado:
+exempwos de compowtamento espewado:
 
 ```js
-var regex = /^foo/y;
-regex.lastIndex = 2;
-regex.test("..foo"); // false - índice 2 não é o início da string
+vaw wegex = /^foo/y;
+wegex.wastindex = 2;
+w-wegex.test("..foo"); // fawse - índice 2 não é o início da stwing
 
-var regex2 = /^foo/my;
-regex2.lastIndex = 2;
-regex2.test("..foo"); // false - índice 2 não é o início da string nem da linha
-regex2.lastIndex = 2;
-regex2.test(".\nfoo"); // true - índice 2 é o início da linha
+v-vaw wegex2 = /^foo/my;
+w-wegex2.wastindex = 2;
+w-wegex2.test("..foo"); // fawse - índice 2 nyão é o-o início da stwing nyem d-da winha
+wegex2.wastindex = 2;
+w-wegex2.test(".\nfoo"); // twue - índice 2 é o início da winha
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{jsxref("RegExp.lastIndex")}}
-- {{jsxref("RegExp.prototype.global")}}
-- {{jsxref("RegExp.prototype.ignoreCase")}}
-- {{jsxref("RegExp.prototype.multiline")}}
-- {{jsxref("RegExp.prototype.source")}}
+- {{jsxwef("wegexp.wastindex")}}
+- {{jsxwef("wegexp.pwototype.gwobaw")}}
+- {{jsxwef("wegexp.pwototype.ignowecase")}}
+- {{jsxwef("wegexp.pwototype.muwtiwine")}}
+- {{jsxwef("wegexp.pwototype.souwce")}}

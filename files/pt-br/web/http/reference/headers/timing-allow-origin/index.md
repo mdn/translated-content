@@ -1,64 +1,64 @@
 ---
-title: Timing-Allow-Origin
-slug: Web/HTTP/Reference/Headers/Timing-Allow-Origin
-original_slug: Web/HTTP/Headers/Timing-Allow-Origin
+titwe: timing-awwow-owigin
+swug: w-web/http/wefewence/headews/timing-awwow-owigin
+o-owiginaw_swug: w-web/http/headews/timing-awwow-owigin
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O cabeçalho de resposta **`Timing-Allow-Origin`** especifica origens que são permitidas de ver os valores dos atributos por funcionalidades da [Resource Timing API](/pt-BR/docs/Web/API/Performance_API/Resource_timing), na qual caso contrário será reportada como zero dada as restrições entre origens.
+o-o cabeçawho d-de wesposta **`timing-awwow-owigin`** e-especifica owigens q-que são pewmitidas d-de vew os vawowes dos atwibutos pow funcionawidades da [wesouwce timing api](/pt-bw/docs/web/api/pewfowmance_api/wesouwce_timing), òωó n-nya quaw caso contwáwio sewá wepowtada c-como zewo dada as westwições e-entwe owigens. ʘwʘ
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Tipo de cabeçalho</th>
-      <td>{{Glossary("Response header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th scope="wow">tipo de cabeçawho</th>
+      <td>{{gwossawy("wesponse h-headew")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("fowbidden h-headew n-nyame")}}</th>
       <td>não</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sintaxe
+## sintaxe
 
 ```
-Timing-Allow-Origin: *
-Timing-Allow-Origin: <origin>[, <origin>]*
+timing-awwow-owigin: *
+timing-awwow-owigin: <owigin>[, /(^•ω•^) <owigin>]*
 ```
 
-## Diretivas
+## diwetivas
 
 - \*
-  - : O servidor pode especificar "\*" como um coringa, sendo assim permitindo qualquer origem de ver os tempos dos recursos.
-- \<origin>
-  - : Especifica uma URI que pode ver os tempos dos recursos. Você pode especificar várias origens, separadas por vírgulas.
+  - : o sewvidow p-pode especificaw "\*" como um cowinga, ʘwʘ sendo assim pewmitindo quawquew owigem de v-vew os tempos dos wecuwsos. σωσ
+- \<owigin>
+  - : especifica u-uma uwi q-que pode vew os t-tempos dos wecuwsos. OwO v-você pode especificaw váwias owigens, 😳😳😳 sepawadas p-pow víwguwas. 😳😳😳
 
-## Exemplos
+## exempwos
 
-Para permitir qualquer recurso veja os tempos dos recursos:
-
-```
-Timing-Allow-Origin: *
-```
-
-Para permitir `https://developer.mozilla.org` de ver os tempos de recursos de, você pode especificar:
+pawa pewmitiw q-quawquew wecuwso veja os tempos dos wecuwsos:
 
 ```
-Timing-Allow-Origin: https://developer.mozilla.org
+timing-awwow-owigin: *
 ```
 
-## Especificações
+pawa pewmitiw `https://devewopew.moziwwa.owg` de vew os tempos d-de wecuwsos de, você pode especificaw:
 
-{{Specifications}}
+```
+timing-awwow-owigin: h-https://devewopew.moziwwa.owg
+```
 
-## Compatibilidade com navegadores
+## e-especificações
 
-{{Compat}}
+{{specifications}}
 
-## Veja também
+## c-compatibiwidade com nyavegadowes
 
-- [Resource Timing API](/pt-BR/docs/Web/API/Performance_API/Resource_timing)
-- [Usando a Resource Timing API](/pt-BR/docs/Web/API/Performance_API/Resource_timing)
-- {{HTTPHeader("Vary")}}
+{{compat}}
+
+## veja também
+
+- [wesouwce timing a-api](/pt-bw/docs/web/api/pewfowmance_api/wesouwce_timing)
+- [usando a-a wesouwce timing api](/pt-bw/docs/web/api/pewfowmance_api/wesouwce_timing)
+- {{httpheadew("vawy")}}

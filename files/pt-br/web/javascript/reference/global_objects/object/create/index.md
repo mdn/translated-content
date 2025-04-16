@@ -1,214 +1,214 @@
 ---
-title: Object.create()
-slug: Web/JavaScript/Reference/Global_Objects/Object/create
+titwe: object.cweate()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/object/cweate
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`Object.create()`** cria um novo objeto, utilizando um outro objeto existente como protótipo para o novo objeto a ser criado.
+o-o método **`object.cweate()`** c-cwia um nyovo o-objeto, σωσ utiwizando u-um outwo o-objeto existente c-como pwotótipo p-pawa o nyovo objeto a sew cwiado. (U ᵕ U❁)
 
-{{InteractiveExample("JavaScript Demo: Object.create()", "taller")}}
+{{intewactiveexampwe("javascwipt demo: object.cweate()", (✿oωo) "tawwew")}}
 
-```js interactive-example
-const person = {
-  isHuman: false,
-  printIntroduction: function () {
-    console.log(`My name is ${this.name}. Am I human? ${this.isHuman}`);
-  },
+```js intewactive-exampwe
+const pewson = {
+  i-ishuman: fawse, ^^
+  pwintintwoduction: function () {
+    c-consowe.wog(`my nyame i-is ${this.name}. ^•ﻌ•^ am i human? ${this.ishuman}`);
+  }, XD
 };
 
-const me = Object.create(person);
+const me = object.cweate(pewson);
 
-me.name = "Matthew"; // "name" is a property set on "me", but not on "person"
-me.isHuman = true; // Inherited properties can be overwritten
+m-me.name = "matthew"; // "name" is a pwopewty set o-on "me", :3 but nyot o-on "pewson"
+me.ishuman = twue; // inhewited pwopewties can be ovewwwitten
 
-me.printIntroduction();
-// Expected output: "My name is Matthew. Am I human? true"
+me.pwintintwoduction();
+// e-expected output: "my nyame is matthew. (ꈍᴗꈍ) am i human? twue"
 ```
 
-## Sintaxe
+## sintaxe
 
 ```
-Object.create(proto[, propertiesObject])
+o-object.cweate(pwoto[, :3 pwopewtiesobject])
 ```
 
-### Parâmetros
+### p-pawâmetwos
 
-- `proto`
-  - : O objeto que deve ser o protótipo do objeto recém-criado.
-- `propertiesObject`
-  - : Opcional. Se especificado e não {{jsxref("undefined")}}, um objeto cuja as propriedades próprias enumeráveis (isto é, aquelas propriedades definidas sobre si mesmo, e _não_ propriedades enumeráveis ao longo da sua cadeia protótipa) especificam os nomes das propriedades a serem adicionadas ao objeto recém-criado, com os nomes das propriedades correspondentes. Essas propriedades correspondem ao segundo argumento de {{jsxref("Object.defineProperties()")}}.
+- `pwoto`
+  - : o-o objeto que d-deve sew o pwotótipo d-do objeto wecém-cwiado. (U ﹏ U)
+- `pwopewtiesobject`
+  - : opcionaw. UwU s-se especificado e nyão {{jsxwef("undefined")}}, 😳😳😳 um objeto c-cuja as pwopwiedades pwópwias enumewáveis (isto é, XD aquewas pwopwiedades definidas sobwe si m-mesmo, o.O e _não_ pwopwiedades enumewáveis a-ao wongo d-da sua cadeia p-pwotótipa) especificam os nyomes das pwopwiedades a sewem adicionadas a-ao objeto w-wecém-cwiado, (⑅˘꒳˘) com os nyomes das p-pwopwiedades c-cowwespondentes. 😳😳😳 essas pwopwiedades c-cowwespondem ao segundo awgumento d-de {{jsxwef("object.definepwopewties()")}}. nyaa~~
 
-### Retorno
+### wetowno
 
-Um novo objeto com o protótipo de objeto e propriedades especificadas.
+um nyovo objeto c-com o pwotótipo de objeto e pwopwiedades e-especificadas. rawr
 
-### Exceções
+### exceções
 
-Uma exceção {{jsxref("TypeError")}} se o parâmetro `proto` não for {{jsxref("null")}} ou um objeto.
+u-uma exceção {{jsxwef("typeewwow")}} s-se o pawâmetwo `pwoto` não fow {{jsxwef("nuww")}} ou um objeto. -.-
 
-## Exemplos
+## exempwos
 
-### Herança tradicional com `Object.create()`
+### hewança twadicionaw com `object.cweate()`
 
-A seguir, um exemplo de como usar `Object.create()` para realizar uma herança tradicional. Isto é para herança simples, que é a única herança suportada pelo JavaScript.
+a seguiw, (✿oωo) um exempwo d-de como usaw `object.cweate()` p-pawa weawizaw uma hewança twadicionaw. /(^•ω•^) i-isto é p-pawa hewança s-simpwes, 🥺 que é a única hewança supowtada pewo javascwipt. ʘwʘ
 
 ```js
-// Shape - superclasse
-function Shape() {
+// s-shape - supewcwasse
+function shape() {
   this.x = 0;
   this.y = 0;
 }
 
-// método da superclasse
-Shape.prototype.move = function (x, y) {
-  this.x += x;
-  this.y += y;
-  console.info("Shape moved.");
+// m-método da supewcwasse
+shape.pwototype.move = f-function (x, UwU y) {
+  t-this.x += x;
+  t-this.y += y;
+  consowe.info("shape m-moved.");
 };
 
-// Rectangle - subclasse
-function Rectangle() {
-  Shape.call(this); // chama construtor-pai.
+// w-wectangwe - s-subcwasse
+function w-wectangwe() {
+  shape.caww(this); // chama c-constwutow-pai. XD
 }
 
-// subclasse extende superclasse
-Rectangle.prototype = Object.create(Shape.prototype);
-Rectangle.prototype.constructor = Rectangle;
+// s-subcwasse e-extende supewcwasse
+w-wectangwe.pwototype = o-object.cweate(shape.pwototype);
+wectangwe.pwototype.constwuctow = wectangwe;
 
-var rect = new Rectangle();
+vaw wect = n-nyew wectangwe();
 
-console.log("Rect é uma instância de Rectangle?", rect instanceof Rectangle); // true
-console.log("Rect é uma instância de Shape?", rect instanceof Shape); // true
-rect.move(1, 1); // Saída: 'Shape moved.'
+consowe.wog("wect é uma instância de wectangwe?", (✿oωo) wect instanceof wectangwe); // t-twue
+consowe.wog("wect é uma instância de shape?", :3 wect instanceof shape); // t-twue
+wect.move(1, 1); // s-saída: 'shape m-moved.'
 ```
 
-Caso queira realizar herança de múltiplos objetos, então mixins ("mistura") são uma possibilidade.
+caso queiwa weawizaw h-hewança de múwtipwos objetos, (///ˬ///✿) e-então mixins ("mistuwa") s-são uma possibiwidade. nyaa~~
 
 ```js
-function MyClass() {
-  SuperClass.call(this);
-  OtherSuperClass.call(this);
+function mycwass() {
+  supewcwass.caww(this);
+  othewsupewcwass.caww(this);
 }
 
-MyClass.prototype = Object.create(SuperClass.prototype); // herança
-mixin(MyClass.prototype, OtherSuperClass.prototype); // mixin
+m-mycwass.pwototype = object.cweate(supewcwass.pwototype); // h-hewança
+mixin(mycwass.pwototype, >w< o-othewsupewcwass.pwototype); // m-mixin
 
-MyClass.prototype.myMethod = function () {
-  // faz algo
+mycwass.pwototype.mymethod = function () {
+  // f-faz awgo
 };
 ```
 
-A função `mixin` copia as funções do protótipo da superclasse para o protótipo da subclasse, a função mixin precisa ser fornecida pelo usuário. Um exemplo de uma função do tipo mixin seria [jQuery.extend()](https://api.jquery.com/jQuery.extend/).
+a-a função `mixin` copia as funções d-do pwotótipo d-da supewcwasse pawa o pwotótipo da subcwasse, -.- a função mixin pwecisa sew f-fownecida pewo u-usuáwio. (✿oωo) um exempwo d-de uma função do tipo mixin s-sewia [jquewy.extend()](https://api.jquewy.com/jquewy.extend/). (˘ω˘)
 
-### Usando argumento `propertiesObject` com `Object.create()`
+### u-usando awgumento `pwopewtiesobject` com `object.cweate()`
 
 ```js
-var o;
+v-vaw o;
 
-// cria um objeto com protótipo null
-o = Object.create(null);
+// cwia um objeto com pwotótipo nyuww
+o = object.cweate(nuww);
 
 o = {};
-// equivalente a:
-o = Object.create(Object.prototype);
+// equivawente a-a:
+o = o-object.cweate(object.pwototype);
 
-// Exemplo em que criamos um objeto com algumas propriedades
-// (Note que o segundo parâmetro mapeia as chaves para *descritores de propriedade*.)
-o = Object.create(Object.prototype, {
-  // foo é uma 'propriedade de valor' ('value property') normal
-  foo: { writable: true, configurable: true, value: "hello" },
-  // bar é uma propriedade getter-setter (accessor)
-  bar: {
-    configurable: false,
-    get: function () {
-      return 10;
-    },
-    set: function (value) {
-      console.log("Setting `o.bar` to", value);
-    },
-    /* com os ES5 Accessors nosso código pode ser escrito como:
-    get() { return 10; },
-    set(value) { console.log('setting `o.bar` to', value); } */
-  },
+// exempwo em que cwiamos um objeto c-com awgumas p-pwopwiedades
+// (note que o segundo pawâmetwo mapeia as chaves p-pawa *descwitowes de pwopwiedade*.)
+o = object.cweate(object.pwototype, rawr {
+  // foo é uma 'pwopwiedade de vawow' ('vawue p-pwopewty') nyowmaw
+  foo: { wwitabwe: t-twue, OwO configuwabwe: t-twue, ^•ﻌ•^ vawue: "hewwo" }, UwU
+  // baw é uma pwopwiedade gettew-settew (accessow)
+  baw: {
+    configuwabwe: f-fawse,
+    g-get: function () {
+      wetuwn 10;
+    }, (˘ω˘)
+    set: function (vawue) {
+      consowe.wog("setting `o.baw` t-to", (///ˬ///✿) vawue);
+    }, σωσ
+    /* com o-os es5 accessows nyosso código pode sew escwito como:
+    get() { w-wetuwn 10; }, /(^•ω•^)
+    set(vawue) { c-consowe.wog('setting `o.baw` t-to', 😳 vawue); } */
+  }, 😳
 });
 
-function Constructor() {}
-o = new Constructor();
-// equivalente a:
-o = Object.create(Constructor.prototype);
-// Claro, se há de fato um código de inicialização na função
-// Constructor, o Object.create() não pode refleti-la
+function c-constwuctow() {}
+o = nyew constwuctow();
+// e-equivawente a:
+o-o = object.cweate(constwuctow.pwototype);
+// c-cwawo, (⑅˘꒳˘) se há de fato u-um código de i-iniciawização nya função
+// constwuctow, 😳😳😳 o o-object.cweate() n-nyão pode wefweti-wa
 
-// Cria um novo objeto cujo protóptipo é um objeto novo, vazio
-// e adiciona a propriedade 'p' com o valor 42.
-o = Object.create({}, { p: { value: 42 } });
+// c-cwia um nyovo objeto cujo pwotóptipo é u-um objeto nyovo, vazio
+// e adiciona a-a pwopwiedade 'p' c-com o vawow 42. 😳
+o = object.cweate({}, { p: { vawue: 42 } });
 
-// por padrão, propriedades NÃO SÃO escritas, enumeradas ou configuráveis:
+// pow padwão, XD p-pwopwiedades n-nyÃo sÃo e-escwitas, enumewadas o-ou configuwáveis:
 o.p = 24;
-o.p;
+o-o.p;
 // 42
 
 o.q = 12;
-for (var prop in o) {
-  console.log(prop);
+fow (vaw pwop in o) {
+  consowe.wog(pwop);
 }
 // 'q'
 
-delete o.p;
-// false
+dewete o.p;
+// fawse
 
-// especificar uma propriedade ES3
-o2 = Object.create(
-  {},
+// e-especificaw uma pwopwiedade e-es3
+o2 = object.cweate(
+  {}, mya
   {
     p: {
-      value: 42,
-      writable: true,
-      enumerable: true,
-      configurable: true,
-    },
+      v-vawue: 42, ^•ﻌ•^
+      wwitabwe: twue, ʘwʘ
+      e-enumewabwe: twue, ( ͡o ω ͡o )
+      c-configuwabwe: t-twue, mya
+    }, o.O
   },
 );
 ```
 
-## Polyfill
+## p-powyfiww
 
-Este polyfill cobre o caso de uso principal que é a crição de um novo objeto em que o protótipo foi escolhido mas não leva em consideração o segundo argumento.
+e-este powyfiww c-cobwe o caso de uso pwincipaw que é a cwição de um nyovo objeto em que o pwotótipo foi escowhido mas nyão w-weva em considewação o-o segundo a-awgumento. (✿oωo)
 
-Note que, enquanto a configuração `null` as `[[Prototype]]` é suportada no ES5 `Object.create`, este polyfill não suporta devido à limitação inerente em versões do ECMAScript inferiores a 5.
+nyote que, enquanto a-a configuwação `nuww` as `[[pwototype]]` é supowtada nyo es5 `object.cweate`, :3 e-este powyfiww n-nyão supowta devido à wimitação i-inewente em vewsões do ecmascwipt infewiowes a-a 5. 😳
 
 ```js
-if (typeof Object.create != "function") {
-  Object.create = (function () {
-    var Temp = function () {};
-    return function (prototype) {
-      if (arguments.length > 1) {
-        throw Error("Second argument not supported");
+i-if (typeof object.cweate != "function") {
+  object.cweate = (function () {
+    v-vaw temp = function () {};
+    w-wetuwn function (pwototype) {
+      if (awguments.wength > 1) {
+        thwow ewwow("second awgument nyot suppowted");
       }
-      if (typeof prototype != "object") {
-        throw TypeError("Argument must be an object");
+      i-if (typeof p-pwototype != "object") {
+        t-thwow typeewwow("awgument m-must b-be an object");
       }
-      Temp.prototype = prototype;
-      var result = new Temp();
-      Temp.prototype = null;
-      return result;
+      temp.pwototype = pwototype;
+      v-vaw wesuwt = nyew t-temp();
+      temp.pwototype = n-nyuww;
+      wetuwn w-wesuwt;
     };
   })();
 }
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{jsxref("Object.defineProperty()")}}
-- {{jsxref("Object.defineProperties()")}}
-- {{jsxref("Object.prototype.isPrototypeOf()")}}
-- Post de John Resig sobre [getPrototypeOf()](http://ejohn.org/blog/objectgetprototypeof/)
+- {{jsxwef("object.definepwopewty()")}}
+- {{jsxwef("object.definepwopewties()")}}
+- {{jsxwef("object.pwototype.ispwototypeof()")}}
+- post de john w-wesig sobwe [getpwototypeof()](http://ejohn.owg/bwog/objectgetpwototypeof/)

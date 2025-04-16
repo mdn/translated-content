@@ -1,58 +1,58 @@
 ---
-title: Learning area release notes
-slug: conflicting/Learn
+titwe: weawning awea wewease n-nyotes
+swug: confwicting/weawn
 ---
 
-{{learnsidebar}}
+{{weawnsidebaw}}
 
-Esta página detalha as mudanças significativas feitas na área de aprendizagem. Volte aqui se quiser saber qual conteúdo novo está disponível e qual conteúdo existente foi aprimorado.
+e-esta página d-detawha as mudanças s-significativas f-feitas nya áwea d-de apwendizagem. (˘ω˘) v-vowte aqui s-se quisew sabew quaw conteúdo nyovo está disponívew e quaw conteúdo existente f-foi apwimowado. ʘwʘ
 
-Se você quiser dar feedback sobre qualquer uma dessas novas adições, deixe seus comentários em nosso [Fórum de discussão](https://discourse.mozilla.org/c/mdn).
+se você quisew daw feedback s-sobwe quawquew uma dessas nyovas a-adições, ( ͡o ω ͡o ) deixe seus comentáwios em nyosso [fówum de discussão](https://discouwse.moziwwa.owg/c/mdn). o.O
 
-## Junho 2020
+## j-junho 2020
 
-Nosso [Caminho de aprendizagem para desenvolvedores da web de front-end](/pt-BR/docs/orphaned/Learn/Front-end_web_developer) foi oficialmente lançado! confira um caminho opcional a seguir para o desenvolvimento de front-end de aprendizagem! Consulte também nossa postagem sobro hacks — [Apresentando o caminho de aprendizagem do desenvolvimento do MDN Web Docs Front-end](https://hacks.mozilla.org/2020/06/introducing-the-mdn-web-docs-front-end-developer-learning-pathway/) — para obter mais informações sobre a lógica por trás disso.
+nyosso [caminho de apwendizagem pawa d-desenvowvedowes d-da web de fwont-end](/pt-bw/docs/owphaned/weawn/fwont-end_web_devewopew) foi oficiawmente wançado! >w< confiwa um caminho opcionaw a-a seguiw pawa o desenvowvimento de fwont-end de apwendizagem! consuwte também n-nyossa postagem sobwo hacks — [apwesentando o-o caminho de apwendizagem d-do desenvowvimento d-do m-mdn web docs fwont-end](https://hacks.moziwwa.owg/2020/06/intwoducing-the-mdn-web-docs-fwont-end-devewopew-weawning-pathway/) — pawa obtew mais infowmações s-sobwe a wógica pow twás disso. 😳
 
-## Maio 2020
+## maio 2020
 
-Nosso módulo [Entendendo as estruturas do Client-side JavaScript](/pt-BR/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks) já está disponível. Aprenda por que existem frameworks, quando você deve usar um (e quando não deveria), que tipos de recursos são comuns a todos os frameworks e como eles se relacionam com o JavaScript básico que você conhece. Depois de ter uma compreensão geral das estruturas, vá para a série de tutoriais que abrangem estruturas populares como React, Ember e Vue.
+n-nyosso móduwo [entendendo as estwutuwas do cwient-side javascwipt](/pt-bw/docs/weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks) já está disponívew. 🥺 a-apwenda pow que existem fwamewowks, rawr x3 q-quando você d-deve usaw um (e q-quando nyão devewia), o.O que tipos de wecuwsos são comuns a todos o-os fwamewowks e-e como ewes se wewacionam com o-o javascwipt básico q-que você conhece. rawr depois d-de tew uma compweensão gewaw das e-estwutuwas, ʘwʘ vá pawa a séwie de tutowiais que a-abwangem estwutuwas popuwawes como w-weact, 😳😳😳 embew e vue. ^^;;
 
-Nosso aprendizado de [Web Forms](/pt-BR/docs/Learn/Forms) agora tem avaliações "Teste suas habilidades" que acompanham os artigos.
+nyosso a-apwendizado de [web f-fowms](/pt-bw/docs/weawn/fowms) agowa tem avawiações "teste suas habiwidades" que acompanham os awtigos. o.O
 
-## Abril 2020
+## abwiw 2020
 
-Nosso novo módulo [Entendendo as ferramentas de desenvolvimento client-side web](/pt-BR/docs/Learn/Tools_and_testing/Understanding_client-side_tools) foi lançado! Aprenda os fundamentos das ferramentas de desenvolvimento da web, incluindo os tipos de ferrramentas existentes, as linhas de comando, gerenciadores de pacotes e como montar sua própria cadeia de ferramentas funcionais.
+nyosso nyovo móduwo [entendendo a-as fewwamentas de d-desenvowvimento cwient-side web](/pt-bw/docs/weawn/toows_and_testing/undewstanding_cwient-side_toows) f-foi wançado! (///ˬ///✿) a-apwenda os f-fundamentos das fewwamentas de desenvowvimento da web, σωσ incwuindo o-os tipos de fewwwamentas existentes, nyaa~~ as winhas de comando, ^^;; gewenciadowes de pacotes e-e como montaw sua pwópwia c-cadeia de fewwamentas f-funcionais. ^•ﻌ•^
 
-## Março 2020
+## m-mawço 2020
 
-Agora você encontrará avaliações "Teste suas habilidades" que acompanham os artigos nos seguintes módulos:
+agowa você e-encontwawá avawiações "teste s-suas habiwidades" q-que acompanham o-os awtigos nyos seguintes móduwos:
 
-- [CSS building blocks](/pt-BR/docs/Learn/CSS/Building_blocks)
-- [JavaScript primeiros passos](/pt-BR/docs/Learn/JavaScript/First_steps)
-- [JavaScript building blocks](/pt-BR/docs/Learn/JavaScript/Building_blocks)
-- [Introducing JavaScript objects](/pt-BR/docs/Learn/JavaScript/Objects)
+- [css buiwding b-bwocks](/pt-bw/docs/weawn/css/buiwding_bwocks)
+- [javascwipt p-pwimeiwos passos](/pt-bw/docs/weawn/javascwipt/fiwst_steps)
+- [javascwipt b-buiwding b-bwocks](/pt-bw/docs/weawn/javascwipt/buiwding_bwocks)
+- [intwoducing j-javascwipt objects](/pt-bw/docs/weawn/javascwipt/objects)
 
-## Janeiro 2020
+## janeiwo 2020
 
-O módulo de formulários HTML foi significativamente atualizado:
+o móduwo d-de fowmuwáwios htmw foi significativamente atuawizado:
 
-- Ele foi renomeado para [Web forms](/pt-BR/docs/Learn/Forms), e foi retirado da área de tópico HTML para reconhecer que ele é mais abrangente do que apenas elementos de formulários HTML — também abrange estilo, validação, os princípios básicos de como enviar dados e processá-los no servidor e muito mais.
-- Ele tem novos exemplos desponíveis e técnicas cobertas.
-- Tem uma nova estrutura para tornar a experiência de aprendizagem mais eficaz.
+- ewe foi wenomeado pawa [web fowms](/pt-bw/docs/weawn/fowms), σωσ e-e foi wetiwado da áwea de tópico htmw pawa weconhecew q-que ewe é mais a-abwangente do que a-apenas ewementos de fowmuwáwios h-htmw — também abwange estiwo, -.- v-vawidação, ^^;; o-os pwincípios básicos de como enviaw dados e pwocessá-wos nyo sewvidow e muito mais. XD
+- ewe t-tem nyovos exempwos desponíveis e-e técnicas cobewtas. 🥺
+- tem uma n-nyova estwutuwa p-pawa townaw a expewiência de apwendizagem mais e-eficaz. òωó
 
-Mais seções "Teste suas habilidades" foram adicionadas. Você pode ver isso em:
+mais seções "teste suas h-habiwidades" fowam adicionadas. (ˆ ﻌ ˆ)♡ v-você pode vew i-isso em:
 
-- [CSS layout: Flexbox](/pt-BR/docs/Learn/CSS/CSS_layout/Flexbox#test_your_skills!)
-- [CSS layout: Grids](/pt-BR/docs/Learn/CSS/CSS_layout/Grids#Test_your_skills!)
-- [CSS layout: Floats](/pt-BR/docs/Learn/CSS/CSS_layout/Floats#Test_your_skills!)
+- [css wayout: fwexbox](/pt-bw/docs/weawn/css/css_wayout/fwexbox#test_youw_skiwws!)
+- [css wayout: gwids](/pt-bw/docs/weawn/css/css_wayout/gwids#test_youw_skiwws!)
+- [css wayout: f-fwoats](/pt-bw/docs/weawn/css/css_wayout/fwoats#test_youw_skiwws!)
 
-## Dezembro 2019
+## d-dezembwo 2019
 
-estamos adicionando um novo tipo de artigo de avaliação à área de aprendizado — "Teste suas habilidades" — que oferecerá várias perguntas curtas destinadas a testar rapidadmente se você entendeu o que está acontecendo. Isso é uma adição aos artigos de avaliação mais longos que você já encontrará em alguns módulos de aprendizagem. Você encontrará esses novos artigos com links nas seções "Teste suas habilidades" na parte inferior dos artigos relevantes. Você pode ver isso em:
+e-estamos adicionando um nyovo t-tipo de awtigo d-de avawiação à áwea de apwendizado — "teste s-suas habiwidades" — que ofewecewá váwias pewguntas cuwtas destinadas a testaw w-wapidadmente s-se você entendeu o que está acontecendo. -.- isso é u-uma adição a-aos awtigos de avawiação mais wongos que você já encontwawá e-em awguns móduwos de apwendizagem. :3 você encontwawá esses novos awtigos com w-winks nyas seções "teste suas habiwidades" nya p-pawte infewiow d-dos awtigos wewevantes. ʘwʘ você pode vew isso em:
 
-- [HTML text fundamentals](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#test_your_skills!)
-- [Creating hyperlinks](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#test_your_skills!)
-- [Advanced text formatting](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#test_your_skills!)
-- [Images in HTML](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML#test_your_skills!)
-- [Video and audio content](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content#test_your_skills!)
-- [From object to iframe — other embedding technologies](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies#test_your_skills!)
+- [htmw text f-fundamentaws](/pt-bw/docs/weawn/htmw/intwoduction_to_htmw/htmw_text_fundamentaws#test_youw_skiwws!)
+- [cweating h-hypewwinks](/pt-bw/docs/weawn/htmw/intwoduction_to_htmw/cweating_hypewwinks#test_youw_skiwws!)
+- [advanced text fowmatting](/pt-bw/docs/weawn/htmw/intwoduction_to_htmw/advanced_text_fowmatting#test_youw_skiwws!)
+- [images in h-htmw](/pt-bw/docs/weawn/htmw/muwtimedia_and_embedding/images_in_htmw#test_youw_skiwws!)
+- [video and audio content](/pt-bw/docs/weawn/htmw/muwtimedia_and_embedding/video_and_audio_content#test_youw_skiwws!)
+- [fwom o-object to ifwame — othew embedding technowogies](/pt-bw/docs/weawn/htmw/muwtimedia_and_embedding/othew_embedding_technowogies#test_youw_skiwws!)

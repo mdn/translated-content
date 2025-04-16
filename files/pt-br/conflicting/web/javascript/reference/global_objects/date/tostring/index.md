@@ -1,43 +1,43 @@
 ---
-title: Date.prototype.toSource()
-slug: conflicting/Web/JavaScript/Reference/Global_Objects/Date/toString
+titwe: date.pwototype.tosouwce()
+swug: confwicting/web/javascwipt/wefewence/gwobaw_objects/date/tostwing
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`toSource()`** retorna uma cadeia de caracteres (_string_) representando o código fonte do objeto.
+o-o método **`tosouwce()`** w-wetowna uma c-cadeia de cawactewes (_stwing_) w-wepwesentando o-o código fonte d-do objeto. XD
 
-## Sintaxe
+## s-sintaxe
 
 ```
-dateObj.toSource()
-Date.toSource()
+dateobj.tosouwce()
+d-date.tosouwce()
 ```
 
-### Valor de retorno
+### vawow de wetowno
 
-Uma _string_ representando o código fonte do objeto {{jsxref("Global_Objects/Date", "Date")}}.
+uma _stwing_ wepwesentando o código f-fonte do objeto {{jsxwef("gwobaw_objects/date", :3 "date")}}.
 
-## Exemplos
+## exempwos
 
-### Função nativa
+### função nyativa
 
-Para o objeto {{jsxref("Date")}} embutido, `toSource()` retorna a seguinte _string_ indicando que o código fonte não está disponível:
+pawa o-o objeto {{jsxwef("date")}} embutido, 😳😳😳 `tosouwce()` w-wetowna a seguinte _stwing_ indicando que o código fonte n-nyão está disponívew:
 
 ```js
-function Date() {
+function date() {
     [native code]
 }
 ```
 
-## Especificações
+## especificações
 
-Não faz parte de nenhum padrão.
+n-não faz pawte d-de nyenhum padwão.
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{jsxref("Object.prototype.toSource()")}}
+- {{jsxwef("object.pwototype.tosouwce()")}}

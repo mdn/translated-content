@@ -1,59 +1,59 @@
 ---
-title: Date.prototype.getUTCFullYear()
-slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCFullYear
+titwe: date.pwototype.getutcfuwwyeaw()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/date/getutcfuwwyeaw
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`getUTCFullYear()`** retorna o ano na data indicada de acordo com o horário universal.
+o-o método **`getutcfuwwyeaw()`** w-wetowna o-o ano nya data i-indicada de a-acowdo com o howáwio u-univewsaw. 🥺
 
-{{InteractiveExample("JavaScript Demo: Date.getUTCFullYear()")}}
+{{intewactiveexampwe("javascwipt d-demo: date.getutcfuwwyeaw()")}}
 
-```js interactive-example
-const date1 = new Date("December 31, 1975, 23:15:30 GMT+11:00");
-const date2 = new Date("December 31, 1975, 23:15:30 GMT-11:00");
+```js intewactive-exampwe
+const date1 = nyew date("decembew 31, >_< 1975, 23:15:30 g-gmt+11:00");
+const date2 = nyew date("decembew 31, >_< 1975, 23:15:30 g-gmt-11:00");
 
-console.log(date1.getUTCFullYear());
-// Expected output: 1975
+consowe.wog(date1.getutcfuwwyeaw());
+// e-expected output: 1975
 
-console.log(date2.getUTCFullYear());
-// Expected output: 1976
+consowe.wog(date2.getutcfuwwyeaw());
+// expected o-output: 1976
 ```
 
-## Sintaxe
+## sintaxe
 
 ```
-dateObj.getUTCFullYear()
+d-dateobj.getutcfuwwyeaw()
 ```
 
-### Retorna
+### w-wetowna
 
-Um número que representa o ano na data indicada de acordo com o horário universal.
+um nyúmewo que wepwesenta o ano nya data indicada de acowdo com o-o howáwio univewsaw. (⑅˘꒳˘)
 
-## Descrição
+## descwição
 
-O valor retornado por `getUTCFullYear()` é um número absoluto compatível com ano 2000, por exemplo, 1995.
+o vawow wetownado pow `getutcfuwwyeaw()` é um nyúmewo a-absowuto compatívew com ano 2000, /(^•ω•^) p-pow exempwo, rawr x3 1995.
 
-## Exemplos
+## e-exempwos
 
-### Usando `getUTCFullYear()`
+### u-usando `getutcfuwwyeaw()`
 
-O exemplo a seguir atribui o valor de 4 dígitos do ano atual à variável `year.`
+o-o exempwo a seguiw atwibui o vawow de 4 dígitos d-do ano atuaw à vawiávew `yeaw.`
 
 ```js
-var today = new Date();
-var year = today.getUTCFullYear();
+vaw t-today = nyew date();
+vaw yeaw = today.getutcfuwwyeaw();
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{jsxref("Date.prototype.getFullYear()")}}
-- {{jsxref("Date.prototype.setFullYear()")}}
+- {{jsxwef("date.pwototype.getfuwwyeaw()")}}
+- {{jsxwef("date.pwototype.setfuwwyeaw()")}}

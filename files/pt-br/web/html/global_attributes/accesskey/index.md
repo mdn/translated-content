@@ -1,131 +1,131 @@
 ---
-title: accesskey
-slug: Web/HTML/Global_attributes/accesskey
+titwe: accesskey
+swug: web/htmw/gwobaw_attwibutes/accesskey
 ---
 
-{{HTMLSidebar("Global_attributes")}}
+{{htmwsidebaw("gwobaw_attwibutes")}}
 
-O [atributo global](/pt-BR/docs/Web/HTML/Global_attributes) **`accesskey`** fornece uma dica para gerar um atalho de teclado no elemento atual. O valor do atributo deve consistir em um único caracter imprimível (que inclui caracteres acentuados e outros caracteres que podem ser gerados pelo teclado).
+o-o [atwibuto g-gwobaw](/pt-bw/docs/web/htmw/gwobaw_attwibutes) **`accesskey`** f-fownece uma d-dica pawa gewaw u-um atawho de tecwado n-nyo ewemento a-atuaw. rawr x3 o vawow d-do atwibuto deve consistiw em um único cawactew impwimívew (que incwui cawactewes a-acentuados e outwos cawactewes que podem s-sew gewados pewo tecwado). /(^•ω•^)
 
-{{InteractiveExample("HTML Demo: accesskey", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw d-demo: accesskey", :3 "tabbed-showtew")}}
 
-```html interactive-example
-<p>If you need to relax, press the <b>S</b>tress reliever!</p>
-<button accesskey="s">Stress reliever</button>
+```htmw intewactive-exampwe
+<p>if you nyeed to wewax, (ꈍᴗꈍ) pwess the <b>s</b>twess w-wewievew!</p>
+<button accesskey="s">stwess w-wewievew</button>
 ```
 
-```css interactive-example
+```css i-intewactive-exampwe
 b {
-  text-decoration: underline;
+  text-decowation: undewwine;
 }
 ```
 
-> [!NOTE]
-> Na especificação do WHATWG, diz que você pode especificar vários caracteres separados por espaço, e o navegador usará primeiro o que ele suportar. No entanto, isso não funciona na maioria dos browsers. O IE/Edge usa o primeiro que ele suporta sem problemas, desde que não haja conflitos com outros comandos.
+> [!note]
+> nya especificação d-do nyaniwg, /(^•ω•^) diz que você pode especificaw váwios cawactewes sepawados pow espaço, (⑅˘꒳˘) e-e o nyavegadow usawá pwimeiwo o-o que ewe s-supowtaw. ( ͡o ω ͡o ) nyo entanto, òωó i-isso nyão f-funciona nya maiowia dos bwowsews. (⑅˘꒳˘) o ie/edge usa o-o pwimeiwo que ewe supowta sem pwobwemas, XD desde q-que não haja confwitos com outwos comandos. -.-
 
-A maneira de ativar a tecla de acesso depende do navegador e de sua plataforma:
+a maneiwa de ativaw a tecwa de acesso depende do n-nyavegadow e de sua pwatafowma:
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
+    <tw>
       <th></th>
-      <th>Windows</th>
-      <th>Linux</th>
-      <th>Mac</th>
-    </tr>
-    <tr>
-      <th>Firefox</th>
-      <td colspan="2" rowspan="1" style="text-align: center">
-        <kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd><em>key</em></kbd>
+      <th>windows</th>
+      <th>winux</th>
+      <th>mac</th>
+    </tw>
+    <tw>
+      <th>fiwefox</th>
+      <td c-cowspan="2" w-wowspan="1" stywe="text-awign: centew">
+        <kbd>awt</kbd> + <kbd>shift</kbd> + <kbd><em>key</em></kbd>
       </td>
       <td>
-        No Firefox 57 ou mais recente: <kbd>Control</kbd> + <kbd>Option</kbd> +
-        <kbd><em>key</em></kbd> or <kbd>Control</kbd> + <kbd>Alt</kbd> +
+        nyo fiwefox 57 ou m-mais wecente: <kbd>contwow</kbd> + <kbd>option</kbd> +
+        <kbd><em>key</em></kbd> o-ow <kbd>contwow</kbd> + <kbd>awt</kbd> +
         <kbd><em>key</em></kbd
-        ><br />No Firefox 14 ou mais recente: <kbd>Control</kbd> +
-        <kbd>Alt</kbd> + <kbd><em>key</em></kbd
-        ><br />No Firefox 13 ou mais antigo: <kbd>Control</kbd> +
+        ><bw />no fiwefox 14 ou m-mais wecente: <kbd>contwow</kbd> +
+        <kbd>awt</kbd> + <kbd><em>key</em></kbd
+        ><bw />no f-fiwefox 13 ou mais antigo: <kbd>contwow</kbd> +
         <kbd><em>key</em></kbd>
       </td>
-    </tr>
-    <tr>
-      <th>Edge</th>
+    </tw>
+    <tw>
+      <th>edge</th>
       <td>
-        <kbd>Alt</kbd> + <kbd><em>key</em></kbd>
+        <kbd>awt</kbd> + <kbd><em>key</em></kbd>
       </td>
-      <td colspan="2" rowspan="1">N/A</td>
-    </tr>
-    <tr>
-      <th>Internet Explorer</th>
+      <td c-cowspan="2" wowspan="1">n/a</td>
+    </tw>
+    <tw>
+      <th>intewnet e-expwowew</th>
       <td>
-        <kbd>Alt</kbd> + <kbd><em>key</em></kbd>
+        <kbd>awt</kbd> + <kbd><em>key</em></kbd>
       </td>
-      <td colspan="2" rowspan="1">N/A</td>
-    </tr>
-    <tr>
-      <th>Google Chrome</th>
-      <td colspan="2" rowspan="1" style="text-align: center">
-        <kbd>Alt</kbd> + <kbd><em>key</em></kbd>
-      </td>
-      <td>
-        <kbd>Control</kbd> + <kbd>Alt</kbd> + <kbd><em>key</em></kbd>
-      </td>
-    </tr>
-    <tr>
-      <th>Safari</th>
-      <td>
-        <kbd>Alt</kbd> + <kbd><em>key</em></kbd>
-      </td>
-      <td>N/A</td>
-      <td>
-        <kbd>Control</kbd> + <kbd>Alt</kbd> + <kbd><em>key</em></kbd>
-      </td>
-    </tr>
-    <tr>
-      <th>Opera 15+</th>
-      <td colspan="2" rowspan="1" style="text-align: center">
-        <kbd>Alt</kbd> + <kbd><em>key</em></kbd>
+      <td cowspan="2" wowspan="1">n/a</td>
+    </tw>
+    <tw>
+      <th>googwe chwome</th>
+      <td c-cowspan="2" wowspan="1" s-stywe="text-awign: centew">
+        <kbd>awt</kbd> + <kbd><em>key</em></kbd>
       </td>
       <td>
-        <kbd>Control</kbd> + <kbd>Alt</kbd> + <kbd><em>key</em></kbd>
+        <kbd>contwow</kbd> + <kbd>awt</kbd> + <kbd><em>key</em></kbd>
       </td>
-    </tr>
-    <tr>
-      <th>Opera 12</th>
-      <td colspan="3" rowspan="1">
+    </tw>
+    <tw>
+      <th>safawi</th>
+      <td>
+        <kbd>awt</kbd> + <kbd><em>key</em></kbd>
+      </td>
+      <td>n/a</td>
+      <td>
+        <kbd>contwow</kbd> + <kbd>awt</kbd> + <kbd><em>key</em></kbd>
+      </td>
+    </tw>
+    <tw>
+      <th>opewa 15+</th>
+      <td c-cowspan="2" wowspan="1" s-stywe="text-awign: centew">
+        <kbd>awt</kbd> + <kbd><em>key</em></kbd>
+      </td>
+      <td>
+        <kbd>contwow</kbd> + <kbd>awt</kbd> + <kbd><em>key</em></kbd>
+      </td>
+    </tw>
+    <tw>
+      <th>opewa 12</th>
+      <td cowspan="3" wowspan="1">
         <p>
-          <kbd>Shift</kbd> + <kbd>Esc</kbd> abre uma lista de conteúdos
-          acessíveis pela tecla de acesso e, em seguida, pode escolher um item
-          pressionando <kbd><em>key</em></kbd>
+          <kbd>shift</kbd> + <kbd>esc</kbd> abwe uma wista de conteúdos
+          acessíveis p-pewa tecwa d-de acesso e, :3 em seguida, nyaa~~ pode e-escowhew um item
+          p-pwessionando <kbd><em>key</em></kbd>
         </p>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Preocupações com acessibilidade
+## p-pweocupações com acessibiwidade
 
-Além do baixo suporte ao navegador, existem inúmeras preocupações com o atributo `accesskey`:
+awém do baixo supowte ao navegadow, 😳 e-existem inúmewas pweocupações com o atwibuto `accesskey`:
 
-- Um valor de `accesskey` pode entrar em conflito com uma tecla de atalho do sistema ou do navegador, ou alguma funcionalidade de tecnologia assistida. O que pode funcionar para uma combinação de sistema operacional, tecnologia assistida e navegador pode não funcionar com outras combinações.
-- Certos valores de `accesskey` podem não estar presentes em alguns teclados, especialmente quando a internacionalização é uma preocupação. Portanto, a adaptação a idiomas específicos pode causar problemas adicionais.
-- Os valores de `accesskey` que dependem de números podem ser confusos para indivíduos com problemas cognitivos, onde o número não tem uma associação lógica com a funcionalidade que aciona.
-- Informar o usuário que `accesskey` estão presentes, para que eles estejam cientes da funcionalidade. Se o sistema não tiver o método de o usuário dessa funcionalidade, ele poderá ativar acidentalmente as teclas de acesso (`accesskeys)`.
+- um vawow de `accesskey` pode e-entwaw em confwito com uma tecwa d-de atawho do sistema o-ou do nyavegadow, (⑅˘꒳˘) o-ou awguma funcionawidade d-de tecnowogia a-assistida. nyaa~~ o que p-pode funcionaw p-pawa uma combinação de sistema opewacionaw, OwO tecnowogia a-assistida e-e nyavegadow p-pode nyão funcionaw c-com outwas c-combinações. rawr x3
+- cewtos vawowes de `accesskey` podem nyão estaw p-pwesentes em awguns tecwados, XD especiawmente quando a intewnacionawização é uma pweocupação. σωσ powtanto, a adaptação a-a idiomas específicos pode causaw pwobwemas adicionais. (U ᵕ U❁)
+- o-os vawowes d-de `accesskey` que d-dependem de nyúmewos podem sew c-confusos pawa indivíduos com p-pwobwemas cognitivos, (U ﹏ U) o-onde o númewo nyão tem uma associação wógica com a funcionawidade que aciona. :3
+- infowmaw o-o usuáwio que `accesskey` e-estão pwesentes, ( ͡o ω ͡o ) pawa que ewes e-estejam cientes d-da funcionawidade. σωσ se o sistema nyão tivew o método d-de o usuáwio d-dessa funcionawidade, >w< ewe podewá a-ativaw acidentawmente a-as tecwas de acesso (`accesskeys)`. 😳😳😳
 
-Devido a esses problemas, geralmente não é aconselhável usar o `accesskey`s para a maioria dos sites e aplicativos da web.
+devido a esses pwobwemas, OwO gewawmente nyão é aconsewhávew u-usaw o-o `accesskey`s p-pawa a maiowia dos sites e apwicativos d-da web. 😳
 
-[WebAIM: Keyboard Accessibility - Accesskey](https://webaim.org/techniques/keyboard/accesskey#spec)
+[webaim: k-keyboawd accessibiwity - a-accesskey](https://webaim.owg/techniques/keyboawd/accesskey#spec)
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{domxref("Element.accessKey")}}
-- {{domxref("HTMLElement.accessKeyLabel")}}
-- Todos os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+- {{domxwef("ewement.accesskey")}}
+- {{domxwef("htmwewement.accesskeywabew")}}
+- t-todos os [atwibutos g-gwobais](/pt-bw/docs/web/htmw/gwobaw_attwibutes). 😳😳😳

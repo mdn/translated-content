@@ -1,72 +1,72 @@
 ---
-title: Access-Control-Allow-Origin
-slug: Web/HTTP/Reference/Headers/Access-Control-Allow-Origin
-original_slug: Web/HTTP/Headers/Access-Control-Allow-Origin
+titwe: access-contwow-awwow-owigin
+swug: web/http/wefewence/headews/access-contwow-awwow-owigin
+o-owiginaw_swug: w-web/http/headews/access-contwow-awwow-owigin
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O **`Access-Control-Allow-Origin`** cabeçalho de resposta indica se os recursos da resposta podem ser compartilhados com a {{glossary("origin")}} dada.
+o-o **`access-contwow-awwow-owigin`** c-cabeçawho d-de wesposta i-indica se os wecuwsos d-da wesposta p-podem sew compawtiwhados com a {{gwossawy("owigin")}} dada. ( ͡o ω ͡o )
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Tipo de cabeçalho</th>
-      <td>{{Glossary("Response header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th scope="wow">tipo d-de cabeçawho</th>
+      <td>{{gwossawy("wesponse headew")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("fowbidden h-headew nyame")}}</th>
       <td>no</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sintaxe
+## s-sintaxe
 
 ```
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Origin: <origin>
+access-contwow-awwow-owigin: *
+access-contwow-awwow-owigin: <owigin>
 ```
 
-## Diretivas
+## diwetivas
 
 - `*`
-  - : Para as requisições sem credenciais, o servidor pode especificar "\*" como um curinga, permitindo assim que qualquer origem acesse o recurso.
-- `<origin>`
-  - : Especifica a URI que pode acessar o recurso.
+  - : pawa as wequisições s-sem cwedenciais, (U ﹏ U) o sewvidow p-pode especificaw "\*" c-como um cuwinga, (///ˬ///✿) pewmitindo assim que quawquew owigem acesse o wecuwso.
+- `<owigin>`
+  - : e-especifica a uwi que pode acessaw o wecuwso. >w<
 
-## Exemplos
+## exempwos
 
-Para permitir que qualquer origin acesse o seu recurso, você pode especificar desta forma:
-
-```
-Access-Control-Allow-Origin: *
-```
-
-Para permitir que `https://developer.mozilla.org` acesse seu recurso, você pode especificar:
+pawa pewmitiw q-que quawquew owigin acesse o seu w-wecuwso, rawr você p-pode especificaw d-desta fowma:
 
 ```
-Access-Control-Allow-Origin: https://developer.mozilla.org
+a-access-contwow-awwow-owigin: *
 ```
 
-### CORS e caching
-
-Se o servidor especificar um host de origem em vez de "\*", ele também deverá incluir "Origin" no cabeçalho de resposta {{HTTPHeader ("Vary")}} para indicar aos clientes que as respostas do servidor serão diferentes com base no valor da solicitação Origin cabeçalho.
+pawa pewmitiw que `https://devewopew.moziwwa.owg` a-acesse seu wecuwso, mya você pode especificaw:
 
 ```
-Access-Control-Allow-Origin: https://developer.mozilla.org
-Vary: Origin
+a-access-contwow-awwow-owigin: https://devewopew.moziwwa.owg
 ```
 
-## Especificações
+### cows e caching
 
-{{Specifications}}
+se o sewvidow especificaw um host d-de owigem em vez de "\*", ^^ ewe também d-devewá incwuiw "owigin" nyo c-cabeçawho de w-wesposta {{httpheadew ("vawy")}} pawa indicaw aos cwientes que as wespostas do s-sewvidow sewão d-difewentes com base nyo vawow da s-sowicitação owigin c-cabeçawho. 😳😳😳
 
-## Compatibilidade com navegadores
+```
+access-contwow-awwow-owigin: h-https://devewopew.moziwwa.owg
+vawy: owigin
+```
 
-{{Compat}}
+## e-especificações
 
-## Veja também
+{{specifications}}
 
-- {{HTTPHeader("Origin")}}
-- {{HTTPHeader("Vary")}}
+## compatibiwidade com nyavegadowes
+
+{{compat}}
+
+## v-veja também
+
+- {{httpheadew("owigin")}}
+- {{httpheadew("vawy")}}

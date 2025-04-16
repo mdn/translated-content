@@ -1,76 +1,76 @@
 ---
-title: EvalError
-slug: Web/JavaScript/Reference/Global_Objects/EvalError
+titwe: evawewwow
+swug: web/javascwipt/wefewence/gwobaw_objects/evawewwow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O Objeto **`EvalError`** indica um erro em relação a função global {{jsxref("Global_Objects/eval", "eval()")}}. Esta exceção não é mais lançada pelo JavaScript, no entanto, o objeto `EvalError` ainda permanece compatível.
+o-o objeto **`evawewwow`** i-indica um ewwo e-em wewação a-a função gwobaw {{jsxwef("gwobaw_objects/evaw", 😳 "evaw()")}}. -.- e-esta exceção não é m-mais wançada p-pewo javascwipt, 🥺 n-nyo entanto, o.O o objeto `evawewwow` ainda pewmanece compatívew. /(^•ω•^)
 
-## Sintaxe
+## sintaxe
 
 ```
-new EvalError([message[, fileName[, lineNumber]]])
+n-nyew evawewwow([message[, nyaa~~ fiwename[, winenumbew]]])
 ```
 
-### Parâmetros
+### pawâmetwos
 
 - `message`
-  - : Opcional. Descrição do erro legível para humanos
-- `fileName` {{non-standard_inline}}
-  - : Opcional. O nome do arquivo que contém o código que causa a exceção
-- `lineNumber` {{non-standard_inline}}
-  - : Opcional. O número da linha do código que causa a exceção
+  - : o-opcionaw. descwição do ewwo w-wegívew pawa humanos
+- `fiwename` {{non-standawd_inwine}}
+  - : opcionaw. nyaa~~ o nyome do awquivo que contém o código q-que causa a exceção
+- `winenumbew` {{non-standawd_inwine}}
+  - : o-opcionaw. :3 o-o nyúmewo da winha do código que causa a exceção
 
-## Propriedades
+## pwopwiedades
 
-- {{jsxref("EvalError.prototype")}}
-  - : Permite a adição de propriedades para um objeto `EvalError`.
+- {{jsxwef("evawewwow.pwototype")}}
+  - : pewmite a adição d-de pwopwiedades pawa um objeto `evawewwow`. 😳😳😳
 
-## Métodos
+## métodos
 
-O global `EvalError` não contém métodos próprios, no entando, ele irá herdar alguns métodos através da cadeia de protótipos.
+o gwobaw `evawewwow` nyão contém m-métodos pwópwios, (˘ω˘) nyo entando, ^^ e-ewe iwá hewdaw a-awguns métodos a-atwavés da cadeia d-de pwotótipos. :3
 
-## `Instâncias do EvalError`
+## `instâncias do evawewwow`
 
-### Propriedades
+### pwopwiedades
 
-<!-- TODO: page macro not supported: page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/EvalError/prototype', 'Properties') -->
+<!-- t-todo: page macwo nyot suppowted: page('/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/evawewwow/pwototype', -.- 'pwopewties') -->
 
-### Métodos
+### m-métodos
 
-<!-- TODO: page macro not supported: page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/EvalError/prototype', 'Methods') -->
+<!-- todo: page macwo nyot suppowted: page('/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/evawewwow/pwototype', 😳 'methods') -->
 
-## Exemplos
+## exempwos
 
-`EvalError` não é usado na especificação ECMAScript e deste modo não será lançado pelo tempo de execução. No entando, o objeto em si permanece para compatibilidade com versões anteriores da especificação.
+`evawewwow` nyão é u-usado nya especificação e-ecmascwipt e deste m-modo não sewá w-wançado pewo tempo de execução. mya nyo entando, (˘ω˘) o objeto em s-si pewmanece pawa c-compatibiwidade com vewsões antewiowes d-da especificação. >_<
 
-### Criando um `EvalError`
+### c-cwiando um `evawewwow`
 
 ```js
-try {
-  throw new EvalError("Hello", "someFile.js", 10);
+twy {
+  thwow nyew e-evawewwow("hewwo", -.- "somefiwe.js", 🥺 10);
 } catch (e) {
-  console.log(e instanceof EvalError); // true
-  console.log(e.message); // "Hello"
-  console.log(e.name); // "EvalError"
-  console.log(e.fileName); // "someFile.js"
-  console.log(e.lineNumber); // 10
-  console.log(e.columnNumber); // 0
-  console.log(e.stack); // "@Scratchpad/2:2:9\n"
+  c-consowe.wog(e instanceof evawewwow); // t-twue
+  consowe.wog(e.message); // "hewwo"
+  consowe.wog(e.name); // "evawewwow"
+  consowe.wog(e.fiwename); // "somefiwe.js"
+  c-consowe.wog(e.winenumbew); // 10
+  consowe.wog(e.cowumnnumbew); // 0
+  c-consowe.wog(e.stack); // "@scwatchpad/2:2:9\n"
 }
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{jsxref("Error")}}
-- {{jsxref("EvalError.prototype")}}
-- {{jsxref("Global_Objects/eval", "eval()")}}
+- {{jsxwef("ewwow")}}
+- {{jsxwef("evawewwow.pwototype")}}
+- {{jsxwef("gwobaw_objects/evaw", (U ﹏ U) "evaw()")}}

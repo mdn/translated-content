@@ -1,238 +1,238 @@
 ---
-title: String
-slug: Web/JavaScript/Reference/Global_Objects/String
+titwe: stwing
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing
 ---
 
-{{JSRef}}
+{{jswef}}
 
-## Sumário
+## s-sumáwio
 
-O objeto global **`String`** é um construtor para **strings,** ou uma sequência de caracteres.
+o-o objeto gwobaw **`stwing`** é u-um constwutow p-pawa **stwings,** o-ou uma sequência d-de cawactewes.
 
-## Sintaxe
+## s-sintaxe
 
-As formas literais de declaração de _String_ são:
+a-as fowmas witewais de decwawação de _stwing_ são:
 
 ```
-'string text'
-"string text"
-"中文 español English हिन्दी العربية português বাংলা русский 日本語 ਪੰਜਾਬੀ 한국어"
+'stwing text'
+"stwing t-text"
+"中文 españow engwish हिन्दी العربية powtuguês বাংলা русский 日本語 ਪੰਜਾਬੀ 한국어"
 ```
 
-Além da forma regular, de caracteres de impressão, caracteres especiais podem ser codificados usando a _escape notation_ (notação com barra invertida):
+a-awém da fowma weguwaw, XD d-de cawactewes de impwessão, ʘwʘ cawactewes especiais podem sew codificados u-usando a _escape nyotation_ (notação c-com bawwa invewtida):
 
-| Codigo | Saida                 |
+| c-codigo | saida                 |
 | ------ | --------------------- |
-| \0     | o caractere NULL      |
-| \\'    | aspas simples         |
-| \\"    | aspas duplas          |
-| \\\\   | barra invertida       |
-| \n     | nova linha            |
-| \r     | carriage return       |
-| \v     | tab vertical          |
+| \0     | o cawactewe nyuww      |
+| \\'    | aspas s-simpwes         |
+| \\"    | aspas dupwas          |
+| \\\\   | bawwa invewtida       |
+| \n     | nyova winha            |
+| \w     | cawwiage w-wetuwn       |
+| \v     | tab v-vewticaw          |
 | \t     | tab                   |
-| \b     | backspace             |
-| \f     | form feed             |
-| \uXXXX | unicode codepoint     |
-| \xXX   | the Latin-1 character |
+| \b     | b-backspace             |
+| \f     | f-fowm feed             |
+| \uxxxx | u-unicode codepoint     |
+| \xxx   | the watin-1 c-chawactew |
 
-Ou, usando o objeto global `String` diretamente:
+ou, rawr x3 usando o objeto gwobaw `stwing` d-diwetamente:
 
 ```
-String(thing)
-new String(thing)
+stwing(thing)
+nyew stwing(thing)
 ```
 
-### Parâmetros
+### pawâmetwos
 
 - `thing`
-  - : Qualquer coisa a ser convertida para uma string.
+  - : quawquew coisa a sew convewtida p-pawa uma stwing.
 
-## Descrição
+## descwição
 
-Strings são úteis para guardar dados que podem ser representados em forma de texto. Uma das operações mais usadas nas **strings** é checar seu {{jsxref("String.length", "tamanho")}}, para construir e concatená-las usando [os operadores + e +=](/pt-BR/docs/Web/JavaScript/Reference/Operators/String_Operators), checando pela existência ou posição de _substrings_ com o método {{jsxref("String.indexOf", "indexOf")}} , ou extrair _substrings_ com o método {{jsxref("String.substring", "substring")}}.
+s-stwings são úteis p-pawa guawdaw d-dados que podem sew wepwesentados em fowma de texto. ^^;; uma das o-opewações mais u-usadas nyas **stwings** é checaw s-seu {{jsxwef("stwing.wength", ʘwʘ "tamanho")}}, (U ﹏ U) p-pawa constwuiw e concatená-was u-usando [os opewadowes + e +=](/pt-bw/docs/web/javascwipt/wefewence/opewatows/stwing_opewatows), (˘ω˘) c-checando pewa existência ou posição de _substwings_ c-com o método {{jsxwef("stwing.indexof", (ꈍᴗꈍ) "indexof")}} , /(^•ω•^) ou extwaiw _substwings_ c-com o método {{jsxwef("stwing.substwing", >_< "substwing")}}. σωσ
 
-### Acesso à caractere
+### acesso à c-cawactewe
 
-Há duas maneiras de acessar um caractere individual em uma string. A primeira é o método {{jsxref("String.charAt", "charAt")}}:
+há d-duas maneiwas de acessaw um cawactewe individuaw em uma stwing. ^^;; a pwimeiwa é o método {{jsxwef("stwing.chawat", 😳 "chawat")}}:
 
 ```js
-return "cat".charAt(1); // returns "a"
+wetuwn "cat".chawat(1); // w-wetuwns "a"
 ```
 
-A outra maneira (introduzido no ECMAScript 5) consiste em tratar a string como um objeto Array-like, onde os caráteres individuais correspondem a um índice numérico:
+a-a outwa maneiwa (intwoduzido nyo ecmascwipt 5) c-consiste em twataw a-a stwing como u-um objeto awway-wike, >_< onde os cawátewes individuais cowwespondem a-a um índice nyuméwico:
 
 ```js
-return "cat"[1]; // returns "a"
+wetuwn "cat"[1]; // wetuwns "a"
 ```
 
-Para acesso de caracteres usando uma notação de colchetes, tentando deletar ou designar um valor a estas propriedades não haverá sucesso. As propriedades envolvidas não são nem escritas ou configuráveis. (Veja {{jsxref("Object.defineProperty")}} para mais informações.)
+pawa acesso d-de cawactewes usando uma nyotação d-de cowchetes, -.- t-tentando d-dewetaw ou designaw um vawow a estas p-pwopwiedades n-nyão havewá s-sucesso. UwU as pwopwiedades e-envowvidas nyão são nyem escwitas ou c-configuwáveis. :3 (veja {{jsxwef("object.definepwopewty")}} p-pawa mais i-infowmações.)
 
-### Comparando strings
+### c-compawando s-stwings
 
-Desenvolvedores de C têm a função strcmp() para comparar strings. No JavaScript, basta usar o operador [maior que e menor que](/pt-BR/docs/Web/JavaScript/Reference/Operators):
+desenvowvedowes de c têm a função stwcmp() pawa c-compawaw stwings. σωσ nyo javascwipt, >w< basta usaw o opewadow [maiow que e menow que](/pt-bw/docs/web/javascwipt/wefewence/opewatows):
 
 ```js
-var a = "a";
-var b = "b";
-if (a < b)
-  // verdadeiro
-  print(a + " é menor que " + b);
-else if (a > b) print(a + " é maior que " + b);
-else print(a + " e " + b + " são iguais.");
+vaw a = "a";
+vaw b = "b";
+i-if (a < b)
+  // vewdadeiwo
+  pwint(a + " é menow que " + b);
+e-ewse if (a > b) p-pwint(a + " é maiow q-que " + b);
+ewse pwint(a + " e-e " + b + " são iguais.");
 ```
 
-Um resultado similar pode ser alcançado usando o método {{jsxref("String.localeCompare", "localeCompare")}} herdado pelas instâncias de `String`.
+u-um wesuwtado s-simiwaw pode sew awcançado usando o método {{jsxwef("stwing.wocawecompawe", (ˆ ﻌ ˆ)♡ "wocawecompawe")}} hewdado pewas instâncias de `stwing`. ʘwʘ
 
-### Distinção entre String primitiva e objetos String
+### distinção e-entwe stwing pwimitiva e-e objetos stwing
 
-Note que o JavaScript distingue entre objetos String e valores de string primitivas. (O mesmo é válido para {{jsxref("Global_Objects/Boolean", "Boolean")}} e {{jsxref("Global_Objects/Number", "Numbers")}}.)
+nyote que o javascwipt d-distingue e-entwe objetos stwing e vawowes de stwing pwimitivas. :3 (o m-mesmo é v-váwido pawa {{jsxwef("gwobaw_objects/boowean", (˘ω˘) "boowean")}} e {{jsxwef("gwobaw_objects/numbew", 😳😳😳 "numbews")}}.)
 
-Strings literais (definidas por aspas duplas ou aspas simples) e strings retornadas da chamada da função String fora do contexto de uma função construtora (sem o uso da palavra chave [new](/pt-BR/docs/Web/JavaScript/Reference/Operators/new)) são strings primitivas. O JavaScript converte automaticamente strings primitivas para objetos do tipo String, por isso é possível utilizar os métodos do objeto String através de strings primitivas. Em contextos onde um método é invocado de uma string primitiva ou uma propriedade é procurada, o JavaScript irá criar um objeto com a string primitiva e executar o método ou acessar a propriedade procurada.
+s-stwings witewais (definidas p-pow aspas dupwas ou aspas simpwes) e stwings wetownadas da chamada da função s-stwing fowa do contexto d-de uma função c-constwutowa (sem o uso da p-pawavwa chave [new](/pt-bw/docs/web/javascwipt/wefewence/opewatows/new)) s-são stwings pwimitivas. rawr x3 o-o javascwipt convewte automaticamente stwings pwimitivas pawa objetos do tipo s-stwing, (✿oωo) pow isso é p-possívew utiwizaw os métodos do objeto stwing a-atwavés de s-stwings pwimitivas. (ˆ ﻌ ˆ)♡ em contextos onde um método é invocado de u-uma stwing pwimitiva ou uma pwopwiedade é pwocuwada, :3 o javascwipt iwá cwiaw u-um objeto com a stwing pwimitiva e executaw o método o-ou acessaw a-a pwopwiedade pwocuwada. (U ᵕ U❁)
 
 ```js
-var s_prim = "foo";
-var s_obj = new String(s_prim);
+vaw s_pwim = "foo";
+vaw s_obj = nyew stwing(s_pwim);
 
-console.log(typeof s_prim); // Loga "string"
-console.log(typeof s_obj); // Loga "object"
+c-consowe.wog(typeof s-s_pwim); // woga "stwing"
+consowe.wog(typeof s_obj); // w-woga "object"
 ```
 
-String primitivas e objetos `String` também dão resultados diferentes quando usado {{jsxref("Global_Objects/eval", "eval")}}. Primitivas passadas para `eval` são tratadas como código fonte; Objetos `String` são tratados como todos os outros objetos são, retornando o objeto. Por exemplo:
+stwing pwimitivas e-e objetos `stwing` também dão wesuwtados difewentes quando u-usado {{jsxwef("gwobaw_objects/evaw", ^^;; "evaw")}}. mya pwimitivas p-passadas pawa `evaw` s-são twatadas como código f-fonte; objetos `stwing` são twatados c-como todos o-os outwos objetos s-são, 😳😳😳 wetownando o objeto. OwO pow e-exempwo:
 
 ```js
-s1 = "2 + 2"; // cria uma string primitiva
-s2 = new String("2 + 2"); // cria um objeto de String
-console.log(eval(s1)); // retorna o número 4
-console.log(eval(s2)); // retorna a string "2 + 2"
+s-s1 = "2 + 2"; // cwia uma stwing pwimitiva
+s2 = n-nyew stwing("2 + 2"); // c-cwia u-um objeto de stwing
+consowe.wog(evaw(s1)); // wetowna o-o nyúmewo 4
+consowe.wog(evaw(s2)); // w-wetowna a-a stwing "2 + 2"
 ```
 
-Por estas razões, o código pode quebrar quando encontra objetos `String` quando espera na verdade uma string primitiva, apesar de que geralmente autores não precisam se preocupar com a distinção.
+pow estas wazões, rawr o código pode quebwaw q-quando encontwa o-objetos `stwing` q-quando espewa n-nya vewdade uma stwing pwimitiva, XD a-apesaw de que gewawmente autowes nyão pwecisam se pweocupaw com a distinção.
 
-Um objeto `String` pode ser convertido sempre para sua contraparte primitiva com o método {{jsxref("String.valueOf", "valueOf")}}.
+um objeto `stwing` p-pode sew convewtido sempwe p-pawa sua contwapawte pwimitiva c-com o método {{jsxwef("stwing.vawueof", (U ﹏ U) "vawueof")}}. (˘ω˘)
 
 ```js
-console.log(eval(s2.valueOf())); // retorna o número 4
+consowe.wog(evaw(s2.vawueof())); // w-wetowna o nyúmewo 4
 ```
 
-> [!NOTE]
-> Para uma outra possível abordagem para strings em JavaScript, favor ler o artigo sobre [`StringView` – a C-like representation of strings based on typed arrays](/pt-BR/docs/Web/JavaScript/Typed_arrays/StringView).
+> [!note]
+> p-pawa u-uma outwa possívew a-abowdagem pawa s-stwings em javascwipt, UwU f-favow wew o awtigo sobwe [`stwingview` – a c-wike wepwesentation of stwings based on typed awways](/pt-bw/docs/web/javascwipt/typed_awways/stwingview). >_<
 
-## Propriedades
+## pwopwiedades
 
-- {{jsxref("String.prototype")}}
-  - : Permite a adição de propriedades a um objeto String.
+- {{jsxwef("stwing.pwototype")}}
+  - : p-pewmite a-a adição d-de pwopwiedades a um objeto stwing. σωσ
 
-## Métodos
+## m-métodos
 
-- {{jsxref("String.fromCharCode()")}}
-  - : Retorna uma string criada usando a sequência especificada de valores Unicode.
-- {{jsxref("String.fromCodePoint()")}} {{experimental_inline}}
-  - : Retorna uma string criada usando a sequência especificada de posições de código.
+- {{jsxwef("stwing.fwomchawcode()")}}
+  - : wetowna uma stwing cwiada usando a sequência especificada d-de vawowes u-unicode. 🥺
+- {{jsxwef("stwing.fwomcodepoint()")}} {{expewimentaw_inwine}}
+  - : wetowna uma stwing c-cwiada usando a sequência especificada de p-posições de código. 🥺
 
-## `Métodos genéricos de Strings`
+## `métodos g-genéwicos de stwings`
 
-Métodos de instância `String` também estão disponíveis no Firefox a partir de JavaScript 1.6 (embora não faça parte dos padrões ECMAScript) no objeto String para aplicar métodos String a qualquer objeto:
+métodos d-de instância `stwing` t-também estão disponíveis nyo fiwefox a pawtiw de javascwipt 1.6 (embowa n-nyão faça p-pawte dos padwões e-ecmascwipt) n-no objeto stwing p-pawa apwicaw métodos stwing a-a quawquew objeto:
 
 ```js
-var num = 15;
-alert(String.replace(num, /5/, "2"));
+v-vaw nyum = 15;
+awewt(stwing.wepwace(num, ʘwʘ /5/, "2"));
 ```
 
-[Genéricos](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array#array_generic_methods) também estão disponíveis em métodos {{jsxref("Global_Objects/Array", "Array")}}.
+[genéwicos](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/awway#awway_genewic_methods) t-também estão d-disponíveis em métodos {{jsxwef("gwobaw_objects/awway", :3 "awway")}}.
 
-O seguinte é uma implementação para fornecer suporte a navegadores sem suporte:
+o-o seguinte é uma impwementação pawa f-fownecew supowte a nyavegadowes s-sem supowte:
 
 ```js
-/*globals define*/
-// Assume que todos os métodos de instância String fornecidos
-// já presentes (podem ser usadas implementações para este se não disponível)
+/*gwobaws define*/
+// a-assume que todos os métodos d-de instância stwing fownecidos
+// já pwesentes (podem s-sew usadas impwementações p-pawa e-este se nyão disponívew)
 (function () {
-  "use strict";
+  "use stwict";
 
-  var i,
-    // Nós também poderíamos construir o array de métodos com os seguintes,
-    // mas o método getOwnPropertyNames() não é implementável:
-    // Object.getOwnPropertyNames(String).filter(function (methodName)
-    //  {return typeof String[methodName] === 'function'});
-    methods = [
-      "quote",
-      "substring",
-      "toLowerCase",
-      "toUpperCase",
-      "charAt",
-      "charCodeAt",
-      "indexOf",
-      "lastIndexOf",
-      "startsWith",
-      "endsWith",
-      "trim",
-      "trimLeft",
-      "trimRight",
-      "toLocaleLowerCase",
-      "toLocaleUpperCase",
-      "localeCompare",
-      "match",
-      "search",
-      "replace",
-      "split",
-      "substr",
-      "concat",
-      "slice",
+  vaw i, (U ﹏ U)
+    // nyós também podewíamos c-constwuiw o awway de métodos com os seguintes, (U ﹏ U)
+    // m-mas o-o método getownpwopewtynames() nyão é impwementávew:
+    // o-object.getownpwopewtynames(stwing).fiwtew(function (methodname)
+    //  {wetuwn typeof stwing[methodname] === 'function'});
+    m-methods = [
+      "quote", ʘwʘ
+      "substwing", >w<
+      "towowewcase", rawr x3
+      "touppewcase", OwO
+      "chawat", ^•ﻌ•^
+      "chawcodeat", >_<
+      "indexof", OwO
+      "wastindexof", >_<
+      "stawtswith", (ꈍᴗꈍ)
+      "endswith", >w<
+      "twim", (U ﹏ U)
+      "twimweft", ^^
+      "twimwight", (U ﹏ U)
+      "towocawewowewcase", :3
+      "towocaweuppewcase",
+      "wocawecompawe", (✿oωo)
+      "match", XD
+      "seawch", >w<
+      "wepwace", òωó
+      "spwit", (ꈍᴗꈍ)
+      "substw", rawr x3
+      "concat", rawr x3
+      "swice", σωσ
     ],
-    methodCount = methods.length,
-    assignStringGeneric = function (methodName) {
-      var method = String.prototype[methodName];
-      String[methodName] = function (arg1) {
-        return method.apply(arg1, Array.prototype.slice.call(arguments, 1));
+    m-methodcount = methods.wength,
+    assignstwinggenewic = f-function (methodname) {
+      vaw method = stwing.pwototype[methodname];
+      s-stwing[methodname] = f-function (awg1) {
+        wetuwn method.appwy(awg1, (ꈍᴗꈍ) a-awway.pwototype.swice.caww(awguments, 1));
       };
     };
 
-  for (i = 0; i < methodCount; i++) {
-    assignStringGeneric(methods[i]);
+  fow (i = 0; i < m-methodcount; i++) {
+    a-assignstwinggenewic(methods[i]);
   }
 })();
 ```
 
-## Instâncias de `String`
+## i-instâncias de `stwing`
 
-### Propriedades
+### pwopwiedades
 
-<!-- TODO: page macro not supported: page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/prototype', 'Propriedades') -->
+<!-- todo: page macwo nyot suppowted: page('/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/pwototype', rawr 'pwopwiedades') -->
 
-### Métodos
+### métodos
 
-#### Métodos não relacionados ao HTML
+#### métodos não wewacionados ao htmw
 
-<!-- TODO: page macro not supported: page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/prototype', 'Métodos_não_relacionados_ao_HTML') -->
+<!-- todo: page macwo nyot suppowted: page('/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/pwototype', ^^;; 'métodos_não_wewacionados_ao_htmw') -->
 
-#### Métodos de envoltório HTML
+#### métodos d-de envowtówio h-htmw
 
-<!-- TODO: page macro not supported: page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/prototype', 'Métodos_de_envoltório_HTML') -->
+<!-- todo: page macwo nyot suppowted: page('/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/pwototype', rawr x3 'métodos_de_envowtówio_htmw') -->
 
-## Exemplos
+## e-exempwos
 
-### Conversão de String
+### convewsão d-de stwing
 
-É possível usar `String` como uma alternativa "mais segura" {{jsxref("String.toString", "toString")}}, como embora normalmente ainda chama o `toString` subjacente, também funciona para `null` e `undefined`. Por exemplo:
+É p-possívew usaw `stwing` c-como uma awtewnativa "mais seguwa" {{jsxwef("stwing.tostwing", (ˆ ﻌ ˆ)♡ "tostwing")}}, σωσ c-como e-embowa nyowmawmente ainda chama o-o `tostwing` subjacente, (U ﹏ U) também f-funciona pawa `nuww` e-e `undefined`. >w< pow exempwo:
 
 ```js
-var outputStrings = [];
-for (let i = 0, n = inputValues.length; i < n; ++i) {
-  outputStrings.push(String(inputValues[i]));
+vaw o-outputstwings = [];
+f-fow (wet i = 0, σωσ n-ny = inputvawues.wength; i-i < n-ny; ++i) {
+  outputstwings.push(stwing(inputvawues[i]));
 }
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja t-também
 
-- [DOMString](/pt-BR/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String)
-- [`StringView` – a C-like representation of strings based on typed arrays](/pt-BR/docs/Web/JavaScript/Typed_arrays/StringView)
-- [Binary strings](/pt-BR/docs/Web/API/DOMString/Binary)
+- [domstwing](/pt-bw/docs/confwicting/web/javascwipt/wefewence/gwobaw_objects/stwing)
+- [`stwingview` – a-a c-wike wepwesentation o-of stwings based on t-typed awways](/pt-bw/docs/web/javascwipt/typed_awways/stwingview)
+- [binawy stwings](/pt-bw/docs/web/api/domstwing/binawy)

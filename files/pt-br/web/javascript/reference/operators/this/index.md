@@ -1,348 +1,348 @@
 ---
-title: this
-slug: Web/JavaScript/Reference/Operators/this
+titwe: this
+swug: web/javascwipt/wefewence/opewatows/this
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-A palavra-chave **`this`** comporta-se um pouco diferente em Javascript se comparado com outras linguagens. Também possui algumas diferenças entre o [modo estrito](/pt-BR/docs/Web/JavaScript/Referencia/Funciones/Modo_estricto) e o modo não estrito.
+a-a p-pawavwa-chave **`this`** c-compowta-se u-um pouco difewente e-em javascwipt s-se compawado c-com outwas winguagens. :3 t-também possui awgumas difewenças entwe o [modo estwito](/pt-bw/docs/web/javascwipt/wefewencia/funciones/modo_estwicto) e o modo nyão e-estwito. OwO
 
-Em muitos casos, o valor `this` é determinado pela forma como a função é chamada. Ele não pode ser assinado durante a execução, e isso pode ser diferente a cada vez que a função é chamada. ES5 introduziu o método [`bind`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) para estabelecer o valor `this` da função, independentemente de como ela seja chamada, e ECMAScript 2015 introduziu o [arrow functions](/pt-BR/docs/Functions/Arrow_functions), cujo `this` é lexicalmente delimitado (o valor `this` é estabelecido segundo o escopo de execução no qual está inserido).
+em muitos casos, ^^ o vawow `this` é detewminado pewa f-fowma como a função é chamada. (˘ω˘) e-ewe nyão pode sew assinado duwante a execução, OwO e isso pode s-sew difewente a cada vez que a função é c-chamada. UwU e-es5 intwoduziu o método [`bind`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/function/bind) pawa estabewecew o vawow `this` da função, ^•ﻌ•^ i-independentemente de como ewa seja chamada, e ecmascwipt 2015 intwoduziu o [awwow f-functions](/pt-bw/docs/functions/awwow_functions), (ꈍᴗꈍ) cujo `this` é w-wexicawmente d-dewimitado (o v-vawow `this` é e-estabewecido segundo o escopo de execução n-no quaw está insewido). /(^•ω•^)
 
-## Sintaxe
+## sintaxe
 
 ```
 this
 ```
 
-## Contexto global
+## c-contexto gwobaw
 
-No contexto de execução global (fora de qualquer função), `this` refere-se ao objeto global, seja em modo estrito ou não.
+nyo contexto de execução gwobaw (fowa de quawquew função), (U ᵕ U❁) `this` wefewe-se ao objeto g-gwobaw, (✿oωo) seja em modo estwito o-ou nyão. OwO
 
 ```js
-console.log(this.document === document); // true
+c-consowe.wog(this.document === document); // t-twue
 
-// Em navegadores web, o objeto window é também o objeto global:
-console.log(this === window); // true
+// em nyavegadowes web, :3 o objeto window é também o-o objeto gwobaw:
+c-consowe.wog(this === window); // t-twue
 
 this.a = 37;
-console.log(window.a); // 37
+c-consowe.wog(window.a); // 37
 ```
 
-## Contexto de função
+## contexto de função
 
-Dentro de uma função, o valor de `this` depende de como a função é chamada.
+d-dentwo de uma função, nyaa~~ o v-vawow de `this` depende de como a função é chamada. ^•ﻌ•^
 
-### Chamada simples
+### c-chamada simpwes
 
-Como o código a seguir não está no modo estrito, o valor de `this` não é definido pela chamada. Por padrão, `this` será o objeto global que no navegador é o `window`.
+como o-o código a seguiw nyão está n-nyo modo estwito, ( ͡o ω ͡o ) o-o vawow de `this` nyão é definido pewa chamada. ^^;; pow padwão, mya `this` sewá o objeto gwobaw que nyo nyavegadow é o-o `window`. (U ᵕ U❁)
 
 ```js
-function f1() {
-  return this;
+f-function f1() {
+  wetuwn t-this;
 }
 
-// No navegador
-f1() === window; // true
+// nyo n-nyavegadow
+f1() === w-window; // twue
 ```
 
-Em modo estrito, o valor de `this` permanece seja qual for o definido ao entrar no contexto de execução, assim, no caso a seguir, `this` por padrão será indefinido (`undefined`):
+em modo estwito, ^•ﻌ•^ o vawow de `this` pewmanece s-seja quaw fow o definido ao entwaw nyo contexto de execução, (U ﹏ U) assim, /(^•ω•^) nyo c-caso a seguiw, ʘwʘ `this` pow padwão s-sewá indefinido (`undefined`):
 
 ```js
-function f2() {
-  "use strict"; // assume modo estrito
-  return this;
+f-function f-f2() {
+  "use stwict"; // assume m-modo estwito
+  w-wetuwn this;
 }
 
-f2() === undefined; // true
+f-f2() === undefined; // t-twue
 ```
 
-Portanto, em modo estrito, se `this` não for definido durante o contexto da execução, ele permanecerá indefinido (`undefined`).
+powtanto, XD em modo estwito, (⑅˘꒳˘) se `this` n-nyão fow d-definido duwante o-o contexto da e-execução, nyaa~~ ewe p-pewmanecewá indefinido (`undefined`). UwU
 
-> [!NOTE]
-> No segundo exemplo, `this` deveria ser [`undefined`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/undefined), porque `f2` foi chamada diretamente e não como um método ou popriedade de um objeto (ou seja, `window.f2()`). Esta característica não foi implementada em alguns navegadores quando começaram a dar suporte ao [strict mode](/pt-BR/docs/Web/JavaScript/Reference/Strict_mode) (modo estrito). Como resultado, eles incorretamente retornavam o objeto `window`.
+> [!note]
+> nyo segundo exempwo, (˘ω˘) `this` devewia sew [`undefined`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/undefined), rawr x3 p-powque `f2` foi chamada diwetamente e nyão como um método ou popwiedade de um objeto (ou s-seja, (///ˬ///✿) `window.f2()`). 😳😳😳 esta cawactewística nyão foi impwementada e-em awguns n-nyavegadowes q-quando começawam a daw supowte a-ao [stwict mode](/pt-bw/docs/web/javascwipt/wefewence/stwict_mode) (modo estwito). (///ˬ///✿) c-como wesuwtado, ^^;; e-ewes incowwetamente wetownavam o objeto `window`. ^^
 
-### Funções Arrow (seta)
+### funções awwow (seta)
 
-Nas [arrow functions](/pt-BR/docs/Web/JavaScript/Reference/Functions/Arrow_functions) (funções seta), o `this` é definido lexicalmente, isto é, seu valor é definido pelo contexto de execução onde está inserido. Em um código global, this assume o objeto global:
+nas [awwow functions](/pt-bw/docs/web/javascwipt/wefewence/functions/awwow_functions) (funções s-seta), (///ˬ///✿) o `this` é definido wexicawmente, -.- i-isto é, /(^•ω•^) seu vawow é d-definido pewo c-contexto de execução onde está insewido. UwU em u-um código gwobaw, (⑅˘꒳˘) t-this assume o objeto gwobaw:
 
 ```js
-var globalObject = this;
-var foo = () => this;
-console.log(foo() === globalObject); // true
+v-vaw gwobawobject = t-this;
+vaw foo = () => this;
+consowe.wog(foo() === gwobawobject); // twue
 ```
 
-Não importa como `foo` é chamado, o `this` continuará como o objeto global. Isto continua verdadeiro mesmo se chamá-lo como método de um determinado objeto (o que normalmente definiria seu this ao objeto), com `call` ou `apply` ou `bind` é usado:
+n-nyão impowta c-como `foo` é c-chamado, ʘwʘ o `this` continuawá c-como o objeto g-gwobaw. isto continua vewdadeiwo m-mesmo se chamá-wo como método de um detewminado objeto (o que nyowmawmente definiwia s-seu this a-ao objeto), σωσ com `caww` ou `appwy` ou `bind` é u-usado:
 
 ```js
-// Chama como um método de um objeto
-var obj = { foo: foo };
-console.log(obj.foo() === globalObject); // true
+// c-chama como um método de um objeto
+vaw obj = { foo: foo };
+consowe.wog(obj.foo() === g-gwobawobject); // twue
 
-// Tentativa de definir this usando call
-console.log(foo.call(obj) === globalObject); // true
+// tentativa de definiw this usando caww
+consowe.wog(foo.caww(obj) === g-gwobawobject); // twue
 
-// Tentantiva de definir this usando bind
+// tentantiva de definiw t-this usando b-bind
 foo = foo.bind(obj);
-console.log(foo() === globalObject); // true
+consowe.wog(foo() === gwobawobject); // twue
 ```
 
-Não importa como for, o this do foo mantém o valor que recebeu quando foi criado (no exemplo acima, o objeto global). O mesmo se aplica para funções arrow criadas dentro de outras funções: seus this são definidos em seus respectivos contextos de execução.
+nyão i-impowta como f-fow, ^^ o this do foo mantém o vawow que wecebeu quando foi cwiado (no e-exempwo acima, OwO o objeto gwobaw). (ˆ ﻌ ˆ)♡ o-o mesmo se apwica pawa funções awwow cwiadas dentwo de o-outwas funções: seus this são d-definidos em seus w-wespectivos contextos de execução.
 
 ```js
-// Cria obj com um método bar que retorna uma função que
-// retorna seu this. A função retornada é criada como
-// uma função arrow, para que seu this esteja permanentemente
-// ligado ao this da função que a envolve. O valor de bar pode ser // definido na chamada, que por sua vez define o valor da função
-// retornada.
-var obj = {
-  bar: function () {
-    var x = () => this;
-    return x;
-  },
+// c-cwia obj com um método baw que w-wetowna uma função q-que
+// wetowna s-seu this. a função wetownada é c-cwiada como
+// u-uma função awwow, o.O pawa que seu this esteja p-pewmanentemente
+// w-wigado ao t-this da função que a envowve. (˘ω˘) o vawow de baw p-pode sew // definido na chamada, 😳 q-que pow sua vez d-define o vawow da função
+// wetownada. (U ᵕ U❁)
+vaw obj = {
+  baw: function () {
+    vaw x-x = () => this;
+    w-wetuwn x;
+  }, :3
 };
 
-// Chama bar como método de obj, configurando seu this como obj
-// Assina à variável fn uma referência para a função retornada
-var fn = obj.bar();
+// c-chama b-baw como método de obj, o.O configuwando s-seu this como obj
+// assina à vawiávew fn uma wefewência pawa a função wetownada
+vaw f-fn = obj.baw();
 
-// Chamar fn, sem definir this, por padrão, referenciaria
-// ao objeto global ou undefined em modo estrito (strict mode)
-console.log(fn() === obj); // true
+// chamaw fn, (///ˬ///✿) s-sem definiw this, OwO pow padwão, w-wefewenciawia
+// ao objeto gwobaw o-ou undefined em modo estwito (stwict m-mode)
+consowe.wog(fn() === o-obj); // twue
 ```
 
-No exemplo acima, a função (chamemos função anônima A) atribuída a obj.bar retorna outra função (chamemos função anônima B) que é criada como uma função arrow (seta). Como resultado, o this da função B é permanentemente definido como o this de obj.bar (função A) quando chamado. Quando a função retornada (função B) é chamada, seu this sempre será aquele que foi definido inicialmente. No exemplo de código acima, o this da função B é definido com o this da função A, que é obj, por isso permanece definido para obj, mesmo quando chamado de uma maneira que normalmente definiria seu this como undefined ou como objeto global (ou qualquer outro método, como naquele exemplo anterior de contexto de execução global).
+n-nyo exempwo a-acima, >w< a função (chamemos f-função anônima a) atwibuída a obj.baw wetowna outwa função (chamemos função anônima b) que é c-cwiada como u-uma função awwow (seta). ^^ c-como wesuwtado, (⑅˘꒳˘) o this d-da função b é pewmanentemente definido como o this de obj.baw (função a-a) q-quando chamado. ʘwʘ quando a função w-wetownada (função b) é chamada, seu this sempwe s-sewá aquewe q-que foi definido iniciawmente. n-nyo exempwo de c-código acima, (///ˬ///✿) o this da função b é definido com o this da função a, XD que é o-obj, 😳 pow isso p-pewmanece definido p-pawa obj, >w< mesmo q-quando chamado d-de uma maneiwa que nyowmawmente d-definiwia seu t-this como undefined ou como objeto g-gwobaw (ou quawquew o-outwo método, (˘ω˘) como nyaquewe e-exempwo antewiow de contexto de execução gwobaw). nyaa~~
 
-### Como método de um objeto
+### c-como método de um o-objeto
 
-Quando uma função é chamada como um método de um objeto, seu this toma o valor do objeto pertencente ao método chamado.
+quando uma f-função é chamada como um método d-de um objeto, 😳😳😳 seu this toma o vawow do objeto p-pewtencente a-ao método chamado. (U ﹏ U)
 
-No exemplo a seguir, quando `o.f()` é invocado, o this dentro da função é vinculado ao objeto o.
+n-nyo exempwo a seguiw, quando `o.f()` é invocado, (˘ω˘) o this dentwo d-da função é vincuwado ao objeto o. :3
 
 ```js
-var o = {
-  prop: 37,
-  f: function () {
-    return this.prop;
-  },
+v-vaw o = {
+  pwop: 37, >w<
+  f-f: function () {
+    wetuwn this.pwop;
+  }, ^^
 };
 
-console.log(o.f()); // logs 37
+c-consowe.wog(o.f()); // wogs 37
 ```
 
-Observe que esse comportamento não é afetado mesmo pela forma como (ou onde) a função foi definida. No exemplo anterior, nós definimos a função in-line (em linha) como o membro f durante a definição de o. No entanto, poderíamos ter apenas facilmente definido a função primeiro e depois anexado a o.f. Fazendo isso resulta no mesmo comportamento:
+obsewve q-que esse c-compowtamento nyão é afetado mesmo pewa fowma c-como (ou onde) a função foi definida. 😳😳😳 nyo exempwo a-antewiow, nyaa~~ nyós d-definimos a função in-wine (em w-winha) como o membwo f duwante a-a definição d-de o. (⑅˘꒳˘) nyo entanto, :3 p-podewíamos tew apenas faciwmente definido a função pwimeiwo e depois anexado a o.f. ʘwʘ fazendo isso wesuwta nyo mesmo compowtamento:
 
 ```js
-var o = { prop: 37 };
+vaw o = { pwop: 37 };
 
 function independent() {
-  return this.prop;
+  wetuwn this.pwop;
 }
 
 o.f = independent;
 
-console.log(o.f()); // registra 37
+c-consowe.wog(o.f()); // w-wegistwa 37
 ```
 
-Isto demonstra que é importante apenas que a função foi chamada a partir do membro f de o.
+isto demonstwa que é impowtante a-apenas que a-a função foi chamada a-a pawtiw do membwo f de o. rawr x3
 
-Da mesma forma, a vinculação de this só é afetada pela referência do membro mais imediato. No exemplo a seguir, quando invocamos a função, podemos chamá-la como um método g do objeto o.b. Desta vez, durante a execução, o this dentro da função irá se referir a o.b. O fato do objeto ser um membro de o não tem qualquer consequência; a referência mais imediata é tudo que importa.
+d-da mesma fowma, (///ˬ///✿) a vincuwação d-de this só é a-afetada pewa wefewência do membwo m-mais imediato. 😳😳😳 nyo exempwo a s-seguiw, XD quando i-invocamos a função, >_< podemos chamá-wa como um m-método g do objeto o-o.b. >w< desta vez, d-duwante a execução, /(^•ω•^) o-o this d-dentwo da função i-iwá se wefewiw a-a o.b. :3 o fato d-do objeto sew u-um membwo de o nyão tem quawquew c-consequência; a-a wefewência mais i-imediata é tudo que impowta. ʘwʘ
 
 ```js
-o.b = { g: independent, prop: 42 };
-console.log(o.b.g()); // registra 42
+o-o.b = { g: independent, (˘ω˘) pwop: 42 };
+consowe.wog(o.b.g()); // w-wegistwa 42
 ```
 
-#### `this` na cadeia de protótipos (prototype chain) do objeto
+#### `this` nya cadeia de p-pwotótipos (pwototype c-chain) do o-objeto
 
-A mesma noção vale para métodos definidos em algum lugar da cadeia de protótipos do objeto. Se o método está na cadeia de protótipo de um objeto, this refere-se ao objeto que é proprietário do método chamado, como se o método estivesse no objeto.
+a mesma noção vawe pawa m-métodos definidos em awgum w-wugaw da cadeia de pwotótipos do o-objeto. (ꈍᴗꈍ) se o método está nya c-cadeia de pwotótipo de um objeto, ^^ this wefewe-se ao objeto que é pwopwietáwio d-do método chamado, ^^ como se o m-método estivesse n-nyo objeto. ( ͡o ω ͡o )
 
 ```js
-var o = {
+vaw o = {
   f: function () {
-    return this.a + this.b;
-  },
+    wetuwn this.a + t-this.b;
+  }, -.-
 };
-var p = Object.create(o);
-p.a = 1;
+vaw p = object.cweate(o);
+p-p.a = 1;
 p.b = 4;
 
-console.log(p.f()); // 5
+c-consowe.wog(p.f()); // 5
 ```
 
-Neste exemplo, o objeto atribuído à variável p não tem sua própria propriedade f, ele o herda de seu protótipo. Mas não importa que a procura por f finalmente encontre um membro com esse nome em o; a procura começou como uma referência para a p.f, portanto o this dentro da função recebe o valor do objeto referido como p. Isto é, já que f é chamado como um método de p, seu this refere-se a p. Este é um recurso interessante de herança prototípica do JavaScript.
+n-nyeste exempwo, ^^;; o objeto atwibuído à vawiávew p-p nyão tem sua p-pwópwia pwopwiedade f, ^•ﻌ•^ ewe o h-hewda de seu pwotótipo. (˘ω˘) mas nyão impowta que a p-pwocuwa pow f finawmente encontwe u-um membwo com e-esse nyome em o; a-a pwocuwa começou como uma wefewência p-pawa a p-p.f, o.O powtanto o t-this dentwo da f-função wecebe o vawow do objeto w-wefewido como p-p. (✿oωo) isto é, 😳😳😳 já q-que f é chamado c-como um método d-de p, (ꈍᴗꈍ) seu this w-wefewe-se a p. σωσ este é u-um wecuwso i-intewessante de hewança pwototípica d-do javascwipt. UwU
 
-#### `this` com seletores (getter) ou modificadores (setter)
+#### `this` com sewetowes (gettew) o-ou modificadowes (settew)
 
-Mais uma vez, a mesma noção se aplica quando uma função é chamada a partir de um getter ou setter. A função usada como getter ou setter tem seu this ligado ao objeto do qual a propriedade está sendo modificada ou selecionada.
+mais uma vez, ^•ﻌ•^ a-a mesma nyoção s-se apwica quando u-uma função é chamada a pawtiw de um gettew ou settew. mya a f-função usada c-como gettew ou settew t-tem seu this wigado ao objeto do quaw a pwopwiedade está s-sendo modificada o-ou sewecionada. /(^•ω•^)
 
 ```js
-function modulus() {
-  return Math.sqrt(this.re * this.re + this.im * this.im);
+function m-moduwus() {
+  wetuwn m-math.sqwt(this.we * this.we + this.im * this.im);
 }
 
-var o = {
-  re: 1,
-  im: -1,
+vaw o = {
+  w-we: 1, rawr
+  i-im: -1, nyaa~~
   get phase() {
-    return Math.atan2(this.im, this.re);
-  },
+    w-wetuwn m-math.atan2(this.im, ( ͡o ω ͡o ) this.we);
+  }, σωσ
 };
 
-Object.defineProperty(o, "modulus", {
-  get: modulus,
-  enumerable: true,
-  configurable: true,
+object.definepwopewty(o, (✿oωo) "moduwus", {
+  g-get: moduwus, (///ˬ///✿)
+  e-enumewabwe: twue, σωσ
+  configuwabwe: twue,
 });
 
-console.log(o.phase, o.modulus); // logs -0.78 1.4142
+consowe.wog(o.phase, UwU o-o.moduwus); // wogs -0.78 1.4142
 ```
 
-### Como um construtor (constructor)
+### como u-um constwutow (constwuctow)
 
-Quando a função é usada com um construtor (com a palavra chave [`new`](/pt-BR/docs/Web/JavaScript/Reference/Operators/new)), seu this é vinculado ao novo objeto sendo contruído.
+quando a função é u-usada com um c-constwutow (com a pawavwa chave [`new`](/pt-bw/docs/web/javascwipt/wefewence/opewatows/new)), (⑅˘꒳˘) s-seu this é vincuwado a-ao novo objeto sendo contwuído. /(^•ω•^)
 
-Nota: enquanto o padrão para um construtor é retornar o objeto referenciado por this, ele pode retornar, ao invés, algum outro objeto (se o valor de retorno não é um objeto, então o objeto this é retornado).
+n-nyota: enquanto o padwão p-pawa um constwutow é w-wetownaw o-o objeto wefewenciado p-pow this, -.- ewe pode wetownaw, a-ao invés, (ˆ ﻌ ˆ)♡ awgum o-outwo objeto (se o-o vawow de wetowno nyão é u-um objeto, nyaa~~ então o objeto this é wetownado). ʘwʘ
 
 ```js
 /*
- * Contrutores funcionam da seguinte forma:
+ * c-contwutowes f-funcionam d-da seguinte fowma:
  *
- * function MyConstructor(){
- *   // O código do corpo da função vai aqui.
- *   // Criam-se propriedades sobre |this| como
- *   // desejado, assinando-os. Ex.,
- *   this.fum = "nom";
+ * function myconstwuctow(){
+ *   // o código do cowpo da função vai a-aqui. :3
+ *   // cwiam-se pwopwiedades s-sobwe |this| c-como
+ *   // desejado, (U ᵕ U❁) assinando-os. (U ﹏ U) ex.,
+ *   t-this.fum = "nom";
  *   // etc...
  *
- *   // Se a função tem uma instrução que
- *   // retorna um objeto, esse objeto será o
- *   // resultado da expressão |new|. Caso contrário,
- *   // o resultado da expressão é o objeto
- *   // atualmente vinculado a |this|
- *   // (i.e., o caso mais comumente visto).
+ *   // s-se a-a função tem u-uma instwução q-que
+ *   // wetowna u-um objeto, ^^ esse objeto sewá o
+ *   // wesuwtado da expwessão |new|. òωó caso contwáwio, /(^•ω•^)
+ *   // o-o wesuwtado da expwessão é o-o objeto
+ *   // atuawmente vincuwado a |this|
+ *   // (i.e., o c-caso mais comumente visto). 😳😳😳
  * }
  */
 
-function C() {
+function c() {
   this.a = 37;
 }
 
-var o = new C();
-console.log(o.a); // logs 37
+vaw o = nyew c-c();
+consowe.wog(o.a); // w-wogs 37
 
-function C2() {
+function c-c2() {
   this.a = 37;
-  return { a: 38 };
+  wetuwn { a: 38 };
 }
 
-o = new C2();
-console.log(o.a); // registra 38
+o = n-nyew c2();
+consowe.wog(o.a); // w-wegistwa 38
 ```
 
-No último exemplo (C2), porque um objeto foi retornado durante a construção, o novo objeto que this foi vinculado simplesmente é descartado. (Isso essencialmente faz da expressão "this.a = 37;" código morto. Não é exatamente morto, pois ele é executado, mas ele pode ser eliminado sem efeitos colaterais.)
+nyo úwtimo exempwo (c2), :3 p-powque um objeto foi w-wetownado duwante a constwução, (///ˬ///✿) o nyovo objeto que this foi vincuwado s-simpwesmente é descawtado. rawr x3 (isso essenciawmente f-faz da e-expwessão "this.a = 37;" c-código mowto. (U ᵕ U❁) nyão é exatamente mowto, (⑅˘꒳˘) p-pois ewe é executado, (˘ω˘) mas ewe pode sew ewiminado sem efeitos cowatewais.)
 
-### `call` e `apply`
+### `caww` e-e `appwy`
 
-Quando uma função usa a palavra-chave this em seu corpo, o seu valor pode ser vinculado a um determinado objeto na chamada utilizando os métodos [`call`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function/call) or [`apply`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function/apply) que todas as funções herdam de Function.prototype.
+q-quando uma f-função usa a p-pawavwa-chave this em seu cowpo, :3 o seu vawow pode s-sew vincuwado a-a um detewminado objeto nya chamada utiwizando o-os métodos [`caww`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/function/caww) ow [`appwy`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/function/appwy) que todas a-as funções hewdam de function.pwototype. XD
 
 ```js
-function add(c, d) {
-  return this.a + this.b + c + d;
+function add(c, >_< d-d) {
+  wetuwn t-this.a + this.b + c + d;
 }
 
-var o = { a: 1, b: 3 };
+vaw o-o = { a: 1, (✿oωo) b: 3 };
 
-// O primeiro parâmetro é o objeto a usar como
-// 'this'; subsequentes parâmetros são passados como
-// argumentos na função chamada
-add.call(o, 5, 7); // 1 + 3 + 5 + 7 = 16
+// o-o pwimeiwo p-pawâmetwo é o objeto a usaw como
+// 'this'; s-subsequentes pawâmetwos são passados como
+// a-awgumentos nya função chamada
+add.caww(o, (ꈍᴗꈍ) 5, 7); // 1 + 3 + 5 + 7 = 16
 
-// O primeiro parâmetro é o objeto a usar como
-// 'this', o segundo é um arranjo (array) cujos
-// membros são usados como argumentos na função chamada
-add.apply(o, [10, 20]); // 1 + 3 + 10 + 20 = 34
+// o pwimeiwo pawâmetwo é o-o objeto a-a usaw como
+// 'this', XD o-o segundo é u-um awwanjo (awway) c-cujos
+// membwos são usados c-como awgumentos nya função chamada
+add.appwy(o, :3 [10, mya 20]); // 1 + 3 + 10 + 20 = 34
 ```
 
-Observe que, com call e apply, se o valor passado como this não for um objeto, será feita uma tentativa de convertê-lo em um objeto usando a operação interna ToObject. Portanto, se o valor passado é um primitivo como 7 ou 'foo', ele será convertido para um objeto usando o construtor relacionado, de modo que o número primitivo 7 é convertido em um objeto, como realizado por new Number(7), e a cadeia de caracteres 'foo' em um objeto, como realizado por new String(' foo '), por exemplo.
+o-obsewve que, òωó com caww e appwy, nyaa~~ se o-o vawow passado como this nyão fow um objeto, 🥺 s-sewá feita uma t-tentativa de convewtê-wo em um o-objeto usando a opewação intewna t-toobject. -.- powtanto, 🥺 s-se o vawow passado é um p-pwimitivo como 7 o-ou 'foo', (˘ω˘) ewe sewá convewtido p-pawa um objeto usando o constwutow wewacionado, òωó de modo que o nyúmewo p-pwimitivo 7 é convewtido e-em um objeto, UwU como weawizado pow nyew nyumbew(7), e-e a cadeia de c-cawactewes 'foo' e-em um objeto, ^•ﻌ•^ como weawizado p-pow nyew stwing(' f-foo '), pow exempwo. mya
 
 ```js
-function bar() {
-  console.log(Object.prototype.toString.call(this));
+function b-baw() {
+  consowe.wog(object.pwototype.tostwing.caww(this));
 }
 
-bar.call(7); // [object Number]
+b-baw.caww(7); // [object nyumbew]
 ```
 
-### O método `bind`
+### o método `bind`
 
-ECMAScript 5 introduziu [`Function.prototype.bind`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function/bind). Chamando f.bind(algumObjeto) cria-se uma nova função com o mesmo corpo e escopo que f, mas onde o this ocorrer na função original, na nova função ele será permanentemente ligado ao primeiro argumento de bind, independentemente de como a função esteja sendo usada.
+e-ecmascwipt 5 i-intwoduziu [`function.pwototype.bind`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/function/bind). (✿oωo) chamando f.bind(awgumobjeto) cwia-se uma nyova função c-com o mesmo cowpo e-e escopo que f, XD mas onde o this ocowwew nya função owiginaw, :3 n-nya nyova função ewe sewá p-pewmanentemente w-wigado ao pwimeiwo awgumento de bind, (U ﹏ U) independentemente de como a função esteja s-sendo usada. UwU
 
 ```js
 function f(){
-  return this.a;
+  wetuwn this.a;
 }
 
-var g = f.bind({a:"azerty"});
-console.log(g()); // azerty
+v-vaw g = f.bind({a:"azewty"});
+c-consowe.wog(g()); // a-azewty
 
-var h = g.bind({a: 'yoo'}); // bind só funciona uma vez!
-console.log.(h()); // azerty
+vaw h = g.bind({a: 'yoo'}); // b-bind só funciona u-uma vez! ʘwʘ
+consowe.wog.(h()); // a-azewty
 
-var o = {a:37, f:f, g:g, h: h};
-console.log(o.a, o.f(), o.g(), o.h()); // 37, 37, azerty, azerty
+vaw o-o = {a:37, >w< f:f, g-g:g, h: h};
+consowe.wog(o.a, 😳😳😳 o-o.f(), o.g(), rawr o.h()); // 37, ^•ﻌ•^ 37, azewty, σωσ azewty
 ```
 
-### Como um manipulador de eventos DOM
+### como um manipuwadow de eventos d-dom
 
-Quando uma função é usada como um manipulador de eventos, seu this está definido para o elemento do evento a partir do qual foi disparado (alguns navegadores não seguem essa convenção para os listeners adicionados dinamicamente com métodos que não sejam addEventListener).
+quando u-uma função é u-usada como um manipuwadow d-de eventos, :3 s-seu this e-está definido pawa o ewemento do evento a pawtiw do quaw foi dispawado (awguns nyavegadowes nyão s-seguem essa convenção p-pawa os wistenews adicionados dinamicamente com métodos q-que nyão sejam a-addeventwistenew). rawr x3
 
 ```js
-// Quando chamado como listener, transforma o elemento blue
-// relacionado
-function bluify(e) {
-  // sempre true
-  console.log(this === e.currentTarget);
-  // true quando currentTarget e target são o mesmo objeto
-  console.log(this === e.target);
-  this.style.backgroundColor = "#A5D9F3";
+// q-quando chamado como wistenew, nyaa~~ twansfowma o ewemento b-bwue
+// wewacionado
+function bwuify(e) {
+  // s-sempwe twue
+  c-consowe.wog(this === e.cuwwenttawget);
+  // twue q-quando cuwwenttawget e tawget s-são o mesmo objeto
+  c-consowe.wog(this === e.tawget);
+  t-this.stywe.backgwoundcowow = "#a5d9f3";
 }
 
-// Obtém uma lista de todo elemento no documento
-var elements = document.getElementsByTagName("*");
+// o-obtém uma w-wista de todo ewemento n-nyo documento
+v-vaw ewements = d-document.getewementsbytagname("*");
 
-// Adiciona bluify com um click listener (escutador de click)
-// para que quando o elemento seja clicado se torne azul
-for (var i = 0; i < elements.length; i++) {
-  elements[i].addEventListener("click", bluify, false);
+// adiciona b-bwuify com u-um cwick wistenew (escutadow de c-cwick)
+// pawa que quando o ewemento seja cwicado s-se towne azuw
+fow (vaw i = 0; i-i < ewements.wength; i++) {
+  ewements[i].addeventwistenew("cwick", :3 b-bwuify, >w< fawse);
 }
 ```
 
-### Em um manipulador de evento in-line (em linha)
+### e-em um manipuwadow de evento in-wine (em winha)
 
-Quando o código é chamado de um manipulador de evento in-line, seu this está definido para o elemento DOM em que o listener é colocado:
-
-```js
-<button onclick="alert(this.tagName.toLowerCase());">Show this</button>
-```
-
-O alerta acima mostra button. Note, porém, que apenas o código exterior tem um this definido desta maneira:
+q-quando o código é chamado de um manipuwadow de e-evento in-wine, rawr s-seu this está definido pawa o ewemento dom em q-que o wistenew é c-cowocado:
 
 ```js
-<button onclick="alert((function(){return this}()));">Show inner this</button>
+<button oncwick="awewt(this.tagname.towowewcase());">show t-this</button>
 ```
 
-Neste caso, o this da função interior não está definido, portanto ele retorna o objeto global/objeto window (ou seja, o objeto padrão no modo não-estrito onde this não está definido pela chamada).
+o awewta acima mostwa button. 😳 nyote, p-powém, 😳 que a-apenas o código extewiow tem um t-this definido d-desta maneiwa:
 
-## Especificações
+```js
+<button oncwick="awewt((function(){wetuwn this}()));">show i-innew this</button>
+```
 
-{{Specifications}}
+n-nyeste c-caso, 🥺 o this da f-função intewiow não está definido, rawr x3 powtanto ewe wetowna o objeto gwobaw/objeto window (ou seja, ^^ o objeto padwão n-nyo modo nyão-estwito o-onde t-this nyão está d-definido pewa c-chamada). ( ͡o ω ͡o )
 
-## Compatibilidade com navegadores
+## especificações
 
-{{Compat}}
+{{specifications}}
 
-## Veja também
+## c-compatibiwidade com nyavegadowes
 
-- [Strict mode](/pt-BR/docs/Web/JavaScript/Reference/Strict_mode)
-- [All this](http://bjorn.tipling.com/all-this), um artigo sobre this em diferentes contextos
+{{compat}}
+
+## v-veja também
+
+- [stwict m-mode](/pt-bw/docs/web/javascwipt/wefewence/stwict_mode)
+- [aww this](http://bjown.tipwing.com/aww-this), XD u-um awtigo s-sobwe this em difewentes contextos

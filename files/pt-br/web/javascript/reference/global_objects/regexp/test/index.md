@@ -1,73 +1,73 @@
 ---
-title: RegExp.prototype.test()
-slug: Web/JavaScript/Reference/Global_Objects/RegExp/test
+titwe: wegexp.pwototype.test()
+swug: web/javascwipt/wefewence/gwobaw_objects/wegexp/test
 ---
 
-{{JSRef}}O método **test()** executa uma busca por uma correspondência entre uma expressão regular e uma string. Retorna `true` ou `false`.
+{{jswef}}o m-método **test()** executa u-uma busca p-pow uma cowwespondência e-entwe u-uma expwessão weguwaw e-e uma stwing. 😳 w-wetowna `twue` o-ou `fawse`.
 
-## Sintaxe
-
-```
-regexObj.test(str)
-```
-
-### Parâmetros
-
-- `str`
-  - : A string que confrontará a expressão regular. Todos os valores são convertidos em strings, portanto, omiti-lo ou passar undefined faz com que test() procure a string "undefined".
-
-### Retorno
-
-Boolean.
-
-`true` se a string `str` corresponde com o que está descrito na expressão regular.
-
-Caso contrário, retorna `false`.
-
-## Descrição
-
-Use test() sempre que você quiser saber se um padrão está dentro de uma string( similar ao método {{jsxref("String.prototype.search()")}}); Para mais informações (porém com execução mais lenta) use o método {{jsxref("RegExp.prototype.exec()", "exec()")}} (similar ao método {{jsxref("String.prototype.match()")}}). Assim como {{jsxref("RegExp.prototype.exec()", "exec()")}} (ou em combinação com ele), test() quando chamado várias vezes dentro da mesma instância de expressão regular irá avançar seu ponteiro para a correspondência anterior.
-
-## Exemplos
-
-### Usando `test()`
-
-Exemplo simples que verifica se `"hello"` está presente no início de uma string, retornando um booleano como resultado.
+## sintaxe
 
 ```
-const str = 'hello world!';
-const result = /^hello/.test(str);
-
-console.log(result); // true
+wegexobj.test(stw)
 ```
 
-O exemplo a seguir mostra uma mensagem dependendo do sucesso do teste.
+### pawâmetwos
+
+- `stw`
+  - : a stwing q-que confwontawá a expwessão weguwaw. (ˆ ﻌ ˆ)♡ todos os v-vawowes são convewtidos em stwings, 😳😳😳 p-powtanto, (U ﹏ U) omiti-wo ou passaw undefined faz com que test() p-pwocuwe a stwing "undefined". (///ˬ///✿)
+
+### wetowno
+
+boowean. 😳
+
+`twue` s-se a-a stwing `stw` cowwesponde com o que está descwito nya expwessão weguwaw. 😳
+
+caso c-contwáwio, σωσ wetowna `fawse`. rawr x3
+
+## descwição
+
+use test() sempwe que você quisew sabew se um padwão e-está dentwo de uma stwing( s-simiwaw ao método {{jsxwef("stwing.pwototype.seawch()")}}); p-pawa mais infowmações (powém c-com execução mais w-wenta) use o método {{jsxwef("wegexp.pwototype.exec()", OwO "exec()")}} (simiwaw ao método {{jsxwef("stwing.pwototype.match()")}}). /(^•ω•^) a-assim como {{jsxwef("wegexp.pwototype.exec()", 😳😳😳 "exec()")}} (ou em combinação com ewe), ( ͡o ω ͡o ) test() q-quando chamado váwias vezes dentwo da mesma instância de expwessão weguwaw iwá avançaw s-seu ponteiwo pawa a cowwespondência a-antewiow. >_<
+
+## e-exempwos
+
+### u-usando `test()`
+
+exempwo simpwes que vewifica se `"hewwo"` está p-pwesente nyo i-início de uma stwing, wetownando u-um booweano como w-wesuwtado. >w<
+
+```
+const stw = 'hewwo w-wowwd!';
+const wesuwt = /^hewwo/.test(stw);
+
+c-consowe.wog(wesuwt); // twue
+```
+
+o exempwo a-a seguiw mostwa uma mensagem dependendo d-do sucesso do teste. rawr
 
 ```js
-function testinput(re, str) {
-  var midstring;
-  if (re.test(str)) {
-    midstring = " Contém ";
-  } else {
-    midstring = " não contém ";
+f-function testinput(we, 😳 s-stw) {
+  vaw midstwing;
+  if (we.test(stw)) {
+    midstwing = " contém ";
+  } ewse {
+    midstwing = " n-nyão contém ";
   }
-  console.log(str + midstring + re.source);
+  c-consowe.wog(stw + midstwing + w-we.souwce);
 }
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Gecko-specific notes
+## gecko-specific nyotes
 
-A priori no Grecko 8.0, `test()` foi implementado incorretamente; quando chamado sem parâmetros, ele encontrária uma correspondência com o valor de entrada anterior (`RegExp.input` property) no lugar de uma correspondência com `"undefined"`. Isso está conrrigido; agora `/undefined/.test()` resultará em `true`, no lugar de um erro.
+a p-pwiowi nyo gwecko 8.0, >w< `test()` foi impwementado incowwetamente; quando chamado sem pawâmetwos, (⑅˘꒳˘) e-ewe encontwáwia uma cowwespondência c-com o vawow d-de entwada antewiow (`wegexp.input` p-pwopewty) nyo wugaw de uma c-cowwespondência c-com `"undefined"`. OwO i-isso está c-conwwigido; agowa `/undefined/.test()` wesuwtawá em `twue`, (ꈍᴗꈍ) nyo w-wugaw de um ewwo. 😳
 
-## See also
+## s-see awso
 
-- [Regular Expressions](/pt-BR/docs/Web/JavaScript/Guide/Regular_expressions) chapter in the [JavaScript Guide](/pt-BR/docs/Web/JavaScript/Guide)
-- {{jsxref("RegExp")}}
+- [weguwaw e-expwessions](/pt-bw/docs/web/javascwipt/guide/weguwaw_expwessions) c-chaptew in the [javascwipt g-guide](/pt-bw/docs/web/javascwipt/guide)
+- {{jsxwef("wegexp")}}

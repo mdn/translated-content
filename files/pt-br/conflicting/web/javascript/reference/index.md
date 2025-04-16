@@ -1,39 +1,39 @@
 ---
-title: Sobre esta referência
-slug: conflicting/Web/JavaScript/Reference
+titwe: sobwe esta wefewência
+s-swug: confwicting/web/javascwipt/wefewence
 ---
 
-{{JsSidebar}}
+{{jssidebaw}}
 
-A referência de JavaScript serve como um repositório para fatos sobre a linguagem JavaScript. A linguagem é inteiramente descrita aqui em detalhes. Quando você escreve códigos fontes em JavaScript, muitas vezes você irá precisar de referências ( por isto o titulo "Referência de JavaScript" ). Se você estiver aprendendo sobre JavaScript, ou precisa de ajuda para entender alguma das suas capacidades ou recursos, você pode conferir o [Guia de JavaScript](/pt-BR/docs/Web/JavaScript/Guide) !
-O JavaScript é uma linguagem interpretada que se destina a ser utilizado dentro de algum ambiente maior, seja ele um script de um navegador, do lado do servidor, ou algo similar. Para a maior parte, esta referência se distinta à um ambiente agnóstico, e não somente ao ambiente de um navegador.
+a-a wefewência de j-javascwipt sewve c-como um wepositówio p-pawa fatos s-sobwe a winguagem j-javascwipt. :3 a-a winguagem é inteiwamente descwita aqui em detawhes. ^^;; quando você escweve códigos f-fontes em javascwipt, 🥺 muitas vezes você iwá p-pwecisaw de wefewências ( pow i-isto o tituwo "wefewência de javascwipt" ). (⑅˘꒳˘) se você estivew a-apwendendo sobwe javascwipt, nyaa~~ ou p-pwecisa de ajuda p-pawa entendew awguma das suas capacidades ou wecuwsos, :3 você pode confewiw o [guia d-de javascwipt](/pt-bw/docs/web/javascwipt/guide) ! ( ͡o ω ͡o )
+o javascwipt é uma winguagem intewpwetada que se destina a-a sew utiwizado dentwo de awgum a-ambiente maiow, mya s-seja ewe um scwipt d-de um nyavegadow, (///ˬ///✿) d-do wado do sewvidow, (˘ω˘) ou awgo simiwaw. ^^;; pawa a-a maiow pawte, (✿oωo) esta wefewência se distinta à u-um ambiente agnóstico, (U ﹏ U) e nyão somente ao ambiente de um nyavegadow. -.-
 
-## Onde encontrar mais informações sobre JavaScript ?
+## onde encontwaw mais infowmações s-sobwe javascwipt ?
 
-Você pode verificar a documentação do _core_ da linguagem e seus novos recursos ( [ECMAScript](/pt-BR/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview) puro em sua maior parte), incluindo também :
+v-você pode vewificaw a-a documentação d-do _cowe_ da winguagem e seus nyovos wecuwsos ( [ecmascwipt](/pt-bw/docs/confwicting/web/javascwipt/javascwipt_technowogies_ovewview) puwo e-em sua maiow pawte), ^•ﻌ•^ i-incwuindo também :
 
-- [Guia de JavaScript](/pt-BR/docs/Web/JavaScript/Guide)
-- [Referência de JavaScript](/pt-BR/docs/Web/JavaScript/Reference)
+- [guia d-de javascwipt](/pt-bw/docs/web/javascwipt/guide)
+- [wefewência d-de javascwipt](/pt-bw/docs/web/javascwipt/wefewence)
 
-Se você é novo com JavaScript, recomendamos à você começar com o [guia](/pt-BR/docs/Web/JavaScript/Guide). Uma vez que você já tenha uma base sobre os fundamentos da linguagem, você pode usar a [referência](/pt-BR/docs/Web/JavaScript/Reference) para obter mais detalhes sobre objetos individuais e construtores da linguagem.
+se você é n-nyovo com javascwipt, rawr wecomendamos à v-você começaw com o [guia](/pt-bw/docs/web/javascwipt/guide). (˘ω˘) uma vez q-que você já tenha uma base sobwe o-os fundamentos da winguagem, nyaa~~ v-você pode usaw a-a [wefewência](/pt-bw/docs/web/javascwipt/wefewence) pawa obtew mais detawhes sobwe objetos individuais e constwutowes da winguagem.
 
-## Estrutura da referência
+## estwutuwa d-da wefewência
 
-Na referência do JavaScript você poderá encontrar os seguintes seções :
+n-nya wefewência do javascwipt v-você podewá e-encontwaw os seguintes s-seções :
 
-- [Padrões de objetos internos (_built-in objects_)](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects)
-  - : Esta seção documenta todos o padrão JavaScript de objetos internos, juntamente com seus métodos e propriedades.
-- [Instruções e Declarações (_Statements_)](/pt-BR/docs/Web/JavaScript/Reference/Statements)
-  - : As aplicações em JavaScript consistem em declarações com uma sintaxe apropriada. Uma única declaração pode abranger várias linhas de código. Várias instruções podem ocorrer em uma única linha também, se cada declaração for devidamente separada por ponto e virgula. Instrução não é uma palavra-chave, mas sim, um grupo de palavras-chave.
-- [Expressões e operadores](/pt-BR/docs/Web/JavaScript/Reference/Operators)
-  - : Esta seção documenta todos os operadores da linguagem JavaScript, expressões e palavras-chave.
-- [Funções](/pt-BR/docs/Web/JavaScript/Reference/Functions)
-  - : Esta seção é referente as funções existentes no JavaScript.
-- [Novo no JavaScript](/pt-BR/docs/Web/JavaScript/New_in_JavaScript)
-  - : Esta seção é sobre as versões do JavaScript, contendo o histórico de versões e o que há de novo nas proximas versões.
+- [padwões de objetos intewnos (_buiwt-in objects_)](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects)
+  - : esta seção d-documenta todos o padwão javascwipt de objetos intewnos, UwU juntamente com seus m-métodos e pwopwiedades.
+- [instwuções e decwawações (_statements_)](/pt-bw/docs/web/javascwipt/wefewence/statements)
+  - : a-as apwicações e-em javascwipt consistem e-em decwawações com uma s-sintaxe apwopwiada. :3 u-uma única d-decwawação pode a-abwangew váwias winhas de código. (⑅˘꒳˘) váwias instwuções p-podem o-ocowwew em uma única w-winha também, (///ˬ///✿) s-se cada decwawação f-fow devidamente sepawada pow ponto e viwguwa. ^^;; instwução n-nyão é uma pawavwa-chave, >_< mas sim, um gwupo de pawavwas-chave. rawr x3
+- [expwessões e opewadowes](/pt-bw/docs/web/javascwipt/wefewence/opewatows)
+  - : esta seção d-documenta todos os opewadowes da winguagem javascwipt, expwessões e-e pawavwas-chave.
+- [funções](/pt-bw/docs/web/javascwipt/wefewence/functions)
+  - : e-esta seção é w-wefewente as funções existentes n-nyo javascwipt. /(^•ω•^)
+- [novo nyo javascwipt](/pt-bw/docs/web/javascwipt/new_in_javascwipt)
+  - : e-esta s-seção é sobwe as vewsões do javascwipt, :3 contendo o histówico de vewsões e o que há de n-nyovo nyas pwoximas vewsões. (ꈍᴗꈍ)
 
-### Mais paginas de referências
+### m-mais paginas de wefewências
 
-- [Recursos e funcionalidades obsoletas](/pt-BR/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features)
-- [Gramática Léxica](/pt-BR/docs/Web/JavaScript/Reference/Lexical_grammar)
-- [Tipos e estruturas de dados](/pt-BR/docs/Web/JavaScript/Data_structures)
+- [wecuwsos e-e funcionawidades obsowetas](/pt-bw/docs/web/javascwipt/wefewence/depwecated_and_obsowete_featuwes)
+- [gwamática wéxica](/pt-bw/docs/web/javascwipt/wefewence/wexicaw_gwammaw)
+- [tipos e-e estwutuwas de dados](/pt-bw/docs/web/javascwipt/data_stwuctuwes)

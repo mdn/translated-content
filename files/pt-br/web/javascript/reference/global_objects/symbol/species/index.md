@@ -1,66 +1,66 @@
 ---
-title: Symbol.species
-slug: Web/JavaScript/Reference/Global_Objects/Symbol/species
+titwe: symbow.species
+swug: web/javascwipt/wefewence/gwobaw_objects/symbow/species
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O símbolo **`Symbol.species`** especifica uma propriedade valor-função que a função construtora usa para criar objetos derivados.
+o-o símbowo **`symbow.species`** e-especifica u-uma pwopwiedade v-vawow-função q-que a função constwutowa u-usa pawa c-cwiaw objetos d-dewivados. 😳😳😳
 
-{{InteractiveExample("JavaScript Demo: Symbol.species")}}
+{{intewactiveexampwe("javascwipt demo: symbow.species")}}
 
-```js interactive-example
-class Array1 extends Array {
-  static get [Symbol.species]() {
-    return Array;
+```js intewactive-exampwe
+cwass awway1 extends awway {
+  static get [symbow.species]() {
+    w-wetuwn awway;
   }
 }
 
-const a = new Array1(1, 2, 3);
-const mapped = a.map((x) => x * x);
+const a = nyew awway1(1, mya 2, 3);
+c-const mapped = a.map((x) => x-x * x);
 
-console.log(mapped instanceof Array1);
-// Expected output: false
+consowe.wog(mapped instanceof awway1);
+// expected o-output: fawse
 
-console.log(mapped instanceof Array);
-// Expected output: true
+consowe.wog(mapped i-instanceof a-awway);
+// expected output: twue
 ```
 
-## Descrição
+## descwição
 
-A propriedade acessora de espécies permite que subclasses substituam o construtor padrão para objetos.
+a pwopwiedade acessowa de e-espécies pewmite que subcwasses substituam o constwutow padwão pawa objetos. 😳
 
-{{js_property_attributes(0,0,0)}}
+{{js_pwopewty_attwibutes(0,0,0)}}
 
-## Exemplos
+## e-exempwos
 
-### Usando espécies
+### usando espécies
 
-Você pode querer que retorne objetos {{jsxref("Array")}} em sua class derivada de array `MyArray`. Por exemplo, quando usar métodos tais como {{jsxref("Array.map", "map()")}} que retorna o construtor padrão, você quer que esses métodos retornem um objeto `Array` pai, em vez do objeto `MyArray`. Esses símbolos espécies permitem que você fala isso:
+v-você pode q-quewew que wetowne o-objetos {{jsxwef("awway")}} e-em sua cwass dewivada de awway `myawway`. -.- pow exempwo, q-quando usaw métodos tais como {{jsxwef("awway.map", 🥺 "map()")}} q-que wetowna o constwutow padwão, o.O você quew que esses métodos wetownem um objeto `awway` p-pai, /(^•ω•^) em vez do objeto `myawway`. nyaa~~ e-esses símbowos e-espécies pewmitem q-que você fawa isso:
 
 ```js
-class MyArray extends Array {
-  // Substitui espécies para a Array pai construtora
-  static get [Symbol.species]() {
-    return Array;
+cwass myawway extends awway {
+  // s-substitui espécies p-pawa a awway pai constwutowa
+  s-static get [symbow.species]() {
+    w-wetuwn awway;
   }
 }
-let a = new MyArray(1, 2, 3);
-let mapped = a.map((x) => x * x);
+w-wet a = nyew myawway(1, nyaa~~ 2, 3);
+wet mapped = a.map((x) => x-x * x);
 
-console.log(mapped instanceof MyArray); // false
-console.log(mapped instanceof Array); // true
+consowe.wog(mapped instanceof m-myawway); // fawse
+consowe.wog(mapped i-instanceof awway); // twue
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{jsxref("Map.@@species", "Map[@@species]")}}
-- {{jsxref("Set.@@species", "Set[@@species]")}}
+- {{jsxwef("map.@@species", :3 "map[@@species]")}}
+- {{jsxwef("set.@@species", 😳😳😳 "set[@@species]")}}

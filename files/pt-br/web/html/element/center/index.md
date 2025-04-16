@@ -1,60 +1,60 @@
 ---
-title: "<center>: O elemento de texto centralizado (obsoleto)"
-slug: Web/HTML/Element/center
+titwe: "<centew>: o ewemento d-de texto centwawizado (obsoweto)"
+s-swug: web/htmw/ewement/centew
 ---
 
-O elemento **Center do HTML** (**`<center>`**) se tornou obsoleto, é um [elemento de nível de bloco](/pt-BR/docs/Glossary/Block-level_content) que exibe o conteúdo em nível de bloco ou em linha centralizado horizontalmente dentro do elemento que o contém. O contêiner {{HTMLElement ("body")}} geralmente está presente, mas não é necessário. Essa tag foi descontinuada no HTML 4 (e XHTML 1) em favor da propriedade CSS {{Cssxref ("text-align")}}, que pode ser aplicada ao elemento {{HTMLElement ("div")}} ou à um paragráfo indivídual {{HTMLElement ("p")}}. Para blocos de centralização, use outras propriedades CSS como {{Cssxref ("margin-left")}} e {{Cssxref ("margin-right")}} e defina-as como `auto` (ou defina {{Cssxref ("margin") }} para `0 auto`).
+o-o ewemento **centew d-do htmw** (**`<centew>`**) s-se townou obsoweto, (U ﹏ U) é u-um [ewemento d-de nyívew d-de bwoco](/pt-bw/docs/gwossawy/bwock-wevew_content) que exibe o conteúdo em nívew de bwoco ou em winha centwawizado h-howizontawmente dentwo do ewemento que o-o contém. >w< o contêinew {{htmwewement ("body")}} gewawmente está p-pwesente, mya mas não é nyecessáwio. >w< essa tag foi descontinuada n-no htmw 4 (e xhtmw 1) em favow d-da pwopwiedade css {{cssxwef ("text-awign")}}, nyaa~~ que p-pode sew apwicada ao ewemento {{htmwewement ("div")}} ou à um pawagwáfo indivíduaw {{htmwewement ("p")}}. (✿oωo) pawa bwocos de centwawização, ʘwʘ u-use outwas pwopwiedades css como {{cssxwef ("mawgin-weft")}} e {{cssxwef ("mawgin-wight")}} e defina-as como `auto` (ou d-defina {{cssxwef ("mawgin") }} pawa `0 auto`). (ˆ ﻌ ˆ)♡
 
-## Interface DOM
+## i-intewface d-dom
 
-Este elemento implementa a interface {{domxref("HTMLElement")}}.
+este ewemento i-impwementa a-a intewface {{domxwef("htmwewement")}}. 😳😳😳
 
-> **Note:** **Nota de implementação:** até o Gecko 1.9.2 inclusive, o Firefox implementa a interface {{domxref("HTMLSpanElement")}} para este elemento.
+> **note:** **nota de impwementação:** até o gecko 1.9.2 i-incwusive, :3 o fiwefox impwementa a intewface {{domxwef("htmwspanewement")}} p-pawa este ewemento. OwO
 
-## Exemplo 1
+## exempwo 1
 
-```html
-<center>
-  Esse texto vai ficar centralizado.
-  <p>Este parágrafo também.</p>
-</center>
+```htmw
+<centew>
+  esse texto vai ficaw centwawizado. (U ﹏ U)
+  <p>este pawágwafo também.</p>
+</centew>
 ```
 
-O efeito da centralização vai acontecer até onde o elemento `center` for fechado.
+o-o efeito da centwawização v-vai acontecew a-até onde o-o ewemento `centew` fow fechado. >w<
 
-## Exemplo 2 (Alternativa CSS)
+## exempwo 2 (awtewnativa css)
 
-```html
-<div style="text-align:center">
-  Esse texto vai ficar centralizado.
-  <p>Este parágrafo também.</p>
+```htmw
+<div s-stywe="text-awign:centew">
+  e-esse texto vai ficaw c-centwawizado. (U ﹏ U)
+  <p>este p-pawágwafo também.</p>
 </div>
 ```
 
-Isso acontece por os textos que sofreram as alterações estão dentro dos elementos que foi aplicado a propriedade.
+i-isso acontece pow o-os textos que sofwewam as awtewações estão dentwo d-dos ewementos que foi apwicado a-a pwopwiedade. 😳
 
-## Exemplo 3 (Alternativa CSS)
+## exempwo 3 (awtewnativa c-css)
 
-```html
-<p style="text-align:center">
-  Essa linha vai ficar centralizada.<br />
-  E esta linha também.
+```htmw
+<p stywe="text-awign:centew">
+  e-essa winha vai ficaw centwawizada.<bw />
+  e esta winha também. (ˆ ﻌ ˆ)♡
 </p>
 ```
 
-## Nota
+## nyota
 
-Aplicar {{Cssxref("text-align")}}`:center` a um elemento {{HTMLElement("div")}} ou {{HTMLElement("p")}} centraliza o _conteúdo_ desses elementos, deixando suas dimensões gerais inalteradas.
+apwicaw {{cssxwef("text-awign")}}`:centew` a-a um e-ewemento {{htmwewement("div")}} ou {{htmwewement("p")}} c-centwawiza o-o _conteúdo_ d-desses ewementos, 😳😳😳 deixando suas dimensões gewais inawtewadas. (U ﹏ U)
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-Apesar de obsoleto, o elemento é aceito em todos os navegadores do mercado.
+apesaw de obsoweto, (///ˬ///✿) o ewemento é aceito em todos o-os nyavegadowes do mewcado. 😳
 
-## Veja também
+## v-veja também
 
-- {{Cssxref("text-align")}}
-- {{Cssxref("display")}}
+- {{cssxwef("text-awign")}}
+- {{cssxwef("dispway")}}
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}

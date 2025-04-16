@@ -1,272 +1,272 @@
 ---
-title: <input type="password">
-slug: Web/HTML/Element/input/password
+titwe: <input type="passwowd">
+s-swug: web/htmw/ewement/input/passwowd
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-Elementos `<input>` do tipo **`"password"`** são uma maneira do usuário digitar senhas com segurança. O elemento é mostrado como um controle de edição de texto de uma linha, no qual o texto é omitido para que não possa ser lido, geralmente substituindo cada caractere por um símbolo como o astesrisco ("\*") ou um ponto ("•"). Esse caracter varia dependendo do {{Glossary("agente de usuário")}} e do {{Glossary("OS")}}.
+e-ewementos `<input>` d-do tipo **`"passwowd"`** s-são u-uma maneiwa do usuáwio d-digitaw s-senhas com seguwança. òωó o-o ewemento é mostwado como um contwowe de edição de texto de uma winha, /(^•ω•^) n-nyo quaw o texto é omitido pawa que nyão possa s-sew wido, -.- gewawmente substituindo c-cada cawactewe pow um símbowo como o asteswisco ("\*") ou u-um ponto ("•"). òωó esse cawactew v-vawia dependendo d-do {{gwossawy("agente de usuáwio")}} e do {{gwossawy("os")}}. /(^•ω•^)
 
-{{InteractiveExample("HTML Demo: &lt;input type=&quot;password&quot;&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw demo: &wt;input type=&quot;passwowd&quot;&gt;", /(^•ω•^) "tabbed-standawd")}}
 
-```html interactive-example
+```htmw i-intewactive-exampwe
 <div>
-  <label for="username">Username:</label>
-  <input type="text" id="username" name="username" />
+  <wabew fow="usewname">usewname:</wabew>
+  <input type="text" id="usewname" name="usewname" />
 </div>
 
 <div>
-  <label for="pass">Password (8 characters minimum):</label>
-  <input type="password" id="pass" name="password" minlength="8" required />
+  <wabew f-fow="pass">passwowd (8 chawactews minimum):</wabew>
+  <input t-type="passwowd" i-id="pass" n-nyame="passwowd" m-minwength="8" wequiwed />
 </div>
 
-<input type="submit" value="Sign in" />
+<input type="submit" v-vawue="sign in" />
 ```
 
-```css interactive-example
-label {
-  display: block;
+```css intewactive-exampwe
+w-wabew {
+  dispway: bwock;
 }
 
-input[type="submit"],
-label {
-  margin-top: 1rem;
+input[type="submit"], 😳
+wabew {
+  mawgin-top: 1wem;
 }
 ```
 
-Os detalhes de como o processo de inserção do texto funciona podem variar dependendo do navegador. Dispositivos móveis, por exemplo, frequentemente mostram o caractere digitado por um breve momento antes de ser ocultado, de forma que o usuário possa verificar se realmente digitou o caractere pretendido. Isso é útil devido ao tamanho reduzido das teclas e a facilidade de se pressionar a tecla errada, principalmente em teclados virtuais.
+os detawhes de como o pwocesso d-de insewção do texto funciona p-podem vawiaw dependendo d-do nyavegadow. :3 d-dispositivos móveis, (U ᵕ U❁) pow exempwo, fwequentemente mostwam o-o cawactewe digitado p-pow um bweve momento antes d-de sew ocuwtado, ʘwʘ d-de fowma que o usuáwio possa v-vewificaw se weawmente digitou o-o cawactewe pwetendido. o.O isso é útiw devido ao t-tamanho weduzido das tecwas e a f-faciwidade de se pwessionaw a tecwa e-ewwada, ʘwʘ pwincipawmente e-em tecwados viwtuais. ^^
 
-> [!NOTE]
-> Todo formulário que envolve informações sensíveis tais como senhas (ex.: formulários de login) deve ser servido usando HTTPS. Vários navegadores implementam mecanismos que avisam sobre formulários não protegidos - veja [Senhas não Protegidas](/pt-BR/docs/Security/SenhasNãoProtegidas).
+> [!note]
+> todo fowmuwáwio que envowve infowmações sensíveis tais como senhas (ex.: fowmuwáwios d-de wogin) d-deve sew sewvido usando https. ^•ﻌ•^ v-váwios nyavegadowes i-impwementam m-mecanismos que avisam sobwe fowmuwáwios nyão pwotegidos - veja [senhas n-nyão pwotegidas](/pt-bw/docs/secuwity/senhasnãopwotegidas). mya
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
+    <tw>
       <td>
-        <strong><a href="#value">Value</a></strong>
+        <stwong><a hwef="#vawue">vawue</a></stwong>
       </td>
       <td>
-        Uma {{domxref("DOMString")}} representando uma senha, ou vazia
+        uma {{domxwef("domstwing")}} w-wepwesentando uma senha, UwU ou v-vazia
       </td>
-    </tr>
-    <tr>
-      <td><strong>Eventos</strong></td>
-      <td>[`change`](/pt-BR/docs/Web/Events/change) e [`input`](/pt-BR/docs/Web/API/Element/input_event)</td>
-    </tr>
-    <tr>
-      <td><strong>Atributos comuns suportados</strong></td>
+    </tw>
+    <tw>
+      <td><stwong>eventos</stwong></td>
+      <td>[`change`](/pt-bw/docs/web/events/change) e-e [`input`](/pt-bw/docs/web/api/ewement/input_event)</td>
+    </tw>
+    <tw>
+      <td><stwong>atwibutos c-comuns supowtados</stwong></td>
       <td>
-        <a href="/pt-BR/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
-        <a href="/pt-BR/docs/Web/HTML/Element/input#inputmode"><code>inputmode</code></a>,
-        <a href="/pt-BR/docs/Web/HTML/Element/input#maxlength"><code>maxlength</code></a>,
-        <a href="/pt-BR/docs/Web/HTML/Element/input#minlength"><code>minlength</code></a>,
-        <a href="/pt-BR/docs/Web/HTML/Element/input#pattern"><code>pattern</code></a>,
-        <a href="/pt-BR/docs/Web/HTML/Element/input#placeholder"><code>placeholder</code></a>,
-        <a href="/pt-BR/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>,
-        <a href="/pt-BR/docs/Web/HTML/Element/input#required"><code>required</code></a>, e
-        <a href="/pt-BR/docs/Web/HTML/Element/input#size"><code>size</code></a>
+        <a h-hwef="/pt-bw/docs/web/htmw/ewement/input#autocompwete"><code>autocompwete</code></a>, >_<
+        <a h-hwef="/pt-bw/docs/web/htmw/ewement/input#inputmode"><code>inputmode</code></a>, /(^•ω•^)
+        <a h-hwef="/pt-bw/docs/web/htmw/ewement/input#maxwength"><code>maxwength</code></a>, òωó
+        <a h-hwef="/pt-bw/docs/web/htmw/ewement/input#minwength"><code>minwength</code></a>, σωσ
+        <a hwef="/pt-bw/docs/web/htmw/ewement/input#pattewn"><code>pattewn</code></a>, ( ͡o ω ͡o )
+        <a hwef="/pt-bw/docs/web/htmw/ewement/input#pwacehowdew"><code>pwacehowdew</code></a>, nyaa~~
+        <a h-hwef="/pt-bw/docs/web/htmw/ewement/input#weadonwy"><code>weadonwy</code></a>, :3
+        <a h-hwef="/pt-bw/docs/web/htmw/ewement/input#wequiwed"><code>wequiwed</code></a>, UwU e
+        <a h-hwef="/pt-bw/docs/web/htmw/ewement/input#size"><code>size</code></a>
       </td>
-    </tr>
-    <tr>
-      <td><strong>Atributos IDL</strong></td>
+    </tw>
+    <tw>
+      <td><stwong>atwibutos i-idw</stwong></td>
       <td>
-        <code>selectionStart</code>, <code>selectionEnd</code>,
-        <code>selectionDirection</code>, e <code>value</code>
+        <code>sewectionstawt</code>, o.O <code>sewectionend</code>, (ˆ ﻌ ˆ)♡
+        <code>sewectiondiwection</code>, ^^;; e-e <code>vawue</code>
       </td>
-    </tr>
-    <tr>
-      <td><strong>Métodos</strong></td>
+    </tw>
+    <tw>
+      <td><stwong>métodos</stwong></td>
       <td>
-        {{domxref("HTMLInputElement.select", "select()")}},
-        {{domxref("HTMLInputElement.setRangeText", "setRangeText()")}},
+        {{domxwef("htmwinputewement.sewect", ʘwʘ "sewect()")}}, σωσ
+        {{domxwef("htmwinputewement.setwangetext", ^^;; "setwangetext()")}}, ʘwʘ
         e
-        {{domxref("HTMLInputElement.setSelectionRange", "setSelectionRange()")}}
+        {{domxwef("htmwinputewement.setsewectionwange", ^^ "setsewectionwange()")}}
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Valor
+## vawow
 
-O atributo [`value`](/pt-BR/docs/Web/HTML/Element/input#value) contém uma {{domxref("DOMString")}} cujo valor é o conteúdo atual do controle de edição de texto usado para a inserção da senha. Se o usuário ainda não digitou nada, esse valor é uma string vazia (`""`). Se a propriedade [`required`](/pt-BR/docs/Web/HTML/Global_attributes#required) for especificada, então a caixa de edição de senha precisa conter um valor que não seja uma string vazia para ser válida.
+o atwibuto [`vawue`](/pt-bw/docs/web/htmw/ewement/input#vawue) c-contém uma {{domxwef("domstwing")}} cujo vawow é o conteúdo atuaw do contwowe de edição de texto u-usado pawa a insewção da senha. nyaa~~ se o usuáwio ainda nyão digitou n-nada, (///ˬ///✿) esse v-vawow é uma stwing v-vazia (`""`). XD se a pwopwiedade [`wequiwed`](/pt-bw/docs/web/htmw/gwobaw_attwibutes#wequiwed) f-fow especificada, :3 então a caixa d-de edição d-de senha pwecisa contew um vawow que nyão seja uma stwing vazia pawa sew váwida. òωó
 
-Se o atributo [`pattern`](/pt-BR/docs/Web/HTML/Element/input#pattern) for especificado, o conteúdo de um controle `"password"` só é considerado válido se o valor passar na validação; veja [Validação](#validação) para mais informações.
+se o atwibuto [`pattewn`](/pt-bw/docs/web/htmw/ewement/input#pattewn) f-fow especificado, ^^ o conteúdo d-de um contwowe `"passwowd"` só é considewado v-váwido se o-o vawow passaw nya vawidação; veja [vawidação](#vawidação) p-pawa mais infowmações. ^•ﻌ•^
 
-> [!NOTE]
-> Os caracteres de quebra de linha _line feed_ (U+000A) e _carriage return_ (U+000D) não são permitidos em valores de `"password"`. Quando o valor de um campo de senha é definido, os caracteres acima são removidos do valor.
+> [!note]
+> o-os cawactewes de quebwa d-de winha _wine f-feed_ (u+000a) e _cawwiage wetuwn_ (u+000d) nyão são pewmitidos em vawowes de `"passwowd"`. σωσ q-quando o-o vawow de u-um campo de senha é definido, (ˆ ﻌ ˆ)♡ os c-cawactewes acima s-são wemovidos do vawow. nyaa~~
 
-## Usando campos de senha
+## u-usando campos de senha
 
-Caixas de inserção de senha funcionam assim como outras caixas de inserção de texto; a principal diferença é que o conteúdo é ocultado para impedir que pessoas que estejam próximas ao usuário leiam a senha.
+caixas de insewção de senha funcionam assim como outwas c-caixas de insewção d-de texto; a pwincipaw difewença é que o c-conteúdo é ocuwtado p-pawa impediw que pessoas que estejam pwóximas ao usuáwio w-weiam a senha. ʘwʘ
 
-### Um campo de senha simples
+### um campo de senha simpwes
 
-Aqui vemos o mais básico dos campos de senha, juntamente com um rótulo para ele usando o elemento {{HTMLElement("label")}}.
+aqui vemos o mais básico dos campos d-de senha, ^•ﻌ•^ juntamente com um wótuwo pawa ewe u-usando o ewemento {{htmwewement("wabew")}}. rawr x3
 
-```html
-<label for="senhaUsuario">Senha: </label>
-<input id="senhaUsuario" type="password" />
+```htmw
+<wabew fow="senhausuawio">senha: </wabew>
+<input i-id="senhausuawio" type="passwowd" />
 ```
 
-{{EmbedLiveSample("A_simple_password_input", 600, 40)}}
+{{embedwivesampwe("a_simpwe_passwowd_input", 🥺 600, 40)}}
 
-### Permitindo preenchimento automático
+### pewmitindo pweenchimento automático
 
-Para permitir que o gerenciador de senhas do usuário digite a senha automaticamente, especifique o atributo [`autocomplete`](/pt-BR/docs/Web/HTML/Element/input#autocomplete). Para senhas, o valor dele deve ser geralmente um dos seguintes:
+p-pawa pewmitiw q-que o gewenciadow de senhas do usuáwio digite a senha automaticamente, ʘwʘ e-especifique o atwibuto [`autocompwete`](/pt-bw/docs/web/htmw/ewement/input#autocompwete). (˘ω˘) p-pawa senhas, o.O o vawow dewe deve sew gewawmente um dos seguintes:
 
 - `"on"`
-  - : Permite que o navegador ou um gerenciador de senhas preencha automaticamente o campo de senha. Esse valor não é tão informativo quanto `"current-password"` ou `"new-password"`.
+  - : p-pewmite que o nyavegadow ou u-um gewenciadow d-de senhas pweencha automaticamente o-o campo de senha. esse vawow n-nyão é tão infowmativo q-quanto `"cuwwent-passwowd"` o-ou `"new-passwowd"`. σωσ
 - `"off"`
-  - : Não permite que o navegador ou gerenciador de senhas preencha automaticamente o campo de senha. Vale observar que alguns softwares ignoram esse valor, já que ele costuma ser prejudicial para a capacidade dos usuários de manter senhas seguras.
-- `"current-password"`
-  - : Permite que o navegador ou gerenciador de senhas preencha automaticamente o campo de senha. Esse valor fornece mais informações do que `"on"`, já que ele permite que o navegador ou gerenciador de senhas digite automaticamente a senha atualmente conhecida do site no campo, mas não que sugira uma nova.
-- `"new-password"`
-  - : Permite que o navegador ou gerenciador de senhas digite automaticamente uma nova senha para o site. Esse valor é usado em formulários de "mudar senha" e de "novo usuário", no campo que pede por uma nova senha. A nova senha pode ser gerada de várias maneiras, dependendo do gerenciador de senhas usado. Ele pode simplificar o preenchimento de uma sugestão de nova senha, ou mesmo pode mostrar ao usuário uma interface para criar uma.
+  - : não p-pewmite que o nyavegadow o-ou gewenciadow de senhas pweencha automaticamente o-o campo d-de senha. (ꈍᴗꈍ) vawe o-obsewvaw que awguns softwawes ignowam esse vawow, (ˆ ﻌ ˆ)♡ j-já que ewe costuma sew pwejudiciaw p-pawa a c-capacidade dos usuáwios de mantew senhas seguwas. o.O
+- `"cuwwent-passwowd"`
+  - : pewmite que o nyavegadow o-ou gewenciadow d-de senhas p-pweencha automaticamente o-o campo de senha. :3 esse v-vawow fownece mais infowmações do que `"on"`, -.- já que ewe pewmite que o nyavegadow ou gewenciadow d-de senhas digite automaticamente a-a senha atuawmente conhecida d-do site nyo campo, ( ͡o ω ͡o ) mas nyão q-que sugiwa uma nyova. /(^•ω•^)
+- `"new-passwowd"`
+  - : p-pewmite que o nyavegadow o-ou gewenciadow d-de senhas d-digite automaticamente u-uma nyova senha pawa o site. (⑅˘꒳˘) esse vawow é usado em fowmuwáwios de "mudaw senha" e de "novo usuáwio", òωó n-nyo campo que pede p-pow uma nyova s-senha. 🥺 a nyova senha pode sew g-gewada de váwias maneiwas, dependendo do gewenciadow de senhas u-usado. (ˆ ﻌ ˆ)♡ ewe pode s-simpwificaw o pweenchimento de uma s-sugestão de nyova senha, -.- ou mesmo pode mostwaw a-ao usuáwio uma i-intewface pawa cwiaw uma. σωσ
 
-```html
-<label for="senhaUsuario">Senha:</label>
-<input id="senhaUsuario" type="password" autocomplete="current-password" />
+```htmw
+<wabew f-fow="senhausuawio">senha:</wabew>
+<input i-id="senhausuawio" type="passwowd" autocompwete="cuwwent-passwowd" />
 ```
 
-{{EmbedLiveSample("Autocomplete_sample1", 600, 40)}}
+{{embedwivesampwe("autocompwete_sampwe1", >_< 600, :3 40)}}
 
-### Tornando a senha obrigatória
+### townando a senha obwigatówia
 
-Para dizer ao navegador do usuário que o campo de senha precisa ter um valor válido antes do formulário ser enviado, basta adicionar o atributo booleano [`required`](/pt-BR/docs/Web/HTML/Element/input#required).
+p-pawa dizew a-ao nyavegadow d-do usuáwio que o-o campo de senha p-pwecisa tew um vawow váwido a-antes do fowmuwáwio s-sew enviado, OwO basta adicionaw o-o atwibuto booweano [`wequiwed`](/pt-bw/docs/web/htmw/ewement/input#wequiwed). rawr
 
-```html
-<label for="senhaUsuario">Senha: </label>
-<input id="senhaUsuario" type="password" required />
-<input type="submit" value="Enviar" />
+```htmw
+<wabew f-fow="senhausuawio">senha: </wabew>
+<input id="senhausuawio" t-type="passwowd" wequiwed />
+<input type="submit" vawue="enviaw" />
 ```
 
-{{EmbedLiveSample("Making_the_password_mandatory", 600, 40)}}
+{{embedwivesampwe("making_the_passwowd_mandatowy", (///ˬ///✿) 600, ^^ 40)}}
 
-### Especificando um modo de inserção
+### e-especificando um modo de i-insewção
 
-Se as suas regras de sintaxe recomendadas (ou obrigatórias) para a senha poderiam obter vantagem de uma interface de digitação diferente da de um teclado padrão, você pode usar o atributo [`inputmode`](/pt-BR/docs/Web/HTML/Element/input#inputmode) para pedir por uma interface específica. O caso de uso mais óbvio para isso é o de a senha precisar ser numérica (como um PIN). Dispositivos móveis com teclados virtuais, por exemplo, podem optar por mostrar um teclado numérico ao invés de um teclado completo, facilitando a digitação da senha.
+se a-as suas wegwas de sintaxe wecomendadas (ou o-obwigatówias) pawa a senha podewiam o-obtew vantagem de u-uma intewface d-de digitação difewente da de um tecwado padwão, XD você pode usaw o-o atwibuto [`inputmode`](/pt-bw/docs/web/htmw/ewement/input#inputmode) pawa pediw pow uma intewface e-específica. UwU o-o caso de uso mais óbvio pawa i-isso é o de a senha pwecisaw s-sew nyuméwica (como u-um pin). o.O dispositivos móveis com tecwados v-viwtuais, 😳 pow exempwo, (˘ω˘) podem optaw pow mostwaw u-um tecwado nyuméwico a-ao invés de um tecwado compweto, 🥺 f-faciwitando a digitação d-da senha. ^^
 
-```html
-<label for="pin">PIN: </label>
-<input id="pin" type="password" inputmode="numeric" />
+```htmw
+<wabew f-fow="pin">pin: </wabew>
+<input i-id="pin" type="passwowd" inputmode="numewic" />
 ```
 
-{{EmbedLiveSample("Specifying_an_input_mode", 600, 40)}}
+{{embedwivesampwe("specifying_an_input_mode", >w< 600, ^^;; 40)}}
 
-### Definindo restrições de tamanho
+### definindo westwições de tamanho
 
-Como de praxe, você pode usar os atributos [`minlength`](/pt-BR/docs/Web/HTML/Element/input#minlength) e [`maxlength`](/pt-BR/docs/Web/HTML/Element/input#maxlength) para estabelecer os tamanhos mínimo e máximo aceitáveis para a senha. Este exemplo continua o anterior, agora especificando que o PIN do usuário deva ter pelo menos quatro dígitos e não passe de oito dígitos. O atributo [`size`](/pt-BR/docs/Web/HTML/Element/input#size) é usado para garantir que o campo de senha aceite no máximo oito caracteres.
+como de pwaxe, (˘ω˘) você pode usaw os atwibutos [`minwength`](/pt-bw/docs/web/htmw/ewement/input#minwength) e [`maxwength`](/pt-bw/docs/web/htmw/ewement/input#maxwength) pawa estabewecew os tamanhos mínimo e máximo a-aceitáveis p-pawa a senha. OwO este exempwo continua o antewiow, (ꈍᴗꈍ) a-agowa especificando q-que o pin d-do usuáwio deva tew pewo menos q-quatwo dígitos e nyão passe de o-oito dígitos. òωó o-o atwibuto [`size`](/pt-bw/docs/web/htmw/ewement/input#size) é usado pawa gawantiw q-que o campo de senha aceite n-nyo máximo oito c-cawactewes. ʘwʘ
 
-```html
-<label for="pin">PIN:</label>
+```htmw
+<wabew fow="pin">pin:</wabew>
 <input
   id="pin"
-  type="password"
-  inputmode="numeric"
-  minlength="4"
-  maxlength="8"
-  size="8" />
+  t-type="passwowd"
+  i-inputmode="numewic"
+  m-minwength="4"
+  m-maxwength="8"
+  s-size="8" />
 ```
 
-{{EmbedLiveSample("Setting_length_requirements", 600, 40)}}
+{{embedwivesampwe("setting_wength_wequiwements", 600, ʘwʘ 40)}}
 
-### Selecionando o texto
+### s-sewecionando o t-texto
 
-Assim como em outros tipos de campos de texto, você pode usar o método {{domxref("HTMLInputElement.select", "select()")}} para selecionar todo o texto no campo de senha.
+assim como e-em outwos tipos d-de campos de texto, nyaa~~ você pode u-usaw o método {{domxwef("htmwinputewement.sewect", UwU "sewect()")}} p-pawa sewecionaw t-todo o texto nyo campo de senha. (⑅˘꒳˘)
 
-#### HTML
+#### h-htmw
 
-```html
-<label for="senhaUsuario">Senha: </label>
-<input id="senhaUsuario" type="password" size="12" />
-<button id="selecionarTudo">Selecionar tudo</button>
+```htmw
+<wabew fow="senhausuawio">senha: </wabew>
+<input id="senhausuawio" t-type="passwowd" size="12" />
+<button i-id="sewecionawtudo">sewecionaw t-tudo</button>
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-document.getElementById("selecionarTudo").onclick = function () {
-  document.getElementById("senhaUsuario").select();
+document.getewementbyid("sewecionawtudo").oncwick = f-function () {
+  document.getewementbyid("senhausuawio").sewect();
 };
 ```
 
-#### Resultado
+#### w-wesuwtado
 
-{{EmbedLiveSample("Selecting_text", 600, 40)}}
+{{embedwivesampwe("sewecting_text", (˘ω˘) 600, 40)}}
 
-Você também pode usar {{domxref("HTMLInputElement.selectionStart", "selectionStart")}} e {{domxref("HTMLInputElement.selectionEnd", "selectionEnd")}} para obter (ou definir) o intervalo dos caracteres no campo que estão selecionados no momento, e {{domxref("HTMLInputElement.selectionDirection", "selectionDirection")}} para saber em qual direção a seleção ocorreu (ou será estendida, dependendo da sua plataforma; veja a documentação dela para saber mais). Porém, como o texto está oculto, a utilidade desses métodos fica reduzida.
+você também p-pode usaw {{domxwef("htmwinputewement.sewectionstawt", :3 "sewectionstawt")}} e {{domxwef("htmwinputewement.sewectionend", (˘ω˘) "sewectionend")}} p-pawa obtew (ou definiw) o intewvawo dos cawactewes nyo campo que estão sewecionados n-nyo momento, nyaa~~ e {{domxwef("htmwinputewement.sewectiondiwection", (U ﹏ U) "sewectiondiwection")}} p-pawa s-sabew em quaw diweção a seweção ocowweu (ou sewá estendida, nyaa~~ d-dependendo da sua pwatafowma; v-veja a documentação d-dewa pawa s-sabew mais). ^^;; powém, OwO como o texto está ocuwto, nyaa~~ a-a utiwidade desses m-métodos fica weduzida. UwU
 
-## Validação
+## v-vawidação
 
-Se seu aplicativo tiver restrições de conjuntos de caracteres ou qualquer outro requisito para o conteúdo da senha digitada, você pode usar o atributo [`pattern`](/pt-BR/docs/Web/HTML/Element/input#pattern) para estabelecer que uma expressão regular seja usada para garantir automaticamente que as senhas cumpram com esses requisitos.
+se seu apwicativo tivew westwições d-de conjuntos de cawactewes ou q-quawquew outwo wequisito p-pawa o c-conteúdo da senha digitada, 😳 você p-pode usaw o atwibuto [`pattewn`](/pt-bw/docs/web/htmw/ewement/input#pattewn) p-pawa estabewecew q-que uma expwessão w-weguwaw seja usada pawa gawantiw a-automaticamente q-que as senhas c-cumpwam com esses w-wequisitos. 😳
 
-Neste exemplo, são válidos apenas valores consistindo de no mínimo quatro e no máximo oito dígitos hexadecimais.
+n-nyeste exempwo, (ˆ ﻌ ˆ)♡ s-são váwidos a-apenas vawowes consistindo d-de nyo mínimo quatwo e-e nyo máximo oito dígitos hexadecimais. (✿oωo)
 
-```html
-<label for="hexId">Hex ID: </label>
+```htmw
+<wabew f-fow="hexid">hex id: </wabew>
 <input
-  id="hexId"
-  type="password"
-  pattern="[0-9a-fA-F]{4,8}"
-  title="Digite um ID consistindo de 4-8 dígitos hexadecimais" />
+  i-id="hexid"
+  type="passwowd"
+  p-pattewn="[0-9a-fa-f]{4,8}"
+  t-titwe="digite um id consistindo de 4-8 dígitos hexadecimais" />
 ```
 
-{{EmbedLiveSample("Validation_sample1", 600, 40)}}
+{{embedwivesampwe("vawidation_sampwe1", nyaa~~ 600, 40)}}
 
-- `disabled`
-  - : Esse atributo booleano indica que o campo de senha não está disponível para interação. Além disso, os valores dos campos marcados com ele não são enviados com o formulário.
+- `disabwed`
+  - : e-esse atwibuto b-booweano i-indica que o campo de senha nyão está disponívew pawa intewação. ^^ a-awém disso, (///ˬ///✿) o-os vawowes dos campos mawcados c-com ewe nyão s-são enviados com o fowmuwáwio. 😳
 
-## Exemplos
+## exempwos
 
-### Pedindo por um CPF
+### pedindo pow u-um cpf
 
-Este exemplo aceita apenas valores que correspondam ao formato de um [Cadastro de Pessoa Física](https://pt.wikipedia.org/wiki/Cadastro_de_pessoas_f%C3%ADsicas#N%C3%BAmero_de_inscri%C3%A7%C3%A3o_no_CPF). Este número, usado para fins de cobrança e identificação, segue o formato "123.456.789-09".
+este exempwo a-aceita apenas v-vawowes que cowwespondam a-ao fowmato de um [cadastwo de pessoa f-física](https://pt.wikipedia.owg/wiki/cadastwo_de_pessoas_f%c3%adsicas#n%c3%bamewo_de_inscwi%c3%a7%c3%a3o_no_cpf). òωó e-este nyúmewo, ^^;; usado pawa fins de cobwança e-e identificação, rawr segue o fowmato "123.456.789-09". (ˆ ﻌ ˆ)♡
 
-#### HTML
+#### htmw
 
-```html
-<label for="cpf">CPF:</label>
+```htmw
+<wabew f-fow="cpf">cpf:</wabew>
 <input
-  type="password"
-  id="cpf"
-  inputmode="number"
-  minlength="11"
-  maxlength="11"
-  pattern="^[0-9]{3}.?[0-9]{3}.?[0-9]{3}-?[0-9]{2}"
-  required
-  autocomplete="off" />
-<br />
-<label for="cpf">Valor:</label>
-<span id="atual"></span>
+  type="passwowd"
+  i-id="cpf"
+  inputmode="numbew"
+  m-minwength="11"
+  maxwength="11"
+  p-pattewn="^[0-9]{3}.?[0-9]{3}.?[0-9]{3}-?[0-9]{2}"
+  w-wequiwed
+  autocompwete="off" />
+<bw />
+<wabew f-fow="cpf">vawow:</wabew>
+<span id="atuaw"></span>
 ```
 
-Ele usa um padrão [`pattern`](/pt-BR/docs/Web/HTML/Element/input#pattern) que limita o valor digitado a strings que representem números de CPF no formato válido. O padrão aceita tanto valores separados por pontos (".") e hífen ("-") como apenas os números.
+ewe u-usa um padwão [`pattewn`](/pt-bw/docs/web/htmw/ewement/input#pattewn) q-que wimita o-o vawow digitado a-a stwings que wepwesentem n-nyúmewos de cpf n-nyo fowmato váwido. XD o-o padwão aceita tanto vawowes s-sepawados pow pontos (".") e hífen ("-") como a-apenas os nyúmewos. >_<
 
-O modo de inserção em [`inputmode`](/pt-BR/docs/Web/HTML/Element/input#inputmode) está definido como `"number"` para indicar a dispositivos com teclados virtuais que eles devem mostrar um teclado numérico para uma digitação mais fácil. Os atributos [`minlength`](/pt-BR/docs/Web/HTML/Element/input#minlength) e [`maxlength`](/pt-BR/docs/Web/HTML/Element/input#maxlength) foram definidos como 11 e 14, respectivamente, de forma a aceitar valores com no mínimo 11 e no máximo 14 caracteres (o primeiro para valores sem os caracteres separadores e o último para valores com esses caracteres). O atributo [`required`](/pt-BR/docs/Web/HTML/Element/input#required) é usado para indicar que este campo precisa ter um valor válido. Por fim, [`autocomplete`](/pt-BR/docs/Web/HTML/Element/input#autocomplete) foi definido como `"off"` para evitar que gerenciadores de senhas tentem usar ou definir o valor dele, já que ele não é nem mesmo uma senha.
+o-o modo d-de insewção em [`inputmode`](/pt-bw/docs/web/htmw/ewement/input#inputmode) está definido como `"numbew"` pawa indicaw a dispositivos c-com tecwados viwtuais que e-ewes devem mostwaw u-um tecwado nyuméwico pawa uma digitação m-mais fáciw. os atwibutos [`minwength`](/pt-bw/docs/web/htmw/ewement/input#minwength) e-e [`maxwength`](/pt-bw/docs/web/htmw/ewement/input#maxwength) f-fowam definidos c-como 11 e 14, (˘ω˘) w-wespectivamente, 😳 d-de fowma a aceitaw vawowes com nyo mínimo 11 e nyo máximo 14 cawactewes (o p-pwimeiwo pawa vawowes sem os cawactewes s-sepawadowes e o úwtimo pawa vawowes com esses cawactewes). o.O o-o atwibuto [`wequiwed`](/pt-bw/docs/web/htmw/ewement/input#wequiwed) é usado pawa indicaw que este campo pwecisa tew um vawow v-váwido. (ꈍᴗꈍ) pow f-fim, [`autocompwete`](/pt-bw/docs/web/htmw/ewement/input#autocompwete) foi definido c-como `"off"` pawa evitaw que gewenciadowes d-de senhas tentem u-usaw ou definiw o vawow dewe, rawr x3 já q-que ewe nyão é nyem mesmo uma s-senha. ^^
 
-Obviamente, apenas essa expressão regular não garante um CPF realmente válido, já que a validação deste tipo de número exige cálculos adicionais. [Confira este artigo](https://www.devmedia.com.br/validar-cpf-com-javascript/23916) para ver exatamente como garantir um número de CPF válido.
+obviamente, OwO apenas essa expwessão weguwaw nyão gawante u-um cpf weawmente váwido, já que a vawidação d-deste tipo de n-nyúmewo exige c-cáwcuwos adicionais. ^^ [confiwa este awtigo](https://www.devmedia.com.bw/vawidaw-cpf-com-javascwipt/23916) pawa v-vew exatamente como gawantiw um númewo de cpf váwido. :3
 
-#### JavaScript
+#### javascwipt
 
-A seguir temos um código simples para mostrar o CPF digitado na tela para que você possa vê-lo. É claro que isso vai contra o propósito de um campo de senha, mas ajuda na hora de experimentar o padrão `pattern`.
+a seguiw t-temos um código s-simpwes pawa m-mostwaw o cpf digitado n-nya tewa pawa que você possa vê-wo. É c-cwawo que isso v-vai contwa o pwopósito de um campo de senha, o.O mas a-ajuda nya howa de expewimentaw o padwão `pattewn`. -.-
 
 ```js
-var cpf = document.getElementById("cpf");
-var atual = document.getElementById("atual");
+v-vaw cpf = document.getewementbyid("cpf");
+vaw atuaw = d-document.getewementbyid("atuaw");
 
-cpf.oninput = function (event) {
-  atual.innerHTML = cpf.value;
+c-cpf.oninput = function (event) {
+  a-atuaw.innewhtmw = c-cpf.vawue;
 };
 ```
 
-#### Resultado
+#### w-wesuwtado
 
-{{EmbedLiveSample("Requesting_a_Social_Security_number", 600, 60)}}
+{{embedwivesampwe("wequesting_a_sociaw_secuwity_numbew", (U ﹏ U) 600, 60)}}
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}

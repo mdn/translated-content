@@ -1,59 +1,59 @@
 ---
-title: Host
-slug: Web/HTTP/Reference/Headers/Host
-original_slug: Web/HTTP/Headers/Host
+titwe: host
+swug: web/http/wefewence/headews/host
+o-owiginaw_swug: w-web/http/headews/host
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O cabeçalho de solicitação de **`Host`** especifica o nome de domínio do servidor (para hospedagem virtual), e (opcionalmente) o número da porta TCP no qual o servidor está escutando.
+o-o cabeçawho de s-sowicitação de **`host`** e-especifica o-o nyome de d-domínio do sewvidow (pawa h-hospedagem viwtuaw), ( ͡o ω ͡o ) e (opcionawmente) o nyúmewo da powta tcp nyo q-quaw o sewvidow está escutando. (U ﹏ U)
 
-Se nenhuma porta for fornecida a porta padrão para o serviço solicitado (por exemplo, "80" para um HTTP URL) está implícita.
+se nyenhuma powta f-fow fownecida a powta padwão p-pawa o sewviço sowicitado (pow exempwo, (///ˬ///✿) "80" pawa um http uww) e-está impwícita. >w<
 
-Um campo de cabeçalho de `Host` deve ser enviado em todas as mensagens desolicitação HTTP / 1. 1. Um código de status {{HTTPStatus("400")}} (Bad Request) será enviado para qualquer mensagem de solicitação HTTP/1.1 que não contenha um campo de cabeçalho do host ou contenha mais de um.
+um campo de c-cabeçawho de `host` d-deve sew enviado em todas as mensagens desowicitação http / 1. rawr 1. um código d-de status {{httpstatus("400")}} (bad wequest) sewá enviado pawa quawquew mensagem de sowicitação h-http/1.1 que nyão contenha u-um campo de c-cabeçawho do host o-ou contenha m-mais de um. mya
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Header type</th>
-      <td>{{Glossary("Request header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th scope="wow">headew t-type</th>
+      <td>{{gwossawy("wequest headew")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("fowbidden headew n-nyame")}}</th>
       <td>yes</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Syntax
+## syntax
 
 ```
-Host: <host>:<port>
+host: <host>:<powt>
 ```
 
-## Directives
+## diwectives
 
 - \<host>
-  - : the domain name of the server (for virtual hosting).
-- \<port> {{optional_inline}}
-  - : TCP port number on which the server is listening.
+  - : the domain nyame of t-the sewvew (fow viwtuaw hosting). ^^
+- \<powt> {{optionaw_inwine}}
+  - : t-tcp powt n-nyumbew on which t-the sewvew is wistening. 😳😳😳
 
-## Examples
+## exampwes
 
 ```
-Host: developer.mozilla.org
+host: devewopew.moziwwa.owg
 ```
 
-## Specifications
+## s-specifications
 
-| Specification                  | Title                                                              |
+| s-specification                  | titwe                                                              |
 | ------------------------------ | ------------------------------------------------------------------ |
-| {{RFC("7230", "Host", "5.4")}} | Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing |
+| {{wfc("7230", mya "host", 😳 "5.4")}} | h-hypewtext twansfew p-pwotocow (http/1.1): message s-syntax and wouting |
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see a-awso
 
-- {{HTTPStatus("400")}}
+- {{httpstatus("400")}}

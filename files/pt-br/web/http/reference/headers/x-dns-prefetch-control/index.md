@@ -1,89 +1,89 @@
 ---
-title: X-DNS-Prefetch-Control
-slug: Web/HTTP/Reference/Headers/X-DNS-Prefetch-Control
-original_slug: Web/HTTP/Headers/X-DNS-Prefetch-Control
+titwe: x-dns-pwefetch-contwow
+swug: web/http/wefewence/headews/x-dns-pwefetch-contwow
+o-owiginaw_swug: w-web/http/headews/x-dns-pwefetch-contwow
 ---
 
-{{HTTPSidebar}}O cabeçalho de resposta HTTP **`X-DNS-Prefetch-Control`** controla a pré-busca de DNS, um recurso pelo qual os navegadores realizam proativamente a resolução de nomes de domínio em ambos os links que o usuário pode escolher, além de URLs para itens referenciados pelo documento, incluindo imagens , CSS, JavaScript e assim por diante.
+{{httpsidebaw}}o c-cabeçawho d-de wesposta http **`x-dns-pwefetch-contwow`** contwowa a-a pwé-busca d-de dns, ^^;; um w-wecuwso pewo quaw o-os nyavegadowes weawizam pwoativamente a wesowução de nyomes de domínio em a-ambos os winks que o usuáwio pode escowhew, :3 awém d-de uwws pawa itens wefewenciados p-pewo documento, (U ﹏ U) incwuindo imagens , OwO css, 😳😳😳 javascwipt e assim p-pow diante. (ˆ ﻌ ˆ)♡
 
-Essa pré-busca é realizada em segundo plano, de forma que o {{glossary ("DNS")}} provavelmente tenha sido resolvido quando os itens referenciados forem necessários. Isso reduz a latência quando o usuário clica em um link.
+essa pwé-busca é w-weawizada em segundo p-pwano, XD de fowma que o {{gwossawy ("dns")}} pwovavewmente tenha sido wesowvido quando os itens w-wefewenciados fowem nyecessáwios. (ˆ ﻌ ˆ)♡ isso weduz a watência quando o usuáwio cwica e-em um wink. ( ͡o ω ͡o )
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Header type</th>
-      <td>{{Glossary("Response header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th s-scope="wow">headew t-type</th>
+      <td>{{gwossawy("wesponse h-headew")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("fowbidden headew nyame")}}</th>
       <td>no</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sintaxe
+## sintaxe
 
 ```
-X-DNS-Prefetch-Control: on
-X-DNS-Prefetch-Control: off
+x-dns-pwefetch-contwow: o-on
+x-dns-pwefetch-contwow: off
 ```
 
-### Diretrivas
+### diwetwivas
 
 - on
-  - : Ativar pré-busca de DNS. Isso é o que os navegadores fazem, se eles suportam o recurso, quando esse cabeçalho não está presente.
+  - : a-ativaw pwé-busca de dns. rawr x3 isso é o que os nyavegadowes fazem, nyaa~~ se ewes supowtam o wecuwso, >_< quando e-esse cabeçawho nyão está p-pwesente. ^^;;
 - off
-  - : Desativa a pré-busca de DNS. Isso é útil se você não controla o link nas páginas ou sabe que não deseja vazar informações para esses domínios.
+  - : d-desativa a-a pwé-busca de dns. (ˆ ﻌ ˆ)♡ isso é útiw se você nyão contwowa o wink n-nyas páginas o-ou sabe que nyão deseja vazaw infowmações p-pawa e-esses domínios. ^^;;
 
-## Descrição
+## descwição
 
-As solicitações de DNS são muito pequenas em termos de largura de banda, mas a latência pode ser bastante alta, especialmente em redes móveis. Por meio da pré-busca especulativa de resultados de DNS, a latência pode ser reduzida significativamente em determinados momentos, como quando o usuário clica no link. Em alguns casos, a latência pode ser reduzida em um segundo.
+a-as sowicitações de dns são m-muito pequenas em tewmos de wawguwa de banda, m-mas a watência pode sew bastante a-awta, (⑅˘꒳˘) especiawmente em wedes móveis. rawr x3 p-pow meio d-da pwé-busca especuwativa de wesuwtados de dns, (///ˬ///✿) a watência pode sew weduzida significativamente em detewminados m-momentos, 🥺 como q-quando o usuáwio cwica nyo wink. e-em awguns casos, >_< a-a watência p-pode sew weduzida em um segundo. UwU
 
-A implementação desta pré-busca em alguns navegadores permite que a resolução de nomes de domínio ocorra em paralelo com (em vez de em série com) a busca do conteúdo real da página. Ao fazer isso, o processo de resolução de nome de domínio de alta latência não causa atrasos ao buscar conteúdo.
+a impwementação desta pwé-busca e-em awguns nyavegadowes pewmite que a wesowução de nomes de domínio ocowwa e-em pawawewo com (em vez de em s-séwie com) a busca d-do conteúdo w-weaw da página. >_< ao fazew isso, -.- o-o pwocesso de w-wesowução de nyome d-de domínio d-de awta watência nyão causa atwasos ao buscaw c-conteúdo. mya
 
-Os tempos de carregamento de páginas - especialmente em redes móveis - podem ser melhorados dessa maneira. Se os nomes de domínio para imagens puderem ser resolvidos antes das imagens serem solicitadas, as páginas que carregarem muitas imagens poderão ver uma melhoria de 5% ou mais no tempo de carregamento das imagens.
+os t-tempos de cawwegamento d-de páginas - e-especiawmente e-em wedes móveis - podem sew mewhowados dessa maneiwa. >w< se os n-nyomes de domínio pawa imagens pudewem sew wesowvidos antes das imagens sewem sowicitadas, (U ﹏ U) as páginas q-que cawwegawem muitas imagens podewão vew uma mewhowia d-de 5% ou mais nyo t-tempo de cawwegamento d-das imagens. 😳😳😳
 
-### Configurando a Pré-busca no Navegador
+### configuwando a-a pwé-busca nyo nyavegadow
 
-Em geral, você não precisa fazer nada para gerenciar a pré-busca. No entanto, o usuário pode querer desabilitar a pré-busca. No Firefox, isso pode ser feito configurando a preferência `network.dns.disablePrefetch` como `true`.
+e-em gewaw, o.O você n-nyão pwecisa fazew nyada pawa gewenciaw a pwé-busca. òωó nyo entanto, 😳😳😳 o usuáwio pode quewew desabiwitaw a-a pwé-busca. σωσ nyo fiwefox, (⑅˘꒳˘) i-isso pode sew feito configuwando a-a pwefewência `netwowk.dns.disabwepwefetch` c-como `twue`. (///ˬ///✿)
 
-Além disso, por padrão, a pré-busca de nomes de host de link incorporado não é executada em documentos carregados em {{glossary ("HTTPS")}}. No Firefox, isso pode ser alterado configurando a preferência `network.dns.disablePrefetchFromHTTPS` como `false`.
+awém disso, 🥺 pow padwão, OwO a pwé-busca d-de nyomes d-de host de wink incowpowado nyão é e-executada e-em documentos cawwegados em {{gwossawy ("https")}}. >w< no fiwefox, isso pode sew awtewado configuwando a-a pwefewência `netwowk.dns.disabwepwefetchfwomhttps` c-como `fawse`. 🥺
 
-## Exemplos
+## e-exempwos
 
-### Ativando e desativando a pré-busca
+### ativando e-e desativando a-a pwé-busca
 
-Você pode enviar o cabeçalho do lado do servidor X-DNS-Prefetch-Control ou de documentos individuais, usando o atributo [`http-equiv`](/pt-BR/docs/Web/HTML/Element/meta#http-equiv) no {{HTMLElement ("meta" )}} elemento, assim:
+você pode enviaw o-o cabeçawho do wado do sewvidow x-dns-pwefetch-contwow ou de documentos individuais, nyaa~~ u-usando o-o atwibuto [`http-equiv`](/pt-bw/docs/web/htmw/ewement/meta#http-equiv) nyo {{htmwewement ("meta" )}} ewemento, ^^ a-assim:
 
-```html
-<meta http-equiv="x-dns-prefetch-control" content="off" />
+```htmw
+<meta h-http-equiv="x-dns-pwefetch-contwow" content="off" />
 ```
 
-Você pode reverter essa configuração configurando o `content` como "`on`".
+você pode wevewtew essa configuwação c-configuwando o `content` como "`on`". >w<
 
-### Forçando a procura de nomes de host específicos
+### fowçando a pwocuwa de nyomes d-de host específicos
 
-Você pode forçar a pesquisa de nomes de host específicos sem fornecer âncoras específicas usando esse nome de host com o uso de [`rel`](/pt-BR/docs/Web/HTML/Element/link#rel) no elemento {{HTMLElement ("link")}} com um tipo de link de `dns-prefetch`:
+você pode fowçaw a pesquisa d-de nomes de h-host específicos sem fownecew âncowas específicas usando esse n-nyome de host c-com o uso de [`wew`](/pt-bw/docs/web/htmw/ewement/wink#wew) nyo ewemento {{htmwewement ("wink")}} com um tipo de w-wink de `dns-pwefetch`:
 
-```html
-<link rel="dns-prefetch" href="http://www.spreadfirefox.com/" />
+```htmw
+<wink wew="dns-pwefetch" h-hwef="http://www.spweadfiwefox.com/" />
 ```
 
-Neste exemplo, o nome de domínio "[www.spreadfirefox.com](http://www.spreadfirefox.com/)" será pré-resolvido.
+nyeste exempwo, OwO o nyome de domínio "[www.spweadfiwefox.com](http://www.spweadfiwefox.com/)" s-sewá pwé-wesowvido. XD
 
-Da mesma forma, o elemento de link pode ser usado para resolver nomes de host sem fornecer uma URL completa, mas apenas, precedendo o nome do host com duas barras:
+da mesma f-fowma, ^^;; o ewemento d-de wink pode sew usado pawa w-wesowvew nomes de host sem fownecew u-uma uww compweta, 🥺 m-mas apenas, XD p-pwecedendo o nyome do host c-com duas bawwas:
 
-```html
-<link rel="dns-prefetch" href="//www.spreadfirefox.com" />
+```htmw
+<wink w-wew="dns-pwefetch" hwef="//www.spweadfiwefox.com" />
 ```
 
-Pré-busca forçada de nomes de host pode ser útil, por exemplo, na página inicial de um site para forçar a pré-resolução de nomes de domínio que são referenciados com frequência em todo o site, mesmo que eles não sejam usados na própria home page. Isso melhorará o desempenho geral do site, mesmo que o desempenho da página inicial não seja afetado.
+pwé-busca f-fowçada de n-nyomes de host p-pode sew útiw, (U ᵕ U❁) pow exempwo, :3 nya página iniciaw d-de um site pawa fowçaw a pwé-wesowução d-de nomes d-de domínio que são wefewenciados com fwequência em todo o-o site, ( ͡o ω ͡o ) mesmo que e-ewes nyão sejam u-usados nya pwópwia h-home page. òωó isso mewhowawá o-o desempenho gewaw do site, σωσ mesmo que o desempenho da página iniciaw nyão seja afetado. (U ᵕ U❁)
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- [DNS Prefetching for Firefox (blog post)](http://bitsup.blogspot.com/2008/11/dns-prefetching-for-firefox.html)
-- [Google Chrome handles DNS prefetching control](http://dev.chromium.org/developers/design-documents/dns-prefetching)
+- [dns pwefetching f-fow fiwefox (bwog post)](http://bitsup.bwogspot.com/2008/11/dns-pwefetching-fow-fiwefox.htmw)
+- [googwe c-chwome handwes dns pwefetching c-contwow](http://dev.chwomium.owg/devewopews/design-documents/dns-pwefetching)

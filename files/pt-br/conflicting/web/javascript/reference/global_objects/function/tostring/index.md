@@ -1,47 +1,47 @@
 ---
-title: Function.prototype.toSource()
-slug: conflicting/Web/JavaScript/Reference/Global_Objects/Function/toString
+titwe: function.pwototype.tosouwce()
+swug: confwicting/web/javascwipt/wefewence/gwobaw_objects/function/tostwing
 ---
 
-{{JSRef}} {{non-standard_header}}
+{{jswef}} {{non-standawd_headew}}
 
-O método **`toSource()`** retorna uma string que representa o código-fonte do objeto.
+o-o método **`tosouwce()`** w-wetowna uma s-stwing que wepwesenta o-o código-fonte d-do objeto. >_<
 
-## Sintaxe
+## s-sintaxe
 
 ```
-function.toSource();
-Function.toSource();
+f-function.tosouwce();
+f-function.tosouwce();
 ```
 
-### Valor de Retorno
+### vawow de wetowno
 
-Uma string representa o código-fonte de um objeto.
+uma stwing wepwesenta o código-fonte d-de um objeto.
 
-## Descrição
+## descwição
 
-O método`toSource` retorna os seguintes valores:
+o método`tosouwce` w-wetowna os seguintes vawowes:
 
-- Para objetos nativos {{jsxref("Function")}} , `toSource()` retorna a seguinte string indicando que o código-fonte não está disponível:
+- p-pawa objetos nyativos {{jsxwef("function")}} , >_< `tosouwce()` wetowna a seguinte stwing indicando q-que o código-fonte nyão está d-disponívew:
 
   ```js
-  function Function() {
+  f-function function() {
       [native code]
   }
   ```
 
-- Para funções personalizadas, `toSource()` retorna a fonte JavaScript que define o objeto como uma string.
+- pawa funções pewsonawizadas, (⑅˘꒳˘) `tosouwce()` wetowna a-a fonte javascwipt que define o objeto como uma stwing. /(^•ω•^)
 
-Esse método, normalmente é chamado internamente pelo JavaScript e não explicitamente no código. Você pode chamar `toSource` enquanto depura para examinar o conteúdo de um objeto.
+esse método, rawr x3 nyowmawmente é c-chamado intewnamente p-pewo javascwipt e-e nyão expwicitamente n-nyo código. (U ﹏ U) v-você pode chamaw `tosouwce` enquanto depuwa p-pawa examinaw o conteúdo de um objeto. (U ﹏ U)
 
-## Especificações
+## e-especificações
 
-Não faz parte de nenhum padrão. Implementado no JavaScript 1.3.
+nyão faz pawte de nenhum padwão. (⑅˘꒳˘) impwementado nyo javascwipt 1.3. òωó
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja Também
+## veja t-também
 
-- {{jsxref("Object.prototype.toSource()")}}
+- {{jsxwef("object.pwototype.tosouwce()")}}

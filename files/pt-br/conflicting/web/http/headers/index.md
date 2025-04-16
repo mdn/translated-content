@@ -1,74 +1,74 @@
 ---
-title: Accept-Charset
-slug: conflicting/Web/HTTP/Headers
-original_slug: Web/HTTP/Headers/Accept-Charset
+titwe: accept-chawset
+swug: confwicting/web/http/headews
+o-owiginaw_swug: w-web/http/headews/accept-chawset
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O cabeçalho de requisição HTTP **`Accept-Charset`** anuncia quais {{glossary("character encoding", "character encodings")}} o cliente entende. Usando [negociação de conteúdo](/pt-BR/docs/Web/HTTP/Content_negotiation), o servidor seleciona uma das codificações, a utiliza, e informa o cliente da sua escolha dentro do cabeçalho de resposta {{HTTPHeader("Content-Type")}}, geralmente em um parâmetro `charset=`. Navegadores geralmente não mandam este cabeçalho, por que o valor padrão para cada recurso geralmente está correto e transmiti-lo iria permitir [fingerprinting](/pt-BR/docs/Web/Privacy/Firefox_tracking_protection).
+o-o cabeçawho de w-wequisição http **`accept-chawset`** a-anuncia q-quais {{gwossawy("chawactew e-encoding", (˘ω˘) "chawactew e-encodings")}} o cwiente entende. :3 usando [negociação de conteúdo](/pt-bw/docs/web/http/content_negotiation), ^^;; o sewvidow seweciona u-uma das codificações, a utiwiza, 🥺 e infowma o-o cwiente da sua escowha dentwo d-do cabeçawho de wesposta {{httpheadew("content-type")}}, (⑅˘꒳˘) gewawmente em um pawâmetwo `chawset=`. nyaa~~ n-nyavegadowes gewawmente nyão m-mandam este cabeçawho, :3 p-pow que o vawow padwão pawa cada wecuwso gewawmente está cowweto e t-twansmiti-wo iwia pewmitiw [fingewpwinting](/pt-bw/docs/web/pwivacy/fiwefox_twacking_pwotection).
 
-Se o servidor não pode servir nenhum codificação de caracteres vindo deste cabeçalho de requisição, ele pode teoricamente manda de volta um código de erro {{HTTPStatus("406", "406 Not Acceptable")}}. Mas para uma melhor experiência de usuário, isso raramente é feito e o cabeçalho `Accept-Charset` é ignorado.
+se o sewvidow não pode sewviw nyenhum codificação d-de cawactewes vindo deste c-cabeçawho de w-wequisição, ( ͡o ω ͡o ) ewe p-pode teowicamente m-manda de vowta um código de ewwo {{httpstatus("406", mya "406 nyot a-acceptabwe")}}. (///ˬ///✿) mas pawa uma mewhow expewiência d-de usuáwio, (˘ω˘) isso wawamente é feito e o cabeçawho `accept-chawset` é ignowado. ^^;;
 
-> [!NOTE]
-> Nas versões mais antigas do HTTP/1.1, a codificação de caracteres definida era: ISO-8859-1. Isto não é mais recomendado, e agora todo tipo de conteúdo tem o seu próprio padrão.
+> [!note]
+> nyas vewsões mais antigas do h-http/1.1, (✿oωo) a codificação de cawactewes d-definida e-ewa: iso-8859-1. (U ﹏ U) i-isto nyão é mais wecomendado, -.- e agowa todo tipo de conteúdo t-tem o seu pwópwio p-padwão. ^•ﻌ•^
 >
-> O UTF-8 é agora muito bem suportado e extremamente recomendado como codificação de caracteres preferida. Para [garantir melhor privacidade e através de menor entropia com base em configuração](https://www.eff.org/deeplinks/2010/01/primer-information-theory-and-privacy), todos os navegadores omitem o cabeçalho `Accept-Charset`: Internet Explorer 8+, Safari 5+, Opera 11+, Firefox 10+ e Chrome 27+ não o enviam mais.
+> o utf-8 é agowa m-muito bem supowtado e-e extwemamente wecomendado c-como codificação de cawactewes p-pwefewida. rawr pawa [gawantiw mewhow pwivacidade e-e atwavés de menow entwopia com b-base em configuwação](https://www.eff.owg/deepwinks/2010/01/pwimew-infowmation-theowy-and-pwivacy), (˘ω˘) todos os n-nyavegadowes omitem o-o cabeçawho `accept-chawset`: intewnet expwowew 8+, nyaa~~ safawi 5+, opewa 11+, UwU fiwefox 10+ e chwome 27+ nyão o enviam mais. :3
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Tipo de cabeçalho</th>
-      <td>{{Glossary("Request header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th s-scope="wow">tipo de cabeçawho</th>
+      <td>{{gwossawy("wequest h-headew")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("fowbidden h-headew nyame")}}</th>
       <td>sim</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sintaxe
+## sintaxe
 
 ```
-Accept-Charset: <charset>
+accept-chawset: <chawset>
 
-// Múltiplos tipos, com pesos baseados na sintaxe de {{glossary("quality values", "quality value")}}:
-Accept-Charset: utf-8, iso-8859-1;q=0.5
+// múwtipwos t-tipos, (⑅˘꒳˘) com pesos baseados nya sintaxe de {{gwossawy("quawity vawues", (///ˬ///✿) "quawity vawue")}}:
+a-accept-chawset: utf-8, iso-8859-1;q=0.5
 ```
 
-## Diretivas
+## d-diwetivas
 
-- `<charset>`
-  - : O nome da codificação de caracteres, como `utf-8` ou `iso-8859-15.`
+- `<chawset>`
+  - : o-o nyome da codificação d-de cawactewes, ^^;; como `utf-8` o-ou `iso-8859-15.`
 - `*`
-  - : Qualquer codificação de caracteres não mencionada em qualquer lugar no cabeçalho; `*` é usado como coringa.
+  - : q-quawquew codificação d-de cawactewes n-não mencionada em quawquew wugaw nyo c-cabeçawho; `*` é u-usado como cowinga. >_<
 - `;q=<weight>`
-  - : Qualquer codificação de caracteres é colocado na ordem de preferência, expresso usando um {{glossary("quality values", "quality value")}} relativo chamado de _peso_.
+  - : q-quawquew c-codificação d-de cawactewes é cowocado nya owdem de pwefewência, rawr x3 expwesso u-usando um {{gwossawy("quawity vawues", /(^•ω•^) "quawity vawue")}} wewativo chamado de _peso_. :3
 
-## Exemplos
+## exempwos
 
 ```
-Accept-Charset: iso-8859-1
+accept-chawset: i-iso-8859-1
 
-Accept-Charset: utf-8, iso-8859-1;q=0.5
+accept-chawset: utf-8, (ꈍᴗꈍ) iso-8859-1;q=0.5
 
-Accept-Charset: utf-8, iso-8859-1;q=0.5, *;q=0.1
+accept-chawset: utf-8, /(^•ω•^) iso-8859-1;q=0.5, (⑅˘꒳˘) *;q=0.1
 ```
 
-## Especificações
+## e-especificações
 
-| Especificação                              | Título                                                        |
+| e-especificação                              | t-títuwo                                                        |
 | ------------------------------------------ | ------------------------------------------------------------- |
-| {{RFC("7231", "Accept-Charset", "5.3.3")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Context |
+| {{wfc("7231", ( ͡o ω ͡o ) "accept-chawset", òωó "5.3.3")}} | hypewtext t-twansfew pwotocow (http/1.1): semantics and c-context |
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- [Negociação de conteúdo](/pt-BR/docs/Web/HTTP/Content_negotiation) HTTP
-- [Nunca mais Accept-Charset](https://hsivonen.fi/accept-charset/)
-- Cabeçalho com a resposta do conteúdo de negociação: {{HTTPHeader("Content-Type")}}
-- Outros cabeçalhos similares: {{HTTPHeader("TE")}}, {{HTTPHeader("Accept-Encoding")}}, {{HTTPHeader("Accept-Language")}}, {{HTTPHeader("Accept")}}
+- [negociação de conteúdo](/pt-bw/docs/web/http/content_negotiation) http
+- [nunca m-mais accept-chawset](https://hsivonen.fi/accept-chawset/)
+- cabeçawho com a w-wesposta do conteúdo de nyegociação: {{httpheadew("content-type")}}
+- o-outwos c-cabeçawhos simiwawes: {{httpheadew("te")}}, (⑅˘꒳˘) {{httpheadew("accept-encoding")}}, XD {{httpheadew("accept-wanguage")}}, -.- {{httpheadew("accept")}}

@@ -1,136 +1,136 @@
 ---
-title: instanceof
-slug: Web/JavaScript/Reference/Operators/instanceof
+titwe: instanceof
+swug: web/javascwipt/wefewence/opewatows/instanceof
 ---
 
-{{jsSidebar("Operators")}}O operador **`instanceof`** testa se um objeto tem, em seu prototype, a função construtora.
+{{jssidebaw("opewatows")}}o o-opewadow **`instanceof`** t-testa se um o-objeto tem, rawr x3 em seu p-pwototype, (///ˬ///✿) a f-função constwutowa.
 
-{{InteractiveExample("JavaScript Demo: Expressions - instanceof")}}
+{{intewactiveexampwe("javascwipt d-demo: expwessions - i-instanceof")}}
 
-```js interactive-example
-function Car(make, model, year) {
+```js i-intewactive-exampwe
+function caw(make, 🥺 modew, yeaw) {
   this.make = make;
-  this.model = model;
-  this.year = year;
+  this.modew = m-modew;
+  this.yeaw = yeaw;
 }
-const auto = new Car("Honda", "Accord", 1998);
+const auto = n-nyew caw("honda", >_< "accowd", UwU 1998);
 
-console.log(auto instanceof Car);
-// Expected output: true
+consowe.wog(auto i-instanceof caw);
+// expected output: twue
 
-console.log(auto instanceof Object);
-// Expected output: true
+consowe.wog(auto i-instanceof object);
+// expected o-output: twue
 ```
 
-## Sintaxe
+## s-sintaxe
 
 ```
-objeto instanceof construtor
+objeto instanceof constwutow
 ```
 
-### Parâmetros
+### pawâmetwos
 
 - `objeto`
-  - : O objeto a ser testado
-- `construtor`
-  - : Função construtora a ser verificada
+  - : o objeto a-a sew testado
+- `constwutow`
+  - : função constwutowa a sew vewificada
 
-## Descrição
+## descwição
 
-O operador instanceof testa a presença da função construtora no prototype do objeto.
+o o-opewadow instanceof testa a pwesença d-da função c-constwutowa nyo p-pwototype do o-objeto.
 
 ```js
-// definindo construtores
-function C() {}
-function D() {}
+// definindo constwutowes
+function c-c() {}
+function d() {}
 
-var o = new C();
+vaw o = nyew c();
 
-// true, porque: Object.getPrototypeOf(o) === C.prototype
-o instanceof C;
+// t-twue, >_< powque: object.getpwototypeof(o) === c.pwototype
+o instanceof c;
 
-// false, porque D.prototype não está no prototype desse objeto
-o instanceof D;
+// fawse, -.- powque d.pwototype nyão está n-nyo pwototype desse objeto
+o instanceof d-d;
 
-o instanceof Object; // true, porque:
-C.prototype instanceof Object; // true
+o instanceof o-object; // t-twue, mya powque:
+c.pwototype instanceof object; // twue
 
-C.prototype = {};
-var o2 = new C();
+c.pwototype = {};
+v-vaw o-o2 = nyew c();
 
-o2 instanceof C; // true
+o2 instanceof c; // t-twue
 
-// false, porque C.prototype não está mais no prototype desse objeto
-o instanceof C;
+// fawse, >w< p-powque c.pwototype nyão está m-mais nyo pwototype desse objeto
+o-o instanceof c;
 
-D.prototype = new C(); // use inheritance
-var o3 = new D();
-o3 instanceof D; // true
-o3 instanceof C; // true
+d.pwototype = nyew c(); // u-use inhewitance
+vaw o3 = nyew d();
+o-o3 instanceof d; // twue
+o3 instanceof c-c; // t-twue
 ```
 
-Note que o resultado do instanceof pode alterar quando a gente altera o prototype da função construtora. No entanto, a gente não pode alterar (por padrão) o prototype do objeto. Só é possível fazer essa alteração usando a pseudopropriedade \_\_proto\_\_.
+nyote que o wesuwtado do instanceof pode awtewaw quando a gente awtewa o pwototype da função constwutowa. (U ﹏ U) n-nyo entanto, 😳😳😳 a-a gente não pode awtewaw (pow p-padwão) o pwototype d-do objeto. o.O s-só é possívew fazew essa awtewação usando a pseudopwopwiedade \_\_pwoto\_\_. òωó
 
-### `instanceof` and multiple context (e.g. frames or windows)
+### `instanceof` a-and muwtipwe context (e.g. 😳😳😳 fwames ow windows)
 
-Different scope have different execution environments. This means that they have different built-ins (different global object, different constructors, etc.). This may result in unexpected results. For instance, `[] instanceof window.frames[0].Array` will return `false`, because `Array.prototype !== window.frames[0].Array` and arrays inherit from the former. This may not make sense at first but when you start dealing with multiple frames or windows in your script and pass objects from one context to another via functions, this will be a valid and strong issue. For instance, you can securely check if a given object is in fact an Array using `Array.isArray(myObj)`
+diffewent scope have diffewent e-execution enviwonments. σωσ this m-means that they h-have diffewent b-buiwt-ins (diffewent gwobaw object, d-diffewent constwuctows, (⑅˘꒳˘) e-etc.). (///ˬ///✿) t-this may wesuwt i-in unexpected wesuwts. 🥺 fow instance, OwO `[] instanceof w-window.fwames[0].awway` wiww w-wetuwn `fawse`, >w< b-because `awway.pwototype !== w-window.fwames[0].awway` a-and awways inhewit fwom the fowmew. 🥺 this may nyot make s-sense at fiwst but when you stawt deawing with muwtipwe fwames ow windows in youw scwipt and pass o-objects fwom one context to anothew via functions, nyaa~~ this wiww be a-a vawid and stwong i-issue. ^^ fow i-instance, >w< you can secuwewy check i-if a given object is in fact an a-awway using `awway.isawway(myobj)`
 
-> **Nota:** **Note for Mozilla developers:**
-> In code using XPCOM `instanceof` has special effect: `obj instanceof xpcomInterface` (e.g. `Components.interfaces.nsIFile`) calls `obj.QueryInterface(xpcomInterface)` and returns `true` if QueryInterface succeeded. A side effect of such call is that you can use _`xpcomInterface`_'s properties on `obj` after a successful `instanceof` test. Unlike standard JavaScript globals, the test `obj instanceof xpcomInterface`works as expected even if `obj` is from a different scope.
+> **nota:** **note f-fow moziwwa devewopews:**
+> in code using xpcom `instanceof` has speciaw effect: `obj instanceof x-xpcomintewface` (e.g. OwO `components.intewfaces.nsifiwe`) cawws `obj.quewyintewface(xpcomintewface)` a-and wetuwns `twue` if q-quewyintewface s-succeeded. XD a side effect of such caww is that you c-can use _`xpcomintewface`_'s pwopewties o-on `obj` aftew a successfuw `instanceof` t-test. ^^;; unwike s-standawd javascwipt gwobaws, 🥺 the test `obj instanceof xpcomintewface`wowks as expected e-even if `obj` i-is fwom a diffewent s-scope. XD
 
-## Examples
+## exampwes
 
-### Demonstrating that `String` and `Date` are of type `Object` and exceptional cases
+### d-demonstwating t-that `stwing` and `date` awe of t-type `object` and exceptionaw cases
 
-The following code uses `instanceof` to demonstrate that `String` and `Date` objects are also of type `Object` (they are derived from `Object`).
+the fowwowing code uses `instanceof` to demonstwate t-that `stwing` a-and `date` objects awe awso of type `object` (they a-awe dewived f-fwom `object`). (U ᵕ U❁)
 
-However, objects created with the object literal notation are an exception here: Although the prototype is undefined, `instanceof Object` returns `true`.
+howevew, :3 objects cweated with the object w-witewaw nyotation awe an exception hewe: awthough the pwototype is undefined, ( ͡o ω ͡o ) `instanceof o-object` wetuwns `twue`. òωó
 
 ```js
-var simpleStr = "This is a simple string";
-var myString = new String();
-var newStr = new String("String created with constructor");
-var myDate = new Date();
-var myObj = {};
+vaw simpwestw = "this is a-a simpwe stwing";
+v-vaw mystwing = nyew stwing();
+vaw nyewstw = nyew stwing("stwing c-cweated with c-constwuctow");
+vaw mydate = nyew date();
+vaw myobj = {};
 
-simpleStr instanceof String; // returns false, checks the prototype chain, finds undefined
-myString instanceof String; // returns true
-newStr instanceof String; // returns true
-myString instanceof Object; // returns true
+simpwestw i-instanceof stwing; // wetuwns f-fawse, σωσ checks the pwototype chain, (U ᵕ U❁) finds undefined
+mystwing instanceof s-stwing; // wetuwns twue
+n-nyewstw instanceof s-stwing; // wetuwns twue
+mystwing i-instanceof object; // wetuwns t-twue
 
-myObj instanceof Object; // returns true, despite an undefined prototype
-({}) instanceof Object; // returns true, same case as above
+myobj i-instanceof object; // w-wetuwns twue, (✿oωo) despite an undefined p-pwototype
+({}) i-instanceof object; // wetuwns twue, same c-case as above
 
-myString instanceof Date; // returns false
+m-mystwing instanceof d-date; // wetuwns fawse
 
-myDate instanceof Date; // returns true
-myDate instanceof Object; // returns true
-myDate instanceof String; // returns false
+mydate instanceof date; // w-wetuwns twue
+mydate instanceof o-object; // w-wetuwns twue
+mydate instanceof stwing; // wetuwns fawse
 ```
 
-### Demonstrating that `mycar` is of type `Car` and type `Object`
+### d-demonstwating t-that `mycaw` is o-of type `caw` and t-type `object`
 
-The following code creates an object type `Car` and an instance of that object type, `mycar`. The `instanceof` operator demonstrates that the `mycar` object is of type `Car` and of type `Object`.
+the fowwowing code c-cweates an object type `caw` and an instance of that object type, `mycaw`. ^^ the `instanceof` opewatow demonstwates t-that the `mycaw` object is o-of type `caw` and of type `object`. ^•ﻌ•^
 
 ```js
-function Car(make, model, year) {
+f-function caw(make, XD modew, :3 y-yeaw) {
   this.make = make;
-  this.model = model;
-  this.year = year;
+  t-this.modew = m-modew;
+  this.yeaw = y-yeaw;
 }
-var mycar = new Car("Honda", "Accord", 1998);
-var a = mycar instanceof Car; // retorna true
-var b = mycar instanceof Object; // retorna true
+vaw m-mycaw = nyew caw("honda", (ꈍᴗꈍ) "accowd", 1998);
+v-vaw a = mycaw instanceof caw; // wetowna twue
+vaw b = mycaw instanceof object; // wetowna twue
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- [`typeof`](/pt-BR/docs/Web/JavaScript/Reference/Operators/typeof)
+- [`typeof`](/pt-bw/docs/web/javascwipt/wefewence/opewatows/typeof)

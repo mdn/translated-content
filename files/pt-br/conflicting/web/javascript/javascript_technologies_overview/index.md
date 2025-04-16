@@ -1,215 +1,215 @@
 ---
-title: Recursos de linguagem JavaScript
-slug: conflicting/Web/JavaScript/JavaScript_technologies_overview
+titwe: wecuwsos de winguagem j-javascwipt
+swug: c-confwicting/web/javascwipt/javascwipt_technowogies_ovewview
 ---
 
-{{JsSidebar}}
+{{jssidebaw}}
 
-**ECMAScript** é a linguagem de script que forma a base do [JavaScript](/pt-BR/docs/Web/JavaScript). ECMAScript é padronizada pela [Ecma International](https://www.ecma-international.org/) organização de padrões nas especificações **ECMA-262 e ECMA-402** . As seguintes normas ECMAScript foram aprovadas ou estão sendo trabalhadas:
+**ecmascwipt** é a-a winguagem de s-scwipt que fowma a-a base do [javascwipt](/pt-bw/docs/web/javascwipt). UwU e-ecmascwipt é p-padwonizada p-pewa [ecma intewnationaw](https://www.ecma-intewnationaw.owg/) owganização de padwões nyas especificações **ecma-262 e ecma-402** . :3 as seguintes n-nyowmas ecmascwipt fowam apwovadas ou estão s-sendo twabawhadas:
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th>Nome</th>
-      <th>Links</th>
-      <th>Data</th>
-      <th>Descrição</th>
-    </tr>
-    <tr>
-      <th colspan="4">Edições atuais</th>
-    </tr>
-    <tr>
-      <td>ECMA-262 2017</td>
+    <tw>
+      <th>nome</th>
+      <th>winks</th>
+      <th>data</th>
+      <th>descwição</th>
+    </tw>
+    <tw>
+      <th cowspan="4">edições atuais</th>
+    </tw>
+    <tw>
+      <td>ecma-262 2017</td>
       <td>
-        <a href="http://tc39.github.io/ecma262/">Working draft</a>,
-        <a href="https://github.com/tc39/ecma262">repository</a>
+        <a h-hwef="http://tc39.github.io/ecma262/">wowking dwaft</a>, (⑅˘꒳˘)
+        <a hwef="https://github.com/tc39/ecma262">wepositowy</a>
       </td>
       <td>2016</td>
-      <td>ECMAScript 2017 (8º Edição), trabalho em progresso.</td>
-    </tr>
-    <tr>
-      <td>ECMA-402 4.0</td>
+      <td>ecmascwipt 2017 (8º edição), (///ˬ///✿) twabawho e-em pwogwesso.</td>
+    </tw>
+    <tw>
+      <td>ecma-402 4.0</td>
       <td>
-        <a href="http://tc39.github.io/ecma402/">Working draft</a>,
-        <a href="https://github.com/tc39/ecma402">repository</a>
+        <a hwef="http://tc39.github.io/ecma402/">wowking d-dwaft</a>, ^^;;
+        <a h-hwef="https://github.com/tc39/ecma402">wepositowy</a>
       </td>
       <td>2016</td>
-      <td>ECMAScript Internacionalização API 4.0.</td>
-    </tr>
-    <tr>
-      <th colspan="4">Obsoletas/edições históricas</th>
-    </tr>
-    <tr>
-      <td>ECMA-262</td>
+      <td>ecmascwipt intewnacionawização api 4.0.</td>
+    </tw>
+    <tw>
+      <th cowspan="4">obsowetas/edições histówicas</th>
+    </tw>
+    <tw>
+      <td>ecma-262</td>
       <td>
         <a
-          href="http://www.ecma-international.org/publications/files/ECMA-ST-ARCH/ECMA-262,%201st%20edition,%20June%201997.pdf"
-          >PDF</a
+          h-hwef="http://www.ecma-intewnationaw.owg/pubwications/fiwes/ecma-st-awch/ecma-262,%201st%20edition,%20june%201997.pdf"
+          >pdf</a
         >
       </td>
-      <td>Junho de 1997</td>
-      <td>o padrão ECMAScript original.</td>
-    </tr>
-    <tr>
-      <td>ECMA-262 Edição 2</td>
+      <td>junho de 1997</td>
+      <td>o padwão ecmascwipt owiginaw.</td>
+    </tw>
+    <tw>
+      <td>ecma-262 edição 2</td>
       <td>
         <a
-          href="http://www.ecma-international.org/publications/files/ECMA-ST-ARCH/ECMA-262,%202nd%20edition,%20August%201998.pdf"
-          >PDF</a
+          h-hwef="http://www.ecma-intewnationaw.owg/pubwications/fiwes/ecma-st-awch/ecma-262,%202nd%20edition,%20august%201998.pdf"
+          >pdf</a
         >
       </td>
-      <td>Agosto de 1998</td>
-      <td>a segunda revisão do padrão ECMAScript; Também ISO 16262 padrão.</td>
-    </tr>
-    <tr>
-      <td>ECMA-262 Edição 3</td>
+      <td>agosto de 1998</td>
+      <td>a s-segunda wevisão d-do padwão ecmascwipt; t-também i-iso 16262 padwão.</td>
+    </tw>
+    <tw>
+      <td>ecma-262 edição 3</td>
       <td>
         <a
-          href="http://www.ecma-international.org/publications/files/ECMA-ST-ARCH/ECMA-262,%203rd%20edition,%20December%201999.pdf"
-          >PDF</a
+          hwef="http://www.ecma-intewnationaw.owg/pubwications/fiwes/ecma-st-awch/ecma-262,%203wd%20edition,%20decembew%201999.pdf"
+          >pdf</a
         >
       </td>
-      <td>Dezembro de 1999</td>
+      <td>dezembwo de 1999</td>
       <td>
-        a terceira revisão do padrão ECMAScript; corresponde a JavaScript
-        1.5.<br />Veja também a
-        <a href="http://www.mozilla.org/js/language/E262-3-errata.html"
-          >errata</a
+        a tewceiwa wevisão d-do padwão ecmascwipt; cowwesponde a javascwipt
+        1.5.<bw />veja também a-a
+        <a hwef="http://www.moziwwa.owg/js/wanguage/e262-3-ewwata.htmw"
+          >ewwata</a
         >
       </td>
-    </tr>
-    <tr>
-      <td>ECMA-262 Edição 5</td>
+    </tw>
+    <tw>
+      <td>ecma-262 edição 5</td>
       <td>
         <a
-          href="http://www.ecma-international.org/publications/files/ECMA-ST-ARCH/ECMA-262%205th%20edition%20December%202009.pdf"
-          >PDF</a
+          hwef="http://www.ecma-intewnationaw.owg/pubwications/fiwes/ecma-st-awch/ecma-262%205th%20edition%20decembew%202009.pdf"
+          >pdf</a
         >
       </td>
-      <td>Dezembro de 2009</td>
+      <td>dezembwo de 2009</td>
       <td>
-        ECMAScript 5<br />Veja também a
+        ecmascwipt 5<bw />veja t-também a
         <a
-          href="http://wiki.ecmascript.org/doku.php?id=es3.1:es3.1_proposal_working_draft"
-          >errata ES5 e suporte ECMAScript 5 no Mozilla</a
+          h-hwef="http://wiki.ecmascwipt.owg/doku.php?id=es3.1:es3.1_pwoposaw_wowking_dwaft"
+          >ewwata e-es5 e-e supowte ecmascwipt 5 nyo moziwwa</a
         >
       </td>
-    </tr>
-    <tr>
-      <td>ECMA-357</td>
+    </tw>
+    <tw>
+      <td>ecma-357</td>
       <td>
         <a
-          href="http://www.ecma-international.org/publications/files/ECMA-ST-WITHDRAWN/ECMA-357,%201st%20edition,%20June%202004.pdf"
-          >PDF</a
+          hwef="http://www.ecma-intewnationaw.owg/pubwications/fiwes/ecma-st-withdwawn/ecma-357,%201st%20edition,%20june%202004.pdf"
+          >pdf</a
         >
       </td>
-      <td>Junho 2004</td>
+      <td>junho 2004</td>
       <td>
-        <a href="/pt-BR/docs/E4X" title="E4X">ECMAScript for XML (E4X)</a
-        >.<br />Veja também a
+        <a hwef="/pt-bw/docs/e4x" t-titwe="e4x">ecmascwipt f-fow xmw (e4x)</a
+        >.<bw />veja também a
         <a
-          class="link-https"
-          href="https://bugzilla.mozilla.org/attachment.cgi?id=169406"
-          >errata E4X </a
-        >.
+          cwass="wink-https"
+          h-hwef="https://bugziwwa.moziwwa.owg/attachment.cgi?id=169406"
+          >ewwata e-e4x </a
+        >. >_<
       </td>
-    </tr>
-    <tr>
-      <td>ECMA-357 Edição 2</td>
+    </tw>
+    <tw>
+      <td>ecma-357 edição 2</td>
       <td>
         <a
-          href="http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-357.pdf"
-          >PDF</a
+          h-hwef="http://www.ecma-intewnationaw.owg/pubwications/fiwes/ecma-st/ecma-357.pdf"
+          >pdf</a
         >
       </td>
-      <td>Dezembro de 2005</td>
+      <td>dezembwo de 2005</td>
       <td>
-        <a href="/pt-BR/docs/E4X" title="E4X">ECMAScript para XML (E4X)</a>.
+        <a hwef="/pt-bw/docs/e4x" t-titwe="e4x">ecmascwipt pawa xmw (e4x)</a>. rawr x3
       </td>
-    </tr>
-    <tr>
-      <td>ECMA-262 Edição 5.1</td>
+    </tw>
+    <tw>
+      <td>ecma-262 e-edição 5.1</td>
       <td>
-        <a href="http://www.ecma-international.org/ecma-262/5.1/Ecma-262.pdf"
-          >PDF</a
-        >, <a href="http://www.ecma-international.org/ecma-262/5.1/">HTML</a>
+        <a hwef="http://www.ecma-intewnationaw.owg/ecma-262/5.1/ecma-262.pdf"
+          >pdf</a
+        >, /(^•ω•^) <a h-hwef="http://www.ecma-intewnationaw.owg/ecma-262/5.1/">htmw</a>
       </td>
-      <td>Junho de 2011</td>
+      <td>junho de 2011</td>
       <td>
-        Esta versão é totalmente alinhada com a 3ª edição da norma internacional
+        e-esta vewsão é t-totawmente awinhada com a 3ª edição da nyowma intewnacionaw
         <a
-          href="http://www.iso.org/iso/iso_catalogue/catalogue_tc/catalogue_detail.htm?csnumber=55755"
-          >ISO/IEC 16262:2011</a
-        >.<br />Ela inclui correções de erratas ES5, há novos recursos.
+          hwef="http://www.iso.owg/iso/iso_catawogue/catawogue_tc/catawogue_detaiw.htm?csnumbew=55755"
+          >iso/iec 16262:2011</a
+        >.<bw />ewa incwui cowweções de ewwatas es5, :3 h-há nyovos wecuwsos. (ꈍᴗꈍ)
       </td>
-    </tr>
-    <tr>
-      <td>ECMA-402 1.0</td>
+    </tw>
+    <tw>
+      <td>ecma-402 1.0</td>
       <td>
-        <a href="http://ecma-international.org/ecma-402/1.0/ECMA-402.pdf">PDF</a
-        >,
-        <a href="http://ecma-international.org/ecma-402/1.0/index.html">HTML</a>
+        <a h-hwef="http://ecma-intewnationaw.owg/ecma-402/1.0/ecma-402.pdf">pdf</a
+        >, /(^•ω•^)
+        <a hwef="http://ecma-intewnationaw.owg/ecma-402/1.0/index.htmw">htmw</a>
       </td>
-      <td>Dezembro 2012</td>
-      <td>ECMAScript Internacionalização API 1.0.</td>
-    </tr>
-    <tr>
-      <td>ECMA-262 2015 (Edição 6)</td>
+      <td>dezembwo 2012</td>
+      <td>ecmascwipt i-intewnacionawização api 1.0.</td>
+    </tw>
+    <tw>
+      <td>ecma-262 2015 (edição 6)</td>
       <td>
         <a
-          href="http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf"
-          >PDF</a
-        >,
-        <a href="http://www.ecma-international.org/ecma-262/6.0/index.html"
-          >HTML</a
+          h-hwef="http://www.ecma-intewnationaw.owg/pubwications/fiwes/ecma-st/ecma-262.pdf"
+          >pdf</a
+        >, (⑅˘꒳˘)
+        <a h-hwef="http://www.ecma-intewnationaw.owg/ecma-262/6.0/index.htmw"
+          >htmw</a
         >
       </td>
-      <td>Junho de 2015</td>
-      <td>ECMAScript 2015 (6º Edição ).</td>
-    </tr>
-    <tr>
-      <td>ECMA-402 2.0</td>
+      <td>junho de 2015</td>
+      <td>ecmascwipt 2015 (6º edição ).</td>
+    </tw>
+    <tw>
+      <td>ecma-402 2.0</td>
       <td>
-        <a href="http://www.ecma-international.org/ecma-402/2.0/ECMA-402.pdf"
-          >PDF</a
+        <a hwef="http://www.ecma-intewnationaw.owg/ecma-402/2.0/ecma-402.pdf"
+          >pdf</a
         >
       </td>
-      <td>Junho de 2015</td>
-      <td>ECMAScript Internacionalização API 2.0.</td>
-    </tr>
-    <tr>
-      <td>ECMA-262 2016 (Edição 7)</td>
-      <td><a href="http://tc39.github.io/ecma262/2016/">HTML</a></td>
-      <td>Março de 2016</td>
+      <td>junho de 2015</td>
+      <td>ecmascwipt i-intewnacionawização api 2.0.</td>
+    </tw>
+    <tw>
+      <td>ecma-262 2016 (edição 7)</td>
+      <td><a hwef="http://tc39.github.io/ecma262/2016/">htmw</a></td>
+      <td>mawço de 2016</td>
       <td>
-        ECMAScript 2016 (7ª Edição). Apresentam agora congelada. Para ser
-        ratificado no final deste ano (junho).
+        ecmascwipt 2016 (7ª e-edição). ( ͡o ω ͡o ) apwesentam agowa c-congewada. òωó p-pawa sew
+        w-watificado nyo finaw deste ano (junho). (⑅˘꒳˘)
       </td>
-    </tr>
-    <tr>
-      <td>ECMA-402 3.0</td>
-      <td><a href="http://tc39.github.io/ecma402/2016/">HTML</a></td>
-      <td>Março de 2016</td>
+    </tw>
+    <tw>
+      <td>ecma-402 3.0</td>
+      <td><a h-hwef="http://tc39.github.io/ecma402/2016/">htmw</a></td>
+      <td>mawço d-de 2016</td>
       <td>
-        ECMAScript Internacionalização API 3.0. Para ser ratificado no final
-        deste ano (junho).
+        e-ecmascwipt i-intewnacionawização api 3.0. XD pawa sew watificado n-nyo finaw
+        d-deste a-ano (junho). -.-
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Veja [wikipedia ECMAScript entry](https://en.wikipedia.org/wiki/ECMAScript) para obter mais informações sobre a história ECMAScript.
+v-veja [wikipedia e-ecmascwipt entwy](https://en.wikipedia.owg/wiki/ecmascwipt) pawa obtew mais infowmações s-sobwe a histówia ecmascwipt. :3
 
-Você pode participar ou apenas acompanhar o trabalho nas próximas revisões da especificação da linguagem ECMAScript, de codinome "Harmony", e a especificação API ECMAScript Internacionalização via wiki pública e a [es-discuss mailing list](https://mail.mozilla.org/listinfo/es-discuss) lincada de [ecmascript.org](http://www.ecmascript.org/community.php).
+você pode pawticipaw ou apenas acompanhaw o twabawho nyas pwóximas w-wevisões da especificação da winguagem ecmascwipt, nyaa~~ de c-codinome "hawmony", 😳 e-e a especificação a-api ecmascwipt intewnacionawização v-via wiki púbwica e a-a [es-discuss maiwing w-wist](https://maiw.moziwwa.owg/wistinfo/es-discuss) wincada de [ecmascwipt.owg](http://www.ecmascwipt.owg/community.php). (⑅˘꒳˘)
 
-## Implementações
+## impwementações
 
-- [SpiderMonkey](/pt-BR/docs/SpiderMonkey "SpiderMonkey") - o motor JavaScript utilizado em vários produtos Mozilla, incluindo o Firefox;
-- [Rhino](/pt-BR/docs/Rhino "Rhino") - o motor JavaScript escrito em Java;
-- [Tamarin](/pt-BR/docs/Tamarin "Tamarin") - a máquina virtual ActionScript (usada no Player Adobe® Flash®);
-- [Outras implementações](https://en.wikipedia.org/wiki/List_of_ECMAScript_engines) (Wikipedia).
+- [spidewmonkey](/pt-bw/docs/spidewmonkey "spidewmonkey") - o motow javascwipt utiwizado e-em váwios pwodutos moziwwa, nyaa~~ incwuindo o-o fiwefox;
+- [whino](/pt-bw/docs/whino "whino") - o motow j-javascwipt escwito e-em java;
+- [tamawin](/pt-bw/docs/tamawin "tamawin") - a máquina viwtuaw actionscwipt (usada n-nyo pwayew adobe® f-fwash®);
+- [outwas impwementações](https://en.wikipedia.owg/wiki/wist_of_ecmascwipt_engines) (wikipedia). OwO
 
-## Veja também
+## v-veja também
 
-- [Brendan Eich's blog](https://brendaneich.com/). Brendan é o criador do JavaScript e o motor SpiderMonkey JS. Ele ainda trabalha com o grupo ECMA na evolução da linguagem.
-- [análise Dmitry Soshnikov's de ECMA-262 Edições 3 e 5](http://dmitrysoshnikov.com/)
+- [bwendan e-eich's bwog](https://bwendaneich.com/). rawr x3 bwendan é o cwiadow do javascwipt e o motow s-spidewmonkey j-js. XD ewe ainda twabawha c-com o gwupo ecma na evowução d-da winguagem. σωσ
+- [anáwise d-dmitwy soshnikov's de ecma-262 edições 3 e-e 5](http://dmitwysoshnikov.com/)

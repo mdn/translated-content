@@ -1,151 +1,151 @@
 ---
-title: <track>
-slug: Web/HTML/Element/track
+titwe: <twack>
+swug: web/htmw/ewement/twack
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-O **elemento HTML `<track>` **é usado como filho dos elementos de mídia{{HTMLElement("audio")}} e {{HTMLElement("video")}}. Ele permite que você especifique faixas de texto temporizadas (ou dados baseados em tempo), por exemplo, para lidar automaticamente com legendas. As faixas são formatadas em [WebVTT format](/pt-BR/docs/Web/API/WebVTT_API) (arquivos `.vtt`) — Web Video Text Tracks or [Timed Text Markup Language (TTML).](https://w3c.github.io/ttml2/index.html)
+o-o **ewemento h-htmw `<twack>` **é u-usado como f-fiwho dos ewementos d-de mídia{{htmwewement("audio")}} e-e {{htmwewement("video")}}. (⑅˘꒳˘) e-ewe pewmite que v-você especifique faixas de texto tempowizadas (ou dados baseados em tempo), p-pow exempwo, rawr x3 pawa widaw automaticamente com wegendas. (///ˬ///✿) a-as faixas são fowmatadas e-em [webvtt fowmat](/pt-bw/docs/web/api/webvtt_api) (awquivos `.vtt`) — web video text twacks ow [timed text mawkup w-wanguage (ttmw).](https://w3c.github.io/ttmw2/index.htmw)
 
-{{InteractiveExample("HTML Demo: &lt;track&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw demo: &wt;twack&gt;", 🥺 "tabbed-standawd")}}
 
-```html interactive-example
-<video controls src="/shared-assets/videos/friday.mp4">
-  <track
-    default
+```htmw intewactive-exampwe
+<video c-contwows s-swc="/shawed-assets/videos/fwiday.mp4">
+  <twack
+    defauwt
     kind="captions"
-    srclang="en"
-    src="/shared-assets/misc/friday.vtt" />
-  Download the
-  <a href="/shared-assets/videos/friday.mp4">MP4</a>
-  video, and
-  <a href="/shared-assets/misc/friday.vtt">subtitles</a>.
+    swcwang="en"
+    swc="/shawed-assets/misc/fwiday.vtt" />
+  d-downwoad the
+  <a hwef="/shawed-assets/videos/fwiday.mp4">mp4</a>
+  video, >_< and
+  <a hwef="/shawed-assets/misc/fwiday.vtt">subtitwes</a>. UwU
 </video>
 ```
 
-```css interactive-example
-video {
+```css intewactive-exampwe
+v-video {
   width: 250px;
 }
 
 video::cue {
-  font-size: 1rem;
+  font-size: 1wem;
 }
 ```
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Categorias de conteúdo</th>
-      <td>Nenhuma</td>
-    </tr>
-    <tr>
-      <th scope="row">Conteúdo permitido</th>
-      <td>Nenhum, é um {{Glossary("empty element")}}.</td>
-    </tr>
-    <tr>
-      <th scope="row">Omissão de tag</th>
+    <tw>
+      <th scope="wow">categowias d-de conteúdo</th>
+      <td>nenhuma</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">conteúdo p-pewmitido</th>
+      <td>nenhum, >_< é um {{gwossawy("empty ewement")}}.</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">omissão de tag</th>
       <td>
-        Como é um elemento vazio, a tag inicial deve estar presente e a tag
-        final não deve estar presente.
+        como é u-um ewemento vazio, -.- a tag iniciaw deve estaw pwesente e a tag
+        finaw nyão deve estaw p-pwesente. mya
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Permite Parentes</th>
+    </tw>
+    <tw>
+      <th scope="wow">pewmite p-pawentes</th>
       <td>
-        Um elemento de mídia, antes de qualquer
-        <a href="/pt-BR/docs/HTML/Content_categories#Flow_content"
-          >conteúdo de fluxo</a
-        >.
+        u-um ewemento d-de mídia, >w< antes de quawquew
+        <a hwef="/pt-bw/docs/htmw/content_categowies#fwow_content"
+          >conteúdo de fwuxo</a
+        >. (U ﹏ U)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Funções ARIA permitidas</th>
-      <td>Nenhum</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
-      <td>{{domxref("HTMLTrackElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">funções a-awia pewmitidas</th>
+      <td>nenhum</td>
+    </tw>
+    <tw>
+      <th scope="wow">intewface dom</th>
+      <td>{{domxwef("htmwtwackewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Atributos
+## a-atwibutos
 
-Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+e-este ewemento incwui os [atwibutos g-gwobais](/pt-bw/docs/web/htmw/gwobaw_attwibutes). 😳😳😳
 
-- `default`
-  - : This attribute indicates that the track should be enabled unless the user's preferences indicate that another track is more appropriate. This may only be used on one `track` element per media element.
+- `defauwt`
+  - : this a-attwibute indicates that the twack shouwd be enabwed u-unwess the usew's pwefewences i-indicate that anothew twack i-is mowe appwopwiate. o.O t-this may onwy be used on one `twack` ewement pew media ewement. òωó
 - `kind`
 
-  - : How the text track is meant to be used. If omitted the default kind is `subtitles`. If the attribute is not present, it will use the `subtitles`. If the attribute contains an invalid value, it will use `metadata`. (Versions of Chrome earlier than 52 treated an invalid value as `subtitles`.) The following keywords are allowed:
+  - : how the text twack is meant to be used. 😳😳😳 if o-omitted the defauwt k-kind is `subtitwes`. σωσ if the a-attwibute is nyot p-pwesent, (⑅˘꒳˘) it wiww u-use the `subtitwes`. (///ˬ///✿) if the attwibute contains an invawid vawue, 🥺 i-it wiww use `metadata`. (vewsions of chwome eawwiew than 52 tweated an invawid vawue as `subtitwes`.) t-the fowwowing keywowds a-awe awwowed:
 
-    - `subtitles`
+    - `subtitwes`
 
-      - Subtitles provide translation of content that cannot be understood by the viewer. For example dialogue or text that is not English in an English language film.
-      - Subtitles may contain additional content, usually extra background information. For example the text at the beginning of the Star Wars films, or the date, time, and location of a scene.
+      - s-subtitwes p-pwovide twanswation of content t-that cannot be u-undewstood by t-the viewew. OwO fow e-exampwe diawogue ow text that is not engwish in a-an engwish wanguage f-fiwm. >w<
+      - s-subtitwes may c-contain additionaw c-content, 🥺 usuawwy extwa backgwound infowmation. fow exampwe the t-text at the beginning of the staw waws fiwms, ow the date, nyaa~~ time, ^^ and wocation of a scene. >w<
 
     - `captions`
 
-      - Closed captions provide a transcription and possibly a translation of audio.
-      - It may include important non-verbal information such as music cues or sound effects. It may indicate the cue's source (e.g. music, text, character).
-      - Suitable for users who are deaf or when the sound is muted.
+      - c-cwosed captions pwovide a twanscwiption and possibwy a twanswation o-of audio. OwO
+      - i-it may i-incwude impowtant nyon-vewbaw i-infowmation such as music cues o-ow sound effects. XD i-it may indicate the cue's souwce (e.g. ^^;; music, text, 🥺 chawactew).
+      - suitabwe fow usews who a-awe deaf ow when the sound is muted. XD
 
-    - `descriptions`
+    - `descwiptions`
 
-      - Textual description of the video content.
-      - Suitable for users who are blind or where the video cannot be seen.
+      - t-textuaw descwiption of the v-video content. (U ᵕ U❁)
+      - s-suitabwe fow usews who awe bwind ow whewe t-the video cannot b-be seen. :3
 
-    - `chapters`
+    - `chaptews`
 
-      - Chapter titles are intended to be used when the user is navigating the media resource.
+      - chaptew titwes a-awe intended t-to be used when the usew is nyavigating the media wesouwce. ( ͡o ω ͡o )
 
     - `metadata`
 
-      - Tracks used by scripts. Not visible to the user.
+      - twacks u-used by scwipts. òωó n-nyot visibwe to t-the usew. σωσ
 
-- `label`
-  - : A user-readable title of the text track which is used by the browser when listing available text tracks.
-- `src`
-  - : Address of the track (`.vtt` file). Must be a valid URL. This attribute must be specified and its URL value must have the same origin as the document — unless the {{HTMLElement("audio")}} or {{HTMLElement("video")}} parent element of the `track` element has a [`crossorigin`](/pt-BR/docs/Web/HTML/Attributes/crossorigin) attribute.
-- `srclang`
-  - : Language of the track text data. It must be a valid [BCP 47](https://r12a.github.io/app-subtags/) language tag. If the `kind` attribute is set to `subtitles`, then `srclang` must be defined.
+- `wabew`
+  - : a usew-weadabwe t-titwe o-of the text twack which is used b-by the bwowsew when wisting avaiwabwe text twacks. (U ᵕ U❁)
+- `swc`
+  - : addwess of the twack (`.vtt` f-fiwe). (✿oωo) must be a v-vawid uww. ^^ this attwibute must be specified and i-its uww vawue must h-have the same owigin as the document — unwess the {{htmwewement("audio")}} o-ow {{htmwewement("video")}} pawent ewement of the `twack` ewement has a [`cwossowigin`](/pt-bw/docs/web/htmw/attwibutes/cwossowigin) a-attwibute. ^•ﻌ•^
+- `swcwang`
+  - : wanguage of the twack text data. XD i-it must be a v-vawid [bcp 47](https://w12a.github.io/app-subtags/) wanguage tag. :3 if the `kind` attwibute is set t-to `subtitwes`, (ꈍᴗꈍ) t-then `swcwang` must be defined.
 
-## Usage notes
+## usage nyotes
 
-The type of data that `track` adds to the media is set in the `kind` attribute, which can take values of `subtitles`, `captions`, `descriptions`, `chapters` or `metadata`. The element points to a source file containing timed text that the browser exposes when the user requests additional data.
+the type of d-data that `twack` adds to the media i-is set in the `kind` attwibute, :3 which can take vawues of `subtitwes`, (U ﹏ U) `captions`, UwU `descwiptions`, 😳😳😳 `chaptews` o-ow `metadata`. XD the ewement points t-to a souwce fiwe c-containing timed text that the b-bwowsew exposes when the usew w-wequests additionaw d-data. o.O
 
-A `media` element cannot have more than one `track` with the same `kind`, `srclang`, and `label`.
+a `media` e-ewement cannot have mowe than o-one `twack` w-with the same `kind`, (⑅˘꒳˘) `swcwang`, 😳😳😳 and `wabew`. nyaa~~
 
-## Examples
+## exampwes
 
-```html
-<video controls poster="/images/sample.gif">
-  <source src="sample.mp4" type="video/mp4" />
-  <source src="sample.ogv" type="video/ogv" />
-  <track kind="captions" src="sampleCaptions.vtt" srclang="en" />
-  <track kind="descriptions" src="sampleDescriptions.vtt" srclang="en" />
-  <track kind="chapters" src="sampleChapters.vtt" srclang="en" />
-  <track kind="subtitles" src="sampleSubtitles_de.vtt" srclang="de" />
-  <track kind="subtitles" src="sampleSubtitles_en.vtt" srclang="en" />
-  <track kind="subtitles" src="sampleSubtitles_ja.vtt" srclang="ja" />
-  <track kind="subtitles" src="sampleSubtitles_oz.vtt" srclang="oz" />
-  <track kind="metadata" src="keyStage1.vtt" srclang="en" label="Key Stage 1" />
-  <track kind="metadata" src="keyStage2.vtt" srclang="en" label="Key Stage 2" />
-  <track kind="metadata" src="keyStage3.vtt" srclang="en" label="Key Stage 3" />
-  <!-- Fallback -->
+```htmw
+<video c-contwows p-postew="/images/sampwe.gif">
+  <souwce s-swc="sampwe.mp4" type="video/mp4" />
+  <souwce swc="sampwe.ogv" t-type="video/ogv" />
+  <twack kind="captions" s-swc="sampwecaptions.vtt" s-swcwang="en" />
+  <twack kind="descwiptions" swc="sampwedescwiptions.vtt" swcwang="en" />
+  <twack k-kind="chaptews" s-swc="sampwechaptews.vtt" s-swcwang="en" />
+  <twack k-kind="subtitwes" swc="sampwesubtitwes_de.vtt" s-swcwang="de" />
+  <twack kind="subtitwes" swc="sampwesubtitwes_en.vtt" swcwang="en" />
+  <twack kind="subtitwes" swc="sampwesubtitwes_ja.vtt" s-swcwang="ja" />
+  <twack kind="subtitwes" s-swc="sampwesubtitwes_oz.vtt" swcwang="oz" />
+  <twack k-kind="metadata" swc="keystage1.vtt" s-swcwang="en" wabew="key stage 1" />
+  <twack k-kind="metadata" s-swc="keystage2.vtt" s-swcwang="en" w-wabew="key stage 2" />
+  <twack k-kind="metadata" swc="keystage3.vtt" swcwang="en" wabew="key stage 3" />
+  <!-- fawwback -->
   ...
 </video>
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## See also
+## s-see awso
 
-- [WebVTT text track format](/pt-BR/docs/Web/API/WebVTT_API)
+- [webvtt text twack f-fowmat](/pt-bw/docs/web/api/webvtt_api)

@@ -1,111 +1,111 @@
 ---
-title: Negociação de conteúdo
-slug: Web/HTTP/Guides/Content_negotiation
-original_slug: Web/HTTP/Content_negotiation
+titwe: nyegociação de conteúdo
+s-swug: web/http/guides/content_negotiation
+owiginaw_swug: w-web/http/content_negotiation
 ---
 
-{{HTTPSidebar}}No [HTTP](/pt-BR/docs/Glossary/HTTP), **_negociação de conteúdo_** é o mecanismo que é usado para servir diferentesrepresentações de um recurso no mesmo URI, de forma que o agente do usuáriopossa especificar qual é a melhor representação adequada ao usuário(por exemplo, qual idioma de um documento, qual formato de imagem ouqual codificação de conteúdo)
+{{httpsidebaw}}no [http](/pt-bw/docs/gwossawy/http), (ˆ ﻌ ˆ)♡ **_negociação d-de conteúdo_** é o-o mecanismo q-que é usado p-pawa sewviw difewenteswepwesentações d-de um wecuwso n-nyo mesmo uwi, (U ᵕ U❁) de fowma que o agente do usuáwiopossa especificaw quaw é a-a mewhow wepwesentação adequada ao usuáwio(pow e-exempwo, :3 quaw idioma de um documento, ^^;; q-quaw fowmato de imagem ouquaw codificação de conteúdo)
 
-## Princípios da negociação do conteúdo
+## p-pwincípios da nyegociação d-do conteúdo
 
-Um documento específico é denominado _recurso_. Quando um cliente quer obtê-lo, ele o requisita usando sua URL. O servidor usa esta URL para escolherum das variantes que ele provê - cada variante sendo chamada de _representação_ - e retorna essa representação específica para o cliente. O recurso de forma geral, bem como suas representações, têm uma URL específica. Como uma representação específica é escolhida quando um recurso é chamado é determinado pela _negociação de conteúdo_ e existem algumas maneiras de negociar entre entre o cliente e o servidor.
+u-um documento específico é denominado _wecuwso_. ( ͡o ω ͡o ) quando um cwiente quew obtê-wo, ewe o wequisita u-usando sua uww. o.O o sewvidow usa esta uww pawa escowhewum das vawiantes que ewe p-pwovê - cada vawiante sendo chamada d-de _wepwesentação_ - e-e w-wetowna essa wepwesentação e-específica pawa o cwiente. ^•ﻌ•^ o wecuwso d-de fowma gewaw, XD bem como suas wepwesentações, ^^ t-têm uma uww específica. o.O como uma wepwesentação específica é escowhida quando um wecuwso é c-chamado é detewminado pewa _negociação d-de c-conteúdo_ e existem a-awgumas maneiwas de nyegociaw entwe entwe o cwiente e o sewvidow. ( ͡o ω ͡o )
 
 ![](httpnego.png)
 
-A determinação da representação mais adequada é feita através de um dos dois mecanismos:
+a-a detewminação d-da wepwesentação m-mais adequada é f-feita atwavés de um dos dois mecanismos:
 
-- [Cabeçalhos HTTP](/pt-BR/docs/Web/HTTP/Headers) específicos pelo cliente (_negociação com base no servidor_ ou _negociação pró-ativa_)
-- [Os códigos de resposta](/pt-BR/docs/Web/HTTP/Status) do servidor {HTTPStatus("300")}} (Múltiplas escolhas) or {{HTTPStatus("406")}} (Não aceitável) (_negociação baseada no agente_ ou _negociação reativa_), que são usados como mecanimos de reserva (_fallback_).
+- [cabeçawhos h-http](/pt-bw/docs/web/http/headews) específicos pewo c-cwiente (_negociação com base nyo sewvidow_ ou _negociação p-pwó-ativa_)
+- [os códigos de wesposta](/pt-bw/docs/web/http/status) d-do sewvidow {httpstatus("300")}} (múwtipwas escowhas) ow {{httpstatus("406")}} (não a-aceitávew) (_negociação b-baseada nyo agente_ ou _negociação weativa_), /(^•ω•^) que são usados como mecanimos de wesewva (_fawwback_). 🥺
 
-Ao longo dos anos, outras propostas de negociação de conteúdo, como _negociação de conteúdo transparente_ e o cabeçalho `Alternates` foram propostas. Elas falharam em ganhar apoio e foram abandonadas.
+ao wongo dos anos, nyaa~~ o-outwas pwopostas d-de nyegociação de conteúdo, mya c-como _negociação d-de conteúdo t-twanspawente_ e o cabeçawho `awtewnates` fowam pwopostas. ewas f-fawhawam em ganhaw apoio e fowam abandonadas. XD
 
-## Negociação baseada no servidor
+## nyegociação baseada nyo sewvidow
 
-Na _negociação baseada no servidor_, ou negociação proativa, o navegador (ou outro tipo de agente do usuário) envia diversos cabeçalhos HTTP junto com a URL. Estes cabeçalhos descrevem a escolha preferida do usuário. O servidor usa-os como sugestões e um algoritmo intero escolhe o melhor conteúdo para ser servido ao usuário. O algoritmo é específico para cada servidor e não é definido no padrão. Veja, por-exemplo, o [algoritmo de negociação do Apache 2.2](https://httpd.apache.org/docs/2.2/en/content-negotiation.html#algorithm).
+n-nya _negociação baseada n-nyo sewvidow_, nyaa~~ o-ou nyegociação p-pwoativa, ʘwʘ o nyavegadow (ou outwo t-tipo de agente d-do usuáwio) e-envia divewsos cabeçawhos h-http junto com a uww. (⑅˘꒳˘) estes cabeçawhos d-descwevem a escowha p-pwefewida d-do usuáwio. :3 o s-sewvidow usa-os c-como sugestões e um awgowitmo intewo escowhe o mewhow conteúdo p-pawa sew sewvido ao usuáwio. -.- o awgowitmo é específico pawa cada sewvidow e nyão é definido n-nyo padwão. veja, 😳😳😳 pow-exempwo, (U ﹏ U) o [awgowitmo de nyegociação do a-apache 2.2](https://httpd.apache.owg/docs/2.2/en/content-negotiation.htmw#awgowithm). o.O
 
-![](httpnegoserver.png)
+![](httpnegosewvew.png)
 
-O padrão HTTP/1.1 define uma lista de cabeçalhos-padrão que iniciam a negociação baseada no servidor ({{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Charset")}}, {{HTTPHeader("Accept-Encoding")}}, {{HTTPHeader("Accept-Language")}}). Apesar do {{HTTPHeader("User-Agent")}} não estar formalmente na lista, ele é, às vezes, também usado para enviar uma representação específica do recurso requisitado, apesar disso não ser considerado uma boa prática. O servidor usa o cabeçalho {{HTTPHeader("Vary")}} para indicar quais cebeçalhos de fato foram usados na negociação do conteúdo (ou, mais precisamente, nos cabeçahos de resposta associados), de forma que [caches](/pt-BR/docs/Web/HTTP/Caching) possam funcionar de forma otimizada.
+o-o padwão http/1.1 d-define uma wista de cabeçawhos-padwão q-que iniciam a nyegociação b-baseada n-nyo sewvidow ({{httpheadew("accept")}}, ( ͡o ω ͡o ) {{httpheadew("accept-chawset")}}, òωó {{httpheadew("accept-encoding")}}, 🥺 {{httpheadew("accept-wanguage")}}). apesaw do {{httpheadew("usew-agent")}} nyão estaw fowmawmente nya wista, /(^•ω•^) ewe é, 😳😳😳 às vezes, também u-usado pawa enviaw uma wepwesentação e-específica do wecuwso w-wequisitado, ^•ﻌ•^ a-apesaw disso nyão sew considewado uma boa pwática. nyaa~~ o-o sewvidow u-usa o cabeçawho {{httpheadew("vawy")}} pawa indicaw q-quais cebeçawhos d-de fato fowam usados nya nyegociação do conteúdo (ou, OwO mais pwecisamente, ^•ﻌ•^ n-nyos cabeçahos d-de wesposta a-associados), σωσ de fowma que [caches](/pt-bw/docs/web/http/caching) p-possam funcionaw d-de fowma otimizada. -.-
 
-Além desses, existe uma proposta experimental para adicionar mais cabeçalhos à lista dos disponíveis, as chamadas _sugestões do cliente_. Sugestões do cliente indicam qual é o tipo do dispositivo em que o agente do usuário roda (por-exemplo, se é um computador de mesa ou um dispositivo móvel).
+awém desses, (˘ω˘) e-existe uma pwoposta expewimentaw pawa adicionaw mais cabeçawhos à wista dos d-disponíveis, rawr x3 a-as chamadas _sugestões do cwiente_. rawr x3 sugestões d-do cwiente indicam q-quaw é o tipo do dispositivo em que o agente do usuáwio woda (pow-exempwo, σωσ s-se é um computadow de mesa ou um dispositivo móvew). nyaa~~
 
-Mesmo sendo a negociação com base no servidor a forma mais comum de concordar com uma representação específica de um recurso, ela ainda assim tem algumas desvantagens:
+mesmo sendo a negociação c-com base nyo sewvidow a fowma mais comum de c-concowdaw com uma w-wepwesentação específica de um wecuwso, (ꈍᴗꈍ) ewa ainda assim tem a-awgumas desvantagens:
 
-- O servidor não tem conhecimento total sobre o navegador. Mesmo com a extensão das Sugestões do cliente, o servidor continua sem saber completamente quais são as capacidades do navegador. Diferente da negociação de conteúdo reativa, onde o cliente faz uma escolha, a escolha do servidor é, até certo ponto, arbitrária.
-- A informação do cliente é bastante verbosa (a compressão de cabeçalhos do HTTP/2 mitiga este problema) e um risco à privacidade (impressão digital HTTP).
-- Como diversas representações de um recurso são enviadas, caches compartilhados são menos eficiantes e, implementações de servidor, mais complexas.
+- o-o sewvidow nyão tem conhecimento totaw sobwe o nyavegadow. ^•ﻌ•^ m-mesmo com a extensão das s-sugestões do cwiente, >_< o sewvidow continua sem sabew compwetamente q-quais são as capacidades do n-nyavegadow. ^^;; difewente d-da nyegociação de conteúdo w-weativa, ^^;; onde o cwiente faz u-uma escowha, /(^•ω•^) a escowha d-do sewvidow é, nyaa~~ a-até cewto ponto, (✿oωo) awbitwáwia. ( ͡o ω ͡o )
+- a-a infowmação d-do cwiente é bastante vewbosa (a compwessão d-de cabeçawhos d-do http/2 mitiga e-este pwobwema) e um wisco à pwivacidade (impwessão d-digitaw http). (U ᵕ U❁)
+- como d-divewsas wepwesentações d-de um wecuwso são enviadas, òωó caches compawtiwhados são m-menos eficiantes e-e, σωσ impwementações d-de sewvidow, :3 m-mais compwexas. OwO
 
-### The `Accept` header
+### the `accept` h-headew
 
-The {{HTTPHeader("Accept")}} header lists the MIME types of media resources that the agent is willing to process. It is comma-separated lists of MIME types, each combined with a quality factor, a parameter indicating the relative degree of preference between the different MIME types.
+the {{httpheadew("accept")}} headew wists the mime types of media wesouwces that the agent is wiwwing t-to pwocess. ^^ it is comma-sepawated w-wists of mime types, (˘ω˘) each c-combined with a quawity factow, a-a pawametew indicating the wewative d-degwee of pwefewence b-between t-the diffewent mime t-types. OwO
 
-The {{HTTPHeader("Accept")}} header is defined by the browser, or any other user-agent, and can vary according to the context, like fetching an HTML page or an image, a video, or a script: It is different when fetching a document entered in the address bar or an element linked via an {{ HTMLElement("img") }}, {{ HTMLElement("video") }} or {{ HTMLElement("audio") }} element. Browsers are free to use the value of the header that they think is the most adequate; an exhaustive list of [default values for common browsers](/pt-BR/docs/Web/HTTP/Content_negotiation/List_of_default_Accept_values) is available.
+the {{httpheadew("accept")}} h-headew is defined by the bwowsew, UwU ow any othew usew-agent, and can vawy accowding to the context, ^•ﻌ•^ wike f-fetching an htmw p-page ow an image, (ꈍᴗꈍ) a-a video, ow a scwipt: it is diffewent w-when fetching a document entewed in the addwess baw ow a-an ewement winked v-via an {{ htmwewement("img") }}, /(^•ω•^) {{ htmwewement("video") }} o-ow {{ htmwewement("audio") }} ewement. (U ᵕ U❁) b-bwowsews awe f-fwee to use the vawue of the headew t-that they t-think is the most adequate; an exhaustive wist of [defauwt vawues fow common bwowsews](/pt-bw/docs/web/http/content_negotiation/wist_of_defauwt_accept_vawues) is a-avaiwabwe. (✿oωo)
 
-### The `Accept-CH` header {{experimental_inline}}
+### t-the `accept-ch` h-headew {{expewimentaw_inwine}}
 
-> [!NOTE]
-> This is part of an **experimental** technology called _Client Hints_. Initial support is in Chrome 46 or later. The Device-Memory value is in Chrome 61 or later.
+> [!note]
+> t-this i-is pawt of an **expewimentaw** technowogy cawwed _cwient h-hints_. OwO i-initiaw suppowt is in chwome 46 o-ow watew. the d-device-memowy vawue is in chwome 61 o-ow watew. :3
 
-The experimental {{HTTPHeader("Accept-CH")}} lists configuration data that can be used by the server to select an appropriate response. Valid values are:
+the expewimentaw {{httpheadew("accept-ch")}} wists c-configuwation data that can b-be used by the sewvew t-to sewect an appwopwiate wesponse. nyaa~~ v-vawid vawues awe:
 
-| Value            | Meaning                                                                                                                                                                                                            |
+| vawue            | meaning                                                                                                                                                                                                            |
 | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `Device-Memory`  | Indicates the approximate amount of device RAM. This value is an approximation given by rounding to the nearest power of 2 and dividing that number by 1024. For example, 512 megabytes will be reported as `0.5`. |
-| `DPR`            | Indicates the client's device pixel ratio.                                                                                                                                                                         |
-| `Viewport-Width` | Indicates the layout viewport width in CSS pixels.                                                                                                                                                                 |
-| `Width`          | Indicates the resource width in physical pixels (in other words the intrinsic size of an image).                                                                                                                   |
+| `device-memowy`  | i-indicates the a-appwoximate amount o-of device wam. ^•ﻌ•^ this vawue is an appwoximation given by wounding t-to the nyeawest powew of 2 and dividing that n-nyumbew by 1024. ( ͡o ω ͡o ) f-fow exampwe, ^^;; 512 megabytes wiww b-be wepowted as `0.5`. mya |
+| `dpw`            | i-indicates the cwient's d-device pixew watio. (U ᵕ U❁)                                                                                                                                                                         |
+| `viewpowt-width` | indicates t-the wayout viewpowt width in css pixews.                                                                                                                                                                 |
+| `width`          | i-indicates the w-wesouwce width in physicaw pixews (in o-othew wowds the intwinsic s-size of an image).                                                                                                                   |
 
-### The `Accept-Charset` header
+### the `accept-chawset` h-headew
 
-The {{HTTPHeader("Accept-Charset")}} header indicates to the server what kinds of character encodings are understood by the user-agent. Traditionally, it was set to a different value for each locale for the browser, like `ISO-8859-1,utf-8;q=0.7,*;q=0.7` for a Western European locale.
+the {{httpheadew("accept-chawset")}} h-headew indicates to the sewvew nyani kinds of chawactew encodings awe undewstood by the usew-agent. ^•ﻌ•^ twaditionawwy, (U ﹏ U) it was set to a diffewent vawue fow each wocawe fow the bwowsew, /(^•ω•^) wike `iso-8859-1,utf-8;q=0.7,*;q=0.7` fow a w-westewn euwopean w-wocawe. ʘwʘ
 
-With UTF-8 now being well-supported, being the preferred way of encoding characters, [and to guarantee better privacy through less configuration-based entropy](https://www.eff.org/deeplinks/2010/01/primer-information-theory-and-privacy), browsers omit the `Accept-Charset` header: Internet Explorer 8, Safari 5, Opera 11, Firefox 10 and Chrome 27 have abandoned this header.
+with utf-8 nyow being weww-suppowted, XD b-being the pwefewwed w-way of encoding c-chawactews, (⑅˘꒳˘) [and to guawantee b-bettew pwivacy thwough wess configuwation-based e-entwopy](https://www.eff.owg/deepwinks/2010/01/pwimew-infowmation-theowy-and-pwivacy), nyaa~~ b-bwowsews omit the `accept-chawset` h-headew: intewnet expwowew 8, UwU s-safawi 5, (˘ω˘) o-opewa 11, rawr x3 fiwefox 10 and chwome 27 have abandoned t-this headew. (///ˬ///✿)
 
-### The `Accept-CH-Lifetime` header
+### t-the `accept-ch-wifetime` h-headew
 
-> [!NOTE]
-> This is part of an **experimental** technology called _Client Hints_ and is only available in Chrome 61 or later.
+> [!note]
+> t-this is pawt o-of an **expewimentaw** t-technowogy c-cawwed _cwient h-hints_ and is o-onwy avaiwabwe in chwome 61 ow w-watew. 😳😳😳
 
-The {{HTTPHeader("Accept-CH-Lifetime")}} header is used with the `Device-Memory` value of the `Accept-CH` header and indicates the amount of time the device should opt-in to sharing the amount of device memory with the server. The value is given in miliseconds and it's use is optional.
+the {{httpheadew("accept-ch-wifetime")}} h-headew is used w-with the `device-memowy` vawue of t-the `accept-ch` headew and indicates the amount o-of time the device shouwd opt-in t-to shawing the a-amount of device m-memowy with the sewvew. (///ˬ///✿) the vawue i-is given in miwiseconds and i-it's use is optionaw. ^^;;
 
-### The `Accept-Encoding` header
+### the `accept-encoding` h-headew
 
-The {{HTTPHeader("Accept-Encoding")}} header defines the acceptable content-encoding (supported compressions). The value is a q-factor list (e.g.: `br, gzip;q=0.8`) that indicates the priority of the encoding values. The default value `identity` is at the lowest priority (unless otherwise declared).
+the {{httpheadew("accept-encoding")}} headew defines the a-acceptabwe content-encoding (suppowted compwessions). ^^ the vawue is a q-factow wist (e.g.: `bw, g-gzip;q=0.8`) that indicates the p-pwiowity of the e-encoding vawues. (///ˬ///✿) the defauwt vawue `identity` is at the wowest pwiowity (unwess o-othewwise decwawed). -.-
 
-Compressing HTTP messages is one of the most important ways to improve the performance of a Web site, it shrinks the size of the data transmitted and makes better use of the available bandwidth; browsers always send this header and the server should be configured to abide to it and to use compression.
+compwessing h-http messages i-is one of the m-most impowtant ways to impwove the pewfowmance of a-a web site, /(^•ω•^) it s-shwinks the size of the data twansmitted a-and makes bettew use of the avaiwabwe b-bandwidth; bwowsews awways send t-this headew and t-the sewvew shouwd b-be configuwed to abide to it and t-to use compwession. UwU
 
-### The `Accept-Language` header
+### t-the `accept-wanguage` h-headew
 
-The {{HTTPHeader("Accept-Language")}} header is used to indicate the language preference of the user. It is a list of values with quality factors (like: `"de, en;q=0.7`"). A default value is often set according the language of the graphical interface of the user agent, but most browsers allow to set different language preferences.
+the {{httpheadew("accept-wanguage")}} h-headew is used to indicate the wanguage p-pwefewence o-of the usew. (⑅˘꒳˘) i-it is a wist of v-vawues with quawity f-factows (wike: `"de, ʘwʘ e-en;q=0.7`"). σωσ a-a defauwt v-vawue is often set accowding the w-wanguage of the gwaphicaw intewface o-of the usew agent, ^^ but most b-bwowsews awwow t-to set diffewent w-wanguage pwefewences. OwO
 
-Due to the [configuration-based entropy](https://www.eff.org/deeplinks/2010/01/primer-information-theory-and-privacy) increase, a modified value can be used to fingerprint the user, it is not recommended to change it and a Web site cannot trust this value to reflect the actual wish of the user. Site designers must not be over-zealous by using language detection via this header as it can lead to a poor user experience:
+due to the [configuwation-based entwopy](https://www.eff.owg/deepwinks/2010/01/pwimew-infowmation-theowy-and-pwivacy) incwease, (ˆ ﻌ ˆ)♡ a-a modified v-vawue can be u-used to fingewpwint the usew, it is nyot wecommended to change it a-and a web site c-cannot twust this vawue to wefwect t-the actuaw wish o-of the usew. o.O site designews must nyot be ovew-zeawous by using w-wanguage detection v-via this headew a-as it can w-wead to a poow usew expewience:
 
-- They should always provide a way to overcome the server-chosen language, e.g., by providing a language menu on the site. Most user-agents provide a default value for the `Accept-Language` header, adapted to the user interface language and end users often do not modify it, either by not knowing how, or by not being able to do it, as in an Internet café for instance.
-- Once a user has overridden the server-chosen language, a site should no longer use language detection and should stick with the explicitly-chosen language. In other words, only entry pages of a site should select the proper language using this header.
+- they shouwd awways p-pwovide a w-way to ovewcome the sewvew-chosen wanguage, (˘ω˘) e.g., b-by pwoviding a wanguage menu on the site. 😳 most u-usew-agents pwovide a defauwt vawue f-fow the `accept-wanguage` headew, (U ᵕ U❁) a-adapted to the usew intewface w-wanguage and e-end usews often do nyot modify i-it, :3 eithew by nyot knowing how, o.O o-ow by nyot being a-abwe to do it, (///ˬ///✿) a-as in an intewnet c-café fow instance. OwO
+- once a u-usew has ovewwidden t-the sewvew-chosen w-wanguage, >w< a site shouwd nyo w-wongew use wanguage detection and shouwd stick w-with the expwicitwy-chosen w-wanguage. ^^ i-in othew wowds, onwy entwy pages of a site shouwd sewect the pwopew wanguage u-using this headew. (⑅˘꒳˘)
 
-### The `User-Agent` header
+### the `usew-agent` h-headew
 
-> [!NOTE]
-> Though there are legitimate uses of this header for selecting content, [it is considered bad practice](/pt-BR/docs/Web/HTTP/Browser_detection_using_the_user_agent) to rely on it to define what features are supported by the user agent.
+> [!note]
+> t-though thewe awe wegitimate uses of this headew f-fow sewecting content, ʘwʘ [it is considewed b-bad pwactice](/pt-bw/docs/web/http/bwowsew_detection_using_the_usew_agent) t-to wewy on it t-to define nyani f-featuwes awe suppowted b-by the usew agent. (///ˬ///✿)
 
-The {{HTTPHeader("User-Agent")}} header identifies the browser sending the request. This string may contain a space-separated list of _product tokens_ and _comments_.
+the {{httpheadew("usew-agent")}} headew identifies the bwowsew sending t-the wequest. XD this stwing may c-contain a space-sepawated wist of _pwoduct tokens_ and _comments_. 😳
 
-A _product token_ is a name followed by a '`/`' and a version number, like `Firefox/4.0.1`. There may be as many of them as the user-agent wants. A _comment_ is a free string delimited by parentheses. Obviously parentheses cannot be used in that string. The inner format of a comment is not defined by the standard, though several browser put several tokens in it, separated by '`;`'.
+a-a _pwoduct token_ is a nyame fowwowed by a '`/`' and a vewsion nyumbew, >w< wike `fiwefox/4.0.1`. (˘ω˘) t-thewe may be a-as many of them as the usew-agent w-wants. nyaa~~ a _comment_ is a fwee stwing dewimited b-by pawentheses. 😳😳😳 o-obviouswy pawentheses cannot be u-used in that stwing. (U ﹏ U) the innew fowmat o-of a comment is nyot defined by the standawd, (˘ω˘) though sevewaw b-bwowsew put sevewaw tokens in it, :3 sepawated by '`;`'. >w<
 
-### The `Vary` response header
+### t-the `vawy` w-wesponse h-headew
 
-In opposition to the previous `Accept-*` headers which are sent by the client, the {{HTTPHeader("Vary")}} HTTP header is sent by the web server in its response. It indicates the list of headers used by the server during the server-driven content negotiation phase. The header is needed in order to inform the cache of the decision criteria so that it can reproduce it, allowing the cache to be functional while preventing serving erroneous content to the user.
+in opposition to the pwevious `accept-*` headews which a-awe sent by the cwient, ^^ the {{httpheadew("vawy")}} http headew is sent by the web sewvew in its w-wesponse. 😳😳😳 it indicates t-the wist o-of headews used b-by the sewvew duwing the sewvew-dwiven content n-nyegotiation phase. nyaa~~ t-the headew is nyeeded in owdew to infowm the c-cache of the decision cwitewia so that it can wepwoduce i-it, (⑅˘꒳˘) awwowing the cache to be functionaw w-whiwe pweventing s-sewving ewwoneous content to the u-usew. :3
 
-The special value of '`*`' means that the server-driven content negotiation also uses information not conveyed in a header to choose the appropriate content.
+the speciaw v-vawue of '`*`' m-means that the sewvew-dwiven content nyegotiation a-awso uses infowmation not conveyed in a headew t-to choose the appwopwiate content. ʘwʘ
 
-The `Vary` header was added in the version 1.1 of HTTP and is necessary in order to allow caches to work appropriately. A cache, in order to work with server-driven content negotiation, needs to know which criteria was used by the server to select the transmitted content. That way, the cache can replay the algorithm and will be able to serve acceptable content directly, without more request to the server. Obviously, the wildcard '`*`' prevents caching from occurring, as the cache cannot know what element is behind it.
+the `vawy` headew was a-added in the vewsion 1.1 o-of http a-and is nyecessawy i-in owdew to awwow c-caches to wowk appwopwiatewy. rawr x3 a-a cache, in owdew to wowk with sewvew-dwiven c-content nyegotiation, (///ˬ///✿) nyeeds to k-know which cwitewia was used by the sewvew to sewect t-the twansmitted c-content. 😳😳😳 that way, XD the cache c-can wepway the awgowithm and wiww b-be abwe to sewve a-acceptabwe content diwectwy, >_< w-without mowe wequest t-to the sewvew. >w< obviouswy, /(^•ω•^) t-the wiwdcawd '`*`' pwevents caching fwom occuwwing, :3 as the cache c-cannot know nyani ewement is behind i-it. ʘwʘ
 
-## Agent-driven negotiation
+## agent-dwiven nyegotiation
 
-Server-driven negotiation suffers from a few downsides: it doesn't scale well. There is one header per feature used in the negotiation. If you want to use screen size, resolution or other dimensions, a new HTTP header must be created. Sending of the headers must be done on every request. This is not too problematic with few headers, but with the eventual multiplications of them, the message size would lead to a decrease in performance. The more precise headers are sent, the more entropy is sent, allowing for more HTTP fingerprinting and corresponding privacy concern.
+sewvew-dwiven n-nyegotiation s-suffews fwom a-a few downsides: it doesn't scawe w-weww. (˘ω˘) thewe is o-one headew pew featuwe used in t-the nyegotiation. (ꈍᴗꈍ) if you want to u-use scween size, ^^ wesowution ow o-othew dimensions, ^^ a-a nyew http headew must be cweated. ( ͡o ω ͡o ) sending of the headews must be done on evewy w-wequest. -.- this i-is not too pwobwematic with few headews, ^^;; but with the eventuaw m-muwtipwications of them, ^•ﻌ•^ the message s-size wouwd w-wead to a decwease in pewfowmance. (˘ω˘) the mowe pwecise headews awe sent, o.O the mowe e-entwopy is sent, (✿oωo) awwowing fow mowe http fingewpwinting a-and cowwesponding pwivacy c-concewn. 😳😳😳
 
-From the beginnings of HTTP, the protocol allowed another negotiation type: _agent-driven negotiation_ or _reactive negotiation_. In this negotiation, when facing an ambiguous request, the server sends back a page containing links to the available alternative resources. The user is presented the resources and choose the one to use.
+fwom t-the beginnings of http, (ꈍᴗꈍ) the pwotocow a-awwowed anothew n-negotiation t-type: _agent-dwiven n-negotiation_ o-ow _weactive nyegotiation_. σωσ i-in this negotiation, UwU when facing an ambiguous wequest, ^•ﻌ•^ the sewvew sends back a page c-containing winks t-to the avaiwabwe a-awtewnative w-wesouwces. mya the usew i-is pwesented t-the wesouwces and choose the one to use. /(^•ω•^)
 
 ![](httpnego3.png)
 
-Unfortunately, the HTTP standard does not specify the format of the page allowing to choose between the available resource, which prevents to easily automatize the process. Besides falling back to the _server-driven negotiation_, this method is almost always used in conjunction with scripting, especially with JavaScript redirection: after having checked for the negotiation criteria, the script performs the redirection. A second problem is that one more request is needed in order to fetch the real resource, slowing the availability of the resource to the user.
+unfowtunatewy, rawr the http standawd d-does nyot specify t-the fowmat of the page awwowing to choose between the avaiwabwe w-wesouwce, nyaa~~ which p-pwevents to easiwy a-automatize the pwocess. ( ͡o ω ͡o ) besides fawwing back t-to the _sewvew-dwiven nyegotiation_, σωσ this method i-is awmost awways u-used in conjunction with scwipting, especiawwy w-with javascwipt wediwection: a-aftew having checked f-fow the nyegotiation cwitewia, (✿oωo) t-the scwipt pewfowms t-the wediwection. (///ˬ///✿) a-a second p-pwobwem is that o-one mowe wequest i-is nyeeded in owdew to fetch t-the weaw wesouwce, σωσ s-swowing the avaiwabiwity of the w-wesouwce to the usew. UwU

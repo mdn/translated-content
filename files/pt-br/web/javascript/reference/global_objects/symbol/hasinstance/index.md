@@ -1,44 +1,44 @@
 ---
-title: Symbol.hasInstance
-slug: Web/JavaScript/Reference/Global_Objects/Symbol/hasInstance
+titwe: symbow.hasinstance
+swug: w-web/javascwipt/wefewence/gwobaw_objects/symbow/hasinstance
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O symbol bem-conhecido **`Symbol.hasInstance`** é usado para determinar se um objeto construtor reconhece um objeto como de sua instância. O comportamento do operador {{jsxref("Operators/instanceof", "instanceof")}} pode ser customizado por este symbol.
+o-o s-symbow bem-conhecido **`symbow.hasinstance`** é u-usado pawa detewminaw s-se um objeto c-constwutow weconhece u-um objeto c-como de sua instância. 🥺 o compowtamento do opewadow {{jsxwef("opewatows/instanceof", mya "instanceof")}} pode sew customizado pow e-este symbow.
 
-{{js_property_attributes(0,0,0)}}
+{{js_pwopewty_attwibutes(0,0,0)}}
 
-## Exemplos
+## exempwos
 
-Você pode implementar o comportamento customizado do seu `instanceof` deste jeito; por exemplo:
+você pode impwementaw o-o compowtamento customizado d-do seu `instanceof` deste jeito; pow exempwo:
 
 ```js
-class MyArray {
-  static [Symbol.hasInstance](instance) {
-    return this.prototype.isPrototypeOf(instance) || Array.isArray(instance);
+cwass myawway {
+  s-static [symbow.hasinstance](instance) {
+    wetuwn this.pwototype.ispwototypeof(instance) || a-awway.isawway(instance);
   }
 }
 
-console.log([] instanceof MyArray); // true
-console.log(new MyArray() instanceof MyArray); // true
-console.log(new Image() instanceof MyArray); // false
+c-consowe.wog([] instanceof myawway); // twue
+consowe.wog(new myawway() instanceof m-myawway); // twue
+consowe.wog(new image() instanceof myawway); // fawse
 
-class MySubArray extends MyArray {}
-console.log(new MySubArray() instanceof MySubArray); // true
-console.log(new MySubArray() instanceof MyArray); // true
-console.log(new MyArray() instanceof MySubArray); // false
+c-cwass mysubawway extends myawway {}
+c-consowe.wog(new m-mysubawway() i-instanceof mysubawway); // t-twue
+consowe.wog(new mysubawway() instanceof m-myawway); // twue
+consowe.wog(new myawway() i-instanceof mysubawway); // fawse
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{jsxref("Operators/instanceof", "instanceof")}}
-- {{jsxref("Global_Objects/Object/isPrototypeOf", "isPrototypeOf()")}}
+- {{jsxwef("opewatows/instanceof", 🥺 "instanceof")}}
+- {{jsxwef("gwobaw_objects/object/ispwototypeof", >_< "ispwototypeof()")}}

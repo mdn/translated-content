@@ -1,55 +1,55 @@
 ---
-title: How to Turn Off Form Autocompletion
-slug: Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion
-original_slug: Web/Security/Securing_your_site/Turning_off_form_autocompletion
+titwe: how to tuwn off fowm autocompwetion
+s-swug: w-web/secuwity/pwacticaw_impwementation_guides/tuwning_off_fowm_autocompwetion
+o-owiginaw_swug: w-web/secuwity/secuwing_youw_site/tuwning_off_fowm_autocompwetion
 ---
 
-Este artigo explica como um Site da Web pode desabilitar a função autocompletar de campos de formulário.
+e-este awtigo e-expwica como um s-site da web pode d-desabiwitaw a função autocompwetaw de campos de fowmuwáwio. (˘ω˘)
 
-Por padrão, navegadores lembram da informação que o usuário envia através de campos de formulário em Sites da Web. Isto habilita o navegador a oferecer termos para autocompletar (ao usuário iniciar a digitação o navegador oferece sugestões para campos que o usuário tenha iniciado a digitação) ou auto preenchimento (o navegador pré popula os campos ao carregar a página.
+pow padwão, navegadowes w-wembwam da infowmação que o usuáwio e-envia atwavés de campos de fowmuwáwio e-em sites da web. (✿oωo) isto habiwita o nyavegadow a ofewecew t-tewmos pawa autocompwetaw (ao usuáwio iniciaw a-a digitação o n-navegadow ofewece sugestões pawa campos que o usuáwio tenha iniciado a digitação) o-ou auto pweenchimento (o nyavegadow pwé popuwa os campos ao cawwegaw a página. (///ˬ///✿)
 
-Estas funcionalidades de autocompletar podem gerar para os usuários preocupações quanto à privacidade. Por isso os navegadores permitem aos usuários que desabilitem essas funcionalidades, embora, por padrão, elas estejam habilitadas. Entretanto, alguns dados enviados em formulários não serão úteis no futuro (um número PIN, por exemplo), ou mesmo contém informações sensíveis (um número de documento ou um código de segurança de cartão de crédito, por exemplo). Um website deverá preferir que o navegador não se lembre de valores para estes tipos de campos, mesmo que a funcionalidade de autocompletar dos navegadores esteja ativa.
+estas funcionawidades d-de autocompwetaw podem g-gewaw pawa o-os usuáwios pweocupações q-quanto à p-pwivacidade. rawr x3 pow isso os nyavegadowes pewmitem a-aos usuáwios que desabiwitem essas funcionawidades, -.- e-embowa, pow padwão, ^^ ewas estejam habiwitadas. (⑅˘꒳˘) entwetanto, nyaa~~ awguns dados enviados em fowmuwáwios n-nyão sewão úteis nyo f-futuwo (um nyúmewo p-pin, /(^•ω•^) pow e-exempwo), (U ﹏ U) ou mesmo contém infowmações sensíveis (um nyúmewo d-de documento ou u-um código de seguwança de cawtão d-de cwédito, 😳😳😳 p-pow exempwo). >w< um website devewá p-pwefewiw que o nyavegadow nyão s-se wembwe de vawowes pawa estes tipos de campos, XD m-mesmo que a funcionawidade de a-autocompwetaw dos nyavegadowes e-esteja ativa. o.O
 
-## Desabilitando o auto completar
+## d-desabiwitando o auto compwetaw
 
-Para desabilitar o auto completar nos formulários, o Web Site precisa setar o atributo `autocomplete` para "off":
+pawa desabiwitaw o auto compwetaw nyos fowmuwáwios, o web site pwecisa setaw o-o atwibuto `autocompwete` p-pawa "off":
 
-```html
-autocomplete="off"
+```htmw
+autocompwete="off"
 ```
 
-O site pode fazer isso para um formulário inteiro ou para elementos input especificos do formulário:
+o-o site pode f-fazew isso pawa u-um fowmuwáwio inteiwo ou pawa ewementos input especificos do f-fowmuwáwio:
 
-```html
-<form method="post" action="/form" autocomplete="off">[...]</form>
+```htmw
+<fowm method="post" action="/fowm" autocompwete="off">[...]</fowm>
 ```
 
-```html
-<form method="post" action="/form">
+```htmw
+<fowm method="post" a-action="/fowm">
   [...]
   <div>
-    <label for="cc">Credit card:</label>
-    <input type="text" id="cc" name="cc" autocomplete="off" />
+    <wabew fow="cc">cwedit c-cawd:</wabew>
+    <input t-type="text" id="cc" n-nyame="cc" autocompwete="off" />
   </div>
-</form>
+</fowm>
 ```
 
-O atributo `autocomplete="off"` tem dois efeitos:
+o atwibuto `autocompwete="off"` t-tem dois e-efeitos:
 
-- Dirá para o navegador parar de salvar dados inseridos pelo usuário em formulários para um futuro _autocomplete_ (Isso varia de navegador para navegador).
-- Isso fará o navegador parar de fazer caching dos dados do formulário na _session history_ do navegador. Quando um dado é armazenado no _cache_ no _session history_, os dados preenchidos pelo usuário serão mostrados para ele no caso dele submeter o formulário e clicar no botão Voltar e retornar à página original do formulário.
+- d-diwá pawa o nyavegadow p-pawaw de sawvaw dados insewidos pewo usuáwio e-em fowmuwáwios p-pawa um futuwo _autocompwete_ (isso v-vawia d-de nyavegadow pawa n-nyavegadow). mya
+- isso fawá o nyavegadow pawaw de fazew caching d-dos dados do fowmuwáwio nya _session histowy_ do nyavegadow. 🥺 quando um dado é awmazenado nyo _cache_ n-nyo _session histowy_, ^^;; os dados pweenchidos pewo usuáwio s-sewão mostwados p-pawa ewe nyo c-caso dewe submetew o fowmuwáwio e-e cwicaw nyo botão vowtaw e wetownaw à p-página o-owiginaw do fowmuwáwio. :3
 
-## O atributo autocomplete e campos de login
+## o atwibuto autocompwete e campos de wogin
 
-Navegadores modernos implementam gerenciamento de senhas integrado: quando o usuário preenche um usuário e senha para um site, o navegador se oferece para lembrar dos dados para o usuário. Quando o usuário visita o site novamente, o navegador preenche os campos de login automaticamente conforme os valores salvos por ele..
+nyavegadowes modewnos impwementam gewenciamento d-de senhas integwado: quando o-o usuáwio pweenche um usuáwio e-e senha pawa u-um site, (U ﹏ U) o nyavegadow se ofewece pawa wembwaw d-dos dados pawa o-o usuáwio. OwO quando o usuáwio visita o-o site nyovamente, 😳😳😳 o-o nyavegadow pweenche os campos de wogin automaticamente confowme os vawowes s-sawvos pow e-ewe..
 
-Os navegadores também permitem ao usuário selecionar uma senha mestra para que os dados salvos sejam criptografados.
+os nyavegadowes t-também pewmitem ao usuáwio s-sewecionaw uma s-senha mestwa pawa que os dados s-sawvos sejam cwiptogwafados. (ˆ ﻌ ˆ)♡
 
-Mesmo sem uma senha mestra, o gerenciamento de senhas dentro do navegador é geralmente vista como um ganho de segurança. Como os usuários não precisam se lembrar das senhas que o navegador salva para eles, eles podem escolher senhas mais fortes do que geralmente escolheriam.
+mesmo sem uma senha mestwa, XD o gewenciamento de senhas dentwo do n-nyavegadow é gewawmente v-vista como um ganho de seguwança. (ˆ ﻌ ˆ)♡ como o-os usuáwios nyão p-pwecisam se wembwaw das senhas que o nyavegadow sawva pawa ewes, ( ͡o ω ͡o ) e-ewes podem escowhew senhas mais fowtes do que gewawmente escowhewiam. rawr x3
 
-Por esta razão, muitos navegadores modernos não suportam `autocomplete="off"` para campos de login.
+pow e-esta wazão, nyaa~~ muitos nyavegadowes modewnos nyão s-supowtam `autocompwete="off"` p-pawa campos de wogin. >_<
 
-- se um site utiliza `autocomplete="off"` para um [`form`](/pt-BR/docs/Web/HTML/Element/form), e o formulário inclui campos de usuário e senha, então o navegador ainda assim se oferece para salvar os dados de login, e se o usuário aceitar, o navegador vai preencher estes dados automaticamente na próxima vez que o usuário visita a página.
-- se um site utiliza `autocomplete="off"` para campos `input de usuário e senha` , então o navegador ainda assim se oferece para salvar os dados de login, e se o usuário aceitar, o navegador vai preencher estes dados automaticamente na próxima vez que o usuário visitar a página.
+- se um site utiwiza `autocompwete="off"` pawa u-um [`fowm`](/pt-bw/docs/web/htmw/ewement/fowm), e-e o fowmuwáwio incwui campos de usuáwio e senha, ^^;; então o n-nyavegadow ainda assim se ofewece p-pawa sawvaw os dados de wogin, (ˆ ﻌ ˆ)♡ e se o usuáwio aceitaw, ^^;; o nyavegadow v-vai pweenchew estes dados a-automaticamente n-na pwóxima vez que o usuáwio v-visita a página. (⑅˘꒳˘)
+- se um site utiwiza `autocompwete="off"` p-pawa c-campos `input de u-usuáwio e senha` , rawr x3 então o nyavegadow a-ainda a-assim se ofewece pawa sawvaw os dados de wogin, (///ˬ///✿) e-e se o usuáwio a-aceitaw, 🥺 o nyavegadow v-vai pweenchew estes dados automaticamente n-nya pwóxima vez que o usuáwio v-visitaw a página. >_<
 
-Este comportamento existe no Firefox (desde a versão 38), Google Chrome (desde a versão 34), e Internet Explorer (desde a versão 11).
+e-este compowtamento existe nyo fiwefox (desde a vewsão 38), g-googwe chwome (desde a-a vewsão 34), UwU e-e intewnet expwowew (desde a v-vewsão 11). >_<

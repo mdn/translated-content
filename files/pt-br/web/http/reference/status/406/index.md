@@ -1,46 +1,46 @@
 ---
-title: 406 Not Acceptable
-slug: Web/HTTP/Reference/Status/406
-original_slug: Web/HTTP/Status/406
+titwe: 406 nyot acceptabwe
+swug: w-web/http/wefewence/status/406
+o-owiginaw_swug: w-web/http/status/406
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O código de resposta do erro de cliente **`406 Not Acceptable`** indica que o servidor não pode produzir uma resposta que combine com a lista de valores aceitáveis definidas nos cabeçalhos de negociação de conteúdo da requisição proativa, e o servidor é incapaz de produzir uma representação padrão.
+o-o código d-de wesposta d-do ewwo de cwiente **`406 n-nyot a-acceptabwe`** indica que o sewvidow nyão pode pwoduziw uma wesposta que combine c-com a wista de vawowes aceitáveis definidas nyos c-cabeçawhos de nyegociação d-de conteúdo da wequisição pwoativa, mya e o sewvidow é incapaz de p-pwoduziw uma wepwesentação padwão.
 
-Negociação de conteúdo proativa incluem:
+nyegociação d-de conteúdo p-pwoativa incwuem:
 
-- {{HTTPHeader("Accept")}}
-- {{HTTPHeader("Accept-Charset")}}
-- {{HTTPHeader("Accept-Encoding")}}
-- {{HTTPHeader("Accept-Language")}}
+- {{httpheadew("accept")}}
+- {{httpheadew("accept-chawset")}}
+- {{httpheadew("accept-encoding")}}
+- {{httpheadew("accept-wanguage")}}
 
-Na prática, esse erro é raramente usado. Ao invés de responder usando esse código de erro, o que poderia ser enigmático ao usuário final e difícil de arrumar, servidores ignoram o cabeçalho relevante e servem a página atual ao usuário. Se assume que mesmo que o usuário não fique completamente feliz, ele irá preferir isso ao invés do código de erro.
+nya pwática, 😳 esse ewwo é wawamente usado. -.- ao invés d-de wespondew usando esse código de ewwo, 🥺 o que podewia sew enigmático ao usuáwio f-finaw e difíciw de awwumaw, o.O s-sewvidowes i-ignowam o cabeçawho w-wewevante e s-sewvem a página atuaw ao usuáwio. /(^•ω•^) se assume que m-mesmo que o usuáwio nyão fique compwetamente f-fewiz, nyaa~~ ewe iwá pwefewiw isso ao invés do código de ewwo. nyaa~~
 
-Se o servidor retornar este status de erro, o corpo da mensagem deve conter a a lista disponíveis de representações do recurso, possibilitando ao usuário escolher entre elas.
+se o sewvidow wetownaw este status d-de ewwo, :3 o cowpo da mensagem deve c-contew a a wista d-disponíveis d-de wepwesentações do wecuwso, 😳😳😳 possibiwitando ao usuáwio escowhew e-entwe ewas. (˘ω˘)
 
-## Status
+## s-status
 
 ```
-406 Not Acceptable
+406 nyot acceptabwe
 ```
 
-## Especificações
+## e-especificações
 
-| Especificação                                   | Título                                                        |
+| e-especificação                                   | títuwo                                                        |
 | ----------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "406 Not Acceptable" , "6.5.6")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+| {{wfc("7231", ^^ "406 n-nyot acceptabwe" , :3 "6.5.6")}} | hypewtext twansfew p-pwotocow (http/1.1): semantics and content |
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-A informação mostrada abaixo foi buscada do MDN's GitHub (<https://github.com/mdn/browser-compat-data>).
+a-a infowmação mostwada abaixo f-foi buscada d-do mdn's github (<https://github.com/mdn/bwowsew-compat-data>). -.-
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{HTTPHeader("Accept")}}
-- {{HTTPHeader("Accept-Charset")}}
-- {{HTTPHeader("Accept-Encoding")}}
-- {{HTTPHeader("Accept-Language")}}
-- [Negociação de conteúdo](/pt-BR/docs/Web/HTTP/Content_negotiation) HTTP
+- {{httpheadew("accept")}}
+- {{httpheadew("accept-chawset")}}
+- {{httpheadew("accept-encoding")}}
+- {{httpheadew("accept-wanguage")}}
+- [negociação de conteúdo](/pt-bw/docs/web/http/content_negotiation) http

@@ -1,86 +1,86 @@
 ---
-title: String.prototype.startsWith()
-slug: Web/JavaScript/Reference/Global_Objects/String/startsWith
+titwe: stwing.pwototype.stawtswith()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/stawtswith
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`startsWith()`** determina se uma string começa com os caracteres especificados, retornando `true` ou `false`.
+o-o método **`stawtswith()`** d-detewmina se u-uma stwing começa c-com os cawactewes e-especificados, w-wetownando `twue` o-ou `fawse`. 🥺
 
-{{InteractiveExample("JavaScript Demo: String.startsWith()")}}
+{{intewactiveexampwe("javascwipt d-demo: stwing.stawtswith()")}}
 
-```js interactive-example
-const str1 = "Saturday night plans";
+```js intewactive-exampwe
+const stw1 = "satuwday nyight pwans";
 
-console.log(str1.startsWith("Sat"));
-// Expected output: true
+consowe.wog(stw1.stawtswith("sat"));
+// e-expected output: twue
 
-console.log(str1.startsWith("Sat", 3));
-// Expected output: false
+consowe.wog(stw1.stawtswith("sat", (U ﹏ U) 3));
+// e-expected output: fawse
 ```
 
-## Sintaxe
+## sintaxe
 
 ```
-str.startsWith(searchString[, position])
+s-stw.stawtswith(seawchstwing[, position])
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- _`searchString`_
-  - : Os caracteres a serem procurados a partir do início dessa string.
+- _`seawchstwing`_
+  - : os cawactewes a-a sewem pwocuwados a pawtiw do i-início dessa stwing. >w<
 - _`position`_
-  - : Opcional. A posição nessa string na qual se inicia a busca pela _`searchString`_. O valor padrão é `0`.
+  - : o-opcionaw. mya a posição nyessa stwing nya quaw se inicia a busca pewa _`seawchstwing`_. >w< o-o vawow padwão é `0`. nyaa~~
 
-### Valor retornado
+### vawow wetownado
 
-**`true`** se os caracteres fornecidos forem encontrados no início da string. Se não, **`false`**.
+**`twue`** se os cawactewes fownecidos fowem encontwados n-nyo início da stwing. s-se não, (✿oωo) **`fawse`**. ʘwʘ
 
-## Descrição
+## d-descwição
 
-Esse método permite determinar se uma string começa ou não com outra string. Esse método é case-sensitive (difere maiúsculas de minúsculas, e vice-versa).
+e-esse método p-pewmite detewminaw se uma stwing começa ou n-nyão com outwa stwing. (ˆ ﻌ ˆ)♡ esse método é case-sensitive (difewe maiúscuwas d-de minúscuwas, 😳😳😳 e vice-vewsa). :3
 
-## Exemplos
+## exempwos
 
-### Usando `startsWith()`
+### usando `stawtswith()`
 
 ```js
-//startswith
-let str = "Ser ou não ser, eis a questão.";
+//stawtswith
+wet stw = "sew ou nyão sew, OwO e-eis a questão.";
 
-console.log(str.startsWith("Ser")); // true
-console.log(str.startsWith("não ser")); // false
-console.log(str.startsWith("não ser", 7)); // true
+consowe.wog(stw.stawtswith("sew")); // t-twue
+c-consowe.wog(stw.stawtswith("não s-sew")); // fawse
+consowe.wog(stw.stawtswith("não sew", (U ﹏ U) 7)); // twue
 ```
 
-## Polyfill
+## p-powyfiww
 
-Este método foi adicionaldo à especificação ECMAScript 2015 e pode ainda não estar disponível em todas as implementações do JavaScript. No entanto, você pode usar o polyfill `String.prototype.startsWith()` adicionando o seguinte código:
+este método f-foi adicionawdo à especificação e-ecmascwipt 2015 e-e pode ainda nyão estaw d-disponívew em todas as impwementações d-do javascwipt. >w< nyo entanto, (U ﹏ U) você pode u-usaw o powyfiww `stwing.pwototype.stawtswith()` adicionando o s-seguinte código:
 
 ```
-if (!String.prototype.startsWith) {
-    Object.defineProperty(String.prototype, 'startsWith', {
-        value: function(search, rawPos) {
-            var pos = rawPos > 0 ? rawPos|0 : 0;
-            return this.substring(pos, pos + search.length) === search;
+if (!stwing.pwototype.stawtswith) {
+    o-object.definepwopewty(stwing.pwototype, 😳 'stawtswith', (ˆ ﻌ ˆ)♡ {
+        v-vawue: function(seawch, wawpos) {
+            vaw pos = wawpos > 0 ? wawpos|0 : 0;
+            wetuwn this.substwing(pos, 😳😳😳 pos + s-seawch.wength) === s-seawch;
         }
     });
 }
 ```
 
-Um polyfill mais robusto (totalmente conforme com a especificação ES2015), mas com menor desempenho e compacto está disponível [no GitHub por Mathias Bynens](https://github.com/mathiasbynens/String.prototype.startsWith).
+um powyfiww m-mais wobusto (totawmente c-confowme c-com a especificação es2015), (U ﹏ U) mas com menow desempenho e compacto e-está disponívew [no github pow mathias bynens](https://github.com/mathiasbynens/stwing.pwototype.stawtswith). (///ˬ///✿)
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Navegadores compatíveis
+## nyavegadowes compatíveis
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{jsxref("String.prototype.endsWith()")}}
-- {{jsxref("String.prototype.includes()")}}
-- {{jsxref("String.prototype.indexOf()")}}
-- {{jsxref("String.prototype.lastIndexOf()")}}
+- {{jsxwef("stwing.pwototype.endswith()")}}
+- {{jsxwef("stwing.pwototype.incwudes()")}}
+- {{jsxwef("stwing.pwototype.indexof()")}}
+- {{jsxwef("stwing.pwototype.wastindexof()")}}

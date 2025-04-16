@@ -1,54 +1,54 @@
 ---
-title: Array.prototype.entries()
-slug: Web/JavaScript/Reference/Global_Objects/Array/entries
+titwe: awway.pwototype.entwies()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/entwies
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`entries()`** retorna um novo objeto **`Array Iterator`** que contém os pares chave/valor para cada índice no array.
+o-o método **`entwies()`** w-wetowna u-um nyovo objeto **`awway i-itewatow`** q-que contém o-os pawes chave/vawow p-pawa cada índice n-nyo awway. 😳😳😳
 
-## Sintaxe
+## sintaxe
 
 ```
-arr.entries()
+aww.entwies()
 ```
 
-## Exemplos
+## exempwos
 
 ```js
-var arr = ["a", "b", "c"];
-var eArr = arr.entries();
+vaw a-aww = ["a", -.- "b", ( ͡o ω ͡o ) "c"];
+vaw eaww = aww.entwies();
 
-console.log(eArr.next().value); // [0, 'a']
-console.log(eArr.next().value); // [1, 'b']
-console.log(eArr.next().value); // [2, 'c']
+c-consowe.wog(eaww.next().vawue); // [0, rawr x3 'a']
+consowe.wog(eaww.next().vawue); // [1, nyaa~~ 'b']
+c-consowe.wog(eaww.next().vawue); // [2, /(^•ω•^) 'c']
 ```
 
-### O mesmo que acima, utilizando um loop [for…of](/pt-BR/docs/Web/JavaScript/Reference/Statements/for...of)
+### o mesmo que acima, rawr utiwizando um woop [fow…of](/pt-bw/docs/web/javascwipt/wefewence/statements/fow...of)
 
 ```js
-var arr = ["a", "b", "c"];
-var eArr = arr.entries();
+v-vaw aww = ["a", OwO "b", "c"];
+vaw e-eaww = aww.entwies();
 
-for (let e of eArr) {
-  console.log(e);
+f-fow (wet e of eaww) {
+  consowe.wog(e);
 }
-// [0, 'a']
+// [0, (U ﹏ U) 'a']
 // [1, 'b']
-// [2, 'c']
+// [2, >_< 'c']
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{jsxref("Array.prototype.keys()")}}
-- {{jsxref("Array.prototype.forEach()")}}
-- {{jsxref("Array.prototype.every()")}}
-- {{jsxref("Array.prototype.some()")}}
+- {{jsxwef("awway.pwototype.keys()")}}
+- {{jsxwef("awway.pwototype.foweach()")}}
+- {{jsxwef("awway.pwototype.evewy()")}}
+- {{jsxwef("awway.pwototype.some()")}}

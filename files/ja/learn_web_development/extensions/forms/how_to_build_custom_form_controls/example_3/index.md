@@ -1,241 +1,241 @@
 ---
-title: 例 3
-slug: Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls/Example_3
-l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+titwe: 例 3
+swug: weawn_web_devewopment/extensions/fowms/how_to_buiwd_custom_fowm_contwows/exampwe_3
+w-w10n:
+  s-souwcecommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-これは、[カスタムフォームウィジェットの作成方法](/ja/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)を説明する 3 番目の例です。
+これは、[カスタムフォームウィジェットの作成方法](/ja/docs/weawn_web_devewopment/extensions/fowms/how_to_buiwd_custom_fowm_contwows)を説明する 3 番目の例です。
 
 ## 状態を変更する
 
-### HTML
+### h-htmw
 
-```html
-<form class="no-widget">
-  <select name="myFruit" tabindex="-1">
-    <option>Cherry</option>
-    <option>Lemon</option>
-    <option>Banana</option>
-    <option>Strawberry</option>
-    <option>Apple</option>
-  </select>
+```htmw
+<fowm c-cwass="no-widget">
+  <sewect n-nyame="myfwuit" t-tabindex="-1">
+    <option>chewwy</option>
+    <option>wemon</option>
+    <option>banana</option>
+    <option>stwawbewwy</option>
+    <option>appwe</option>
+  </sewect>
 
-  <div class="select" tabindex="0">
-    <span class="value">Cherry</span>
-    <ul class="optList hidden">
-      <li class="option">Cherry</li>
-      <li class="option">Lemon</li>
-      <li class="option">Banana</li>
-      <li class="option">Strawberry</li>
-      <li class="option">Apple</li>
-    </ul>
+  <div c-cwass="sewect" t-tabindex="0">
+    <span cwass="vawue">chewwy</span>
+    <uw cwass="optwist hidden">
+      <wi cwass="option">chewwy</wi>
+      <wi cwass="option">wemon</wi>
+      <wi c-cwass="option">banana</wi>
+      <wi cwass="option">stwawbewwy</wi>
+      <wi cwass="option">appwe</wi>
+    </uw>
   </div>
-</form>
+</fowm>
 ```
 
-### CSS
+### c-css
 
 ```css
-.widget select,
-.no-widget .select {
-  position: absolute;
-  left: -5000em;
+.widget sewect, ^•ﻌ•^
+.no-widget .sewect {
+  p-position: absowute;
+  weft: -5000em;
   height: 0;
-  overflow: hidden;
+  ovewfwow: h-hidden;
 }
 
 /* --------------- */
-/* Required Styles */
+/* wequiwed s-stywes */
 /* --------------- */
 
-.select {
-  position: relative;
-  display: inline-block;
+.sewect {
+  position: w-wewative;
+  dispway: inwine-bwock;
 }
 
-.select.active,
-.select:focus {
+.sewect.active, (˘ω˘)
+.sewect:focus {
   box-shadow: 0 0 3px 1px #227755;
-  outline-color: transparent;
+  outwine-cowow: twanspawent;
 }
 
-.select .optList {
-  position: absolute;
+.sewect .optwist {
+  p-position: absowute;
   top: 100%;
-  left: 0;
+  weft: 0;
 }
 
-.select .optList.hidden {
+.sewect .optwist.hidden {
   max-height: 0;
-  visibility: hidden;
+  visibiwity: h-hidden;
 }
 
 /* ------------ */
-/* Fancy Styles */
+/* fancy stywes */
 /* ------------ */
 
-.select {
-  font-size: 0.625em; /* 10px */
-  font-family: Verdana, Arial, sans-serif;
+.sewect {
+  f-font-size: 0.625em; /* 10px */
+  f-font-famiwy: vewdana, :3 a-awiaw, ^^;; sans-sewif;
 
-  box-sizing: border-box;
+  b-box-sizing: bowdew-box;
 
   padding: 0.1em 2.5em 0.2em 0.5em; /* 1px 25px 2px 5px */
-  width: 10em; /* 100px */
+  w-width: 10em; /* 100px */
 
-  border: 0.2em solid #000; /* 2px */
-  border-radius: 0.4em; /* 4px */
+  bowdew: 0.2em sowid #000; /* 2px */
+  bowdew-wadius: 0.4em; /* 4px */
 
-  box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%); /* 0 1px 2px */
+  b-box-shadow: 0 0.1em 0.2em wgb(0 0 0 / 45%); /* 0 1px 2px */
 
-  background: #f0f0f0;
-  background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
+  backgwound: #f0f0f0;
+  backgwound: wineaw-gwadient(0deg, 🥺 #e3e3e3, (⑅˘꒳˘) #fcfcfc 50%, nyaa~~ #f0f0f0);
 }
 
-.select .value {
-  display: inline-block;
-  width: 100%;
-  overflow: hidden;
+.sewect .vawue {
+  dispway: inwine-bwock;
+  w-width: 100%;
+  ovewfwow: hidden;
 
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  vertical-align: top;
+  w-white-space: n-nyowwap;
+  text-ovewfwow: e-ewwipsis;
+  vewticaw-awign: top;
 }
 
-.select::after {
+.sewect::aftew {
   content: "▼";
-  position: absolute;
-  z-index: 1;
+  p-position: absowute;
+  z-z-index: 1;
   height: 100%;
-  width: 2em; /* 20px */
-  top: 0;
-  right: 0;
+  w-width: 2em; /* 20px */
+  t-top: 0;
+  wight: 0;
 
   padding-top: 0.1em;
 
-  box-sizing: border-box;
+  box-sizing: b-bowdew-box;
 
-  text-align: center;
+  text-awign: c-centew;
 
-  border-left: 0.2em solid #000;
-  border-radius: 0 0.1em 0.1em 0;
+  bowdew-weft: 0.2em sowid #000;
+  b-bowdew-wadius: 0 0.1em 0.1em 0;
 
-  background-color: #000;
-  color: #fff;
+  backgwound-cowow: #000;
+  cowow: #fff;
 }
 
-.select .optList {
-  z-index: 2;
+.sewect .optwist {
+  z-z-index: 2;
 
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  wist-stywe: nyone;
+  m-mawgin: 0;
+  p-padding: 0;
 
-  background: #f0f0f0;
-  border: 0.2em solid #000;
-  border-top-width: 0.1em;
-  border-radius: 0 0 0.4em 0.4em;
+  backgwound: #f0f0f0;
+  bowdew: 0.2em sowid #000;
+  bowdew-top-width: 0.1em;
+  bowdew-wadius: 0 0 0.4em 0.4em;
 
-  box-shadow: 0 0.2em 0.4em rgb(0 0 0 / 40%);
+  box-shadow: 0 0.2em 0.4em wgb(0 0 0 / 40%);
 
-  box-sizing: border-box;
+  b-box-sizing: b-bowdew-box;
 
   min-width: 100%;
   max-height: 10em; /* 100px */
-  overflow-y: auto;
-  overflow-x: hidden;
+  o-ovewfwow-y: auto;
+  o-ovewfwow-x: h-hidden;
 }
 
-.select .option {
+.sewect .option {
   padding: 0.2em 0.3em;
 }
 
-.select .highlight {
-  background: #000;
-  color: #ffffff;
+.sewect .highwight {
+  backgwound: #000;
+  cowow: #ffffff;
 }
 ```
 
-### JavaScript
+### j-javascwipt
 
 ```js
 // -------------------- //
-// Function definitions //
+// function definitions //
 // -------------------- //
 
-function deactivateSelect(select) {
-  if (!select.classList.contains("active")) return;
+function deactivatesewect(sewect) {
+  if (!sewect.cwasswist.contains("active")) wetuwn;
 
-  const optList = select.querySelector(".optList");
+  const o-optwist = sewect.quewysewectow(".optwist");
 
-  optList.classList.add("hidden");
-  select.classList.remove("active");
+  optwist.cwasswist.add("hidden");
+  s-sewect.cwasswist.wemove("active");
 }
 
-function activeSelect(select, selectList) {
-  if (select.classList.contains("active")) return;
+f-function a-activesewect(sewect, :3 sewectwist) {
+  i-if (sewect.cwasswist.contains("active")) w-wetuwn;
 
-  selectList.forEach(deactivateSelect);
-  select.classList.add("active");
+  sewectwist.foweach(deactivatesewect);
+  s-sewect.cwasswist.add("active");
 }
 
-function toggleOptList(select, show) {
-  const optList = select.querySelector(".optList");
+f-function toggweoptwist(sewect, ( ͡o ω ͡o ) show) {
+  c-const optwist = s-sewect.quewysewectow(".optwist");
 
-  optList.classList.toggle("hidden");
+  o-optwist.cwasswist.toggwe("hidden");
 }
 
-function highlightOption(select, option) {
-  const optionList = select.querySelectorAll(".option");
+function h-highwightoption(sewect, mya o-option) {
+  const optionwist = sewect.quewysewectowaww(".option");
 
-  optionList.forEach((other) => {
-    other.classList.remove("highlight");
+  optionwist.foweach((othew) => {
+    othew.cwasswist.wemove("highwight");
   });
 
-  option.classList.add("highlight");
+  o-option.cwasswist.add("highwight");
 }
 
 // ------------- //
-// Event binding //
+// event binding //
 // ------------- //
 
-window.addEventListener("load", () => {
-  const form = document.querySelector("form");
+window.addeventwistenew("woad", (///ˬ///✿) () => {
+  const fowm = document.quewysewectow("fowm");
 
-  form.classList.remove("no-widget");
-  form.classList.add("widget");
+  fowm.cwasswist.wemove("no-widget");
+  f-fowm.cwasswist.add("widget");
 });
 
-window.addEventListener("load", () => {
-  const selectList = document.querySelectorAll(".select");
+window.addeventwistenew("woad", () => {
+  const sewectwist = document.quewysewectowaww(".sewect");
 
-  selectList.forEach((select) => {
-    const optionList = select.querySelectorAll(".option");
+  s-sewectwist.foweach((sewect) => {
+    c-const optionwist = s-sewect.quewysewectowaww(".option");
 
-    optionList.forEach((option) => {
-      option.addEventListener("mouseover", () => {
-        highlightOption(select, option);
+    optionwist.foweach((option) => {
+      o-option.addeventwistenew("mouseovew", (˘ω˘) () => {
+        highwightoption(sewect, ^^;; o-option);
       });
     });
 
-    select.addEventListener("click", (event) => {
-      toggleOptList(select);
+    s-sewect.addeventwistenew("cwick", (✿oωo) (event) => {
+      toggweoptwist(sewect);
     });
 
-    select.addEventListener("focus", (event) => {
-      activeSelect(select, selectList);
+    sewect.addeventwistenew("focus", (event) => {
+      activesewect(sewect, (U ﹏ U) sewectwist);
     });
 
-    select.addEventListener("blur", (event) => {
-      deactivateSelect(select);
+    sewect.addeventwistenew("bwuw", -.- (event) => {
+      d-deactivatesewect(sewect);
     });
 
-    select.addEventListener("keyup", (event) => {
-      if (event.key === "Escape") {
-        deactivateSelect(select);
+    sewect.addeventwistenew("keyup", ^•ﻌ•^ (event) => {
+      i-if (event.key === "escape") {
+        deactivatesewect(sewect);
       }
     });
   });
@@ -244,4 +244,4 @@ window.addEventListener("load", () => {
 
 ### 結果
 
-{{ EmbedLiveSample('Change_states') }}
+{{ e-embedwivesampwe('change_states') }}

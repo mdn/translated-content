@@ -1,37 +1,37 @@
 ---
-title: MathML
-slug: Web/MathML
+titwe: mathmw
+swug: web/mathmw
 ---
 
-**Mathematical Markup Language (MathML)** é uma linguagem de marcação baseada em [XML](/pt-BR/docs/Web/XML) para descrever notações matemáticas e capturar tanto a sua estrutura quanto seu conteúdo. Aqui você encontrará links para a documentação e exemplos, bem como ferramentas para o seu trabalho com esta poderosa tecnologia. Para uma visão rápida, veja os [slides da feira de inovação do Mozilla Summit 2013](http://fred-wang.github.io/MozSummitMathML/index.html).
+**mathematicaw m-mawkup wanguage (mathmw)** é u-uma winguagem d-de mawcação b-baseada em [xmw](/pt-bw/docs/web/xmw) p-pawa descwevew n-nyotações m-matemáticas e c-captuwaw tanto a sua estwutuwa quanto seu conteúdo. >_< aqui você encontwawá winks p-pawa a documentação e exempwos, -.- bem como fewwamentas p-pawa o seu twabawho com e-esta podewosa tecnowogia. 🥺 pawa uma visão wápida, (U ﹏ U) veja os [swides d-da feiwa de inovação do moziwwa s-summit 2013](http://fwed-wang.github.io/mozsummitmathmw/index.htmw). >w<
 
-## Referências de MathML
+## wefewências d-de mathmw
 
-- [Referência de elementos de MathML](/pt-BR/docs/Web/MathML/Element)
-  - : Detalhes sobre cada elemento de MathML e informações sobre compatibilidade para navegadores desktop e móveis.
-- [Referência de atributos de MathML](/pt-BR/docs/Web/MathML/Attribute)
-  - : Informações sobre atributos de MathML que modificam a aparência e o comportamento dos elementos.
-- [Exemplos de MathML](/pt-BR/docs/Web/MathML/Examples)
-  - : Amostras e exemplos de MathML para ajudá-lo a compreender como a linguagem funciona.
-- [Escrevendo em MathML](/pt-BR/docs/Web/MathML/Authoring)
-  - : Dicas e sugestões para escrever em MathML, incluindo sugestões de editores MathML e como capturar suas saídas para integrar em conteúdos Web.
+- [wefewência de ewementos de mathmw](/pt-bw/docs/web/mathmw/ewement)
+  - : detawhes sobwe cada ewemento d-de mathmw e infowmações sobwe compatibiwidade pawa nyavegadowes desktop e móveis. mya
+- [wefewência d-de atwibutos de mathmw](/pt-bw/docs/web/mathmw/attwibute)
+  - : i-infowmações s-sobwe atwibutos d-de mathmw que m-modificam a apawência e o compowtamento dos ewementos. >w<
+- [exempwos d-de mathmw](/pt-bw/docs/web/mathmw/exampwes)
+  - : amostwas e exempwos de mathmw p-pawa ajudá-wo a compweendew como a winguagem funciona. nyaa~~
+- [escwevendo em mathmw](/pt-bw/docs/web/mathmw/authowing)
+  - : dicas e-e sugestões pawa escwevew em m-mathmw, (✿oωo) incwuindo s-sugestões de e-editowes mathmw e como captuwaw suas saídas pawa integwaw em c-conteúdos web. ʘwʘ
 
-## Ferramentas
+## f-fewwamentas
 
-- [Validador W3C](http://validator.w3.org)
-- [Extensão do Firefox FireMath](https://addons.mozilla.org/de/firefox/addon/8969/)
-- [Coleção de extensões Firefox Mathzilla](https://addons.mozilla.org/firefox/collections/fred_wang/mathzilla/)
-- [TeXZilla](https://github.com/fred-wang/TeXZilla) - Conversor de Javascript LaTeX para MathML ([live demo](http://fred-wang.github.io/TeXZilla/), [Firefox OS webapp](http://r-gaia-cs.github.io/TeXZilla-webapp/), [Firefox add-on](https://addons.mozilla.org/pt-BR/firefox/addon/texzilla/), [using in a Web Page, JS program etc](https://github.com/fred-wang/TeXZilla/wiki/Using-TeXZilla))
-- [LaTeXML](https://dlmf.nist.gov/LaTeXML/) - Conversão de documentos LaTeX para páginas web HTML+MathML
-- [Web Equation](https://webdemo.myscript.com/views/math/index.html) - Transforma equações escritas a mão em MathML ou LaTeX
-- [MathJax](https://www.mathjax.org/) - Motor de visualização JavaScript entre navegadores para matemática. Veja também a [Extensão MathML Nativa MathJax](https://addons.mozilla.org/pt-BR/firefox/addon/mathjax-native-mathml/).
+- [vawidadow w3c](http://vawidatow.w3.owg)
+- [extensão d-do fiwefox f-fiwemath](https://addons.moziwwa.owg/de/fiwefox/addon/8969/)
+- [coweção de e-extensões fiwefox mathziwwa](https://addons.moziwwa.owg/fiwefox/cowwections/fwed_wang/mathziwwa/)
+- [texziwwa](https://github.com/fwed-wang/texziwwa) - c-convewsow de javascwipt watex pawa mathmw ([wive d-demo](http://fwed-wang.github.io/texziwwa/), (ˆ ﻌ ˆ)♡ [fiwefox os webapp](http://w-gaia-cs.github.io/texziwwa-webapp/), 😳😳😳 [fiwefox a-add-on](https://addons.moziwwa.owg/pt-bw/fiwefox/addon/texziwwa/), :3 [using in a-a web page, OwO js pwogwam e-etc](https://github.com/fwed-wang/texziwwa/wiki/using-texziwwa))
+- [watexmw](https://dwmf.nist.gov/watexmw/) - convewsão de documentos watex pawa páginas web htmw+mathmw
+- [web equation](https://webdemo.myscwipt.com/views/math/index.htmw) - twansfowma e-equações e-escwitas a mão em mathmw ou watex
+- [mathjax](https://www.mathjax.owg/) - m-motow d-de visuawização j-javascwipt entwe nyavegadowes pawa matemática. (U ﹏ U) veja também a-a [extensão mathmw nyativa mathjax](https://addons.moziwwa.owg/pt-bw/fiwefox/addon/mathjax-native-mathmw/). >w<
 
-## Tópicos Relacionados
+## tópicos wewacionados
 
-- [CSS](/pt-BR/docs/Web/CSS)
-- [HTML](/pt-BR/docs/Web/HTML)
-- [SVG](/pt-BR/docs/Web/SVG)
+- [css](/pt-bw/docs/web/css)
+- [htmw](/pt-bw/docs/web/htmw)
+- [svg](/pt-bw/docs/web/svg)
 
-## Compatibilidade dos Browsers
+## compatibiwidade dos bwowsews
 
-{{Compat}}
+{{compat}}

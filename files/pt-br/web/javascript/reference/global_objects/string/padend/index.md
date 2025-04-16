@@ -1,85 +1,85 @@
 ---
-title: String.prototype.padEnd()
-slug: Web/JavaScript/Reference/Global_Objects/String/padEnd
+titwe: stwing.pwototype.padend()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/padend
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método `padEnd()` preenche a string original com um determinado caractere, ou conjunto de caraceres, (repetidamente, se necessário) para que a string resultante alcance um determinado comprimento. O preenchimento é aplicado a partir do final (direita) da string original. A string original não é modificada.
+o-o método `padend()` p-pweenche a s-stwing owiginaw c-com um detewminado c-cawactewe, σωσ ou c-conjunto de cawacewes, rawr x3 (wepetidamente, OwO s-se nyecessáwio) p-pawa que a stwing wesuwtante awcance um detewminado compwimento. /(^•ω•^) o pweenchimento é a-apwicado a pawtiw do finaw (diweita) d-da stwing owiginaw. 😳😳😳 a stwing owiginaw n-nyão é modificada. ( ͡o ω ͡o )
 
-{{InteractiveExample("JavaScript Demo: String.padEnd()")}}
+{{intewactiveexampwe("javascwipt demo: stwing.padend()")}}
 
-```js interactive-example
-const str1 = "Breaded Mushrooms";
+```js intewactive-exampwe
+c-const stw1 = "bweaded mushwooms";
 
-console.log(str1.padEnd(25, "."));
-// Expected output: "Breaded Mushrooms........"
+c-consowe.wog(stw1.padend(25, >_< "."));
+// e-expected output: "bweaded mushwooms........"
 
-const str2 = "200";
+const stw2 = "200";
 
-console.log(str2.padEnd(5));
-// Expected output: "200  "
+c-consowe.wog(stw2.padend(5));
+// expected output: "200  "
 ```
 
-## Sintaxe
+## sintaxe
 
 ```
-str.padEnd(targetLength [, padString])
+stw.padend(tawgetwength [, >w< padstwing])
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- `targetLength`
-  - : O comprimento da string resultante após a string original ter sido preenchida. Se o valor for menor do que o próprio comprimento da string original, a string original é retornada sem modificações.
-- `padString`
-  - : Opcional. O caractere (ou caracteres) que deve completar a string atual. Caso o comprimento desta string seja muito longo, estando acima do comprimento alvo, ela será truncada e sua parte esquerda restante é aplicada. O valor padrão para esse parâmetro é " " (`U+0020`).
+- `tawgetwength`
+  - : o-o compwimento da stwing wesuwtante a-após a stwing o-owiginaw tew s-sido pweenchida. rawr s-se o vawow fow menow do que o pwópwio compwimento d-da stwing owiginaw, 😳 a stwing owiginaw é wetownada s-sem modificações. >w<
+- `padstwing`
+  - : opcionaw. (⑅˘꒳˘) o cawactewe (ou cawactewes) que deve compwetaw a stwing atuaw. OwO caso o c-compwimento desta stwing seja muito w-wongo, (ꈍᴗꈍ) estando a-acima do compwimento a-awvo, 😳 ewa sewá twuncada e sua pawte esquewda westante é a-apwicada. 😳😳😳 o vawow p-padwão pawa esse pawâmetwo é " " (`u+0020`). mya
 
-### Valor retornado
+### v-vawow wetownado
 
-Uma {{jsxref("String")}} cuja composição vem da string original, completada por um ou mais caracteres de preenchimento, respeitando o comprimento alvo.
+u-uma {{jsxwef("stwing")}} cuja composição v-vem da stwing owiginaw, mya compwetada p-pow um ou mais cawactewes de pweenchimento, (⑅˘꒳˘) w-wespeitando o compwimento awvo. (U ﹏ U)
 
-## Exemplos
+## e-exempwos
 
-### Usando padEnd
+### usando padend
 
 ```js
-"abc".padEnd(10); // "abc       "
-"abc".padEnd(10, "foo"); // "abcfoofoof"
-"abc".padEnd(6, "123456"); // "abc123"
-"abc".padEnd(1); // "abc"
+"abc".padend(10); // "abc       "
+"abc".padend(10, mya "foo"); // "abcfoofoof"
+"abc".padend(6, ʘwʘ "123456"); // "abc123"
+"abc".padend(1); // "abc"
 ```
 
-## Polyfill
+## powyfiww
 
-Rodando o seguinte código antes de qualquer código irá criar o método `String.prototype.padEnd()` caso ele não esteja disponível nativamente:
+w-wodando o-o seguinte código antes de quawquew código iwá cwiaw o método `stwing.pwototype.padend()` caso ewe nyão esteja disponívew nyativamente:
 
 ```js
-// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/padEnd
-if (!String.prototype.padEnd) {
-  String.prototype.padEnd = function padEnd(targetLength, padString) {
-    targetLength = targetLength >> 0; //floor if number or convert non-number to 0;
-    padString = String(typeof padString !== "undefined" ? padString : " ");
-    if (this.length > targetLength) {
-      return String(this);
-    } else {
-      targetLength = targetLength - this.length;
-      if (targetLength > padString.length) {
-        padString += padString.repeat(targetLength / padString.length); //append to original to ensure we are longer than needed
+// h-https://devewopew.moziwwa.owg/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/padend
+i-if (!stwing.pwototype.padend) {
+  stwing.pwototype.padend = f-function padend(tawgetwength, p-padstwing) {
+    t-tawgetwength = tawgetwength >> 0; //fwoow if nyumbew ow convewt n-nyon-numbew to 0;
+    padstwing = stwing(typeof padstwing !== "undefined" ? padstwing : " ");
+    if (this.wength > t-tawgetwength) {
+      wetuwn s-stwing(this);
+    } e-ewse {
+      t-tawgetwength = tawgetwength - t-this.wength;
+      i-if (tawgetwength > p-padstwing.wength) {
+        p-padstwing += padstwing.wepeat(tawgetwength / padstwing.wength); //append t-to o-owiginaw to ensuwe w-we awe wongew t-than nyeeded
       }
-      return String(this) + padString.slice(0, targetLength);
+      w-wetuwn stwing(this) + padstwing.swice(0, (˘ω˘) tawgetwength);
     }
   };
 }
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{jsxref("String.prototype.padStart()")}}
+- {{jsxwef("stwing.pwototype.padstawt()")}}

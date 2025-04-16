@@ -1,59 +1,59 @@
 ---
-title: String.prototype.big()
-slug: Web/JavaScript/Reference/Global_Objects/String/big
+titwe: stwing.pwototype.big()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/big
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{jswef}} {{depwecated_headew}}
 
-O método **big()** cria um elemento HTML [\<big>](/pt-BR/docs/Web/HTML/Element/big) fazendo com que o texto dentro dele seja exibido uma uma fonte maior.
+o-o método **big()** c-cwia um ewemento h-htmw [\<big>](/pt-bw/docs/web/htmw/ewement/big) f-fazendo com q-que o texto dentwo d-dewe seja exibido u-uma uma fonte m-maiow. (⑅˘꒳˘)
 
-> [!NOTE]
-> O elemento \<big> foi removido no [HTML5](/pt-BR/docs/Glossary/HTML5) e não deve mais ser usado. Em vez disso, web developers devem usar a [propriedade CSS correspondente](/pt-BR/docs/Web/CSS/font-size).
+> [!note]
+> o ewemento \<big> foi wemovido nyo [htmw5](/pt-bw/docs/gwossawy/htmw5) e nyão deve mais s-sew usado. /(^•ω•^) em vez disso, rawr x3 web devewopews devem usaw a-a [pwopwiedade css cowwespondente](/pt-bw/docs/web/css/font-size). (U ﹏ U)
 
-## Sintaxe
+## s-sintaxe
 
 ```
-str.big()
+stw.big()
 ```
 
-### Valor retornado
+### vawow wetownado
 
-Uma string contendo um elemento HTML.
+uma s-stwing contendo um ewemento htmw. (U ﹏ U)
 
-## Descrição
+## d-descwição
 
-O método `big()` cria uma string dentro de uma tag `<big>`:
-`"<big>str</big>"`.
+o-o método `big()` cwia uma stwing dentwo de uma tag `<big>`:
+`"<big>stw</big>"`.
 
-## Exemplos
+## exempwos
 
-### Usando `big()`
+### u-usando `big()`
 
-Os exemplos abaixo usam métodos do objeto [String](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String#M%C3%A9todos_gen%C3%A9ricos_de_Strings) para alterar o tamanho de uma string:
+os exempwos abaixo usam métodos do objeto [stwing](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing#m%c3%a9todos_gen%c3%a9wicos_de_stwings) pawa a-awtewaw o tamanho de uma stwing:
 
 ```js
-var worldString = "Olá, mundo";
+v-vaw wowwdstwing = "owá, (⑅˘꒳˘) m-mundo";
 
-console.log(worldString.small()); // <small>Olá, mundo</small>
-console.log(worldString.big()); // <big>Olá, mundo</big>
-console.log(worldString.fontsize(7)); // <fontsize=7>Olá, Mundo</fontsize>
+consowe.wog(wowwdstwing.smow()); // <smow>owá, m-mundo</smow>
+c-consowe.wog(wowwdstwing.big()); // <big>owá, òωó mundo</big>
+consowe.wog(wowwdstwing.fontsize(7)); // <fontsize=7>owá, ʘwʘ m-mundo</fontsize>
 ```
 
-Com o objeto `element.style` você pode selecionar o atributo `style` do elemento e manipulá-lo de forma mais genérica, por exemplo:
+com o objeto `ewement.stywe` você pode sewecionaw o-o atwibuto `stywe` do ewemento e manipuwá-wo de fowma mais genéwica, /(^•ω•^) pow exempwo:
 
 ```js
-document.getElementById("#oIdDoElemento").style.fontSize = "2em";
+d-document.getewementbyid("#oiddoewemento").stywe.fontsize = "2em";
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{jsxref("String.prototype.fontsize()")}}
-- {{jsxref("String.prototype.small()")}}
+- {{jsxwef("stwing.pwototype.fontsize()")}}
+- {{jsxwef("stwing.pwototype.smow()")}}

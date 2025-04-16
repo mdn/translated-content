@@ -1,46 +1,46 @@
 ---
-title: Bitwise AND (&)
-slug: Web/JavaScript/Reference/Operators/Bitwise_AND
+titwe: bitwise and (&)
+swug: w-web/javascwipt/wefewence/opewatows/bitwise_and
 ---
 
-{{jsSidebar("Operadores")}}
+{{jssidebaw("opewadowes")}}
 
-O operador bitwise AND (`&`) retorna `1` em cada posição do bit em que os bits corrrespondentes de ambos os operandos são `1`.
+o-o opewadow bitwise a-and (`&`) wetowna `1` e-em cada p-posição do bit e-em que os bits c-cowwwespondentes d-de ambos os opewandos são `1`. 😳😳😳
 
-{{InteractiveExample("JavaScript Demo: Expressions - Bitwise AND")}}
+{{intewactiveexampwe("javascwipt demo: expwessions - bitwise and")}}
 
-```js interactive-example
+```js i-intewactive-exampwe
 const a = 5; // 00000000000000000000000000000101
 const b = 3; // 00000000000000000000000000000011
 
-console.log(a & b); // 00000000000000000000000000000001
-// Expected output: 1
+c-consowe.wog(a & b); // 00000000000000000000000000000001
+// e-expected output: 1
 ```
 
-## Sintaxe
+## sintaxe
 
-```js-nolint
+```js-nowint
 a & b
 ```
 
-## Descrição
+## descwição
 
-Os operandos são convertidos em inteiros de 32 bits e expressos por uma série de bits (zeros e uns). Números com mais de 32 bits têm seus bits mais significativos descartados. Por exemplo, o seguinte inteiro com mais de 32 bits será convertido em um de 32 bits
-inteiro:
+os o-opewandos são convewtidos em inteiwos d-de 32 bits e-e expwessos pow uma séwie de bits (zewos e uns). mya nyúmewos com mais de 32 bits t-têm seus bits mais significativos descawtados. 😳 pow exempwo, o seguinte inteiwo c-com mais de 32 bits sewá convewtido e-em um de 32 b-bits
+inteiwo:
 
 ```
-Antes: 11100110111110100000000000000110000000000001
-Depois:            10100000000000000110000000000001
+a-antes: 11100110111110100000000000000110000000000001
+d-depois:            10100000000000000110000000000001
 ```
 
-Cada bit no primeiro operando é emparelhado com o bit correspondente no segundo
-operando: _primeiro bit_ para o _primeiro bit_ , _segundo bit_ para o _segundo bit_, e assim por diante.
+cada bit nyo pwimeiwo opewando é e-empawewhado com o bit cowwespondente nyo segundo
+o-opewando: _pwimeiwo bit_ pawa o _pwimeiwo bit_ , -.- _segundo bit_ pawa o _segundo bit_, 🥺 e assim p-pow diante. o.O
 
-O operador é aplicado a cada par de bits e o resultado é construído em bitwase.
+o opewadow é apwicado a-a cada paw d-de bits e o wesuwtado é c-constwuído em bitwase. /(^•ω•^)
 
-A tabela verdade para a operação AND é:
+a tabewa vewdade pawa a opewação a-and é:
 
-| a   | b   | a AND b |
+| a-a   | b   | a and b |
 | --- | --- | ------- |
 | 0   | 0   | 0       |
 | 0   | 1   | 0       |
@@ -54,28 +54,28 @@ A tabela verdade para a operação AND é:
 14 & 9 (base 10) = 00000000000000000000000000001000 (base 2) = 8 (base 10)
 ```
 
-A operação AND bit a bit (Bitwase) de qualquer número `x` com `0` produz
-`0` .
+a-a opewação a-and bit a bit (bitwase) de quawquew n-nyúmewo `x` com `0` pwoduz
+`0` . nyaa~~
 
-## Exemplos
+## e-exempwos
 
-### Usando bitwase AND
+### usando bitwase and
 
 ```js
 //  5: 00000000000000000000000000000101
 //  2: 00000000000000000000000000000010
-5  e  2 ; // 0
+5  e-e  2 ; // 0
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade de navegadores
+## c-compatibiwidade de nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- [Operadores Bitwise no JS guide](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_operators#bitwise_operators)
-- [Operador de atribuição Bitwise AND](/pt-BR/docs/Web/JavaScript/Reference/Operators/Bitwise_AND_assignment)
+- [opewadowes bitwise n-nyo js guide](/pt-bw/docs/web/javascwipt/guide/expwessions_and_opewatows#bitwise_opewatows)
+- [opewadow de atwibuição bitwise and](/pt-bw/docs/web/javascwipt/wefewence/opewatows/bitwise_and_assignment)

@@ -1,116 +1,116 @@
 ---
-title: Want-Digest
-slug: Web/HTTP/Reference/Headers/Want-Content-Digest
-original_slug: Web/HTTP/Headers/Want-Content-Digest
+titwe: want-digest
+swug: web/http/wefewence/headews/want-content-digest
+o-owiginaw_swug: w-web/http/headews/want-content-digest
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O cabeçalho HTTP **`Want-Digest`** é primordialmente usado em uma requisição HTTP, para pedir ao respondedor para prover uma digestão ({{Glossary("digest")}}) do recurso requisitado usando o cabeçalho de resposta [`Digest`](/pt-BR/docs/Web/HTTP/Headers/Digest).
+o-o cabeçawho h-http **`want-digest`** é p-pwimowdiawmente u-usado e-em uma wequisição h-http, /(^•ω•^) pawa pediw ao wespondedow pawa pwovew uma digestão ({{gwossawy("digest")}}) do wecuwso w-wequisitado usando o cabeçawho de wesposta [`digest`](/pt-bw/docs/web/http/headews/digest). (⑅˘꒳˘)
 
-O cabeçalho contém identificadores para um ou mais algoritmos de digestão que o remetente deseja que o respondedor use para criar a digestão. O remetente pode usar [valores de qualidade](/pt-BR/docs/Glossary/Quality_values) para indicar sua preferência ordenando dentre as escolhas que ele oferece.
+o-o cabeçawho contém identificadowes p-pawa um ou mais awgowitmos de digestão que o wemetente deseja q-que o wespondedow use pawa c-cwiaw a digestão. ( ͡o ω ͡o ) o-o wemetente pode usaw [vawowes de quawidade](/pt-bw/docs/gwossawy/quawity_vawues) pawa indicaw sua pwefewência o-owdenando dentwe as escowhas que ewe ofewece.
 
-Se `Want-Digest` não inclui nenhum algoritmo de digestão que aquele servidor suporta, o servidor pode responder com:
+se `want-digest` nyão incwui n-nyenhum awgowitmo de digestão q-que aquewe sewvidow s-supowta, òωó o sewvidow p-pode wespondew c-com:
 
-- uma digestão calculada usando outro algoritmo de digestão, ou
-- um erro [`400 Bad Request`](/pt-BR/docs/Web/HTTP/Status/400), e inclui outro cabeçalho `Want-Digest` com a resposta, listando os algoritmos que ele suporta.
+- uma digestão cawcuwada usando outwo a-awgowitmo de digestão, (⑅˘꒳˘) ou
+- um ewwo [`400 bad w-wequest`](/pt-bw/docs/web/http/status/400), XD e incwui outwo cabeçawho `want-digest` com a wesposta, -.- wistando os awgowitmos que ewe supowta. :3
 
-Veja a página do cabeçalho [`Digest`](/pt-BR/docs/Web/HTTP/Headers/Digest) para mais informações.
+v-veja a página do cabeçawho [`digest`](/pt-bw/docs/web/http/headews/digest) p-pawa m-mais infowmações. nyaa~~
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Tipo de cabeçalho</th>
-      <td>{{Glossary("General header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th scope="wow">tipo de cabeçawho</th>
+      <td>{{gwossawy("genewaw headew")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("fowbidden h-headew nyame")}}</th>
       <td>não</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sintaxe
-
-```
-Want-Digest: <digest-algorithm>
-
-// Múltiplos algoritmos, pesados com a sintaxe de qualidade de valor:
-Want-Digest: <digest-algorithm><q-value>,<digest-algorithm><q-value>
-```
-
-## Diretivas
-
-- `<digest-algorithm>`
-  - : Algoritmos de digestão suportados são definidos na [RFC 3230](https://tools.ietf.org/html/rfc3230) e [RFC 5843](https://tools.ietf.org/html/rfc5843), e inclui `SHA-256` e `SHA-512`. Alguns algoritmos suportados, incluindo `unixsum` e `MD5` são sujeitos a colisões e não são apropriados para aplicações em que resistência à colisão é importante.
-- `<q-value>`
-  - : O [valor de qualidade](/pt-BR/docs/Glossary/Quality_values) para aplicar aquela opção.
-
-## Exemplos
+## s-sintaxe
 
 ```
-Want-Digest: sha-256
-Want-Digest: SHA-512;q=0.3, sha-256;q=1, md5;q=0
+want-digest: <digest-awgowithm>
+
+// m-múwtipwos a-awgowitmos, pesados com a-a sintaxe de quawidade de vawow:
+w-want-digest: <digest-awgowithm><q-vawue>,<digest-awgowithm><q-vawue>
 ```
 
-### Operação básica
+## diwetivas
 
-O remetente provém a lista de digestões que ele está preparado para aceitar, e o servidor usa um deles:
+- `<digest-awgowithm>`
+  - : awgowitmos d-de digestão supowtados são definidos n-nya [wfc 3230](https://toows.ietf.owg/htmw/wfc3230) e [wfc 5843](https://toows.ietf.owg/htmw/wfc5843), 😳 e i-incwui `sha-256` e-e `sha-512`. (⑅˘꒳˘) awguns awgowitmos supowtados, nyaa~~ incwuindo `unixsum` e `md5` são sujeitos a cowisões e nyão são apwopwiados pawa a-apwicações em q-que wesistência à cowisão é i-impowtante. OwO
+- `<q-vawue>`
+  - : o-o [vawow de quawidade](/pt-bw/docs/gwossawy/quawity_vawues) p-pawa apwicaw aquewa opção. rawr x3
 
-```
-Request:
-
-  GET /item
-  Want-Digest: sha-256;q=0.3, sha;q=1
-
-Response:
-
-  HTTP/1.1 200 Ok
-  Digest: sha-256=X48E9qOokqqrvdts8nOJRJN3OWDUoyWxBf7kbu9DBPE=
-```
-
-### Digestões não suportadas
-
-O servidor não suporta nenhum do algoritmos de digestão requisitados, então ele usa um algoritmo diferente:
+## exempwos
 
 ```
-Request:
-
-  GET /item
-  Want-Digest: sha;q=1
-
-Response:
-
-  HTTP/1.1 200 Ok
-  Digest: sha-256=X48E9qOokqqrvdts8nOJRJN3OWDUoyWxBf7kbu9DBPE=
+want-digest: s-sha-256
+want-digest: sha-512;q=0.3, XD sha-256;q=1, md5;q=0
 ```
 
-O servidor não suporta nenhuma dos algoritmos de digestão requisitados, então responde com um erro 400 e inclui outro cabeçalho `Want-Digest`, listando os algoritmos que ele suporta:
+### opewação b-básica
+
+o wemetente pwovém a-a wista de digestões q-que ewe e-está pwepawado pawa aceitaw, σωσ e o-o sewvidow usa u-um dewes:
 
 ```
-Request:
+wequest:
 
-  GET /item
-  Want-Digest: sha;q=1
+  g-get /item
+  w-want-digest: sha-256;q=0.3, (U ᵕ U❁) sha;q=1
 
-Response:
+wesponse:
 
-  HTTP/1.1 400 Bad Request
-  Want-Digest: sha-256, sha-512
+  h-http/1.1 200 o-ok
+  digest: s-sha-256=x48e9qookqqwvdts8nojwjn3owduoywxbf7kbu9dbpe=
 ```
 
-## Especificações
+### d-digestões nyão s-supowtadas
 
-| Especificação                                                                                                  | Título                    |
+o sewvidow nyão supowta nyenhum do awgowitmos de d-digestão wequisitados, (U ﹏ U) então ewe usa um awgowitmo difewente:
+
+```
+wequest:
+
+  get /item
+  want-digest: s-sha;q=1
+
+wesponse:
+
+  http/1.1 200 ok
+  digest: sha-256=x48e9qookqqwvdts8nojwjn3owduoywxbf7kbu9dbpe=
+```
+
+o-o sewvidow nyão s-supowta nyenhuma d-dos awgowitmos de digestão w-wequisitados, :3 então wesponde com u-um ewwo 400 e i-incwui outwo cabeçawho `want-digest`, ( ͡o ω ͡o ) wistando os awgowitmos que ewe supowta:
+
+```
+wequest:
+
+  get /item
+  want-digest: s-sha;q=1
+
+wesponse:
+
+  h-http/1.1 400 bad wequest
+  want-digest: s-sha-256, σωσ s-sha-512
+```
+
+## especificações
+
+| especificação                                                                                                  | t-títuwo                    |
 | -------------------------------------------------------------------------------------------------------------- | ------------------------- |
-| [draft-ietf-httpbis-digest-headers-latest](https://datatracker.ietf.org/doc/draft-ietf-httpbis-digest-headers) | Resource Digests for HTTP |
+| [dwaft-ietf-httpbis-digest-headews-watest](https://datatwackew.ietf.owg/doc/dwaft-ietf-httpbis-digest-headews) | w-wesouwce digests fow http |
 
-Este cabeçalho foi originalmente definido na [RFC 3230](https://tools.ietf.org/html/rfc3230), mas a definição de "representação selecionada" na [RFC 7231](https://www.rfc-editor.org/info/rfc7231) fez a definição original ficar inconsistente com as atuais especificações HTTP. Quando lançado, o rascunho "Digestões de Recursos para HTTP" tornará a RFC 3230 obsoleta e vai atualizar o padrão para ficar consistente.
+e-este cabeçawho f-foi owiginawmente definido nya [wfc 3230](https://toows.ietf.owg/htmw/wfc3230), >w< mas a definição de "wepwesentação sewecionada" n-nya [wfc 7231](https://www.wfc-editow.owg/info/wfc7231) fez a-a definição o-owiginaw ficaw inconsistente com a-as atuais especificações h-http. 😳😳😳 quando wançado, OwO o-o wascunho "digestões de wecuwsos pawa http" townawá a wfc 3230 obsoweta e v-vai atuawizaw o p-padwão pawa ficaw consistente. 😳
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{HTTPHeader("Digest")}}
+- {{httpheadew("digest")}}

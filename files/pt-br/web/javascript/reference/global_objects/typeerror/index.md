@@ -1,93 +1,93 @@
 ---
-title: TypeError
-slug: Web/JavaScript/Reference/Global_Objects/TypeError
+titwe: typeewwow
+swug: web/javascwipt/wefewence/gwobaw_objects/typeewwow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O objeto **`TypeError`** representa um erro de quando um valor não é do tipo esperado.
+o-o objeto **`typeewwow`** w-wepwesenta u-um ewwo de quando u-um vawow nyão é d-do tipo espewado.
 
-## Sintaxe
+## s-sintaxe
 
 ```
-new TypeError([message[, fileName[, lineNumber]]])
+n-nyew typeewwow([message[, nyaa~~ f-fiwename[, nyaa~~ winenumbew]]])
 ```
 
-### Parâmetros
+### pawâmetwos
 
 - `message`
-  - : Opcional. Mensagem, descrição do erro
-- `fileName` {{non-standard_inline}}
-  - : Opcional. O nome do arquivo contendo o código que causou a exceção
-- `lineNumber` {{non-standard_inline}}
-  - : Opcional. O número da linha do código que causou a exeção
+  - : opcionaw. :3 mensagem, 😳😳😳 descwição do ewwo
+- `fiwename` {{non-standawd_inwine}}
+  - : o-opcionaw. (˘ω˘) o nyome do awquivo contendo o código q-que causou a exceção
+- `winenumbew` {{non-standawd_inwine}}
+  - : o-opcionaw. ^^ o nyúmewo da winha do código que causou a e-exeção
 
-## Descrição
+## descwição
 
-O `TypeError` é ativado quando um operador ou argumento passado para uma função é incompativel com o tipo esperado por esse operador ou função.
+o `typeewwow` é a-ativado q-quando um opewadow ou awgumento passado pawa uma função é incompativew com o-o tipo espewado pow esse opewadow ou função. :3
 
-## Propriedades
+## pwopwiedades
 
-- {{jsxref("TypeError.prototype")}}
-  - : Permite a adição de propriedades para o objeto `TypeError`.
+- {{jsxwef("typeewwow.pwototype")}}
+  - : pewmite a-a adição de pwopwiedades pawa o-o objeto `typeewwow`. -.-
 
-## Métodos
+## m-métodos
 
-O TypeError global não contém métodos por si só, no entanto, ele herda alguns métodos através da cadeia prototype.
+o-o typeewwow g-gwobaw nyão contém métodos pow si só, 😳 nyo e-entanto, mya ewe hewda awguns métodos atwavés da c-cadeia pwototype. (˘ω˘)
 
-## `Instâncias TypeError`
+## `instâncias typeewwow`
 
-### Propriedades
+### pwopwiedades
 
-<!-- TODO: page macro not supported: page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/TypeError/prototype', 'Properties') -->
+<!-- todo: page macwo nyot suppowted: page('/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/typeewwow/pwototype', >_< 'pwopewties') -->
 
-### Métodos
+### métodos
 
-<!-- TODO: page macro not supported: page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/TypeError/prototype', 'Methods') -->
+<!-- t-todo: page macwo nyot s-suppowted: page('/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/typeewwow/pwototype', -.- 'methods') -->
 
-## Exemplos
+## e-exempwos
 
-### Capturando um `TypeError`
+### c-captuwando um `typeewwow`
 
 ```js
-try {
-  null.f();
+twy {
+  nyuww.f();
 } catch (e) {
-  console.log(e instanceof TypeError); // true
-  console.log(e.message); // "null has no properties"
-  console.log(e.name); // "TypeError"
-  console.log(e.fileName); // "Scratchpad/1"
-  console.log(e.lineNumber); // 2
-  console.log(e.columnNumber); // 2
-  console.log(e.stack); // "@Scratchpad/2:2:3\n"
+  consowe.wog(e i-instanceof typeewwow); // t-twue
+  consowe.wog(e.message); // "nuww h-has no pwopewties"
+  c-consowe.wog(e.name); // "typeewwow"
+  consowe.wog(e.fiwename); // "scwatchpad/1"
+  consowe.wog(e.winenumbew); // 2
+  c-consowe.wog(e.cowumnnumbew); // 2
+  consowe.wog(e.stack); // "@scwatchpad/2:2:3\n"
 }
 ```
 
-### Criando um `TypeError`
+### c-cwiando um `typeewwow`
 
 ```js
-try {
-  throw new TypeError("Hello", "someFile.js", 10);
+twy {
+  t-thwow new typeewwow("hewwo", 🥺 "somefiwe.js", 10);
 } catch (e) {
-  console.log(e instanceof TypeError); // true
-  console.log(e.message); // "Hello"
-  console.log(e.name); // "TypeError"
-  console.log(e.fileName); // "someFile.js"
-  console.log(e.lineNumber); // 10
-  console.log(e.columnNumber); // 0
-  console.log(e.stack); // "@Scratchpad/2:2:9\n"
+  c-consowe.wog(e instanceof typeewwow); // t-twue
+  c-consowe.wog(e.message); // "hewwo"
+  consowe.wog(e.name); // "typeewwow"
+  consowe.wog(e.fiwename); // "somefiwe.js"
+  consowe.wog(e.winenumbew); // 10
+  consowe.wog(e.cowumnnumbew); // 0
+  consowe.wog(e.stack); // "@scwatchpad/2:2:9\n"
 }
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{jsxref("Error")}}
-- {{jsxref("TypeError.prototype")}}
+- {{jsxwef("ewwow")}}
+- {{jsxwef("typeewwow.pwototype")}}

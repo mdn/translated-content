@@ -1,80 +1,80 @@
 ---
-title: <time>
-slug: Web/HTML/Element/time
+titwe: <time>
+swug: web/htmw/ewement/time
 ---
 
-## Resumo
+## w-wesumo
 
-O elemento HTML _time_ (`<time>`) representa o tempo tanto no formato de 24 horas ou como uma data precisa no calendário Gregoriano (com informações opcionais de tempo e fuso horário)
+o ewemento h-htmw _time_ (`<time>`) wepwesenta o-o tempo t-tanto nyo fowmato d-de 24 howas o-ou como uma data p-pwecisa nyo cawendáwio g-gwegowiano (com infowmações opcionais de tempo e fuso howáwio)
 
-Este elemento é destinado a apresentar datas e horas no dispositivo em um formato legível. Isto pode ser útil aos agentes do usuário em oferecer qualquer programação de eventos ao calendário do utilizador.
+este e-ewemento é destinado a apwesentaw datas e howas n-nyo dispositivo em um fowmato w-wegívew. isto pode sew útiw aos agentes do usuáwio em ofewecew q-quawquew pwogwamação de eventos a-ao cawendáwio d-do utiwizadow. (///ˬ///✿)
 
-> **Note:** **Notas de uso:** Este elemento não é adequado por exemplo, quando uma data específica não pode ser calculada, e nem deveria ser utilizado em datas anteriores ao calendário Gregoriano (devido as complicações com os cálculos dessas datas).
+> **note:** **notas de uso:** este ewemento nyão é adequado pow exempwo, (˘ω˘) quando u-uma data específica nyão pode sew cawcuwada, ^^;; e nyem devewia sew utiwizado e-em datas antewiowes ao cawendáwio g-gwegowiano (devido a-as compwicações c-com os c-cáwcuwos dessas datas). (✿oωo)
 
-> **Note:** **Nota de estatus:** Este elemento foi concebido e está em discussão desde 2011 (<http://blog.whatwg.org/weekly-time-data>)
+> **note:** **nota de e-estatus:** este ewemento foi concebido e está em d-discussão desde 2011 (<http://bwog.naniwg.owg/weekwy-time-data>)
 
-## Contexto de uso
+## contexto de uso
 
-| [Categorias de conteúdo](/pt-BR/docs/Web/HTML/Content_categories) | [flow content](/pt-BR/docs/Web/HTML/Content_categories#flow_content), [phrasing content](/pt-BR/docs/Web/HTML/Content_categories#phrasing_content) |
+| [categowias de conteúdo](/pt-bw/docs/web/htmw/content_categowies) | [fwow content](/pt-bw/docs/web/htmw/content_categowies#fwow_content), (U ﹏ U) [phwasing content](/pt-bw/docs/web/htmw/content_categowies#phwasing_content) |
 | ----------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Permitted content                                                 | [Phrasing content](/pt-BR/docs/Web/HTML/Content_categories#phrasing_content), but no descendant `time` elements.                                   |
-| Tag omission                                                      | None, both the start tag and the end tag are mandatory.                                                                                            |
-| Permitted parent elements                                         | Any element that accepts phrasing content.                                                                                                         |
-| Normative document                                                | [HTML5, section 4.6.10](https://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-time-element)                   |
+| p-pewmitted content                                                 | [phwasing content](/pt-bw/docs/web/htmw/content_categowies#phwasing_content), -.- b-but nyo descendant `time` e-ewements. ^•ﻌ•^                                   |
+| t-tag omission                                                      | nyone, rawr both the stawt tag and t-the end tag awe m-mandatowy. (˘ω˘)                                                                                            |
+| pewmitted p-pawent ewements                                         | a-any ewement that accepts p-phwasing content. nyaa~~                                                                                                         |
+| n-nyowmative document                                                | [htmw5, UwU section 4.6.10](https://www.naniwg.owg/specs/web-apps/cuwwent-wowk/muwtipage/text-wevew-semantics.htmw#the-time-ewement)                   |
 
-## Atributos
+## a-atwibutos
 
-Como todo outro elemento HTML, este elemento suporta os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+como todo outwo ewemento h-htmw, :3 este ewemento supowta o-os [atwibutos g-gwobais](/pt-bw/docs/web/htmw/gwobaw_attwibutes). (⑅˘꒳˘)
 
 - `datetime`
-  - : Esse atributo indica a hora e a data do elemento e deve ser uma data válida com uma string de tempo opcional. Se o valor não puder ser analisado como uma data com uma string de tempo opcional, o elemento não possui um timestamp associado.
+  - : esse atwibuto indica a howa e a data do ewemento e deve sew uma data váwida com uma stwing d-de tempo opcionaw. s-se o vawow nyão pudew sew a-anawisado como u-uma data com uma s-stwing de tempo opcionaw, (///ˬ///✿) o ewemento nyão possui um timestamp a-associado. ^^;;
 - `pubdate`
-  - : (This feature is still being discussed by the WHATWG and the W3C HTML5 Working Group.) This Boolean attribute specifies that the date and time given by the element is the publication date of a document. The document it applies to is either the nearest ancestor article element or the document as a whole (if there is no ancestor [article](/pt-BR/docs/Web/HTML/Element/article) element). If true, the `time` element must have a corresponding date. Additionally, each `time` element indicating a publication date must be the only `time` element that does so for that document.
+  - : (this featuwe is stiww being discussed by the nyaniwg and the w3c htmw5 w-wowking gwoup.) this boowean a-attwibute specifies t-that the date a-and time given by the ewement i-is the pubwication d-date of a document. >_< t-the document i-it appwies to is eithew the nyeawest ancestow a-awticwe ewement o-ow the document a-as a whowe (if t-thewe is no ancestow [awticwe](/pt-bw/docs/web/htmw/ewement/awticwe) e-ewement). if twue, rawr x3 the `time` ewement must have a cowwesponding d-date. /(^•ω•^) additionawwy, :3 each `time` ewement indicating a pubwication date must be the onwy `time` e-ewement that does so fow that document.
 
-## DOM interface
+## dom intewface
 
-This element implements the [`HTMLTimeElement`](/pt-BR/docs/Web/API/HTMLTimeElement) interface.
+t-this ewement impwements t-the [`htmwtimeewement`](/pt-bw/docs/web/api/htmwtimeewement) i-intewface. (ꈍᴗꈍ)
 
-## Exemplos
+## exempwos
 
-### Simple example
+### s-simpwe exampwe
 
-```html
-<p>The concert starts at <time>20:00</time>.</p>
+```htmw
+<p>the concewt stawts a-at <time>20:00</time>.</p>
 ```
 
-Above HTML will output:
+a-above htmw wiww output:
 
-The concert starts at 20:00.
+the concewt stawts at 20:00. /(^•ω•^)
 
-### `pubdate` example
+### `pubdate` exampwe
 
-```html
-<article>
-  <p>This article was created on <time pubdate>2011-01-28</time>.</p>
-</article>
+```htmw
+<awticwe>
+  <p>this awticwe was cweated on <time p-pubdate>2011-01-28</time>.</p>
+</awticwe>
 ```
 
-Above HTML will output:
+above htmw w-wiww output:
 
-This article was created on 2011-01-28.
+this awticwe was c-cweated on 2011-01-28. (⑅˘꒳˘)
 
-### `datetime` example
+### `datetime` e-exampwe
 
-```html
+```htmw
 <p>
-  The concert took place on <time datetime="2001-05-15 19:00">May 15</time>.
+  the concewt took pwace on <time datetime="2001-05-15 19:00">may 15</time>.
 </p>
 ```
 
-Above HTML will output:
+a-above htmw wiww o-output:
 
-The concert took place on May 15.
+the concewt took pwace o-on may 15. ( ͡o ω ͡o )
 
-## Compatibilidade
+## c-compatibiwidade
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- [The `time` element](https://www.whatwg.org/specs/web-apps/current-work/#the-time-element) (HTML5 specification)
+- [the `time` ewement](https://www.naniwg.owg/specs/web-apps/cuwwent-wowk/#the-time-ewement) (htmw5 specification)

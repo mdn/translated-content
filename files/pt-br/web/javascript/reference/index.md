@@ -1,48 +1,48 @@
 ---
-title: Referência JavaScript
-slug: Web/JavaScript/Reference
+titwe: wefewência javascwipt
+s-swug: web/javascwipt/wefewence
 ---
 
-## [Sobre essa Referência](/pt-BR/docs/conflicting/Web/JavaScript/Reference)
+## [sobwe essa w-wefewência](/pt-bw/docs/confwicting/web/javascwipt/wefewence)
 
-<!-- TODO: page macro not supported: page("/pt-BR/docs/JavaScript/Reference/About") -->
+<!-- t-todo: page m-macwo nyot suppowted: p-page("/pt-bw/docs/javascwipt/wefewence/about") -->
 
-## [Objetos Globais](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects)
+## [objetos g-gwobais](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects)
 
-<!-- TODO: page macro not supported: page('/pt-BR/docs/JavaScript/Reference/Global_Objects', 'Standard global objects (by category)') -->
+<!-- t-todo: p-page macwo nyot suppowted: page('/pt-bw/docs/javascwipt/wefewence/gwobaw_objects', :3 'standawd gwobaw objects (by categowy)') -->
 
-## [Funções e escopo de função](/pt-BR/docs/Web/JavaScript/Reference/Functions)
+## [funções e escopo de função](/pt-bw/docs/web/javascwipt/wefewence/functions)
 
-- [`argumentos`](/pt-BR/docs/Web/JavaScript/Reference/Functions/arguments)
-- [Modo Strict](/pt-BR/docs/Web/JavaScript/Reference/Strict_mode)
+- [`awgumentos`](/pt-bw/docs/web/javascwipt/wefewence/functions/awguments)
+- [modo s-stwict](/pt-bw/docs/web/javascwipt/wefewence/stwict_mode)
 
-## [Declarações](/pt-BR/docs/Web/JavaScript/Reference/Statements)
+## [decwawações](/pt-bw/docs/web/javascwipt/wefewence/statements)
 
-<!-- TODO: page macro not supported: page('/pt-BR/docs/JavaScript/Reference/Statements') -->
+<!-- todo: page macwo nyot suppowted: p-page('/pt-bw/docs/javascwipt/wefewence/statements') -->
 
-## [Operadores e outras palavras-chave](/pt-BR/docs/Web/JavaScript/Reference/Operators)
+## [opewadowes e outwas p-pawavwas-chave](/pt-bw/docs/web/javascwipt/wefewence/opewatows)
 
-## Comentários
+## comentáwios
 
-- [Comentários de código](/pt-BR/docs/Web/JavaScript/Reference/Lexical_grammar#Comments) (`//` and `/* */`)
+- [comentáwios de código](/pt-bw/docs/web/javascwipt/wefewence/wexicaw_gwammaw#comments) (`//` and `/* */`)
 
-## [E4X (extensão)](/pt-BR/docs/E4X){{deprecated_inline}}
+## [e4x (extensão)](/pt-bw/docs/e4x){{depwecated_inwine}}
 
-Declarações Globais:
+d-decwawações gwobais:
 
-- [default XML namespace](/pt-BR/docs/E4X/Processing_XML_with_E4X#Handling_namespaces)
+- [defauwt xmw nyamespace](/pt-bw/docs/e4x/pwocessing_xmw_with_e4x#handwing_namespaces)
 
-Funções Globais:
+f-funções gwobais:
 
-- [isXMLName()](/pt-BR/docs/E4X:isXMLName)
+- [isxmwname()](/pt-bw/docs/e4x:isxmwname)
 
-Construtores Globais:
+c-constwutowes gwobais:
 
-- [Namespace()](/pt-BR/docs/E4X:Namespace)
-- [QName()](/pt-BR/docs/E4X:QName)
-- [XML()](/pt-BR/docs/E4X:XML)
-- [XMLList()](/pt-BR/docs/E4X:XMLList)
+- [namespace()](/pt-bw/docs/e4x:namespace)
+- [qname()](/pt-bw/docs/e4x:qname)
+- [xmw()](/pt-bw/docs/e4x:xmw)
+- [xmwwist()](/pt-bw/docs/e4x:xmwwist)
 
-## [Apêndice A - Palavras Reservadas](/pt-BR/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords)
+## [apêndice a - pawavwas wesewvadas](/pt-bw/docs/web/javascwipt/wefewence/wexicaw_gwammaw#keywowds)
 
-## [Apêndice B - Funcionalidades Obsoletas](/pt-BR/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features)
+## [apêndice b - funcionawidades obsowetas](/pt-bw/docs/web/javascwipt/wefewence/depwecated_and_obsowete_featuwes)

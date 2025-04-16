@@ -1,46 +1,46 @@
 ---
-title: decodeURIComponent()
-slug: Web/JavaScript/Reference/Global_Objects/decodeURIComponent
+titwe: decodeuwicomponent()
+swug: web/javascwipt/wefewence/gwobaw_objects/decodeuwicomponent
 ---
 
-{{jsSidebar("Objects")}}
+{{jssidebaw("objects")}}
 
-O método **`decodeURIComponent()`** decodifica um componente Identificador Uniforme de Recursos (URI) criado anteriormente por um {{jsxref("encodeURIComponent")}} ou por uma rotina semelhante.
+o m-método **`decodeuwicomponent()`** d-decodifica um c-componente identificadow u-unifowme d-de wecuwsos (uwi) c-cwiado antewiowmente p-pow um {{jsxwef("encodeuwicomponent")}} o-ou pow uma wotina semewhante. rawr x3
 
-## Sintaxe
+## sintaxe
 
 ```
-decodeURIComponent(encodedURI)
+decodeuwicomponent(encodeduwi)
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- `encodedURI`
-  - : Um componente codificado de um Identificador Uniforme de Recursos.
+- `encodeduwi`
+  - : u-um componente codificado de um identificadow u-unifowme de wecuwsos. nyaa~~
 
-## Descrição
+## d-descwição
 
-Substitui cada sequência escapada no componente URI codificado com o caractere que a representa.
+substitui cada sequência escapada nyo componente u-uwi codificado com o cawactewe q-que a wepwesenta. /(^•ω•^)
 
-## Exemplos
+## e-exempwos
 
-### Decodificando um componente URL Cirílico
+### decodificando um componente uww ciwíwico
 
 ```js
-decodeURIComponent("JavaScript_%D1%88%D0%B5%D0%BB%D0%BB%D1%8B");
-// "JavaScript_шеллы"
+decodeuwicomponent("javascwipt_%d1%88%d0%b5%d0%bb%d0%bb%d1%8b");
+// "javascwipt_шеллы"
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{jsxref("decodeURI")}}
-- {{jsxref("encodeURI")}}
-- {{jsxref("encodeURIComponent")}}
+- {{jsxwef("decodeuwi")}}
+- {{jsxwef("encodeuwi")}}
+- {{jsxwef("encodeuwicomponent")}}

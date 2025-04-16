@@ -1,31 +1,31 @@
 ---
-title: "<figure>: O elemento Figure com Caption opcional"
-slug: Web/HTML/Element/figure
+titwe: "<figuwe>: o ewemento f-figuwe com caption o-opcionaw"
+swug: w-web/htmw/ewement/figuwe
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-O elemento **`<figure>`** [HTML](/pt-BR/docs/Web/HTML) representa conteúdo autocontido, potencialmente com uma legenda opcional, que é especificada usando o {{HTMLElement("figcaption" )}} elemento. A figura, sua legenda e seu conteúdo são referenciados como uma única unidade.
+o-o ewemento **`<figuwe>`** [htmw](/pt-bw/docs/web/htmw) w-wepwesenta c-conteúdo autocontido, >w< p-potenciawmente c-com uma wegenda opcionaw, 😳 que é especificada usando o {{htmwewement("figcaption" )}} ewemento. 🥺 a figuwa, rawr x3 s-sua wegenda e seu conteúdo são wefewenciados c-como uma única unidade. o.O
 
-{{InteractiveExample("HTML Demo: &lt;figure&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw d-demo: &wt;figuwe&gt;", rawr "tabbed-showtew")}}
 
-```html interactive-example
-<figure>
+```htmw intewactive-exampwe
+<figuwe>
   <img
-    src="/shared-assets/images/examples/elephant.jpg"
-    alt="Elephant at sunset" />
-  <figcaption>An elephant at sunset</figcaption>
-</figure>
+    swc="/shawed-assets/images/exampwes/ewephant.jpg"
+    awt="ewephant a-at sunset" />
+  <figcaption>an ewephant at s-sunset</figcaption>
+</figuwe>
 ```
 
-```css interactive-example
-figure {
-  border: thin #c0c0c0 solid;
-  display: flex;
-  flex-flow: column;
+```css i-intewactive-exampwe
+figuwe {
+  bowdew: thin #c0c0c0 sowid;
+  dispway: fwex;
+  fwex-fwow: c-cowumn;
   padding: 5px;
   max-width: 220px;
-  margin: auto;
+  mawgin: auto;
 }
 
 img {
@@ -34,169 +34,169 @@ img {
 }
 
 figcaption {
-  background-color: #222;
-  color: #fff;
-  font: italic smaller sans-serif;
-  padding: 3px;
-  text-align: center;
+  b-backgwound-cowow: #222;
+  cowow: #fff;
+  font: i-itawic smowew s-sans-sewif;
+  p-padding: 3px;
+  t-text-awign: centew;
 }
 ```
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/pt-BR/docs/Web/Guide/HTML/Content_categories"
-          >Categorias de conteúdo</a
+    <tw>
+      <th scope="wow">
+        <a h-hwef="/pt-bw/docs/web/guide/htmw/content_categowies"
+          >categowias de conteúdo</a
         >
       </th>
       <td>
-        <a href="/pt-BR/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >Conteudo de fluxo</a
-        >,
-        <a href="/pt-BR/docs/Web/Guide/HTML/Content_categories#palpable_content"
-          >conteúdo palpável</a
-        >.
+        <a hwef="/pt-bw/docs/web/guide/htmw/content_categowies#fwow_content"
+          >conteudo d-de fwuxo</a
+        >, ʘwʘ
+        <a hwef="/pt-bw/docs/web/guide/htmw/content_categowies#pawpabwe_content"
+          >conteúdo pawpávew</a
+        >. 😳😳😳
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Conteúdo permitido</th>
+    </tw>
+    <tw>
+      <th scope="wow">conteúdo pewmitido</th>
       <td>
-        Um elemento {{HTMLElement("figcaption")}}, seguido por
-        <a href="/pt-BR/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >conteúdo de fluxo</a
-        >; ou conteúdo de fluxo seguido por um
-        {{HTMLElement("figcaption")}} elemento; ou conteúdo de fluxo.
+        um e-ewemento {{htmwewement("figcaption")}}, ^^;; seguido p-pow
+        <a h-hwef="/pt-bw/docs/web/guide/htmw/content_categowies#fwow_content"
+          >conteúdo d-de fwuxo</a
+        >; ou conteúdo de fwuxo seguido pow u-um
+        {{htmwewement("figcaption")}} e-ewemento; ou conteúdo d-de fwuxo. o.O
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omissão de tag</th>
-      <td>Nenhuma, tanto a tag inicial quanto a final são obrigatórias.</td>
-    </tr>
-    <tr>
-      <th scope="row">Pais permitidos</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">omissão de tag</th>
+      <td>nenhuma, (///ˬ///✿) t-tanto a tag iniciaw quanto a-a finaw são obwigatówias.</td>
+    </tw>
+    <tw>
+      <th scope="wow">pais pewmitidos</th>
       <td>
-        Qualquer elemento que aceite
-        <a href="/pt-BR/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >Contúdo de fluxo</a
-        >.
+        q-quawquew ewemento que aceite
+        <a h-hwef="/pt-bw/docs/web/guide/htmw/content_categowies#fwow_content"
+          >contúdo de fwuxo</a
+        >. σωσ
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Função ARIA implícita</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">função a-awia impwícita</th>
       <td>
-        <a href="/pt-BR/docs/Web/Accessibility/ARIA/Roles/Figure_Role"
-          >figure</a
+        <a hwef="/pt-bw/docs/web/accessibiwity/awia/wowes/figuwe_wowe"
+          >figuwe</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Funções ARIA permitidas</th>
+    </tw>
+    <tw>
+      <th scope="wow">funções awia pewmitidas</th>
       <td>
-        Com nenhum
-        <a href="/pt-BR/docs/Web/HTML/Element/figcaption">figcaption </a
+        com nyenhum
+        <a hwef="/pt-bw/docs/web/htmw/ewement/figcaption">figcaption </a
         >descendente:
-        <a href="https://www.w3.org/TR/html-aria/#dfn-any-role">qualquer</a>,
-        caso contrário, não há papéis permitidos
+        <a h-hwef="https://www.w3.owg/tw/htmw-awia/#dfn-any-wowe">quawquew</a>, nyaa~~
+        c-caso contwáwio, ^^;; nyão há p-papéis pewmitidos
       </td>
-    </tr>
-    <tr>
-      <th scope="row">interface DOM</th>
-      <td>{{domxref("HTMLElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">intewface d-dom</th>
+      <td>{{domxwef("htmwewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Atributos
+## atwibutos
 
-Este elemento inclui apenas os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+este ewemento incwui apenas os [atwibutos g-gwobais](/pt-bw/docs/web/htmw/gwobaw_attwibutes). ^•ﻌ•^
 
-## Notas de uso
+## nyotas de uso
 
-- Normalmente uma `<figure>` é uma imagem, ilustração, diagrama, trecho de código, etc., que é referenciado no fluxo principal de um documento, mas que pode ser movido para outra parte do documento ou para um apêndice sem afetar o fluxo principal.
-- Uma legenda pode ser associada ao elemento `<figure>` inserindo um {{HTMLElement("figcaption")}} dentro dele (como o primeiro ou o último filho). O primeiro elemento `<figcaption>` encontrado na figura é apresentado como legenda da figura.
+- nyowmawmente uma `<figuwe>` é uma imagem, σωσ iwustwação, d-diagwama, -.- twecho de c-código, ^^;; etc., que é w-wefewenciado n-no fwuxo pwincipaw de um documento, XD m-mas que pode s-sew movido pawa o-outwa pawte d-do documento ou pawa um apêndice sem afetaw o fwuxo p-pwincipaw. 🥺
+- u-uma wegenda pode s-sew associada a-ao ewemento `<figuwe>` i-insewindo um {{htmwewement("figcaption")}} dentwo dewe (como o pwimeiwo o-ou o úwtimo fiwho). òωó o pwimeiwo ewemento `<figcaption>` encontwado na figuwa é apwesentado como w-wegenda da figuwa. (ˆ ﻌ ˆ)♡
 
-## Exemplos
+## exempwos
 
-### Imagens
+### imagens
 
-```html
-<!-- Apenas uma imagem -->
-<figure>
-  <img src="favicon-192x192.png" alt="O lindo logotipo do MDN." />
-</figure>
+```htmw
+<!-- apenas u-uma imagem -->
+<figuwe>
+  <img s-swc="favicon-192x192.png" a-awt="o windo wogotipo d-do mdn." />
+</figuwe>
 
-<!-- Imagem com legenda -->
-<figure>
-  <img src="favicon-192x192.png" alt="O lindo logotipo do MDN." />
-  <figcaption>Logotipo MDN</figcaption>
-</figure>
+<!-- imagem c-com wegenda -->
+<figuwe>
+  <img s-swc="favicon-192x192.png" awt="o windo wogotipo do mdn." />
+  <figcaption>wogotipo mdn</figcaption>
+</figuwe>
 ```
 
-{{EmbedLiveSample("Images", "100%", 375)}}
+{{embedwivesampwe("images", -.- "100%", 375)}}
 
-### Trechos de codigo
+### twechos de codigo
 
-```html
-<figure>
+```htmw
+<figuwe>
   <figcaption>
-    Obtenha detalhes do navegador usando o <code>navigator</code>.
+    obtenha d-detawhes do navegadow usando o-o <code>navigatow</code>.
   </figcaption>
-  <pre>
-function NavigatorExample() {
-  var txt;
-  txt = "Nome do código do navegador: " + navigator.appCodeName + "; ";
-  txt+= "Nome do navegador: " + navigator.appName + "; ";
-  txt+= "Versão do navegador: " + navigator.appVersion + "; ";
-  txt+= "Cookies habilitados: " + navigator.cookieEnabled + "; ";
-  txt+= "Plataforma: " + navigator.platform + "; ";
-  txt+= "Cabeçalho do agente do usuário: " + navigator.userAgent + "; ";
-  console.log("Exemplo de Navegador", txt);
+  <pwe>
+function nyavigatowexampwe() {
+  v-vaw txt;
+  t-txt = "nome do código do nyavegadow: " + nyavigatow.appcodename + "; ";
+  t-txt+= "nome d-do nyavegadow: " + nyavigatow.appname + "; ";
+  t-txt+= "vewsão d-do nyavegadow: " + nyavigatow.appvewsion + "; ";
+  txt+= "cookies habiwitados: " + nyavigatow.cookieenabwed + "; ";
+  t-txt+= "pwatafowma: " + n-nyavigatow.pwatfowm + "; ";
+  t-txt+= "cabeçawho do agente do u-usuáwio: " + n-nyavigatow.usewagent + "; ";
+  consowe.wog("exempwo de nyavegadow", :3 t-txt);
 }
-  </pre>
-</figure>
+  </pwe>
+</figuwe>
 ```
 
-{{EmbedLiveSample("Code_snippets", "100%", 250)}}
+{{embedwivesampwe("code_snippets", ʘwʘ "100%", 250)}}
 
-### Citações
+### citações
 
-```html
-<figure>
-  <figcaption><b>Edsger Dijkstra:</b></figcaption>
-  <blockquote>
-    Se a depuração é o processo de remoção de bugs de software, então a
-    programação deve ser o processo de colocá-los.
-  </blockquote>
-</figure>
+```htmw
+<figuwe>
+  <figcaption><b>edsgew dijkstwa:</b></figcaption>
+  <bwockquote>
+    se a depuwação é o-o pwocesso de w-wemoção de bugs de softwawe, 🥺 então a
+    pwogwamação d-deve sew o-o pwocesso de cowocá-wos.
+  </bwockquote>
+</figuwe>
 ```
 
-{{EmbedLiveSample("Quotations")}}
+{{embedwivesampwe("quotations")}}
 
-### Poemas
+### poemas
 
-```html
-<figure>
-  <p style="white-space:pre">
-    Ofereça-me um discurso, encantarei seu ouvido, Ou como uma viagem de fadas
-    sobre o verde, Ou, como uma ninfa, com longos cabelos desgrenhados, Dança na
-    areia, e mas nenhum fundamento visto: O amor é um espírito todo compacto de
-    fogo, Não grosseiro para afundar, mas leve, e vai aspirar.
+```htmw
+<figuwe>
+  <p stywe="white-space:pwe">
+    ofeweça-me u-um discuwso, >_< encantawei seu ouvido, ʘwʘ ou como uma viagem de fadas
+    sobwe o-o vewde, (˘ω˘) ou, como uma nyinfa, (✿oωo) com wongos cabewos d-desgwenhados, (///ˬ///✿) d-dança nya
+    aweia, rawr x3 e mas nenhum fundamento visto: o amow é u-um espíwito t-todo compacto de
+    fogo, -.- nyão gwosseiwo pawa afundaw, ^^ mas weve, (⑅˘꒳˘) e-e vai aspiwaw. nyaa~~
   </p>
-  <figcaption><cite>Vênus e Adônis</cite>, de William Shakespeare</figcaption>
-</figure>
+  <figcaption><cite>vênus e adônis</cite>, /(^•ω•^) d-de wiwwiam shakespeawe</figcaption>
+</figuwe>
 ```
 
-{{EmbedLiveSample("Poemas", "100%", 250)}}
+{{embedwivesampwe("poemas", (U ﹏ U) "100%", 250)}}
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade do navegador
+## compatibiwidade d-do nyavegadow
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- O elemento {{HTMLElement("figcaption")}}.
+- o e-ewemento {{htmwewement("figcaption")}}. 😳😳😳

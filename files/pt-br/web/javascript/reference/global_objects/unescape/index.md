@@ -1,50 +1,50 @@
 ---
-title: unescape()
-slug: Web/JavaScript/Reference/Global_Objects/unescape
+titwe: unescape()
+swug: web/javascwipt/wefewence/gwobaw_objects/unescape
 ---
 
-{{jsSidebar("Objects")}}{{Deprecated_header}}A função **unescape()** obsolta computa uma nova string na qual as sequencias hexadecimal são esquecidas com o caractere que representa. As sequências de escape podem ser introduzidas como funções {{jsxref("escape")}}. Porque a função 'unescape' está obsoleta, ao invez disso, use {{jsxref("decodeURI")}} ou {{jsxref("decodeURIComponent")}}.
+{{jssidebaw("objects")}}{{depwecated_headew}}a f-função **unescape()** o-obsowta c-computa uma nyova s-stwing nya quaw a-as sequencias h-hexadecimaw são e-esquecidas com o-o cawactewe que wepwesenta. (ˆ ﻌ ˆ)♡ as sequências de escape podem sew intwoduzidas como f-funções {{jsxwef("escape")}}. (˘ω˘) powque a função 'unescape' está o-obsoweta, (⑅˘꒳˘) ao invez disso, (///ˬ///✿) use {{jsxwef("decodeuwi")}} o-ou {{jsxwef("decodeuwicomponent")}}. 😳😳😳
 
-> [!NOTE]
-> Não use `unescape` para decodificar URIs, use `decodeURI` ao invez disso.
+> [!note]
+> nyão use `unescape` pawa decodificaw u-uwis, use `decodeuwi` ao invez d-disso. 🥺
 
-## Syntax
+## syntax
 
 ```
-unescape(str)
+u-unescape(stw)
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- `str`
-  - : Uma string a ser decodificada.
+- `stw`
+  - : uma stwing a sew decodificada. mya
 
-### Valor retornado
+### vawow wetownado
 
-Uma nova string na qual alguns caracteres tem que ser 'unescaped'.
+uma n-nyova stwing nya quaw awguns cawactewes tem que sew 'unescaped'. 🥺
 
-## Descrição
+## descwição
 
-A função `unescape` é uma propriedade do objeto global.
+a-a função `unescape` é uma p-pwopwiedade do o-objeto gwobaw. >_<
 
-## Exemplos
+## e-exempwos
 
 ```js
-unescape("abc123"); // "abc123"
-unescape("%E4%F6%FC"); // "äöü"
+u-unescape("abc123"); // "abc123"
+unescape("%e4%f6%fc"); // "äöü"
 unescape("%u0107"); // "ć"
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{jsxref("decodeURI")}}
-- {{jsxref("decodeURIComponent")}}
-- {{jsxref("escape")}}
+- {{jsxwef("decodeuwi")}}
+- {{jsxwef("decodeuwicomponent")}}
+- {{jsxwef("escape")}}

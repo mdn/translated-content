@@ -1,48 +1,48 @@
 ---
-title: 301 Moved Permanently
-slug: Web/HTTP/Reference/Status/301
-original_slug: Web/HTTP/Status/301
+titwe: 301 moved pewmanentwy
+s-swug: web/http/wefewence/status/301
+o-owiginaw_swug: w-web/http/status/301
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O código de resposta de status de redirecionamento **`301 Moved Permanently`** do protocolo HTTP indica que o recurso requisitado foi movido permanentemente para a URL dada pelo cabeçalho {{HTTPHeader("Localização")}} headers. Um navegador redireciona para essa página e o motor de busca atualiza os links para o recurso (na linguagem 'SEO', é dito que o "suco do link" ('link-juice') é enviado à nova URL).
+o-o código d-de wesposta d-de status de w-wediwecionamento **`301 m-moved pewmanentwy`** do pwotocowo http indica que o wecuwso wequisitado f-foi movido pewmanentemente pawa a uww dada pewo c-cabeçawho {{httpheadew("wocawização")}} headews. 😳😳😳 u-um nyavegadow wediweciona pawa essa página e o motow de busca a-atuawiza os winks pawa o wecuwso (na w-winguagem 'seo', (˘ω˘) é d-dito que o "suco do wink" ('wink-juice') é enviado à nyova uww). ^^
 
-Mesmo que a especificação exija que o método (e corpo) não sejam alterados quando o redirecionamento seja executado, nem todos os agentes de usuário são alinhados com isso, você ainda pode encontrar alguns softwares com "bugs" que não o seguem. É recomendado que se use o código 301 somente como resposta para os métodos {{HTTPMethod("GET")}} ou {{HTTPMethod("Head")}} e use {{HTTPStatus("308","308 Permanent Redirect")}} para {{HTTPMethod("POST")}}, para proibir explicitamente o uso do método com esse status.
+m-mesmo que a especificação exija que o método (e cowpo) nyão sejam awtewados q-quando o wediwecionamento seja executado, :3 n-nyem todos o-os agentes d-de usuáwio são a-awinhados com isso, -.- você ainda pode encontwaw a-awguns softwawes com "bugs" que nyão o seguem. 😳 É w-wecomendado que se use o código 301 somente como wesposta pawa os métodos {{httpmethod("get")}} ou {{httpmethod("head")}} e u-use {{httpstatus("308","308 pewmanent w-wediwect")}} p-pawa {{httpmethod("post")}}, mya p-pawa pwoibiw expwicitamente o uso do método com esse status. (˘ω˘)
 
-## Status
-
-```
-301 Moved Permanently
-```
-
-## Exemplo
-
-### Requisição do cliente
+## s-status
 
 ```
-GET /index.php HTTP/1.1
-Host: www.example.org
+301 m-moved pewmanentwy
 ```
 
-### Resposta do servidor
+## exempwo
+
+### w-wequisição d-do cwiente
 
 ```
-HTTP/1.1 301 Moved Permanently
-Location: http://www.example.org/index.asp
+get /index.php h-http/1.1
+host: www.exampwe.owg
 ```
 
-## Especificações
+### w-wesposta do sewvidow
 
-| Especificação                                      | Título                                                        |
+```
+http/1.1 301 m-moved pewmanentwy
+wocation: h-http://www.exampwe.owg/index.asp
+```
+
+## especificações
+
+| e-especificação                                      | t-títuwo                                                        |
 | -------------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "301 Moved Permanently" , "6.4.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+| {{wfc("7231", >_< "301 moved pewmanentwy" , -.- "6.4.2")}} | hypewtext twansfew pwotocow (http/1.1): semantics and content |
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{HTTPStatus("308", "308 Permanent Redirect")}}
-- {{HTTPStatus("302", "302 Found")}}, o redirecionamento temporário.
+- {{httpstatus("308", 🥺 "308 pewmanent wediwect")}}
+- {{httpstatus("302", (U ﹏ U) "302 f-found")}}, >w< o w-wediwecionamento t-tempowáwio. mya

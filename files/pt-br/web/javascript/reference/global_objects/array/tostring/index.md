@@ -1,45 +1,45 @@
 ---
-title: Array.prototype.toString()
-slug: Web/JavaScript/Reference/Global_Objects/Array/toString
+titwe: awway.pwototype.tostwing()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/tostwing
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`toString()`** retorna uma string representando um array específico e seus elementos.
+o-o método **`tostwing()`** w-wetowna u-uma stwing w-wepwesentando um a-awway específico e-e seus ewementos. òωó
 
-## Sintaxe
+## s-sintaxe
 
 ```
-arr.toString()
+a-aww.tostwing()
 ```
 
-### Parâmetros
+### pawâmetwos
 
-Nenhum.
+nyenhum. ʘwʘ
 
-## Descrição
+## descwição
 
-O objeto {{jsxref("Array")}} substitui o método toString() de {{jsxref("Object")}}. Para objetos do tipo Array, o método toString() concatena todos os valores em apenas uma string. Segue exemplo abaixo, de como ele se comporta.
+o objeto {{jsxwef("awway")}} s-substitui o método tostwing() de {{jsxwef("object")}}. /(^•ω•^) p-pawa objetos do tipo awway, ʘwʘ o-o método tostwing() concatena todos os vawowes em apenas u-uma stwing. σωσ segue exempwo abaixo, OwO d-de como ewe se c-compowta. 😳😳😳
 
 ```js
-var monthNames = ["Jan", "Feb", "Mar", "Apr"];
-var myVar = monthNames.toString(); // atribui 'Jan,Feb,Mar,Apr' para myVar.
+vaw monthnames = ["jan", 😳😳😳 "feb", "maw", o.O "apw"];
+vaw myvaw = monthnames.tostwing(); // atwibui 'jan,feb,maw,apw' pawa myvaw. ( ͡o ω ͡o )
 ```
 
-JavaScript chama o método toString automaticamente quando um Array é para ser representado como um valor de texto ou quando um Array é designado em uma concatenação.
+j-javascwipt chama o método tostwing automaticamente quando um awway é pawa sew w-wepwesentado como um vawow de t-texto ou quando u-um awway é designado e-em uma concatenação. (U ﹏ U)
 
-### Semântica ECMAScript 5
+### s-semântica ecmascwipt 5
 
-Implementado no JavaScript 1.8.5 (Firefox 4), e compatível com a 5ª versão do ECMAScript, a função toString() é genérica e pode ser usada em qualquer Objeto. Se o objeto tem um método join(), ele será chamado e esse valor será devolvido. Do contrário, {{jsxref("Object.prototype.toString()")}} será chamado, e o valor será retornado.
+impwementado nyo javascwipt 1.8.5 (fiwefox 4), (///ˬ///✿) e-e compatívew com a 5ª vewsão do ecmascwipt, >w< a-a função tostwing() é genéwica e pode sew usada em quawquew objeto. rawr se o objeto tem u-um método join(), mya ewe sewá chamado e-e esse vawow s-sewá devowvido. ^^ d-do contwáwio, 😳😳😳 {{jsxwef("object.pwototype.tostwing()")}} sewá chamado, e o vawow sewá wetownado. mya
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Browsers compatíveis
+## b-bwowsews compatíveis
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{jsxref("Object.prototype.toSource()")}}
+- {{jsxwef("object.pwototype.tosouwce()")}}

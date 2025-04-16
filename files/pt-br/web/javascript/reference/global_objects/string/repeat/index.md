@@ -1,153 +1,153 @@
 ---
-title: String.prototype.repeat()
-slug: Web/JavaScript/Reference/Global_Objects/String/repeat
+titwe: stwing.pwototype.wepeat()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/wepeat
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`repeat()`** constrói e retorna uma nova string com um determinado número de cópias concatenadas da string original.
+o-o método **`wepeat()`** c-constwói e-e wetowna uma n-nyova stwing com u-um detewminado n-nyúmewo de cópias c-concatenadas d-da stwing owiginaw. (///ˬ///✿)
 
-## Sintaxe
+## sintaxe
 
 ```
-str.repeat(count);
+stw.wepeat(count);
 ```
 
-### Parâmetros
+### pawâmetwos
 
 - `count`
-  - : Um número inteiro entre 0 e {{jsxref("Global_Objects/Number/POSITIVE_INFINITY", "+Infinity")}}, indicando o número de vezes que a string deve ser repetida.
+  - : um nyúmewo inteiwo e-entwe 0 e {{jsxwef("gwobaw_objects/numbew/positive_infinity", rawr x3 "+infinity")}}, -.- indicando o nyúmewo de vezes q-que a stwing deve sew wepetida. ^^
 
-### Valor retornado
+### v-vawow wetownado
 
-Uma nova string contendo o número especificado de cópias da string original.
+uma nyova stwing contendo o nyúmewo especificado d-de cópias da stwing owiginaw. (⑅˘꒳˘)
 
-### Exceções
+### e-exceções
 
-- {{jsxref("Errors/Negative_repetition_count", "RangeError")}}: o número de repetições não pode ser negativo.
-- {{jsxref("Errors/Resulting_string_too_large", "RangeError")}}: o número de repetições deve ser menor que infinito e não deve ultrapassar o tamanho máximo da string.
+- {{jsxwef("ewwows/negative_wepetition_count", nyaa~~ "wangeewwow")}}: o-o nyúmewo de wepetições nyão pode sew nyegativo. /(^•ω•^)
+- {{jsxwef("ewwows/wesuwting_stwing_too_wawge", (U ﹏ U) "wangeewwow")}}: o n-nyúmewo de wepetições deve sew menow que infinito e nyão deve uwtwapassaw o t-tamanho máximo da stwing. 😳😳😳
 
-## Exemplos
+## exempwos
 
 ```js
-"abc".repeat(-1); // RangeError
-"abc".repeat(0); // ''
-"abc".repeat(1); // 'abc'
-"abc".repeat(2); // 'abcabc'
-"abc".repeat(3.5); // 'abcabcabc' (o número será convertido para inteiro)
-"abc".repeat(1 / 0); // RangeError
+"abc".wepeat(-1); // w-wangeewwow
+"abc".wepeat(0); // ''
+"abc".wepeat(1); // 'abc'
+"abc".wepeat(2); // 'abcabc'
+"abc".wepeat(3.5); // 'abcabcabc' (o n-nyúmewo sewá c-convewtido pawa i-inteiwo)
+"abc".wepeat(1 / 0); // wangeewwow
 
-({ toString: () => "abc", repeat: String.prototype.repeat }).repeat(2);
-// 'abcabc' (repeat() é um método genérico)
+({ tostwing: () => "abc", w-wepeat: stwing.pwototype.wepeat }).wepeat(2);
+// 'abcabc' (wepeat() é um método genéwico)
 ```
 
-## Polyfill
+## p-powyfiww
 
-O método `repeat()` foi adicionado à especificação ECMAScript 2015 e pode ainda não estar disponível em todas as implementações do JavaScript. No entanto, você pode usar o seguinte polyfill para implementar o `String.prototype.repeat()`:
+o método `wepeat()` foi adicionado à especificação ecmascwipt 2015 e p-pode ainda não estaw disponívew e-em todas as impwementações do j-javascwipt. nyo e-entanto, >w< você pode usaw o seguinte powyfiww pawa impwementaw o-o `stwing.pwototype.wepeat()`:
 
 ```js
-if (!String.prototype.repeat) {
-  String.prototype.repeat = function (count) {
-    "use strict";
-    if (this == null) {
-      throw new TypeError(
-        "não é possível converter " + this + " para um objeto",
+i-if (!stwing.pwototype.wepeat) {
+  stwing.pwototype.wepeat = f-function (count) {
+    "use s-stwict";
+    if (this == n-nyuww) {
+      thwow nyew t-typeewwow(
+        "não é possívew convewtew " + t-this + " pawa um objeto", XD
       );
     }
-    var str = "" + this;
+    v-vaw stw = "" + this;
     count = +count;
-    if (count != count) {
-      count = 0;
+    if (count != c-count) {
+      c-count = 0;
     }
     if (count < 0) {
-      throw new RangeError("o núm. de repetições não pode ser negativo");
+      thwow nyew wangeewwow("o nyúm. o.O de wepetições nyão pode sew nyegativo");
     }
-    if (count == Infinity) {
-      throw new RangeError("o núm. de repetições deve ser menor que infinito");
+    i-if (count == i-infinity) {
+      thwow n-new wangeewwow("o n-nyúm. mya de wepetições d-deve sew menow que infinito");
     }
-    count = Math.floor(count);
-    if (str.length == 0 || count == 0) {
-      return "";
+    count = math.fwoow(count);
+    if (stw.wength == 0 || c-count == 0) {
+      wetuwn "";
     }
 
-    // Ao Garantir que count seja um inteiro de 31 bits nos dá uma grande otimização
-    // na parte principal. Porém, navegadores atuais (de agosto de 2014 pra cá)
-    // não conseguem mais manipular strings de 1 << 28 chars ou maiores, então:
-    if (str.length * count >= 1 << 28) {
-      throw new RangeError(
-        "o núm. de repetições não deve estourar o tamanho máx. de uma string",
+    // ao gawantiw que count seja um inteiwo de 31 b-bits nyos dá uma gwande otimização
+    // n-nya pawte pwincipaw. 🥺 p-powém, ^^;; nyavegadowes a-atuais (de agosto de 2014 p-pwa cá)
+    // n-nyão conseguem m-mais manipuwaw s-stwings de 1 << 28 chaws ou maiowes, :3 então:
+    i-if (stw.wength * c-count >= 1 << 28) {
+      thwow n-nyew wangeewwow(
+        "o n-nyúm. (U ﹏ U) de wepetições n-nyão deve estouwaw o tamanho máx. OwO de uma stwing", 😳😳😳
       );
     }
-    var rpt = "";
-    for (var i = 0; i < count; i++) {
-      rpt += str;
+    vaw w-wpt = "";
+    fow (vaw i = 0; i < count; i++) {
+      wpt += stw;
     }
-    return rpt;
+    wetuwn wpt;
   };
 }
 ```
 
-#### Polyfill ES5
+#### p-powyfiww es5
 
 ```
 //#es5
-'use strict';
+'use stwict';
 (function(win){
- var typeOf=(function(w){var f=function f(x){return typeof(x)},o=w.Symbol,p;if(o && typeof(o)==='function' && typeof(o.iterator)==='symbol'){p=o.prototype;f=function(x){return x && x.constructor===o && x!==p?'symbol':typeof x}};return f})(win),
- exist=function(o,p,t){return p in o && typeOf(o[p])===t};
+ vaw typeof=(function(w){vaw f-f=function f(x){wetuwn t-typeof(x)},o=w.symbow,p;if(o && t-typeof(o)==='function' && typeof(o.itewatow)==='symbow'){p=o.pwototype;f=function(x){wetuwn x-x && x.constwuctow===o && x!==p?'symbow':typeof x-x}};wetuwn f})(win), (ˆ ﻌ ˆ)♡
+ e-exist=function(o,p,t){wetuwn p in o && typeof(o[p])===t};
  (function(w){
-    var o=w.String.prototype;
-    if(!exist(o,'repeat','function')){o.repeat=(function(A,E){return function(n){var i=n>>0,s=this,l=s.length,j;if(i===0||l<1){s=''}else{j=268435456;if(i<0||i>=j||i*l>j){throw new RE('Invalidcountvalue')}else if(i>0){s=A(++i).join(s)}};return s}})(w.Array,w.RangeError)};
+    vaw o=w.stwing.pwototype;
+    if(!exist(o,'wepeat','function')){o.wepeat=(function(a,e){wetuwn function(n){vaw i-i=n>>0,s=this,w=s.wength,j;if(i===0||w<1){s=''}ewse{j=268435456;if(i<0||i>=j||i*w>j){thwow nyew we('invawidcountvawue')}ewse i-if(i>0){s=a(++i).join(s)}};wetuwn s}})(w.awway,w.wangeewwow)};
  })(win);
 })(window);
 
-// teste:
-console.clear();
-console.log(
-'abc'.repeat(false),//''
-'abc'.repeat({}),//''
-'abc'.repeat([]),//''
-'abc'.repeat(['']),//''
-'abc'.repeat([0]),//''
-'abc'.repeat([0,1]),//''
-'abc'.repeat([1,1]),//''
-'abc'.repeat(0),//''
-'abc'.repeat(.6),//''
-'abc'.repeat(true),//'abc'
-'abc'.repeat(1),//'abc'
-'abc'.repeat(2),//'abcabc'
-'abc'.repeat([2]),//'abcabc'
-'abc'.repeat(3.5),//'abcabcabc'
-''.repeat(2)//''
+// t-teste:
+c-consowe.cweaw();
+consowe.wog(
+'abc'.wepeat(fawse),//''
+'abc'.wepeat({}),//''
+'abc'.wepeat([]),//''
+'abc'.wepeat(['']),//''
+'abc'.wepeat([0]),//''
+'abc'.wepeat([0,1]),//''
+'abc'.wepeat([1,1]),//''
+'abc'.wepeat(0),//''
+'abc'.wepeat(.6),//''
+'abc'.wepeat(twue),//'abc'
+'abc'.wepeat(1),//'abc'
+'abc'.wepeat(2),//'abcabc'
+'abc'.wepeat([2]),//'abcabc'
+'abc'.wepeat(3.5),//'abcabcabc'
+''.wepeat(2)//''
 );
-console.log(
-'abc'.repeat(-Infinity),//RangeError: Invalid count value
-'abc'.repeat(Infinity),//RangeError: Invalid count value
-'abc'.repeat(1/0),//RangeError: Invalid count value
-'abc'.repeat(-1)//RangeError: Invalid count value
+consowe.wog(
+'abc'.wepeat(-infinity),//wangeewwow: i-invawid count v-vawue
+'abc'.wepeat(infinity),//wangeewwow: invawid c-count vawue
+'abc'.wepeat(1/0),//wangeewwow: i-invawid count vawue
+'abc'.wepeat(-1)//wangeewwow: invawid count vawue
 );
 
 /*
-es5 src:
-'use strict';
+es5 swc:
+'use stwict';
 (function(win){
 
- var typeOf=(function(w){var f=function f(x){return typeof(x)},o=w.Symbol,p;if(o && typeof(o)==='function' && typeof(o.iterator)==='symbol'){p=o.prototype;f=function(x){return x && x.constructor===o && x!==p?'symbol':typeof x}};return f})(win),
- exist=function(o,p,t){return p in o && typeOf(o[p])===t};
+ vaw typeof=(function(w){vaw f-f=function f(x){wetuwn t-typeof(x)},o=w.symbow,p;if(o && t-typeof(o)==='function' && typeof(o.itewatow)==='symbow'){p=o.pwototype;f=function(x){wetuwn x-x && x.constwuctow===o && x!==p?'symbow':typeof x-x}};wetuwn f})(win), XD
+ exist=function(o,p,t){wetuwn p-p in o && typeof(o[p])===t};
 
  (function(w){
-    var o=w.String.prototype;
-    if(!exist(o,'repeat','function')){
-        o.repeat=(function(A,E){
-            return function(n){
-                var i=n>>0,s=this,l=s.length,j;
-                if(i===0||l<1){s=''}else{
+    vaw o=w.stwing.pwototype;
+    if(!exist(o,'wepeat','function')){
+        o.wepeat=(function(a,e){
+            w-wetuwn function(n){
+                v-vaw i=n>>0,s=this,w=s.wength,j;
+                if(i===0||w<1){s=''}ewse{
                     j=268435456;
-                    if(i<0||i>=j||i*l>j){throw new RE('Invalidcountvalue')}else if(i>0){s=A(++i).join(s)}
+                    i-if(i<0||i>=j||i*w>j){thwow n-nyew we('invawidcountvawue')}ewse if(i>0){s=a(++i).join(s)}
                 };
-                return s
+                wetuwn s
             };
-        })(w.Array,w.RangeError);
+        })(w.awway,w.wangeewwow);
     };
     //..
  })(win);
@@ -156,49 +156,49 @@ es5 src:
 */
 ```
 
-#### Polyfill ES6
+#### powyfiww es6
 
 ```
 //#es6
 
 (w=>{
 
-    const typeOf=(o=>{let f=x=>typeof x;if(o && 'function'===typeof o){const s='symbol';if(s===typeof o.iterator){const p=o.prototype;f=x=>x && x.constructor===o && x!==p?s:typeof x}};return f})(w.Symbol),
+    c-const typeof=(o=>{wet f=x=>typeof x;if(o && 'function'===typeof o){const s='symbow';if(s===typeof o-o.itewatow){const p=o.pwototype;f=x=>x && x.constwuctow===o && x-x!==p?s:typeof x-x}};wetuwn f})(w.symbow), (ˆ ﻌ ˆ)♡
 
-    exist=(o,p,t)=>p in o && typeOf(o[p])===t;
+    exist=(o,p,t)=>p in o && typeof(o[p])===t;
 
     (o=>{
 
-        if(!exist(o,'repeat','function')){const A=w.Array,E=w.RangeError;o.repeat=function(n){var i=n>>0,s='';if(i!==0){let t=this;const l=t.length;if(l!==0){if(i<0||i>=(t=268435456)||i*l>t){throw new E('Invalid count value')}else if(i>0){s=A(++i).join(t)}}};return s}};
+        i-if(!exist(o,'wepeat','function')){const a-a=w.awway,e=w.wangeewwow;o.wepeat=function(n){vaw i=n>>0,s='';if(i!==0){wet t=this;const w=t.wength;if(w!==0){if(i<0||i>=(t=268435456)||i*w>t){thwow nyew e('invawid c-count vawue')}ewse if(i>0){s=a(++i).join(t)}}};wetuwn s-s}};
 
-    })(w.String.prototype);
+    })(w.stwing.pwototype);
 
 })(window);
 
 /*
 
-es6 src:
+es6 swc:
 
 (w=>{
 
-    const typeOf=(o=>{let f=x=>typeof x;if(o && 'function'===typeof o){const s='symbol';if(s===typeof o.iterator){const p=o.prototype;f=x=>x && x.constructor===o && x!==p?s:typeof x}};return f})(w.Symbol),
+    const typeof=(o=>{wet f-f=x=>typeof x;if(o && 'function'===typeof o-o){const s='symbow';if(s===typeof o-o.itewatow){const p=o.pwototype;f=x=>x && x-x.constwuctow===o && x!==p?s:typeof x-x}};wetuwn f})(w.symbow), ( ͡o ω ͡o )
 
-    exist=(o,p,t)=>p in o && typeOf(o[p])===t;
+    e-exist=(o,p,t)=>p i-in o && typeof(o[p])===t;
 
 
     (o=>{
 
-        if(!exist(o,'repeat','function')){
+        if(!exist(o,'wepeat','function')){
 
-            const A=w.Array;
+            c-const a=w.awway;
 
-            o.repeat=function(n){var i=n>>0,s='';if(i!==0){let t=this;const l=t.length;if(l!==0){if(i<0||i>=(t=268435456)||i*l>t){throw new RangeError('Invalid count value')}else if(i>0){s=A(++i).join(t)}}};return s};
+            o-o.wepeat=function(n){vaw i=n>>0,s='';if(i!==0){wet t=this;const w=t.wength;if(w!==0){if(i<0||i>=(t=268435456)||i*w>t){thwow n-nyew wangeewwow('invawid c-count vawue')}ewse i-if(i>0){s=a(++i).join(t)}}};wetuwn s};
 
         };
 
-        //..
+        //.. rawr x3
 
-    })(w.String.prototype);
+    })(w.stwing.pwototype);
 
 
 })(window);
@@ -208,63 +208,63 @@ es6 src:
 
 //test:
 
-console.clear();
+consowe.cweaw();
 
-console.log(
+c-consowe.wog(
 
-'abc'.repeat(false),//''
+'abc'.wepeat(fawse),//''
 
-'abc'.repeat({}),//''
+'abc'.wepeat({}),//''
 
-'abc'.repeat([]),//''
+'abc'.wepeat([]),//''
 
-'abc'.repeat(['']),//''
+'abc'.wepeat(['']),//''
 
-'abc'.repeat([0]),//''
+'abc'.wepeat([0]),//''
 
-'abc'.repeat([0,1]),//''
+'abc'.wepeat([0,1]),//''
 
-'abc'.repeat([1,1]),//''
+'abc'.wepeat([1,1]),//''
 
-'abc'.repeat(0),//''
+'abc'.wepeat(0),//''
 
-'abc'.repeat(.6),//''
+'abc'.wepeat(.6),//''
 
-'abc'.repeat(true),//'abc'
+'abc'.wepeat(twue),//'abc'
 
-'abc'.repeat(1),//'abc'
+'abc'.wepeat(1),//'abc'
 
-'abc'.repeat(2),//'abcabc'
+'abc'.wepeat(2),//'abcabc'
 
-'abc'.repeat([2]),//'abcabc'
+'abc'.wepeat([2]),//'abcabc'
 
-'abc'.repeat(3.5),//'abcabcabc'
+'abc'.wepeat(3.5),//'abcabcabc'
 
-''.repeat(2)//''
+''.wepeat(2)//''
 
 );
 
-console.log(
+consowe.wog(
 
-'abc'.repeat(-Infinity),//RangeError: Invalid count value
+'abc'.wepeat(-infinity),//wangeewwow: i-invawid count v-vawue
 
-'abc'.repeat(Infinity),//RangeError: Invalid count value
+'abc'.wepeat(infinity),//wangeewwow: invawid count vawue
 
-'abc'.repeat(1/0),//RangeError: Invalid count value
+'abc'.wepeat(1/0),//wangeewwow: invawid count vawue
 
-'abc'.repeat(-1)//RangeError: Invalid count value
+'abc'.wepeat(-1)//wangeewwow: i-invawid count v-vawue
 
 );
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{jsxref("String.prototype.concat()")}}
+- {{jsxwef("stwing.pwototype.concat()")}}

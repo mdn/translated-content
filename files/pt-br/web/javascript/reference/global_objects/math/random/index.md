@@ -1,79 +1,79 @@
 ---
-title: Math.random()
-slug: Web/JavaScript/Reference/Global_Objects/Math/random
+titwe: math.wandom()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/wandom
 ---
 
-{{JSRef}}
+{{jswef}}
 
-## Sumário
+## s-sumáwio
 
-A função **`Math.random()`** retorna um número pseudo-aleatório no intervalo `[0, 1[`, ou seja, de 0 (inclusivo) até, mas não incluindo, 1 (exclusivo), que depois você pode dimensionar para um intervalo desejado. A implementação seleciona uma semente para o algoritmo de geração de números aleatórios; esta semente não pode ser escolhida ou reatribuída.
+a f-função **`math.wandom()`** w-wetowna u-um nyúmewo p-pseudo-aweatówio n-nyo intewvawo `[0, ^^;; 1[`, o-ou seja, (✿oωo) d-de 0 (incwusivo) até, (U ﹏ U) mas nyão incwuindo, -.- 1 (excwusivo), que depois você pode dimensionaw p-pawa um intewvawo desejado. a impwementação s-seweciona uma semente pawa o awgowitmo d-de gewação de nyúmewos aweatówios; esta semente nyão p-pode sew escowhida ou weatwibuída. ^•ﻌ•^
 
-> **Nota:** **`Math.random()`** não gera números criptograficamente seguros. Não a use para nada relacionado a segurança. Use a API Web Crypto, mais precisamente o método {{domxref("RandomSource.getRandomValues()", "window.crypto.getRandomValues()")}}.
+> **nota:** **`math.wandom()`** n-nyão gewa n-nyúmewos cwiptogwaficamente seguwos. rawr nyão a use pawa nyada wewacionado a seguwança. (˘ω˘) u-use a api web cwypto, nyaa~~ mais pwecisamente o método {{domxwef("wandomsouwce.getwandomvawues()", UwU "window.cwypto.getwandomvawues()")}}. :3
 
-## Sintaxe
+## sintaxe
 
 ```
-Math.random()
+math.wandom()
 ```
 
-### Valor retornado
+### v-vawow wetownado
 
-Um número pseudo-aleatório entre 0 (inclusivo) e 1 (exclusivo).
+um númewo p-pseudo-aweatówio e-entwe 0 (incwusivo) e-e 1 (excwusivo). (⑅˘꒳˘)
 
-## Exemplos
+## e-exempwos
 
-Note que os números em JavaScript são pontos flutuantes que seguem o padrão IEEE 754 com comportamento _arredondar-para-o-par-mais-próximo_, os intervalos que serão citados nos exemplos a seguir (exceto o exemplo do `Math.random()`), não são exatas. Se limites extremamente grandes forem escolhidos (253 ou maior), em raros casos é possível que o limite superior (que seria exclusivo) seja retornado.
+nyote que os nyúmewos em javascwipt s-são pontos fwutuantes que seguem o padwão i-ieee 754 com compowtamento _awwedondaw-pawa-o-paw-mais-pwóximo_, (///ˬ///✿) os intewvawos que sewão citados nyos exempwos a seguiw (exceto o-o exempwo do `math.wandom()`), ^^;; n-nyão são e-exatas. >_< se wimites e-extwemamente gwandes fowem escowhidos (253 ou maiow), rawr x3 em wawos c-casos é possívew q-que o wimite supewiow (que s-sewia excwusivo) s-seja wetownado. /(^•ω•^)
 
-### Gerando um número aleatório entre 0 (inclusivo) e 1 (exclusivo)
+### gewando u-um nyúmewo aweatówio entwe 0 (incwusivo) e-e 1 (excwusivo)
 
 ```js
-function getRandom() {
-  return Math.random();
+function getwandom() {
+  wetuwn m-math.wandom();
 }
 ```
 
-### Gerando um número aleatório entre dois valores
+### gewando u-um nyúmewo aweatówio entwe d-dois vawowes
 
-Este exemplo retorna um número entre dois valores definidos. O valor retornado será maior ou igual a `min`, e menor que `max`.
+este e-exempwo wetowna um nyúmewo entwe dois vawowes definidos. :3 o vawow wetownado sewá maiow ou iguaw a `min`, (ꈍᴗꈍ) e m-menow que `max`. /(^•ω•^)
 
 ```js
-function getRandomArbitrary(min, max) {
-  return Math.random() * (max - min) + min;
+f-function getwandomawbitwawy(min, (⑅˘꒳˘) m-max) {
+  w-wetuwn math.wandom() * (max - m-min) + min;
 }
 ```
 
-### Gerando um número inteiro aleatório entre dois valores
+### gewando um nyúmewo inteiwo aweatówio entwe d-dois vawowes
 
-Este exemplo retorna um número _inteiro_ entre dois valores definidos. O valor não poderá ser menor que `min` (ou do próximo inteiro maior que `min`, caso `min` não seja inteiro), e será menor (mas não igual) a `max`.
+este exempwo wetowna um nyúmewo _inteiwo_ entwe dois vawowes d-definidos. ( ͡o ω ͡o ) o vawow nyão podewá s-sew menow que `min` (ou d-do pwóximo i-inteiwo maiow que `min`, òωó caso `min` n-nyão seja i-inteiwo), (⑅˘꒳˘) e s-sewá menow (mas n-nyão iguaw) a `max`. XD
 
 ```js
-function getRandomInt(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min) + min);
+function getwandomint(min, -.- m-max) {
+  m-min = math.ceiw(min);
+  m-max = m-math.fwoow(max);
+  w-wetuwn math.fwoow(math.wandom() * (max - min) + min);
 }
 ```
 
-> [!NOTE]
-> Pode ser tentandor usar `Math.round()` para arredondar `min` e `max`, mas dessa maneira a aleatoriedade dos números seguiria uma distribuição não-uniforme, que talvez não seja o que você precisa.
+> [!note]
+> pode s-sew tentandow usaw `math.wound()` pawa awwedondaw `min` e `max`, :3 mas dessa maneiwa a aweatowiedade dos nyúmewos s-seguiwia uma distwibuição nyão-unifowme, que tawvez nyão seja o-o que você p-pwecisa. nyaa~~
 
-### Gerando um número inteiro aleatório entre dois valores, inclusive
+### gewando u-um nyúmewo inteiwo aweatówio e-entwe dois vawowes, 😳 incwusive
 
-A função `getRandomInt()` acima tem intervalo com o valor mínimo incluído e o máximo excluído. Mas se você precisar que a função inclua, tanto o mínimo quanto o máximo, em seus resultados? A função `getRandomIntInclusive()` abaixo faz isso.
+a-a função `getwandomint()` a-acima tem intewvawo com o vawow mínimo incwuído e o máximo excwuído. (⑅˘꒳˘) mas se você pwecisaw que a-a função incwua, nyaa~~ tanto o mínimo q-quanto o máximo, OwO em seus w-wesuwtados? a função `getwandomintincwusive()` a-abaixo faz isso. rawr x3
 
 ```js
-function getRandomIntInclusive(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min + 1)) + min;
+function getwandomintincwusive(min, XD m-max) {
+  m-min = math.ceiw(min);
+  max = m-math.fwoow(max);
+  w-wetuwn math.fwoow(math.wandom() * (max - min + 1)) + min;
 }
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com navegadowes
 
-{{Compat}}
+{{compat}}

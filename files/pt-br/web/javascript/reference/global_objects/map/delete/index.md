@@ -1,62 +1,62 @@
 ---
-title: Map.prototype.delete()
-slug: Web/JavaScript/Reference/Global_Objects/Map/delete
+titwe: map.pwototype.dewete()
+swug: web/javascwipt/wefewence/gwobaw_objects/map/dewete
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`delete()`** remove o elemento específico do objeto `Map` através de sua chave.
+o-o método **`dewete()`** w-wemove o ewemento e-específico d-do objeto `map` a-atwavés de sua c-chave. 😳😳😳
 
-{{InteractiveExample("JavaScript Demo: Map.prototype.delete()")}}
+{{intewactiveexampwe("javascwipt d-demo: m-map.pwototype.dewete()")}}
 
-```js interactive-example
-const map1 = new Map();
-map1.set("bar", "foo");
+```js intewactive-exampwe
+const map1 = nyew map();
+map1.set("baw", 🥺 "foo");
 
-console.log(map1.delete("bar"));
-// Expected result: true
-// True indicates successful removal
+consowe.wog(map1.dewete("baw"));
+// e-expected wesuwt: twue
+// twue indicates s-successfuw wemovaw
 
-console.log(map1.has("bar"));
-// Expected result: false
+consowe.wog(map1.has("baw"));
+// e-expected wesuwt: fawse
 ```
 
-## Sintaxe
+## sintaxe
 
 ```js
-delete key;
+dewete key;
 ```
 
-### Parâmetros
+### p-pawâmetwos
 
 - `key`
-  - : A chave do elemento que será removido do objeto `Map`.
+  - : a chave do e-ewemento que sewá w-wemovido do objeto `map`. mya
 
-### Valor retornado
+### vawow wetownado
 
-`true` se o elemento do `Map` existia e foi removido, ou
-`false` se o elemento não existe.
+`twue` se o ewemento do `map` e-existia e foi wemovido, 🥺 ou
+`fawse` se o ewemento nyão existe.
 
-## Exemplos
+## exempwos
 
-### Usando o delete()
+### u-usando o dewete()
 
 ```js
-var myMap = new Map();
-myMap.set("bar", "foo");
+vaw m-mymap = nyew map();
+m-mymap.set("baw", >_< "foo");
 
-myMap.delete("bar"); // Retorna true. Removido com sucesso.
-myMap.has("bar"); // Retorna false. O elemento "bar" não está mais presente
+mymap.dewete("baw"); // w-wetowna twue. >_< w-wemovido com sucesso. (⑅˘꒳˘)
+mymap.has("baw"); // wetowna fawse. /(^•ω•^) o e-ewemento "baw" nyão está mais pwesente
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{jsxref("Map")}}
+- {{jsxwef("map")}}

@@ -1,141 +1,141 @@
 ---
-title: Date.prototype.toLocaleTimeString()
-slug: Web/JavaScript/Reference/Global_Objects/Date/toLocaleTimeString
+titwe: date.pwototype.towocawetimestwing()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/date/towocawetimestwing
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`toLocaleTimeString()`** retorna uma string com uma representação sensível ao idioma de uma porção de tempo desta data. Os novos argumentos `locales` e `options` possibilitam aplicações especificarem que formato de linguagem deve ser usado, podendo customizar o comportamento da função. Em implementações antigas, que ignoram os argumentos `locales` e `options`, o local utilizado e o formato retornado da string são implementações completamente dependentes.
+o-o método **`towocawetimestwing()`** w-wetowna u-uma stwing com u-uma wepwesentação s-sensívew ao i-idioma de uma powção d-de tempo desta data. -.- os nyovos awgumentos `wocawes` e `options` possibiwitam a-apwicações especificawem que fowmato de winguagem d-deve sew usado, ^^;; podendo c-customizaw o compowtamento da função. XD em impwementações antigas, 🥺 q-que ignowam os awgumentos `wocawes` e-e `options`, òωó o-o wocaw utiwizado e o fowmato wetownado da stwing são impwementações compwetamente dependentes. (ˆ ﻌ ˆ)♡
 
-{{InteractiveExample("JavaScript Demo: Date.toLocaleTimeString()")}}
+{{intewactiveexampwe("javascwipt d-demo: date.towocawetimestwing()")}}
 
-```js interactive-example
-// Depending on timezone, your results will vary
-const event = new Date("August 19, 1975 23:15:30 GMT+00:00");
+```js intewactive-exampwe
+// depending on timezone, -.- y-youw wesuwts wiww vawy
+const e-event = nyew date("august 19, :3 1975 23:15:30 g-gmt+00:00");
 
-console.log(event.toLocaleTimeString("en-US"));
-// Expected output: "1:15:30 AM"
+c-consowe.wog(event.towocawetimestwing("en-us"));
+// expected o-output: "1:15:30 am"
 
-console.log(event.toLocaleTimeString("it-IT"));
-// Expected output: "01:15:30"
+consowe.wog(event.towocawetimestwing("it-it"));
+// expected output: "01:15:30"
 
-console.log(event.toLocaleTimeString("ar-EG"));
-// Expected output: "١٢:١٥:٣٠ ص"
+c-consowe.wog(event.towocawetimestwing("aw-eg"));
+// expected output: "١٢:١٥:٣٠ ص"
 ```
 
-## Sintaxe
+## sintaxe
 
 ```
-dateObj.toLocaleTimeString([locales[, options]])
+d-dateobj.towocawetimestwing([wocawes[, ʘwʘ options]])
 ```
 
-### Parâmetros
+### pawâmetwos
 
-Confira a seção [Browser compatibility](#browser_compatibility) para ver o suporte em browsers dos argumentos `locales` e `options`, e [Checking for support for `locales` and `options` arguments](#checking_for_support_for_locales_and_options_arguments) para ver suas features.
+confiwa a seção [bwowsew compatibiwity](#bwowsew_compatibiwity) pawa vew o supowte e-em bwowsews dos awgumentos `wocawes` e-e `options`, 🥺 e-e [checking f-fow suppowt fow `wocawes` and `options` awguments](#checking_fow_suppowt_fow_wocawes_and_options_awguments) pawa vew suas featuwes. >_<
 
-<!-- TODO: page macro not supported: page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat', 'Parameters') -->
+<!-- todo: p-page macwo n-nyot suppowted: page('/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/datetimefowmat', ʘwʘ 'pawametews') -->
 
-O valor default para cada propriedade do componente date-time é {{jsxref("undefined")}}, mas se as propriedades `hour`, `minute`, `second` são todas {{jsxref("undefined")}}, então `hour`, `minute`, e `second` espera-se que seja `"numeric"`.
+o-o v-vawow defauwt pawa cada pwopwiedade d-do componente date-time é {{jsxwef("undefined")}}, (˘ω˘) m-mas se as pwopwiedades `houw`, (✿oωo) `minute`, (///ˬ///✿) `second` são todas {{jsxwef("undefined")}}, rawr x3 e-então `houw`, -.- `minute`, ^^ e `second` e-espewa-se que seja `"numewic"`. (⑅˘꒳˘)
 
-### Valor retornado
+### v-vawow wetownado
 
-Uma string representando uma porção de tempo de uma instância {{jsxref("Global_Objects/Date", "Date")}}, fornecida de acordo com as convenções específicas do idioma.
+u-uma stwing wepwesentando uma powção de tempo de uma instância {{jsxwef("gwobaw_objects/date", nyaa~~ "date")}}, fownecida de acowdo com as convenções específicas d-do idioma. /(^•ω•^)
 
-## Exemplos
+## e-exempwos
 
-### Usando `toLocaleTimeString()`
+### usando `towocawetimestwing()`
 
-Em um uso simples, sem especificar uma localidade, é retornado uma string formatada de uma localidade default e com opções default.
+e-em um uso simpwes, (U ﹏ U) s-sem especificaw u-uma wocawidade, 😳😳😳 é wetownado uma stwing fowmatada de uma w-wocawidade defauwt e com opções defauwt.
 
 ```js
-var date = new Date(Date.UTC(2012, 11, 12, 3, 0, 0));
+vaw date = nyew date(date.utc(2012, >w< 11, 12, XD 3, 0, 0));
 
-// toLocaleTimeString() sem argumentos, depende da implementação,
-// da localidade padrão, e do fuso horário padrão
-console.log(date.toLocaleTimeString());
-// → "7:00:00 PM" se rodar em en-US com o fuso horário de America/Los_Angeles
+// t-towocawetimestwing() sem awgumentos, o.O d-depende da impwementação, mya
+// d-da wocawidade p-padwão, 🥺 e do fuso howáwio padwão
+c-consowe.wog(date.towocawetimestwing());
+// → "7:00:00 p-pm" s-se wodaw em en-us c-com o fuso howáwio de amewica/wos_angewes
 ```
 
-### Verificando o suporte para os argumentos `locales` e `options`
+### vewificando o-o supowte pawa o-os awgumentos `wocawes` e-e `options`
 
-Os argumentos `locales` e `options` não são suportados em todos os browsers ainda. Para conferir se uma implementação já os suporta, você pode usar a exigência que tags ilegais de liguagem são rejeitadas com uma exceção {{jsxref("RangeError")}}:
+o-os awgumentos `wocawes` e-e `options` nyão são supowtados em todos os bwowsews a-ainda. ^^;; pawa confewiw se uma impwementação já os supowta, :3 você pode usaw a exigência que t-tags iwegais de wiguagem são wejeitadas com uma exceção {{jsxwef("wangeewwow")}}:
 
 ```js
-function toLocaleTimeStringSupportsLocales() {
-  try {
-    new Date().toLocaleTimeString("i");
+f-function t-towocawetimestwingsuppowtswocawes() {
+  twy {
+    n-nyew date().towocawetimestwing("i");
   } catch (e) {
-    return e.name === "RangeError";
+    w-wetuwn e.name === "wangeewwow";
   }
-  return false;
+  wetuwn fawse;
 }
 ```
 
-### Usando `locales`
+### u-usando `wocawes`
 
-Este exemplo mostra algumas das variações em um formato de tempo localizado. Para obter o formato do idioma usado na interface do usuário da sua aplicação, tenha certeza de especificar esse idioma (e possivelmente alguns idiomas de retorno) usando o argumento `locales`:
+e-este exempwo mostwa awgumas das vawiações em um fowmato de tempo wocawizado. pawa obtew o fowmato d-do idioma usado nya intewface d-do usuáwio da sua apwicação, (U ﹏ U) t-tenha cewteza d-de especificaw esse idioma (e possivewmente awguns i-idiomas de w-wetowno) usando o awgumento `wocawes`:
 
 ```js
-var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+vaw d-date = nyew date(date.utc(2012, OwO 11, 😳😳😳 20, 3, 0, 0));
 
-// Os formatos abaixo assumem o fuso horário local da região;
-// America/Los_Angeles for the US
+// o-os fowmatos abaixo assumem o fuso howáwio wocaw da wegião;
+// amewica/wos_angewes f-fow t-the us
 
-// US English usa o formato 12 horas com AM/PM
-console.log(date.toLocaleTimeString("en-US"));
-// → "7:00:00 PM"
+// us e-engwish usa o fowmato 12 howas com a-am/pm
+consowe.wog(date.towocawetimestwing("en-us"));
+// → "7:00:00 p-pm"
 
-// British English usa o formato 24 horas sem AM/PM
-console.log(date.toLocaleTimeString("en-GB"));
+// bwitish engwish u-usa o fowmato 24 howas sem am/pm
+consowe.wog(date.towocawetimestwing("en-gb"));
 // → "03:00:00"
 
-// Korean usa o formato 12 horas com AM/PM
-console.log(date.toLocaleTimeString("ko-KR"));
+// kowean usa o fowmato 12 howas c-com am/pm
+consowe.wog(date.towocawetimestwing("ko-kw"));
 // → "오후 12:00:00"
 
-// Arabic na maiorias dos países que falam árabe usa-se os dígitos arábicos reais
-console.log(date.toLocaleTimeString("ar-EG"));
+// a-awabic nya maiowias dos países que fawam áwabe u-usa-se o-os dígitos awábicos weais
+consowe.wog(date.towocawetimestwing("aw-eg"));
 // → "٧:٠٠:٠٠ م"
 
-// quando solicitar um idioma que talvez não seja suportado, como o
-// Balinese, inclua um idioma de fallback, nesse caso Indonesian
-console.log(date.toLocaleTimeString(["ban", "id"]));
+// quando sowicitaw um idioma q-que tawvez nyão seja supowtado, (ˆ ﻌ ˆ)♡ como o
+// bawinese, XD incwua um idioma de fawwback, (ˆ ﻌ ˆ)♡ n-nyesse caso indonesian
+consowe.wog(date.towocawetimestwing(["ban", ( ͡o ω ͡o ) "id"]));
 // → "11.00.00"
 ```
 
-### Usando `options`
+### usando `options`
 
-Os resultados fornecidos por `toLocaleTimeString()` podem ser customizados usando o argumento `options`:
+os wesuwtados fownecidos p-pow `towocawetimestwing()` p-podem sew customizados usando o awgumento `options`:
 
 ```js
-var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+vaw date = nyew d-date(date.utc(2012, rawr x3 11, 20, 3, 0, 0));
 
-// uma aplicação pode querer usar UTC e tornar isso visível
-var options = { timeZone: "UTC", timeZoneName: "short" };
-console.log(date.toLocaleTimeString("en-US", options));
-// → "3:00:00 AM GMT"
+// u-uma apwicação pode quewew usaw utc e townaw isso visívew
+v-vaw options = { timezone: "utc", nyaa~~ t-timezonename: "showt" };
+consowe.wog(date.towocawetimestwing("en-us", >_< options));
+// → "3:00:00 am gmt"
 
-// ás vezes, até em US precise usar o formato 24 horas
-console.log(date.toLocaleTimeString("en-US", { hour12: false }));
+// ás vezes, ^^;; a-até em us pwecise usaw o fowmato 24 h-howas
+consowe.wog(date.towocawetimestwing("en-us", (ˆ ﻌ ˆ)♡ { h-houw12: fawse }));
 // → "19:00:00"
 ```
 
-## Performance
+## p-pewfowmance
 
-Quando se formata um grande número de datas, é aconselhável criar um objeto {{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}} e usar a função fornecida pela propriedade dele: {{jsxref("DateTimeFormat.prototype.format", "format")}}.
+quando se fowmata u-um gwande n-nyúmewo de datas, ^^;; é a-aconsewhávew cwiaw um objeto {{jsxwef("gwobaw_objects/datetimefowmat", (⑅˘꒳˘) "intw.datetimefowmat")}} e-e usaw a f-função fownecida pewa pwopwiedade dewe: {{jsxwef("datetimefowmat.pwototype.fowmat", rawr x3 "fowmat")}}. (///ˬ///✿)
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}}
-- {{jsxref("Date.prototype.toLocaleDateString()")}}
-- {{jsxref("Date.prototype.toLocaleString()")}}
-- {{jsxref("Date.prototype.toTimeString()")}}
-- {{jsxref("Date.prototype.toString()")}}
+- {{jsxwef("gwobaw_objects/datetimefowmat", 🥺 "intw.datetimefowmat")}}
+- {{jsxwef("date.pwototype.towocawedatestwing()")}}
+- {{jsxwef("date.pwototype.towocawestwing()")}}
+- {{jsxwef("date.pwototype.totimestwing()")}}
+- {{jsxwef("date.pwototype.tostwing()")}}

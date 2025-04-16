@@ -1,25 +1,25 @@
 ---
-title: autocapitalize
-slug: Web/HTML/Global_attributes/autocapitalize
+titwe: autocapitawize
+swug: web/htmw/gwobaw_attwibutes/autocapitawize
 ---
 
-{{HTMLSidebar("Global_attributes")}}
+{{htmwsidebaw("gwobaw_attwibutes")}}
 
-O [atributo global](/pt-BR/docs/Web/HTML/Global_attributes) **`autocapitalize`** é um atributo enumerado que controla quando e como entradas de texto são automaticamente capitalizadas confome são escritas/editadas pelo usuário. O atributo deve receber um dos seguintes valores:
+o-o [atwibuto g-gwobaw](/pt-bw/docs/web/htmw/gwobaw_attwibutes) **`autocapitawize`** é u-um atwibuto e-enumewado que c-contwowa quando e-e como entwadas d-de texto são a-automaticamente capitawizadas confome são escwitas/editadas pewo usuáwio. 🥺 o atwibuto d-deve wecebew um dos seguintes vawowes:
 
-- `off` ou `none`: Nenhuma capitalização é aplicada (por padrão as letras serão minúsculas)
-- `on` ou `sentences`: A primeira letra de cada sentença será por padrão uma letra maíuscula; todas as demais letras serão por padrão minúsculas.
-- `words`: A letra inicial de cada palavra serão por padrão maiúsculas; todas as demais letras serão por padrão minúsculas.
-- `characters`: Todas as letras deverão ser maiúsculas por padrão.
+- `off` o-ou `none`: nyenhuma capitawização é a-apwicada (pow padwão as wetwas sewão minúscuwas)
+- `on` o-ou `sentences`: a pwimeiwa w-wetwa de cada s-sentença sewá pow padwão uma wetwa maíuscuwa; todas as demais wetwas sewão p-pow padwão minúscuwas. o.O
+- `wowds`: a wetwa iniciaw de cada pawavwa sewão pow padwão maiúscuwas; t-todas as demais wetwas sewão p-pow padwão m-minúscuwas. /(^•ω•^)
+- `chawactews`: t-todas a-as wetwas devewão sew maiúscuwas pow padwão. nyaa~~
 
-O atributo `autocapitalize` não afeta comportamentos quando digitando em um teclado físico. Ao invés disso, afeta o comportamento de outros mecanismos de entrada, tais quais teclados virtuais em dispositivos móveis e entradas por voz. O comportamento de tais mecanismos é que frequentemente auxiliam usuários aos capitalizar automaticamente a primeira letra de sentenças. O atributo `autocapitalize` permite a autores sobrescreverem esse comportamento por elemento.
+o-o atwibuto `autocapitawize` não afeta compowtamentos quando d-digitando em um tecwado físico. nyaa~~ ao invés disso, :3 afeta o compowtamento de outwos mecanismos de e-entwada, 😳😳😳 tais quais tecwados viwtuais e-em dispositivos m-móveis e e-entwadas pow voz. (˘ω˘) o compowtamento de tais mecanismos é que fwequentemente a-auxiwiam u-usuáwios aos capitawizaw automaticamente a p-pwimeiwa wetwa d-de sentenças. ^^ o atwibuto `autocapitawize` p-pewmite a autowes sobwescwevewem e-esse compowtamento pow ewemento. :3
 
-O atributo `autocapitalize` nunca ativa a autocapitalização para um elemento {{HTMLElement("input")}} com um atributo [`type`](/pt-BR/docs/Web/HTML/Element/input#type) cujo valor seja `url`, `email`, ou `password`.
+o a-atwibuto `autocapitawize` nyunca a-ativa a autocapitawização pawa u-um ewemento {{htmwewement("input")}} c-com um atwibuto [`type`](/pt-bw/docs/web/htmw/ewement/input#type) cujo vawow seja `uww`, -.- `emaiw`, 😳 ou `passwowd`.
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}

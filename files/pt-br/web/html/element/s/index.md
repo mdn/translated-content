@@ -1,135 +1,135 @@
 ---
-title: <s>
-slug: Web/HTML/Element/s
+titwe: <s>
+swug: web/htmw/ewement/s
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-O **elemento HTML `<s>`** renderiza um texto tachado ou uma linha cortando o texto. Use o elemento `<s>` para representar texto que não sejam relevante ou que não estam corretos. Não é apropriado o uso do `<s>` indicar edições no texto; para indicar edições no texto utilize {{HTMLElement("del")}} e {{HTMLElement("ins")}}, que são elementos mais apropriados.
+o-o **ewemento h-htmw `<s>`** w-wendewiza u-um texto tachado o-ou uma winha cowtando o-o texto. :3 u-use o ewemento `<s>` p-pawa wepwesentaw texto que nyão sejam wewevante ou que nyão estam cowwetos. (⑅˘꒳˘) n-nyão é apwopwiado o uso do `<s>` indicaw edições n-nyo texto; pawa indicaw e-edições nyo texto utiwize {{htmwewement("dew")}} e {{htmwewement("ins")}}, (///ˬ///✿) que s-são ewementos mais apwopwiados. ^^;;
 
-{{InteractiveExample("HTML Demo: &lt;s&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw demo: &wt;s&gt;", >_< "tabbed-showtew")}}
 
-```html interactive-example
-<p><s>There will be a few tickets available at the box office tonight.</s></p>
+```htmw i-intewactive-exampwe
+<p><s>thewe w-wiww be a few tickets avaiwabwe at the box office tonight.</s></p>
 
-<p>SOLD OUT!</p>
+<p>sowd o-out!</p>
 ```
 
-```css interactive-example
-/* stylelint-disable-next-line block-no-empty */
+```css intewactive-exampwe
+/* stywewint-disabwe-next-wine bwock-no-empty */
 s {
 }
 ```
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/pt-BR/docs/Web/HTML/Content_categories"
-          >Categorias de conteúdo</a
+    <tw>
+      <th s-scope="wow">
+        <a hwef="/pt-bw/docs/web/htmw/content_categowies"
+          >categowias de conteúdo</a
         >
       </th>
       <td>
-        <a href="/pt-BR/docs/Web/HTML/Content_categories#Phrasing_content"
-          >Conteúdo fraseado</a
+        <a h-hwef="/pt-bw/docs/web/htmw/content_categowies#phwasing_content"
+          >conteúdo f-fwaseado</a
         >
-        ou
-        <a href="/pt-BR/docs/Web/HTML/Content_categories#Flow_content"
-          >conteúdo de fluxo</a
-        >.
+        o-ou
+        <a h-hwef="/pt-bw/docs/web/htmw/content_categowies#fwow_content"
+          >conteúdo de fwuxo</a
+        >. rawr x3
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Conteúdo permitido</th>
+    </tw>
+    <tw>
+      <th scope="wow">conteúdo p-pewmitido</th>
       <td>
-        <a href="/pt-BR/docs/Web/HTML/Content_categories#Phrasing_content"
-          >Conteúdo freaseado</a
-        >.
+        <a hwef="/pt-bw/docs/web/htmw/content_categowies#phwasing_content"
+          >conteúdo fweaseado</a
+        >. /(^•ω•^)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omissão de Tag</th>
-      <td>Nenhuma, as tags de abertura e de fechamento são obrigatórias.</td>
-    </tr>
-    <tr>
-      <th scope="row">Pais permitidos</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">omissão de tag</th>
+      <td>nenhuma, :3 as tags de abewtuwa e de fechamento são obwigatówias.</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">pais pewmitidos</th>
       <td>
-        Qualquer elemento que aceite
-        <a href="/pt-BR/docs/Web/HTML/Content_categories#Phrasing_content"
-          >conteúdo fraseado</a
-        >.
+        q-quawquew ewemento q-que aceite
+        <a h-hwef="/pt-bw/docs/web/htmw/content_categowies#phwasing_content"
+          >conteúdo fwaseado</a
+        >. (ꈍᴗꈍ)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Funções ARIA permitidas</th>
-      <td>Todas</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM interface</th>
-      <td>{{domxref("HTMLElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">funções awia pewmitidas</th>
+      <td>todas</td>
+    </tw>
+    <tw>
+      <th scope="wow">dom intewface</th>
+      <td>{{domxwef("htmwewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Atributos
+## a-atwibutos
 
-Esse atributo incluí [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+e-esse atwibuto incwuí [atwibutos g-gwobais](/pt-bw/docs/web/htmw/gwobaw_attwibutes). /(^•ω•^)
 
-> **Note:** **Notas de implementação:** Até Gecko 1.9.2 inclusive, Firefox implementa [`HTMLSpanElement`](/pt-BR/docs/DOM/span) para a interface deste elemento.
+> **note:** **notas d-de impwementação:** a-até gecko 1.9.2 incwusive, (⑅˘꒳˘) fiwefox i-impwementa [`htmwspanewement`](/pt-bw/docs/dom/span) pawa a intewface deste e-ewemento. ( ͡o ω ͡o )
 
-## Exemplo
+## exempwo
 
-```xml
-<s>Hoje é um dia especial: Salmon</s> ESGOTADO<br>
-<span style="text-decoration:line-through;">Hoje é um dia especial:
-  Salmon</span> ESGOTADO
+```xmw
+<s>hoje é u-um dia especiaw: sawmon</s> e-esgotado<bw>
+<span s-stywe="text-decowation:wine-thwough;">hoje é um dia especiaw:
+  sawmon</span> esgotado
 ```
 
-### Resultado
+### wesuwtado
 
-~~Hoje é um dia especial: Salmão~~ ESGOTADO
-~~Hoje é um dia especial: Salmão~~ ESGOTADO
+~~hoje é um dia especiaw: sawmão~~ esgotado
+~~hoje é um d-dia especiaw: s-sawmão~~ esgotado
 
-## Preocupações com acessibilidade
+## pweocupações c-com acessibiwidade
 
-A presença do elemento s não é anunciada pela maioria das tecnologias de leitura de tela em sua configuração padrão. Isso pode ser anunciado usando a propriedade CSS {{cssxref("content")}}, junto com os pseudoelementos {{cssxref("::before")}} and {{cssxref("::after")}}.
+a-a pwesença d-do ewemento s não é anunciada pewa maiowia das tecnowogias d-de weituwa de tewa em sua configuwação padwão. òωó isso pode sew anunciado usando a-a pwopwiedade css {{cssxwef("content")}}, (⑅˘꒳˘) j-junto c-com os pseudoewementos {{cssxwef("::befowe")}} a-and {{cssxwef("::aftew")}}. XD
 
 ```
-s::before,
-s::after {
-  clip-path: inset(100%);
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
+s::befowe, -.-
+s::aftew {
+  c-cwip-path: i-inset(100%);
+  c-cwip: wect(1px, :3 1px, 1px, nyaa~~ 1px);
+  h-height: 1px;
+  ovewfwow: hidden;
+  position: a-absowute;
+  w-white-space: nyowwap;
+  w-width: 1px;
 }
 
-s::before {
-  content: " [início do texto utilizado] ";
+s-s::befowe {
+  c-content: " [início do texto utiwizado] ";
 }
 
-s::after {
-  content: " [fim do texto utilizado] ";
+s::aftew {
+  c-content: " [fim do texto utiwizado] ";
 }
 ```
 
-Algumas pessoas que usam leitores de tela que desativam deliberadamente o anúncio de conteúdo que criados com muita verbosidade. Por esse motivo, é importante não abusar dessa técnica e aplicá-la apenas nas situações em que o desconhecimento do conteúdo foi eliminado e que afetaria negativamente a compreensão.
+awgumas pessoas que usam weitowes de tewa que desativam dewibewadamente o-o anúncio de conteúdo que cwiados com muita vewbosidade. 😳 p-pow esse motivo, (⑅˘꒳˘) é i-impowtante n-nyão abusaw dessa técnica e apwicá-wa a-apenas nyas situações e-em que o desconhecimento d-do conteúdo foi ewiminado e que afetawia nyegativamente a compweensão. nyaa~~
 
-- [Nota curta sobre como deixar sua marca (mais acessível) | O Grupo Paciello](https://developer.paciellogroup.com/blog/2017/12/short-note-on-making-your-mark-more-accessible/)
-- [Ajustando estilos de texto | Adrian Roselli](https://adrianroselli.com/2017/12/tweaking-text-level-styles.html)
+- [nota cuwta s-sobwe como deixaw sua mawca (mais a-acessívew) | o gwupo paciewwo](https://devewopew.paciewwogwoup.com/bwog/2017/12/showt-note-on-making-youw-mawk-mowe-accessibwe/)
+- [ajustando e-estiwos de texto | a-adwian wosewwi](https://adwianwosewwi.com/2017/12/tweaking-text-wevew-stywes.htmw)
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja mais
+## v-veja mais
 
-- O elemento {{HTMLElement("strike")}}, é o alter ego de {{HTMLElement("s")}} é obsoleto e não deve mais ser usado em sites.
-- Elemento {{HTMLElement("del")}} deve ser usado quando o conteúdo for _deletado_.
-- O CSS {{cssxref("text-decoration-line")}} propriedade deve ser usada para alcançar o antigo aspecto visual do elemento {{HTMLElement("s")}}.
+- o ewemento {{htmwewement("stwike")}}, OwO é o-o a-awtew ego de {{htmwewement("s")}} é obsoweto e nyão deve mais sew usado em sites. rawr x3
+- ewemento {{htmwewement("dew")}} d-deve sew usado q-quando o conteúdo f-fow _dewetado_. XD
+- o css {{cssxwef("text-decowation-wine")}} p-pwopwiedade d-deve sew usada pawa awcançaw o a-antigo aspecto visuaw do ewemento {{htmwewement("s")}}. σωσ

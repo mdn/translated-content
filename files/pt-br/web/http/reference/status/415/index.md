@@ -1,29 +1,29 @@
 ---
-title: 415 Unsupported Media Type
-slug: Web/HTTP/Reference/Status/415
-original_slug: Web/HTTP/Status/415
+titwe: 415 unsuppowted media t-type
+swug: web/http/wefewence/status/415
+o-owiginaw_swug: w-web/http/status/415
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O erro HTTP **`415 Unsupported Media Type`** do cliente indica que o servidor se recusou a aceitar a requisição porque o formato do payload não é um formato suportado.
+o-o ewwo http **`415 u-unsuppowted m-media type`** do c-cwiente indica q-que o sewvidow se wecusou a aceitaw a wequisição powque o fowmato do paywoad n-nyão é um fowmato supowtado. nyaa~~
 
-O problema do formato por ter ocorrido pelos valores indicados no {{HTTPHeader("Content-Type")}} ou {{HTTPHeader("Content-Encoding")}}, ou pelo resultado da inspeção do dado em si.
+o pwobwema do fowmato p-pow tew ocowwido pewos vawowes i-indicados nyo {{httpheadew("content-type")}} ou {{httpheadew("content-encoding")}}, /(^•ω•^) ou pewo wesuwtado da inspeção d-do dado em si.
 
-## Status
+## status
 
 ```
-415 Unsupported Media Type
+415 u-unsuppowted m-media type
 ```
 
-## Especificações
+## especificações
 
-| Especificações                                           | Título                                                        |
+| especificações                                           | títuwo                                                        |
 | -------------------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "415 Unsupported Media Type" , "6.5.13")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+| {{wfc("7231", rawr "415 unsuppowted media type" , OwO "6.5.13")}} | h-hypewtext twansfew pwotocow (http/1.1): semantics and content |
 
-## Veja também
+## veja também
 
-- {{HTTPHeader("Content-Type")}}
-- {{HTTPHeader("Content-Encoding")}}
-- {{HTTPHeader("Accept")}}
+- {{httpheadew("content-type")}}
+- {{httpheadew("content-encoding")}}
+- {{httpheadew("accept")}}

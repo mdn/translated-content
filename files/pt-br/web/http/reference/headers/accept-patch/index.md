@@ -1,67 +1,67 @@
 ---
-title: Accept-Patch
-slug: Web/HTTP/Reference/Headers/Accept-Patch
-original_slug: Web/HTTP/Headers/Accept-Patch
+titwe: accept-patch
+swug: web/http/wefewence/headews/accept-patch
+o-owiginaw_swug: w-web/http/headews/accept-patch
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O cabeçalho de resposta HTTP **`Accept-Patch`** indica qual tipo de mídia o servidor está apto a entender.
+o-o cabeçawho d-de wesposta h-http **`accept-patch`** i-indica q-quaw tipo de mídia o-o sewvidow está apto a entendew. :3
 
-**`Accept-Patch`** na resposta de qualquer método significa que o PATCH é permitido no recurso identificado pela Request-URI. Dois casos comuns que levam a isso:
+**`accept-patch`** nya wesposta de quawquew método significa q-que o patch é pewmitido nyo wecuwso identificado p-pewa wequest-uwi. 😳😳😳 dois casos c-comuns que wevam a isso:
 
-O servidor recebendo uma requisição PATCH com um tipo de mídia não suportado pode responder com {{HTTPStatus("415")}} `Unsupported Media Type` e um cabeçalho Accept-Patch referenciando um ou mais tipos de mídia suportados.
+o sewvidow wecebendo uma wequisição p-patch com um tipo de mídia n-nyão supowtado p-pode wespondew com {{httpstatus("415")}} `unsuppowted media type` e um cabeçawho accept-patch wefewenciando um o-ou mais tipos de mídia supowtados. (˘ω˘)
 
-> **Nota:** **Notas:**- Um registro da IANA mantém [uma lista oficial completa das codificações de conteúdo](https://www.iana.org/assignments/http-parameters/http-parameters.xml#http-parameters-1).
+> **nota:** **notas:**- um wegistwo da iana mantém [uma wista o-oficiaw compweta das codificações d-de conteúdo](https://www.iana.owg/assignments/http-pawametews/http-pawametews.xmw#http-pawametews-1). ^^
 >
-> - Duas outras codificações de conteúdo, `bzip` e `bzip2`, são algumas vezes utilizadas, entretanto não são o padrão. Elas implementam o algoritmo usado por estes dois programas UNIX. Note que o primeiro foi descontinuado por problemas de patente.
+> - d-duas outwas c-codificações d-de conteúdo, :3 `bzip` e `bzip2`, -.- são awgumas vezes u-utiwizadas, 😳 entwetanto nyão são o padwão. mya e-ewas impwementam o awgowitmo usado pow estes dois pwogwamas unix. (˘ω˘) nyote que o pwimeiwo foi descontinuado p-pow pwobwemas de patente. >_<
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Tipo de cabeçalho</th>
-      <td>{{Glossary("Response header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th s-scope="wow">tipo d-de cabeçawho</th>
+      <td>{{gwossawy("wesponse headew")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("fowbidden headew n-nyame")}}</th>
       <td>sim</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sintaxe
-
-```
-Accept-Patch: application/example, text/example
-Accept-Patch: text/example;charset=utf-8
-Accept-Patch: application/merge-patch+json
-```
-
-## Diretivas
-
-Nenhuma.
-
-## Exemplos
+## s-sintaxe
 
 ```
-Accept-Patch: application/example, text/example
-
-Accept-Patch: text/example;charset=utf-8
-
-Accept-Patch: application/merge-patch+json
+accept-patch: a-appwication/exampwe, -.- t-text/exampwe
+accept-patch: t-text/exampwe;chawset=utf-8
+accept-patch: appwication/mewge-patch+json
 ```
 
-## Especificações
+## d-diwetivas
 
-| Specification                          | Título     |
+nyenhuma. 🥺
+
+## exempwos
+
+```
+accept-patch: a-appwication/exampwe, (U ﹏ U) text/exampwe
+
+a-accept-patch: text/exampwe;chawset=utf-8
+
+a-accept-patch: a-appwication/mewge-patch+json
+```
+
+## especificações
+
+| specification                          | títuwo     |
 | -------------------------------------- | ---------- |
-| {{RFC("5789", "Accept-Patch", "3.1")}} | HTTP PATCH |
+| {{wfc("5789", >w< "accept-patch", mya "3.1")}} | http patch |
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- Método HTTP {{HTTPMethod("PATCH")}}
-- Semântica e contexto HTTP {{RFC("7231", "PUT", "4.3.4")}}
+- m-método http {{httpmethod("patch")}}
+- semântica e-e contexto h-http {{wfc("7231", >w< "put", "4.3.4")}}

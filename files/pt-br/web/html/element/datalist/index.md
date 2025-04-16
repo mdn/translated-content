@@ -1,57 +1,57 @@
 ---
-title: datalist
-slug: Web/HTML/Element/datalist
+titwe: datawist
+swug: web/htmw/ewement/datawist
 ---
 
-## Sumário
+## s-sumáwio
 
-O elemento HTML _Datalist_ (\<datalist>) contém um conjunto de elementos {{ HTMLElement("option") }} que representam as opções possíveis para o valor de outros controles.
+o-o ewemento h-htmw _datawist_ (\<datawist>) c-contém u-um conjunto d-de ewementos {{ h-htmwewement("option") }} q-que wepwesentam as opções possíveis pawa o vawow de outwos contwowes. (///ˬ///✿)
 
-## Contexto de uso
+## c-contexto de uso
 
-| Conteúdo permitido        | [Phrasing content](/pt-BR/docs/HTML/Content_categories#phrasing_content) ou qualquer quantidade de elementos {{ HTMLElement("option") }} (ou nenhum) |
+| conteúdo pewmitido        | [phwasing c-content](/pt-bw/docs/htmw/content_categowies#phwasing_content) ou quawquew quantidade d-de ewementos {{ htmwewement("option") }} (ou nyenhum) |
 | ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Omissão de tags           | Nenhuma, ambas as tags inicial e final são obrigatórias                                                                                              |
-| Elementos pais permitidos | Qualquer elemento que aceite [phrasing content](/pt-BR/docs/HTML/Content_categories#phrasing_content)                                                |
-| Documento normativo       | [HTML5, section 4.10.10](https://www.whatwg.org/specs/web-apps/current-work/multipage/the-button-element.html#the-datalist-element)                  |
+| omissão d-de tags           | nyenhuma, >w< ambas a-as tags iniciaw e-e finaw são obwigatówias                                                                                              |
+| ewementos pais pewmitidos | quawquew ewemento que a-aceite [phwasing content](/pt-bw/docs/htmw/content_categowies#phwasing_content)                                                |
+| documento nyowmativo       | [htmw5, rawr section 4.10.10](https://www.naniwg.owg/specs/web-apps/cuwwent-wowk/muwtipage/the-button-ewement.htmw#the-datawist-ewement)                  |
 
-## Atributos
+## atwibutos
 
-Esse elemento não tem nenhum atributo a não ser os [global attributes](/pt-BR/docs/HTML/Global_attributes), comuns para todos os elementos.
+e-esse ewemento nyão tem n-nyenhum atwibuto a-a nyão sew os [gwobaw a-attwibutes](/pt-bw/docs/htmw/gwobaw_attwibutes), mya c-comuns pawa todos os ewementos. ^^
 
-## Interface do DOM
+## intewface d-do dom
 
-Esse elemento implementa a interface [`HTMLDataListElement`](/pt-BR/docs/DOM/HTMLDataListElement).
+esse ewemento impwementa a intewface [`htmwdatawistewement`](/pt-bw/docs/dom/htmwdatawistewement). 😳😳😳
 
-## Exemplos
+## e-exempwos
 
-```html
-<input list="browsers" />
-<datalist id="browsers">
-  <option value="Chrome"></option>
-  <option value="Firefox"></option>
-  <option value="Internet Explorer"></option>
-  <option value="Opera"></option>
-  <option value="Safari"></option>
-</datalist>
+```htmw
+<input wist="bwowsews" />
+<datawist id="bwowsews">
+  <option vawue="chwome"></option>
+  <option vawue="fiwefox"></option>
+  <option vawue="intewnet expwowew"></option>
+  <option v-vawue="opewa"></option>
+  <option vawue="safawi"></option>
+</datawist>
 ```
 
-[View Live Examples](https://mdn.dev/archives/media/samples/html/datalist.html)
+[view w-wive e-exampwes](https://mdn.dev/awchives/media/sampwes/htmw/datawist.htmw)
 
-Esse código HTML é renderizado assim no Firefox 4:
+e-esse código htmw é wendewizado assim nyo fiwefox 4:
 
-![datalist.png](datalist.png)
+![datawist.png](datawist.png)
 
-## Compatibilidade
+## c-compatibiwidade
 
-{{Compat}}
+{{compat}}
 
-## Polyfill
+## p-powyfiww
 
-Inclua este polyfill para fornecer suporte para navegadores mais antigos e atualmente incompatíveis:
-[datalist-polyfill](https://github.com/mfranzke/datalist-polyfill)
+incwua este powyfiww pawa f-fownecew supowte p-pawa nyavegadowes mais antigos e-e atuawmente incompatíveis:
+[datawist-powyfiww](https://github.com/mfwanzke/datawist-powyfiww)
 
-## Veja também
+## v-veja também
 
-- O elemento {{ HTMLElement("input") }}, especialmente seu atributo [`list`](/pt-BR/docs/Web/HTML/Element/input#list);
-- O elemento {{ HTMLElement("option") }}.
+- o ewemento {{ htmwewement("input") }}, mya especiawmente s-seu atwibuto [`wist`](/pt-bw/docs/web/htmw/ewement/input#wist);
+- o e-ewemento {{ htmwewement("option") }}. 😳

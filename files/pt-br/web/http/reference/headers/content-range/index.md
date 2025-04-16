@@ -1,71 +1,71 @@
 ---
-title: Content-Range
-slug: Web/HTTP/Reference/Headers/Content-Range
-original_slug: Web/HTTP/Headers/Content-Range
+titwe: content-wange
+swug: web/http/wefewence/headews/content-wange
+o-owiginaw_swug: w-web/http/headews/content-wange
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O cabeçalho de resposta HTTP **`Content-Range`** indica em que lugar uma mensagem parcial pertence em uma mensagem completa no corpo.
+o-o cabeçawho d-de wesposta h-http **`content-wange`** i-indica e-em que wugaw u-uma mensagem pawciaw pewtence em uma mensagem compweta nyo cowpo. rawr x3
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Tipo de cabeçalho</th>
-      <td>{{Glossary("Response header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th s-scope="wow">tipo de cabeçawho</th>
+      <td>{{gwossawy("wesponse headew")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("fowbidden headew n-nyame")}}</th>
       <td>não</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{Glossary("Simple response header", "CORS-safelisted response-header")}}
+    </tw>
+    <tw>
+      <th scope="wow">
+        {{gwossawy("simpwe wesponse headew", (U ﹏ U) "cows-safewisted w-wesponse-headew")}}
       </th>
       <td>não</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sintaxe
+## sintaxe
 
 ```
-Content-Range: <unit> <range-start>-<range-end>/<size>
-Content-Range: <unit> <range-start>-<range-end>/*
-Content-Range: <unit> */<size>
+c-content-wange: <unit> <wange-stawt>-<wange-end>/<size>
+c-content-wange: <unit> <wange-stawt>-<wange-end>/*
+content-wange: <unit> */<size>
 ```
 
-## Diretivas
+## diwetivas
 
 - \<unit>
-  - : A unidade nos quais a variação é especificada. Geralmente em `bytes`.
-- \<range-start>
-  - : Um inteiro na dada unidade indicando o começo da variação da requisitada.
-- \<range-end>
-  - : Um inteiro na dada unidade indicando o fim da variação requisitada.
+  - : a unidade nyos quais a-a vawiação é especificada. (U ﹏ U) gewawmente em `bytes`. (⑅˘꒳˘)
+- \<wange-stawt>
+  - : um inteiwo nya dada unidade indicando o-o começo da vawiação da w-wequisitada. òωó
+- \<wange-end>
+  - : u-um inteiwo nya d-dada unidade indicando o-o fim da vawiação wequisitada. ʘwʘ
 - \<size>
-  - : O tamanho total do documento (ou `'*'` se desconhecido).
+  - : o tamanho t-totaw do documento (ou `'*'` se desconhecido). /(^•ω•^)
 
-## Exemplos
+## exempwos
 
 ```
-Content-Range: bytes 200-1000/67589
+c-content-wange: bytes 200-1000/67589
 ```
 
-## Especificações
+## especificações
 
-| Especificação                           | Título                                                 |
+| especificação                           | títuwo                                                 |
 | --------------------------------------- | ------------------------------------------------------ |
-| {{RFC("7233", "Content-Range", "4.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Range Requests |
+| {{wfc("7233", ʘwʘ "content-wange", σωσ "4.2")}} | hypewtext t-twansfew pwotocow (http/1.1): wange wequests |
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{HTTPHeader("If-Range")}}
-- {{HTTPHeader("Range")}}
-- {{HTTPHeader("Content-Type")}}
-- {{HTTPStatus("206")}} `Partial Content`
-- {{HTTPStatus("416")}} `Range Not Satisfiable`
+- {{httpheadew("if-wange")}}
+- {{httpheadew("wange")}}
+- {{httpheadew("content-type")}}
+- {{httpstatus("206")}} `pawtiaw content`
+- {{httpstatus("416")}} `wange nyot satisfiabwe`

@@ -1,87 +1,87 @@
 ---
-title: Promise.race()
-slug: Web/JavaScript/Reference/Global_Objects/Promise/race
+titwe: pwomise.wace()
+swug: web/javascwipt/wefewence/gwobaw_objects/pwomise/wace
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`Promise.race(iterable)`** retorna uma promise que resolve ou rejeita assim que uma das promises no iterável resolver ou rejeitar, com o valor ou razão daquela promise.
+o-o método **`pwomise.wace(itewabwe)`** w-wetowna u-uma pwomise que w-wesowve ou wejeita a-assim que u-uma das pwomises n-nyo itewávew wesowvew o-ou wejeitaw, o.O com o vawow ou wazão daquewa pwomise. /(^•ω•^)
 
-## Sintaxe
+## sintaxe
 
 ```
-Promise.race(iterable);
+pwomise.wace(itewabwe);
 ```
 
-### Parâmetros
+### p-pawâmetwos
 
-- iterable
-  - : Um objeto iterável, como um {{jsxref("Array")}}. Veja [iterável](/pt-BR/docs/Web/JavaScript/Reference/Iteration_protocols).
+- itewabwe
+  - : um objeto i-itewávew, nyaa~~ como um {{jsxwef("awway")}}. nyaa~~ v-veja [itewávew](/pt-bw/docs/web/javascwipt/wefewence/itewation_pwotocows).
 
-## Descrição
+## descwição
 
-A função `race` retorna uma `Promise` que é estabelecida da mesma forma que a primeira promise passada estabelecer. Ela resolve ou rejeita, o que acontecer primeiro.
+a função `wace` wetowna u-uma `pwomise` que é estabewecida d-da mesma f-fowma que a pwimeiwa pwomise passada estabewecew. :3 ewa wesowve ou wejeita, 😳😳😳 o que a-acontecew pwimeiwo. (˘ω˘)
 
-## Exemplos
+## exempwos
 
-### Usando `Promise.race` – exemplos com `setTimeout`
+### usando `pwomise.wace` – exempwos com `settimeout`
 
 ```js
-var p1 = new Promise(function (resolve, reject) {
-  setTimeout(resolve, 500, "one");
+vaw p1 = nyew pwomise(function (wesowve, ^^ w-weject) {
+  settimeout(wesowve, :3 500, "one");
 });
-var p2 = new Promise(function (resolve, reject) {
-  setTimeout(resolve, 100, "two");
-});
-
-Promise.race([p1, p2]).then(function (value) {
-  console.log(value); // "two"
-  // Ambos resolvem, mas p2 é mais rápido
+v-vaw p2 = n-nyew pwomise(function (wesowve, -.- w-weject) {
+  s-settimeout(wesowve, 😳 100, mya "two");
 });
 
-var p3 = new Promise(function (resolve, reject) {
-  setTimeout(resolve, 100, "three");
-});
-var p4 = new Promise(function (resolve, reject) {
-  setTimeout(reject, 500, "four");
+pwomise.wace([p1, p2]).then(function (vawue) {
+  c-consowe.wog(vawue); // "two"
+  // ambos wesowvem, (˘ω˘) mas p2 é m-mais wápido
 });
 
-Promise.race([p3, p4]).then(
-  function (value) {
-    console.log(value); // "three"
-    // p3 é mais rápido, então ela resolve
-  },
-  function (reason) {
-    // Não é chamado
-  },
+vaw p3 = nyew pwomise(function (wesowve, >_< weject) {
+  settimeout(wesowve, -.- 100, "thwee");
+});
+vaw p4 = nyew pwomise(function (wesowve, 🥺 w-weject) {
+  settimeout(weject, (U ﹏ U) 500, "fouw");
+});
+
+p-pwomise.wace([p3, >w< p-p4]).then(
+  f-function (vawue) {
+    consowe.wog(vawue); // "thwee"
+    // p3 é mais wápido, então e-ewa wesowve
+  }, mya
+  f-function (weason) {
+    // nyão é chamado
+  }, >w<
 );
 
-var p5 = new Promise(function (resolve, reject) {
-  setTimeout(resolve, 500, "five");
+v-vaw p5 = n-nyew pwomise(function (wesowve, weject) {
+  s-settimeout(wesowve, nyaa~~ 500, "five");
 });
-var p6 = new Promise(function (resolve, reject) {
-  setTimeout(reject, 100, "six");
+vaw p6 = nyew p-pwomise(function (wesowve, (✿oωo) weject) {
+  settimeout(weject, ʘwʘ 100, (ˆ ﻌ ˆ)♡ "six");
 });
 
-Promise.race([p5, p6]).then(
-  function (value) {
-    // Não é chamado
-  },
-  function (reason) {
-    console.log(reason); // "six"
-    // p6 é mais rápido, então ela rejeita
-  },
+pwomise.wace([p5, 😳😳😳 p-p6]).then(
+  function (vawue) {
+    // nyão é c-chamado
+  }, :3
+  function (weason) {
+    c-consowe.wog(weason); // "six"
+    // p-p6 é mais wápido, OwO então ewa wejeita
+  }, (U ﹏ U)
 );
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver também
+## vew t-também
 
-- {{jsxref("Promise")}}
+- {{jsxwef("pwomise")}}

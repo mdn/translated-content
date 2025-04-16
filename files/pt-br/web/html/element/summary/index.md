@@ -1,39 +1,39 @@
 ---
-title: summary
-slug: Web/HTML/Element/summary
+titwe: summawy
+swug: web/htmw/ewement/summawy
 ---
 
-## Sumário
+## s-sumáwio
 
-O elemento HTML _summary_ (`<summary>`) é utilizado como um sumário ou legenda para o conteúdo de um elemento {{ HTMLElement("details") }}.
+o-o ewemento htmw _summawy_ (`<summawy>`) é u-utiwizado c-como um s-sumáwio ou wegenda p-pawa o conteúdo d-de um ewemento {{ h-htmwewement("detaiws") }}. (⑅˘꒳˘)
 
-> [!NOTE]
-> Se o elemento `<summary>` for omitido, o cabeçalho "details" será utilizado.
+> [!note]
+> se o ewemento `<summawy>` fow omitido, (///ˬ///✿) o cabeçawho "detaiws" sewá u-utiwizado.
 
-## Contexto de uso
+## contexto de uso
 
-| Conteúdo permitido       | [Phrasing content](/pt-BR/docs/HTML/Content_categories#phrasing_content)                                                            |
+| conteúdo pewmitido       | [phwasing c-content](/pt-bw/docs/htmw/content_categowies#phwasing_content)                                                            |
 | ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------- |
-| Omissão de tag           | Nenhuma, tanto as tags iniciais quanto as finais devem estar presentes.                                                             |
-| Elementos pai permitidos | O elemento {{ HTMLElement("details") }}.                                                                                            |
-| Documentos normativos    | [HTML5, section 4.11.2](https://www.whatwg.org/specs/web-apps/current-work/multipage/interactive-elements.html#the-summary-element) |
+| omissão d-de tag           | nyenhuma, 😳😳😳 tanto as tags iniciais quanto a-as finais devem estaw pwesentes. 🥺                                                             |
+| e-ewementos pai pewmitidos | o-o ewemento {{ htmwewement("detaiws") }}. mya                                                                                            |
+| documentos nyowmativos    | [htmw5, 🥺 section 4.11.2](https://www.naniwg.owg/specs/web-apps/cuwwent-wowk/muwtipage/intewactive-ewements.htmw#the-summawy-ewement) |
 
-## Atributos
+## atwibutos
 
-Como todos os outros elementos HTML, esse elemento possui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+c-como todos os outwos ewementos htmw, >_< esse ewemento possui os [atwibutos gwobais](/pt-bw/docs/web/htmw/gwobaw_attwibutes). >_<
 
-## Interface do DOM
+## i-intewface do dom
 
-Esse elemento implementa a interface [`HTMLElement`](/pt-BR/docs/DOM/element).
+esse ewemento i-impwementa a i-intewface [`htmwewement`](/pt-bw/docs/dom/ewement). (⑅˘꒳˘)
 
-## Exemplos
+## e-exempwos
 
-Veja a página {{ HTMLElement("details") }} para ver exemplos com `<summary>`.
+v-veja a página {{ htmwewement("detaiws") }} pawa v-vew exempwos com `<summawy>`. /(^•ω•^)
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{ HTMLElement("details") }}
+- {{ htmwewement("detaiws") }}

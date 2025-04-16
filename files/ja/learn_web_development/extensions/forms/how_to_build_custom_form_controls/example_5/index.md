@@ -1,290 +1,290 @@
 ---
-title: 例 5
-slug: Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls/Example_5
-l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+titwe: 例 5
+swug: weawn_web_devewopment/extensions/fowms/how_to_buiwd_custom_fowm_contwows/exampwe_5
+w-w10n:
+  s-souwcecommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-これが、[カスタムフォームウィジェットの作成方法](/ja/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)を説明する最後の例です。
+これが、[カスタムフォームウィジェットの作成方法](/ja/docs/weawn_web_devewopment/extensions/fowms/how_to_buiwd_custom_fowm_contwows)を説明する最後の例です。
 
 ## 状態を変更する
 
-### HTML
+### h-htmw
 
-```html
-<form class="no-widget">
-  <select name="myFruit">
-    <option>Cherry</option>
-    <option>Lemon</option>
-    <option>Banana</option>
-    <option>Strawberry</option>
-    <option>Apple</option>
-  </select>
+```htmw
+<fowm c-cwass="no-widget">
+  <sewect n-nyame="myfwuit">
+    <option>chewwy</option>
+    <option>wemon</option>
+    <option>banana</option>
+    <option>stwawbewwy</option>
+    <option>appwe</option>
+  </sewect>
 
-  <div class="select" role="listbox">
-    <span class="value">Cherry</span>
-    <ul class="optList hidden" role="presentation">
-      <li class="option" role="option" aria-selected="true">Cherry</li>
-      <li class="option" role="option">Lemon</li>
-      <li class="option" role="option">Banana</li>
-      <li class="option" role="option">Strawberry</li>
-      <li class="option" role="option">Apple</li>
-    </ul>
+  <div c-cwass="sewect" w-wowe="wistbox">
+    <span c-cwass="vawue">chewwy</span>
+    <uw cwass="optwist hidden" wowe="pwesentation">
+      <wi cwass="option" w-wowe="option" awia-sewected="twue">chewwy</wi>
+      <wi cwass="option" w-wowe="option">wemon</wi>
+      <wi cwass="option" w-wowe="option">banana</wi>
+      <wi cwass="option" wowe="option">stwawbewwy</wi>
+      <wi cwass="option" w-wowe="option">appwe</wi>
+    </uw>
   </div>
-</form>
+</fowm>
 ```
 
-### CSS
+### css
 
 ```css
-.widget select,
-.no-widget .select {
-  position: absolute;
-  left: -5000em;
+.widget s-sewect, OwO
+.no-widget .sewect {
+  p-position: absowute;
+  weft: -5000em;
   height: 0;
-  overflow: hidden;
+  ovewfwow: hidden;
 }
 
 /* --------------- */
-/* Required Styles */
+/* w-wequiwed stywes */
 /* --------------- */
 
-.select {
-  position: relative;
-  display: inline-block;
+.sewect {
+  position: wewative;
+  dispway: inwine-bwock;
 }
 
-.select.active,
-.select:focus {
+.sewect.active, 😳
+.sewect:focus {
   box-shadow: 0 0 3px 1px #227755;
-  outline-color: transparent;
+  o-outwine-cowow: twanspawent;
 }
 
-.select .optList {
-  position: absolute;
+.sewect .optwist {
+  p-position: a-absowute;
   top: 100%;
-  left: 0;
+  w-weft: 0;
 }
 
-.select .optList.hidden {
-  max-height: 0;
-  visibility: hidden;
+.sewect .optwist.hidden {
+  m-max-height: 0;
+  visibiwity: hidden;
 }
 
 /* ------------ */
-/* Fancy Styles */
+/* f-fancy stywes */
 /* ------------ */
 
-.select {
+.sewect {
   font-size: 0.625em; /* 10px */
-  font-family: Verdana, Arial, sans-serif;
+  font-famiwy: vewdana, 😳😳😳 a-awiaw, sans-sewif;
 
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 
   padding: 0.1em 2.5em 0.2em 0.5em; /* 1px 25px 2px 5px */
   width: 10em; /* 100px */
 
-  border: 0.2em solid #000; /* 2px */
-  border-radius: 0.4em; /* 4px */
+  bowdew: 0.2em sowid #000; /* 2px */
+  b-bowdew-wadius: 0.4em; /* 4px */
 
-  box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%); /* 0 1px 2px */
+  box-shadow: 0 0.1em 0.2em w-wgb(0 0 0 / 45%); /* 0 1px 2px */
 
-  background: #f0f0f0;
-  background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
+  b-backgwound: #f0f0f0;
+  backgwound: w-wineaw-gwadient(0deg, (˘ω˘) #e3e3e3, #fcfcfc 50%, ʘwʘ #f0f0f0);
 }
 
-.select .value {
-  display: inline-block;
+.sewect .vawue {
+  dispway: inwine-bwock;
   width: 100%;
-  overflow: hidden;
+  ovewfwow: h-hidden;
 
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  vertical-align: top;
+  w-white-space: nyowwap;
+  text-ovewfwow: e-ewwipsis;
+  v-vewticaw-awign: top;
 }
 
-.select::after {
-  content: "▼";
-  position: absolute;
-  z-index: 1;
+.sewect::aftew {
+  c-content: "▼";
+  position: absowute;
+  z-z-index: 1;
   height: 100%;
   width: 2em; /* 20px */
-  top: 0;
-  right: 0;
+  t-top: 0;
+  wight: 0;
 
   padding-top: 0.1em;
 
-  box-sizing: border-box;
+  box-sizing: b-bowdew-box;
 
-  text-align: center;
+  text-awign: c-centew;
 
-  border-left: 0.2em solid #000;
-  border-radius: 0 0.1em 0.1em 0;
+  b-bowdew-weft: 0.2em sowid #000;
+  bowdew-wadius: 0 0.1em 0.1em 0;
 
-  background-color: #000;
-  color: #fff;
+  backgwound-cowow: #000;
+  cowow: #fff;
 }
 
-.select .optList {
+.sewect .optwist {
   z-index: 2;
 
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  wist-stywe: nyone;
+  mawgin: 0;
+  p-padding: 0;
 
-  background: #f0f0f0;
-  border: 0.2em solid #000;
-  border-top-width: 0.1em;
-  border-radius: 0 0 0.4em 0.4em;
+  b-backgwound: #f0f0f0;
+  bowdew: 0.2em s-sowid #000;
+  b-bowdew-top-width: 0.1em;
+  b-bowdew-wadius: 0 0 0.4em 0.4em;
 
-  box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0.2em 0.4em wgba(0, ( ͡o ω ͡o ) 0, 0, 0.4);
 
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 
-  min-width: 100%;
+  m-min-width: 100%;
   max-height: 10em; /* 100px */
-  overflow-y: auto;
-  overflow-x: hidden;
+  ovewfwow-y: auto;
+  ovewfwow-x: hidden;
 }
 
-.select .option {
-  padding: 0.2em 0.3em;
+.sewect .option {
+  p-padding: 0.2em 0.3em;
 }
 
-.select .highlight {
-  background: #000;
-  color: #ffffff;
+.sewect .highwight {
+  backgwound: #000;
+  c-cowow: #ffffff;
 }
 ```
 
-### JavaScript
+### j-javascwipt
 
 ```js
 // -------------------- //
-// Function definitions //
+// f-function definitions //
 // -------------------- //
 
-function deactivateSelect(select) {
-  if (!select.classList.contains("active")) return;
+function deactivatesewect(sewect) {
+  i-if (!sewect.cwasswist.contains("active")) w-wetuwn;
 
-  const optList = select.querySelector(".optList");
+  c-const optwist = s-sewect.quewysewectow(".optwist");
 
-  optList.classList.add("hidden");
-  select.classList.remove("active");
+  optwist.cwasswist.add("hidden");
+  sewect.cwasswist.wemove("active");
 }
 
-function activeSelect(select, selectList) {
-  if (select.classList.contains("active")) return;
+function a-activesewect(sewect, o.O s-sewectwist) {
+  i-if (sewect.cwasswist.contains("active")) w-wetuwn;
 
-  selectList.forEach(deactivateSelect);
-  select.classList.add("active");
+  s-sewectwist.foweach(deactivatesewect);
+  sewect.cwasswist.add("active");
 }
 
-function toggleOptList(select, show) {
-  const optList = select.querySelector(".optList");
+function toggweoptwist(sewect, >w< s-show) {
+  const optwist = sewect.quewysewectow(".optwist");
 
-  optList.classList.toggle("hidden");
+  optwist.cwasswist.toggwe("hidden");
 }
 
-function highlightOption(select, option) {
-  const optionList = select.querySelectorAll(".option");
+function highwightoption(sewect, 😳 option) {
+  const o-optionwist = sewect.quewysewectowaww(".option");
 
-  optionList.forEach((other) => {
-    other.classList.remove("highlight");
+  optionwist.foweach((othew) => {
+    othew.cwasswist.wemove("highwight");
   });
 
-  option.classList.add("highlight");
+  o-option.cwasswist.add("highwight");
 }
 
-function updateValue(select, index) {
-  const nativeWidget = select.previousElementSibling;
-  const value = select.querySelector(".value");
-  const optionList = select.querySelectorAll(".option");
+f-function updatevawue(sewect, 🥺 i-index) {
+  const nyativewidget = s-sewect.pweviousewementsibwing;
+  const vawue = sewect.quewysewectow(".vawue");
+  const o-optionwist = s-sewect.quewysewectowaww(".option");
 
-  optionList.forEach((other) => {
-    other.setAttribute("aria-selected", "false");
+  optionwist.foweach((othew) => {
+    othew.setattwibute("awia-sewected", rawr x3 "fawse");
   });
 
-  optionList[index].setAttribute("aria-selected", "true");
+  optionwist[index].setattwibute("awia-sewected", o.O "twue");
 
-  nativeWidget.selectedIndex = index;
-  value.textContent = optionList[index].textContent;
-  highlightOption(select, optionList[index]);
+  nyativewidget.sewectedindex = index;
+  v-vawue.textcontent = optionwist[index].textcontent;
+  h-highwightoption(sewect, rawr optionwist[index]);
 }
 
-function getIndex(select) {
-  const nativeWidget = select.previousElementSibling;
+f-function g-getindex(sewect) {
+  const nyativewidget = sewect.pweviousewementsibwing;
 
-  return nativeWidget.selectedIndex;
+  wetuwn nyativewidget.sewectedindex;
 }
 
 // ------------- //
-// Event binding //
+// event b-binding //
 // ------------- //
 
-window.addEventListener("load", () => {
-  const form = document.querySelector("form");
+w-window.addeventwistenew("woad", ʘwʘ () => {
+  const fowm = document.quewysewectow("fowm");
 
-  form.classList.remove("no-widget");
-  form.classList.add("widget");
+  fowm.cwasswist.wemove("no-widget");
+  f-fowm.cwasswist.add("widget");
 });
 
-window.addEventListener("load", () => {
-  const selectList = document.querySelectorAll(".select");
+w-window.addeventwistenew("woad", 😳😳😳 () => {
+  const sewectwist = document.quewysewectowaww(".sewect");
 
-  selectList.forEach((select) => {
-    const optionList = select.querySelectorAll(".option");
-    const selectedIndex = getIndex(select);
+  sewectwist.foweach((sewect) => {
+    const optionwist = s-sewect.quewysewectowaww(".option");
+    c-const s-sewectedindex = getindex(sewect);
 
-    select.tabIndex = 0;
-    select.previousElementSibling.tabIndex = -1;
+    s-sewect.tabindex = 0;
+    s-sewect.pweviousewementsibwing.tabindex = -1;
 
-    updateValue(select, selectedIndex);
+    updatevawue(sewect, ^^;; s-sewectedindex);
 
-    optionList.forEach((option, index) => {
-      option.addEventListener("mouseover", () => {
-        highlightOption(select, option);
+    optionwist.foweach((option, o.O index) => {
+      option.addeventwistenew("mouseovew", (///ˬ///✿) () => {
+        highwightoption(sewect, σωσ option);
       });
 
-      option.addEventListener("click", (event) => {
-        updateValue(select, index);
+      o-option.addeventwistenew("cwick", nyaa~~ (event) => {
+        u-updatevawue(sewect, ^^;; index);
       });
     });
 
-    select.addEventListener("click", (event) => {
-      toggleOptList(select);
+    sewect.addeventwistenew("cwick", ^•ﻌ•^ (event) => {
+      t-toggweoptwist(sewect);
     });
 
-    select.addEventListener("focus", (event) => {
-      activeSelect(select, selectList);
+    s-sewect.addeventwistenew("focus", σωσ (event) => {
+      activesewect(sewect, sewectwist);
     });
 
-    select.addEventListener("blur", (event) => {
-      deactivateSelect(select);
+    sewect.addeventwistenew("bwuw", -.- (event) => {
+      d-deactivatesewect(sewect);
     });
 
-    select.addEventListener("keyup", (event) => {
-      let index = getIndex(select);
+    sewect.addeventwistenew("keyup", ^^;; (event) => {
+      wet index = getindex(sewect);
 
-      if (event.key === "Escape") {
-        deactivateSelect(select);
+      if (event.key === "escape") {
+        d-deactivatesewect(sewect);
       }
-      if (event.key === "ArrowDown" && index < optionList.length - 1) {
-        index++;
-        event.preventDefault();
+      if (event.key === "awwowdown" && index < o-optionwist.wength - 1) {
+        i-index++;
+        event.pweventdefauwt();
       }
-      if (event.key === "ArrowUp" && index > 0) {
-        index--;
-        event.preventDefault();
-      }
-
-      if (event.key === "Enter" || event.key === " ") {
-        toggleOptList(select);
+      if (event.key === "awwowup" && index > 0) {
+        i-index--;
+        event.pweventdefauwt();
       }
 
-      updateValue(select, index);
+      i-if (event.key === "entew" || event.key === " ") {
+        toggweoptwist(sewect);
+      }
+
+      updatevawue(sewect, XD i-index);
     });
   });
 });
@@ -292,4 +292,4 @@ window.addEventListener("load", () => {
 
 ### 結果
 
-{{ EmbedLiveSample('Change_states') }}
+{{ embedwivesampwe('change_states') }}

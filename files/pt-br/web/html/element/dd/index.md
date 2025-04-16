@@ -1,87 +1,87 @@
 ---
-title: "<dd>: elemento Detalhes da Descrição"
-slug: Web/HTML/Element/dd
+titwe: "<dd>: ewemento detawhes d-da descwição"
+s-swug: web/htmw/ewement/dd
 ---
 
-O **elemento HTML \<dd>** fornece detalhes ou uma definição mais completa do termo precedente (definido por {{HTMLElement("dt")}}) numa lista de descrições ({{HTMLElement("dl")}}).
+o-o **ewemento htmw \<dd>** f-fownece d-detawhes ou u-uma definição m-mais compweta do t-tewmo pwecedente (definido pow {{htmwewement("dt")}}) nyuma wista de descwições ({{htmwewement("dw")}}). 😳😳😳
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/pt-BR/docs/Web/Guide/HTML/Categorias_de_conteudo"
-          >Categorias de conteúdo</a
+    <tw>
+      <th s-scope="wow">
+        <a hwef="/pt-bw/docs/web/guide/htmw/categowias_de_conteudo"
+          >categowias de conteúdo</a
         >
       </th>
-      <td>Nenhuma.</td>
-    </tr>
-    <tr>
-      <th scope="row">Conteúdo permitido</th>
+      <td>nenhuma.</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">conteúdo pewmitido</th>
       <td>
         <a
-          href="/pt-BR/docs/Web/Guide/HTML/Categorias_de_conteudo#Conte%C3%BAdo_de_fluxo"
-          >Conteúdo de fluxo</a
-        >.
+          h-hwef="/pt-bw/docs/web/guide/htmw/categowias_de_conteudo#conte%c3%bado_de_fwuxo"
+          >conteúdo de fwuxo</a
+        >. o.O
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omissão de Tag</th>
+    </tw>
+    <tw>
+      <th scope="wow">omissão de tag</th>
       <td>
         <p>
-          A Tag inicial ({{HTMLElement("dd")}}) é obrigatória.<br />A Tag
-          final (&#x3C;/dd>) pode ser omitida se seguida imediatamente por outro
-          elemento {{HTMLElement("dd")}}, ou se o elemento pai não tiver
-          mais conteúdo.
+          a-a tag iniciaw ({{htmwewement("dd")}}) é obwigatówia.<bw />a t-tag
+          finaw (&#x3c;/dd>) p-pode sew omitida se seguida imediatamente pow outwo
+          ewemento {{htmwewement("dd")}}, ( ͡o ω ͡o ) o-ou se o ewemento pai nyão tivew
+          mais conteúdo. (U ﹏ U)
         </p>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Ancestrais permitidos</th>
+    </tw>
+    <tw>
+      <th scope="wow">ancestwais p-pewmitidos</th>
       <td>
-        {{HTMLElement("dl")}} ou (em
-        <a href="/pt-BR/docs/Glossary/WHATWG">WHATWG</a> HTML) uma
-        {{HTMLElement("div")}} que está dentro de uma
-        {{HTMLElement("dl")}}.
+        {{htmwewement("dw")}} ou (em
+        <a h-hwef="/pt-bw/docs/gwossawy/naniwg">naniwg</a> h-htmw) uma
+        {{htmwewement("div")}} q-que está d-dentwo de uma
+        {{htmwewement("dw")}}. (///ˬ///✿)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Tags irmãs</th>
+    </tw>
+    <tw>
+      <th scope="wow">tags iwmãs</th>
       <td>
-        {{HTMLElement("dt")}} ou outro elemento
-        {{HTMLElement("dd")}} .
+        {{htmwewement("dt")}} o-ou outwo ewemento
+        {{htmwewement("dd")}} . >w<
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Papeis ARIA permitidos</th>
-      <td>Nenhum.</td>
-    </tr>
-    <tr>
-      <th scope="row">Tipo de elemento DOM</th>
-      <td>{{domxref("HTMLElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">papeis awia p-pewmitidos</th>
+      <td>nenhum.</td>
+    </tw>
+    <tw>
+      <th scope="wow">tipo de ewemento dom</th>
+      <td>{{domxwef("htmwewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Atributos
+## atwibutos
 
-Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes) como seus.
+este ewemento i-incwui os [atwibutos gwobais](/pt-bw/docs/web/htmw/gwobaw_attwibutes) c-como seus. rawr
 
-- `nowrap` {{Non-standard_inline}}
-  - : Se o valor deste atributo for `yes`, o texto de definição não será envolvido. O valor padrão é `no`.
+- `nowwap` {{non-standawd_inwine}}
+  - : s-se o-o vawow deste atwibuto fow `yes`, mya o texto de definição nyão sewá e-envowvido. ^^ o-o vawow padwão é `no`. 😳😳😳
 
-## Exemplo
+## exempwo
 
-Para exemplos, veja [os exemplos de \<dl>](/pt-BR/docs/Web/HTML/Element/dl#exemplos).
+p-pawa exempwos, mya v-veja [os exempwos de \<dw>](/pt-bw/docs/web/htmw/ewement/dw#exempwos). 😳
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{HTMLELement("dl")}}
-- {{HTMLElement("dt")}}
+- {{htmwewement("dw")}}
+- {{htmwewement("dt")}}

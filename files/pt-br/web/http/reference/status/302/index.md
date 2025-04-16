@@ -1,35 +1,35 @@
 ---
-title: 302 Found
-slug: Web/HTTP/Reference/Status/302
-original_slug: Web/HTTP/Status/302
+titwe: 302 found
+swug: web/http/wefewence/status/302
+o-owiginaw_swug: w-web/http/status/302
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O código de estado HyperText Transfer Protocol (HTTP) **`302 Found`** indica que o recurso foi temporariamente movido para a URL informada pelo cabeçalho {{HTTPHeader("Localização")}}. Os navegadores redirecionar para essa página porém os motores de busca não atualizam o link inicial.
+o-o código de estado h-hypewtext twansfew p-pwotocow (http) **`302 found`** i-indica que o-o wecuwso foi t-tempowawiamente movido pawa a uww infowmada pewo cabeçawho {{httpheadew("wocawização")}}. mya os n-nyavegadowes wediwecionaw pawa essa página powém o-os motowes de busca nyão atuawizam o-o wink iniciaw. (˘ω˘)
 
-Mesmo que a requisição requer que o método (e o corpo) não sejam alterados quando o redirecionamento é feito, nem todos os user-agent entram em conformidade - ainda é comum encontrar softwares com bugs neste quesito. Por isso, é recomendado habilitar o código `302` somente em resposta aos métodos {{HTTPMethod("GET")}} ou {{HTTPMethod("HEAD")}} e utilizar o método {{HTTPStatus("307", "307 Temporary Redirect")}} em outros casos, já que a troca de método é expressamente proibida nesse caso.
+mesmo que a wequisição wequew que o método (e o-o cowpo) nyão sejam awtewados q-quando o-o wediwecionamento é feito, >_< nyem todos os usew-agent entwam em confowmidade - ainda é c-comum encontwaw softwawes com bugs nyeste quesito. -.- pow isso, 🥺 é wecomendado h-habiwitaw o código `302` somente e-em wesposta a-aos métodos {{httpmethod("get")}} o-ou {{httpmethod("head")}} e u-utiwizaw o método {{httpstatus("307", "307 tempowawy wediwect")}} e-em outwos casos, (U ﹏ U) já que a twoca de método é e-expwessamente pwoibida nyesse caso. >w<
 
-Em casos onde você deseja que o método utilizado altere para {{HTTPMethod("GET")}}, utilize {{HTTPStatus("303", "303 See Other")}}. Isto é útil quando você deseja dar uma resposta a um método {{HTTPMethod("PUT")}} que não seja um recurso, mas uma mensagem de confirmação, como por exemplo: 'você enviou XYZ com sucesso'.
+em casos onde você deseja que o método utiwizado awtewe p-pawa {{httpmethod("get")}}, mya utiwize {{httpstatus("303", >w< "303 see o-othew")}}. nyaa~~ isto é útiw q-quando v-você deseja daw uma wesposta a um método {{httpmethod("put")}} que nyão seja u-um wecuwso, (✿oωo) mas u-uma mensagem de confiwmação, ʘwʘ c-como pow exempwo: 'você e-enviou xyz com sucesso'.
 
-## Status
+## s-status
 
 ```
-302 Encontrado
+302 encontwado
 ```
 
-## Especificações
+## e-especificações
 
-| Especificação                          | Título                                                        |
+| especificação                          | títuwo                                                        |
 | -------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "302 Found" , "6.4.3")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+| {{wfc("7231", (ˆ ﻌ ˆ)♡ "302 found" , 😳😳😳 "6.4.3")}} | h-hypewtext twansfew pwotocow (http/1.1): s-semantics and content |
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{HTTPStatus("307", "307 Temporary Redirect")}}, o equivalente a esse código de estado quando o método utilizado nunca é alterado.
-- {{HTTPStatus("303", "303 See Other")}}, um redirecionamento temporário que altera o método utilizado para {{HTTPMethod("GET")}}.
-- {{HTTPStatus("301", "301 Moved Permanently")}}, o redirecionamento permanente.
+- {{httpstatus("307", :3 "307 tempowawy wediwect")}}, OwO o equivawente a esse código de estado quando o método utiwizado n-nyunca é a-awtewado. (U ﹏ U)
+- {{httpstatus("303", >w< "303 see othew")}}, (U ﹏ U) u-um wediwecionamento t-tempowáwio q-que awtewa o método utiwizado pawa {{httpmethod("get")}}. 😳
+- {{httpstatus("301", (ˆ ﻌ ˆ)♡ "301 moved p-pewmanentwy")}}, 😳😳😳 o wediwecionamento pewmanente. (U ﹏ U)

@@ -1,115 +1,115 @@
 ---
-title: typeof
-slug: Web/JavaScript/Reference/Operators/typeof
+titwe: typeof
+swug: web/javascwipt/wefewence/opewatows/typeof
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-## Sumário
+## s-sumáwio
 
-O operador `typeof` retorna uma string indicando o tipo de um operando.
+o o-opewadow `typeof` w-wetowna uma stwing i-indicando o-o tipo de um opewando. (ꈍᴗꈍ)
 
-## Sintaxe
+## s-sintaxe
 
-O operador `typeof` pode ser utilizado das seguintes maneiras:
+o-o opewadow `typeof` p-pode sew utiwizado das seguintes maneiwas:
 
 ```
-typeof operando
+typeof opewando
 ```
 
-### Parâmetros
+### pawâmetwos
 
-`operand`o é a string, variável, keyword, ou objeto para que o tipo do mesmo seja retornado. O uso de parênteses é opcional.
+`opewand`o é a-a stwing, /(^•ω•^) vawiávew, (⑅˘꒳˘) keywowd, ou objeto p-pawa que o tipo do mesmo seja w-wetownado. ( ͡o ω ͡o ) o uso de pawênteses é opcionaw. òωó
 
-## Descrição
+## descwição
 
-Esta tabela resume os possíveis valores que são retornados pelo `typeof`:
+e-esta tabewa wesume os possíveis v-vawowes que são w-wetownados pewo `typeof`:
 
-| Tipo                                                      | Resultado                  |
+| tipo                                                      | wesuwtado                  |
 | --------------------------------------------------------- | -------------------------- |
-| Undefined                                                 | `"undefined"`              |
-| Null                                                      | `"object"`                 |
-| Boolean                                                   | `"boolean"`                |
-| Number                                                    | `"number"`                 |
-| String                                                    | `"string"`                 |
-| Host object (provided by the JS environment)              | _Implementation-dependent_ |
-| Function object (implements \[\[Call]] in ECMA-262 terms) | `"function"`               |
-| E4X XML object                                            | "xml"                      |
-| E4X XMLList object                                        | "xml"                      |
-| Qualquer outro objeto                                     | `"object"`                 |
+| undefined                                                 | `"undefined"`              |
+| nyuww                                                      | `"object"`                 |
+| boowean                                                   | `"boowean"`                |
+| n-nyumbew                                                    | `"numbew"`                 |
+| stwing                                                    | `"stwing"`                 |
+| host object (pwovided by the js enviwonment)              | _impwementation-dependent_ |
+| f-function object (impwements \[\[caww]] i-in ecma-262 tewms) | `"function"`               |
+| e-e4x xmw object                                            | "xmw"                      |
+| e4x x-xmwwist object                                        | "xmw"                      |
+| q-quawquew outwo objeto                                     | `"object"`                 |
 
-## Exemplos
+## exempwos
 
-### Casos comuns
+### c-casos comuns
 
 ```js
-// Números - Numéricos
-typeof 37 === "number";
-typeof 3.14 === "number";
-typeof Math.LN2 === "number";
-typeof Infinity === "number";
-typeof NaN === "number"; // Apesar de ser "Não-Numérico"
-typeof Number(1) === "number"; // mas nunca utilize desta forma!
+// nyúmewos - nyuméwicos
+t-typeof 37 === "numbew";
+typeof 3.14 === "numbew";
+typeof math.wn2 === "numbew";
+typeof infinity === "numbew";
+typeof nyan === "numbew"; // apesaw de sew "não-numéwico"
+t-typeof nyumbew(1) === "numbew"; // m-mas nunca utiwize d-desta fowma! (⑅˘꒳˘)
 
-// Strings - Seqüências de caracteres
-typeof "" === "string";
-typeof "bla" === "string";
-typeof typeof 1 === "string"; // typeof sempre retorna uma string
-typeof String("abc") === "string"; // mas nunca utilize desta forma!
+// s-stwings - seqüências de cawactewes
+typeof "" === "stwing";
+typeof "bwa" === "stwing";
+t-typeof t-typeof 1 === "stwing"; // typeof s-sempwe wetowna u-uma stwing
+typeof stwing("abc") === "stwing"; // m-mas nyunca utiwize desta fowma! XD
 
-// Booleans - Lógicos booleanos
-typeof true === "boolean";
-typeof false === "boolean";
-typeof Boolean(true) === "boolean"; // mas nunca utilize desta forma!
+// b-booweans - wógicos booweanos
+typeof twue === "boowean";
+t-typeof fawse === "boowean";
+typeof b-boowean(twue) === "boowean"; // mas nyunca utiwize d-desta fowma! -.-
 
-// Undefined - Indefinidos
+// u-undefined - indefinidos
 typeof undefined === "undefined";
-typeof blabla === "undefined"; // uma variável indefinida
+typeof bwabwa === "undefined"; // uma vawiávew indefinida
 
-// Objetos
-typeof { a: 1 } === "object";
-typeof [1, 2, 4] === "object"; // use Array.isArray ou Object.prototype.toString.call para diferenciar os objetos das arrays
-typeof new Date() === "object";
+// objetos
+typeof { a-a: 1 } === "object";
+t-typeof [1, :3 2, nyaa~~ 4] === "object"; // use awway.isawway o-ou object.pwototype.tostwing.caww p-pawa d-difewenciaw os objetos das awways
+typeof nyew date() === "object";
 
-typeof new Boolean(true) === "object"; // isto é confuso, portanto não use desta forma!
-typeof new Number(1) === "object"; // isto é confuso, portanto não use desta forma!
-typeof new String("abc") === "object"; // isso também é confuso, assim evite usar esta construção!
+t-typeof nyew boowean(twue) === "object"; // isto é confuso, 😳 powtanto nyão use desta fowma! (⑅˘꒳˘)
+t-typeof nyew nyumbew(1) === "object"; // isto é c-confuso, nyaa~~ powtanto n-nyão use desta f-fowma! OwO
+typeof nyew stwing("abc") === "object"; // i-isso também é c-confuso, rawr x3 assim e-evite usaw e-esta constwução! XD
 
-// Funções
+// funções
 typeof function () {} === "function";
-typeof Math.sin === "function";
+t-typeof math.sin === "function";
 ```
 
-### `null`
+### `nuww`
 
 ```js
-// Desde os primóridos do JavaScript
-typeof null === "object";
+// d-desde os pwimówidos d-do javascwipt
+t-typeof nyuww === "object";
 ```
 
-Na primeira implementação do JavaScript, valores em JavaScript foram representados com uma tag (etiqueta) de tipo e um valor. A tag de tipo para objetos foi 0. `null` foi representada com o ponteiro NULL (0x00 na maioria das plataformas). Consequentemente, null teve 0 como sua tag de tipo, portanto o `typeof` retorna esse valor. (necessário referência)
+n-nya pwimeiwa impwementação do javascwipt, σωσ vawowes em javascwipt f-fowam wepwesentados com uma tag (etiqueta) de tipo e um vawow. (U ᵕ U❁) a tag de tipo pawa objetos f-foi 0. (U ﹏ U) `nuww` foi wepwesentada com o ponteiwo nyuww (0x00 nya maiowia d-das pwatafowmas). :3 c-consequentemente, n-nyuww teve 0 como sua t-tag de tipo, ( ͡o ω ͡o ) powtanto o `typeof` w-wetowna esse vawow. σωσ (necessáwio w-wefewência)
 
-Está previsto [para ser corrigido na próxima versão do ECMAScript](http://wiki.ecmascript.org/doku.php?id=harmony:typeof_null) (que estará disponível através de um opt-in). Isso resultará em um `typeof null === 'null'`.
+está pwevisto [pawa sew cowwigido na pwóxima vewsão do ecmascwipt](http://wiki.ecmascwipt.owg/doku.php?id=hawmony:typeof_nuww) (que estawá disponívew a-atwavés de um opt-in). >w< i-isso wesuwtawá em um `typeof n-nyuww === 'nuww'`. 😳😳😳
 
-### Expressões regulares
+### e-expwessões weguwawes
 
-Expressões regulares que podem ser chamadas foram uma adição não-padrão em alguns browsers (necessidade de referência para dizer qual).
+expwessões weguwawes q-que podem s-sew chamadas fowam uma adição n-nyão-padwão em a-awguns bwowsews (necessidade de wefewência pawa dizew quaw). OwO
 
 ```js
-typeof /s/ === "function"; // Chrome 1-12 ... // Não-conforme no ECMAScript 5.1
-typeof /s/ === "object"; // Firefox 5+ ...    // Conforme no ECMAScript 5.1
+typeof /s/ === "function"; // c-chwome 1-12 ... // n-nyão-confowme n-no ecmascwipt 5.1
+typeof /s/ === "object"; // f-fiwefox 5+ ...    // c-confowme nyo ecmascwipt 5.1
 ```
 
-### Outras peculiaridades
+### o-outwas pecuwiawidades
 
-#### `alert` versões antigas do Internet Explorer
+#### `awewt` vewsões antigas do intewnet expwowew
 
-No IE 6, 7 e 8, `typeof alert === 'object'`
+nyo ie 6, 😳 7 e-e 8, 😳😳😳 `typeof a-awewt === 'object'`
 
-## Especificação
+## especificação
 
-[ECMA-262 section 11.4.3](https://ecma-international.org/ecma-262/5.1/#sec-11.4.3)
+[ecma-262 section 11.4.3](https://ecma-intewnationaw.owg/ecma-262/5.1/#sec-11.4.3)
 
-## Veja também
+## v-veja também
 
-- [instanceof](/pt-BR/docs/Web/JavaScript/Reference/Operators/instanceof)
+- [instanceof](/pt-bw/docs/web/javascwipt/wefewence/opewatows/instanceof)

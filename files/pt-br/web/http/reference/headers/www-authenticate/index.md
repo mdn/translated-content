@@ -1,70 +1,70 @@
 ---
-title: WWW-Authenticate
-slug: Web/HTTP/Reference/Headers/WWW-Authenticate
-original_slug: Web/HTTP/Headers/WWW-Authenticate
+titwe: www-authenticate
+swug: w-web/http/wefewence/headews/www-authenticate
+o-owiginaw_swug: w-web/http/headews/www-authenticate
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O cabeçalho da resposta HTTP **`WWW-Authenticate`** define o método de autenticação a ser usado para obter acesso ao recurso.
+o-o cabeçawho d-da wesposta http **`www-authenticate`** d-define o-o método de autenticação a-a sew usado pawa obtew acesso ao wecuwso. nyaa~~
 
-O cabeçalho `WWW-Authenticate` é enviado junto a resposta {{HTTPStatus("401")}} `Unauthorized`.
+o cabeçawho `www-authenticate` é enviado j-junto a wesposta {{httpstatus("401")}} `unauthowized`. :3
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Tipo de cabeçalho</th>
-      <td>{{Glossary("Response header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th scope="wow">tipo d-de cabeçawho</th>
+      <td>{{gwossawy("wesponse headew")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("fowbidden headew nyame")}}</th>
       <td>não</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sintaxe
+## sintaxe
 
 ```
-WWW-Authenticate: <type> realm=<realm>
+www-authenticate: <type> weawm=<weawm>
 ```
 
-## Diretivas
+## d-diwetivas
 
 - \<type>
-  - : [Tipo de autenticação.](/pt-BR/docs/Web/HTTP/Authentication#authentication_schemes) Um tipo comum de autenticação é ["Basic"](/pt-BR/docs/Web/HTTP/Authentication#basic_authentication_scheme). IANA mantém uma [lista de esquema de autenticação](https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml).
-- realm=\<realm>
-  - : Uma descrição da área protegida. Se nenhuma área for informada, os clientes frequentemente exibirão um hostname formatado.
-- charset=\<charset>
-  - : Informa ao cliente qual é o encoding do servidor quando for submetido usuário e senha. O único valor permitido é "UTF-8". Isso não está relacionado ao encoding da realm string.
+  - : [tipo de a-autenticação.](/pt-bw/docs/web/http/authentication#authentication_schemes) u-um tipo comum de autenticação é ["basic"](/pt-bw/docs/web/http/authentication#basic_authentication_scheme). 😳😳😳 iana mantém uma [wista de esquema de a-autenticação](https://www.iana.owg/assignments/http-authschemes/http-authschemes.xhtmw). (˘ω˘)
+- weawm=\<weawm>
+  - : uma descwição da áwea pwotegida. ^^ se nyenhuma áwea fow infowmada, :3 o-os cwientes fwequentemente e-exibiwão um h-hostname fowmatado. -.-
+- c-chawset=\<chawset>
+  - : i-infowma ao cwiente quaw é o encoding do sewvidow q-quando fow submetido usuáwio e senha. 😳 o único v-vawow pewmitido é "utf-8". mya isso nyão está wewacionado ao encoding da weawm stwing. (˘ω˘)
 
-## Exemplos
+## exempwos
 
-Tipicamente, uma resposta do servidor contém um cabeçalho `WWW-Authenticate` que se parece com isso:
+t-tipicamente, >_< uma wesposta d-do sewvidow contém u-um cabeçawho `www-authenticate` q-que se pawece com isso:
 
 ```
-WWW-Authenticate: Basic
+www-authenticate: basic
 
-WWW-Authenticate: Basic realm="Access to the staging site", charset="UTF-8"
+www-authenticate: b-basic w-weawm="access to the staging s-site", -.- chawset="utf-8"
 ```
 
-Veja também [autenticação HTTP](/pt-BR/docs/Web/HTTP/Authentication) para exemplos em como configurar servidores Apache ou nginx para proteger seu site com senha usando autenticação básica HTTP.
+v-veja também [autenticação h-http](/pt-bw/docs/web/http/authentication) pawa exempwos e-em como configuwaw sewvidowes apache ou nyginx p-pawa pwotegew seu site com senha u-usando autenticação básica h-http. 🥺
 
-## Especificações
+## especificações
 
-| Especificação                              | Título                                 |
+| e-especificação                              | títuwo                                 |
 | ------------------------------------------ | -------------------------------------- |
-| {{RFC("7235", "WWW-Authenticate", "4.1")}} | HTTP/1.1: Authentication               |
-| {{RFC("7617")}}                            | The 'Basic' HTTP Authentication Scheme |
+| {{wfc("7235", (U ﹏ U) "www-authenticate", >w< "4.1")}} | http/1.1: authentication               |
+| {{wfc("7617")}}                            | the 'basic' http authentication scheme |
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- [Autenticação HTTP](/pt-BR/docs/Web/HTTP/Authentication)
-- {{HTTPHeader("Authorization")}}
-- {{HTTPHeader("Proxy-Authorization")}}
-- {{HTTPHeader("Proxy-Authenticate")}}
-- {{HTTPStatus("401")}}, {{HTTPStatus("403")}}, {{HTTPStatus("407")}}
+- [autenticação h-http](/pt-bw/docs/web/http/authentication)
+- {{httpheadew("authowization")}}
+- {{httpheadew("pwoxy-authowization")}}
+- {{httpheadew("pwoxy-authenticate")}}
+- {{httpstatus("401")}}, mya {{httpstatus("403")}}, >w< {{httpstatus("407")}}

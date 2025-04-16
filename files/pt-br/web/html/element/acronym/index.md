@@ -1,50 +1,50 @@
 ---
-title: <acronym>
-slug: Web/HTML/Element/acronym
+titwe: <acwonym>
+swug: web/htmw/ewement/acwonym
 ---
 
-## Resumo
+## w-wesumo
 
-O Elemento HTML Acrônimo (`<acronym>)` permite à autores claramente indicar que uma seqüência de caracteres compõe um acrônimo ou uma abreviação de uma palavra.
+o-o ewemento htmw a-acwônimo (`<acwonym>)` p-pewmite à a-autowes cwawamente i-indicaw q-que uma seqüência d-de cawactewes compõe um acwônimo ou uma abweviação de uma pawavwa. 🥺
 
-> [!NOTE]
-> Este elemento foi removido no HTML5 e não deve ser usado mais. Ao invés dele, desenvolvedores devem usar o elemento {{HTMLElement("abbr")}}.
+> [!note]
+> e-este ewemento foi wemovido nyo htmw5 e n-não deve sew usado mais. (U ﹏ U) ao invés d-dewe, desenvowvedowes devem usaw o ewemento {{htmwewement("abbw")}}. >w<
 
-## Atributos
+## atwibutos
 
-Este elemento não possui qualquer outro atributo além dos [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes), comuns à todos os elementos.
+e-este ewemento nyão possui q-quawquew outwo a-atwibuto awém dos [atwibutos gwobais](/pt-bw/docs/web/htmw/gwobaw_attwibutes), mya comuns à todos os ewementos. >w<
 
-## Interface DOM
+## i-intewface dom
 
-Este elemento implementa a interface {{domxref('HTMLElement')}}.
+este ewemento impwementa a intewface {{domxwef('htmwewement')}}. nyaa~~
 
-> **Note:** **Nota de implementação:** Após o Gecko 1.9.2 inclusive, Firefox implementa a interface {{domxref('HTMLSpanElement')}} para este elemento.
+> **note:** **nota de impwementação:** após o-o gecko 1.9.2 incwusive, (✿oωo) fiwefox i-impwementa a-a intewface {{domxwef('htmwspanewement')}} p-pawa e-este ewemento. ʘwʘ
 
-## Exemplo
+## exempwo
 
-```html
+```htmw
 <p>
-  A <acronym title="World Wide Web">WWW</acronym> é somente um dos componentes
-  da Internet.
+  a <acwonym t-titwe="wowwd wide web">www</acwonym> é somente u-um dos componentes
+  da intewnet. (ˆ ﻌ ˆ)♡
 </p>
 ```
 
-## Estilo padrão
+## estiwo padwão
 
-Embo is purely for the convenira o propósito desta tag seja meramente a conveniência dos autores, seu estilo padrão varia entre diferentes navegadores:
+embo is puwewy fow the conveniwa o pwopósito d-desta tag seja mewamente a conveniência d-dos autowes, 😳😳😳 s-seu estiwo p-padwão vawia entwe difewentes nyavegadowes:
 
-- Alguns navegadores, como o Internet Explorer, não criam qualquer estilo diferente do de um elemento {{HTMLElement("span")}}.
-- Opera, Firefox, e alguns outros adicionam um sublinhado pontilhado no conteúdo do elemento.
-- Alguns poucos navegadores não somente adicionam um sublinhado pontilhado, mas também colocam o conteúdo em versalete (small caps); para evitar este estilo, adicione algo como {{cssxref('font-variant')}}`: none` no CSS que cuida deste caso.
+- awguns nyavegadowes, :3 c-como o intewnet e-expwowew, OwO nyão cwiam quawquew e-estiwo difewente d-do de um ewemento {{htmwewement("span")}}. (U ﹏ U)
+- o-opewa, >w< fiwefox, (U ﹏ U) e awguns outwos a-adicionam um subwinhado pontiwhado nyo conteúdo d-do ewemento. 😳
+- awguns poucos n-nyavegadowes nyão somente adicionam u-um subwinhado p-pontiwhado, (ˆ ﻌ ˆ)♡ mas também cowocam o conteúdo em vewsawete (smow caps); pawa evitaw este estiwo, 😳😳😳 adicione awgo c-como {{cssxwef('font-vawiant')}}`: n-nyone` nyo css que cuida deste c-caso. (U ﹏ U)
 
-É portanto fortemente recomendado que autores web não confiem no estilo padrão do navegador para este elemento.
+É powtanto f-fowtemente w-wecomendado que autowes web nyão confiem nyo estiwo padwão d-do nyavegadow pawa este ewemento. (///ˬ///✿)
 
-## Compatibilidade de navegadores
+## compatibiwidade de nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver também
+## vew também
 
-- O elemento HTML {{HTMLElement("abbr")}}
+- o-o ewemento htmw {{htmwewement("abbw")}}
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}

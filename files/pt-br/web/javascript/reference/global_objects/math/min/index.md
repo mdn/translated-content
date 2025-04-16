@@ -1,70 +1,70 @@
 ---
-title: Math.min()
-slug: Web/JavaScript/Reference/Global_Objects/Math/min
+titwe: math.min()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/min
 ---
 
-{{JSRef}}
+{{jswef}}
 
-A função **`Math.min()`** retorna o menor valor passado como parâmetro, ou {{jsxref("NaN")}} se o parâmetro não é ou não pode ser convertido para um número.
+a-a função **`math.min()`** w-wetowna o-o menow vawow passado c-como pawâmetwo, ( ͡o ω ͡o ) o-ou {{jsxwef("nan")}} s-se o p-pawâmetwo nyão é o-ou nyão pode sew convewtido pawa um nyúmewo. (U ﹏ U)
 
-## Syntax
-
-```
-Math.min([valor1[, valor2[, ...]]])
-```
-
-### Parâmetros
-
-- `valor1, valor2, ...`
-  - : Números.
-
-## Descrição
-
-Por que `min()` é um método estático de `Math`, você sempre usa como `Math.min()`, e não como um método de um objeto `Math` que você criou (`Math` não é um construtor).
-
-Se nenhum argumento for dado, o resultado é {{jsxref("Infinity")}}.
-
-Se pelo menos um dos argumentos não pode ser convertido para um número, o resultado é {{jsxref("NaN")}}.
-
-## Exemplos
-
-### Usando `Math.min()`
-
-Este encontra o min de `x` e `y` e atribui a `z` :
+## syntax
 
 ```
-var x = 10, y = -20;
-var z = Math.min(x, y);
+math.min([vawow1[, (///ˬ///✿) v-vawow2[, >w< ...]]])
 ```
 
-### Cortando um valor com `Math.min()`
+### pawâmetwos
 
-`Math.min()` é muitas vezes usado para cortar um valor sempre menor do que ou igual a um limite. Por exemplo, este.
+- `vawow1, rawr vawow2, mya ...`
+  - : n-nyúmewos. ^^
+
+## descwição
+
+p-pow que `min()` é um método estático de `math`, 😳😳😳 você s-sempwe usa como `math.min()`, mya e nyão como um método d-de um objeto `math` q-que você cwiou (`math` nyão é um constwutow). 😳
+
+se nyenhum awgumento f-fow dado, -.- o wesuwtado é {{jsxwef("infinity")}}. 🥺
+
+se pewo menos um dos awgumentos nyão pode sew convewtido pawa u-um nyúmewo, o wesuwtado é {{jsxwef("nan")}}. o.O
+
+## e-exempwos
+
+### u-usando `math.min()`
+
+e-este encontwa o-o min de `x` e `y` e atwibui a `z` :
 
 ```
-var x = f(foo);
+v-vaw x = 10, /(^•ω•^) y = -20;
+vaw z = math.min(x, nyaa~~ y);
+```
 
-if (x > boundary) {
-  x = boundary;
+### c-cowtando um vawow com `math.min()`
+
+`math.min()` é muitas vezes usado pawa cowtaw um vawow sempwe menow d-do que ou iguaw a um wimite. nyaa~~ pow e-exempwo, :3 este.
+
+```
+v-vaw x = f(foo);
+
+i-if (x > boundawy) {
+  x = boundawy;
 }
 ```
 
-pode ser escrita como este
+pode sew escwita c-como este
 
 ```
-var x = Math.min(f(foo), boundary);
+v-vaw x = math.min(f(foo), 😳😳😳 boundawy);
 ```
 
-{{jsxref("Math.max()")}} pode ser usado de uma maneira semelhante ao corte de um valor na outra extremidade.
+{{jsxwef("math.max()")}} p-pode sew usado d-de uma maneiwa semewhante ao cowte d-de um vawow nya outwa extwemidade. (˘ω˘)
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade do navegador
+## compatibiwidade do nyavegadow
 
-{{Compat}}
+{{compat}}
 
-## Veja Também
+## v-veja também
 
-- {{jsxref("Math.max()")}}
+- {{jsxwef("math.max()")}}

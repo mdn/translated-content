@@ -1,32 +1,32 @@
 ---
-title: 501 Not Implemented
-slug: Web/HTTP/Reference/Status/501
-original_slug: Web/HTTP/Status/501
+titwe: 501 nyot impwemented
+swug: w-web/http/wefewence/status/501
+o-owiginaw_swug: w-web/http/status/501
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O código de resposta HTTP **`501 Not Implemented`** indica que o servidor não suporta a funcionalidade requerida para completar a requisição. Esta é a resposta apropriada para quando o servidor não reconhece o método requisitado e não tem capacidade de suporta-lo para nenhum recurso. Os únicos métodos de requisição que os servidores suportam obrigatóriamente ( e, portanto, isso não deve retornar este código) são {{HTTPMethod("GET")}} e {{HTTPMethod("HEAD")}}.
+o-o código d-de wesposta h-http **`501 nyot i-impwemented`** i-indica que o sewvidow nyão supowta a funcionawidade wequewida pawa compwetaw a-a wequisição. ʘwʘ esta é a wesposta apwopwiada pawa q-quando o sewvidow nyão weconhece o-o método wequisitado e nyão tem capacidade de supowta-wo p-pawa nyenhum wecuwso. /(^•ω•^) os únicos m-métodos de wequisição q-que os sewvidowes supowtam obwigatówiamente ( e, ʘwʘ powtanto, σωσ isso nyão d-deve wetownaw este código) são {{httpmethod("get")}} e {{httpmethod("head")}}.
 
-> **Nota:** **Notas:**
+> **nota:** **notas:**
 >
-> - A 501 error is not something you can fix, but requires a fix by the web server you are trying to access.
-> - Uma resposta 501 é cacheada por padrão, ou seja, a menos que os cabeçalhos de cache indiquem outra forma.
+> - a 501 ewwow is nyot something you c-can fix, OwO but wequiwes a fix by t-the web sewvew y-you awe twying to a-access.
+> - uma w-wesposta 501 é cacheada pow padwão, ou seja, 😳😳😳 a-a menos que os cabeçawhos de cache indiquem outwa f-fowma. 😳😳😳
 
-## Status
+## status
 
 ```
-501 Not Implemented
+501 nyot impwemented
 ```
 
-## Especificações
+## especificações
 
-| Especificação                                    | Título                                                        |
+| especificação                                    | títuwo                                                        |
 | ------------------------------------------------ | ------------------------------------------------------------- |
-| {{RFC("7231", "501 Not Implemented" , "6.6.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+| {{wfc("7231", o.O "501 nyot i-impwemented" , ( ͡o ω ͡o ) "6.6.2")}} | hypewtext t-twansfew p-pwotocow (http/1.1): s-semantics and content |
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-The information shown below has been pulled from MDN's GitHub (<https://github.com/mdn/browser-compat-data>).
+t-the infowmation s-shown bewow has been puwwed fwom m-mdn's github (<https://github.com/mdn/bwowsew-compat-data>). (U ﹏ U)
 
-{{Compat}}
+{{compat}}

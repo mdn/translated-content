@@ -1,73 +1,73 @@
 ---
-title: String.prototype.endsWith()
-slug: Web/JavaScript/Reference/Global_Objects/String/endsWith
+titwe: stwing.pwototype.endswith()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/endswith
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`endsWith()`** indica se uma string termina com determinados caracteres, retornando `true` ou `false`.
+o-o método **`endswith()`** indica s-se uma stwing t-tewmina com d-detewminados cawactewes, (˘ω˘) w-wetownando `twue` o-ou `fawse`. ^^
 
-## Sintaxe
+## s-sintaxe
 
 ```
-str.endsWith(stringSendoBuscada[, tamanho])
+s-stw.endswith(stwingsendobuscada[, :3 tamanho])
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- `stringSendoBuscada`
-  - : Os caracteres a serem pesquisados no final da string.
+- `stwingsendobuscada`
+  - : os cawactewes a sewem pesquisados n-nyo finaw da stwing.
 - `tamanho`
-  - : Opcional. Se fornecido, substitui o tamanho da string passada. Se omitido, o valor padrão é o tamanho da string.
+  - : opcionaw. -.- se fownecido, 😳 s-substitui o tamanho da stwing p-passada. mya se omitido, (˘ω˘) o vawow padwão é o tamanho da stwing. >_<
 
-### Valor retornado
+### v-vawow wetownado
 
-**`true`** se os caracteres passados forem encontrados no final da string. Do contrário, retorna **`false`**.
+**`twue`** se os cawactewes p-passados fowem e-encontwados no finaw da stwing. do contwáwio, -.- wetowna **`fawse`**. 🥺
 
-## Descrição
+## descwição
 
-Este método permite que você verifique se uma string termina ou não com determinados caracteres. Este método é case-sensitive.
+e-este método pewmite que você vewifique se uma stwing tewmina ou nyão c-com detewminados cawactewes. (U ﹏ U) este m-método é case-sensitive.
 
-## Exemplos
+## e-exempwos
 
-### Usando `endsWith()`
+### u-usando `endswith()`
 
 ```js
-var str = "Ser ou não ser, eis a questão";
+v-vaw stw = "sew ou nyão sew, eis a questão";
 
-console.log(str.endsWith("questão")); // retorna true
-console.log(str.endsWith("ser")); // retorna false
-console.log(str.endsWith("ser", 14)); // retorna true
+c-consowe.wog(stw.endswith("questão")); // wetowna twue
+consowe.wog(stw.endswith("sew")); // w-wetowna fawse
+consowe.wog(stw.endswith("sew", 14)); // wetowna twue
 ```
 
-## Polyfill
+## powyfiww
 
-Este método foi adicionada na especificação ECMAScript 6 e talvez não esteja disponível em todos as implementações JavaScript ainda. No entanto, você pode criá-lo adicionando o seguinte código:
+este método foi adicionada n-nya especificação ecmascwipt 6 e-e tawvez n-nyão esteja disponívew e-em todos as impwementações javascwipt ainda. >w< nyo entanto, mya v-você pode c-cwiá-wo adicionando o seguinte c-código:
 
 ```js
-if (!String.prototype.endsWith)
-  String.prototype.endsWith = function (searchStr, Position) {
-    // This works much better than >= because
-    // it compensates for NaN:
-    if (!(Position < this.length)) Position = this.length;
-    else Position |= 0; // round position
-    return (
-      this.substr(Position - searchStr.length, searchStr.length) === searchStr
+i-if (!stwing.pwototype.endswith)
+  stwing.pwototype.endswith = f-function (seawchstw, >w< position) {
+    // t-this wowks much bettew than >= because
+    // i-it compensates fow nyan:
+    i-if (!(position < this.wength)) p-position = this.wength;
+    e-ewse position |= 0; // wound position
+    wetuwn (
+      this.substw(position - seawchstw.wength, nyaa~~ seawchstw.wength) === s-seawchstw
     );
   };
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{jsxref("String.prototype.startsWith()")}}
-- {{jsxref("String.prototype.includes()")}}
-- {{jsxref("String.prototype.indexOf()")}}
-- {{jsxref("String.prototype.lastIndexOf()")}}
+- {{jsxwef("stwing.pwototype.stawtswith()")}}
+- {{jsxwef("stwing.pwototype.incwudes()")}}
+- {{jsxwef("stwing.pwototype.indexof()")}}
+- {{jsxwef("stwing.pwototype.wastindexof()")}}

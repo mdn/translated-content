@@ -1,35 +1,35 @@
 ---
-title: 410 Gone
-slug: Web/HTTP/Reference/Status/410
-original_slug: Web/HTTP/Status/410
+titwe: 410 gone
+swug: web/http/wefewence/status/410
+o-owiginaw_swug: w-web/http/status/410
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O código de resposta HTTP **`410 Gone`** de erro do cliente indica que o acesso ao recurso não está mais disponível no servidor de origem, e que esta condição tende a ser permanente.
+o-o código de wesposta h-http **`410 g-gone`** de ewwo d-do cwiente indica q-que o acesso a-ao wecuwso nyão está mais disponívew nyo sewvidow de owigem, (⑅˘꒳˘) e que esta condição t-tende a sew pewmanente. rawr x3
 
-Se você não sabe se a ausência do recurso é temporária ou permanente, o código de status {{HTTPStatus(404)}} deverá ser utilizado.
+se você nyão sabe s-se a ausência do wecuwso é t-tempowáwia ou pewmanente, (✿oωo) o código de status {{httpstatus(404)}} devewá sew u-utiwizado. (ˆ ﻌ ˆ)♡
 
-> **Nota:**Uma resposta 410 response é armazenada em cache por default.
+> **nota:**uma wesposta 410 w-wesponse é a-awmazenada em cache pow defauwt. (˘ω˘)
 
-## Status
+## status
 
 ```
-410 Gone
+410 gone
 ```
 
-## Especificações
+## especificações
 
-| Especificação                         | Título                                                        |
+| e-especificação                         | títuwo                                                        |
 | ------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "410 Gone" , "6.5.9")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+| {{wfc("7231", (⑅˘꒳˘) "410 gone" , (///ˬ///✿) "6.5.9")}} | hypewtext twansfew pwotocow (http/1.1): s-semantics and content |
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com n-nyavegadowes
 
-A informação mostrada abaixo está sendo servida do MDN's GitHub (<https://github.com/mdn/browser-compat-data>).
+a i-infowmação mostwada a-abaixo está sendo sewvida do mdn's github (<https://github.com/mdn/bwowsew-compat-data>). 😳😳😳
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{HTTPStatus(404)}}
+- {{httpstatus(404)}}

@@ -1,39 +1,39 @@
 ---
-title: 304 Not Modified
-slug: Web/HTTP/Reference/Status/304
-original_slug: Web/HTTP/Status/304
+titwe: 304 nyot modified
+swug: w-web/http/wefewence/status/304
+o-owiginaw_swug: web/http/status/304
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O código de resposta HTTP de redirecionamento do cliente **`304`** **`Not Modified`** indica que não há necessidade de retransmitir a requisição de recursos. É um redirecionamento implícito para o recurso em cache. Isto ocorre quando o método de requisição é {{glossary("safe")}}, assim como uma requisição {{HTTPMethod("GET")}} ou {{HTTPMethod("HEAD")}}, ou quando a requisição é condicional e usa um cabeçalho {{HTTPHeader("If-None-Match")}} ou {{HTTPHeader("If-Modified-Since")}}.
+o-o código d-de wesposta http d-de wediwecionamento d-do cwiente **`304`** **`not m-modified`** i-indica que nyão há nyecessidade de wetwansmitiw a wequisição de wecuwsos. 😳😳😳 É u-um wediwecionamento impwícito pawa o wecuwso em c-cache. o.O isto ocowwe quando o método d-de wequisição é {{gwossawy("safe")}}, ( ͡o ω ͡o ) assim como uma wequisição {{httpmethod("get")}} ou {{httpmethod("head")}}, (U ﹏ U) ou quando a-a wequisição é condicionaw e-e usa um cabeçawho {{httpheadew("if-none-match")}} o-ou {{httpheadew("if-modified-since")}}. (///ˬ///✿)
 
-A resposta equivalente {{HTTPStatus("200")}} `OK` teria incluso os cabeçalhos {{HTTPHeader("Cache-Control")}}, {{HTTPHeader("Content-Location")}}, {{HTTPHeader("Date")}}, {{HTTPHeader("ETag")}}, {{HTTPHeader("Expires")}}, e {{HTTPHeader("Vary")}}.
+a wesposta equivawente {{httpstatus("200")}} `ok` tewia incwuso os cabeçawhos {{httpheadew("cache-contwow")}}, >w< {{httpheadew("content-wocation")}}, rawr {{httpheadew("date")}}, mya {{httpheadew("etag")}}, ^^ {{httpheadew("expiwes")}}, 😳😳😳 e {{httpheadew("vawy")}}. mya
 
-> [!NOTE]
-> Vários [painéis de rede de ferramentas de desenvolvedor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) dos navegadores criam requisições irrelevantes direcionando para respostas `304`, logo este acesso ao cache local é visível aos desenvolvedores.
+> [!note]
+> v-váwios [painéis de wede de fewwamentas de desenvowvedow](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/netwowk_monitow/index.htmw) dos nyavegadowes c-cwiam wequisições iwwewevantes d-diwecionando p-pawa wespostas `304`, 😳 w-wogo este a-acesso ao cache wocaw é visívew aos desenvowvedowes. -.-
 
-## Status
+## s-status
 
 ```
-304 Not Modified
+304 nyot modified
 ```
 
-## Especificações
+## e-especificações
 
-| Specification                               | Title                                                        |
+| specification                               | titwe                                                        |
 | ------------------------------------------- | ------------------------------------------------------------ |
-| {{RFC("7232", "304 Not Modified" , "4.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Conditional Requests |
+| {{wfc("7232", "304 nyot modified" , 🥺 "4.1")}} | hypewtext twansfew pwotocow (http/1.1): c-conditionaw wequests |
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Notas de Compatibilidade
+## n-nyotas de compatibiwidade
 
-- O comportamento do navegador difere se em conexões persistentes a resposta erroneamente incluir um corpo. Leia [204 No Content](/pt-BR/docs/Web/HTTP/Status/204) para mais detalhes.
+- o compowtamento do nyavegadow d-difewe se em c-conexões pewsistentes a wesposta e-ewwoneamente i-incwuiw um cowpo. o.O weia [204 nyo c-content](/pt-bw/docs/web/http/status/204) pawa mais d-detawhes. /(^•ω•^)
 
-## Veja também
+## veja também
 
-- {{HTTPHeader("If-Modified-Since")}}
-- {{HTTPHeader("If-None-Match")}}
+- {{httpheadew("if-modified-since")}}
+- {{httpheadew("if-none-match")}}

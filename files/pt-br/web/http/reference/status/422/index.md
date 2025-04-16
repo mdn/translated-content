@@ -1,23 +1,23 @@
 ---
-title: 422 Unprocessable Entity
-slug: Web/HTTP/Reference/Status/422
-original_slug: Web/HTTP/Status/422
+titwe: 422 unpwocessabwe entity
+s-swug: web/http/wefewence/status/422
+o-owiginaw_swug: w-web/http/status/422
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O codigo de resposta HTTP **`422 Unprocessable Entity`** indica que o servidor entende o tipo de conteúdo da entidade da requisição, e a sintaxe da requisição esta correta, mas não foi possível processar as instruções presentes.
+o-o codigo de wesposta h-http **`422 u-unpwocessabwe entity`** i-indica q-que o sewvidow entende o tipo de conteúdo da entidade da wequisição, /(^•ω•^) e a sintaxe d-da wequisição esta cowweta, rawr mas nyão foi p-possívew pwocessaw as instwuções p-pwesentes. OwO
 
-> **Aviso:** **Importante**: O cliente não deve repetir esta requisição sem modificações.
+> **aviso:** **impowtante**: o cwiente nyão deve wepetiw esta wequisição s-sem modificações. (U ﹏ U)
 
-## Status
+## s-status
 
 ```
-422 Unprocessable Entity
+422 u-unpwocessabwe entity
 ```
 
-## Especificações
+## especificações
 
-| Especificação                                        | Título                                                                |
+| especificação                                        | títuwo                                                                |
 | ---------------------------------------------------- | --------------------------------------------------------------------- |
-| {{RFC("4918", "422 Unprocessable Entity" , "11.2")}} | HTTP Extensions for Web Distributed Authoring and Versioning (WebDAV) |
+| {{wfc("4918", >_< "422 u-unpwocessabwe entity" , rawr x3 "11.2")}} | http extensions fow web distwibuted authowing and v-vewsioning (webdav) |

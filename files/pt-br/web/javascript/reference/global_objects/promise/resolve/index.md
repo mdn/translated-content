@@ -1,136 +1,136 @@
 ---
-title: Promise.resolve()
-slug: Web/JavaScript/Reference/Global_Objects/Promise/resolve
+titwe: pwomise.wesowve()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/pwomise/wesowve
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`Promise.resolve(value)`** retorna um objeto {{jsxref("Promise")}} que é resolvido com o valor passado. Se o valor for _thenable_ (ex: tiver um método {{jsxref("Promise.then", "then")}}), a promise retornada irá "seguir" esse _thenable_, adotando seu estado final; se o valor for uma promise, o objeto será o resultado da chamada Promise.resolve; do contrário a promise será realizada com o valor.
+o-o método **`pwomise.wesowve(vawue)`** w-wetowna um objeto {{jsxwef("pwomise")}} q-que é w-wesowvido com o v-vawow passado. 😳 se o-o vawow fow _thenabwe_ (ex: t-tivew um método {{jsxwef("pwomise.then", 😳😳😳 "then")}}), mya a pwomise wetownada iwá "seguiw" esse _thenabwe_, mya a-adotando seu estado finaw; se o vawow fow u-uma pwomise, (⑅˘꒳˘) o objeto sewá o wesuwtado d-da chamada pwomise.wesowve; do contwáwio a pwomise sewá w-weawizada com o vawow. (U ﹏ U)
 
-## Sintaxe
+## sintaxe
 
 ```
-Promise.resolve(value);
-Promise.resolve(promise);
-Promise.resolve(thenable);
+p-pwomise.wesowve(vawue);
+p-pwomise.wesowve(pwomise);
+pwomise.wesowve(thenabwe);
 ```
 
-### Parametros
+### pawametwos
 
-- value
-  - : Argumento a ser resolvido pela `Promise`. Pode também ser uma `Promise` ou um thenable a resolver.
+- vawue
+  - : awgumento a sew wesowvido p-pewa `pwomise`. mya pode também sew uma `pwomise` ou um thenabwe a wesowvew. ʘwʘ
 
-### Valor retornado
+### v-vawow wetownado
 
-A {{jsxref("Promise")}} que será resolvida com o valor passado ou com a {{jsxref("Promise")}} passada como valor, caso o valor seja um objeto {{jsxref("Promise")}}
+a {{jsxwef("pwomise")}} q-que s-sewá wesowvida c-com o vawow passado o-ou com a {{jsxwef("pwomise")}} passada como vawow, caso o vawow s-seja um objeto {{jsxwef("pwomise")}}
 
-## Descrição
+## descwição
 
-A função estática `Promise.resolve` retorna uma `Promise` de que será resolvida.
+a função e-estática `pwomise.wesowve` wetowna uma `pwomise` de que sewá wesowvida. (˘ω˘)
 
-## Examples
+## exampwes
 
-### Usando o método estático `Promise.resolve`
+### usando o método e-estático `pwomise.wesowve`
 
 ```js
-Promise.resolve("Success").then(
-  function (value) {
-    console.log(value); // "Success"
-  },
-  function (value) {
-    // not called
-  },
+pwomise.wesowve("success").then(
+  f-function (vawue) {
+    c-consowe.wog(vawue); // "success"
+  }, (U ﹏ U)
+  f-function (vawue) {
+    // nyot cawwed
+  }, ^•ﻌ•^
 );
 ```
 
-### Resolvendo um array
+### wesowvendo um awway
 
 ```js
-var p = Promise.resolve([1, 2, 3]);
-p.then(function (v) {
-  console.log(v[0]); // 1
+vaw p = p-pwomise.wesowve([1, (˘ω˘) 2, 3]);
+p-p.then(function (v) {
+  consowe.wog(v[0]); // 1
 });
 ```
 
-### Resolvendo outra `Promise`
+### w-wesowvendo o-outwa `pwomise`
 
 ```js
-var original = Promise.resolve(true);
-var cast = Promise.resolve(original);
-cast.then(function (v) {
-  console.log(v); // true
+vaw o-owiginaw = pwomise.wesowve(twue);
+vaw cast = pwomise.wesowve(owiginaw);
+c-cast.then(function (v) {
+  consowe.wog(v); // twue
 });
 ```
 
-A ordem invertida dos logs acontece devido ao fato de que os handlers são chamados assincronamente. Veja como o `then` funciona [aqui](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise/then#return_value).
+a-a owdem invewtida dos wogs a-acontece devido ao fato de que os h-handwews são c-chamados assincwonamente. :3 veja como o `then` funciona [aqui](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise/then#wetuwn_vawue). ^^;;
 
-### Resolvendo thenables e disparando Errors
+### wesowvendo thenabwes e dispawando ewwows
 
 ```js
-// Resolving a thenable object
-var p1 = Promise.resolve({
-  then: function (onFulfill, onReject) {
-    onFulfill("fulfilled!");
-  },
+// wesowving a t-thenabwe object
+v-vaw p1 = pwomise.wesowve({
+  then: f-function (onfuwfiww, 🥺 o-onweject) {
+    o-onfuwfiww("fuwfiwwed!");
+  }, (⑅˘꒳˘)
 });
-console.log(p1 instanceof Promise); // true, object casted to a Promise
+consowe.wog(p1 instanceof pwomise); // t-twue, nyaa~~ object casted to a pwomise
 
 p1.then(
   function (v) {
-    console.log(v); // "fulfilled!"
-  },
+    consowe.wog(v); // "fuwfiwwed!"
+  }, :3
   function (e) {
-    // not called
-  },
+    // nyot c-cawwed
+  }, ( ͡o ω ͡o )
 );
 
-// Thenable throws before callback
-// Promise rejects
-var thenable = {
-  then: function (resolve) {
-    throw new TypeError("Throwing");
-    resolve("Resolving");
-  },
+// thenabwe t-thwows befowe cawwback
+// p-pwomise w-wejects
+vaw thenabwe = {
+  then: f-function (wesowve) {
+    t-thwow n-nyew typeewwow("thwowing");
+    w-wesowve("wesowving");
+  }, mya
 };
 
-var p2 = Promise.resolve(thenable);
+vaw p2 = pwomise.wesowve(thenabwe);
 p2.then(
-  function (v) {
-    // not called
-  },
-  function (e) {
-    console.log(e); // TypeError: Throwing
-  },
+  f-function (v) {
+    // n-nyot cawwed
+  }, (///ˬ///✿)
+  f-function (e) {
+    c-consowe.wog(e); // typeewwow: t-thwowing
+  }, (˘ω˘)
 );
 
-// Thenable throws after callback
-// Promise resolves
-var thenable = {
-  then: function (resolve) {
-    resolve("Resolving");
-    throw new TypeError("Throwing");
-  },
+// thenabwe thwows aftew cawwback
+// pwomise wesowves
+v-vaw thenabwe = {
+  then: function (wesowve) {
+    wesowve("wesowving");
+    thwow nyew typeewwow("thwowing");
+  }, ^^;;
 };
 
-var p3 = Promise.resolve(thenable);
+vaw p3 = p-pwomise.wesowve(thenabwe);
 p3.then(
   function (v) {
-    console.log(v); // "Resolving"
-  },
-  function (e) {
-    // not called
-  },
+    consowe.wog(v); // "wesowving"
+  }, (✿oωo)
+  f-function (e) {
+    // n-nyot cawwed
+  }, (U ﹏ U)
 );
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja t-também
 
-- {{jsxref("Promise")}}
+- {{jsxwef("pwomise")}}

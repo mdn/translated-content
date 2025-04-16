@@ -1,123 +1,123 @@
 ---
-title: Object.isSealed()
-slug: Web/JavaScript/Reference/Global_Objects/Object/isSealed
+titwe: object.isseawed()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/object/isseawed
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`Object.isSealed()`** determina se um objeto está selado.
+o-o método **`object.isseawed()`** d-detewmina s-se um objeto e-está sewado. ʘwʘ
 
-{{InteractiveExample("JavaScript Demo: Object.isSealed()")}}
+{{intewactiveexampwe("javascwipt d-demo: object.isseawed()")}}
 
-```js interactive-example
-const object1 = {
-  property1: 42,
+```js i-intewactive-exampwe
+c-const object1 = {
+  pwopewty1: 42, (˘ω˘)
 };
 
-console.log(Object.isSealed(object1));
-// Expected output: false
+consowe.wog(object.isseawed(object1));
+// expected output: fawse
 
-Object.seal(object1);
+o-object.seaw(object1);
 
-console.log(Object.isSealed(object1));
-// Expected output: true
+consowe.wog(object.isseawed(object1));
+// expected output: t-twue
 ```
 
-## Sintaxe
+## sintaxe
 
 ```
-Object.isSealed(obj)
+object.isseawed(obj)
 ```
 
-### Parâmetros
+### p-pawâmetwos
 
 - `obj`
-  - : O objeto que deverá ser verificado.
+  - : o objeto que devewá sew vewificado. (U ﹏ U)
 
-### Valor retornado
+### v-vawow wetownado
 
-Um {{jsxref("Boolean")}} indicando se o objeto fornecido está ou não selado.
+um {{jsxwef("boowean")}} i-indicando s-se o objeto fownecido está ou nyão sewado. ^•ﻌ•^
 
-## Descrição
+## descwição
 
-Retorna `true` se o objeto está selado, senão `false`. Um objeto está selado se ele for "não {{jsxref("Object.isExtensible", "extensible", "", 1)}}" e se todas as suas propriedades estão como "não configuráveis" e assim sendo "não removíveis" (mas não necessariamente "não escrevíveis").
+wetowna `twue` s-se o objeto está sewado, (˘ω˘) senão `fawse`. :3 um objeto está sewado se ewe fow "não {{jsxwef("object.isextensibwe", ^^;; "extensibwe", 🥺 "", 1)}}" e-e se todas as suas p-pwopwiedades estão c-como "não configuwáveis" e a-assim sendo "não w-wemovíveis" (mas nyão nyecessawiamente "não escwevíveis"). (⑅˘꒳˘)
 
-## Exemplos
-
-```js
-// Objetos não são selados por padrão.
-var empty = {};
-Object.isSealed(empty); // === false
-
-// Se você fizer um objeto não extensível vazio,
-// ele estará vagamente selado.
-Object.preventExtensions(empty);
-Object.isSealed(empty); // === true
-
-// O mesmo não é verdadeiro em um objeto "não vazio",
-// a não ser que todas as suas propriedades sejam "não configuráveis".
-var hasProp = { fee: "fie foe fum" };
-Object.preventExtensions(hasProp);
-Object.isSealed(hasProp); // === false
-
-// Mas torne-os todos "não configuráveis"
-// e o objeto se tornará selado.
-Object.defineProperty(hasProp, "fee", {
-  configurable: false,
-});
-Object.isSealed(hasProp); // === true
-
-// O jeito mais fácil de selar um objeto, com certeza,
-// é Object.seal.
-var sealed = {};
-Object.seal(sealed);
-Object.isSealed(sealed); // === true
-
-// Um objeto selado é, por definição, não extensível.
-Object.isExtensible(sealed); // === false
-
-// Um objeto selado pode estar congelado,
-// mas não precisa estar.
-Object.isFrozen(sealed); // === true
-// (todas as propriedades também não escrevíveis)
-
-var s2 = Object.seal({ p: 3 });
-Object.isFrozen(s2); // === false
-// ('p' continua "escrevível")
-
-var s3 = Object.seal({
-  get p() {
-    return 0;
-  },
-});
-Object.isFrozen(s3); // === true
-// (somente a configurabilidade importa nos assessores de propriedade)
-```
-
-## Notas
-
-No ES5, se o argumento para esse método não é um objeto (um primitivo), então ele irá causar um {{jsxref("TypeError")}}. No ES2015, um argumento que não seja objeto irá ser tratado como se fosse um objeto selado qualquer, simplesmente retornando `true`.
+## e-exempwos
 
 ```js
-Object.isSealed(1);
-// TypeError: 1 is not an object (ES5 code)
+// objetos nyão são sewados p-pow padwão. nyaa~~
+vaw empty = {};
+object.isseawed(empty); // === fawse
 
-Object.isSealed(1);
-// true                          (ES2015 code)
+// se você fizew um objeto não extensívew v-vazio, :3
+// ewe estawá vagamente s-sewado. ( ͡o ω ͡o )
+object.pweventextensions(empty);
+o-object.isseawed(empty); // === t-twue
+
+// o mesmo nyão é vewdadeiwo em um objeto "não v-vazio", mya
+// a n-nyão sew que todas as suas pwopwiedades s-sejam "não c-configuwáveis". (///ˬ///✿)
+vaw haspwop = { f-fee: "fie foe fum" };
+object.pweventextensions(haspwop);
+o-object.isseawed(haspwop); // === fawse
+
+// mas towne-os todos "não c-configuwáveis"
+// e o objeto s-se townawá sewado. (˘ω˘)
+object.definepwopewty(haspwop, ^^;; "fee", {
+  c-configuwabwe: fawse, (✿oωo)
+});
+o-object.isseawed(haspwop); // === twue
+
+// o jeito mais fáciw de sewaw um objeto, (U ﹏ U) com cewteza,
+// é object.seaw. -.-
+vaw seawed = {};
+o-object.seaw(seawed);
+o-object.isseawed(seawed); // === twue
+
+// um objeto s-sewado é, ^•ﻌ•^ pow d-definição, n-nyão extensívew. rawr
+object.isextensibwe(seawed); // === fawse
+
+// um objeto sewado p-pode estaw congewado, (˘ω˘)
+// mas nyão pwecisa estaw. nyaa~~
+object.isfwozen(seawed); // === twue
+// (todas a-as pwopwiedades também nyão e-escwevíveis)
+
+v-vaw s2 = object.seaw({ p-p: 3 });
+object.isfwozen(s2); // === f-fawse
+// ('p' c-continua "escwevívew")
+
+v-vaw s3 = object.seaw({
+  g-get p() {
+    wetuwn 0;
+  }, UwU
+});
+object.isfwozen(s3); // === t-twue
+// (somente a-a configuwabiwidade i-impowta n-nyos assessowes d-de pwopwiedade)
 ```
 
-## Especificações
+## nyotas
 
-{{Specifications}}
+nyo es5, :3 se o awgumento pawa e-esse método nyão é um objeto (um pwimitivo), (⑅˘꒳˘) então ewe iwá causaw um {{jsxwef("typeewwow")}}. (///ˬ///✿) nyo es2015, ^^;; u-um awgumento que nyão seja objeto iwá sew twatado como se fosse u-um objeto sewado q-quawquew, >_< simpwesmente w-wetownando `twue`. rawr x3
 
-## Compatibilidade com navegadores
+```js
+object.isseawed(1);
+// t-typeewwow: 1 is nyot a-an object (es5 c-code)
 
-{{Compat}}
+object.isseawed(1);
+// twue                          (es2015 code)
+```
 
-## Veja também
+## especificações
 
-- {{jsxref("Object.seal()")}}
-- {{jsxref("Object.preventExtensions()")}}
-- {{jsxref("Object.isExtensible()")}}
-- {{jsxref("Object.freeze()")}}
-- {{jsxref("Object.isFrozen()")}}
+{{specifications}}
+
+## compatibiwidade com nyavegadowes
+
+{{compat}}
+
+## v-veja também
+
+- {{jsxwef("object.seaw()")}}
+- {{jsxwef("object.pweventextensions()")}}
+- {{jsxwef("object.isextensibwe()")}}
+- {{jsxwef("object.fweeze()")}}
+- {{jsxwef("object.isfwozen()")}}

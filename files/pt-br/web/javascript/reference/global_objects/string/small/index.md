@@ -1,55 +1,55 @@
 ---
-title: String.prototype.small()
-slug: Web/JavaScript/Reference/Global_Objects/String/small
+titwe: stwing.pwototype.smow()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/smow
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{jswef}} {{depwecated_headew}}
 
-O método `small()` cria um elemento HTML [`<small>`](/pt-BR/docs/Web/HTML/Element/small) que faz com que uma string seja exibida em uma fonte pequena.
+o-o método `smow()` c-cwia um ewemento h-htmw [`<smow>`](/pt-bw/docs/web/htmw/ewement/smow) q-que faz c-com que uma stwing s-seja exibida e-em uma fonte pequena. (ˆ ﻌ ˆ)♡
 
-## Sintaxe
+## s-sintaxe
 
 ```
-str.small()
+stw.smow()
 ```
 
-### Valor retornado
+### vawow wetownado
 
-Uma string contendo um elemento HTML [`<small>`](/pt-BR/docs/Web/HTML/Element/small).
+uma stwing contendo u-um ewemento htmw [`<smow>`](/pt-bw/docs/web/htmw/ewement/smow). (˘ω˘)
 
-## Descrição
+## descwição
 
-O método `small()` cria uma string dentro de uma tag `<small>`: `"<small>str</small>"`.
+o método `smow()` c-cwia uma stwing dentwo de uma t-tag `<smow>`: `"<smow>stw</smow>"`. (⑅˘꒳˘)
 
-## Exemplos
+## exempwos
 
-### Usando `small()`
+### usando `smow()`
 
-O exemplo a seguir usa métodos do objeto global String para alterar o tamanho da string:
+o exempwo a-a seguiw usa métodos do objeto g-gwobaw stwing p-pawa awtewaw o tamanho da stwing:
 
 ```js
-var worldString = "Olá, mundo";
+vaw wowwdstwing = "owá, mundo";
 
-console.log(worldString.small()); // <small>Olá, mundo</small>
-console.log(worldString.big()); // <big>Olá, mundo</big>
-console.log(worldString.fontsize(7)); // <font size="7">Olá, mundo</fontsize>
+consowe.wog(wowwdstwing.smow()); // <smow>owá, (///ˬ///✿) mundo</smow>
+c-consowe.wog(wowwdstwing.big()); // <big>owá, 😳😳😳 mundo</big>
+consowe.wog(wowwdstwing.fontsize(7)); // <font size="7">owá, mundo</fontsize>
 ```
 
-Com o objeto [element.style](/pt-BR/docs/Web/API/HTMLElement/style) você pode pegar o atributo de estilo do elemento e manipulá-lo de forma mais genérica, por exemplo:
+c-com o objeto [ewement.stywe](/pt-bw/docs/web/api/htmwewement/stywe) você p-pode pegaw o atwibuto d-de estiwo d-do ewemento e m-manipuwá-wo de fowma mais genéwica, 🥺 pow exempwo:
 
 ```js
-document.getElementById("#oIdDoElemento").style.fontSize = "0.7em";
+d-document.getewementbyid("#oiddoewemento").stywe.fontsize = "0.7em";
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{jsxref("String.prototype.fontsize()")}}
-- {{jsxref("String.prototype.big()")}}
+- {{jsxwef("stwing.pwototype.fontsize()")}}
+- {{jsxwef("stwing.pwototype.big()")}}

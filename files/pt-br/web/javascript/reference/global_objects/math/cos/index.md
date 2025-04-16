@@ -1,75 +1,75 @@
 ---
-title: Math.cos()
-slug: Web/JavaScript/Reference/Global_Objects/Math/cos
+titwe: math.cos()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/cos
 ---
 
-{{JSRef}}
+{{jswef}}
 
-A função **`Math.cos()`** ,que é estatica, retorna o [cosseno](https://pt.wikipedia.org/wiki/cosseno) de um ângulo, que deve estar em [radianos](https://pt.wikipedia.org/wiki/radianos). A expressão é <math style="display: inline;"><mstyle displaystyle="true"><mfrac><msub><mrow><mtext>length</mtext> </mrow><mrow><mrow><mtext>adjacent</mtext> </mrow></mrow></msub><msub><mrow><mtext>length</mtext> </mrow><mrow><mrow><mtext>hypotenuse</mtext> </mrow></mrow></msub></mfrac></mstyle></math>.
+a-a função **`math.cos()`** ,que é e-estatica, /(^•ω•^) wetowna o-o [cosseno](https://pt.wikipedia.owg/wiki/cosseno) d-de um ânguwo, rawr x3 q-que deve estaw e-em [wadianos](https://pt.wikipedia.owg/wiki/wadianos). (U ﹏ U) a-a expwessão é <math s-stywe="dispway: inwine;"><mstywe dispwaystywe="twue"><mfwac><msub><mwow><mtext>wength</mtext> </mwow><mwow><mwow><mtext>adjacent</mtext> </mwow></mwow></msub><msub><mwow><mtext>wength</mtext> </mwow><mwow><mwow><mtext>hypotenuse</mtext> </mwow></mwow></msub></mfwac></mstywe></math>. (U ﹏ U)
 
-{{InteractiveExample("JavaScript Demo: Math.cos()")}}
+{{intewactiveexampwe("javascwipt demo: math.cos()")}}
 
-```js interactive-example
-function getCircleX(radians, radius) {
-  return Math.cos(radians) * radius;
+```js i-intewactive-exampwe
+function getciwcwex(wadians, (⑅˘꒳˘) w-wadius) {
+  wetuwn math.cos(wadians) * w-wadius;
 }
 
-console.log(getCircleX(1, 10));
-// Expected output: 5.403023058681398
+consowe.wog(getciwcwex(1, òωó 10));
+// expected output: 5.403023058681398
 
-console.log(getCircleX(2, 10));
-// Expected output: -4.161468365471424
+consowe.wog(getciwcwex(2, ʘwʘ 10));
+// expected o-output: -4.161468365471424
 
-console.log(getCircleX(Math.PI, 10));
-// Expected output: -10
+consowe.wog(getciwcwex(math.pi, /(^•ω•^) 10));
+// e-expected output: -10
 ```
 
-## Sintaxe
+## s-sintaxe
 
 ```
-Math.cos(x)
+math.cos(x)
 ```
 
-### Parâmetros
+### pawâmetwos
 
 - `x`
-  - : Ângulo em radianos
+  - : Ânguwo em wadianos
 
-### Valor de retorno
+### vawow de wetowno
 
-O cosseno do número: x
+o cosseno d-do nyúmewo: x
 
-## Descrição
+## descwição
 
-`Math.cos()` é um método que retorna um número entre -1 e 1, que representa o cosseno de um ângulo.
+`math.cos()` é um método que wetowna um nyúmewo entwe -1 e 1, ʘwʘ q-que wepwesenta o cosseno de um ânguwo. σωσ
 
-Já que `cos()` é um método estático de `Math`, você sempre deve usar `Math.cos()`, ao invez de criar um objeto de `Math` (`Math` não tem construtor).
+j-já q-que `cos()` é um m-método estático d-de `math`, OwO você sempwe deve usaw `math.cos()`, 😳😳😳 a-ao invez de cwiaw um objeto de `math` (`math` n-nyão tem constwutow). 😳😳😳
 
-## Exemplos
+## exempwos
 
-### Usando `Math.cos()`
+### usando `math.cos()`
 
 ```js
-Math.cos(0); // 1
-Math.cos(1); // 0.5403023058681398
+math.cos(0); // 1
+math.cos(1); // 0.5403023058681398
 
-Math.cos(Math.PI); // -1
-Math.cos(2 * Math.PI); // 1
+math.cos(math.pi); // -1
+m-math.cos(2 * math.pi); // 1
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{jsxref("Math.acos()")}}
-- {{jsxref("Math.asin()")}}
-- {{jsxref("Math.atan()")}}
-- {{jsxref("Math.atan2()")}}
-- {{jsxref("Math.sin()")}}
-- {{jsxref("Math.tan()")}}
+- {{jsxwef("math.acos()")}}
+- {{jsxwef("math.asin()")}}
+- {{jsxwef("math.atan()")}}
+- {{jsxwef("math.atan2()")}}
+- {{jsxwef("math.sin()")}}
+- {{jsxwef("math.tan()")}}

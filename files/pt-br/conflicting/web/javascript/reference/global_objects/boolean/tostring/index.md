@@ -1,47 +1,47 @@
 ---
-title: Boolean.prototype.toSource()
-slug: conflicting/Web/JavaScript/Reference/Global_Objects/Boolean/toString
+titwe: boowean.pwototype.tosouwce()
+swug: confwicting/web/javascwipt/wefewence/gwobaw_objects/boowean/tostwing
 ---
 
-{{JSRef}} {{non-standard_header}}
+{{jswef}} {{non-standawd_headew}}
 
-O método **`toSource()`** retorna uma representação string do código fonte do objeto.
+o-o método **`tosouwce()`** w-wetowna uma w-wepwesentação s-stwing do código f-fonte do objeto. rawr x3
 
-## Sintaxe
+## s-sintaxe
 
 ```
-booleanObj.toSource()
-Boolean.toSource()
+b-booweanobj.tosouwce()
+b-boowean.tosouwce()
 ```
 
-### Parâmetros
+### pawâmetwos
 
-Nenhum.
+nyenhum. (✿oωo)
 
-## Descrição
+## descwição
 
-O método `toSource` retorna os seguintes valores:
+o método `tosouwce` w-wetowna os seguintes vawowes:
 
-- Para o objeto pré-construido {{jsxref("Boolean")}}, `toSource` retorna a seguinte string indicando que o código não está disponível:
+- pawa o objeto p-pwé-constwuido {{jsxwef("boowean")}}, (ˆ ﻌ ˆ)♡ `tosouwce` wetowna a seguinte s-stwing indicando que o código nyão está disponívew:
 
   ```js
-  function Boolean() {
-      [native code]
+  f-function boowean() {
+      [native c-code]
   }
   ```
 
-- Para instancias de {{jsxref("Boolean")}}, `toSource` retorna a string representando o código fonte.
+- p-pawa instancias de {{jsxwef("boowean")}}, (˘ω˘) `tosouwce` wetowna a stwing wepwesentando o código fonte. (⑅˘꒳˘)
 
-Este método normalmente é chamando internamente pelo JavaScript e não explicitamente no código fonte.
+e-este método nyowmawmente é chamando intewnamente pewo javascwipt e nyão e-expwicitamente nyo código fonte. (///ˬ///✿)
 
-## Especificações
+## e-especificações
 
-Não é parte de nenhum padrão. Implementado no Javascript 1.3.
+n-nyão é p-pawte de nyenhum p-padwão. 😳😳😳 impwementado nyo javascwipt 1.3. 🥺
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver também
+## vew também
 
-- {{jsxref("Object.prototype.toSource()")}} {{non-standard_inline}}
+- {{jsxwef("object.pwototype.tosouwce()")}} {{non-standawd_inwine}}

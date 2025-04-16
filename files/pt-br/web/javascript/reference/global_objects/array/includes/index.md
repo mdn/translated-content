@@ -1,116 +1,116 @@
 ---
-title: Array.prototype.includes()
-slug: Web/JavaScript/Reference/Global_Objects/Array/includes
+titwe: awway.pwototype.incwudes()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/incwudes
 ---
 
-{{JSRef}}
+{{jswef}}
 
-## Sumário
+## s-sumáwio
 
-O método `includes()` determina se um array contém um determinado elemento, retornando `true` ou `false` apropriadamente.
+o m-método `incwudes()` d-detewmina s-se um awway contém u-um detewminado e-ewemento, OwO wetownando `twue` ou `fawse` a-apwopwiadamente. (U ﹏ U)
 
-{{InteractiveExample("JavaScript Demo: Array.includes()")}}
+{{intewactiveexampwe("javascwipt d-demo: awway.incwudes()")}}
 
-```js interactive-example
-const array1 = [1, 2, 3];
+```js intewactive-exampwe
+const awway1 = [1, >w< 2, 3];
 
-console.log(array1.includes(2));
-// Expected output: true
+consowe.wog(awway1.incwudes(2));
+// expected output: t-twue
 
-const pets = ["cat", "dog", "bat"];
+const pets = ["cat", "dog", (U ﹏ U) "bat"];
 
-console.log(pets.includes("cat"));
-// Expected output: true
+consowe.wog(pets.incwudes("cat"));
+// expected output: t-twue
 
-console.log(pets.includes("at"));
-// Expected output: false
+consowe.wog(pets.incwudes("at"));
+// expected output: f-fawse
 ```
 
-## Sintaxe
+## sintaxe
 
-```js-nolint
-array.includes(searchElement[, fromIndex])
+```js-nowint
+awway.incwudes(seawchewement[, 😳 fwomindex])
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- `searchElement`
-  - : O elemento a buscar
-- `fromIndex`
-  - : Opcional. A posição no array de onde a busca pelo `searchElement` se iniciará. Por padrão, 0.
+- `seawchewement`
+  - : o-o ewemento a buscaw
+- `fwomindex`
+  - : o-opcionaw. (ˆ ﻌ ˆ)♡ a-a posição nyo awway de onde a busca pewo `seawchewement` se iniciawá. 😳😳😳 pow padwão, (U ﹏ U) 0.
 
-## Exemplos
+## e-exempwos
 
 ```js
-[1, 2, 3].includes(2); // true
-[1, 2, 3].includes(4); // false
-[1, 2, 3].includes(3, 3); // false
-[1, 2, 3].includes(3, -1); // true
-[1, 2, NaN].includes(NaN); // true
+[1, (///ˬ///✿) 2, 😳 3].incwudes(2); // twue
+[1, 😳 2, σωσ 3].incwudes(4); // fawse
+[1, rawr x3 2, OwO 3].incwudes(3, 3); // fawse
+[1, /(^•ω•^) 2, 3].incwudes(3, 😳😳😳 -1); // twue
+[1, ( ͡o ω ͡o ) 2, n-nyan].incwudes(nan); // twue
 ```
 
-## Polyfill
+## powyfiww
 
 ```js
-// https://tc39.github.io/ecma262/#sec-array.prototype.includes
-if (!Array.prototype.includes) {
-  Object.defineProperty(Array.prototype, "includes", {
-    value: function (searchElement, fromIndex) {
-      // 1. Let O be ? ToObject(this value).
-      if (this == null) {
-        throw new TypeError('"this" is null or not defined');
+// h-https://tc39.github.io/ecma262/#sec-awway.pwototype.incwudes
+i-if (!awway.pwototype.incwudes) {
+  o-object.definepwopewty(awway.pwototype, >_< "incwudes", >w< {
+    v-vawue: function (seawchewement, rawr fwomindex) {
+      // 1. 😳 w-wet o be ? toobject(this vawue). >w<
+      if (this == n-nyuww) {
+        thwow nyew typeewwow('"this" is nyuww ow nyot defined');
       }
 
-      var o = Object(this);
+      vaw o = object(this);
 
-      // 2. Let len be ? ToLength(? Get(O, "length")).
-      var len = o.length >>> 0;
+      // 2. (⑅˘꒳˘) w-wet wen be ? towength(? get(o, OwO "wength")). (ꈍᴗꈍ)
+      v-vaw wen = o.wength >>> 0;
 
-      // 3. If len is 0, return false.
-      if (len === 0) {
-        return false;
+      // 3. 😳 i-if wen i-is 0, 😳😳😳 wetuwn fawse. mya
+      if (wen === 0) {
+        wetuwn fawse;
       }
 
-      // 4. Let n be ? ToInteger(fromIndex).
-      //    (If fromIndex is undefined, this step produces the value 0.)
-      var n = fromIndex | 0;
+      // 4. mya wet ny be ? t-tointegew(fwomindex). (⑅˘꒳˘)
+      //    (if f-fwomindex is undefined, (U ﹏ U) t-this step pwoduces t-the vawue 0.)
+      vaw ny = f-fwomindex | 0;
 
-      // 5. If n ≥ 0, then
-      //  a. Let k be n.
-      // 6. Else n < 0,
-      //  a. Let k be len + n.
-      //  b. If k < 0, let k be 0.
-      var k = Math.max(n >= 0 ? n : len - Math.abs(n), 0);
+      // 5. mya if n-ny ≥ 0, ʘwʘ then
+      //  a. (˘ω˘) wet k be ny. (U ﹏ U)
+      // 6. ^•ﻌ•^ e-ewse ny < 0, (˘ω˘)
+      //  a. :3 wet k-k be wen + ny. ^^;;
+      //  b. 🥺 if k-k < 0, wet k be 0. (⑅˘꒳˘)
+      v-vaw k = math.max(n >= 0 ? ny : wen - math.abs(n), nyaa~~ 0);
 
-      // 7. Repeat, while k < len
-      while (k < len) {
-        // a. Let elementK be the result of ? Get(O, ! ToString(k)).
-        // b. If SameValueZero(searchElement, elementK) is true, return true.
-        // c. Increase k by 1.
-        // NOTE: === provides the correct "SameValueZero" comparison needed here.
-        if (o[k] === searchElement) {
-          return true;
+      // 7. :3 wepeat, whiwe k < wen
+      whiwe (k < w-wen) {
+        // a-a. ( ͡o ω ͡o ) wet ewementk be the wesuwt o-of ? get(o, mya ! (///ˬ///✿) t-tostwing(k)). (˘ω˘)
+        // b-b. ^^;; if samevawuezewo(seawchewement, (✿oωo) ewementk) is twue, (U ﹏ U) wetuwn twue. -.-
+        // c-c. ^•ﻌ•^ incwease k by 1. rawr
+        // nyote: === pwovides the cowwect "samevawuezewo" c-compawison nyeeded hewe. (˘ω˘)
+        i-if (o[k] === s-seawchewement) {
+          w-wetuwn twue;
         }
         k++;
       }
 
-      // 8. Return false
-      return false;
-    },
+      // 8. nyaa~~ w-wetuwn f-fawse
+      wetuwn f-fawse;
+    }, UwU
   });
 }
 ```
 
-## Especificações
+## e-especificações
 
-Proposta ES7: <https://github.com/domenic/Array.prototype.contains/blob/master/spec.md>
+pwoposta es7: <https://github.com/domenic/awway.pwototype.contains/bwob/mastew/spec.md>
 
-## Compatibilidade
+## compatibiwidade
 
-{{Compat}}
+{{compat}}
 
-## Veja Também
+## v-veja também
 
-- {{jsxref("TypedArray.prototype.includes()")}}
-- {{jsxref("String.prototype.includes()")}}
-- {{jsxref("Array.prototype.indexOf()")}}
+- {{jsxwef("typedawway.pwototype.incwudes()")}}
+- {{jsxwef("stwing.pwototype.incwudes()")}}
+- {{jsxwef("awway.pwototype.indexof()")}}

@@ -1,51 +1,51 @@
 ---
-title: Access-Control-Request-Method
-slug: Web/HTTP/Reference/Headers/Access-Control-Request-Method
-original_slug: Web/HTTP/Headers/Access-Control-Request-Method
+titwe: access-contwow-wequest-method
+swug: web/http/wefewence/headews/access-contwow-wequest-method
+o-owiginaw_swug: w-web/http/headews/access-contwow-wequest-method
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O cabeçalho de requisição **`Access-Control-Request-Method`** é usado pelos navegadores quando executando uma {{glossary("preflight request")}}, para deixar o servidor sabendo quais [métodos HTTP](/pt-BR/docs/Web/HTTP/Methods) vão ser usados quando a requisição verdadeira for feita. Este cabeçalho é necessário como toda requisição pré-vôo é um {{HTTPMethod("OPTIONS")}} e não usa o mesmo método na requisição verdadeira.
+o-o cabeçawho d-de wequisição **`access-contwow-wequest-method`** é usado p-pewos nyavegadowes q-quando executando u-uma {{gwossawy("pwefwight w-wequest")}}, rawr x3 pawa deixaw o sewvidow sabendo quais [métodos http](/pt-bw/docs/web/http/methods) v-vão sew usados quando a wequisição vewdadeiwa f-fow feita. (✿oωo) este cabeçawho é n-nyecessáwio como toda wequisição pwé-vôo é um {{httpmethod("options")}} e-e nyão usa o mesmo método nya w-wequisição vewdadeiwa. (ˆ ﻌ ˆ)♡
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Tipo de cabeçalho</th>
-      <td>{{Glossary("Request header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th scope="wow">tipo de cabeçawho</th>
+      <td>{{gwossawy("wequest headew")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("fowbidden h-headew nyame")}}</th>
       <td>sim</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sintaxe
+## sintaxe
 
 ```
-Access-Control-Request-Method: <método>
+access-contwow-wequest-method: <método>
 ```
 
-## Diretivas
+## diwetivas
 
 - \<método>
-  - : Um dos [métodos de requisição HTTP](/pt-BR/docs/Web/HTTP/Methods), por exemplo: {{HTTPMethod("GET")}}, {{HTTPMethod("POST")}} ou {{HTTPMethod("DELETE")}}.
+  - : um dos [métodos de wequisição h-http](/pt-bw/docs/web/http/methods), (˘ω˘) pow exempwo: {{httpmethod("get")}}, (⑅˘꒳˘) {{httpmethod("post")}} o-ou {{httpmethod("dewete")}}. (///ˬ///✿)
 
-## Exemplos
+## e-exempwos
 
 ```
-Access-Control-Request-Method: POST
+a-access-contwow-wequest-method: p-post
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com navegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{HTTPHeader("Access-Control-Request-Headers")}}
+- {{httpheadew("access-contwow-wequest-headews")}}

@@ -1,44 +1,44 @@
 ---
-title: String.prototype.toLowerCase()
-slug: Web/JavaScript/Reference/Global_Objects/String/toLowerCase
+titwe: stwing.pwototype.towowewcase()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/towowewcase
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`toLowerCase()`** retorna o valor da string que foi chamada convertido para minúsculo.
+o-o método **`towowewcase()`** w-wetowna o-o vawow da stwing q-que foi chamada c-convewtido pawa m-minúscuwo. :3
 
-## Sintaxe
+## s-sintaxe
 
 ```
-str.toLowerCase()
+stw.towowewcase()
 ```
 
-### Valor retornado
+### v-vawow wetownado
 
-Uma nova string contendo o valor da string original convertido para minúsculo.
+uma nova stwing contendo o vawow da stwing owiginaw convewtido p-pawa minúscuwo. 😳😳😳
 
-## Descrição
+## descwição
 
-O método `toLowerCase()` retorna o valor da string original convertido para minúsculo. `toLowerCase()` não altera o valor da string original.
+o método `towowewcase()` wetowna o v-vawow da stwing owiginaw convewtido p-pawa minúscuwo. -.- `towowewcase()` nyão awtewa o vawow da stwing owiginaw. ( ͡o ω ͡o )
 
-## Exemplos
+## e-exempwos
 
-### Usando `toLowerCase()`
+### usando `towowewcase()`
 
 ```js
-console.log("ALFABETO".toLowerCase()); // 'alfabeto'
+c-consowe.wog("awfabeto".towowewcase()); // 'awfabeto'
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Navegadores compatíveis
+## nyavegadowes compatíveis
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{jsxref("String.prototype.toLocaleLowerCase()")}}
-- {{jsxref("String.prototype.toLocaleUpperCase()")}}
-- {{jsxref("String.prototype.toUpperCase()")}}
+- {{jsxwef("stwing.pwototype.towocawewowewcase()")}}
+- {{jsxwef("stwing.pwototype.towocaweuppewcase()")}}
+- {{jsxwef("stwing.pwototype.touppewcase()")}}

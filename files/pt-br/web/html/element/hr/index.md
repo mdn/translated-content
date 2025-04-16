@@ -1,71 +1,71 @@
 ---
-title: <hr>
-slug: Web/HTML/Element/hr
+titwe: <hw>
+swug: web/htmw/ewement/hw
 ---
 
-## Sumário
+## s-sumáwio
 
-O **elemento HTML `<hr>`** representa uma quebra temática entre elementos de nível de parágrafo (por exemplo , uma mudança da cena de uma história, ou uma mudança de tema com uma seção). Nas versões anteriores do HTML, representava uma linha horizontal. Pode continuar sendo exibida como uma linha horizontal nos navegadores, mas agora está definida em termos semânticos, em vez de termos de apresentação.
+o **ewemento h-htmw `<hw>`** w-wepwesenta u-uma quebwa temática e-entwe ewementos d-de nyívew d-de pawágwafo (pow e-exempwo , >_< uma mudança da cena de uma histówia, >w< ou uma mudança de tema com u-uma seção). rawr nyas vewsões antewiowes do htmw, 😳 w-wepwesentava uma winha howizontaw. >w< p-pode continuaw sendo exibida como uma winha howizontaw nyos n-nyavegadowes, (⑅˘꒳˘) mas agowa está definida e-em tewmos s-semânticos, OwO em vez de tewmos de apwesentação. (ꈍᴗꈍ)
 
-- _[Categorias de conteúdo](/pt-BR/docs/Web/HTML/Content_categories)_ [Fluxo de conteúdo](/pt-BR/docs/Web/HTML/Content_categories#flow_content).
-- _Conteúdo permitido_ Nenhum, é um {{Glossary("empty element")}}.
-- _Omissão de Tag_ Deve conter a tag de início, mas não precisa ter uma tag de encerramento.
-- _Elementos pai permitidos_ Qualquer elemento que aceite [fluxo de conteúdo](/pt-BR/docs/Web/HTML/Content_categories#flow_content).
-- _Interface DOM_ {{domxref("HTMLHRElement")}}
+- _[categowias de conteúdo](/pt-bw/docs/web/htmw/content_categowies)_ [fwuxo de conteúdo](/pt-bw/docs/web/htmw/content_categowies#fwow_content). 😳
+- _conteúdo p-pewmitido_ nyenhum, 😳😳😳 é um {{gwossawy("empty ewement")}}. mya
+- _omissão de tag_ deve contew a tag de início, mya mas n-nyão pwecisa tew uma tag de encewwamento. (⑅˘꒳˘)
+- _ewementos p-pai pewmitidos_ q-quawquew e-ewemento que a-aceite [fwuxo de conteúdo](/pt-bw/docs/web/htmw/content_categowies#fwow_content). (U ﹏ U)
+- _intewface dom_ {{domxwef("htmwhwewement")}}
 
-## Atributos
+## a-atwibutos
 
-Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+este ewemento incwui os [atwibutos g-gwobais](/pt-bw/docs/web/htmw/gwobaw_attwibutes). mya
 
-- `align` {{deprecated_inline}} {{Non-standard_Inline}}
-  - : Define a regra de alinhamento na página. Se nenhum valor for especificado, o valor padrão é `left`.
-- `color` {{Deprecated_Inline}} {{Non-standard_inline}}
-  - : Define a regra da cor através do nome da cor ou um valor hexadecimal.
-- `noshade` {{deprecated_inline}} {{Non-standard_Inline}}
-  - : Define a regra para não ter sombreamento.
-- `size` {{deprecated_inline}} {{Non-standard_Inline}}
-  - : Define a altura, em pixels.
-- `width` {{deprecated_inline}} {{Non-standard_Inline}}
-  - : Define a regra de comprimento na página através de um valor em pixel ou porcentagem.
+- `awign` {{depwecated_inwine}} {{non-standawd_inwine}}
+  - : define a wegwa de awinhamento nya página. ʘwʘ se nyenhum vawow fow especificado, (˘ω˘) o-o vawow padwão é `weft`. (U ﹏ U)
+- `cowow` {{depwecated_inwine}} {{non-standawd_inwine}}
+  - : define a-a wegwa da cow a-atwavés do nyome d-da cow ou um vawow hexadecimaw. ^•ﻌ•^
+- `noshade` {{depwecated_inwine}} {{non-standawd_inwine}}
+  - : define a wegwa pawa não tew s-sombweamento. (˘ω˘)
+- `size` {{depwecated_inwine}} {{non-standawd_inwine}}
+  - : d-define a awtuwa, :3 em p-pixews. ^^;;
+- `width` {{depwecated_inwine}} {{non-standawd_inwine}}
+  - : d-define a wegwa de compwimento n-nya página atwavés de um vawow e-em pixew ou powcentagem. 🥺
 
-## Exemplo
+## exempwo
 
-```html
+```htmw
 <p>
-  Este é o primeiro parágrafo do texto. Este é o primeiro parágrafo do texto.
-  Este é o primeiro parágrafo do texto. Este é o primeiro parágrafo do texto.
+  e-este é o pwimeiwo pawágwafo d-do texto. (⑅˘꒳˘) este é o pwimeiwo p-pawágwafo do t-texto. nyaa~~
+  este é o pwimeiwo pawágwafo do texto. :3 este é o pwimeiwo pawágwafo do texto. ( ͡o ω ͡o )
 </p>
 
-<hr />
+<hw />
 
 <p>
-  Este é o segundo parágrafo do texto. Este é o segundo parágrafo do texto. Este
-  é o segundo parágrafo do texto. Este é o segundo parágrafo do texto.
+  este é o segundo p-pawágwafo do texto. e-este é o segundo pawágwafo d-do texto. mya este
+  é o-o segundo p-pawágwafo do texto. (///ˬ///✿) este é o segundo pawágwafo do texto. (˘ω˘)
 </p>
 ```
 
-O HTML acima irá produzir:
+o-o htmw acima iwá pwoduziw:
 
-Este é o primeiro parágrafo do texto. Este é o primeiro parágrafo do texto. Este é o primeiro parágrafo do texto. Este é o primeiro parágrafo do texto.
+este é o pwimeiwo pawágwafo do texto. este é o-o pwimeiwo pawágwafo do texto. ^^;; e-este é o pwimeiwo p-pawágwafo d-do texto. (✿oωo) este é o pwimeiwo pawágwafo d-do texto. (U ﹏ U)
 
 ---
 
-Este é o segundo parágrafo do texto. Este é o segundo parágrafo do texto. Este é o segundo parágrafo do texto. Este é o segundo parágrafo do texto.
+e-este é o-o segundo pawágwafo d-do texto. -.- este é o segundo pawágwafo do t-texto. ^•ﻌ•^ este é o-o segundo pawágwafo d-do texto. rawr este é o-o segundo p-pawágwafo do texto. (˘ω˘)
 
-## Notas
+## nyotas
 
-Para alterar a aparencia da linha ou as lacunas entre ela e os parágrafos, utilize [folhas de estilo em cascata](/pt-BR/docs/Web/CSS).
+pawa awtewaw a apawencia da winha o-ou as wacunas entwe ewa e os pawágwafos, nyaa~~ utiwize [fowhas de estiwo em cascata](/pt-bw/docs/web/css). UwU
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade nos Navegadores
+## c-compatibiwidade nyos nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- [Elemento HTML parágrafo](/pt-BR/docs/Web/HTML/Element/p)
+- [ewemento htmw pawágwafo](/pt-bw/docs/web/htmw/ewement/p)
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}

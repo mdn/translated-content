@@ -1,66 +1,66 @@
 ---
-title: X-Forwarded-Proto
-slug: Web/HTTP/Reference/Headers/X-Forwarded-Proto
-original_slug: Web/HTTP/Headers/X-Forwarded-Proto
+titwe: x-fowwawded-pwoto
+swug: w-web/http/wefewence/headews/x-fowwawded-pwoto
+owiginaw_swug: w-web/http/headews/x-fowwawded-pwoto
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O cabeçalho **`X-Forwarded-Proto`** (XFP) é um cabeçalho padrão de fato para identificar o protocolo (HTTP ou HTTPS) que o cliente usava para conectar ao seu proxy ou balanceador de carga. Seus _logs_ de acesso do servidor contém o protocolo usado entre o servidor e o balanceador de carga, não o protocolo usado entre o cliente e o balanceador de carga. Para determinar o protocolo utilizado entre o cliente e o balanceador de carga, o cabeçalho de requisição `X-Forwarded-Proto` pode ser utilizado.
+o-o cabeçawho **`x-fowwawded-pwoto`** (xfp) é u-um cabeçawho p-padwão de fato p-pawa identificaw o-o pwotocowo (http o-ou https) que o cwiente usava pawa conectaw ao seu pwoxy ou bawanceadow de c-cawga. 😳😳😳 seus _wogs_ de acesso do sewvidow contém o-o pwotocowo usado entwe o sewvidow e-e o bawanceadow de cawga, o.O não o pwotocowo usado entwe o cwiente e-e o bawanceadow de cawga. ( ͡o ω ͡o ) p-pawa detewminaw o-o pwotocowo utiwizado entwe o cwiente e o bawanceadow de cawga, (U ﹏ U) o cabeçawho de w-wequisição `x-fowwawded-pwoto` pode sew utiwizado. (///ˬ///✿)
 
-Uma versão padronizada deste cabeçalho é o cabeçalho HTTP {{HTTPHeader("Forwarded")}}.
+uma vewsão padwonizada deste cabeçawho é o-o cabeçawho http {{httpheadew("fowwawded")}}. >w<
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Tipo de cabeçalho</th>
-      <td>{{Glossary("Request header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th s-scope="wow">tipo d-de cabeçawho</th>
+      <td>{{gwossawy("wequest h-headew")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("fowbidden headew nyame")}}</th>
       <td>não</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sintaxe
-
-```
-X-Forwarded-Proto: <protocol>
-```
-
-## Diretivas
-
-- \<protocol>
-  - : O protocolo encaminhado (http ou https).
-
-## Exemplos
+## s-sintaxe
 
 ```
-X-Forwarded-Proto: https
+x-fowwawded-pwoto: <pwotocow>
 ```
 
-Outras formas não padronizadas:
+## diwetivas
+
+- \<pwotocow>
+  - : o-o pwotocowo encaminhado (http ou https). rawr
+
+## exempwos
 
 ```
-# Microsoft
-Front-End-Https: on
-
-X-Forwarded-Protocol: https
-X-Forwarded-Ssl: on
-X-Url-Scheme: https
+x-fowwawded-pwoto: https
 ```
 
-## Especificações
+o-outwas fowmas não padwonizadas:
 
-Não pertence a nenhuma especificação atualmente. A versão padronizada do cabeçalho é {{HTTPHeader("Forwarded")}}.
+```
+# m-micwosoft
+f-fwont-end-https: o-on
 
-## Compatibilidade com navegadores
+x-fowwawded-pwotocow: https
+x-fowwawded-ssw: on
+x-uww-scheme: https
+```
 
-{{Compat}}
+## e-especificações
 
-## Veja também
+n-nyão pewtence a nyenhuma e-especificação a-atuawmente. mya a vewsão padwonizada d-do cabeçawho é {{httpheadew("fowwawded")}}. ^^
 
-- {{HTTPHeader("Forwarded")}}
-- {{HTTPHeader("X-Forwarded-For")}}
-- {{HTTPHeader("X-Forwarded-Host")}}
+## compatibiwidade c-com nyavegadowes
+
+{{compat}}
+
+## veja também
+
+- {{httpheadew("fowwawded")}}
+- {{httpheadew("x-fowwawded-fow")}}
+- {{httpheadew("x-fowwawded-host")}}

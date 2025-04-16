@@ -1,230 +1,230 @@
 ---
-title: Sintaxe de Espalhamento
-slug: Web/JavaScript/Reference/Operators/Spread_syntax
+titwe: sintaxe de espawhamento
+s-swug: web/javascwipt/wefewence/opewatows/spwead_syntax
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-**Sintaxe de Espalhamento (Spread syntax)** permite que um objeto iterável, como uma expressão de array ou uma string seja expandido para ser usado onde zero ou mais argumentos (para chamadas de funções) ou elementos (para arrays _literais_) são esperados, ou que um objeto seja expandido onde zero ou mais pares _propriedade:valor_ (para objetos _literais_) são esperados.
+**sintaxe d-de espawhamento (spwead s-syntax)** p-pewmite que u-um objeto itewávew, o.O c-como uma e-expwessão de awway o-ou uma stwing seja expandido pawa sew usado onde zewo ou mais awgumentos (pawa c-chamadas de funções) ou ewementos (pawa awways _witewais_) s-são espewados, UwU ou que um objeto s-seja expandido onde zewo ou mais pawes _pwopwiedade:vawow_ (pawa objetos _witewais_) s-são espewados. rawr x3
 
-{{InteractiveExample("JavaScript Demo: Expressions - Spread syntax")}}
+{{intewactiveexampwe("javascwipt demo: expwessions - s-spwead s-syntax")}}
 
-```js interactive-example
-function sum(x, y, z) {
-  return x + y + z;
+```js intewactive-exampwe
+function sum(x, 🥺 y, z) {
+  wetuwn x + y + z-z;
 }
 
-const numbers = [1, 2, 3];
+const nyumbews = [1, :3 2, 3];
 
-console.log(sum(...numbers));
-// Expected output: 6
+consowe.wog(sum(...numbews));
+// expected output: 6
 
-console.log(sum.apply(null, numbers));
-// Expected output: 6
+consowe.wog(sum.appwy(nuww, (ꈍᴗꈍ) nyumbews));
+// e-expected output: 6
 ```
 
-## Sintaxe
+## sintaxe
 
-Para chamada de funções:
-
-```
-myFunction(...iterableObj);
-```
-
-Para arrays literais ou strings:
+pawa chamada d-de funções:
 
 ```
-[...iterableObj, '4', 'five', 6];
+m-myfunction(...itewabweobj);
 ```
 
-Para objetos literais (novo em ECMAScript 2018; stage 3 draft):
+p-pawa awways w-witewais ou stwings:
 
 ```
-let objClone = { ...obj };
+[...itewabweobj, 🥺 '4', 'five', (✿oωo) 6];
 ```
 
-## Exemplos
+pawa objetos w-witewais (novo em ecmascwipt 2018; stage 3 dwaft):
 
-### Espalhamento e chamadas de funções
+```
+w-wet objcwone = { ...obj };
+```
 
-#### Substituindo apply
+## exempwos
 
-É comum usar {{jsxref( "Function.prototype.apply")}} em casos onde você quer usar os elementos de um array como argumentos para uma função.
+### espawhamento e chamadas de funções
+
+#### substituindo a-appwy
+
+É comum usaw {{jsxwef( "function.pwototype.appwy")}} e-em casos onde v-você quew usaw o-os ewementos de um awway como awgumentos pawa uma função.
 
 ```js
-function myFunction(x, y, z) {}
-var args = [0, 1, 2];
-myFunction.apply(null, args);
+f-function myfunction(x, y-y, (U ﹏ U) z) {}
+vaw awgs = [0, :3 1, 2];
+m-myfunction.appwy(nuww, ^^;; a-awgs);
 ```
 
-Com a sintaxe de espalhamento, o código acima pode ser escrito assim:
+com a sintaxe de espawhamento, rawr o-o código acima pode s-sew escwito assim:
 
 ```js
-function myFunction(x, y, z) {}
-var args = [0, 1, 2];
-myFunction(...args);
+function myfunction(x, 😳😳😳 y-y, z) {}
+vaw awgs = [0, (✿oωo) 1, 2];
+myfunction(...awgs);
 ```
 
-Qualquer argumento numa lista de argumentos pode usar a sintaxe de espalhamento e pode ser usado mais de uma vez.
+q-quawquew awgumento nyuma w-wista de awgumentos p-pode usaw a sintaxe de espawhamento e pode sew usado mais de uma vez. OwO
 
 ```js
-function myFunction(v, w, x, y, z) {}
-var args = [0, 1];
-myFunction(-1, ...args, 2, ...[3]);
+function myfunction(v, ʘwʘ w, x, y-y, z) {}
+vaw awgs = [0, (ˆ ﻌ ˆ)♡ 1];
+m-myfunction(-1, (U ﹏ U) ...awgs, UwU 2, ...[3]);
 ```
 
-#### Apply para new
+#### appwy p-pawa nyew
 
-Quando um construtor é chamado com `new`, não é possivel usar diretamente um array e `apply` (`apply` executa o `[[Call]]` e não o `[[Construct]]`). No entanto, um array pode facilmente ser usado com `new` graças ao operador de espalhamento:
+quando u-um constwutow é c-chamado com `new`, XD nyão é possivew usaw diwetamente um awway e-e `appwy` (`appwy` executa o `[[caww]]` e nyão o `[[constwuct]]`). ʘwʘ nyo entanto, rawr x3 u-um awway pode faciwmente sew u-usado com `new` g-gwaças ao opewadow d-de espawhamento:
 
 ```js
-var dateFields = [1970, 0, 1]; // 1 Jan 1970
-var d = new Date(...dateFields);
+vaw d-datefiewds = [1970, ^^;; 0, 1]; // 1 j-jan 1970
+vaw d = n-nyew date(...datefiewds);
 ```
 
-Para usar o `new` com array de parâmetros sem a sintaxa de espalhamento, você teria que fazer isso **indiretamente** por meio da aplicação parcial:
+p-pawa usaw o `new` com awway de pawâmetwos sem a-a sintaxa de espawhamento, ʘwʘ v-você t-tewia que fazew i-isso **indiwetamente** p-pow meio da apwicação pawciaw:
 
 ```js
-function applyAndNew(constructor, args) {
-  function partial() {
-    return constructor.apply(this, args);
+function appwyandnew(constwuctow, a-awgs) {
+  function pawtiaw() {
+    wetuwn constwuctow.appwy(this, (U ﹏ U) awgs);
   }
-  if (typeof constructor.prototype === "object") {
-    partial.prototype = Object.create(constructor.prototype);
+  if (typeof constwuctow.pwototype === "object") {
+    pawtiaw.pwototype = o-object.cweate(constwuctow.pwototype);
   }
-  return partial;
+  wetuwn pawtiaw;
 }
 
-function myConstructor() {
-  console.log("arguments.length: " + arguments.length);
-  console.log(arguments);
-  this.prop1 = "val1";
-  this.prop2 = "val2";
+function myconstwuctow() {
+  c-consowe.wog("awguments.wength: " + a-awguments.wength);
+  c-consowe.wog(awguments);
+  this.pwop1 = "vaw1";
+  this.pwop2 = "vaw2";
 }
 
-var myArguments = ["hi", "how", "are", "you", "mr", null];
-var myConstructorWithArguments = applyAndNew(myConstructor, myArguments);
+v-vaw myawguments = ["hi", (˘ω˘) "how", (ꈍᴗꈍ) "awe", "you", "mw", /(^•ω•^) nyuww];
+v-vaw myconstwuctowwithawguments = a-appwyandnew(myconstwuctow, >_< myawguments);
 
-console.log(new myConstructorWithArguments());
-// (internal log of myConstructor):           arguments.length: 6
-// (internal log of myConstructor):           ["hi", "how", "are", "you", "mr", null]
-// (log of "new myConstructorWithArguments"): {prop1: "val1", prop2: "val2"}
+consowe.wog(new myconstwuctowwithawguments());
+// (intewnaw wog of myconstwuctow):           awguments.wength: 6
+// (intewnaw w-wog of myconstwuctow):           ["hi", σωσ "how", "awe", ^^;; "you", "mw", nyuww]
+// (wog o-of "new myconstwuctowwithawguments"): {pwop1: "vaw1", 😳 p-pwop2: "vaw2"}
 ```
 
-### Espalhamento em arrays literais
+### e-espawhamento em awways witewais
 
-#### Um array literal mais poderoso
+#### u-um awway witewaw m-mais podewoso
 
-Criar um novo array usando um array existente como parte dele, não é possível utilizando apenas a sintaxe de array literal. O código imperativo deve ser usado ao invés da combinação de `push`, `splice`, `concat`, etc. Com a sintaxe de espalhamento isso se torna muito mais sucinto:
+cwiaw um nyovo a-awway usando um a-awway existente como pawte dewe, nyão é possívew utiwizando apenas a sintaxe d-de awway witewaw. >_< o-o código impewativo d-deve sew usado ao invés d-da combinação d-de `push`, -.- `spwice`, `concat`, UwU etc. com a sintaxe d-de espawhamento isso se towna muito mais sucinto:
 
 ```js
-var parts = ["shoulders", "knees"];
-var lyrics = ["head", ...parts, "and", "toes"];
-// ["head", "shoulders", "knees", "and", "toes"]
+vaw pawts = ["shouwdews", "knees"];
+v-vaw wywics = ["head", :3 ...pawts, "and", σωσ "toes"];
+// ["head", >w< "shouwdews", (ˆ ﻌ ˆ)♡ "knees", "and", ʘwʘ "toes"]
 ```
 
-Assim como espalhar a lista de argumentos, `...` pode ser usado em qualquer lugar em um array literal e pode ser usado multiplas vezes.
+a-assim como espawhaw a wista de awgumentos, :3 `...` p-pode sew u-usado em quawquew wugaw em um awway witewaw e pode sew usado muwtipwas v-vezes. (˘ω˘)
 
-#### Copiando um array
+#### copiando um awway
 
 ```js
-var arr = [1, 2, 3];
-var arr2 = [...arr]; // like arr.slice()
-arr2.push(4);
+vaw aww = [1, 😳😳😳 2, rawr x3 3];
+vaw aww2 = [...aww]; // w-wike aww.swice()
+aww2.push(4);
 
-// arr2 becomes [1, 2, 3, 4]
-// arr remains unaffected
+// aww2 b-becomes [1, (✿oωo) 2, 3, 4]
+// a-aww wemains unaffected
 ```
 
-**Nota:** A sintaxe de espalhamento efetivamente vai um nível mais profundo quando se copia um array. Assim sendo, pode ser inadequado para copiar arrays multidimensionais como o exemplo a seguir mostra (é o mesmo com {{jsxref("Object.assign()")}} e a sintaxe de espalhamento).
+**nota:** a sintaxe de espawhamento efetivamente v-vai um nyívew m-mais pwofundo quando se copia um awway. (ˆ ﻌ ˆ)♡ assim sendo, :3 pode s-sew inadequado pawa copiaw awways m-muwtidimensionais como o exempwo a seguiw mostwa (é o mesmo com {{jsxwef("object.assign()")}} e-e a sintaxe de espawhamento). (U ᵕ U❁)
 
 ```js
-var a = [[1], [2], [3]];
-var b = [...a];
+v-vaw a = [[1], ^^;; [2], [3]];
+vaw b-b = [...a];
 b.shift().shift(); // 1
-// Now array a is affected as well: [[], [2], [3]]
+// nyow awway a-a is affected as weww: [[], mya [2], [3]]
 ```
 
-#### Uma maneira melhor de concatenar arrays
+#### u-uma maneiwa m-mewhow de concatenaw a-awways
 
-{{jsxref("Array.concat")}} é frequentemente usado para concatenar um array no final de um array existente. Sem a sintaxe de espalhamento é feito assim:
+{{jsxwef("awway.concat")}} é fwequentemente u-usado p-pawa concatenaw um awway nyo finaw de um awway e-existente. 😳😳😳 sem a s-sintaxe de espawhamento é f-feito assim:
 
 ```js
-var arr1 = [0, 1, 2];
-var arr2 = [3, 4, 5];
-// Append all items from arr2 onto arr1
-arr1 = arr1.concat(arr2);
+vaw aww1 = [0, OwO 1, 2];
+v-vaw aww2 = [3, rawr 4, 5];
+// append aww items f-fwom aww2 onto aww1
+a-aww1 = aww1.concat(aww2);
 ```
 
-Com a sintaxe de espalhamento se torna isso:
+com a sintaxe de espawhamento se towna isso:
 
 ```js
-var arr1 = [0, 1, 2];
-var arr2 = [3, 4, 5];
-arr1 = [...arr1, ...arr2];
+v-vaw aww1 = [0, XD 1, 2];
+v-vaw a-aww2 = [3, (U ﹏ U) 4, 5];
+a-aww1 = [...aww1, (˘ω˘) ...aww2];
 ```
 
-{{jsxref("Array.unshift")}} é frequentemente usado para inserir um array de valores no inicio de um array existente. Sem a sintaxe de espalhamento é feito assim:
+{{jsxwef("awway.unshift")}} é fwequentemente u-usado pawa insewiw um awway de vawowes nyo inicio de um awway existente. UwU sem a sintaxe de espawhamento é f-feito assim:
 
 ```js
-var arr1 = [0, 1, 2];
-var arr2 = [3, 4, 5];
-// Prepend all items from arr2 onto arr1
-Array.prototype.unshift.apply(arr1, arr2); // arr1 is now [3, 4, 5, 0, 1, 2]
+vaw a-aww1 = [0, >_< 1, 2];
+vaw aww2 = [3, σωσ 4, 5];
+// p-pwepend aww items f-fwom aww2 onto aww1
+awway.pwototype.unshift.appwy(aww1, 🥺 a-aww2); // a-aww1 is nyow [3, 🥺 4, 5, 0, ʘwʘ 1, 2]
 ```
 
-Com a _sintaxe de espalhamento_ isso se torna _\[Note, no entanto, que isso cria um novo `arr1` array. Ao contrário de {{jsxref("Array.unshift")}}, isso não modifica o array original `arr1` array]_:
+c-com a _sintaxe d-de espawhamento_ i-isso se towna _\[note, :3 nyo entanto, (U ﹏ U) que isso cwia um nyovo `aww1` awway. (U ﹏ U) ao contwáwio de {{jsxwef("awway.unshift")}}, ʘwʘ isso n-nyão modifica o-o awway owiginaw `aww1` a-awway]_:
 
 ```js
-var arr1 = [0, 1, 2];
-var arr2 = [3, 4, 5];
-arr1 = [...arr2, ...arr1]; // arr1 is now [3, 4, 5, 0, 1, 2]
+vaw aww1 = [0, >w< 1, 2];
+v-vaw aww2 = [3, rawr x3 4, 5];
+aww1 = [...aww2, OwO ...aww1]; // aww1 is nyow [3, ^•ﻌ•^ 4, 5, 0, >_< 1, 2]
 ```
 
-### Espalhamento em objetos literais
+### espawhamento e-em objetos w-witewais
 
-A proposta [Rest/Spread Properties for ECMAScript](https://github.com/tc39/proposal-object-rest-spread) (stage 3) adiciona espalhamento de propriedades para [objetos literais](/pt-BR/docs/Web/JavaScript/Reference/Operators/Object_initializer). Este copia as propriedades enumeráveis de um objeto informado em um novo objeto.
+a pwoposta [west/spwead p-pwopewties fow ecmascwipt](https://github.com/tc39/pwoposaw-object-west-spwead) (stage 3) adiciona espawhamento d-de pwopwiedades p-pawa [objetos witewais](/pt-bw/docs/web/javascwipt/wefewence/opewatows/object_initiawizew). OwO e-este copia as p-pwopwiedades enumewáveis de um objeto infowmado em um nyovo objeto. >_<
 
-**Cópia-rasa (Shallow-cloning)** (excluindo o protótipo) ou fusão (**merge**) de objetos agora é possivel usando uma sintaxe mais curta que {{jsxref("Object.assign()")}}.
+**cópia-wasa (shawwow-cwoning)** (excwuindo o pwotótipo) o-ou fusão (**mewge**) d-de objetos a-agowa é possivew u-usando uma s-sintaxe mais cuwta que {{jsxwef("object.assign()")}}. (ꈍᴗꈍ)
 
 ```js
-var obj1 = { foo: "bar", x: 42 };
-var obj2 = { foo: "baz", y: 13 };
+v-vaw o-obj1 = { foo: "baw", >w< x: 42 };
+vaw o-obj2 = { foo: "baz", (U ﹏ U) y-y: 13 };
 
-var clonedObj = { ...obj1 };
-// Object { foo: "bar", x: 42 }
+vaw cwonedobj = { ...obj1 };
+// o-object { foo: "baw", ^^ x: 42 }
 
-var mergedObj = { ...obj1, ...obj2 };
-// Object { foo: "baz", x: 42, y: 13 }
+vaw mewgedobj = { ...obj1, (U ﹏ U) ...obj2 };
+// o-object { foo: "baz", :3 x: 42, y-y: 13 }
 ```
 
-Note que {{jsxref("Object.assign()")}} chamada os [setters](/pt-BR/docs/Web/JavaScript/Reference/Functions/set) e a _sintaxe de espalhamento_ não.
+n-nyote que {{jsxwef("object.assign()")}} chamada o-os [settews](/pt-bw/docs/web/javascwipt/wefewence/functions/set) e a _sintaxe de espawhamento_ n-nyão. (✿oωo)
 
-### Apenas para iteráveis
+### apenas p-pawa itewáveis
 
-A sintaxe de espalhamento (diferente de propriedades espalhadas) só pode ser utilizada com objetos iteráveis.
+a-a sintaxe de espawhamento (difewente de pwopwiedades espawhadas) s-só pode sew utiwizada com objetos itewáveis. XD
 
 ```js
-var obj = { key1: "value1" };
-var array = [...obj]; // TypeError: obj is not iterable
+v-vaw o-obj = { key1: "vawue1" };
+vaw awway = [...obj]; // t-typeewwow: obj is nyot itewabwe
 ```
 
-### Espalhamento com muitos valores
+### e-espawhamento c-com muitos vawowes
 
-Quando usar a sintaxe de espalhamento para chamada de funções, esteja ciente da possibilidade de exceder tamanho máximo de argumentos do motor do Javascript. Veja [`apply()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function/apply) para mais detalhes.
+quando usaw a sintaxe d-de espawhamento pawa chamada de funções, esteja c-ciente da possibiwidade d-de excedew tamanho m-máximo de awgumentos do motow do j-javascwipt. >w< veja [`appwy()`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/function/appwy) p-pawa mais detawhes. òωó
 
-## Sintaxe Rest (parâmetros)
+## s-sintaxe west (pawâmetwos)
 
-A _sintaxe rest_ se parece exatamente como a _sintaxe de espalhamento_, mas esta é usada para desestruturar arrays e objetos. De certa forma, a _sintaxe rest_ é o oposto da _sintaxe de espalhamento_: A _sintaxe de espalhamento (spread)_ 'expande' um array em vários elementos, enquanto a _sintaxe rest_ coleta multiplos elementos e 'condensa' eles em um único elemento. Veja [parâmetros rest.](/pt-BR/docs/Web/JavaScript/Reference/Functions/rest_parameters)
+a _sintaxe west_ se pawece exatamente como a _sintaxe de espawhamento_, (ꈍᴗꈍ) mas esta é usada pawa desestwutuwaw awways e objetos. rawr x3 de cewta fowma, rawr x3 a _sintaxe west_ é o oposto d-da _sintaxe de e-espawhamento_: a _sintaxe de espawhamento (spwead)_ 'expande' um awway em váwios e-ewementos, σωσ enquanto a-a _sintaxe w-west_ coweta muwtipwos ewementos e-e 'condensa' ewes em um único e-ewemento. (ꈍᴗꈍ) veja [pawâmetwos west.](/pt-bw/docs/web/javascwipt/wefewence/functions/west_pawametews)
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- [Parâmetros Rest](/pt-BR/docs/Web/JavaScript/Reference/Functions/rest_parameters) (also '`...`')
+- [pawâmetwos w-west](/pt-bw/docs/web/javascwipt/wefewence/functions/west_pawametews) (awso '`...`')

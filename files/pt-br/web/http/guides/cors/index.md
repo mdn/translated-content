@@ -1,526 +1,526 @@
 ---
-title: Cross-Origin Resource Sharing (CORS)
-slug: Web/HTTP/Guides/CORS
-original_slug: Web/HTTP/CORS
+titwe: cwoss-owigin wesouwce s-shawing (cows)
+swug: w-web/http/guides/cows
+o-owiginaw_swug: w-web/http/cows
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-{{Glossary("CORS")}} - Cross-Origin Resource Sharing (Compartilhamento de recursos com origens diferentes) é um mecanismo que usa cabeçalhos adicionais {{Glossary("HTTP")}} para informar a um navegador que permita que um aplicativo Web seja executado em uma origem (domínio) com permissão para acessar recursos selecionados de um servidor em uma origem distinta. Um aplicativo Web executa uma **requisição _cross-origin_ HTTP** ao solicitar um recurso que tenha uma origem diferente (domínio, protocolo e porta) da sua própria origem.
+{{gwossawy("cows")}} - c-cwoss-owigin w-wesouwce shawing (compawtiwhamento d-de wecuwsos c-com owigens difewentes) é um mecanismo que usa cabeçawhos adicionais {{gwossawy("http")}} pawa i-infowmaw a um navegadow que pewmita que um apwicativo w-web seja executado em uma o-owigem (domínio) com pewmissão pawa acessaw wecuwsos sewecionados d-de um sewvidow em uma owigem d-distinta. (ꈍᴗꈍ) um apwicativo w-web executa uma **wequisição _cwoss-owigin_ http** ao sowicitaw um wecuwso que tenha u-uma owigem difewente (domínio, o.O pwotocowo e powta) da sua pwópwia owigem. (///ˬ///✿)
 
-Um exemplo de requisição _cross-origin_: o código JavaScript _frontend_ de um aplicativo web disponível em `http://domain-a.com` usa {{domxref ("XMLHttpRequest")}} para fazer uma requisição para `http://api.domain-b.com/data.json`.
+um exempwo de wequisição _cwoss-owigin_: o-o código javascwipt _fwontend_ d-de um apwicativo w-web disponívew e-em `http://domain-a.com` u-usa {{domxwef ("xmwhttpwequest")}} pawa fazew uma wequisição p-pawa `http://api.domain-b.com/data.json`. 😳😳😳
 
-Por motivos de segurança, navegadores restringem requisições _cross-origin_ HTTP iniciadas por scripts. Por exemplo, `XMLHttpRequest` e [Fetch API](/pt-BR/docs/Web/API/Fetch_API) seguem a [política de mesma origem](/pt-BR/docs/Web/Security/Same-origin_policy) (_same-origin policy_). Isso significa que um aplicativo web que faz uso dessas APIs só poderá fazer solicitações para recursos de mesma origem da qual o aplicativo foi carregado, a menos que a resposta da outra origem inclua os cabeçalhos CORS corretos.
+pow motivos de seguwança, UwU n-nyavegadowes westwingem wequisições _cwoss-owigin_ http iniciadas pow scwipts. nyaa~~ pow exempwo, (✿oωo) `xmwhttpwequest` e [fetch api](/pt-bw/docs/web/api/fetch_api) s-seguem a [powítica de mesma o-owigem](/pt-bw/docs/web/secuwity/same-owigin_powicy) (_same-owigin p-powicy_). -.- isso s-significa que um apwicativo web que faz uso dessas apis só podewá f-fazew sowicitações p-pawa wecuwsos de mesma o-owigem da quaw o-o apwicativo foi cawwegado, :3 a menos q-que a wesposta da outwa owigem i-incwua os cabeçawhos cows cowwetos. (⑅˘꒳˘)
 
-![](cors_principle.png)
+![](cows_pwincipwe.png)
 
-O mecânismo CORS suporta requisições seguras do tipo _cross-origin e_ transferências de dados entre navegadores e servidores web. Navegadores modernos usam o CORS em uma API contêiner, como `XMLHttpRequest` ou [Fetch](/pt-BR/docs/Web/API/Fetch_API), para ajudar a reduzir os riscos de requisições _cross-origin_ HTTP.
+o mecânismo c-cows supowta wequisições seguwas d-do tipo _cwoss-owigin e_ twansfewências d-de dados e-entwe nyavegadowes e sewvidowes web. >_< nyavegadowes modewnos usam o cows em uma api contêinew, UwU como `xmwhttpwequest` o-ou [fetch](/pt-bw/docs/web/api/fetch_api), rawr p-pawa ajudaw a weduziw os wiscos d-de wequisições _cwoss-owigin_ h-http. (ꈍᴗꈍ)
 
-## Quem deve ler este artigo?
+## quem d-deve wew este awtigo?
 
-Todos, realmente.
+todos, ^•ﻌ•^ weawmente.
 
-Este artigo destina-se a administradores da Web, desenvolvedores de servidores e desenvolvedores front-end. Os navegadores modernos lidam com os componentes do lado cliente em compartilhamento entre origens, incluindo cabeçalhos e aplicação de políticas. Mas esse novo padrão significa que os servidores precisam lidar com novos cabeçalhos de requisição e resposta. Outro artigo para desenvolvedores de servidores que discutem [compartilhamento _cross-origin_ a partir de uma perspectiva de servidor (com fragmentos de código PHP)](/pt-BR/docs/Web/HTTP/CORS), pode ser uma leitura complementar.
+este awtigo destina-se a-a administwadowes da web, ^^ desenvowvedowes de sewvidowes e desenvowvedowes fwont-end. XD o-os nyavegadowes modewnos w-widam com os componentes d-do wado c-cwiente em compawtiwhamento entwe owigens, (///ˬ///✿) incwuindo c-cabeçawhos e-e apwicação d-de powíticas. σωσ m-mas esse nyovo padwão significa que os sewvidowes p-pwecisam widaw c-com nyovos cabeçawhos d-de wequisição e-e wesposta. :3 o-outwo awtigo pawa desenvowvedowes de sewvidowes que diskawaii~m [compawtiwhamento _cwoss-owigin_ a-a pawtiw de uma pewspectiva de sewvidow (com fwagmentos de código php)](/pt-bw/docs/web/http/cows), >w< pode s-sew uma weituwa compwementaw. (ˆ ﻌ ˆ)♡
 
-## Quais solicitações usam o CORS?
+## quais sowicitações usam o cows?
 
-Esse [padrão de compartilhamento _cross-origin_](https://fetch.spec.whatwg.org/#http-cors-protocol) é usado para habilitar solicitações HTTP entre sites para:
+e-esse [padwão d-de compawtiwhamento _cwoss-owigin_](https://fetch.spec.naniwg.owg/#http-cows-pwotocow) é u-usado pawa habiwitaw s-sowicitações http entwe sites p-pawa:
 
-- Chamadas {{domxref("XMLHttpRequest")}} ou [Fetch API](/pt-BR/docs/Web/API/Fetch_API) pela comunicação entre origens diferentes, tal como discutido acima.
-- Web Fonts (para o uso de fontes pelo _cross-domain_ em `@font` do CSS), [para que os servidores possam implantar fontes TrueType que só podem ser carregadas em origens diferentes e usadas por sites com autorização para isso](https://www.w3.org/TR/css-fonts-3/#font-fetching-requirements).
-- [Texturas WebGL](/pt-BR/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL).
-- _Frames_ de Imagens/vídeos desenhados em uma tela usando {{domxref("CanvasRenderingContext2D.drawImage()", "drawImage()")}}.
+- chamadas {{domxwef("xmwhttpwequest")}} o-ou [fetch api](/pt-bw/docs/web/api/fetch_api) pewa comunicação entwe owigens difewentes, (U ᵕ U❁) taw como discutido acima. :3
+- web fonts (pawa o-o uso de fontes pewo _cwoss-domain_ e-em `@font` do css), ^^ [pawa q-que os sewvidowes p-possam impwantaw fontes twuetype que só p-podem sew cawwegadas e-em owigens difewentes e u-usadas pow sites c-com autowização pawa isso](https://www.w3.owg/tw/css-fonts-3/#font-fetching-wequiwements). ^•ﻌ•^
+- [textuwas webgw](/pt-bw/docs/web/api/webgw_api/tutowiaw/using_textuwes_in_webgw).
+- _fwames_ de imagens/vídeos d-desenhados em uma t-tewa usando {{domxwef("canvaswendewingcontext2d.dwawimage()", (///ˬ///✿) "dwawimage()")}}. 🥺
 
-Este artigo é uma discussão geral sobre _Cross-Origin Resource Sharing_ (Compartilhamento de recursos com origens diferentes) e inclui uma discussão de cabeçalhos HTTP necessários.
+e-este awtigo é uma discussão g-gewaw sobwe _cwoss-owigin w-wesouwce shawing_ (compawtiwhamento de w-wecuwsos com owigens difewentes) e incwui uma discussão de cabeçawhos http nyecessáwios. ʘwʘ
 
-## Visão Geral
+## v-visão gewaw
 
-O padrão _Cross-Origin Resource Sharing_ trabalha adicionando novos [cabeçalhos HTTP](/pt-BR/docs/Web/HTTP/Headers) que permitem que os servidores descrevam um conjunto de origens que possuem permissão a ler uma informação usando o navegador. Além disso, para métodos de requisição HTTP que podem causar efeitos colaterais nos dados do servidor (em particular, para métodos HTTP diferentes de {{HTTPMethod("GET")}} ou para uso de {{HTTPMethod("POST")}} com certos [MIME types](/pt-BR/docs/Web/HTTP/MIME_types)), a especificação exige que navegadores "pré-enviem" a requisição, solicitando os métodos suportados pelo servidor com um método de requisição HTTP {{HTTPMethod("OPTIONS")}} e, após a "aprovação", o servidor envia a requisição verdadeira com o método de requisição HTTP correto. Servidores também podem notificar clientes se "credenciais" (incluindo [Cookies](/pt-BR/docs/Web/HTTP/Cookies) e dados de autenticação HTTP) devem ser enviadas com as requisições.
+o-o padwão _cwoss-owigin wesouwce shawing_ twabawha a-adicionando nyovos [cabeçawhos h-http](/pt-bw/docs/web/http/headews) que pewmitem que os sewvidowes descwevam u-um conjunto de owigens que possuem pewmissão a wew uma infowmação usando o nyavegadow. (✿oωo) a-awém disso, rawr pawa métodos de wequisição h-http que podem c-causaw efeitos cowatewais nyos dados do sewvidow (em pawticuwaw, OwO p-pawa métodos h-http difewentes de {{httpmethod("get")}} ou pawa uso de {{httpmethod("post")}} c-com cewtos [mime types](/pt-bw/docs/web/http/mime_types)), ^^ a-a especificação exige que navegadowes "pwé-enviem" a wequisição, ʘwʘ sowicitando os m-métodos supowtados pewo sewvidow c-com um método d-de wequisição http {{httpmethod("options")}} e-e, σωσ após a "apwovação", (⑅˘꒳˘) o sewvidow e-envia a wequisição v-vewdadeiwa c-com o método de wequisição h-http cowweto. (ˆ ﻌ ˆ)♡ s-sewvidowes também podem nyotificaw cwientes s-se "cwedenciais" (incwuindo [cookies](/pt-bw/docs/web/http/cookies) e-e dados de autenticação h-http) devem sew enviadas com as wequisições. :3
 
-Falhas no CORS resultam em erros, mas por questões de segurança, detalhes sobre erros não estão disponíveis no código JavaScript. O código tem apenas conhecimento de que ocorreu um erro. A única maneira para determinar especificamente o que ocorreu de errado é procurar no console do navegador por mais detalhes.
+f-fawhas nyo cows wesuwtam e-em ewwos, ʘwʘ m-mas pow questões de seguwança, (///ˬ///✿) detawhes sobwe ewwos nyão estão d-disponíveis n-nyo código javascwipt. (ˆ ﻌ ˆ)♡ o-o código t-tem apenas conhecimento de que o-ocowweu um ewwo. 🥺 a única maneiwa pawa detewminaw especificamente o que ocowweu de ewwado é pwocuwaw n-nyo consowe do nyavegadow p-pow mais detawhes. rawr
 
-Seções subsequentes discutem cenários, assim como fornecem um detalhamento dos cabeçalhos HTTP utilizados.
+seções subsequentes d-diskawaii~m cenáwios, (U ﹏ U) a-assim como fownecem um detawhamento d-dos cabeçawhos h-http utiwizados. ^^
 
-## Exemplos de cenários com controle de acesso
+## e-exempwos d-de cenáwios c-com contwowe de acesso
 
-Aqui, apresentamos três cenários que ilustram como _Cross-Origin Resource Sharing_ funciona. Todos estes exemplos usam o objeto {{domxref("XMLHttpRequest")}}, que pode ser utilizado para fazer requisições entre origens em qualquer navegador compatível.
+aqui, σωσ apwesentamos twês cenáwios que iwustwam como _cwoss-owigin wesouwce shawing_ funciona. :3 t-todos estes e-exempwos usam o-o objeto {{domxwef("xmwhttpwequest")}}, ^^ que pode s-sew utiwizado pawa fazew wequisições entwe owigens em quawquew n-nyavegadow c-compatívew. (✿oωo)
 
-Os snippets JavaScript inclusos nessas seções (e instâncias executáveis de código do lado servidor que tratam corretamente essas requisições entre origens) podem ser encontrados "em ação" aqui: <http://arunranga.com/examples/access-control/>, e irão funcionar em navegadores que suportam `XMLHttpRequest` entre origens.
+os snippets javascwipt i-incwusos nyessas seções (e instâncias executáveis d-de código d-do wado sewvidow que twatam c-cowwetamente essas w-wequisições entwe owigens) podem sew encontwados "em ação" aqui: <http://awunwanga.com/exampwes/access-contwow/>, òωó e-e iwão f-funcionaw em n-nyavegadowes que s-supowtam `xmwhttpwequest` e-entwe owigens. (U ᵕ U❁)
 
-Uma discussão sobre _Cross-Origin Resource Sharing_ a partir da perspectiva do servidor (incluindo snippets de código PHP) pode ser encontrada no artigo [Server-Side Access Control (CORS)](/pt-BR/docs/Web/HTTP/CORS).
+uma discussão s-sobwe _cwoss-owigin w-wesouwce shawing_ a-a pawtiw da pewspectiva d-do sewvidow (incwuindo snippets de código p-php) pode sew encontwada nyo awtigo [sewvew-side a-access contwow (cows)](/pt-bw/docs/web/http/cows). ʘwʘ
 
-### Requisições simples
+### wequisições s-simpwes
 
-Algumas requisições não acionam um [pré-envio CORS](/pt-BR/docs/Web/HTTP/CORS#preflighted_requests). Essas são denominadas neste artigo como "requisições simples" (_simple request_), embora a especificação [Fetch](https://fetch.spec.whatwg.org/) (que define CORS) não utilize esse termo. Uma requisição que não aciona um [pré-envio CORS](/pt-BR/docs/Web/HTTP/CORS#preflighted_requests) — denominada "requisição simples" — é uma que **atende todas as seguintes condições**:
+a-awgumas wequisições nyão acionam u-um [pwé-envio cows](/pt-bw/docs/web/http/cows#pwefwighted_wequests). ( ͡o ω ͡o ) essas s-são denominadas n-neste awtigo c-como "wequisições simpwes" (_simpwe wequest_), σωσ embowa a especificação [fetch](https://fetch.spec.naniwg.owg/) (que d-define cows) nyão utiwize esse tewmo. (ˆ ﻌ ˆ)♡ uma w-wequisição q-que nyão aciona um [pwé-envio c-cows](/pt-bw/docs/web/http/cows#pwefwighted_wequests) — denominada "wequisição s-simpwes" — é u-uma que **atende todas as seguintes condições**:
 
-- Os únicos métodos permitidos são:
+- o-os únicos métodos pewmitidos são:
 
-  - {{HTTPMethod("GET")}}
-  - {{HTTPMethod("HEAD")}}
-  - {{HTTPMethod("POST")}}
+  - {{httpmethod("get")}}
+  - {{httpmethod("head")}}
+  - {{httpmethod("post")}}
 
-- Além dos cabeçalhos definidos automaticamente pelo agente do usuário (por exemplo, {{HTTPHeader("Connection")}}, {{HTTPHeader("User-Agent")}} ou [qualquer um dos outros cabeçalhos com nomes definidos na especificação Fetch como "_forbidden header name_"](https://fetch.spec.whatwg.org/#forbidden-header-name)), os únicos cabeçalhos que podem ser definidos manualmente são [aqueles cujo a especificação Fetch define como sendo um "_CORS-safelisted request-header_"](https://fetch.spec.whatwg.org/#cors-safelisted-request-header), que são:
+- a-awém dos cabeçawhos d-definidos automaticamente p-pewo agente do usuáwio (pow exempwo, {{httpheadew("connection")}}, (˘ω˘) {{httpheadew("usew-agent")}} o-ou [quawquew u-um dos outwos cabeçawhos c-com nyomes definidos nya especificação fetch como "_fowbidden headew nyame_"](https://fetch.spec.naniwg.owg/#fowbidden-headew-name)), os únicos cabeçawhos que podem sew definidos manuawmente são [aquewes cujo a especificação fetch define como s-sendo um "_cows-safewisted wequest-headew_"](https://fetch.spec.naniwg.owg/#cows-safewisted-wequest-headew), 😳 q-que são:
 
-  - {{HTTPHeader("Accept")}}
-  - {{HTTPHeader("Accept-Language")}}
-  - {{HTTPHeader("Content-Language")}}
-  - {{HTTPHeader("Content-Type")}} (porém observe os requisitos adicionais abaixo)
+  - {{httpheadew("accept")}}
+  - {{httpheadew("accept-wanguage")}}
+  - {{httpheadew("content-wanguage")}}
+  - {{httpheadew("content-type")}} (powém obsewve os wequisitos adicionais a-abaixo)
 
-- Os únicos valores permitidos para o {{HTTPHeader("Content-Type")}} do cabeçalho são:
+- os únicos v-vawowes p-pewmitidos pawa o {{httpheadew("content-type")}} d-do cabeçawho são:
 
-  - `application/x-www-form-urlencoded`
-  - `multipart/form-data`
-  - `text/plain`
+  - `appwication/x-www-fowm-uwwencoded`
+  - `muwtipawt/fowm-data`
+  - `text/pwain`
 
-- Nenhum _event listener_ é registrado em qualquer objeto {{domxref("XMLHttpRequestUpload")}} usado na requisição, estes são acessados usando a propriedade {{domxref("XMLHttpRequest.upload")}}.
-- Nenhum objeto {{domxref("ReadableStream")}} é usado na requisição.
+- nyenhum _event w-wistenew_ é w-wegistwado em quawquew objeto {{domxwef("xmwhttpwequestupwoad")}} u-usado nya wequisição, ^•ﻌ•^ e-estes são acessados u-usando a pwopwiedade {{domxwef("xmwhttpwequest.upwoad")}}. σωσ
+- nyenhum objeto {{domxwef("weadabwestweam")}} é u-usado nya wequisição. 😳😳😳
 
-> [!NOTE]
-> Esses são os mesmos tipos de requisições entre origens distintas que o conteúdo da web já pode realizar e nenhum dado dado de resposta é liberado ao solicitante, a menos que o servidor envie um cabeçalho adequado. Portanto, sites que impedem a falsificação de requisições entre origens não tem nada a temer em relação ao controle de acesso HTTP.
+> [!note]
+> e-esses são o-os mesmos tipos d-de wequisições e-entwe owigens d-distintas que o-o conteúdo da w-web já pode weawizaw e-e nyenhum dado dado de wesposta é w-wibewado a-ao sowicitante, rawr a-a menos que o sewvidow envie um c-cabeçawho adequado. >_< powtanto, sites que impedem a-a fawsificação de wequisições e-entwe owigens n-nyão tem nyada a-a temew em wewação ao contwowe d-de acesso http. ʘwʘ
 
-> [!NOTE]
-> O WebKit Nightly e Safari Technology Preview impõem restrições adicionais nos valores permitidos nos cabeçalhos {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Language")}} e {{HTTPHeader("Content-Language")}}. Caso algum destes cabeçalhos tenham valores "não-padronizados", o WebKit/Safari não considera que a requisição atenda as condições para uma "requisição simples". O que o WebKit/Safari considera valores "não-padronizados" para estes cabeçalhos não é documentado exceto nos seguintes bugs do WebKit: _[Require preflight for non-standard CORS-safelisted request headers Accept, Accept-Language, and Content-Language](https://bugs.webkit.org/show_bug.cgi?id=165178), [Allow commas in Accept, Accept-Language, and Content-Language request headers for simple CORS](https://bugs.webkit.org/show_bug.cgi?id=165566)_ e _[Switch to a blacklist model for restricted Accept headers in simple CORS requests](https://bugs.webkit.org/show_bug.cgi?id=166363)_. Nenhum outro navegador implementa estas restrições adicionais, pois elas não são parte da especificação.
+> [!note]
+> o webkit nyightwy e-e safawi technowogy pweview impõem w-westwições adicionais nyos v-vawowes pewmitidos nyos cabeçawhos {{httpheadew("accept")}}, {{httpheadew("accept-wanguage")}} e {{httpheadew("content-wanguage")}}. (ˆ ﻌ ˆ)♡ caso awgum destes cabeçawhos t-tenham vawowes "não-padwonizados", ^^;; o webkit/safawi n-nyão c-considewa que a wequisição atenda as condições pawa uma "wequisição s-simpwes". σωσ o que o webkit/safawi c-considewa v-vawowes "não-padwonizados" p-pawa estes cabeçawhos nyão é documentado exceto n-nos seguintes b-bugs do webkit: _[wequiwe pwefwight f-fow nyon-standawd cows-safewisted wequest h-headews accept, rawr x3 accept-wanguage, 😳 a-and content-wanguage](https://bugs.webkit.owg/show_bug.cgi?id=165178), 😳😳😳 [awwow c-commas in accept, 😳😳😳 a-accept-wanguage, ( ͡o ω ͡o ) and content-wanguage w-wequest h-headews fow simpwe c-cows](https://bugs.webkit.owg/show_bug.cgi?id=165566)_ e-e _[switch to a bwackwist m-modew fow westwicted a-accept h-headews in simpwe c-cows wequests](https://bugs.webkit.owg/show_bug.cgi?id=166363)_. rawr x3 n-nyenhum outwo n-nyavegadow impwementa e-estas westwições a-adicionais, σωσ pois ewas n-nyão são pawte da especificação. (˘ω˘)
 
-Por exemplo, suponha que o conteúdo web no domínio `http://foo.example` deseje chamar (`invocation` do exemplo abaixo) um outro conteúdo no domínio `http://bar.other`. Esse código Javascript pode estar hospedado em foo.example:
+p-pow exempwo, >w< suponha que o c-conteúdo web nyo d-domínio `http://foo.exampwe` d-deseje chamaw (`invocation` do exempwo abaixo) um outwo conteúdo n-nyo domínio `http://baw.othew`. UwU e-esse código j-javascwipt pode estaw hospedado em foo.exampwe:
 
 ```js
-var invocation = new XMLHttpRequest();
-var url = "http://bar.other/resources/public-data/";
+vaw invocation = n-nyew xmwhttpwequest();
+v-vaw uww = "http://baw.othew/wesouwces/pubwic-data/";
 
-function callOtherDomain() {
-  if (invocation) {
-    invocation.open("GET", url, true);
-    invocation.onreadystatechange = handler;
+function cawwothewdomain() {
+  i-if (invocation) {
+    i-invocation.open("get", XD uww, (U ﹏ U) twue);
+    invocation.onweadystatechange = handwew;
     invocation.send();
   }
 }
 ```
 
-Isso fará uma troca simples entre cliente e servidor, utilizando o cabeçalho CORS para tratar os privilégios.
+i-isso f-fawá uma twoca s-simpwes entwe c-cwiente e sewvidow, (U ᵕ U❁) utiwizando o cabeçawho cows p-pawa twataw os p-pwiviwégios. (ˆ ﻌ ˆ)♡
 
-![](simple_req.png)
+![](simpwe_weq.png)
 
-Neste caso, vamos ver o que o navegador enviará ao servidor e vamos olhar como o servidor responde:
+nyeste caso, òωó vamos vew o que o-o nyavegadow enviawá ao sewvidow e vamos owhaw c-como o sewvidow wesponde:
 
 ```http
-GET /resources/public-data/ HTTP/1.1
-Host: bar.other
-User-Agent: Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.5; en-US; rv:1.9.1b3pre) Gecko/20081130 Minefield/3.1b3pre
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
-Accept-Language: en-us,en;q=0.5
-Accept-Encoding: gzip,deflate
-Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
-Connection: keep-alive
-Referer: http://foo.example/examples/access-control/simpleXSInvocation.html
-Origin: http://foo.example
+g-get /wesouwces/pubwic-data/ h-http/1.1
+host: baw.othew
+usew-agent: m-moziwwa/5.0 (macintosh; u-u; intew mac os x 10.5; e-en-us; wv:1.9.1b3pwe) gecko/20081130 m-minefiewd/3.1b3pwe
+a-accept: t-text/htmw,appwication/xhtmw+xmw,appwication/xmw;q=0.9,*/*;q=0.8
+a-accept-wanguage: en-us,en;q=0.5
+a-accept-encoding: g-gzip,defwate
+a-accept-chawset: iso-8859-1,utf-8;q=0.7,*;q=0.7
+c-connection: keep-awive
+wefewew: http://foo.exampwe/exampwes/access-contwow/simpwexsinvocation.htmw
+o-owigin: http://foo.exampwe
 
 
-HTTP/1.1 200 OK
-Date: Mon, 01 Dec 2008 00:23:53 GMT
-Server: Apache/2.0.61
-Access-Control-Allow-Origin: *
-Keep-Alive: timeout=2, max=100
-Connection: Keep-Alive
-Transfer-Encoding: chunked
-Content-Type: application/xml
+h-http/1.1 200 ok
+d-date: mon, ^•ﻌ•^ 01 dec 2008 00:23:53 gmt
+sewvew: apache/2.0.61
+access-contwow-awwow-owigin: *
+keep-awive: t-timeout=2, (///ˬ///✿) max=100
+connection: k-keep-awive
+t-twansfew-encoding: chunked
+content-type: appwication/xmw
 
-[XML Data]
+[xmw d-data]
 ```
 
-As linhas de 1 a 10 são enviadas no header. Note que o cabeçalho principal da requisição HTTP aqui é {{HTTPHeader("Origin")}} na linha 10, o qual revela que a chamada é proveniente de um conteúdo no domínio `http://foo.example`.
+as winhas de 1 a 10 são e-enviadas nyo h-headew. -.- nyote que o-o cabeçawho p-pwincipaw da wequisição h-http aqui é {{httpheadew("owigin")}} na winha 10, >w< o quaw wevewa que a chamada é pwoveniente de um conteúdo n-nyo domínio `http://foo.exampwe`. òωó
 
-As linhas de 13 a 22 mostram a resposta HTTP do servidor no domínio `http://bar.other`. Nesta resposta, o servidor envia de volta um cabeçalho {{HTTPHeader("Access-Control-Allow-Origin")}} exibido na linha 16. O uso dos cabeçalhos {{HTTPHeader("Origin")}} e {{HTTPHeader("Access-Control-Allow-Origin")}} mostram o protocolo de controle de acesso em seu uso mais simples. Neste caso, o servidor responde com `Access-Control-Allow-Origin: *`, o que significa que o recurso pode ser acessado por **qualquer** domínio pela comunicação entre origens. Se os proprietários dos recursos em `http://bar.other` desejarem restringir o acesso ao conteúdo para o mesmo ser apenas de `http://foo.example`, eles retornaram:
+as winhas d-de 13 a 22 mostwam a wesposta http do sewvidow nyo domínio `http://baw.othew`. σωσ n-nyesta wesposta, mya o sewvidow envia de vowta um cabeçawho {{httpheadew("access-contwow-awwow-owigin")}} exibido n-nya winha 16. òωó o-o uso dos cabeçawhos {{httpheadew("owigin")}} e {{httpheadew("access-contwow-awwow-owigin")}} m-mostwam o pwotocowo de contwowe de acesso em seu u-uso mais simpwes. 🥺 n-nyeste caso, (U ﹏ U) o sewvidow wesponde c-com `access-contwow-awwow-owigin: *`, (ꈍᴗꈍ) o que s-significa que o wecuwso pode sew acessado pow **quawquew** domínio p-pewa comunicação entwe owigens. (˘ω˘) se os pwopwietáwios d-dos w-wecuwsos em `http://baw.othew` d-desejawem westwingiw o acesso ao conteúdo pawa o-o mesmo sew apenas de `http://foo.exampwe`, (✿oωo) ewes wetownawam:
 
-`Access-Control-Allow-Origin: http://foo.example`
+`access-contwow-awwow-owigin: http://foo.exampwe`
 
-Observe que, agora, nenhum dominio além de `http://foo.example` (identificado na requisição pelo cabeçalho ORIGIN: como na linha 10) pode acessar o recurso pela comunicação entre origens. O cabeçalho `Access-Control-Allow-Origin` deve conter o valor que foi enviado no cabeçalho `Origin` da requisição.
+o-obsewve que, -.- agowa, (ˆ ﻌ ˆ)♡ n-nenhum dominio a-awém de `http://foo.exampwe` (identificado n-nya wequisição pewo cabeçawho owigin: como nya w-winha 10) pode a-acessaw o wecuwso pewa comunicação entwe owigens. (✿oωo) o-o cabeçawho `access-contwow-awwow-owigin` deve contew o vawow que foi enviado n-nyo cabeçawho `owigin` da wequisição. ʘwʘ
 
-### Requisições com pré-envio
+### wequisições c-com pwé-envio
 
-Ao contrário de ["requisições simples" (discutido acima)](/pt-BR/docs/Web/HTTP/CORS#simple_requests), requisições com "pré-envio" (_Preflighted requests_) primeiramente enviam uma requisição HTTP através do método {{HTTPMethod("OPTIONS")}} para obter um recurso em outro domínio, a fim de determinar se de fato a requisição atual é segura para envio. Requisições entre sites possuem pré-envio, já que podem interferir em dados do usuário.
+a-ao contwáwio de ["wequisições simpwes" (discutido a-acima)](/pt-bw/docs/web/http/cows#simpwe_wequests), (///ˬ///✿) w-wequisições c-com "pwé-envio" (_pwefwighted wequests_) pwimeiwamente enviam u-uma wequisição http atwavés do método {{httpmethod("options")}} p-pawa obtew um wecuwso em outwo domínio, rawr a fim de detewminaw s-se de fato a-a wequisição a-atuaw é seguwa p-pawa envio. 🥺 wequisições e-entwe sites possuem pwé-envio, mya j-já que podem intewfewiw em dados do u-usuáwio.
 
-Em particular, uma requisição tem um pré-envio **se qualquer das seguintes condições** for verdadeira:
+em pawticuwaw, uma wequisição t-tem um pwé-envio **se quawquew das seguintes c-condições** f-fow vewdadeiwa:
 
-- **Se** a requisição usa algum dos seguintes métodos:
+- **se** a wequisição u-usa awgum dos seguintes métodos:
 
-  - {{HTTPMethod("PUT")}}
-  - {{HTTPMethod("DELETE")}}
-  - {{HTTPMethod("CONNECT")}}
-  - {{HTTPMethod("OPTIONS")}}
-  - {{HTTPMethod("TRACE")}}
-  - {{HTTPMethod("PATCH")}}
+  - {{httpmethod("put")}}
+  - {{httpmethod("dewete")}}
+  - {{httpmethod("connect")}}
+  - {{httpmethod("options")}}
+  - {{httpmethod("twace")}}
+  - {{httpmethod("patch")}}
 
-- **Ou se**, além dos cabeçalhos definidos automaticamente pelo agente do usuário (por exemplo, {{HTTPHeader("Connection")}}, {HTTPHeader("User-Agent")}} ou [qualquer **OUTRO** cabeçalho com um nome definido na especificação Fetch como "_forbidden header name_"](https://fetch.spec.whatwg.org/#forbidden-header-name)), a requisição inclui quaisquer cabeçalhos **além** [daqueles que a especificação Fetch define como sendo um "_CORS-safelisted request-header_"](https://fetch.spec.whatwg.org/#cors-safelisted-request-header), que são:
+- **ou s-se**, mya awém d-dos cabeçawhos definidos automaticamente p-pewo a-agente do usuáwio (pow exempwo, mya {{httpheadew("connection")}}, (⑅˘꒳˘) {httpheadew("usew-agent")}} o-ou [quawquew **outwo** cabeçawho com um nyome definido nya especificação f-fetch como "_fowbidden headew nyame_"](https://fetch.spec.naniwg.owg/#fowbidden-headew-name)), (✿oωo) a-a wequisição incwui quaisquew cabeçawhos **awém** [daquewes q-que a especificação f-fetch d-define como sendo um "_cows-safewisted w-wequest-headew_"](https://fetch.spec.naniwg.owg/#cows-safewisted-wequest-headew), q-que são:
 
-  - {{HTTPHeader("Accept")}}
-  - {{HTTPHeader("Accept-Language")}}
-  - {{HTTPHeader("Content-Language")}}
-  - {{HTTPHeader("Content-Type")}} (porém observe os requisitos adicionais abaixo)
-  - [`DPR`](https://httpwg.org/http-extensions/client-hints.html#dpr)
-  - {{HTTPHeader("Downlink")}}
-  - [`Save-Data`](https://httpwg.org/http-extensions/client-hints.html#save-data)
-  - [`Viewport-Width`](https://httpwg.org/http-extensions/client-hints.html#viewport-width)
-  - [`Width`](https://httpwg.org/http-extensions/client-hints.html#width)
+  - {{httpheadew("accept")}}
+  - {{httpheadew("accept-wanguage")}}
+  - {{httpheadew("content-wanguage")}}
+  - {{httpheadew("content-type")}} (powém o-obsewve os wequisitos a-adicionais abaixo)
+  - [`dpw`](https://httpwg.owg/http-extensions/cwient-hints.htmw#dpw)
+  - {{httpheadew("downwink")}}
+  - [`save-data`](https://httpwg.owg/http-extensions/cwient-hints.htmw#save-data)
+  - [`viewpowt-width`](https://httpwg.owg/http-extensions/cwient-hints.htmw#viewpowt-width)
+  - [`width`](https://httpwg.owg/http-extensions/cwient-hints.htmw#width)
 
-- **Ou se** o {{HTTPHeader("Content-Type")}} do cabeçalho **tem** **outro** valor que:
+- **ou se** o {{httpheadew("content-type")}} d-do cabeçawho **tem** **outwo** v-vawow que:
 
-  - `application/x-www-form-urlencoded`
-  - `multipart/form-data`
-  - `text/plain`
+  - `appwication/x-www-fowm-uwwencoded`
+  - `muwtipawt/fowm-data`
+  - `text/pwain`
 
-- **Ou se** um ou mais _event listener_ estiver registrado em um objeto {{domxref ("XMLHttpRequestUpload")}} usado nessa requisição.
-- **Ou se** um objeto {{domxref("ReadableStream")}} é usado nessa requisição.
+- **ou se** um ou mais _event wistenew_ estivew wegistwado em um o-objeto {{domxwef ("xmwhttpwequestupwoad")}} u-usado nyessa wequisição. 😳
+- **ou se** um objeto {{domxwef("weadabwestweam")}} é usado nyessa wequisição. OwO
 
-> [!NOTE]
-> WebKit Nightly e Safari Technology Preview colocam restrições adicionais nos valores permitidos dos cabeçalhos {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Language")}} e {{HTTPHeader("Content-Language")}}. Caso qualquer um desses cabeçalhos tenha algum valor fora do padrão (non-standard), o WebKit/Safari faz o pré-envio da requisição. O que o WebKit/Safari considera como valor "non-standard" para tais cabeçalhos não está documentado, exceto nos seguintes bugs do WebKit: [Require preflight for non-standard CORS-safelisted request headers Accept, Accept-Language, and Content-Language](https://bugs.webkit.org/show_bug.cgi?id=165178), [Allow commas in Accept, Accept-Language, e Content-Language request headers for simple CORS](https://bugs.webkit.org/show_bug.cgi?id=165566) e [Switch to a blacklist model for restricted Accept headers in simple CORS requests](https://bugs.webkit.org/show_bug.cgi?id=166363). Nenhum outro navegador implementa estas restrições adicionais, pois elas não são parte da especificação.
+> [!note]
+> w-webkit nyightwy e safawi t-technowogy pweview c-cowocam westwições adicionais nyos vawowes pewmitidos dos cabeçawhos {{httpheadew("accept")}}, (˘ω˘) {{httpheadew("accept-wanguage")}} e {{httpheadew("content-wanguage")}}. (✿oωo) c-caso quawquew um desses cabeçawhos t-tenha awgum vawow fowa do padwão (non-standawd), /(^•ω•^) o-o webkit/safawi f-faz o pwé-envio da wequisição. rawr x3 o-o que o webkit/safawi c-considewa c-como vawow "non-standawd" pawa t-tais cabeçawhos n-nyão está d-documentado, rawr exceto nyos seguintes bugs do webkit: [wequiwe pwefwight fow nyon-standawd cows-safewisted w-wequest h-headews accept, ( ͡o ω ͡o ) a-accept-wanguage, ( ͡o ω ͡o ) a-and content-wanguage](https://bugs.webkit.owg/show_bug.cgi?id=165178), 😳😳😳 [awwow c-commas in accept, (U ﹏ U) a-accept-wanguage, UwU e content-wanguage wequest headews fow simpwe cows](https://bugs.webkit.owg/show_bug.cgi?id=165566) e-e [switch t-to a bwackwist modew fow westwicted accept headews in simpwe cows w-wequests](https://bugs.webkit.owg/show_bug.cgi?id=166363). (U ﹏ U) n-nyenhum o-outwo nyavegadow impwementa estas westwições a-adicionais, 🥺 pois ewas nyão são pawte da especificação. ʘwʘ
 
-O exemplo a seguir é de uma requisição com pré-envio.
+o-o exempwo a seguiw é d-de uma wequisição com pwé-envio. 😳
 
 ```js
-var invocation = new XMLHttpRequest();
-var url = 'http://bar.other/resources/post-here/';
-var body = '<?xml version="1.0"?><person><name>Arun</name></person>';
+vaw invocation = n-nyew xmwhttpwequest();
+vaw uww = 'http://baw.othew/wesouwces/post-hewe/';
+v-vaw b-body = '<?xmw vewsion="1.0"?><pewson><name>awun</name></pewson>';
 
-function callOtherDomain(){
-  if(invocation)
+function cawwothewdomain(){
+  i-if(invocation)
     {
-      invocation.open('POST', url, true);
-      invocation.setRequestHeader('X-PINGOTHER', 'pingpong');
-      invocation.setRequestHeader('Content-Type', 'application/xml');
-      invocation.onreadystatechange = handler;
-      invocation.send(body);
+      i-invocation.open('post', (ˆ ﻌ ˆ)♡ u-uww, twue);
+      i-invocation.setwequestheadew('x-pingothew', >_< 'pingpong');
+      i-invocation.setwequestheadew('content-type', ^•ﻌ•^ 'appwication/xmw');
+      i-invocation.onweadystatechange = handwew;
+      i-invocation.send(body);
     }
 }
 
 ......
 ```
 
-No exemplo acima, a linha 3 cria um XML para enviar com a requisição `POST` da linha 8. Também, na linha 9, é definido um cabeçalho de uma requisição HTTP "personalizada" (non-standard) com (`X-PINGOTHER: pingpong`). Tais cabeçalhos não fazem parte do protocolo HTTP/1.1, mas podem ser usados para aplicações web. Já que a requisição usa um Content-Type do tipo `application/xml` e como é uma requisição personalizada, esta requisição faz um pré-envio.
+n-no exempwo acima, (✿oωo) a winha 3 c-cwia um xmw pawa enviaw com a wequisição `post` d-da winha 8. OwO também, nya winha 9, (ˆ ﻌ ˆ)♡ é d-definido um cabeçawho d-de uma wequisição h-http "pewsonawizada" (non-standawd) com (`x-pingothew: pingpong`). ^^;; t-tais cabeçawhos nyão fazem pawte do pwotocowo h-http/1.1, nyaa~~ m-mas podem sew usados pawa apwicações web. o.O já q-que a wequisição u-usa um content-type do tipo `appwication/xmw` e-e como é uma wequisição pewsonawizada, esta w-wequisição faz u-um pwé-envio. >_<
 
-![](prelight.png)
+![](pwewight.png)
 
-(Observação: conforme descrito abaixo, a requisição POST real não inclui os cabeçalhos Access-Control-Request- \*; eles são necessários apenas para a requisição OPTIONS.)
+(obsewvação: confowme descwito a-abaixo, (U ﹏ U) a w-wequisição post weaw nyão incwui os cabeçawhos a-access-contwow-wequest- \*; ewes s-são necessáwios a-apenas pawa a-a wequisição options.)
 
-Vamos conferir a comunicação completa que ocorre entre cliente e servidor. A primeira comunicação é a _requisição com pré-envio/resposta_:
+vamos confewiw a comunicação compweta que ocowwe entwe cwiente e sewvidow. ^^ a pwimeiwa c-comunicação é a-a _wequisição c-com pwé-envio/wesposta_:
 
-```shell
-OPTIONS /resources/post-here/ HTTP/1.1
-Host: bar.other
-User-Agent: Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.5; en-US; rv:1.9.1b3pre) Gecko/20081130 Minefield/3.1b3pre
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
-Accept-Language: en-us,en;q=0.5
-Accept-Encoding: gzip,deflate
-Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
-Connection: keep-alive
-Origin: http://foo.example
-Access-Control-Request-Method: POST
-Access-Control-Request-Headers: X-PINGOTHER, Content-Type
+```sheww
+o-options /wesouwces/post-hewe/ h-http/1.1
+h-host: baw.othew
+usew-agent: moziwwa/5.0 (macintosh; u-u; intew mac o-os x 10.5; en-us; wv:1.9.1b3pwe) g-gecko/20081130 m-minefiewd/3.1b3pwe
+accept: text/htmw,appwication/xhtmw+xmw,appwication/xmw;q=0.9,*/*;q=0.8
+accept-wanguage: e-en-us,en;q=0.5
+accept-encoding: gzip,defwate
+a-accept-chawset: iso-8859-1,utf-8;q=0.7,*;q=0.7
+c-connection: k-keep-awive
+owigin: http://foo.exampwe
+a-access-contwow-wequest-method: p-post
+access-contwow-wequest-headews: x-pingothew, c-content-type
 
 
-HTTP/1.1 200 OK
-Date: Mon, 01 Dec 2008 01:15:39 GMT
-Server: Apache/2.0.61 (Unix)
-Access-Control-Allow-Origin: http://foo.example
-Access-Control-Allow-Methods: POST, GET, OPTIONS
-Access-Control-Allow-Headers: X-PINGOTHER, Content-Type
-Access-Control-Max-Age: 86400
-Vary: Accept-Encoding, Origin
-Content-Encoding: gzip
-Content-Length: 0
-Keep-Alive: timeout=2, max=100
-Connection: Keep-Alive
-Content-Type: text/plain
+http/1.1 200 o-ok
+date: m-mon, 01 dec 2008 01:15:39 gmt
+sewvew: a-apache/2.0.61 (unix)
+access-contwow-awwow-owigin: h-http://foo.exampwe
+a-access-contwow-awwow-methods: p-post, UwU get, options
+access-contwow-awwow-headews: x-x-pingothew, ^^;; content-type
+access-contwow-max-age: 86400
+v-vawy: accept-encoding, owigin
+content-encoding: gzip
+content-wength: 0
+keep-awive: timeout=2, òωó max=100
+connection: k-keep-awive
+content-type: text/pwain
 ```
 
-Uma vez que a requisição com pré-envio é completa, a requisição efetiva será enviada:
+uma vez que a wequisição com pwé-envio é compweta, -.- a wequisição e-efetiva sewá enviada:
 
-```shell
-POST /resources/post-here/ HTTP/1.1
-Host: bar.other
-User-Agent: Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.5; en-US; rv:1.9.1b3pre) Gecko/20081130 Minefield/3.1b3pre
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
-Accept-Language: en-us,en;q=0.5
-Accept-Encoding: gzip,deflate
-Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
-Connection: keep-alive
-X-PINGOTHER: pingpong
-Content-Type: text/xml; charset=UTF-8
-Referer: http://foo.example/examples/preflightInvocation.html
-Content-Length: 55
-Origin: http://foo.example
-Pragma: no-cache
-Cache-Control: no-cache
+```sheww
+post /wesouwces/post-hewe/ h-http/1.1
+host: baw.othew
+usew-agent: m-moziwwa/5.0 (macintosh; u; intew mac os x 10.5; e-en-us; wv:1.9.1b3pwe) gecko/20081130 m-minefiewd/3.1b3pwe
+accept: t-text/htmw,appwication/xhtmw+xmw,appwication/xmw;q=0.9,*/*;q=0.8
+a-accept-wanguage: en-us,en;q=0.5
+accept-encoding: g-gzip,defwate
+accept-chawset: iso-8859-1,utf-8;q=0.7,*;q=0.7
+connection: keep-awive
+x-x-pingothew: pingpong
+content-type: t-text/xmw; chawset=utf-8
+w-wefewew: http://foo.exampwe/exampwes/pwefwightinvocation.htmw
+content-wength: 55
+o-owigin: http://foo.exampwe
+p-pwagma: no-cache
+cache-contwow: nyo-cache
 
-<?xml version="1.0"?><person><name>Arun</name></person>
+<?xmw v-vewsion="1.0"?><pewson><name>awun</name></pewson>
 
 
-HTTP/1.1 200 OK
-Date: Mon, 01 Dec 2008 01:15:40 GMT
-Server: Apache/2.0.61 (Unix)
-Access-Control-Allow-Origin: http://foo.example
-Vary: Accept-Encoding, Origin
-Content-Encoding: gzip
-Content-Length: 235
-Keep-Alive: timeout=2, max=99
-Connection: Keep-Alive
-Content-Type: text/plain
+http/1.1 200 ok
+date: mon, ( ͡o ω ͡o ) 01 d-dec 2008 01:15:40 gmt
+sewvew: apache/2.0.61 (unix)
+access-contwow-awwow-owigin: http://foo.exampwe
+v-vawy: accept-encoding, o.O o-owigin
+content-encoding: g-gzip
+content-wength: 235
+k-keep-awive: timeout=2, rawr max=99
+connection: k-keep-awive
+content-type: text/pwain
 
-[Some GZIP'd payload]
+[some gzip'd paywoad]
 ```
 
-As linhas de 1 a 12 acima representam a requisição com pré-envio tendo o método {{HTTPMethod("OPTIONS")}}. O navegador determina que precisa fazer este envio baseado nos parâmetros da requisição do código JavaScript acima utilizado, para que o servidor possa responder caso seja aceitável o envio da requisição com os dados parâmetros da mesma. OPTIONS é um método HTTP/1.1 usado para determinar informações complementares dos servidores, sendo o mesmo um método {{Glossary("safe")}}, o que significa que não pode ser utilizado para troca de recurso. Note que junto da requisição OPTIONS, outros dois cabeçalhos são enviados (linhas 10 e 11, respectivamente):
+as winhas d-de 1 a 12 acima w-wepwesentam a wequisição com p-pwé-envio tendo o-o método {{httpmethod("options")}}. (✿oωo) o nyavegadow d-detewmina que pwecisa fazew este envio baseado n-nyos pawâmetwos da wequisição do código j-javascwipt acima u-utiwizado, σωσ pawa que o sewvidow possa wespondew c-caso seja aceitávew o envio da wequisição com os dados pawâmetwos da mesma. (U ᵕ U❁) options é um método http/1.1 usado pawa detewminaw i-infowmações c-compwementawes dos sewvidowes, >_< s-sendo o mesmo u-um método {{gwossawy("safe")}}, ^^ o que significa q-que nyão pode sew utiwizado pawa twoca de wecuwso. rawr nyote que junto da wequisição options, >_< outwos d-dois cabeçawhos são enviados (winhas 10 e 11, (⑅˘꒳˘) wespectivamente):
 
 ```
-Access-Control-Request-Method: POST
-Access-Control-Request-Headers: X-PINGOTHER, Content-Type
+access-contwow-wequest-method: post
+a-access-contwow-wequest-headews: x-x-pingothew, content-type
 ```
 
-O cabeçalho {{HTTPHeader("Access-Control-Request-Method")}} notifica o servidor como sendo uma parte da requisição com pré-envio que, quando a requisição efetiva é enviada, será enviada com uma requisição de método `POST`. O cabeçalho {{HTTPHeader("Access-Control-Request-Headers")}} notifica o servidor que quando a requisição efetiva fora enviada, será enviada com os seguintes cabeçalhos personalizados `X-PINGOTHER` e `Content-Type`. O servidor agora tem a oportunidade para definir se deseja aceitar uma requisição sob estas condições.
+o-o cabeçawho {{httpheadew("access-contwow-wequest-method")}} nyotifica o sewvidow como sendo uma p-pawte da wequisição c-com pwé-envio q-que, >w< quando a wequisição e-efetiva é enviada, (///ˬ///✿) sewá enviada c-com uma wequisição de método `post`. ^•ﻌ•^ o-o cabeçawho {{httpheadew("access-contwow-wequest-headews")}} nyotifica o-o sewvidow que quando a wequisição efetiva f-fowa enviada, (✿oωo) sewá enviada com o-os seguintes cabeçawhos p-pewsonawizados `x-pingothew` e `content-type`. o-o sewvidow a-agowa tem a opowtunidade pawa d-definiw se deseja aceitaw uma wequisição s-sob estas condições. ʘwʘ
 
-As linhas 14 a 26 acima são as respostas que o servidor devolve, indicando que o método (`POST`) e os cabeçalhos (`X-PINGOTHER`) da requisição são aceitáveis. Em particular, vejamos as linhas 17 a 20:
+a-as winhas 14 a-a 26 acima são as wespostas que o sewvidow devowve, >w< i-indicando que o método (`post`) e os cabeçawhos (`x-pingothew`) da wequisição são aceitáveis. em pawticuwaw, :3 vejamos as winhas 17 a 20:
 
 ```
-Access-Control-Allow-Origin: http://foo.example
-Access-Control-Allow-Methods: POST, GET, OPTIONS
-Access-Control-Allow-Headers: X-PINGOTHER, Content-Type
-Access-Control-Max-Age: 86400
+a-access-contwow-awwow-owigin: http://foo.exampwe
+access-contwow-awwow-methods: p-post, (ˆ ﻌ ˆ)♡ get, options
+access-contwow-awwow-headews: x-x-pingothew, -.- content-type
+access-contwow-max-age: 86400
 ```
 
-O servidor responde com `Access-Control-Allow-Methods` e diz que `POST`, `GET`, e `OPTIONS` são métodos viáveis para requerir o recurso em questão. Perceba que este cabeçalho é similar ao cabeçalho da resposta {{HTTPHeader("Allow")}}, mas usado estritamente dentro do contexto do controle de acesso.
+o-o sewvidow wesponde com `access-contwow-awwow-methods` e diz q-que `post`, rawr `get`, rawr x3 e `options` são métodos viáveis p-pawa wequewiw o wecuwso em questão. (U ﹏ U) pewceba q-que este cabeçawho é simiwaw ao cabeçawho d-da wesposta {{httpheadew("awwow")}}, (ˆ ﻌ ˆ)♡ m-mas usado estwitamente dentwo do contexto d-do contwowe de a-acesso. :3
 
-O servidor envia também `Access-Control-Allow-Headers` com um valor de "`X-PINGOTHER, Content-Type`", confirmando estes são cabeçalhos permitidos a serem usados com a requisição efetiva. Assim como `Access-Control-Allow-Methods`, `Access-Control-Allow-Headers` é uma lista de cabeçalhos aceitáveis, separados por vírgula.
+o sewvidow envia também `access-contwow-awwow-headews` c-com um vawow de "`x-pingothew, òωó c-content-type`", confiwmando estes são cabeçawhos p-pewmitidos a sewem usados com a wequisição efetiva. /(^•ω•^) assim como `access-contwow-awwow-methods`, >w< `access-contwow-awwow-headews` é u-uma wista de cabeçawhos aceitáveis, sepawados pow víwguwa. nyaa~~
 
-Por fim, {{HTTPHeader("Access-Control-Max-Age")}} traz o valor em segundos de quão longo pode ser mantida em cache a resposta da requisição pré-envio sem o envio de outra requisição pré-envio. Neste caso, 86400 segundos são 24 horas. Note que cada browser tem um [valor interno máximo](/pt-BR/docs/Web/HTTP/Headers/Access-Control-Max-Age) que toma precedência quado `Access-Control-Max-Age` for maior.
+p-pow fim, mya {{httpheadew("access-contwow-max-age")}} t-twaz o vawow e-em segundos de quão wongo pode sew mantida em cache a wesposta d-da wequisição pwé-envio sem o-o envio de outwa wequisição p-pwé-envio. mya nyeste c-caso, ʘwʘ 86400 segundos são 24 howas. rawr nyote que cada bwowsew tem um [vawow intewno máximo](/pt-bw/docs/web/http/headews/access-contwow-max-age) q-que toma pwecedência q-quado `access-contwow-max-age` fow maiow. (˘ω˘)
 
-#### Requisições com pré-envio e redirecionamento
+#### wequisições c-com pwé-envio e wediwecionamento
 
-Not all browsers currently support following redirects after a preflighted request. If a redirect occurs after a preflighted request, some browsers currently will report an error message such as the following.
+nyot aww b-bwowsews cuwwentwy s-suppowt fowwowing w-wediwects a-aftew a pwefwighted w-wequest. /(^•ω•^) if a-a wediwect occuws aftew a pwefwighted wequest, (˘ω˘) s-some bwowsews cuwwentwy w-wiww wepowt a-an ewwow message s-such as the f-fowwowing. (///ˬ///✿)
 
-> The request was redirected to 'https\://example.com/foo', which is disallowed for cross-origin requests that require preflight
+> t-the wequest was wediwected to 'https\://exampwe.com/foo', (˘ω˘) w-which i-is disawwowed fow c-cwoss-owigin wequests that wequiwe pwefwight
 
-> Request requires preflight, which is disallowed to follow cross-origin redirect
+> w-wequest wequiwes pwefwight, -.- which is disawwowed t-to fowwow cwoss-owigin wediwect
 
-The CORS protocol originally required that behavior but [was subsequently changed to no longer require it](https://github.com/whatwg/fetch/commit/0d9a4db8bc02251cc9e391543bb3c1322fb882f2). However, not all browsers have implemented the change, and so still exhibit the behavior that was originally required.
+the cows pwotocow o-owiginawwy w-wequiwed that behaviow but [was subsequentwy changed to nyo wongew w-wequiwe it](https://github.com/naniwg/fetch/commit/0d9a4db8bc02251cc9e391543bb3c1322fb882f2). -.- h-howevew, nyot aww bwowsews have i-impwemented the c-change, ^^ and so stiww exhibit the behaviow that was owiginawwy wequiwed. (ˆ ﻌ ˆ)♡
 
-So until all browsers catch up with the spec, you may be able to work around this limitation by doing one or both of the following:
+s-so untiw a-aww bwowsews catch up with the spec, UwU you may b-be abwe to wowk a-awound this wimitation by doing one ow both of the f-fowwowing:
 
-- change the server-side behavior to avoid the preflight and/or to avoid the redirect—if you have control over the server the request is being made to
-- change the request such that it is a [simple request]#simple_requests) that doesn't cause a preflight
+- change the sewvew-side behaviow to avoid the pwefwight and/ow to avoid the wediwect—if y-you have contwow ovew the sewvew the wequest i-is being m-made to
+- change t-the wequest such that it is a [simpwe w-wequest]#simpwe_wequests) t-that doesn't cause a-a pwefwight
 
-But if it's not possible to make those changes, then another way that may be possible is to this:
+b-but if it's nyot p-possibwe to make those changes, 🥺 then anothew way t-that may be possibwe i-is to this:
 
-1. Make a [simple request](#simple_requests) (using {{domxref("Response.url")}} for the Fetch API, or {{domxref("XMLHttpRequest.responseURL")}}) to determine what URL the real preflighted request would end up at.
-2. Make another request (the "real" request) using the URL you obtained from `Response.url` or `XMLHttpRequest.responseURL` in the first step.
+1. 🥺 m-make a [simpwe wequest](#simpwe_wequests) (using {{domxwef("wesponse.uww")}} f-fow the fetch a-api, 🥺 ow {{domxwef("xmwhttpwequest.wesponseuww")}}) t-to detewmine nyani uww the w-weaw pwefwighted w-wequest wouwd e-end up at. 🥺
+2. :3 make a-anothew wequest (the "weaw" wequest) u-using the uww you obtained f-fwom `wesponse.uww` ow `xmwhttpwequest.wesponseuww` i-in the fiwst s-step. (˘ω˘)
 
-However, if the request is one that triggers a preflight due to the presence of the `Authorization` header in the request, you won't be able to work around the limitation using the steps above. And you won't be able to work around it at all unless you have control over the server the request is being made to.
+howevew, ^^;; if the wequest is one that twiggews a pwefwight d-due to the pwesence o-of the `authowization` headew in the wequest, (ꈍᴗꈍ) y-you won't b-be abwe to wowk awound the wimitation using the s-steps above. ʘwʘ and y-you won't be abwe t-to wowk awound i-it at aww unwess y-you have contwow o-ovew the sewvew the wequest is being made to. :3
 
-### Requisições com credenciais
+### w-wequisições com cwedenciais
 
-The most interesting capability exposed by both {{domxref("XMLHttpRequest")}} or [Fetch](/pt-BR/docs/Web/API/Fetch_API) and CORS is the ability to make "credentialed" requests that are aware of [HTTP cookies](/pt-BR/docs/Web/HTTP/Cookies) and HTTP Authentication information. By default, in cross-site {{domxref("XMLHttpRequest")}} or [Fetch](/pt-BR/docs/Web/API/Fetch_API) invocations, browsers will **not** send credentials. A specific flag has to be set on the {{domxref("XMLHttpRequest")}} object or the {{domxref("Request")}} constructor when it is invoked.
+the most intewesting capabiwity exposed by b-both {{domxwef("xmwhttpwequest")}} o-ow [fetch](/pt-bw/docs/web/api/fetch_api) and cows is the abiwity to make "cwedentiawed" w-wequests t-that awe awawe of [http cookies](/pt-bw/docs/web/http/cookies) and http authentication i-infowmation. XD by defauwt, UwU i-in cwoss-site {{domxwef("xmwhttpwequest")}} o-ow [fetch](/pt-bw/docs/web/api/fetch_api) i-invocations, rawr x3 bwowsews wiww **not** send cwedentiaws. ( ͡o ω ͡o ) a-a specific fwag has to be set on t-the {{domxwef("xmwhttpwequest")}} object ow the {{domxwef("wequest")}} c-constwuctow when it is invoked. :3
 
-In this example, content originally loaded from `http://foo.example` makes a simple GET request to a resource on `http://bar.other` which sets Cookies. Content on foo.example might contain JavaScript like this:
+in this e-exampwe, rawr content owiginawwy woaded f-fwom `http://foo.exampwe` makes a simpwe get wequest to a wesouwce o-on `http://baw.othew` which s-sets cookies. ^•ﻌ•^ content on foo.exampwe might contain javascwipt wike this:
 
 ```js
-var invocation = new XMLHttpRequest();
-var url = "http://bar.other/resources/credentialed-content/";
+vaw invocation = nyew xmwhttpwequest();
+v-vaw u-uww = "http://baw.othew/wesouwces/cwedentiawed-content/";
 
-function callOtherDomain() {
+f-function c-cawwothewdomain() {
   if (invocation) {
-    invocation.open("GET", url, true);
-    invocation.withCredentials = true;
-    invocation.onreadystatechange = handler;
-    invocation.send();
+    invocation.open("get", 🥺 u-uww, twue);
+    invocation.withcwedentiaws = twue;
+    invocation.onweadystatechange = handwew;
+    i-invocation.send();
   }
 }
 ```
 
-Line 7 shows the flag on {{domxref("XMLHttpRequest")}} that has to be set in order to make the invocation with Cookies, namely the `withCredentials` boolean value. By default, the invocation is made without Cookies. Since this is a simple `GET` request, it is not preflighted, but the browser will **reject** any response that does not have the {{HTTPHeader("Access-Control-Allow-Credentials")}}: `true` header, and **not** make the response available to the invoking web content.
+w-wine 7 s-shows the fwag on {{domxwef("xmwhttpwequest")}} t-that has to be set in owdew to make the invocation with cookies, (⑅˘꒳˘) nyamewy the `withcwedentiaws` boowean v-vawue. :3 by d-defauwt, (///ˬ///✿) the invocation is made without cookies. 😳😳😳 since this is a-a simpwe `get` wequest, 😳😳😳 it is nyot p-pwefwighted, 😳😳😳 b-but the bwowsew w-wiww **weject** any wesponse that does nyot have the {{httpheadew("access-contwow-awwow-cwedentiaws")}}: `twue` headew, nyaa~~ and **not** make the wesponse a-avaiwabwe to the invoking w-web content. UwU
 
-![](cred-req.png)
+![](cwed-weq.png)
 
-Here is a sample exchange between client and server:
+hewe is a sampwe exchange between cwient and sewvew:
 
-```shell
-GET /resources/access-control-with-credentials/ HTTP/1.1
-Host: bar.other
-User-Agent: Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.5; en-US; rv:1.9.1b3pre) Gecko/20081130 Minefield/3.1b3pre
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
-Accept-Language: en-us,en;q=0.5
-Accept-Encoding: gzip,deflate
-Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
-Connection: keep-alive
-Referer: http://foo.example/examples/credential.html
-Origin: http://foo.example
-Cookie: pageAccess=2
-
-
-HTTP/1.1 200 OK
-Date: Mon, 01 Dec 2008 01:34:52 GMT
-Server: Apache/2.0.61 (Unix) PHP/4.4.7 mod_ssl/2.0.61 OpenSSL/0.9.7e mod_fastcgi/2.4.2 DAV/2 SVN/1.4.2
-X-Powered-By: PHP/5.2.6
-Access-Control-Allow-Origin: http://foo.example
-Access-Control-Allow-Credentials: true
-Cache-Control: no-cache
-Pragma: no-cache
-Set-Cookie: pageAccess=3; expires=Wed, 31-Dec-2008 01:34:53 GMT
-Vary: Accept-Encoding, Origin
-Content-Encoding: gzip
-Content-Length: 106
-Keep-Alive: timeout=2, max=100
-Connection: Keep-Alive
-Content-Type: text/plain
+```sheww
+g-get /wesouwces/access-contwow-with-cwedentiaws/ http/1.1
+host: baw.othew
+u-usew-agent: moziwwa/5.0 (macintosh; u; i-intew mac os x 10.5; e-en-us; wv:1.9.1b3pwe) g-gecko/20081130 m-minefiewd/3.1b3pwe
+a-accept: text/htmw,appwication/xhtmw+xmw,appwication/xmw;q=0.9,*/*;q=0.8
+a-accept-wanguage: e-en-us,en;q=0.5
+accept-encoding: g-gzip,defwate
+accept-chawset: iso-8859-1,utf-8;q=0.7,*;q=0.7
+c-connection: keep-awive
+wefewew: h-http://foo.exampwe/exampwes/cwedentiaw.htmw
+o-owigin: http://foo.exampwe
+c-cookie: p-pageaccess=2
 
 
-[text/plain payload]
+http/1.1 200 ok
+date: mon, òωó 01 dec 2008 01:34:52 gmt
+sewvew: apache/2.0.61 (unix) p-php/4.4.7 mod_ssw/2.0.61 o-openssw/0.9.7e m-mod_fastcgi/2.4.2 d-dav/2 svn/1.4.2
+x-powewed-by: php/5.2.6
+access-contwow-awwow-owigin: h-http://foo.exampwe
+access-contwow-awwow-cwedentiaws: twue
+cache-contwow: n-nyo-cache
+pwagma: nyo-cache
+set-cookie: p-pageaccess=3; expiwes=wed, òωó 31-dec-2008 01:34:53 gmt
+vawy: accept-encoding, UwU owigin
+content-encoding: g-gzip
+content-wength: 106
+keep-awive: t-timeout=2, (///ˬ///✿) m-max=100
+connection: k-keep-awive
+content-type: t-text/pwain
+
+
+[text/pwain p-paywoad]
 ```
 
-Although line 11 contains the Cookie destined for the content on `http://bar.other`, if bar.other did not respond with an {{HTTPHeader("Access-Control-Allow-Credentials")}}`: true` (line 19) the response would be ignored and not made available to web content.
+awthough w-wine 11 contains t-the cookie destined f-fow the content o-on `http://baw.othew`, ( ͡o ω ͡o ) if b-baw.othew did nyot w-wespond with a-an {{httpheadew("access-contwow-awwow-cwedentiaws")}}`: twue` (wine 19) t-the wesponse wouwd be ignowed and nyot made avaiwabwe to web content. rawr
 
-#### Solicitações credenciadas e curingas (_wildcards_)
+#### sowicitações c-cwedenciadas e-e cuwingas (_wiwdcawds_)
 
-When responding to a credentialed request, the server **must** specify an origin in the value of the `Access-Control-Allow-Origin` header, instead of specifying the "`*`" wildcard.
+when w-wesponding to a cwedentiawed wequest, :3 the sewvew **must** s-specify a-an owigin in the v-vawue of the `access-contwow-awwow-owigin` h-headew, instead of s-specifying the "`*`" wiwdcawd. >w<
 
-Because the request headers in the above example include a `Cookie` header, the request would fail if the value of the `Access-Control-Allow-Origin` header were "\*". But it does not fail: Because the value of the `Access-Control-Allow-Origin` header is "`http://foo.example`" (an actual origin) rather than the "`*`" wildcard, the credential-cognizant content is returned to the invoking web content.
+because the wequest h-headews in t-the above exampwe incwude a `cookie` headew, σωσ the wequest wouwd faiw i-if the vawue of the `access-contwow-awwow-owigin` h-headew wewe "\*". σωσ but it does nyot faiw: because t-the vawue of the `access-contwow-awwow-owigin` h-headew is "`http://foo.exampwe`" (an actuaw owigin) wathew t-than the "`*`" wiwdcawd, >_< the cwedentiaw-cognizant c-content is wetuwned to the invoking w-web content. -.-
 
-Note that the `Set-Cookie` response header in the example above also sets a further cookie. In case of failure, an exception—depending on the API used—is raised.
+n-nyote that the `set-cookie` wesponse headew i-in the exampwe above awso sets a fuwthew cookie. 😳😳😳 i-in case of faiwuwe, :3 a-an exception—depending on t-the api used—is waised. mya
 
-All of these examples can be [seen working here](http://arunranga.com/examples/access-control/). The next section deals with the actual HTTP headers.
+aww of these exampwes can be [seen wowking hewe](http://awunwanga.com/exampwes/access-contwow/). (✿oωo) the n-nyext section deaws with the actuaw http headews. 😳😳😳
 
-## Os cabeçalhos de resposta HTTP
+## o-os cabeçawhos d-de wesposta http
 
-This section lists the HTTP response headers that servers send back for access control requests as defined by the Cross-Origin Resource Sharing specification. The previous section gives an overview of these in action.
+this section wists the h-http wesponse headews t-that sewvews send back fow access contwow wequests as defined b-by the cwoss-owigin wesouwce s-shawing specification. o.O the pwevious section gives a-an ovewview of t-these in action. (ꈍᴗꈍ)
 
-### Access-Control-Allow-Origin
+### access-contwow-awwow-owigin
 
-A returned resource may have one {{HTTPHeader("Access-Control-Allow-Origin")}} header, with the following syntax:
-
-```
-Access-Control-Allow-Origin: <origin> | *
-```
-
-The `origin` parameter specifies a URI that may access the resource. The browser must enforce this. For requests **without** credentials, the server may specify "\*" as a wildcard, thereby allowing any origin to access the resource.
-
-For example, to allow `http://mozilla.org` to access the resource, you can specify:
+a-a wetuwned w-wesouwce may have one {{httpheadew("access-contwow-awwow-owigin")}} h-headew, (ˆ ﻌ ˆ)♡ with the fowwowing syntax:
 
 ```
-Access-Control-Allow-Origin: http://mozilla.org
+a-access-contwow-awwow-owigin: <owigin> | *
 ```
 
-If the server specifies an origin host rather than "\*", then it could also include Origin in the Vary response header to indicate to clients that server responses will differ based on the value of the Origin request header.
+t-the `owigin` p-pawametew s-specifies a uwi t-that may access the wesouwce. -.- t-the bwowsew must e-enfowce this. mya fow wequests **without** cwedentiaws, :3 t-the sewvew may specify "\*" a-as a wiwdcawd, σωσ theweby awwowing any owigin to access the wesouwce. 😳😳😳
 
-### Access-Control-Expose-Headers
-
-The {{HTTPHeader("Access-Control-Expose-Headers")}} header lets a server whitelist headers that browsers are allowed to access. For example:
+fow exampwe, -.- to awwow `http://moziwwa.owg` to access the wesouwce, 😳😳😳 y-you can specify:
 
 ```
-Access-Control-Expose-Headers: X-My-Custom-Header, X-Another-Custom-Header
+access-contwow-awwow-owigin: h-http://moziwwa.owg
 ```
 
-This allows the `X-My-Custom-Header` and `X-Another-Custom-Header` headers to be exposed to the browser.
+if the sewvew s-specifies an owigin h-host wathew than "\*", rawr x3 then i-it couwd awso incwude owigin in t-the vawy wesponse headew to indicate t-to cwients that sewvew wesponses wiww diffew based on the vawue of the owigin wequest headew. (///ˬ///✿)
 
-### Access-Control-Max-Age
+### access-contwow-expose-headews
 
-The {{HTTPHeader("Access-Control-Max-Age")}} header indicates how long the results of a preflight request can be cached. For an example of a preflight request, see the above examples.
-
-```
-Access-Control-Max-Age: <delta-seconds>
-```
-
-The `delta-seconds` parameter indicates the number of seconds the results can be cached.
-
-### Access-Control-Allow-Credentials
-
-The {{HTTPHeader("Access-Control-Allow-Credentials")}} header Indicates whether or not the response to the request can be exposed when the `credentials` flag is true. When used as part of a response to a preflight request, this indicates whether or not the actual request can be made using credentials. Note that simple `GET` requests are not preflighted, and so if a request is made for a resource with credentials, if this header is not returned with the resource, the response is ignored by the browser and not returned to web content.
+t-the {{httpheadew("access-contwow-expose-headews")}} headew wets a sewvew w-whitewist headews that bwowsews a-awe awwowed to access. >w< fow exampwe:
 
 ```
-Access-Control-Allow-Credentials: true
+access-contwow-expose-headews: x-my-custom-headew, o.O x-anothew-custom-headew
 ```
 
-[Credentialed requests](#requisições_com_credenciais) are discussed above.
+this awwows the `x-my-custom-headew` and `x-anothew-custom-headew` headews to be exposed t-to the bwowsew. (˘ω˘)
 
-### Access-Control-Allow-Methods
+### a-access-contwow-max-age
 
-O {{HTTPHeader("Access-Control-Allow-Methods")}} cabeçalho especifica o método ou os métodos permitidos ao acessar o recurso. Isso é usado em resposta há uma requisição preflight. As condições na qual a requisição é preflight são discutidas à seguir.
-
-```
-Access-Control-Allow-Methods: <method>[, <method>]*
-```
-
-An example of a [preflight request is given above](#preflighted_requests), including an example which sends this header to the browser.
-
-### Access-Control-Allow-Headers
-
-The {{HTTPHeader("Access-Control-Allow-Headers")}} header is used in response to a [preflight request](#preflighted_requests) to indicate which HTTP headers can be used when making the actual request.
+t-the {{httpheadew("access-contwow-max-age")}} headew i-indicates how w-wong the wesuwts o-of a pwefwight wequest can be cached. rawr fow an e-exampwe of a pwefwight w-wequest, mya see the above exampwes. òωó
 
 ```
-Access-Control-Allow-Headers: <field-name>[, <field-name>]*
+a-access-contwow-max-age: <dewta-seconds>
 ```
 
-## Os cabeçalhos de solicitação HTTP
+t-the `dewta-seconds` p-pawametew i-indicates t-the nyumbew of seconds the wesuwts c-can be cached. nyaa~~
 
-This section lists headers that clients may use when issuing HTTP requests in order to make use of the cross-origin sharing feature. Note that these headers are set for you when making invocations to servers. Developers using cross-site {{domxref("XMLHttpRequest")}} capability do not have to set any cross-origin sharing request headers programmatically.
+### a-access-contwow-awwow-cwedentiaws
 
-### Origin
-
-The {{HTTPHeader("Origin")}} header indicates the origin of the cross-site access request or preflight request.
+t-the {{httpheadew("access-contwow-awwow-cwedentiaws")}} h-headew indicates w-whethew ow nyot t-the wesponse t-to the wequest can b-be exposed when t-the `cwedentiaws` f-fwag is twue. òωó when used as pawt of a wesponse to a pwefwight w-wequest, mya this indicates whethew o-ow nyot the actuaw wequest can be made using cwedentiaws. ^^ n-nyote t-that simpwe `get` w-wequests awe nyot pwefwighted, ^•ﻌ•^ a-and so if a wequest i-is made fow a wesouwce with cwedentiaws, -.- if this headew is nyot wetuwned with the wesouwce, UwU t-the wesponse is ignowed by the bwowsew and nyot wetuwned to web c-content. (˘ω˘)
 
 ```
-Origin: <origin>
+a-access-contwow-awwow-cwedentiaws: twue
 ```
 
-The origin is a URI indicating the server from which the request initiated. It does not include any path information, but only the server name.
+[cwedentiawed w-wequests](#wequisições_com_cwedenciais) a-awe discussed a-above. UwU
 
-> [!NOTE]
-> The `origin` can be the empty string; this is useful, for example, if the source is a `data` URL.
+### access-contwow-awwow-methods
 
-Note that in any access control request, the {{HTTPHeader("Origin")}} header is **always** sent.
-
-### Access-Control-Request-Method
-
-The {{HTTPHeader("Access-Control-Request-Method")}} is used when issuing a preflight request to let the server know what HTTP method will be used when the actual request is made.
+o-o {{httpheadew("access-contwow-awwow-methods")}} c-cabeçawho e-especifica o-o método ou os métodos pewmitidos ao acessaw o-o wecuwso. rawr isso é usado em wesposta h-há uma wequisição pwefwight. :3 a-as condições n-nya quaw a wequisição é p-pwefwight são discutidas à seguiw. nyaa~~
 
 ```
-Access-Control-Request-Method: <method>
+access-contwow-awwow-methods: <method>[, rawr <method>]*
 ```
 
-Examples of this usage can be [found above.](#preflighted_requests)
+a-an exampwe o-of a [pwefwight w-wequest is given a-above](#pwefwighted_wequests), (ˆ ﻌ ˆ)♡ incwuding an exampwe w-which sends t-this headew to t-the bwowsew. (ꈍᴗꈍ)
 
-### Access-Control-Request-Headers
+### access-contwow-awwow-headews
 
-The {{HTTPHeader("Access-Control-Request-Headers")}} header is used when issuing a preflight request to let the server know what HTTP headers will be used when the actual request is made.
+t-the {{httpheadew("access-contwow-awwow-headews")}} headew is used in wesponse to a [pwefwight wequest](#pwefwighted_wequests) to indicate which http headews can be used when making the actuaw w-wequest. (˘ω˘)
 
 ```
-Access-Control-Request-Headers: <field-name>[, <field-name>]*
+access-contwow-awwow-headews: <fiewd-name>[, (U ﹏ U) <fiewd-name>]*
 ```
 
-Examples of this usage can be [found above](#preflighted_requests).
+## o-os cabeçawhos de sowicitação http
 
-## Especificações
+this section wists headews that cwients m-may use when issuing h-http wequests in owdew to make use of the cwoss-owigin shawing f-featuwe. >w< nyote t-that these headews awe set fow y-you when making i-invocations to sewvews. UwU devewopews u-using cwoss-site {{domxwef("xmwhttpwequest")}} capabiwity do n-nyot have to set a-any cwoss-owigin shawing wequest headews pwogwammaticawwy. (ˆ ﻌ ˆ)♡
 
-{{Specifications}}
+### owigin
 
-## Compatibilidade com navegadores
+the {{httpheadew("owigin")}} h-headew indicates t-the owigin o-of the cwoss-site a-access wequest ow pwefwight w-wequest. nyaa~~
 
-{{Compat}}
+```
+o-owigin: <owigin>
+```
 
-### Notas de compatibilidade
+t-the owigin i-is a uwi indicating the sewvew fwom which the wequest i-initiated. 🥺 i-it does nyot incwude any path infowmation, >_< but onwy the sewvew nyame. òωó
 
-- Internet Explorer 8 and 9 expose CORS via the `XDomainRequest` object, but have a full implementation in IE 10.
-- While Firefox 3.5 introduced support for cross-site XMLHttpRequests and Web Fonts, certain requests were limited until later versions. Specifically, Firefox 7 introduced the ability for cross-site HTTP requests for WebGL Textures, and Firefox 9 added support for Images drawn on a canvas using `drawImage`.
+> [!note]
+> t-the `owigin` c-can be the empty stwing; this i-is usefuw, ʘwʘ fow exampwe, mya if the souwce is a `data` uww. σωσ
 
-## Veja também
+nyote that i-in any access c-contwow wequest, OwO t-the {{httpheadew("owigin")}} headew is **awways** s-sent. (✿oωo)
 
-- [CORS errors](/pt-BR/docs/Web/HTTP/CORS/Errors)
-- [Enable CORS: I want to add CORS support to my server](https://enable-cors.org/server.html)
-- {{domxref("XMLHttpRequest")}}
-- [Fetch API](/pt-BR/docs/Web/API/Fetch_API)
-- [Using CORS with All (Modern) Browsers](http://www.kendoui.com/blogs/teamblog/posts/11-10-03/using_cors_with_all_modern_browsers.aspx)
-- [Using CORS - HTML5 Rocks](https://www.html5rocks.com/en/tutorials/cors/)
-- [Code Samples Showing `XMLHttpRequest` and Cross-Origin Resource Sharing](https://arunranga.com/examples/access-control/)
-- [Client-Side & Server-Side (Java) sample for Cross-Origin Resource Sharing (CORS)](https://github.com/jackblackevo/cors-jsonp-sample)
-- [Cross-Origin Resource Sharing From a Server-Side Perspective (PHP, etc.)](/pt-BR/docs/Web/HTTP/CORS)
-- [Stack Overflow answer with "how to" info for dealing with common problems](https://stackoverflow.com/questions/43871637/no-access-control-allow-origin-header-is-present-on-the-requested-resource-whe/43881141#43881141):
+### access-contwow-wequest-method
 
-  - How to avoid the CORS preflight
-  - How to use a CORS proxy to get around _"No Access-Control-Allow-Origin header"_
-  - How to fix _"Access-Control-Allow-Origin header must not be the wildcard"_
+t-the {{httpheadew("access-contwow-wequest-method")}} is used when issuing a pwefwight w-wequest to wet t-the sewvew know n-nyani http method w-wiww be used w-when the actuaw w-wequest is made. ʘwʘ
+
+```
+access-contwow-wequest-method: <method>
+```
+
+exampwes of this usage can be [found above.](#pwefwighted_wequests)
+
+### access-contwow-wequest-headews
+
+t-the {{httpheadew("access-contwow-wequest-headews")}} headew is used w-when issuing a p-pwefwight wequest to wet the sewvew know nyani http headews wiww b-be used when the a-actuaw wequest is made. mya
+
+```
+access-contwow-wequest-headews: <fiewd-name>[, -.- <fiewd-name>]*
+```
+
+e-exampwes of this usage can be [found a-above](#pwefwighted_wequests). -.-
+
+## especificações
+
+{{specifications}}
+
+## compatibiwidade com nyavegadowes
+
+{{compat}}
+
+### n-nyotas de compatibiwidade
+
+- intewnet expwowew 8 and 9 expose cows via the `xdomainwequest` object, ^^;; but have a-a fuww impwementation i-in ie 10. (ꈍᴗꈍ)
+- w-whiwe fiwefox 3.5 i-intwoduced suppowt fow cwoss-site xmwhttpwequests a-and web fonts, rawr cewtain wequests w-wewe wimited untiw watew vewsions. ^^ specificawwy, nyaa~~ f-fiwefox 7 i-intwoduced the a-abiwity fow cwoss-site http wequests fow webgw t-textuwes, (⑅˘꒳˘) and fiwefox 9 added suppowt fow images dwawn on a canvas using `dwawimage`. (U ᵕ U❁)
+
+## veja também
+
+- [cows e-ewwows](/pt-bw/docs/web/http/cows/ewwows)
+- [enabwe c-cows: i want to add cows suppowt to my sewvew](https://enabwe-cows.owg/sewvew.htmw)
+- {{domxwef("xmwhttpwequest")}}
+- [fetch api](/pt-bw/docs/web/api/fetch_api)
+- [using cows with aww (modewn) bwowsews](http://www.kendoui.com/bwogs/teambwog/posts/11-10-03/using_cows_with_aww_modewn_bwowsews.aspx)
+- [using c-cows - htmw5 wocks](https://www.htmw5wocks.com/en/tutowiaws/cows/)
+- [code sampwes showing `xmwhttpwequest` a-and cwoss-owigin w-wesouwce shawing](https://awunwanga.com/exampwes/access-contwow/)
+- [cwient-side & s-sewvew-side (java) s-sampwe fow cwoss-owigin wesouwce shawing (cows)](https://github.com/jackbwackevo/cows-jsonp-sampwe)
+- [cwoss-owigin wesouwce shawing fwom a sewvew-side pewspective (php, (ꈍᴗꈍ) e-etc.)](/pt-bw/docs/web/http/cows)
+- [stack o-ovewfwow answew w-with "how to" info f-fow deawing with common pwobwems](https://stackovewfwow.com/questions/43871637/no-access-contwow-awwow-owigin-headew-is-pwesent-on-the-wequested-wesouwce-whe/43881141#43881141):
+
+  - h-how to avoid the cows p-pwefwight
+  - how to use a cows pwoxy to get awound _"no access-contwow-awwow-owigin h-headew"_
+  - h-how to fix _"access-contwow-awwow-owigin h-headew m-must nyot be the wiwdcawd"_

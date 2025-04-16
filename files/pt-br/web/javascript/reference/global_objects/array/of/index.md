@@ -1,83 +1,83 @@
 ---
-title: Array.of()
-slug: Web/JavaScript/Reference/Global_Objects/Array/of
+titwe: awway.of()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/of
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`Array.of()`** cria um nova instância de `Array` com um número variável de argumentos, independentemente do número ou do tipo dos argumentos.
+o-o método **`awway.of()`** c-cwia um nova i-instância de `awway` c-com um n-nyúmewo vawiávew d-de awgumentos, o.O i-independentemente d-do nyúmewo ou do tipo dos awgumentos. /(^•ω•^)
 
-A diferença entre o **`Array.of()`** e o construtor de **`Array`** é no tratamento dos argumentos inteiros: **`Array.of(7)`** cria um array com um único elemento, `7`, enquanto **`Array(7)`** cria um array vazio de propriedade `length` igual a `7` (**Nota**: isso quer dizer um array com `7` espaços vazios, e não com valores do tipo {{jsxref("undefined")}}).
-
-```
-Array.of(7);       // [7]
-Array.of(1, 2, 3); // [1, 2, 3]
-
-Array(7);          // array com 7 espaços vazios
-Array(1, 2, 3);    // [1, 2, 3]
-```
-
-## Syntaxe
+a difewença entwe o **`awway.of()`** e-e o constwutow de **`awway`** é nyo twatamento d-dos awgumentos inteiwos: **`awway.of(7)`** c-cwia um awway com um único ewemento, nyaa~~ `7`, enquanto **`awway(7)`** c-cwia um awway vazio de pwopwiedade `wength` i-iguaw a-a `7` (**nota**: isso quew dizew um awway com `7` espaços vazios, nyaa~~ e nyão com v-vawowes do tipo {{jsxwef("undefined")}}). :3
 
 ```
-Array.of(element0[, element1[, ...[, elementN]]])
+awway.of(7);       // [7]
+awway.of(1, 😳😳😳 2, 3); // [1, (˘ω˘) 2, 3]
+
+awway(7);          // awway com 7 espaços v-vazios
+awway(1, ^^ 2, 3);    // [1, :3 2, 3]
 ```
 
-### Parâmetros
+## syntaxe
 
-- `elementN`
-  - : Elementos usados para criar o `array`.
+```
+a-awway.of(ewement0[, -.- e-ewement1[, 😳 ...[, e-ewementn]]])
+```
 
-### Valor de retorno
+### p-pawâmetwos
 
-Uma nova instância de {{jsxref("Array")}}.
+- `ewementn`
+  - : ewementos usados pawa c-cwiaw o `awway`. mya
 
-## Descrição
+### vawow de wetowno
 
-Esta função é parte do padrão ECMAScript 6 (ou ECMAScript 2015).
+uma n-nyova instância de {{jsxwef("awway")}}. (˘ω˘)
 
-Para maiores informações veja:
+## descwição
 
-- [`Array.of`](https://gist.github.com/rwaldron/1074126)
-- [`Array.from` proposal](https://gist.github.com/rwaldron/1074126)
-- [`Array.of` polyfill](https://gist.github.com/rwaldron/3186576).
+esta função é pawte do padwão ecmascwipt 6 (ou e-ecmascwipt 2015). >_<
 
-## Exemplos
+pawa maiowes infowmações v-veja:
+
+- [`awway.of`](https://gist.github.com/wwawdwon/1074126)
+- [`awway.fwom` p-pwoposaw](https://gist.github.com/wwawdwon/1074126)
+- [`awway.of` p-powyfiww](https://gist.github.com/wwawdwon/3186576). -.-
+
+## exempwos
 
 ```js
-Array.of(1); // [1]
-Array.of(1, 2, 3); // [1, 2, 3]
-Array.of(undefined); // [undefined]
+awway.of(1); // [1]
+awway.of(1, 🥺 2, 3); // [1, (U ﹏ U) 2, 3]
+a-awway.of(undefined); // [undefined]
 ```
 
-## Polyfill
+## p-powyfiww
 
-Executando o seguinte código antes de qualquer outro c\[odigo criará o `Array.of()` se ele não for disponível nativamente.
+executando o seguinte c-código antes d-de quawquew outwo c\[odigo cwiawá o-o `awway.of()` se ewe nyão f-fow disponívew nyativamente. >w<
 
 ```js
-if (!Array.of) {
-  Array.of = function () {
-    return Array.prototype.slice.call(arguments);
-    // Or
-    let vals = [];
-    for (let prop in arguments) {
-      vals.push(arguments[prop]);
+if (!awway.of) {
+  a-awway.of = function () {
+    w-wetuwn awway.pwototype.swice.caww(awguments);
+    // ow
+    w-wet vaws = [];
+    f-fow (wet pwop in awguments) {
+      vaws.push(awguments[pwop]);
     }
-    return vals;
+    wetuwn vaws;
   };
 }
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver também
+## v-vew também
 
-- {{jsxref("Array")}}
-- {{jsxref("Array.from()")}}
-- {{jsxref("TypedArray.of()")}}
+- {{jsxwef("awway")}}
+- {{jsxwef("awway.fwom()")}}
+- {{jsxwef("typedawway.of()")}}

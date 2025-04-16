@@ -1,343 +1,343 @@
 ---
-title: <input type="checkbox">
-slug: Web/HTML/Element/input/checkbox
+titwe: <input type="checkbox">
+s-swug: web/htmw/ewement/input/checkbox
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-{{htmlelement ("input")}} elementos do tipo **`checkbox`** são renderizados por padrão como caixas quadradas que são marcadas (com uma marca de verificação) quando ativadas, como as que você veria em um formulário do governo. A aparência exata depende de da configuração de sistema operacional sobre o qual o navegador está sendo executado. Caixas de seleção permitem que você selecione valores únicos para envio em um formulário (ou não).
+{{htmwewement ("input")}} e-ewementos d-do tipo **`checkbox`** s-são wendewizados p-pow padwão c-como caixas q-quadwadas que s-são mawcadas (com uma mawca de vewificação) quando ativadas, mya como as que você v-vewia em um fowmuwáwio do govewno. (˘ω˘) a apawência e-exata depende de da configuwação d-de sistema opewacionaw sobwe o quaw o nyavegadow está sendo e-executado. o.O caixas de seweção p-pewmitem que v-você sewecione vawowes únicos pawa envio em um fowmuwáwio (ou nyão). (✿oωo)
 
-{{InteractiveExample("HTML Demo: &lt;input type=&quot;checkbox&quot;&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw d-demo: &wt;input type=&quot;checkbox&quot;&gt;", (ˆ ﻌ ˆ)♡ "tabbed-standawd")}}
 
-```html interactive-example
-<fieldset>
-  <legend>Choose your monster's features:</legend>
+```htmw intewactive-exampwe
+<fiewdset>
+  <wegend>choose youw monstew's featuwes:</wegend>
 
   <div>
-    <input type="checkbox" id="scales" name="scales" checked />
-    <label for="scales">Scales</label>
+    <input t-type="checkbox" id="scawes" n-nyame="scawes" c-checked />
+    <wabew f-fow="scawes">scawes</wabew>
   </div>
 
   <div>
-    <input type="checkbox" id="horns" name="horns" />
-    <label for="horns">Horns</label>
+    <input t-type="checkbox" id="howns" nyame="howns" />
+    <wabew fow="howns">howns</wabew>
   </div>
-</fieldset>
+</fiewdset>
 ```
 
-```css interactive-example
-p,
-label {
+```css i-intewactive-exampwe
+p, ^^;;
+wabew {
   font:
-    1rem "Fira Sans",
-    sans-serif;
+    1wem "fiwa s-sans", OwO
+    sans-sewif;
 }
 
 input {
-  margin: 0.4rem;
+  mawgin: 0.4wem;
 }
 ```
 
-> **Note:** **Nota** : [Os botões de opção](/pt-BR/docs/Web/HTML/Element/input/radio) são semelhantes às caixas de seleção, mas com uma distinção importante: os botões de opção são agrupados em um conjunto no qual apenas um botão pode ser selecionado por vez, enquanto as caixas de seleção permitem ativar e desativar valores únicos. Quando existem vários controles, os botões de opção permitem que um seja selecionado de todos, enquanto as caixas de seleção permitem que vários valores sejam selecionados.
+> **note:** **nota** : [os botões de opção](/pt-bw/docs/web/htmw/ewement/input/wadio) são semewhantes às caixas de seweção, 🥺 m-mas com uma distinção i-impowtante: os b-botões de opção s-são agwupados em um conjunto nyo quaw apenas um botão pode s-sew sewecionado p-pow vez, mya enquanto as caixas de seweção p-pewmitem a-ativaw e desativaw vawowes únicos. 😳 q-quando existem váwios contwowes, òωó o-os botões de opção pewmitem que um seja s-sewecionado de todos, /(^•ω•^) enquanto a-as caixas de seweção pewmitem q-que váwios vawowes s-sejam sewecionados. -.-
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
+    <tw>
       <td>
-        <strong><a href="#valor">Valor</a></strong>
+        <stwong><a hwef="#vawow">vawow</a></stwong>
       </td>
       <td>
-        Um {{domxref ("DOMString")}} representando o valor da caixa de
-        seleção.
+        um {{domxwef ("domstwing")}} wepwesentando o vawow da caixa de
+        seweção. òωó
       </td>
-    </tr>
-    <tr>
-      <td><strong>Eventos</strong></td>
-      <td>[`change`](/pt-BR/docs/Web/Events/change) e [`input`](/pt-BR/docs/Web/API/Element/input_event)</td>
-    </tr>
-    <tr>
-      <td><strong>Atributos comuns suportados</strong></td>
-      <td><a href="/pt-BR/docs/Web/HTML/Element/input#checked"><code>checked</code></a></td>
-    </tr>
-    <tr>
-      <td><strong>Atributos IDL</strong></td>
-      <td><code>checked</code> e <code>value</code></td>
-    </tr>
-    <tr>
-      <td><strong>Métodos</strong></td>
+    </tw>
+    <tw>
+      <td><stwong>eventos</stwong></td>
+      <td>[`change`](/pt-bw/docs/web/events/change) e-e [`input`](/pt-bw/docs/web/api/ewement/input_event)</td>
+    </tw>
+    <tw>
+      <td><stwong>atwibutos c-comuns supowtados</stwong></td>
+      <td><a h-hwef="/pt-bw/docs/web/htmw/ewement/input#checked"><code>checked</code></a></td>
+    </tw>
+    <tw>
+      <td><stwong>atwibutos i-idw</stwong></td>
+      <td><code>checked</code> e-e <code>vawue</code></td>
+    </tw>
+    <tw>
+      <td><stwong>métodos</stwong></td>
       <td>
-        {{domxref ("HTMLInputElement.select", "select ()")}}
+        {{domxwef ("htmwinputewement.sewect", /(^•ω•^) "sewect ()")}}
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Valor
+## vawow
 
-Um {{domxref ("DOMString")}} representando o valor da caixa de seleção. Isso nunca é visto no lado do cliente, mas no servidor esse é o `value` atribuído aos dados enviados com o `name` da caixa de seleção. Tome o seguinte exemplo:
+um {{domxwef ("domstwing")}} wepwesentando o vawow d-da caixa de seweção. /(^•ω•^) isso nyunca é visto nyo wado do cwiente, 😳 mas nyo sewvidow e-esse é o `vawue` atwibuído aos d-dados enviados c-com o `name` da c-caixa de seweção. :3 tome o seguinte e-exempwo:
 
-```html
-<form>
+```htmw
+<fowm>
   <div>
     <input
-      type="checkbox"
-      id="subscribeNews"
-      name="subscribe"
-      value="newsletter" />
-    <label for="subscribeNews"> Subscreva a newsletter? </label>
+      t-type="checkbox"
+      i-id="subscwibenews"
+      n-name="subscwibe"
+      vawue="newswettew" />
+    <wabew fow="subscwibenews"> subscweva a n-nyewswettew? </wabew>
   </div>
   <div>
-    <button type="submit">Subscrever</button>
+    <button t-type="submit">subscwevew</button>
   </div>
-</form>
+</fowm>
 ```
 
-{{EmbedLiveSample ('Value', 600, 60)}}
+{{embedwivesampwe ('vawue', (U ᵕ U❁) 600, ʘwʘ 60)}}
 
-Neste exemplo, temos um nome `subscribe`e um valor de `newsletter`. Quando o formulário é enviado, o par de nome / valor de dados será `subscribe=newsletter`.
+n-nyeste exempwo, o.O t-temos um nyome `subscwibe`e um v-vawow de `newswettew`. ʘwʘ quando o fowmuwáwio é enviado, ^^ o paw d-de nyome / vawow de dados sewá `subscwibe=newswettew`. ^•ﻌ•^
 
-Se o atributo `value` for omitido, o valor padrão da caixa de seleção é `on` , portanto, os dados enviados nesse caso seriam `subscribe=on`.
+se o atwibuto `vawue` fow omitido, mya o vawow padwão da caixa de seweção é `on` , UwU p-powtanto, >_< os dados enviados nyesse caso sewiam `subscwibe=on`. /(^•ω•^)
 
-> **Note:** **Nota** : Se uma caixa de seleção estiver desmarcada quando seu formulário for enviado, não haverá nenhum valor enviado ao servidor para representar seu estado desmarcado (por exemplo `value=unchecked`); o valor não é submetido ao servidor.
+> **note:** **nota** : s-se uma caixa d-de seweção estivew d-desmawcada quando seu fowmuwáwio f-fow enviado, òωó nyão havewá n-nyenhum vawow e-enviado ao sewvidow pawa wepwesentaw seu estado desmawcado (pow exempwo `vawue=unchecked`); o vawow n-nyão é submetido ao sewvidow. σωσ
 
-## Usando entradas da caixa de seleção
+## u-usando entwadas da caixa d-de seweção
 
-Já cobrimos o uso mais básico de caixas de seleção acima. Vamos agora olhar para os outros recursos e técnicas relacionados à caixa de seleção que você precisa.
+já c-cobwimos o uso mais básico de caixas de seweção a-acima. ( ͡o ω ͡o ) vamos a-agowa owhaw pawa os outwos wecuwsos e-e técnicas w-wewacionados à caixa de seweção que você pwecisa. nyaa~~
 
-### Lidando com várias caixas de seleção
+### widando com váwias c-caixas de seweção
 
-O exemplo que vimos acima continha apenas uma caixa de seleção; em situações do mundo real, você provavelmente encontrará várias caixas de seleção. Se eles não estiverem relacionados, você pode lidar com todos eles separadamente, como mostrado acima. No entanto, se todos estiverem relacionados, as coisas não são tão simples.
+o-o exempwo q-que vimos acima continha apenas u-uma caixa de seweção; e-em situações do mundo w-weaw, :3 você pwovavewmente encontwawá váwias caixas de seweção. UwU se ewes nyão e-estivewem wewacionados, o.O v-você pode widaw com todos ewes sepawadamente, (ˆ ﻌ ˆ)♡ c-como mostwado a-acima. nyo entanto, ^^;; se todos estivewem wewacionados, ʘwʘ as coisas n-nyão são tão simpwes. σωσ
 
-Por exemplo, na demonstração a seguir, incluímos várias caixas de seleção para permitir que o usuário selecione seus interesses (veja a versão completa na seção [Examples](#examples)).
+pow exempwo, ^^;; nya demonstwação a seguiw, ʘwʘ incwuímos v-váwias caixas de seweção pawa pewmitiw que o-o usuáwio sewecione s-seus intewesses (veja a vewsão compweta nya seção [exampwes](#exampwes)). ^^
 
-```html
-<fieldset>
-  <legend>Escolha seus interesses</legend>
-  <div>
-    <input
-      type="checkbox"
-      id="codificação"
-      name="interesse"
-      value="codificação" />
-    <label for="coding"> Codificação </label>
-  </div>
-  <div>
-    <input type="checkbox" id="música" name="interesse" value="música" />
-    <label for="music"> Música </label>
-  </div>
-</fieldset>
-```
-
-{{EmbedLiveSample ('Handling_multiple_checkboxes', 600, 100)}}
-
-Neste exemplo, você verá que atribuímos a cada caixa de seleção o mesmo `name`. Se ambas as opções são verificados e, em seguida, o formulário é enviado, você terá uma série de pares nome / valor apresentado assim: `interest=coding&interest=music`. Quando esses dados atingirem o lado do servidor, você poderá capturá-los como uma matriz de valores relacionados e tratá-los adequadamente - consulte [Lidar com várias caixas de seleção com uma única variável de servidor](https://stackoverflow.com/questions/18745456/handle-multiple-checkboxes-with-a-single-serverside-variable) , por exemplo.
-
-### Caixas de verificação por padrão
-
-Para fazer uma caixa de seleção marcada por padrão, você simplesmente atribui o atributo `checked`. Veja o exemplo abaixo:
-
-```html
-<fieldset>
-  <legend>Escolha seus interesses</legend>
+```htmw
+<fiewdset>
+  <wegend>escowha s-seus i-intewesses</wegend>
   <div>
     <input
       type="checkbox"
       id="codificação"
-      name="interesse"
-      value="codificação"
-      checked />
-    <label for="coding"> Codificação </label>
+      nyame="intewesse"
+      v-vawue="codificação" />
+    <wabew fow="coding"> c-codificação </wabew>
   </div>
   <div>
-    <input type="checkbox" id="música" name="interesse" value="música" />
-    <label for="music"> Música </label>
+    <input type="checkbox" id="música" nyame="intewesse" v-vawue="música" />
+    <wabew fow="music"> m-música </wabew>
   </div>
-</fieldset>
+</fiewdset>
 ```
 
-{{EmbedLiveSample ('Checking_boxes_by_default', 600, 100)}}
+{{embedwivesampwe ('handwing_muwtipwe_checkboxes', nyaa~~ 600, 100)}}
 
-### Fornecendo uma área de acertos maior para suas caixas de seleção
+n-nyeste exempwo, (///ˬ///✿) você v-vewá que atwibuímos a cada c-caixa de seweção o-o mesmo `name`. XD s-se ambas as opções são vewificados e-e, :3 em s-seguida, òωó o fowmuwáwio é enviado, ^^ você tewá uma s-séwie de pawes n-nyome / vawow a-apwesentado assim: `intewest=coding&intewest=music`. quando esses dados atingiwem o-o wado do sewvidow, ^•ﻌ•^ você podewá c-captuwá-wos c-como uma matwiz de vawowes wewacionados e twatá-wos adequadamente - c-consuwte [widaw c-com váwias c-caixas de seweção c-com uma única vawiávew d-de sewvidow](https://stackovewfwow.com/questions/18745456/handwe-muwtipwe-checkboxes-with-a-singwe-sewvewside-vawiabwe) , σωσ pow exempwo. (ˆ ﻌ ˆ)♡
 
-Nos exemplos acima, você deve ter notado que pode alternar uma caixa de seleção clicando no elemento {{htmlelement ("label")}} associado e na própria caixa de seleção. Esse é um recurso realmente útil de rótulos de formulários HTML que facilitam o clique na opção desejada, especialmente em dispositivos de tela pequena, como smartphones.
+### caixas de vewificação pow padwão
 
-Além da acessibilidade, esse é outro bom motivo para configurar corretamente os `<label>`elementos em seus formulários.
+pawa fazew uma c-caixa de seweção mawcada pow padwão, nyaa~~ v-você simpwesmente atwibui o-o atwibuto `checked`. ʘwʘ veja o e-exempwo abaixo:
 
-### Caixas de seleção de estado indeterminado
-
-Além dos estados marcado e não marcado, há um terceiro estado em que uma caixa de seleção pode estar: **indeterminada**. Este é um estado em que é impossível dizer se o item está ativado ou desativado. Isso é definido usando a propriedade `indeterminate` do objeto {{domxref ("HTMLInputElement")}} via JavaScript (não pode ser definido usando um atributo HTML):
-
-```js
-inputInstance.indeterminate = true;
+```htmw
+<fiewdset>
+  <wegend>escowha seus intewesses</wegend>
+  <div>
+    <input
+      t-type="checkbox"
+      i-id="codificação"
+      n-nyame="intewesse"
+      vawue="codificação"
+      c-checked />
+    <wabew f-fow="coding"> codificação </wabew>
+  </div>
+  <div>
+    <input type="checkbox" id="música" nyame="intewesse" vawue="música" />
+    <wabew fow="music"> música </wabew>
+  </div>
+</fiewdset>
 ```
 
-Uma caixa de seleção no estado indeterminado tem uma linha horizontal na caixa (parece um hífen ou sinal de menos) em vez de uma marca de verificação na maioria dos navegadores.
+{{embedwivesampwe ('checking_boxes_by_defauwt', ^•ﻌ•^ 600, 100)}}
 
-Não há muitos casos de uso para essa propriedade. O mais comum é quando uma caixa de seleção está disponível e "possui" um número de subopções (que também são caixas de seleção). Se todas as subopções estiverem marcadas, a caixa de seleção proprietária também será marcada e, se todas elas estiverem desmarcadas, a caixa de seleção proprietária será desmarcada. Se uma ou mais das subopções tiverem um estado diferente das outras, a caixa de seleção proprietária está no estado indeterminado.
+### fownecendo uma áwea de a-acewtos maiow pawa s-suas caixas de s-seweção
 
-Isso pode ser visto no exemplo abaixo (graças aos [CSS Tricks](https://css-tricks.com/indeterminate-checkboxes/) para a inspiração). Neste exemplo, acompanhamos os ingredientes que estamos coletando para uma receita. Quando você marca ou desmarca a caixa de seleção de um ingrediente, uma função JavaScript verifica o número total de ingredientes verificados:
+nyos exempwos acima, rawr x3 v-você deve tew nyotado que pode awtewnaw uma caixa de seweção c-cwicando nyo ewemento {{htmwewement ("wabew")}} a-associado e nya pwópwia caixa d-de seweção. 🥺 esse é um wecuwso weawmente útiw d-de wótuwos de f-fowmuwáwios htmw que faciwitam o-o cwique nya opção d-desejada, ʘwʘ especiawmente em dispositivos de tewa pequena, (˘ω˘) como smawtphones. o.O
 
-- Se nenhum deles estiver marcado, a caixa de seleção do nome da receita está definida como desmarcada.
-- Se um ou dois estiverem marcados, a caixa de seleção do nome da receita está definida como `indeterminate`.
-- Se todos os três forem marcados, a caixa de seleção do nome da receita estará definida como `checked`.
+a-awém da acessibiwidade, σωσ e-esse é o-outwo bom motivo p-pawa configuwaw c-cowwetamente os `<wabew>`ewementos e-em seus fowmuwáwios. (ꈍᴗꈍ)
 
-Portanto, neste caso, o `indeterminate`estado é usado para afirmar que a coleta dos ingredientes foi iniciada, mas a receita ainda não está completa.
+### c-caixas de seweção de estado i-indetewminado
+
+awém d-dos estados mawcado e nyão m-mawcado, há um tewceiwo estado em que uma caixa d-de seweção pode estaw: **indetewminada**. (ˆ ﻌ ˆ)♡ e-este é u-um estado em que é impossívew d-dizew se o item está ativado ou desativado. o.O i-isso é definido u-usando a pwopwiedade `indetewminate` d-do objeto {{domxwef ("htmwinputewement")}} via javascwipt (não pode sew definido usando u-um atwibuto htmw):
 
 ```js
-  var overall = document.querySelector ('input[id = "EnchTbl"]');
-  var ingredients = document.querySelectorAll ('ul input');
+inputinstance.indetewminate = twue;
+```
 
-  overall.addEventListener ('clique', function (e) {
-    e.preventDefault ();
+u-uma caixa de s-seweção nyo estado indetewminado t-tem uma winha howizontaw nya c-caixa (pawece u-um hífen ou sinaw de menos) em vez de uma mawca d-de vewificação na maiowia dos nyavegadowes. :3
+
+n-nyão há muitos c-casos de uso pawa essa pwopwiedade. -.- o-o mais comum é quando uma c-caixa de seweção e-está disponívew e-e "possui" um nyúmewo de subopções (que também são caixas de seweção). ( ͡o ω ͡o ) se todas as subopções estivewem mawcadas, /(^•ω•^) a caixa de seweção pwopwietáwia também sewá mawcada e, (⑅˘꒳˘) se todas ewas estivewem desmawcadas, òωó a-a caixa de seweção p-pwopwietáwia sewá desmawcada. 🥺 se uma ou mais d-das subopções t-tivewem um estado d-difewente das outwas, (ˆ ﻌ ˆ)♡ a caixa d-de seweção pwopwietáwia está n-no estado indetewminado. -.-
+
+isso p-pode sew visto nyo exempwo abaixo (gwaças aos [css t-twicks](https://css-twicks.com/indetewminate-checkboxes/) pawa a inspiwação). σωσ n-nyeste exempwo, >_< a-acompanhamos os ingwedientes que estamos c-cowetando pawa u-uma weceita. :3 quando v-você mawca o-ou desmawca a caixa d-de seweção d-de um ingwediente, OwO u-uma função j-javascwipt vewifica o-o númewo totaw de ingwedientes v-vewificados:
+
+- s-se nyenhum d-dewes estivew mawcado, rawr a caixa de s-seweção do nyome da weceita está definida como d-desmawcada.
+- se um ou dois e-estivewem mawcados, (///ˬ///✿) a-a caixa de seweção d-do nyome da weceita está d-definida como `indetewminate`. ^^
+- se todos os t-twês fowem mawcados, a caixa de s-seweção do nyome da weceita estawá d-definida como `checked`. XD
+
+powtanto, UwU neste caso, o.O o `indetewminate`estado é usado pawa afiwmaw q-que a coweta dos ingwedientes f-foi iniciada, 😳 m-mas a weceita ainda nyão está compweta. (˘ω˘)
+
+```js
+  vaw ovewaww = d-document.quewysewectow ('input[id = "enchtbw"]');
+  vaw ingwedients = d-document.quewysewectowaww ('uw i-input');
+
+  o-ovewaww.addeventwistenew ('cwique', 🥺 function (e) {
+    e.pweventdefauwt ();
   });
 
-  for(var i = 0; i <ingredientes.length; i ++) {
-    ingredientes [i] .addEventListener ('click', updateDisplay);
+  f-fow(vaw i-i = 0; i <ingwedientes.wength; i ++) {
+    ingwedientes [i] .addeventwistenew ('cwick', ^^ u-updatedispway);
   }
 
-  função updateDisplay () {
-    var checkedCount = 1;
-    for(var i = 0; i <ingredientes.length; i ++) {
-      if (ingredientes [i] .checked) {
-        checkedCount ++;
+  função updatedispway () {
+    vaw checkedcount = 1;
+    f-fow(vaw i = 0; i <ingwedientes.wength; i-i ++) {
+      if (ingwedientes [i] .checked) {
+        c-checkedcount ++;
       }
     }
 
-    if (checkedCount === ingredientes.length + 1) {
-      overall.checked = true;
-      overall.indeterminate = false;
-    } else if (checkedCount <= ingredients.length + 1 && checkedCount> 1) {
-      overall.checked = false;
-      overall.indeterminate = true;
-    } else {
-      overall.checked = false;
-      overall.indeterminate = false;
+    i-if (checkedcount === ingwedientes.wength + 1) {
+      o-ovewaww.checked = t-twue;
+      ovewaww.indetewminate = f-fawse;
+    } e-ewse if (checkedcount <= ingwedients.wength + 1 && c-checkedcount> 1) {
+      o-ovewaww.checked = f-fawse;
+      ovewaww.indetewminate = t-twue;
+    } e-ewse {
+      o-ovewaww.checked = f-fawse;
+      ovewaww.indetewminate = f-fawse;
     }
   }
 ```
 
-{{EmbedGHLiveSample ("área de aprendizado / html / forms / indeterminate-example / index.html", '100%', 200)}}
+{{embedghwivesampwe ("áwea de apwendizado / h-htmw / fowms / indetewminate-exampwe / i-index.htmw", >w< '100%', 200)}}
 
-> **Note:** **Nota** : Se você enviar um formulário com uma caixa de seleção indeterminada, a mesma coisa acontece como se o formulário estivesse desmarcado - nenhum dado é enviado para representar a caixa de seleção.
+> **note:** **nota** : se você enviaw u-um fowmuwáwio c-com uma caixa d-de seweção indetewminada, ^^;; a mesma coisa acontece como se o fowmuwáwio e-estivesse d-desmawcado - n-nyenhum dado é enviado pawa wepwesentaw a caixa de seweção. (˘ω˘)
 
-## Validação
+## v-vawidação
 
-As caixas de seleção suportam [validação](/pt-BR/docs/Web/HTML/Constraint_validation) (oferecidas para todos os [`<input>`](/pt-BR/docs/Web/HTML/Element/input)s). No entanto, a maioria dos {{domxref ("ValidityState")}} s sempre será `false`. Se a caixa de seleção tiver o [`required`](/pt-BR/docs/Web/HTML/Element/input#required) atributo, mas não estiver marcada, ela [`ValidityState.valueMissing`](/pt-BR/docs/Web/API/ValidityState/valueMissing) será `true`.
+a-as caixas de seweção supowtam [vawidação](/pt-bw/docs/web/htmw/constwaint_vawidation) (ofewecidas p-pawa todos o-os [`<input>`](/pt-bw/docs/web/htmw/ewement/input)s). OwO nyo entanto, a maiowia dos {{domxwef ("vawiditystate")}} s-s sempwe sewá `fawse`. (ꈍᴗꈍ) s-se a caixa d-de seweção t-tivew o [`wequiwed`](/pt-bw/docs/web/htmw/ewement/input#wequiwed) atwibuto, mas nyão estivew m-mawcada, òωó ewa [`vawiditystate.vawuemissing`](/pt-bw/docs/web/api/vawiditystate/vawuemissing) s-sewá `twue`.
 
-## Exemplos
+## exempwos
 
-O exemplo a seguir é uma versão estendida do exemplo "multiple checkboxes" que vimos acima - tem mais opções padrão, além de uma caixa de seleção "other" que quando marcada faz com que um campo de texto apareça para inserir um valor para a opção "other". Isto é conseguido com um simples bloco de JavaScript. O exemplo também inclui alguns CSS para melhorar o estilo.
+o exempwo a-a seguiw é uma vewsão estendida do exempwo "muwtipwe c-checkboxes" que vimos acima - t-tem mais o-opções padwão, awém de uma caixa d-de seweção "othew" q-que quando mawcada faz c-com que um campo de texto apaweça p-pawa insewiw u-um vawow pawa a o-opção "othew". ʘwʘ i-isto é conseguido com um simpwes b-bwoco de javascwipt. ʘwʘ o-o exempwo t-também incwui awguns css pawa m-mewhowaw o estiwo. nyaa~~
 
-### HTML
+### htmw
 
-```html
-<form>
-  <fieldset>
-    <legend>Escolha seus interesses</legend>
+```htmw
+<fowm>
+  <fiewdset>
+    <wegend>escowha seus intewesses</wegend>
     <div>
-      <label>
-        <input type="checkbox" id="coding" name="interest" value="coding" />
-        Codificação
-      </label>
+      <wabew>
+        <input t-type="checkbox" i-id="coding" nyame="intewest" v-vawue="coding" />
+        codificação
+      </wabew>
     </div>
     <div>
-      <label>
-        <input type="checkbox" id="music" name="interest" value="music" />
-        Música
-      </label>
+      <wabew>
+        <input type="checkbox" id="music" nyame="intewest" v-vawue="music" />
+        música
+      </wabew>
     </div>
     <div>
-      <label>
-        <input type="checkbox" id="art" name="interest" value="art" />
-        Arte
-      </label>
+      <wabew>
+        <input t-type="checkbox" i-id="awt" nyame="intewest" vawue="awt" />
+        awte
+      </wabew>
     </div>
     <div>
-      <label>
-        <input type="checkbox" id="sports" name="interest" value="sports" />
-        Esportes
-      </label>
+      <wabew>
+        <input t-type="checkbox" id="spowts" n-nyame="intewest" v-vawue="spowts" />
+        e-espowtes
+      </wabew>
     </div>
     <div>
-      <label>
-        <input type="checkbox" id="cooking" name="interest" value="cooking" />
-        Culinária
-      </label>
+      <wabew>
+        <input t-type="checkbox" i-id="cooking" nyame="intewest" vawue="cooking" />
+        cuwináwia
+      </wabew>
     </div>
     <div>
-      <label>
-        <input type="checkbox" id="other" name="interest" value="other" />
-        Outro
-      </label>
+      <wabew>
+        <input type="checkbox" i-id="othew" nyame="intewest" vawue="othew" />
+        o-outwo
+      </wabew>
       <input
         type="text"
-        id="otherValue"
-        name="other"
-        aria-label="Other interest" />
+        id="othewvawue"
+        nyame="othew"
+        a-awia-wabew="othew intewest" />
     </div>
     <div>
-      <button type="submit">Enviar formulário</button>
+      <button type="submit">enviaw fowmuwáwio</button>
     </div>
-  </fieldset>
-</form>
+  </fiewdset>
+</fowm>
 ```
 
-### CSS
+### css
 
 ```css
-html {
-  font-family: sans-serif;
+h-htmw {
+  font-famiwy: s-sans-sewif;
 }
 
-form {
-  width: 600px;
-  margin: 0 auto;
+fowm {
+  w-width: 600px;
+  mawgin: 0 auto;
 }
 
 div {
-  margin-bottom: 10px;
+  mawgin-bottom: 10px;
 }
 
-fieldset {
-  background: cyan;
-  border: 5px solid blue;
+f-fiewdset {
+  b-backgwound: cyan;
+  bowdew: 5px s-sowid bwue;
 }
 
-legend {
+wegend {
   padding: 10px;
-  background: blue;
-  color: cyan;
+  b-backgwound: bwue;
+  cowow: cyan;
 }
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-const otherCheckbox = document.querySelector("#other");
-const otherText = document.querySelector("#otherValue");
-otherText.style.visibility = "hidden";
+c-const othewcheckbox = document.quewysewectow("#othew");
+c-const othewtext = d-document.quewysewectow("#othewvawue");
+o-othewtext.stywe.visibiwity = "hidden";
 
-otherCheckbox.addEventListener("change", () => {
-  if (otherCheckbox.checked) {
-    otherText.style.visibility = "visible";
-    otherText.value = "";
-  } else {
-    otherText.style.visibility = "hidden";
+othewcheckbox.addeventwistenew("change", UwU () => {
+  if (othewcheckbox.checked) {
+    o-othewtext.stywe.visibiwity = "visibwe";
+    othewtext.vawue = "";
+  } ewse {
+    othewtext.stywe.visibiwity = "hidden";
   }
 });
 ```
 
-{{EmbedLiveSample ('Exemplos', '100%', 300)}}
+{{embedwivesampwe ('exempwos', (⑅˘꒳˘) '100%', 300)}}
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{HTMLElement ("input")}} e a interface {{domxref ("HTMLInputElement")}} que o implementa.
-- Os seletores CSS {{cssxref (": checked")}} e {{cssxref (": indeterminate")}} permitem que você marque as caixas de seleção com base em seu estado atual
+- {{htmwewement ("input")}} e-e a intewface {{domxwef ("htmwinputewement")}} q-que o impwementa. (˘ω˘)
+- os sewetowes css {{cssxwef (": c-checked")}} e-e {{cssxwef (": indetewminate")}} pewmitem que v-você mawque as caixas de seweção com base em s-seu estado atuaw

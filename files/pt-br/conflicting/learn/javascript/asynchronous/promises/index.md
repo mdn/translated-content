@@ -1,584 +1,584 @@
 ---
-title: Tornando mais fácil a programação assíncrona com async e await
-slug: conflicting/Learn/JavaScript/Asynchronous/Promises
+titwe: townando mais fáciw a p-pwogwamação assíncwona c-com async e-e await
+swug: c-confwicting/weawn/javascwipt/asynchwonous/pwomises
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Choosing_the_right_approach", "Learn/JavaScript/Asynchronous")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/javascwipt/asynchwonous/pwomises", "weawn/javascwipt/choosing_the_wight_appwoach", "weawn/javascwipt/asynchwonous")}}
 
-Adições mais recentes à linguagem JavaScript são as [funções assíncronas](/pt-BR/docs/Web/JavaScript/Reference/Statements/async_function) e a palavra-chave [`await`](/pt-BR/docs/Web/JavaScript/Reference/Operators/await), adicionadas no ECMAScript 2017. Esses recursos atuam basicamente como um syntactic sugar em cima de promises, tornando o código assíncrono mais fácil de escrever e ler. Isso faz com que o código assíncrono pareça mais com o código síncrono old-school, então vale a pena aprender. Este artigo fornece o que você precisa saber.
+a-adições m-mais wecentes à w-winguagem j-javascwipt são as [funções assíncwonas](/pt-bw/docs/web/javascwipt/wefewence/statements/async_function) e a pawavwa-chave [`await`](/pt-bw/docs/web/javascwipt/wefewence/opewatows/await), adicionadas nyo e-ecmascwipt 2017. mya esses wecuwsos atuam basicamente c-como um syntactic sugaw em cima d-de pwomises, ʘwʘ townando o código assíncwono mais fáciw de escwevew e-e wew. (˘ω˘) isso faz com que o c-código assíncwono p-paweça mais com o código síncwono owd-schoow, 😳 então vawe a pena apwendew. òωó e-este awtigo fownece o que você pwecisa sabew. nyaa~~
 
-<table class="learn-box standard-table">
+<tabwe cwass="weawn-box standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Pré-requisitos:</th>
+    <tw>
+      <th s-scope="wow">pwé-wequisitos:</th>
       <td>
-        Conhecimento básico de informática, uma compreensão razoável dos
-        fundamentos do JavaScript, uma compreensão de código assíncrono em geral
-        e promises.
+        conhecimento b-básico d-de infowmática, o.O u-uma compweensão w-wazoávew dos
+        fundamentos do javascwipt, nyaa~~ u-uma compweensão de código assíncwono em g-gewaw
+        e pwomises. (U ᵕ U❁)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivo:</th>
-      <td>Entender o uso do async/await.</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">objetivo:</th>
+      <td>entendew o uso do async/await.</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## O básico de async/await
+## o básico de async/await
 
-Existem duas formas de usar async/await no seu código.
+e-existem duas fowmas de usaw a-async/await n-no seu código. 😳😳😳
 
-### A palavra-chave async
+### a-a pawavwa-chave async
 
-Em primeiro lugar, temos a palavra-chave `async`, que você coloca antes de uma declaração de função para transformá-la em uma função assíncrona. Uma [função assíncrona](/pt-BR/docs/Web/JavaScript/Reference/Statements/async_function) é uma função que espera a possibilidade de a palavra-chave await ser usada para invocar código assíncrono.
+em pwimeiwo wugaw, (U ﹏ U) temos a pawavwa-chave `async`, ^•ﻌ•^ q-que v-você cowoca antes de uma decwawação d-de função p-pawa twansfowmá-wa em uma f-função assíncwona. (⑅˘꒳˘) uma [função a-assíncwona](/pt-bw/docs/web/javascwipt/wefewence/statements/async_function) é uma função que espewa a possibiwidade d-de a pawavwa-chave await s-sew usada pawa invocaw código a-assíncwono. >_<
 
-Experimente digitar as seguintes linhas no console JS do seu navegador.
+e-expewimente digitaw as seguintes winhas nyo consowe js do seu nyavegadow. (⑅˘꒳˘)
 
 ```js
-function hello() { return "Hello" };
-    hello();
+function hewwo() { wetuwn "hewwo" };
+    h-hewwo();
 ```
 
-A funcão retorna "Hello" — nada de especial, certo?
+a-a funcão wetowna "hewwo" — n-nyada de e-especiaw, σωσ cewto?
 
-Mas o que acontece se transformar-mos isso em uma função assíncrona? Tente o seguinte:
+m-mas o que acontece se twansfowmaw-mos isso em uma função assíncwona? t-tente o seguinte:
 
 ```js
-async function hello() { return "Hello" };
-      hello();
+async function hewwo() { wetuwn "hewwo" };
+      hewwo();
 ```
 
-Ah. A invocação da função agora retorna uma promise. Isso é uma das características das funções assíncronas — seus valores de retorno são garantidos para serem convertidos em promises.
+a-ah. 🥺 a invocação da função a-agowa wetowna uma p-pwomise. :3 isso é u-uma das cawactewísticas das f-funções assíncwonas — s-seus v-vawowes de wetowno s-são gawantidos pawa sewem convewtidos em pwomises. (ꈍᴗꈍ)
 
-Você também pode criar uma [expressão de função assíncrona](/pt-BR/docs/Web/JavaScript/Reference/Operators/async_function), assim:
+v-você também p-pode cwiaw u-uma [expwessão d-de função assíncwona](/pt-bw/docs/web/javascwipt/wefewence/opewatows/async_function), ^•ﻌ•^ a-assim:
 
 ```js
-let hello = async function() { return "Hello" };
-      hello();
+wet hewwo = async function() { wetuwn "hewwo" };
+      h-hewwo();
 ```
 
-E você pode usar arrow functions:
+e você pode usaw awwow functions:
 
 ```js
-let hello = async () => { return "Hello" };
+wet hewwo = async () => { wetuwn "hewwo" };
 ```
 
-Tudo isso faz basicamente a mesma coisa.
+t-tudo isso faz basicamente a mesma coisa. (˘ω˘)
 
-Para consumir o valor retornado quando a promise é finalizada, desde que esteja retornando uma promise, podemos usar um bloco `.then()`:
+pawa consumiw o-o vawow wetownado q-quando a pwomise é f-finawizada, 🥺 desde que esteja w-wetownando uma pwomise, (✿oωo) podemos u-usaw um bwoco `.then()`:
 
 ```js
-hello().then((value) => console.log(value))
+h-hewwo().then((vawue) => consowe.wog(vawue))
 ```
 
-ou mesmo de forma simplificada
+ou mesmo de fowma simpwificada
 
 ```js
-hello().then(console.log)
+hewwo().then(consowe.wog)
 ```
 
-Como vimos no último artigo.
+como vimos n-nyo úwtimo awtigo. XD
 
-Então a palavra-chave `async` é adicionada nas funções para dizer a elas para retornar uma promise ao invés de diretamente retornar uma valor.
+então a-a pawavwa-chave `async` é adicionada n-nyas funções p-pawa dizew a ewas pawa wetownaw uma pwomise a-ao invés de diwetamente w-wetownaw uma vawow. (///ˬ///✿)
 
-### A palavra-chave await
+### a-a pawavwa-chave a-await
 
-A vantagem de uma função assíncrona só se torna aparente quando você a combina com a palavra-chave [await](/pt-BR/docs/Web/JavaScript/Reference/Operators/await). `await` só funciona dentro de funções assíncronas no código JavaScript regular, no entanto, pode ser usado por conta própria com [JavaScript modules.](/pt-BR/docs/Web/JavaScript/Guide/Modules)
+a vantagem de uma função assíncwona só se towna apawente quando você a-a combina com a-a pawavwa-chave [await](/pt-bw/docs/web/javascwipt/wefewence/opewatows/await). ( ͡o ω ͡o ) `await` s-só funciona dentwo de f-funções assíncwonas n-nyo código javascwipt weguwaw, n-nyo entanto, ʘwʘ pode sew usado pow conta pwópwia com [javascwipt moduwes.](/pt-bw/docs/web/javascwipt/guide/moduwes)
 
-`await` pode ser colocado na frente de qualquer função assíncrona baseada em promise para pausar seu código nessa linha até que a promise seja resolvida e, em seguida, retornar o valor resultante.
+`await` p-pode sew cowocado n-nya fwente de quawquew função assíncwona b-baseada em pwomise p-pawa pausaw seu código nyessa winha até que a pwomise seja w-wesowvida e, rawr em seguida, wetownaw o vawow wesuwtante. o.O
 
-Você pode usar `await` quando chamar qualquer função que retorne uma Promise, incluindo funções de API web.
+você pode usaw `await` q-quando chamaw quawquew função que wetowne uma p-pwomise, ^•ﻌ•^ incwuindo f-funções de api web. (///ˬ///✿)
 
-Aqui está um exemplo comum:
+aqui está um exempwo comum:
 
 ```js
-async function hello() {
-      return greeting = await Promise.resolve("Hello");
+async f-function hewwo() {
+      w-wetuwn gweeting = await pwomise.wesowve("hewwo");
     };
 
-    hello().then(alert);
+    hewwo().then(awewt);
 ```
 
-Com certeza, o exemplo acima não é muito útil, porém serve para ilustrar a sintaxe. Vamos seguir em frente e ver um exemplo real.
+c-com cewteza, (ˆ ﻌ ˆ)♡ o exempwo acima n-nyão é muito útiw, XD powém sewve pawa iwustwaw a sintaxe. (✿oωo) vamos s-seguiw em fwente e vew um exempwo w-weaw. -.-
 
-## Reescrevendo código baseado em promises com async/await
+## w-weescwevendo código baseado em p-pwomises com async/await
 
-Vejamos um exemplo simples de busca que vimos no artigo anterior:
+vejamos u-um exempwo simpwes d-de busca que v-vimos nyo awtigo antewiow:
 
 ```js
-fetch('coffee.jpg')
-    .then(response => {
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
+f-fetch('coffee.jpg')
+    .then(wesponse => {
+      i-if (!wesponse.ok) {
+        thwow nyew ewwow(`http ewwow! XD s-status: ${wesponse.status}`);
       }
-      return response.blob();
+      w-wetuwn w-wesponse.bwob();
     })
-    .then(myBlob => {
-      let objectURL = URL.createObjectURL(myBlob);
-      let image = document.createElement('img');
-      image.src = objectURL;
-      document.body.appendChild(image);
+    .then(mybwob => {
+      wet objectuww = uww.cweateobjectuww(mybwob);
+      w-wet image = document.cweateewement('img');
+      i-image.swc = o-objectuww;
+      document.body.appendchiwd(image);
     })
     .catch(e => {
-      console.log('There has been a problem with your fetch operation: ' + e.message);
+      consowe.wog('thewe has b-been a pwobwem w-with youw fetch o-opewation: ' + e.message);
     });
 ```
 
-Por enquanto, você precisa ter um entendimento razoável das promises e como elas funcionam, mas vamos converter isso para usar async/await e ver o quão simples as coisas se tornam:
+p-pow enquanto, (✿oωo) você pwecisa t-tew um entendimento wazoávew das pwomises e como ewas funcionam, mas vamos convewtew isso pawa u-usaw async/await e vew o quão s-simpwes as coisas se townam:
 
 ```js
-async function myFetch() {
-      let response = await fetch('coffee.jpg');
+a-async function myfetch() {
+      w-wet wesponse = await fetch('coffee.jpg');
 
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
+      i-if (!wesponse.ok) {
+        t-thwow nyew e-ewwow(`http ewwow! (˘ω˘) s-status: ${wesponse.status}`);
       }
 
-      let myBlob = await response.blob();
+      w-wet mybwob = await wesponse.bwob();
 
-      let objectURL = URL.createObjectURL(myBlob);
-      let image = document.createElement('img');
-      image.src = objectURL;
-      document.body.appendChild(image);
+      wet objectuww = uww.cweateobjectuww(mybwob);
+      wet image = document.cweateewement('img');
+      image.swc = objectuww;
+      d-document.body.appendchiwd(image);
     }
 
-    myFetch()
+    m-myfetch()
     .catch(e => {
-      console.log('There has been a problem with your fetch operation: ' + e.message);
+      c-consowe.wog('thewe has b-been a pwobwem with youw fetch opewation: ' + e.message);
     });
 ```
 
-Isto faz o código muito mais simples and fácil de entender — sem mais blocos `.then()` em todo lugar!
+i-isto faz o-o código muito mais simpwes and f-fáciw de entendew — sem mais bwocos `.then()` e-em todo wugaw! (ˆ ﻌ ˆ)♡
 
-Visto que a palavra-chave `async` transforma a funcão em uma promise, você pode refatorar seu código para usar uma abordagem de promises e await, trazendo a segunda metade da funcão para um novo bloco e torná-la mais flexível:
+v-visto que a pawavwa-chave `async` t-twansfowma a-a funcão em uma pwomise, >_< você pode wefatowaw seu código pawa usaw uma abowdagem d-de pwomises e-e await, -.- twazendo a-a segunda metade d-da funcão pawa u-um nyovo bwoco e towná-wa mais f-fwexívew:
 
 ```js
-async function myFetch() {
-      let response = await fetch('coffee.jpg');
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
+a-async function myfetch() {
+      w-wet wesponse = a-await fetch('coffee.jpg');
+      if (!wesponse.ok) {
+        t-thwow nyew ewwow(`http ewwow! (///ˬ///✿) status: ${wesponse.status}`);
       }
-      return await response.blob();
+      w-wetuwn await wesponse.bwob();
 
     }
 
-    myFetch().then((blob) => {
-      let objectURL = URL.createObjectURL(blob);
-      let image = document.createElement('img');
-      image.src = objectURL;
-      document.body.appendChild(image);
-    }).catch(e => console.log(e));
+    m-myfetch().then((bwob) => {
+      w-wet objectuww = uww.cweateobjectuww(bwob);
+      w-wet image = document.cweateewement('img');
+      image.swc = o-objectuww;
+      d-document.body.appendchiwd(image);
+    }).catch(e => c-consowe.wog(e));
 ```
 
-Você pode tentar fazer o exemplo sozinho, ou rodar o nosso [exemplo ao vivo](https://mdn.github.io/learning-area/javascript/asynchronous/async-await/simple-fetch-async-await.html) (veja também o[código-fonte](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/simple-fetch-async-await.html)).
+você pode tentaw fazew o exempwo sozinho, XD ou wodaw o-o nyosso [exempwo ao vivo](https://mdn.github.io/weawning-awea/javascwipt/asynchwonous/async-await/simpwe-fetch-async-await.htmw) (veja também o-o[código-fonte](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/asynchwonous/async-await/simpwe-fetch-async-await.htmw)). ^^;;
 
-### Mas como isso funciona?
+### m-mas como isso funciona?
 
-Você notará que empacotamos o código dentro de uma função, e incluímos a palavra-chave `async` antes da palavra-chave`function`. Isso é necessário — você tem que criar uma função assíncrona para definir o bloco de código no qual você executará seu código assíncrono; como falamos mais cedo, `await` só funciona dentro de funções assíncronas.
+você nyotawá q-que empacotamos o código d-dentwo de uma f-função, rawr x3 e incwuímos a pawavwa-chave `async` antes da pawavwa-chave`function`. OwO i-isso é nyecessáwio — você tem que cwiaw uma f-função assíncwona p-pawa definiw o bwoco de código n-nyo quaw você executawá s-seu código assíncwono; c-como fawamos m-mais cedo, `await` só funciona dentwo de funções assíncwonas. ʘwʘ
 
-Dentro da definição da função `myFetch()` você pode ver que o código se parece muito à versão anterior com promise, , mas tem algumas diferenças. Ao invés de precisar encadear um bloco `.then()` no final de cada método baseado em promise, você apenas adiciona a palavra-chave `await` antes de cada chamada de método, e então atribui o resultado a variável. A palavra-chave `await` faz com que o JavaScript pause seu código em tempo de execução nesta linha, não permitindo mais  nenhum código ser executado nesse meio tempo até que a chamada de função assíncrona retorne seu resultado — muito útil se o código subsequente depender desse resultado!
+dentwo da definição da função `myfetch()` você pode vew que o código se pawece muito à vewsão antewiow com pwomise, rawr , mas tem a-awgumas difewenças. UwU a-ao invés de pwecisaw encadeaw um bwoco `.then()` n-nyo finaw d-de cada método b-baseado em pwomise, (ꈍᴗꈍ) você apenas a-adiciona a pawavwa-chave `await` antes de cada c-chamada de método, (✿oωo) e-e então atwibui o wesuwtado a-a vawiávew. (⑅˘꒳˘) a pawavwa-chave `await` f-faz com que o-o javascwipt pause seu código em tempo de execução n-nyesta w-winha, OwO nyão pewmitindo m-mais  nenhum c-código sew e-executado nyesse m-meio tempo até q-que a chamada d-de função assíncwona w-wetowne seu wesuwtado — m-muito útiw se o-o código subsequente d-dependew desse wesuwtado! 🥺
 
-Assim que estiver completo, seu código continua a ser executado começando na próxima linha. Por exemplo:
+a-assim que estivew compweto, >_< seu código continua a-a sew executado começando nya p-pwóxima winha. (ꈍᴗꈍ) p-pow exempwo:
 
 ```js
-let response = await fetch('coffee.jpg');
+w-wet wesponse = await fetch('coffee.jpg');
 ```
 
-A resposta retornada pela promise `fetch()` preenchida é atribuída a variável `response` quando a resposta estiver disponível, e o parser pausa nesta linha até que isso ocorra. Uma vez que a resposta está disponível, o parser move para a próxima linha, o qual cria o [`Blob`](/pt-BR/docs/Web/API/Blob) fora dele. Esta linha também invoca um método assíncrono baseado em promise, assim podemos usar `await` aqui também. Quando o resultado da operação retorna, retornamos isso fora da funcão `myFetch()`.
+a-a wesposta wetownada pewa p-pwomise `fetch()` pweenchida é a-atwibuída a vawiávew `wesponse` quando a wesposta e-estivew disponívew, 😳 e o pawsew pausa nyesta winha até que isso ocowwa. 🥺 uma v-vez que a wesposta está disponívew, nyaa~~ o-o pawsew m-move pawa a pwóxima winha, o quaw cwia o [`bwob`](/pt-bw/docs/web/api/bwob) fowa d-dewe. ^•ﻌ•^ esta winha também invoca u-um método assíncwono b-baseado e-em pwomise, (ˆ ﻌ ˆ)♡ assim podemos usaw `await` aqui também. (U ᵕ U❁) q-quando o wesuwtado d-da opewação wetowna, w-wetownamos isso fowa da funcão `myfetch()`. mya
 
-Isso significa que quando nós chamamos a função `myFetch()`, isso retorna uma promise, então podemos encadear um `.then()` no final, dentro do qual lidamos com a exibição do blob na tela.
+isso s-significa que quando nyós chamamos a-a função `myfetch()`, 😳 isso w-wetowna uma p-pwomise, σωσ então podemos encadeaw u-um `.then()` nyo f-finaw, ( ͡o ω ͡o ) dentwo d-do quaw widamos c-com a exibição do bwob nya tewa. XD
 
-Provavelmente você já está pensando "isso é realmente demais!", e você está certo — menos blocos `.then()` para envolver o código, e quase sempre se parece com um código síncrono, por isso é muito intuitivo.
+p-pwovavewmente v-você já está p-pensando "isso é w-weawmente demais!", :3 e-e você e-está cewto — m-menos bwocos `.then()` p-pawa envowvew o código, :3 e-e quase sempwe se pawece com um c-código síncwono, (⑅˘꒳˘) pow isso é muito i-intuitivo. òωó
 
-### Adicionando tratamento de erros
+### a-adicionando t-twatamento de ewwos
 
-E se você deseja adicionar tratamento de erros, você tem algumas opções.
+e se você deseja adicionaw twatamento de e-ewwos, mya você tem a-awgumas opções. 😳😳😳
 
-Você pode usar uma estrutura [`try...catch`](/pt-BR/docs/Web/JavaScript/Reference/Statements/try...catch) síncrona com `async`/`await`. Este exemplo se expande da primeira versão do código que mostramos acima:
+v-você pode usaw uma estwutuwa [`twy...catch`](/pt-bw/docs/web/javascwipt/wefewence/statements/twy...catch) síncwona com `async`/`await`. este e-exempwo se expande d-da pwimeiwa vewsão do código q-que mostwamos a-acima:
 
 ```js
-async function myFetch() {
-      try {
-        let response = await fetch('coffee.jpg');
+async function myfetch() {
+      twy {
+        w-wet wesponse = await f-fetch('coffee.jpg');
 
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
+        i-if (!wesponse.ok) {
+          t-thwow nyew ewwow(`http ewwow! :3 status: ${wesponse.status}`);
         }
-        let myBlob = await response.blob();
-        let objectURL = URL.createObjectURL(myBlob);
-        let image = document.createElement('img');
-        image.src = objectURL;
-        document.body.appendChild(image);
+        wet mybwob = await w-wesponse.bwob();
+        w-wet objectuww = uww.cweateobjectuww(mybwob);
+        wet image = document.cweateewement('img');
+        i-image.swc = objectuww;
+        document.body.appendchiwd(image);
 
       } catch(e) {
-        console.log(e);
+        c-consowe.wog(e);
       }
     }
 
-    myFetch();
+    myfetch();
 ```
 
-Ao bloco `catch() {}` é passado um objeto de erro, qual nós chamamos `e`; agora podemos registrar isso no console, e isso nos fornecerá uma mensagem de erro detalhada mostrando onde o erro foi gerado no código.
+a-ao bwoco `catch() {}` é p-passado um objeto de e-ewwo, >_< quaw nyós c-chamamos `e`; agowa podemos wegistwaw i-isso nyo consowe, 🥺 e isso n-nyos fownecewá u-uma mensagem de e-ewwo detawhada m-mostwando onde o ewwo foi gewado n-nyo código. (ꈍᴗꈍ)
 
-Se você quiser usar a segunda versão (refatorada) do código que mostramos acima, seria melhor apenas continuar a abordagem híbrida e encadear um bloco `.catch()` no final da chamada `.then()`, dessa forma:
+se v-você quisew usaw a-a segunda vewsão (wefatowada) do código que m-mostwamos acima, rawr x3 sewia mewhow apenas continuaw a-a abowdagem híbwida e-e encadeaw u-um bwoco `.catch()` nyo finaw da chamada `.then()`, (U ﹏ U) dessa fowma:
 
 ```js
-async function myFetch() {
-      let response = await fetch('coffee.jpg');
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
+async function m-myfetch() {
+      wet wesponse = a-await fetch('coffee.jpg');
+      i-if (!wesponse.ok) {
+        thwow nyew ewwow(`http ewwow! ( ͡o ω ͡o ) s-status: ${wesponse.status}`);
       }
-      return await response.blob();
+      wetuwn await wesponse.bwob();
 
     }
 
-    myFetch().then((blob) => {
-      let objectURL = URL.createObjectURL(blob);
-      let image = document.createElement('img');
-      image.src = objectURL;
-      document.body.appendChild(image);
+    m-myfetch().then((bwob) => {
+      w-wet objectuww = u-uww.cweateobjectuww(bwob);
+      w-wet i-image = document.cweateewement('img');
+      image.swc = objectuww;
+      document.body.appendchiwd(image);
     })
     .catch((e) =>
-      console.log(e)
+      consowe.wog(e)
     );
 ```
 
-Isso ocorre porque o bloco `.catch()` vai pegar os erros que ocorrem em ambos, na chamada de função com async e com cadeia de promises. Se você usou bloco `try`/`catch` aqui, você ainda pode obter erros não tratados na função `myFetch()` quando ela for chamada.
+i-isso ocowwe powque o bwoco `.catch()` v-vai pegaw os ewwos que ocowwem em ambos, 😳😳😳 nya chamada d-de função com async e com cadeia de pwomises. 🥺 se você usou bwoco `twy`/`catch` aqui, òωó você ainda p-pode obtew e-ewwos nyão twatados na função `myfetch()` q-quando ewa fow chamada. XD
 
-Você pode encontrar esses dois exemplos no GitHub:
+você pode e-encontwaw esses d-dois exempwos nyo github:
 
-- [simple-fetch-async-await-try-catch.html](https://mdn.github.io/learning-area/javascript/asynchronous/async-await/simple-fetch-async-await-try-catch.html) (veja [código-fonte](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/simple-fetch-async-await-try-catch.html))
-- [simple-fetch-async-await-promise-catch.html](https://mdn.github.io/learning-area/javascript/asynchronous/async-await/simple-fetch-async-await-promise-catch.html) (veja [código-fonte](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/simple-fetch-async-await-promise-catch.html))
+- [simpwe-fetch-async-await-twy-catch.htmw](https://mdn.github.io/weawning-awea/javascwipt/asynchwonous/async-await/simpwe-fetch-async-await-twy-catch.htmw) (veja [código-fonte](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/asynchwonous/async-await/simpwe-fetch-async-await-twy-catch.htmw))
+- [simpwe-fetch-async-await-pwomise-catch.htmw](https://mdn.github.io/weawning-awea/javascwipt/asynchwonous/async-await/simpwe-fetch-async-await-pwomise-catch.htmw) (veja [código-fonte](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/asynchwonous/async-await/simpwe-fetch-async-await-pwomise-catch.htmw))
 
-## Esperando um Promise.all()
+## e-espewando um pwomise.aww()
 
-async/await é construído em cima de [promises](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise), por isso é compatível com todos os recursos oferecidos por promises. Isso inclui [`Promise.all()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise/all) — você pode esperar felizmente uma chamada `Promise.all()` para obter todos os resultados retornados em uma variável de uma forma que se pareça com um código síncrono simples. De novo, vamos voltar para [um exemplo que vimos em nosso artigo anterior](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/promises/promise-all.html). Mantenha-o aberto em uma guia separada para que você possa comparar e contrastar com a nova versão mostrada abaixo.
+async/await é c-constwuído em cima de [pwomises](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise), XD pow isso é compatívew c-com todos os wecuwsos ofewecidos pow pwomises. ( ͡o ω ͡o ) i-isso incwui [`pwomise.aww()`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise/aww) — v-você pode e-espewaw fewizmente uma chamada `pwomise.aww()` pawa obtew todos o-os wesuwtados wetownados em uma vawiávew de uma fowma que se paweça com um código s-síncwono simpwes. >w< d-de nyovo, v-vamos vowtaw pawa [um e-exempwo que vimos em nyosso awtigo antewiow](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/asynchwonous/pwomises/pwomise-aww.htmw). mya m-mantenha-o a-abewto em uma guia sepawada pawa que você p-possa compawaw e contwastaw com a nyova vewsão m-mostwada abaixo. (ꈍᴗꈍ)
 
-Convertendo este para async/await (veja [demonstração ao vivo](https://mdn.github.io/learning-area/javascript/asynchronous/async-await/promise-all-async-await.html) e [código-fonte](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/promise-all-async-await.html)), isso agora parece assim:
+convewtendo este pawa async/await (veja [demonstwação a-ao vivo](https://mdn.github.io/weawning-awea/javascwipt/asynchwonous/async-await/pwomise-aww-async-await.htmw) e-e [código-fonte](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/asynchwonous/async-await/pwomise-aww-async-await.htmw)), -.- isso agowa pawece a-assim:
 
 ```js
-async function fetchAndDecode(url, type) {
-      let response = await fetch(url);
+a-async function fetchanddecode(uww, (⑅˘꒳˘) t-type) {
+      wet wesponse = await fetch(uww);
 
-      let content;
+      w-wet content;
 
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      } else {
-        if(type === 'blob') {
-          content = await response.blob();
-        } else if(type === 'text') {
-          content = await response.text();
+      if (!wesponse.ok) {
+        thwow nyew e-ewwow(`http ewwow! (U ﹏ U) status: ${wesponse.status}`);
+      } ewse {
+        if(type === 'bwob') {
+          c-content = a-await wesponse.bwob();
+        } e-ewse if(type === 'text') {
+          c-content = a-await wesponse.text();
         }
       }
 
-      return content;
+      wetuwn content;
 
 
     }
 
-    async function displayContent() {
-      let coffee = fetchAndDecode('coffee.jpg', 'blob');
-      let tea = fetchAndDecode('tea.jpg', 'blob');
-      let description = fetchAndDecode('description.txt', 'text');
+    a-async function dispwaycontent() {
+      wet coffee = f-fetchanddecode('coffee.jpg', σωσ 'bwob');
+      wet tea = fetchanddecode('tea.jpg', :3 'bwob');
+      w-wet descwiption = fetchanddecode('descwiption.txt', /(^•ω•^) 'text');
 
-      let values = await Promise.all([coffee, tea, description]);
+      wet vawues = a-await pwomise.aww([coffee, σωσ t-tea, (U ᵕ U❁) descwiption]);
 
-      let objectURL1 = URL.createObjectURL(values[0]);
-      let objectURL2 = URL.createObjectURL(values[1]);
-      let descText = values[2];
+      wet o-objectuww1 = uww.cweateobjectuww(vawues[0]);
+      wet objectuww2 = u-uww.cweateobjectuww(vawues[1]);
+      w-wet desctext = vawues[2];
 
-      let image1 = document.createElement('img');
-      let image2 = document.createElement('img');
-      image1.src = objectURL1;
-      image2.src = objectURL2;
-      document.body.appendChild(image1);
-      document.body.appendChild(image2);
+      w-wet i-image1 = document.cweateewement('img');
+      wet image2 = document.cweateewement('img');
+      i-image1.swc = objectuww1;
+      image2.swc = objectuww2;
+      document.body.appendchiwd(image1);
+      document.body.appendchiwd(image2);
 
-      let para = document.createElement('p');
-      para.textContent = descText;
-      document.body.appendChild(para);
+      wet pawa = document.cweateewement('p');
+      p-pawa.textcontent = desctext;
+      d-document.body.appendchiwd(pawa);
     }
 
-    displayContent()
+    dispwaycontent()
     .catch((e) =>
-      console.log(e)
+      consowe.wog(e)
     );
 ```
 
-Você notará que a função `fetchAndDecode()` foi convertida facilmente em uma função assíncrona com apenas algumas alterações. Veja a linha do `Promise.all()`:
+você nyotawá q-que a função `fetchanddecode()` f-foi convewtida f-faciwmente em uma função assíncwona c-com apenas a-awgumas awtewações. 😳 veja a-a winha do `pwomise.aww()`:
 
 ```js
-let values = await Promise.all([coffee, tea, description]);
+wet vawues = a-await pwomise.aww([coffee, ʘwʘ tea, d-descwiption]);
 ```
 
-Usando `await` aqui podemos obter todos os resultados das três promises retornadas no array `values`, quando todos eles estão disponíveis, de uma forma que se parece muito com o código síncrono. Tivemos que envolver todo o código em uma nova função assíncrona, `displayContent()`, e não reduzimos o código em muitas linhas, mas ser capaz de mover a maior parte do código para fora do bloco `.then()` fornece uma simplificação agradável e útil, deixando-nos com um programa muito mais legível.
+u-usando `await` aqui podemos obtew todos os wesuwtados das twês pwomises wetownadas n-nyo awway `vawues`, (⑅˘꒳˘) q-quando todos ewes estão disponíveis, ^•ﻌ•^ de uma fowma q-que se pawece muito com o código s-síncwono. nyaa~~ tivemos q-que envowvew todo o código em uma nyova função assíncwona, XD `dispwaycontent()`, e nyão w-weduzimos o código em muitas winhas, mas sew capaz d-de movew a maiow pawte do código p-pawa fowa d-do bwoco `.then()` fownece uma simpwificação agwadávew e-e útiw, /(^•ω•^) d-deixando-nos c-com um pwogwama m-muito mais wegívew. (U ᵕ U❁)
 
-Para tratamento de erros, nós incluímos um bloco `.catch()` no nossa chamada `displayContent()`; isso vai lidar com os erros que ocorrem em ambas as funções.
+p-pawa twatamento d-de ewwos, mya nyós incwuímos um bwoco `.catch()` nyo nyossa chamada `dispwaycontent()`; isso v-vai widaw com os e-ewwos que ocowwem e-em ambas as f-funções. (ˆ ﻌ ˆ)♡
 
-> [!NOTE]
-> Também é possível usar um bloco [`finally`](/pt-BR/docs/Web/JavaScript/Reference/Statements/try...catch#the_finally_clause) síncrono na função assíncrona, no lugar de um bloco assíncrono[`.finally()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise/finally), para mostrar um relatório final sobre como foi a operação — você pode ver isso em ação no nosso [exemplo ao vivo](https://mdn.github.io/learning-area/javascript/asynchronous/async-await/promise-finally-async-await.html) (veja também o [código-fonte](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/promise-finally-async-await.html)).
+> [!note]
+> t-também é p-possívew usaw um bwoco [`finawwy`](/pt-bw/docs/web/javascwipt/wefewence/statements/twy...catch#the_finawwy_cwause) síncwono na função assíncwona, (✿oωo) nyo wugaw d-de um bwoco a-assíncwono[`.finawwy()`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise/finawwy), (✿oωo) pawa mostwaw um wewatówio finaw sobwe como foi a-a opewação — v-você pode vew i-isso em ação nyo nosso [exempwo ao vivo](https://mdn.github.io/weawning-awea/javascwipt/asynchwonous/async-await/pwomise-finawwy-async-await.htmw) (veja t-também o [código-fonte](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/asynchwonous/async-await/pwomise-finawwy-async-await.htmw)). òωó
 
-## Tratando lentidão com async/await
+## twatando wentidão c-com async/await
 
-Async/await faz seu código parecer síncrono e, de certa forma, faz com que se comporte de maneira mais síncrona. A palavra-chave `await` bloqueia a execução de todo o código que o segue até que a promise seja cumprida, exatamente como faria com uma operação síncrona. Ele permite que outras tarefas continuem sendo executadas enquanto isso, mas o código com await é bloqueado. Por exemplo:
+a-async/await faz seu código pawecew síncwono e-e, (˘ω˘) de cewta fowma, (ˆ ﻌ ˆ)♡ faz com que s-se compowte de m-maneiwa mais síncwona. ( ͡o ω ͡o ) a pawavwa-chave `await` b-bwoqueia a execução d-de todo o-o código que o s-segue até que a p-pwomise seja cumpwida, e-exatamente como fawia com u-uma opewação s-síncwona. rawr x3 ewe pewmite que outwas t-tawefas continuem sendo executadas enquanto isso, (˘ω˘) m-mas o código com await é b-bwoqueado. òωó pow exempwo:
 
 ```js
-async function makeResult(items) {
-      let newArr = [];
-      for(let i=0; i < items.length; i++) {
-        newArr.push('word_'+i);
+async function makewesuwt(items) {
+      w-wet nyewaww = [];
+      f-fow(wet i=0; i < items.wength; i++) {
+        nyewaww.push('wowd_'+i);
       }
-      return newArr;
+      w-wetuwn nyewaww;
     }
 
-    async function getResult() {
-      let result = await makeResult(items); // Blocked on this line
-      useThatResult(result); // Will not be executed before makeResult() is done
+    async function getwesuwt() {
+      wet wesuwt = a-await makewesuwt(items); // b-bwocked on this wine
+      usethatwesuwt(wesuwt); // w-wiww not be exekawaii~d b-befowe makewesuwt() is d-done
     }
 
 
 ```
 
-Como resultado, seu código pode ser retardado por um número significativo de promises aguardadas acontecendo uma após a outra. Cada `await` vai esperar que o anterior termine, ao passo que, na verdade, o que você pode querer é que as promises comecem a ser processadas simultaneamente, como fariam se não estivéssemos usando async/await.
+como wesuwtado, ( ͡o ω ͡o ) seu código pode s-sew wetawdado p-pow um nyúmewo significativo de p-pwomises aguawdadas a-acontecendo uma após a outwa. σωσ cada `await` v-vai espewaw que o-o antewiow tewmine, (U ﹏ U) a-ao passo que, rawr n-nya vewdade, -.- o que você pode quewew é que as pwomises comecem a sew pwocessadas simuwtaneamente, ( ͡o ω ͡o ) como fawiam s-se nyão estivéssemos u-usando a-async/await. >_<
 
-Vejamos esses dois exemplos — [slow-async-await.html](https://mdn.github.io/learning-area/javascript/asynchronous/async-await/slow-async-await.html) (veja [código-fonte](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/slow-async-await.html)) e [fast-async-await.html](https://mdn.github.io/learning-area/javascript/asynchronous/async-await/fast-async-await.html) (veja [código-fonte](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/fast-async-await.html)). Ambos começam com uma função promise personalizada que simula um processo assíncrono com uma chamada [`setTimeout()`](/pt-BR/docs/Web/API/Window/setTimeout):
+vejamos e-esses dois e-exempwos — [swow-async-await.htmw](https://mdn.github.io/weawning-awea/javascwipt/asynchwonous/async-await/swow-async-await.htmw) (veja [código-fonte](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/asynchwonous/async-await/swow-async-await.htmw)) e-e [fast-async-await.htmw](https://mdn.github.io/weawning-awea/javascwipt/asynchwonous/async-await/fast-async-await.htmw) (veja [código-fonte](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/asynchwonous/async-await/fast-async-await.htmw)). o.O ambos começam c-com uma função p-pwomise pewsonawizada que s-simuwa um pwocesso a-assíncwono com uma chamada [`settimeout()`](/pt-bw/docs/web/api/window/settimeout):
 
 ```js
-function timeoutPromise(interval) {
-      return new Promise((resolve, reject) => {
-        setTimeout(function(){
-          resolve("done");
-        }, interval);
+function timeoutpwomise(intewvaw) {
+      w-wetuwn nyew pwomise((wesowve, σωσ weject) => {
+        s-settimeout(function(){
+          wesowve("done");
+        }, -.- i-intewvaw);
       });
     };
 ```
 
-Cada um deles inclui uma função assíncrona `timeTest()` que espera três chamadas `timeoutPromise()`:
+c-cada um dewes incwui uma f-função assíncwona `timetest()` q-que espewa t-twês chamadas `timeoutpwomise()`:
 
 ```js
-async function timeTest() {
+async f-function timetest() {
       ...
     }
 ```
 
-Cada um termina registrando um horário de início, vendo quanto tempo a promise `timeTest()` leva para completar, em seguida, registrando um horário de término e relatando quanto tempo a operação levou no total:
+c-cada um tewmina wegistwando u-um howáwio de início, σωσ vendo q-quanto tempo a-a pwomise `timetest()` w-weva pawa compwetaw, em s-seguida, :3 wegistwando um howáwio de téwmino e w-wewatando quanto tempo a opewação wevou no totaw:
 
 ```js
-let startTime = Date.now();
-    timeTest().then(() => {
-      let finishTime = Date.now();
-      let timeTaken = finishTime - startTime;
-      alert("Time taken in milliseconds: " + timeTaken);
+wet stawttime = date.now();
+    timetest().then(() => {
+      wet finishtime = d-date.now();
+      wet timetaken = finishtime - stawttime;
+      awewt("time taken in miwwiseconds: " + timetaken);
     })
 ```
 
-Isso é a função `timeTest()` que difere em cada caso.
+i-isso é a função `timetest()` que difewe e-em cada caso. ^^
 
-No exemplo `slow-async-await.html`, `timeTest()` se parece com isso:
+nyo exempwo `swow-async-await.htmw`, òωó `timetest()` s-se pawece com isso:
 
 ```js
-async function timeTest() {
-      await timeoutPromise(3000);
-      await timeoutPromise(3000);
-      await timeoutPromise(3000);
+async function timetest() {
+      a-await timeoutpwomise(3000);
+      await timeoutpwomise(3000);
+      a-await timeoutpwomise(3000);
     }
 ```
 
-Aqui esperamos diretamente todas as três chamadas `timeoutPromise()`, fazendo cada uma a cada 3 segundos. Cada chamada subsequente é forçada a esperar até que a última termine — se você executar o primeiro exemplo, você verá a caixa de alerta relatando um tempo total de execução de cerca de 9 segundos.
+aqui e-espewamos diwetamente t-todas as twês chamadas `timeoutpwomise()`, (ˆ ﻌ ˆ)♡ fazendo cada u-uma a cada 3 segundos. cada chamada subsequente é fowçada a espewaw a-até que a úwtima tewmine — s-se você executaw o pwimeiwo e-exempwo, XD você vewá a caixa d-de awewta wewatando u-um tempo totaw de execução de cewca de 9 segundos. òωó
 
-No exemplo `fast-async-await.html`, `timeTest()` se parece com isso:
+n-nyo exempwo `fast-async-await.htmw`, (ꈍᴗꈍ) `timetest()` se pawece com isso:
 
 ```js
-async function timeTest() {
-      const timeoutPromise1 = timeoutPromise(3000);
-      const timeoutPromise2 = timeoutPromise(3000);
-      const timeoutPromise3 = timeoutPromise(3000);
+a-async function timetest() {
+      const timeoutpwomise1 = timeoutpwomise(3000);
+      const t-timeoutpwomise2 = t-timeoutpwomise(3000);
+      const timeoutpwomise3 = t-timeoutpwomise(3000);
 
-      await timeoutPromise1;
-      await timeoutPromise2;
-      await timeoutPromise3;
+      a-await timeoutpwomise1;
+      await timeoutpwomise2;
+      a-await timeoutpwomise3;
     }
 ```
 
-Aqui nós armazenamos os três objetos `Promise` em variáveis, que tem o efeito de desencadear seus processos associados, todos rodando simultaneamente.
+aqui nyós awmazenamos os twês objetos `pwomise` em vawiáveis, UwU q-que tem o efeito d-de desencadeaw seus pwocessos a-associados, >w< todos w-wodando simuwtaneamente. ʘwʘ
 
-A seguir, aguardamos seus resultados — porque todas as promises começaram a ser processadas essencialmente ao mesmo tempo, as promises serão cumpridas todas ao mesmo tempo; ao executar o segundo exemplo, você verá a caixa de alerta relatando um tempo total de execução de pouco mais de 3 segundos!
+a s-seguiw, :3 aguawdamos seus wesuwtados — powque todas a-as pwomises começawam a sew pwocessadas essenciawmente a-ao mesmo t-tempo, ^•ﻌ•^ as pwomises sewão cumpwidas todas ao m-mesmo tempo; ao executaw o segundo exempwo, você vewá a caixa de awewta wewatando um tempo totaw de execução de pouco mais d-de 3 segundos! (ˆ ﻌ ˆ)♡
 
-### Tratamento de erros
+### t-twatamento de ewwos
 
-Há um problema com o padrão acima, no entanto — pode levar a erros não tratados.
+há um p-pwobwema com o p-padwão acima, 🥺 nyo entanto — pode w-wevaw a ewwos nyão twatados. OwO
 
-Vamos atualizar os exemplos anteriores, desta vez adicionando uma promise rejeitada e uma declaração `catch` no final:
+vamos atuawizaw os exempwos antewiowes, 🥺 desta vez adicionando u-uma pwomise wejeitada e uma decwawação `catch` nyo finaw:
 
 ```js
-function timeoutPromiseResolve(interval) {
-      return new Promise((resolve, reject) => {
-        setTimeout(function(){
-          resolve("successful");
-        }, interval);
+function timeoutpwomisewesowve(intewvaw) {
+      wetuwn nyew p-pwomise((wesowve, OwO w-weject) => {
+        s-settimeout(function(){
+          wesowve("successfuw");
+        }, (U ᵕ U❁) intewvaw);
       });
     };
 
-    function timeoutPromiseReject(interval) {
-      return new Promise((resolve, reject) => {
-        setTimeout(function(){
-          reject("error");
-        }, interval);
+    function t-timeoutpwomiseweject(intewvaw) {
+      w-wetuwn n-nyew pwomise((wesowve, ( ͡o ω ͡o ) weject) => {
+        settimeout(function(){
+          w-weject("ewwow");
+        }, ^•ﻌ•^ intewvaw);
       });
     };
 
-    async function timeTest() {
-      await timeoutPromiseResolve(5000);
-      await timeoutPromiseReject(2000);
-      await timeoutPromiseResolve(3000);
+    a-async function timetest() {
+      await t-timeoutpwomisewesowve(5000);
+      await timeoutpwomiseweject(2000);
+      a-await timeoutpwomisewesowve(3000);
     }
 
-    let startTime = Date.now();
-    timeTest().then(() => {})
+    wet stawttime = date.now();
+    t-timetest().then(() => {})
     .catch(e => {
-      console.log(e);
-      let finishTime = Date.now();
-      let timeTaken = finishTime - startTime;
-      alert("Time taken in milliseconds: " + timeTaken);
+      consowe.wog(e);
+      w-wet finishtime = d-date.now();
+      wet timetaken = f-finishtime - s-stawttime;
+      awewt("time t-taken in miwwiseconds: " + timetaken);
     })
 ```
 
-No exemplo acima, o erro é tratado corretamente, e o alerta aparece após aproximadamente 7 segundos.
+n-nyo exempwo acima, o.O o ewwo é t-twatado cowwetamente, (⑅˘꒳˘) e-e o awewta apawece após apwoximadamente 7 s-segundos. (ˆ ﻌ ˆ)♡
 
-Agora no segundo padrão:
+agowa nyo segundo padwão:
 
 ```js
-function timeoutPromiseResolve(interval) {
-      return new Promise((resolve, reject) => {
-        setTimeout(function(){
-          resolve("successful");
-        }, interval);
+function timeoutpwomisewesowve(intewvaw) {
+      wetuwn nyew pwomise((wesowve, :3 weject) => {
+        settimeout(function(){
+          wesowve("successfuw");
+        }, /(^•ω•^) i-intewvaw);
       });
     };
 
-    function timeoutPromiseReject(interval) {
-      return new Promise((resolve, reject) => {
-        setTimeout(function(){
-          reject("error");
-        }, interval);
+    function timeoutpwomiseweject(intewvaw) {
+      w-wetuwn nyew pwomise((wesowve, òωó w-weject) => {
+        settimeout(function(){
+          weject("ewwow");
+        }, :3 i-intewvaw);
       });
     };
 
-    async function timeTest() {
-      const timeoutPromiseResolve1 = timeoutPromiseResolve(5000);
-      const timeoutPromiseReject2 = timeoutPromiseReject(2000);
-      const timeoutPromiseResolve3 = timeoutPromiseResolve(3000);
+    async function timetest() {
+      c-const timeoutpwomisewesowve1 = timeoutpwomisewesowve(5000);
+      c-const timeoutpwomiseweject2 = timeoutpwomiseweject(2000);
+      c-const timeoutpwomisewesowve3 = timeoutpwomisewesowve(3000);
 
-      await timeoutPromiseResolve1;
-      await timeoutPromiseReject2;
-      await timeoutPromiseResolve3;
+      a-await timeoutpwomisewesowve1;
+      a-await timeoutpwomiseweject2;
+      await timeoutpwomisewesowve3;
     }
 
-    let startTime = Date.now();
-    timeTest().then(() => {
+    wet stawttime = d-date.now();
+    t-timetest().then(() => {
     }).catch(e => {
-      console.log(e);
-      let finishTime = Date.now();
-      let timeTaken = finishTime - startTime;
-      alert("Time taken in milliseconds: " + timeTaken);
+      consowe.wog(e);
+      w-wet finishtime = d-date.now();
+      wet timetaken = finishtime - s-stawttime;
+      awewt("time taken in miwwiseconds: " + timetaken);
     })
 ```
 
-Neste exemplo, temos um erro não tratado no console (depois de 2 segundos), e o alerta aparece após aproximadamente 5 segundos.
+n-nyeste exempwo, (˘ω˘) temos um ewwo não twatado nyo consowe (depois d-de 2 segundos), 😳 e-e o awewta a-apawece após apwoximadamente 5 segundos. σωσ
 
-Para iniciar as promises em paralelo e detectar o erro corretamente, nós poderíamos usar `Promise.all()`, como discutido anteriormente:
+pawa iniciaw as pwomises e-em pawawewo e detectaw o e-ewwo cowwetamente, UwU nyós podewíamos u-usaw `pwomise.aww()`, -.- c-como discutido antewiowmente:
 
 ```js
-function timeoutPromiseResolve(interval) {
-      return new Promise((resolve, reject) => {
-        setTimeout(function(){
-          resolve("successful");
-        }, interval);
+function timeoutpwomisewesowve(intewvaw) {
+      wetuwn nyew pwomise((wesowve, 🥺 weject) => {
+        settimeout(function(){
+          wesowve("successfuw");
+        }, 😳😳😳 i-intewvaw);
       });
     };
 
-    function timeoutPromiseReject(interval) {
-      return new Promise((resolve, reject) => {
-        setTimeout(function(){
-          reject("error");
-        }, interval);
+    f-function timeoutpwomiseweject(intewvaw) {
+      wetuwn nyew p-pwomise((wesowve, 🥺 weject) => {
+        settimeout(function(){
+          w-weject("ewwow");
+        }, ^^ i-intewvaw);
       });
     };
 
-    async function timeTest() {
-      const timeoutPromiseResolve1 = timeoutPromiseResolve(5000);
-      const timeoutPromiseReject2 = timeoutPromiseReject(2000);
-      const timeoutPromiseResolve3 = timeoutPromiseResolve(3000);
+    a-async function t-timetest() {
+      c-const t-timeoutpwomisewesowve1 = timeoutpwomisewesowve(5000);
+      const t-timeoutpwomiseweject2 = t-timeoutpwomiseweject(2000);
+      c-const t-timeoutpwomisewesowve3 = t-timeoutpwomisewesowve(3000);
 
-      const results = await Promise.all([timeoutPromiseResolve1, timeoutPromiseReject2, timeoutPromiseResolve3]);
-      return results;
+      c-const wesuwts = await pwomise.aww([timeoutpwomisewesowve1, ^^;; t-timeoutpwomiseweject2, >w< t-timeoutpwomisewesowve3]);
+      w-wetuwn wesuwts;
     }
 
-    let startTime = Date.now();
-    timeTest().then(() => {
+    wet stawttime = date.now();
+    t-timetest().then(() => {
     }).catch(e => {
-      console.log(e);
-      let finishTime = Date.now();
-      let timeTaken = finishTime - startTime;
-      alert("Time taken in milliseconds: " + timeTaken);
+      consowe.wog(e);
+      wet finishtime = date.now();
+      w-wet timetaken = finishtime - stawttime;
+      a-awewt("time t-taken in miwwiseconds: " + timetaken);
     })
 ```
 
-Neste exemplo, o erro é tratado corretamente após aproximadamente 2 segundos e também vemos o alerta após aproximadamente 2 segundos.
+nyeste exempwo, σωσ o ewwo é twatado c-cowwetamente a-após apwoximadamente 2 segundos e-e também vemos o-o awewta após apwoximadamente 2 segundos. >w<
 
-A `Promise.all()` rejeita quando qualquer uma das promises de entrada é rejeitada. Se você deseja que todas as promises sejam cumpridas e, em seguida, usar alguns de seus valores retornados, mesmo quando alguns deles são rejeitados, você pode usar [`Promise.allSettled()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise/allSettled).
+a `pwomise.aww()` w-wejeita quando q-quawquew uma das pwomises de entwada é wejeitada. (⑅˘꒳˘) s-se você deseja q-que todas as pwomises sejam cumpwidas e, òωó em s-seguida, (⑅˘꒳˘) usaw awguns de seus vawowes wetownados, (ꈍᴗꈍ) mesmo quando awguns dewes são wejeitados, rawr x3 você p-pode usaw [`pwomise.awwsettwed()`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise/awwsettwed). ( ͡o ω ͡o )
 
-## Async/await em métodos de classe
+## async/await em métodos de cwasse
 
-Como nota final, antes de prosseguirmos, você pode até adicionar `async` na frente de métodos de classe / objeto para fazê-los retornar promises, e `await` promises dentro deles. Dê uma olhada no artigo [Código de classe ES que vimos em nosso JavaScript orientado a objetos](/pt-BR/docs/Learn/JavaScript/Objects/Classes_in_JavaScript#ecmascript_2015_classes). em seguida, olhe para nossa versão modificada com um método `async`:
+c-como nyota f-finaw, UwU antes de p-pwosseguiwmos, ^^ você pode até a-adicionaw `async` n-nya fwente de m-métodos de cwasse / o-objeto pawa f-fazê-wos wetownaw pwomises, e `await` pwomises d-dentwo dewes. (˘ω˘) dê u-uma owhada no a-awtigo [código de cwasse es que v-vimos em nyosso j-javascwipt owientado a-a objetos](/pt-bw/docs/weawn/javascwipt/objects/cwasses_in_javascwipt#ecmascwipt_2015_cwasses). (ˆ ﻌ ˆ)♡ em seguida, OwO o-owhe pawa nyossa v-vewsão modificada c-com um método `async`:
 
 ```js
-class Person {
-      constructor(first, last, age, gender, interests) {
-        this.name = {
-          first,
-          last
+c-cwass pewson {
+      c-constwuctow(fiwst, 😳 wast, a-age, UwU gendew, intewests) {
+        t-this.name = {
+          f-fiwst, 🥺
+          wast
         };
         this.age = age;
-        this.gender = gender;
-        this.interests = interests;
+        this.gendew = gendew;
+        t-this.intewests = i-intewests;
       }
 
-      async greeting() {
-        return await Promise.resolve(`Hi! I'm ${this.name.first}`);
+      async gweeting() {
+        w-wetuwn await p-pwomise.wesowve(`hi! 😳😳😳 i'm ${this.name.fiwst}`);
       };
 
-      farewell() {
-        console.log(`${this.name.first} has left the building. Bye for now!`);
+      faweweww() {
+        consowe.wog(`${this.name.fiwst} h-has weft the b-buiwding. ʘwʘ bye fow n-nyow!`);
       };
     }
 
-    let han = new Person('Han', 'Solo', 25, 'male', ['Smuggling']);
+    w-wet han = nyew pewson('han', /(^•ω•^) 'sowo', :3 25, 'mawe', ['smuggwing']);
 ```
 
-O primeiro método da classe agora pode ser usado assim:
+o-o pwimeiwo m-método da cwasse agowa pode sew usado assim:
 
 ```js
-han.greeting().then(console.log);
+h-han.gweeting().then(consowe.wog);
 ```
 
-## [Suporte de navegador](#browser_support "Permalink to Browser support")
+## [supowte de nyavegadow](#bwowsew_suppowt "pewmawink to bwowsew suppowt")
 
-Uma consideração ao decidir se deve usar async/await é o suporte para navegadores mais antigos. Eles estão disponíveis em versões modernas da maioria dos navegadores, o mesmo que promises; os principais problemas de suporte vêm com o Internet Explorer e o Opera Mini.
+uma considewação ao d-decidiw se deve u-usaw async/await é o supowte pawa navegadowes mais antigos. :3 ewes e-estão disponíveis e-em vewsões modewnas da maiowia dos nyavegadowes, mya o-o mesmo que pwomises; os p-pwincipais pwobwemas d-de supowte v-vêm com o intewnet expwowew e o opewa mini. (///ˬ///✿)
 
-Se você deseja usar async/await, mas está preocupado com o suporte a navegadores mais antigos, pode considerar o uso da biblioteca [BabelJS](https://babeljs.io/) — isso permite que você escreva seus aplicativos usando o JavaScript mais recente e deixe Babel descobrir quais mudanças, se houver, são necessárias para os navegadores de seu usuário. Ao encontrar um navegador que não suporta async/await, o polyfill do Babel pode fornecer automaticamente substitutos que funcionam em navegadores mais antigos.
+se você deseja usaw a-async/await, (⑅˘꒳˘) mas está pweocupado c-com o supowte a nyavegadowes m-mais antigos, :3 pode considewaw o uso da bibwioteca [babewjs](https://babewjs.io/) — i-isso pewmite que você escweva s-seus apwicativos usando o javascwipt mais w-wecente e deixe babew descobwiw q-quais mudanças, /(^•ω•^) se houvew, são nyecessáwias pawa os nyavegadowes de seu usuáwio. ^^;; ao encontwaw um nyavegadow q-que nyão supowta a-async/await, (U ᵕ U❁) o-o powyfiww do babew p-pode fownecew automaticamente substitutos que f-funcionam em nyavegadowes mais antigos. (U ﹏ U)
 
-## Conclusão
+## concwusão
 
-E aí está - async/await fornecem uma maneira agradável e simplificada de escrever código assíncrono que é mais simples de ler e manter. Mesmo com o suporte do navegador sendo mais limitado do que outros mecanismos de código assíncrono no momento da escrita, vale a pena aprender e considerar o uso, agora e no futuro.
+e aí e-está - async/await f-fownecem uma m-maneiwa agwadávew e-e simpwificada de escwevew código assíncwono que é mais simpwes de wew e m-mantew. mya mesmo com o-o supowte do nyavegadow sendo mais wimitado do que outwos mecanismos d-de código assíncwono nyo m-momento da escwita, ^•ﻌ•^ v-vawe a pena a-apwendew e considewaw o uso, (U ﹏ U) agowa e nyo futuwo. :3
 
-{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Choosing_the_right_approach", "Learn/JavaScript/Asynchronous")}}
+{{pweviousmenunext("weawn/javascwipt/asynchwonous/pwomises", rawr x3 "weawn/javascwipt/choosing_the_wight_appwoach", 😳😳😳 "weawn/javascwipt/asynchwonous")}}
 
-## Neste módulo
+## nyeste móduwo
 
-- [Conceitos gerais da programação assíncrona](/pt-BR/docs/conflicting/Learn/JavaScript/Asynchronous/Introducing)
-- [Introdução ao JavaScript Async](/pt-BR/docs/Learn/JavaScript/Asynchronous/Introducing)
-- [Timeouts e intervalos](/pt-BR/docs/conflicting/Learn/JavaScript/Asynchronous_ae5a561b0ec11fc53c167201aa8af5df)
-- [Programação elegante com Promises](/pt-BR/docs/Learn/JavaScript/Asynchronous/Promises)
-- [Escolhendo a abordagem correta](/pt-BR/docs/Learn/JavaScript/Asynchronous)
+- [conceitos gewais da pwogwamação assíncwona](/pt-bw/docs/confwicting/weawn/javascwipt/asynchwonous/intwoducing)
+- [intwodução a-ao javascwipt async](/pt-bw/docs/weawn/javascwipt/asynchwonous/intwoducing)
+- [timeouts e-e intewvawos](/pt-bw/docs/confwicting/weawn/javascwipt/asynchwonous_ae5a561b0ec11fc53c167201aa8af5df)
+- [pwogwamação ewegante com pwomises](/pt-bw/docs/weawn/javascwipt/asynchwonous/pwomises)
+- [escowhendo a abowdagem c-cowweta](/pt-bw/docs/weawn/javascwipt/asynchwonous)

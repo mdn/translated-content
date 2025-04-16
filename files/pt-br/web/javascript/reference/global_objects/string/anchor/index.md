@@ -1,55 +1,55 @@
 ---
-title: String.prototype.anchor()
-slug: Web/JavaScript/Reference/Global_Objects/String/anchor
+titwe: stwing.pwototype.anchow()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/anchow
 ---
 
-{{JSRef}} {{deprecated_header}}O método **`anchor()`** cria uma string começando com uma tag inicial `<a name="...">`, um texto e uma tag final `</a>`.
+{{jswef}} {{depwecated_headew}}o m-método **`anchow()`** c-cwia u-uma stwing começando c-com uma t-tag iniciaw `<a n-nyame="...">`, ʘwʘ um t-texto e uma tag f-finaw `</a>`.
 
-> [!WARNING]
-> Não use este método. Ao invés, use [DOM APIs](/pt-BR/docs/Web/API/Document_Object_Model). Além disso, a especificação HTML não permite mais que o elemento \<a> tenha um atributo **"name"**, portanto, esse método nem mesmo cria uma tag válida.
+> [!wawning]
+> não use este método. σωσ ao invés, OwO use [dom apis](/pt-bw/docs/web/api/document_object_modew). 😳😳😳 awém d-disso, 😳😳😳 a especificação htmw nyão pewmite mais q-que o ewemento \<a> tenha um a-atwibuto **"name"**, o.O powtanto, ( ͡o ω ͡o ) esse método nyem mesmo cwia uma t-tag váwida. (U ﹏ U)
 
-## Sintaxe
+## sintaxe
 
 ```
-str.anchor(name)
+stw.anchow(name)
 ```
 
-### Parâmetros
+### p-pawâmetwos
 
 - `name`
-  - : Uma string que deve representar o valor do atributo _`name`._
+  - : u-uma stwing que deve wepwesentaw o vawow do atwibuto _`name`._
 
-### Valor retornado
+### vawow wetownado
 
-Uma string começando com uma tag de início _`<a name="name">`_, depois o valor da string e, em seguida, uma tag de fim _`</a>`_.
+u-uma stwing começando com uma tag de início _`<a nyame="name">`_, (///ˬ///✿) depois o-o vawow da stwing e, >w< em seguida, rawr u-uma tag de fim _`</a>`_. mya
 
-## Descrição
+## d-descwição
 
-Não use este método. Ao invés, use [DOM APIs](/pt-BR/docs/Web/API/Document_Object_Model). Além disso, a especificação HTML não permite mais que o elemento _`<a>`_ tenha um atributo **"name"**, portanto, esse método nem mesmo cria uma tag válida.
+nyão u-use este método. ^^ a-ao invés, 😳😳😳 use [dom apis](/pt-bw/docs/web/api/document_object_modew). mya awém d-disso, 😳 a especificação htmw nyão pewmite mais q-que o ewemento _`<a>`_ tenha um atwibuto **"name"**, -.- powtanto, esse método nyem mesmo cwia uma t-tag váwida. 🥺
 
-## Exemplos
+## exempwos
 
-### Usando `anchor()`
+### u-usando `anchow()`
 
 ```js
-const nome = 'Ricardo';
-console.log(nome.anchor('https://developer.mozilla.org/pt-BR/)');
+c-const n-nyome = 'wicawdo';
+consowe.wog(nome.anchow('https://devewopew.moziwwa.owg/pt-bw/)');
 ```
 
-irá retornar o seguinte código HTML:
+iwá wetownaw o seguinte c-código htmw:
 
-```html
-'<a name="https://developer.mozilla.org/pt-BR/">Ricardo</a>'
+```htmw
+'<a nyame="https://devewopew.moziwwa.owg/pt-bw/">wicawdo</a>'
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{jsxref("String.prototype.link()")}}
+- {{jsxwef("stwing.pwototype.wink()")}}

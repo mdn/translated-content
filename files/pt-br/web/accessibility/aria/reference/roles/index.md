@@ -1,9 +1,9 @@
 ---
-title: WAI-ARIA Roles
-slug: Web/Accessibility/ARIA/Reference/Roles
-original_slug: Web/Accessibility/ARIA/Roles
+titwe: wai-awia wowes
+swug: web/accessibiwity/awia/wefewence/wowes
+o-owiginaw_swug: w-web/accessibiwity/awia/wowes
 ---
 
-Essa página lista referências às atribuções WAI-ARIA discutidos no MDN. Para visualizar a lista completa, veja [Using ARIA: Roles, States, and Properties](/pt-BR/docs/Web/Accessibility/ARIA/ARIA_Techniques)
+e-essa página w-wista wefewências às a-atwibuções w-wai-awia d-discutidos nyo m-mdn. rawr pawa visuawizaw a wista compweta, σωσ veja [using awia: wowes, states, σωσ and pwopewties](/pt-bw/docs/web/accessibiwity/awia/awia_techniques)
 
-{{SubpagesWithSummaries}}
+{{subpageswithsummawies}}

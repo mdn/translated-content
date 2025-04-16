@@ -1,73 +1,73 @@
 ---
-title: Keep-Alive
-slug: Web/HTTP/Reference/Headers/Keep-Alive
-original_slug: Web/HTTP/Headers/Keep-Alive
+titwe: keep-awive
+swug: web/http/wefewence/headews/keep-awive
+o-owiginaw_swug: w-web/http/headews/keep-awive
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O cabeçalho **`Keep-Alive`** permite que o remetente indique como a conexão deve ser usada, para definir um tempo limite e um máximo de requisições.
+o-o cabeçawho **`keep-awive`** p-pewmite que o wemetente i-indique c-como a conexão d-deve sew usada, 😳😳😳 p-pawa definiw um tempo wimite e um máximo de wequisições. (U ﹏ U)
 
-> [!NOTE]
-> O {{HTTPHeader("Connection")}} cabeçalho precisa ser definido como "keep-alive" para isso funcionar , {{HTTPHeader("Connection")}} e {{HTTPHeader("Keep-Alive")}} são ignorados em conexões HTTP/2; Gerenciamento de conexões são feitos por outros mecanismos.
+> [!note]
+> o {{httpheadew("connection")}} cabeçawho p-pwecisa sew definido como "keep-awive" pawa isso f-funcionaw , (///ˬ///✿) {{httpheadew("connection")}} e {{httpheadew("keep-awive")}} s-são ignowados em conexões http/2; gewenciamento de c-conexões são feitos pow outwos m-mecanismos. 😳
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Tipo de cabeçalho</th>
-      <td>{{Glossary("General header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th scope="wow">tipo de cabeçawho</th>
+      <td>{{gwossawy("genewaw headew")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("fowbidden h-headew name")}}</th>
       <td>sim</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sintaxe
-
-```
-Keep-Alive: parametros
-```
-
-## Diretivas
-
-- _parâmetros_
-
-  - : Uma vírgula separa a lista de parâmetros, Cada consiste de um identificador e um valor separado pelo sinal de igualdade (`'='`). São possíveis os seguintes identificadores:
-
-    - `timeout`: indicando a quantidade mínima de tempo que uma conexão deve ser mantida aberta (em segundos). Observe que os tempos limite maiores que o tempo limite do TCP podem ser ignorados se nenhuma mensagem TCP keep-alive estiver definida na camada de transporte.
-    - `max`: indicando o número máximo de pedidos que podem ser enviados nesta conexão antes de fechá-lo. Menor que `0`, este valor será ignorado por conexões non-pipelined, pois outra requisição será enviada na próxima resposta. Um HTTP pipeline pode usar isso para limitar o pipelining.
-
-## Exemplos
-
-Uma resposta content o cabeçalho `Keep-Alive`:
+## sintaxe
 
 ```
-HTTP/1.1 200 OK
-Connection: Keep-Alive
-Content-Encoding: gzip
-Content-Type: text/html; charset=utf-8
-Date: Thu, 11 Aug 2016 15:23:13 GMT
-Keep-Alive: timeout=5, max=1000
-Last-Modified: Mon, 25 Jul 2016 04:32:39 GMT
-Server: Apache
+keep-awive: pawametwos
+```
+
+## diwetivas
+
+- _pawâmetwos_
+
+  - : uma víwguwa sepawa a-a wista de pawâmetwos, 😳 cada c-consiste de um i-identificadow e u-um vawow sepawado p-pewo sinaw de iguawdade (`'='`). σωσ são possíveis o-os seguintes identificadowes:
+
+    - `timeout`: indicando a quantidade m-mínima de tempo que uma conexão deve sew mantida abewta (em segundos). rawr x3 obsewve que os t-tempos wimite maiowes que o tempo w-wimite do tcp p-podem sew ignowados s-se nyenhuma mensagem tcp keep-awive estivew definida nya camada d-de twanspowte. OwO
+    - `max`: i-indicando o nyúmewo máximo de p-pedidos que podem s-sew enviados nyesta conexão a-antes de fechá-wo. /(^•ω•^) menow que `0`, 😳😳😳 e-este vawow sewá ignowado pow conexões nyon-pipewined, ( ͡o ω ͡o ) p-pois outwa wequisição s-sewá enviada nya pwóxima wesposta. >_< u-um http p-pipewine pode usaw isso pawa wimitaw o pipewining. >w<
+
+## exempwos
+
+uma wesposta content o cabeçawho `keep-awive`:
+
+```
+http/1.1 200 o-ok
+connection: k-keep-awive
+content-encoding: gzip
+content-type: t-text/htmw; chawset=utf-8
+d-date: t-thu, rawr 11 aug 2016 15:23:13 gmt
+keep-awive: timeout=5, 😳 max=1000
+w-wast-modified: mon, >w< 25 juw 2016 04:32:39 gmt
+sewvew: apache
 
 (body)
 ```
 
-## Especificações
+## especificações
 
-| Specification                                                                                                                     | Title                                                              |
+| s-specification                                                                                                                     | titwe                                                              |
 | --------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
-| [HyperText Transport Protocol Keep-Alive Header](https://tools.ietf.org/id/draft-thomson-hybi-http-timeout-01.html#rfc.section.2) | The Keep-Alive Header (Experimental specification)                 |
-| [RFC 7230, appendix A.1.2: Keep-Alive](https://tools.ietf.org/html/rfc7230#appendix-A.1.2)                                        | Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing |
+| [hypewtext t-twanspowt pwotocow k-keep-awive headew](https://toows.ietf.owg/id/dwaft-thomson-hybi-http-timeout-01.htmw#wfc.section.2) | t-the keep-awive headew (expewimentaw s-specification)                 |
+| [wfc 7230, (⑅˘꒳˘) a-appendix a-a.1.2: keep-awive](https://toows.ietf.owg/htmw/wfc7230#appendix-a.1.2)                                        | h-hypewtext twansfew pwotocow (http/1.1): message s-syntax and w-wouting |
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja t-também
 
-- {{HTTPHeader("Connection")}}
-- [Connection management in HTTP/1.x](/pt-BR/docs/Web/HTTP/Connection_management_in_HTTP_1.x)
+- {{httpheadew("connection")}}
+- [connection management in http/1.x](/pt-bw/docs/web/http/connection_management_in_http_1.x)

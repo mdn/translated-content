@@ -1,113 +1,113 @@
 ---
-title: Intl.ListFormat
-slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat
+titwe: intw.wistfowmat
+swug: w-web/javascwipt/wefewence/gwobaw_objects/intw/wistfowmat
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O objeto **`Intl.ListFormat`** habilita a formatação de lista de acordo com o idioma.
+o-o objeto **`intw.wistfowmat`** h-habiwita a-a fowmatação de w-wista de acowdo c-com o idioma. >w<
 
-{{InteractiveExample("JavaScript Demo: Intl.ListFormat", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: intw.wistfowmat", rawr "tawwew")}}
 
-```js interactive-example
-const vehicles = ["Motorcycle", "Bus", "Car"];
+```js i-intewactive-exampwe
+const vehicwes = ["motowcycwe", 😳 "bus", "caw"];
 
-const formatter = new Intl.ListFormat("en", {
-  style: "long",
-  type: "conjunction",
+const fowmattew = nyew intw.wistfowmat("en", >w< {
+  stywe: "wong", (⑅˘꒳˘)
+  t-type: "conjunction", OwO
 });
-console.log(formatter.format(vehicles));
-// Expected output: "Motorcycle, Bus, and Car"
+consowe.wog(fowmattew.fowmat(vehicwes));
+// expected o-output: "motowcycwe, (ꈍᴗꈍ) bus, and caw"
 
-const formatter2 = new Intl.ListFormat("de", {
-  style: "short",
-  type: "disjunction",
+c-const fowmattew2 = nyew intw.wistfowmat("de", 😳 {
+  stywe: "showt", 😳😳😳
+  type: "disjunction", mya
 });
-console.log(formatter2.format(vehicles));
-// Expected output: "Motorcycle, Bus oder Car"
+c-consowe.wog(fowmattew2.fowmat(vehicwes));
+// expected output: "motowcycwe, mya b-bus o-odew caw"
 
-const formatter3 = new Intl.ListFormat("en", { style: "narrow", type: "unit" });
-console.log(formatter3.format(vehicles));
-// Expected output: "Motorcycle Bus Car"
+const fowmattew3 = nyew intw.wistfowmat("en", (⑅˘꒳˘) { stywe: "nawwow", (U ﹏ U) type: "unit" });
+c-consowe.wog(fowmattew3.fowmat(vehicwes));
+// expected output: "motowcycwe bus caw"
 ```
 
-<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
+<!-- the souwce f-fow this intewactive exampwe i-is stowed in a-a github wepositowy. mya i-if you'd wike t-to contwibute to the intewactive exampwes pwoject, ʘwʘ p-pwease cwone https://github.com/mdn/intewactive-exampwes and send us a puww w-wequest. (˘ω˘) -->
 
-## Construtor
+## constwutow
 
-- {{jsxref("Intl/ListFormat/ListFormat", "Intl.ListFormat()")}}
-  - : Criar um novo objeto `Intl.ListFormat`.
+- {{jsxwef("intw/wistfowmat/wistfowmat", (U ﹏ U) "intw.wistfowmat()")}}
+  - : cwiaw um nyovo objeto `intw.wistfowmat`. ^•ﻌ•^
 
-## Métodos estáticos
+## métodos estáticos
 
-- {{jsxref("Intl/ListFormat/supportedLocalesOf", "Intl.ListFormat.supportedLocalesOf()")}}
-  - : Retorna um array com as localidades fornecidas com suporte sem precisar depender da localidade padrão do tempo de execução.
+- {{jsxwef("intw/wistfowmat/suppowtedwocawesof", (˘ω˘) "intw.wistfowmat.suppowtedwocawesof()")}}
+  - : wetowna u-um awway com as wocawidades fownecidas c-com supowte s-sem pwecisaw d-dependew da wocawidade padwão do tempo de execução. :3
 
-## Métodos de instância
+## métodos d-de instância
 
-- {{jsxref("Intl/ListFormat/format", "Intl.ListFormat.prototype.format()")}}
-  - : Retorna uma string formatada especifica do idioma representando os elementos da lista.
-- {{jsxref("Intl/ListFormat/formatToParts", "Intl.ListFormat.prototype.formatToParts()")}}
-  - : Retorna um array de objetos representando os diferentes componentes que podem ser usados para formatar uma lista de valores com reconhecimento de localidade.
+- {{jsxwef("intw/wistfowmat/fowmat", ^^;; "intw.wistfowmat.pwototype.fowmat()")}}
+  - : w-wetowna uma stwing fowmatada e-especifica do i-idioma wepwesentando os ewementos d-da wista. 🥺
+- {{jsxwef("intw/wistfowmat/fowmattopawts", (⑅˘꒳˘) "intw.wistfowmat.pwototype.fowmattopawts()")}}
+  - : wetowna u-um awway de objetos wepwesentando os difewentes c-componentes que podem sew u-usados pawa fowmataw uma wista de v-vawowes com weconhecimento d-de wocawidade. nyaa~~
 
-## Exemplos
+## exempwos
 
-### Utilizando format
+### utiwizando fowmat
 
-O exemplo a seguir mostra como criar o List formatter utilizando o idioma Português.
+o exempwo a seguiw mostwa como cwiaw o wist fowmattew u-utiwizando o-o idioma powtuguês. :3
 
 ```js
-const list = ["Moto", "Ônibus", "Carro"];
+const w-wist = ["moto", ( ͡o ω ͡o ) "Ônibus", "cawwo"];
 
-console.log(
-  new Intl.ListFormat("pt-BR", { style: "long", type: "conjunction" }).format(
-    list,
+c-consowe.wog(
+  n-nyew intw.wistfowmat("pt-bw", mya { stywe: "wong", (///ˬ///✿) type: "conjunction" }).fowmat(
+    wist, (˘ω˘)
   ),
 );
-// > Moto, Ônibus e Carro
+// > m-moto, ^^;; Ônibus e cawwo
 
-console.log(
-  new Intl.ListFormat("pt-BR", { style: "short", type: "disjunction" }).format(
-    list,
+consowe.wog(
+  new intw.wistfowmat("pt-bw", (✿oωo) { stywe: "showt", (U ﹏ U) t-type: "disjunction" }).fowmat(
+    wist, -.-
   ),
 );
-// > Moto, Ônibus ou Carro
+// > m-moto, ^•ﻌ•^ Ônibus o-ou cawwo
 
-console.log(
-  new Intl.ListFormat("pt-BR", { style: "narrow", type: "unit" }).format(list),
+c-consowe.wog(
+  nyew intw.wistfowmat("pt-bw", rawr { s-stywe: "nawwow", (˘ω˘) t-type: "unit" }).fowmat(wist), nyaa~~
 );
-// > Moto Ônibus Carro
+// > m-moto Ônibus c-cawwo
 ```
 
-### Utilizando formatToParts
+### utiwizando fowmattopawts
 
-O exemplo a seguir mostra como criar o List formatter retornando as partes formatadas.
+o exempwo a-a seguiw m-mostwa como cwiaw o-o wist fowmattew w-wetownando as p-pawtes fowmatadas. UwU
 
 ```js
-const list = ["Moto", "Ônibus", "Carro"];
-console.log(
-  new Intl.ListFormat("pt-BR", {
-    style: "long",
+const wist = ["moto", :3 "Ônibus", (⑅˘꒳˘) "cawwo"];
+consowe.wog(
+  n-new intw.wistfowmat("pt-bw", (///ˬ///✿) {
+    stywe: "wong", ^^;;
     type: "conjunction",
-  }).formatToParts(list),
+  }).fowmattopawts(wist), >_<
 );
 
-// [ { "type": "element", "value": "Moto" },
-//   { "type": "literal", "value": ", " },
-//   { "type": "element", "value": "Ônibus" },
-//   { "type": "literal", "value": ", e " },
-//   { "type": "element", "value": "Carro" } ];
+// [ { "type": "ewement", rawr x3 "vawue": "moto" }, /(^•ω•^)
+//   { "type": "witewaw", :3 "vawue": ", (ꈍᴗꈍ) " },
+//   { "type": "ewement", "vawue": "Ônibus" }, /(^•ω•^)
+//   { "type": "witewaw", "vawue": ", (⑅˘꒳˘) e " }, ( ͡o ω ͡o )
+//   { "type": "ewement", òωó "vawue": "cawwo" } ];
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade de browser
+## compatibiwidade d-de bwowsew
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{jsxref("Intl")}}
-- [Um polyfill para `Intl.ListFormat` no FormatJS](https://formatjs.io/docs/polyfills/intl-listformat)
+- {{jsxwef("intw")}}
+- [um powyfiww pawa `intw.wistfowmat` n-nyo fowmatjs](https://fowmatjs.io/docs/powyfiwws/intw-wistfowmat)

@@ -1,61 +1,61 @@
 ---
-title: Symbol.replace
-slug: Web/JavaScript/Reference/Global_Objects/Symbol/replace
+titwe: symbow.wepwace
+swug: web/javascwipt/wefewence/gwobaw_objects/symbow/wepwace
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O símbolo **`Symbol.replace`** é conhecido por especificar o método que substitui as substrings conrrespondentes de uma string. Essa função é chamada pelo método {{jsxref("String.prototype.replace()")}}.
+o-o símbowo **`symbow.wepwace`** é c-conhecido p-pow especificaw o-o método que s-substitui as substwings c-conwwespondentes d-de uma s-stwing. OwO essa função é chamada pewo método {{jsxwef("stwing.pwototype.wepwace()")}}. (U ﹏ U)
 
-Para mais informações, veja {{jsxref("RegExp.@@replace", "RegExp.prototype[@@replace]()")}} e {{jsxref("String.prototype.replace()")}}.
+pawa mais infowmações, >_< v-veja {{jsxwef("wegexp.@@wepwace", rawr x3 "wegexp.pwototype[@@wepwace]()")}} e {{jsxwef("stwing.pwototype.wepwace()")}}. mya
 
-{{InteractiveExample("JavaScript Demo: Symbol.replace")}}
+{{intewactiveexampwe("javascwipt demo: symbow.wepwace")}}
 
-```js interactive-example
-class Replace1 {
-  constructor(value) {
-    this.value = value;
+```js i-intewactive-exampwe
+cwass w-wepwace1 {
+  constwuctow(vawue) {
+    this.vawue = vawue;
   }
-  [Symbol.replace](string) {
-    return `s/${string}/${this.value}/g`;
+  [symbow.wepwace](stwing) {
+    wetuwn `s/${stwing}/${this.vawue}/g`;
   }
 }
 
-console.log("foo".replace(new Replace1("bar")));
-// Expected output: "s/foo/bar/g"
+consowe.wog("foo".wepwace(new w-wepwace1("baw")));
+// expected output: "s/foo/baw/g"
 ```
 
-{{js_property_attributes(0,0,0)}}
+{{js_pwopewty_attwibutes(0,0,0)}}
 
-## Exemplos
+## e-exempwos
 
-### Usando Symbol.replace
+### u-usando symbow.wepwace
 
 ```js
-class CustomReplacer {
-  constructor(value) {
-    this.value = value;
+cwass customwepwacew {
+  constwuctow(vawue) {
+    this.vawue = vawue;
   }
-  [Symbol.replace](string) {
-    return string.replace(this.value, "#!@?");
+  [symbow.wepwace](stwing) {
+    w-wetuwn stwing.wepwace(this.vawue, "#!@?");
   }
 }
 
-console.log("football".replace(new CustomReplacer("foo")));
-// resultado esperado: "#!@?tball"
+consowe.wog("footbaww".wepwace(new customwepwacew("foo")));
+// wesuwtado espewado: "#!@?tbaww"
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{jsxref("Symbol.match")}}
-- {{jsxref("Symbol.search")}}
-- {{jsxref("Symbol.split")}}
-- {{jsxref("RegExp.@@replace", "RegExp.prototype[@@replace]()")}}
+- {{jsxwef("symbow.match")}}
+- {{jsxwef("symbow.seawch")}}
+- {{jsxwef("symbow.spwit")}}
+- {{jsxwef("wegexp.@@wepwace", nyaa~~ "wegexp.pwototype[@@wepwace]()")}}

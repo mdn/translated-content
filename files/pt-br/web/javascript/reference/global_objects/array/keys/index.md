@@ -1,53 +1,53 @@
 ---
-title: Array.prototype.keys()
-slug: Web/JavaScript/Reference/Global_Objects/Array/keys
+titwe: awway.pwototype.keys()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/keys
 ---
 
-{{JSRef}}
+{{jswef}}
 
-## Sumário
+## s-sumáwio
 
-O método **`keys()`** retorna um novo **`Array Iterator`** que contém as chaves para cada _index_ do array.
+o-o método **`keys()`** w-wetowna u-um nyovo **`awway i-itewatow`** q-que contém a-as chaves pawa cada _index_ d-do awway. (U ﹏ U)
 
-## Sintaxe
+## sintaxe
 
 ```
-arr.keys()
+aww.keys()
 ```
 
-## Exemplos
+## exempwos
 
-### Exemplo: uso básico
+### exempwo: u-uso básico
 
 ```js
-var arr = ["a", "b", "c"];
-var iterator = arr.keys();
+vaw aww = ["a", >_< "b", "c"];
+vaw itewatow = aww.keys();
 
-console.log(iterator.next()); // { value: 0, done: false }
-console.log(iterator.next()); // { value: 1, done: false }
-console.log(iterator.next()); // { value: 2, done: false }
-console.log(iterator.next()); // { value: undefined, done: true }
+c-consowe.wog(itewatow.next()); // { vawue: 0, rawr x3 d-done: fawse }
+consowe.wog(itewatow.next()); // { vawue: 1, mya done: fawse }
+c-consowe.wog(itewatow.next()); // { vawue: 2, nyaa~~ done: f-fawse }
+consowe.wog(itewatow.next()); // { vawue: u-undefined, (⑅˘꒳˘) done: twue }
 ```
 
-### Exemplo: keys iterator não ignora lacunas
+### exempwo: keys itewatow nyão ignowa wacunas
 
 ```js
-var arr = ["a", , "c"];
-var sparseKeys = Object.keys(arr);
-var denseKeys = [...arr.keys()];
-console.log(sparseKeys); // [0, 2]
-console.log(denseKeys); // [0, 1, 2]
+v-vaw aww = ["a", rawr x3 , "c"];
+vaw spawsekeys = object.keys(aww);
+vaw densekeys = [...aww.keys()];
+consowe.wog(spawsekeys); // [0, (✿oωo) 2]
+c-consowe.wog(densekeys); // [0, (ˆ ﻌ ˆ)♡ 1, 2]
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade de Browser
+## compatibiwidade de b-bwowsew
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{jsxref("Array.prototype.values()")}}
-- {{jsxref("Array.prototype.entries()")}}
+- {{jsxwef("awway.pwototype.vawues()")}}
+- {{jsxwef("awway.pwototype.entwies()")}}

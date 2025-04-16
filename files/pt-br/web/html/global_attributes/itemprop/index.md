@@ -1,446 +1,446 @@
 ---
-title: itemprop
-slug: Web/HTML/Global_attributes/itemprop
+titwe: itempwop
+swug: web/htmw/gwobaw_attwibutes/itempwop
 ---
 
-{{HTMLSidebar("Global_attributes")}}
+{{htmwsidebaw("gwobaw_attwibutes")}}
 
-O atributo global **`itemprop`** é usado para adicionar propriedades para um item. Todo elemento HTML pode ter um atributo `itemprop` especificado, e um `itemprop` consiste em um par de nome e valor. Cada par de nome e valor é chamado de **propriedade,** e um grupo de uma ou mais propriedades forma um **item**. Os valores das propriedades são ou um texto ou uma URL e pode ser associada a uma grande variedade de elementos incluindo {{HTMLElement("audio")}}, {{HTMLElement("embed")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, {{HTMLElement("link")}}, {{HTMLElement("object")}}, {{HTMLElement("source")}} , {{HTMLElement("track")}}, and {{HTMLElement("video")}}.
+o-o atwibuto g-gwobaw **`itempwop`** é u-usado p-pawa adicionaw p-pwopwiedades pawa u-um item. UwU todo e-ewemento htmw pode t-tew um atwibuto `itempwop` especificado, >_< e um `itempwop` consiste em um paw de nyome e vawow. /(^•ω•^) c-cada paw de nyome e vawow é chamado de **pwopwiedade,** e-e um gwupo de uma ou m-mais pwopwiedades fowma um **item**. òωó os vawowes das pwopwiedades s-são ou um texto ou uma uww e pode s-sew associada a-a uma gwande vawiedade de ewementos incwuindo {{htmwewement("audio")}}, σωσ {{htmwewement("embed")}}, {{htmwewement("ifwame")}}, ( ͡o ω ͡o ) {{htmwewement("img")}}, nyaa~~ {{htmwewement("wink")}}, :3 {{htmwewement("object")}}, UwU {{htmwewement("souwce")}} , o.O {{htmwewement("twack")}}, (ˆ ﻌ ˆ)♡ and {{htmwewement("video")}}. ^^;;
 
-## Exemplos
+## exempwos
 
-The example below shows the source for a set of elements marked up with `itemprop` attributes, followed by a table showing the resulting structured data.
+the e-exampwe bewow shows the souwce fow a set of ewements mawked up with `itempwop` a-attwibutes, ʘwʘ fowwowed by a tabwe s-showing the wesuwting s-stwuctuwed d-data. σωσ
 
-### HTML
+### htmw
 
-```html
-<div itemscope itemtype="http://schema.org/Movie">
-  <h1 itemprop="name">Avatar</h1>
+```htmw
+<div itemscope i-itemtype="http://schema.owg/movie">
+  <h1 itempwop="name">avataw</h1>
   <span
-    >Director:
-    <span itemprop="director">James Cameron</span>
-    (born August 16, 1954)</span
+    >diwectow:
+    <span itempwop="diwectow">james c-camewon</span>
+    (bown august 16, ^^;; 1954)</span
   >
-  <span itemprop="genre">Science fiction</span>
-  <a href="../movies/avatar-theatrical-trailer.html" itemprop="trailer"
-    >Trailer</a
+  <span itempwop="genwe">science fiction</span>
+  <a h-hwef="../movies/avataw-theatwicaw-twaiwew.htmw" itempwop="twaiwew"
+    >twaiwew</a
   >
 </div>
 ```
 
-### Structured data
+### stwuctuwed data
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <td colspan="1" rowspan="2"></td>
-      <th colspan="2" rowspan="1"><strong>Item</strong></th>
-    </tr>
-    <tr>
-      <th><strong>itemprop name</strong></th>
-      <th><strong>itemprop value</strong></th>
-    </tr>
-    <tr>
-      <td>itemprop</td>
+    <tw>
+      <td cowspan="1" w-wowspan="2"></td>
+      <th cowspan="2" wowspan="1"><stwong>item</stwong></th>
+    </tw>
+    <tw>
+      <th><stwong>itempwop n-nyame</stwong></th>
+      <th><stwong>itempwop vawue</stwong></th>
+    </tw>
+    <tw>
+      <td>itempwop</td>
       <td>name</td>
-      <td>Avatar</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>director</td>
-      <td>James Cameron</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>genre</td>
-      <td>Science fiction</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>trailer</td>
-      <td>../movies/avatar-theatrical-trailer.html</td>
-    </tr>
+      <td>avataw</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>diwectow</td>
+      <td>james c-camewon</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>genwe</td>
+      <td>science f-fiction</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>twaiwew</td>
+      <td>../movies/avataw-theatwicaw-twaiwew.htmw</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Properties
+## pwopewties
 
-Properties have values that are either a string or a URL. When a string value is a URL, it is expressed using the {{HTMLElement("a")}} element and its [`href`](/pt-BR/docs/Web/HTML/Element/a#href) attribute, the {{HTMLElement("img")}} element and its [`src`](/pt-BR/docs/Web/HTML/Element/img#src) attribute, or other elements that link to or embed external resources.
+pwopewties have vawues that awe eithew a-a stwing ow a-a uww. ʘwʘ when a stwing vawue is a-a uww, ^^ it is expwessed u-using the {{htmwewement("a")}} ewement and i-its [`hwef`](/pt-bw/docs/web/htmw/ewement/a#hwef) attwibute, nyaa~~ the {{htmwewement("img")}} e-ewement and its [`swc`](/pt-bw/docs/web/htmw/ewement/img#swc) attwibute, (///ˬ///✿) o-ow othew ewements that wink to o-ow embed extewnaw wesouwces. XD
 
-### Three properties with values that are strings
+### t-thwee pwopewties w-with vawues that awe stwings
 
-```html
+```htmw
 <div itemscope>
-  <p>My name is <span itemprop="name">Neil</span>.</p>
-  <p>My band is called <span itemprop="band">Four Parts Water</span>.</p>
-  <p>I am <span itemprop="nationality">British</span>.</p>
+  <p>my nyame is <span itempwop="name">neiw</span>.</p>
+  <p>my band is cawwed <span i-itempwop="band">fouw p-pawts watew</span>.</p>
+  <p>i am <span itempwop="nationawity">bwitish</span>.</p>
 </div>
 ```
 
-### One property, "image", whose value is a URL
+### o-one pwopewty, :3 "image", whose v-vawue is a u-uww
 
-```html
+```htmw
 <div itemscope>
-  <img itemprop="image" src="google-logo.png" alt="Google" />
+  <img itempwop="image" swc="googwe-wogo.png" a-awt="googwe" />
 </div>
 ```
 
-When a string value can't be easily read and understood by a person (e.g., a long string of numbers and letters), it can be displayed using the value attribute of the data element, with the more easily-understood-by-a human-version given in the element's contents (which is not part of the structured data - see example below).
+when a stwing vawue can't be easiwy wead and undewstood by a-a pewson (e.g., a wong stwing o-of numbews and wettews), òωó i-it can b-be dispwayed using the vawue attwibute o-of the data e-ewement, ^^ with t-the mowe easiwy-undewstood-by-a h-human-vewsion given in the ewement's contents (which i-is nyot pawt o-of the stwuctuwed d-data - see e-exampwe bewow). ^•ﻌ•^
 
-### An item with a property whose value is a product ID
+### a-an item with a pwopewty whose vawue is a pwoduct id
 
-The ID is not human-friendly, so the product's name is used the human-visible text instead of the ID.
+the id i-is not human-fwiendwy, σωσ so the pwoduct's nyame is used the human-visibwe text instead of the id. (ˆ ﻌ ˆ)♡
 
-```html
-<h1 itemscope>
-  <data itemprop="product-id" value="9678AOU879">The Instigator 2000</data>
+```htmw
+<h1 i-itemscope>
+  <data itempwop="pwoduct-id" vawue="9678aou879">the instigatow 2000</data>
 </h1>
 ```
 
-For numeric data, the meter element and its value attribute can be used.
+f-fow nyumewic data, nyaa~~ t-the metew ewement a-and its vawue attwibute can b-be used. ʘwʘ
 
-### A meter element
+### a metew ewement
 
-```html
-<div itemscope itemtype="http://schema.org/Product">
-  <span itemprop="name">Panasonic White 60L Refrigerator</span>
-  <img src="panasonic-fridge-60l-white.jpg" alt="" />
+```htmw
+<div i-itemscope i-itemtype="http://schema.owg/pwoduct">
+  <span itempwop="name">panasonic white 60w wefwigewatow</span>
+  <img swc="panasonic-fwidge-60w-white.jpg" awt="" />
   <div
-    itemprop="aggregateRating"
-    itemscope
-    itemtype="http://schema.org/AggregateRating">
-    <meter itemprop="ratingValue" min="0" value="3.5" max="5">
-      Rated 3.5/5
-    </meter>
-    (based on <span itemprop="reviewCount">11</span>
-    customer reviews)
+    itempwop="aggwegatewating"
+    i-itemscope
+    itemtype="http://schema.owg/aggwegatewating">
+    <metew i-itempwop="watingvawue" min="0" v-vawue="3.5" max="5">
+      w-wated 3.5/5
+    </metew>
+    (based on <span itempwop="weviewcount">11</span>
+    customew weviews)
   </div>
 </div>
 ```
 
-Similarly, for date- and time-related data, the time element and its datetime attribute can be used.
+s-simiwawwy, ^•ﻌ•^ f-fow date- and time-wewated data, rawr x3 t-the time ewement a-and its datetime attwibute can be used. 🥺
 
-### An item with one property, "birthday", whose value is a date
+### an item with one pwopewty, ʘwʘ "biwthday", (˘ω˘) w-whose vawue i-is a date
 
-```html
-<div itemscope>
-  I was born on
-  <time itemprop="birthday" datetime="2009-05-10">May 10th 2009</time>.
+```htmw
+<div i-itemscope>
+  i was bown o-on
+  <time itempwop="biwthday" d-datetime="2009-05-10">may 10th 2009</time>. o.O
 </div>
 ```
 
-Properties can also be groups of name-value pairs, by putting the itemscope attribute on the element that declares the property. Each value is either a string or a group of name-value pairs (i.e. an item).
+pwopewties c-can awso be gwoups of nyame-vawue paiws, σωσ by putting the itemscope attwibute o-on the ewement t-that decwawes the pwopewty. (ꈍᴗꈍ) each vawue is eithew a-a stwing ow a g-gwoup of nyame-vawue paiws (i.e. (ˆ ﻌ ˆ)♡ an item).
 
-### An outer item representing a person, and an inner one representing a band
+### an outew item wepwesenting a-a pewson, o.O and an innew one wepwesenting a band
 
-```html
+```htmw
 <div itemscope>
-  <p>Name: <span itemprop="name">Amanda</span></p>
+  <p>name: <span i-itempwop="name">amanda</span></p>
   <p>
-    Band:
-    <span itemprop="band" itemscope>
-      <span itemprop="name">Jazz Band</span>
-      (<span itemprop="size">12</span> players)</span
+    band:
+    <span itempwop="band" i-itemscope>
+      <span i-itempwop="name">jazz band</span>
+      (<span itempwop="size">12</span> pwayews)</span
     >
   </p>
 </div>
 ```
 
-The outer item above has two properties, "name" and "band". The "name" is "Amanda", and the "band" is an item in its own right, with two properties, "name" and "size". The "name" of the band is "Jazz Band", and the "size" is "12". The outer item in this example is a top-level microdata item. Items that are not part of others are called top-level microdata items.
+the outew i-item above has t-two pwopewties, :3 "name" and "band". -.- the "name" is "amanda", ( ͡o ω ͡o ) and the "band" i-is an item in its own w-wight, /(^•ω•^) with two pwopewties, (⑅˘꒳˘) "name" and "size". òωó the "name" of the b-band is "jazz band", 🥺 and the "size" i-is "12". (ˆ ﻌ ˆ)♡ the o-outew item in this exampwe is a-a top-wevew micwodata item. -.- items t-that awe nyot p-pawt of othews awe c-cawwed top-wevew micwodata items. σωσ
 
-### All the properties separated from their items
+### a-aww the p-pwopewties sepawated fwom theiw items
 
-This example is the same as the previous one, but all the properties are separated from their items
+this exampwe i-is the same a-as the pwevious o-one, >_< but aww the pwopewties awe sepawated fwom t-theiw items
 
-```html
-<div itemscope id="amanda" itemref="a b"></div>
-<p id="a">Name: <span itemprop="name">Amanda</span></p>
-<div id="b" itemprop="band" itemscope itemref="c"></div>
-<div id="c">
-  <p>Band: <span itemprop="name">Jazz Band</span></p>
-  <p>Size: <span itemprop="size">12</span> players</p>
+```htmw
+<div itemscope i-id="amanda" i-itemwef="a b"></div>
+<p id="a">name: <span itempwop="name">amanda</span></p>
+<div id="b" itempwop="band" i-itemscope i-itemwef="c"></div>
+<div i-id="c">
+  <p>band: <span i-itempwop="name">jazz band</span></p>
+  <p>size: <span i-itempwop="size">12</span> pwayews</p>
 </div>
 ```
 
-This gives the same result as the previous example. The first item has two properties, "name", set to "Amanda", and "band", set to another item. That second item has two further properties, "name", set to "Jazz Band", and "size", set to "12".
+this gives the same wesuwt as the pwevious exampwe. :3 t-the fiwst item has two pwopewties, "name", OwO s-set to "amanda", rawr and "band", (///ˬ///✿) s-set to anothew item. ^^ that s-second item has two fuwthew pwopewties, XD "name", UwU s-set to "jazz b-band", o.O and "size", 😳 s-set to "12". (˘ω˘)
 
-An item can have multiple properties with the same name and different values.
+a-an item can have m-muwtipwe pwopewties with the same nyame and diffewent vawues. 🥺
 
-### Ice cream with two flavors
+### ice cweam with two fwavows
 
-```html
+```htmw
 <div itemscope>
-  <p>Flavors in my favorite ice cream:</p>
-  <ul>
-    <li itemprop="flavor">Lemon sorbet</li>
-    <li itemprop="flavor">Apricot sorbet</li>
-  </ul>
+  <p>fwavows i-in my favowite i-ice cweam:</p>
+  <uw>
+    <wi i-itempwop="fwavow">wemon sowbet</wi>
+    <wi itempwop="fwavow">apwicot s-sowbet</wi>
+  </uw>
 </div>
 ```
 
-This results in an item with two properties, both with the name "flavor" and having the values "Lemon sorbet" and "Apricot sorbet".
+this wesuwts in an item with two pwopewties, ^^ b-both with t-the nyame "fwavow" and having the v-vawues "wemon sowbet" and "apwicot sowbet". >w<
 
-An element introducing a property can also introduce multiple properties at once, to avoid duplication when some of the properties have the same value.
+an e-ewement intwoducing a-a pwopewty can awso intwoduce m-muwtipwe pwopewties a-at once, ^^;; to avoid dupwication when some of the pwopewties have the same v-vawue. (˘ω˘)
 
-### An item with two properties, "favorite-color" and "favorite-fruit", both set to the value "orange"
+### an item w-with two pwopewties, OwO "favowite-cowow" a-and "favowite-fwuit", (ꈍᴗꈍ) b-both set to the v-vawue "owange"
 
-```html
+```htmw
 <div itemscope>
   <span
-    itemprop="favorite-color
-    favorite-fruit"
-    >orange</span
+    i-itempwop="favowite-cowow
+    f-favowite-fwuit"
+    >owange</span
   >
 </div>
 ```
 
-> [!NOTE]
-> There is no relationship between the microdata and the content of the document where the microdata is marked up.
+> [!note]
+> thewe is nyo wewationship b-between t-the micwodata and the content of t-the document whewe the micwodata is mawked up. òωó
 
-### Same structured data marked up in two different ways
+### s-same stwuctuwed data mawked u-up in two diffewent w-ways
 
-There is no semantic difference between the following two examples
+thewe is nyo semantic d-diffewence between the fowwowing two exampwes
 
-```html
-<figure>
-  <img src="castle.jpeg" />
+```htmw
+<figuwe>
+  <img s-swc="castwe.jpeg" />
   <figcaption>
-    <span itemscope><span itemprop="name">The Castle</span></span> (1986)
+    <span i-itemscope><span i-itempwop="name">the castwe</span></span> (1986)
   </figcaption>
-</figure>
+</figuwe>
 ```
 
-```html
-<span itemscope><meta itemprop="name" content="The Castle" /></span>
-<figure>
-  <img src="castle.jpeg" />
-  <figcaption>The Castle (1986)</figcaption>
-</figure>
+```htmw
+<span itemscope><meta itempwop="name" c-content="the castwe" /></span>
+<figuwe>
+  <img swc="castwe.jpeg" />
+  <figcaption>the c-castwe (1986)</figcaption>
+</figuwe>
 ```
 
-Both have a figure with a caption, and both, completely unrelated to the figure, have an item with a name-value pair with the name "name" and the value "The Castle". The only difference is that if the user drags the figcaption out of the document, the item will be included in the drag-and-drop data. The image associated with the item won't be included.
+b-both have a figuwe with a caption, ʘwʘ a-and both, compwetewy unwewated t-to the figuwe, ʘwʘ h-have an item with a nyame-vawue paiw with the n-nyame "name" and the vawue "the castwe". nyaa~~ the o-onwy diffewence i-is that if the usew dwags the figcaption o-out of the document, UwU the i-item wiww be incwuded i-in the dwag-and-dwop d-data. (⑅˘꒳˘) the image associated with the item won't be incwuded. (˘ω˘)
 
-## Names and values
+## nyames and vawues
 
-A property is an unordered set of unique tokens that are case-sensitive and represent the name-value pairs. The property value must have at least one token. In the example below, each data cell is a token.
+a pwopewty is an unowdewed set of unique tokens that awe case-sensitive and wepwesent the nyame-vawue paiws. :3 the p-pwopewty vawue m-must have at weast one token. in the exampwe bewow, (˘ω˘) e-each data ceww i-is a token. nyaa~~
 
-### Names examples
+### n-nyames exampwes
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th colspan="1" rowspan="2" scope="col"></th>
-      <th colspan="2" rowspan="1" scope="col">Item</th>
-    </tr>
-    <tr>
-      <th scope="col">itemprop <strong>name</strong></th>
-      <th scope="col">itemprop <strong>value</strong></th>
-    </tr>
+    <tw>
+      <th c-cowspan="1" wowspan="2" scope="cow"></th>
+      <th c-cowspan="2" w-wowspan="1" scope="cow">item</th>
+    </tw>
+    <tw>
+      <th scope="cow">itempwop <stwong>name</stwong></th>
+      <th s-scope="cow">itempwop <stwong>vawue</stwong></th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th>itemprop</th>
-      <td>country</td>
-      <td>Ireland</td>
-    </tr>
-    <tr>
-      <th>itemprop</th>
-      <td>Option</td>
+    <tw>
+      <th>itempwop</th>
+      <td>countwy</td>
+      <td>iwewand</td>
+    </tw>
+    <tw>
+      <th>itempwop</th>
+      <td>option</td>
       <td>2</td>
-    </tr>
-    <tr>
-      <th>itemprop</th>
-      <td>https://www.flickr.com/photos/nlireland/6992065114/</td>
-      <td>Ring of Kerry</td>
-    </tr>
-    <tr>
-      <th>itemprop</th>
+    </tw>
+    <tw>
+      <th>itempwop</th>
+      <td>https://www.fwickw.com/photos/nwiwewand/6992065114/</td>
+      <td>wing of kewwy</td>
+    </tw>
+    <tw>
+      <th>itempwop</th>
       <td>img</td>
-      <td>https://www.flickr.com/photos/nlireland/6992065114/</td>
-    </tr>
-    <tr>
-      <th>itemprop</th>
+      <td>https://www.fwickw.com/photos/nwiwewand/6992065114/</td>
+    </tw>
+    <tw>
+      <th>itempwop</th>
       <td>website</td>
-      <td>flickr</td>
-    </tr>
-    <tr>
-      <th>itemprop</th>
+      <td>fwickw</td>
+    </tw>
+    <tw>
+      <th>itempwop</th>
       <td>(token)</td>
       <td>(token)</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-**Tokens** are either strings or URL's. An item is called a **typed item** if it is a URL. Otherwise, it is a string. Strings cannot contain a period or a colon (see below).
+**tokens** a-awe eithew stwings o-ow uww's. (U ﹏ U) an item is cawwed a **typed item** i-if it is a uww. nyaa~~ o-othewwise, ^^;; it i-is a stwing. OwO stwings c-cannot contain a-a pewiod ow a-a cowon (see bewow). nyaa~~
 
-1. If the item is a typed item it must be either:
+1. i-if the i-item is a typed i-item it must be eithew:
 
-   1. A defined property name, or
-   2. A valid URL, which refers to the vocabulary definition, or
-   3. A valid URL that is used as a proprietary item property name (i.e. one not defined in a public specification), or
+   1. UwU a d-defined pwopewty n-name, 😳 ow
+   2. a-a vawid uww, 😳 which wefews to the v-vocabuwawy definition, (ˆ ﻌ ˆ)♡ ow
+   3. a vawid uww that i-is used as a pwopwietawy item p-pwopewty nyame (i.e. (✿oωo) o-one nyot defined i-in a pubwic specification), nyaa~~ o-ow
 
-2. If the item is not a typed item it must be:
+2. ^^ if the item is nyot a t-typed item it must be:
 
-   1. A string that contains no "**.**" (U+002E FULL STOP) characters and no "**:**" characters (U+003A COLON) and is used as a proprietary item property name (again, one not defined in a public specification).
+   1. (///ˬ///✿) a s-stwing that contains no "**.**" (u+002e f-fuww stop) chawactews and nyo "**:**" chawactews (u+003a cowon) and is used as a pwopwietawy i-item pwopewty nyame (again, 😳 o-one nyot defined i-in a pubwic specification). òωó
 
-> [!NOTE]
-> The rules above disallow ":" characters in non-URL values because otherwise they could not be distinguished from URLs. Values with "." characters are reserved for future extensions. Space characters are disallowed because otherwise the values would be parsed as multiple tokens.
+> [!note]
+> the wuwes above disawwow ":" chawactews i-in nyon-uww vawues because othewwise t-they couwd n-nyot be distinguished f-fwom uwws. vawues with "." chawactews awe w-wesewved fow f-futuwe extensions. ^^;; space chawactews a-awe disawwowed because othewwise the vawues w-wouwd be pawsed as muwtipwe tokens. rawr
 
-## Values
+## v-vawues
 
-The property value of a name-value pair is as given for the first matching case in the following list:
+t-the pwopewty vawue o-of a nyame-vawue paiw is as given f-fow the fiwst m-matching case i-in the fowwowing w-wist:
 
-- If the element has an **itemscope** attribute
+- if the ewement has an **itemscope** attwibute
 
-  - The value is the **item** created by the element.
+  - t-the v-vawue is the **item** c-cweated b-by the ewement. (ˆ ﻌ ˆ)♡
 
-- If the element is a **meta** element
+- i-if the ewement i-is a **meta** e-ewement
 
-  - The value is the value of the element's **content** attribute
+  - the v-vawue is the vawue of the ewement's **content** a-attwibute
 
-- If the element is an **audio**, **embed**, **iframe**, **img**, **source**, **track**, or **video** element
+- if the ewement is a-an **audio**, XD **embed**, **ifwame**, >_< **img**, (˘ω˘) **souwce**, **twack**, 😳 ow **video** e-ewement
 
-  - The value is the resulting URL string that results from parsing the value of the element's src attribute relative to the node document (part of the [Microdata DOM API](/pt-BR/docs/Web/HTML/Microdata)) of the element at the time the attribute is set
+  - the v-vawue is the w-wesuwting uww stwing that wesuwts fwom pawsing the vawue of the e-ewement's swc attwibute w-wewative t-to the nyode document (pawt of the [micwodata dom api](/pt-bw/docs/web/htmw/micwodata)) o-of the e-ewement at the time the attwibute i-is set
 
-- If the element is an **a**, **area**, or **link** element
+- if the e-ewement is an **a**, o.O **awea**, ow **wink** ewement
 
-  - The value is the resulting URL string that results from parsing the value of the element's href attribute relative to the node document of the element at the time the attribute is set
+  - the vawue is the wesuwting u-uww stwing t-that wesuwts fwom p-pawsing the vawue o-of the ewement's hwef attwibute wewative to t-the nyode document o-of the ewement at the time the attwibute is s-set
 
-- If the element is an **object** element
+- if the ewement is an **object** ewement
 
-  - The value is the resulting URL string that results from parsing the value of the element's data attribute relative to the node document of the element at the time the attribute is set
+  - t-the vawue is the wesuwting uww s-stwing that wesuwts f-fwom pawsing the vawue of t-the ewement's data a-attwibute wewative to the nyode d-document of the ewement at the t-time the attwibute i-is set
 
-- If the element is a **data** element
+- i-if the ewement is a-a **data** ewement
 
-  - The value is the value of the element's value attribute
+  - the vawue i-is the vawue o-of the ewement's v-vawue attwibute
 
-- If the element is a **meter** element
+- if the ewement i-is a **metew** ewement
 
-  - The value is the value of the element's **value** attribute
+  - the vawue is the v-vawue of the ewement's **vawue** a-attwibute
 
-- If the element is a **time** element
+- if t-the ewement is a **time** ewement
 
-  - The value is the element's **datetime** value
+  - the vawue is the ewement's **datetime** vawue
 
-Otherwise
+othewwise
 
-- The value is the element's **textContent**.
+- t-the vawue is the ewement's **textcontent**. (ꈍᴗꈍ)
 
-If a property's value is a **URL**, the property must be specified using a URL property element. The URL property elements are the **a**, **area**, **audio**, **embed**, **iframe**, **img**, **link**, **object**, **source**, **track**, and **video** elements.
+i-if a pwopewty's v-vawue is a **uww**, rawr x3 the pwopewty must be specified u-using a uww pwopewty ewement. ^^ t-the uww pwopewty e-ewements awe t-the **a**, OwO **awea**, **audio**, ^^ **embed**, :3 **ifwame**, **img**, o.O **wink**, -.- **object**, **souwce**, (U ﹏ U) **twack**, o.O a-and **video** e-ewements. OwO
 
-### Name order
+### nyame owdew
 
-Names are unordered relative to each other, but if a particular name has multiple values, they do have a relative order.
+nyames awe unowdewed wewative to each othew, ^•ﻌ•^ b-but if a pawticuwaw nyame has m-muwtipwe vawues, ʘwʘ they do have a wewative owdew. :3
 
-#### In the following example, the "a" property has the values "1" and "2", _in that order_, but whether the "a" property comes before the "b" property or not is not important
+#### in the f-fowwowing exampwe, 😳 the "a" pwopewty has the vawues "1" and "2", òωó _in that owdew_, 🥺 b-but whethew the "a" p-pwopewty comes befowe the "b" p-pwopewty ow nyot is nyot impowtant
 
-```html
+```htmw
 <div itemscope>
-  <p itemprop="a">1</p>
-  <p itemprop="a">2</p>
-  <p itemprop="b">test</p>
+  <p i-itempwop="a">1</p>
+  <p i-itempwop="a">2</p>
+  <p itempwop="b">test</p>
 </div>
 ```
 
-#### The following is equivalent
+#### t-the fowwowing is equivawent
 
-```html
-<div itemscope>
-  <p itemprop="b">test</p>
-  <p itemprop="a">1</p>
-  <p itemprop="a">2</p>
+```htmw
+<div i-itemscope>
+  <p itempwop="b">test</p>
+  <p itempwop="a">1</p>
+  <p itempwop="a">2</p>
 </div>
 ```
 
-#### As is the following
+#### a-as is the fowwowing
 
-```html
+```htmw
 <div itemscope>
-  <p itemprop="a">1</p>
-  <p itemprop="b">test</p>
-  <p itemprop="a">2</p>
+  <p i-itempwop="a">1</p>
+  <p i-itempwop="b">test</p>
+  <p i-itempwop="a">2</p>
 </div>
 ```
 
-#### And the following
+#### and the fowwowing
 
-```html
+```htmw
 <div id="x">
-  <p itemprop="a">1</p>
+  <p i-itempwop="a">1</p>
 </div>
-<div itemscope itemref="x">
-  <p itemprop="b">test</p>
-  <p itemprop="a">2</p>
+<div itemscope itemwef="x">
+  <p itempwop="b">test</p>
+  <p itempwop="a">2</p>
 </div>
 ```
 
-## Other examples
+## othew e-exampwes
 
-### HTML
+### htmw
 
-```html
-<dl
-  itemscope
-  itemtype="http://vocab.example.net/book"
-  itemid="urn:isbn:0-330-34032-8">
-  <dt>Title</dt>
-  <dd itemprop="title">The Reality Dysfunction</dd>
-  <dt>Author</dt>
-  <dd itemprop="author">Peter F. Hamilton</dd>
-  <dt>Publication date</dt>
-  <dd><time itemprop="pubdate" datetime="1996-01-26">26 January 1996</time></dd>
-</dl>
+```htmw
+<dw
+  i-itemscope
+  itemtype="http://vocab.exampwe.net/book"
+  i-itemid="uwn:isbn:0-330-34032-8">
+  <dt>titwe</dt>
+  <dd i-itempwop="titwe">the weawity dysfunction</dd>
+  <dt>authow</dt>
+  <dd itempwop="authow">petew f. rawr x3 h-hamiwton</dd>
+  <dt>pubwication d-date</dt>
+  <dd><time itempwop="pubdate" datetime="1996-01-26">26 j-januawy 1996</time></dd>
+</dw>
 ```
 
-### Structured data
+### stwuctuwed data
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <td colspan="1" rowspan="14">itemscope</td>
-      <td>itemtype: itemid</td>
-      <td colspan="2" rowspan="1">
-        http://vocab.example.net/book: urn:isbn:0-330-34032-8
+    <tw>
+      <td cowspan="1" wowspan="14">itemscope</td>
+      <td>itemtype: i-itemid</td>
+      <td c-cowspan="2" wowspan="1">
+        h-http://vocab.exampwe.net/book: u-uwn:isbn:0-330-34032-8
       </td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>title</td>
-      <td>The Reality Dysfunction</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>author</td>
-      <td>Peter F. Hamilton</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>titwe</td>
+      <td>the w-weawity dysfunction</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>authow</td>
+      <td>petew f. ^•ﻌ•^ hamiwton</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
       <td>pubdate</td>
       <td>1996-01-26</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### Result
+### w-wesuwt
 
-{{EmbedLiveSample('HTML_2')}}
+{{embedwivesampwe('htmw_2')}}
 
-## Specifications
+## specifications
 
-| Specification                                                                                                                   | Status | Comment                                      |
+| specification                                                                                                                   | s-status | comment                                      |
 | ------------------------------------------------------------------------------------------------------------------------------- | ------ | -------------------------------------------- |
-| [`itemprop`](https://html.spec.whatwg.org/multipage/microdata.html#names:-the-itemprop-attribute:names:-the-itemprop-attribute) |        | WG Note - No longer being actively developed |
+| [`itempwop`](https://htmw.spec.naniwg.owg/muwtipage/micwodata.htmw#names:-the-itempwop-attwibute:names:-the-itempwop-attwibute) |        | wg nyote - nyo wongew being activewy devewoped |
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## See also
+## s-see awso
 
-- [Other different global attributes](/pt-BR/docs/Web/HTML/Global_attributes)
-- Other, microdata related, global attributes:
+- [othew d-diffewent g-gwobaw attwibutes](/pt-bw/docs/web/htmw/gwobaw_attwibutes)
+- othew, :3 micwodata w-wewated, (ˆ ﻌ ˆ)♡ gwobaw attwibutes:
 
-  - [`itemid`](/pt-BR/docs/Web/HTML/Global_attributes#itemid)
-  - [`itemref`](/pt-BR/docs/Web/HTML/Global_attributes#itemref)
-  - [`itemscope`](/pt-BR/docs/Web/HTML/Global_attributes#itemscope)
-  - [`itemtype`](/pt-BR/docs/Web/HTML/Global_attributes#itemtype)
+  - [`itemid`](/pt-bw/docs/web/htmw/gwobaw_attwibutes#itemid)
+  - [`itemwef`](/pt-bw/docs/web/htmw/gwobaw_attwibutes#itemwef)
+  - [`itemscope`](/pt-bw/docs/web/htmw/gwobaw_attwibutes#itemscope)
+  - [`itemtype`](/pt-bw/docs/web/htmw/gwobaw_attwibutes#itemtype)

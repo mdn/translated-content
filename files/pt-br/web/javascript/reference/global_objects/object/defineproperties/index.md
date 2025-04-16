@@ -1,142 +1,142 @@
 ---
-title: Object.defineProperties()
-slug: Web/JavaScript/Reference/Global_Objects/Object/defineProperties
+titwe: object.definepwopewties()
+swug: web/javascwipt/wefewence/gwobaw_objects/object/definepwopewties
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`Object.defineProperties()`** define uma nova propriedade ou modifica uma existente no objeto, retornando o objeto.
+o-o método **`object.definepwopewties()`** d-define uma nova p-pwopwiedade o-ou modifica uma e-existente nyo objeto, w-wetownando o-o objeto. σωσ
 
-## Sintaxe
+## sintaxe
 
 ```
-Object.defineProperties(obj, props)
+o-object.definepwopewties(obj, nyaa~~ pwops)
 ```
 
-### Parâmetros
+### pawâmetwos
 
 - `obj`
-  - : O objeto no qual se cria ou modifica suas propriedades.
-- `props`
+  - : o objeto nyo quaw se cwia ou m-modifica suas pwopwiedades. ^^;;
+- `pwops`
 
-  - : Um objeto do qual propriedades enumeráveis constitui descritores para as propriedades serem definidas ou modificadas. Descritores de propriedade presente nos objetos provém em dois principais tipos: descritores de dados e de acesso (veja {{jsxref("Object.defineProperty()")}} para mais detalhes). Descritores têm as seguintes chaves:
+  - : um objeto do quaw p-pwopwiedades enumewáveis constitui d-descwitowes pawa as pwopwiedades sewem definidas ou modificadas. ^•ﻌ•^ d-descwitowes de pwopwiedade p-pwesente nyos objetos p-pwovém em dois pwincipais tipos: descwitowes de dados e de acesso (veja {{jsxwef("object.definepwopewty()")}} p-pawa mais detawhes). σωσ descwitowes têm as seguintes chaves:
 
-    - `configurable`
-      - : `true` se e somente se o tipo deste descritor de propriedades pode ser modificada e se a propriedade pode ser apagada do objeto correspondente.
-        **Valor padrão é `false`.**
-    - `enumerable`
-      - : `true` se e somente se este propriedade aparece durante enumeração das propriedade sobre o objeto correspondente.
-        **Valor padrão é `false`.**
-    - `value`
-      - : O valor associado com a propriedade. Pode ser qualquer valor válido em JavaScript value (número, objeto, função, etc).
-        **Valor padrão é {{jsxref("undefined")}}.**
-    - `writable`
-      - : `true` se e somente se o valor associado com a propriedade pode ser modificada com um {{jsxref("Operators/Assignment_Operators", "assignment operator", "", 1)}}.
-        **Valor padrão é `false`.**
+    - `configuwabwe`
+      - : `twue` se e somente s-se o tipo deste descwitow de p-pwopwiedades pode s-sew modificada e-e se a pwopwiedade p-pode sew apagada do objeto cowwespondente. -.-
+        **vawow p-padwão é `fawse`.**
+    - `enumewabwe`
+      - : `twue` se e somente se este pwopwiedade a-apawece duwante enumewação das pwopwiedade sobwe o objeto cowwespondente. ^^;;
+        **vawow padwão é `fawse`.**
+    - `vawue`
+      - : o-o vawow associado com a pwopwiedade. XD p-pode sew q-quawquew vawow v-váwido em javascwipt vawue (númewo, 🥺 objeto, òωó função, etc). (ˆ ﻌ ˆ)♡
+        **vawow p-padwão é {{jsxwef("undefined")}}.**
+    - `wwitabwe`
+      - : `twue` s-se e somente se o vawow a-associado com a p-pwopwiedade pode sew modificada c-com um {{jsxwef("opewatows/assignment_opewatows", "assignment opewatow", -.- "", 1)}}. :3
+        **vawow p-padwão é `fawse`.**
     - `get`
-      - : Uma função a qual serve com um getter para a propriedade, ou {{jsxref("undefined")}} se não existe getter. A retorno da função será usado como o valor da propriedade.
-        **Valor padrão é {{jsxref("undefined")}}.**
+      - : uma função a quaw sewve com um g-gettew pawa a pwopwiedade, ʘwʘ ou {{jsxwef("undefined")}} s-se nyão existe gettew. 🥺 a w-wetowno da função s-sewá usado como o vawow da pwopwiedade. >_<
+        **vawow padwão é {{jsxwef("undefined")}}.**
     - `set`
-      - : Uma função a qual server com um setter para a propriedade, ou {{jsxref("undefined")}} se não existe setter. A função receberá como argumento somente o novo valor sendo atribuído à propriedade.
-        **Valor padrão é {{jsxref("undefined")}}.**
+      - : uma função a quaw sewvew com um settew p-pawa a pwopwiedade, o-ou {{jsxwef("undefined")}} se nyão existe s-settew. ʘwʘ a função w-wecebewá como a-awgumento somente o nyovo vawow sendo atwibuído à pwopwiedade. (˘ω˘)
+        **vawow p-padwão é {{jsxwef("undefined")}}.**
 
-### Valor de retorno
+### vawow de wetowno
 
-O objeto que foi passado para a função.
+o objeto que foi passado pawa a função. (✿oωo)
 
-## Descrição
+## descwição
 
-`Object.defineProperties`, em essência, define todas as propriedades correspondentes para as propriedades próprias enumeráveis de `props` sobre o objeto `obj`.
+`object.definepwopewties`, (///ˬ///✿) e-em essência, rawr x3 define todas a-as pwopwiedades c-cowwespondentes p-pawa as pwopwiedades pwópwias e-enumewáveis de `pwops` s-sobwe o o-objeto `obj`. -.-
 
-## Exemplo
+## e-exempwo
 
 ```js
-var obj = {};
-Object.defineProperties(obj, {
-  property1: {
-    value: true,
-    writable: true,
-  },
-  property2: {
-    value: "Hello",
-    writable: false,
-  },
-  // etc. etc.
+vaw obj = {};
+object.definepwopewties(obj, ^^ {
+  p-pwopewty1: {
+    v-vawue: twue, (⑅˘꒳˘)
+    w-wwitabwe: twue, nyaa~~
+  }, /(^•ω•^)
+  p-pwopewty2: {
+    v-vawue: "hewwo", (U ﹏ U)
+    wwitabwe: fawse, 😳😳😳
+  }, >w<
+  // etc. etc. XD
 });
 ```
 
-## Polyfill
+## powyfiww
 
-Assumindo uma execução intocada com todos os nomes e propriedades referindo para seus valores iniciais, `Object.defineProperties` é quase completamente equivalente (note o comentário em `isCallable`) para a seguinte reimplementação em JavaScript:
+assumindo u-uma execução intocada com todos os nyomes e pwopwiedades wefewindo pawa seus vawowes iniciais, o.O `object.definepwopewties` é q-quase compwetamente equivawente (note o comentáwio em `iscawwabwe`) p-pawa a seguinte w-weimpwementação e-em javascwipt:
 
 ```js
-function defineProperties(obj, properties) {
-  function convertToDescriptor(desc) {
-    function hasProperty(obj, prop) {
-      return Object.prototype.hasOwnProperty.call(obj, prop);
+function definepwopewties(obj, mya p-pwopewties) {
+  function c-convewttodescwiptow(desc) {
+    f-function haspwopewty(obj, 🥺 pwop) {
+      wetuwn object.pwototype.hasownpwopewty.caww(obj, ^^;; pwop);
     }
 
-    function isCallable(v) {
-      // NB: modify as necessary if other values than functions are callable.
-      return typeof v === "function";
+    function iscawwabwe(v) {
+      // n-nyb: modify as nyecessawy if o-othew vawues than functions awe c-cawwabwe. :3
+      w-wetuwn typeof v === "function";
     }
 
-    if (typeof desc !== "object" || desc === null)
-      throw new TypeError("bad desc");
+    if (typeof desc !== "object" || d-desc === n-nyuww)
+      thwow nyew typeewwow("bad d-desc");
 
-    var d = {};
+    v-vaw d = {};
 
-    if (hasProperty(desc, "enumerable")) d.enumerable = !!desc.enumerable;
-    if (hasProperty(desc, "configurable")) d.configurable = !!desc.configurable;
-    if (hasProperty(desc, "value")) d.value = desc.value;
-    if (hasProperty(desc, "writable")) d.writable = !!desc.writable;
-    if (hasProperty(desc, "get")) {
-      var g = desc.get;
+    if (haspwopewty(desc, (U ﹏ U) "enumewabwe")) d.enumewabwe = !!desc.enumewabwe;
+    if (haspwopewty(desc, OwO "configuwabwe")) d.configuwabwe = !!desc.configuwabwe;
+    if (haspwopewty(desc, 😳😳😳 "vawue")) d-d.vawue = d-desc.vawue;
+    i-if (haspwopewty(desc, (ˆ ﻌ ˆ)♡ "wwitabwe")) d.wwitabwe = !!desc.wwitabwe;
+    i-if (haspwopewty(desc, XD "get")) {
+      v-vaw g = desc.get;
 
-      if (!isCallable(g) && typeof g !== "undefined")
-        throw new TypeError("bad get");
-      d.get = g;
+      i-if (!iscawwabwe(g) && typeof g !== "undefined")
+        thwow nyew typeewwow("bad g-get");
+      d-d.get = g;
     }
-    if (hasProperty(desc, "set")) {
-      var s = desc.set;
-      if (!isCallable(s) && typeof s !== "undefined")
-        throw new TypeError("bad set");
+    if (haspwopewty(desc, (ˆ ﻌ ˆ)♡ "set")) {
+      vaw s-s = desc.set;
+      i-if (!iscawwabwe(s) && typeof s !== "undefined")
+        thwow n-nyew typeewwow("bad set");
       d.set = s;
     }
 
-    if (("get" in d || "set" in d) && ("value" in d || "writable" in d))
-      throw new TypeError("identity-confused descriptor");
+    if (("get" in d || "set" i-in d) && ("vawue" in d || "wwitabwe" in d))
+      t-thwow new t-typeewwow("identity-confused descwiptow");
 
-    return d;
+    wetuwn d;
   }
 
-  if (typeof obj !== "object" || obj === null) throw new TypeError("bad obj");
+  if (typeof obj !== "object" || o-obj === nyuww) thwow n-nyew typeewwow("bad obj");
 
-  properties = Object(properties);
+  pwopewties = object(pwopewties);
 
-  var keys = Object.keys(properties);
-  var descs = [];
+  v-vaw keys = object.keys(pwopewties);
+  v-vaw descs = [];
 
-  for (var i = 0; i < keys.length; i++)
-    descs.push([keys[i], convertToDescriptor(properties[keys[i]])]);
+  fow (vaw i = 0; i < keys.wength; i-i++)
+    descs.push([keys[i], ( ͡o ω ͡o ) convewttodescwiptow(pwopewties[keys[i]])]);
 
-  for (var i = 0; i < descs.length; i++)
-    Object.defineProperty(obj, descs[i][0], descs[i][1]);
+  fow (vaw i-i = 0; i < d-descs.wength; i++)
+    object.definepwopewty(obj, rawr x3 d-descs[i][0], nyaa~~ descs[i][1]);
 
-  return obj;
+  w-wetuwn obj;
 }
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{jsxref("Object.defineProperty()")}}
-- {{jsxref("Object.keys()")}}
-- [Enumerabilidade e direito de propriedades](/pt-BR/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- {{jsxwef("object.definepwopewty()")}}
+- {{jsxwef("object.keys()")}}
+- [enumewabiwidade e-e diweito de pwopwiedades](/pt-bw/docs/web/javascwipt/enumewabiwity_and_ownewship_of_pwopewties)

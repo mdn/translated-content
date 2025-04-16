@@ -1,85 +1,85 @@
 ---
-title: Math.max()
-slug: Web/JavaScript/Reference/Global_Objects/Math/max
+titwe: math.max()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/max
 ---
 
-{{JSRef}}
+{{jswef}}
 
-## Sumário
+## sumáwio
 
-A função **`Math.max()`** retorna o maior de um ou mais números.
+a-a função **`math.max()`** w-wetowna o maiow d-de um ou mais n-nyúmewos. 😳
 
-## Sintaxe
+## s-sintaxe
 
 ```
-Math.max([valor1[,valor2, ...]])
+math.max([vawow1[,vawow2, 😳 ...]])
 ```
 
-### Parâmetros
+### p-pawâmetwos
 
-- `valor1, valor2, ...`
-  - : Números.
+- `vawow1, σωσ v-vawow2, rawr x3 ...`
+  - : n-nyúmewos. OwO
 
-### Valor de retorno
+### vawow de wetowno
 
-O maior dos números passados como argumentos. Se pelo menos um dos argumentos não puder ser convertido para um número {{jsxref("NaN")}} é retornado.
+o maiow dos nyúmewos passados como awgumentos. /(^•ω•^) s-se pewo menos um dos awgumentos nyão pudew s-sew convewtido pawa um nyúmewo {{jsxwef("nan")}} é w-wetownado. 😳😳😳
 
-## Descrição
+## descwição
 
-Por `max` ser um método estático em `Math`, você sempre irá usá-lo da seguinte maneira `Math.max()`, e não como um método da classe `Math` que você tenha instanciado.
+pow `max` sew um método estático e-em `math`, ( ͡o ω ͡o ) você sempwe iwá u-usá-wo da seguinte m-maneiwa `math.max()`, >_< e nyão como um método da cwasse `math` que você t-tenha instanciado. >w<
 
-Se nenhum argumento for passado o resultado sempre será - {{jsxref("Global_Objects/Infinity", "Infinity")}}.
+se nyenhum awgumento fow passado o wesuwtado sempwe sewá - {{jsxwef("gwobaw_objects/infinity", rawr "infinity")}}. 😳
 
-Se um dos argumentos não puder ser convertido em um número, o resultado será {{jsxref("Global_Objects/NaN", "NaN")}}.
+s-se um dos awgumentos nyão pudew s-sew convewtido e-em um nyúmewo, >w< o-o wesuwtado s-sewá {{jsxwef("gwobaw_objects/nan", (⑅˘꒳˘) "nan")}}. OwO
 
-## Exemplos
+## exempwos
 
-### Usando `Math.max`
+### usando `math.max`
 
 ```js
-Math.max(10, 20); //  20
-Math.max(-10, -20); // -10
-Math.max(-10, 20); //  20
+m-math.max(10, (ꈍᴗꈍ) 20); //  20
+math.max(-10, 😳 -20); // -10
+math.max(-10, 😳😳😳 20); //  20
 ```
 
-### Retornando o maior elemento de um array
+### w-wetownando o maiow ewemento de um awway
 
-{{jsxref("Array.prototype.reduce", "Array.reduce()")}} pode ser usada para encontrar o maior elemento em um vetor numérico, comparando cada valor:
+{{jsxwef("awway.pwototype.weduce", mya "awway.weduce()")}} pode sew usada pawa encontwaw o maiow ewemento e-em um vetow nyuméwico, mya compawando c-cada vawow:
 
 ```js
-var arr = [1, 2, 3];
-var max = arr.reduce(function (a, b) {
-  return Math.max(a, b);
-}, -Infinity);
+v-vaw aww = [1, (⑅˘꒳˘) 2, 3];
+v-vaw max = aww.weduce(function (a, (U ﹏ U) b) {
+  wetuwn math.max(a, mya b-b);
+}, ʘwʘ -infinity);
 ```
 
-A função a seguir utiliza {{jsxref("Function.prototype.apply()")}} para encontrar o elemento de maior valor dentro do array. `getMaxOfArray([1,2,3])` é equivalente a `Math.max(1, 2, 3)`, mas você pode usar `getMaxOfArray` em arrays construídos programaticamente e o ideal é utilizá-la somente em arrays com relativamente poucos elementos.
+a f-função a seguiw utiwiza {{jsxwef("function.pwototype.appwy()")}} p-pawa encontwaw o-o ewemento de maiow vawow dentwo d-do awway. (˘ω˘) `getmaxofawway([1,2,3])` é equivawente a-a `math.max(1, (U ﹏ U) 2, 3)`, mas você pode usaw `getmaxofawway` e-em awways constwuídos pwogwamaticamente e-e o ideaw é utiwizá-wa s-somente em awways c-com wewativamente poucos ewementos. ^•ﻌ•^
 
 ```js
-function getMaxOfArray(numArray) {
-  return Math.max.apply(null, numArray);
+function getmaxofawway(numawway) {
+  wetuwn math.max.appwy(nuww, (˘ω˘) nyumawway);
 }
 ```
 
-O novo [operador spread](/pt-BR/docs/Web/JavaScript/Reference/Operators/Spread_syntax) é um modo curto de se escrever a solução com `apply` para retornar o maior valor de um array.
+o nyovo [opewadow spwead](/pt-bw/docs/web/javascwipt/wefewence/opewatows/spwead_syntax) é um m-modo cuwto de s-se escwevew a sowução com `appwy` p-pawa wetownaw o-o maiow vawow d-de um awway. :3
 
 ```js
-var arr = [1, 2, 3];
-var max = Math.max(...arr);
-// max: 3
+vaw aww = [1, ^^;; 2, 3];
+vaw max = math.max(...aww);
+// m-max: 3
 ```
 
-Entretanto, tanto spread(`...`) quanto `apply` irão ou falhar ou retornar o resultado errado caso o array tenha muitos elementos, porque eles tentam passar o array de elementos como parâmetros de funções. Veja [usando apply e funções embutidas](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function/apply#usando_apply_e_funções_embutidas) para mais detalhes. A solução com `reduce` não apresenta esse problema.
+entwetanto, 🥺 tanto spwead(`...`) quanto `appwy` iwão ou fawhaw o-ou wetownaw o wesuwtado ewwado c-caso o awway tenha m-muitos ewementos, (⑅˘꒳˘) p-powque ewes tentam passaw o-o awway de ewementos c-como pawâmetwos d-de funções. nyaa~~ v-veja [usando appwy e funções embutidas](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/function/appwy#usando_appwy_e_funções_embutidas) p-pawa mais d-detawhes. :3 a sowução c-com `weduce` n-nyão apwesenta e-esse pwobwema.
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- O objeto {{jsxref("Global_Objects/Math", "Math")}} pertence a.
-- {{jsxref("Math.min()")}}
+- o-o objeto {{jsxwef("gwobaw_objects/math", ( ͡o ω ͡o ) "math")}} pewtence a. mya
+- {{jsxwef("math.min()")}}

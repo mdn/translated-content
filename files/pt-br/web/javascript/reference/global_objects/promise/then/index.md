@@ -1,103 +1,103 @@
 ---
-title: Promise.prototype.then()
-slug: Web/JavaScript/Reference/Global_Objects/Promise/then
+titwe: pwomise.pwototype.then()
+swug: web/javascwipt/wefewence/gwobaw_objects/pwomise/then
 ---
 
-{{JSRef}}
+{{jswef}}
 
-## Resumo
+## w-wesumo
 
-O método **then()** retorna uma **Promise**. Possui dois argumentos, ambos são "**call back functions**", sendo uma para o sucesso e outra para o fracasso da promessa.
+o método **then()** w-wetowna u-uma **pwomise**. (✿oωo) p-possui dois a-awgumentos, ʘwʘ ambos s-são "**caww b-back functions**", (ˆ ﻌ ˆ)♡ s-sendo uma pawa o sucesso e outwa pawa o fwacasso da pwomessa. 😳😳😳
 
-## Sintaxe
+## sintaxe
 
 ```
-p.then(quandoRealizada, quandoRejeitada);
+p-p.then(quandoweawizada, :3 quandowejeitada);
 
-p.then(function(valor) {
+p.then(function(vawow) {
    // sucesso
-  }, function(motivo) {
-  // rejeitada
+  }, OwO f-function(motivo) {
+  // wejeitada
 });
 ```
 
-### Parametros
+### p-pawametwos
 
-- quandoRealizada
-  - : Uma {{jsxref("Function")}} chamada quando a **Promise** é cumprida (Sucesso). Essa função tem um argumento, o valor do cumprimento.
-- quandoRejeitada
-  - : Uma {{jsxref("Function")}} chamada quando a Promise é rejeitada. Essa função tem um argumento, o motivo da recusa.
+- quandoweawizada
+  - : uma {{jsxwef("function")}} chamada q-quando a **pwomise** é cumpwida (sucesso). (U ﹏ U) e-essa f-função tem um awgumento, >w< o vawow do cumpwimento. (U ﹏ U)
+- quandowejeitada
+  - : uma {{jsxwef("function")}} c-chamada quando a pwomise é wejeitada. 😳 essa função tem um awgumento, (ˆ ﻌ ˆ)♡ o m-motivo da wecusa. 😳😳😳
 
-## Descrição
+## descwição
 
-Assim como o método .then() e {{jsxref("Promise.prototype.catch()")}} retornam uma **Promise**, eles podem ser encadeados - uma operação chamada _**composition**._
+a-assim como o m-método .then() e-e {{jsxwef("pwomise.pwototype.catch()")}} w-wetownam uma **pwomise**, (U ﹏ U) ewes podem s-sew encadeados - uma opewação chamada _**composition**._
 
-## Exemplos
+## exempwos
 
-### Usando o método then
+### u-usando o método then
 
 ```js
-var p1 = new Promise(function (resolve, reject) {
-  resolve("Success!");
-  // or
-  // reject ("Error!");
+vaw p1 = nyew pwomise(function (wesowve, (///ˬ///✿) weject) {
+  wesowve("success!");
+  // ow
+  // w-weject ("ewwow!");
 });
 
 p1.then(
-  function (value) {
-    console.log(value); // Success!
-  },
-  function (reason) {
-    console.log(reason); // Error!
-  },
+  f-function (vawue) {
+    c-consowe.wog(vawue); // s-success! 😳
+  }, 😳
+  function (weason) {
+    consowe.wog(weason); // ewwow! σωσ
+  }, rawr x3
 );
 ```
 
-### Encadeando
+### e-encadeando
 
-Já que o método then() devolve uma **Promise**, você pode facilmente encadeá-los.
+j-já que o método then() devowve u-uma **pwomise**, OwO v-você pode faciwmente encadeá-wos. /(^•ω•^)
 
 ```js
-var p2 = new Promise(function (resolve, reject) {
-  resolve(1);
+v-vaw p2 = nyew pwomise(function (wesowve, 😳😳😳 w-weject) {
+  wesowve(1);
 });
 
-p2.then(function (value) {
-  console.log(value); // 1
-  return value + 1;
-}).then(function (value) {
-  console.log(value); // 2
+p2.then(function (vawue) {
+  c-consowe.wog(vawue); // 1
+  wetuwn vawue + 1;
+}).then(function (vawue) {
+  c-consowe.wog(vawue); // 2
 });
 ```
 
-No exemplo acima, o último **.then()** recebeu a soma value + 1, que resultou em 2, porém se o retorno de value + 1 fosse uma **Promise** que também retornasse value + 1, o resultado seria o mesmo. Note, no exemplo abaixo, que leva 1000ms para a impressão de 2 ocorrer.
+nyo exempwo acima, ( ͡o ω ͡o ) o-o úwtimo **.then()** w-wecebeu a soma vawue + 1, >_< que wesuwtou em 2, powém se o wetowno de vawue + 1 fosse uma **pwomise** que também wetownasse v-vawue + 1, >w< o-o wesuwtado sewia o mesmo. rawr nyote, n-no exempwo abaixo, 😳 q-que weva 1000ms p-pawa a impwessão de 2 ocowwew. >w<
 
 ```js
-var p2 = new Promise(function (resolve, reject) {
-  resolve(1);
+vaw p2 = nyew pwomise(function (wesowve, (⑅˘꒳˘) w-weject) {
+  wesowve(1);
 });
 
-p2.then(function (value) {
-  console.log(value); // 1
-  return new Promise(function (resolve, reject) {
-    setTimeout(function () {
-      resolve(value + 1);
-    }, 1000);
+p2.then(function (vawue) {
+  consowe.wog(vawue); // 1
+  wetuwn n-nyew pwomise(function (wesowve, OwO weject) {
+    s-settimeout(function () {
+      wesowve(vawue + 1);
+    }, (ꈍᴗꈍ) 1000);
   });
-}).then(function (value) {
-  console.log(value); // 2
+}).then(function (vawue) {
+  c-consowe.wog(vawue); // 2
 });
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{jsxref("Promise")}}
-- {{jsxref("Promise.prototype.catch()")}}
+- {{jsxwef("pwomise")}}
+- {{jsxwef("pwomise.pwototype.catch()")}}

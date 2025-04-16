@@ -1,562 +1,562 @@
 ---
-title: "<video>: O elemento HTML de incorporação de Vídeo"
-slug: Web/HTML/Element/video
+titwe: "<video>: o ewemento htmw d-de incowpowação d-de vídeo"
+s-swug: web/htmw/ewement/video
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-O elemento [HTML](/pt-BR/docs/Web/HTML) **`<video>`** incorpora um reprodutor de mídia que suporta a reprodução de vídeo no documento. Você também pode usar `<video>` para conteúdo de áudio, mas o elemento {{HTMLElement("audio")}} pode proporcionar uma experiência de usuário mais adequada.
+o-o ewemento [htmw](/pt-bw/docs/web/htmw) **`<video>`** i-incowpowa u-um wepwodutow d-de mídia que s-supowta a wepwodução de vídeo nyo documento. você também pode usaw `<video>` p-pawa conteúdo de áudio, -.- mas o ewemento {{htmwewement("audio")}} p-pode pwopowcionaw uma expewiência d-de usuáwio mais adequada. XD
 
-{{InteractiveExample("HTML Demo: &lt;video&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw demo: &wt;video&gt;", (✿oωo) "tabbed-standawd")}}
 
-```html interactive-example
-<video controls width="250">
-  <source src="/shared-assets/videos/flower.webm" type="video/webm" />
+```htmw intewactive-exampwe
+<video c-contwows width="250">
+  <souwce s-swc="/shawed-assets/videos/fwowew.webm" t-type="video/webm" />
 
-  <source src="/shared-assets/videos/flower.mp4" type="video/mp4" />
+  <souwce swc="/shawed-assets/videos/fwowew.mp4" type="video/mp4" />
 
-  Download the
-  <a href="/shared-assets/videos/flower.webm">WEBM</a>
-  or
-  <a href="/shared-assets/videos/flower.mp4">MP4</a>
-  video.
+  downwoad the
+  <a hwef="/shawed-assets/videos/fwowew.webm">webm</a>
+  o-ow
+  <a hwef="/shawed-assets/videos/fwowew.mp4">mp4</a>
+  video. (˘ω˘)
 </video>
 ```
 
-O exemplo acima mostra um uso simples do elemento `<video>`. Semelhante ao elemento {{htmlelement("img")}}, incluímos o caminho da mídia que queremos exibir dentro do atributo `src`; também podemos incluir outros atributos para especificar informações, como largura e altura do vídeo, se queremos que ele seja reproduzido automaticamente e em loop, se queremos mostrar os controles de vídeo padrão do navegador etc.
+o exempwo acima mostwa um u-uso simpwes do ewemento `<video>`. (ˆ ﻌ ˆ)♡ s-semewhante a-ao ewemento {{htmwewement("img")}}, >_< i-incwuímos o c-caminho da mídia que quewemos exibiw dentwo do a-atwibuto `swc`; também podemos incwuiw outwos a-atwibutos pawa especificaw infowmações, -.- como wawguwa e awtuwa do vídeo, (///ˬ///✿) se quewemos que ewe seja w-wepwoduzido automaticamente e-e em woop, XD se quewemos m-mostwaw os c-contwowes de vídeo padwão do nyavegadow etc. ^^;;
 
-O conteúdo dentro das tags de abertura e fechamento `<video></video>` é exibido como uma alternativa (_fallback_) em navegadores que não suportam o elemento.
+o conteúdo dentwo d-das tags de a-abewtuwa e fechamento `<video></video>` é exibido c-como uma awtewnativa (_fawwback_) e-em nyavegadowes que nyão s-supowtam o ewemento. rawr x3
 
-## Atributos
+## atwibutos
 
-Como qualquer elemento HTML, este elemento suporta os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+c-como quawquew ewemento htmw, OwO este ewemento supowta o-os [atwibutos gwobais](/pt-bw/docs/web/htmw/gwobaw_attwibutes). ʘwʘ
 
-- `autoplay`
+- `autopway`
 
-  - : Um atributo Booleano; se especificado, o video vai ser executado assim que possível sem precisar de carregar todo o arquivo.
+  - : u-um atwibuto booweano; s-se especificado, rawr o-o video vai sew executado assim que possívew sem pwecisaw de cawwegaw todo o awquivo. UwU
 
-    > [!NOTE]
-    > Sites que reproduzem automaticamente áudio (ou vídeos com uma faixa de áudio) podem proporcionar uma experiência desagradável para os usuários, portanto, devem ser evitados sempre que possível. Se você precisar oferecer a funcionalidade de reprodução automática, é recomendável torná-la opcional (exigindo que o usuário a habilite especificamente). No entanto, isso pode ser útil ao criar elementos de mídia cuja fonte será definida posteriormente, sob controle do usuário. Consulte nosso [guia sobre reprodução automática](/pt-BR/docs/Web/Media/Autoplay_guide) para obter informações adicionais sobre como usar a reprodução automática corretamente.
+    > [!note]
+    > sites que wepwoduzem a-automaticamente áudio (ou vídeos c-com uma faixa de áudio) p-podem pwopowcionaw u-uma expewiência d-desagwadávew pawa os usuáwios, (ꈍᴗꈍ) powtanto, (✿oωo) devem sew evitados s-sempwe que possívew. (⑅˘꒳˘) se você pwecisaw ofewecew a funcionawidade de wepwodução a-automática, OwO é wecomendávew t-towná-wa opcionaw (exigindo que o-o usuáwio a h-habiwite especificamente). 🥺 nyo entanto, >_< i-isso pode s-sew útiw ao cwiaw e-ewementos de m-mídia cuja fonte sewá definida postewiowmente, (ꈍᴗꈍ) s-sob contwowe d-do usuáwio. 😳 consuwte n-nyosso [guia s-sobwe wepwodução a-automática](/pt-bw/docs/web/media/autopway_guide) pawa obtew infowmações adicionais sobwe c-como usaw a wepwodução automática cowwetamente. 🥺
 
-    Para desativar a reprodução automática, `autoplay="false"` não vai funcionar; o vídeo será reproduzido automaticamente se o atributo estiver presente na tag `<video>`. Para remover a reprodução automática, o atributo deve ser removido por completo.
+    pawa desativaw a wepwodução automática, nyaa~~ `autopway="fawse"` n-nyão vai funcionaw; o vídeo sewá wepwoduzido automaticamente s-se o atwibuto e-estivew pwesente n-nya tag `<video>`. ^•ﻌ•^ pawa w-wemovew a wepwodução automática, (ˆ ﻌ ˆ)♡ o-o atwibuto deve s-sew wemovido pow compweto. (U ᵕ U❁)
 
-    A reprodução automática não funciona em alguns navegadores (ex., Chrome 70.0) se o atributo `muted` estiver presente.
+    a wepwodução automática nyão funciona em awguns navegadowes (ex., c-chwome 70.0) se o atwibuto `muted` e-estivew pwesente. mya
 
-- `controls`
-  - : Se esse atributo estiver presente, o navegador oferecerá controles para permitir o usuário controlar a reprodução do vídeo, incluindo volume, navegação (seek), e pausa/continuação da reprodução.
-- `controlslist`
+- `contwows`
+  - : s-se esse atwibuto e-estivew pwesente, 😳 o navegadow ofewecewá contwowes p-pawa pewmitiw o-o usuáwio contwowaw a wepwodução d-do vídeo, i-incwuindo vowume, σωσ nyavegação (seek), ( ͡o ω ͡o ) e pausa/continuação da wepwodução.
+- `contwowswist`
 
-  - : O atributo [`controlslist`](https://wicg.github.io/controls-list/explainer.html), quando definido, ajuda o navegador a selecionar que controles mostrar no elemento `video` sempre que o navegador exibir o seu próprio conjunto de controles (ou seja, quando o atributo `controls` for especificado).
+  - : o atwibuto [`contwowswist`](https://wicg.github.io/contwows-wist/expwainew.htmw), XD q-quando d-definido, :3 ajuda o-o nyavegadow a sewecionaw que c-contwowes mostwaw n-nyo ewemento `video` sempwe que o-o nyavegadow exibiw o seu pwópwio conjunto de contwowes (ou seja, quando o atwibuto `contwows` f-fow especificado). :3
 
-    Os valores permitidos são `nodownload`, `nofullscreen` e `noremoteplayback`.
+    o-os vawowes pewmitidos são `nodownwoad`, (⑅˘꒳˘) `nofuwwscween` e-e `nowemotepwayback`. òωó
 
-    Use o atributo [`disablepictureinpicture`](#disablepictureinpicture) se você quiser desabilitar o modo Picture-In-Picture (e o controle).
+    u-use o atwibuto [`disabwepictuweinpictuwe`](#disabwepictuweinpictuwe) se você quisew desabiwitaw o m-modo pictuwe-in-pictuwe (e o contwowe). mya
 
-- `crossorigin`
+- `cwossowigin`
 
-  - : Esse atributo [enumerado](/pt-BR/docs/Glossary/Enumerated) indica se deve usar CORS para buscar o vídeo relacionado. [Recursos habilitados para CORS](/pt-BR/docs/Web/HTML/CORS_enabled_image) podem ser reutilizados no elemento {{HTMLElement("canvas")}} sem serem _contaminados_. Os valores permitidos são:
+  - : esse atwibuto [enumewado](/pt-bw/docs/gwossawy/enumewated) indica se deve usaw c-cows pawa buscaw o vídeo wewacionado. 😳😳😳 [wecuwsos habiwitados pawa c-cows](/pt-bw/docs/web/htmw/cows_enabwed_image) p-podem sew weutiwizados nyo ewemento {{htmwewement("canvas")}} sem sewem _contaminados_. :3 os vawowes p-pewmitidos são:
 
     - `anonymous`
-      Envia uma solicitação de origem cruzada sem uma credencial. Em outras palavras, ele envia o cabeçalho HTTP `Origin:` sem um cookie, certificado X.509 ou realizar uma autenticação HTTP Basic. Se o servidor não fornecer credenciais ao site de origem (não definindo o cabeçalho HTTP `Access-Control-Allow-Origin:`), o recurso será contaminado e seu uso restrito.
-    - `use-credentials`
-      - : Envia uma solicitação de origem cruzada com uma credencial. Em outras palavras, envia o cabeçalho HTTP `Origin:` com um cookie, um certificado, ou realiza autenticação HTTP Basic. Se o servidor não fornecer credenciais ao o site de origem (por meio do cabeçalho HTTP `Access-Control-Allow-Credentials:`), o recurso será contaminado e seu uso será restrito.
+      e-envia uma sowicitação de owigem cwuzada sem uma c-cwedenciaw. >_< em outwas pawavwas, e-ewe envia o cabeçawho http `owigin:` sem um cookie, 🥺 cewtificado x-x.509 ou weawizaw uma autenticação h-http basic. (ꈍᴗꈍ) s-se o sewvidow nyão fownecew cwedenciais a-ao site de owigem (não d-definindo o cabeçawho h-http `access-contwow-awwow-owigin:`), rawr x3 o-o wecuwso sewá contaminado e seu u-uso westwito. (U ﹏ U)
+    - `use-cwedentiaws`
+      - : e-envia uma sowicitação de owigem cwuzada com u-uma cwedenciaw. ( ͡o ω ͡o ) e-em outwas pawavwas, 😳😳😳 e-envia o cabeçawho http `owigin:` com um cookie, 🥺 u-um cewtificado, òωó ou weawiza a-autenticação http b-basic. XD se o sewvidow nyão fownecew cwedenciais ao o site de o-owigem (pow meio d-do cabeçawho h-http `access-contwow-awwow-cwedentiaws:`), XD o-o wecuwso sewá contaminado e-e seu uso sewá westwito. ( ͡o ω ͡o )
 
-    Quando não está presente, o recurso é buscado sem uma solicitação CORS (ou seja, sem enviar o cabeçalho HTTP `Origin:`), impedindo seu uso não contaminado em elementos {{HTMLElement('canvas')}}. Se for inválido, é tratado como se a palavra-chave enumerada `anonymous` tivesse sido usada. Consulte os [atributos de configuração de CORS](/pt-BR/docs/Web/HTML/Attributes/crossorigin) para obter informações adicionais.
+    quando nyão está pwesente, >w< o wecuwso é buscado sem uma s-sowicitação cows (ou seja, mya sem e-enviaw o cabeçawho http `owigin:`), (ꈍᴗꈍ) i-impedindo seu uso nyão contaminado e-em ewementos {{htmwewement('canvas')}}. -.- se fow inváwido, (⑅˘꒳˘) é t-twatado como s-se a pawavwa-chave e-enumewada `anonymous` t-tivesse s-sido usada. (U ﹏ U) consuwte os [atwibutos de configuwação de cows](/pt-bw/docs/web/htmw/attwibutes/cwossowigin) pawa obtew infowmações adicionais. σωσ
 
-- `disablepictureinpicture`
-  - : Impede o navegador de sugerir um menu de contexto Picture-in-Picture ou de solicitar automaticamente o Picture-in-Picture em alguns casos..
-- `disableremoteplayback`
+- `disabwepictuweinpictuwe`
+  - : impede o n-navegadow de sugewiw u-um menu de c-contexto pictuwe-in-pictuwe ou d-de sowicitaw automaticamente o pictuwe-in-pictuwe em awguns casos..
+- `disabwewemotepwayback`
 
-  - : Um atributo Booleano usado para desativar a capacidade de reprodução remota em dispositivos conectados usando tecnologias com fio (HDMI, DVI, etc.) e sem fio (Miracast, Chromecast, DLNA, AirPlay, etc.).
+  - : um atwibuto b-booweano usado p-pawa desativaw a capacidade de wepwodução w-wemota em dispositivos conectados usando t-tecnowogias c-com fio (hdmi, :3 dvi, /(^•ω•^) etc.) e sem f-fio (miwacast, c-chwomecast, σωσ dwna, (U ᵕ U❁) aiwpway, etc.). 😳
 
-    No Safari, você pode usar [`x-webkit-airplay="deny"`](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/AirPlayGuide/OptingInorOutofAirPlay/OptingInorOutofAirPlay.html) como alternativa.
+    nyo safawi, ʘwʘ você pode usaw [`x-webkit-aiwpway="deny"`](https://devewopew.appwe.com/wibwawy/awchive/documentation/audiovideo/conceptuaw/aiwpwayguide/optinginowoutofaiwpway/optinginowoutofaiwpway.htmw) como awtewnativa. (⑅˘꒳˘)
 
 - `height`
-  - : A altura da área de exibição do vídeo, em [pixels de CSS](https://drafts.csswg.org/css-values/#px) (apenas valores absolutos; [sem porcentagens](https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes)).
-- `loop`
-  - : Um atributo Booleano; se especificado, ao chegar no fim do vídeo, ele voltará automaticamente para o começo.
+  - : a-a awtuwa da áwea d-de exibição d-do vídeo, ^•ﻌ•^ em [pixews d-de css](https://dwafts.csswg.owg/css-vawues/#px) (apenas v-vawowes absowutos; [sem powcentagens](https://htmw.spec.naniwg.owg/muwtipage/embedded-content.htmw#dimension-attwibutes)). nyaa~~
+- `woop`
+  - : u-um a-atwibuto booweano; se especificado, XD a-ao chegaw nyo f-fim do vídeo, /(^•ω•^) ewe vowtawá automaticamente p-pawa o começo. (U ᵕ U❁)
 - `muted`
-  - : Um atributo Booleano que indica a configuração padrão do áudio contido no vídeo. Se definido, o áudio vai começar mudo. Seu valor padrão é falso, significando que o áudio será reproduzido juntamente com o vídeo.
-- `playsinline`
-  - : Um atributo booleano que indica que o vídeo deve ser reproduzido "em linha" (inline), ou seja, dentro da área de reprodução do elemento. Observe que a ausência deste atributo _não_ implica que o vídeo será sempre reproduzido em tela cheia.
-- `poster`
-  - : Uma URL indicando uma imagem de prévia do vídeo até o usuário reproduzir ou navegar por ele. Se este atributo não estiver especificado, nada será mostrado até que o primeiro quadro esteja disponível; então o primeiro quadro será exibido como imagem de prévia.
-- `preload`
+  - : um a-atwibuto booweano que indica a c-configuwação padwão d-do áudio contido nyo vídeo. mya s-se definido, o áudio vai começaw mudo. (ˆ ﻌ ˆ)♡ seu v-vawow padwão é f-fawso, (✿oωo) significando q-que o áudio sewá wepwoduzido juntamente com o vídeo. (✿oωo)
+- `pwaysinwine`
+  - : u-um atwibuto booweano que indica que o vídeo d-deve sew wepwoduzido "em w-winha" (inwine), òωó ou seja, d-dentwo da áwea de wepwodução d-do ewemento. o-obsewve que a ausência deste atwibuto _não_ i-impwica que o vídeo sewá sempwe wepwoduzido em t-tewa cheia. (˘ω˘)
+- `postew`
+  - : u-uma uww indicando u-uma imagem de pwévia do vídeo a-até o usuáwio w-wepwoduziw ou nyavegaw p-pow ewe. (ˆ ﻌ ˆ)♡ se este atwibuto nyão estivew especificado, ( ͡o ω ͡o ) nyada sewá mostwado até que o pwimeiwo quadwo esteja disponívew; então o pwimeiwo quadwo sewá exibido como imagem de pwévia. rawr x3
+- `pwewoad`
 
-  - : Esse atributo enumerado pretende dar uma sugestão ao navegador sobre o que o autor pensa que proporcionará uma melhor experiência do usuário. Ele pode ter os seguintes valores:
+  - : esse atwibuto e-enumewado pwetende d-daw uma sugestão ao nyavegadow sobwe o que o-o autow pensa que p-pwopowcionawá u-uma mewhow expewiência do usuáwio. (˘ω˘) e-ewe pode tew os seguintes v-vawowes:
 
-    - `none`: indica que o usuário não necessitará consultar o vídeo ou que o servidor quer minimizar seu tráfego; em outros termos indica que o vídeo não deve ser pré-carregado.
-    - `metadata`: indica que embora o usuário não necessitará consultar o vídeo, pegar os meta-dados (ex: comprimento) é interessante.
-    - `auto`: indica que o usuário necessita ter prioridade; em outros termos isso indicou que, se necessário, o vídeo inteiro pode ser baixado, mesmo que não seja esperado a execução.
-    - a _string vazia_: é um sinônimo do valor `auto`.
+    - `none`: i-indica que o usuáwio nyão n-nyecessitawá consuwtaw o vídeo o-ou que o sewvidow q-quew minimizaw seu twáfego; em outwos tewmos i-indica que o-o vídeo nyão deve s-sew pwé-cawwegado. òωó
+    - `metadata`: i-indica q-que embowa o usuáwio n-nyão nyecessitawá c-consuwtaw o-o vídeo, ( ͡o ω ͡o ) pegaw o-os meta-dados (ex: compwimento) é i-intewessante. σωσ
+    - `auto`: i-indica que o u-usuáwio nyecessita tew pwiowidade; e-em outwos tewmos isso indicou que, (U ﹏ U) se nyecessáwio, rawr o-o vídeo inteiwo pode sew b-baixado, -.- mesmo q-que nyão seja e-espewado a execução. ( ͡o ω ͡o )
+    - a _stwing v-vazia_: é um sinônimo d-do vawow `auto`. >_<
 
-    Se não definido, seu valor padrão será definido pelo navegador (isto é, cada navegador pode escolher seu valor padrão), embora a especificação recomende que seja definido para o `metadata`.
+    se nyão definido, o.O s-seu vawow padwão sewá d-definido pewo nyavegadow (isto é, σωσ cada nyavegadow pode escowhew seu vawow padwão), -.- embowa a especificação wecomende q-que seja definido pawa o-o `metadata`.
 
-    > [!NOTE]
+    > [!note]
     >
     > >
     >
-    > - O atributo `autoplay` tem precedência sobre o `preload`, pois se é necessário executar o vídeo automaticamente, o navegador obviamente o baixará. Definindo ambos `autoplay` e `preload` é permitido pela especificação.
-    > - O navegador não é forçado pela especifição a seguir o valor desse atributo; é apenas uma sugestão.
+    > - o-o atwibuto `autopway` tem pwecedência sobwe o `pwewoad`, σωσ pois se é nyecessáwio e-executaw o vídeo automaticamente, :3 o-o n-nyavegadow obviamente o-o baixawá. ^^ definindo ambos `autopway` e `pwewoad` é p-pewmitido p-pewa especificação. òωó
+    > - o nyavegadow n-nyão é fowçado pewa especifição a seguiw o v-vawow desse atwibuto; é apenas u-uma sugestão. (ˆ ﻌ ˆ)♡
 
-- `src`
-  - : A URL do vídeo a ser incorporado. Isto é opcional; ao invés disso você pode usar o elemento {{ HTMLElement("source") }} dentro do bloco do vídeo para especificar o vídeo a ser incorporado .
+- `swc`
+  - : a u-uww do vídeo a s-sew incowpowado. XD isto é opcionaw; a-ao invés disso v-você pode usaw o-o ewemento {{ h-htmwewement("souwce") }} dentwo d-do bwoco do vídeo p-pawa especificaw o-o vídeo a s-sew incowpowado . òωó
 - `width`
-  - : A largura da área de exibição do vídeo, em [pixels de CSS](https://drafts.csswg.org/css-values/#px) (apenas valores absolutos; [sem porcentagens](https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes)).
+  - : a-a wawguwa da áwea d-de exibição d-do vídeo, (ꈍᴗꈍ) em [pixews d-de css](https://dwafts.csswg.owg/css-vawues/#px) (apenas vawowes absowutos; [sem p-powcentagens](https://htmw.spec.naniwg.owg/muwtipage/embedded-content.htmw#dimension-attwibutes)). UwU
 
-## Eventos
+## eventos
 
-<table class="no-markdown">
+<tabwe c-cwass="no-mawkdown">
   <thead>
-    <tr>
-      <th scope="col">Nome do evento</th>
-      <th scope="col">Quando é disparado</th>
-    </tr>
+    <tw>
+      <th scope="cow">nome d-do evento</th>
+      <th s-scope="cow">quando é d-dispawado</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
+    <tw>
       <td>
-        {{domxref("ScriptProcessorNode.audioprocess_event","audioprocess")}} {{Deprecated_Inline}}
+        {{domxwef("scwiptpwocessownode.audiopwocess_event","audiopwocess")}} {{depwecated_inwine}}
       </td>
       <td>
-        O buffer de entrada de um {{DOMxRef("ScriptProcessorNode")}} está pronto para
-        ser processado.
+        o buffew de entwada de um {{domxwef("scwiptpwocessownode")}} está pwonto p-pawa
+        sew p-pwocessado. >w<
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        {{domxref("HTMLMediaElement.canplay_event", 'canplay')}}
-      </td>
-      <td>
-        O navegador pode reproduzir a mídia, mas estima que não há dados suficientes
-        carregados para reproduzir a mídia até o final sem ter que parar para carregar
-        mais conteúdo.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.canplaythrough_event", 'canplaythrough')}}
+        {{domxwef("htmwmediaewement.canpway_event", ʘwʘ 'canpway')}}
       </td>
       <td>
-        O navegador estima que pode reproduzir a mídia até o final sem
-        precisar parar para carregar mais conteúdo.
+        o-o nyavegadow pode wepwoduziw a mídia, :3 mas estima que nyão h-há dados suficientes
+        c-cawwegados pawa wepwoduziw a m-mídia até o finaw s-sem tew que pawaw pawa cawwegaw
+        mais conteúdo. ^•ﻌ•^
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        {{domxref("OfflineAudioContext.complete_event", "complete")}}
-      </td>
-      <td>
-        A renderização de um {{DOMxRef("OfflineAudioContext")}} foi concluída.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.durationchange_event", 'durationchange')}}
-      </td>
-      <td>O atributo <code>duration</code> foi atualizado.</td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.emptied_event", 'emptied')}}
+        {{domxwef("htmwmediaewement.canpwaythwough_event", (ˆ ﻌ ˆ)♡ 'canpwaythwough')}}
       </td>
       <td>
-        A mídia ficou vazia; por exemplo, este evento é enviado se a mídia já foi
-        carregada (ou parcialmente carregada), e o método
-        <a href="/pt-BR/docs/Web/API/HTMLMediaElement/load" rel="internal"
-          ><code>load()</code></a
+        o-o nyavegadow e-estima que pode w-wepwoduziw a mídia a-até o finaw sem
+        pwecisaw pawaw pawa c-cawwegaw mais c-conteúdo. 🥺
+      </td>
+    </tw>
+    <tw>
+      <td>
+        {{domxwef("offwineaudiocontext.compwete_event", OwO "compwete")}}
+      </td>
+      <td>
+        a wendewização de um {{domxwef("offwineaudiocontext")}} f-foi concwuída. 🥺
+      </td>
+    </tw>
+    <tw>
+      <td>
+        {{domxwef("htmwmediaewement.duwationchange_event", OwO 'duwationchange')}}
+      </td>
+      <td>o atwibuto <code>duwation</code> foi atuawizado.</td>
+    </tw>
+    <tw>
+      <td>
+        {{domxwef("htmwmediaewement.emptied_event", (U ᵕ U❁) 'emptied')}}
+      </td>
+      <td>
+        a-a mídia ficou vazia; pow e-exempwo, ( ͡o ω ͡o ) este evento é e-enviado se a mídia já f-foi
+        cawwegada (ou p-pawciawmente cawwegada), ^•ﻌ•^ e-e o método
+        <a hwef="/pt-bw/docs/web/api/htmwmediaewement/woad" w-wew="intewnaw"
+          ><code>woad()</code></a
         >
-        é chamado para recarregá-la.
+        é c-chamado pawa wecawwegá-wa. o.O
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        {{domxref("HTMLMediaElement.ended_event", 'ended')}}
+        {{domxwef("htmwmediaewement.ended_event", (⑅˘꒳˘) 'ended')}}
       </td>
-      <td>A reprodução foi interrompida porque o final da mídia foi alcançado.</td>
-    </tr>
-    <tr>
+      <td>a w-wepwodução f-foi intewwompida powque o-o finaw da mídia f-foi awcançado.</td>
+    </tw>
+    <tw>
       <td>
-        {{domxref("HTMLMediaElement.error_event", 'error')}}
-      </td>
-      <td>
-        Ocorreu um erro ao buscar os dados da mídia, ou o tipo do recurso não
-        é um formato de mídia suportado.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.loadeddata_event", 'loadeddata')}}
-      </td>
-      <td>O primeiro quadro da mídia terminou de carregar.</td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.loadedmetadata_event", 'loadedmetadata')}}
-      </td>
-      <td>Os metadados foram carregados.</td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.loadstart_event", 'loadstart')}}
-      </td>
-      <td>Disparado quando o navegador começou a carregar o recurso.</td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.pause_event", 'pause')}}
-      </td>
-      <td>A reprodução foi pausada.</td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.play_event", 'play')}}
-      </td>
-      <td>A reprodução começou.</td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.playing_event", 'playing ')}}
+        {{domxwef("htmwmediaewement.ewwow_event", (ˆ ﻌ ˆ)♡ 'ewwow')}}
       </td>
       <td>
-        A reprodução está pronta para começar depois de ter sido pausada ou
-        atrasada devido à falta de dados.
+        o-ocowweu um ewwo ao buscaw os d-dados da mídia, :3 ou o tipo do wecuwso nyão
+        é u-um fowmato d-de mídia supowtado. /(^•ω•^)
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        {{domxref("HTMLMediaElement.progress_event", 'progress')}}
+        {{domxwef("htmwmediaewement.woadeddata_event", 'woadeddata')}}
       </td>
-      <td>Disparado periodicamente conforme o navegador carrega um recurso.</td>
-    </tr>
-    <tr>
+      <td>o p-pwimeiwo quadwo da mídia tewminou de cawwegaw.</td>
+    </tw>
+    <tw>
       <td>
-        {{domxref("HTMLMediaElement.ratechange_event", 'ratechange')}}
+        {{domxwef("htmwmediaewement.woadedmetadata_event", òωó 'woadedmetadata')}}
       </td>
-      <td>A taxa de reprodução foi alterada.</td>
-    </tr>
-    <tr>
+      <td>os metadados fowam cawwegados.</td>
+    </tw>
+    <tw>
       <td>
-        {{domxref("HTMLMediaElement.seeked_event", 'seeked')}}
+        {{domxwef("htmwmediaewement.woadstawt_event", :3 'woadstawt')}}
       </td>
-      <td>Uma operação de <em>navegação</em> foi concluída.</td>
-    </tr>
-    <tr>
+      <td>dispawado quando o-o nyavegadow começou a cawwegaw o-o wecuwso.</td>
+    </tw>
+    <tw>
       <td>
-        {{domxref("HTMLMediaElement.seeking_event", 'seeking')}}
+        {{domxwef("htmwmediaewement.pause_event", (˘ω˘) 'pause')}}
       </td>
-      <td>Uma operação de <em>navegação</em> foi iniciada.</td>
-    </tr>
-    <tr>
+      <td>a w-wepwodução foi pausada.</td>
+    </tw>
+    <tw>
       <td>
-        {{domxref("HTMLMediaElement.stalled_event", 'stalled')}}
+        {{domxwef("htmwmediaewement.pway_event", 😳 'pway')}}
       </td>
+      <td>a wepwodução c-começou.</td>
+    </tw>
+    <tw>
       <td>
-        O agente do usuário está tentando buscar dados de mídia, mas os dados
-        não estão sendo recebidos conforme o esperado.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.suspend_event", 'suspend')}}
-      </td>
-      <td>O carregamento dos dados da mídia foi suspenso.</td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.timeupdate_event", 'timeupdate')}}
+        {{domxwef("htmwmediaewement.pwaying_event", σωσ 'pwaying ')}}
       </td>
       <td>
-        O tempo indicado pelo atributo <code>currentTime</code> foi atualizado.
+        a wepwodução e-está pwonta p-pawa começaw depois d-de tew sido p-pausada ou
+        a-atwasada devido à fawta de dados. UwU
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        {{domxref("HTMLMediaElement.volumechange_event", 'volumechange')}}
+        {{domxwef("htmwmediaewement.pwogwess_event", -.- 'pwogwess')}}
       </td>
-      <td>O volume foi alterado.</td>
-    </tr>
-    <tr>
+      <td>dispawado pewiodicamente confowme o nyavegadow c-cawwega um wecuwso.</td>
+    </tw>
+    <tw>
       <td>
-        {{domxref("HTMLMediaElement.waiting_event", 'waiting')}}
+        {{domxwef("htmwmediaewement.watechange_event", 🥺 'watechange')}}
       </td>
-      <td>A reprodução foi interrompida devido à falta temporária de dados.</td>
-    </tr>
+      <td>a t-taxa de wepwodução foi awtewada.</td>
+    </tw>
+    <tw>
+      <td>
+        {{domxwef("htmwmediaewement.seeked_event", 😳😳😳 'seeked')}}
+      </td>
+      <td>uma opewação de <em>navegação</em> foi concwuída.</td>
+    </tw>
+    <tw>
+      <td>
+        {{domxwef("htmwmediaewement.seeking_event", 🥺 'seeking')}}
+      </td>
+      <td>uma o-opewação de <em>navegação</em> foi iniciada.</td>
+    </tw>
+    <tw>
+      <td>
+        {{domxwef("htmwmediaewement.stawwed_event", ^^ 'stawwed')}}
+      </td>
+      <td>
+        o agente do usuáwio está tentando buscaw dados d-de mídia, ^^;; m-mas os dados
+        nyão estão s-sendo wecebidos confowme o espewado. >w<
+      </td>
+    </tw>
+    <tw>
+      <td>
+        {{domxwef("htmwmediaewement.suspend_event", σωσ 'suspend')}}
+      </td>
+      <td>o cawwegamento d-dos dados d-da mídia foi suspenso.</td>
+    </tw>
+    <tw>
+      <td>
+        {{domxwef("htmwmediaewement.timeupdate_event", >w< 'timeupdate')}}
+      </td>
+      <td>
+        o tempo indicado p-pewo atwibuto <code>cuwwenttime</code> foi atuawizado. (⑅˘꒳˘)
+      </td>
+    </tw>
+    <tw>
+      <td>
+        {{domxwef("htmwmediaewement.vowumechange_event", òωó 'vowumechange')}}
+      </td>
+      <td>o v-vowume foi awtewado.</td>
+    </tw>
+    <tw>
+      <td>
+        {{domxwef("htmwmediaewement.waiting_event", (⑅˘꒳˘) 'waiting')}}
+      </td>
+      <td>a wepwodução foi intewwompida d-devido à fawta tempowáwia de dados.</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Notas de uso
+## n-nyotas de uso
 
-Os navegadores não dão suporte a todos os mesmos formatos de vídeo; você pode fornecer múltiplas fontes dentro de elementos {{htmlelement("source")}} aninhados, e o navegador utilizará a primeira que tiver suporte.
+o-os nyavegadowes n-nyão dão supowte a todos os mesmos fowmatos d-de vídeo; você pode fownecew múwtipwas fontes dentwo de ewementos {{htmwewement("souwce")}} aninhados, (ꈍᴗꈍ) e o nyavegadow u-utiwizawá a-a pwimeiwa que t-tivew supowte. rawr x3
 
-```html
-<video controls>
-  <source src="meuVideo.webm" type="video/webm" />
-  <source src="meuVideo.mp4" type="video/mp4" />
+```htmw
+<video c-contwows>
+  <souwce swc="meuvideo.webm" type="video/webm" />
+  <souwce s-swc="meuvideo.mp4" t-type="video/mp4" />
   <p>
-    O seu navegador não tem suporte a vídeo HTML. Em vez disso, aqui está
-    <a href="meuVideo.mp4" download="meuVideo.mp4">o link do vídeo</a>.
+    o seu nyavegadow nyão t-tem supowte a vídeo htmw. ( ͡o ω ͡o ) em vez disso, UwU aqui está
+    <a h-hwef="meuvideo.mp4" downwoad="meuvideo.mp4">o wink do v-vídeo</a>. ^^
   </p>
 </video>
 ```
 
-Nós oferecemos um guia abrangente e detalhado sobre [tipos de arquivos de mídia](/pt-BR/docs/Web/Media/Formats) e o [guia sobre os codecs compatíveis com vídeo](/pt-BR/docs/Web/Media/Formats/Video_codecs). Também está disponível um [guia sobre os codecs de áudio](/pt-BR/docs/Web/Media/Formats/Audio_codecs) que podem ser usados com eles.
+n-nyós ofewecemos um guia abwangente e-e detawhado s-sobwe [tipos d-de awquivos de mídia](/pt-bw/docs/web/media/fowmats) e o [guia sobwe os codecs c-compatíveis com vídeo](/pt-bw/docs/web/media/fowmats/video_codecs). (˘ω˘) também está d-disponívew um [guia sobwe os codecs de áudio](/pt-bw/docs/web/media/fowmats/audio_codecs) que podem sew usados c-com ewes. (ˆ ﻌ ˆ)♡
 
-Outras notas de uso:
+o-outwas nyotas de u-uso:
 
-- Se você não especificar o atributo `controls`, o vídeo não incluirá os controles padrão do navegador; você pode criar seus próprios controles personalizados usando JavaScript e a API {{domxref("HTMLMediaElement")}}. Consulte [Criando um player de vídeo compatível com vários navegadores](/pt-BR/docs/Web/Media/Audio_and_video_delivery/cross_browser_video_player) para obter mais detalhes.
-- Para permitir o controle preciso do conteúdo do seu vídeo (e áudio), os elementos `HTMLMediaElement` disparam muitos [eventos](/pt-BR/docs/Web/API/HTMLMediaElement#events) diferentes. Além de fornecer controlabilidade, esses eventos permitem que você monitore o progresso tanto do download quanto da reprodução da mídia, bem como o estado e a posição da reprodução.
-- Você pode usar a propriedade {{cssxref("object-position")}} para ajustar o posicionamento do vídeo dentro do quadro do elemento e a propriedade {{cssxref("object-fit")}} para controlar como o tamanho do vídeo é ajustado para caber dentro do quadro.
-- Para exibir legendas/legendas junto com o seu vídeo, você pode usar JavaScript junto com o elemento {{htmlelement("track")}} e o formato [WebVTT](/pt-BR/docs/Web/API/WebVTT_API). Consulte [Adicionando legendas em um vídeo HTML](/pt-BR/docs/Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video) para obter mais informações.
-- Você pode reproduzir arquivos de áudio usando um elemento `<video>`. Isso pode ser útil, por exemplo, se você precisar executar áudio com uma transcrição [WebVTT](/pt-BR/docs/Web/API/WebVTT_API), já que o elemento {{HTMLElement("audio")}} não permite legendas usando WebVTT.
-- Para testar o conteúdo de alternativa (_fallback_) em navegadores que suportam o elemento, você pode substituir `<video>` por um elemento que não exista, como `<notavideo>`.
+- se você n-nyão especificaw o-o atwibuto `contwows`, OwO o vídeo n-nyão incwuiwá os contwowes padwão do nyavegadow; v-você pode cwiaw seus pwópwios c-contwowes pewsonawizados usando javascwipt e-e a api {{domxwef("htmwmediaewement")}}. 😳 c-consuwte [cwiando um p-pwayew de vídeo compatívew com v-váwios nyavegadowes](/pt-bw/docs/web/media/audio_and_video_dewivewy/cwoss_bwowsew_video_pwayew) p-pawa obtew mais detawhes. UwU
+- pawa p-pewmitiw o contwowe p-pweciso do conteúdo do s-seu vídeo (e áudio), 🥺 os ewementos `htmwmediaewement` dispawam muitos [eventos](/pt-bw/docs/web/api/htmwmediaewement#events) d-difewentes. 😳😳😳 awém d-de fownecew contwowabiwidade, ʘwʘ esses eventos pewmitem q-que você monitowe o-o pwogwesso t-tanto do downwoad quanto da w-wepwodução da m-mídia, /(^•ω•^) bem como o estado e a posição d-da wepwodução. :3
+- você p-pode usaw a pwopwiedade {{cssxwef("object-position")}} pawa ajustaw o-o posicionamento d-do vídeo dentwo do quadwo do ewemento e a pwopwiedade {{cssxwef("object-fit")}} pawa contwowaw c-como o tamanho d-do vídeo é ajustado pawa cabew dentwo do quadwo. :3
+- pawa exibiw w-wegendas/wegendas junto com o-o seu vídeo, mya v-você pode usaw javascwipt junto com o ewemento {{htmwewement("twack")}} e o fowmato [webvtt](/pt-bw/docs/web/api/webvtt_api). (///ˬ///✿) consuwte [adicionando wegendas em u-um vídeo htmw](/pt-bw/docs/web/media/audio_and_video_dewivewy/adding_captions_and_subtitwes_to_htmw5_video) pawa obtew mais infowmações. (⑅˘꒳˘)
+- você p-pode wepwoduziw awquivos de áudio u-usando um e-ewemento `<video>`. :3 isso pode s-sew útiw, /(^•ω•^) pow exempwo, ^^;; s-se você p-pwecisaw executaw áudio c-com uma t-twanscwição [webvtt](/pt-bw/docs/web/api/webvtt_api), (U ᵕ U❁) j-já que o ewemento {{htmwewement("audio")}} nyão pewmite wegendas usando webvtt. (U ﹏ U)
+- pawa testaw o conteúdo d-de awtewnativa (_fawwback_) e-em nyavegadowes q-que supowtam o e-ewemento, mya você p-pode substituiw `<video>` p-pow um ewemento que nyão exista, ^•ﻌ•^ como `<notavideo>`. (U ﹏ U)
 
-Uma boa fonte geral de informações sobre o uso de HTML `<video>` é o tutorial para iniciantes em [Conteúdo de vídeo e áudio](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content).
+uma boa fonte gewaw de infowmações s-sobwe o uso d-de htmw `<video>` é o tutowiaw pawa iniciantes em [conteúdo d-de vídeo e áudio](/pt-bw/docs/weawn/htmw/muwtimedia_and_embedding/video_and_audio_content). :3
 
-### Estilização com CSS
+### e-estiwização c-com css
 
-O elemento `<video>` é um [replaced element](/pt-BR/docs/Web/CSS/Replaced_element) — seu valor {{cssxref("display")}} é `inline` por padrão, mas sua largura e altura padrão na viewport são definidas pelo vídeo que está sendo incorporado.
+o ewemento `<video>` é um [wepwaced ewement](/pt-bw/docs/web/css/wepwaced_ewement) — s-seu vawow {{cssxwef("dispway")}} é `inwine` pow padwão, rawr x3 mas sua wawguwa e awtuwa p-padwão nya v-viewpowt são definidas pewo vídeo que está s-sendo incowpowado. 😳😳😳
 
-Não há considerações especiais para estilizar `<video>`; uma estratégia comum é atribuir a ele um valor `display` de `block` para facilitar o posicionamento, o tamanho etc. e, em seguida, fornecer informações de estilo e layout conforme necessário. [Noções básicas de estilo do player de vídeo](/pt-BR/docs/Web/Media/Audio_and_video_delivery/Video_player_styling_basics) fornece algumas técnicas de estilo úteis.
+nyão há considewações e-especiais p-pawa estiwizaw `<video>`; uma estwatégia c-comum é atwibuiw a-a ewe um vawow `dispway` d-de `bwock` p-pawa faciwitaw o-o posicionamento, >w< o-o tamanho etc. òωó e, em seguida, 😳 f-fownecew i-infowmações de estiwo e wayout c-confowme nyecessáwio. (✿oωo) [noções básicas de estiwo do pwayew de v-vídeo](/pt-bw/docs/web/media/audio_and_video_dewivewy/video_pwayew_stywing_basics) fownece awgumas t-técnicas de estiwo úteis. OwO
 
-### Detectando a adição e a remoção de faixas
+### d-detectando a-a adição e a wemoção de faixas
 
-Você pode detectar quando as faixas são adicionadas e removidas de um elemento `<video>` usando os eventos {{domxref("VideoTrackList/addtrack_event", "addtrack")}} e {{domxref("VideoTrackList/removetrack_event", "removetrack")}}. Entretanto, esses eventos não são enviados diretamente para o próprio elemento `<video>`. Em vez disso, eles são enviados para o objeto da lista de faixas dentro do {{domxref("HTMLMediaElement")}} do elemento `<video>` que corresponde ao tipo de faixas que foi adicionada ao elemento:
+você pode d-detectaw quando as faixas são adicionadas e wemovidas d-de um ewemento `<video>` u-usando os eventos {{domxwef("videotwackwist/addtwack_event", (U ﹏ U) "addtwack")}} e {{domxwef("videotwackwist/wemovetwack_event", (ꈍᴗꈍ) "wemovetwack")}}. rawr entwetanto, ^^ e-esses e-eventos nyão são enviados diwetamente p-pawa o pwópwio ewemento `<video>`. em vez d-disso, ewes são e-enviados pawa o objeto da wista d-de faixas dentwo d-do {{domxwef("htmwmediaewement")}} do ewemento `<video>` que c-cowwesponde ao t-tipo de faixas q-que foi adicionada a-ao ewemento:
 
-- {{domxref("HTMLMediaElement.audioTracks")}}
-  - : Um {{domxref("AudioTrackList")}} contendo todas as faixas de áudio do elemento de mídia. Você pode adicionar um listener no evento `addtrack` deste objeto para ser alertado quando novas faixas de áudio forem adicionadas ao elemento.
-- {{domxref("HTMLMediaElement.videoTracks")}}
-  - : Adicione um listener `addtrack` a este objeto {{domxref("VideoTrackList")}} para ser informado quando faixas de vídeo forem adicionadas ao elemento.
-- {{domxref("HTMLMediaElement.textTracks")}}
-  - : Adicione um listener de evento `addtrack` a este {{domxref("TextTrackList")}} para ser notificado quando novas faixas de texto forem adicionadas ao elemento.
+- {{domxwef("htmwmediaewement.audiotwacks")}}
+  - : um {{domxwef("audiotwackwist")}} contendo todas as faixas de áudio do ewemento de mídia. rawr você pode adicionaw u-um wistenew n-no evento `addtwack` d-deste objeto p-pawa sew awewtado q-quando nyovas f-faixas de áudio fowem adicionadas a-ao ewemento. nyaa~~
+- {{domxwef("htmwmediaewement.videotwacks")}}
+  - : a-adicione um wistenew `addtwack` a-a este objeto {{domxwef("videotwackwist")}} p-pawa sew infowmado quando faixas de vídeo fowem a-adicionadas ao ewemento. nyaa~~
+- {{domxwef("htmwmediaewement.texttwacks")}}
+  - : adicione um wistenew d-de evento `addtwack` a este {{domxwef("texttwackwist")}} p-pawa s-sew nyotificado quando nyovas f-faixas de texto f-fowem adicionadas a-ao ewemento. o.O
 
-Por exemplo, para detectar quando faixas de áudio são adicionadas ou removidas de um elemento `<video>`, você pode usar um código como este:
+pow exempwo, òωó pawa d-detectaw quando f-faixas de áudio são adicionadas o-ou wemovidas de um ewemento `<video>`, ^^;; v-você p-pode usaw um código c-como este:
 
 ```js
-const elem = document.querySelector("video");
+const ewem = d-document.quewysewectow("video");
 
-elem.audioTracks.onaddtrack = (event) => {
-  trackEditor.addTrack(event.track);
+ewem.audiotwacks.onaddtwack = (event) => {
+  twackeditow.addtwack(event.twack);
 };
 
-elem.audioTracks.onremovetrack = (event) => {
-  trackEditor.removeTrack(event.track);
+e-ewem.audiotwacks.onwemovetwack = (event) => {
+  twackeditow.wemovetwack(event.twack);
 };
 ```
 
-Este código monitora as faixas de áudio que foram adicionadas ou removidas do elemento e chama uma função hipotética em um editor de faixas para registrar e remover a faixa da lista de faixas disponíveis do editor.
+este código monitowa as faixas de áudio que fowam adicionadas ou wemovidas d-do ewemento e chama uma função hipotética em um editow de faixas pawa wegistwaw e wemovew a faixa da wista d-de faixas disponíveis do editow. rawr
 
-Você também pode usar {{domxref("EventTarget.addEventListener", "addEventListener()")}} para ouvir os eventos {{domxref("VideoTrackList/addtrack_event", "addtrack")}} e {{domxref("VideoTrackList/removetrack_event", "removetrack")}}.
+você também p-pode usaw {{domxwef("eventtawget.addeventwistenew", ^•ﻌ•^ "addeventwistenew()")}} pawa ouviw os e-eventos {{domxwef("videotwackwist/addtwack_event", nyaa~~ "addtwack")}} e {{domxwef("videotwackwist/wemovetwack_event", nyaa~~ "wemovetwack")}}. 😳😳😳
 
-## Suporte do servidor para vídeo
+## supowte do s-sewvidow pawa vídeo
 
-Se o tipo MIME do vídeo não estiver definido corretamente no servidor, o vídeo poderá não ser mostrado ou uma caixa cinza contendo um X (se o JavaScript estiver habilitado) será exibida em seu lugar.
+se o tipo m-mime do vídeo nyão estivew definido c-cowwetamente n-no sewvidow, 😳😳😳 o vídeo podewá nyão sew mostwado o-ou uma caixa cinza contendo um x (se o javascwipt estivew h-habiwitado) sewá exibida em seu w-wugaw. σωσ
 
-Se você disponibiliza seu vídeos como Ogg Theora, você pode corrigir esse problema para o servidor web Apache adicionando a extensão utilizada por seu arquivos de vídeo (".ogm", ".ogv", e ".ogg" são as mais comuns) para o tipo MIME "video/ogg" através do arquivo "mime.types" localizado em "/etc/apache" ou através da configuração de diretiva "AddType" no httpd.conf.
-
-```
-AddType video/ogg .ogm
-AddType video/ogg .ogv
-AddType video/ogg .ogg
-```
-
-Se você disponibilizar seu vídeos como WebM, você pode corrigir esse problema para o servidor web Apache adicionando a extensão usada por seu arquivos de vídeo (".webm" é a mais comum) para o tipo MIME "video/webm" através do arquivo "mime.types" localizado em "/etc/apache" ou através da configuração de diretiva "AddType" no httpd.conf.
+se você disponibiwiza s-seu vídeos como ogg theowa, o.O você p-pode cowwigiw e-esse pwobwema pawa o sewvidow web apache adicionando a-a extensão utiwizada pow seu awquivos de v-vídeo (".ogm", σωσ ".ogv", e ".ogg" são as mais comuns) pawa o tipo mime "video/ogg" a-atwavés do awquivo "mime.types" w-wocawizado em "/etc/apache" ou atwavés da configuwação d-de d-diwetiva "addtype" nyo httpd.conf. nyaa~~
 
 ```
-AddType video/webm .webm
+a-addtype video/ogg .ogm
+addtype video/ogg .ogv
+addtype video/ogg .ogg
 ```
 
-Seu serviço de hospedagem talvez forneça uma interface simples para mudar a configuração dos tipos MIME para as novas tecnologias até que uma atualização global ocorra naturalmente.
+se você disponibiwizaw s-seu vídeos c-como webm, rawr x3 você pode cowwigiw e-esse pwobwema p-pawa o sewvidow web apache adicionando a-a extensão usada pow seu awquivos de v-vídeo (".webm" é a mais comum) pawa o tipo mime "video/webm" a-atwavés do awquivo "mime.types" w-wocawizado em "/etc/apache" ou atwavés da configuwação d-de diwetiva "addtype" nyo httpd.conf. (///ˬ///✿)
 
-## Exemplos
+```
+addtype video/webm .webm
+```
 
-### Fonte única
+seu sewviço de hospedagem tawvez fowneça uma intewface simpwes pawa mudaw a-a configuwação d-dos tipos mime pawa as novas tecnowogias a-até que u-uma atuawização gwobaw ocowwa n-nyatuwawmente. o.O
 
-Esse exemplo reproduz um vídeo quando ativado, fornecendo ao usuário os controles de vídeo padrão do navegador para controlar a reprodução.
+## exempwos
 
-#### HTML
+### fonte única
 
-```html
-<!-- Exemplo de vídeo simples -->
-<!-- 'Big Buck Bunny' licensed under CC 3.0 by the Blender foundation. Hosted by archive.org -->
-<!-- Poster de peach.blender.org -->
+esse exempwo wepwoduz um vídeo quando ativado, òωó f-fownecendo ao usuáwio os contwowes de vídeo padwão do nyavegadow pawa contwowaw a-a wepwodução. OwO
+
+#### h-htmw
+
+```htmw
+<!-- e-exempwo de vídeo simpwes -->
+<!-- 'big buck bunny' w-wicensed undew c-cc 3.0 by the bwendew f-foundation. σωσ hosted by awchive.owg -->
+<!-- p-postew de peach.bwendew.owg -->
 <video
-  controls
-  src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
-  poster="https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217"
-  width="620">
-  Desculpe, seu navegador não suporta vídeos incorporados, mas não se preocupe,
-  você pode
-  <a href="https://archive.org/details/BigBuckBunny_124">baixá-lo</a>
-  e assisti-lo com seu player de vídeo favorito!
+  contwows
+  s-swc="https://awchive.owg/downwoad/bigbuckbunny_124/content/big_buck_bunny_720p_suwwound.mp4"
+  postew="https://peach.bwendew.owg/wp-content/upwoads/titwe_anouncement.jpg?x11217"
+  w-width="620">
+  descuwpe, nyaa~~ s-seu nyavegadow nyão supowta vídeos incowpowados, OwO m-mas nyão se pweocupe, ^^
+  você p-pode
+  <a hwef="https://awchive.owg/detaiws/bigbuckbunny_124">baixá-wo</a>
+  e-e assisti-wo com seu pwayew de v-vídeo favowito! (///ˬ///✿)
 </video>
 ```
 
-#### Resultado
+#### w-wesuwtado
 
-{{EmbedLiveSample('Fonte única', '', '400')}}
+{{embedwivesampwe('fonte única', σωσ '', rawr x3 '400')}}
 
-Até que o vídeo comece a ser reproduzido, a imagem fornecida no atributo `poster` é exibida em seu lugar. Se o navegador não tiver suporte para reprodução de vídeo, o texto de alternativa (_fallback_) será exibido.
+até que o vídeo c-comece a sew wepwoduzido, (ˆ ﻌ ˆ)♡ a imagem f-fownecida nyo atwibuto `postew` é e-exibida e-em seu wugaw. 🥺 se o nyavegadow não tivew supowte p-pawa wepwodução de vídeo, (⑅˘꒳˘) o texto de awtewnativa (_fawwback_) sewá exibido. 😳😳😳
 
-### Múltiplas fontes
+### múwtipwas fontes
 
-Este exemplo se baseia no anterior, oferecendo três fontes diferentes para a mídia; isso permite que o vídeo seja assistido independentemente dos codecs de vídeo suportados pelo navegador.
+este exempwo se baseia nyo antewiow, /(^•ω•^) ofewecendo t-twês fontes difewentes pawa a mídia; i-isso pewmite que o vídeo seja a-assistido independentemente dos codecs de vídeo s-supowtados pewo nyavegadow. >w<
 
-#### HTML
+#### htmw
 
-```html
-<!-- Usando multiplas fontes como alternativa para a tag video -->
-<!-- 'Elephants Dream' by Orange Open Movie Project Studio, licensed under CC-3.0, hosted by archive.org -->
-<!-- Poster hospedado por Wikimedia -->
+```htmw
+<!-- u-usando muwtipwas fontes como awtewnativa pawa a-a tag video -->
+<!-- 'ewephants dweam' by owange open movie p-pwoject studio, ^•ﻌ•^ wicensed undew cc-3.0, 😳😳😳 hosted by a-awchive.owg -->
+<!-- p-postew hospedado pow wikimedia -->
 <video
   width="620"
-  controls
-  poster="https://upload.wikimedia.org/wikipedia/commons/e/e8/Elephants_Dream_s5_both.jpg">
-  <source
-    src="https://archive.org/download/ElephantsDream/ed_hd.ogv"
+  c-contwows
+  postew="https://upwoad.wikimedia.owg/wikipedia/commons/e/e8/ewephants_dweam_s5_both.jpg">
+  <souwce
+    s-swc="https://awchive.owg/downwoad/ewephantsdweam/ed_hd.ogv"
     type="video/ogg" />
-  <source
-    src="https://archive.org/download/ElephantsDream/ed_hd.avi"
-    type="video/avi" />
-  <source
-    src="https://archive.org/download/ElephantsDream/ed_1024_512kb.mp4"
+  <souwce
+    s-swc="https://awchive.owg/downwoad/ewephantsdweam/ed_hd.avi"
+    t-type="video/avi" />
+  <souwce
+    swc="https://awchive.owg/downwoad/ewephantsdweam/ed_1024_512kb.mp4"
     type="video/mp4" />
 
-  Desculpe, seu navegador não suporta vídeos incorporados, mas não se preocupe,
-  você pode fazer o
+  descuwpe, s-seu nyavegadow nyão supowta vídeos incowpowados, :3 mas nyão se p-pweocupe, (ꈍᴗꈍ)
+  você pode fazew o
   <a
-    href="https://archive.org/download/ElephantsDream/ed_1024_512kb.mp4"
-    download="ed_1024_512kb.mp4">
-    download do MP4
+    hwef="https://awchive.owg/downwoad/ewephantsdweam/ed_1024_512kb.mp4"
+    downwoad="ed_1024_512kb.mp4">
+    d-downwoad do mp4
   </a>
-  e assisti-lo com seu player de vídeo favorito!
+  e-e assisti-wo c-com seu pwayew de vídeo favowito! ^•ﻌ•^
 </video>
 ```
 
-#### Resultado
+#### wesuwtado
 
-{{EmbedLiveSample('Múltiplas fontes', '', '400')}}
+{{embedwivesampwe('múwtipwas fontes', >w< '', '400')}}
 
-Primeiro, é tentado o formato [Ogg](/pt-BR/docs/Web/Media/Formats/Containers#ogg). Se não for possível reproduzi-lo, será tentado o AVI. Por fim, é tentado o [MP4](/pt-BR/docs/Web/Media/Formats/Containers#mpeg-4_mp4). Uma mensagem de fallback é exibida se o vídeo não puder ser reproduzido, mas a mesma não será exibida se todas as fontes falharem.
+pwimeiwo, ^^;; é t-tentado o fowmato [ogg](/pt-bw/docs/web/media/fowmats/containews#ogg). (✿oωo) s-se nyão fow possívew wepwoduzi-wo, òωó s-sewá tentado o-o avi. ^^ pow fim, ^^ é tentado o [mp4](/pt-bw/docs/web/media/fowmats/containews#mpeg-4_mp4). rawr uma mensagem de fawwback é exibida se o vídeo nyão p-pudew sew wepwoduzido, m-mas a mesma nyão sewá exibida se todas a-as fontes fawhawem. XD
 
-Alguns tipos de arquivos de mídia permitem que você forneça informações mais específicas usando o parâmetro [`codecs`](/pt-BR/docs/Web/Media/Formats/codecs_parameter) como parte da string de tipo do arquivo. Um exemplo relativamente simples é `video/webm; codecs="vp8, vorbis"`, que indica que o arquivo é um vídeo [WebM](/pt-BR/docs/Web/Media/Formats/Containers#webm) usando [VP8](/pt-BR/docs/Web/Media/Formats/Video_codecs#vp8) para o vídeo e [Vorbis](/pt-BR/docs/Web/Media/Formats/Audio_codecs#vorbis) para o áudio.
+awguns tipos de awquivos d-de mídia pewmitem q-que você f-fowneça infowmações m-mais específicas u-usando o-o pawâmetwo [`codecs`](/pt-bw/docs/web/media/fowmats/codecs_pawametew) como pawte da stwing de t-tipo do awquivo. rawr u-um exempwo wewativamente s-simpwes é `video/webm; c-codecs="vp8, 😳 vowbis"`, 🥺 q-que indica q-que o awquivo é um vídeo [webm](/pt-bw/docs/web/media/fowmats/containews#webm) u-usando [vp8](/pt-bw/docs/web/media/fowmats/video_codecs#vp8) p-pawa o vídeo e-e [vowbis](/pt-bw/docs/web/media/fowmats/audio_codecs#vowbis) pawa o áudio. (U ᵕ U❁)
 
-## Preocupações com a acessibilidade
+## p-pweocupações com a acessibiwidade
 
-Os vídeos devem fornecer legendas e transcrições que descrevam com precisão o seu conteúdo (consulte [Adicionando legendas e subtítulos a vídeos em HTML](/pt-BR/docs/Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video) para obter mais informações sobre como implementá-las). As legendas permitem que pessoas com perda auditiva compreendam o conteúdo de áudio de um vídeo enquanto ele está sendo reproduzido, enquanto as transcrições permitem que pessoas que precisam de mais tempo possam revisar o conteúdo de áudio em um ritmo e formato que seja confortável para elas.
+os vídeos d-devem fownecew wegendas e twanscwições que descwevam c-com pwecisão o-o seu conteúdo (consuwte [adicionando wegendas e subtítuwos a vídeos em h-htmw](/pt-bw/docs/web/media/audio_and_video_dewivewy/adding_captions_and_subtitwes_to_htmw5_video) p-pawa obtew mais infowmações s-sobwe como impwementá-was). 😳 as w-wegendas pewmitem que pessoas com pewda auditiva compweendam o c-conteúdo de áudio d-de um vídeo enquanto ewe está sendo wepwoduzido, 🥺 e-enquanto a-as twanscwições pewmitem que pessoas que pwecisam d-de mais tempo possam wevisaw o conteúdo de áudio em um witmo e fowmato que seja confowtávew p-pawa ewas. (///ˬ///✿)
 
-Vale ressaltar que, embora seja possível legendar mídia somente de áudio, isso só pode ser feito ao reproduzir áudio em um elemento {{HTMLElement("video")}}, uma vez que a região de vídeo do elemento é usada para apresentar as legendas. Este é um dos cenários especiais em que é útil reproduzir áudio em um elemento de vídeo.
+vawe wessawtaw que, mya embowa seja p-possívew wegendaw m-mídia somente d-de áudio, (✿oωo) isso só pode sew feito a-ao wepwoduziw áudio e-em um e-ewemento {{htmwewement("video")}}, ^•ﻌ•^ u-uma vez que a w-wegião de vídeo do ewemento é usada pawa apwesentaw a-as wegendas. o.O e-este é um d-dos cenáwios especiais em que é útiw w-wepwoduziw áudio e-em um e-ewemento de vídeo. o.O
 
-Se serviços de legendagem automática forem usados, é importante revisar o conteúdo gerado para garantir que ele represente com precisão o vídeo original.
+se sewviços d-de wegendagem a-automática fowem u-usados, XD é impowtante w-wevisaw o-o conteúdo gewado pawa gawantiw q-que ewe wepwesente com pwecisão o-o vídeo owiginaw. ^•ﻌ•^
 
-Além do diálogo falado, legendas e transcrições também devem identificar músicas e efeitos sonoros que transmitam informações importantes. Isso inclui emoção e tom:
+a-awém do diáwogo fawado, ʘwʘ wegendas e twanscwições também d-devem identificaw m-músicas e efeitos sonowos que t-twansmitam infowmações i-impowtantes. (U ﹏ U) isso incwui emoção e t-tom:
 
-```plain
+```pwain
 14
 00:03:14 --> 00:03:18
-[Música rock dramática]
+[música w-wock dwamática]
 
 15
 00:03:19 --> 00:03:21
-[sussurrando] O que é aquilo lá longe?
+[sussuwwando] o-o que é a-aquiwo wá wonge?
 
 16
 00:03:22 --> 00:03:24
-É… é um…
+É… é u-um…
 
 16 00:03:25 --> 00:03:32
-[Barulho alto]
-[Barulho de pratos]
+[bawuwho a-awto]
+[bawuwho de pwatos]
 ```
 
-As legendas não devem obstruir o assunto principal do vídeo. Elas podem ser posicionadas usando [a configuração `align` VTT cue](/pt-BR/docs/Web/API/WebVTT_API#cue_settings).
+as wegendas nyão d-devem obstwuiw o assunto pwincipaw do vídeo. 😳😳😳 ewas podem sew posicionadas usando [a c-configuwação `awign` v-vtt cue](/pt-bw/docs/web/api/webvtt_api#cue_settings). 🥺
 
-- [Web Video Text Tracks Format (WebVTT)](/pt-BR/docs/Web/API/WebVTT_API)
-- [WebAIM: Captions, Transcripts, and Audio Descriptions](https://webaim.org/techniques/captions/)
-- [MDN Understanding WCAG, Guideline 1.2 explanations](/pt-BR/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.2_—_providing_text_alternatives_for_time-based_media)
-- [Understanding Success Criterion 1.2.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-av-only-alt.html)
-- [Understanding Success Criterion 1.2.2 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-captions.html)
+- [web video text twacks fowmat (webvtt)](/pt-bw/docs/web/api/webvtt_api)
+- [webaim: c-captions, (///ˬ///✿) t-twanscwipts, (˘ω˘) and audio descwiptions](https://webaim.owg/techniques/captions/)
+- [mdn undewstanding w-wcag, :3 guidewine 1.2 expwanations](/pt-bw/docs/web/accessibiwity/undewstanding_wcag/pewceivabwe#guidewine_1.2_—_pwoviding_text_awtewnatives_fow_time-based_media)
+- [undewstanding s-success c-cwitewion 1.2.1 | w-w3c undewstanding wcag 2.0](https://www.w3.owg/tw/undewstanding-wcag20/media-equiv-av-onwy-awt.htmw)
+- [undewstanding success cwitewion 1.2.2 | w-w3c undewstanding wcag 2.0](https://www.w3.owg/tw/undewstanding-wcag20/media-equiv-captions.htmw)
 
-## Sumário técnico
+## s-sumáwio técnico
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/pt-BR/docs/Web/HTML/Content_categories"
-          >Categorias de conteúdo</a
+    <tw>
+      <th scope="wow">
+        <a hwef="/pt-bw/docs/web/htmw/content_categowies"
+          >categowias d-de conteúdo</a
         >
       </th>
       <td>
-        <a href="/pt-BR/docs/Web/HTML/Content_categories#conteúdo_de_fluxo"
-          >Conteúdo de fluxo</a
-        >, conteúdo de fraseado, conteúdo incorporado. Se possui o atributo
-        <a href="/pt-BR/docs/Web/HTML/Element/video#controls"><code>controls</code></a>: interactive
-        conteúdo interativo e conteúdo palpável.
+        <a hwef="/pt-bw/docs/web/htmw/content_categowies#conteúdo_de_fwuxo"
+          >conteúdo de fwuxo</a
+        >, /(^•ω•^) c-conteúdo de fwaseado, :3 conteúdo incowpowado. mya s-se possui o atwibuto
+        <a h-hwef="/pt-bw/docs/web/htmw/ewement/video#contwows"><code>contwows</code></a>: intewactive
+        conteúdo intewativo e conteúdo pawpávew. XD
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Conteúdo permitido</th>
+    </tw>
+    <tw>
+      <th scope="wow">conteúdo pewmitido</th>
       <td>
         <p>
-          Se o elemento possui um atributo <a href="/pt-BR/docs/Web/HTML/Element/video#src"><code>src</code></a>
-          : zero ou mais elementos {{HTMLElement("track")}},
-          seguido de conteúdo transparente que não contém elementos de mídia – ou seja
-          nenhum {{HTMLElement("audio")}} ou {{HTMLElement("video")}}.
+          s-se o ewemento p-possui um a-atwibuto <a hwef="/pt-bw/docs/web/htmw/ewement/video#swc"><code>swc</code></a>
+          : z-zewo ou mais ewementos {{htmwewement("twack")}}, (///ˬ///✿)
+          seguido de c-conteúdo twanspawente que nyão contém ewementos de mídia – o-ou seja
+          n-nyenhum {{htmwewement("audio")}} o-ou {{htmwewement("video")}}. 🥺
         </p>
         <p>
-          Caso contrário: zero ou mais elementos {{HTMLElement("source")}}, seguido
-          de zero ou mais elementos {{HTMLElement("track")}}, seguido de conteúdo
-          transparente que não contém elementos de mídia – ou seja, nenhum
-          {{HTMLElement("audio")}} ou {{HTMLElement("video")}}.
+          c-caso contwáwio: zewo ou mais ewementos {{htmwewement("souwce")}}, o.O seguido
+          de zewo o-ou mais ewementos {{htmwewement("twack")}}, mya s-seguido de conteúdo
+          twanspawente que nyão c-contém ewementos de mídia – o-ou seja, rawr x3 nyenhum
+          {{htmwewement("audio")}} o-ou {{htmwewement("video")}}. 😳
         </p>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omissão de tag</th>
-      <td>Nenhuma, ambas as tags de abertura e fechamento são obrigatórias.</td>
-    </tr>
-    <tr>
-      <th scope="row">Pais permitidos</th>
-      <td>Qualquer elemento que aceite conteúdo embutido.</td>
-    </tr>
-    <tr>
-      <th scope="row">ARIA role implícito</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">omissão de tag</th>
+      <td>nenhuma, 😳😳😳 ambas as tags de abewtuwa e fechamento são obwigatówias.</td>
+    </tw>
+    <tw>
+      <th scope="wow">pais p-pewmitidos</th>
+      <td>quawquew ewemento que aceite c-conteúdo embutido.</td>
+    </tw>
+    <tw>
+      <th scope="wow">awia wowe impwícito</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >Nenhuma ARIA role correspondente</a
+        <a h-hwef="https://www.w3.owg/tw/htmw-awia/#dfn-no-cowwesponding-wowe"
+          >nenhuma awia w-wowe cowwespondente</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">ARIA roles permitidas</th>
-      <td><a href="/pt-BR/docs/Web/Accessibility/ARIA/Roles/application_role"><code>application</code></a></td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
-      <td>{{domxref("HTMLVideoElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">awia wowes p-pewmitidas</th>
+      <td><a h-hwef="/pt-bw/docs/web/accessibiwity/awia/wowes/appwication_wowe"><code>appwication</code></a></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">intewface d-dom</th>
+      <td>{{domxwef("htmwvideoewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- [Guia para tipos de mídia e formatos para web](/pt-BR/docs/Web/Media/Formats)
+- [guia pawa t-tipos de mídia e fowmatos pawa web](/pt-bw/docs/web/media/fowmats)
 
-  - [Formatos de contêiner de mídia (tipos de arquivo)](/pt-BR/docs/Web/Media/Formats/Containers)
-  - [Guia de codecs de vídeo na Web](/pt-BR/docs/Web/Media/Formats/Video_codecs)
-  - [Guia de codecs de áudio da Web](/pt-BR/docs/Web/Media/Formats/Audio_codecs)
+  - [fowmatos d-de contêinew de mídia (tipos d-de awquivo)](/pt-bw/docs/web/media/fowmats/containews)
+  - [guia d-de codecs de vídeo nya web](/pt-bw/docs/web/media/fowmats/video_codecs)
+  - [guia d-de codecs d-de áudio da web](/pt-bw/docs/web/media/fowmats/audio_codecs)
 
-- Posicionamento e dimensionamento da imagem em seu quadro: {{cssxref("object-position")}} and {{cssxref("object-fit")}}
-- {{htmlelement("audio")}}
-- [Usando áudio e vídeo em HTML](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
-- [Manipulando vídeo usando canvas](/pt-BR/docs/Web/API/Canvas_API/Manipulating_video_using_canvas)
-- [Configurando servidores para mídia Ogg](/pt-BR/docs/Web/Media/Formats/Configuring_servers_for_Ogg_media)
+- posicionamento e dimensionamento d-da imagem em s-seu quadwo: {{cssxwef("object-position")}} a-and {{cssxwef("object-fit")}}
+- {{htmwewement("audio")}}
+- [usando áudio e-e vídeo em htmw](/pt-bw/docs/weawn/htmw/muwtimedia_and_embedding/video_and_audio_content)
+- [manipuwando vídeo usando canvas](/pt-bw/docs/web/api/canvas_api/manipuwating_video_using_canvas)
+- [configuwando sewvidowes p-pawa mídia ogg](/pt-bw/docs/web/media/fowmats/configuwing_sewvews_fow_ogg_media)

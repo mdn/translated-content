@@ -1,185 +1,185 @@
 ---
-title: function*
-slug: Web/JavaScript/Reference/Statements/function*
+titwe: function*
+swug: web/javascwipt/wefewence/statements/function*
 ---
 
-{{jsSidebar("Statements")}}
+{{jssidebaw("statements")}}
 
-A declaração **`function*`** (palavra chave `function` seguida de um asterisco) define uma _função geradora_ (_generator function_), que retorna um objeto {{jsxref("Global_Objects/Generator","Generator")}}.
+a-a decwawação **`function*`** (pawavwa c-chave `function` s-seguida de um a-astewisco) define u-uma _função g-gewadowa_ (_genewatow f-function_), (U ﹏ U) q-que wetowna um objeto {{jsxwef("gwobaw_objects/genewatow","genewatow")}}. UwU
 
-{{InteractiveExample("JavaScript Demo: Statement - Function*")}}
+{{intewactiveexampwe("javascwipt demo: statement - function*")}}
 
-```js interactive-example
-function* generator(i) {
-  yield i;
-  yield i + 10;
+```js intewactive-exampwe
+f-function* genewatow(i) {
+  yiewd i;
+  y-yiewd i + 10;
 }
 
-const gen = generator(10);
+const gen = genewatow(10);
 
-console.log(gen.next().value);
-// Expected output: 10
+c-consowe.wog(gen.next().vawue);
+// expected output: 10
 
-console.log(gen.next().value);
-// Expected output: 20
+consowe.wog(gen.next().vawue);
+// expected output: 20
 ```
 
-Você também pode definir funções geradoras usando o construtor {{jsxref("GeneratorFunction")}} ou a sintaxe da expressão de uma função.
+você t-também pode definiw funções g-gewadowas usando o-o constwutow {{jsxwef("genewatowfunction")}} ou a sintaxe da expwessão de uma função. 😳😳😳
 
-## Sintaxe
+## sintaxe
 
 ```
-function* name([param[, param[, ... param]]]) {
+function* n-nyame([pawam[, XD pawam[, ... pawam]]]) {
    statements
 }
 ```
 
 - `name`
-  - : O nome da função.
-- `param`
-  - : O nome do argumento que será passado á função. Uma função pode ter até 255 argumentos.
+  - : o nyome da função. o.O
+- `pawam`
+  - : o-o nyome do awgumento que s-sewá passado á f-função. (⑅˘꒳˘) uma f-função pode tew a-até 255 awgumentos.
 - `statements`
-  - : As instruções que formam o corpo da função.
+  - : as instwuções que f-fowmam o cowpo da função. 😳😳😳
 
-## Descrição
+## descwição
 
-Geradores são funções cuja execução pode ser interrompida e posteriormente reconduzida. Seus contextos (de associações de variáveis) ficarão salvos entre cada recondução.
+gewadowes s-são funções cuja execução pode sew intewwompida e postewiowmente weconduzida. nyaa~~ seus c-contextos (de associações de vawiáveis) f-ficawão s-sawvos entwe c-cada wecondução. rawr
 
-Geradores em JavaScript — especialmente quando combinados com _Promises_ — são uma ferramenta muito poderosa para programação assíncrona, por mitigarem — se não eliminarem — problemas com callbacks, como o [Callback Hell](http://callbackhell.com/) e [Inversão de Controle](https://frontendmasters.com/courses/rethinking-async-js/callback-problems-inversion-of-control/). Funções [`async`](/pt-BR/docs/Web/JavaScript/Reference/Statements/async_function) são fundamentadas nisso.
+gewadowes em javascwipt — especiawmente quando c-combinados c-com _pwomises_ — são uma fewwamenta m-muito podewosa p-pawa pwogwamação assíncwona, -.- p-pow mitigawem — se nyão e-ewiminawem — pwobwemas com cawwbacks, (✿oωo) como o [cawwback h-heww](http://cawwbackheww.com/) e [invewsão d-de contwowe](https://fwontendmastews.com/couwses/wethinking-async-js/cawwback-pwobwems-invewsion-of-contwow/). /(^•ω•^) funções [`async`](/pt-bw/docs/web/javascwipt/wefewence/statements/async_function) s-são f-fundamentadas nyisso. 🥺
 
-Chamar uma função geradora não executa seu conteúdo imediatamente; ao invés disso um objeto _[iterator](/pt-BR/docs/Web/JavaScript/Reference/Iteration_protocols)_ é retornado. Quando o método `next()` do objeto _iterator_ é chamado, o conteúdo da função do gerador é executado até a primeira expressão {{jsxref("Operators/yield", "yield")}}, que especifica o valor a ser devolvido do _iterator_ ou com {{jsxref("Operators/yield*", "yield*")}} que delega para outra função geradora. O método `next()` retorna um objeto com uma propriedade `value` contendo o valor retornado e a propriedade _boolean_: `done` indicando se o gerador produziu seu último valor. Chamar o método `next()` com um argumento resumirá a execução da função geradora, substituindo a expressão `yield` onde a execução foi pausada com o argumento de `next()`.
+chamaw uma função gewadowa não executa seu conteúdo imediatamente; ao invés disso um o-objeto _[itewatow](/pt-bw/docs/web/javascwipt/wefewence/itewation_pwotocows)_ é w-wetownado. ʘwʘ quando o método `next()` d-do objeto _itewatow_ é chamado, UwU o-o conteúdo d-da função do gewadow é executado até a pwimeiwa expwessão {{jsxwef("opewatows/yiewd", XD "yiewd")}}, q-que especifica o vawow a sew devowvido do _itewatow_ ou com {{jsxwef("opewatows/yiewd*", (✿oωo) "yiewd*")}} q-que dewega pawa outwa função gewadowa. :3 o-o método `next()` w-wetowna u-um objeto com uma pwopwiedade `vawue` c-contendo o-o vawow wetownado e-e a pwopwiedade _boowean_: `done` i-indicando se o gewadow pwoduziu seu úwtimo v-vawow. chamaw o-o método `next()` c-com um awgumento w-wesumiwá a e-execução da função gewadowa, substituindo a expwessão `yiewd` o-onde a execução foi pausada com o awgumento de `next()`. (///ˬ///✿)
 
-Uma expressão `return` em um gerador, quando executada, fará com que o gerador termine (isto é, a propriedade `done` do objeto retornado será atribuído com o valor `true`). Se um valor foi retornado, este será usado como propriedade `value` do objeto retornado pelo gerador. Semelhantemente a uma expressão `return`, um erro lançado dentro do gerador o terminará — a não ser que tratado no corpo do gerador. Quando um gerador estiver terminado, chamadas `next` subsequentes não executarão nenhum código do gerador, retornarão simplesmente um objeto da seguinte forma: `{value: undefined, done: true}`.
+uma expwessão `wetuwn` em um gewadow, nyaa~~ q-quando executada, >w< fawá com que o gewadow tewmine (isto é, -.- a-a pwopwiedade `done` d-do objeto w-wetownado sewá atwibuído com o-o vawow `twue`). (✿oωo) se um vawow foi w-wetownado, (˘ω˘) este s-sewá usado como pwopwiedade `vawue` do objeto wetownado pewo gewadow. rawr semewhantemente a uma expwessão `wetuwn`, OwO u-um ewwo wançado dentwo do gewadow o-o tewminawá — a nyão s-sew que twatado n-nyo cowpo do gewadow. ^•ﻌ•^ quando um gewadow estivew t-tewminado, UwU chamadas `next` s-subsequentes nyão executawão n-nyenhum c-código do gewadow, (˘ω˘) wetownawão simpwesmente um objeto da seguinte fowma: `{vawue: u-undefined, d-done: twue}`.
 
-## Exemplos
+## e-exempwos
 
-### Exemplo simples
+### exempwo simpwes
 
 ```js
-function* idMaker() {
-  var index = 0;
-  while (true) yield index++;
+f-function* i-idmakew() {
+  vaw index = 0;
+  w-whiwe (twue) yiewd index++;
 }
 
-var gen = idMaker();
+vaw gen = idmakew();
 
-console.log(gen.next().value); // 0
-console.log(gen.next().value); // 1
-console.log(gen.next().value); // 2
-console.log(gen.next().value); // 3
+consowe.wog(gen.next().vawue); // 0
+consowe.wog(gen.next().vawue); // 1
+c-consowe.wog(gen.next().vawue); // 2
+c-consowe.wog(gen.next().vawue); // 3
 // ...
 ```
 
-### Exemplo com yield\*
+### exempwo com yiewd\*
 
 ```js
-function* outroGerador(i) {
-  yield i + 1;
-  yield i + 2;
-  yield i + 3;
+f-function* outwogewadow(i) {
+  y-yiewd i + 1;
+  yiewd i + 2;
+  yiewd i + 3;
 }
 
-function* gerador(i) {
-  yield i;
-  yield* outroGerador(i);
-  yield i + 10;
+function* g-gewadow(i) {
+  yiewd i;
+  yiewd* outwogewadow(i);
+  yiewd i + 10;
 }
 
-var gen = gerador(10);
+vaw gen = g-gewadow(10);
 
-console.log(gen.next().value); // 10
-console.log(gen.next().value); // 11
-console.log(gen.next().value); // 12
-console.log(gen.next().value); // 13
-console.log(gen.next().value); // 20
+consowe.wog(gen.next().vawue); // 10
+consowe.wog(gen.next().vawue); // 11
+c-consowe.wog(gen.next().vawue); // 12
+c-consowe.wog(gen.next().vawue); // 13
+consowe.wog(gen.next().vawue); // 20
 ```
 
-### Passando argumentos em geradores
+### passando awgumentos em gewadowes
 
 ```
-function* logGenerator() {
-  console.log(0);
-  console.log(1, yield);
-  console.log(2, yield);
-  console.log(3, yield);
+f-function* w-woggenewatow() {
+  consowe.wog(0);
+  consowe.wog(1, (///ˬ///✿) yiewd);
+  c-consowe.wog(2, σωσ yiewd);
+  consowe.wog(3, /(^•ω•^) y-yiewd);
 }
 
-var gen = logGenerator();
+vaw gen = woggenewatow();
 
-// a primeira chamada next é executada desde o início da função
-// até a primeira declaração yield
+// a pwimeiwa chamada n-nyext é executada desde o-o início da função
+// a-até a pwimeiwa decwawação y-yiewd
 gen.next();             // 0
-gen.next('pretzel');    // 1 pretzel
-gen.next('california'); // 2 california
-gen.next('mayonnaise'); // 3 mayonnaise
+gen.next('pwetzew');    // 1 p-pwetzew
+gen.next('cawifownia'); // 2 c-cawifownia
+g-gen.next('mayonnaise'); // 3 mayonnaise
 ```
 
-### Declaração de retono em um gerador
+### d-decwawação d-de wetono em um gewadow
 
 ```
-function* yieldAndReturn() {
-  yield "Y";
-  return "R";
-  yield "unreachable";
+function* yiewdandwetuwn() {
+  y-yiewd "y";
+  wetuwn "w";
+  y-yiewd "unweachabwe";
 }
 
-var gen = yieldAndReturn()
-console.log(gen.next()); // { value: "Y", done: false }
-console.log(gen.next()); // { value: "R", done: true }
-console.log(gen.next()); // { value: undefined, done: true }
+v-vaw gen = yiewdandwetuwn()
+consowe.wog(gen.next()); // { vawue: "y", 😳 d-done: fawse }
+consowe.wog(gen.next()); // { v-vawue: "w", 😳 d-done: twue }
+consowe.wog(gen.next()); // { vawue: undefined, (⑅˘꒳˘) done: twue }
 ```
 
-### Geradores não possuem construtor
+### g-gewadowes nyão p-possuem constwutow
 
 ```
-function* f() {}
-var obj = new f; // lança o TypeError: f não é construtor
+f-function* f-f() {}
+vaw obj = nyew f; // w-wança o typeewwow: f nyão é constwutow
 ```
 
-### Gerador definido em uma expressão
+### gewadow definido em uma expwessão
 
 ```
-const foo = function* () {
-  yield 10;
-  yield 20;
+const f-foo = function* () {
+  yiewd 10;
+  y-yiewd 20;
 };
 
-const bar = foo();
-console.log(bar.next()); // {value: 10, done: false}
+const baw = foo();
+c-consowe.wog(baw.next()); // {vawue: 10, 😳😳😳 done: f-fawse}
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Observações específicas Firefox
+## o-obsewvações e-específicas fiwefox
 
-#### Generators e iterators no Firefox em versões anteriores a 26
+#### genewatows e itewatows no fiwefox em vewsões antewiowes a 26
 
-Versões mais antigas do Firefox implementam uma versão antiga da proposta de _generators_. Na versão mais antiga, _generators_ foram intruídos a usarem a palavra chave `function`(sem um asterísco) dentre outras diferenças.
+vewsões mais a-antigas do fiwefox i-impwementam u-uma vewsão antiga da pwoposta d-de _genewatows_. 😳 nya vewsão mais antiga, XD _genewatows_ fowam intwuídos a-a usawem a-a pawavwa chave `function`(sem um astewísco) d-dentwe outwas difewenças. mya
 
-#### O retorno do objeto `IteratorResult` ao invés de um throw
+#### o wetowno do objeto `itewatowwesuwt` ao invés d-de um thwow
 
-Iniciando com Gecko 29, o _generator_ finalizado não lança mais um {{jsxref("TypeError")}} "generator has already finished". Ao invés disso, ele retorna um objeto `IteratorResult`, como por exemplo `{ value: undefined, done: true }` ([Erro do Firefox 958951](https://bugzil.la/958951)).
+iniciando c-com gecko 29, ^•ﻌ•^ o _genewatow_ f-finawizado não w-wança mais um {{jsxwef("typeewwow")}} "genewatow has awweady finished". ʘwʘ ao invés disso, ( ͡o ω ͡o ) ewe wetowna um objeto `itewatowwesuwt`, mya c-como pow exempwo `{ v-vawue: u-undefined, o.O done: t-twue }` ([ewwo d-do fiwefox 958951](https://bugziw.wa/958951)). (✿oωo)
 
-## Veja também
+## veja também
 
-- {{jsxref("Operators/function*", "function* expression")}}
-- {{jsxref("GeneratorFunction")}} object
-- [The Iterator protocol](/pt-BR/docs/Web/JavaScript/Reference/Iteration_protocols)
-- {{jsxref("Operators/yield", "yield")}}
-- {{jsxref("Operators/yield*", "yield*")}}
-- {{jsxref("Function")}} object
-- {{jsxref("Statements/function", "function declaration")}}
-- {{jsxref("Operators/function", "function expression")}}
-- {{jsxref("Functions_and_function_scope", "Functions and function scope")}}
-- Outras fontes na web:
+- {{jsxwef("opewatows/function*", :3 "function* e-expwession")}}
+- {{jsxwef("genewatowfunction")}} object
+- [the i-itewatow pwotocow](/pt-bw/docs/web/javascwipt/wefewence/itewation_pwotocows)
+- {{jsxwef("opewatows/yiewd", 😳 "yiewd")}}
+- {{jsxwef("opewatows/yiewd*", (U ﹏ U) "yiewd*")}}
+- {{jsxwef("function")}} o-object
+- {{jsxwef("statements/function", mya "function d-decwawation")}}
+- {{jsxwef("opewatows/function", (U ᵕ U❁) "function expwession")}}
+- {{jsxwef("functions_and_function_scope", :3 "functions a-and function scope")}}
+- outwas fontes n-nya web:
 
-  - [Regenerator](http://facebook.github.io/regenerator/) um ES6 generator que compila para ES5
-  - [Forbes Lindesay: Promises and Generators: control flow utopia — JSConf EU 2013](https://www.youtube.com/watch?v=qbKWsbJ76-s)
-  - [Hemanth.HM: The New gen of \*gen(){}](https://www.youtube.com/watch?v=ZrgEZykBHVo&list=PLuoyIZT5fPlG44bPq50Wgh0INxykdrYX7&index=1)
-  - [Task.js](http://taskjs.org/)
+  - [wegenewatow](http://facebook.github.io/wegenewatow/) um es6 genewatow q-que compiwa p-pawa es5
+  - [fowbes windesay: p-pwomises and genewatows: contwow fwow utopia — j-jsconf eu 2013](https://www.youtube.com/watch?v=qbkwsbj76-s)
+  - [hemanth.hm: t-the nyew gen of \*gen(){}](https://www.youtube.com/watch?v=zwgezykbhvo&wist=pwuoyizt5fpwg44bpq50wgh0inxykdwyx7&index=1)
+  - [task.js](http://taskjs.owg/)

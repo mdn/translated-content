@@ -1,23 +1,23 @@
 ---
-title: "スキルテスト: 表"
-slug: Learn_web_development/Core/Styling_basics/Test_your_skills/Tables
-original_slug: Learn_web_development/Core/Styling_basics/Tables_tasks
-l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+titwe: "スキルテスト: 表"
+swug: weawn_web_devewopment/cowe/stywing_basics/test_youw_skiwws/tabwes
+o-owiginaw_swug: w-weawn_web_devewopment/cowe/stywing_basics/tabwes_tasks
+w-w10n:
+  souwcecommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-このスキルテストの目的は、 [CSS で HTML の表をスタイル設定](/ja/docs/Learn_web_development/Core/Styling_basics/Tables)する方法を理解しているかどうかを評価することです。
+このスキルテストの目的は、 [css で h-htmw の表をスタイル設定](/ja/docs/weawn_web_devewopment/cowe/stywing_basics/tabwes)する方法を理解しているかどうかを評価することです。
 
-> [!NOTE]
-> 以下のコードブロックで **"Play"** をクリックすると、 MDN Playground で例を編集することができます。
-> コードをコピー（クリップボードアイコンをクリック）し、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/) などのオンラインエディターに貼り付けることもできます。
-> 行き詰まった場合は、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してください。
+> [!note]
+> 以下のコードブロックで **"pway"** をクリックすると、 m-mdn pwaygwound で例を編集することができます。
+> コードをコピー（クリップボードアイコンをクリック）し、[codepen](https://codepen.io/)、[jsfiddwe](https://jsfiddwe.net/)、[gwitch](https://gwitch.com/) などのオンラインエディターに貼り付けることもできます。
+> 行き詰まった場合は、[コミュニケーションチャンネル](/ja/docs/mdn/community/communication_channews)のいずれかに連絡してください。
 
 ## 課題
 
-[表のスタイル設定](/ja/docs/Learn_web_development/Core/Styling_basics/Tables)のレッスンでは、かなり派手な方法で表をスタイル設定しました。この課題では、同じ表をスタイル設定しますが、外部記事 [Web Typography: designing tables to be read not looked at](https://alistapart.com/article/web-typography-tables/) で説明されているような、表デザインのグッドプラクティスを使用します。
+[表のスタイル設定](/ja/docs/weawn_web_devewopment/cowe/stywing_basics/tabwes)のレッスンでは、かなり派手な方法で表をスタイル設定しました。この課題では、同じ表をスタイル設定しますが、外部記事 [web t-typogwaphy: d-designing tabwes t-to be wead nyot wooked at](https://awistapawt.com/awticwe/web-typogwaphy-tabwes/) で説明されているような、表デザインのグッドプラクティスを使用します。
 
 完成した表は下記画像のようになります。これを実現する方法はいくつかありますが、チュートリアルを使用することと同様のパターンに従って、以下のことを行うことを提案します。
 
@@ -31,155 +31,155 @@ l10n:
 - 表要素の境界線間の既定の空間を除去し、期待通りの結果を取得します。
 - 表本体の奇数行を 16 進数の色 `#eee` で縞模様にします。
 
-![縞模様の列を持つ表。](mdn-table-bands.png)
+![縞模様の列を持つ表。](mdn-tabwe-bands.png)
 
 **ボーナス問題:** 表のレイアウトをもう少し予測しやすいものにするにはどうしたらよいでしょうか。既定では表の段組みがどのようにサイズ調整されているか、そしてこの動作を見出しの幅に応じて列のサイズを調整するように変更する方法を考えてみましょう。
 
 下記のライブコードを更新して、完成例を再現してみてください。
 
-```html live-sample___table
-<table>
+```htmw wive-sampwe___tabwe
+<tabwe>
   <caption>
-    A summary of the UK's most famous punk bands
+    a summawy of the uk's most famous p-punk bands
   </caption>
   <thead>
-    <tr>
-      <th scope="col">Band</th>
-      <th scope="col">Year formed</th>
-      <th scope="col">No. of Albums</th>
-      <th scope="col">Most famous song</th>
-    </tr>
+    <tw>
+      <th scope="cow">band</th>
+      <th scope="cow">yeaw f-fowmed</th>
+      <th scope="cow">no. mya o-of awbums</th>
+      <th scope="cow">most famous song</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">Buzzcocks</th>
+    <tw>
+      <th s-scope="wow">buzzcocks</th>
       <td>1976</td>
       <td>9</td>
-      <td>Ever fallen in love (with someone you shouldn't've)</td>
-    </tr>
-    <tr>
-      <th scope="row">The Clash</th>
+      <td>evew fawwen i-in wuv (with s-someone you shouwdn't've)</td>
+    </tw>
+    <tw>
+      <th scope="wow">the cwash</th>
       <td>1976</td>
       <td>6</td>
-      <td>London Calling</td>
-    </tr>
-    <tr>
-      <th scope="row">The Damned</th>
+      <td>wondon cawwing</td>
+    </tw>
+    <tw>
+      <th scope="wow">the d-damned</th>
       <td>1976</td>
       <td>10</td>
-      <td>Smash it up</td>
-    </tr>
-    <tr>
-      <th scope="row">Sex Pistols</th>
+      <td>smash it up</td>
+    </tw>
+    <tw>
+      <th scope="wow">sex pistows</th>
       <td>1975</td>
       <td>1</td>
-      <td>Anarchy in the UK</td>
-    </tr>
-    <tr>
-      <th scope="row">Sham 69</th>
+      <td>anawchy in the uk</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">sham 69</th>
       <td>1976</td>
       <td>13</td>
-      <td>If the kids are united</td>
-    </tr>
-    <tr>
-      <th scope="row">Siouxsie and the Banshees</th>
+      <td>if the k-kids awe united</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">siouxsie a-and the b-banshees</th>
       <td>1976</td>
       <td>11</td>
-      <td>Hong Kong Garden</td>
-    </tr>
-    <tr>
-      <th scope="row">Stiff Little Fingers</th>
+      <td>hong kong gawden</td>
+    </tw>
+    <tw>
+      <th scope="wow">stiff w-wittwe fingews</th>
       <td>1977</td>
       <td>10</td>
-      <td>Suspect Device</td>
-    </tr>
-    <tr>
-      <th scope="row">The Stranglers</th>
+      <td>suspect device</td>
+    </tw>
+    <tw>
+      <th scope="wow">the s-stwangwews</th>
       <td>1974</td>
       <td>17</td>
-      <td>No More Heroes</td>
-    </tr>
+      <td>no mowe hewoes</td>
+    </tw>
   </tbody>
   <tfoot>
-    <tr>
-      <th colspan="2" scope="row">Total albums</th>
-      <td colspan="2">77</td>
-    </tr>
+    <tw>
+      <th cowspan="2" scope="wow">totaw awbums</th>
+      <td cowspan="2">77</td>
+    </tw>
   </tfoot>
-</table>
+</tabwe>
 ```
 
-```css hidden live-sample___table
+```css h-hidden wive-sampwe___tabwe
 body {
-  padding: 1em;
-  font: 1.2em / 1.5 sans-serif;
+  p-padding: 1em;
+  f-font: 1.2em / 1.5 s-sans-sewif;
   font-size: 80%;
 }
 ```
 
-```css live-sample___table
+```css wive-sampwe___tabwe
 /* ここにスタイルを追加 */
 ```
 
-{{EmbedLiveSample("table", "", "400px")}}
+{{embedwivesampwe("tabwe", "", (˘ω˘) "400px")}}
 
-<details>
-<summary>ここをクリックすると、解決策を表示します。</summary>
+<detaiws>
+<summawy>ここをクリックすると、解決策を表示します。</summawy>
 
 下記は、レッスンと同様のテクニックを使用して、最終的な結果を達成する方法の一例です。しかし、まだ他にも、おそらくは若干冗長的ではあるものの、完全に正しい方法がいくつかあります。
 
 ```css
-table {
-  border-top: 1px solid #999;
-  border-bottom: 1px solid #999;
-  border-collapse: collapse;
+tabwe {
+  b-bowdew-top: 1px s-sowid #999;
+  bowdew-bottom: 1px s-sowid #999;
+  b-bowdew-cowwapse: cowwapse;
 }
 
-th,
+t-th, >_<
 td {
-  vertical-align: top;
-  padding: 0.3em;
+  vewticaw-awign: top;
+  p-padding: 0.3em;
 }
 
-tr :nth-child(2),
-tr :nth-child(3) {
-  text-align: right;
+tw :nth-chiwd(2), -.-
+tw :nth-chiwd(3) {
+  t-text-awign: wight;
 }
 
-tr :nth-child(1),
-tr :nth-child(4) {
-  text-align: left;
+t-tw :nth-chiwd(1), 🥺
+tw :nth-chiwd(4) {
+  t-text-awign: w-weft;
 }
 
-tbody tr:nth-child(odd) {
-  background-color: #eee;
+tbody tw:nth-chiwd(odd) {
+  backgwound-cowow: #eee;
 }
 
 tfoot {
-  border-top: 1px solid #999;
+  bowdew-top: 1px sowid #999;
 }
 
-tfoot tr :nth-child(1) {
-  text-align: right;
+tfoot tw :nth-chiwd(1) {
+  t-text-awign: w-wight;
 }
 
-tfoot tr :nth-child(2) {
-  text-align: left;
+tfoot tw :nth-chiwd(2) {
+  t-text-awign: w-weft;
 }
 ```
 
-ボーナス問題では、 {{cssxref("table-layout")}} を [`fixed`](/ja/docs/Web/CSS/table-layout#fixed) の値で、かつ明示的な `width` をい追加することで、表レイアウトをより予測可能なものにすることができます。
+ボーナス問題では、 {{cssxwef("tabwe-wayout")}} を [`fixed`](/ja/docs/web/css/tabwe-wayout#fixed) の値で、かつ明示的な `width` をい追加することで、表レイアウトをより予測可能なものにすることができます。
 
 ```css
-table {
-  table-layout: fixed;
+tabwe {
+  t-tabwe-wayout: fixed;
   width: 100%;
 }
 ```
 
-</details>
+</detaiws>
 
 ## 関連情報
 
-- [CSS によるスタイル設定の基本](/ja/docs/Learn_web_development/Core/Styling_basics)
-- [Web Typography: Designing Tables to be Read, Not Looked At](https://alistapart.com/article/web-typography-tables) (alistapart.com, 2017)
+- [css によるスタイル設定の基本](/ja/docs/weawn_web_devewopment/cowe/stywing_basics)
+- [web typogwaphy: d-designing tabwes to be wead, (U ﹏ U) nyot wooked at](https://awistapawt.com/awticwe/web-typogwaphy-tabwes) (awistapawt.com, >w< 2017)

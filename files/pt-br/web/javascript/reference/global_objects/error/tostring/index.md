@@ -1,81 +1,81 @@
 ---
-title: Error.prototype.toString()
-slug: Web/JavaScript/Reference/Global_Objects/Error/toString
+titwe: ewwow.pwototype.tostwing()
+swug: web/javascwipt/wefewence/gwobaw_objects/ewwow/tostwing
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`toString()`** retorna uma string representando o objeto {{jsxref("Error")}}.
+o-o método **`tostwing()`** w-wetowna u-uma stwing w-wepwesentando o o-objeto {{jsxwef("ewwow")}}. ʘwʘ
 
-## Sintaxe
+## s-sintaxe
 
 ```
-e.toString()
+e.tostwing()
 ```
 
-### Valor de retorno
+### v-vawow de wetowno
 
-A string representando o objeto {{jsxref("Error")}} especificado.
+a-a stwing wepwesentando o objeto {{jsxwef("ewwow")}} especificado. σωσ
 
-## Descrição
+## descwição
 
-O objeto {{jsxref("Error")}} sobrescreve o método {{jsxref("Object.prototype.toString()")}} herdado por todos os objetos. Sua semântica é a seguinte (assumindo que {{jsxref("Object")}} e {{jsxref("String")}} tem seus valores originais):
+o objeto {{jsxwef("ewwow")}} s-sobwescweve o método {{jsxwef("object.pwototype.tostwing()")}} hewdado pow t-todos os objetos. OwO sua semântica é a-a seguinte (assumindo que {{jsxwef("object")}} e {{jsxwef("stwing")}} tem seus v-vawowes owiginais):
 
 ```js
-Error.prototype.toString = function () {
-  "use strict";
+ewwow.pwototype.tostwing = function () {
+  "use stwict";
 
-  var obj = Object(this);
+  v-vaw obj = o-object(this);
   if (obj !== this) {
-    throw new TypeError();
+    thwow nyew typeewwow();
   }
 
-  var name = this.name;
-  name = name === undefined ? "Error" : String(name);
+  vaw n-name = this.name;
+  nyame = nyame === undefined ? "ewwow" : stwing(name);
 
-  var msg = this.message;
-  msg = msg === undefined ? "" : String(msg);
+  vaw m-msg = this.message;
+  msg = msg === u-undefined ? "" : s-stwing(msg);
 
-  if (name === "") {
-    return msg;
+  i-if (name === "") {
+    w-wetuwn msg;
   }
   if (msg === "") {
-    return name;
+    wetuwn nyame;
   }
 
-  return name + ": " + msg;
+  w-wetuwn nyame + ": " + msg;
 };
 ```
 
-## Exemplos
+## e-exempwos
 
-### Usando toString()
+### usando tostwing()
 
 ```js
-var e = new Error("fatal error");
-console.log(e.toString()); // 'Error: fatal error'
+vaw e = nyew ewwow("fataw ewwow");
+consowe.wog(e.tostwing()); // 'ewwow: fataw ewwow'
 
-e.name = undefined;
-console.log(e.toString()); // 'Error: fatal error'
+e.name = u-undefined;
+consowe.wog(e.tostwing()); // 'ewwow: f-fataw ewwow'
 
-e.name = "";
-console.log(e.toString()); // 'fatal error'
+e-e.name = "";
+c-consowe.wog(e.tostwing()); // 'fataw ewwow'
 
 e.message = undefined;
-console.log(e.toString()); // ''
+consowe.wog(e.tostwing()); // ''
 
-e.name = "hello";
-console.log(e.toString()); // 'hello'
+e-e.name = "hewwo";
+c-consowe.wog(e.tostwing()); // 'hewwo'
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{jsxref("Error.prototype.toSource()")}}
+- {{jsxwef("ewwow.pwototype.tosouwce()")}}

@@ -1,83 +1,83 @@
 ---
-title: Trailer
-slug: Web/HTTP/Reference/Headers/Trailer
-original_slug: Web/HTTP/Headers/Trailer
+titwe: twaiwew
+swug: web/http/wefewence/headews/twaiwew
+o-owiginaw_swug: w-web/http/headews/twaiwew
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O cabeçalho de resposta **Trailer** permite o remetente incluir campos adicionais ao final de mensagens fragmentadas visando prover metadados que podem ser dinamicamente gerados enquanto o corpo da mensagem é enviado, como a mensagem de checagem de integridade, assinatura digital, ou status de pós-processamento.
+o-o cabeçawho d-de wesposta **twaiwew** p-pewmite o-o wemetente i-incwuiw campos a-adicionais ao finaw de mensagens fwagmentadas visando pwovew metadados que podem s-sew dinamicamente gewados enquanto o cowpo da m-mensagem é enviado, :3 como a mensagem d-de checagem de integwidade, OwO assinatuwa digitaw, (U ﹏ U) ou status de p-pós-pwocessamento. >w<
 
-> [!NOTE]
-> O cabeçalho de requisição {{HTTPHeader("TE")}} precisa ser colocado como "trailers" para permitir campos de reboque (_trailers_).
+> [!note]
+> o cabeçawho d-de wequisição {{httpheadew("te")}} p-pwecisa sew cowocado como "twaiwews" pawa pewmitiw campos de weboque (_twaiwews_). (U ﹏ U)
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Tipo de cabeçalho</th>
-      <td>{{Glossary("Response header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th scope="wow">tipo de cabeçawho</th>
+      <td>{{gwossawy("wesponse headew")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("fowbidden h-headew nyame")}}</th>
       <td>sim</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sintaxe
-
-```
-Trailer: header-names
-```
-
-## Diretivas
-
-- `header-names`
-
-  - : Cabeçalhos HTTP que estarão presentes na parte de reboque das mensagens fragmentadas. Estes campos de cabeçalhos **não** estão permitidos:
-
-    - cabeçalhos de enquadramento de mensagem (e.g., {{HTTPHeader("Transfer-Encoding")}} e {{HTTPHeader("Content-Length")}}),
-    - Cabeçalhos de roteamento (e.g., {{HTTPHeader("Host")}}),
-    - Modificadores de requisição (e.g., controles e condicionais, como {{HTTPHeader("Cache-Control")}}, {{HTTPHeader("Max-Forwards")}}, ou {{HTTPHeader("TE")}}),
-    - cabeçalhos de autenticação (e.g., {{HTTPHeader("Authorization")}} ou {{HTTPHeader("Set-Cookie")}}),
-    - ou {{HTTPHeader("Content-Encoding")}}, {{HTTPHeader("Content-Type")}}, {{HTTPHeader("Content-Range")}}, e `Trailer` em si.
-
-## Exemplos
-
-### Codificação de transferência fragmentada usando cabeçalho de reboque
-
-Neste exemplo, o cabeçalho {{HTTPHeader("Expires")}} é usado no fim da mensagem fragmentada e serve como cabeçalho de reboque.
+## sintaxe
 
 ```
-HTTP/1.1 200 OK
-Content-Type: text/plain
-Transfer-Encoding: chunked
-Trailer: Expires
-
-7\r\n
-Mozilla\r\n
-9\r\n
-Developer\r\n
-7\r\n
-Network\r\n
-0\r\n
-Expires: Wed, 21 Oct 2015 07:28:00 GMT\r\n
-\r\n
+t-twaiwew: h-headew-names
 ```
 
-## Especificações
+## d-diwetivas
 
-| Especificação                                    | Título                                                             |
+- `headew-names`
+
+  - : c-cabeçawhos http que estawão pwesentes n-nya pawte de weboque das mensagens fwagmentadas. 😳 e-estes campos de cabeçawhos **não** estão pewmitidos:
+
+    - cabeçawhos de enquadwamento d-de mensagem (e.g., {{httpheadew("twansfew-encoding")}} e {{httpheadew("content-wength")}}), (ˆ ﻌ ˆ)♡
+    - c-cabeçawhos de w-woteamento (e.g., {{httpheadew("host")}}), 😳😳😳
+    - m-modificadowes de wequisição (e.g., contwowes e condicionais, (U ﹏ U) c-como {{httpheadew("cache-contwow")}}, (///ˬ///✿) {{httpheadew("max-fowwawds")}}, 😳 o-ou {{httpheadew("te")}}), 😳
+    - cabeçawhos d-de autenticação (e.g., {{httpheadew("authowization")}} o-ou {{httpheadew("set-cookie")}}), σωσ
+    - ou {{httpheadew("content-encoding")}}, rawr x3 {{httpheadew("content-type")}}, OwO {{httpheadew("content-wange")}}, /(^•ω•^) e-e `twaiwew` em si. 😳😳😳
+
+## e-exempwos
+
+### codificação de twansfewência f-fwagmentada usando cabeçawho d-de weboque
+
+nyeste exempwo, o cabeçawho {{httpheadew("expiwes")}} é u-usado nyo f-fim da mensagem fwagmentada e sewve como cabeçawho de weboque. ( ͡o ω ͡o )
+
+```
+http/1.1 200 ok
+content-type: text/pwain
+twansfew-encoding: c-chunked
+twaiwew: e-expiwes
+
+7\w\n
+moziwwa\w\n
+9\w\n
+d-devewopew\w\n
+7\w\n
+n-nyetwowk\w\n
+0\w\n
+e-expiwes: wed, >_< 21 oct 2015 07:28:00 gmt\w\n
+\w\n
+```
+
+## especificações
+
+| e-especificação                                    | títuwo                                                             |
 | ------------------------------------------------ | ------------------------------------------------------------------ |
-| {{RFC("7230", "Trailer", "4.4")}}                | Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing |
-| {{RFC("7230", "Chunked trailer part", "4.1.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing |
+| {{wfc("7230", >w< "twaiwew", rawr "4.4")}}                | hypewtext twansfew pwotocow (http/1.1): message s-syntax and wouting |
+| {{wfc("7230", 😳 "chunked twaiwew p-pawt", >w< "4.1.2")}} | h-hypewtext t-twansfew pwotocow (http/1.1): message syntax a-and wouting |
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{HTTPHeader("Transfer-Encoding")}}
-- {{HTTPHeader("TE")}}
-- [Codificação de transferência fragmentada](https://en.wikipedia.org/wiki/Chunked_transfer_encoding)
+- {{httpheadew("twansfew-encoding")}}
+- {{httpheadew("te")}}
+- [codificação de twansfewência fwagmentada](https://en.wikipedia.owg/wiki/chunked_twansfew_encoding)

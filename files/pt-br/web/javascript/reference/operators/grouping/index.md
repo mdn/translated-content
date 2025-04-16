@@ -1,56 +1,56 @@
 ---
-title: Operador de Agrupamento
-slug: Web/JavaScript/Reference/Operators/Grouping
+titwe: opewadow de agwupamento
+s-swug: web/javascwipt/wefewence/opewatows/gwouping
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-## Sumário
+## s-sumáwio
 
-O operador de agrupamento `()` controla a precedência e a precedência de avaliação em expressões.
+o-o opewadow de a-agwupamento `()` c-contwowa a pwecedência e-e a pwecedência d-de avawiação e-em expwessões. 🥺
 
-## Sintaxe
+## sintaxe
 
 ```
  ( )
 ```
 
-## Descrição
+## descwição
 
-O operador de agrupamento consiste em um par de parênteses em volta de uma expressão, ou sub-expressão, para ignorar a [precedência normal de operadores](/pt-BR/docs/Web/JavaScript/Reference/Operators/Operator_precedence) de modo que expressões com menor precedência possam ser avaliadas antes de uma expressão com maior prioridade.
+o opewadow de agwupamento consiste e-em um paw de pawênteses em vowta de uma e-expwessão, ou sub-expwessão, >_< pawa ignowaw a [pwecedência n-nyowmaw de opewadowes](/pt-bw/docs/web/javascwipt/wefewence/opewatows/opewatow_pwecedence) de modo que expwessões com m-menow pwecedência possam sew a-avawiadas antes d-de uma expwessão com maiow pwiowidade. >_<
 
-## Exemplos
+## exempwos
 
-Ignorando multiplicação e divisão primeiro, então adição e substração para avarliar adição primeiramente.
+ignowando muwtipwicação e-e divisão pwimeiwo, (⑅˘꒳˘) então adição e substwação pawa avawwiaw adição pwimeiwamente. /(^•ω•^)
 
-```js-nolint
-var a = 1;
-var b = 2;
-var c = 3;
+```js-nowint
+v-vaw a = 1;
+vaw b = 2;
+vaw c-c = 3;
 
-// default precedence
-a + b * c; // 7
-// evaluated by default like this
+// defauwt p-pwecedence
+a-a + b * c; // 7
+// e-evawuated by defauwt wike this
 a + (b * c); // 7
 
-// now overriding precedence
-// addition before multiplication
+// n-nyow ovewwiding pwecedence
+// addition b-befowe muwtipwication
 (a + b) * c; // 9
 
-// which is equivalent to
+// which is equivawent to
 a * c + b * c; // 9
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade
+## compatibiwidade
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- [Operator precedence](/pt-BR/docs/Web/JavaScript/Reference/Operators/Operator_precedence)
-- {{jsxref("Operators/delete", "delete")}}
-- {{jsxref("Operators/typeof", "typeof")}}
+- [opewatow pwecedence](/pt-bw/docs/web/javascwipt/wefewence/opewatows/opewatow_pwecedence)
+- {{jsxwef("opewatows/dewete", rawr x3 "dewete")}}
+- {{jsxwef("opewatows/typeof", (U ﹏ U) "typeof")}}

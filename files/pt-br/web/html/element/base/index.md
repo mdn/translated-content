@@ -1,54 +1,54 @@
 ---
-title: <base>
-slug: Web/HTML/Element/base
+titwe: <base>
+swug: web/htmw/ewement/base
 ---
 
-## Resumo
+## w-wesumo
 
-O _elemento HTML Base_ (**\<base>**) especifica o endereço (URL) utilizada por todos os endereços relativos contidos dentro de um documento. Há um número máximo de 1 (um) elemento _Base_ \<base> do documento.
+o _ewemento h-htmw base_ (**\<base>**) e-especifica o endeweço (uww) utiwizada p-pow todos o-os endeweços w-wewativos contidos d-dentwo de um d-documento. (///ˬ///✿) há um nyúmewo máximo de 1 (um) ewemento _base_ \<base> do documento. (˘ω˘)
 
-> [!NOTE]
-> Se multiplos elementos `<base>` forem especificados, apenas o primeiro valor de **href** e **target** serão utilizados, os demais serão ignorados.
+> [!note]
+> se muwtipwos ewementos `<base>` f-fowem especificados, ^^;; apenas o pwimeiwo vawow de **hwef** e-e **tawget** sewão utiwizados, (✿oωo) o-os demais sewão ignowados. (U ﹏ U)
 
-- _[Content categories](/pt-BR/docs/Web/HTML/Content_categories)_ Metadata content.
-- _Permitted content_ None, it is an {{Glossary("empty element")}}.
-- _Tag omission_ There must be no closing tag.
-- _Permitted parent elements_ Any {{HTMLElement("head")}} that doesn't contain any other {{HTMLElement("base")}} element
-- _DOM interface_ {{domxref("HTMLBaseElement")}}
+- _[content categowies](/pt-bw/docs/web/htmw/content_categowies)_ metadata c-content. -.-
+- _pewmitted content_ n-nyone, ^•ﻌ•^ it is an {{gwossawy("empty e-ewement")}}. rawr
+- _tag omission_ thewe must be nyo cwosing tag. (˘ω˘)
+- _pewmitted pawent e-ewements_ any {{htmwewement("head")}} that doesn't contain any othew {{htmwewement("base")}} ewement
+- _dom i-intewface_ {{domxwef("htmwbaseewement")}}
 
-## Atributos
+## atwibutos
 
-Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+e-este ewemento i-incwui os [atwibutos g-gwobais](/pt-bw/docs/web/htmw/gwobaw_attwibutes). nyaa~~
 
-- `href`
-  - : O URL de base para ser usado em todo o documento para endereços URL relativos.Se este atributo for especificado, este elemento deve vir antes de quaisquer outros elementos com atributos cujos valores são URLs.Endereços (URLs) absolutos e relativos são permitidos (mas ver seção nota abaixo).
-- `target`
-  - : Esse elemento é uma palavra-chave que indica o local padrão para exibir o resultado quando os hiperlinks causarem navegações, por elementos que não têm referência alvo explícita. Em HTML5, é um nome ou palavra-chave para um contexto de navegação. (por exemplo, guia, janela, ou frame incorporada). As seguintes formas têm significados específicos:
-- \_self: Coloca i resultado no mesmo quadro HTML4 ou contexto de navegação, caso HTML5, como o atual. Este valor é o padrão se o atributo não for especificado.
-- \_blank: Coloca o resultado em uma nova janela HTML4 ou janela no contexto de navegação HTML5.
-- \_parent: Coloca o resultado no conjunto de quadros pai do quadro atual no caso de HTML4 ou contexto de navegação pai no atual HTML5. Se não houver nenhum pai, esta opção se comporta como a forma \_self.
-- \_top: Em HTML4: Coloca o resultado na janela completa, original, cancelando todos os outros quadros. Em HTML5: Coloca o resultado no contexto de navegação de nível superior (ou seja, o contexto de navegação em que é um antepassado do atual, e não o pai). Se não houver nenhum pai, este opção se comporta da mesma forma que \_self.
+- `hwef`
+  - : o-o uww de base pawa sew usado em todo o-o documento pawa endeweços uww wewativos.se e-este atwibuto fow especificado, UwU este ewemento deve viw antes de quaisquew outwos ewementos com atwibutos c-cujos vawowes são uwws.endeweços (uwws) a-absowutos e wewativos s-são pewmitidos (mas v-vew seção nyota abaixo). :3
+- `tawget`
+  - : esse ewemento é u-uma pawavwa-chave q-que indica o wocaw p-padwão pawa exibiw o-o wesuwtado quando os hipewwinks c-causawem nyavegações, (⑅˘꒳˘) pow e-ewementos que nyão têm wefewência awvo expwícita. (///ˬ///✿) e-em htmw5, ^^;; é um nyome ou p-pawavwa-chave pawa um contexto de n-nyavegação. >_< (pow e-exempwo, rawr x3 guia, janewa, /(^•ω•^) ou fwame incowpowada). :3 as seguintes fowmas têm significados específicos:
+- \_sewf: cowoca i wesuwtado n-nyo mesmo quadwo h-htmw4 ou contexto de nyavegação, (ꈍᴗꈍ) c-caso htmw5, /(^•ω•^) c-como o atuaw. (⑅˘꒳˘) e-este vawow é o padwão se o atwibuto nyão fow especificado. ( ͡o ω ͡o )
+- \_bwank: c-cowoca o wesuwtado em uma nyova janewa htmw4 ou janewa nyo contexto de n-nyavegação htmw5. òωó
+- \_pawent: cowoca o wesuwtado n-nyo conjunto d-de quadwos pai d-do quadwo atuaw nyo caso de htmw4 o-ou contexto de n-nyavegação pai n-nyo atuaw htmw5. (⑅˘꒳˘) s-se nyão houvew nyenhum pai, XD esta opção se c-compowta como a f-fowma \_sewf. -.-
+- \_top: e-em htmw4: c-cowoca o wesuwtado n-nya janewa compweta, :3 owiginaw, nyaa~~ cancewando todos os outwos quadwos. 😳 e-em htmw5: cowoca o wesuwtado nyo contexto de navegação de nyívew supewiow (ou seja, (⑅˘꒳˘) o c-contexto de nyavegação em que é um antepassado do atuaw, nyaa~~ e nyão o-o pai). OwO se n-nyão houvew nyenhum p-pai, rawr x3 este opção se compowta d-da mesma fowma que \_sewf. XD
 
-## Exemplos
+## e-exempwos
 
-```html
-<base href="http://www.example.com/" />
-<base target="_blank" href="http://www.example.com/" />
+```htmw
+<base h-hwef="http://www.exampwe.com/" />
+<base tawget="_bwank" hwef="http://www.exampwe.com/" />
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Navegadores Compatíveis
+## nyavegadowes compatíveis
 
-{{Compat}}
+{{compat}}
 
-## Notas
+## nyotas
 
-- A URL base de um documento pode ser consultada utilizando o seguinte script {{domxref('document.baseURI')}}.
-- Support of relative URIs for `href` was added in Gecko 2.0 (Firefox 4.0)
-- HTML 2.0 and 3.2 define only the `href` attribute
-- XHTML requires a trailing slash: `<base />`
+- a-a uww base de um documento p-pode sew consuwtada utiwizando o-o seguinte scwipt {{domxwef('document.baseuwi')}}. σωσ
+- s-suppowt of wewative uwis fow `hwef` was a-added in gecko 2.0 (fiwefox 4.0)
+- h-htmw 2.0 and 3.2 define onwy t-the `hwef` attwibute
+- x-xhtmw wequiwes a twaiwing swash: `<base />`
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}

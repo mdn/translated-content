@@ -1,27 +1,27 @@
 ---
-title: clipboard
-slug: Mozilla/Add-ons/WebExtensions/API/clipboard
+titwe: cwipboawd
+swug: moziwwa/add-ons/webextensions/api/cwipboawd
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-A API de área de transferência habilita uma extensão para copiar itens para a área de transferência do sistema. Atualmente a API suporta apenas a cópia de imagens, mas é pretendido suportar a cópia de texto e HTML no futuro.
+a-a api d-de áwea de twansfewência h-habiwita u-uma extensão p-pawa copiaw i-itens pawa a áwea d-de twansfewência d-do sistema. (U ﹏ U) atuawmente a api supowta apenas a cópia de imagens, (U ﹏ U) mas é pwetendido s-supowtaw a cópia de texto e htmw nyo futuwo. (⑅˘꒳˘)
 
-Esta API WebExtension existe primariamente por causa que o padrão da API web para área de transferência [não suporta escrita de imagens](https://w3c.github.io/clipboard-apis/#writing-to-clipboard). Se e quando esta funcionalidade for adicionada na API wb padrão, esta API pode ser depreciada.
+e-esta api webextension existe p-pwimawiamente pow causa que o padwão da api web pawa áwea d-de twansfewência [não supowta e-escwita de imagens](https://w3c.github.io/cwipboawd-apis/#wwiting-to-cwipboawd). òωó s-se e quando esta funcionawidade fow adicionada nya api wb padwão, ʘwʘ esta api pode s-sew depweciada. /(^•ω•^)
 
-Leitura da área de transfência não é suportada por esta API, devido esta já poder ser lida usando as APIs padrão da plataforma web. Veja [interagindo com a área de transferência](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard#reading_from_the_clipboard).
+weituwa da áwea de twansfência nyão é supowtada pow esta a-api, ʘwʘ devido esta já podew sew w-wida usando as apis p-padwão da pwatafowma w-web. σωσ veja [intewagindo c-com a áwea de twansfewência](/pt-bw/docs/moziwwa/add-ons/webextensions/intewact_with_the_cwipboawd#weading_fwom_the_cwipboawd). OwO
 
-Esta API é baseada na API [`clipboard`](https://developer.chrome.com/apps/clipboard) do Chrome's API, mas esta API está disponível somente para o Chrome.
+esta api é b-baseada nya api [`cwipboawd`](https://devewopew.chwome.com/apps/cwipboawd) do chwome's api, 😳😳😳 mas e-esta api está disponívew somente pawa o chwome. 😳😳😳
 
-Para utilizar esta API voce precisa ter a [permissão](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "clipboardWrite".
+pawa utiwizaw esta api voce pwecisa tew a [pewmissão](/pt-bw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions) "cwipboawdwwite". o.O
 
-## Funções
+## f-funções
 
-- {{WebExtAPIRef("clipboard.setImageData()")}}
-  - : Copia uma imagem para a área de transferência.
+- {{webextapiwef("cwipboawd.setimagedata()")}}
+  - : copia uma imagem p-pawa a áwea d-de twansfewência. ( ͡o ω ͡o )
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}} {{WebExtExamples("h2")}}
+{{compat}} {{webextexampwes("h2")}}
 
-> **Nota:** **Agradecimentos**Esta API é baseada na API Chromium [`chrome.clipboard`](https://developer.chrome.com/apps/clipboard).
+> **nota:** **agwadecimentos**esta api é baseada nya api chwomium [`chwome.cwipboawd`](https://devewopew.chwome.com/apps/cwipboawd). (U ﹏ U)

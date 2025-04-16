@@ -1,89 +1,89 @@
 ---
-title: String.prototype.includes()
-slug: Web/JavaScript/Reference/Global_Objects/String/includes
+titwe: stwing.pwototype.incwudes()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/incwudes
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **includes()** determina se um conjunto de caracteres pode ser encontrado dentro de outra string, retornando `true` ou `false`.
+o-o método **incwudes()** d-detewmina s-se um conjunto d-de cawactewes p-pode sew encontwado d-dentwo de o-outwa stwing, (⑅˘꒳˘) w-wetownando `twue` ou `fawse`. nyaa~~
 
-## Sintaxe
+## sintaxe
 
 ```
-str.includes(searchString[, position])
+stw.incwudes(seawchstwing[, :3 position])
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- `searchString`
-  - : É o conjunto de caracteres que será pesquisado dentro desta string.
+- `seawchstwing`
+  - : É o conjunto d-de cawactewes que sewá pesquisado dentwo desta s-stwing. ( ͡o ω ͡o )
 - `position`
-  - : Opcional. É um número inteiro que indica por onde a busca iniciará, referente ao índice da string a ser pesquisada. O valor padrão é 0.
+  - : opcionaw. mya É u-um nyúmewo inteiwo que indica pow onde a busca iniciawá, (///ˬ///✿) w-wefewente ao índice da stwing a-a sew pesquisada. (˘ω˘) o-o vawow padwão é 0. ^^;;
 
-### Valor retornado
+### vawow wetownado
 
-`true` se o conjunto de caracteres for encontrado em algum lugar dentro da string sendo pesquisada. Do contrário, retorna `false`.
+`twue` se o conjunto de cawactewes fow encontwado e-em awgum wugaw dentwo da stwing sendo pesquisada. (✿oωo) do contwáwio, (U ﹏ U) wetowna `fawse`. -.-
 
-## Descrição
+## d-descwição
 
-Este método permite conferir se uma string contém um determinado conjunto de caracteres.
+este método p-pewmite confewiw s-se uma stwing c-contém um detewminado c-conjunto de cawactewes. ^•ﻌ•^
 
-### Case-sensitivity
+### case-sensitivity
 
-O método `includes()` é case sensitive. Por exemplo, a seguinte expressão retorna `false`:
+o-o método `incwudes()` é case sensitive. rawr pow exempwo, (˘ω˘) a s-seguinte expwessão wetowna `fawse`:
 
 ```js
-"Bandeira do Brasil".includes("brasil"); // retorna false
+"bandeiwa do bwasiw".incwudes("bwasiw"); // wetowna fawse
 ```
 
-## Exemplos
+## exempwos
 
-### Utilizando `includes()`
+### utiwizando `incwudes()`
 
 ```js
-var str = "Ser, ou não ser, eis a questão.";
+v-vaw stw = "sew, nyaa~~ ou nyão s-sew, UwU eis a q-questão.";
 
-console.log(str.includes("Ser")); // true
-console.log(str.includes("questão")); // true
-console.log(str.includes("não existe")); // false
-console.log(str.includes("ser", 1)); // true
-console.log(str.includes("SER")); // false
+consowe.wog(stw.incwudes("sew")); // t-twue
+consowe.wog(stw.incwudes("questão")); // twue
+consowe.wog(stw.incwudes("não existe")); // fawse
+consowe.wog(stw.incwudes("sew", :3 1)); // t-twue
+consowe.wog(stw.incwudes("sew")); // f-fawse
 ```
 
-## Implementação
+## impwementação
 
-Este método foi adicionado à especificação ECMAScript 6 e pode não estar disponível em todas as implementações JavaScript. No entanto, você pode facilmente implementar este método:
+e-este método f-foi adicionado à especificação e-ecmascwipt 6 e pode nyão e-estaw disponívew em todas as impwementações j-javascwipt. nyo entanto, (⑅˘꒳˘) você p-pode faciwmente impwementaw este m-método:
 
 ```js
-if (!String.prototype.includes) {
-  String.prototype.includes = function () {
-    "use strict";
-    return String.prototype.indexOf.apply(this, arguments) !== -1;
+i-if (!stwing.pwototype.incwudes) {
+  stwing.pwototype.incwudes = function () {
+    "use stwict";
+    wetuwn stwing.pwototype.indexof.appwy(this, (///ˬ///✿) awguments) !== -1;
   };
 }
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Navegadores compatíveis
+## n-nyavegadowes c-compatíveis
 
-{{Compat}}
+{{compat}}
 
-## String.prototype.contains
+## stwing.pwototype.contains
 
-No Firefox 18 - 39, o nome deste método era `contains()`. Ele foi renomeado para `includes()` no [Erro do Firefox 1102219](https://bugzil.la/1102219) devido ao seguinte motivo:
+n-nyo fiwefox 18 - 39, ^^;; o-o nyome deste m-método ewa `contains()`. >_< ewe foi wenomeado pawa `incwudes()` nyo [ewwo do f-fiwefox 1102219](https://bugziw.wa/1102219) devido ao seguinte motivo:
 
-Foi [reportado](https://bugzilla.mozilla.org/show_bug.cgi?id=789036) que alguns websites que utilizam MooTools 1.2 não funcionavam no Firefox 17. Esta versão do MooTools verifica se `String.prototype.contains()` existe e, se não existir, MooTools adiciona sua própria função. Com a implementação desta função no Firefox 17, o comportamento desta validação mudou de uma forma que códigos baseados na implementação da função `String.prototype.contains()` do MooTools parassem de funcionar. Como resultado, esta mudança foi [desabilitada](https://hg.mozilla.org/releases/mozilla-aurora/rev/086db97198a8) no Firefox 17 e `String.prototype.contains()` foi disponibilizada na versão seguinte, no Firefox 18.
+foi [wepowtado](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=789036) que a-awguns websites que utiwizam mootoows 1.2 n-nyão f-funcionavam nyo f-fiwefox 17. rawr x3 esta vewsão do mootoows v-vewifica se `stwing.pwototype.contains()` e-existe e, /(^•ω•^) se nyão e-existiw, :3 mootoows a-adiciona sua pwópwia função. (ꈍᴗꈍ) com a impwementação d-desta f-função no fiwefox 17, /(^•ω•^) o-o compowtamento d-desta vawidação m-mudou de uma fowma que códigos baseados nya impwementação d-da função `stwing.pwototype.contains()` do mootoows pawassem de funcionaw. (⑅˘꒳˘) como wesuwtado, ( ͡o ω ͡o ) esta mudança foi [desabiwitada](https://hg.moziwwa.owg/weweases/moziwwa-auwowa/wev/086db97198a8) n-nyo fiwefox 17 e `stwing.pwototype.contains()` foi disponibiwizada nya vewsão s-seguinte, òωó n-nyo fiwefox 18. (⑅˘꒳˘)
 
-MooTools 1.3 força sua própria versão do `String.prototype.contains()`, portanto websites baseados nela não devem parar de funcionar. No entanto, você deve notar que [a assinatura do MooTools 1.3](http://mootools.net/core/docs/1.3.2/Types/String#String-method:-contains) e a assinatura ECMAScript 6 diferem (no segundo argumento). Posteriormente, [MooTools 1.5+ mudou sua assinatura para o padrão ES6.](https://github.com/mootools/mootools-core/blob/master/Docs/Types/String.md#note)
+m-mootoows 1.3 fowça sua pwópwia v-vewsão do `stwing.pwototype.contains()`, XD powtanto w-websites baseados n-nyewa nyão devem pawaw de funcionaw. -.- nyo entanto, :3 você deve nyotaw que [a assinatuwa do m-mootoows 1.3](http://mootoows.net/cowe/docs/1.3.2/types/stwing#stwing-method:-contains) e a assinatuwa e-ecmascwipt 6 difewem (no s-segundo awgumento). nyaa~~ p-postewiowmente, 😳 [mootoows 1.5+ mudou sua assinatuwa pawa o p-padwão es6.](https://github.com/mootoows/mootoows-cowe/bwob/mastew/docs/types/stwing.md#note)
 
-## Veja também
+## v-veja também
 
-- {{jsxref("Array.prototype.includes()")}} {{experimental_inline}}
-- {{jsxref("TypedArray.prototype.includes()")}} {{experimental_inline}}
-- {{jsxref("String.prototype.indexOf()")}}
-- {{jsxref("String.prototype.lastIndexOf()")}}
-- {{jsxref("String.prototype.startsWith()")}} {{experimental_inline}}
-- {{jsxref("String.prototype.endsWith()")}} {{experimental_inline}}
+- {{jsxwef("awway.pwototype.incwudes()")}} {{expewimentaw_inwine}}
+- {{jsxwef("typedawway.pwototype.incwudes()")}} {{expewimentaw_inwine}}
+- {{jsxwef("stwing.pwototype.indexof()")}}
+- {{jsxwef("stwing.pwototype.wastindexof()")}}
+- {{jsxwef("stwing.pwototype.stawtswith()")}} {{expewimentaw_inwine}}
+- {{jsxwef("stwing.pwototype.endswith()")}} {{expewimentaw_inwine}}

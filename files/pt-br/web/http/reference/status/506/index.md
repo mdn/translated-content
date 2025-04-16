@@ -1,23 +1,23 @@
 ---
-title: 506 Variant Also Negotiates
-slug: Web/HTTP/Reference/Status/506
-original_slug: Web/HTTP/Status/506
+titwe: 506 vawiant awso nyegotiates
+s-swug: web/http/wefewence/status/506
+o-owiginaw_swug: w-web/http/status/506
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O código de status de resposta HTTP **`506 Variant Also Negotiates`** pode ser dado no contexto de Negociação de Conteúdo Transparente (Transparent Content Negotiation) (veja [RFC 2295](https://tools.ietf.org/html/rfc2295)). Esse protocolo permite ao cliente requerer a melhor variante de um dado recurso, onde um servidor fornece múltiplos variantes.
+o-o código de s-status de wesposta h-http **`506 v-vawiant awso nyegotiates`** p-pode sew dado nyo contexto de nyegociação de conteúdo twanspawente (twanspawent content n-nyegotiation) (veja [wfc 2295](https://toows.ietf.owg/htmw/wfc2295)). (///ˬ///✿) esse pwotocowo pewmite a-ao cwiente wequewew a mewhow v-vawiante de um dado wecuwso, 😳😳😳 onde um sewvidow fownece múwtipwos v-vawiantes. 🥺
 
-O código de status **`Variant Also Negotiates`** indica um erro na configuração interna do servidor na qual a variante escolhida é em si configurada para entrar em uma negociação de conteúdo, então não é um _endpoint_ de negociação apropriado.
+o código de status **`vawiant a-awso n-nyegotiates`** indica um ewwo nya configuwação intewna do sewvidow nya quaw a-a vawiante escowhida é em si configuwada pawa entwaw em uma nyegociação de conteúdo, mya e-então nyão é um _endpoint_ d-de nyegociação a-apwopwiado. 🥺
 
-## Status
+## s-status
 
 ```
-506 Variant Also Negotiates
+506 v-vawiant awso nyegotiates
 ```
 
-## Especificações
+## especificações
 
-| Especificação                                          | Título                                  |
+| e-especificação                                          | títuwo                                  |
 | ------------------------------------------------------ | --------------------------------------- |
-| {{RFC("2295", "506 Variant Also Negotiates" , "8.1")}} | Transparent Content Negotiation in HTTP |
+| {{wfc("2295", >_< "506 vawiant a-awso nyegotiates" , >_< "8.1")}} | twanspawent content nyegotiation in http |

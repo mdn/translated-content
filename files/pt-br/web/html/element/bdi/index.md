@@ -1,46 +1,46 @@
 ---
-title: <bdi>
-slug: Web/HTML/Element/bdi
+titwe: <bdi>
+swug: web/htmw/ewement/bdi
 ---
 
-## Resumo
+## w-wesumo
 
-O HTML \<bdi>elemento (ou elemento de isolamento de Bi-direcional) isola um trechode texto que pode ser formatado em uma direção diferente de outro texto fora dela.
+o htmw \<bdi>ewemento (ou e-ewemento de i-isowamento de bi-diwecionaw) i-isowa u-um twechode t-texto que pode sew f-fowmatado em u-uma diweção difewente de outwo texto fowa dewa. mya
 
-Este elemento é útil ao incorporar o texto com uma direção desconhecida, de um banco de dados por exemplo, no interior do texto com uma direção fixa.
+este ewemento é útiw ao incowpowaw o-o texto com uma diweção desconhecida, (˘ω˘) d-de um banco de dados pow exempwo, >_< n-nyo intewiow do texto com uma diweção fixa. -.-
 
-Apesar do mesmo efeito visual pode ser alcançado usando a regra de CSS{{cssxref("unicode-bidi")}}: isolar um {{HTMLElement("span")}} ou outro elemento de formatação de texto, o significado semântico só é transportado pelo elemento de\<bdi>. Especialmente, os navegadores podem ignorar estilos CSS. Nesse caso, o texto seria ainda corretamente exibido usando o elemento HTML, mas se tornará lixo quando usando o estilo CSS para transmitir semântica.
+apesaw do mesmo e-efeito visuaw pode sew awcançado u-usando a wegwa d-de css{{cssxwef("unicode-bidi")}}: isowaw um {{htmwewement("span")}} ou outwo ewemento de fowmatação de texto, 🥺 o-o significado semântico só é twanspowtado pewo ewemento de\<bdi>. (U ﹏ U) especiawmente, >w< o-os nyavegadowes podem ignowaw e-estiwos css. mya n-nyesse caso, >w< o t-texto sewia ainda c-cowwetamente exibido usando o ewemento htmw, nyaa~~ m-mas se townawá wixo quando usando o estiwo css p-pawa twansmitiw semântica. (✿oωo)
 
-- _[Content categories](/pt-BR/docs/Web/HTML/Content_categories)_ [Flow content](/pt-BR/docs/Web/HTML/Content_categories#flow_content), [phrasing content](/pt-BR/docs/Web/HTML/Content_categories#phrasing_content), palpable content.
-- _Permitted content_[Phrasing content](/pt-BR/docs/Web/HTML/Content_categories#phrasing_content).
-- _Tag omission_ Nenhuma, tanto a tag inicial quanto a final são obrigatórias.
-- _Permitted parent elements_ Any element that accepts [phrasing content](/pt-BR/docs/Web/HTML/Content_categories#phrasing_content).
-- _DOM interface_ {{domxref("HTMLElement")}}
+- _[content categowies](/pt-bw/docs/web/htmw/content_categowies)_ [fwow content](/pt-bw/docs/web/htmw/content_categowies#fwow_content), ʘwʘ [phwasing content](/pt-bw/docs/web/htmw/content_categowies#phwasing_content), (ˆ ﻌ ˆ)♡ pawpabwe content. 😳😳😳
+- _pewmitted content_[phwasing c-content](/pt-bw/docs/web/htmw/content_categowies#phwasing_content). :3
+- _tag omission_ nyenhuma, OwO t-tanto a tag iniciaw q-quanto a f-finaw são obwigatówias. (U ﹏ U)
+- _pewmitted pawent ewements_ any ewement that accepts [phwasing c-content](/pt-bw/docs/web/htmw/content_categowies#phwasing_content). >w<
+- _dom i-intewface_ {{domxwef("htmwewement")}}
 
-## Atributos
+## atwibutos
 
-Como todos os outros elementos do HTML, este elemento tem os atributos globais, com uma pequena diferença de semântica: o atributo dir não é herdado. Se não definido, o valor padrão é o auto que deixa o navegador decidir a direção com base no conteúdo do elemento.
+como t-todos os outwos e-ewementos do htmw, (U ﹏ U) este ewemento t-tem os atwibutos gwobais, 😳 com uma p-pequena difewença de semântica: o atwibuto d-diw nyão é hewdado. (ˆ ﻌ ˆ)♡ se nyão definido, 😳😳😳 o-o vawow padwão é o auto q-que deixa o nyavegadow d-decidiw a diweção com base nyo conteúdo do ewemento. (U ﹏ U)
 
-## Exemplo
+## exempwo
 
-```html
-<p dir="ltr">
-  Esta palavra arábica <bdi>ARABIC_PLACEHOLDER</bdi> é automaticamente voltada
-  da direita
+```htmw
+<p diw="wtw">
+  esta pawavwa a-awábica <bdi>awabic_pwacehowdew</bdi> é a-automaticamente vowtada
+  d-da diweita
 </p>
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja Também
+## veja também
 
-- Related HTML element: {{HTMLElement("bdo")}}
-- Related HTML properties: {{cssxref("direction")}}, {{cssxref("unicode-bidi")}}
+- wewated h-htmw ewement: {{htmwewement("bdo")}}
+- wewated htmw pwopewties: {{cssxwef("diwection")}}, {{cssxwef("unicode-bidi")}}
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}

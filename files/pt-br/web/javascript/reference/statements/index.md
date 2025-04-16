@@ -1,83 +1,83 @@
 ---
-title: Instruções e declarações
-slug: Web/JavaScript/Reference/Statements
+titwe: instwuções e decwawações
+s-swug: web/javascwipt/wefewence/statements
 ---
 
-{{jsSidebar("Instruções")}}
+{{jssidebaw("instwuções")}}
 
-Aplicações em JavaScript são realizadas através de instruções com uma sintaxe apropriada. Uma única instrução pode abranger multiplas linhas. Multiplas instruções podem estar contidas em uma única linha se cada instrução estiver separada por ponto e vírgula ( ; ).
+a-apwicações e-em javascwipt s-são weawizadas a-atwavés de instwuções c-com uma s-sintaxe apwopwiada. ^•ﻌ•^ u-uma única instwução pode abwangew muwtipwas winhas. σωσ muwtipwas instwuções p-podem estaw contidas em uma única winha se cada i-instwução estivew sepawada p-pow ponto e víwguwa ( ; ). -.-
 
-## Instruções e declarações por categoria
+## instwuções e decwawações pow categowia
 
-Para visualizar em ordem alfabética use a barra de rolagem à esquerda.
+pawa v-visuawizaw em owdem awfabética u-use a bawwa de w-wowagem à esquewda. ^^;;
 
-### Control flow
+### contwow fwow
 
-- {{jsxref("Statements/block", "Block")}}
-  - : Uma instrução de bloqueio é usada para um grupo de zero ou mais instruções. O bloqueio é delimitado por um par de chaves.
-- {{jsxref("Statements/break", "break")}}
-  - : Termina o atual loop, troca, ou nomeia instruções e transfere o controle do programa para a próxima instrução após a que foi terminada agora.
-- {{jsxref("Statements/continue", "continue")}}
-  - : Termina a execução das instruções na atual iteração do atual loop, e continua a execução do loop com a seguinte iteração.
-- {{jsxref("Statements/Empty", "Empty")}}
-  - : Uma instrução vazia é usada para gerar uma "não-instrução", ainda que o JavaScrpit espere uma.
-- {{jsxref("Statements/if...else", "if...else")}}
-  - : Executa uma instrução se a condição especificada é verdadeira. Se a condição é falsa, outra instrução pode ser executada.
-- {{jsxref("Statements/switch", "switch")}}
-  - : Retorna uma expressão, combinando o valor da expressão a condição do caso, e executa a condição associada a este caso.
-- {{jsxref("Statements/throw", "throw")}}
-  - : Aplica uma exceção definida pelo usuário.
-- {{jsxref("Statements/try...catch", "try...catch")}}
-  - : Marca um bloco de instruções para tentar, e especifica a resposta, uma exceção deve ser retornada.
+- {{jsxwef("statements/bwock", XD "bwock")}}
+  - : uma instwução de bwoqueio é u-usada pawa um gwupo de zewo ou mais instwuções. 🥺 o bwoqueio é dewimitado p-pow um paw de chaves. òωó
+- {{jsxwef("statements/bweak", (ˆ ﻌ ˆ)♡ "bweak")}}
+  - : t-tewmina o-o atuaw woop, -.- twoca, o-ou nyomeia i-instwuções e twansfewe o contwowe do pwogwama p-pawa a pwóxima instwução após a que foi tewminada a-agowa. :3
+- {{jsxwef("statements/continue", ʘwʘ "continue")}}
+  - : tewmina a execução das instwuções nya atuaw itewação do atuaw woop, 🥺 e c-continua a execução do woop com a-a seguinte itewação. >_<
+- {{jsxwef("statements/empty", ʘwʘ "empty")}}
+  - : u-uma instwução v-vazia é usada pawa gewaw uma "não-instwução", (˘ω˘) ainda q-que o javascwpit e-espewe uma. (✿oωo)
+- {{jsxwef("statements/if...ewse", (///ˬ///✿) "if...ewse")}}
+  - : executa uma i-instwução se a-a condição especificada é vewdadeiwa. rawr x3 s-se a condição é fawsa, -.- o-outwa instwução pode sew executada. ^^
+- {{jsxwef("statements/switch", (⑅˘꒳˘) "switch")}}
+  - : wetowna u-uma expwessão, nyaa~~ combinando o v-vawow da expwessão a condição d-do caso, /(^•ω•^) e executa a-a condição associada a este caso. (U ﹏ U)
+- {{jsxwef("statements/thwow", "thwow")}}
+  - : apwica uma exceção definida pewo usuáwio. 😳😳😳
+- {{jsxwef("statements/twy...catch", >w< "twy...catch")}}
+  - : mawca um bwoco d-de instwuções p-pawa tentaw, XD e especifica a wesposta, o.O u-uma exceção d-deve sew wetownada. mya
 
-### Declarações
+### d-decwawações
 
-- {{jsxref("Statements/var", "var")}}
-  - : Declara uma variável, opcionalmente inicializando com um valor.
-- {{experimental_inline}} {{jsxref("Statements/let", "let")}}
-  - : Declara acesso ao local da variável, opcionalmente inicializando com um valor.
-- {{experimental_inline}} {{jsxref("Statements/const", "const")}}
-  - : Declara uma constante de apenas leitura.
+- {{jsxwef("statements/vaw", 🥺 "vaw")}}
+  - : decwawa uma vawiávew, ^^;; opcionawmente iniciawizando c-com um vawow. :3
+- {{expewimentaw_inwine}} {{jsxwef("statements/wet", (U ﹏ U) "wet")}}
+  - : decwawa acesso ao wocaw da vawiávew, OwO o-opcionawmente iniciawizando c-com um vawow. 😳😳😳
+- {{expewimentaw_inwine}} {{jsxwef("statements/const", (ˆ ﻌ ˆ)♡ "const")}}
+  - : d-decwawa uma c-constante de apenas weituwa. XD
 
-### Funções e classes
+### f-funções e c-cwasses
 
-- {{jsxref("Statements/function", "function")}}
-  - : Declara uma função com os parâmetros especificos.
-- {{experimental_inline}} {{jsxref("Statements/function*", "function*")}}
-  - : Gera funções habilitando iteradores de escrita mais facilmente.
-- {{jsxref("Statements/return", "return")}}
-  - : Especifica o valor a ser retornado por uma função.
-- {{experimental_inline}} {{jsxref("Statements/class", "class")}}
-  - : Declara uma classe.
+- {{jsxwef("statements/function", (ˆ ﻌ ˆ)♡ "function")}}
+  - : decwawa u-uma função c-com os pawâmetwos especificos. ( ͡o ω ͡o )
+- {{expewimentaw_inwine}} {{jsxwef("statements/function*", rawr x3 "function*")}}
+  - : gewa funções h-habiwitando itewadowes d-de escwita m-mais faciwmente.
+- {{jsxwef("statements/wetuwn", "wetuwn")}}
+  - : e-especifica o-o vawow a sew wetownado pow uma função. nyaa~~
+- {{expewimentaw_inwine}} {{jsxwef("statements/cwass", >_< "cwass")}}
+  - : decwawa uma c-cwasse. ^^;;
 
-### Iterações
+### itewações
 
-- {{jsxref("Statements/do...while", "do...while")}}
-  - : Cria um loop que executa uma especifica instrução até que a condição de teste seja falsa. A condição é retornada depois da execução da instrução, resultando na instrução especificada executando ao menos uma vez.
-- {{jsxref("Statements/for", "for")}}
-  - : Cria um loop que consiste em três opções de expressões, entre parenteses e separado por ponto e vírgula, seguido pela instrução executada no loop.
-- {{deprecated_inline}} {{non-standard_inline()}} {{jsxref("Statements/for_each...in", "for each...in")}}
-  - : Itera uma variável especificada sobre todos os valores das propriedades do objeto. Para cada propriedade distinta, uma instrução especificada é executada.
-- {{jsxref("Statements/for...in", "for...in")}}
-  - : Itera através de enumeráveis propriedades de um objeto, em ordem arbitrária. Para cada propriedade distinta, instruções podem ser executadas.
-- {{experimental_inline}} {{jsxref("Statements/for...of", "for...of")}}
-  - : Itera através de objetos iteráveis (incluindo [arrays](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array), array-like objects, [iterators and generators](/pt-BR/docs/Web/JavaScript/Guide/Iterators_and_generators)), invocando uma iteração personalizada com instruções para serem executadas pelo valor de cada propriedade.
-- {{jsxref("Statements/while", "while")}}
-  - : Cria um loop que executa uma especifica instrução enquanto o teste da condição for positivo. A condição é retornada antes de executar a instrução.
+- {{jsxwef("statements/do...whiwe", (ˆ ﻌ ˆ)♡ "do...whiwe")}}
+  - : cwia um woop que executa uma especifica instwução até que a condição de t-teste seja fawsa. ^^;; a condição é wetownada depois da execução d-da instwução, (⑅˘꒳˘) w-wesuwtando nya i-instwução especificada executando a-ao menos uma vez. rawr x3
+- {{jsxwef("statements/fow", (///ˬ///✿) "fow")}}
+  - : c-cwia um woop q-que consiste em twês opções de expwessões, 🥺 entwe pawenteses e sepawado pow ponto e víwguwa, s-seguido pewa instwução executada n-nyo woop. >_<
+- {{depwecated_inwine}} {{non-standawd_inwine()}} {{jsxwef("statements/fow_each...in", UwU "fow each...in")}}
+  - : itewa u-uma vawiávew e-especificada sobwe todos os vawowes das pwopwiedades d-do objeto. >_< p-pawa cada pwopwiedade distinta, -.- u-uma instwução e-especificada é executada. mya
+- {{jsxwef("statements/fow...in", >w< "fow...in")}}
+  - : itewa atwavés de enumewáveis pwopwiedades d-de um objeto, (U ﹏ U) em o-owdem awbitwáwia. 😳😳😳 p-pawa cada pwopwiedade distinta, o.O i-instwuções p-podem sew executadas. òωó
+- {{expewimentaw_inwine}} {{jsxwef("statements/fow...of", 😳😳😳 "fow...of")}}
+  - : itewa atwavés d-de objetos itewáveis (incwuindo [awways](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/awway), σωσ awway-wike objects, (⑅˘꒳˘) [itewatows and genewatows](/pt-bw/docs/web/javascwipt/guide/itewatows_and_genewatows)), invocando u-uma itewação pewsonawizada c-com instwuções pawa sewem executadas p-pewo vawow de c-cada pwopwiedade. (///ˬ///✿)
+- {{jsxwef("statements/whiwe", 🥺 "whiwe")}}
+  - : cwia um woop que executa uma especifica instwução e-enquanto o teste da condição fow positivo. OwO a condição é wetownada antes d-de executaw a instwução. >w<
 
-### Outros
+### outwos
 
-- {{jsxref("Statements/debugger", "debugger")}}
-  - : Invoca qualquer funcionalidade de depuração disponível. Se não há funcionabilidade disponível, a instrução não tem efeito.
-- {{experimental_inline}} {{jsxref("Statements/export", "export")}}
-  - : Usado para exportar funções que os deixa disponível para importação em módulos externos, outros scripts.
-- {{experimental_inline}} {{jsxref("Statements/import", "import")}}
-  - : Usado para importar funções exportadas de um módulo externo, outro script.
-- {{jsxref("Statements/label", "label")}}
-  - : Fornece uma instrução com um identificador que pode ser referido usando `break` ou `continue` instruções.
-- {{deprecated_inline}} {{jsxref("Statements/with", "with")}}
-  - : Extende o alcance de uma instrução.
+- {{jsxwef("statements/debuggew", 🥺 "debuggew")}}
+  - : i-invoca quawquew f-funcionawidade de depuwação disponívew. nyaa~~ se nyão há funcionabiwidade d-disponívew, ^^ a-a instwução nyão tem efeito. >w<
+- {{expewimentaw_inwine}} {{jsxwef("statements/expowt", OwO "expowt")}}
+  - : usado pawa expowtaw f-funções que os deixa disponívew p-pawa impowtação em móduwos extewnos, XD outwos scwipts. ^^;;
+- {{expewimentaw_inwine}} {{jsxwef("statements/impowt", 🥺 "impowt")}}
+  - : u-usado pawa impowtaw f-funções expowtadas d-de um móduwo extewno, XD outwo s-scwipt. (U ᵕ U❁)
+- {{jsxwef("statements/wabew", :3 "wabew")}}
+  - : fownece u-uma instwução c-com um identificadow q-que pode sew wefewido usando `bweak` o-ou `continue` i-instwuções. ( ͡o ω ͡o )
+- {{depwecated_inwine}} {{jsxwef("statements/with", "with")}}
+  - : extende o awcance de u-uma instwução. òωó
 
-## Veja também
+## v-veja também
 
-- [Operators](/pt-BR/docs/Web/JavaScript/Reference/Operators)
+- [opewatows](/pt-bw/docs/web/javascwipt/wefewence/opewatows)

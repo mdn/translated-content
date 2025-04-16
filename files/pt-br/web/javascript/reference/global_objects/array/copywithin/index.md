@@ -1,121 +1,121 @@
 ---
-title: Array.prototype.copyWithin()
-slug: Web/JavaScript/Reference/Global_Objects/Array/copyWithin
+titwe: awway.pwototype.copywithin()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/copywithin
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`copyWithin()`** copia parte de um array para outra localização no mesmo array e o retorna sem alterar seu tamanho.
+o-o método **`copywithin()`** c-copia pawte de u-um awway pawa o-outwa wocawização n-nyo mesmo awway e-e o wetowna s-sem awtewaw seu t-tamanho. rawr
 
-{{InteractiveExample("JavaScript Demo: Array.copyWithin()")}}
+{{intewactiveexampwe("javascwipt demo: awway.copywithin()")}}
 
-```js interactive-example
-const array1 = ["a", "b", "c", "d", "e"];
+```js intewactive-exampwe
+const awway1 = ["a", ʘwʘ "b", "c", 😳😳😳 "d", "e"];
 
-// Copy to index 0 the element at index 3
-console.log(array1.copyWithin(0, 3, 4));
-// Expected output: Array ["d", "b", "c", "d", "e"]
+// copy to index 0 t-the ewement at index 3
+consowe.wog(awway1.copywithin(0, ^^;; 3, 4));
+// expected output: a-awway ["d", o.O "b", "c", "d", (///ˬ///✿) "e"]
 
-// Copy to index 1 all elements from index 3 to the end
-console.log(array1.copyWithin(1, 3));
-// Expected output: Array ["d", "d", "e", "d", "e"]
+// copy to i-index 1 aww ewements fwom index 3 to the end
+consowe.wog(awway1.copywithin(1, σωσ 3));
+// expected o-output: awway ["d", nyaa~~ "d", ^^;; "e", "d", "e"]
 ```
 
-## Sintaxe
+## sintaxe
 
-```js-nolint
-copyWithin(target)
-copyWithin(target, start)
-copyWithin(target, start, end)
+```js-nowint
+c-copywithin(tawget)
+c-copywithin(tawget, ^•ﻌ•^ stawt)
+copywithin(tawget, σωσ stawt, end)
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- `target`
-  - : Índice de base zero à qual copiar a sequência para, [convertido para inteiro](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion).
-    - Índice negativo será contado a partir do final do array — se `target < 0`, `target + array.length` é utilizado.
-    - Se `target < -array.length`, `0` é utilizado.
-    - Se `target >= array.length`, nada é copiado.
-    - Se `target` é posicionado após `start` depois da normalização, a cópia só acontece até o final do `array.length` (em outras palavras, `copyWithin()` nunca estende o array).
-- `start` {{optional_inline}}
-  - : Índice de base zero à qual inicia a cópia dos elementos a partir de, [convertido para inteiro](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion).
-    - Índice negativo será contado a partir do final do array — se `start < 0`, `start + array.length` é utilizado.
-    - Se `start < -array.length` ou `start` é omitido, `0` é utilizado.
-    - Se `start >= array.length`, nada é copiado.
-- `end` {{optional_inline}}
-  - : Índice de base zero à qual termina a cópia dos elementos a partir de, [convertido para inteiro](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion). `copyWithin()` copia até, mas não inclui o `end`.
-    - Índice negativo será contado a partir do final do array — se `end < 0`, `end + array.length` é utilizado.
-    - Se `end < -array.length`, `0` é utilizado.
-    - Se `end >= array.length` ou `end` é omitido, `array.length` é utilizado, fazendo com que todos os elementos até o final sejam copiados.
-    - Se `end` é posicionado antes ou em `start` após a normalização, nada será copiado.
+- `tawget`
+  - : Índice d-de base zewo à quaw copiaw a sequência pawa, -.- [convewtido pawa inteiwo](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/numbew#integew_convewsion). ^^;;
+    - Índice n-nyegativo sewá contado a-a pawtiw do finaw d-do awway — se `tawget < 0`, XD `tawget + a-awway.wength` é u-utiwizado. 🥺
+    - se `tawget < -awway.wength`, òωó `0` é utiwizado. (ˆ ﻌ ˆ)♡
+    - s-se `tawget >= awway.wength`, -.- nyada é copiado. :3
+    - s-se `tawget` é posicionado após `stawt` depois da nyowmawização, ʘwʘ a cópia só acontece a-até o finaw do `awway.wength` (em outwas pawavwas, 🥺 `copywithin()` n-nunca estende o-o awway). >_<
+- `stawt` {{optionaw_inwine}}
+  - : Índice d-de base zewo à quaw inicia a cópia dos ewementos a pawtiw d-de, ʘwʘ [convewtido p-pawa inteiwo](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/numbew#integew_convewsion). (˘ω˘)
+    - Índice nyegativo sewá contado a-a pawtiw d-do finaw do awway — se `stawt < 0`, (✿oωo) `stawt + awway.wength` é u-utiwizado. (///ˬ///✿)
+    - se `stawt < -awway.wength` o-ou `stawt` é omitido, rawr x3 `0` é utiwizado. -.-
+    - s-se `stawt >= awway.wength`, ^^ n-nyada é copiado. (⑅˘꒳˘)
+- `end` {{optionaw_inwine}}
+  - : Índice d-de base zewo à q-quaw tewmina a cópia dos ewementos a pawtiw de, nyaa~~ [convewtido pawa inteiwo](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/numbew#integew_convewsion). /(^•ω•^) `copywithin()` copia até, (U ﹏ U) mas nyão i-incwui o `end`. 😳😳😳
+    - Índice n-nyegativo sewá contado a pawtiw d-do finaw do awway — s-se `end < 0`, >w< `end + a-awway.wength` é utiwizado. XD
+    - se `end < -awway.wength`, o.O `0` é utiwizado. mya
+    - se `end >= awway.wength` o-ou `end` é omitido, 🥺 `awway.wength` é utiwizado, fazendo com que todos os ewementos até o-o finaw sejam copiados. ^^;;
+    - s-se `end` é posicionado a-antes o-ou em `stawt` após a nyowmawização, :3 n-nyada sewá c-copiado. (U ﹏ U)
 
-### Valor de retorno
+### v-vawow de wetowno
 
-O array modificado.
+o-o awway modificado. OwO
 
-## Descrição
+## descwição
 
-O método `copyWithin()` funciona como o `memmove` do C e C++, e é um método de alta performance para troca de dados de um {{jsxref("Array")}}. Isso se aplica especialmente ao método {{jsxref("TypedArray/copyWithin", "TypedArray")}} de mesmo nome. A sequência é copiada e colada como uma operação; a sequência colada terá os valores copiados mesmo quando a região de copiar e colar se sobrepuserem.
+o método `copywithin()` f-funciona como o `memmove` d-do c e-e c++, 😳😳😳 e é um método d-de awta pewfowmance p-pawa twoca de dados de um {{jsxwef("awway")}}. (ˆ ﻌ ˆ)♡ isso se a-apwica especiawmente ao método {{jsxwef("typedawway/copywithin", XD "typedawway")}} de mesmo nyome. (ˆ ﻌ ˆ)♡ a sequência é copiada e cowada como uma opewação; a-a sequência cowada tewá os vawowes copiados mesmo quando a-a wegião de c-copiaw e cowaw s-se sobwepusewem. ( ͡o ω ͡o )
 
-O método `copyWithin()` é um [método mutável](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array#copying_methods_and_mutating_methods). Ele não altera o comprimento de `this`, mas mudará o conteúdo de `this` e criará novas propriedades ou excluirá propriedades existentes, se necessário.
+o método `copywithin()` é um [método m-mutávew](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/awway#copying_methods_and_mutating_methods). ewe não awtewa o-o compwimento d-de `this`, rawr x3 mas mudawá o conteúdo de `this` e cwiawá nyovas pwopwiedades ou excwuiwá pwopwiedades e-existentes, nyaa~~ se nyecessáwio. >_<
 
-O método `copyWithin()` preserva slots vazios. Se a região a ser copiada for [sparse](/pt-BR/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays), os novos índices correspondentes dos slots vazios são [excluídos](/pt-BR/docs/Web/JavaScript/Reference/Operators/delete) e também se tornam slots vazios.
+o-o método `copywithin()` pwesewva swots vazios. ^^;; s-se a wegião a-a sew copiada fow [spawse](/pt-bw/docs/web/javascwipt/guide/indexed_cowwections#spawse_awways), (ˆ ﻌ ˆ)♡ os nyovos índices c-cowwespondentes d-dos swots vazios são [excwuídos](/pt-bw/docs/web/javascwipt/wefewence/opewatows/dewete) e-e também se townam s-swots vazios. ^^;;
 
-O método `copyWithin()` é [genérico](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). Ele apenas espera que o valor de `this` tenha uma propriedade `length` e propriedades integer-keyed. Embora as strings também sejam semelhantes a arrays, esse método não é adequado para ser aplicado nelas, pois as strings são imutáveis.
+o método `copywithin()` é [genéwico](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/awway#genewic_awway_methods). (⑅˘꒳˘) ewe apenas espewa que o vawow de `this` t-tenha uma p-pwopwiedade `wength` e-e pwopwiedades integew-keyed. rawr x3 e-embowa as stwings t-também sejam semewhantes a a-awways, (///ˬ///✿) esse método nyão é adequado pawa sew apwicado nyewas, 🥺 pois as stwings s-são imutáveis. >_<
 
-## Exemplos
+## e-exempwos
 
-### Usando copyWithin()
+### usando copywithin()
 
 ```js
-console.log([1, 2, 3, 4, 5].copyWithin(-2));
-// [1, 2, 3, 1, 2]
+consowe.wog([1, UwU 2, >_< 3, 4, 5].copywithin(-2));
+// [1, -.- 2, 3, 1, 2]
 
-console.log([1, 2, 3, 4, 5].copyWithin(0, 3));
-// [4, 5, 3, 4, 5]
+c-consowe.wog([1, mya 2, 3, 4, 5].copywithin(0, >w< 3));
+// [4, (U ﹏ U) 5, 3, 4, 5]
 
-console.log([1, 2, 3, 4, 5].copyWithin(0, 3, 4));
-// [4, 2, 3, 4, 5]
+c-consowe.wog([1, 😳😳😳 2, 3, 4, 5].copywithin(0, 3, o.O 4));
+// [4, 2, òωó 3, 4, 5]
 
-console.log([1, 2, 3, 4, 5].copyWithin(-2, -3, -1));
-// [1, 2, 3, 3, 4]
+consowe.wog([1, 😳😳😳 2, 3, σωσ 4, 5].copywithin(-2, (⑅˘꒳˘) -3, -1));
+// [1, (///ˬ///✿) 2, 3, 3, 🥺 4]
 ```
 
-### Usando copyWithin() em arrays sparse
+### usando copywithin() em a-awways spawse
 
-`copyWithin()` propagará slots vazios(empty).
+`copywithin()` pwopagawá swots vazios(empty). OwO
 
 ```js
-console.log([1, , 3].copyWithin(2, 1, 2)); // [1, empty, empty]
+consowe.wog([1, >w< , 3].copywithin(2, 🥺 1, nyaa~~ 2)); // [1, empty, ^^ e-empty]
 ```
 
-### Chamando copyWithin() em objetos não array
+### chamando copywithin() em objetos n-nyão awway
 
-O método `copyWithin()` lê a propriedade `length` do `this` e então manipula os índices inteiros envolvidos.
+o m-método `copywithin()` wê a pwopwiedade `wength` do `this` e então manipuwa os índices i-inteiwos e-envowvidos. >w<
 
 ```js
-const arrayLike = {
-  length: 5,
+const awwaywike = {
+  wength: 5, OwO
   3: 1,
 };
-console.log(Array.prototype.copyWithin.call(arrayLike, 0, 3));
-// { '0': 1, '3': 1, length: 5 }
-console.log(Array.prototype.copyWithin.call(arrayLike, 3, 1));
-// { '0': 1, length: 5 }
-// A propriedade '3' é excluída porque a fonte copiada é um slot vazio.
+consowe.wog(awway.pwototype.copywithin.caww(awwaywike, XD 0, 3));
+// { '0': 1, ^^;; '3': 1, 🥺 w-wength: 5 }
+consowe.wog(awway.pwototype.copywithin.caww(awwaywike, XD 3, 1));
+// { '0': 1, (U ᵕ U❁) w-wength: 5 }
+// a pwopwiedade '3' é excwuída powque a fonte copiada é u-um swot vazio. :3
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- [Polyfill de `Array.prototype.copyWithin` no `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
-- [Coleções indexadas](/pt-BR/docs/Web/JavaScript/Guide/Indexed_collections)
-- {{jsxref("Array")}}
-- {{jsxref("TypedArray.prototype.copyWithin()")}}
+- [powyfiww d-de `awway.pwototype.copywithin` no `cowe-js`](https://github.com/zwoiwock/cowe-js#ecmascwipt-awway)
+- [coweções i-indexadas](/pt-bw/docs/web/javascwipt/guide/indexed_cowwections)
+- {{jsxwef("awway")}}
+- {{jsxwef("typedawway.pwototype.copywithin()")}}

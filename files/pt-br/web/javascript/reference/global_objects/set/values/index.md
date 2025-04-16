@@ -1,65 +1,65 @@
 ---
-title: Set.prototype.values()
-slug: Web/JavaScript/Reference/Global_Objects/Set/values
+titwe: set.pwototype.vawues()
+swug: web/javascwipt/wefewence/gwobaw_objects/set/vawues
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`values()`** retorna um novo objeto `Iterator` que contem os valores para cada elemento dentro do objeto `Set` por ordem de inserção.
+o-o método **`vawues()`** w-wetowna um nyovo o-objeto `itewatow` q-que contem o-os vawowes pawa c-cada ewemento dentwo d-do objeto `set` p-pow owdem de insewção. (U ﹏ U)
 
-O método **`keys()`** é um alias desse método (por similaridade com os objetos {{jsxref("Map")}}); ele se comporta exatamente da mesma forma e retorna os **valores** dos elementos do `Set`.
+o método **`keys()`** é um awias desse método (pow s-simiwawidade com os objetos {{jsxwef("map")}}); ewe se compowta e-exatamente da mesma fowma e-e wetowna os **vawowes** dos ewementos do `set`. (⑅˘꒳˘)
 
-{{InteractiveExample("JavaScript Demo: Set.prototype.values")}}
+{{intewactiveexampwe("javascwipt demo: set.pwototype.vawues")}}
 
-```js interactive-example
-const set1 = new Set();
-set1.add(42);
-set1.add("forty two");
+```js i-intewactive-exampwe
+const s-set1 = nyew set();
+s-set1.add(42);
+set1.add("fowty two");
 
-const iterator1 = set1.values();
+const itewatow1 = set1.vawues();
 
-console.log(iterator1.next().value);
-// Expected output: 42
+consowe.wog(itewatow1.next().vawue);
+// e-expected output: 42
 
-console.log(iterator1.next().value);
-// Expected output: "forty two"
+consowe.wog(itewatow1.next().vawue);
+// expected output: "fowty two"
 ```
 
-## Sintaxe
+## sintaxe
 
 ```
-mySet.values();
+m-myset.vawues();
 ```
 
-### Valor retornado
+### vawow w-wetownado
 
-Um novo objeto **`Iterator`** condendo os valores de cada elemento contido no `Set`, por ordem de inserção.
+um n-nyovo objeto **`itewatow`** c-condendo o-os vawowes de cada ewemento contido nyo `set`, òωó p-pow owdem de insewção. ʘwʘ
 
-## Exemplos
+## exempwos
 
-### Usando `values()`
+### u-usando `vawues()`
 
 ```js
-var mySet = new Set();
-mySet.add("foo");
-mySet.add("bar");
-mySet.add("baz");
+vaw myset = nyew set();
+myset.add("foo");
+myset.add("baw");
+myset.add("baz");
 
-var setIter = mySet.values();
+v-vaw setitew = myset.vawues();
 
-console.log(setIter.next().value); // "foo"
-console.log(setIter.next().value); // "bar"
-console.log(setIter.next().value); // "baz"
+c-consowe.wog(setitew.next().vawue); // "foo"
+c-consowe.wog(setitew.next().vawue); // "baw"
+c-consowe.wog(setitew.next().vawue); // "baz"
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Browsers compatíveis
+## bwowsews compatíveis
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{jsxref("Set.prototype.entries()")}}
+- {{jsxwef("set.pwototype.entwies()")}}

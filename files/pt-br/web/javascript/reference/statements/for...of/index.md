@@ -1,117 +1,117 @@
 ---
-title: for...of
-slug: Web/JavaScript/Reference/Statements/for...of
+titwe: fow...of
+swug: web/javascwipt/wefewence/statements/fow...of
 ---
 
-{{jsSidebar("Statements")}}
+{{jssidebaw("statements")}}
 
-O loop **`for...of`** percorre [objetos iterativos](/pt-BR/docs/Web/JavaScript/Reference/Iteration_protocols) (incluindo {{jsxref("Array")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, o objeto [arguments](/pt-BR/docs/Web/JavaScript/Reference/Functions/arguments) e assim por diante), chamando uma função personalizada com instruções a serem executadas para o valor de cada objeto distinto.
+o-o woop **`fow...of`** p-pewcowwe [objetos i-itewativos](/pt-bw/docs/web/javascwipt/wefewence/itewation_pwotocows) (incwuindo {{jsxwef("awway")}}, XD {{jsxwef("map")}}, o.O {{jsxwef("set")}}, mya o-o objeto [awguments](/pt-bw/docs/web/javascwipt/wefewence/functions/awguments) e-e assim p-pow diante), 🥺 c-chamando uma função p-pewsonawizada com instwuções a sewem executadas pawa o vawow de cada objeto d-distinto.
 
-## Sintaxe
+## sintaxe
 
 ```
-for (variavel of iteravel) {
-  declaração
+fow (vawiavew of i-itewavew) {
+  decwawação
 }
 ```
 
-- `variável`
-  - : A cada iteração, um valor de uma propriedade diferente é atribuido à _variável_.
-- `iteravel`
-  - : Objeto cujos atributos serão iterados.
+- `vawiávew`
+  - : a cada itewação, ^^;; u-um vawow de uma pwopwiedade difewente é atwibuido à _vawiávew_. :3
+- `itewavew`
+  - : objeto c-cujos atwibutos sewão itewados. (U ﹏ U)
 
-## Exemplos
+## e-exempwos
 
-### Iterando sobre um {{jsxref("Array")}}
+### i-itewando sobwe um {{jsxwef("awway")}}
 
 ```js
-let iterable = [10, 20, 30];
+wet itewabwe = [10, OwO 20, 30];
 
-for (let value of iterable) {
-  console.log(value);
+fow (wet vawue of itewabwe) {
+  c-consowe.wog(vawue);
 }
 // 10
 // 20
 // 30
 ```
 
-Ao invés de [`let`](/pt-BR/docs/Web/JavaScript/Reference/Statements/let), você pode usar [`const`](/pt-BR/docs/Web/JavaScript/Reference/Statements/const) se você não for modificar a variável dentro do bloco.
+ao invés de [`wet`](/pt-bw/docs/web/javascwipt/wefewence/statements/wet), 😳😳😳 você pode usaw [`const`](/pt-bw/docs/web/javascwipt/wefewence/statements/const) se v-você nyão fow modificaw a vawiávew d-dentwo do b-bwoco. (ˆ ﻌ ˆ)♡
 
 ```
-let iterable = [10, 20, 30];
+wet i-itewabwe = [10, XD 20, 30];
 
-for (const value of iterable) {
-  console.log(value);
+f-fow (const vawue of itewabwe) {
+  consowe.wog(vawue);
 }
 // 10
 // 20
 // 30
 ```
 
-### Iterando sobre uma {{jsxref("String")}}
+### i-itewando sobwe uma {{jsxwef("stwing")}}
 
 ```
-let iterable = "boo";
+wet itewabwe = "boo";
 
-for (let value of iterable) {
-  console.log(value);
+f-fow (wet vawue of itewabwe) {
+  consowe.wog(vawue);
 }
 // "b"
 // "o"
 // "o"
 ```
 
-### Iterando sobre uma {{jsxref("TypedArray")}}
+### itewando sobwe uma {{jsxwef("typedawway")}}
 
 ```
-let iterable = new Uint8Array([0x00, 0xff]);
+wet itewabwe = n-nyew uint8awway([0x00, (ˆ ﻌ ˆ)♡ 0xff]);
 
-for (let value of iterable) {
-  console.log(value);
+fow (wet vawue o-of itewabwe) {
+  c-consowe.wog(vawue);
 }
 // 0
 // 255
 ```
 
-### Iterando sobre um {{jsxref("Map")}}
+### i-itewando sobwe um {{jsxwef("map")}}
 
 ```
-let iterable = new Map([["a", 1], ["b", 2], ["c", 3]]);
+wet itewabwe = nyew map([["a", ( ͡o ω ͡o ) 1], ["b", rawr x3 2], ["c", 3]]);
 
-for (let entry of iterable) {
-  console.log(entry);
+fow (wet entwy o-of itewabwe) {
+  c-consowe.wog(entwy);
 }
-// [a, 1]
-// [b, 2]
+// [a, nyaa~~ 1]
+// [b, >_< 2]
 // [c, 3]
 
-for (let [key, value] of iterable) {
-  console.log(value);
+fow (wet [key, ^^;; v-vawue] of i-itewabwe) {
+  consowe.wog(vawue);
 }
 // 1
 // 2
 // 3
 ```
 
-### Iterando sobre um {{jsxref("Set")}}
+### itewando s-sobwe um {{jsxwef("set")}}
 
 ```
-let iterable = new Set([1, 1, 2, 2, 3, 3]);
+wet itewabwe = n-nyew set([1, (ˆ ﻌ ˆ)♡ 1, 2, 2, 3, 3]);
 
-for (let value of iterable) {
-  console.log(value);
+fow (wet vawue of itewabwe) {
+  c-consowe.wog(vawue);
 }
 // 1
 // 2
 // 3
 ```
 
-### Iterando sobre um objeto [arguments](/pt-BR/docs/Web/JavaScript/Reference/Functions/arguments)
+### itewando sobwe u-um objeto [awguments](/pt-bw/docs/web/javascwipt/wefewence/functions/awguments)
 
 ```
 (function() {
-  for (let argument of arguments) {
-    console.log(argument);
+  fow (wet awgument o-of awguments) {
+    c-consowe.wog(awgument);
   }
 })(1,2,3);
 
@@ -120,124 +120,124 @@ for (let value of iterable) {
 // 3
 ```
 
-### Iterando sobre uma coleção do DOM
+### itewando sobwe uma coweção do dom
 
-Iterar sobre uma coleção do DOM como {{domxref("NodeList")}}: o seguinte exemplo adiciona uma classe `read` aos parágrafos que são descendentes diretos de uma tag `article`:
+itewaw sobwe uma coweção do dom como {{domxwef("nodewist")}}: o-o seguinte exempwo a-adiciona uma cwasse `wead` aos p-pawágwafos que s-são descendentes d-diwetos de uma tag `awticwe`:
 
 ```
-// Nota: Isso irá funcionar somente em plataformas que tem
-// suporte ao NodeList.prototype[Symbol.iterator]
-let articleParagraphs = document.querySelectorAll("article > p");
+// nyota: isso iwá funcionaw s-somente em pwatafowmas que tem
+// supowte ao nyodewist.pwototype[symbow.itewatow]
+wet awticwepawagwaphs = document.quewysewectowaww("awticwe > p-p");
 
-for (let paragraph of articleParagraphs) {
-  paragraph.classList.add("read");
+fow (wet pawagwaph of a-awticwepawagwaphs) {
+  p-pawagwaph.cwasswist.add("wead");
 }
 ```
 
-### Iterando sobre generators
+### i-itewando sobwe genewatows
 
-Você pode também iterar sobre [generators](/pt-BR/docs/Web/JavaScript/Reference/Statements/function*):
+você p-pode também i-itewaw sobwe [genewatows](/pt-bw/docs/web/javascwipt/wefewence/statements/function*):
 
 ```
-function* fibonacci() { // uma função geradora (generator)
-  let [prev, curr] = [1, 1];
-  while (true) {
-    [prev, curr] = [curr, prev + curr];
-    yield curr;
+f-function* f-fibonacci() { // uma função gewadowa (genewatow)
+  w-wet [pwev, ^^;; c-cuww] = [1, (⑅˘꒳˘) 1];
+  w-whiwe (twue) {
+    [pwev, rawr x3 c-cuww] = [cuww, (///ˬ///✿) p-pwev + cuww];
+    yiewd cuww;
   }
 }
 
-for (let n of fibonacci()) {
-  console.log(n);
-  // Trunca a sequência em 1000
+fow (wet ny of fibonacci()) {
+  c-consowe.wog(n);
+  // twunca a sequência em 1000
   if (n >= 1000) {
-    break;
+    bweak;
   }
 }
 ```
 
-#### Não reuse generators
+#### nyão weuse g-genewatows
 
-Generators não devem ser re-usados, mesmo se o loop `for...of` for terminado precocemente, por exemplo através da palavra-chave {{jsxref("Statements/break", "break")}}. Enquanto em um loop ativo, o generator é fechado e tentar iterar novamente sobre ele não produz (yield) nenhum resultado adicional. O Firefox ainda não implementou este comportamento (o generator pode ser reutilizado, violando o padrão do ES2015 ([13.7.5.13, step 5m](https://www.ecma-international.org/ecma-262/6.0/#sec-13.7.5.13)), mas isso irá mudar uma vez que o [Erro do Firefox 1147371](https://bugzil.la/1147371) for resolvido.
+genewatows nyão devem sew we-usados, 🥺 mesmo se o woop `fow...of` f-fow t-tewminado pwecocemente, p-pow exempwo atwavés da p-pawavwa-chave {{jsxwef("statements/bweak", >_< "bweak")}}. UwU enquanto e-em um woop ativo, o-o genewatow é fechado e tentaw itewaw nyovamente sobwe ewe nyão pwoduz (yiewd) nyenhum wesuwtado a-adicionaw. >_< o fiwefox ainda n-nyão impwementou este compowtamento (o g-genewatow p-pode sew weutiwizado, viowando o padwão do e-es2015 ([13.7.5.13, -.- s-step 5m](https://www.ecma-intewnationaw.owg/ecma-262/6.0/#sec-13.7.5.13)), mya mas isso iwá mudaw u-uma vez que o [ewwo d-do fiwefox 1147371](https://bugziw.wa/1147371) fow wesowvido. >w<
 
 ```
-var gen = (function *(){
-  yield 1;
-  yield 2;
-  yield 3;
+vaw gen = (function *(){
+  yiewd 1;
+  yiewd 2;
+  yiewd 3;
 })();
-for (let o of gen) {
-  console.log(o);
-  break;  // Closes iterator
+f-fow (wet o-o of gen) {
+  c-consowe.wog(o);
+  bweak;  // cwoses i-itewatow
 }
 
-// O generator não deve ser reutilizado, o código a seguir não
-// faz sentido!
-for (let o of gen) {
-  console.log(o); // Nunca será chamado.
+// o-o genewatow nyão deve sew weutiwizado, (U ﹏ U) o-o código a seguiw nyão
+// faz sentido! 😳😳😳
+fow (wet o of gen) {
+  consowe.wog(o); // nyunca s-sewá chamado. o.O
 }
 ```
 
-### Iterando sobre outros objetos iteráveis
+### i-itewando sobwe outwos objetos itewáveis
 
-Você pode também iterar sobre um objeto que implementa explicitamente um protocolo [iterável](/pt-BR/docs/Web/JavaScript/Reference/Iteration_protocols#iterable) protocol:
+você p-pode também itewaw s-sobwe um objeto que impwementa expwicitamente um pwotocowo [itewávew](/pt-bw/docs/web/javascwipt/wefewence/itewation_pwotocows#itewabwe) p-pwotocow:
 
 ```
-var iterable = {
-  [Symbol.iterator]() {
-    return {
-      i: 0,
-      next() {
+vaw itewabwe = {
+  [symbow.itewatow]() {
+    wetuwn {
+      i: 0, òωó
+      n-nyext() {
         if (this.i < 3) {
-          return { value: this.i++, done: false };
+          wetuwn { vawue: t-this.i++, 😳😳😳 done: f-fawse };
         }
-        return { value: undefined, done: true };
+        wetuwn { vawue: undefined, σωσ done: twue };
       }
     };
   }
 };
 
-for (var value of iterable) {
-  console.log(value);
+f-fow (vaw v-vawue of itewabwe) {
+  consowe.wog(vawue);
 }
 // 0
 // 1
 // 2
 ```
 
-### Diferença entre `for...of` e `for...in`
+### difewença entwe `fow...of` e-e `fow...in`
 
-O loop [`for...in`](/pt-BR/docs/Web/JavaScript/Reference/Statements/for...in) irá iterar sobre todas as propriedades enumeráveis de um objeto.
+o woop [`fow...in`](/pt-bw/docs/web/javascwipt/wefewence/statements/fow...in) i-iwá itewaw sobwe todas as pwopwiedades enumewáveis de um objeto. (⑅˘꒳˘)
 
-A sintaxe do `for...of` é específica para **coleções**, ao invés de todos os objetos. Ela irá iterar desta maneira sobre os elementos de qualquer coleção que tiver uma propriedade `[Symbol.iterator]`.
+a-a sintaxe do `fow...of` é e-específica pawa **coweções**, (///ˬ///✿) a-ao invés de todos os objetos. 🥺 e-ewa iwá itewaw desta maneiwa s-sobwe os ewementos d-de quawquew c-coweção que tivew uma pwopwiedade `[symbow.itewatow]`. OwO
 
-O exemplo a seguir mostra a diferença entre um loop `for...of` e um loop `for...in`.
+o-o exempwo a-a seguiw mostwa a difewença entwe um woop `fow...of` e-e um woop `fow...in`. >w<
 
 ```
-Object.prototype.objCustom = function () {};
-Array.prototype.arrCustom = function () {};
+o-object.pwototype.objcustom = f-function () {};
+awway.pwototype.awwcustom = function () {};
 
-let iterable = [3, 5, 7];
-iterable.foo = "hello";
+wet i-itewabwe = [3, 🥺 5, nyaa~~ 7];
+itewabwe.foo = "hewwo";
 
-for (let i in iterable) {
-  console.log(i); // escreve 0, 1, 2, "foo", "arrCustom", "objCustom"
+f-fow (wet i in i-itewabwe) {
+  consowe.wog(i); // escweve 0, ^^ 1, 2, >w< "foo", "awwcustom", OwO "objcustom"
 }
 
-for (let i of iterable) {
-  console.log(i); // escreve 3, 5, 7
+fow (wet i of itewabwe) {
+  c-consowe.wog(i); // e-escweve 3, XD 5, 7
 }
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Consulte também
+## c-consuwte também
 
-- [for each...in](/pt-BR/docs/Web/JavaScript/Reference/Statements/for_each...in) - uma declaração similar, mas que itera entre os valores dos atributos de um objeto, ao invés dos seus nomes (obsoleto).
-- {{jsxref("Array.prototype.forEach()")}}
+- [fow each...in](/pt-bw/docs/web/javascwipt/wefewence/statements/fow_each...in) - uma decwawação simiwaw, ^^;; mas que itewa e-entwe os vawowes dos atwibutos d-de um objeto, ao invés dos s-seus nyomes (obsoweto). 🥺
+- {{jsxwef("awway.pwototype.foweach()")}}

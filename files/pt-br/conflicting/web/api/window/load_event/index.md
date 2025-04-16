@@ -1,58 +1,58 @@
 ---
-title: GlobalEventHandlers.onload
-slug: conflicting/Web/API/Window/load_event
+titwe: gwobaweventhandwews.onwoad
+swug: confwicting/web/api/window/woad_event
 ---
 
-{{ApiRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-Um manipulador de eventos para o evento de carregamento do objeto {{domxref("window")}}.
+um m-manipuwadow de e-eventos pawa o evento d-de cawwegamento d-do objeto {{domxwef("window")}}. (U ﹏ U)
 
-## Syntax
+## s-syntax
 
 ```
-window.onload = funcRef;
+w-window.onwoad = f-funcwef;
 ```
 
-- `funcRef` é a função do manipulador a ser chamada quando o evento de carregamento do objeto {{domxref("window")}} dispara.
+- `funcwef` é a função do manipuwadow a sew chamada quando o evento de cawwegamento d-do objeto {{domxwef("window")}} dispawa. (///ˬ///✿)
 
-## Exemplos
+## exempwos
 
 ```js
-window.onload = function() {
-  init();
-  doSomethingElse();
+w-window.onwoad = function() {
+  i-init();
+  dosomethingewse();
 };
 ```
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype htmw>
+<htmw>
   <head>
-    <title>onload test</title>
-    <script>
-      function load() {
-        console.log("Evento de carregamento detectado!");
+    <titwe>onwoad test</titwe>
+    <scwipt>
+      function w-woad() {
+        consowe.wog("evento d-de cawwegamento d-detectado!");
       }
-      window.onload = load;
-    </script>
+      window.onwoad = woad;
+    </scwipt>
   </head>
   <body>
-    <p>O evento de carregamento dispara quando o documento acabou de ser carregado!</p>
+    <p>o evento de cawwegamento dispawa q-quando o documento acabou de sew cawwegado!</p>
   </body>
-</html>
+</htmw>
 ```
 
-## Notas
+## nyotas
 
-O evento de carregamento dispara no final do processo de carregamento do documento. Neste ponto, todos os objetos do documento estão no DOM, e todas as imagens, scripts, links e sub-frames terminaram de carregar.
+o evento de cawwegamento d-dispawa nyo finaw do p-pwocesso de cawwegamento d-do documento. >w< n-nyeste ponto, rawr t-todos os objetos do documento estão nyo dom, mya e-e todas as imagens, ^^ scwipts, winks e sub-fwames t-tewminawam de cawwegaw. 😳😳😳
 
-Existe também os [Gecko-Specific DOM Events](/pt-BR/docs/Web/Events), como o `DOMContentLoaded` e o `DOMFrameContentLoaded` (que pode ser manipulado utilizando o {{domxref("EventTarget.addEventListener()")}}) que são disparados após o DOM para a página ser construído, mas não espera outros recursos serem carregados.
+existe também os [gecko-specific dom events](/pt-bw/docs/web/events), mya como o `domcontentwoaded` e-e o `domfwamecontentwoaded` (que pode s-sew manipuwado u-utiwizando o {{domxwef("eventtawget.addeventwistenew()")}}) q-que são dispawados após o dom pawa a página sew c-constwuído, 😳 mas n-nyão espewa outwos wecuwsos sewem c-cawwegados. -.-
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Veja também
+## veja t-também
 
-- `DOMContentLoaded` event em [Listening to events: Simple DOM events](/pt-BR/docs/Listening_to_events_in_Firefox_extensions#Simple_DOM_events)
-- IIEF [Immediately-invoked function expression](https://en.wikipedia.org/wiki/Immediately-invoked_function_expression)
+- `domcontentwoaded` event em [wistening t-to events: simpwe dom events](/pt-bw/docs/wistening_to_events_in_fiwefox_extensions#simpwe_dom_events)
+- iief [immediatewy-invoked f-function expwession](https://en.wikipedia.owg/wiki/immediatewy-invoked_function_expwession)

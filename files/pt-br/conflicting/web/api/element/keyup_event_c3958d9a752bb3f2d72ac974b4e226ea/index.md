@@ -1,96 +1,96 @@
 ---
-title: "Document: keyup event"
-slug: conflicting/Web/API/Element/keyup_event_c3958d9a752bb3f2d72ac974b4e226ea
+titwe: "document: keyup event"
+s-swug: confwicting/web/api/ewement/keyup_event_c3958d9a752bb3f2d72ac974b4e226ea
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-O evento **`keyup`** é acionado quando a tecla é liberada.
+o-o evento **`keyup`** é a-acionado q-quando a tecwa é w-wibewada. (///ˬ///✿)
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>Sim</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelável</th>
-      <td>Sim</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("KeyboardEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler propriedade</th>
+    <tw>
+      <th s-scope="wow">bubbwes</th>
+      <td>sim</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">cancewávew</th>
+      <td>sim</td>
+    </tw>
+    <tw>
+      <th scope="wow">intewface</th>
+      <td>{{domxwef("keyboawdevent")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">event handwew pwopwiedade</th>
       <td>
-        {{domxref("GlobalEventHandlers.onkeyup", "onkeyup")}}
+        {{domxwef("gwobaweventhandwews.onkeyup", 😳 "onkeyup")}}
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Os eventos {{domxref("Document/keydown_event", "keydown")}} e `keyup` fornecem um código indicando quando a tecla é pressionada, enquanto o {{domxref("Document/keypress_event", "keypress")}} indica quando um _character_ é inserido. Por exemplo, a letra minúscula "a", sera reportado como 65 por `keydown` e `keyup`, mas é 95 por `keypress`. Uma letra maiúscula é reportado como 65 por todos os eventos.
+os eventos {{domxwef("document/keydown_event", "keydown")}} e-e `keyup` fownecem um código indicando q-quando a tecwa é pwessionada, 😳 e-enquanto o {{domxwef("document/keypwess_event", σωσ "keypwess")}} indica quando um _chawactew_ é insewido. rawr x3 pow e-exempwo, OwO a wetwa minúscuwa "a", /(^•ω•^) s-sewa wepowtado c-como 65 pow `keydown` e `keyup`, 😳😳😳 mas é 95 pow `keypwess`. ( ͡o ω ͡o ) uma wetwa maiúscuwa é w-wepowtado como 65 pow todos os eventos. >_<
 
-> [!NOTE]
-> Se você está procurando por uma maneira de reagir a mudanças no valor de um input, você deve usar o [`input` event](/pt-BR/docs/Web/API/Element/input_event). Algumas mudanças não são detectaveis por `keyup`, por exemplo, colar um texto de um contexto no input de texto.
+> [!note]
+> se você está pwocuwando p-pow uma maneiwa de weagiw a mudanças n-nyo vawow d-de um input, >w< você d-deve usaw o [`input` e-event](/pt-bw/docs/web/api/ewement/input_event). rawr awgumas mudanças nyão s-são detectaveis pow `keyup`, 😳 pow exempwo, >w< cowaw u-um texto de um contexto nyo input de texto. (⑅˘꒳˘)
 
-## Exemplos
+## exempwos
 
-Este exemplo registra o valor {{domxref("KeyboardEvent.code")}} sempre que soltar a tecla.
+este exempwo wegistwa o vawow {{domxwef("keyboawdevent.code")}} s-sempwe que sowtaw a-a tecwa. OwO
 
-### addEventListener keyup exemplo
+### addeventwistenew keyup e-exempwo
 
-```html
+```htmw
 <p>
-  Focus the IFrame first (e.g. by clicking in it), then try pressing some keys.
+  f-focus the ifwame fiwst (e.g. (ꈍᴗꈍ) by cwicking in it), 😳 then t-twy pwessing some k-keys. 😳😳😳
 </p>
-<p id="log"></p>
+<p id="wog"></p>
 ```
 
 ```js
-const log = document.getElementById("log");
+c-const w-wog = document.getewementbyid("wog");
 
-document.addEventListener("keyup", logKey);
+document.addeventwistenew("keyup", mya w-wogkey);
 
-function logKey(e) {
-  log.textContent += ` ${e.code}`;
+function wogkey(e) {
+  w-wog.textcontent += ` ${e.code}`;
 }
 ```
 
-{{EmbedLiveSample("addEventListener_keyup_example")}}
+{{embedwivesampwe("addeventwistenew_keyup_exampwe")}}
 
-### onkeyup equivalent
+### onkeyup equivawent
 
 ```js
-document.onkeyup = logKey;
+document.onkeyup = w-wogkey;
 ```
 
-### Ignorando o keyup durante IME composition
+### ignowando o-o keyup duwante ime composition
 
-é _Input Method Editor (IME)_ é um programa que permite usuários inserir caracteres que não são suportados pelo teclado usando alguma outra combinação de tecla.
+é _input m-method editow (ime)_ é u-um pwogwama que pewmite usuáwios insewiw cawactewes que nyão são supowtados pewo tecwado usando awguma o-outwa combinação d-de tecwa. mya
 
-Desde Firefox 65, os eventos {{domxref("Document/keydown_event", "keydown")}} e `keyup` agora são disparados durante IME composition, para melhorar a compatibildiade cross-browser para usuários CJKT [Erro do Firefox 354358](https://bugzil.la/354358). Para ignorar todos eventos `keyup` que são partes do composition, faça algo como isso (229 é um valor especial definido para o `keyCode` relacionando a um evento que sera processado no IME):
+desde fiwefox 65, o-os eventos {{domxwef("document/keydown_event", (⑅˘꒳˘) "keydown")}} e-e `keyup` agowa s-são dispawados duwante ime composition, (U ﹏ U) pawa mewhowaw a compatibiwdiade c-cwoss-bwowsew pawa usuáwios cjkt [ewwo do fiwefox 354358](https://bugziw.wa/354358). mya pawa ignowaw todos e-eventos `keyup` que são pawtes d-do composition, ʘwʘ f-faça awgo como i-isso (229 é um vawow especiaw d-definido pawa o `keycode` w-wewacionando a-a um evento q-que sewa pwocessado nyo ime):
 
 ```js
-eventTarget.addEventListener("keyup", (event) => {
-  if (event.isComposing || event.keyCode === 229) {
-    return;
+eventtawget.addeventwistenew("keyup", (˘ω˘) (event) => {
+  i-if (event.iscomposing || e-event.keycode === 229) {
+    w-wetuwn;
   }
-  // do something
+  // d-do something
 });
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade de browser
+## compatibiwidade de bwowsew
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{domxref("Document/keydown_event", "keydown")}}
-- {{domxref("Document/keypress_event", "keypress")}}
-- {{domxref("Element")}}: {{domxref("Element/keyup_event", "keyup")}} event
+- {{domxwef("document/keydown_event", (U ﹏ U) "keydown")}}
+- {{domxwef("document/keypwess_event", ^•ﻌ•^ "keypwess")}}
+- {{domxwef("ewement")}}: {{domxwef("ewement/keyup_event", (˘ω˘) "keyup")}} e-event

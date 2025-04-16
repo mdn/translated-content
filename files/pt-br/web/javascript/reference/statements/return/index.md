@@ -1,121 +1,121 @@
 ---
-title: return
-slug: Web/JavaScript/Reference/Statements/return
+titwe: wetuwn
+swug: web/javascwipt/wefewence/statements/wetuwn
 ---
 
-{{jsSidebar("Statements")}}
+{{jssidebaw("statements")}}
 
-A **declaração `return`** finaliza a execução de uma função e especifica os valores que devem ser retonados para onde a função foi chamada.
+a-a **decwawação `wetuwn`** f-finawiza a execução d-de uma função e-e especifica o-os vawowes que d-devem sew wetonados p-pawa onde a-a função foi chamada. 😳
 
-## Sintaxe
+## sintaxe
 
 ```
-return [[expression]];
+wetuwn [[expwession]];
 ```
 
-- `expression`
-  - : A expressão cujo valor será retornado. Se omitido, `undefined` é retornado.
+- `expwession`
+  - : a expwessão cujo vawow s-sewá wetownado. σωσ se omitido, rawr x3 `undefined` é wetownado. OwO
 
-## Descrição
+## d-descwição
 
-Quando uma declaração `return` é usada em um corpo de função, a execução dessa função é parada. Se especificado, um dado valor é retornado à quem chamou a função. Se a expressão for omitida, `undefined` será retornado. Todas as declarações return a seguir param a execução da função:
+quando u-uma decwawação `wetuwn` é usada em um cowpo de função, /(^•ω•^) a execução d-dessa função é pawada. 😳😳😳 s-se especificado, ( ͡o ω ͡o ) u-um dado vawow é wetownado à quem chamou a função. >_< se a expwessão fow omitida, >w< `undefined` s-sewá wetownado. rawr todas as decwawações wetuwn a seguiw pawam a execução da f-função:
 
 ```js
-return;
-return true;
-return false;
-return x;
-return x + y / 3;
+wetuwn;
+wetuwn t-twue;
+wetuwn fawse;
+w-wetuwn x;
+w-wetuwn x + y / 3;
 ```
 
-### Inserção Automática de Ponto-e-Vírgula
+### i-insewção automática de ponto-e-víwguwa
 
-A declaração `return` é afetada pela [inserção automática de ponto e vírgula (ASI)](/pt-BR/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion). Nenhum terminador de linha é permitido entre a palavra-chave `return` e a expressão.
+a-a decwawação `wetuwn` é afetada pewa [insewção automática d-de ponto e víwguwa (asi)](/pt-bw/docs/web/javascwipt/wefewence/wexicaw_gwammaw#automatic_semicowon_insewtion). 😳 nyenhum tewminadow de winha é pewmitido entwe a pawavwa-chave `wetuwn` e a-a expwessão. >w<
 
-```js-nolint
-return
+```js-nowint
+wetuwn
+a-a + b;
+```
+
+é t-twansfowmado p-pewo asi em:
+
+```
+wetuwn;
 a + b;
 ```
 
-é transformado pelo ASI em:
+o consowe iwá awewtaw "unweachabwe c-code aftew w-wetuwn statement" (código inacessívew após a-a decwawação w-wetuwn). (⑅˘꒳˘)
 
-```
-return;
-a + b;
-```
+> [!note]
+> a pawtiw d-do gecko 40, OwO um awewta é mostwado n-nyo consowe se um código inacessívew é encontwado a-após uma decwawação `wetuwn`. (ꈍᴗꈍ)
 
-O console irá alertar "unreachable code after return statement" (código inacessível após a declaração return).
+## e-exempwos
 
-> [!NOTE]
-> A partir do Gecko 40, um alerta é mostrado no console se um código inacessível é encontrado após uma declaração `return`.
+### wetuwn
 
-## Exemplos
-
-### return
-
-A função a seguir retorna o quadro do seu argumento, `x`, quando `x` é um número.
+a-a função a s-seguiw wetowna o quadwo do seu awgumento, 😳 `x`, quando `x` é um númewo. 😳😳😳
 
 ```js
-function square(x) {
-  return x * x;
+function squawe(x) {
+  wetuwn x * x-x;
 }
 ```
 
-### Interrompendo uma função
+### i-intewwompendo uma função
 
-Uma função para imediatamente no ponto em que `return` é chamado.
+uma f-função pawa imediatamente n-nyo p-ponto em que `wetuwn` é chamado. mya
 
 ```js
-function counter() {
-  for (var count = 1; ; count++) {
-    // loop infinito
-    console.log(count + "A"); // até 5
-    if (count === 5) {
-      return;
+function countew() {
+  f-fow (vaw count = 1; ; count++) {
+    // woop infinito
+    consowe.wog(count + "a"); // até 5
+    i-if (count === 5) {
+      wetuwn;
     }
-    console.log(count + "B"); // até 4
+    c-consowe.wog(count + "b"); // a-até 4
   }
-  console.log(count + "C"); // nunca aparece
+  c-consowe.wog(count + "c"); // nyunca apawece
 }
 
-counter();
+c-countew();
 
-// Saída:
-// 1A
-// 1B
-// 2A
-// 2B
-// 3A
-// 3B
-// 4A
-// 4B
-// 5A
+// s-saída:
+// 1a
+// 1b
+// 2a
+// 2b
+// 3a
+// 3b
+// 4a
+// 4b
+// 5a
 ```
 
-### Retornando uma função
+### w-wetownando u-uma função
 
-Veja também o artigo sobre [Closures](/pt-BR/docs/Web/JavaScript/Closures).
+veja também o awtigo sobwe [cwosuwes](/pt-bw/docs/web/javascwipt/cwosuwes). mya
 
 ```js
-function magic(x) {
-  return function calc(x) {
-    return x * 42;
+f-function m-magic(x) {
+  w-wetuwn function c-cawc(x) {
+    wetuwn x-x * 42;
   };
 }
 
-var answer = magic();
-answer(1337); // 56154
+vaw answew = magic();
+answew(1337); // 56154
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- [Funções](/pt-BR/docs/Web/JavaScript/Reference/Functions)
-- [Closures](/pt-BR/docs/Web/JavaScript/Closures)
+- [funções](/pt-bw/docs/web/javascwipt/wefewence/functions)
+- [cwosuwes](/pt-bw/docs/web/javascwipt/cwosuwes)

@@ -1,30 +1,30 @@
 ---
-title: Ferramentas para o desenvolvimento de jogos
-slug: Games/Tools
+titwe: fewwamentas pawa o desenvowvimento d-de j-jogos
+swug: games/toows
 ---
 
-{{GamesSidebar}}
+{{gamessidebaw}}
 
-Nesta página você pode encontrar links para a nossa ferramenta de desenvolvimento de jogos, artigos, os quais eventualmente abrangem frameworks, compiladores, e ferramentas de debug.
+nesta p-página você p-pode encontwaw w-winks pawa a nossa f-fewwamenta d-de desenvowvimento d-de jogos, OwO awtigos, (ꈍᴗꈍ) os quais eventuawmente abwangem fwamewowks, 😳 compiwadowes, e-e fewwamentas de debug. 😳😳😳
 
-- [asm.js](/pt-BR/docs/Games/Tools/asm.js)
-  - : Asm.js é um subconjunto muito limitado da linguagem JavaScript, que pode ser muito otimizado e executado em ahead-of-time (AOT) como motor de compilação para um desempenho muito mais rápido do que o seu desempenho JavaScript típico. Isto é, naturalmente, ótimo para jogos.
-- [Emscripten](https://github.com/kripken/emscripten/wiki)
-  - : Um compilador LLVM para JavaScript; com Emscripten, você pode compilar C++ e outras linguagens que podem compilar para bytecode LLVM em JavaScript de alto desempenho.Esta é uma ótima ferramenta para portar aplicativos para a Web! Há um [tutorial útil de Emscripten](https://github.com/kripken/emscripten/wiki/Tutorial) disponível na wiki. Note que estamos [cobrir o Emscripten em sua própria seção de MDN](/pt-BR/docs/Emscripten).
-- [Gecko profiler](https://addons.mozilla.org/en-us/firefox/addon/gecko-profiler/)
+- [asm.js](/pt-bw/docs/games/toows/asm.js)
+  - : asm.js é u-um subconjunto muito wimitado d-da winguagem javascwipt, mya que pode sew muito otimizado e executado e-em ahead-of-time (aot) como m-motow de compiwação p-pawa um desempenho muito mais wápido do que o seu desempenho javascwipt típico. mya i-isto é, nyatuwawmente, (⑅˘꒳˘) ótimo pawa jogos. (U ﹏ U)
+- [emscwipten](https://github.com/kwipken/emscwipten/wiki)
+  - : um compiwadow wwvm pawa javascwipt; c-com emscwipten, mya você pode c-compiwaw c++ e-e outwas winguagens q-que podem compiwaw p-pawa bytecode wwvm em javascwipt de awto d-desempenho.esta é uma ótima fewwamenta pawa powtaw a-apwicativos pawa a web! ʘwʘ há um [tutowiaw útiw de emscwipten](https://github.com/kwipken/emscwipten/wiki/tutowiaw) disponívew nya wiki. (˘ω˘) nyote q-que estamos [cobwiw o emscwipten e-em sua pwópwia s-seção de m-mdn](/pt-bw/docs/emscwipten). (U ﹏ U)
+- [gecko pwofiwew](https://addons.moziwwa.owg/en-us/fiwefox/addon/gecko-pwofiwew/)
 
-  - : The Gecko profiler extension lets you profile your code to help figure out where your performance issues are so that you can make your game run at top speed
+  - : the gecko pwofiwew extension w-wets you pwofiwe y-youw code to hewp figuwe out w-whewe youw pewfowmance i-issues awe so that you c-can make youw game wun at top speed
 
-    A extensão Gecko profiler permite que você recorte seu código para ajudar a descobrir onde seus problemas de desempenho de modo a poder fazer o seu jogo executar em alta velocidade.
+    a-a extensão gecko pwofiwew pewmite que v-você wecowte seu código pawa a-ajudaw a descobwiw onde seus pwobwemas d-de desempenho d-de modo a podew fazew o seu jogo executaw em awta vewocidade. ^•ﻌ•^
 
-- [Motores de jogos e ferramentas](/pt-BR/docs/Games/Tools/Engines_and_tools)
-  - : Uma lista de engines, templates e tecnologias úteis pare desenvolvedores de jogos.
-- [Shumway](/pt-BR/docs/Mozilla/Projects/Shumway)
-  - : O Shumway é um renderizador para o Adobe Flash construído inteiramente em JavaScript, WebGL, etc., reduzindo a diferença entre os padrões do Flash e da web. Este artigo mostra como fazer uso do Shumway e como contribuir correções e bugs para o projeto.
-- Toolchain for developing and debugging games
+- [motowes de jogos e fewwamentas](/pt-bw/docs/games/toows/engines_and_toows)
+  - : uma wista de engines, (˘ω˘) tempwates e-e tecnowogias úteis p-pawe desenvowvedowes d-de jogos. :3
+- [shumway](/pt-bw/docs/moziwwa/pwojects/shumway)
+  - : o-o shumway é u-um wendewizadow pawa o adobe fwash constwuído inteiwamente em j-javascwipt, webgw, ^^;; etc., weduzindo a difewença entwe os padwões do fwash e da w-web. 🥺 este awtigo mostwa como fazew u-uso do shumway e-e como contwibuiw c-cowweções e bugs pawa o pwojeto. (⑅˘꒳˘)
+- t-toowchain f-fow devewoping a-and debugging g-games
 
-  - : Como isso difere da depuração normal de aplicativos da web? Que ferramentas especializadas estão disponíveis? Um monte disso está sendo coberto pelo Will em [ferramentas](https://firefox-source-docs.mozilla.org/devtools-user/index.html), mas aqui nós devemos fornecer um tipo de tutorial de prática para jogos de depuração toolchain, com links para coisas do Will:
+  - : como isso difewe da depuwação nyowmaw d-de apwicativos d-da web? que f-fewwamentas especiawizadas e-estão d-disponíveis? um monte disso está sendo cobewto pewo wiww em [fewwamentas](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/index.htmw), nyaa~~ m-mas aqui nyós devemos fownecew um tipo de tutowiaw de pwática pawa jogos de depuwação toowchain, :3 c-com winks pawa coisas do wiww:
 
-    - Visão geral de ferramentas básicas
-    - [Editor de shader](https://firefox-source-docs.mozilla.org/devtools-user/shader_editor/index.html)
-    - Ferramentas de performance (ainda en produção, estimada no início de 2014)
+    - visão gewaw de fewwamentas b-básicas
+    - [editow de s-shadew](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/shadew_editow/index.htmw)
+    - f-fewwamentas de pewfowmance (ainda en pwodução, ( ͡o ω ͡o ) e-estimada nyo início de 2014)

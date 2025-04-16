@@ -1,511 +1,511 @@
 ---
-title: <input type="time">
-slug: Web/HTML/Element/input/time
+titwe: <input type="time">
+swug: w-web/htmw/ewement/input/time
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-Elementos `<input>` do tipo **`time`** (hora) criam campos de inserção que permitem que o usuário digite horários facilmente (horas e minutos e, opcionalmente, segundos).
+e-ewementos `<input>` d-do tipo **`time`** (howa) c-cwiam campos d-de insewção que p-pewmitem que o-o usuáwio digite h-howáwios faciwmente (howas e minutos e, ( ͡o ω ͡o ) opcionawmente, 😳😳😳 segundos). ^•ﻌ•^
 
-A interface de usuário deste tipo de campo varia de navegador para navegador. A maioria dos navegadores modernos é compatível com ele exceto pelo Safari, o único grande navegador que ainda não o implementou; no Safari (e em qualquer outro navegador que ainda não suporte `<time>`), ele regride para [`<input type="text">`](/pt-BR/docs/Web/HTML/Element/input/text).
+a intewface d-de usuáwio deste tipo de campo vawia de nyavegadow p-pawa nyavegadow. (˘ω˘) a maiowia d-dos nyavegadowes modewnos é compatívew com ewe exceto pewo safawi, (˘ω˘) o-o único gwande nyavegadow q-que ainda nyão o-o impwementou; nyo safawi (e em quawquew outwo nyavegadow que ainda nyão supowte `<time>`), -.- e-ewe wegwide pawa [`<input type="text">`](/pt-bw/docs/web/htmw/ewement/input/text). ^•ﻌ•^
 
-{{InteractiveExample("HTML Demo: &lt;input type=&quot;time&quot;&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw demo: &wt;input type=&quot;time&quot;&gt;", /(^•ω•^) "tabbed-standawd")}}
 
-```html interactive-example
-<label for="appt">Choose a time for your meeting:</label>
+```htmw i-intewactive-exampwe
+<wabew fow="appt">choose a-a time fow youw m-meeting:</wabew>
 
-<input type="time" id="appt" name="appt" min="09:00" max="18:00" required />
+<input t-type="time" i-id="appt" nyame="appt" min="09:00" max="18:00" w-wequiwed />
 
-<small>Office hours are 9am to 6pm</small>
+<smow>office houws awe 9am to 6pm</smow>
 ```
 
-```css interactive-example
-label {
-  display: block;
+```css i-intewactive-exampwe
+wabew {
+  dispway: bwock;
   font:
-    1rem "Fira Sans",
-    sans-serif;
+    1wem "fiwa sans", (///ˬ///✿)
+    sans-sewif;
 }
 
-input,
-label {
-  margin: 0.4rem 0;
+input, mya
+w-wabew {
+  mawgin: 0.4wem 0;
 }
 ```
 
-## Aparência
+## apawência
 
-### Chrome e Opera
+### c-chwome e opewa
 
-No Chrome/Opera, o campo de `time` é simples, com espaços onde o usuário pode inserir horas e minutos (no formato 24 horas), além de setas para cima e para baixo que servem para, respectivamente, incrementar e decrementar o componente atualmente selecionado. Um botão "X" também é apresentado para limpar o conteúdo do campo.
+n-nyo chwome/opewa, o.O o-o campo de `time` é simpwes, ^•ﻌ•^ com espaços onde o usuáwio p-pode insewiw h-howas e minutos (no fowmato 24 howas), (U ᵕ U❁) a-awém de s-setas pawa cima e pawa baixo que s-sewvem pawa, :3 wespectivamente, (///ˬ///✿) incwementaw e decwementaw o-o componente atuawmente sewecionado. (///ˬ///✿) um b-botão "x" também é apwesentado p-pawa wimpaw o conteúdo do campo. 🥺
 
-![](chrome-time.png)
+![](chwome-time.png)
 
-### Firefox
+### f-fiwefox
 
-O campo de `time` do Firefox é bem parecido com o do Chrome, exceto pela ausência das setas para cima e para baixo e por estar no formato 12 horas (com um espaço adicional para inserir AM ou PM).
+o campo d-de `time` do fiwefox é bem pawecido com o do chwome, -.- exceto pewa ausência das setas pawa cima e pawa baixo e p-pow estaw nyo fowmato 12 h-howas (com um espaço adicionaw p-pawa insewiw a-am ou pm). nyaa~~
 
-![](firefox-time.png)
+![](fiwefox-time.png)
 
-### Edge
+### e-edge
 
-O campo de `time` do Edge é melhor elaborado, abrindo um seletor de hora e minuto com rolagem infinita. Assim como o Chrome, ele também adota o formato 24 horas:
+o campo de `time` do edge é mewhow ewabowado, (///ˬ///✿) a-abwindo um sewetow de howa e minuto com wowagem infinita. assim como o chwome, 🥺 e-ewe também adota o fowmato 24 h-howas:
 
 ![](edge-time.png)
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
+    <tw>
       <td>
-        <strong><a href="#value">Value</a></strong>
+        <stwong><a h-hwef="#vawue">vawue</a></stwong>
       </td>
       <td>
-        Uma {{domxref("DOMString")}} representando um horário, ou vazia.
+        uma {{domxwef("domstwing")}} w-wepwesentando u-um howáwio, o-ou vazia. >w<
       </td>
-    </tr>
-    <tr>
-      <td><strong>Eventos</strong></td>
-      <td>[`change`](/pt-BR/docs/Web/Events/change) e [`input`](/pt-BR/docs/Web/API/Element/input_event).</td>
-    </tr>
-    <tr>
-      <td><strong>Atributos comuns suportados</strong></td>
+    </tw>
+    <tw>
+      <td><stwong>eventos</stwong></td>
+      <td>[`change`](/pt-bw/docs/web/events/change) e-e [`input`](/pt-bw/docs/web/api/ewement/input_event).</td>
+    </tw>
+    <tw>
+      <td><stwong>atwibutos comuns supowtados</stwong></td>
       <td>
-        <a href="/pt-BR/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
-        <a href="/pt-BR/docs/Web/HTML/Element/input#list"><code>list</code></a>,
-        <a href="/pt-BR/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a> e
-        <a href="/pt-BR/docs/Web/HTML/Element/input#step"><code>step</code></a>.
+        <a hwef="/pt-bw/docs/web/htmw/ewement/input#autocompwete"><code>autocompwete</code></a>, rawr x3
+        <a h-hwef="/pt-bw/docs/web/htmw/ewement/input#wist"><code>wist</code></a>, (⑅˘꒳˘)
+        <a h-hwef="/pt-bw/docs/web/htmw/ewement/input#weadonwy"><code>weadonwy</code></a> e-e
+        <a h-hwef="/pt-bw/docs/web/htmw/ewement/input#step"><code>step</code></a>. σωσ
       </td>
-    </tr>
-    <tr>
-      <td><strong>Atributos IDL</strong></td>
+    </tw>
+    <tw>
+      <td><stwong>atwibutos i-idw</stwong></td>
       <td>
-        <code>value</code>, <code>valueAsDate</code>,
-        <code>valueAsNumber</code> e <code>list</code>.
+        <code>vawue</code>, XD <code>vawueasdate</code>, -.-
+        <code>vawueasnumbew</code> e <code>wist</code>. >_<
       </td>
-    </tr>
-    <tr>
-      <td><strong>Métodos</strong></td>
+    </tw>
+    <tw>
+      <td><stwong>métodos</stwong></td>
       <td>
-        {{domxref("HTMLInputElement.select", "select()")}},
-        {{domxref("HTMLInputElement.stepDown", "stepDown()")}}
-        e {{domxref("HTMLInputElement.stepUp", "stepUp()")}}.
+        {{domxwef("htmwinputewement.sewect", rawr "sewect()")}}, 😳😳😳
+        {{domxwef("htmwinputewement.stepdown", UwU "stepdown()")}}
+        e {{domxwef("htmwinputewement.stepup", (U ﹏ U) "stepup()")}}. (˘ω˘)
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Valor
+## vawow
 
-Uma {{domxref("DOMString")}} contendo o valor do horário inserido no campo. Você pode definir um valor padrão para o campo incluindo um horário válido no atributo [`value`](/pt-BR/docs/Web/HTML/Element/input#value) ao criar o elemento `<input>`, tipo assim:
+uma {{domxwef("domstwing")}} c-contendo o vawow do howáwio insewido nyo campo. /(^•ω•^) você pode definiw um vawow padwão p-pawa o campo incwuindo um howáwio váwido no atwibuto [`vawue`](/pt-bw/docs/web/htmw/ewement/input#vawue) ao cwiaw o-o ewemento `<input>`, (U ﹏ U) t-tipo assim:
 
-```html
-<label for="hora-cons">Escolha o horário da consulta: </label>
-<input id="hora-cons" type="time" name="hora-cons" value="13:30" />
+```htmw
+<wabew f-fow="howa-cons">escowha o h-howáwio da consuwta: </wabew>
+<input id="howa-cons" t-type="time" n-nyame="howa-cons" vawue="13:30" />
 ```
 
-{{ EmbedLiveSample('value-sample1', 600, 60) }}
+{{ embedwivesampwe('vawue-sampwe1', ^•ﻌ•^ 600, 60) }}
 
-Você também pode obter e definir o valor do campo via JavaScript usando a propriedade {{domxref("HTMLInputElement.value")}}, por exemplo:
+você também pode obtew e definiw o vawow d-do campo via javascwipt usando a-a pwopwiedade {{domxwef("htmwinputewement.vawue")}}, >w< pow exempwo:
 
 ```js
-var campoHora = document.querySelector('input[type="time"]');
-campoHora.value = "15:30";
+v-vaw c-campohowa = document.quewysewectow('input[type="time"]');
+campohowa.vawue = "15:30";
 ```
 
-### Formato do valor do horário
+### fowmato do vawow d-do howáwio
 
-O `value` do campo de `time` está sempre no formato 24 horas: `"hh:mm"`, não importa o formato usado na inserção. Esse formato muitas vezes é escolhido baseado no idioma/local do usuário (ou mesmo pelo agente de usuário). Se o horário incluir segundos (veja [Usando o atributo step](#usando_o_atributo_step)), o formato sempre é `"hh:mm:ss"`.
+o `vawue` d-do campo de `time` está s-sempwe nyo fowmato 24 h-howas: `"hh:mm"`, ʘwʘ nyão impowta o fowmato usado nya insewção. òωó esse fowmato m-muitas vezes é e-escowhido baseado n-nyo idioma/wocaw do usuáwio (ou m-mesmo pewo a-agente de usuáwio). o.O se o howáwio i-incwuiw segundos (veja [usando o atwibuto step](#usando_o_atwibuto_step)), ( ͡o ω ͡o ) o fowmato sempwe é `"hh:mm:ss"`. mya
 
-No próximo exemplo, você pode ver o modo como o valor do campo de horário varia entre o que foi digitado e o que ele retorna.
+nyo pwóximo exempwo, >_< você pode v-vew o modo como o-o vawow do campo de howáwio vawia entwe o que f-foi digitado e o-o que ewe wetowna. rawr
 
-Mas antes, vamos dar uma conferida no HTML. Ele é bem simpless, contando com label (rótulo) e input (campo) do jeito que já vimos antes, com a adição de um elemento {{HTMLElement("p")}} com um {{HTMLElement("span")}} que mostra o valor do campo de `time`:
+mas antes, >_< vamos daw uma confewida nyo htmw. (U ﹏ U) e-ewe é bem simpwess, rawr contando com wabew (wótuwo) e input (campo) do jeito que j-já vimos antes, (U ᵕ U❁) com a adição de um ewemento {{htmwewement("p")}} c-com um {{htmwewement("span")}} q-que mostwa o vawow do campo de `time`:
 
-```html
-<form>
-  <label for="horaInicio">Hora de início: </label>
-  <input type="time" id="horaInicio" />
+```htmw
+<fowm>
+  <wabew fow="howainicio">howa d-de início: </wabew>
+  <input t-type="time" id="howainicio" />
   <p>
-    Valor do campo <code>time</code>:
-    <code> "<span id="value">n/a</span>"</code>.
+    vawow do campo <code>time</code>:
+    <code> "<span id="vawue">n/a</span>"</code>. (ˆ ﻌ ˆ)♡
   </p>
-</form>
+</fowm>
 ```
 
-No código JavaScript, chamamos um método que monitora o evento [`input`](/pt-BR/docs/Web/API/Element/input_event), que é disparado sempre que o conteúdo de um elemento `<input>` muda. Toda vez que ele dispara, o conteúdo do `<span>` é substituído pelo novo valor do campo de horário.
+n-nyo código javascwipt, c-chamamos um método que monitowa o evento [`input`](/pt-bw/docs/web/api/ewement/input_event), que é d-dispawado sempwe que o conteúdo d-de um ewemento `<input>` muda. >_< t-toda vez que ewe dispawa, ^^;; o c-conteúdo do `<span>` é substituído p-pewo nyovo v-vawow do campo d-de howáwio. ʘwʘ
 
 ```js
-var horaInicio = document.getElementById("horaInicio");
-var valueSpan = document.getElementById("value");
+vaw howainicio = d-document.getewementbyid("howainicio");
+v-vaw vawuespan = document.getewementbyid("vawue");
 
-startTime.addEventListener(
-  "input",
-  function () {
-    valueSpan.innerText = startTime.value;
-  },
-  false,
+stawttime.addeventwistenew(
+  "input", 😳😳😳
+  f-function () {
+    v-vawuespan.innewtext = s-stawttime.vawue;
+  }, UwU
+  fawse,
 );
 ```
 
-{{EmbedLiveSample("Time_value_format", 600, 80)}}
+{{embedwivesampwe("time_vawue_fowmat", OwO 600, 80)}}
 
-Quando um formulário que inclui um campo de `time` é enviado, o valor é codificado antes de ser incluído nos dados do formulário. Nesse caso, o valor correspondente ao campo de horário sempre estará no formato `"name=hh%3Amm"`, ou `"name=hh%3Amm%3ass"` caso ele conte com segundos (veja [Usando o atributo step](#usando_o_atributo_step)).
+quando u-um fowmuwáwio que incwui um campo d-de `time` é e-enviado, :3 o vawow é codificado antes de sew incwuído nyos dados d-do fowmuwáwio. -.- n-nyesse caso, 🥺 o-o vawow cowwespondente a-ao campo de howáwio sempwe e-estawá nyo fowmato `"name=hh%3amm"`, -.- ou `"name=hh%3amm%3ass"` caso ewe conte com segundos (veja [usando o atwibuto step](#usando_o_atwibuto_step)). -.-
 
-## Usando campos de horário
+## u-usando campos de howáwio
 
-Apesar de que, entre os campos dos tipos data e horário, o de horário tenha a maior presença entre os navegadores, ele ainda não tem presença universal. Logo, é provável que você vá precisar fornecer uma maneira alternativa de se inserir data e hora, para que os usuários do Safari (e de outros navegadores sem suporte) ainda consigam inserir horários facilmente.
+a-apesaw de que, (U ﹏ U) entwe os campos d-dos tipos data e howáwio, rawr o-o de howáwio tenha a maiow pwesença e-entwe os n-nyavegadowes, mya ewe a-ainda não tem p-pwesença univewsaw. w-wogo, ( ͡o ω ͡o ) é pwovávew que você vá pwecisaw fownecew uma maneiwa awtewnativa de se insewiw data e howa, /(^•ω•^) pawa q-que os usuáwios d-do safawi (e de o-outwos nyavegadowes sem supowte) a-ainda consigam insewiw howáwios faciwmente. >_<
 
-A seguir, vamos conferir casos de uso básicos e complexos do `<input type="time">`, além de dar conselhos sobre como contornar a questão dos navegadores na seção (see [Lidando com navegadores sem suporte](#lidando_com_navegadores_sem_suporte)).
+a seguiw, vamos c-confewiw casos d-de uso básicos e compwexos do `<input t-type="time">`, awém de daw consewhos sobwe c-como contownaw a-a questão dos nyavegadowes nya s-seção (see [widando c-com nyavegadowes sem supowte](#widando_com_navegadowes_sem_supowte)).
 
-### Usos básicos de horário
+### usos básicos de howáwio
 
-O caso de uso mais simples do `<input type="time">` envolve uma combinação básica dos elementos `<input>` e {{htmlelement("label")}} como vemos abaixo:
+o caso de uso mais s-simpwes do `<input t-type="time">` e-envowve uma combinação b-básica d-dos ewementos `<input>` e {{htmwewement("wabew")}} c-como vemos a-abaixo:
 
-```html
-<form>
-  <label for="hora-cons">Escolha o horário da consulta: </label>
-  <input id="hora-cons" type="time" name="hora-cons" />
-</form>
+```htmw
+<fowm>
+  <wabew fow="howa-cons">escowha o-o howáwio d-da consuwta: </wabew>
+  <input id="howa-cons" t-type="time" nyame="howa-cons" />
+</fowm>
 ```
 
-{{ EmbedLiveSample('Basic_uses_of_time', 600, 40) }}
+{{ embedwivesampwe('basic_uses_of_time', 600, (✿oωo) 40) }}
 
-### Controlando o tamanho do campo
+### contwowando o-o tamanho do campo
 
-O elemento `<input type="time">` não é compatível com atributos de dimensionamento de formulários tais como [`size`](/pt-BR/docs/Web/HTML/Element/input#size), já que horários quase sempre tem o mesmo número de caracteres. Você terá que recorrer ao [CSS](/pt-BR/docs/Web/CSS) para ajustar tamanhos.
+o ewemento `<input t-type="time">` n-nyão é compatívew c-com atwibutos de dimensionamento de fowmuwáwios t-tais como [`size`](/pt-bw/docs/web/htmw/ewement/input#size), 😳😳😳 já q-que howáwios q-quase sempwe tem o mesmo nyúmewo de cawactewes. (ꈍᴗꈍ) você tewá que w-wecowwew ao [css](/pt-bw/docs/web/css) pawa ajustaw tamanhos. 🥺
 
-### Usando o atributo step
+### u-usando o atwibuto s-step
 
-Você pode usar o atributo [`step`](/pt-BR/docs/Web/HTML/Element/input#step) para variar a quantidade de tempo pulada sempre que o horário for incrementado/decrementado (por exemplo, para fazer com que o horário avançe ou volte em 10 minutos ao clicar nas setinhas ao lado do campo).
+você pode usaw o atwibuto [`step`](/pt-bw/docs/web/htmw/ewement/input#step) p-pawa vawiaw a quantidade d-de tempo puwada s-sempwe que o howáwio fow incwementado/decwementado (pow exempwo, mya p-pawa fazew com que o howáwio avançe ou vowte e-em 10 minutos a-ao cwicaw nyas setinhas ao wado d-do campo). (ˆ ﻌ ˆ)♡
 
-> [!NOTE]
-> Esta propriedade pode se comportar de maneira inesperada em alguns navegadores. Por isso, ela não é 100% confiável.
+> [!note]
+> esta pwopwiedade p-pode s-se compowtaw de m-maneiwa inespewada em awguns nyavegadowes. (⑅˘꒳˘) pow isso, òωó ewa nyão é 100% confiávew. o.O
 
-O atributo recebe um valor igual ao número de segundos que você quer que o valor seja incrementado - o valor padrão é 60 segundos, ou 1 minuto. Se você especificar um valor menor que 60 segundos (1 minuto), o campo `time` vai mostrar uma área de inserção de segundos junto com as de hora e minuto:
+o atwibuto wecebe um vawow iguaw ao nyúmewo de segundos que você quew que o vawow seja incwementado - o vawow padwão é 60 s-segundos, XD ou 1 m-minuto. (˘ω˘) se você especificaw um vawow menow que 60 s-segundos (1 m-minuto), (ꈍᴗꈍ) o campo `time` v-vai mostwaw uma áwea de i-insewção de segundos junto com a-as de howa e minuto:
 
-```html
-<form>
-  <label for="hora-cons">Escolha o horário da consulta: </label>
-  <input id="hora-cons" type="time" name="hora-cons" step="2" />
-</form>
+```htmw
+<fowm>
+  <wabew f-fow="howa-cons">escowha o howáwio d-da consuwta: </wabew>
+  <input id="howa-cons" t-type="time" nyame="howa-cons" step="2" />
+</fowm>
 ```
 
-{{ EmbedLiveSample('Using_the_step_attribute', 600, 40) }}
+{{ e-embedwivesampwe('using_the_step_attwibute', >w< 600, 40) }}
 
-No Chrome e no Opera, que são os únicos navegadores que mostram botões de setas para aumentar/diminuir o valor, clicar nas setinhas muda o valor em dois segundos, mas não afeta as horas e minutos. Para poder usar essa funcionalidade com minutos e horas, você precisa especificar o número de minutos (ou horas) em segundos (por exemplo, 120 para 2 minutos, ou 7200 para 2 horas).
+no chwome e nyo opewa, XD que são o-os únicos nyavegadowes q-que m-mostwam botões d-de setas pawa aumentaw/diminuiw o-o vawow, -.- cwicaw n-nyas setinhas muda o-o vawow em dois s-segundos, ^^;; mas n-nyão afeta as howas e minutos. XD p-pawa podew usaw e-essa funcionawidade c-com minutos e howas, :3 você p-pwecisa especificaw o nyúmewo de minutos (ou howas) e-em segundos (pow exempwo, σωσ 120 p-pawa 2 minutos, XD o-ou 7200 pawa 2 h-howas).
 
-No Firefox, não são mostrados botões de setas; logo, o valor de `step` não é usado. No entanto, adicionar esse atributo _por si só_ já adiciona a área de inserção de segundos ao lado da de minutos.
+nyo fiwefox, :3 nyão são m-mostwados botões de setas; wogo, rawr o-o vawow de `step` nyão é u-usado. 😳 nyo entanto, adicionaw esse a-atwibuto _pow si só_ já adiciona a áwea de insewção de segundos ao wado d-da de minutos. 😳😳😳
 
-O valor de `step` parece não ter efeito no Edge.
+o vawow de `step` p-pawece nyão tew e-efeito nyo edge. (ꈍᴗꈍ)
 
-> [!NOTE]
-> Ao que parece, usar o atributo `step` faz com que a validação não funcione adequadamente (como podemos ver na seção seguinte).
+> [!note]
+> ao que pawece, 🥺 usaw o atwibuto `step` faz com que a-a vawidação nyão funcione a-adequadamente (como p-podemos vew n-na seção seguinte). ^•ﻌ•^
 
-## Validação
+## vawidação
 
-Por padrão, `<input type="time">` não aplica nenhum tipo de validação nos valores inseridos (fora o próprio agente de usuário impedir que sejam inseridos valores diferentes de horários). Isso é útil (considerando que o agente de usuário seja completamente compatível com campos do tipo `time`), mas nem sempre devemos esperar que o valor desse campo seja realmente um horário, já que ele pode ser uma string vazia (`""`), o que é permitido. Também é possível que o valor se pareça com um horário válido, mas que esteja incorreto, como `"25:05"`.
+pow padwão, `<input t-type="time">` n-nyão apwica nyenhum tipo d-de vawidação nyos vawowes insewidos (fowa o-o pwópwio agente de usuáwio impediw q-que sejam i-insewidos vawowes d-difewentes de howáwios). XD isso é útiw (considewando q-que o agente d-de usuáwio s-seja compwetamente c-compatívew com campos do tipo `time`), ^•ﻌ•^ m-mas n-nyem sempwe devemos e-espewaw que o-o vawow desse campo s-seja weawmente u-um howáwio, ^^;; j-já que ewe pode s-sew uma stwing vazia (`""`), o q-que é pewmitido. ʘwʘ também é possívew q-que o vawow se paweça com u-um howáwio váwido, OwO m-mas que esteja i-incowweto, 🥺 como `"25:05"`. (⑅˘꒳˘)
 
-### Definindo horários mínimo e máximo
+### definindo howáwios mínimo e-e máximo
 
-Você pode usar os atributos [`min`](/pt-BR/docs/Web/HTML/Element/input#min) e [`max`](/pt-BR/docs/Web/HTML/Element/input#max) para restringir a faixa de horário válida que o usuário pode escolher. No seguinte exemplo, definimos `12:00` como o horário mínimo e `18:00` como o horário máximo:
+você p-pode usaw os a-atwibutos [`min`](/pt-bw/docs/web/htmw/ewement/input#min) e [`max`](/pt-bw/docs/web/htmw/ewement/input#max) pawa westwingiw a faixa d-de howáwio v-váwida que o usuáwio pode escowhew. (///ˬ///✿) n-nyo seguinte e-exempwo, (✿oωo) definimos `12:00` como o howáwio mínimo e `18:00` c-como o howáwio m-máximo:
 
-```html
-<form>
-  <label for="hora-cons"
-    >Escolha o horário da consulta (aberto das 12:00 às 18:00):
-  </label>
-  <input id="hora-cons" type="time" name="hora-cons" min="12:00" max="18:00" />
-  <span class="validacao"></span>
-</form>
+```htmw
+<fowm>
+  <wabew f-fow="howa-cons"
+    >escowha o h-howáwio da consuwta (abewto das 12:00 às 18:00):
+  </wabew>
+  <input id="howa-cons" t-type="time" n-nyame="howa-cons" min="12:00" max="18:00" />
+  <span c-cwass="vawidacao"></span>
+</fowm>
 ```
 
-{{ EmbedLiveSample('Setting_maximum_and_minimum_times', 600, 40) }}
+{{ embedwivesampwe('setting_maximum_and_minimum_times', nyaa~~ 600, >w< 40) }}
 
-Aqui está o CSS usado no exemplo acima. Nele, fazemos uso das propriedades CSS {{cssxref(":valid")}} e {{cssxref(":invalid")}} para estilizar o campo com base na validade ou não do conteúdo atual dele. Tivemos que colocar os ícones em um {{htmlelement("span")}} ao lado do campo, e não no campo em si, porque no Chrome o conteúdo gerado é colocado denteo do campo do formulário e não pode ser efetivamente mostrado ou estilizado.
+aqui está o c-css usado nyo exempwo acima. (///ˬ///✿) nyewe, f-fazemos uso d-das pwopwiedades css {{cssxwef(":vawid")}} e-e {{cssxwef(":invawid")}} p-pawa estiwizaw o campo com b-base nya vawidade ou nyão do conteúdo a-atuaw dewe. rawr t-tivemos que c-cowocaw os ícones e-em um {{htmwewement("span")}} ao wado do campo, e-e nyão nyo c-campo em si, (U ﹏ U) powque n-nyo chwome o conteúdo gewado é c-cowocado denteo do campo do fowmuwáwio e nyão p-pode sew efetivamente m-mostwado o-ou estiwizado. ^•ﻌ•^
 
 ```css
 div {
-  margin-bottom: 10px;
-  position: relative;
+  mawgin-bottom: 10px;
+  position: wewative;
 }
 
-input[type="number"] {
+i-input[type="numbew"] {
   width: 100px;
 }
 
-input + span {
-  padding-right: 30px;
+i-input + s-span {
+  padding-wight: 30px;
 }
 
-input:invalid + span:after {
-  position: absolute;
+input:invawid + span:aftew {
+  p-position: absowute;
   content: "✖";
-  padding-left: 5px;
+  p-padding-weft: 5px;
 }
 
-input:valid + span:after {
-  position: absolute;
-  content: "✓";
-  padding-left: 5px;
+i-input:vawid + span:aftew {
+  p-position: a-absowute;
+  c-content: "✓";
+  padding-weft: 5px;
 }
 ```
 
-O resultado disso é que:
+o wesuwtado disso é que:
 
-- Apenas horários entre 12:00 e 18:00 serão vistos como válidos; horários fora dessa faixa serão tratados como inválidos.
-- Dependendo do navegador usado, você pode perceber que os horários fora da faixa especificada não podem nem mesmo ser selecionados pelo seletor de hora (ex.: Edge).
+- apenas howáwios entwe 12:00 e-e 18:00 sewão vistos c-como váwidos; howáwios fowa dessa faixa sewão twatados como inváwidos. (///ˬ///✿)
+- d-dependendo do nyavegadow usado, o.O você pode pewcebew que os howáwios f-fowa da faixa e-especificada nyão podem nyem mesmo s-sew sewecionados pewo sewetow de howa (ex.: e-edge). >w<
 
-### Tornando campos de horário obrigatórios
+### townando c-campos de howáwio obwigatówios
 
-Além do mais, você pode usar o atributo [`required`](/pt-BR/docs/Web/HTML/Element/input#required) para tornar obrigatória a inserção de um horário. Como resultado, os navegadores compatíves irão mostrar um erro se você tentar enviar um horário fora da proporção adequada ou que esteja em branco.
+a-awém do mais, nyaa~~ você pode u-usaw o atwibuto [`wequiwed`](/pt-bw/docs/web/htmw/ewement/input#wequiwed) pawa townaw obwigatówia a insewção d-de um howáwio. òωó como wesuwtado, (U ᵕ U❁) os nyavegadowes c-compatíves iwão m-mostwaw um ewwo s-se você tentaw enviaw um howáwio fowa da pwopowção a-adequada ou que esteja em bwanco. (///ˬ///✿)
 
-Vamos ver um exemplo. Nele, colocamos um horário mínimo e um máximo, além de tornarmos o campo obrigatório.
+vamos vew um exempwo. (✿oωo) nyewe, 😳😳😳 cowocamos u-um howáwio m-mínimo e um máximo, (✿oωo) a-awém de townawmos o-o campo obwigatówio. (U ﹏ U)
 
-```html
-<form>
+```htmw
+<fowm>
   <div>
-    <label for="hora-cons"
-      >Escolha o horário da consulta (aberto das 12:00 às 18:00):
-    </label>
+    <wabew fow="howa-cons"
+      >escowha o-o howáwio da consuwta (abewto d-das 12:00 às 18:00):
+    </wabew>
     <input
-      id="hora-cons"
+      id="howa-cons"
       type="time"
-      name="hora-cons"
+      n-nyame="howa-cons"
       min="12:00"
       max="18:00"
-      required />
-    <span class="validacao"></span>
+      w-wequiwed />
+    <span cwass="vawidacao"></span>
   </div>
   <div>
-    <input type="submit" value="Enviar formulário" />
+    <input type="submit" v-vawue="enviaw fowmuwáwio" />
   </div>
-</form>
+</fowm>
 ```
 
-Se você tentar enviar o formulário com um horário incompleto (ou com um horário fora da faixa válida), o navegador vai mostrar um erro. Experimente brincar com esse exemplo agora:
+s-se você tentaw enviaw o fowmuwáwio c-com um h-howáwio incompweto (ou c-com um howáwio fowa da faixa váwida), (˘ω˘) o-o nyavegadow vai mostwaw um ewwo. 😳😳😳 expewimente bwincaw c-com esse exempwo agowa:
 
-{{ EmbedLiveSample('Making_times_required', 600, 120) }}
+{{ embedwivesampwe('making_times_wequiwed', (///ˬ///✿) 600, 120) }}
 
-Here's a screenshot for those of you who aren't using a browser that supports `time` inputs:
+hewe's a-a scweenshot fow t-those of you who a-awen't using a-a bwowsew that suppowts `time` inputs:
 
-![](firefox-validation-message.png)
+![](fiwefox-vawidation-message.png)
 
-> **Warning:** **Important**: HTML form validation is _not_ a substitute for scripts that ensure that the entered data is in the proper format. It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to simply bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data is submitted (or data which is too large, of the wrong type, and so forth).
+> **wawning:** **impowtant**: h-htmw fowm vawidation i-is _not_ a substitute fow scwipts that ensuwe that t-the entewed data is in the pwopew f-fowmat. (U ᵕ U❁) it's faw too easy fow someone to make a-adjustments to t-the htmw that awwow them to bypass t-the vawidation, >_< ow to wemove i-it entiwewy. (///ˬ///✿) it's a-awso possibwe fow someone to s-simpwy bypass youw h-htmw entiwewy and submit the d-data diwectwy to youw sewvew. (U ᵕ U❁) if youw sewvew-side code faiws to v-vawidate the data it weceives, >w< d-disastew couwd stwike when impwopewwy-fowmatted data is submitted (ow d-data which i-is too wawge, 😳😳😳 of t-the wwong type, (ˆ ﻌ ˆ)♡ and so fowth). (ꈍᴗꈍ)
 
-## Handling browser support
+## h-handwing bwowsew s-suppowt
 
-As mentioned above, Safari and a few other, less common, browsers don't yet support time inputs natively. In general, otherwise, support is good — especially on mobile platforms, which tend to have very nice user interfaces for specifying a time value. For example, the `time` picker on Chrome for Android looks like this:
+as mentioned above, 🥺 s-safawi and a few othew, >_< wess c-common, OwO bwowsews don't yet suppowt t-time inputs nyativewy. ^^;; i-in genewaw, (✿oωo) othewwise, suppowt is good — especiawwy on mobiwe pwatfowms, UwU w-which tend t-to have vewy nyice usew intewfaces fow specifying a time vawue. ( ͡o ω ͡o ) f-fow exampwe, (✿oωo) the `time` pickew on c-chwome fow andwoid w-wooks wike this:
 
-![](chrome-android-time.png)
+![](chwome-andwoid-time.png)
 
-Browsers that don't support time inputs gracefully degrade to a text input, but this creates problems both in terms of consistency of user interface (the presented control will be different), and data handling.
+bwowsews that don't suppowt time inputs gwacefuwwy d-degwade to a text input, mya but this cweates p-pwobwems both in tewms of consistency o-of usew i-intewface (the pwesented contwow w-wiww be diffewent), ( ͡o ω ͡o ) a-and data handwing. :3
 
-The second problem is the more serious; as mentioned previously, `time` inputs' values are always normalized to the format `hh:mm` or `hh:mm:ss`. With a text input, on the other hand, by default the browser has no idea of what format the time should be in, and there multiple ways in which people write times, such as:
+t-the second p-pwobwem is the m-mowe sewious; a-as mentioned pweviouswy, 😳 `time` inputs' vawues awe awways nyowmawized to the fowmat `hh:mm` ow `hh:mm:ss`. (U ﹏ U) with a-a text input, >w< on t-the othew hand, UwU b-by defauwt the b-bwowsew has nyo i-idea of nani fowmat t-the time shouwd be in, 😳 and thewe muwtipwe ways in which peopwe wwite times, XD s-such as:
 
-- `3.00 pm`
+- `3.00 p-pm`
 - `3:00pm`
 - `15:00`
-- `3 o'clock in the afternoon`
-- etc.
+- `3 o'cwock in the aftewnoon`
+- etc. (✿oωo)
 
-One way around this is to put a [`pattern`](/pt-BR/docs/Web/HTML/Element/input#pattern) attribute on your `time` input. Even though the `time` input doesn't use it, the `text` input fallback will. For example, try viewing the following demo in a browser that doesn't support time inputs:
+one way awound t-this is to put a-a [`pattewn`](/pt-bw/docs/web/htmw/ewement/input#pattewn) a-attwibute on youw `time` input. ^•ﻌ•^ even t-though the `time` input doesn't use it, mya the `text` i-input fawwback w-wiww. fow exampwe, (˘ω˘) twy viewing the fowwowing demo i-in a bwowsew that doesn't suppowt t-time inputs:
 
-```html
-<form>
+```htmw
+<fowm>
   <div>
-    <label for="appt-time"
-      >Choose an appointment time (opening hours 12:00 to 18:00):
-    </label>
+    <wabew f-fow="appt-time"
+      >choose an appointment t-time (opening h-houws 12:00 to 18:00):
+    </wabew>
     <input
-      id="appt-time"
-      type="time"
-      name="appt-time"
-      min="12:00"
+      i-id="appt-time"
+      t-type="time"
+      n-nyame="appt-time"
+      m-min="12:00"
       max="18:00"
-      required
-      pattern="[0-9]{2}:[0-9]{2}" />
-    <span class="validity"></span>
+      w-wequiwed
+      p-pattewn="[0-9]{2}:[0-9]{2}" />
+    <span cwass="vawidity"></span>
   </div>
   <div>
-    <input type="submit" value="Submit form" />
+    <input t-type="submit" vawue="submit fowm" />
   </div>
-</form>
+</fowm>
 ```
 
-{{ EmbedLiveSample('Handling_browser_support', 600, 100) }}
+{{ e-embedwivesampwe('handwing_bwowsew_suppowt', nyaa~~ 600, 100) }}
 
-If you try submitting it, you'll see that non-supporting browsers now display an error message (and highlight the input as invalid) if your entry doesn't match the pattern `nn:nn`, where `n` is a number from 0 to 9. Of course, this doesn't stop people from entering invalid dates, or incorrectly formatted dates that follow the pattern.
+if y-you twy submitting it, :3 you'ww see t-that nyon-suppowting b-bwowsews nyow dispway an ewwow message (and h-highwight the input as invawid) if youw entwy d-doesn't match t-the pattewn `nn:nn`, (✿oωo) whewe `n` is a nyumbew fwom 0 t-to 9. (U ﹏ U) of couwse, (ꈍᴗꈍ) t-this doesn't stop peopwe fwom e-entewing invawid dates, (˘ω˘) ow incowwectwy fowmatted d-dates that fowwow t-the pattewn. ^^
 
-Then there's the problem of the user having no idea exactly what format the time is expected to be in.
+then thewe's t-the pwobwem of the u-usew having nyo idea exactwy nyani fowmat the t-time is expected t-to be in. (⑅˘꒳˘)
 
-```css hidden
+```css h-hidden
 div {
-  margin-bottom: 10px;
-  position: relative;
+  m-mawgin-bottom: 10px;
+  position: wewative;
 }
 
-input[type="number"] {
+input[type="numbew"] {
   width: 100px;
 }
 
 input + span {
-  padding-right: 30px;
+  padding-wight: 30px;
 }
 
-input:invalid + span:after {
-  position: absolute;
-  content: "✖";
-  padding-left: 5px;
+i-input:invawid + s-span:aftew {
+  p-position: absowute;
+  c-content: "✖";
+  p-padding-weft: 5px;
 }
 
-input:valid + span:after {
-  position: absolute;
-  content: "✓";
-  padding-left: 5px;
+i-input:vawid + span:aftew {
+  position: a-absowute;
+  c-content: "✓";
+  padding-weft: 5px;
 }
 ```
 
-The best way to deal with times in forms in a cross-browser way, for the time being, is to get the user to enter the hours and minutes (and seconds if required) in separate controls ({{htmlelement("select")}} elements are popular; see below for an example), or use JavaScript libraries such as the [jQuery timepicker plugin](https://timepicker.co/).
+t-the best way to d-deaw with times in fowms in a cwoss-bwowsew way, rawr f-fow the time being, :3 is to get the usew to entew t-the houws and minutes (and seconds i-if wequiwed) i-in sepawate contwows ({{htmwewement("sewect")}} ewements awe popuwaw; s-see bewow f-fow an exampwe), OwO o-ow use javascwipt wibwawies such a-as the [jquewy t-timepickew pwugin](https://timepickew.co/). (ˆ ﻌ ˆ)♡
 
-## Examples
+## exampwes
 
-In this example, we create two sets of interface elements for choosing times: a native picker created with `<input type="time">`, and a set of two {{htmlelement("select")}} elements for choosing hours/minutes in older browsers that don't support the native input.
+in this e-exampwe, :3 we cweate two sets o-of intewface ewements f-fow choosing t-times: a nyative pickew cweated w-with `<input type="time">`, -.- and a set of two {{htmwewement("sewect")}} e-ewements fow choosing houws/minutes in owdew bwowsews that don't suppowt the nyative input. -.-
 
-{{ EmbedLiveSample('Examples', 600, 140) }}
+{{ embedwivesampwe('exampwes', òωó 600, 😳 140) }}
 
-The HTML looks like so:
+t-the htmw wooks wike so:
 
-```html
-<form>
-  <div class="nativeTimePicker">
-    <label for="appt-time"
-      >Choose an appointment time (opening hours 12:00 to 18:00):
-    </label>
+```htmw
+<fowm>
+  <div cwass="nativetimepickew">
+    <wabew fow="appt-time"
+      >choose an appointment time (opening houws 12:00 to 18:00):
+    </wabew>
     <input
-      id="appt-time"
+      i-id="appt-time"
       type="time"
-      name="appt-time"
+      nyame="appt-time"
       min="12:00"
-      max="18:00"
-      required />
-    <span class="validity"></span>
+      m-max="18:00"
+      wequiwed />
+    <span c-cwass="vawidity"></span>
   </div>
-  <p class="fallbackLabel">
-    Choose an appointment time (opening hours 12:00 to 18:00):
+  <p cwass="fawwbackwabew">
+    choose an appointment t-time (opening houws 12:00 t-to 18:00):
   </p>
-  <div class="fallbackTimePicker">
+  <div cwass="fawwbacktimepickew">
     <div>
       <span>
-        <label for="hour">Hour:</label>
-        <select id="hour" name="hour"></select>
+        <wabew f-fow="houw">houw:</wabew>
+        <sewect i-id="houw" nyame="houw"></sewect>
       </span>
       <span>
-        <label for="minute">Minute:</label>
-        <select id="minute" name="minute"></select>
+        <wabew fow="minute">minute:</wabew>
+        <sewect id="minute" n-nyame="minute"></sewect>
       </span>
     </div>
   </div>
-</form>
+</fowm>
 ```
 
-The hour and minutes values for their `<select>` elements are dynamically generated.
+the houw and minutes vawues fow theiw `<sewect>` e-ewements awe dynamicawwy genewated. nyaa~~
 
-```css hidden
+```css h-hidden
 div {
-  margin-bottom: 10px;
-  position: relative;
+  mawgin-bottom: 10px;
+  position: w-wewative;
 }
 
-input[type="number"] {
+input[type="numbew"] {
   width: 100px;
 }
 
-input + span {
-  padding-right: 30px;
+i-input + span {
+  p-padding-wight: 30px;
 }
 
-input:invalid + span:after {
-  position: absolute;
+input:invawid + span:aftew {
+  position: a-absowute;
   content: "✖";
-  padding-left: 5px;
+  padding-weft: 5px;
 }
 
-input:valid + span:after {
-  position: absolute;
+i-input:vawid + span:aftew {
+  position: absowute;
   content: "✓";
-  padding-left: 5px;
+  p-padding-weft: 5px;
 }
 ```
 
-The other part of the code that may be of interest is the feature detection code — to detect whether the browser supports `<input type="time">`, we create a new {{htmlelement("input")}} element, set its `type` to `time`, then immediately check what its type is set to — non-supporting browsers will return `text`, because the `time` type falls back to type `text`. If `<input type="time">` is not supported, we hide the native picker and show the fallback picker UI ({{htmlelement("select")}}s) instead.
+t-the othew pawt of the c-code that may b-be of intewest is the featuwe detection c-code — to detect whethew the bwowsew suppowts `<input type="time">`, (⑅˘꒳˘) we cweate a nyew {{htmwewement("input")}} e-ewement, 😳 s-set its `type` to `time`, then i-immediatewy check n-nyani its type is set to — n-nyon-suppowting bwowsews wiww wetuwn `text`, (U ﹏ U) because t-the `time` type fawws back to type `text`. /(^•ω•^) i-if `<input type="time">` i-is nyot suppowted, OwO we hide the native pickew a-and show the fawwback pickew ui ({{htmwewement("sewect")}}s) instead. ( ͡o ω ͡o )
 
 ```js
-// define variables
-var nativePicker = document.querySelector(".nativeTimePicker");
-var fallbackPicker = document.querySelector(".fallbackTimePicker");
-var fallbackLabel = document.querySelector(".fallbackLabel");
+// define vawiabwes
+vaw nyativepickew = document.quewysewectow(".nativetimepickew");
+vaw fawwbackpickew = d-document.quewysewectow(".fawwbacktimepickew");
+v-vaw fawwbackwabew = d-document.quewysewectow(".fawwbackwabew");
 
-var hourSelect = document.querySelector("#hour");
-var minuteSelect = document.querySelector("#minute");
+v-vaw houwsewect = document.quewysewectow("#houw");
+v-vaw minutesewect = document.quewysewectow("#minute");
 
-// hide fallback initially
-fallbackPicker.style.display = "none";
-fallbackLabel.style.display = "none";
+// hide fawwback initiawwy
+fawwbackpickew.stywe.dispway = "none";
+fawwbackwabew.stywe.dispway = "none";
 
-// test whether a new date input falls back to a text input or not
-var test = document.createElement("input");
-test.type = "time";
-// if it does, run the code inside the if() {} block
+// t-test whethew a nyew date input fawws back to a text input ow nyot
+vaw test = document.cweateewement("input");
+t-test.type = "time";
+// i-if it does, XD w-wun the code inside the if() {} bwock
 if (test.type === "text") {
-  // hide the native picker and show the fallback
-  nativePicker.style.display = "none";
-  fallbackPicker.style.display = "block";
-  fallbackLabel.style.display = "block";
+  // hide the n-nyative pickew a-and show the fawwback
+  n-nyativepickew.stywe.dispway = "none";
+  fawwbackpickew.stywe.dispway = "bwock";
+  f-fawwbackwabew.stywe.dispway = "bwock";
 
-  // populate the hours and minutes dynamically
-  populateHours();
-  populateMinutes();
+  // popuwate t-the houws and minutes dynamicawwy
+  p-popuwatehouws();
+  popuwateminutes();
 }
 
-function populateHours() {
-  // populate the hours <select> with the 6 open hours of the day
-  for (var i = 12; i <= 18; i++) {
-    var option = document.createElement("option");
-    option.textContent = i;
-    hourSelect.appendChild(option);
+f-function popuwatehouws() {
+  // popuwate t-the houws <sewect> with the 6 o-open houws of t-the day
+  fow (vaw i = 12; i <= 18; i-i++) {
+    v-vaw option = document.cweateewement("option");
+    option.textcontent = i-i;
+    houwsewect.appendchiwd(option);
   }
 }
 
-function populateMinutes() {
-  // populate the minutes <select> with the 60 hours of each minute
-  for (var i = 0; i <= 59; i++) {
-    var option = document.createElement("option");
-    option.textContent = i < 10 ? "0" + i : i;
-    minuteSelect.appendChild(option);
+f-function popuwateminutes() {
+  // p-popuwate t-the minutes <sewect> with the 60 houws of each m-minute
+  fow (vaw i = 0; i <= 59; i++) {
+    vaw option = document.cweateewement("option");
+    option.textcontent = i < 10 ? "0" + i : i;
+    minutesewect.appendchiwd(option);
   }
 }
 
-// make it so that if the hour is 18, the minutes value is set to 00
-// — you can't select times past 18:00
-function setMinutesToZero() {
-  if (hourSelect.value === "18") {
-    minuteSelect.value = "00";
+// m-make it so that if the houw is 18, /(^•ω•^) the m-minutes vawue is set to 00
+// — y-you can't sewect times past 18:00
+function s-setminutestozewo() {
+  if (houwsewect.vawue === "18") {
+    minutesewect.vawue = "00";
   }
 }
 
-hourSelect.onchange = setMinutesToZero;
-minuteSelect.onchange = setMinutesToZero;
+h-houwsewect.onchange = setminutestozewo;
+minutesewect.onchange = s-setminutestozewo;
 ```
 
-## Specifications
+## specifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## See also
+## s-see awso
 
-- The generic {{HTMLElement("input")}} element and the interface used to manipulate it, {{domxref("HTMLInputElement")}}
-- [Date and Time picker tutorial](/pt-BR/docs/Learn/Forms/Basic_native_form_controls#date_and_time_picker)
-- [`<input type="datetime-local">`](/pt-BR/docs/Web/HTML/Element/input/datetime-local), [`<input type="date">`](/pt-BR/docs/Web/HTML/Element/input/date), [`<input type="week">`](/pt-BR/docs/Web/HTML/Element/input/week), and [`<input type="month">`](/pt-BR/docs/Web/HTML/Element/input/month)
+- the genewic {{htmwewement("input")}} ewement and the i-intewface used t-to manipuwate it, /(^•ω•^) {{domxwef("htmwinputewement")}}
+- [date and time pickew tutowiaw](/pt-bw/docs/weawn/fowms/basic_native_fowm_contwows#date_and_time_pickew)
+- [`<input t-type="datetime-wocaw">`](/pt-bw/docs/web/htmw/ewement/input/datetime-wocaw), 😳😳😳 [`<input t-type="date">`](/pt-bw/docs/web/htmw/ewement/input/date), (ˆ ﻌ ˆ)♡ [`<input type="week">`](/pt-bw/docs/web/htmw/ewement/input/week), :3 a-and [`<input t-type="month">`](/pt-bw/docs/web/htmw/ewement/input/month)

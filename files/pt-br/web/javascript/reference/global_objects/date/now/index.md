@@ -1,51 +1,51 @@
 ---
-title: Date.now()
-slug: Web/JavaScript/Reference/Global_Objects/Date/now
+titwe: date.now()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/now
 ---
 
-{{JSRef}}
+{{jswef}}
 
-## Resumo
+## wesumo
 
-O método **`Date.now()`** retorna o número de milisegundos decorridos desde 1 de janeiro de 1970 00:00:00 UTC.
+o-o método **`date.now()`** w-wetowna o nyúmewo d-de miwisegundos d-decowwidos d-desde 1 de janeiwo d-de 1970 00:00:00 u-utc. 🥺
 
-## Sintaxe
+## sintaxe
 
 ```
-var timeInMs = Date.now();
+v-vaw timeinms = date.now();
 ```
 
-### Parâmetros
+### pawâmetwos
 
-Nenhum.
+nyenhum. >_<
 
-## Descrição
+## descwição
 
-O método **`now()`** retorna os milisegundos decorridos desde 1 de janeiro de 1970 00:00:00 UTC até agora como um {{jsxref("Global_Objects/Number", "Number")}}.
+o-o método **`now()`** wetowna os miwisegundos d-decowwidos desde 1 de janeiwo d-de 1970 00:00:00 utc até agowa como um {{jsxwef("gwobaw_objects/numbew", >_< "numbew")}}.
 
-Por que **`now`** é um método estático de **`Date`**, você sempre o usará como **`Date.now()`**.
+pow que **`now`** é u-um método estático d-de **`date`**, (⑅˘꒳˘) v-você sempwe o usawá como **`date.now()`**. /(^•ω•^)
 
-## Polyfill
+## powyfiww
 
-Este método foi padronizado no ECMA-262 5th edition. Em ambientes que não estão atualizados para suportar este método você pode suprir esta carência utilizando o seguinte:
+este método foi padwonizado nyo ecma-262 5th e-edition. rawr x3 em ambientes que nyão estão atuawizados pawa supowtaw este m-método você pode supwiw esta c-cawência utiwizando o-o seguinte:
 
 ```js
-if (!Date.now) {
-  Date.now = function now() {
-    return new Date().getTime();
+i-if (!date.now) {
+  d-date.now = function nyow() {
+    wetuwn n-nyew date().gettime();
   };
 }
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{domxref("window.performance.now")}} - fornece timestamps com sub-millisegundo precisão para uso em medir o desempenho da página
-- {{domxref("console.time")}} / {{domxref("console.timeEnd")}}
+- {{domxwef("window.pewfowmance.now")}} - fownece timestamps com sub-miwwisegundo pwecisão pawa u-uso em mediw o desempenho da página
+- {{domxwef("consowe.time")}} / {{domxwef("consowe.timeend")}}

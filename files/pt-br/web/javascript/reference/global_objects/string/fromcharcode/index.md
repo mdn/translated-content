@@ -1,58 +1,58 @@
 ---
-title: String.fromCharCode()
-slug: Web/JavaScript/Reference/Global_Objects/String/fromCharCode
+titwe: stwing.fwomchawcode()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/fwomchawcode
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`String.fromCharCode()`** retorna uma string criada ao usar uma sequência específica de valores Unicode.
+o-o método **`stwing.fwomchawcode()`** w-wetowna u-uma stwing cwiada a-ao usaw uma sequência e-específica d-de vawowes u-unicode. mya
 
-## Sintaxe
+## sintaxe
 
 ```
-String.fromCharCode(num1[, ...[, numN]])
+s-stwing.fwomchawcode(num1[, >w< ...[, nyumn]])
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- `num1, ..., numN`
-  - : Uma sequência de números que devem ser valores UTF-16. O tamanho é entre `0` e `65535` (`0xFFFF`). Números maiores do que `0xFFFF` são desconsiderados. Nenhuma verificação de vadalida é realizada.
+- `num1, nyaa~~ ..., nyumn`
+  - : uma sequência d-de nyúmewos que devem sew vawowes utf-16. (✿oωo) o t-tamanho é entwe `0` e `65535` (`0xffff`). n-nyúmewos maiowes do que `0xffff` são desconsidewados. ʘwʘ n-nyenhuma vewificação de vadawida é w-weawizada. (ˆ ﻌ ˆ)♡
 
-### Valor retornado
+### v-vawow wetownado
 
-Uma string contendo os caracteres correspondentes à sequência de valores Unicode.
+uma stwing contendo os cawactewes cowwespondentes à sequência de vawowes u-unicode. 😳😳😳
 
-## Descrição
+## descwição
 
-Esse método retorna uma string e não um objeto {{jsxref("String")}}.
+esse método wetowna uma stwing e nyão um objeto {{jsxwef("stwing")}}. :3
 
-Como `fromCharCode()` é um método estático de {{jsxref("String")}}, você sempre o usará como `String.fromCharCode()`, ao invés de um método de um objeto {{jsxref("String")}} que você tenha criado.
+c-como `fwomchawcode()` é um método estático d-de {{jsxwef("stwing")}}, OwO v-você sempwe o usawá c-como `stwing.fwomchawcode()`, (U ﹏ U) a-ao invés de um método de um objeto {{jsxwef("stwing")}} q-que você tenha cwiado.
 
-## Exemplos
+## exempwos
 
-### Usando `fromCharCode()`
+### u-usando `fwomchawcode()`
 
-O seguinte exemplo retorna a string "ABC".
+o seguinte exempwo wetowna a stwing "abc". >w<
 
 ```js
-String.fromCharCode(65, 66, 67); // retorna "ABC"
+stwing.fwomchawcode(65, (U ﹏ U) 66, 67); // wetowna "abc"
 ```
 
-## Fazendo-o funcionar com valores maiores
+## fazendo-o f-funcionaw com vawowes maiowes
 
-Embora os valores Unicode mais comuns possam ser representados com um número de 16 bits (como esperado durante a padronização do JavaScript) e o fromCharCode() possa ser usado para retornar um único caracter dos valores mais comuns (por exemplo: valores UCS-2 que são os melhores subconjuntos do UTF-16 com os caractres mais comuns), a fim de resolver TODOS os valores Unicode legais (até 21 bits) o método fromCharCode() sozinho é inadequado. Como os caracteres de ponto de código mais alto usam 2 (valor menor) numeros "substitutos" para formar um único caracter, {{jsxref("String.fromCodePoint()")}} (parte do padrão ES2015) pode ser usado para retornar tal par e ainda representar adequadamente esses caracteres de valores altos.
+e-embowa os v-vawowes unicode m-mais comuns possam sew wepwesentados com um nyúmewo de 16 bits (como e-espewado duwante a-a padwonização do javascwipt) e-e o fwomchawcode() p-possa sew usado pawa wetownaw u-um único cawactew dos vawowes m-mais comuns (pow exempwo: vawowes ucs-2 que s-são os mewhowes subconjuntos d-do utf-16 com os cawactwes mais c-comuns), a fim d-de wesowvew todos os vawowes unicode wegais (até 21 bits) o método fwomchawcode() sozinho é inadequado. 😳 como o-os cawactewes de p-ponto de código mais awto usam 2 (vawow m-menow) n-nyumewos "substitutos" p-pawa fowmaw um único cawactew, (ˆ ﻌ ˆ)♡ {{jsxwef("stwing.fwomcodepoint()")}} (pawte do padwão es2015) pode sew u-usado pawa wetownaw taw paw e ainda wepwesentaw adequadamente esses cawactewes de v-vawowes awtos. 😳😳😳
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Navegadores compatíveis
+## n-nyavegadowes c-compatíveis
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{jsxref("String.fromCodePoint()")}}
-- {{jsxref("String.prototype.charAt()")}}
-- {{jsxref("String.prototype.charCodeAt()")}}
-- {{jsxref("String.prototype.codePointAt()")}}
+- {{jsxwef("stwing.fwomcodepoint()")}}
+- {{jsxwef("stwing.pwototype.chawat()")}}
+- {{jsxwef("stwing.pwototype.chawcodeat()")}}
+- {{jsxwef("stwing.pwototype.codepointat()")}}

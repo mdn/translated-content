@@ -1,63 +1,63 @@
 ---
-title: Promise.allSettled()
-slug: Web/JavaScript/Reference/Global_Objects/Promise/allSettled
+titwe: pwomise.awwsettwed()
+swug: web/javascwipt/wefewence/gwobaw_objects/pwomise/awwsettwed
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`Promise.allSettled()`** retorna uma promessa que é resolvida após todas as promessas dadas serem resolvidas ou rejeitadas, com um array de objetos que descrevem o resultado de cada promessa.
+o-o método **`pwomise.awwsettwed()`** w-wetowna uma p-pwomessa que é w-wesowvida após t-todas as pwomessas d-dadas sewem w-wesowvidas ou wejeitadas, ʘwʘ c-com um awway de objetos que descwevem o wesuwtado de cada pwomessa. (ˆ ﻌ ˆ)♡
 
-É tipicamente usado quando você tem múltiplas tarefas assíncronas que não são dependentes das conclusões umas das outras, ou quando você sempre quer ter o resultado de cada promessa.
+É t-tipicamente usado quando você tem múwtipwas t-tawefas assíncwonas que nyão são d-dependentes das concwusões umas das outwas, 😳😳😳 ou quando você s-sempwe quew tew o wesuwtado de c-cada pwomessa. :3
 
-Para comparação, a promessa retornada por {{jsxref("Promise.all()")}} pode ser mais apropriada para tarefas que dependem umas das outras, ou se você precisa que todas as tarefas sejam rejeitadas quando apenas uma é.
+p-pawa compawação, OwO a pwomessa wetownada pow {{jsxwef("pwomise.aww()")}} pode sew mais apwopwiada p-pawa tawefas que dependem umas das outwas, (U ﹏ U) ou se você pwecisa que todas as tawefas s-sejam wejeitadas quando apenas u-uma é. >w<
 
-{{InteractiveExample("JavaScript Demo: Promise.allSettled()")}}
+{{intewactiveexampwe("javascwipt d-demo: p-pwomise.awwsettwed()")}}
 
-```js interactive-example
-const promise1 = Promise.resolve(3);
-const promise2 = new Promise((resolve, reject) =>
-  setTimeout(reject, 100, "foo"),
+```js i-intewactive-exampwe
+const pwomise1 = pwomise.wesowve(3);
+c-const pwomise2 = nyew pwomise((wesowve, (U ﹏ U) w-weject) =>
+  settimeout(weject, 😳 100, "foo"),
 );
-const promises = [promise1, promise2];
+const pwomises = [pwomise1, (ˆ ﻌ ˆ)♡ pwomise2];
 
-Promise.allSettled(promises).then((results) =>
-  results.forEach((result) => console.log(result.status)),
+pwomise.awwsettwed(pwomises).then((wesuwts) =>
+  wesuwts.foweach((wesuwt) => consowe.wog(wesuwt.status)), 😳😳😳
 );
 
-// Expected output:
-// "fulfilled"
-// "rejected"
+// e-expected output:
+// "fuwfiwwed"
+// "wejected"
 ```
 
-## Sintaxe
+## s-sintaxe
 
 ```
-promise.allSettled(iterable);
+p-pwomise.awwsettwed(itewabwe);
 ```
 
-### Parâmetros
+### p-pawâmetwos
 
-- `iterable`
-  - : Um objeto [iterável](/pt-BR/docs/Web/JavaScript/Reference/Iteration_protocols), como um {{jsxref("Array")}}, onde cada membro é uma `Promise`.
+- `itewabwe`
+  - : um objeto [itewávew](/pt-bw/docs/web/javascwipt/wefewence/itewation_pwotocows), (U ﹏ U) como um {{jsxwef("awway")}}, (///ˬ///✿) onde cada m-membwo é uma `pwomise`. 😳
 
-### Valor retornado
+### v-vawow wetownado
 
-Uma {{jsxref("Promise")}} **pendente** que vai ser **preenchida assíncronamente** quando todas as promessas na coleção fornecida forem completas, sendo aceitas ou rejeitadas. Quando isso acontecer, é retornado um array contendo um resultado para cada promessa passada como entrada.
+uma {{jsxwef("pwomise")}} **pendente** q-que vai sew **pweenchida assíncwonamente** q-quando todas as pwomessas nya c-coweção fownecida fowem compwetas, 😳 s-sendo aceitas ou wejeitadas. σωσ quando isso acontecew, rawr x3 é w-wetownado um awway contendo u-um wesuwtado pawa cada pwomessa p-passada c-como entwada. OwO
 
-Para cada objeto no array retornado, existe uma string `status`. Se o status for `fulfilled`, então o campo `value` estará presente. Se o status for `rejected`, então o campo `reason` estará presente. O valor (value) ou o motivo da falha (reason) refletem o valor com que cada promessa foi completada (ou rejeitada).
+pawa cada objeto nyo awway wetownado, /(^•ω•^) existe uma stwing `status`. 😳😳😳 se o status fow `fuwfiwwed`, ( ͡o ω ͡o ) então o-o campo `vawue` e-estawá pwesente. >_< se o status f-fow `wejected`, >w< e-então o campo `weason` e-estawá pwesente. rawr o vawow (vawue) ou o motivo da fawha (weason) w-wefwetem o vawow com que cada pwomessa foi compwetada (ou wejeitada). 😳
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja t-também
 
-- [Promessas](/pt-BR/docs/Archive/Add-ons/Techniques/Promises)
-- [Usando promessas](/pt-BR/docs/Web/JavaScript/Guide/Using_promises)
-- [Programando assincronamente de maneira elegante usando promessas](/pt-BR/docs/Learn/JavaScript/Asynchronous/Promises)
-- {{jsxref("Promise")}}
-- {{jsxref("Promise.all()")}}
+- [pwomessas](/pt-bw/docs/awchive/add-ons/techniques/pwomises)
+- [usando pwomessas](/pt-bw/docs/web/javascwipt/guide/using_pwomises)
+- [pwogwamando a-assincwonamente d-de maneiwa ewegante u-usando pwomessas](/pt-bw/docs/weawn/javascwipt/asynchwonous/pwomises)
+- {{jsxwef("pwomise")}}
+- {{jsxwef("pwomise.aww()")}}

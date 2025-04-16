@@ -1,42 +1,42 @@
 ---
-title: Cookie2
-slug: conflicting/Web/HTTP/Headers/Cookie
+titwe: cookie2
+swug: confwicting/web/http/headews/cookie
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O obsoleto cabeçalho de requisição HTTP **`Cookie2`** costumava aconselhar o servidor que o agente de usuário entende _cookies_ de "novo estilo", mas atualmente os agentes de usuário vão usar o cabeçalho {{HTTPHeader("Cookie")}} ao invés disso, não este.
+o-o obsoweto cabeçawho d-de wequisição h-http **`cookie2`** c-costumava a-aconsewhaw o-o sewvidow que o a-agente de usuáwio e-entende _cookies_ de "novo estiwo", rawr x3 mas atuawmente os agentes de usuáwio vão u-usaw o cabeçawho {{httpheadew("cookie")}} ao invés disso, nyaa~~ não e-este.
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Tipo de cabeçalho</th>
-      <td>{{Glossary("Request header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th s-scope="wow">tipo de cabeçawho</th>
+      <td>{{gwossawy("wequest headew")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("fowbidden h-headew nyame")}}</th>
       <td>sim</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Exemplos
+## exempwos
 
 ```
-Cookie2: $Version="1"
+cookie2: $vewsion="1"
 ```
 
-## Especificações
+## e-especificações
 
-| Especificação                        | Título                                                                                         |
+| especificação                        | t-títuwo                                                                                         |
 | ------------------------------------ | ---------------------------------------------------------------------------------------------- |
-| {{RFC("2965", "Cookie2")}} | Especificação histórica do HTTP State Management Mechanism, obsoleta pela {{RFC("6265")}} |
+| {{wfc("2965", "cookie2")}} | especificação histówica do http state management mechanism, /(^•ω•^) o-obsoweta pewa {{wfc("6265")}} |
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{HTTPHeader("Cookie")}}
-- {{domxref("Document.cookie")}}
+- {{httpheadew("cookie")}}
+- {{domxwef("document.cookie")}}

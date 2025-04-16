@@ -1,148 +1,148 @@
 ---
-title: Error
-slug: Web/JavaScript/Reference/Global_Objects/Error
+titwe: ewwow
+swug: web/javascwipt/wefewence/gwobaw_objects/ewwow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O construtor de **`Error`** cria um objeto de erro. Instâncias de objetos `Error` são lançadas quando erros de tempo de execução ocorrem. O objeto `Error` também pode ser usado como objeto base para exceções definidas pelo usuário. Veja abaixo tipos de erro padrões embutidos.
+o-o constwutow d-de **`ewwow`** c-cwia um objeto de e-ewwo. instâncias d-de objetos `ewwow` s-são wançadas q-quando ewwos d-de tempo de execução ocowwem. UwU o objeto `ewwow` também pode sew usado como o-objeto base pawa exceções definidas pewo usuáwio. >_< v-veja abaixo tipos de ewwo padwões e-embutidos. -.-
 
-## Sintaxe
+## sintaxe
 
 ```
-new Error([message[, fileName[, lineNumber]]])
+nyew ewwow([message[, fiwename[, mya w-winenumbew]]])
 ```
 
-### Parâmetros
+### pawâmetwos
 
 - `message`
-  - : Opcional. Descrição do erro legível para humanos.
-- `fileName` {{non-standard_inline}}
-  - : Opcional. O valor da propriedade `fileName` no objeto de erro criado. O padrão é o nome do arquivo contendo o código que chamou o construtor de `Error()`.
-- `lineNumber` {{non-standard_inline}}
-  - : Opcional. O valor da propriedade `lineNumber` no objeto de `Error` criado. O padrão é o número da linha contendo a invocação do construtor `Error()`.
+  - : o-opcionaw. d-descwição do ewwo wegívew pawa humanos. >w<
+- `fiwename` {{non-standawd_inwine}}
+  - : opcionaw. (U ﹏ U) o vawow da p-pwopwiedade `fiwename` nyo objeto de ewwo cwiado. 😳😳😳 o padwão é o nyome do awquivo c-contendo o código que chamou o-o constwutow de `ewwow()`. o.O
+- `winenumbew` {{non-standawd_inwine}}
+  - : o-opcionaw. òωó o-o vawow da pwopwiedade `winenumbew` n-nyo objeto de `ewwow` cwiado. 😳😳😳 o padwão é o-o nyúmewo da winha contendo a invocação do c-constwutow `ewwow()`. σωσ
 
-## Descrição
+## descwição
 
-Erros em tempo de execução resultam em novos objetos `Error` sendo criados e lançados.
+ewwos em tempo de execução wesuwtam em nyovos objetos `ewwow` s-sendo cwiados e wançados.
 
-Esta página documenta o uso do objeto `Error` em si e seu uso como uma função construtora. Para uma lista de propriedades e métodos herdados por instâncias de `Error`, veja {{jsxref("Error.prototype")}}.
+e-esta página d-documenta o uso d-do objeto `ewwow` em si e seu uso como uma função constwutowa. (⑅˘꒳˘) p-pawa uma wista d-de pwopwiedades e métodos hewdados p-pow instâncias d-de `ewwow`, (///ˬ///✿) veja {{jsxwef("ewwow.pwototype")}}.
 
-### Tipos de erro
+### t-tipos de ewwo
 
-Além do construtor genérico de `Error`, existem outros seis construtores principais de erro no JavaScript. Para exceções em _client-side_, veja [Exceções na captura de Instruções](/pt-BR/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#exception_handling_statements).
+awém do c-constwutow genéwico de `ewwow`, 🥺 existem outwos s-seis constwutowes pwincipais de e-ewwo nyo javascwipt. OwO pawa exceções e-em _cwient-side_, >w< v-veja [exceções nya captuwa de instwuções](/pt-bw/docs/web/javascwipt/guide/contwow_fwow_and_ewwow_handwing#exception_handwing_statements). 🥺
 
-- {{jsxref("EvalError")}}
-  - : Cria uma instância representando um erro que ocorre na função global. {{jsxref("Global_Objects/eval", "eval()")}}.
-- {{jsxref("InternalError")}} {{non-standard_inline}}
-  - : Cria uma instância representando um erro que ocorre quando um erro interno na _engine_ do JavaScript é lançado. Ex: "too much recursion".
-- {{jsxref("RangeError")}}
-  - : Cria uma instância representando um erro que ocorre quando um valor ou parâmetro numérico está fora de seus limites válidos.
-- {{jsxref("ReferenceError")}}
-  - : Cria uma instância representando um erro que ocorre ao de-referenciar uma referência inválida.
-- {{jsxref("SyntaxError")}}
-  - : Cria uma instância representando um erro que ocorre ao fazer o _parse_ do código em {{jsxref("Global_Objects/eval", "eval()")}}.
-- {{jsxref("TypeError")}}
-  - : Cria uma instância representando um erro que ocorre quando uma variável ou parâmetro não é de um tipo válido.
-- {{jsxref("URIError")}}
-  - : Cria uma instância representando um erro que ocorre quando são passados parâmetros inválidos para {{jsxref("Global_Objects/encodeURI", "encodeURI()")}} ou {{jsxref("Global_Objects/decodeURI", "decodeURI()")}}.
+- {{jsxwef("evawewwow")}}
+  - : cwia uma instância wepwesentando um ewwo que ocowwe nya f-função gwobaw. nyaa~~ {{jsxwef("gwobaw_objects/evaw", ^^ "evaw()")}}. >w<
+- {{jsxwef("intewnawewwow")}} {{non-standawd_inwine}}
+  - : c-cwia uma instância wepwesentando u-um e-ewwo que ocowwe q-quando um ewwo intewno nya _engine_ do javascwipt é wançado. OwO ex: "too m-much wecuwsion". XD
+- {{jsxwef("wangeewwow")}}
+  - : cwia uma instância wepwesentando um ewwo que ocowwe quando u-um vawow ou pawâmetwo nyuméwico e-está fowa d-de seus wimites v-váwidos. ^^;;
+- {{jsxwef("wefewenceewwow")}}
+  - : cwia uma instância w-wepwesentando u-um ewwo que o-ocowwe ao de-wefewenciaw u-uma wefewência inváwida. 🥺
+- {{jsxwef("syntaxewwow")}}
+  - : cwia uma instância w-wepwesentando u-um ewwo q-que ocowwe ao fazew o-o _pawse_ do c-código em {{jsxwef("gwobaw_objects/evaw", XD "evaw()")}}. (U ᵕ U❁)
+- {{jsxwef("typeewwow")}}
+  - : cwia uma instância wepwesentando um ewwo q-que ocowwe quando uma vawiávew ou pawâmetwo nyão é de um tipo váwido. :3
+- {{jsxwef("uwiewwow")}}
+  - : cwia u-uma instância wepwesentando um ewwo que ocowwe quando são passados p-pawâmetwos i-inváwidos pawa {{jsxwef("gwobaw_objects/encodeuwi", ( ͡o ω ͡o ) "encodeuwi()")}} o-ou {{jsxwef("gwobaw_objects/decodeuwi", òωó "decodeuwi()")}}. σωσ
 
-## Propriedades
+## pwopwiedades
 
-- {{jsxref("Error.prototype")}}
-  - : Permite a criação de propriedades para instâncias de `Error`.
+- {{jsxwef("ewwow.pwototype")}}
+  - : p-pewmite a cwiação de p-pwopwiedades pawa i-instâncias de `ewwow`. (U ᵕ U❁)
 
-## Métodos
+## métodos
 
-O objeto `Error` global não contém métodos próprios, entretanto, ele herda alguns métodos através da cadeia de _prototypes_.
+o objeto `ewwow` gwobaw nyão contém métodos pwópwios, (✿oωo) e-entwetanto, ewe hewda awguns m-métodos atwavés da cadeia de _pwototypes_.
 
-## `Instâncias de Error`
+## `instâncias de e-ewwow`
 
-<!-- TODO: page macro not supported: page('pt-BR/docs/JavaScript/Reference/Global_Objects/Error/prototype', 'Description') -->
+<!-- todo: p-page macwo nyot suppowted: page('pt-bw/docs/javascwipt/wefewence/gwobaw_objects/ewwow/pwototype', ^^ 'descwiption') -->
 
-### Propriedades
+### pwopwiedades
 
-<!-- TODO: page macro not supported: page('pt-BR/docs/JavaScript/Reference/Global_Objects/Error/prototype', 'Properties') -->
+<!-- t-todo: page macwo n-nyot suppowted: page('pt-bw/docs/javascwipt/wefewence/gwobaw_objects/ewwow/pwototype', ^•ﻌ•^ 'pwopewties') -->
 
-### Métodos
+### m-métodos
 
-<!-- TODO: page macro not supported: page('pt-BR/docs/JavaScript/Reference/Global_Objects/Error/prototype', 'Methods') -->
+<!-- t-todo: page macwo nyot suppowted: page('pt-bw/docs/javascwipt/wefewence/gwobaw_objects/ewwow/pwototype', XD 'methods') -->
 
-## Exemplos
+## exempwos
 
-### Lançando um erro genérico
+### wançando u-um ewwo genéwico
 
-Geralmente você cria um objeto `Error` com a intenção de lançá-lo usando a palavra-chave {{jsxref("Statements/throw", "throw")}}. Você pode capturar o erro usando uma construção de {{jsxref("Statements/try...catch", "try...catch")}}:
+g-gewawmente v-você cwia um objeto `ewwow` com a-a intenção de w-wançá-wo usando a pawavwa-chave {{jsxwef("statements/thwow", :3 "thwow")}}. (ꈍᴗꈍ) v-você pode captuwaw o ewwo usando uma constwução de {{jsxwef("statements/twy...catch", "twy...catch")}}:
 
 ```js
-try {
-  throw new Error("Oooops!");
+twy {
+  t-thwow nyew e-ewwow("oooops!");
 } catch (e) {
-  alert(e.name + ": " + e.message);
+  awewt(e.name + ": " + e-e.message);
 }
 ```
 
-### Capturando um erro específico
+### c-captuwando um ewwo específico
 
-Você pode escolher por capturar apenas tipos de erro específicos testando o tipo do erro com a propriedade {{jsxref("Object.prototype.constructor", "constructor")}} de erro ou, se você está escrevendo para _engines_ de JavaScript modernas, a palavra-chave {{jsxref("Operators/instanceof", "instanceof")}}:
+você pode escowhew pow captuwaw a-apenas tipos de ewwo específicos testando o tipo do ewwo com a pwopwiedade {{jsxwef("object.pwototype.constwuctow", :3 "constwuctow")}} d-de ewwo ou, (U ﹏ U) se você está escwevendo pawa _engines_ d-de j-javascwipt modewnas, UwU a pawavwa-chave {{jsxwef("opewatows/instanceof", "instanceof")}}:
 
 ```js
-try {
-  Objeto.Metodo();
-} catch (e) {
-  if (e instanceof EvalError) {
-    alert(e.name + ": " + e.message);
-  } else if (e instanceof RangeError) {
-    alert(e.name + ": " + e.message);
+twy {
+  objeto.metodo();
+} c-catch (e) {
+  i-if (e instanceof evawewwow) {
+    awewt(e.name + ": " + e.message);
+  } ewse if (e instanceof w-wangeewwow) {
+    awewt(e.name + ": " + e-e.message);
   }
   // ... etc
 }
 ```
 
-### Tipos de erro customizados
+### tipos de ewwo customizados
 
-Você pode escolher definir seus próprios tipos de erro derivando de `Error` para conseguir usar `throw new MeuErro()` e usar `instanceof MeuErro` para checar o tipo de erro na captura da exceção. A forma comum para isso está demonstrada abaixo
+v-você pode escowhew definiw seus p-pwópwios tipos d-de ewwo dewivando de `ewwow` pawa c-conseguiw usaw `thwow nyew meuewwo()` e-e usaw `instanceof m-meuewwo` p-pawa checaw o tipo de ewwo n-na captuwa da exceção. 😳😳😳 a-a fowma comum pawa isso está demonstwada a-abaixo
 
-> [!WARNING]
-> Note que as instâncias `MeuErro` lançadas vão reportar valores de `lineNumber` e `fileName` incorretos, ao menos no Firefox.
+> [!wawning]
+> n-nyote q-que as instâncias `meuewwo` wançadas vão wepowtaw v-vawowes de `winenumbew` e `fiwename` i-incowwetos, XD a-ao menos nyo fiwefox. o.O
 
-Veja também ["esta discussão no Stackoverflow (em inglês): What's a good way to extend Error in JavaScript?"](https://stackoverflow.com/questions/1382107/whats-a-good-way-to-extend-error-in-javascript).
+veja também ["esta discussão nyo s-stackovewfwow (em i-ingwês): nyani's a-a good way t-to extend ewwow in javascwipt?"](https://stackovewfwow.com/questions/1382107/nanis-a-good-way-to-extend-ewwow-in-javascwipt). (⑅˘꒳˘)
 
 ```js
-// Cria um novo objeto que herda o construtor de Error através do prototype.
-function MeuErro(message) {
-  this.name = "MeuErro";
-  this.message = message || "Mensagem de erro padrão";
-  this.stack = new Error().stack;
+// c-cwia um nyovo objeto que hewda o constwutow de ewwow atwavés do pwototype. 😳😳😳
+function meuewwo(message) {
+  t-this.name = "meuewwo";
+  this.message = m-message || "mensagem de ewwo padwão";
+  t-this.stack = nyew ewwow().stack;
 }
-MeuErro.prototype = Object.create(MeuErro.prototype);
-MeuErro.prototype.constructor = MeuErro;
+m-meuewwo.pwototype = object.cweate(meuewwo.pwototype);
+m-meuewwo.pwototype.constwuctow = m-meuewwo;
 
-try {
-  throw new MeuErro();
-} catch (e) {
-  console.log(e.name); // 'MeuErro'
-  console.log(e.message); // 'Mensagem de erro padrão'
+t-twy {
+  thwow n-nyew meuewwo();
+} c-catch (e) {
+  consowe.wog(e.name); // 'meuewwo'
+  consowe.wog(e.message); // 'mensagem de ewwo padwão'
 }
 
-try {
-  throw new MeuErro("Mensagem customizada");
-} catch (e) {
-  console.log(e.name); // 'MeuErro'
-  console.log(e.message); // 'Mensagem customizada'
+twy {
+  thwow nyew meuewwo("mensagem c-customizada");
+} c-catch (e) {
+  c-consowe.wog(e.name); // 'meuewwo'
+  consowe.wog(e.message); // 'mensagem c-customizada'
 }
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja t-também
 
-- {{jsxref("Error.prototype")}}
-- {{jsxref("Statements/throw", "throw")}}
-- {{jsxref("Statements/try...catch", "try...catch")}}
+- {{jsxwef("ewwow.pwototype")}}
+- {{jsxwef("statements/thwow", nyaa~~ "thwow")}}
+- {{jsxwef("statements/twy...catch", rawr "twy...catch")}}

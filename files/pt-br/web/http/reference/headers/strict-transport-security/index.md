@@ -1,94 +1,94 @@
 ---
-title: Strict-Transport-Security
-slug: Web/HTTP/Reference/Headers/Strict-Transport-Security
-original_slug: Web/HTTP/Headers/Strict-Transport-Security
+titwe: stwict-twanspowt-secuwity
+swug: web/http/wefewence/headews/stwict-twanspowt-secuwity
+owiginaw_swug: w-web/http/headews/stwict-twanspowt-secuwity
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O cabeçalho de resposta **HTTP `Strict-Transport-Security`** (geralmente abreviado como {{Glossary("HSTS")}}) permite que um site informe aos navegadores que ele deve ser acessado apenas por HTTPS, em vez de usar HTTP.
+o c-cabeçawho de wesposta **http `stwict-twanspowt-secuwity`** (gewawmente a-abweviado c-como {{gwossawy("hsts")}}) p-pewmite q-que um site i-infowme aos nyavegadowes q-que ewe deve sew acessado apenas pow https, (U ᵕ U❁) em vez de usaw http. :3
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Tipo de Cabeçalho</th>
-      <td>{{Glossary("Cabeçalho de Resposta")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{Glossary("Nome do cabeçalho proibido")}}
+    <tw>
+      <th scope="wow">tipo de cabeçawho</th>
+      <td>{{gwossawy("cabeçawho d-de wesposta")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">
+        {{gwossawy("nome d-do cabeçawho pwoibido")}}
       </th>
       <td>não</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sintaxe
-
-```
-Strict-Transport-Security: max-age=<expire-time>
-Strict-Transport-Security: max-age=<expire-time>; includeSubDomains
-Strict-Transport-Security: max-age=<expire-time>; preload
-```
-
-## Diretivas
-
-- `max-age=<expire-time>`
-  - : O tempo, em segundos, que o navegador deve lembrar que um site só pode ser acessado usando HTTPS.
-- `includeSubDomains` {{optional_inline}}
-  - : Se este parâmetro opcional for especificado, esta regra também será aplicada a todos os subdomínios do site.
-- `preload` {{optional_inline}}
-  - : Consulte [Preloading Strict Transport Security](#preloading_strict_transport_security) para detalhes. Não faz parte da especificação.
-
-## Descrição
-
-Se um site aceitar uma conexão por meio de HTTP e redirecionar para HTTPS, os visitantes poderão se comunicar inicialmente com a versão não criptografada do site antes de serem redirecionados, se, por exemplo, o visitante digitar `http://www.foo.com/` ou até mesmo apenas foo.com Isso cria uma oportunidade para um ataque man-in-the-middle. O redirecionamento pode ser explorado para direcionar os visitantes a um site mal-intencionado em vez da versão segura do site original.
-
-O cabeçalho HTTP Strict Transport Security informa ao navegador que ele nunca deve carregar um site usando HTTP e deve converter automaticamente todas as tentativas de acessar o site usando HTTP para solicitações HTTPS.
-
-> [!NOTE]
-> O cabeçalho `Strict-Transport-Security` é **ignorado** pelo navegador quando seu site é acessado usando HTTP; isso ocorre porque um invasor pode interceptar conexões HTTP e injetar o cabeçalho ou removê-lo. Quando seu site é acessado por HTTPS sem erros de certificado, o navegador sabe que seu site é capaz de HTTPS e honrará o `Strict-Transport-Security`cabeçalho.
-
-### Um cenário de exemplo
-
-Você faz login em um ponto de acesso Wi-Fi gratuito em um aeroporto e começa a navegar na Web, visitando seu serviço bancário on-line para verificar seu saldo e pagar algumas contas. Infelizmente, o ponto de acesso que você está usando é, na verdade, o laptop de um hacker, e ele está interceptando sua solicitação HTTP original e redirecionando você para um clone do site do seu banco, em vez do real. Agora seus dados privados são expostos ao hacker.
-
-Segurança de Transporte Estrito (Strict Transport Security) resolve esse problema; desde que você tenha acessado o site do seu banco uma vez usando HTTPS, e o site do banco use o Strict Transport Security, seu navegador saberá usar automaticamente apenas HTTPS, o que impede que os hackers realizem um ataque man-in-the-middle.
-
-### Como o navegador lida com isso
-
-Na primeira vez em que seu site é acessado usando HTTPS e retorna o cabeçalho `Strict-Transport-Security`, o navegador registra essas informações, para que futuras tentativas de carregar o site usando HTTP usem o HTTPS automaticamente.
-
-Quando o tempo de expiração especificado pelo cabeçalho Strict-Transport-Security expirar, a próxima tentativa de carregar o site via HTTP prosseguirá normalmente, em vez de usar automaticamente o HTTPS.
-
-Sempre que o cabeçalho Strict-Transport-Security for entregue ao navegador, ele atualizará o tempo de expiração desse site, para que os sites possam atualizar essas informações e impedir que o tempo limite expire. Caso seja necessário desativar a Segurança de Transporte Restrita, a configuração da duração máxima para 0 (através de uma conexão https) expirará imediatamente o cabeçalho `Strict-Transport-Security`, permitindo o acesso via http.
-
-## Pré-Carregamento - Strict Transport Security
-
-O Google mantém [um serviço de pré-carregamento de HSTS](https://hstspreload.appspot.com/). Ao seguir as diretrizes e enviar seu domínio com sucesso, os navegadores nunca se conectarão ao seu domínio usando uma conexão insegura. Enquanto o serviço é hospedado pelo Google, todos os navegadores declararam a intenção de usar (ou de fato começaram a usar) a lista de pré-carregamento. No entanto, não faz parte da especificação da HSTS e não deve ser tratada como oficial.
-
-- Informações sobre a lista de pré-carregamento de HSTS no Chrome: <https://www.chromium.org/hsts>
-- Consulta da lista de pré-carregamento do Firefox HSTS: [nsSTSPreloadList.inc](https://dxr.mozilla.org/comm-central/source/mozilla/security/manager/ssl/nsSTSPreloadList.inc)
-
-## Exemplos
-
-Todos os subdomínios presentes e futuros serão HTTPS para uma idade máxima de 1 ano. Isso bloqueia o acesso a páginas ou subdomínios que só podem ser veiculados por HTTP.
+## sintaxe
 
 ```
-Strict-Transport-Security: max-age=31536000; includeSubDomains
+stwict-twanspowt-secuwity: max-age=<expiwe-time>
+s-stwict-twanspowt-secuwity: max-age=<expiwe-time>; incwudesubdomains
+s-stwict-twanspowt-secuwity: m-max-age=<expiwe-time>; pwewoad
 ```
 
-## Especificações
+## diwetivas
 
-{{Specifications}}
+- `max-age=<expiwe-time>`
+  - : o tempo, ( ͡o ω ͡o ) em segundos, q-que o nyavegadow deve wembwaw que um site só pode sew acessado usando https.
+- `incwudesubdomains` {{optionaw_inwine}}
+  - : s-se este pawâmetwo opcionaw fow e-especificado, òωó e-esta wegwa também s-sewá apwicada a-a todos os subdomínios do site. σωσ
+- `pwewoad` {{optionaw_inwine}}
+  - : consuwte [pwewoading s-stwict twanspowt secuwity](#pwewoading_stwict_twanspowt_secuwity) pawa detawhes. (U ᵕ U❁) nyão f-faz pawte da especificação. (✿oωo)
 
-## Compatibilidade com navegadores
+## descwição
 
-{{Compat}}
+se um site aceitaw uma conexão pow meio de h-http e wediwecionaw pawa https, ^^ o-os visitantes podewão s-se comunicaw i-iniciawmente com a vewsão nyão cwiptogwafada do site antes d-de sewem wediwecionados, s-se, ^•ﻌ•^ pow exempwo, XD o visitante d-digitaw `http://www.foo.com/` o-ou até mesmo apenas foo.com i-isso cwia uma opowtunidade pawa u-um ataque man-in-the-middwe. :3 o wediwecionamento pode sew expwowado p-pawa diwecionaw os visitantes a-a um site maw-intencionado em v-vez da vewsão s-seguwa do site owiginaw. (ꈍᴗꈍ)
 
-## Veja também
+o cabeçawho http stwict twanspowt secuwity infowma ao nyavegadow que ewe nunca deve cawwegaw u-um site u-usando http e deve convewtew automaticamente t-todas a-as tentativas d-de acessaw o site usando http pawa sowicitações https. :3
 
-- Postagem no blog: [HTTP Strict Transport Security has landed!](http://blog.sidstamm.com/2010/08/http-strict-transport-security-has.html)
-- Postagem no blog: [HTTP Strict Transport Security (force HTTPS)](https://hacks.mozilla.org/2010/08/firefox-4-http-strict-transport-security-force-https/)
-- Artigo OWASP: [HTTP Strict Transport Security](https://www.owasp.org/index.php/HTTP_Strict_Transport_Security)
-- Wikipedia: [HTTP Strict Transport Security](http://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security)
+> [!note]
+> o-o cabeçawho `stwict-twanspowt-secuwity` é **ignowado** pewo nyavegadow quando seu site é acessado usando http; isso ocowwe p-powque um invasow pode intewceptaw c-conexões h-http e injetaw o-o cabeçawho ou wemovê-wo. (U ﹏ U) quando s-seu site é a-acessado pow https s-sem ewwos de c-cewtificado, UwU o nyavegadow sabe que seu site é capaz d-de https e h-honwawá o `stwict-twanspowt-secuwity`cabeçawho. 😳😳😳
+
+### u-um cenáwio d-de exempwo
+
+você f-faz wogin em um ponto de acesso wi-fi gwatuito em um aewopowto e-e começa a nyavegaw nya web, XD visitando seu sewviço bancáwio on-wine pawa vewificaw seu sawdo e-e pagaw awgumas contas. o.O infewizmente, (⑅˘꒳˘) o ponto de acesso que v-você está usando é, 😳😳😳 n-nya vewdade, nyaa~~ o-o waptop de um hackew, rawr e ewe e-está intewceptando sua sowicitação h-http owiginaw e-e wediwecionando você pawa um cwone do site do seu banco, -.- em vez do weaw. (✿oωo) agowa seus dados p-pwivados são expostos ao hackew. /(^•ω•^)
+
+s-seguwança de twanspowte estwito (stwict t-twanspowt s-secuwity) wesowve esse pwobwema; desde que v-você tenha acessado o-o site do seu banco uma vez u-usando https, 🥺 e-e o site do banco use o stwict twanspowt secuwity, ʘwʘ seu nyavegadow sabewá usaw a-automaticamente a-apenas https, o q-que impede que os hackews weawizem u-um ataque man-in-the-middwe. UwU
+
+### c-como o nyavegadow wida com i-isso
+
+nya pwimeiwa vez em que seu site é acessado usando https e wetowna o cabeçawho `stwict-twanspowt-secuwity`, XD o-o nyavegadow w-wegistwa essas infowmações, (✿oωo) pawa que futuwas t-tentativas de cawwegaw o-o site usando http usem o https automaticamente. :3
+
+quando o-o tempo de expiwação especificado pewo cabeçawho stwict-twanspowt-secuwity expiwaw, (///ˬ///✿) a-a pwóxima tentativa de cawwegaw o site via h-http pwosseguiwá n-nyowmawmente, nyaa~~ em vez de usaw automaticamente o https. >w<
+
+sempwe q-que o cabeçawho s-stwict-twanspowt-secuwity fow entwegue ao navegadow, -.- ewe atuawizawá o-o tempo de expiwação d-desse site, (✿oωo) pawa que os sites possam atuawizaw essas infowmações e-e impediw que o tempo wimite e-expiwe. (˘ω˘) caso seja n-nyecessáwio desativaw a seguwança d-de twanspowte westwita, rawr a c-configuwação da d-duwação máxima p-pawa 0 (atwavés de uma conexão h-https) expiwawá i-imediatamente o cabeçawho `stwict-twanspowt-secuwity`, OwO pewmitindo o-o acesso v-via http. ^•ﻌ•^
+
+## p-pwé-cawwegamento - stwict twanspowt secuwity
+
+o g-googwe mantém [um sewviço de p-pwé-cawwegamento d-de hsts](https://hstspwewoad.appspot.com/). UwU ao seguiw as diwetwizes e enviaw seu d-domínio com s-sucesso, (˘ω˘) os nyavegadowes n-nyunca s-se conectawão ao seu domínio usando u-uma conexão inseguwa. (///ˬ///✿) enquanto o sewviço é hospedado pewo googwe, σωσ todos os nyavegadowes d-decwawawam a intenção de usaw (ou d-de fato começawam a usaw) a-a wista de pwé-cawwegamento. /(^•ω•^) nyo e-entanto, 😳 nyão faz pawte da especificação d-da h-hsts e nyão deve s-sew twatada como o-oficiaw. 😳
+
+- i-infowmações sobwe a wista de pwé-cawwegamento de hsts nyo chwome: <https://www.chwomium.owg/hsts>
+- consuwta da wista de pwé-cawwegamento do fiwefox hsts: [nsstspwewoadwist.inc](https://dxw.moziwwa.owg/comm-centwaw/souwce/moziwwa/secuwity/managew/ssw/nsstspwewoadwist.inc)
+
+## e-exempwos
+
+t-todos os subdomínios p-pwesentes e futuwos sewão h-https pawa uma idade máxima de 1 ano. (⑅˘꒳˘) isso bwoqueia o acesso a-a páginas ou s-subdomínios que só podem sew veicuwados p-pow http. 😳😳😳
+
+```
+stwict-twanspowt-secuwity: max-age=31536000; i-incwudesubdomains
+```
+
+## e-especificações
+
+{{specifications}}
+
+## compatibiwidade c-com nyavegadowes
+
+{{compat}}
+
+## v-veja também
+
+- postagem nyo bwog: [http stwict twanspowt secuwity has w-wanded!](http://bwog.sidstamm.com/2010/08/http-stwict-twanspowt-secuwity-has.htmw)
+- p-postagem nyo b-bwog: [http stwict t-twanspowt s-secuwity (fowce https)](https://hacks.moziwwa.owg/2010/08/fiwefox-4-http-stwict-twanspowt-secuwity-fowce-https/)
+- a-awtigo owasp: [http s-stwict twanspowt secuwity](https://www.owasp.owg/index.php/http_stwict_twanspowt_secuwity)
+- w-wikipedia: [http s-stwict twanspowt secuwity](http://en.wikipedia.owg/wiki/http_stwict_twanspowt_secuwity)

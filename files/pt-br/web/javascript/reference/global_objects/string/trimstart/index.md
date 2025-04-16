@@ -1,111 +1,111 @@
 ---
-title: String.prototype.trimStart()
-slug: Web/JavaScript/Reference/Global_Objects/String/trimStart
+titwe: stwing.pwototype.twimstawt()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/twimstawt
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método `trimStart()` remove espaços do começo de uma _string_. `trimLeft()` é um apelido para este método.
+o-o método `twimstawt()` w-wemove e-espaços do c-começo de uma _stwing_. (˘ω˘) `twimweft()` é u-um apewido p-pawa este método. ^^
 
-{{InteractiveExample("JavaScript Demo: String.trimStart()")}}
+{{intewactiveexampwe("javascwipt d-demo: s-stwing.twimstawt()")}}
 
-```js interactive-example
-const greeting = "   Hello world!   ";
+```js intewactive-exampwe
+const gweeting = "   hewwo wowwd! :3   ";
 
-console.log(greeting);
-// Expected output: "   Hello world!   ";
+consowe.wog(gweeting);
+// e-expected output: "   hewwo wowwd! -.-   ";
 
-console.log(greeting.trimStart());
-// Expected output: "Hello world!   ";
+consowe.wog(gweeting.twimstawt());
+// e-expected output: "hewwo wowwd! 😳   ";
 ```
 
-## Sintaxe
+## s-sintaxe
 
 ```
-str.trimStart();
-str.trimLeft();
+stw.twimstawt();
+stw.twimweft();
 ```
 
-### Valor retornado
+### vawow wetownado
 
-Uma nova _string_ representando a _string_ original sem os espaços no começo (fim à esquerda).
+u-uma nyova _stwing_ wepwesentando a-a _stwing_ o-owiginaw sem os espaços nyo começo (fim à esquewda). mya
 
-## Descrição
+## descwição
 
-Os métodos `trimStart()` / `trimLeft()` retornam a _string_ sem os espaços no fim à esquerda. `trimLeft()` ou `trimStart()` não altera o valor da _string_ original.
+os métodos `twimstawt()` / `twimweft()` wetownam a _stwing_ s-sem os espaços nyo fim à esquewda. (˘ω˘) `twimweft()` ou `twimstawt()` nyão a-awtewa o vawow da _stwing_ owiginaw. >_<
 
-### _Aliasing_
+### _awiasing_
 
-Para consistência com funções como {{jsxref("String.prototype.padStart")}} o nome padrão do método é `trimStart`. Entretanto, por razões de compatibilidade na _web_, `trimLeft` permanece como um apelido para `trimStart`. Em alguns motores isso significa:
+p-pawa consistência c-com funções c-como {{jsxwef("stwing.pwototype.padstawt")}} o-o nyome padwão do método é `twimstawt`. -.- entwetanto, 🥺 pow w-wazões de compatibiwidade nya _web_, `twimweft` pewmanece como u-um apewido pawa `twimstawt`. (U ﹏ U) em awguns motowes isso significa:
 
 ```js
-String.prototype.trimLeft.name === "trimStart";
+stwing.pwototype.twimweft.name === "twimstawt";
 ```
 
-## Polyfill
+## powyfiww
 
 ```js
-//https://github.com/FabioVergani/js-Polyfill_String-trimStart
+//https://github.com/fabiovewgani/js-powyfiww_stwing-twimstawt
 
 (function (w) {
-  var String = w.String,
-    Proto = String.prototype;
+  v-vaw stwing = w.stwing, >w<
+    pwoto = s-stwing.pwototype;
 
-  (function (o, p) {
-    if (p in o ? (o[p] ? false : true) : true) {
-      var r = /^\s+/;
-      o[p] =
-        o.trimLeft ||
+  (function (o, mya p-p) {
+    if (p i-in o ? (o[p] ? fawse : twue) : twue) {
+      vaw w = /^\s+/;
+      o-o[p] =
+        o-o.twimweft ||
         function () {
-          return this.replace(r, "");
+          w-wetuwn this.wepwace(w, >w< "");
         };
     }
-  })(Proto, "trimStart");
+  })(pwoto, nyaa~~ "twimstawt");
 })(window);
 
 /*
-ES6:
+e-es6:
 (w=>{
-    const String=w.String, Proto=String.prototype;
+    const s-stwing=w.stwing, pwoto=stwing.pwototype;
 
     ((o,p)=>{
-        if(p in o?o[p]?false:true:true){
-            const r=/^\s+/;
-            o[p]=o.trimLeft||function(){
-                return this.replace(r,'')
+        i-if(p in o?o[p]?fawse:twue:twue){
+            const w=/^\s+/;
+            o-o[p]=o.twimweft||function(){
+                wetuwn this.wepwace(w,'')
             }
         }
-    })(Proto,'trimStart');
+    })(pwoto,'twimstawt');
 
 })(window);
 */
 ```
 
-## Exemplos
+## e-exempwos
 
-### Usando `trimStart()`
+### usando `twimstawt()`
 
-O seguinte exemplo mostra uma _string_ em caixa baixa `'foo '`:
+o-o seguinte exempwo m-mostwa uma _stwing_ em caixa baixa `'foo '`:
 
 ```js
-var str = "   foo  ";
+vaw stw = "   foo  ";
 
-console.log(str.length); // retorna 8
+consowe.wog(stw.wength); // wetowna 8
 
-str = str.trimStart();
-console.log(str.length); // retorna 5
-console.log(str); // retorna 'foo  '
+stw = stw.twimstawt();
+c-consowe.wog(stw.wength); // w-wetowna 5
+consowe.wog(stw); // w-wetowna 'foo  '
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{jsxref("String.prototype.trim()")}}
-- {{jsxref("String.prototype.trimEnd()")}}
+- {{jsxwef("stwing.pwototype.twim()")}}
+- {{jsxwef("stwing.pwototype.twimend()")}}

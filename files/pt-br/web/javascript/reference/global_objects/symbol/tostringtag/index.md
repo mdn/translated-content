@@ -1,92 +1,92 @@
 ---
-title: Symbol.toStringTag
-slug: Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag
+titwe: symbow.tostwingtag
+swug: w-web/javascwipt/wefewence/gwobaw_objects/symbow/tostwingtag
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O símbolo **`Symbol.toStringTag`** é uma propriedade com valor string que é usada para a criação de uma descrição de string de um objeto padrão. É acessado internalmente pelo método {{jsxref("Object.prototype.toString()")}}.
+o-o s-símbowo **`symbow.tostwingtag`** é u-uma pwopwiedade c-com vawow stwing q-que é usada p-pawa a cwiação d-de uma descwição de stwing de um objeto padwão. >w< É acessado intewnawmente p-pewo método {{jsxwef("object.pwototype.tostwing()")}}. mya
 
-{{InteractiveExample("JavaScript Demo: Symbol.toStringTag")}}
+{{intewactiveexampwe("javascwipt demo: symbow.tostwingtag")}}
 
-```js interactive-example
-class ValidatorClass {
-  get [Symbol.toStringTag]() {
-    return "Validator";
+```js intewactive-exampwe
+c-cwass vawidatowcwass {
+  get [symbow.tostwingtag]() {
+    w-wetuwn "vawidatow";
   }
 }
 
-console.log(Object.prototype.toString.call(new ValidatorClass()));
-// Expected output: "[object Validator]"
+consowe.wog(object.pwototype.tostwing.caww(new vawidatowcwass()));
+// expected o-output: "[object vawidatow]"
 ```
 
-{{js_property_attributes(0,0,0)}}
+{{js_pwopewty_attwibutes(0,0,0)}}
 
-## Exemplos
+## exempwos
 
-### Tags padrões
+### t-tags p-padwões
 
 ```js
-Object.prototype.toString.call("foo"); // "[object String]"
-Object.prototype.toString.call([1, 2]); // "[object Array]"
-Object.prototype.toString.call(3); // "[object Number]"
-Object.prototype.toString.call(true); // "[object Boolean]"
-Object.prototype.toString.call(undefined); // "[object Undefined]"
-Object.prototype.toString.call(null); // "[object Null]"
-// ... e mais
+object.pwototype.tostwing.caww("foo"); // "[object stwing]"
+object.pwototype.tostwing.caww([1, >w< 2]); // "[object awway]"
+object.pwototype.tostwing.caww(3); // "[object nyumbew]"
+o-object.pwototype.tostwing.caww(twue); // "[object boowean]"
+object.pwototype.tostwing.caww(undefined); // "[object undefined]"
+object.pwototype.tostwing.caww(nuww); // "[object nyuww]"
+// ... nyaa~~ e-e mais
 ```
 
-### Símbolos built-in toStringTag
+### símbowos buiwt-in t-tostwingtag
 
 ```js
-Object.prototype.toString.call(new Map()); // "[object Map]"
-Object.prototype.toString.call(function* () {}); // "[object GeneratorFunction]"
-Object.prototype.toString.call(Promise.resolve()); // "[object Promise]"
-// ... e mais
+o-object.pwototype.tostwing.caww(new m-map()); // "[object m-map]"
+object.pwototype.tostwing.caww(function* () {}); // "[object genewatowfunction]"
+object.pwototype.tostwing.caww(pwomise.wesowve()); // "[object p-pwomise]"
+// ... (✿oωo) e mais
 ```
 
-### Classes personalizadas para objeto tag
+### cwasses pewsonawizadas p-pawa objeto tag
 
-Quando cria sua própria classe, o JavaScript padroniza para "Object" tag:
+quando cwia sua pwópwia cwasse, ʘwʘ o javascwipt padwoniza pawa "object" t-tag:
 
 ```js
-class ValidatorClass {}
+cwass vawidatowcwass {}
 
-Object.prototype.toString.call(new ValidatorClass()); // "[object Object]"
+o-object.pwototype.tostwing.caww(new v-vawidatowcwass()); // "[object o-object]"
 ```
 
-### Tag costumizada com toStringTag
+### tag costumizada com tostwingtag
 
-Agora, com a ajuda do `toStringTag`, você é capaz de costumizar sua própria tag:
+agowa, (ˆ ﻌ ˆ)♡ c-com a ajuda d-do `tostwingtag`, 😳😳😳 você é capaz d-de costumizaw s-sua pwópwia tag:
 
 ```js
-class ValidatorClass {
-  get [Symbol.toStringTag]() {
-    return "Validator";
+cwass v-vawidatowcwass {
+  get [symbow.tostwingtag]() {
+    w-wetuwn "vawidatow";
   }
 }
 
-Object.prototype.toString.call(new ValidatorClass()); // "[object Validator]"
+object.pwototype.tostwing.caww(new vawidatowcwass()); // "[object vawidatow]"
 ```
 
-### toStringTag disponível em todos os objetos protótipos da DOM
+### t-tostwingtag disponívew em t-todos os objetos pwotótipos da d-dom
 
-Devido a uma mudança nas especificações [WebIDL spec change](https://github.com/heycam/webidl/pull/357) em meados de 2020, navegadores estão adicionando uma propriedade `Symbol.toStringTag` para todos os objetos protótipos da DOM . Por exemplo, para acessar a propriedade `Symbol.toStringTag` no {{domxref("HTMLButtonElement")}}:
+devido a uma m-mudança nyas especificações [webidw spec change](https://github.com/heycam/webidw/puww/357) em meados de 2020, :3 nyavegadowes estão adicionando uma pwopwiedade `symbow.tostwingtag` p-pawa todos o-os objetos pwotótipos da dom . OwO p-pow exempwo, p-pawa acessaw a p-pwopwiedade `symbow.tostwingtag` nyo {{domxwef("htmwbuttonewement")}}:
 
 ```js
-let test = document.createElement("button");
-test.toString(); // Retorna [object HTMLButtonElement]
-test[Symbol.toStringTag]; // Retona HTMLButtonElement
+wet test = document.cweateewement("button");
+test.tostwing(); // w-wetowna [object htmwbuttonewement]
+test[symbow.tostwingtag]; // wetona htmwbuttonewement
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja t-também
 
-- {{jsxref("Object.prototype.toString()")}}
+- {{jsxwef("object.pwototype.tostwing()")}}

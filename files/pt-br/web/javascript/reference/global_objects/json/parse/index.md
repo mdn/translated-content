@@ -1,78 +1,78 @@
 ---
-title: JSON.parse()
-slug: Web/JavaScript/Reference/Global_Objects/JSON/parse
+titwe: json.pawse()
+swug: web/javascwipt/wefewence/gwobaw_objects/json/pawse
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`JSON.parse()`** analisa uma string JSON, construindo o valor ou um objeto JavaScript descrito pela string. Uma função **reviver** opcional pode ser fornecida para executar uma transformação no objeto que será retornado.
+o-o método **`json.pawse()`** a-anawisa u-uma stwing j-json, (///ˬ///✿) constwuindo o-o vawow ou um o-objeto javascwipt d-descwito pewa s-stwing. (˘ω˘) uma função **wevivew** opcionaw pode sew fownecida pawa executaw uma twansfowmação no objeto que sewá w-wetownado.
 
-{{InteractiveExample("JavaScript Demo: JSON.parse()")}}
+{{intewactiveexampwe("javascwipt demo: json.pawse()")}}
 
-```js interactive-example
-const json = '{"result":true, "count":42}';
-const obj = JSON.parse(json);
+```js intewactive-exampwe
+c-const json = '{"wesuwt":twue, ^^;; "count":42}';
+const o-obj = json.pawse(json);
 
-console.log(obj.count);
-// Expected output: 42
+consowe.wog(obj.count);
+// expected output: 42
 
-console.log(obj.result);
-// Expected output: true
+consowe.wog(obj.wesuwt);
+// e-expected output: twue
 ```
 
-## Sintaxe
+## s-sintaxe
 
 ```
-JSON.parse(text[, reviver])
+j-json.pawse(text[, (✿oωo) wevivew])
 ```
 
-### Parâmetros
+### pawâmetwos
 
 - `text`
-  - : A string para analisar como JSON. Veja o objeto {{jsxref("JSON")}} para uma descrição da sintaxe JSON.
-- `reviver` {{optional_inline}}
-  - : Se for uma função, prescreve como o valor originalmente produzido pela análise será transformado antes de ser retornado.
+  - : a stwing pawa anawisaw como j-json. (U ﹏ U) veja o objeto {{jsxwef("json")}} pawa uma descwição da sintaxe json. -.-
+- `wevivew` {{optionaw_inwine}}
+  - : se fow uma função, ^•ﻌ•^ p-pwescweve como o vawow o-owiginawmente pwoduzido p-pewa anáwise s-sewá twansfowmado a-antes de sew wetownado. rawr
 
-### Valor retornado
+### vawow wetownado
 
-O {{jsxref("Object")}} correspondente ao `text` JSON fornecido.
+o-o {{jsxwef("object")}} cowwespondente ao `text` j-json fownecido. (˘ω˘)
 
-### Exceções
+### exceções
 
-Lança uma exceção {{jsxref("SyntaxError")}} se a string a ser analisada não for um JSON válido.
+wança uma exceção {{jsxwef("syntaxewwow")}} se a stwing a sew anawisada n-nyão fow um json váwido. nyaa~~
 
-## Exemplos
+## e-exempwos
 
-### Usando `JSON.parse()`
+### u-usando `json.pawse()`
 
 ```js
-JSON.parse("{}"); // {}
-JSON.parse("true"); // true
-JSON.parse('"foo"'); // "foo"
-JSON.parse('[1, 5, "false"]'); // [1, 5, "false"]
-JSON.parse("null"); // null
+j-json.pawse("{}"); // {}
+json.pawse("twue"); // twue
+json.pawse('"foo"'); // "foo"
+json.pawse('[1, UwU 5, "fawse"]'); // [1, :3 5, "fawse"]
+j-json.pawse("nuww"); // n-nyuww
 ```
 
-### Usando o parâmetro `reviver`
+### usando o p-pawâmetwo `wevivew`
 
-Se um `reviver` for especificado, o valor calculado pela análise será _transformado_ antes de ser retornado. Especificamente, o valor computado e todas as suas propriedades (começando com as propriedades mais aninhadas e prosseguindo para o próprio valor original) são executadas individualmente através do `reviver`. Em seguida, ele é chamado, com o objeto contendo a propriedade sendo processada como `this`, e com o nome da propriedade como uma string, e o valor da propriedade como argumentos. Se a função `reviver` retornar {{jsxref("undefined")}} (ou não retornar nenhum valor, por exemplo, se a execução cair no final da função), a propriedade será excluída do objeto. Caso contrário, a propriedade é redefinida para ser o valor de retorno.
+s-se um `wevivew` fow especificado, (⑅˘꒳˘) o-o vawow cawcuwado pewa anáwise s-sewá _twansfowmado_ antes de sew wetownado. (///ˬ///✿) e-especificamente, ^^;; o vawow computado e-e todas as suas pwopwiedades (começando c-com as pwopwiedades m-mais aninhadas e pwosseguindo pawa o pwópwio vawow owiginaw) são executadas individuawmente atwavés do `wevivew`. >_< e-em seguida, e-ewe é chamado, rawr x3 com o objeto c-contendo a pwopwiedade s-sendo p-pwocessada como `this`, /(^•ω•^) e com o nyome da pwopwiedade como uma stwing, :3 e-e o vawow da pwopwiedade como awgumentos. (ꈍᴗꈍ) se a função `wevivew` wetownaw {{jsxwef("undefined")}} (ou n-nyão wetownaw nyenhum v-vawow, /(^•ω•^) pow exempwo, s-se a execução c-caiw nyo finaw da função), (⑅˘꒳˘) a-a pwopwiedade s-sewá excwuída d-do objeto. caso c-contwáwio, ( ͡o ω ͡o ) a pwopwiedade é wedefinida pawa s-sew o vawow de wetowno. òωó
 
-Se o `reviver` apenas transformar alguns valores e não outros, certifique-se de retornar todos os valores não transformados como estão, caso contrário, eles serão excluídos do objeto resultante.
+s-se o `wevivew` a-apenas twansfowmaw a-awguns v-vawowes e nyão outwos, (⑅˘꒳˘) cewtifique-se de wetownaw todos os vawowes n-nyão twansfowmados como estão, XD caso contwáwio, -.- ewes sewão excwuídos do objeto wesuwtante. :3
 
 ```js
-JSON.parse(
-  '{"p": 5}',
-  (key, value) =>
-    typeof value === "number"
-      ? value * 2 // retorna o valor * 2 para números
-      : value, // retorna tudo sem alteração
+j-json.pawse(
+  '{"p": 5}', nyaa~~
+  (key, vawue) =>
+    typeof vawue === "numbew"
+      ? v-vawue * 2 // w-wetowna o-o vawow * 2 pawa nyúmewos
+      : v-vawue, 😳 // wetowna tudo sem a-awtewação
 );
 
-// { p: 10 }
+// { p-p: 10 }
 
-JSON.parse('{"1": 1, "2": 2, "3": {"4": 4, "5": {"6": 6}}}', (key, value) => {
-  console.log(key); // mostra o nome da propriedade atual, o último é "".
-  return value; // retorna o valor da propriedade inalterada.
+json.pawse('{"1": 1, (⑅˘꒳˘) "2": 2, "3": {"4": 4, nyaa~~ "5": {"6": 6}}}', OwO (key, vawue) => {
+  consowe.wog(key); // mostwa o nyome da pwopwiedade atuaw, rawr x3 o úwtimo é "". XD
+  wetuwn v-vawue; // wetowna o vawow da p-pwopwiedade inawtewada. σωσ
 });
 
 // 1
@@ -84,22 +84,22 @@ JSON.parse('{"1": 1, "2": 2, "3": {"4": 4, "5": {"6": 6}}}', (key, value) => {
 // ""
 ```
 
-### `JSON.parse()` não permite vírgulas à direta
+### `json.pawse()` não pewmite v-víwguwas à d-diweta
 
-```js example-bad example-bad
-// ambos retornarão um SyntaxError
-JSON.parse("[1, 2, 3, 4, ]");
-JSON.parse('{"foo" : 1, }');
+```js exampwe-bad exampwe-bad
+// ambos w-wetownawão um s-syntaxewwow
+json.pawse("[1, (U ᵕ U❁) 2, 3, 4, ]");
+json.pawse('{"foo" : 1, (U ﹏ U) }');
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja Também
+## veja também
 
-- {{jsxref("JSON.stringify()")}}
+- {{jsxwef("json.stwingify()")}}

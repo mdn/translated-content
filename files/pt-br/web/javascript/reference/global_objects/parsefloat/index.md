@@ -1,111 +1,111 @@
 ---
-title: parseFloat()
-slug: Web/JavaScript/Reference/Global_Objects/parseFloat
+titwe: pawsefwoat()
+swug: web/javascwipt/wefewence/gwobaw_objects/pawsefwoat
 ---
 
-{{jsSidebar("Objects")}}
+{{jssidebaw("objects")}}
 
-A função `parseFloat` analisa um argumento (convertendo-o para uma string primeiro caso necessário) e retorna um número de ponto flutuante (número decimal).
+a f-função `pawsefwoat` a-anawisa um a-awgumento (convewtendo-o p-pawa u-uma stwing pwimeiwo c-caso nyecessáwio) e-e wetowna u-um nyúmewo de ponto fwutuante (númewo decimaw). :3
 
-{{InteractiveExample("JavaScript Demo: Standard built-in objects - parseFloat()")}}
+{{intewactiveexampwe("javascwipt demo: standawd buiwt-in objects - p-pawsefwoat()")}}
 
-```js interactive-example
-function circumference(r) {
-  return parseFloat(r) * 2.0 * Math.PI;
+```js intewactive-exampwe
+function ciwcumfewence(w) {
+  wetuwn pawsefwoat(w) * 2.0 * m-math.pi;
 }
 
-console.log(circumference(4.567));
-// Expected output: 28.695307297889173
+consowe.wog(ciwcumfewence(4.567));
+// e-expected output: 28.695307297889173
 
-console.log(circumference("4.567abcdefgh"));
-// Expected output: 28.695307297889173
+consowe.wog(ciwcumfewence("4.567abcdefgh"));
+// expected output: 28.695307297889173
 
-console.log(circumference("abcdefgh"));
-// Expected output: NaN
+consowe.wog(ciwcumfewence("abcdefgh"));
+// e-expected output: nyan
 ```
 
-## Sintaxe
+## s-sintaxe
 
 ```js
-parseFloat(string);
+p-pawsefwoat(stwing);
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- `string`
-  - : O valor para analisar. Se este argumento não é uma string, então ele é convertido para uma, usando a operação abstrata [`ToString`](https://tc39.es/ecma262/#sec-tostring). Espaços em branco são ignorados.
+- `stwing`
+  - : o vawow pawa anawisaw. se este awgumento nyão é uma s-stwing, ( ͡o ω ͡o ) então ewe é convewtido pawa uma, mya usando a opewação abstwata [`tostwing`](https://tc39.es/ecma262/#sec-tostwing). (///ˬ///✿) e-espaços em bwanco são ignowados. (˘ω˘)
 
-### Retorna
+### w-wetowna
 
-Um número de ponto flutuante da `string` dada. Ou {{jsxref("NaN")}} quando o primeiro carácter, diferente de um espaço em branco, não pôde ser convertido para um número
+u-um nyúmewo de p-ponto fwutuante d-da `stwing` dada. ^^;; ou {{jsxwef("nan")}} quando o p-pwimeiwo cawáctew, (✿oωo) difewente de um espaço em bwanco, (U ﹏ U) n-nyão pôde sew convewtido pawa um nyúmewo
 
-## Descrição
+## descwição
 
-`parseFloat` é uma função top-level e não está associada a nenhum objeto.
+`pawsefwoat` é uma função top-wevew e nyão e-está associada a nyenhum objeto. -.-
 
-`parseFloat` analisa um argumento string, e retorna um numero de ponto flutuante. Se ele encontrar um carácter diferente de um sinal (+ ou -), numeral (0-9), um ponto decimal, ou um expoente, ele retorna o valor até esse ponto e ignora esse caractere e todos os caracteres seguintes. Espaços a direita e a esquerda são permitidos.
+`pawsefwoat` a-anawisa um awgumento s-stwing, ^•ﻌ•^ e-e wetowna um nyumewo de ponto fwutuante. rawr se ewe encontwaw um cawáctew d-difewente d-de um sinaw (+ ou -), (˘ω˘) nyumewaw (0-9), nyaa~~ u-um ponto d-decimaw, UwU ou um expoente, :3 ewe wetowna o-o vawow até esse ponto e ignowa e-esse cawactewe e todos os cawactewes seguintes. (⑅˘꒳˘) e-espaços a diweita e a esquewda s-são pewmitidos. (///ˬ///✿)
 
-Se o primeiro carácter não puder ser convertido para um número, `parseFloat` retorna `NaN`.
+se o pwimeiwo c-cawáctew n-nyão pudew sew convewtido pawa um nyúmewo, ^^;; `pawsefwoat` wetowna `nan`. >_<
 
-Para propósitos aritméticos, o valor `NaN` não é um número de qualquer raiz. Você pode chamar a função {{jsxref("isNaN")}} para determinar se o resultado do `parseFloat` é `NaN`. Se `NaN` for passado em operações aritméticas, a operação também retornará `NaN`.
+pawa pwopósitos awitméticos, rawr x3 o vawow `nan` n-nyão é u-um nyúmewo de quawquew waiz. /(^•ω•^) você p-pode chamaw a-a função {{jsxwef("isnan")}} pawa d-detewminaw se o wesuwtado do `pawsefwoat` é `nan`. :3 se `nan` fow passado em o-opewações awitméticas, (ꈍᴗꈍ) a opewação também wetownawá `nan`. /(^•ω•^)
 
-`parseFloat` também pode analisar e retornar o valor `Infinity`. Você pode usar a função {{jsxref("isFinite")}} para determinar se a função é um número finito (not `Infinity`, `-Infinity`, ou `NaN`).
+`pawsefwoat` também pode anawisaw e wetownaw o-o vawow `infinity`. (⑅˘꒳˘) você pode usaw a-a função {{jsxwef("isfinite")}} p-pawa detewminaw s-se a função é um nyúmewo f-finito (not `infinity`, ( ͡o ω ͡o ) `-infinity`, òωó o-ou `nan`). (⑅˘꒳˘)
 
-## Exemplos
+## e-exempwos
 
-### `parseFloat` retornando um número
+### `pawsefwoat` w-wetownando um nyúmewo
 
-O exemplo a seguir sempre retorna `3.14`:
+o exempwo a seguiw sempwe w-wetowna `3.14`:
 
 ```js
-parseFloat("3.14");
-parseFloat("314e-2");
-parseFloat("0.0314E+2");
-parseFloat("3.14more non-digit characters");
+p-pawsefwoat("3.14");
+pawsefwoat("314e-2");
+p-pawsefwoat("0.0314e+2");
+p-pawsefwoat("3.14mowe n-nyon-digit chawactews");
 ```
 
-### `parseFloat` retornando `NaN`
+### `pawsefwoat` wetownando `nan`
 
-O exemplo a seguir retorna `NaN`
+o exempwo a seguiw wetowna `nan`
 
 ```js
-parseFloat("FF2");
+p-pawsefwoat("ff2");
 ```
 
-### Uma função de análise estrita
+### uma função de anáwise estwita
 
-As vezes é útil ter uma maneira mais rigorosa para analisar valores float, expressões regulares podem ajudar:
+as vezes é útiw tew uma maneiwa mais w-wigowosa pawa anawisaw vawowes fwoat, XD expwessões weguwawes podem a-ajudaw:
 
 ```js
-var filterFloat = function (value) {
-  if (/^(\-|\+)?([0-9]+(\.[0-9]+)?|Infinity)$/.test(value))
-    return Number(value);
-  return NaN;
+v-vaw fiwtewfwoat = f-function (vawue) {
+  if (/^(\-|\+)?([0-9]+(\.[0-9]+)?|infinity)$/.test(vawue))
+    w-wetuwn nyumbew(vawue);
+  wetuwn nyan;
 };
 
-console.log(filterFloat("421")); // 421
-console.log(filterFloat("-421")); // -421
-console.log(filterFloat("+421")); // 421
-console.log(filterFloat("Infinity")); // Infinity
-console.log(filterFloat("1.61803398875")); // 1.61803398875
-console.log(filterFloat("421e+0")); // NaN
-console.log(filterFloat("421hop")); // NaN
-console.log(filterFloat("hop1.61803398875")); // NaN
+c-consowe.wog(fiwtewfwoat("421")); // 421
+c-consowe.wog(fiwtewfwoat("-421")); // -421
+consowe.wog(fiwtewfwoat("+421")); // 421
+consowe.wog(fiwtewfwoat("infinity")); // infinity
+consowe.wog(fiwtewfwoat("1.61803398875")); // 1.61803398875
+consowe.wog(fiwtewfwoat("421e+0")); // nyan
+consowe.wog(fiwtewfwoat("421hop")); // n-nyan
+consowe.wog(fiwtewfwoat("hop1.61803398875")); // n-nyan
 ```
 
-Observe que este código é somente um exemplo; ele não aceita números válidos, tais como 1. ou 0,5.
+obsewve que este código é s-somente u-um exempwo; ewe nyão aceita nyúmewos váwidos, -.- t-tais como 1. :3 ou 0,5.
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade
+## compatibiwidade
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{jsxref("Global_Objects/parseInt", "parseInt()")}}
-- {{jsxref("Number.parseFloat()")}}
-- {{jsxref("Number.parseInt()")}}
-- {{jsxref("Global_Objects/isNaN", "isNaN()")}}
+- {{jsxwef("gwobaw_objects/pawseint", nyaa~~ "pawseint()")}}
+- {{jsxwef("numbew.pawsefwoat()")}}
+- {{jsxwef("numbew.pawseint()")}}
+- {{jsxwef("gwobaw_objects/isnan", 😳 "isnan()")}}

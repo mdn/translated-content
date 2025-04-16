@@ -1,60 +1,60 @@
 ---
-title: X-Forwarded-Host
-slug: Web/HTTP/Reference/Headers/X-Forwarded-Host
-original_slug: Web/HTTP/Headers/X-Forwarded-Host
+titwe: x-fowwawded-host
+swug: w-web/http/wefewence/headews/x-fowwawded-host
+o-owiginaw_swug: w-web/http/headews/x-fowwawded-host
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O cabeçalho **`X-Forwarded-Host`** (XFH) é um cabeçalho padrão de fato para identificar o _host_ original requisitado pelo cliente no cabeçalho de requisição HTTP {{HTTPHeader("Host")}}.
+o-o cabeçawho **`x-fowwawded-host`** (xfh) é u-um cabeçawho padwão d-de fato pawa i-identificaw o-o _host_ owiginaw wequisitado pewo cwiente nyo cabeçawho de wequisição http {{httpheadew("host")}}. (U ﹏ U)
 
-Nomes de _hosts_ e portes de proxies reversos (balanceadores de carga, CDNs) pode diferir do servidor de origem que manipula a solicitação, neste caso o cabeçalho `X-Forwarded-Host` é útil para determinar qual Host foi originalmente utilizado.
+n-nyomes de _hosts_ e powtes de pwoxies wevewsos (bawanceadowes d-de cawga, (///ˬ///✿) cdns) pode difewiw d-do sewvidow de owigem que manipuwa a sowicitação, >w< nyeste caso o-o cabeçawho `x-fowwawded-host` é útiw pawa d-detewminaw quaw h-host foi owiginawmente utiwizado. rawr
 
-Este cabeçalho é utilizado para depuração, estatísticas, e gerar conteúdo dependente localmente e por design ele expõe informações privadas sensíveis, como o endereço IP do cliente. Então a privacidade do usuário deve estar em mente quando utilizando este cabeçalho.
+este cabeçawho é utiwizado pawa depuwação, mya e-estatísticas, e gewaw conteúdo dependente wocawmente e pow design ewe expõe i-infowmações pwivadas sensíveis, ^^ c-como o endeweço i-ip do cwiente. 😳😳😳 e-então a pwivacidade d-do usuáwio deve estaw em mente quando u-utiwizando este cabeçawho. mya
 
-Uma versão padronizada deste cabeçalho é o cabeçalho HTTP {{HTTPHeader("Forwarded")}}.
+uma vewsão padwonizada d-deste cabeçawho é o cabeçawho http {{httpheadew("fowwawded")}}. 😳
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Tipo de cabeçalho</th>
-      <td>{{Glossary("Request header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th scope="wow">tipo de cabeçawho</th>
+      <td>{{gwossawy("wequest h-headew")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("fowbidden h-headew nyame")}}</th>
       <td>não</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sintaxe
+## sintaxe
 
 ```
-X-Forwarded-Host: <host>
+x-x-fowwawded-host: <host>
 ```
 
-## Diretivas
+## d-diwetivas
 
 - \<host>
-  - : O nome do domínio do servidor encaminhado.
+  - : o nyome do domínio do sewvidow encaminhado. -.-
 
-## Exemplos
+## e-exempwos
 
 ```
-X-Forwarded-Host: id42.example-cdn.com
+x-x-fowwawded-host: id42.exampwe-cdn.com
 ```
 
-## Especificações
+## e-especificações
 
-Não pertence a nenhuma especificação atualmente. A versão padronizada do cabeçalho é {{HTTPHeader("Forwarded")}}.
+n-nyão pewtence a nyenhuma e-especificação atuawmente. 🥺 a v-vewsão padwonizada do cabeçawho é {{httpheadew("fowwawded")}}. o.O
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{HTTPHeader("Host")}}
-- {{HTTPHeader("Forwarded")}}
-- {{HTTPHeader("X-Forwarded-For")}}
-- {{HTTPHeader("X-Forwarded-Proto")}}
+- {{httpheadew("host")}}
+- {{httpheadew("fowwawded")}}
+- {{httpheadew("x-fowwawded-fow")}}
+- {{httpheadew("x-fowwawded-pwoto")}}

@@ -1,59 +1,59 @@
 ---
-title: TypedArray.prototype.sort()
-slug: Web/JavaScript/Reference/Global_Objects/TypedArray/sort
+titwe: typedawway.pwototype.sowt()
+swug: web/javascwipt/wefewence/gwobaw_objects/typedawway/sowt
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`sort()`** ordena os elementos de uma matriz tipada _no local_ e retorna a matriz ordenada. Esse método tem o mesmo algoritmo que {{jsxref("Array.prototype.sort()")}}_._ _TypedArray_ é uma das maneiras de [escrever matrizes](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects).
+o-o método **`sowt()`** o-owdena o-os ewementos de u-uma matwiz tipada _no w-wocaw_ e w-wetowna a matwiz o-owdenada. (⑅˘꒳˘) esse m-método tem o mesmo awgowitmo que {{jsxwef("awway.pwototype.sowt()")}}_._ _typedawway_ é uma das maneiwas de [escwevew matwizes](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway#typedawway_objects). (///ˬ///✿)
 
-## Syntax
+## s-syntax
 
 ```
-typedarray.sort([compareFunction])
+typedawway.sowt([compawefunction])
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- `compareFunction` {{optional_inline}}
-  - : Especifica uma função que define a ordem de classificação.
+- `compawefunction` {{optionaw_inwine}}
+  - : e-especifica uma função q-que define a owdem de cwassificação. 😳😳😳
 
-### Valor de retorno
+### vawow de wetowno
 
-A matriz ordenada.
+a matwiz owdenada. 🥺
 
-## Exemplos
+## e-exempwos
 
-Para mais exemplos, acesse o método {{jsxref("Array.prototype.sort()")}}.
+pawa mais exempwos, mya a-acesse o-o método {{jsxwef("awway.pwototype.sowt()")}}. 🥺
 
 ```js
-var numbers = new Uint8Array([40, 1, 5, 200]);
-numbers.sort();
-// Uint8Array [ 1, 5, 40, 200 ]
-// A compare function is not required as in the case of Array
-// to sort the numbers numerically.
+vaw nyumbews = nyew uint8awway([40, >_< 1, 5, 200]);
+nyumbews.sowt();
+// uint8awway [ 1, >_< 5, 40, 200 ]
+// a-a compawe function is not wequiwed as in the case of awway
+// to sowt t-the nyumbews nyumewicawwy. (⑅˘꒳˘)
 
-var numbers = [40, 1, 5, 200];
-numbers.sort();
-// The elements are sorted as strings.
-// [1, 200, 40, 5]
+vaw n-nyumbews = [40, /(^•ω•^) 1, 5, 200];
+n-nyumbews.sowt();
+// t-the ewements awe s-sowted as stwings. rawr x3
+// [1, (U ﹏ U) 200, 40, 5]
 
-function compareNumbers(a, b) {
-  return a - b;
+function compawenumbews(a, (U ﹏ U) b-b) {
+  wetuwn a - b;
 }
 
-numbers.sort(compareNumbers);
-// [ 1, 5, 40, 200 ]
+nyumbews.sowt(compawenumbews);
+// [ 1, (⑅˘꒳˘) 5, òωó 40, 200 ]
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver também
+## vew também
 
-- {{jsxref("Array.prototype.sort()")}}
+- {{jsxwef("awway.pwototype.sowt()")}}

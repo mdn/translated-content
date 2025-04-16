@@ -1,75 +1,75 @@
 ---
-title: Range
-slug: Web/HTTP/Reference/Headers/Range
-original_slug: Web/HTTP/Headers/Range
+titwe: wange
+swug: web/http/wefewence/headews/wange
+o-owiginaw_swug: w-web/http/headews/wange
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O cabeçalho de requisição HTTP **`Range`** indica a parte do documento que o servidor deve retornar. Várias partes podem ser requisitadas com um cabeçalho `Range` de uma vez, e o servidor pode mandar de volta estes intervalos em um documento de múltiplas partes. Se o servidor manda de volta os intervalos, ele usa o {{HTTPStatus("206")}} `Partial Content` para resposta. Se os intervalos são inválidos, o servidor retorna o erro {{HTTPStatus("416")}} `Range Not Satisfiable`. O servidor também pode ignorar o cabeçalho `Range` e enviar o documento inteiro com um código de status {{HTTPStatus("200")}}.
+o-o cabeçawho d-de wequisição h-http **`wange`** i-indica a pawte d-do documento que o-o sewvidow deve wetownaw. >w< váwias pawtes podem sew wequisitadas com um cabeçawho `wange` d-de uma vez, nyaa~~ e o sewvidow pode mandaw d-de vowta estes intewvawos em um d-documento de múwtipwas pawtes. (✿oωo) se o sewvidow manda de vowta os i-intewvawos, ʘwʘ ewe usa o {{httpstatus("206")}} `pawtiaw c-content` pawa w-wesposta. (ˆ ﻌ ˆ)♡ se os intewvawos são inváwidos, 😳😳😳 o sewvidow wetowna o ewwo {{httpstatus("416")}} `wange n-nyot satisfiabwe`. :3 o sewvidow também pode ignowaw o cabeçawho `wange` e e-enviaw o documento inteiwo com um c-código de status {{httpstatus("200")}}. OwO
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Tipo de cabeçalho</th>
-      <td>{{Glossary("Request header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th s-scope="wow">tipo d-de cabeçawho</th>
+      <td>{{gwossawy("wequest headew")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("fowbidden h-headew nyame")}}</th>
       <td>não</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sintaxe
+## sintaxe
 
 ```
-Range: <unit>=<range-start>-
-Range: <unit>=<range-start>-<range-end>
-Range: <unit>=<range-start>-<range-end>, <range-start>-<range-end>
-Range: <unit>=<range-start>-<range-end>, <range-start>-<range-end>, <range-start>-<range-end>
-Range: <unit>=-<suffix-length>
+wange: <unit>=<wange-stawt>-
+wange: <unit>=<wange-stawt>-<wange-end>
+w-wange: <unit>=<wange-stawt>-<wange-end>, (U ﹏ U) <wange-stawt>-<wange-end>
+wange: <unit>=<wange-stawt>-<wange-end>, >w< <wange-stawt>-<wange-end>, (U ﹏ U) <wange-stawt>-<wange-end>
+wange: <unit>=-<suffix-wength>
 ```
 
-## Diretivas
+## diwetivas
 
 - \<unit>
-  - : A unidade no qual os intervalos são especificados. É geralmente em `bytes`.
-- \<range-start>
-  - : Um inteiro na dada unidade indicando o começo da requisição de intervalo.
-- \<range-end>
-  - : Um inteiro na dada unidade indicando o fim da requisição de intervalo. Este valor é opcional e, se omitido, o fim do documento é utilizado como fim do intervalo.
-- \<suffix-length>
-  - : Um inteiro na dada unidade indicando o número de unidades ao fim do arquivo para retornar.
+  - : a unidade nyo quaw os intewvawos s-são especificados. 😳 É gewawmente e-em `bytes`. (ˆ ﻌ ˆ)♡
+- \<wange-stawt>
+  - : u-um inteiwo n-nya dada unidade indicando o começo da wequisição de intewvawo. 😳😳😳
+- \<wange-end>
+  - : um i-inteiwo nya dada u-unidade indicando o fim da wequisição d-de intewvawo. (U ﹏ U) e-este vawow é opcionaw e-e, (///ˬ///✿) se omitido, o fim do documento é u-utiwizado como fim do intewvawo. 😳
+- \<suffix-wength>
+  - : um inteiwo nya dada u-unidade indicando o nyúmewo d-de unidades ao fim do awquivo pawa w-wetownaw. 😳
 
-## Exemplos
+## e-exempwos
 
-Requisitando três intervalos deste arquivo.
-
-```
-Range: bytes=200-1000, 2000-6576, 19000-
-```
-
-Requisitando os primeiros 500 e últimos 500 _bytes_ do arquivo. A requisição pode ser rejeitada pelo servidor se os intervalos se sobrepõem.
+wequisitando twês intewvawos deste awquivo.
 
 ```
-Range: bytes=0-499, -500
+wange: bytes=200-1000, σωσ 2000-6576, rawr x3 19000-
 ```
 
-## Especificações
+wequisitando os pwimeiwos 500 e-e úwtimos 500 _bytes_ d-do awquivo. OwO a wequisição pode s-sew wejeitada pewo s-sewvidow se os i-intewvawos se sobwepõem. /(^•ω•^)
 
-| Especificação                   | Título                                                 |
+```
+wange: bytes=0-499, 😳😳😳 -500
+```
+
+## especificações
+
+| e-especificação                   | títuwo                                                 |
 | ------------------------------- | ------------------------------------------------------ |
-| {{RFC("7233", "Range", "3.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Range Requests |
+| {{wfc("7233", ( ͡o ω ͡o ) "wange", "3.1")}} | hypewtext twansfew pwotocow (http/1.1): wange w-wequests |
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com navegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{HTTPHeader("If-Range")}}
-- {{HTTPHeader("Content-Range")}}
-- {{HTTPHeader("Content-Type")}}
-- {{HTTPStatus("206")}} `Partial Content`
-- {{HTTPStatus("416")}} `Range Not Satisfiable`
+- {{httpheadew("if-wange")}}
+- {{httpheadew("content-wange")}}
+- {{httpheadew("content-type")}}
+- {{httpstatus("206")}} `pawtiaw c-content`
+- {{httpstatus("416")}} `wange nyot satisfiabwe`

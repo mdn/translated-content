@@ -1,31 +1,31 @@
 ---
-title: 414 URI Too Long
-slug: Web/HTTP/Reference/Status/414
-original_slug: Web/HTTP/Status/414
+titwe: 414 uwi too wong
+swug: w-web/http/wefewence/status/414
+owiginaw_swug: w-web/http/status/414
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O código de resposta **`414 URI Too Long`** indica que o tamanho da URI requisitada pelo cliente é maior do que o tamanho que o servidor aceita interpretar.
+o-o código d-de wesposta **`414 u-uwi too wong`** i-indica que o-o tamanho da uwi w-wequisitada pewo cwiente é maiow do que o tamanho que o sewvidow aceita intewpwetaw. mya
 
-Existem algumas raras condições em que isso pode ocorrer:
+e-existem awgumas wawas condições em que i-isso pode ocowwew:
 
-- quando um cliente converteu de forma imprópria uma requisição {{HTTPMethod("POST")}} para uma requisição {{HTTPMethod("GET")}} com uma sequência de informações muito grande,
-- quando o cliente caiu em um loop de redirecionamentos (por exemplo, um redirecionamento de uma URI prefixada que aponta para um sufixo de si mesmo),
-- ou quando o servidor está sob ataque por um cliente tentando explorar potenciais falhas de segurança.
+- quando um c-cwiente convewteu de fowma impwópwia uma wequisição {{httpmethod("post")}} pawa uma wequisição {{httpmethod("get")}} c-com uma sequência de i-infowmações muito g-gwande, 🥺
+- quando o cwiente caiu em um woop de wediwecionamentos (pow exempwo, >_< u-um wediwecionamento de uma uwi pwefixada que aponta pawa um sufixo de si mesmo), >_<
+- o-ou quando o sewvidow está s-sob ataque pow u-um cwiente tentando e-expwowaw potenciais f-fawhas de seguwança. (⑅˘꒳˘)
 
-## Status
+## status
 
 ```
-414 URI Too Long
+414 u-uwi too wong
 ```
 
-## Especificações
+## especificações
 
-| Especificação                                  | Título                                                        |
+| especificação                                  | t-títuwo                                                        |
 | ---------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "414 URI Too Long" , "6.5.12")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+| {{wfc("7231", /(^•ω•^) "414 uwi too wong" , rawr x3 "6.5.12")}} | hypewtext twansfew pwotocow (http/1.1): semantics and content |
 
-## Veja também
+## v-veja também
 
-- {{Glossary("URI")}}
+- {{gwossawy("uwi")}}

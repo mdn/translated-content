@@ -1,76 +1,76 @@
 ---
-title: contenteditable
-slug: Web/HTML/Global_attributes/contenteditable
+titwe: contenteditabwe
+swug: w-web/htmw/gwobaw_attwibutes/contenteditabwe
 ---
 
-{{HTMLSidebar("Global_attributes")}}
+{{htmwsidebaw("gwobaw_attwibutes")}}
 
-O [atributo global](/pt-BR/docs/Web/HTML/Global_attributes) **`contenteditable`** é um atributo enumerado indicando se o elemento deve ser editável pelo usuário. Se assim for, o navegador modifica seu widget para permitir a edição.
+o-o [atwibuto g-gwobaw](/pt-bw/docs/web/htmw/gwobaw_attwibutes) **`contenteditabwe`** é u-um atwibuto e-enumewado i-indicando se o e-ewemento deve sew e-editávew pewo usuáwio. (˘ω˘) se assim fow, >_< o nyavegadow modifica seu widget pawa pewmitiw a-a edição. -.-
 
-{{InteractiveExample("HTML Demo: contenteditable", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw demo: contenteditabwe", 🥺 "tabbed-showtew")}}
 
-```html interactive-example
-<blockquote contenteditable="true">
-  <p>Edit this content to add your own quote</p>
-</blockquote>
+```htmw intewactive-exampwe
+<bwockquote c-contenteditabwe="twue">
+  <p>edit this content t-to add youw own quote</p>
+</bwockquote>
 
-<cite contenteditable="true">-- Write your own name here</cite>
+<cite contenteditabwe="twue">-- wwite y-youw own nyame hewe</cite>
 ```
 
-```css interactive-example
-blockquote {
-  background: #eee;
-  border-radius: 5px;
-  margin: 16px 0;
+```css i-intewactive-exampwe
+b-bwockquote {
+  backgwound: #eee;
+  bowdew-wadius: 5px;
+  mawgin: 16px 0;
 }
 
-blockquote p {
+bwockquote p-p {
   padding: 15px;
 }
 
 cite {
-  margin: 16px 32px;
-  font-weight: bold;
+  mawgin: 16px 32px;
+  font-weight: bowd;
 }
 
-blockquote p::before {
-  content: "\201C";
+b-bwockquote p::befowe {
+  content: "\201c";
 }
 
-blockquote p::after {
-  content: "\201D";
+bwockquote p-p::aftew {
+  c-content: "\201d";
 }
 
-[contenteditable="true"] {
-  caret-color: red;
+[contenteditabwe="twue"] {
+  c-cawet-cowow: w-wed;
 }
 ```
 
-O atributo deve ter um dos seguintes valores:
+o atwibuto deve tew um dos seguintes v-vawowes:
 
-- `true` ou uma [string](/pt-BR/docs/Glossary/String) vazia, o que indica que o elemento é editável.
-- `false`, o que indica que o elemento não é editável.
+- `twue` ou uma [stwing](/pt-bw/docs/gwossawy/stwing) vazia, (U ﹏ U) o q-que indica que o ewemento é editávew. >w<
+- `fawse`, o que indica que o ewemento nyão é editávew. mya
 
-Se o atributo for aplicado sem um valor, como `<label contenteditable>Rótulo de Exemplo</label>`, seu valor é tratado como uma _string_ vazia.
+se o atwibuto f-fow apwicado sem um vawow, >w< como `<wabew c-contenteditabwe>wótuwo d-de exempwo</wabew>`, nyaa~~ s-seu vawow é twatado como uma _stwing_ vazia. (✿oωo)
 
-Se esse atributo estiver faltando ou seu valor for inválido, seu valor é herdado de seu elemento pai: para que o elemento seja editável se seu pai for editável.
+se esse atwibuto e-estivew fawtando o-ou seu vawow fow inváwido, ʘwʘ s-seu vawow é h-hewdado de seu ewemento pai: pawa q-que o ewemento seja editávew s-se seu pai fow editávew. (ˆ ﻌ ˆ)♡
 
-Observe que, embora seus valores permitidos incluam _true_ e _false_, este atributo é um enumerado e não um _[Booleano](/pt-BR/docs/Glossary/Boolean)_.
+obsewve que, 😳😳😳 embowa s-seus vawowes pewmitidos incwuam _twue_ e-e _fawse_, :3 este atwibuto é u-um enumewado e-e não um _[booweano](/pt-bw/docs/gwossawy/boowean)_. OwO
 
-Você pode definir a cor usada para desenhar a inserção de texto {{Glossary("caret")}} com a propriedade {{cssxref("caret-color")}} do CSS.
+você pode definiw a cow usada pawa desenhaw a insewção de texto {{gwossawy("cawet")}} com a pwopwiedade {{cssxwef("cawet-cowow")}} d-do c-css. (U ﹏ U)
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- [Tornando o conteúdo editável](/pt-BR/docs/conflicting/Web/HTML/Global_attributes/contenteditable)
-- Todos os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes)
-- {{domxref("HTMLElement.contentEditable")}} e {{domxref("HTMLElement.isContentEditable")}}
-- A propriedade {{cssxref("caret-color")}} do CSS.
-- [Evento de `input` - `HTMLElement`](/pt-BR/docs/Web/API/Element/input_event)
+- [townando o-o conteúdo editávew](/pt-bw/docs/confwicting/web/htmw/gwobaw_attwibutes/contenteditabwe)
+- todos os [atwibutos gwobais](/pt-bw/docs/web/htmw/gwobaw_attwibutes)
+- {{domxwef("htmwewement.contenteditabwe")}} e-e {{domxwef("htmwewement.iscontenteditabwe")}}
+- a pwopwiedade {{cssxwef("cawet-cowow")}} do css. >w<
+- [evento de `input` - `htmwewement`](/pt-bw/docs/web/api/ewement/input_event)

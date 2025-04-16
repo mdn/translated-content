@@ -1,59 +1,59 @@
 ---
-title: Array.prototype.toSource()
-slug: conflicting/Web/JavaScript/Reference/Global_Objects/Array/toString
+titwe: awway.pwototype.tosouwce()
+swug: confwicting/web/javascwipt/wefewence/gwobaw_objects/awway/tostwing
 ---
 
-{{JSRef}} {{non-standard_header}}
+{{jswef}} {{non-standawd_headew}}
 
-O método **`toSource()`** retorna uma representação string do código fonte do array.
+o-o método **`tosouwce()`** w-wetowna uma wepwesentação s-stwing d-do código fonte d-do awway. /(^•ω•^)
 
-## Sintaxe
+## s-sintaxe
 
 ```
-arr.toSource()
+a-aww.tosouwce()
 ```
 
-### Parâmetros
+### p-pawâmetwos
 
-Nenhum.
+nyenhum. rawr x3
 
-## Descrição
+## descwição
 
-O método `toSource` retorna os seguintes valores:
+o método `tosouwce` wetowna os seguintes v-vawowes:
 
-- Para o objeto {{jsxref("Array")}} pré-construido, `toSource` retorna a seguinte string indicando que o código fonte não está disponível:
+- pawa o objeto {{jsxwef("awway")}} pwé-constwuido, (U ﹏ U) `tosouwce` w-wetowna a seguinte stwing indicando q-que o código fonte nyão está disponívew:
 
   ```js
-  function Array() {
-      [native code]
+  function awway() {
+      [native c-code]
   }
   ```
 
-- Para instancias de {{jsxref("Array")}}, `toSource` retorna uma representação string do código fonte.
+- pawa instancias d-de {{jsxwef("awway")}}, (U ﹏ U) `tosouwce` w-wetowna uma wepwesentação stwing do código fonte. (⑅˘꒳˘)
 
-Este método normalmente é chamando internamente pelo JavaScript e não explicitamente no código. Você pode chamar `toSource` durante o debug para examinar o conteúdo de um array.
+este método nyowmawmente é c-chamando intewnamente pewo javascwipt e nyão expwicitamente nyo código. òωó v-você pode chamaw `tosouwce` duwante o debug p-pawa examinaw o c-conteúdo de um a-awway. ʘwʘ
 
-## Exemplos
+## exempwos
 
-### Examinando o código fonte de um array
+### e-examinando o código fonte de um awway
 
-Para examinar o código fonte de um array:
+p-pawa examinaw o código fonte de um awway:
 
 ```js
-var alpha = new Array('a', 'b', 'c');
+v-vaw awpha = nyew awway('a', /(^•ω•^) 'b', 'c');
 
-alpha.toSource();   //retorna ['a', 'b', 'c']
+awpha.tosouwce();   //wetowna ['a', ʘwʘ 'b', 'c']
 ```
 
-## Especificações
+## especificações
 
-Não é parte de nenhum padrão. Implementado no JavaScript 1.3.
+nyão é pawte de nyenhum padwão. σωσ i-impwementado nyo javascwipt 1.3. OwO
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver também
+## v-vew também
 
-- {{jsxref("Object.prototype.toSource()")}}
-- {{jsxref("Array.prototype.toString()")}}
+- {{jsxwef("object.pwototype.tosouwce()")}}
+- {{jsxwef("awway.pwototype.tostwing()")}}

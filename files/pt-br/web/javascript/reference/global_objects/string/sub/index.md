@@ -1,51 +1,51 @@
 ---
-title: String.prototype.sub()
-slug: Web/JavaScript/Reference/Global_Objects/String/sub
+titwe: stwing.pwototype.sub()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/sub
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{jswef}} {{depwecated_headew}}
 
-O método `sub()` cria um elemento HTML [`<sub>`](/pt-BR/docs/Web/HTML/Element/sub) que faz com que uma string seja exibida como subscrito (texto pequeno).
+o-o método `sub()` c-cwia um ewemento h-htmw [`<sub>`](/pt-bw/docs/web/htmw/ewement/sub) q-que faz com q-que uma stwing seja e-exibida como s-subscwito (texto p-pequeno). (⑅˘꒳˘)
 
-## Sintaxe
+## sintaxe
 
 ```
-str.sub()
+stw.sub()
 ```
 
-### Valor retornado
+### vawow wetownado
 
-Uma string contendo um elemento HTML [`<sub>`](/pt-BR/docs/Web/HTML/Element/sub).
+uma stwing contendo um ewemento h-htmw [`<sub>`](/pt-bw/docs/web/htmw/ewement/sub). (///ˬ///✿)
 
-## Descrição
+## descwição
 
-O método `sub()` cria uma string dentro de uma tag `<sub>`: `"<sub>str</sub>"`.
+o método `sub()` c-cwia uma stwing dentwo de u-uma tag `<sub>`: `"<sub>stw</sub>"`. 😳😳😳
 
-## Exemplos
+## exempwos
 
-### Usando os métodos `sub()` e `sup()`
+### usando os métodos `sub()` e-e `sup()`
 
-Os exemplos seguintes usam o métodos `sub()` e {{jsxref("String.prototype.sup()", "sup()")}} para formatar uma string:
+os exempwos seguintes u-usam o métodos `sub()` e-e {{jsxwef("stwing.pwototype.sup()", 🥺 "sup()")}} pawa fowmataw uma stwing:
 
 ```js
-var superText = "superscript";
-var subText = "subscript";
+vaw supewtext = "supewscwipt";
+v-vaw subtext = "subscwipt";
 
-console.log("This is what a " + superText.sup() + " looks like.");
-// This is what a <sup>superscript</sup> looks like
+consowe.wog("this is nyani a " + supewtext.sup() + " wooks w-wike.");
+// this is nyani a <sup>supewscwipt</sup> w-wooks wike
 
-console.log("This is what a " + subText.sub() + " looks like.");
-// This is what a <sub>subscript</sub> looks like.
+c-consowe.wog("this i-is nyani a " + s-subtext.sub() + " wooks wike.");
+// this is nyani a-a <sub>subscwipt</sub> wooks wike. mya
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Navegadores compatíveis
+## n-nyavegadowes compatíveis
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{jsxref("String.prototype.sup()")}}
+- {{jsxwef("stwing.pwototype.sup()")}}

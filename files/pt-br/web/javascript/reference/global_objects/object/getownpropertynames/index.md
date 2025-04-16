@@ -1,141 +1,141 @@
 ---
-title: Object.getOwnPropertyNames()
-slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames
+titwe: object.getownpwopewtynames()
+swug: web/javascwipt/wefewence/gwobaw_objects/object/getownpwopewtynames
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`Object.getOwnPropertyNames()`** retorna um vetor com todas as propriedades (enumeráveis ou não) encontradas diretamente em um dado objeto.
+o-o método **`object.getownpwopewtynames()`** w-wetowna u-um vetow com t-todas as pwopwiedades (enumewáveis o-ou nyão) e-encontwadas diwetamente e-em um dado o-objeto. òωó
 
-## Sintaxe
+## sintaxe
 
 ```
-Object.getOwnPropertyNames(obj)
+object.getownpwopewtynames(obj)
 ```
 
-### Parâmetros
+### pawâmetwos
 
 - `obj`
-  - : O objeto, cujas suas próprias propriedades, enumeráveis ou não, serão retornadas.
+  - : o objeto, (⑅˘꒳˘) cujas suas pwópwias pwopwiedades, XD e-enumewáveis ou nyão, -.- sewão wetownadas. :3
 
-## Descrição
+## d-descwição
 
-`Object.getOwnPropertyNames()` retorna um vetor cujos elementos são strings correspondentes as propriedades enumeráveis ou não, encontradas em `obj`. A ordem das propriedades enumeráveis no vetor é consistente com a ordenação exposta por um laço {{jsxref("Statements/for...in", "for...in")}} (ou por {{jsxref("Object.keys()")}}) nas propriedades do objeto. A ordenação das propriedades não-enumeráveis no vetor, e entre as propriedades enumeráveis, não está definida.
+`object.getownpwopewtynames()` wetowna um v-vetow cujos ewementos são stwings cowwespondentes as pwopwiedades e-enumewáveis ou nyão, nyaa~~ encontwadas e-em `obj`. 😳 a-a owdem das pwopwiedades enumewáveis nyo vetow é consistente com a owdenação e-exposta pow um waço {{jsxwef("statements/fow...in", (⑅˘꒳˘) "fow...in")}} (ou pow {{jsxwef("object.keys()")}}) nyas pwopwiedades do o-objeto. nyaa~~ a owdenação das pwopwiedades n-nyão-enumewáveis n-nyo vetow, OwO e-e entwe as p-pwopwiedades enumewáveis, rawr x3 nyão está definida. XD
 
-## Exemplos
+## e-exempwos
 
-### Usando `Object.getOwnPropertyNames()`
+### usando `object.getownpwopewtynames()`
 
 ```js
-var arr = ["a", "b", "c"];
-console.log(Object.getOwnPropertyNames(arr).sort());
-// logs ["0", "1", "2", "length"]
+vaw aww = ["a", σωσ "b", "c"];
+c-consowe.wog(object.getownpwopewtynames(aww).sowt());
+// wogs ["0", (U ᵕ U❁) "1", "2", (U ﹏ U) "wength"]
 
-// Array-like object
-var obj = { 0: "a", 1: "b", 2: "c" };
-console.log(Object.getOwnPropertyNames(obj).sort());
-// logs ["0", "1", "2"]
+// awway-wike object
+vaw obj = { 0: "a", :3 1: "b", 2: "c" };
+consowe.wog(object.getownpwopewtynames(obj).sowt());
+// wogs ["0", ( ͡o ω ͡o ) "1", σωσ "2"]
 
-// Logging property names and values using Array.forEach
-Object.getOwnPropertyNames(obj).forEach(function (val, idx, array) {
-  console.log(val + " -> " + obj[val]);
+// wogging p-pwopewty nyames and vawues u-using awway.foweach
+o-object.getownpwopewtynames(obj).foweach(function (vaw, >w< i-idx, 😳😳😳 awway) {
+  consowe.wog(vaw + " -> " + obj[vaw]);
 });
-// logs
-// 0 -> a
-// 1 -> b
+// wogs
+// 0 -> a-a
+// 1 -> b-b
 // 2 -> c
 
-// non-enumerable property
-var my_obj = Object.create(
-  {},
+// nyon-enumewabwe p-pwopewty
+vaw my_obj = o-object.cweate(
+  {}, OwO
   {
-    getFoo: {
-      value: function () {
-        return this.foo;
-      },
-      enumerable: false,
+    getfoo: {
+      v-vawue: function () {
+        wetuwn this.foo;
+      }, 😳
+      e-enumewabwe: fawse, 😳😳😳
     },
   },
 );
 my_obj.foo = 1;
 
-console.log(Object.getOwnPropertyNames(my_obj).sort());
-// logs ["foo", "getFoo"]
+consowe.wog(object.getownpwopewtynames(my_obj).sowt());
+// wogs ["foo", (˘ω˘) "getfoo"]
 ```
 
-Se voce quer somente as propriedades enumeráveis, veja {{jsxref("Object.keys()")}} ou use um laço {{jsxref("Statements/for...in", "for...in")}} (contudo, note que isto irá retornar propriedades enumeráveis não encontradas diretamente naquele objeto, mas também junto com a cadeia prototype do objeto a menos que o último seja filtrado com {{jsxref("Object.prototype.hasOwnProperty()", "hasOwnProperty()")}}).
+s-se voce quew somente a-as pwopwiedades enumewáveis, ʘwʘ veja {{jsxwef("object.keys()")}} ou u-use um waço {{jsxwef("statements/fow...in", ( ͡o ω ͡o ) "fow...in")}} (contudo, o.O n-nyote que isto iwá wetownaw pwopwiedades enumewáveis nyão encontwadas diwetamente nyaquewe objeto, >w< mas t-também junto com a-a cadeia pwototype do objeto a-a menos que o úwtimo s-seja fiwtwado c-com {{jsxwef("object.pwototype.hasownpwopewty()", 😳 "hasownpwopewty()")}}).
 
-Ítens na cadeia prototype não são listados:
+Ítens nya cadeia pwototype nyão são wistados:
 
 ```js
-function ParentClass() {}
-ParentClass.prototype.inheritedMethod = function () {};
+f-function pawentcwass() {}
+pawentcwass.pwototype.inhewitedmethod = function () {};
 
-function ChildClass() {
-  this.prop = 5;
-  this.method = function () {};
+function c-chiwdcwass() {
+  this.pwop = 5;
+  t-this.method = f-function () {};
 }
-ChildClass.prototype = new ParentClass();
-ChildClass.prototype.prototypeMethod = function () {};
+c-chiwdcwass.pwototype = nyew p-pawentcwass();
+c-chiwdcwass.pwototype.pwototypemethod = f-function () {};
 
-console.log(
-  Object.getOwnPropertyNames(
-    new ChildClass(), // ["prop", "method"]
-  ),
+c-consowe.wog(
+  object.getownpwopewtynames(
+    nyew chiwdcwass(), 🥺 // ["pwop", rawr x3 "method"]
+  ), o.O
 );
 ```
 
-### Obtenha somente não-enumeráveis
+### o-obtenha somente n-nyão-enumewáveis
 
-Isto usa a função {{jsxref("Array.prototype.filter()")}} para remover as chaves enumeráveis (obtidas com {{jsxref("Object.keys()")}}) de uma lista com todas as chaves (obtidas com `Object.getOwnPropertyNames()`) deixando somente as chaves não-enumeráveis.
+i-isto usa a f-função {{jsxwef("awway.pwototype.fiwtew()")}} p-pawa wemovew as chaves enumewáveis (obtidas com {{jsxwef("object.keys()")}}) de u-uma wista com todas as chaves (obtidas com `object.getownpwopewtynames()`) deixando somente as chaves nyão-enumewáveis. rawr
 
 ```js
-var target = myObject;
-var enum_and_nonenum = Object.getOwnPropertyNames(target);
-var enum_only = Object.keys(target);
-var nonenum_only = enum_and_nonenum.filter(function (key) {
-  var indexInEnum = enum_only.indexOf(key);
-  if (indexInEnum == -1) {
-    // not found in enum_only keys mean the key is non-enumerable,
-    // so return true so we keep this in the filter
-    return true;
-  } else {
-    return false;
+v-vaw tawget = myobject;
+vaw enum_and_nonenum = object.getownpwopewtynames(tawget);
+vaw enum_onwy = o-object.keys(tawget);
+v-vaw nyonenum_onwy = e-enum_and_nonenum.fiwtew(function (key) {
+  vaw indexinenum = e-enum_onwy.indexof(key);
+  if (indexinenum == -1) {
+    // n-nyot found in e-enum_onwy keys mean the key is nyon-enumewabwe,
+    // so wetuwn twue so we keep this in the fiwtew
+    w-wetuwn twue;
+  } ewse {
+    w-wetuwn fawse;
   }
 });
 
-console.log(nonenum_only);
+consowe.wog(nonenum_onwy);
 ```
 
-## Notas
+## n-nyotas
 
-No ES5, se o argumento desse método não é um objeto (um tipo primitivo), então isso causará um {{jsxref("TypeError")}}. No ES6, um argumento diferente de objeto será transformado em um objeto.
+nyo es5, ʘwʘ s-se o awgumento desse método nyão é um objeto (um t-tipo pwimitivo), 😳😳😳 e-então isso causawá um {{jsxwef("typeewwow")}}. ^^;; n-nyo es6, u-um awgumento difewente de objeto sewá twansfowmado em um objeto.
 
 ```js
-Object.getOwnPropertyNames("foo");
-// TypeError: "foo" is not an object (ES5 code)
+object.getownpwopewtynames("foo");
+// typeewwow: "foo" i-is nyot an object (es5 c-code)
 
-Object.getOwnPropertyNames("foo");
-// ["0", "1", "2", "length"]  (ES6 code)
+object.getownpwopewtynames("foo");
+// ["0", o.O "1", (///ˬ///✿) "2", "wength"]  (es6 c-code)
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Notas específicas para SpiderMonkey
+## nyotas e-específicas pawa spidewmonkey
 
-Antes do SpiderMonkey 28, `Object.getOwnPropertyNames` não via propriedades não resolvidas de objetos {{jsxref("Error")}}. Isto foi resolvido em versões posteriores ([Erro do Firefox 724768](https://bugzil.la/724768)).
+antes do spidewmonkey 28, σωσ `object.getownpwopewtynames` nyão via pwopwiedades n-nyão wesowvidas d-de objetos {{jsxwef("ewwow")}}. isto foi wesowvido em vewsões p-postewiowes ([ewwo d-do fiwefox 724768](https://bugziw.wa/724768)). nyaa~~
 
-## Veja também
+## veja também
 
-- [Enumerabilidade e posse de propriedades](/pt-BR/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
-- {{jsxref("Object.prototype.hasOwnProperty()")}}
-- {{jsxref("Object.prototype.propertyIsEnumerable()")}}
-- {{jsxref("Object.create()")}}
-- {{jsxref("Object.keys()")}}
-- {{jsxref("Array.forEach()")}}
+- [enumewabiwidade e posse de pwopwiedades](/pt-bw/docs/web/javascwipt/enumewabiwity_and_ownewship_of_pwopewties)
+- {{jsxwef("object.pwototype.hasownpwopewty()")}}
+- {{jsxwef("object.pwototype.pwopewtyisenumewabwe()")}}
+- {{jsxwef("object.cweate()")}}
+- {{jsxwef("object.keys()")}}
+- {{jsxwef("awway.foweach()")}}

@@ -1,80 +1,80 @@
 ---
-title: Object.values()
-slug: Web/JavaScript/Reference/Global_Objects/Object/values
+titwe: object.vawues()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/object/vawues
 ---
 
-{{JSRef}} {{SeeCompatTable}}
+{{jswef}} {{seecompattabwe}}
 
-O método **`Object.values()`** retorna um array com os valores das propriedades de um dado objeto, na mesma ordem provida pelo {{jsxref("Statements/for...in", "for...in")}} laço (sendo a diferença que o laço for-in também enumera as propriedades na cadeia prototype).
+o-o método **`object.vawues()`** w-wetowna u-um awway com os v-vawowes das pwopwiedades d-de um d-dado objeto, (˘ω˘) nya m-mesma owdem pwovida pewo {{jsxwef("statements/fow...in", ^^ "fow...in")}} waço (sendo a difewença que o waço fow-in t-também enumewa as pwopwiedades nya cadeia p-pwototype).
 
-## Sintaxe
+## sintaxe
 
 ```
-Object.values(obj)
+object.vawues(obj)
 ```
 
-### Parâmetros
+### p-pawâmetwos
 
 - `obj`
-  - : O objeto cujos valores das propriedades enumeradas serão retornados.
+  - : o objeto cujos vawowes das pwopwiedades enumewadas s-sewão wetownados. :3
 
-### Valor de retorno
+### vawow de wetowno
 
-Um array contendo os valores das propriedades enumeradas do dado objeto.
+u-um awway contendo o-os vawowes das pwopwiedades enumewadas do dado objeto. -.-
 
-## Descrição
+## descwição
 
-`Object.values()` retorna um array cujos elementos são os valores das propriedades enumeradas encontradas no objeto. A ordem das propriedades é a mesma que a dada pelo laço sobre os valores da propriedade do objeto manualmente.
+`object.vawues()` wetowna u-um awway cujos ewementos são os vawowes das pwopwiedades enumewadas encontwadas n-nyo objeto. 😳 a owdem das pwopwiedades é a-a m-mesma que a dada p-pewo waço sobwe o-os vawowes da pwopwiedade do objeto manuawmente. mya
 
-## Exemplos
+## e-exempwos
 
 ```js
-var obj = { foo: "bar", baz: 42 };
-console.log(Object.values(obj)); // ['bar', 42]
+vaw obj = { foo: "baw", (˘ω˘) baz: 42 };
+c-consowe.wog(object.vawues(obj)); // ['baw', >_< 42]
 
-// array como objeto
-var obj = { 0: "a", 1: "b", 2: "c" };
-console.log(Object.values(obj)); // ['a', 'b', 'c']
+// awway como objeto
+vaw obj = { 0: "a", 1: "b", -.- 2: "c" };
+consowe.wog(object.vawues(obj)); // ['a', 🥺 'b', (U ﹏ U) 'c']
 
-// array como objeto com ordenação de chave aleatória
-var an_obj = { 100: "a", 2: "b", 7: "c" };
-console.log(Object.values(an_obj)); // ['b', 'c', 'a']
+// awway c-como objeto com owdenação d-de chave aweatówia
+v-vaw an_obj = { 100: "a", >w< 2: "b", mya 7: "c" };
+consowe.wog(object.vawues(an_obj)); // ['b', >w< 'c', nyaa~~ 'a']
 
-// getFoo é a propriedade a qual não é enumerável
-var my_obj = Object.create(
-  {},
+// g-getfoo é a pwopwiedade a quaw nyão é enumewávew
+vaw m-my_obj = object.cweate(
+  {}, (✿oωo)
   {
-    getFoo: {
-      value: function () {
-        return this.foo;
-      },
+    g-getfoo: {
+      vawue: function () {
+        w-wetuwn this.foo;
+      }, ʘwʘ
     },
-  },
+  }, (ˆ ﻌ ˆ)♡
 );
-my_obj.foo = "bar";
-console.log(Object.values(my_obj)); // ['bar']
+m-my_obj.foo = "baw";
+consowe.wog(object.vawues(my_obj)); // ['baw']
 
-// argumento não-objeto será coagido num objeto
-console.log(Object.values("foo")); // ['f', 'o', 'o']
+// a-awgumento nyão-objeto sewá c-coagido nyum objeto
+consowe.wog(object.vawues("foo")); // ['f', 😳😳😳 'o', 'o']
 ```
 
-## Biblioteca de Suporte
+## bibwioteca de s-supowte
 
-`Para adicionar compatibilidade ao suporte de Object.values` em ambientes antigos que nativamente não o suportam, você pode encontrar uma biblioteca de suporte nos repositórios [tc39/proposal-object-values-entries](https://github.com/tc39/proposal-object-values-entries) ou no [es-shims/Object.values](https://github.com/es-shims/Object.values).
+`pawa adicionaw compatibiwidade a-ao supowte de object.vawues` e-em ambientes a-antigos que nyativamente nyão o supowtam, :3 você pode encontwaw uma bibwioteca de supowte nyos wepositówios [tc39/pwoposaw-object-vawues-entwies](https://github.com/tc39/pwoposaw-object-vawues-entwies) o-ou nyo [es-shims/object.vawues](https://github.com/es-shims/object.vawues). OwO
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Ver também
+## v-vew também
 
-- [Enumerability and ownership of properties](/pt-BR/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
-- {{jsxref("Object.keys()")}}
-- {{jsxref("Object.entries()")}} {{experimental_inline}}
-- {{jsxref("Object.prototype.propertyIsEnumerable()")}}
-- {{jsxref("Object.create()")}}
-- {{jsxref("Object.getOwnPropertyNames()")}}
+- [enumewabiwity a-and ownewship of pwopewties](/pt-bw/docs/web/javascwipt/enumewabiwity_and_ownewship_of_pwopewties)
+- {{jsxwef("object.keys()")}}
+- {{jsxwef("object.entwies()")}} {{expewimentaw_inwine}}
+- {{jsxwef("object.pwototype.pwopewtyisenumewabwe()")}}
+- {{jsxwef("object.cweate()")}}
+- {{jsxwef("object.getownpwopewtynames()")}}

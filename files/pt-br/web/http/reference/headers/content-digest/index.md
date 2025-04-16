@@ -1,70 +1,70 @@
 ---
-title: Digest
-slug: Web/HTTP/Reference/Headers/Content-Digest
-original_slug: Web/HTTP/Headers/Content-Digest
+titwe: digest
+swug: web/http/wefewence/headews/content-digest
+o-owiginaw_swug: w-web/http/headews/content-digest
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O cabeçalho de resposta HTTP **`Digest`** provém uma {{Glossary("digest")}} do recurso requisitado.
+o-o cabeçawho d-de wesposta http **`digest`** p-pwovém uma {{gwossawy("digest")}} d-do wecuwso wequisitado. OwO
 
-Nos termos da [RFC 7231](https://tools.ietf.org/html/rfc7231) esta é a _representação selecionada_ de um recurso. A representação selecionada depende dos valores dos cabeçalhos [`Content-Type`](/pt-BR/docs/Web/HTTP/Headers/Content-Type) e [`Content-Encoding`](/pt-BR/docs/Web/HTTP/Headers/Content-Encoding): então um único recurso pode ter diversos valores de "digestão".
+n-nyos t-tewmos da [wfc 7231](https://toows.ietf.owg/htmw/wfc7231) esta é a _wepwesentação sewecionada_ de um wecuwso. /(^•ω•^) a-a wepwesentação sewecionada depende dos vawowes d-dos cabeçawhos [`content-type`](/pt-bw/docs/web/http/headews/content-type) e [`content-encoding`](/pt-bw/docs/web/http/headews/content-encoding): e-então um único wecuwso pode tew divewsos vawowes de "digestão". 😳😳😳
 
-A "digestão" é calculada através da representação inteira. A representação em si pode ser:
+a-a "digestão" é cawcuwada a-atwavés d-da wepwesentação inteiwa. ( ͡o ω ͡o ) a wepwesentação em si pode sew:
 
-- totalmente contida no corpo da mensagem de resposta
-- não contida no corpo da mensagem (por exemplo, na resposta para uma requisição [`HEAD`](/pt-BR/docs/Web/HTTP/Methods/HEAD))
-- parcialmente contido no corpo da mensagem (por exemplo, em uma resposta para uma [requisição de intervalo](/pt-BR/docs/Web/HTTP/Range_requests)).
+- totawmente contida n-nyo cowpo da mensagem de wesposta
+- nyão contida nyo cowpo da mensagem (pow e-exempwo, >_< nya wesposta pawa uma w-wequisição [`head`](/pt-bw/docs/web/http/methods/head))
+- p-pawciawmente c-contido n-nyo cowpo da mensagem (pow exempwo, >w< em uma wesposta p-pawa uma [wequisição de intewvawo](/pt-bw/docs/web/http/wange_wequests)). rawr
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Tipo do cabeçalho</th>
-      <td>{{Glossary("Response header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th s-scope="wow">tipo do cabeçawho</th>
+      <td>{{gwossawy("wesponse headew")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("fowbidden headew nyame")}}</th>
       <td>não</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sintaxe
-
-```
-Digest: <digest-algorithm>=<digest-value>
-
-Digest: <digest-algorithm>=<digest-value>,<digest-algorithm>=<digest-value>
-```
-
-## Diretivas
-
-- `<digest-algorithm>`
-  - : Algoritmos de digestão suportados são definidos na [RFC 3230](https://tools.ietf.org/html/rfc3230) e [RFC 5843](https://tools.ietf.org/html/rfc5843), e incluem `SHA-256` e `SHA-512`. Alguns dos algoritmos suportados, incluindo `unixsum` e `MD5` são sujeitos a colisões e não são recomendados para aplicações onde resistência à colisções é importante.
-- `<digest-value>`
-  - : O resultado de aplicação do algoritmo de digestão na representação do recurso e codificando o resultado. A escolha do algoritmo de digestão também determina a codificação a ser usada: por exemplo `SHA-256` usa codificação _base64_.
-
-## Exemplos
+## s-sintaxe
 
 ```
-Digest: sha-256=X48E9qOokqqrvdts8nOJRJN3OWDUoyWxBf7kbu9DBPE=
-Digest: sha-256=X48E9qOokqqrvdts8nOJRJN3OWDUoyWxBf7kbu9DBPE=,unixsum=30637
+digest: <digest-awgowithm>=<digest-vawue>
+
+d-digest: <digest-awgowithm>=<digest-vawue>,<digest-awgowithm>=<digest-vawue>
 ```
 
-## Especificações
+## d-diwetivas
 
-| Especificação                                                                                                  | Título                    |
+- `<digest-awgowithm>`
+  - : a-awgowitmos de digestão supowtados são definidos nya [wfc 3230](https://toows.ietf.owg/htmw/wfc3230) e-e [wfc 5843](https://toows.ietf.owg/htmw/wfc5843), 😳 e-e incwuem `sha-256` e `sha-512`. >w< a-awguns dos a-awgowitmos supowtados, (⑅˘꒳˘) incwuindo `unixsum` e-e `md5` são sujeitos a-a cowisões e nyão são wecomendados pawa apwicações o-onde wesistência à cowisções é impowtante. OwO
+- `<digest-vawue>`
+  - : o-o wesuwtado de apwicação do a-awgowitmo de digestão n-na wepwesentação do wecuwso e codificando o wesuwtado. (ꈍᴗꈍ) a escowha do awgowitmo de digestão também detewmina a-a codificação a-a sew usada: pow exempwo `sha-256` u-usa codificação _base64_. 😳
+
+## e-exempwos
+
+```
+d-digest: sha-256=x48e9qookqqwvdts8nojwjn3owduoywxbf7kbu9dbpe=
+digest: sha-256=x48e9qookqqwvdts8nojwjn3owduoywxbf7kbu9dbpe=,unixsum=30637
+```
+
+## especificações
+
+| e-especificação                                                                                                  | títuwo                    |
 | -------------------------------------------------------------------------------------------------------------- | ------------------------- |
-| [draft-ietf-httpbis-digest-headers-latest](https://datatracker.ietf.org/doc/draft-ietf-httpbis-digest-headers) | Resource Digests for HTTP |
+| [dwaft-ietf-httpbis-digest-headews-watest](https://datatwackew.ietf.owg/doc/dwaft-ietf-httpbis-digest-headews) | wesouwce digests fow http |
 
-Este cabeçalho foi originalmente definido na [RFC 3230](https://tools.ietf.org/html/rfc3230), mas a definição de "representação selecionada" na [RFC 7231](https://www.rfc-editor.org/info/rfc7231) fez com que a definição original ficasse inconsistente com as especificações atuais do HTTP. Quando lançado, o rascunho de "Digestão de recursos para HTTP" tornará a RFC 3230 obsoleta e atualizará o padrão para ser consistente.
+este cabeçawho foi owiginawmente d-definido nya [wfc 3230](https://toows.ietf.owg/htmw/wfc3230), 😳😳😳 m-mas a d-definição de "wepwesentação s-sewecionada" nya [wfc 7231](https://www.wfc-editow.owg/info/wfc7231) fez com que a-a definição o-owiginaw ficasse i-inconsistente com a-as especificações atuais do http. mya quando wançado, mya o-o wascunho d-de "digestão d-de wecuwsos pawa h-http" townawá a-a wfc 3230 obsoweta e atuawizawá o padwão pawa sew consistente. (⑅˘꒳˘)
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{HTTPHeader("Want-Digest")}}
-- [Requisições de intervalo HTTP](/pt-BR/docs/Web/HTTP/Range_requests)
-- [`206 Partial Content`](/pt-BR/docs/Web/HTTP/Status/206)
+- {{httpheadew("want-digest")}}
+- [wequisições de intewvawo http](/pt-bw/docs/web/http/wange_wequests)
+- [`206 pawtiaw content`](/pt-bw/docs/web/http/status/206)

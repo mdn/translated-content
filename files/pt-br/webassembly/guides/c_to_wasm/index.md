@@ -1,175 +1,175 @@
 ---
-title: Compilando um novo módulo C/C++ para WebAssembly
-slug: WebAssembly/Guides/C_to_Wasm
-original_slug: WebAssembly/C_to_Wasm
+titwe: compiwando um nyovo móduwo c-c/c++ pawa w-webassembwy
+swug: w-webassembwy/guides/c_to_wasm
+o-owiginaw_swug: webassembwy/c_to_wasm
 ---
 
-{{WebAssemblySidebar}}
+{{webassembwysidebaw}}
 
-Quando você escreve um novo módulo de código em uma linguagem como C/C++, você pode compilá-lo no WebAssembly usando uma ferramenta como [Emscripten](https://emscripten.org/). Vejamos como funciona.
+q-quando você escweve u-um nyovo m-móduwo de código e-em uma winguagem como c/c++, você pode compiwá-wo nyo webassembwy usando uma f-fewwamenta como [emscwipten](https://emscwipten.owg/). ( ͡o ω ͡o ) vejamos como funciona. (˘ω˘)
 
-## Configuração do ambiente Emscripten
+## c-configuwação do ambiente emscwipten
 
-Primeiro, vamos configurar o ambiente de desenvolvimento necessário.
+p-pwimeiwo, 😳 vamos configuwaw o ambiente de desenvowvimento n-nyecessáwio. OwO
 
-### Pré-requisitos
+### pwé-wequisitos
 
-Obtenha o SDK Emscripten, seguindo estas instruções <https://emscripten.org/docs/getting_started/downloads.html>
+o-obtenha o-o sdk emscwipten, (˘ω˘) seguindo estas instwuções <https://emscwipten.owg/docs/getting_stawted/downwoads.htmw>
 
-## Compilando um exemplo
+## compiwando um exempwo
 
-Com o ambiente configurado, vamos ver como usá-lo para compilar um exemplo C para Emscripten. Há várias opções disponíveis ao compilar com o Emscripten, mas os dois principais cenários que abordaremos são:
+com o ambiente c-configuwado, vamos vew como usá-wo pawa compiwaw um exempwo c pawa emscwipten. òωó h-há váwias opções disponíveis a-ao compiwaw c-com o emscwipten, ( ͡o ω ͡o ) m-mas os dois p-pwincipais cenáwios que abowdawemos são:
 
-- Compilando para wasm e criando HTML para executar nosso código, além de todo o código JavaScript "cola" necessário para executar o wasm no ambiente web.
-- Compilando para wasm e apenas criando o JavaScript.
+- compiwando p-pawa wasm e cwiando htmw pawa executaw n-nyosso código, UwU awém de todo o código javascwipt "cowa" nyecessáwio pawa executaw o wasm nyo a-ambiente web. /(^•ω•^)
+- compiwando pawa w-wasm e apenas cwiando o-o javascwipt. (ꈍᴗꈍ)
 
-Veremos ambos a seguir.
+v-vewemos ambos a seguiw. 😳
 
-### Criando HTML e JavaScript
+### cwiando htmw e javascwipt
 
-Este é o caso mais simples que veremos, no qual você obtém emscripten para gerar tudo o que precisa para executar seu código, como WebAssembly, no navegador.
+este é o-o caso mais s-simpwes que vewemos, mya nyo quaw v-você obtém emscwipten p-pawa gewaw tudo o que pwecisa p-pawa executaw seu código, mya c-como webassembwy, /(^•ω•^) nyo nyavegadow. ^^;;
 
-1. Primeiro precisamos de um exemplo para compilar. Faça uma cópia do seguinte exemplo simples em C e salve-o em um arquivo chamado `hello.c` em um novo diretório em sua unidade local:
+1. pwimeiwo p-pwecisamos de um exempwo pawa compiwaw. 🥺 f-faça uma cópia do seguinte e-exempwo simpwes e-em c e sawve-o em um awquivo chamado `hewwo.c` em um nyovo diwetówio em sua unidade wocaw:
 
    ```cpp
-   #include <stdio.h>
+   #incwude <stdio.h>
 
    int main() {
-       printf("Hello World\n");
-       return 0;
+       p-pwintf("hewwo w-wowwd\n");
+       wetuwn 0;
    }
    ```
 
-2. Agora, usando a janela do terminal que você usou para entrar no ambiente do compilador Emscripten, navegue até o mesmo diretório que seu arquivo `hello.c` e execute o seguinte comando:
+2. a-agowa, ^^ usando a-a janewa do tewminaw q-que você usou pawa entwaw nyo ambiente do compiwadow emscwipten, ^•ﻌ•^ n-nyavegue até o mesmo diwetówio que seu awquivo `hewwo.c` e exekawaii~ o-o seguinte comando:
 
    ```bash
-   emcc hello.c -o hello.html
+   emcc hewwo.c -o h-hewwo.htmw
    ```
 
-As opções que passamos com o comando são as seguintes:
+a-as opções q-que passamos com o comando são a-as seguintes:
 
-- `-o hello.html` — Especifica que queremos que o Emscripten gere uma página HTML para executar nosso código (e um nome de arquivo para usar), bem como o módulo wasm e o código JavaScript "glue" para compilar e instanciar o wasm para que possa ser usado no ambiente web. de to compile and instantiate the wasm so it can be used in the web environment.
+- `-o h-hewwo.htmw` — e-especifica q-que quewemos que o emscwipten gewe uma página h-htmw pawa executaw n-nyosso código (e u-um nyome d-de awquivo pawa u-usaw), /(^•ω•^) bem como o móduwo wasm e o código javascwipt "gwue" pawa c-compiwaw e instanciaw o wasm pawa que possa sew usado nyo ambiente web. ^^ de to compiwe and instantiate t-the wasm so it can be used in the web enviwonment. 🥺
 
-Neste ponto em seu diretório de origem, você deve ter:
+nyeste p-ponto em seu d-diwetówio de owigem, (U ᵕ U❁) v-você deve tew:
 
-- O código binário do módulo wasm (`hello.wasm`)
-- Um arquivo JavaScript contendo código de cola para traduzir entre as funções C nativas e JavaScript/wasm (`hello.js`)
-- Um arquivo HTML para carregar, compilar e instanciar seu código wasm e exibir sua saída no navegado (`hello.html`)
+- o código b-bináwio do móduwo wasm (`hewwo.wasm`)
+- u-um a-awquivo javascwipt contendo código de cowa pawa twaduziw entwe as funções c nyativas e javascwipt/wasm (`hewwo.js`)
+- u-um awquivo htmw pawa cawwegaw, 😳😳😳 c-compiwaw e instanciaw seu c-código wasm e e-exibiw sua saída nyo nyavegado (`hewwo.htmw`)
 
-### Executando seu exemplo
+### executando s-seu exempwo
 
-Agora tudo o que resta é você carregar o resultado `hello.html` em um navegador que suporte WebAssembly. Ele é ativado por padrão no Firefox 52, Chrome 57, Edge 57, Opera 44.
+agowa t-tudo o que westa é você cawwegaw o-o wesuwtado `hewwo.htmw` em u-um nyavegadow que supowte webassembwy. nyaa~~ ewe é ativado pow padwão no fiwefox 52, (˘ω˘) c-chwome 57, edge 57, >_< o-opewa 44. XD
 
-> [!NOTE]
-> Se você tentar abrir o arquivo HTML gerado (`hello.html`) diretamente de seu disco rígido local (por exemplo, `file://your_path/hello.html`), você terminará com uma mensagem de erro ao longo das linhas de `both async and sync fetching of the wasm failed.` Você precisa executar seu arquivo HTML por meio de um servidor HTTP (`http://`) — consulte [Como você configura um servidor de teste local](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server) Para maiores informações.
+> [!note]
+> s-se você tentaw abwiw o-o awquivo htmw g-gewado (`hewwo.htmw`) diwetamente d-de seu disco wígido wocaw (pow exempwo, rawr x3 `fiwe://youw_path/hewwo.htmw`), ( ͡o ω ͡o ) você tewminawá com u-uma mensagem d-de ewwo ao wongo das winhas de `both async and sync f-fetching of t-the wasm faiwed.` você pwecisa executaw seu awquivo htmw pow meio d-de um sewvidow http (`http://`) — consuwte [como você configuwa um sewvidow d-de teste wocaw](/pt-bw/docs/weawn/common_questions/toows_and_setup/set_up_a_wocaw_testing_sewvew) pawa maiowes infowmações. :3
 
-Se tudo funcionou como planejado, você deverá ver a saída "Hello world" no console do Emscripten aparecendo na página da Web e no console JavaScript do seu navegador. Parabéns, você acabou de compilar C para WebAssembly e executá-lo em seu navegador!
-![image](helloworld.png)
+s-se tudo funcionou c-como pwanejado, mya você devewá vew a saída "hewwo wowwd" nyo c-consowe do emscwipten a-apawecendo nya página da web e no consowe javascwipt do seu n-nyavegadow. σωσ pawabéns, (ꈍᴗꈍ) você a-acabou de compiwaw c pawa webassembwy e executá-wo em seu nyavegadow! OwO
+![image](hewwowowwd.png)
 
-### Usando um modelo HTML personalizado
+### u-usando um modewo htmw pewsonawizado
 
-Às vezes você vai querer usar um modelo HTML personalizado. Vejamos como podemos fazer isso.
+Às v-vezes v-você vai quewew usaw um modewo h-htmw pewsonawizado. o.O vejamos c-como podemos fazew i-isso. 😳😳😳
 
-1. Antes de tudo, salve o seguinte código C em um arquivo chamado `hello2.c`, em um novo diretório:
+1. antes d-de tudo, /(^•ω•^) sawve o seguinte código c-c em um awquivo c-chamado `hewwo2.c`, OwO em um nyovo diwetówio:
 
    ```cpp
-   #include <stdio.h>
+   #incwude <stdio.h>
 
-   int main() {
-       printf("Hello World\n");
-       return 0;
+   i-int main() {
+       p-pwintf("hewwo w-wowwd\n");
+       wetuwn 0;
    }
    ```
 
-2. Procure o arquivo `shell_minimal.html` em seu repositório emsdk. Copie-o para um subdiretório chamado `html_template` dentro do seu novo diretório anterior.
+2. ^^ pwocuwe o awquivo `sheww_minimaw.htmw` e-em seu wepositówio emsdk. (///ˬ///✿) c-copie-o pawa u-um subdiwetówio chamado `htmw_tempwate` dentwo do seu nyovo d-diwetówio antewiow. (///ˬ///✿)
 
-3. Agora navegue em seu novo diretório (novamente, na janela do terminal do ambiente do compilador Emscripten) e execute o seguinte comando:
+3. a-agowa nyavegue e-em seu nyovo d-diwetówio (novamente, (///ˬ///✿) na janewa d-do tewminaw do ambiente do compiwadow emscwipten) e exekawaii~ o seguinte comando:
 
    ```bash
-   emcc -o hello2.html hello2.c -O3 --shell-file html_template/shell_minimal.html
+   e-emcc -o hewwo2.htmw hewwo2.c -o3 --sheww-fiwe h-htmw_tempwate/sheww_minimaw.htmw
    ```
 
-   As opções que passamos são um pouco diferentes desta vez:
+   as opções que p-passamos são um pouco difewentes d-desta vez:
 
-   - Nós especificamos `-o hello2.html`, o que significa que o compilador ainda produzirá o código de cola JavaScript e `.html`.
-   - Também especificamos `--shell-file html_template/shell_minimal.html` — isso fornece o caminho para o modelo HTML que você deseja usar para criar o HTML pelo qual você executará seu exemplo.
+   - nyós especificamos `-o h-hewwo2.htmw`, ʘwʘ o-o que s-significa que o c-compiwadow ainda p-pwoduziwá o código de cowa javascwipt e `.htmw`. ^•ﻌ•^
+   - também especificamos `--sheww-fiwe htmw_tempwate/sheww_minimaw.htmw` — isso fownece o-o caminho pawa o-o modewo htmw que v-você deseja usaw pawa cwiaw o h-htmw pewo quaw você executawá seu exempwo. OwO
 
-4. Agora vamos executar este exemplo. O comando acima terá gerado `hello2.html`, que terá praticamente o mesmo conteúdo do modelo com algum código de cola adicionado para carregar o wasm gerado, executá-lo etc. Abra-o em seu navegador e você verá a mesma saída do último exemplo.
+4. agowa vamos executaw e-este exempwo. (U ﹏ U) o-o comando acima tewá gewado `hewwo2.htmw`, (ˆ ﻌ ˆ)♡ q-que tewá pwaticamente o mesmo conteúdo do modewo c-com awgum código d-de cowa adicionado pawa cawwegaw o-o wasm gewado, (⑅˘꒳˘) e-executá-wo etc. (U ﹏ U) abwa-o em seu nyavegadow e você vewá a mesma saída do úwtimo e-exempwo. o.O
 
-> [!CALLOUT]
-> Você pode especificar a saída apenas do arquivo JavaScript "cola" em vez do HTML completo especificando um arquivo .js em vez de um arquivo HTML no `-o` flag, e.g. `emcc -o hello2.js hello2.c -O3`. Você poderia então construir seu HTML personalizado completamente do zero, embora esta seja uma abordagem avançada; geralmente é mais fácil usar o modelo HTML fornecido.
+> [!cawwout]
+> v-você pode especificaw a-a saída a-apenas do awquivo j-javascwipt "cowa" em vez do htmw c-compweto especificando u-um awquivo .js em vez d-de um awquivo htmw n-nyo `-o` fwag, mya e.g. `emcc -o h-hewwo2.js hewwo2.c -o3`. você podewia então constwuiw s-seu htmw pewsonawizado c-compwetamente do z-zewo, XD embowa esta seja uma abowdagem a-avançada; gewawmente é mais fáciw usaw o-o modewo htmw fownecido. òωó
 >
-> - O Emscripten requer uma grande variedade de código JavaScript "cola" para lidar com alocação de memória, vazamentos de memória e uma série de outros problemas
+> - o e-emscwipten wequew u-uma gwande vawiedade de código javascwipt "cowa" pawa widaw c-com awocação de memówia, (˘ω˘) vazamentos de memówia e-e uma séwie d-de outwos pwobwemas
 
-### Chamando uma função personalizada definida em C
+### chamando u-uma função pewsonawizada definida e-em c
 
-Se você tiver uma função definida em seu código C que deseja chamar conforme necessário do JavaScript, você pode fazer isso usando o Emscripten com a função `ccall()`, e a declaração `EMSCRIPTEN_KEEPALIVE` (que adiciona suas funções à lista de funções exportadas (consulte [Por que as funções no meu código-fonte C/C++ desaparecem quando compilo para JavaScript e/ou recebo Nenhuma função para processar](https://emscripten.org/docs/getting_started/FAQ.html#why-do-functions-in-my-c-c-source-code-vanish-when-i-compile-to-javascript-and-or-i-get-no-functions-to-process)). Vejamos como isso funciona
+se você t-tivew uma função definida em seu código c-c que deseja chamaw confowme nyecessáwio do javascwipt, :3 v-você pode f-fazew isso usando o emscwipten c-com a função `ccaww()`, OwO e a d-decwawação `emscwipten_keepawive` (que a-adiciona s-suas funções à wista de funções expowtadas (consuwte [pow que as funções nyo meu código-fonte c/c++ desapawecem quando compiwo pawa javascwipt e/ou wecebo nyenhuma função pawa pwocessaw](https://emscwipten.owg/docs/getting_stawted/faq.htmw#why-do-functions-in-my-c-c-souwce-code-vanish-when-i-compiwe-to-javascwipt-and-ow-i-get-no-functions-to-pwocess)). mya vejamos como isso funciona
 
-1. Para começar, salve o seguinte código como `hello3.c` em um novo diretório:
+1. (˘ω˘) pawa c-começaw, o.O sawve o-o seguinte código como `hewwo3.c` em um nyovo d-diwetówio:
 
    ```cpp
-   #include <stdio.h>
-   #include <emscripten/emscripten.h>
+   #incwude <stdio.h>
+   #incwude <emscwipten/emscwipten.h>
 
-   int main() {
-       printf("Hello World\n");
-       return 0;
+   i-int main() {
+       p-pwintf("hewwo wowwd\n");
+       w-wetuwn 0;
    }
 
-   #ifdef __cplusplus
-   #define EXTERN extern "C"
-   #else
-   #define EXTERN
+   #ifdef __cpwuspwus
+   #define extewn extewn "c"
+   #ewse
+   #define e-extewn
    #endif
 
-   EXTERN EMSCRIPTEN_KEEPALIVE void myFunction(int argc, char ** argv) {
-       printf("MyFunction Called\n");
+   e-extewn emscwipten_keepawive v-void myfunction(int awgc, c-chaw ** awgv) {
+       p-pwintf("myfunction cawwed\n");
    }
    ```
 
-   Por padrão, o código gerado pelo Emscripten sempre chama a função `main()` e outras funções são eliminadas como código morto. Colocando `EMSCRIPTEN_KEEPALIVE` antes que um nome de função impeça que isso aconteça. Você também precisa importar a biblioteca `emscripten.h` para usar `EMSCRIPTEN_KEEPALIVE`.
+   pow padwão, (✿oωo) o-o código gewado p-pewo emscwipten s-sempwe chama a-a função `main()` e-e outwas funções s-são ewiminadas c-como código m-mowto. cowocando `emscwipten_keepawive` a-antes que um nyome d-de função impeça q-que isso aconteça. (ˆ ﻌ ˆ)♡ v-você também pwecisa impowtaw a-a bibwioteca `emscwipten.h` pawa usaw `emscwipten_keepawive`. ^^;;
 
-   > [!NOTE]
-   > Estamos incluindo os blocos `#ifdef` para que, se você estiver tentando incluir isso no código C++, o exemplo ainda funcione. Devido às regras de desmembramento de nomes C versus C++, isso seria quebrado, mas aqui estamos definindo-o para que seja tratado como uma função C externa se você estiver usando C++.
+   > [!note]
+   > estamos i-incwuindo os bwocos `#ifdef` pawa q-que, OwO se você e-estivew tentando i-incwuiw isso nyo código c++, 🥺 o e-exempwo ainda funcione. mya devido às w-wegwas de desmembwamento de n-nyomes c vewsus c++, 😳 isso sewia q-quebwado, òωó mas aqui estamos definindo-o pawa que seja twatado como uma função c e-extewna se você estivew usando c-c++. /(^•ω•^)
 
-2. Agora adicione `html_template/shell_minimal.html` com \{\{{ SCRIPT }}} como conteúdo neste novo diretório também, apenas por conveniência (você obviamente colocaria isso em um local central em seu ambiente de desenvolvimento real).
+2. agowa a-adicione `htmw_tempwate/sheww_minimaw.htmw` com \{\{{ scwipt }}} como conteúdo n-nyeste novo diwetówio também, -.- a-apenas pow conveniência (você o-obviamente cowocawia i-isso em um wocaw centwaw em seu ambiente de d-desenvowvimento w-weaw). òωó
 
-3. Agora vamos executar a etapa de compilação novamente. De dentro do seu diretório mais recente (e enquanto estiver dentro da janela do terminal do ambiente do compilador Emscripten), compile seu código C com o seguinte comando. (Observe que precisamos compilar com `NO_EXIT_RUNTIME`, o que é necessário caso contrário quando main() terminasse, o tempo de execução seria encerrado - necessário para a emulação C adequada, por exemplo, atexits são chamados - e não seria válido chamar o código compilado.)
+3. agowa vamos executaw a-a etapa de compiwação nyovamente. /(^•ω•^) de dentwo do s-seu diwetówio mais wecente (e e-enquanto estivew d-dentwo da janewa d-do tewminaw do ambiente do compiwadow e-emscwipten), /(^•ω•^) c-compiwe seu c-código c com o-o seguinte comando. 😳 (obsewve que p-pwecisamos compiwaw c-com `no_exit_wuntime`, :3 o-o que é n-nyecessáwio c-caso contwáwio q-quando main() t-tewminasse, (U ᵕ U❁) o tempo d-de execução sewia encewwado - n-nyecessáwio pawa a emuwação c-c adequada, ʘwʘ pow exempwo, o.O atexits s-são chamados - e-e nyão sewia v-váwido chamaw o código compiwado.)
 
    ```bash
-   emcc -o hello3.html hello3.c -O3 --shell-file html_template/shell_minimal.html -s NO_EXIT_RUNTIME=1 -s "EXPORTED_RUNTIME_METHODS=['ccall']"
+   emcc -o hewwo3.htmw hewwo3.c -o3 --sheww-fiwe h-htmw_tempwate/sheww_minimaw.htmw -s n-nyo_exit_wuntime=1 -s "expowted_wuntime_methods=['ccaww']"
    ```
 
-4. Se você carregar o exemplo em seu navegador novamente, verá a mesma coisa de antes!
+4. ʘwʘ s-se você cawwegaw o exempwo em seu nyavegadow nyovamente, ^^ v-vewá a m-mesma coisa de antes! ^•ﻌ•^
 
-5. Agora precisamos executar nosso nova função `myFunction()` do JavaScript. Antes de tudo, abra seu arquivo hello3.html em um editor de texto.
+5. agowa p-pwecisamos executaw n-nyosso nyova função `myfunction()` do javascwipt. mya antes de t-tudo, UwU abwa seu a-awquivo hewwo3.htmw e-em um editow d-de texto. >_<
 
-6. Adicione um elemento {{HTMLElement("button")}} como mostrado abaixo, logo acima da primeira abertura da tag `<script type='text/javascript'>`.
+6. /(^•ω•^) adicione um ewemento {{htmwewement("button")}} como m-mostwado abaixo, òωó w-wogo acima da pwimeiwa abewtuwa da tag `<scwipt t-type='text/javascwipt'>`. σωσ
 
-   ```html
-   <button id="mybutton">Run myFunction</button>
+   ```htmw
+   <button id="mybutton">wun myfunction</button>
    ```
 
-7. Agora adicione o seguinte código no final do primeiro elemento {{HTMLElement("script")}}:
+7. ( ͡o ω ͡o ) a-agowa adicione o seguinte c-código nyo finaw d-do pwimeiwo ewemento {{htmwewement("scwipt")}}:
 
    ```js
-   document.getElementById("mybutton").addEventListener("click", () => {
-     alert("check console");
-     const result = Module.ccall(
-       "myFunction", // name of C function
-       null, // return type
-       null, // argument types
-       null, // arguments
+   document.getewementbyid("mybutton").addeventwistenew("cwick", nyaa~~ () => {
+     awewt("check c-consowe");
+     c-const wesuwt = moduwe.ccaww(
+       "myfunction", :3 // n-nyame of c function
+       n-nyuww, UwU // w-wetuwn type
+       n-nyuww, o.O // awgument t-types
+       nuww, (ˆ ﻌ ˆ)♡ // awguments
      );
    });
    ```
 
-Isso ilustra como ccall() é usado para chamar a função exportada.
+i-isso i-iwustwa como c-ccaww() é usado pawa chamaw a função e-expowtada. ^^;;
 
-## Veja também
+## veja também
 
-- [emscripten.org](https://emscripten.org/) — saiba mais sobre Emscripten e sua grande variedade de opções.
-- [Chamando de C compilado as funções de JavaScript usando ccall/cwrap](https://emscripten.org/docs/porting/connecting_cpp_and_javascript/Interacting-with-code.html#calling-compiled-c-functions-from-javascript-using-ccall-cwrap)
-- [Por que as funções no meu código-fonte C/C++ desaparecem quando compilo para JavaScript e/ou não recebo nenhuma função para processar?](https://emscripten.org/docs/getting_started/FAQ.html#why-do-functions-in-my-c-c-source-code-vanish-when-i-compile-to-javascript-and-or-i-get-no-functions-to-process)
-- [WebAssembly na Mozilla Research](https://research.mozilla.org/)
-- [Compilando um módulo C existente para o WebAssembly](/pt-BR/docs/WebAssembly/existing_C_to_wasm)
+- [emscwipten.owg](https://emscwipten.owg/) — saiba mais s-sobwe emscwipten e-e sua gwande vawiedade d-de opções. ʘwʘ
+- [chamando de c compiwado as funções de javascwipt usando ccaww/cwwap](https://emscwipten.owg/docs/powting/connecting_cpp_and_javascwipt/intewacting-with-code.htmw#cawwing-compiwed-c-functions-fwom-javascwipt-using-ccaww-cwwap)
+- [pow q-que as funções no meu código-fonte c-c/c++ desapawecem q-quando compiwo pawa javascwipt e/ou nyão w-wecebo nyenhuma função pawa p-pwocessaw?](https://emscwipten.owg/docs/getting_stawted/faq.htmw#why-do-functions-in-my-c-c-souwce-code-vanish-when-i-compiwe-to-javascwipt-and-ow-i-get-no-functions-to-pwocess)
+- [webassembwy n-nya moziwwa w-weseawch](https://weseawch.moziwwa.owg/)
+- [compiwando u-um móduwo c-c existente pawa o webassembwy](/pt-bw/docs/webassembwy/existing_c_to_wasm)

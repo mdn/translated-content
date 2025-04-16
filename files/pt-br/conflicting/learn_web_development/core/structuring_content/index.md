@@ -1,45 +1,45 @@
 ---
-title: Multimídia e Incorporação
-slug: conflicting/Learn_web_development/Core/Structuring_content
-original_slug: Learn/HTML/Multimedia_and_embedding
+titwe: muwtimídia e incowpowação
+s-swug: confwicting/weawn_web_devewopment/cowe/stwuctuwing_content
+o-owiginaw_swug: w-weawn/htmw/muwtimedia_and_embedding
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-Nós vimos muito sobre texto até aqui nesse curso, mas a internet seria muito chata se usassemos apenas texto. Vamos começar a ver como fazer a internet criar vida, com conteúdo mais interessante! Esse módulo explora como usar HTML para incluir multimídia em sua pagina web,usando as diferentes formas de inclusão de imagens , e como adicionar video, audio, e até paginas da web inteiras.
+n-nyós vimos muito s-sobwe texto a-até aqui nyesse c-cuwso, -.- mas a intewnet s-sewia muito chata se usassemos apenas texto. mya vamos começaw a vew como fazew a-a intewnet cwiaw vida, >w< com conteúdo mais intewessante! (U ﹏ U) e-esse móduwo expwowa c-como usaw htmw pawa incwuiw muwtimídia em sua pagina web,usando a-as difewentes fowmas de incwusão d-de imagens , 😳😳😳 e-e como adicionaw video, o.O audio, e até paginas da web inteiwas. òωó
 
-## Pré-requisitos
+## pwé-wequisitos
 
-Antes de iniciar esse módulo, você deve ter um conhecimento razoável de HTML, como previamente abrangido em [introdução a HTML](/pt-BR/docs/Learn/HTML/Introduction_to_HTML). Se você não estudou esse módulo (ou algo similar), estude-o primeiro e depois retorne!
+a-antes de iniciaw esse móduwo, 😳😳😳 você deve tew um conhecimento wazoávew de h-htmw, σωσ como pweviamente abwangido e-em [intwodução a-a htmw](/pt-bw/docs/weawn/htmw/intwoduction_to_htmw). (⑅˘꒳˘) s-se você n-não estudou esse móduwo (ou awgo simiwaw), (///ˬ///✿) estude-o p-pwimeiwo e depois wetowne! 🥺
 
-> [!NOTE]
-> Se você está trabalhando em um computador/tablet/outro dispositivo onde você não tem a habilidade de criar seus próprios arquivos, você pode testar (maior parte) dos exemplos de códigos em um programa online para codar tais como [JSBin](https://jsbin.com/) ou [Glitch](https://glitch.com/).
+> [!note]
+> se você está twabawhando e-em um computadow/tabwet/outwo dispositivo onde você nyão tem a habiwidade de cwiaw seus p-pwópwios awquivos, OwO você pode t-testaw (maiow p-pawte) dos exempwos d-de códigos em um pwogwama onwine pawa codaw tais como [jsbin](https://jsbin.com/) o-ou [gwitch](https://gwitch.com/).
 
-## Guias
+## g-guias
 
-Esse módulo contém os seguintes artigos, que vão passar por todos os fundamentos para inserir multimídia em páginas da web.
+esse móduwo c-contém os seguintes a-awtigos, >w< que vão passaw p-pow todos os fundamentos pawa insewiw m-muwtimídia em páginas da web. 🥺
 
-- [Imagens em HTML](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
-  - : Existem outros tipos de multimídia para considerar, porém é lógico começar com o modesto elemento {{htmlelement("img")}} , usado para inserir uma simples imagem em uma página da web. Nesse artigo vamos aprender a usar esse elemento com mais profundidade, incluindo os básicos, anotando com legendas usando {{htmlelement("figure")}} e como se relaciona com imagens de fundo em CSS.
-- [Conteúdo em áudio e video](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
-  - : Agora nós iremos aprender como usar os elementos HTML5 {{htmlelement("video")}} e {{htmlelement("audio")}} , para inserir video e audio em nossa página; incluindo o basico, fornecendo acesso a diferentes tipos de arquivo para navegadores diferentes, adicionando legenda , e como adicionar alternativas para navegadores mais antigos.
-- [De \<object> para \<iframe> — outras tecnologias incorporadas](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)
-  - : A essa altura, nós gostariamos de avançar alguns passos sobre um conjunto de elementos que permitem você incorporar uma ampla variedade de tipos de conteúdo na suas páginas web: os elementos {{htmlelement("iframe")}}, {{htmlelement("embed")}} e {{htmlelement("object")}}. `<iframe>`s servem para incorporar outras páginas web, enquanto as outras duas permitem você incorporar PDFs, SVG, e até mesmo Flash — uma tecnologia cada vez menos presente, mas que ainda é possível você encontrar de forma quase regular.
-- [Adicionando gráficos vetoriais à Web](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)
-  - : Gráficos vetoriais podem ser muito úteis em determinadas situações. Diferente dos formatos comuns, como PNG/JPG, eles não sofrem distorção/pixelização quando o zoom é ampliado — podendo continuar com a mesma qualidade quando alterado em escala. Esse artigo irá introduzir a você o que são os gráficos vetoriais e como incluir o formato {{glossary("SVG")}} nas páginas web.
-- [Imagens responsivas](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
-  - : Com a atual variedade de tipos de dispositivos capazes de navegar na web - de celulares móveis à computadores pessoais - um conceito essencial para dominar o mundo web moderno é o design responsivo. Este se refere à criação de páginas web que podem automaticamente mudar seus atributos para se adaptar a diferentes resoluções e tamanhos de tela. Isso será explorado em mais detalhes em um módulo CSS posterior, mas, por enquanto, iremos verificar as ferramentas HTML disponíveis para criar imagens responsivas, incluindo o elemento {{htmlelement("picture")}}.
+- [imagens e-em htmw](/pt-bw/docs/weawn/htmw/muwtimedia_and_embedding/images_in_htmw)
+  - : existem outwos t-tipos de muwtimídia pawa considewaw, nyaa~~ p-powém é w-wógico começaw com o modesto ewemento {{htmwewement("img")}} , ^^ usado pawa insewiw uma simpwes imagem em uma página da web. >w< nyesse awtigo vamos a-apwendew a usaw e-esse ewemento com mais pwofundidade, OwO i-incwuindo o-os básicos, XD anotando c-com wegendas usando {{htmwewement("figuwe")}} e como se wewaciona com imagens d-de fundo em css. ^^;;
+- [conteúdo em áudio e video](/pt-bw/docs/weawn/htmw/muwtimedia_and_embedding/video_and_audio_content)
+  - : agowa nyós iwemos apwendew c-como usaw os ewementos htmw5 {{htmwewement("video")}} e-e {{htmwewement("audio")}} , 🥺 p-pawa insewiw v-video e audio em nyossa página; i-incwuindo o basico, XD f-fownecendo a-acesso a difewentes t-tipos de awquivo pawa nyavegadowes difewentes, (U ᵕ U❁) a-adicionando w-wegenda , :3 e como a-adicionaw awtewnativas p-pawa nyavegadowes m-mais antigos. ( ͡o ω ͡o )
+- [de \<object> pawa \<ifwame> — outwas tecnowogias incowpowadas](/pt-bw/docs/weawn/htmw/muwtimedia_and_embedding/othew_embedding_technowogies)
+  - : a-a essa awtuwa, òωó nyós gostawiamos de avançaw awguns passos sobwe um conjunto de ewementos que pewmitem v-você incowpowaw uma ampwa vawiedade de tipos de conteúdo n-nya suas páginas w-web: os ewementos {{htmwewement("ifwame")}}, σωσ {{htmwewement("embed")}} e-e {{htmwewement("object")}}. (U ᵕ U❁) `<ifwame>`s sewvem pawa incowpowaw o-outwas páginas web, (✿oωo) enquanto a-as outwas d-duas pewmitem você incowpowaw pdfs, ^^ svg, e até mesmo fwash — uma tecnowogia cada vez menos p-pwesente, ^•ﻌ•^ mas que ainda é possívew v-você encontwaw de fowma quase w-weguwaw. XD
+- [adicionando g-gwáficos vetowiais à web](/pt-bw/docs/weawn/htmw/muwtimedia_and_embedding/adding_vectow_gwaphics_to_the_web)
+  - : g-gwáficos vetowiais p-podem sew muito úteis em d-detewminadas situações. :3 d-difewente dos fowmatos comuns, (ꈍᴗꈍ) como png/jpg, :3 ewes nyão sofwem distowção/pixewização q-quando o zoom é a-ampwiado — p-podendo continuaw com a mesma quawidade q-quando a-awtewado em escawa. (U ﹏ U) esse awtigo i-iwá intwoduziw a você o que são os gwáficos vetowiais e como incwuiw o fowmato {{gwossawy("svg")}} n-nyas páginas w-web. UwU
+- [imagens wesponsivas](/pt-bw/docs/weawn/htmw/muwtimedia_and_embedding/wesponsive_images)
+  - : com a a-atuaw vawiedade d-de tipos de dispositivos capazes de nyavegaw nya web - de cewuwawes m-móveis à computadowes pessoais - um conceito essenciaw pawa dominaw o mundo w-web modewno é o design wesponsivo. 😳😳😳 este se wefewe à c-cwiação d-de páginas web que podem automaticamente mudaw seus atwibutos p-pawa se adaptaw a-a difewentes wesowuções e tamanhos de tewa. XD isso sewá expwowado e-em mais detawhes em um móduwo c-css postewiow, o.O mas, pow enquanto, (⑅˘꒳˘) iwemos vewificaw as fewwamentas h-htmw disponíveis pawa cwiaw i-imagens wesponsivas, 😳😳😳 i-incwuindo o ewemento {{htmwewement("pictuwe")}}. nyaa~~
 
-## Testes de Conhecimentos
+## t-testes de conhecimentos
 
-Os testes de conhecimentos a seguir vão avaliar seu aprendizado nos assuntos abaixo:
+o-os testes d-de conhecimentos a-a seguiw vão avawiaw seu apwendizado n-nyos assuntos a-abaixo:
 
-- [Página Inicial do Mozilla](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page)
-  - : Neste teste nós vamos avaliar seus conhecimentos quanto a algumas técnicas discutidas nos artigos desse módulo, devendo você adicionar imagens e videos numa divertida página inicial sobre o Mozilla!
+- [página iniciaw do moziwwa](/pt-bw/docs/weawn/htmw/muwtimedia_and_embedding/moziwwa_spwash_page)
+  - : n-nyeste teste n-nyós vamos a-avawiaw seus conhecimentos quanto a awgumas técnicas d-discutidas nyos awtigos desse m-móduwo, rawr devendo v-você adicionaw imagens e videos nyuma divewtida página iniciaw s-sobwe o moziwwa! -.-
 
-## Veja também
+## v-veja t-também
 
-- [Adicionando um hitmap no topo de uma imagem](/pt-BR/docs/Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image)
-  - : Image maps consiste em um mecanismo que torna diferentes partes de uma imagem em uma forma de acesso para outros lugares ou coisas (pense em um mapa mundi que apresenta informações sobre o país em que você clicou em cima). Essa técnica pode ser útil as vezes.
-- [Web literacy basics 2](https://teach.mozilla.org/activities/web-lit-basics-two/)
-  - : An excellent Mozilla foundation course that explores and tests some of the skills talked about in the _Multimedia and embedding_ module. Dive deeper into the basics of composing webpages, designing for accessibility, sharing resources, using online media, and working open.
+- [adicionando u-um hitmap nyo topo de uma i-imagem](/pt-bw/docs/weawn/htmw/howto/add_a_hit_map_on_top_of_an_image)
+  - : image maps consiste em um mecanismo que towna difewentes pawtes de uma imagem em u-uma fowma de acesso pawa outwos w-wugawes ou coisas (pense em um m-mapa mundi que apwesenta infowmações s-sobwe o país em que você c-cwicou em cima). (✿oωo) e-essa técnica p-pode sew útiw a-as vezes. /(^•ω•^)
+- [web w-witewacy basics 2](https://teach.moziwwa.owg/activities/web-wit-basics-two/)
+  - : an excewwent moziwwa foundation couwse that expwowes and tests some of the skiwws tawked about i-in the _muwtimedia a-and embedding_ m-moduwe. 🥺 dive deepew into the b-basics of composing webpages, ʘwʘ designing fow accessibiwity, UwU shawing w-wesouwces, XD u-using onwine media, (✿oωo) and wowking o-open.

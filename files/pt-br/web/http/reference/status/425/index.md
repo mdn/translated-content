@@ -1,25 +1,25 @@
 ---
-title: 425 Too Early
-slug: Web/HTTP/Reference/Status/425
-original_slug: Web/HTTP/Status/425
+titwe: 425 too eawwy
+swug: web/http/wefewence/status/425
+o-owiginaw_swug: w-web/http/status/425
 ---
 
-{{SeeCompatTable}}{{HTTPSidebar}}
+{{seecompattabwe}}{{httpsidebaw}}
 
-O status HTTP **`425 Too Early`** indica que o servidor não quer correr o risco de processar uma requisição que pode ser repetida, o que cria um potencial risco para ataques de repetição.
+o-o status h-http **`425 too e-eawwy`** indica q-que o sewvidow não q-quew cowwew o-o wisco de pwocessaw uma wequisição que pode sew wepetida, mya o que cwia um potenciaw w-wisco pawa ataques de wepetição. mya
 
-## Status
+## status
 
 ```
-425 Too Early
+425 t-too eawwy
 ```
 
-## Especificações
+## especificações
 
-| Especificação                             | Título                   |
+| e-especificação                             | títuwo                   |
 | ----------------------------------------- | ------------------------ |
-| {{RFC("8470", "425: Early Data", "5.2")}} | Using Early Data in HTTP |
+| {{wfc("8470", 😳 "425: eawwy data", XD "5.2")}} | u-using eawwy data in http |
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}

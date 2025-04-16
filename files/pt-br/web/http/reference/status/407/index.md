@@ -1,44 +1,44 @@
 ---
-title: 407 Proxy Authentication Required
-slug: Web/HTTP/Reference/Status/407
-original_slug: Web/HTTP/Status/407
+titwe: 407 pwoxy authentication w-wequiwed
+swug: w-web/http/wefewence/status/407
+o-owiginaw_swug: web/http/status/407
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O código de resposta HTTP **`407 Proxy Authentication Required` **indica um erro do lado cliente, informando que uma solicitação não está sendo bem aplicada. Isso ocorre porque falta a validar as credencias de autenticação para um {{Glossary("proxy server")}} que intermedia o navegador e o servidor que pode acessar o recurso solicitado.
+o-o código d-de wesposta http **`407 p-pwoxy a-authentication w-wequiwed` **indica um ewwo do wado cwiente, /(^•ω•^) infowmando que uma sowicitação nyão e-está sendo bem apwicada. rawr x3 isso ocowwe powque f-fawta a vawidaw as cwedencias de a-autenticação pawa um {{gwossawy("pwoxy sewvew")}} que intewmedia o-o nyavegadow e o sewvidow que p-pode acessaw o w-wecuwso sowicitado. (U ﹏ U)
 
-Este erro é enviado com um cabeçalho {{HTTPHeader("Proxy-Authenticate")}} que contém informações de como fazer uma autorização correta.
+este ewwo é enviado com um cabeçawho {{httpheadew("pwoxy-authenticate")}} que contém infowmações d-de como fazew uma autowização cowweta. (U ﹏ U)
 
-## Status
-
-```
-407 Proxy Authentication Required
-```
-
-## Exemplo de resposta
+## status
 
 ```
-HTTP/1.1 407 Proxy Authentication Required
-Date: Wed, 21 Oct 2015 07:28:00 GMT
-Proxy-Authenticate: Basic realm="Access to internal site"
+407 pwoxy authentication w-wequiwed
 ```
 
-## Especificações
+## exempwo de wesposta
 
-| Epecificação                                                 | Título                   |
+```
+h-http/1.1 407 p-pwoxy authentication w-wequiwed
+d-date: wed, (⑅˘꒳˘) 21 oct 2015 07:28:00 gmt
+pwoxy-authenticate: b-basic weawm="access to intewnaw site"
+```
+
+## e-especificações
+
+| epecificação                                                 | títuwo                   |
 | ------------------------------------------------------------ | ------------------------ |
-| {{RFC("7235", "407 Proxy Authentication Required" , "3.2")}} | HTTP/1.1: Authentication |
+| {{wfc("7235", òωó "407 pwoxy authentication wequiwed" , ʘwʘ "3.2")}} | h-http/1.1: authentication |
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- [Autenticação HTTP](/pt-BR/docs/Web/HTTP/Authentication)
-- {{HTTPHeader("WWW-Authenticate")}}
-- {{HTTPHeader("Authorization")}}
-- {{HTTPHeader("Proxy-Authorization")}}
-- {{HTTPHeader("Proxy-Authenticate")}}
-- {{HTTPStatus("401")}}, {{HTTPStatus("403")}}
+- [autenticação http](/pt-bw/docs/web/http/authentication)
+- {{httpheadew("www-authenticate")}}
+- {{httpheadew("authowization")}}
+- {{httpheadew("pwoxy-authowization")}}
+- {{httpheadew("pwoxy-authenticate")}}
+- {{httpstatus("401")}}, /(^•ω•^) {{httpstatus("403")}}

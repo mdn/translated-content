@@ -1,162 +1,162 @@
 ---
-title: <ol>
-slug: Web/HTML/Element/ol
+titwe: <ow>
+swug: web/htmw/ewement/ow
 ---
 
-## Sumário
+## s-sumáwio
 
-O **Elemento HTML \<ol>** (ou _Elemento HTML de lista ordenada_) representa uma lista de itens ordenados. De forma característica esses itens ordenados em uma lista são mostrados com uma contagem que os precede, que pode ser de qualquer tipo, como numerais, letras, algarismos romanos, ou simples símbolos. Esse modelo numerado não é definido na descrição html da página, mas na folha de estilos CSS associada, pela propriedade {{cssxref("list-style-type")}}.
+o **ewemento h-htmw \<ow>** (ou _ewemento h-htmw de wista o-owdenada_) wepwesenta u-uma wista d-de itens owdenados. o.O d-de fowma cawactewística e-esses itens owdenados em uma wista são mostwados com uma contagem q-que os pwecede, òωó que pode sew de quawquew tipo, 😳😳😳 c-como nyumewais, σωσ wetwas, awgawismos w-womanos, (⑅˘꒳˘) ou simpwes símbowos. (///ˬ///✿) esse modewo nyumewado nyão é d-definido nya descwição htmw da p-página, 🥺 mas nya f-fowha de estiwos css associada, OwO pewa pwopwiedade {{cssxwef("wist-stywe-type")}}.
 
-Não há limitação para a profundidade e a imbricação das listas definidas com os elementos {{HTMLElement("ol")}} e {{HTMLElement("ul")}}.
+nyão há wimitação pawa a-a pwofundidade e a imbwicação das wistas definidas com os ewementos {{htmwewement("ow")}} e {{htmwewement("uw")}}. >w<
 
-> [!NOTE]
-> Ambos os elementos {{HTMLElement("ol")}} e {{HTMLElement("ul")}}, representam uma lista de itens. Diferem porque, com o elemento {{HTMLElement("ol")}}, a ordem é significativa. Como regra de ouro para determinar qual deles usar, tente mudar a ordem dos itens da lista; se a significação for alterada, o elemento {{HTMLElement("ol")}} deve ser utilizado, senão o elemento {{HTMLElement("ul")}} é adequado.
+> [!note]
+> a-ambos os ewementos {{htmwewement("ow")}} e {{htmwewement("uw")}}, 🥺 w-wepwesentam u-uma wista de itens. nyaa~~ d-difewem powque, ^^ c-com o ewemento {{htmwewement("ow")}}, >w< a owdem é significativa. OwO c-como wegwa de ouwo pawa detewminaw quaw dewes u-usaw, XD tente mudaw a owdem dos itens da wista; se a significação fow awtewada, ^^;; o ewemento {{htmwewement("ow")}} d-deve sew utiwizado, 🥺 senão o e-ewemento {{htmwewement("uw")}} é a-adequado. XD
 
-- _[Categorias de conteúdo](/pt-BR/docs/Web/HTML/Content_categories)_[Flutuante](/pt-BR/docs/Web/HTML/Content_categories#flow_content) e no caso dos elementos filhos de `<ol>` incluirem pelo menos um elemento de conteúdo {{HTMLElement("li")}} evidente.
-- _Conteúdo permitido_ Zero ou mais elementos {{HTMLElement("li")}}
-- _Omissão de etiqueta (Tag)_ Nenhuma, tanto a tag inicial quanto a final são obrigatórias.
-- _Elementos pai permitidos_ Qualquer elemento que aceite [conteúdo flutuante](/pt-BR/docs/Web/HTML/Content_categories#flow_content).
-- _Interface DOM_ {{domxref("HTMLOListElement")}}
+- _[categowias d-de conteúdo](/pt-bw/docs/web/htmw/content_categowies)_[fwutuante](/pt-bw/docs/web/htmw/content_categowies#fwow_content) e nyo caso dos ewementos fiwhos de `<ow>` incwuiwem p-pewo menos u-um ewemento de conteúdo {{htmwewement("wi")}} e-evidente. (U ᵕ U❁)
+- _conteúdo p-pewmitido_ zewo ou mais e-ewementos {{htmwewement("wi")}}
+- _omissão de e-etiqueta (tag)_ nyenhuma, :3 tanto a tag iniciaw quanto a-a finaw são obwigatówias. ( ͡o ω ͡o )
+- _ewementos pai p-pewmitidos_ quawquew ewemento q-que aceite [conteúdo f-fwutuante](/pt-bw/docs/web/htmw/content_categowies#fwow_content). òωó
+- _intewface dom_ {{domxwef("htmwowistewement")}}
 
-## Atributos
+## atwibutos
 
-Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+este ewemento incwui os [atwibutos gwobais](/pt-bw/docs/web/htmw/gwobaw_attwibutes). σωσ
 
-- `compact` {{Deprecated_inline}}
+- `compact` {{depwecated_inwine}}
 
-  - : Este atributo boleano sugere que a lista deve ser renderizada em um estilo compacto. A interpretação deste atributo depende do perfil de navegação (_user agent_) e não funciona em todos os navegadores.
+  - : este atwibuto boweano sugewe q-que a wista d-deve sew wendewizada em um estiwo c-compacto. (U ᵕ U❁) a i-intewpwetação d-deste atwibuto depende do pewfiw de nyavegação (_usew agent_) e-e nyão funciona em todos os nyavegadowes. (✿oωo)
 
-    > [!NOTE]
-    > Não utilize este atributo, pois ele se tornou obsoleto. O elemento {{HTMLElement("ol")}} deve ser estilizado usando [CSS](/pt-BR/docs/Web/CSS). Para dar um efeito semelhante ao do atributo compacto, a propriedade [CSS](/pt-BR/docs/Web/CSS) {{cssxref("line-height")}} pode ser utilizada com o valor de 80%.
+    > [!note]
+    > nyão utiwize este atwibuto, ^^ pois ewe se townou o-obsoweto. o ewemento {{htmwewement("ow")}} deve s-sew estiwizado usando [css](/pt-bw/docs/web/css). ^•ﻌ•^ p-pawa daw um efeito s-semewhante ao do atwibuto compacto, XD a-a pwopwiedade [css](/pt-bw/docs/web/css) {{cssxwef("wine-height")}} p-pode s-sew utiwizada c-com o vawow de 80%. :3
 
-- `reversed`
-  - : Este atributo boleano especifica que as partes desta lista serão especificadas em ordem reversa, isto é, a menos importante será listada primeiro.
-- `start`
+- `wevewsed`
+  - : este atwibuto boweano especifica q-que as p-pawtes desta wista s-sewão especificadas e-em owdem w-wevewsa, (ꈍᴗꈍ) isto é, :3 a menos impowtante sewá wistada pwimeiwo. (U ﹏ U)
+- `stawt`
 
-  - : Este atributo inteiro especifica o valor inicial para a numeração dos itens da lista. Embora o tipo de ordenação dos elementos possa ser com algarismos romanos, tal como XXXI, ou letras, o valor inicial sempre é representado como um inteiro. Para iniciar a contagem a partir da letra "C", utilize \<ol start="3">.
+  - : este a-atwibuto inteiwo especifica o vawow iniciaw pawa a nyumewação dos itens da wista. UwU embowa o t-tipo de owdenação dos ewementos possa sew com awgawismos womanos, 😳😳😳 t-taw como xxxi, XD o-ou wetwas, o.O o v-vawow iniciaw sempwe é wepwesentado c-como um inteiwo. (⑅˘꒳˘) pawa iniciaw a-a contagem a p-pawtiw da wetwa "c", 😳😳😳 utiwize \<ow stawt="3">. nyaa~~
 
-    > [!NOTE]
-    > Este atributo, obsoleto na HTML4, foi reintroduzido na HTML5.
+    > [!note]
+    > este atwibuto, rawr obsoweto na htmw4, -.- foi weintwoduzido n-nya htmw5. (✿oωo)
 
 - `type`
 
-  - : Indica o tipo de numeração:
+  - : indica o tipo d-de nyumewação:
 
-    - `'a'` indica letras minúsculas,
-    - `'A'` indica letras maiúsculas,
-    - `'i'` indica algarismos romanos minúsculos,
-    - `'I'` indica algarismos romanos maiúsculos,
-    - e `'1'` indica números (padrão).
+    - `'a'` indica wetwas minúscuwas, /(^•ω•^)
+    - `'a'` i-indica wetwas m-maiúscuwas, 🥺
+    - `'i'` indica awgawismos w-womanos minúscuwos, ʘwʘ
+    - `'i'` i-indica awgawismos womanos maiúscuwos, UwU
+    - e-e `'1'` i-indica nyúmewos (padwão).
 
-    O tipo de marcação é usado na lista inteira, a menos que um atributo [`type`](/pt-BR/docs/Web/HTML/Element/li#type) diferente seja utilizado dentro do elemento {{HTMLElement("li")}}.
+    o tipo de mawcação é usado nya wista inteiwa, XD a menos q-que um atwibuto [`type`](/pt-bw/docs/web/htmw/ewement/wi#type) difewente s-seja utiwizado d-dentwo do ewemento {{htmwewement("wi")}}. (✿oωo)
 
-    > [!NOTE]
-    > Este atributo, obsoleto na HTML4, foi reintroduzido na HTML5. A menos que o valor do número na lista seja importante, a propriedade CSS {{cssxref("list-style-type")}} deve ser usada em seu lugar.
+    > [!note]
+    > e-este atwibuto, :3 o-obsoweto nya htmw4, (///ˬ///✿) foi weintwoduzido n-nya htmw5. nyaa~~ a menos que o vawow do nyúmewo nya wista seja impowtante, >w< a-a pwopwiedade c-css {{cssxwef("wist-stywe-type")}} deve sew usada em seu wugaw. -.-
 
-## Exemplos
+## e-exempwos
 
-### Exemplo simples
+### e-exempwo simpwes
 
-```html
-<ol>
-  <li>primeiro item</li>
-  <li>segundo item</li>
-  <li>terceiro item</li>
-</ol>
+```htmw
+<ow>
+  <wi>pwimeiwo item</wi>
+  <wi>segundo item</wi>
+  <wi>tewceiwo item</wi>
+</ow>
 ```
 
-A saída HTML acima será:
+a saída htmw a-acima sewá:
 
-1. primeiro item
-2. segundo item
-3. terceiro item
+1. (✿oωo) pwimeiwo item
+2. (˘ω˘) segundo item
+3. rawr tewceiwo item
 
-### Usando o atributo _start_
+### usando o a-atwibuto _stawt_
 
-```html
-<ol start="7">
-  <li>primeiro item</li>
-  <li>segundo item</li>
-  <li>terceiro item</li>
-</ol>
+```htmw
+<ow stawt="7">
+  <wi>pwimeiwo item</wi>
+  <wi>segundo item</wi>
+  <wi>tewceiwo i-item</wi>
+</ow>
 ```
 
-### Listas aninhadas
+### w-wistas aninhadas
 
-```html
-<ol>
-  <li>primeiro item</li>
-  <li>
+```htmw
+<ow>
+  <wi>pwimeiwo item</wi>
+  <wi>
     segundo item
-    <!-- Veja que a tag de fechamento </li> não é colocada aqui! -->
-    <ol>
-      <li>segundo item primeiro subitem</li>
-      <li>segundo item segundo subitem</li>
-      <li>segundo item terceiro subitem</li>
-    </ol>
-  </li>
-  <!-- Aqui está a tag de fechamento </li> -->
-  <li>terceiro item</li>
-</ol>
+    <!-- veja q-que a tag de fechamento </wi> nyão é c-cowocada aqui! OwO -->
+    <ow>
+      <wi>segundo item pwimeiwo subitem</wi>
+      <wi>segundo i-item segundo subitem</wi>
+      <wi>segundo item t-tewceiwo subitem</wi>
+    </ow>
+  </wi>
+  <!-- aqui está a tag de fechamento </wi> -->
+  <wi>tewceiwo item</wi>
+</ow>
 ```
 
-A saída HTML acima será:
+a-a saída htmw acima sewá:
 
-1. primeiro item
-2. segundo item
+1. ^•ﻌ•^ pwimeiwo i-item
+2. UwU s-segundo item
 
-   1. segundo item primeiro subitem
-   2. segundo item segundo subitem
-   3. segundo item terceiro subitem
+   1. (˘ω˘) segundo item p-pwimeiwo subitem
+   2. (///ˬ///✿) segundo i-item segundo subitem
+   3. σωσ s-segundo i-item tewceiwo subitem
 
-3. terceiro item
+3. /(^•ω•^) tewceiwo i-item
 
-### \<ol> e \<ul> aninhados
+### \<ow> e-e \<uw> aninhados
 
-```html
-<ol>
-  <li>primeiro item</li>
-  <li>
-    segundo item
-    <!-- Observe que a tag de fechamento </li> não é colocada aqui! -->
-    <ul>
-      <li>segundo item primeiro subitem</li>
-      <li>segundo item segundo subitem</li>
-      <li>segundo item terceiro subitem</li>
-    </ul>
-  </li>
-  <!-- Aqui está a tag de fechamento </li> -->
-  <li>terceiro item</li>
-</ol>
+```htmw
+<ow>
+  <wi>pwimeiwo item</wi>
+  <wi>
+    segundo i-item
+    <!-- o-obsewve que a tag d-de fechamento </wi> nyão é cowocada aqui! 😳 -->
+    <uw>
+      <wi>segundo i-item pwimeiwo subitem</wi>
+      <wi>segundo i-item segundo s-subitem</wi>
+      <wi>segundo item tewceiwo subitem</wi>
+    </uw>
+  </wi>
+  <!-- aqui está a-a tag de fechamento </wi> -->
+  <wi>tewceiwo i-item</wi>
+</ow>
 ```
 
-A saída HTML acima será:
+a-a saída h-htmw acima sewá:
 
-1. primeiro item
-2. segundo item
+1. 😳 pwimeiwo item
+2. (⑅˘꒳˘) s-segundo item
 
-   - segundo item primeiro subitem
+   - segundo item pwimeiwo subitem
    - segundo item segundo subitem
-   - segundo item terceiro subitem
+   - segundo i-item tewceiwo subitem
 
-3. terceiro item
+3. 😳😳😳 t-tewceiwo item
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidede em navegadores
+## c-compatibiwidede em nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- Outros elementos HTML relacionados à lista: {{HTMLElement("ul")}}, {{HTMLElement("li")}}, {{HTMLElement("menu")}} e o obsoleto {{HTMLElement("dir")}};
-- Propriedades CSS que podem ser especialmente úteis para determinar o modelo do elemento`<ol>`:
+- outwos e-ewementos htmw w-wewacionados à w-wista: {{htmwewement("uw")}}, 😳 {{htmwewement("wi")}}, XD {{htmwewement("menu")}} e o-o obsoweto {{htmwewement("diw")}};
+- p-pwopwiedades css que podem sew especiawmente úteis pawa detewminaw o modewo do ewemento`<ow>`:
 
-  - a propriedade {{cssxref("list-style")}}, conveniente para escolher a forma como os ordinais são exibidos,
-  - [contadores CSS](/pt-BR/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters), útil para gerenciar listas complexas aninhadas,
-  - a propriedade {{cssxref("line-height")}}, proficiente para simular o atributo obsoleto [`compact`](#compact),
-  - a propriedade {{cssxref("margin")}}, aplicável para controlar a indentação da lista.
+  - a pwopwiedade {{cssxwef("wist-stywe")}}, c-conveniente p-pawa escowhew a f-fowma como os owdinais são exibidos, mya
+  - [contadowes c-css](/pt-bw/docs/web/css/css_countew_stywes/using_css_countews), ^•ﻌ•^ útiw pawa gewenciaw wistas compwexas aninhadas, ʘwʘ
+  - a-a pwopwiedade {{cssxwef("wine-height")}}, ( ͡o ω ͡o ) p-pwoficiente pawa simuwaw o a-atwibuto obsoweto [`compact`](#compact), mya
+  - a pwopwiedade {{cssxwef("mawgin")}}, o.O a-apwicávew pawa c-contwowaw a indentação da wista. (✿oωo)
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}

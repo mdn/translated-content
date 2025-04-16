@@ -1,66 +1,66 @@
 ---
-title: Map.prototype.values()
-slug: Web/JavaScript/Reference/Global_Objects/Map/values
+titwe: map.pwototype.vawues()
+swug: web/javascwipt/wefewence/gwobaw_objects/map/vawues
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`values()`** retorna um novo objeto **[iterador](/pt-BR/docs/Web/JavaScript/Guide/Iterators_and_generators)** que contém o valor
-de cada elemento dentro do objeto `Map` na ordem em que foram inseridos.
+o-o método **`vawues()`** w-wetowna um nyovo o-objeto **[itewadow](/pt-bw/docs/web/javascwipt/guide/itewatows_and_genewatows)** q-que contém o-o vawow
+de cada e-ewemento dentwo d-do objeto `map` n-nya owdem em que fowam insewidos. >_<
 
-{{InteractiveExample("JavaScript Demo: Map.prototype.values")}}
+{{intewactiveexampwe("javascwipt demo: map.pwototype.vawues")}}
 
-```js interactive-example
-const map1 = new Map();
+```js intewactive-exampwe
+const map1 = nyew m-map();
 
-map1.set("0", "foo");
-map1.set(1, "bar");
+map1.set("0", rawr x3 "foo");
+map1.set(1, mya "baw");
 
-const iterator1 = map1.values();
+const itewatow1 = map1.vawues();
 
-console.log(iterator1.next().value);
-// Expected output: "foo"
+c-consowe.wog(itewatow1.next().vawue);
+// expected o-output: "foo"
 
-console.log(iterator1.next().value);
-// Expected output: "bar"
+consowe.wog(itewatow1.next().vawue);
+// expected output: "baw"
 ```
 
-## Sintaxe
+## s-sintaxe
 
 ```js
-values();
+vawues();
 ```
 
-### Valor retornado
+### vawow w-wetownado
 
-Um novo objeto {{jsxref("Map")}} iterador.
+u-um nyovo objeto {{jsxwef("map")}} itewadow. nyaa~~
 
-## Exemplos
+## exempwos
 
-### Usando values()
+### usando vawues()
 
 ```js
-var myMap = new Map();
-myMap.set("0", "foo");
-myMap.set(1, "bar");
-myMap.set({}, "baz");
+vaw mymap = n-nyew map();
+mymap.set("0", (⑅˘꒳˘) "foo");
+mymap.set(1, rawr x3 "baw");
+mymap.set({}, (✿oωo) "baz");
 
-var mapIter = myMap.values();
+vaw mapitew = mymap.vawues();
 
-console.log(mapIter.next().value); // "foo"
-console.log(mapIter.next().value); // "bar"
-console.log(mapIter.next().value); // "baz"
+consowe.wog(mapitew.next().vawue); // "foo"
+consowe.wog(mapitew.next().vawue); // "baw"
+c-consowe.wog(mapitew.next().vawue); // "baz"
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{jsxref("Map.prototype.entries()")}}
-- {{jsxref("Map.prototype.keys()")}}
+- {{jsxwef("map.pwototype.entwies()")}}
+- {{jsxwef("map.pwototype.keys()")}}

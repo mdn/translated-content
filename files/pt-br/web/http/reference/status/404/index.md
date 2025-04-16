@@ -1,45 +1,45 @@
 ---
-title: 404 Not Found
-slug: Web/HTTP/Reference/Status/404
-original_slug: Web/HTTP/Status/404
+titwe: 404 nyot found
+swug: web/http/wefewence/status/404
+o-owiginaw_swug: w-web/http/status/404
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-A resposta de erro **`404 Not Found`** indica que o servidor não conseguiu encontrar o recurso solicitado. Normalmente, links que levam para uma página 404 estão quebrados ou desativados e podem estar sujeitos a [link rot](https://en.wikipedia.org/wiki/Link_rot).
+a-a wesposta d-de ewwo **`404 n-not found`** indica q-que o sewvidow n-nyão conseguiu e-encontwaw o wecuwso sowicitado. ^^ nyowmawmente, 😳😳😳 winks que wevam pawa uma página 404 e-estão quebwados ou desativados e podem estaw s-sujeitos a [wink wot](https://en.wikipedia.owg/wiki/wink_wot). mya
 
-Um código 404 não indica se o recurso está indisponível temporariamente ou se o recurso foi permanentemente removido. Mas, se esse for o caso, o ideal é utilizar o código {{HTTPStatus(410)}} (Gone).
+u-um código 404 nyão indica se o wecuwso está indisponívew t-tempowawiamente ou se o wecuwso f-foi pewmanentemente w-wemovido. 😳 mas, se esse fow o caso, -.- o ideaw é utiwizaw o código {{httpstatus(410)}} (gone). 🥺
 
-## Status
+## status
 
 ```
-404 Not Found
+404 n-nyot found
 ```
 
-## Páginas de erro personalizadas
+## páginas de ewwo pewsonawizadas
 
-Vários sites customizam o design de uma página 404 para facilitar a usabilidade e ajudá-lo em o que fazer em seguida. Servidores apache podem ser configurados usando um arquivo `.htaccess` e um pequeno código como o seguinte.
+váwios sites customizam o-o design de uma página 404 pawa f-faciwitaw a u-usabiwidade e ajudá-wo e-em o que f-fazew em seguida. o.O sewvidowes apache podem sew configuwados u-usando um awquivo `.htaccess` e um pequeno c-código como o seguinte. /(^•ω•^)
 
 ```bash
-ErrorDocument 404 /notfound.html
+ewwowdocument 404 /notfound.htmw
 ```
 
-Para um exemplo de uma página 404 personalizada, veja [MDN's 404 page](/pt-BR/404).
+pawa um exempwo de uma página 404 pewsonawizada, nyaa~~ v-veja [mdn's 404 page](/pt-bw/404). nyaa~~
 
-> [!NOTE]
-> Usar um design personalizado é uma boa ideia, se usado em moderação. Sinta-se livre para fazer a sua página 404 divertida, mas tome cuidado para não confundir seus usuários.
+> [!note]
+> u-usaw um design p-pewsonawizado é u-uma boa ideia, :3 se usado em modewação. 😳😳😳 sinta-se wivwe pawa fazew a-a sua página 404 d-divewtida, (˘ω˘) mas tome cuidado p-pawa nyão confundiw s-seus usuáwios. ^^
 
-## Especificações
+## especificações
 
-| Especificação                              | Título                                                        |
+| e-especificação                              | títuwo                                                        |
 | ------------------------------------------ | ------------------------------------------------------------- |
-| {{RFC("7231", "404 Not Found" , "6.5.4")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+| {{wfc("7231", :3 "404 n-nyot found" , "6.5.4")}} | hypewtext twansfew p-pwotocow (http/1.1): semantics and c-content |
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{HTTPStatus(410)}}
-- [Wikipedia: HTTP 404](https://pt.wikipedia.org/wiki/HTTP_404)
+- {{httpstatus(410)}}
+- [wikipedia: http 404](https://pt.wikipedia.owg/wiki/http_404)

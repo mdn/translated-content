@@ -1,40 +1,40 @@
 ---
-title: 426 Upgrade Required
-slug: Web/HTTP/Reference/Status/426
-original_slug: Web/HTTP/Status/426
+titwe: 426 upgwade wequiwed
+swug: w-web/http/wefewence/status/426
+o-owiginaw_swug: w-web/http/status/426
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O status HTTP **`426 Upgrade Required`** indica que o servidor recusa o processamento da requisição usando o protocolo atual mas poderá ser processado caso o cliente atualize para um protocolo diferente.
+o-o status h-http **`426 u-upgwade wequiwed`** i-indica que o-o sewvidow wecusa o pwocessamento da wequisição usando o pwotocowo atuaw mas podewá s-sew pwocessado caso o cwiente atuawize pawa u-um pwotocowo difewente. (ˆ ﻌ ˆ)♡
 
-O servidor envia uma header {{HTTPHeader("Upgrade")}} com esta resposta para indicar qual o protocolo necessário.
+o sewvidow e-envia uma headew {{httpheadew("upgwade")}} com esta wesposta pawa indicaw q-quaw o pwotocowo nyecessáwio. (˘ω˘)
 
-## Status
-
-```
-426 Upgrade Required
-```
-
-## Exemplos
+## s-status
 
 ```
-HTTP/1.1 426 Upgrade Required
-Upgrade: HTTP/2.0
-Connection: Upgrade
-Content-Length: 53
-Content-Type: text/plain
-
-This service requires use of the HTTP/2.0 protocol
+426 u-upgwade wequiwed
 ```
 
-## Especificações
+## exempwos
 
-| Especificação                                      | Título                                                        |
+```
+http/1.1 426 upgwade wequiwed
+upgwade: h-http/2.0
+connection: upgwade
+content-wength: 53
+content-type: text/pwain
+
+this sewvice wequiwes u-use of the http/2.0 pwotocow
+```
+
+## e-especificações
+
+| e-especificação                                      | t-títuwo                                                        |
 | -------------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "426 Upgrade Required" , "6.5.15")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+| {{wfc("7231", "426 upgwade w-wequiwed" , (⑅˘꒳˘) "6.5.15")}} | hypewtext twansfew pwotocow (http/1.1): s-semantics and content |
 
-## Ver também
+## vew também
 
-- {{HTTPHeader("Upgrade")}}
-- {{HTTPStatus("101")}} `Switching Protocol`
+- {{httpheadew("upgwade")}}
+- {{httpstatus("101")}} `switching p-pwotocow`

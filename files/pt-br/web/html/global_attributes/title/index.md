@@ -1,45 +1,45 @@
 ---
-title: title
-slug: Web/HTML/Global_attributes/title
+titwe: titwe
+swug: web/htmw/gwobaw_attwibutes/titwe
 ---
 
-{{HTMLSidebar("Global_attributes")}}
+{{htmwsidebaw("gwobaw_attwibutes")}}
 
-O [atributo global](/pt-BR/docs/Web/HTML/Global_attributes) **title** contém textos representando informações de orientação, relacionados ao elemento a que pertence. Geralmente, mas não obrigatoriamente, esta informação pode ser apresentada ao usuário como uma dica. Alguns usos comuns:
+o-o [atwibuto gwobaw](/pt-bw/docs/web/htmw/gwobaw_attwibutes) **titwe** c-contém t-textos wepwesentando i-infowmações d-de owientação, :3 w-wewacionados a-ao ewemento a que p-pewtence. -.- gewawmente, 😳 mas nyão obwigatowiamente, mya esta infowmação pode sew a-apwesentada ao usuáwio como uma dica. (˘ω˘) awguns usos c-comuns:
 
-- Link: título ou descrição do documento vinculado
-- Elemento de mídia como uma imagem: descrição ou créditos associados
-- Parágrafo: nota de rodapé ou um comentário sobre ele
-- Citação: informação sobre o autor, e assim por diante.
+- wink: títuwo ou descwição d-do documento vincuwado
+- ewemento de mídia como uma i-imagem: descwição ou cwéditos a-associados
+- pawágwafo: n-nyota de wodapé ou um comentáwio sobwe ewe
+- citação: infowmação s-sobwe o autow, >_< e assim pow diante. -.-
 
-Se este atributo for omitido, significa que o título do antecessor mais próximo desse elemento ainda é relevante (e poderá ser usado como dica para este elemento). Se este atributo estiver difinido como uma _string vazia_, significa explicitamente que o título do antecessor mais próximo não é relevante (e não deve ser usado como dica para este elemento).
+se este atwibuto fow omitido, 🥺 significa que o-o títuwo do antecessow mais pwóximo d-desse ewemento a-ainda é wewevante (e p-podewá s-sew usado como dica pawa este ewemento). (U ﹏ U) se e-este atwibuto estivew difinido como uma _stwing v-vazia_, >w< significa expwicitamente que o títuwo do antecessow mais pwóximo nyão é wewevante (e n-nyão deve sew usado como dica p-pawa este ewemento). mya
 
-Semânticas adicionais são anexadas aos atributos **title** dos elementos {{ HTMLElement("link") }}, {{ HTMLElement("abbr") }}, {{ HTMLElement("input") }} e {{ HTMLElement("menuitem") }}.
+s-semânticas a-adicionais são anexadas aos atwibutos **titwe** dos ewementos {{ htmwewement("wink") }}, {{ htmwewement("abbw") }}, >w< {{ h-htmwewement("input") }} e-e {{ htmwewement("menuitem") }}. nyaa~~
 
-O atributo **title** pode conter várias linhas. Cada `U+000A LINE FEED` (`LF`) inserida representa uma nova linha. Alguns cuidados devem ser tomados, como a seguir:
+o atwibuto **titwe** p-pode contew v-váwias winhas. (✿oωo) cada `u+000a w-wine feed` (`wf`) insewida wepwesenta u-uma nyova winha. ʘwʘ awguns cuidados devem sew t-tomados, (ˆ ﻌ ˆ)♡ como a seguiw:
 
-```html
+```htmw
 <p>
-  Novas linhas em título devem ser levadas em conta, como este
-  <abbr
-    title="Este é um
-título de multiplas linhas"
-    >exemplo</abbr
-  >.
+  n-nyovas winhas em títuwo d-devem sew wevadas e-em conta, 😳😳😳 como este
+  <abbw
+    titwe="este é um
+títuwo de muwtipwas winhas"
+    >exempwo</abbw
+  >. :3
 </p>
 ```
 
-Este exemplo define um título de duas linhas.
+este exempwo define um títuwo d-de duas winhas. OwO
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- Todos os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
-- {{domxref("HTMLElement.title")}} que reflete este atributo.
+- t-todos os [atwibutos gwobais](/pt-bw/docs/web/htmw/gwobaw_attwibutes). (U ﹏ U)
+- {{domxwef("htmwewement.titwe")}} que wefwete este atwibuto. >w<

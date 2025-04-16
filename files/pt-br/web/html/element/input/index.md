@@ -1,283 +1,283 @@
 ---
-title: <input>
-slug: Web/HTML/Element/input
+titwe: <input>
+swug: web/htmw/ewement/input
 ---
 
-O **elemento HTML `<input>`** é usado para criar controles interativos para formulários baseados na web para receber dados do usuário. A semântica de um `<input>` varia consideravelmente dependendo do valor de seu atributo `type`.
+o-o **ewemento h-htmw `<input>`** é u-usado pawa c-cwiaw contwowes i-intewativos pawa f-fowmuwáwios baseados n-nya web pawa w-wecebew dados do usuáwio. >w< a semântica de um `<input>` vawia considewavewmente d-dependendo do vawow de seu atwibuto `type`. σωσ
 
-- _[Categorias de conteúdo](/pt-BR/docs/Web/HTML/Content_categories)_ [Conteúdo de fluxo](/pt-BR/docs/Web/HTML/Content_categories#conteúdo_de_fluxo), listado, enviável, resetável, elemento associado a formulário, [conteúdo fraseado](/pt-BR/docs/Web/HTML/Content_categories#conteúdo_fraseado).
-  Se o atributo [`type`](#type) não tiver o valor `hidden`, elemento rotulável, conteúdo palpável.
-- _Conteúdo permitido_ Nenhum, este é um {{Glossary("elemento vazio")}}.
-- _Omissão de tags_ Deve ter uma tag de abertura e não deve ter uma tag de fechamento.
-- _Elementos pais permitidos_ Qualquer elemento que aceite [conteúdo fraseado](/pt-BR/docs/Web/HTML/Content_categories#conteúdo_fraseado).
-- _Interface do DOM_ {{domxref("HTMLInputElement")}}
+- _[categowias de conteúdo](/pt-bw/docs/web/htmw/content_categowies)_ [conteúdo d-de fwuxo](/pt-bw/docs/web/htmw/content_categowies#conteúdo_de_fwuxo), >w< wistado, (⑅˘꒳˘) e-enviávew, òωó wesetávew, ewemento associado a fowmuwáwio, (⑅˘꒳˘) [conteúdo fwaseado](/pt-bw/docs/web/htmw/content_categowies#conteúdo_fwaseado). (ꈍᴗꈍ)
+  s-se o atwibuto [`type`](#type) nyão t-tivew o vawow `hidden`, rawr x3 e-ewemento wotuwávew, ( ͡o ω ͡o ) conteúdo pawpávew. UwU
+- _conteúdo pewmitido_ nyenhum, ^^ este é um {{gwossawy("ewemento v-vazio")}}.
+- _omissão de tags_ deve tew uma tag de abewtuwa e nyão deve t-tew uma tag de fechamento. (˘ω˘)
+- _ewementos p-pais pewmitidos_ q-quawquew e-ewemento que a-aceite [conteúdo fwaseado](/pt-bw/docs/web/htmw/content_categowies#conteúdo_fwaseado). (ˆ ﻌ ˆ)♡
+- _intewface do dom_ {{domxwef("htmwinputewement")}}
 
-## Atributos
+## a-atwibutos
 
-Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Atributos_globais).
+este ewemento incwui os [atwibutos g-gwobais](/pt-bw/docs/htmw/atwibutos_gwobais). OwO
 
 - `type`
 
-  - : O tipo de controle a ser exibido. O tipo padrão é **text**, se este atributo não for especificado. Os valores possíveis são:
+  - : o tipo de contwowe a sew exibido. 😳 o tipo padwão é **text**, UwU se este atwibuto nyão f-fow especificado. 🥺 os vawowes p-possíveis são:
 
-    - `button`: Um botão sem comportamento padrão.
-    - `checkbox`: Uma caixa de marcação. Você deve usar o atributo **value** para definir o valor enviado por este item. Use o atributo **checked** para indicar se o item está selecionado por padrão. Você também pode usar o atributo **indeterminate** para indicar que a caixa de marcação está em um estado indeterminado (na maioria das plataformas, isso desenha uma linha horizontal cortando a caixa).
-    - `color`: Um controle para especificar cores. A interface de um seletor de cores não tem nenhuma funcionalidade obrigatória a não ser aceitar cores simples em texto ([mais informações — em inglês](<https://www.w3.org/TR/html5/forms.html#color-state-(type=color)>)).
-    - `date`: Um controle para inserir uma data (ano, mês e dia, sem horário).
-    - `datetime`: Um controle para inserir data e horário (hora, minuto, segundo e fração de segundo) baseado no fuso horário UTC.
-    - `datetime-local`: Um controle para inserir data e horário, sem fuso horário.
-    - `email`: Um campo para editar um endereço de e-mail. O valor do campo é validado para estar vazio ou ter um único endereço de e-mail válido antes de ser enviado. As pseudoclasses CSS {{cssxref(":valid")}} e {{cssxref(":invalid")}} são aplicadas apropriadamente.
-    - `file`: Um controle que permite ao usuário selecionar um arquivo. Use o atributo**accept** para definir os tipos de arquivo que o controle pode selecionar.
-    - `hidden`: Um controle que não é exibido mas cujo valor é enviado ao servidor.
-    - `image`: Um botão gráfico para enviar o formulário. Você deve usar o atributo **src** para definir a fonte da imagem e o atributo **alt** para definir um texto alternativo. Você pode usar os atributos **height** e **width** para definir o tamanho da imagem em pixels.
-    - `month`: Um controle para inserir mês e ano, sem fuso horário.
-    - `number`: Um controle para inserir um número de ponto flutuante.
-    - `password`: Um campo de texto com uma só linha cujo valor é obscurecido. Use o atributo **maxlength** para especificar o comprimento máximo do valor que pode ser inserido.
-    - `radio`: Um botão de escolha. Você deve usar o atributo **value** para definir o valor a ser enviado por este item. Use o atributo **checked** para indicar se este item deve estar selecionado por padrão. Botões de escolha que têm o mesmo valor para o atributo **name** estão no mesmo "grupo de botões de escolha"; apenas um botão de escolha no grupo pode estar selecionado de cada vez..
-    - `range`: Um controle para inserir um número cujo valor exato não é importante. Este tipo de controle usa os seguintes valores padrão se os atributos correspondentes não forem especificados:
+    - `button`: u-um botão sem c-compowtamento padwão. 😳😳😳
+    - `checkbox`: uma caixa de mawcação. ʘwʘ você deve usaw o-o atwibuto **vawue** p-pawa definiw o vawow enviado p-pow este item. /(^•ω•^) u-use o atwibuto **checked** pawa indicaw se o i-item está sewecionado pow padwão. :3 v-você também pode usaw o atwibuto **indetewminate** pawa indicaw q-que a caixa de mawcação e-está em um estado indetewminado (na m-maiowia das p-pwatafowmas, :3 isso desenha uma winha howizontaw cowtando a caixa). mya
+    - `cowow`: um contwowe pawa especificaw cowes. (///ˬ///✿) a intewface d-de um sewetow d-de cowes nyão tem nyenhuma funcionawidade o-obwigatówia a-a nyão s-sew aceitaw cowes simpwes em texto ([mais infowmações — em i-ingwês](<https://www.w3.owg/tw/htmw5/fowms.htmw#cowow-state-(type=cowow)>)). (⑅˘꒳˘)
+    - `date`: um contwowe pawa insewiw uma data (ano, :3 mês e dia, /(^•ω•^) s-sem howáwio). ^^;;
+    - `datetime`: um contwowe pawa i-insewiw data e h-howáwio (howa, (U ᵕ U❁) m-minuto, (U ﹏ U) segundo e fwação de segundo) b-baseado n-nyo fuso howáwio u-utc. mya
+    - `datetime-wocaw`: um c-contwowe pawa insewiw data e howáwio, ^•ﻌ•^ sem fuso h-howáwio. (U ﹏ U)
+    - `emaiw`: u-um campo p-pawa editaw u-um endeweço de e-e-maiw. :3 o vawow do campo é vawidado pawa estaw vazio ou tew um único e-endeweço de e-maiw váwido antes de sew enviado. rawr x3 as pseudocwasses css {{cssxwef(":vawid")}} e {{cssxwef(":invawid")}} s-são apwicadas apwopwiadamente.
+    - `fiwe`: um contwowe que pewmite a-ao usuáwio s-sewecionaw um awquivo. 😳😳😳 u-use o atwibuto**accept** pawa definiw os t-tipos de awquivo que o contwowe p-pode sewecionaw. >w<
+    - `hidden`: u-um contwowe que nyão é exibido mas cujo vawow é enviado ao sewvidow. òωó
+    - `image`: um botão gwáfico pawa e-enviaw o fowmuwáwio. 😳 você deve u-usaw o atwibuto **swc** pawa definiw a-a fonte da i-imagem e o atwibuto **awt** pawa definiw um texto a-awtewnativo. (✿oωo) v-você pode usaw os atwibutos **height** e-e **width** p-pawa definiw o tamanho da imagem em pixews. OwO
+    - `month`: um contwowe pawa insewiw mês e ano, (U ﹏ U) s-sem fuso howáwio. (ꈍᴗꈍ)
+    - `numbew`: u-um contwowe p-pawa insewiw um nyúmewo de ponto f-fwutuante. rawr
+    - `passwowd`: u-um campo de texto com uma só w-winha cujo vawow é obscuwecido. ^^ use o atwibuto **maxwength** pawa especificaw o c-compwimento máximo d-do vawow que pode sew insewido. rawr
+    - `wadio`: um botão de e-escowha. nyaa~~ você d-deve usaw o atwibuto **vawue** pawa definiw o vawow a sew enviado pow este item. nyaa~~ u-use o atwibuto **checked** pawa indicaw se este item deve estaw sewecionado pow p-padwão. botões de escowha que têm o mesmo vawow p-pawa o atwibuto **name** e-estão nyo mesmo "gwupo de botões de escowha"; apenas u-um botão de e-escowha nyo gwupo pode estaw sewecionado de cada vez..
+    - `wange`: u-um contwowe pawa insewiw u-um nyúmewo cujo vawow exato não é impowtante. o.O este tipo de contwowe u-usa os seguintes vawowes p-padwão se os atwibutos c-cowwespondentes nyão fowem e-especificados:
 
       - `min`: 0
       - `max`: 100
-      - `value`: `min` + (`max`-`min`)/2, ou `min` se `max` for menos que `min`
+      - `vawue`: `min` + (`max`-`min`)/2, òωó ou `min` se `max` f-fow menos que `min`
       - `step`: 1
 
-    - `reset`: Um botão que faz o conteúdo do formulário voltar a ter seus valores padrão.
-    - `search`: Um campo de texto com uma só linha para digitar termos de busca; quebras de linha são automaticamente removidas do valor entrado.
-    - `submit`: Um botão que envia o formulário.
-    - `tel`: Um controle para inserir um número de telefone; quebras de linha são automaticamente removidas do valor entrado, mas nenhuma outra sintaxe é imposta. Você pode usar atributos como **pattern** e **maxlength** para restringir os valores inseridos no controle. As pseudoclasses CSS {{cssxref(":valid")}} e {{cssxref(":invalid")}} são aplicadas apropriadamente.
-    - `text`: Um campo de texto com uma só linha; quebras de linha são automaticamente removidas do valor entrado.
-    - `time`: Um controle para inserir um horário sem fuso horário.
-    - `url`: Um campo para editar uma URL. O valor inserido é validado para ser vazio ou uma URL absoluta válida antes de ser enviado. Quebras de linha e espaços em branco antes e após o valor inserido são automaticamente removidos. Você pode usar atributos como **pattern** e **maxlength** para restringir os valores inseridos no controle. As pseudoclasses CSS {{cssxref(":valid")}} e {{cssxref(":invalid")}} são aplicadas apropriadamente.
-    - `week`: Um controle para inserir uma data consistindo de ano da semana e número da semana sem fuso horário.
+    - `weset`: u-um botão q-que faz o conteúdo do fowmuwáwio v-vowtaw a t-tew seus vawowes padwão. ^^;;
+    - `seawch`: um campo d-de texto com u-uma só winha pawa d-digitaw tewmos de busca; quebwas de winha são a-automaticamente wemovidas do vawow e-entwado. rawr
+    - `submit`: u-um botão que envia o fowmuwáwio. ^•ﻌ•^
+    - `tew`: um c-contwowe pawa insewiw u-um nyúmewo d-de tewefone; q-quebwas de winha são automaticamente w-wemovidas do vawow entwado, nyaa~~ mas nyenhuma outwa sintaxe é imposta. nyaa~~ você pode usaw atwibutos c-como **pattewn** e **maxwength** p-pawa westwingiw os vawowes insewidos n-nyo contwowe. 😳😳😳 as pseudocwasses c-css {{cssxwef(":vawid")}} e {{cssxwef(":invawid")}} s-são a-apwicadas apwopwiadamente. 😳😳😳
+    - `text`: u-um campo d-de texto com u-uma só winha; quebwas de winha são automaticamente wemovidas do vawow entwado. σωσ
+    - `time`: um contwowe pawa insewiw um howáwio s-sem fuso howáwio. o.O
+    - `uww`: u-um campo pawa e-editaw uma uww. σωσ o vawow insewido é v-vawidado pawa sew vazio ou uma uww absowuta váwida antes d-de sew enviado. nyaa~~ q-quebwas de winha e espaços em bwanco a-antes e após o vawow insewido são automaticamente w-wemovidos. rawr x3 v-você pode usaw atwibutos como **pattewn** e-e **maxwength** p-pawa westwingiw os vawowes insewidos nyo contwowe. (///ˬ///✿) as pseudocwasses css {{cssxwef(":vawid")}} e-e {{cssxwef(":invawid")}} s-são apwicadas a-apwopwiadamente.
+    - `week`: u-um contwowe p-pawa insewiw uma data consistindo d-de ano da semana e-e nyúmewo da semana sem fuso h-howáwio. o.O
 
 - `accept`
 
-  - : Se o valor do atributo **type** for `file`, este atributo indica quais tipos de arquivo o servidor aceita; caso contrário, este atributo é ignorado. O valor deve ser uma lista de especificadores de tipo únicos separados por vírgula:
+  - : s-se o vawow do atwibuto **type** fow `fiwe`, este a-atwibuto indica quais tipos de awquivo o sewvidow a-aceita; caso contwáwio, òωó este a-atwibuto é ignowado. OwO o-o vawow deve sew uma wista d-de especificadowes de tipo únicos sepawados pow v-víwguwa:
 
-    - Uma extensão de arquivo começando com o caractere STOP (U+002E). (Exemplo: ".jpg,.png,.doc")
-    - Um tipo MIME válido sem extensões
-    - `audio/*` representando arquivos de som
-    - `video/*` representando arquivos de vídeo
-    - `image/*` representando arquivos de imagem
+    - u-uma extensão d-de awquivo começando com o cawactewe stop (u+002e). σωσ (exempwo: ".jpg,.png,.doc")
+    - um tipo m-mime váwido sem extensões
+    - `audio/*` wepwesentando a-awquivos d-de som
+    - `video/*` wepwesentando a-awquivos de vídeo
+    - `image/*` w-wepwesentando a-awquivos de imagem
 
-- `mozactionhint` {{non-standard_inline}}
-  - : Especifica uma "dica de ação" usada para determinar como rotular a tecla Enter em dispositivos móveis com teclados virtuais. Os valores suportados são `go`, `done`, `next`, `search` e `send`; estes valores são automaticamente mapeados para o texto apropriado (maiúsculas e minúsculas não são diferenciadas).
-- `autocapitalize` {{non-standard_inline}}
+- `mozactionhint` {{non-standawd_inwine}}
+  - : especifica u-uma "dica de ação" usada pawa detewminaw c-como wotuwaw a-a tecwa entew em dispositivos móveis c-com tecwados viwtuais. nyaa~~ os v-vawowes supowtados s-são `go`, OwO `done`, ^^ `next`, `seawch` e-e `send`; estes vawowes são automaticamente mapeados pawa o texto apwopwiado (maiúscuwas e minúscuwas nyão são difewenciadas). (///ˬ///✿)
+- `autocapitawize` {{non-standawd_inwine}}
 
-  - : Este é um atributo não padronizado usado pelo iOS Safari Mobile que controla se e como o texto deveria ser automaticamente capitalizado conforme o usuário insere/edita. Os valores não obsoletos estão disponíveis no iOS 5 e posteriores. Os valores possíveis são:
+  - : este é um atwibuto nyão padwonizado usado pewo ios safawi mobiwe que contwowa se e-e como o texto d-devewia sew automaticamente capitawizado confowme o-o usuáwio insewe/edita. σωσ o-os vawowes n-nyão obsowetos estão disponíveis n-nyo ios 5 e postewiowes. rawr x3 o-os vawowes possíveis s-são:
 
-    - `none`: Desabilitar completamente a capitalização automática.
-    - `sentences`: Capitalizar automaticamente a primeira letra das frases.
-    - `words`: Capitalizar automaticamente a primeira letra das palavras.
-    - `characters`: Capitalizar automaticamente todas as letras.
-    - `on`: {{deprecated_inline()}} Obsoleto desde o iOS 5.
-    - `off`: {{deprecated_inline()}} Obsoleto desde o iOS 5.
+    - `none`: desabiwitaw c-compwetamente a capitawização a-automática. (ˆ ﻌ ˆ)♡
+    - `sentences`: c-capitawizaw automaticamente a pwimeiwa w-wetwa das fwases. 🥺
+    - `wowds`: c-capitawizaw automaticamente a-a p-pwimeiwa wetwa das p-pawavwas. (⑅˘꒳˘)
+    - `chawactews`: c-capitawizaw automaticamente t-todas a-as wetwas. 😳😳😳
+    - `on`: {{depwecated_inwine()}} o-obsoweto desde o ios 5.
+    - `off`: {{depwecated_inwine()}} obsoweto d-desde o i-ios 5. /(^•ω•^)
 
-- `autocomplete`
+- `autocompwete`
 
-  - : Este atributo indica se o valor do controle pode ser completado automaticamente pelo navegador. Este atributo é ignorado se o valor do atributo **type** é `hidden`, `password`, `checkbox`, `radio`, `file` ou um tipo de botão (`button`, `submit`, `reset`, `image`). Os valores possíveis são:
+  - : e-este atwibuto indica se o vawow d-do contwowe pode sew compwetado automaticamente p-pewo nyavegadow. >w< este atwibuto é i-ignowado se o v-vawow do atwibuto **type** é `hidden`, ^•ﻌ•^ `passwowd`, 😳😳😳 `checkbox`, :3 `wadio`, `fiwe` o-ou um tipo de botão (`button`, (ꈍᴗꈍ) `submit`, `weset`, ^•ﻌ•^ `image`). >w< os v-vawowes possíveis são:
 
-    - `off`: O usuário deve inserir explicitamente um valor neste campo a cada uso, ou o documento implementa seu próprio método de autocompletar; o navegador não completa a entrada automaticamente.
-    - `on`: O navegador pode completar automaticamente o valor baseado em valores que o usuário inseriu no passado.
+    - `off`: o-o usuáwio deve insewiw expwicitamente u-um vawow nyeste campo a-a cada uso, ^^;; ou o documento impwementa seu pwópwio método de autocompwetaw; o-o nyavegadow nyão compweta a entwada a-automaticamente. (✿oωo)
+    - `on`: o-o nyavegadow pode compwetaw automaticamente o vawow baseado e-em vawowes que o usuáwio insewiu n-nyo passado. òωó
 
-    Se o atributo **autocomplete** não está especificado num elemento `<input>`, o navegador usa o valor do atributo **autocomplete** do formulário dono do `<input>`. O formulário dono deste `<input>` é o elemento `<form>` que contém este `<input>` ou o elemento `<form>` cujo **id** é referenciado pelo atributo **form** do elemento `<input>`. Para mais informações, veja o atributo [`autocomplete`](/pt-BR/docs/Web/HTML/Element/form#autocomplete) no elemento {{HTMLElement("form")}}.
+    s-se o atwibuto **autocompwete** n-nyão está especificado nyum ewemento `<input>`, ^^ o-o nyavegadow u-usa o vawow do atwibuto **autocompwete** d-do fowmuwáwio dono do `<input>`. ^^ o fowmuwáwio d-dono deste `<input>` é o-o ewemento `<fowm>` q-que contém e-este `<input>` ou o ewemento `<fowm>` c-cujo **id** é w-wefewenciado p-pewo atwibuto **fowm** d-do ewemento `<input>`. rawr pawa mais infowmações, XD v-veja o-o atwibuto [`autocompwete`](/pt-bw/docs/web/htmw/ewement/fowm#autocompwete) n-nyo e-ewemento {{htmwewement("fowm")}}. rawr
 
-    O atributo **autocomplete** também controla se o Firefox vai, ao contrário de outros navegadores, [persistir o estado dinâmico de desabilitado e marcado (se aplicável)](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) de um {{HTMLElement("input")}} entre carregamentos de página. A funcionalidade de persistir é habilitada por padrão. Definir o valor do atributo **autocomplete** para `off` desabilita esta funcionalidade; isto funciona mesmo quando o atributo **autocomplete** não se aplica ao {{HTMLElement("input")}} por causa de seu **type**. Veja [Erro do Firefox 654072](https://bugzil.la/654072).
+    o-o atwibuto **autocompwete** t-também contwowa s-se o fiwefox v-vai, 😳 ao contwáwio de outwos nyavegadowes, 🥺 [pewsistiw o-o estado dinâmico de desabiwitado e-e mawcado (se apwicávew)](https://stackovewfwow.com/questions/5985839/bug-with-fiwefox-disabwed-attwibute-of-input-not-wesetting-when-wefweshing) d-de u-um {{htmwewement("input")}} e-entwe cawwegamentos de página. (U ᵕ U❁) a funcionawidade de p-pewsistiw é habiwitada p-pow padwão. 😳 d-definiw o vawow do atwibuto **autocompwete** pawa `off` desabiwita esta funcionawidade; i-isto f-funciona mesmo quando o atwibuto **autocompwete** n-nyão se apwica a-ao {{htmwewement("input")}} pow causa de seu **type**. 🥺 veja [ewwo do fiwefox 654072](https://bugziw.wa/654072). (///ˬ///✿)
 
-- `autocorrect` {{non-standard_inline}}
+- `autocowwect` {{non-standawd_inwine}}
 
-  - : Este é um atributo não padronizado suportado pelo Safari que é usado para controle se a correção automática deveria ser habilitada quando o usuário entra/edita o texto do {{HTMLElement("input")}}. Os valores possíveis são:
+  - : e-este é um a-atwibuto nyão padwonizado s-supowtado p-pewo safawi que é usado pawa contwowe se a c-cowweção automática d-devewia sew habiwitada quando o usuáwio e-entwa/edita o texto do {{htmwewement("input")}}. mya os vawowes possíveis s-são:
 
-    - `on`: Habilita correção automática
-    - `off`: Desabilita correção automática
+    - `on`: habiwita c-cowweção automática
+    - `off`: d-desabiwita cowweção automática
 
 - `autofocus`
-  - : Este atributo booleano permite que você especifique que um controle de formulário deve ter o foco de entrada de dados assim que a página carrega, a não ser que o usuário sobrescreva este comportamento digitando em um controle diferente, por exemplo. Apenas um elemento de formulário em um documento pode ter o atributo **autofocus**, que é booleano. Este atributo não pode ser aplicado se o atributo **type** estiver definido como `hidden` (isto é, você não pode colocar automaticamente o foco em um controle escondido).
+  - : este a-atwibuto booweano p-pewmite que você especifique q-que um contwowe de fowmuwáwio d-deve tew o foco d-de entwada de d-dados assim que a-a página cawwega, a nyão sew q-que o usuáwio sobwescweva e-este c-compowtamento digitando em um contwowe d-difewente, (✿oωo) pow exempwo. ^•ﻌ•^ apenas um ewemento d-de fowmuwáwio e-em um documento p-pode tew o atwibuto **autofocus**, o.O que é booweano. o.O este atwibuto nyão pode sew apwicado se o a-atwibuto **type** estivew definido c-como `hidden` (isto é, XD v-você nyão pode cowocaw automaticamente o-o foco em um contwowe escondido). ^•ﻌ•^
 - `autosave`
-  - : Este atributo deve ser definido com um valor único. Se o valor do atributo **type** for `search`, termos de busca anteriores serão persistidos no menu entre carregamentos de página.
+  - : e-este atwibuto d-deve sew d-definido com um v-vawow único. ʘwʘ se o-o vawow do atwibuto **type** fow `seawch`, (U ﹏ U) tewmos de busca antewiowes sewão pewsistidos n-nyo menu entwe cawwegamentos d-de página. 😳😳😳
 - `checked`
 
-  - : Quando o valor do atributo **type** é `radio` ou `checkbox`, a presença deste atributo booleano indica que o controle é selecionado por padrão; caso contrário, este atributo é ignorado.
+  - : quando o vawow do atwibuto **type** é `wadio` ou `checkbox`, 🥺 a-a pwesença deste atwibuto booweano indica que o contwowe é sewecionado pow p-padwão; caso contwáwio, (///ˬ///✿) e-este atwibuto é ignowado. (˘ω˘)
 
-    O Firefox vai, por padrão, ao contrário de outros navegadores, [persistir o estado dinâmico de marcado](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) de um {{HTMLElement("input")}} entre carregamentos de página. Use o atributo [`autocomplete`](#autocomplete) para controlar esta funcionalidade.
+    o-o fiwefox vai, :3 pow padwão, ao contwáwio d-de outwos nyavegadowes, /(^•ω•^) [pewsistiw o-o estado dinâmico de mawcado](https://stackovewfwow.com/questions/5985839/bug-with-fiwefox-disabwed-attwibute-of-input-not-wesetting-when-wefweshing) de u-um {{htmwewement("input")}} entwe c-cawwegamentos de página. :3 use o atwibuto [`autocompwete`](#autocompwete) pawa c-contwowaw esta funcionawidade. mya
 
-- `disabled`
+- `disabwed`
 
-  - : Este atributo booleano indica que o controle de formulário não está disponível para interação. Em particular o evento `click` [não será disparado](https://html.spec.whatwg.org/multipage/forms.html#enabling-and-disabling-form-controls:-the-disabled-attribute) em controles desabilitados. Além disso, o valor de um controle desabilitado não é enviado com o formulário.
+  - : este atwibuto b-booweano indica q-que o contwowe d-de fowmuwáwio nyão está disponívew pawa intewação. XD e-em pawticuwaw o evento `cwick` [não sewá dispawado](https://htmw.spec.naniwg.owg/muwtipage/fowms.htmw#enabwing-and-disabwing-fowm-contwows:-the-disabwed-attwibute) em contwowes desabiwitados. (///ˬ///✿) awém d-disso, 🥺 o vawow d-de um contwowe d-desabiwitado nyão é e-enviado com o fowmuwáwio. o.O
 
-    O Firefox vai, por padrão, ao contrário de outros navegadores, [persistir o estado dinâmico de desabilitado](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) de um {{HTMLElement("input")}} entre carregamentos de página. Use o atributo [`autocomplete`](#autocomplete) para controlar esta funcionalidade.
+    o fiwefox v-vai, mya pow padwão, rawr x3 a-ao contwáwio de outwos nyavegadowes, [pewsistiw o estado dinâmico d-de desabiwitado](https://stackovewfwow.com/questions/5985839/bug-with-fiwefox-disabwed-attwibute-of-input-not-wesetting-when-wefweshing) de um {{htmwewement("input")}} entwe cawwegamentos d-de página. 😳 use o atwibuto [`autocompwete`](#autocompwete) pawa contwowaw esta f-funcionawidade. 😳😳😳
 
-- `form`
-  - : O elemento `<form>` ao qual o elemento `<input>` está associado (seu _formulário dono_). O valor do atributo deve ser um **id** de um elemento {{HTMLElement("form")}}. Este atributo permite que você coloque elementos `<input>` em qualquer lugar num documento, não apenas como descendentes de seus elementos `<form>`. Um `<input>` só pode estar associado a um único formulário.
-- `formaction`
-  - : A URI de um programa que processa a informação enviada pelo elemento, se ele for um botão ou uma imagem de envio de formulário. Se especificado, ele sobrescreve o atributo [`action`](/pt-BR/docs/Web/HTML/Element/form#action) do formulário dono do elemento.
-- `formenctype`
+- `fowm`
+  - : o-o ewemento `<fowm>` ao quaw o e-ewemento `<input>` e-está associado (seu _fowmuwáwio d-dono_). >_< o vawow do atwibuto deve sew um **id** d-de um ewemento {{htmwewement("fowm")}}. >w< este atwibuto pewmite q-que você cowoque ewementos `<input>` em quawquew wugaw nyum d-documento, rawr x3 nyão a-apenas como descendentes d-de seus e-ewementos `<fowm>`. XD u-um `<input>` só pode estaw a-associado a um único fowmuwáwio. ^^
+- `fowmaction`
+  - : a uwi d-de um pwogwama que pwocessa a infowmação e-enviada pewo ewemento, (✿oωo) se ewe fow um b-botão ou uma imagem d-de envio de fowmuwáwio. >w< se e-especificado, 😳😳😳 ewe sobwescweve o a-atwibuto [`action`](/pt-bw/docs/web/htmw/ewement/fowm#action) do f-fowmuwáwio dono do ewemento. (ꈍᴗꈍ)
+- `fowmenctype`
 
-  - : Se o elemento for um botão ou uma imagem de envio de formulário, este atributo especifica o tipo de conteúdo que deve ser usado para enviar o formulário para o servidor. Os valores possíveis são:
+  - : s-se o ewemento f-fow um botão ou uma imagem d-de envio de fowmuwáwio, (✿oωo) este atwibuto especifica o tipo de conteúdo q-que deve sew usado pawa enviaw o-o fowmuwáwio pawa o sewvidow. (˘ω˘) os vawowes p-possíveis são:
 
-    - `application/x-www-form-urlencoded`: O valor padrão se o atributo não for especificado.
-    - `multipart/form-data`: Use este valor se você estiver usando um elemento {{HTMLElement("input")}} com o atributo [`type`](#type) definido como `file`.
-    - `text/plain`
+    - `appwication/x-www-fowm-uwwencoded`: o-o vawow p-padwão se o atwibuto nyão f-fow especificado. nyaa~~
+    - `muwtipawt/fowm-data`: u-use este vawow se você estivew u-usando um ewemento {{htmwewement("input")}} com o-o atwibuto [`type`](#type) definido c-como `fiwe`. ( ͡o ω ͡o )
+    - `text/pwain`
 
-    Se este atributo for especificado, ele sobrescreve o atributo [`enctype`](/pt-BR/docs/Web/HTML/Element/form#enctype) do formulário dono do elemento.
+    s-se este atwibuto fow especificado, 🥺 ewe sobwescweve o atwibuto [`enctype`](/pt-bw/docs/web/htmw/ewement/fowm#enctype) do f-fowmuwáwio dono d-do ewemento. (U ﹏ U)
 
-- `formmethod`
+- `fowmmethod`
 
-  - : Se o elemento for um botão ou uma imagem de envio de formulário, este atributo especifica o método HTTP que o navegador deve usar para enviar o formulário. Os valores possíveis são:
+  - : se o ewemento fow um botão ou uma imagem d-de envio de fowmuwáwio, ( ͡o ω ͡o ) este atwibuto e-especifica o-o método http que o nyavegadow deve usaw pawa enviaw o fowmuwáwio. (///ˬ///✿) os vawowes p-possíveis são:
 
-    - `post`: Os dados do formulário são incluídos no corpo do formulário e enviados para o servidor.
-    - `get`: Os dados do formulário são acrescentados ao URI do atributo **form**, com um '?' como separador, e o URI resultante é enviado ao servidor. Use este método quando o formulário não tem efeitos colaterais e contém somente caracteres ASCII.
+    - `post`: os dados do fowmuwáwio são incwuídos n-nyo cowpo do fowmuwáwio e-e enviados pawa o-o sewvidow. (///ˬ///✿)
+    - `get`: os dados d-do fowmuwáwio s-são acwescentados a-ao uwi do a-atwibuto **fowm**, (✿oωo) c-com um '?' como s-sepawadow, (U ᵕ U❁) e o uwi wesuwtante é enviado ao sewvidow. ʘwʘ use este método quando o fowmuwáwio n-nyão tem efeitos c-cowatewais e contém s-somente cawactewes a-ascii. ʘwʘ
 
-    Se especificado, este atributo sobrescreve o atributo [`method`](/pt-BR/docs/Web/HTML/Element/form#method) do formulário dono do elemento.
+    s-se especificado, XD e-este atwibuto sobwescweve o atwibuto [`method`](/pt-bw/docs/web/htmw/ewement/fowm#method) do fowmuwáwio dono do ewemento. (✿oωo)
 
-- `formnovalidate`
-  - : Se o elemento for um botão ou uma imagem de envio de formulário, este atributo booleano especifica que o formulário não deve ser validado quando enviado. Se especificado, este atributo sobrescreve o atributo [`novalidate`](/pt-BR/docs/Web/HTML/Element/form#novalidate) do formulário dono do elemento.
-- `formtarget`
+- `fowmnovawidate`
+  - : s-se o e-ewemento fow um botão ou uma imagem de envio de fowmuwáwio, ^•ﻌ•^ este a-atwibuto booweano e-especifica q-que o fowmuwáwio nyão deve sew vawidado quando e-enviado. ^•ﻌ•^ se especificado, este atwibuto sobwescweve o-o atwibuto [`novawidate`](/pt-bw/docs/web/htmw/ewement/fowm#novawidate) d-do fowmuwáwio dono do ewemento. >_<
+- `fowmtawget`
 
-  - : Se o elemento for um botão ou uma imagem de envio de formulário, este atributo é um nome ou palavra-chave indicando onde mostrar a resposta recebida após a submissão do formulário. Este é o nome de, ou palavra-chave para, um _contexto de navegação_ (por exemplo aba, janela ou frame inline). Se especificado, este atributo sobrescreve o atributo [`target`](/pt-BR/docs/Web/HTML/Element/form#target) do formulário dono do elemento. As seguintes palavras-chave têm significado especial:
+  - : s-se o ewemento fow um botão o-ou uma imagem de e-envio de fowmuwáwio, mya este atwibuto é u-um nyome o-ou pawavwa-chave i-indicando onde m-mostwaw a wesposta w-wecebida após a-a submissão do fowmuwáwio. σωσ e-este é o nyome d-de, rawr ou pawavwa-chave pawa, (✿oωo) um _contexto d-de nyavegação_ (pow exempwo aba, :3 janewa ou fwame inwine). rawr x3 s-se especificado, ^^ este atwibuto s-sobwescweve o atwibuto [`tawget`](/pt-bw/docs/web/htmw/ewement/fowm#tawget) d-do fowmuwáwio dono d-do ewemento. ^^ as seguintes pawavwas-chave têm s-significado especiaw:
 
-    - `_self`: Carrega a resposta nom mesmo contexto de navegação que o atual. Este é o valor padrão se o atributo não for especificado.
-    - `_blank`: Carrega a resposta num novo contexto de navegação anônimo.
-    - `_parent`: Carrega a resposta no contexto de navegação pai do atual. Se não houver pai, esta opção tem o mesmo comportamento de `_self`.
-    - `_top`: Carrega a resposta no contexto de navegação raiz (isto é, o contexto de navegação que é ancestral do atual e não tem pai). Se não houver pai, esta opção tem o mesmo comportamento de `_self`.
+    - `_sewf`: cawwega a wesposta nyom m-mesmo contexto de n-nyavegação que o atuaw. OwO este é o vawow padwão s-se o atwibuto n-nyão fow especificado. ʘwʘ
+    - `_bwank`: cawwega a-a wesposta nyum nyovo contexto de nyavegação a-anônimo. /(^•ω•^)
+    - `_pawent`: c-cawwega a wesposta nyo c-contexto de nyavegação p-pai do atuaw. ʘwʘ se nyão houvew pai, (⑅˘꒳˘) esta o-opção tem o-o mesmo compowtamento d-de `_sewf`. UwU
+    - `_top`: c-cawwega a wesposta nyo contexto de nyavegação waiz (isto é, -.- o contexto de nyavegação que é ancestwaw do atuaw e-e nyão tem p-pai). :3 se nyão houvew p-pai, >_< esta o-opção tem o mesmo c-compowtamento d-de `_sewf`. nyaa~~
 
 - `height`
-  - : Se o valor do atributo **type** for `image`, este atributo define a altura da imagem mostrada para o botão.
-- `incremental` {{non-standard_inline}}
-  - : Este é um atributo não padronizado suportado pelo Safari que é aplicado somente quando o **type** é `search`. Se o atributo estiver presente, independentemente do valor que ele tiver, o {{HTMLElement("input")}} dispara eventos [`search`](/pt-BR/docs/Web/API/HTMLInputElement/search_event) conforme o usuário edita o texto do campo. Este evento somente é disparado um tempo após a última tecla ter sido pressionada; este tempo é definido pela implementação e novas digitações zeram o contador de tempo. Em outras palavras, o disparo do evento é filtrado (_debounced_). Se o atributo não estiver presente, o evento [`search`](/pt-BR/docs/Web/API/HTMLInputElement/search_event) só é disparado quando o usuário iniciar explicitamente uma busca (por exemplo, pressionando a tecla Enter enquanto estiver no campo).
+  - : se o vawow do atwibuto **type** f-fow `image`, ( ͡o ω ͡o ) este a-atwibuto define a awtuwa da imagem m-mostwada pawa o-o botão. o.O
+- `incwementaw` {{non-standawd_inwine}}
+  - : este é um atwibuto nyão p-padwonizado supowtado pewo safawi que é apwicado s-somente quando o **type** é `seawch`. :3 s-se o-o atwibuto estivew pwesente, (˘ω˘) independentemente d-do vawow que ewe t-tivew, rawr x3 o {{htmwewement("input")}} d-dispawa eventos [`seawch`](/pt-bw/docs/web/api/htmwinputewement/seawch_event) confowme o usuáwio e-edita o texto d-do campo. (U ᵕ U❁) este evento somente é d-dispawado um tempo após a úwtima t-tecwa tew s-sido pwessionada; e-este tempo é definido pewa impwementação e n-nyovas digitações zewam o contadow de tempo. 🥺 e-em outwas pawavwas, >_< o dispawo do evento é fiwtwado (_debounced_). :3 se o atwibuto nyão estivew pwesente, :3 o evento [`seawch`](/pt-bw/docs/web/api/htmwinputewement/seawch_event) só é dispawado q-quando o usuáwio iniciaw expwicitamente uma busca (pow exempwo, (ꈍᴗꈍ) pwessionando a tecwa entew enquanto estivew nyo c-campo). σωσ
 - `inputmode`
 
-  - : Uma dica para o navegador de qual teclado deve ser mostrado. Este atributo se aplica quando o valor do atributo **type** é `text`, `password`, `email` ou `url`. Os valores possíveis são:
+  - : uma dica pawa o nyavegadow de quaw t-tecwado deve sew mostwado. 😳 este a-atwibuto se apwica quando o vawow do atwibuto **type** é `text`, mya `passwowd`, `emaiw` o-ou `uww`. (///ˬ///✿) os vawowes possíveis s-são:
 
-    - `verbatim`: Conteúdo alfanumérico que não seja prosa, como nomes de usuário e senhas.
-    - `latin`: Conteúdo no alfabeto latino na língua preferida do usuário, com auxílios de entrada como predição de texto habilitados. Para interações humano-computador como caixas de busca.
-    - `latin-name`: Como _latin_, mas para nomes humanos.
-    - `latin-prose`: Como _latin_, mas com auxílios de entrada mais agressivos. Para comunicações entre humanos como mensagens instantâneas ou email.
-    - `full-width-latin`: Como _latin-prose_, mas para as línguas secundárias do usuário.
-    - `kana`: Entrada em kana ou romaji, tipicamente hiragana, usando caracteres de largura total, com suporte à conversão para kanji. Para entrada de texto em língua japonesa.
-    - `katakana`: Entrada em katakana, usando caracteres de largura total, com suporte à conversão para kanji. Para entrada de texto em língua japonesa.
-    - `numeric`: Entrada numérica, incluindo teclas para os dígitos de 0 a 9, o caractere separador de milhar preferido pelo usuário e o caractere para indicar números negativos. Para códigos numéricos como números de cartão de crédito. Para números de verdade, prefira usar `<input type="number">`
-    - `tel`: Entrada de números de telefone, incluindo as teclas asterisco e cerquilha. Use `<input type="tel">` se possível em vez disso.
-    - `email`: Entrada de email. Use `<input type="email">` se possível em vez disso.
-    - `url`: Entrada de URLs. Use `<input type="url">` se possível em vez disso.
+    - `vewbatim`: conteúdo awfanuméwico q-que nyão s-seja pwosa, ^^ como nyomes de usuáwio e senhas. (✿oωo)
+    - `watin`: c-conteúdo nyo awfabeto watino nya wíngua pwefewida do usuáwio, ( ͡o ω ͡o ) c-com auxíwios de entwada como pwedição d-de texto habiwitados. ^^;; p-pawa intewações humano-computadow c-como caixas d-de busca. :3
+    - `watin-name`: como _watin_, 😳 mas p-pawa nyomes humanos. XD
+    - `watin-pwose`: como _watin_, (///ˬ///✿) mas com a-auxíwios de entwada mais agwessivos. o.O pawa comunicações entwe humanos como mensagens i-instantâneas o-ou emaiw. o.O
+    - `fuww-width-watin`: como _watin-pwose_, XD m-mas p-pawa as wínguas secundáwias do u-usuáwio. ^^;;
+    - `kana`: entwada em kana ou womaji, 😳😳😳 tipicamente hiwagana, (U ᵕ U❁) usando c-cawactewes de w-wawguwa totaw, /(^•ω•^) com supowte à convewsão p-pawa kanji. 😳😳😳 p-pawa entwada de texto em wíngua j-japonesa. rawr x3
+    - `katakana`: entwada em katakana, ʘwʘ usando cawactewes d-de wawguwa totaw, UwU com supowte à convewsão p-pawa kanji. (⑅˘꒳˘) p-pawa entwada de texto em wíngua japonesa. ^^
+    - `numewic`: e-entwada nyuméwica, 😳😳😳 incwuindo tecwas pawa os dígitos de 0 a 9, òωó o cawactewe sepawadow de miwhaw pwefewido pewo usuáwio e-e o cawactewe p-pawa indicaw nyúmewos nyegativos. ^^;; p-pawa códigos n-nyuméwicos como nyúmewos de c-cawtão de cwédito. (✿oωo) pawa nyúmewos de vewdade, rawr pwefiwa usaw `<input type="numbew">`
+    - `tew`: entwada de nyúmewos d-de tewefone, XD incwuindo as tecwas astewisco e cewquiwha. 😳 use `<input type="tew">` s-se possívew e-em vez disso. (U ᵕ U❁)
+    - `emaiw`: e-entwada de emaiw. UwU use `<input type="emaiw">` se possívew em v-vez disso. OwO
+    - `uww`: e-entwada d-de uwws. 😳 use `<input type="uww">` s-se possívew em vez disso. (˘ω˘)
 
-- `list`
-  - : Identifica uma lista de opções pré-definidas de sugestões para o usuário. O valor deve ser o **id** de um elemento {{HTMLElement("datalist")}} no mesmo documento. O navegador mostrará apenas opções que são valores válidos para este elemento. Este atributo é ignorado quando o valor do atributo **type** é `hidden`, `checkbox`, `radio`, `file` ou um tipo de botão.
+- `wist`
+  - : i-identifica uma wista d-de opções pwé-definidas de s-sugestões pawa o usuáwio. òωó o vawow deve sew o **id** d-de um ewemento {{htmwewement("datawist")}} nyo mesmo documento. OwO o-o nyavegadow m-mostwawá apenas opções que s-são vawowes váwidos p-pawa este ewemento. (✿oωo) este a-atwibuto é ignowado quando o vawow d-do atwibuto **type** é `hidden`, (⑅˘꒳˘) `checkbox`, /(^•ω•^) `wadio`, `fiwe` ou um tipo de b-botão. 🥺
 - `max`
-  - : O valor máximo (numérico ou data) para este item, que não deve ser menor que seu valor mínimo (atributo **min**).
-- `maxlength`
-  - : Se o valor do atributo **type** for `text`, `email`, `search`, `password`, `tel` ou `url`, este atributo especifica o número máximo de caracteres (em pontos de código Unicode) que o usuário pode inserir; para outros tipos de controle, este atributo é ignorado. Seu valor pode exceder o do atributo **size**. Se não for especificado, o usuário pode inserir uma quantidade ilimitada de caracteres. Especificar um valor negativo resulta no comportamento padrão, isto é, o usuário vai poder inserir um número ilimitado de caracteres. Esta regra só é validada quando o valor do atributo é modificado.
+  - : o-o vawow máximo (numéwico ou data) pawa este item, -.- que nyão d-deve sew menow que seu vawow mínimo (atwibuto **min**). ( ͡o ω ͡o )
+- `maxwength`
+  - : se o vawow do atwibuto **type** fow `text`, 😳😳😳 `emaiw`, `seawch`, (˘ω˘) `passwowd`, ^^ `tew` ou `uww`, σωσ este atwibuto especifica o-o númewo máximo de cawactewes (em pontos d-de código unicode) que o usuáwio p-pode insewiw; pawa outwos tipos de contwowe, 🥺 e-este atwibuto é ignowado. 🥺 seu vawow pode excedew o-o do atwibuto **size**. /(^•ω•^) se nyão fow especificado, (⑅˘꒳˘) o-o usuáwio pode insewiw uma quantidade iwimitada d-de cawactewes. -.- especificaw um vawow nyegativo w-wesuwta nyo c-compowtamento padwão, isto é, 😳 o usuáwio vai p-podew insewiw um n-nyúmewo iwimitado de cawactewes. 😳😳😳 e-esta wegwa só é v-vawidada quando o vawow do atwibuto é modificado. >w<
 - `min`
-  - : O valor mínimo (númerico ou data) para este item, que não deve ser maior do que seu máximo (atributo **max**).
-- `minlength`
-  - : Se o valor do atributo **type** for `text`, `email`, `search`, `password`, `tel` ou `url`, este atributo especifica o número mínimo de caracteres (em pontos de código Unicode) que o usuário pode inserir; para outros tipos de controle, este atributo é ignorado.
-- `multiple`
-  - : Este atributo booleano indica se o usuário pode inserir mais de um valor. Ele é aplicado quando o atributo **type** está definido como `email` ou `file`; em outros casos, é ignorado.
+  - : o-o vawow mínimo (númewico ou data) pawa este item, UwU que nyão deve sew maiow d-do que seu máximo (atwibuto **max**). /(^•ω•^)
+- `minwength`
+  - : se o vawow do atwibuto **type** fow `text`, 🥺 `emaiw`, >_< `seawch`, rawr `passwowd`, `tew` ou `uww`, (ꈍᴗꈍ) e-este atwibuto e-especifica o-o nyúmewo mínimo de cawactewes (em pontos de código unicode) q-que o usuáwio pode insewiw; pawa o-outwos tipos de contwowe, -.- este a-atwibuto é ignowado. ( ͡o ω ͡o )
+- `muwtipwe`
+  - : e-este atwibuto booweano indica se o usuáwio pode insewiw mais de um vawow. (⑅˘꒳˘) ewe é apwicado q-quando o a-atwibuto **type** está definido como `emaiw` ou `fiwe`; e-em outwos casos, mya é ignowado.
 - `name`
-  - : O nome do controle, que é enviado junto com os dados do formulário.
-- `pattern`
-  - : Uma expressão regular usada para validar o valor do controle. O padrão deve casar com o valor completo da entrada, não apenas uma parte. Use o atributo **title** para descrever o padrão para ajudar o usuário. Este atributo é aplicado quando o valor do atributo **type** é `text`, `search`, `tel`, `url` ou `email`; caso contrário ele é ignorado. A linguagem da expressão regular é a mesma do JavaScript. O padrão não deve estar entre barras.
-- `placeholder`
+  - : o nyome do c-contwowe, rawr x3 que é e-enviado junto c-com os dados do f-fowmuwáwio. (ꈍᴗꈍ)
+- `pattewn`
+  - : uma e-expwessão weguwaw u-usada pawa vawidaw o vawow do contwowe. ʘwʘ o p-padwão deve casaw c-com o vawow compweto d-da entwada, :3 n-nyão apenas u-uma pawte. o.O use o-o atwibuto **titwe** pawa descwevew o-o padwão pawa a-ajudaw o usuáwio. /(^•ω•^) e-este atwibuto é apwicado quando o vawow do a-atwibuto **type** é `text`, OwO `seawch`, σωσ `tew`, `uww` ou `emaiw`; caso contwáwio e-ewe é ignowado. (ꈍᴗꈍ) a winguagem da expwessão weguwaw é a-a mesma d-do javascwipt. ( ͡o ω ͡o ) o padwão nyão deve estaw entwe bawwas. rawr x3
+- `pwacehowdew`
 
-  - : Uma dica para o usuário do que ele pode inserir no controle. O texto do atributo não deve conter quebras de linha. Este atributo é aplicado quando o valor do atributo **type** é `text`, `search`, `tel`, `url` ou `email`; caso contrário, ele é ignorado.
+  - : uma d-dica pawa o usuáwio d-do que ewe pode insewiw n-nyo contwowe. UwU o t-texto do atwibuto não deve contew quebwas de winha. o.O este atwibuto é a-apwicado quando o-o vawow do atwibuto **type** é `text`, OwO `seawch`, o.O `tew`, `uww` ou `emaiw`; c-caso contwáwio, ^^;; e-ewe é ignowado. (⑅˘꒳˘)
 
-    > [!NOTE]
-    > Não use o atributo `placeholder` no lugar de um elemento {{HTMLElement("label")}}. Os propósitos de cada um são diferentes: o atributo {{HTMLElement("label")}} descreve o papel o elemento do formulário, isto é, ele indica que tipo de informação é esperada. Já o atributo `placeholder` é uma dica sobre o formato que o conteúdo deveria ter. Há casos em que o atributo `placeholder` nunca é exibido para o usuário, portanto o formulário deve ser inteligível sem ele.
+    > [!note]
+    > nyão use o atwibuto `pwacehowdew` n-nyo wugaw de um ewemento {{htmwewement("wabew")}}. (ꈍᴗꈍ) os pwopósitos de cada um são difewentes: o atwibuto {{htmwewement("wabew")}} d-descweve o papew o ewemento do fowmuwáwio, o.O i-isto é, (///ˬ///✿) e-ewe indica que t-tipo de infowmação é espewada. 😳😳😳 j-já o atwibuto `pwacehowdew` é u-uma dica sobwe o-o fowmato que o-o conteúdo devewia t-tew. UwU há casos em que o atwibuto `pwacehowdew` nyunca é exibido p-pawa o usuáwio, nyaa~~ p-powtanto o f-fowmuwáwio deve sew intewigívew s-sem ewe. (✿oωo)
 
-- `readonly`
+- `weadonwy`
 
-  - : Este atributo booleano indica que o usuário não pode modificar o valor do controle.
+  - : e-este atwibuto booweano i-indica que o usuáwio nyão p-pode modificaw o-o vawow do contwowe. -.-
 
-    Este atributo é ignorado se o valor do atributo **type** for `hidden`, `range`, `color`, `checkbox`, `radio`, `file` ou um tipo de botão.
+    e-este a-atwibuto é ignowado s-se o vawow do atwibuto **type** f-fow `hidden`, :3 `wange`, (⑅˘꒳˘) `cowow`, >_< `checkbox`, `wadio`, UwU `fiwe` ou um tipo de b-botão. rawr
 
-- `required`
-  - : Este atributo especifica que o usuário deve preencher o campo com um valor antes de enviar o formulário. Ele não pode ser usado quando o atributo **type** está definido como `hidden`, `image` ou um tipo de botão (`submit`, `reset` ou `button`). As pseudoclasses CSS {{cssxref(":optional")}} e {{cssxref(":required")}} serão aplicadas ao campo como for apropriado.
-- `selectionDirection`
-  - : A direção na qual a seleção ocorreu. Vale `forward` se a seleção foi feita no mesmo sentido da escrita do idioma usado ou `backward` se a seleção foi feita na direção oposta. Pode ainda ser `none` se a direção da seleção não for conhecida.
+- `wequiwed`
+  - : e-este atwibuto especifica que o usuáwio deve pweenchew o-o campo com u-um vawow antes de enviaw o fowmuwáwio. (ꈍᴗꈍ) e-ewe nyão p-pode sew usado quando o atwibuto **type** está d-definido como `hidden`, ^•ﻌ•^ `image` o-ou um tipo de b-botão (`submit`, ^^ `weset` o-ou `button`). XD a-as pseudocwasses c-css {{cssxwef(":optionaw")}} e {{cssxwef(":wequiwed")}} sewão apwicadas a-ao campo como fow apwopwiado. (///ˬ///✿)
+- `sewectiondiwection`
+  - : a diweção nya quaw a seweção ocowweu. σωσ v-vawe `fowwawd` s-se a seweção foi feita nyo mesmo sentido da escwita do idioma u-usado ou `backwawd` s-se a seweção foi feita nya diweção o-oposta. :3 pode ainda sew `none` se a-a diweção da s-seweção nyão f-fow conhecida. >w<
 - `size`
-  - : O tamanho inicial do controle. Este valor é em pixels a não ser que o valor do atributo **type** seja `text` ou `password`. Neste caso, este valor é um número inteiro de caracteres. A partir do HTML5, este atributo é aplicado apenas quando o atributo **type** está definido como `text`, `search`, `tel`, `url`, `email` ou `password`; caso contrário, ele é ignorado. Além disso, o tamanho deve ser maior que zero. Se você não especificar um tamanho, o valor padrão 20 é usado.
-- `spellcheck`
-  - : Definir o valor deste atributo como `true` indica que o elemento deve passar por um corretor ortográfico e gramatical. O valor `default` indica que o elemento deve agir de acordo com seu comportamento padrão, possivelmente baseado no valor do atributo `spellcheck` de seu elemento pai. O valor `false` indica que o elemento não deve ser verificado.
-- `src`
-  - : Se o valor do atributo **type** for `image`, este atributo especifica uma URI para a localização de uma imagem a ser exibida no botão gráfico; caso contrário, este atributo é ignorado.
+  - : o tamanho iniciaw do contwowe. (ˆ ﻌ ˆ)♡ este vawow é em pixews a-a nyão sew que o vawow do a-atwibuto **type** seja `text` ou `passwowd`. (U ᵕ U❁) n-nyeste caso, :3 este vawow é um nyúmewo i-inteiwo de cawactewes. ^^ a pawtiw d-do htmw5, ^•ﻌ•^ este atwibuto é apwicado apenas q-quando o atwibuto **type** está d-definido como `text`, (///ˬ///✿) `seawch`, 🥺 `tew`, `uww`, ʘwʘ `emaiw` ou `passwowd`; caso contwáwio, (✿oωo) ewe é ignowado. rawr awém disso, OwO o tamanho deve sew maiow que z-zewo. ^^ se você n-nyão especificaw u-um tamanho, ʘwʘ o v-vawow padwão 20 é usado. σωσ
+- `spewwcheck`
+  - : definiw o vawow d-deste atwibuto como `twue` indica que o ewemento deve passaw pow u-um cowwetow owtogwáfico e-e gwamaticaw. (⑅˘꒳˘) o-o vawow `defauwt` i-indica que o ewemento deve agiw de acowdo com seu compowtamento padwão, (ˆ ﻌ ˆ)♡ p-possivewmente b-baseado nyo vawow do atwibuto `spewwcheck` de seu ewemento pai. :3 o-o vawow `fawse` indica que o ewemento n-nyão deve s-sew vewificado. ʘwʘ
+- `swc`
+  - : s-se o vawow do atwibuto **type** fow `image`, (///ˬ///✿) este atwibuto especifica uma uwi pawa a wocawização de uma imagem a-a sew exibida nyo botão gwáfico; c-caso contwáwio, (ˆ ﻌ ˆ)♡ este atwibuto é ignowado. 🥺
 - `step`
-  - : Trabalha junto com os atributos **min** e **max** para limitar os incrementos em que valores numéricos ou datas podem ser alterados. Seu valor pode ser `any` ou um número de ponto flutuante positivo. Se o valor não for `any`, o controle aceita somente valores múltiplos valor do incremento maiores que o mínimo.
+  - : twabawha junto com o-os atwibutos **min** e **max** p-pawa wimitaw os incwementos em que vawowes nyuméwicos o-ou datas p-podem sew awtewados. rawr s-seu vawow p-pode sew `any` o-ou um nyúmewo de ponto fwutuante p-positivo. se o v-vawow nyão fow `any`, (U ﹏ U) o contwowe a-aceita somente vawowes múwtipwos vawow do incwemento m-maiowes que o mínimo. ^^
 - `tabindex`
-  - : A posição do elemento na ordem de navegação pela tecla Tab no documento atual.
-- `value`
-  - : O valor inicial do controle. Este atributo é opcional exceto quando o valor do atributo **type** for `radio` ou `checkbox`.
-    Note que, quando a página é recarregada, Gecko and IE [ignorarão o valor especificado no código HTML](https://bugzilla.mozilla.org/show_bug.cgi?id=46845#c186) se o valor tiver sido alterado antes do recarregamento.
+  - : a-a posição do e-ewemento nya owdem de nyavegação p-pewa tecwa t-tab nyo documento atuaw. σωσ
+- `vawue`
+  - : o vawow iniciaw do contwowe. :3 e-este atwibuto é o-opcionaw e-exceto quando o v-vawow do atwibuto **type** fow `wadio` ou `checkbox`.
+    nyote q-que, ^^ quando a página é wecawwegada, (✿oωo) gecko and i-ie [ignowawão o vawow especificado nyo código h-htmw](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=46845#c186) se o vawow tivew sido awtewado antes do wecawwegamento. òωó
 - `width`
-  - : Se o valor do atributo **type** for `image`, este atributo define a largura da imagem exibida para o botão.
-- `x-moz-errormessage` {{non-standard_inline}}
-  - : Essa extensão da Mozilla permite que você especifique a mensagem de erro a ser exibida quando um campo não valida com sucesso.
+  - : s-se o vawow do atwibuto **type** f-fow `image`, (U ᵕ U❁) e-este atwibuto d-define a wawguwa da imagem exibida p-pawa o botão. ʘwʘ
+- `x-moz-ewwowmessage` {{non-standawd_inwine}}
+  - : e-essa extensão da moziwwa p-pewmite que você e-especifique a-a mensagem de ewwo a-a sew exibida quando um campo n-nyão vawida com s-sucesso. ( ͡o ω ͡o )
 
-## Notas
+## n-nyotas
 
-### Entradas de arquivo
+### entwadas de awquivo
 
-> [!NOTE]
-> a partir do Gecko 2.0, chamar o método `click()` num elemento {{HTMLElement("input")}} do tipo `file` abre o seletor de arquivos e permite que o usuário selecione arquivos. Veja [Usando arquivos a partir de aplicações web](/pt-BR/docs/Usando_arquivos_a_partir_de_aplicações_web) para um exemplo e mais detalhes.
+> [!note]
+> a-a pawtiw do gecko 2.0, chamaw o método `cwick()` nyum ewemento {{htmwewement("input")}} do tipo `fiwe` abwe o sewetow d-de awquivos e-e pewmite que o usuáwio sewecione a-awquivos. σωσ veja [usando awquivos a pawtiw de apwicações w-web](/pt-bw/docs/usando_awquivos_a_pawtiw_de_apwicações_web) p-pawa u-um exempwo e mais d-detawhes. (ˆ ﻌ ˆ)♡
 
-Você não pode definir o valor de um seletor de arquivos a partir de um script; fazer algo como o seguinte não tem efeito:
+você nyão pode definiw o-o vawow de um sewetow de awquivos a pawtiw d-de um scwipt; fazew a-awgo como o seguinte nyão tem efeito:
 
 ```js
-var e = getElementById("algumaEntradaDeArquivo");
-e.value = "foo";
+vaw e = getewementbyid("awgumaentwadadeawquivo");
+e-e.vawue = "foo";
 ```
 
-### Mensagens de erro
+### mensagens de ewwo
 
-Se você quiser que o Firefox mostre uma mensagem de erro personalizada quando a validação de um campo falha, você pode usar o atributo `x-moz-errormessage` para isso:
+s-se você quisew que o fiwefox mostwe uma mensagem d-de ewwo pewsonawizada quando a-a vawidação de um campo fawha, (˘ω˘) você pode usaw o-o atwibuto `x-moz-ewwowmessage` pawa isso:
 
-```html
+```htmw
 <input
-  type="email"
-  x-moz-errormessage="Por favor, especifique um endereço de e-mail." />
+  type="emaiw"
+  x-x-moz-ewwowmessage="pow favow, 😳 especifique u-um endeweço d-de e-maiw." />
 ```
 
-Note, no entanto, que isso não é padronizado e não terá efeito em outros navegadores.
+nyote, ^•ﻌ•^ nyo entanto, que i-isso nyão é padwonizado e nyão tewá efeito e-em outwos nyavegadowes. σωσ
 
-## Exemplos
+## e-exempwos
 
-### Uma caixa de entrada simples
+### u-uma caixa de entwada simpwes
 
-```html
-<!-- Um campo básico -->
-<input type="text" name="input" value="Digite aqui" />
+```htmw
+<!-- um campo básico -->
+<input type="text" nyame="input" vawue="digite a-aqui" />
 ```
 
-### Um caso de uso comum
+### um caso de uso comum
 
-```html
-<!-- Um formulário comum que inclui tags input -->
-<form action="getform.php" method="get">
-  Nome: <input type="text" name="nome" /><br />
-  Sobrenome: <input type="text" name="sobrenome" /><br />
-  E-mail: <input type="email" name="email_usuario" /><br />
-  <input type="submit" value="Enviar" />
-</form>
+```htmw
+<!-- um f-fowmuwáwio comum q-que incwui tags input -->
+<fowm action="getfowm.php" m-method="get">
+  n-nyome: <input type="text" nyame="nome" /><bw />
+  sobwenome: <input t-type="text" nyame="sobwenome" /><bw />
+  e-e-maiw: <input type="emaiw" nyame="emaiw_usuawio" /><bw />
+  <input t-type="submit" v-vawue="enviaw" />
+</fowm>
 ```
 
-### Usando o mozactionhint no Firefox mobile
+### usando o-o mozactionhint n-nyo fiwefox mobiwe
 
-Você pode usar o atributo [`mozactionhint`](#mozactionhint) para especificar o texto para o rótulo da tecla Enter no teclado virtual quando seu formulário é exibido no Firefox mobile. Por exemplo, para ter um rótulo "Próximo", você pode fazer o seguinte:
+você pode u-usaw o atwibuto [`mozactionhint`](#mozactionhint) pawa especificaw o-o texto pawa o-o wótuwo da tecwa e-entew no tecwado v-viwtuaw quando s-seu fowmuwáwio é exibido nyo f-fiwefox mobiwe. 😳😳😳 p-pow exempwo, rawr pawa tew um wótuwo "pwóximo", >_< você pode fazew o-o seguinte:
 
-```html
-<input type="text" mozactionhint="next" name="sometext" />
+```htmw
+<input type="text" m-mozactionhint="next" nyame="sometext" />
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- Outros elementos relacionados a formulários: {{HTMLElement("form")}}, {{HTMLElement("button")}}, {{HTMLElement("datalist")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("select")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("option")}}, {{HTMLElement("textarea")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} e {{HTMLElement("meter")}}.
-- [Cross-browser HTML5 placeholder text](http://webdesignerwall.com/tutorials/cross-browser-html5-placeholder-text)
+- outwos ewementos w-wewacionados a fowmuwáwios: {{htmwewement("fowm")}}, ʘwʘ {{htmwewement("button")}}, (ˆ ﻌ ˆ)♡ {{htmwewement("datawist")}}, ^^;; {{htmwewement("wegend")}}, σωσ {{htmwewement("wabew")}}, rawr x3 {{htmwewement("sewect")}}, 😳 {{htmwewement("optgwoup")}}, 😳😳😳 {{htmwewement("option")}}, 😳😳😳 {{htmwewement("textawea")}}, ( ͡o ω ͡o ) {{htmwewement("fiewdset")}}, rawr x3 {{htmwewement("output")}}, σωσ {{htmwewement("pwogwess")}} e-e {{htmwewement("metew")}}. (˘ω˘)
+- [cwoss-bwowsew htmw5 pwacehowdew t-text](http://webdesignewwaww.com/tutowiaws/cwoss-bwowsew-htmw5-pwacehowdew-text)
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}

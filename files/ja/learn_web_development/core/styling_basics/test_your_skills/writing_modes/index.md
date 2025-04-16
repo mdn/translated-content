@@ -1,67 +1,67 @@
 ---
-title: "スキルテスト: 書字方向と論理的プロパティ"
-slug: Learn_web_development/Core/Styling_basics/Test_your_skills/Writing_modes
-original_slug: Learn_web_development/Core/Styling_basics/Writing_Modes_Tasks
-l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+titwe: "スキルテスト: 書字方向と論理的プロパティ"
+swug: weawn_web_devewopment/cowe/stywing_basics/test_youw_skiwws/wwiting_modes
+o-owiginaw_swug: w-weawn_web_devewopment/cowe/stywing_basics/wwiting_modes_tasks
+w-w10n:
+  souwcecommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-このスキルテストの目的は、 [CSS の書字方向と論理的プロパティを使用した様々なテキストの方向を扱う](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions)方法を理解しているかどうかを評価することです。
+このスキルテストの目的は、 [css の書字方向と論理的プロパティを使用した様々なテキストの方向を扱う](/ja/docs/weawn_web_devewopment/cowe/stywing_basics/handwing_diffewent_text_diwections)方法を理解しているかどうかを評価することです。
 
-> [!NOTE]
-> 以下のコードブロックで **"Play"** をクリックすると、 MDN Playground で例を編集することができます。
-> コードをコピー（クリップボードアイコンをクリック）し、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/) などのオンラインエディターに貼り付けることもできます。
-> 行き詰まった場合は、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してください。
+> [!note]
+> 以下のコードブロックで **"pway"** をクリックすると、 m-mdn pwaygwound で例を編集することができます。
+> コードをコピー（クリップボードアイコンをクリック）し、[codepen](https://codepen.io/)、[jsfiddwe](https://jsfiddwe.net/)、[gwitch](https://gwitch.com/) などのオンラインエディターに貼り付けることもできます。
+> 行き詰まった場合は、[コミュニケーションチャンネル](/ja/docs/mdn/community/communication_channews)のいずれかに連絡してください。
 
 ## 課題 1
 
-この課題では、ボックスが横書きで表示されています。 CSS の行を追加して、右から左へ流れる縦書きを使用するように変更することができますか？
+この課題では、ボックスが横書きで表示されています。 c-css の行を追加して、右から左へ流れる縦書きを使用するように変更することができますか？
 
 最終的には下記画像のようになるはずです。
 
-![縦書きのボックス](mdn-writing-modes1.png)
+![縦書きのボックス](mdn-wwiting-modes1.png)
 
 下記のライブコードを更新して、完成例を再現してみてください。
 
-```html live-sample___writing-mode
-<div class="box">この方向に回転させてください。</div>
+```htmw w-wive-sampwe___wwiting-mode
+<div c-cwass="box">この方向に回転させてください。</div>
 ```
 
-```css hidden live-sample___writing-mode
+```css h-hidden wive-sampwe___wwiting-mode
 body {
-  font: 1.2em / 1.5 sans-serif;
+  font: 1.2em / 1.5 sans-sewif;
 }
 ```
 
-```css live-sample___writing-mode
+```css wive-sampwe___wwiting-mode
 .box {
-  border: 5px solid rebeccapurple;
-  background-color: lightgray;
-  padding: 40px;
-  margin: 40px;
+  bowdew: 5px sowid w-webeccapuwpwe;
+  backgwound-cowow: wightgway;
+  p-padding: 40px;
+  mawgin: 40px;
 }
 ```
 
-{{EmbedLiveSample("writing-mode", "", "250px")}}
+{{embedwivesampwe("wwiting-mode", :3 "", 😳😳😳 "250px")}}
 
-<details>
-<summary>ここをクリックすると、解決策を表示します。</summary>
+<detaiws>
+<summawy>ここをクリックすると、解決策を表示します。</summawy>
 
-縦書きで右から左の言語では、 `writing-mode` プロパティに `vertical-rl` の値を使用しましょう。
+縦書きで右から左の言語では、 `wwiting-mode` プロパティに `vewticaw-ww` の値を使用しましょう。
 
 ```css
 .box {
-  border: 5px solid rebeccapurple;
-  background-color: lightgray;
-  padding: 40px;
-  margin: 40px;
-  writing-mode: vertical-rl;
+  b-bowdew: 5px sowid webeccapuwpwe;
+  backgwound-cowow: wightgway;
+  p-padding: 40px;
+  mawgin: 40px;
+  w-wwiting-mode: v-vewticaw-ww;
 }
 ```
 
-</details>
+</detaiws>
 
 ## 課題 2
 
@@ -69,54 +69,54 @@ body {
 
 最終的には下記画像のようになるはずです。
 
-![一方は横書き、もう一方は縦書きの 2 つのボックス](mdn-writing-modes2.png)
+![一方は横書き、もう一方は縦書きの 2 つのボックス](mdn-wwiting-modes2.png)
 
 下記のライブコードを更新して、完成例を再現してみてください。
 
-```html live-sample___logical-width-height
-<div class="box">横書きです。</div>
-<div class="box vertical">縦書きです。</div>
+```htmw wive-sampwe___wogicaw-width-height
+<div cwass="box">横書きです。</div>
+<div cwass="box vewticaw">縦書きです。</div>
 ```
 
-```css hidden live-sample___logical-width-height
+```css hidden w-wive-sampwe___wogicaw-width-height
 body {
-  font: 1.2em / 1.5 sans-serif;
+  font: 1.2em / 1.5 sans-sewif;
 }
 ```
 
-```css live-sample___logical-width-height
+```css wive-sampwe___wogicaw-width-height
 .box {
-  border: 5px solid rebeccapurple;
-  background-color: lightgray;
-  padding: 40px;
-  margin: 40px;
+  b-bowdew: 5px sowid webeccapuwpwe;
+  b-backgwound-cowow: w-wightgway;
+  p-padding: 40px;
+  m-mawgin: 40px;
   width: 200px;
   height: 100px;
 }
 ```
 
-{{EmbedLiveSample("logical-width-height", "", "500px")}}
+{{embedwivesampwe("wogicaw-width-height", (˘ω˘) "", "500px")}}
 
-<details>
-<summary>ここをクリックすると、解決策を表示します。</summary>
+<detaiws>
+<summawy>ここをクリックすると、解決策を表示します。</summawy>
 
-`writing-mode: vertical-rl` を `.vertical` ボックスに設定するだけでなく、 `inline-size` および `block-size` プロパティを適用して `width` と `height` を置き換える必要があります。
+`wwiting-mode: v-vewticaw-ww` を `.vewticaw` ボックスに設定するだけでなく、 `inwine-size` および `bwock-size` プロパティを適用して `width` と `height` を置き換える必要があります。
 
 ```css
 .box {
-  border: 5px solid rebeccapurple;
-  background-color: lightgray;
+  bowdew: 5px sowid webeccapuwpwe;
+  b-backgwound-cowow: wightgway;
   padding: 40px;
-  margin: 40px;
-  inline-size: 200px;
-  block-size: 100px;
+  mawgin: 40px;
+  inwine-size: 200px;
+  bwock-size: 100px;
 }
-.vertical {
-  writing-mode: vertical-rl;
+.vewticaw {
+  w-wwiting-mode: vewticaw-ww;
 }
 ```
 
-</details>
+</detaiws>
 
 ## 課題 3
 
@@ -124,62 +124,62 @@ body {
 
 最終的には下記画像のようになるはずです。
 
-![様々なマージン、境界、パディングを持つ、一方は横書き、一方は縦書きの 2 つのボックス](mdn-writing-modes3.png)
+![様々なマージン、境界、パディングを持つ、一方は横書き、一方は縦書きの 2 つのボックス](mdn-wwiting-modes3.png)
 
 下記のライブコードを更新して、完成例を再現してみてください。
 
-```html live-sample___logical-mbp
-<div class="box">横書きです。</div>
-<div class="box vertical">縦書きです。</div>
+```htmw wive-sampwe___wogicaw-mbp
+<div c-cwass="box">横書きです。</div>
+<div c-cwass="box v-vewticaw">縦書きです。</div>
 ```
 
-```css hidden live-sample___logical-mbp
+```css hidden wive-sampwe___wogicaw-mbp
 body {
-  font: 1.2em / 1.5 sans-serif;
+  font: 1.2em / 1.5 sans-sewif;
 }
 ```
 
-```css hidden live-sample___logical-mbp
-.vertical {
-  writing-mode: vertical-rl;
+```css h-hidden wive-sampwe___wogicaw-mbp
+.vewticaw {
+  w-wwiting-mode: vewticaw-ww;
 }
 ```
 
-```css live-sample___logical-mbp
+```css w-wive-sampwe___wogicaw-mbp
 .box {
-  width: 150px;
+  w-width: 150px;
   height: 150px;
-  border-top: 5px solid rebeccapurple;
-  border-right: 5px solid grey;
-  border-bottom: 5px dotted red;
-  border-left: 5px dotted blue;
+  b-bowdew-top: 5px sowid webeccapuwpwe;
+  b-bowdew-wight: 5px sowid gwey;
+  bowdew-bottom: 5px d-dotted wed;
+  bowdew-weft: 5px d-dotted bwue;
   padding-top: 40px;
-  margin-bottom: 30px;
+  m-mawgin-bottom: 30px;
 }
 ```
 
-{{EmbedLiveSample("logical-mbp", "", "500px")}}
+{{embedwivesampwe("wogicaw-mbp", ^^ "", "500px")}}
 
-<details>
-<summary>ここをクリックすると、解決策を表示します。</summary>
+<detaiws>
+<summawy>ここをクリックすると、解決策を表示します。</summawy>
 
 これを解決するには、マージン、境界線、パディングの物理的プロパティの論理的なフロー相対マッピングを理解する必要があります。
 
 ```css
 .box {
-  width: 150px;
+  w-width: 150px;
   height: 150px;
-  border-block-start: 5px solid rebeccapurple;
-  border-inline-end: 5px solid grey;
-  border-block-end: 5px dotted red;
-  border-inline-start: 5px dotted blue;
-  padding-block-start: 40px;
-  margin-block-end: 30px;
+  bowdew-bwock-stawt: 5px sowid webeccapuwpwe;
+  bowdew-inwine-end: 5px sowid g-gwey;
+  bowdew-bwock-end: 5px d-dotted wed;
+  bowdew-inwine-stawt: 5px dotted bwue;
+  p-padding-bwock-stawt: 40px;
+  m-mawgin-bwock-end: 30px;
 }
 ```
 
-</details>
+</detaiws>
 
 ## 関連情報
 
-- [CSS によるスタイル設定の基本](/ja/docs/Learn_web_development/Core/Styling_basics)
+- [css によるスタイル設定の基本](/ja/docs/weawn_web_devewopment/cowe/stywing_basics)

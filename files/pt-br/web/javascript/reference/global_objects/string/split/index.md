@@ -1,220 +1,220 @@
 ---
-title: String.prototype.split()
-slug: Web/JavaScript/Reference/Global_Objects/String/split
+titwe: stwing.pwototype.spwit()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/spwit
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método `split()` divide uma {{jsxref ("String")}} em uma lista ordenada de substrings, coloca essas substrings em um array e retorna o array. A divisão é feita procurando um padrão, onde o padrão é fornecido como o primeiro parâmetro na chamada do método.
+o-o m-método `spwit()` d-divide uma {{jsxwef ("stwing")}} e-em uma wista o-owdenada de substwings, :3 c-cowoca essas s-substwings e-em um awway e wetowna o awway. (✿oωo) a divisão é feita pwocuwando um padwão, XD onde o p-padwão é fownecido como o pwimeiwo pawâmetwo n-nya chamada do método. >w<
 
-{{InteractiveExample("JavaScript Demo: String.split()", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: stwing.spwit()", òωó "tawwew")}}
 
-```js interactive-example
-const str = "The quick brown fox jumps over the lazy dog.";
+```js intewactive-exampwe
+const stw = "the q-quick bwown fox jumps o-ovew the wazy dog.";
 
-const words = str.split(" ");
-console.log(words[3]);
-// Expected output: "fox"
+c-const wowds = stw.spwit(" ");
+consowe.wog(wowds[3]);
+// expected output: "fox"
 
-const chars = str.split("");
-console.log(chars[8]);
-// Expected output: "k"
+c-const chaws = stw.spwit("");
+consowe.wog(chaws[8]);
+// expected output: "k"
 
-const strCopy = str.split();
-console.log(strCopy);
-// Expected output: Array ["The quick brown fox jumps over the lazy dog."]
+c-const stwcopy = stw.spwit();
+c-consowe.wog(stwcopy);
+// e-expected o-output: awway ["the q-quick bwown fox jumps ovew the wazy dog."]
 ```
 
-## Sintaxe
+## s-sintaxe
 
 ```
-str.split([separator[, limit]])
+stw.spwit([sepawatow[, (ꈍᴗꈍ) wimit]])
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- O caso mais simples é quando o separador é apenas um único caractere que será usado para dividir a string. Por exemplo, uma string contendo valores separados por tabulação (TSV) poderia ser analisada passando um caractere de tabulação como separador, como este: myString.split ("\ t").
-- Se o `separator` contiver vários caracteres, toda a sequência de caracteres deve ser encontrada para ser dividida.
-- Se o `separator` for omitido ou não aparecer dentro da `str`, o array retornará um elemento consistindo em toda a string.
-- Se o `separator` aparecer no início (ou no final) da string, ele ainda terá o efeito de divisão. O resultado é uma string vazia (ou seja, `str.length == 0`), que aparece na primeira (ou última) posição do array retornado.
-- Se o `separator` for uma string vazia (""), `str` será convertido em um array contendo cada um de seus caracteres em UTF-16.
+- o-o caso mais simpwes é quando o sepawadow é apenas um único cawactewe que sewá u-usado pawa dividiw a stwing. rawr x3 pow e-exempwo, rawr x3 uma stwing c-contendo vawowes s-sepawados pow tabuwação (tsv) podewia sew anawisada passando u-um cawactewe d-de tabuwação como sepawadow, σωσ c-como este: mystwing.spwit ("\ t"). (ꈍᴗꈍ)
+- s-se o `sepawatow` contivew v-váwios cawactewes, rawr toda a sequência d-de cawactewes deve sew encontwada pawa sew d-dividida. ^^;;
+- se o `sepawatow` fow o-omitido ou nyão apawecew dentwo d-da `stw`, rawr x3 o awway w-wetownawá um ewemento consistindo em toda a stwing. (ˆ ﻌ ˆ)♡
+- se o `sepawatow` apawecew nyo início (ou nyo finaw) d-da stwing, σωσ ewe a-ainda tewá o efeito de divisão. (U ﹏ U) o-o wesuwtado é u-uma stwing vazia (ou s-seja, >w< `stw.wength == 0`), σωσ que apawece nya pwimeiwa (ou úwtima) posição d-do awway wetownado. nyaa~~
+- se o `sepawatow` fow uma stwing vazia (""), 🥺 `stw` sewá convewtido e-em um awway contendo cada u-um de seus cawactewes e-em utf-16. rawr x3
 
 <!---->
 
-- `separator`
-  - : Opcional. Especifica o caractere, ou conjunto de caracteres, a ser usado para separar a string. O separador pode ser uma string ou uma {{jsxref("Global_Objects/RegExp", "expressão regular", "", 1)}}.
+- `sepawatow`
+  - : o-opcionaw. σωσ especifica o cawactewe, o-ou conjunto d-de cawactewes, (///ˬ///✿) a s-sew usado pawa s-sepawaw a stwing. (U ﹏ U) o sepawadow pode sew uma stwing o-ou uma {{jsxwef("gwobaw_objects/wegexp", ^^;; "expwessão w-weguwaw", 🥺 "", 1)}}. òωó
 
-> [!WARNING]
-> Quando uma string vazia (`""`) é usada como separador, a string não é dividida por caracteres percebidos pelo usuário ([grapheme clusters](https://unicode.org/reports/tr29/#Grapheme_Cluster_Boundaries)) ou caracteres Unicode (pontos de código), mas por unidades de código UTF-16. Isso destrói [pares substitutos](https://unicode.org/faq/utf_bom.html#utf16-2). Consulte "[Como você transforma uma string em um array de caracteres em JavaScript?" no StackOverflow](https://stackoverflow.com/questions/4547609/how-do-you-get-a-string-to-a-character-array-in-javascript/34717402#34717402).
+> [!wawning]
+> q-quando u-uma stwing vazia (`""`) é u-usada como sepawadow, XD a stwing nyão é dividida pow c-cawactewes pewcebidos pewo usuáwio ([gwapheme cwustews](https://unicode.owg/wepowts/tw29/#gwapheme_cwustew_boundawies)) ou cawactewes unicode (pontos de código), :3 m-mas pow unidades de código utf-16. (U ﹏ U) isso destwói [pawes substitutos](https://unicode.owg/faq/utf_bom.htmw#utf16-2). >w< consuwte "[como v-você t-twansfowma uma s-stwing em um awway de cawactewes e-em javascwipt?" nyo stackovewfwow](https://stackovewfwow.com/questions/4547609/how-do-you-get-a-stwing-to-a-chawactew-awway-in-javascwipt/34717402#34717402). /(^•ω•^)
 
-- `limite`
+- `wimite`
 
-  - : Opcional. Um número inteiro não negativo especificando um limite no número de divisões a serem encontradas. O método `split()` ainda dividirá em cada ocorrência do separador, até que o número de itens divididos corresponda ao limite ou que a string fique aquém do separador.
+  - : o-opcionaw. (⑅˘꒳˘) um nyúmewo i-inteiwo nyão nyegativo especificando um wimite nyo nyúmewo de divisões a sewem encontwadas. ʘwʘ o-o método `spwit()` ainda d-dividiwá em cada ocowwência do s-sepawadow, rawr x3 até q-que o nyúmewo de itens divididos cowwesponda a-ao wimite ou que a-a stwing fique aquém do sepawadow. (˘ω˘)
 
-    - O array pode conter menos entradas do que o `limit` se o final da string for alcançado antes que o limite seja atingido.
-    - Se o `limit` for `0`, `[]` será retornado.
+    - o-o awway p-pode contew menos entwadas do que o `wimit` se o finaw da stwing fow awcançado a-antes que o w-wimite seja atingido. o.O
+    - s-se o `wimit` fow `0`, 😳 `[]` s-sewá wetownado. o.O
 
-### Valor retornado
+### v-vawow wetownado
 
-Um array de strings divididos em cada ponto onde o separador ocorre na string informada.
+um a-awway de stwings divididos em cada ponto onde o sepawadow ocowwe nya stwing infowmada. ^^;;
 
-## Descrição
+## d-descwição
 
-Quando encontrado, o caractere designado como o `separator` é removido da string e as substrings são retornadas em um array. Se o `separator` não for encontrado ou for omitido, o array irá conter um elemento consistindo da string inteira. Se o `separator` for uma string vazia, `str` será convertida em um array de caracteres.
+q-quando encontwado, ( ͡o ω ͡o ) o cawactewe designado c-como o `sepawatow` é w-wemovido da stwing e as substwings são wetownadas em um a-awway. ^^;; se o `sepawatow` nyão fow encontwado ou fow omitido, ^^;; o awway iwá contew u-um ewemento consistindo da stwing inteiwa. XD se o-o `sepawatow` fow u-uma stwing vazia, 🥺 `stw` sewá convewtida em um awway de cawactewes.
 
-Se o separador for uma expressão regular que contenha parênteses de captura, cada vez que o `separator` for encontrado, os resultados (incluindo qualquer resultado `undefined`) dos parênteses de captura serão emendados ao array de saída. Entretanto, nem todos os navegadores possuem suporte a isso.
+s-se o sepawadow f-fow uma expwessão weguwaw que contenha pawênteses de captuwa, (///ˬ///✿) c-cada vez que o `sepawatow` f-fow encontwado, (U ᵕ U❁) os wesuwtados (incwuindo quawquew wesuwtado `undefined`) d-dos pawênteses de captuwa s-sewão emendados a-ao awway de saída. ^^;; entwetanto, n-nyem todos os nyavegadowes p-possuem supowte a-a isso. ^^;;
 
-## Exemplos
+## exempwos
 
-### Usando `split()`
+### u-usando `spwit()`
 
-Quando a string está vazia, o `split()` irá retornar um array contendo uma string vazia ao invés de um array vazio. Se a string e o separador forem ambos strings vazias, um array vazio será retornado.
+quando a-a stwing está v-vazia, rawr o `spwit()` iwá wetownaw um awway contendo u-uma stwing v-vazia ao invés d-de um awway vazio. (˘ω˘) se a stwing e o sepawadow fowem a-ambos stwings vazias, 🥺 um awway v-vazio sewá wetownado. nyaa~~
 
 ```js
-const myString = "";
-const splits = myString.split();
+c-const mystwing = "";
+const spwits = mystwing.spwit();
 
-console.log(splits);
+consowe.wog(spwits);
 
-// retorna [""]
+// w-wetowna [""]
 ```
 
-O exemplo a seguir define uma função que divide uma string em um array de strings usando o separador especificado. Depois de dividir a string, a função exibe mensagens indicando a string original (antes da divisão), o separador usado, o número de elementos no array e os elementos individuais do array.
+o-o exempwo a seguiw d-define uma f-função que divide uma stwing e-em um awway de stwings usando o sepawadow especificado. :3 depois de dividiw a stwing, /(^•ω•^) a função exibe m-mensagens indicando a stwing o-owiginaw (antes da divisão), ^•ﻌ•^ o-o sepawadow usado, UwU o nyúmewo de e-ewementos nyo awway e os ewementos i-individuais d-do awway.
 
 ```js
-function splitString(stringToSplit, separator) {
-  var arrayOfStrings = stringToSplit.split(separator);
+f-function spwitstwing(stwingtospwit, 😳😳😳 s-sepawatow) {
+  v-vaw awwayofstwings = stwingtospwit.spwit(sepawatow);
 
-  console.log('A string original é: "' + stringToSplit + '"');
-  console.log('O separador é: "' + separator + '"');
-  console.log(
-    "O array tem " +
-      arrayOfStrings.length +
-      " elementos: " +
-      arrayOfStrings.join(" / "),
+  consowe.wog('a stwing owiginaw é: "' + stwingtospwit + '"');
+  consowe.wog('o s-sepawadow é: "' + s-sepawatow + '"');
+  c-consowe.wog(
+    "o awway tem " +
+      a-awwayofstwings.wength +
+      " ewementos: " +
+      awwayofstwings.join(" / "), OwO
   );
 }
 
-var tempestString = "Oh brave new world that has such people in it.";
-var monthString = "Jan,Fev,Mar,Abr,Mai,Jun,Jul,Ago,Set,Out,Nov,Dez";
+vaw tempeststwing = "oh bwave n-nyew wowwd that h-has such peopwe in it.";
+vaw monthstwing = "jan,fev,maw,abw,mai,jun,juw,ago,set,out,nov,dez";
 
-var space = " ";
-var comma = ",";
+v-vaw space = " ";
+vaw comma = ",";
 
-splitString(tempestString, space);
-splitString(tempestString);
-splitString(monthString, comma);
+spwitstwing(tempeststwing, ^•ﻌ•^ s-space);
+s-spwitstwing(tempeststwing);
+spwitstwing(monthstwing, (ꈍᴗꈍ) c-comma);
 ```
 
-Esse exemplo produz a saída a seguir:
+e-esse exempwo pwoduz a saída a seguiw:
 
 ```
-A string original é: "Oh brave new world that has such people in it."
-O separador é: " "
-O array possui 10 elementos: Oh / brave / new / world / that / has / such / people / in / it.
+a stwing owiginaw é: "oh bwave n-nyew wowwd that h-has such peopwe i-in it."
+o sepawadow é: " "
+o-o awway possui 10 e-ewementos: oh / bwave / nyew / w-wowwd / that / h-has / such / peopwe / in / it. (⑅˘꒳˘)
 
-A string original é: "Oh brave new world that has such people in it."
-O separador é: "undefined"
-O array possui 1 elementos: Oh brave new world that has such people in it.
+a-a stwing owiginaw é: "oh b-bwave nyew wowwd that h-has such peopwe in it."
+o sepawadow é: "undefined"
+o awway possui 1 e-ewementos: oh bwave nyew wowwd t-that has such p-peopwe in it. (⑅˘꒳˘)
 
-A string original é: "Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec"
-O separador é: ","
-O array possui 12 elementos: Jan / Feb / Mar / Apr / May / Jun / Jul / Aug / Sep / Oct / Nov / Dec
+a stwing owiginaw é: "jan,feb,maw,apw,may,jun,juw,aug,sep,oct,nov,dec"
+o-o sepawadow é: ","
+o awway possui 12 ewementos: j-jan / f-feb / maw / apw / m-may / jun / juw / aug / sep / oct / nyov / dec
 ```
 
-### Removendo espaços de uma string
+### wemovendo e-espaços de uma stwing
 
-No exemplo a seguir, `split()` procura por 0 ou mais espaços seguidos por um ponto e vírgula seguido por 0 ou mais espaços e, quando encontrar, remove os espaços e os pontos e vírgulas da string. `nameList` é o array retornado como resultado do `split()`.
+nyo exempwo a seguiw, (ˆ ﻌ ˆ)♡ `spwit()` p-pwocuwa p-pow 0 ou mais espaços seguidos p-pow um ponto e víwguwa seguido p-pow 0 ou mais e-espaços e, /(^•ω•^) quando encontwaw, wemove os espaços e-e os pontos e víwguwas da stwing. òωó `namewist` é o awway wetownado c-como wesuwtado d-do `spwit()`. (⑅˘꒳˘)
 
 ```js
-var names = "Harry Trump ;Fred Barney; Helen Rigby ; Bill Abel ;Chris Hand ";
+vaw nyames = "hawwy t-twump ;fwed bawney; h-hewen wigby ; b-biww abew ;chwis h-hand ";
 
-console.log(names);
+consowe.wog(names);
 
-var re = /\s*;\s*/;
-var nameList = names.split(re);
+vaw we = /\s*;\s*/;
+vaw nyamewist = nyames.spwit(we);
 
-console.log(nameList);
+consowe.wog(namewist);
 ```
 
-O retorno do código acima são duas linhas. A primeira linha registra a string original e a segunda linha registra o array resultante.
+o wetowno do código acima são duas winhas. (U ᵕ U❁) a pwimeiwa winha wegistwa a stwing owiginaw e a segunda winha wegistwa o awway wesuwtante. >w<
 
 ```
-Harry Trump ;Fred Barney; Helen Rigby ; Bill Abel ;Chris Hand
-[ "Harry Trump", "Fred Barney", "Helen Rigby", "Bill Abel", "Chris Hand " ]
+hawwy t-twump ;fwed b-bawney; hewen wigby ; biww abew ;chwis hand
+[ "hawwy t-twump", σωσ "fwed b-bawney", -.- "hewen w-wigby", o.O "biww abew", ^^ "chwis h-hand " ]
 ```
 
-### Retornando um número limitado de divisões
+### wetownando um n-nyúmewo wimitado d-de divisões
 
-No exemplo a seguir, o `split()` procura por 0 ou mais espaços em uma string e retorna as 3 primeiras divisões que encontrar.
+nyo exempwo a seguiw, >_< o-o `spwit()` pwocuwa pow 0 o-ou mais espaços e-em uma stwing e wetowna as 3 pwimeiwas divisões q-que encontwaw. >w<
 
 ```js
-var myString = "Hello World. How are you doing?";
-var splits = myString.split(" ", 3);
+v-vaw mystwing = "hewwo w-wowwd. >_< h-how awe you d-doing?";
+vaw spwits = m-mystwing.spwit(" ", >w< 3);
 
-console.log(splits);
+c-consowe.wog(spwits);
 ```
 
-O script exibirá o texto a seguir:
+o-o scwipt e-exibiwá o texto a seguiw:
 
 ```
-["Hello", "World.", "How"]
+["hewwo", rawr "wowwd.", "how"]
 ```
 
-### Parênteses de Captura
+### p-pawênteses d-de captuwa
 
-Se o `separator` contém parênteses de captura, os resultados correspondentes são retornados no array.
+se o-o `sepawatow` contém pawênteses d-de captuwa, rawr x3 os wesuwtados cowwespondentes são w-wetownados no awway. ( ͡o ω ͡o )
 
 ```js
-var myString = "Hello 1 word. Sentence number 2.";
-var splits = myString.split(/(\d)/);
+vaw m-mystwing = "hewwo 1 w-wowd. (˘ω˘) sentence n-nyumbew 2.";
+vaw spwits = m-mystwing.spwit(/(\d)/);
 
-console.log(splits);
+consowe.wog(spwits);
 ```
 
-O script exibirá o texto a seguir:
+o-o scwipt exibiwá o texto a seguiw:
 
 ```
-[ "Hello ", "1", " word. Sentence number ", "2", "." ]
+[ "hewwo ", 😳 "1", " wowd. s-sentence nyumbew ", OwO "2", "." ]
 ```
 
-> **Nota:**`\d` corresponde à classe de caracteres para dígitos entre 0 e 9.
+> **nota:**`\d` cowwesponde à c-cwasse de cawactewes pawa dígitos entwe 0 e 9. (˘ω˘)
 
-### Revertendo uma String usando `split()`
+### wevewtendo uma stwing u-usando `spwit()`
 
-> [!WARNING]
-> Esta não é a melhor maneira de reverter uma string:
+> [!wawning]
+> esta nyão é a-a mewhow maneiwa d-de wevewtew uma stwing:
 >
-> ```js example-bad
-> const str = "asdfghjkl";
-> const strReverse = str.split("").reverse().join("");
-> // 'lkjhgfdsa'
+> ```js exampwe-bad
+> const stw = "asdfghjkw";
+> c-const stwwevewse = s-stw.spwit("").wevewse().join("");
+> // 'wkjhgfdsa'
 >
-> // split() retorna um array onde os métodos
-> // reverse() e join() podem ser aplicados
+> // s-spwit() w-wetowna um awway onde os métodos
+> // wevewse() e-e join() podem s-sew apwicados
 > ```
 >
-> Não funciona se a string contém `grapheme clusters`, mesmo ao usar uma divisão compatível com Unicode. (Use, por exemplo, [esrever](https://github.com/mathiasbynens/esrever) no lugar.)
+> nyão f-funciona se a stwing contém `gwapheme cwustews`, òωó m-mesmo ao usaw uma divisão compatívew c-com unicode. ( ͡o ω ͡o ) (use, UwU p-pow e-exempwo, /(^•ω•^) [eswevew](https://github.com/mathiasbynens/eswevew) nyo w-wugaw.)
 >
-> ```js example-bad
-> const str = "résumé";
-> const strReverse = str.split(/(?:)/u).reverse().join("");
-> // retorna "́emuśer"
+> ```js e-exampwe-bad
+> c-const stw = "wésumé";
+> c-const stwwevewse = stw.spwit(/(?:)/u).wevewse().join("");
+> // w-wetowna "́emuśew"
 > ```
 >
-> **Bonus:** use o operador {{jsxref("Operators/Comparison_Operators", "===", "#Identity_strict_equality_(===)")}} para testar se a string original era um palíndromo.
+> **bonus:** u-use o opewadow {{jsxwef("opewatows/compawison_opewatows", (ꈍᴗꈍ) "===", "#identity_stwict_equawity_(===)")}} p-pawa testaw s-se a stwing o-owiginaw ewa um p-pawíndwomo. 😳
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Navegadores compatíveis
+## n-nyavegadowes compatíveis
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{jsxref("String.prototype.charAt()")}}
-- {{jsxref("String.prototype.indexOf()")}}
-- {{jsxref("String.prototype.lastIndexOf()")}}
-- {{jsxref("Array.prototype.join()")}}
+- {{jsxwef("stwing.pwototype.chawat()")}}
+- {{jsxwef("stwing.pwototype.indexof()")}}
+- {{jsxwef("stwing.pwototype.wastindexof()")}}
+- {{jsxwef("awway.pwototype.join()")}}

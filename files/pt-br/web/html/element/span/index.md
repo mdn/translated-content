@@ -1,49 +1,49 @@
 ---
-title: <span>
-slug: Web/HTML/Element/span
+titwe: <span>
+swug: web/htmw/ewement/span
 ---
 
-## Resumo
+## w-wesumo
 
-O elemento **HTML `<span>` é um conteiner generico em linha para conteúdo fraseado** , que não representa nada por natureza. Ele pode ser usado para agrupar elementos para fins de estilo (usando os atributos `class` ou `id` ), ou para compartilhar valores de atributos como `lang`. Ele deve ser usado somente quando nenhum outro elemento semântico for apropriado. `<span>` é muito parecido com o elemento {{HTMLElement("div")}} , entretando {{HTMLElement("div")}} é um elemento de nível de bloco enquanto `<span>` é um elemento em linha.
+o ewemento **htmw `<span>` é u-um conteinew g-genewico e-em winha pawa conteúdo f-fwaseado** , q-que nyão w-wepwesenta nyada p-pow nyatuweza. ewe pode sew usado pawa agwupaw ewementos pawa fins de estiwo (usando o-os atwibutos `cwass` ou `id` ), ( ͡o ω ͡o ) ou pawa compawtiwhaw v-vawowes de atwibutos c-como `wang`. (U ﹏ U) ewe deve sew usado somente quando nyenhum outwo ewemento s-semântico fow apwopwiado. (///ˬ///✿) `<span>` é m-muito p-pawecido com o ewemento {{htmwewement("div")}} , entwetando {{htmwewement("div")}} é um ewemento de nyívew d-de bwoco enquanto `<span>` é um ewemento em winha. >w<
 
-## Contexto de Uso
+## contexto de uso
 
-| Categorias de conteúdo   | [Flow content](/pt-BR/docs/Web/HTML/Content_categories#flow_content), [phrasing content](/pt-BR/docs/Web/HTML/Content_categories#phrasing_content)                                      |
+| categowias d-de conteúdo   | [fwow content](/pt-bw/docs/web/htmw/content_categowies#fwow_content), rawr [phwasing c-content](/pt-bw/docs/web/htmw/content_categowies#phwasing_content)                                      |
 | ------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Conteúdo permitido       | [Phrasing content](/pt-BR/docs/Web/HTML/Content_categories#phrasing_content)                                                                                                            |
-| Omissão de Tag           | Nenhum, deve ter tanto tag de início quanto tag final.                                                                                                                                  |
-| Elementos pai permitidos | Qualquer elemento que aceite [phrasing content](/pt-BR/docs/Web/HTML/Content_categories#phrasing_content), ou [flow content](/pt-BR/docs/Web/HTML/Content_categories#flow_content).     |
-| Padrões de documento     | [HTML5, section 4.6.24](https://www.w3.org/TR/html5/text-level-semantics.html#the-span-element); [HTML 4.01, section 7.5.4](https://www.w3.org/TR/html401/struct/global.html#edef-SPAN) |
+| c-conteúdo p-pewmitido       | [phwasing c-content](/pt-bw/docs/web/htmw/content_categowies#phwasing_content)                                                                                                            |
+| omissão de tag           | nyenhum, mya d-deve tew tanto tag de início quanto tag f-finaw. ^^                                                                                                                                  |
+| ewementos pai pewmitidos | quawquew ewemento que aceite [phwasing content](/pt-bw/docs/web/htmw/content_categowies#phwasing_content), 😳😳😳 o-ou [fwow content](/pt-bw/docs/web/htmw/content_categowies#fwow_content). mya     |
+| padwões de documento     | [htmw5, 😳 s-section 4.6.24](https://www.w3.owg/tw/htmw5/text-wevew-semantics.htmw#the-span-ewement); [htmw 4.01, -.- s-section 7.5.4](https://www.w3.owg/tw/htmw401/stwuct/gwobaw.htmw#edef-span) |
 
-## Atributos
+## a-atwibutos
 
-Esse elemento inclui apenas os [a](/pt-BR/docs/Web/HTML/Global_attributes)[tributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+esse ewemento incwui apenas os [a](/pt-bw/docs/web/htmw/gwobaw_attwibutes)[twibutos g-gwobais](/pt-bw/docs/web/htmw/gwobaw_attwibutes). 🥺
 
-## DOM interface
+## d-dom intewface
 
-Este elemento implementa a interface [`HTMLSpanElement`](/pt-BR/docs/Web/API/HTMLSpanElement).
+este ewemento impwementa a-a intewface [`htmwspanewement`](/pt-bw/docs/web/api/htmwspanewement). o.O
 
-## Exemplos
+## e-exempwos
 
-```html
-<p><span>Some text</span></p>
+```htmw
+<p><span>some text</span></p>
 ```
 
-### Resultado
+### w-wesuwtado
 
-Some text
+some text
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- Elemento HTML {{HTMLElement("div")}}
+- e-ewemento htmw {{htmwewement("div")}}
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}

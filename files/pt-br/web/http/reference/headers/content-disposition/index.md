@@ -1,119 +1,119 @@
 ---
-title: Content-Disposition
-slug: Web/HTTP/Reference/Headers/Content-Disposition
-original_slug: Web/HTTP/Headers/Content-Disposition
+titwe: content-disposition
+swug: w-web/http/wefewence/headews/content-disposition
+o-owiginaw_swug: w-web/http/headews/content-disposition
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-Em uma resposta HTTP normal, o cabeçalho de resposta **`Content-Disposition`** indica se o conteúdo é esperado a ser exibido _inline_ no navegador, isso significa, como uma página Web ou parte de uma, ou como um anexo, que é baixado e salvo localmente.
+e-em u-uma wesposta http n-nyowmaw, UwU o cabeçawho d-de wesposta **`content-disposition`** i-indica se o conteúdo é espewado a sew exibido _inwine_ nyo nyavegadow, XD i-isso significa, (✿oωo) como uma página web ou pawte d-de uma, :3 ou como um anexo, (///ˬ///✿) que é b-baixado e sawvo wocawmente. nyaa~~
 
-Em um corpo `multipart/form-data`, o cabeçalho geral HTTP **`Content-Disposition`** é um cabeçalho que pode ser utilizado em uma subparte de um corpo multipartes para dar informações sobre o campo a que ele se aplica. A subparte é delimitada pelo limite definido no cabeçalho {{HTTPHeader("Content-Type")}}. Usado no corpo em si, `Content-Disposition` não tem efeito.
+em um cowpo `muwtipawt/fowm-data`, >w< o cabeçawho g-gewaw http **`content-disposition`** é um cabeçawho q-que pode s-sew utiwizado em uma subpawte de um cowpo muwtipawtes pawa daw infowmações sobwe o-o campo a que ewe se apwica. a subpawte é dewimitada pewo wimite definido n-nyo cabeçawho {{httpheadew("content-type")}}. -.- usado nyo cowpo em s-si, (✿oωo) `content-disposition` n-nyão t-tem efeito. (˘ω˘)
 
-O cabeçalho `Content-Disposition` é definido em um grande contexto de mensagens MIME para e-mail, mas somente um subconjunto dos possíveis parâmetros são aplicados à formulários HTTP e requisições {{HTTPMethod("POST")}} requests. Somente o valor `form-data`, assim como a diretiva opcional `name` e `filename`, podem ser usadas no contexto HTTP.
+o c-cabeçawho `content-disposition` é definido em um gwande contexto d-de mensagens mime pawa e-maiw, rawr mas somente um s-subconjunto dos possíveis pawâmetwos são apwicados à fowmuwáwios http e wequisições {{httpmethod("post")}} wequests. OwO somente o-o vawow `fowm-data`, ^•ﻌ•^ assim c-como a diwetiva o-opcionaw `name` e-e `fiwename`, UwU podem sew usadas nyo contexto http. (˘ω˘)
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Tipo de cabeçalho</th>
+    <tw>
+      <th s-scope="wow">tipo d-de cabeçawho</th>
       <td>
-        {{Glossary("Response header")}} (para o corpo principal)<br />{{Glossary("General header")}}
-        (para a subparte de um corpo multipartes)
+        {{gwossawy("wesponse h-headew")}} (pawa o-o cowpo pwincipaw)<bw />{{gwossawy("genewaw h-headew")}}
+        (pawa a s-subpawte de um cowpo muwtipawtes)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("fowbidden h-headew nyame")}}</th>
       <td>não</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sintaxe
+## s-sintaxe
 
-### Como cabeçalho de resposta para o corpo principal
+### como cabeçawho d-de wesposta p-pawa o cowpo pwincipaw
 
-O primeiro parâmetro no contexto HTTP ou é `inline` (valor padrão, indicando que ele pode ser mostrado dentro de uma página Web, ou como uma página Web) ou `attachment` (indicando que ele deve ser baixado; a maioria dos navegadores apresenta uma caixa de diálogo "Salvar como", pré-preenchido com o valor do parâmetro `filename` se presente).
-
-```
-Content-Disposition: inline
-Content-Disposition: attachment
-Content-Disposition: attachment; filename="filename.jpg"
-```
-
-### Como cabeçalho para um corpo multipartes
-
-O primeiro parâmetro no contexto HTTP é sempre o `form-data`. Parâmetros adicionais são _case-insensitive_ e possuem argumentos que usam a sintaxe de cadeia de caracteres delimitadas por aspas depois do sinal `'='`. Múltiplos parâmetros são separados por um ponto e vírgula (`';'`).
+o pwimeiwo pawâmetwo nyo contexto http ou é `inwine` (vawow padwão, (///ˬ///✿) indicando que ewe p-pode sew mostwado d-dentwo de uma página web, σωσ o-ou como uma página w-web) ou `attachment` (indicando q-que ewe deve sew baixado; a maiowia dos nyavegadowes apwesenta u-uma caixa de diáwogo "sawvaw como", /(^•ω•^) pwé-pweenchido com o vawow do pawâmetwo `fiwename` s-se pwesente). 😳
 
 ```
-Content-Disposition: form-data
-Content-Disposition: form-data; name="fieldName"
-Content-Disposition: form-data; name="fieldName"; filename="filename.jpg"
+c-content-disposition: i-inwine
+content-disposition: a-attachment
+content-disposition: attachment; fiwename="fiwename.jpg"
 ```
 
-### Diretivas
+### c-como c-cabeçawho pawa u-um cowpo muwtipawtes
+
+o-o pwimeiwo pawâmetwo nyo contexto http é s-sempwe o `fowm-data`. p-pawâmetwos a-adicionais s-são _case-insensitive_ e-e possuem awgumentos que usam a sintaxe de cadeia de cawactewes d-dewimitadas pow aspas depois do sinaw `'='`. 😳 múwtipwos pawâmetwos são sepawados pow u-um ponto e víwguwa (`';'`). (⑅˘꒳˘)
+
+```
+content-disposition: fowm-data
+content-disposition: f-fowm-data; n-nyame="fiewdname"
+c-content-disposition: fowm-data; n-nyame="fiewdname"; fiwename="fiwename.jpg"
+```
+
+### d-diwetivas
 
 - `name`
 
-  - : O nome é seguido por uma cadeia de caracteres contendo o nome do campo HTML no formulário que o conteúdo dessa subparte se refere. Quando lidando com múltiplos arquivos no mesmo campo (por exemplo, o atributo [`multiple`](/pt-BR/docs/Web/HTML/Element/input#multiple) de um elemento `{HTMLElement("input","<input type=\"file\">")}}`), podem haver diversas subpartes com o mesmo nome.
+  - : o-o nyome é seguido pow uma cadeia de cawactewes contendo o nome do campo htmw nyo fowmuwáwio q-que o conteúdo dessa subpawte se w-wefewe. 😳😳😳 quando widando com múwtipwos a-awquivos n-nyo mesmo campo (pow exempwo, 😳 o atwibuto [`muwtipwe`](/pt-bw/docs/web/htmw/ewement/input#muwtipwe) d-de um ewemento `{htmwewement("input","<input t-type=\"fiwe\">")}}`), XD podem havew d-divewsas subpawtes c-com o mesmo nyome. mya
 
-    Um `name` com o valor de `'_charset_'` indica que a parte não é um campo HTML, mas uma codificação para usar em partes sem explicitar a informação de codificação.
+    um `name` com o vawow de `'_chawset_'` indica que a-a pawte nyão é u-um campo htmw, ^•ﻌ•^ m-mas uma codificação pawa usaw e-em pawtes sem expwicitaw a-a infowmação de codificação. ʘwʘ
 
-- `filename`
-  - : É seguido por uma cadeia de caracteres contendo o nome original do arquivo transmitido. O nome do arquivo é sempre opcional e não deve ser usado cegamente pela aplicação: informação de caminho deve ser removida, e conversão para as regras do sistema de arquivo do servidor devem ser feitas. Este parâmetro provém a maior parte da informação indicativa. Quando usado em combinação com `Content-Disposition: attachment`, ele é usado como nome de arquivo padrão para uma eventual caixa de diálogo "Salvar como" apresentado ao usuário.
-- `filename*`
-  - : Os parâmetros "filename" e "filename\*" se diferenciam somente no fato de que "filename\*" usa a codificação definida na [RFC 5987](https://tools.ietf.org/html/rfc5987). Quando ambos "filename" e "filename\*" estão presentes em um único campo de valor do cabeçalho, "filename\*" é preferido sobre "filename" quando ambos são entendidos.
+- `fiwename`
+  - : É s-seguido pow uma cadeia de cawactewes contendo o nome owiginaw do awquivo twansmitido. ( ͡o ω ͡o ) o-o nyome do a-awquivo é sempwe opcionaw e nyão deve sew usado c-cegamente pewa a-apwicação: infowmação de caminho deve sew wemovida, mya e convewsão p-pawa as wegwas do sistema de awquivo do sewvidow devem sew feitas. o.O este p-pawâmetwo pwovém a maiow pawte da infowmação i-indicativa. (✿oωo) quando u-usado em combinação com `content-disposition: attachment`, :3 ewe é usado como n-nome de awquivo p-padwão pawa uma eventuaw caixa de diáwogo "sawvaw como" apwesentado a-ao usuáwio. 😳
+- `fiwename*`
+  - : os pawâmetwos "fiwename" e-e "fiwename\*" se difewenciam somente nyo fato de que "fiwename\*" u-usa a codificação definida n-na [wfc 5987](https://toows.ietf.owg/htmw/wfc5987). (U ﹏ U) q-quando ambos "fiwename" e "fiwename\*" estão p-pwesentes em um único campo d-de vawow do cabeçawho, mya "fiwename\*" é p-pwefewido s-sobwe "fiwename" quando ambos s-são entendidos. (U ᵕ U❁)
 
-## Exemplos
+## e-exempwos
 
-Uma resposta ativando a caixa de diálogo "Salvar como":
-
-```
-200 OK
-Content-Type: text/html; charset=utf-8
-Content-Disposition: attachment; filename="cool.html"
-Content-Length: 21
-
-<HTML>Me salve!</HTML>
-```
-
-O simples arquivo HTML será salvo como um download regular ao invés de ser mostrado no navegador. A maioria dos navegadores irá propôr salvar o arquivo como nome de `cool.html` (por padrão).
-
-Um exemplo de um formulário de HTML postado usando o formato `multipart/form-data` que faz o uso do cabeçalho `Content-Disposition`:
+uma wesposta ativando a caixa d-de diáwogo "sawvaw c-como":
 
 ```
-POST /test.html HTTP/1.1
-Host: example.org
-Content-Type: multipart/form-data;boundary="boundary"
+200 o-ok
+content-type: text/htmw; chawset=utf-8
+content-disposition: a-attachment; fiwename="coow.htmw"
+content-wength: 21
 
---boundary
-Content-Disposition: form-data; name="field1"
-
-value1
---boundary
-Content-Disposition: form-data; name="field2"; filename="example.txt"
-
-value2
---boundary--
+<htmw>me s-sawve!</htmw>
 ```
 
-## Especificações
+o-o simpwes awquivo htmw sewá sawvo como um downwoad weguwaw a-ao invés de sew m-mostwado nyo nyavegadow. :3 a-a maiowia d-dos nyavegadowes iwá pwopôw s-sawvaw o awquivo como nyome de `coow.htmw` (pow padwão). mya
 
-| Especificação   | Título                                                                                            |
+um exempwo de um fowmuwáwio de htmw postado usando o-o fowmato `muwtipawt/fowm-data` que faz o uso do c-cabeçawho `content-disposition`:
+
+```
+post /test.htmw h-http/1.1
+host: exampwe.owg
+c-content-type: muwtipawt/fowm-data;boundawy="boundawy"
+
+--boundawy
+c-content-disposition: f-fowm-data; n-nyame="fiewd1"
+
+v-vawue1
+--boundawy
+c-content-disposition: fowm-data; nyame="fiewd2"; fiwename="exampwe.txt"
+
+vawue2
+--boundawy--
+```
+
+## especificações
+
+| especificação   | t-títuwo                                                                                            |
 | --------------- | ------------------------------------------------------------------------------------------------- |
-| {{RFC("7578")}} | Returning Values from Forms: multipart/form-data                                                  |
-| {{RFC("6266")}} | Use of the Content-Disposition Header Field in the Hypertext Transfer Protocol (HTTP)             |
-| {{RFC("2183")}} | Communicating Presentation Information in Internet Messages: The Content-Disposition Header Field |
+| {{wfc("7578")}} | w-wetuwning vawues f-fwom fowms: muwtipawt/fowm-data                                                  |
+| {{wfc("6266")}} | u-use of the content-disposition headew fiewd in the h-hypewtext twansfew p-pwotocow (http)             |
+| {{wfc("2183")}} | communicating p-pwesentation infowmation in intewnet messages: t-the content-disposition h-headew fiewd |
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Notas de compatibilidade
+## nyotas de compatibiwidade
 
-- Firefox 5 lida com o cabeçalho de resposta HTTP `Content-Disposition` mais efetivamente se ambos parâmetros `filename` e `filename*` são providos; ele olha através de todos os nomes providenciados, usando o parâmetro `filename*` se um estiver disponível, mesmo se o parâmetro `filename` estiver incluído primeiro. Anteriormente, o primeiro parâmetro que combinasse seria utilizado, Previously, the first matching parameter would be used, desse modo prevenindo um nome mais apropriado de ser utilizado. Veja [Erro do Firefox 588781](https://bugzil.la/588781).
+- fiwefox 5 wida com o c-cabeçawho de wesposta h-http `content-disposition` m-mais efetivamente s-se ambos pawâmetwos `fiwename` e-e `fiwename*` são pwovidos; e-ewe owha atwavés d-de todos os nyomes pwovidenciados, OwO u-usando o pawâmetwo `fiwename*` s-se um estivew disponívew, (ˆ ﻌ ˆ)♡ m-mesmo se o pawâmetwo `fiwename` estivew incwuído pwimeiwo. ʘwʘ antewiowmente, o.O o-o pwimeiwo pawâmetwo q-que combinasse s-sewia utiwizado, UwU pweviouswy, rawr x3 the f-fiwst matching pawametew wouwd be used, 🥺 desse m-modo pwevenindo u-um nyome mais apwopwiado d-de sew utiwizado. veja [ewwo do fiwefox 588781](https://bugziw.wa/588781). :3
 
-## Veja também
+## veja também
 
-- [Formulários HTML](/pt-BR/docs/Learn/Forms)
-- O cabeçalho {{HTTPHeader("Content-Type")}} definindo o limite do corpo multipartes.
-- A interface {{domxref("FormData")}} usada para manipular dados de formulários para uso na API {{domxref("XMLHttpRequest")}}.
+- [fowmuwáwios h-htmw](/pt-bw/docs/weawn/fowms)
+- o cabeçawho {{httpheadew("content-type")}} definindo o w-wimite do cowpo m-muwtipawtes. (ꈍᴗꈍ)
+- a intewface {{domxwef("fowmdata")}} u-usada pawa manipuwaw dados de f-fowmuwáwios pawa u-uso nya api {{domxwef("xmwhttpwequest")}}. 🥺

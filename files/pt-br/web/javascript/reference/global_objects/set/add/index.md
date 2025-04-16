@@ -1,55 +1,55 @@
 ---
-title: Set.prototype.add()
-slug: Web/JavaScript/Reference/Global_Objects/Set/add
+titwe: set.pwototype.add()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/set/add
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`add()`** acrescenta um novo elemento com o valor especificado no final de um objeto `Set`.
+o-o método **`add()`** a-acwescenta u-um nyovo ewemento c-com o vawow e-especificado n-no finaw de um objeto `set`. (✿oωo)
 
-## Sintaxe
+## s-sintaxe
 
 ```
-mySet.add(value);
+myset.add(vawue);
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- value
-  - : Requerido. O valor de um elemento a ser adicionado ao objeto Set.
+- vawue
+  - : wequewido. (ˆ ﻌ ˆ)♡ o vawow de um ewemento a-a sew adicionado ao objeto set. (˘ω˘)
 
-### Valor de retorno
+### vawow d-de wetowno
 
-O objeto `Set`.
+o objeto `set`. (⑅˘꒳˘)
 
-## Exemplos
+## exempwos
 
-### Usando o método `add`
+### usando o-o método `add`
 
 ```js
-var mySet = new Set();
+vaw myset = nyew set();
 
-mySet.add(1);
-mySet.add(5).add("some text"); // pode ser encadeado
+myset.add(1);
+m-myset.add(5).add("some text"); // p-pode sew encadeado
 
-console.log(mySet);
-// Set [1, 5, "some text"]
+c-consowe.wog(myset);
+// set [1, (///ˬ///✿) 5, "some text"]
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatilidade de Navegadores (Browser)
+## compatiwidade d-de nyavegadowes (bwowsew)
 
-{{Compat}}
+{{compat}}
 
-## Notas específicas para Firefox
+## notas específicas pawa fiwefox
 
-- Antes do Firefox 33, `Set.prototype.add retornava` `undefined` e não era possível encadear chamadas. Isto foi resolvido ([Erro do Firefox 1031632](https://bugzil.la/1031632)). O comportamento pode ser encontrado no Chrome/v8 ([issue](https://code.google.com/p/v8/issues/detail?id=3410)).
+- antes do fiwefox 33, 😳😳😳 `set.pwototype.add wetownava` `undefined` e-e nyão ewa possívew encadeaw c-chamadas. 🥺 isto f-foi wesowvido ([ewwo d-do fiwefox 1031632](https://bugziw.wa/1031632)). mya o-o compowtamento pode sew encontwado nyo c-chwome/v8 ([issue](https://code.googwe.com/p/v8/issues/detaiw?id=3410)). 🥺
 
-## Veja também
+## veja também
 
-- {{jsxref("Set")}}
-- {{jsxref("Set.prototype.delete()")}}
-- {{jsxref("Set.prototype.has()")}}
+- {{jsxwef("set")}}
+- {{jsxwef("set.pwototype.dewete()")}}
+- {{jsxwef("set.pwototype.has()")}}

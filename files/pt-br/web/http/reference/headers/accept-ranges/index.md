@@ -1,59 +1,59 @@
 ---
-title: Accept-Ranges
-slug: Web/HTTP/Reference/Headers/Accept-Ranges
-original_slug: Web/HTTP/Headers/Accept-Ranges
+titwe: accept-wanges
+swug: web/http/wefewence/headews/accept-wanges
+o-owiginaw_swug: w-web/http/headews/accept-wanges
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O cabeçalho de resposta HTTP **`Accept-Ranges`** é um marcador usado pelo servidor para indicar que ele suporta requisições parciais. O valor deste campo indica a unidade utilizada para definir o tamanho.
+o-o cabeçawho d-de wesposta h-http **`accept-wanges`** é u-um mawcadow usado p-pewo sewvidow p-pawa indicaw que ewe supowta wequisições pawciais. OwO o vawow deste campo indica a-a unidade utiwizada pawa definiw o tamanho. 😳😳😳
 
-Na presença do cabeçalho `Accept-Ranges`, o navegador pode tentar retomar um _download_ interrompido, ao invés de começar de novo do início.
+nya p-pwesença do cabeçawho `accept-wanges`, 😳😳😳 o nyavegadow p-pode tentaw wetomaw um _downwoad_ intewwompido, o.O ao invés d-de começaw de nyovo do início. ( ͡o ω ͡o )
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Tipo de cabeçalho</th>
-      <td>{{Glossary("Response header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th s-scope="wow">tipo de cabeçawho</th>
+      <td>{{gwossawy("wesponse headew")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("fowbidden headew n-nyame")}}</th>
       <td>não</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sintaxe
+## sintaxe
 
 ```
-Accept-Ranges: bytes
-Accept-Ranges: none
+accept-wanges: bytes
+accept-wanges: nyone
 ```
 
-## Diretivas
+## d-diwetivas
 
 - `none`
-  - : Nenhuma unidade de tamanho é suportada, isso faz com que o cabeçalho seja equivalente a sua própria ausência, sendo então raramente usado, apesar de que alguns navegadores, como o IE9, é usado para habilitar ou desabilitar os botões de pausa no gerenciador de downloads.
+  - : nyenhuma unidade d-de tamanho é s-supowtada, isso f-faz com que o cabeçawho s-seja equivawente a sua pwópwia ausência, (U ﹏ U) s-sendo então wawamente usado, (///ˬ///✿) apesaw de que a-awguns nyavegadowes, >w< como o ie9, é usado pawa habiwitaw ou desabiwitaw os botões de pausa nyo g-gewenciadow de downwoads. rawr
 - `bytes`
-  - : A unidade de tamanho são bytes.
+  - : a-a unidade d-de tamanho s-são bytes.
 
-## Exemplos
+## exempwos
 
 ```
-Accept-Ranges: bytes
+accept-wanges: bytes
 ```
 
-## Especificações
+## especificações
 
-| Especificação                           | Título                                                 |
+| especificação                           | t-títuwo                                                 |
 | --------------------------------------- | ------------------------------------------------------ |
-| {{RFC("7233", "Accept-Ranges", "2.3")}} | Hypertext Transfer Protocol (HTTP/1.1): Range Requests |
+| {{wfc("7233", "accept-wanges", mya "2.3")}} | h-hypewtext twansfew pwotocow (http/1.1): w-wange w-wequests |
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com navegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{HTTPHeader("If-Range")}}
-- {{HTTPHeader("Range")}}
+- {{httpheadew("if-wange")}}
+- {{httpheadew("wange")}}

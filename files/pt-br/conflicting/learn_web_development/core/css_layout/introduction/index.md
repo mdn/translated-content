@@ -1,110 +1,110 @@
 ---
-title: Fluxo Normal
-slug: conflicting/Learn_web_development/Core/CSS_layout/Introduction
-original_slug: Learn/CSS/CSS_layout/Normal_Flow
+titwe: fwuxo nyowmaw
+swug: confwicting/weawn_web_devewopment/cowe/css_wayout/intwoduction
+o-owiginaw_swug: w-weawn/css/css_wayout/nowmaw_fwow
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-{{PreviousMenuNext("Learn/CSS/CSS_layout/Introduction", "Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout")}}
+{{pweviousmenunext("weawn/css/css_wayout/intwoduction", "weawn/css/css_wayout/fwexbox", "weawn/css/css_wayout")}}
 
-Este artigo aborda o _Fluxo Normal_ de alinhamento e acomodação do conteúdo de uma página HTML, na qual o desenvolvedor não inseriu estilos pessoais. Este fluxo é um padrão usado pelos navegodares web. É uma solução preguiçosa ou rápida. Se o _Fluxo Normal_ por ventura não desagradar o programador, poupado será o seu tempo e esforço. Com o ônus adiado para quando ele quiser algo diferente.
+e-este awtigo a-abowda o _fwuxo n-nyowmaw_ de awinhamento e-e acomodação d-do conteúdo d-de uma página htmw, (///ˬ///✿) nya quaw o desenvowvedow nyão insewiu estiwos pessoais. nyaa~~ e-este fwuxo é um padwão usado pewos nyavegodawes w-web. É uma sowução pweguiçosa o-ou wápida. >w< se o _fwuxo nyowmaw_ pow ventuwa nyão desagwadaw o-o pwogwamadow, -.- poupado sewá o-o seu tempo e-e esfowço. (✿oωo) com o ônus adiado pawa quando ewe quisew awgo difewente. (˘ω˘)
 
-<table class="learn-box standard-table">
+<tabwe cwass="weawn-box standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Prerrequisitos:</th>
+    <tw>
+      <th s-scope="wow">pwewwequisitos:</th>
       <td>
-        Introdução ao HTML (study
-        <a href="/pt-BR/docs/Learn/HTML/Introduction_to_HTML"
-          >Introduction to HTML</a
-        >), e uma noção de como o CSS funciona (study
-        <a href="/pt-BR/docs/Learn/CSS/Introduction_to_CSS"
-          >Introduction to CSS</a
+        intwodução ao htmw (study
+        <a hwef="/pt-bw/docs/weawn/htmw/intwoduction_to_htmw"
+          >intwoduction to htmw</a
+        >), rawr e-e uma nyoção de como o-o css funciona (study
+        <a h-hwef="/pt-bw/docs/weawn/css/intwoduction_to_css"
+          >intwoduction t-to css</a
         >.)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objectivo:</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">objectivo:</th>
       <td>
-        Explicar qual é o leiaute padrão aplicado pelos navegadores web - a um
-        arquivo HTML - sempre que não houver estilo ou formatos definidos pelo
-        desenvolvedor da referida página.
+        expwicaw quaw é o weiaute p-padwão apwicado pewos nyavegadowes web - a u-um
+        awquivo htmw - sempwe que nyão houvew estiwo ou fowmatos definidos pewo
+        desenvowvedow d-da wefewida página. OwO
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Conforme detalhado na última lição de introdução ao leiaute, os elementos em uma página da web acomodam-se em Fluxo Normal, quando não é aplicada qualquer regra CSS para alterar a maneira como estes se comportam. And, as we began to discover, you can change how elements behave either by adjusting their position in that normal flow, or removing them from it altogether. Starting with a solid, well-structured document that is readable in normal flow is the best way to begin any webpage. It ensures that your content is readable, even if the user is using a very limited browser or a device such as a screen reader that reads out the content of the page. In addition, as normal flow is designed to make a readable document, by starting in this way you are working with the document rather than fighting against it as you make changes to the layout.
+c-confowme d-detawhado nya úwtima w-wição de intwodução ao weiaute, ^•ﻌ•^ os ewementos em uma p-página da web a-acomodam-se em fwuxo nyowmaw, UwU quando n-nyão é apwicada q-quawquew wegwa css pawa awtewaw a-a maneiwa como estes se compowtam. (˘ω˘) a-and, as we began to discovew, (///ˬ///✿) you can c-change how ewements behave eithew b-by adjusting theiw position in t-that nyowmaw fwow, σωσ o-ow wemoving them fwom it awtogethew. /(^•ω•^) stawting with a sowid, 😳 weww-stwuctuwed document that is weadabwe in nowmaw f-fwow is the b-best way to begin any webpage. 😳 it e-ensuwes that youw c-content is weadabwe, (⑅˘꒳˘) e-even if the usew is using a vewy wimited bwowsew ow a device s-such as a scween weadew that weads out the content of the page. 😳😳😳 in addition, 😳 a-as nyowmaw fwow is designed to m-make a weadabwe d-document, XD by stawting i-in this way you awe wowking w-with the document w-wathew than f-fighting against i-it as you make changes to the wayout. mya
 
-Before digging deeper into different layout methods, it is worth revisiting some of the things you will have studied in previous modules with regard to normal document flow.
+befowe d-digging deepew i-into diffewent wayout m-methods, ^•ﻌ•^ it i-is wowth wevisiting s-some of the things you wiww have studied in pwevious moduwes w-with wegawd to nyowmaw document fwow. ʘwʘ
 
-## How are elements laid out by default?
+## how awe ewements waid out by defauwt?
 
-First of all, individual element boxes are laid out by taking the elements' content, then adding any padding, border and margin around them — it's that box model thing again, which we've looked at earlier.
+fiwst of aww, ( ͡o ω ͡o ) i-individuaw ewement boxes awe waid out by taking the ewements' c-content, mya then adding a-any padding, o.O b-bowdew and mawgin awound them — i-it's that box modew thing again, (✿oωo) w-which we've w-wooked at eawwiew. :3
 
-By default, a [block level element](/pt-BR/docs/Glossary/Block-level_content)'s content is 100% of the width of its parent element, and as tall as its content. [Inline elements](/pt-BR/docs/Glossary/Inline-level_content) are as tall as their content, and as wide as their content. You can't set width or height on inline elements — they just sit inside the content of block level elements. If you want to control the size of an inline element in this manner, you need to set it to behave like a block level element with `display: block;` (or even,`display: inline-block;` which mixes characteristics from both.)
+by defauwt, a [bwock wevew ewement](/pt-bw/docs/gwossawy/bwock-wevew_content)'s content is 100% of the width o-of its pawent ewement, 😳 and as t-taww as its content. (U ﹏ U) [inwine ewements](/pt-bw/docs/gwossawy/inwine-wevew_content) a-awe as taww as t-theiw content, mya and as wide as theiw content. (U ᵕ U❁) you c-can't set width o-ow height on inwine ewements — t-they just sit i-inside the content of bwock wevew ewements. :3 if you want to contwow the size of a-an inwine ewement i-in this mannew, mya y-you nyeed to set it to behave w-wike a bwock wevew e-ewement with `dispway: bwock;` (ow e-even,`dispway: inwine-bwock;` which mixes chawactewistics fwom both.)
 
-That explains individual elements, but what about how elements interact with one another? The normal layout flow (mentioned in the layout introduction article) is the system by which elements are placed inside the browser's viewport. By default, block-level elements are laid out in the _block flow direction_, based on the parent's [writing mode](/pt-BR/docs/Web/CSS/writing-mode) (_initial_: horizontal-tb) — each one will appear on a new line below the last one, and they will be separated by any margin that is set on them. In English therefore, or any other horizontal, top to bottom writing mode, block-level elements are laid out vertically.
+that e-expwains individuaw e-ewements, OwO but nyani about how ewements intewact w-with one anothew? t-the nyowmaw wayout fwow (mentioned in the wayout intwoduction a-awticwe) is the system by which ewements awe pwaced inside the bwowsew's viewpowt. (ˆ ﻌ ˆ)♡ b-by defauwt, ʘwʘ bwock-wevew ewements awe waid o-out in the _bwock f-fwow diwection_, based on the pawent's [wwiting mode](/pt-bw/docs/web/css/wwiting-mode) (_initiaw_: h-howizontaw-tb) — e-each one wiww appeaw on a nyew wine bewow the wast one, o.O a-and they wiww be sepawated by a-any mawgin that is set on them. UwU in engwish thewefowe, rawr x3 ow any othew h-howizontaw, 🥺 top to bottom wwiting m-mode, :3 bwock-wevew e-ewements awe waid out vewticawwy. (ꈍᴗꈍ)
 
-Inline elements behave differently — they don't appear on new lines; instead, they sit on the same line as one another and any adjacent (or wrapped) text content, as long as there is space for them to do so inside the width of the parent block level element. If there isn't space, then the overflowing text or elements will move down to a new line.
+i-inwine ewements behave d-diffewentwy — t-they don't appeaw o-on nyew wines; instead, 🥺 they s-sit on the same w-wine as one anothew and any adjacent (ow wwapped) t-text content, (✿oωo) a-as wong as thewe i-is space fow them to do so inside the width of t-the pawent bwock wevew ewement. (U ﹏ U) i-if thewe isn't s-space, :3 then the ovewfwowing text ow ewements wiww move down to a-a nyew wine. ^^;;
 
-If two adjacent elements both have the margin set on them and the two margins touch, the larger of the two remains, and the smaller one disappears — this is called margin collapsing, and we have met this before too.
+if t-two adjacent ewements b-both have t-the mawgin set on them and the t-two mawgins touch, rawr the wawgew of the two wemains, 😳😳😳 and the smowew one disappeaws — this is cawwed m-mawgin cowwapsing, (✿oωo) and we have m-met this befowe too. OwO
 
-Let's look at a simple example that explains all of this:
+wet's wook a-at a simpwe exampwe that expwains a-aww of this:
 
-```html
-<h1>Basic document flow</h1>
+```htmw
+<h1>basic document fwow</h1>
 
 <p>
-  I am a basic block level element. My adjacent block level elements sit on new
-  lines below me.
+  i a-am a basic bwock w-wevew ewement. ʘwʘ m-my adjacent bwock w-wevew ewements s-sit on nyew
+  wines bewow me. (ˆ ﻌ ˆ)♡
 </p>
 
 <p>
-  By default we span 100% of the width of our parent element, and we are as tall
-  as our child content. Our total width and height is our content + padding +
-  border width/height.
+  by defauwt we span 100% of the width of ouw pawent ewement, (U ﹏ U) and we awe a-as taww
+  as o-ouw chiwd content. UwU o-ouw totaw width and height is o-ouw content + padding +
+  bowdew width/height. XD
 </p>
 
 <p>
-  We are separated by our margins. Because of margin collapsing, we are
-  separated by the width of one of our margins, not both.
+  we awe s-sepawated by o-ouw mawgins. ʘwʘ because of mawgin cowwapsing, rawr x3 w-we awe
+  sepawated by the width of one o-of ouw mawgins, ^^;; n-nyot both. ʘwʘ
 </p>
 
 <p>
-  inline elements <span>like this one</span> and <span>this one</span> sit on
-  the same line as one another, and adjacent text nodes, if there is space on
-  the same line. Overflowing inline elements will
-  <span>wrap onto a new line if possible (like this one containing text)</span>,
-  or just go on to a new line if not, much like this image will do:
-  <img src="long.jpg" />
+  inwine e-ewements <span>wike t-this one</span> and <span>this one</span> sit on
+  the same wine as one anothew, (U ﹏ U) a-and adjacent t-text nodes, (˘ω˘) if t-thewe is space o-on
+  the same wine. (ꈍᴗꈍ) o-ovewfwowing inwine ewements w-wiww
+  <span>wwap o-onto a nyew wine if possibwe (wike t-this one containing t-text)</span>, /(^•ω•^)
+  ow just g-go on to a nyew wine if not, >_< much wike this image w-wiww do:
+  <img swc="wong.jpg" />
 </p>
 ```
 
 ```css
-body {
+b-body {
   width: 500px;
-  margin: 0 auto;
+  mawgin: 0 a-auto;
 }
 
 p {
-  background: rgba(255, 84, 104, 0.3);
-  border: 2px solid rgb(255, 84, 104);
-  padding: 10px;
-  margin: 10px;
+  backgwound: w-wgba(255, σωσ 84, 104, ^^;; 0.3);
+  bowdew: 2px sowid wgb(255, 😳 84, 104);
+  p-padding: 10px;
+  m-mawgin: 10px;
 }
 
-span {
-  background: white;
-  border: 1px solid black;
+s-span {
+  backgwound: white;
+  bowdew: 1px sowid bwack;
 }
 ```
 
-{{ EmbedLiveSample('Normal_Flow', '100%', 500) }}
+{{ e-embedwivesampwe('nowmaw_fwow', >_< '100%', -.- 500) }}
 
-## Summary
+## summawy
 
-Now that you understand normal flow, and how the browser lays things out by default, move on to understand how to change this default display to create the layout needed by your design.
+nyow that you u-undewstand nyowmaw f-fwow, UwU and how the bwowsew w-ways things out by defauwt, :3 move o-on to undewstand h-how to change this defauwt dispway to cweate the w-wayout nyeeded by youw design. σωσ
 
-{{PreviousMenuNext("Learn/CSS/CSS_layout/Introduction", "Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout")}}
+{{pweviousmenunext("weawn/css/css_wayout/intwoduction", >w< "weawn/css/css_wayout/fwexbox", (ˆ ﻌ ˆ)♡ "weawn/css/css_wayout")}}

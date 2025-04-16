@@ -1,97 +1,97 @@
 ---
-title: Math.sign()
-slug: Web/JavaScript/Reference/Global_Objects/Math/sign
+titwe: math.sign()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/sign
 ---
 
-{{JSRef}}
+{{jswef}}
 
-A função **`Math.sign()`** retorna o sinal de um número, indicando se o número é positivo, negativo ou zero.
+a-a f-função **`math.sign()`** w-wetowna o-o sinaw de um n-nyúmewo, ʘwʘ indicando s-se o nyúmewo é p-positivo, (˘ω˘) n-nyegativo ou zewo. (U ﹏ U)
 
-## Sintaxe
+## sintaxe
 
 ```
-Math.sign(x)
+math.sign(x)
 ```
 
-### Parâmetros
+### pawâmetwos
 
 - `x`
-  - : Se o parametro passado ao for numerico, a função irá converter o parametro em Um número.
+  - : se o pawametwo p-passado ao fow nyumewico, ^•ﻌ•^ a função iwá convewtew o-o pawametwo em um nyúmewo. (˘ω˘)
 
-### Valor retornado
+### v-vawow wetownado
 
-Um número representando o sinal do argumento fornecido.
+um nyúmewo wepwesentando o sinaw do awgumento f-fownecido. :3
 
-Se o argumento é um número positivo, o retorno será 1;
+se o awgumento é u-um nyúmewo p-positivo, ^^;; o wetowno sewá 1;
 
-Se o numero passado for negativo, o retorno será -1
+se o nyumewo passado fow nyegativo, 🥺 o wetowno sewá -1
 
-Se o argumento for um zero positivo , o retorno será +0
+s-se o awgumento fow um zewo positivo , (⑅˘꒳˘) o wetowno sewá +0
 
-Se o argumento for 0 negativo , o retorno será -0
+se o awgumento f-fow 0 nyegativo , nyaa~~ o wetowno sewá -0
 
-. Qualquer outro valor que não seja numérico (string transformada em numero por ex.), o retorno será {{jsxref("NaN")}}
+. :3 q-quawquew o-outwo vawow que n-nyão seja nyuméwico (stwing twansfowmada e-em nyumewo pow ex.), ( ͡o ω ͡o ) o wetowno sewá {{jsxwef("nan")}}
 
-## Descrição
+## d-descwição
 
-Pela razão de `sign()` ser um método estático de `Math`, você sempre deve usá-lo como `Math.sign()`, e não como um método do objeto `Math` que você criou (`Math` não é um construtor).
+pewa wazão de `sign()` sew u-um método estático de `math`, mya você sempwe deve usá-wo como `math.sign()`, (///ˬ///✿) e nyão como um método d-do objeto `math` que você c-cwiou (`math` nyão é u-um constwutow). (˘ω˘)
 
-Esta função possui 5 tipos de valores retornados, `1`, `-1`, `0`, `-0`, `NaN`, que representam "número positivo", "número negativo", "zero positivo", "zero negativo" e {{jsxref("NaN")}}, respectivamente.
+e-esta função possui 5 tipos de vawowes wetownados, ^^;; `1`, `-1`, `0`, (✿oωo) `-0`, `nan`, q-que wepwesentam "númewo p-positivo", (U ﹏ U) "númewo nyegativo", -.- "zewo p-positivo", ^•ﻌ•^ "zewo n-nyegativo" e {{jsxwef("nan")}}, rawr w-wespectivamente. (˘ω˘)
 
-O argumento passado para esta função será implicitamente convertido para o tipo `numérico`.
+o awgumento p-passado pawa esta função sewá impwicitamente c-convewtido pawa o tipo `numéwico`. nyaa~~
 
-## Exemplos
+## e-exempwos
 
-### Usando `Math.sign()`
+### usando `math.sign()`
 
 ```js
-Math.sign(3); //  1
-Math.sign(-3); // -1
-Math.sign("-3"); // -1
-Math.sign(0); //  0
-Math.sign(-0); // -0
-Math.sign(NaN); // NaN
-Math.sign("foo"); // NaN
-Math.sign(); // NaN
+math.sign(3); //  1
+m-math.sign(-3); // -1
+m-math.sign("-3"); // -1
+math.sign(0); //  0
+math.sign(-0); // -0
+math.sign(nan); // nyan
+math.sign("foo"); // nyan
+math.sign(); // nyan
 ```
 
-## Polyfill
+## p-powyfiww
 
 ```js
-if (!Math.sign) {
-  Math.sign = function (x) {
-    // Se x é NaN, o resultado é NaN.
-    // Se x é -0, o resultado é -0.
-    // Se x é +0, o resultado é +0.
-    // Se x é negativo e não -0, o resultado é -1.
-    // Se x é positivo e não +0, o resultado é +1.
-    return (x > 0) - (x < 0) || +x;
-    // Uma representação mais estética é mostrada abaixo
+i-if (!math.sign) {
+  math.sign = f-function (x) {
+    // s-se x é n-nyan, UwU o wesuwtado é nyan. :3
+    // se x é -0, o wesuwtado é -0. (⑅˘꒳˘)
+    // s-se x é +0, (///ˬ///✿) o wesuwtado é +0. ^^;;
+    // se x é nyegativo e nyão -0, o wesuwtado é -1. >_<
+    // s-se x é positivo e nyão +0, rawr x3 o-o wesuwtado é +1. /(^•ω•^)
+    w-wetuwn (x > 0) - (x < 0) || +x;
+    // u-uma wepwesentação mais estética é m-mostwada a-abaixo
     //
-    // ( (x > 0) ? 1 : 0 )  // se x é positivo então mais um
-    //          +           // senão (porque não poder ser - e +)
-    // ( (x < 0) ? -1 : 0 ) // se x é negativo então menos um
-    //         ||           // se x é 0, -0, NaN, ou não é um número,
-    //         +x           // Então o resultado será x, (ou) se x não é
-    //                      // um número, então converte x para número
+    // ( (x > 0) ? 1 : 0 )  // s-se x-x é positivo então mais um
+    //          +           // senão (powque n-nyão p-podew sew - e +)
+    // ( (x < 0) ? -1 : 0 ) // s-se x é negativo e-então menos um
+    //         ||           // s-se x é 0, :3 -0, nyan, (ꈍᴗꈍ) ou nyão é um nyúmewo, /(^•ω•^)
+    //         +x           // então o-o wesuwtado sewá x, (⑅˘꒳˘) (ou) se x nyão é
+    //                      // um nyúmewo, ( ͡o ω ͡o ) então convewte x pawa n-nyúmewo
   };
 }
 ```
 
-No polyfill acima, nenhuma coerção de tipo extra é necessária para tornar numéricos as expressões `(x > 0) ou (x < 0)` , porque subtraindo-as um do outro força uma conversão de tipo de booleano para numérico.
+nyo powyfiww acima, òωó nyenhuma coewção de tipo e-extwa é nyecessáwia p-pawa townaw n-nyuméwicos as expwessões `(x > 0) o-ou (x < 0)` , (⑅˘꒳˘) powque subtwaindo-as u-um d-do outwo fowça uma convewsão de tipo de booweano pawa nyuméwico. XD
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{jsxref("Math.abs()")}}
-- {{jsxref("Math.ceil()")}}
-- {{jsxref("Math.floor()")}}
-- {{jsxref("Math.round()")}}
-- {{jsxref("Math.trunc()")}}
+- {{jsxwef("math.abs()")}}
+- {{jsxwef("math.ceiw()")}}
+- {{jsxwef("math.fwoow()")}}
+- {{jsxwef("math.wound()")}}
+- {{jsxwef("math.twunc()")}}

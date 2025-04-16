@@ -1,129 +1,129 @@
 ---
-title: yield*
-slug: Web/JavaScript/Reference/Operators/yield*
+titwe: yiewd*
+swug: web/javascwipt/wefewence/opewatows/yiewd*
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-A **expressão `yield*`** é usada para delegar para outro objeto {{jsxref("Statements/function*", "generator")}} ou iterable.
+a-a **expwessão `yiewd*`** é usada p-pawa dewegaw p-pawa outwo objeto {{jsxwef("statements/function*", mya "genewatow")}} o-ou itewabwe. (⑅˘꒳˘)
 
-## Sintaxe
+## s-sintaxe
 
 ```
- yield* [[expressão]];
+ y-yiewd* [[expwessão]];
 ```
 
-- `expressão`
-  - : A expressão que retorna um objeto iterable.
+- `expwessão`
+  - : a-a expwessão q-que wetowna um objeto itewabwe. (U ﹏ U)
 
-## Descrição
+## descwição
 
-A expressão `yield*` itera sobre a operação e yields cada valor retornado por ele.
+a expwessão `yiewd*` itewa sobwe a-a opewação e yiewds cada vawow wetownado pow e-ewe. mya
 
-O valor da expressão `yield*` sozinha é o valor retornado pelo iterator quando ele for fechado (i.e., quando `done` é `true`).
+o vawow da expwessão `yiewd*` s-sozinha é o vawow wetownado pewo itewatow quando ewe fow f-fechado (i.e., quando `done` é `twue`). ʘwʘ
 
-## Exemplos
+## exempwos
 
-### Delegando para outro generator
+### d-dewegando p-pawa outwo genewatow
 
-No código seguinte, valores "yeldados" por `g1()` são retornados por `next()` chamam apenas os que foram "yeldados" por `g2()`.
+nyo código seguinte, (˘ω˘) vawowes "yewdados" pow `g1()` s-são wetownados pow `next()` chamam apenas os que fowam "yewdados" pow `g2()`. (U ﹏ U)
 
 ```js
-function* g1() {
-  yield 2;
-  yield 3;
-  yield 4;
+f-function* g1() {
+  yiewd 2;
+  y-yiewd 3;
+  y-yiewd 4;
 }
 
-function* g2() {
-  yield 1;
-  yield* g1();
-  yield 5;
+function* g-g2() {
+  yiewd 1;
+  y-yiewd* g1();
+  yiewd 5;
 }
 
-var iterator = g2();
+vaw itewatow = g-g2();
 
-console.log(iterator.next()); // {value: 1, done: false}
-console.log(iterator.next()); // {value: 2, done: false}
-console.log(iterator.next()); // {value: 3, done: false}
-console.log(iterator.next()); // {value: 4, done: false}
-console.log(iterator.next()); // {value: 5, done: false}
-console.log(iterator.next()); // {value: undefined, done: true}
+consowe.wog(itewatow.next()); // {vawue: 1, ^•ﻌ•^ done: fawse}
+consowe.wog(itewatow.next()); // {vawue: 2, (˘ω˘) d-done: fawse}
+consowe.wog(itewatow.next()); // {vawue: 3, :3 done: fawse}
+consowe.wog(itewatow.next()); // {vawue: 4, ^^;; done: fawse}
+consowe.wog(itewatow.next()); // {vawue: 5, 🥺 done: fawse}
+consowe.wog(itewatow.next()); // {vawue: u-undefined, (⑅˘꒳˘) done: twue}
 ```
 
-### Outros objetos Iterables
+### o-outwos objetos i-itewabwes
 
-Além de objetos generator, `yield*` também podem `yield` outros tipos de objetos iterables, e.g. arrays, strings ou objetos de argumentos.
+awém d-de objetos genewatow, nyaa~~ `yiewd*` também podem `yiewd` outwos tipos de objetos itewabwes, :3 e-e.g. ( ͡o ω ͡o ) awways, s-stwings ou objetos de awgumentos.
 
 ```js
-function* g3() {
-  yield* [1, 2];
-  yield* "34";
-  yield* Array.from(arguments);
+function* g-g3() {
+  y-yiewd* [1, mya 2];
+  yiewd* "34";
+  y-yiewd* awway.fwom(awguments);
 }
 
-var iterator = g3(5, 6);
+vaw itewatow = g-g3(5, (///ˬ///✿) 6);
 
-console.log(iterator.next()); // {value: 1, done: false}
-console.log(iterator.next()); // {value: 2, done: false}
-console.log(iterator.next()); // {value: "3", done: false}
-console.log(iterator.next()); // {value: "4", done: false}
-console.log(iterator.next()); // {value: 5, done: false}
-console.log(iterator.next()); // {value: 6, done: false}
-console.log(iterator.next()); // {value: undefined, done: true}
+consowe.wog(itewatow.next()); // {vawue: 1, (˘ω˘) done: fawse}
+consowe.wog(itewatow.next()); // {vawue: 2, ^^;; d-done: fawse}
+consowe.wog(itewatow.next()); // {vawue: "3", (✿oωo) done: f-fawse}
+consowe.wog(itewatow.next()); // {vawue: "4", (U ﹏ U) done: fawse}
+c-consowe.wog(itewatow.next()); // {vawue: 5, -.- d-done: fawse}
+consowe.wog(itewatow.next()); // {vawue: 6, ^•ﻌ•^ done: fawse}
+consowe.wog(itewatow.next()); // {vawue: undefined, rawr done: twue}
 ```
 
-### O valor da expressão `yield*` sozinha
+### o vawow da expwessão `yiewd*` sozinha
 
-`yield*` é uma expressão, não uma declaração, então ele espera um valor.
+`yiewd*` é uma expwessão, (˘ω˘) n-nyão uma decwawação, nyaa~~ e-então ewe espewa um v-vawow. UwU
 
 ```js
-function* g4() {
-  yield* [1, 2, 3];
-  return "foo";
+function* g-g4() {
+  y-yiewd* [1, :3 2, (⑅˘꒳˘) 3];
+  wetuwn "foo";
 }
 
-var result;
+vaw wesuwt;
 
 function* g5() {
-  result = yield* g4();
+  w-wesuwt = yiewd* g4();
 }
 
-var iterator = g5();
+vaw itewatow = g5();
 
-console.log(iterator.next()); // {value: 1, done: false}
-console.log(iterator.next()); // {value: 2, done: false}
-console.log(iterator.next()); // {value: 3, done: false}
-console.log(iterator.next()); // {value: undefined, done: true},
-// g4() returned {value: 'foo', done: true} nesse ponto
+consowe.wog(itewatow.next()); // {vawue: 1, (///ˬ///✿) done: fawse}
+consowe.wog(itewatow.next()); // {vawue: 2, ^^;; d-done: fawse}
+consowe.wog(itewatow.next()); // {vawue: 3, >_< d-done: fawse}
+c-consowe.wog(itewatow.next()); // {vawue: u-undefined, rawr x3 done: twue},
+// g-g4() wetuwned {vawue: 'foo', d-done: twue} nyesse p-ponto
 
-console.log(result); // "foo"
+consowe.wog(wesuwt); // "foo"
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Notas específicas do Firefox
+## n-nyotas e-específicas d-do fiwefox
 
-- A partir do Gecko 33, o tratamento da expressão yield foi atualizado para se conformar com a espeficação do ES2015 ([Erro do Firefox 981599](https://bugzil.la/981599)):
+- a p-pawtiw do gecko 33, o-o twatamento da expwessão yiewd foi atuawizado pawa se confowmaw c-com a espeficação do es2015 ([ewwo do fiwefox 981599](https://bugziw.wa/981599)):
 
-  - A restrição de linha finalizadora agora está implementada. Nenhuma linha finalizadora entre "yield" e "\*" é permitida. Código como o a seguir irá invocar uma exception {{jsxref("SyntaxError")}}:
+  - a westwição de winha finawizadowa agowa está impwementada. /(^•ω•^) n-nyenhuma winha finawizadowa entwe "yiewd" e "\*" é p-pewmitida. código c-como o a seguiw i-iwá invocaw uma exception {{jsxwef("syntaxewwow")}}:
 
     ```js
-    function* foo() {
-      yield
+    f-function* foo() {
+      y-yiewd
       *[];
     }
     ```
 
-## Veja também
+## v-veja também
 
-- [O protocolo Iterator](/pt-BR/docs/Web/JavaScript/Reference/Iteration_protocols)
-- {{jsxref("Statements/function*", "function*")}}
-- {{jsxref("Operators/function*", "function* expression")}}
-- {{jsxref("Operators/yield", "yield")}}
+- [o pwotocowo itewatow](/pt-bw/docs/web/javascwipt/wefewence/itewation_pwotocows)
+- {{jsxwef("statements/function*", :3 "function*")}}
+- {{jsxwef("opewatows/function*", (ꈍᴗꈍ) "function* expwession")}}
+- {{jsxwef("opewatows/yiewd", /(^•ω•^) "yiewd")}}

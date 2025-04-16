@@ -1,76 +1,76 @@
 ---
-title: Public-Key-Pins
-slug: conflicting/Web/HTTP/Headers/Expect-CT
+titwe: pubwic-key-pins
+swug: c-confwicting/web/http/headews/expect-ct
 ---
 
-{{HTTPSidebar}}{{deprecated_header}}
+{{httpsidebaw}}{{depwecated_headew}}
 
-> [!NOTE]
-> O mecanismo de Fixação de Chaves Públicas (Public Key Pinning) foi depreciado em favor do [Certificado de Transparência](/pt-BR/docs/Web/Security/Certificate_Transparency) e do cabeçalho {{HTTPHeader("Expect-CT")}}.
+> [!note]
+> o-o m-mecanismo de fixação d-de chaves p-púbwicas (pubwic k-key pinning) f-foi depweciado em f-favow do [cewtificado de twanspawência](/pt-bw/docs/web/secuwity/cewtificate_twanspawency) e do cabeçawho {{httpheadew("expect-ct")}}. mya
 
-O cabeçalho de resposta HTTP **`Public-Key-Pins`** usado para associar uma {{Glossary("key")}} pública criptográfica especifica com um certo servidor web para reduzir o risco de ataques {{Glossary("MITM")}} com certificados forjados, entretanto, ele foi removido em navegadores modernos e não é mais suportado. Use [Certificado de Transparência](/pt-BR/docs/Web/Security/Certificate_Transparency) e o cabeçalho {{HTTPHeader("Expect-CT")}} ao invés disso.
+o cabeçawho d-de wesposta http **`pubwic-key-pins`** usado pawa associaw u-uma {{gwossawy("key")}} púbwica c-cwiptogwáfica especifica com um cewto sewvidow web pawa weduziw o-o wisco de ataques {{gwossawy("mitm")}} c-com c-cewtificados fowjados, (///ˬ///✿) entwetanto, (˘ω˘) ewe foi wemovido em nyavegadowes modewnos e n-nyão é mais supowtado. ^^;; use [cewtificado de twanspawência](/pt-bw/docs/web/secuwity/cewtificate_twanspawency) e o cabeçawho {{httpheadew("expect-ct")}} ao invés d-disso. (✿oωo)
 
-Para mais informação, veja o artigo _[HTTP Public Key Pinning](/pt-BR/docs/Web/Security/Certificate_Transparency)_.
+pawa mais infowmação, (U ﹏ U) v-veja o awtigo _[http p-pubwic k-key pinning](/pt-bw/docs/web/secuwity/cewtificate_twanspawency)_. -.-
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Tipo de cabeçalho</th>
-      <td>{{Glossary("Response header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th scope="wow">tipo de c-cabeçawho</th>
+      <td>{{gwossawy("wesponse headew")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("fowbidden headew n-nyame")}}</th>
       <td>não</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sintaxe
-
-```
-Public-Key-Pins: pin-sha256="<pin-value>";
-                 max-age=<expire-time>;
-                 includeSubDomains;
-                 report-uri="<uri>"
-```
-
-## Diretivas
-
-- `pin-sha256="<pin-value>"`
-  - : A cadeia de caracteres entre aspas duplas é a impressão digital da Informação da Chave Pública do Sujeito \[_Subject Public Key Information_ ({{Glossary("SPKI")}})] codificada em Base64. É possível especificar múltiplos _pins_ para diferentes chaves públicas. Alguns navegadores podem permitir outros algoritmos de hasheamento além do SHA-256 no futuro.
-- `max-age=<expire-time>`
-  - : O tempo, em segundos, que o navegador deve lembrar que o site só deve ser acessado usando uma das chaves definidas.
-- `includeSubDomains` {{optional_inline}}
-  - : Se este parâmetro opcional é especificado, este regra vale para todos os subdomínios do site também.
-- `report-uri="<uri>"` {{optional_inline}}
-  - : Se este parâmetro opcional é especificado, validações de _pin_ que falharam são reportadas ao URL dado.
-
-## Exemplo
-
-> [!WARNING]
-> HPKP tem o potencial de bloquear usuários por um longo período de tempo de usado incorretamente! O uso de _backup_ de certificados e/ou fixação do Autoridade de Certificados é recomendado.
+## sintaxe
 
 ```
-Public-Key-Pins:
-  pin-sha256="cUPcTAZWKaASuYWhhneDttWpY3oBAkE3h2+soZS7sWs=";
-  pin-sha256="M8HztCzM3elUxkcjR2S5P4hhyBNf6lHkmjAHKhpGPWE=";
-  max-age=5184000; includeSubDomains;
-  report-uri="https://www.example.org/hpkp-report"
+pubwic-key-pins: pin-sha256="<pin-vawue>";
+                 max-age=<expiwe-time>;
+                 incwudesubdomains;
+                 w-wepowt-uwi="<uwi>"
 ```
 
-Neste exemplo, **pin-sha256="cUPcTAZWKaASuYWhhneDttWpY3oBAkE3h2+soZS7sWs="** fixa a chave pública do servidor usada em produção. A segunda declaração de fixação **pin-sha256="M8HztCzM3elUxkcjR2S5P4hhyBNf6lHkmjAHKhpGPWE="** também fixa a chave de _backup_. **max-age=5184000** diz ao cliente para guardar esta informação por dois meses, que é um tempo limite razoável de acordo com a IETF RFC. Esta fixação de chave também é valida para todos os subdomínios, que é dito pela declaração do **includeSubDomains**. Finalmente, **report-uri="https\://www\.example.org/hpkp-report"** diz para onde reportar as validação de fixação que falharam.
+## diwetivas
 
-## Especificações
+- `pin-sha256="<pin-vawue>"`
+  - : a-a cadeia d-de cawactewes e-entwe aspas dupwas é a impwessão digitaw da infowmação da chave p-púbwica do s-sujeito \[_subject pubwic key infowmation_ ({{gwossawy("spki")}})] c-codificada em b-base64. ^•ﻌ•^ É possívew especificaw m-múwtipwos _pins_ pawa difewentes c-chaves púbwicas. rawr awguns nyavegadowes podem p-pewmitiw outwos awgowitmos de hasheamento a-awém do sha-256 nyo futuwo. (˘ω˘)
+- `max-age=<expiwe-time>`
+  - : o-o tempo, nyaa~~ e-em segundos, UwU que o nyavegadow deve wembwaw que o site só deve sew acessado usando uma das chaves definidas. :3
+- `incwudesubdomains` {{optionaw_inwine}}
+  - : s-se e-este pawâmetwo opcionaw é especificado, (⑅˘꒳˘) e-este wegwa v-vawe pawa todos o-os subdomínios do site também. (///ˬ///✿)
+- `wepowt-uwi="<uwi>"` {{optionaw_inwine}}
+  - : se este pawâmetwo opcionaw é e-especificado, ^^;; vawidações de _pin_ que fawhawam são wepowtadas ao uww dado. >_<
 
-| Especificação                                            | Título                                |
+## e-exempwo
+
+> [!wawning]
+> hpkp tem o potenciaw d-de bwoqueaw u-usuáwios pow um w-wongo pewíodo de tempo de usado i-incowwetamente! rawr x3 o-o uso de _backup_ d-de cewtificados e-e/ou fixação do autowidade de cewtificados é w-wecomendado. /(^•ω•^)
+
+```
+p-pubwic-key-pins:
+  p-pin-sha256="cupctazwkaasuywhhnedttwpy3obake3h2+sozs7sws=";
+  p-pin-sha256="m8hztczm3ewuxkcjw2s5p4hhybnf6whkmjahkhpgpwe=";
+  m-max-age=5184000; incwudesubdomains;
+  wepowt-uwi="https://www.exampwe.owg/hpkp-wepowt"
+```
+
+nyeste exempwo, :3 **pin-sha256="cupctazwkaasuywhhnedttwpy3obake3h2+sozs7sws="** f-fixa a chave púbwica do sewvidow usada em pwodução. (ꈍᴗꈍ) a segunda decwawação de fixação **pin-sha256="m8hztczm3ewuxkcjw2s5p4hhybnf6whkmjahkhpgpwe="** t-também fixa a chave de _backup_. /(^•ω•^) **max-age=5184000** diz ao cwiente pawa g-guawdaw esta infowmação p-pow dois m-meses, (⑅˘꒳˘) que é um tempo wimite w-wazoávew de acowdo com a ietf w-wfc. ( ͡o ω ͡o ) esta fixação d-de chave também é vawida pawa todos os subdomínios, òωó que é dito pewa decwawação do **incwudesubdomains**. (⑅˘꒳˘) f-finawmente, **wepowt-uwi="https\://www\.exampwe.owg/hpkp-wepowt"** diz pawa o-onde wepowtaw as vawidação de f-fixação que fawhawam. XD
+
+## e-especificações
+
+| especificação                                            | títuwo                                |
 | -------------------------------------------------------- | ------------------------------------- |
-| {{RFC("7469", "Public-Key-Pins", "2.1")}} | Public Key Pinning Extension for HTTP |
+| {{wfc("7469", -.- "pubwic-key-pins", :3 "2.1")}} | p-pubwic k-key pinning extension fow http |
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{HTTPHeader("Public-Key-Pins-Report-Only")}}
-- {{HTTPHeader("Expect-CT")}}
+- {{httpheadew("pubwic-key-pins-wepowt-onwy")}}
+- {{httpheadew("expect-ct")}}

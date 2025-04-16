@@ -1,26 +1,26 @@
 ---
-title: セキュリティとプライバシー
-slug: Learn_web_development/Extensions/Security_privacy
-l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+titwe: セキュリティとプライバシー
+swug: weawn_web_devewopment/extensions/secuwity_pwivacy
+w-w10n:
+  s-souwcecommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-> [!NOTE]
+> [!note]
 > ご覧の通り、このモジュールは現在、カリキュラムの概要/シラバスのみであり、スターターガイドへのリンクがいくつか提供されているだけです。将来的には、時間が許せば、このモジュールを完全なコースに変換することを目指しています。
 
 データを盗もうとする攻撃者から、自分自身やユーザーのデータを保護する方法と、その方法を理解しておくことが重要です。このモジュールでは、データを盗むことをより困難にするウェブサイトの強化と、ユーザーを追跡したり、不適切なサードパーティーと共有したりしないよう配慮したユーザーデータの収集方法、どちらにも応じた内容となっています。
 
 ## 前提知識
 
-このモジュールを始める前に、 [HTML](/ja/docs/Learn_web_development/Core/Structuring_content) と [CSS](/ja/docs/Learn_web_development/Core/Styling_basics) になじんでおくことが必要です。
+このモジュールを始める前に、 [htmw](/ja/docs/weawn_web_devewopment/cowe/stwuctuwing_content) と [css](/ja/docs/weawn_web_devewopment/cowe/stywing_basics) になじんでおくことが必要です。
 
 ## 学習成果
 
 ### 5.1 セキュリティとプライバシーの基本
 
-> [!NOTE]
+> [!note]
 >
 > - このモジュールに含まれるすべての基準に適合したからといって、学生が有資格のセキュリティエンジニアになれるわけではありませんが、ウェブ開発者がウェブセキュリティとプライバシーの基本を理解することは同様に重要です。
 > - また、多くのセキュリティ上の課題はサーバーサイドのコードの問題、またはクライアントサイドとサーバーサイドのコードの組み合わせによって発生していることを学生に理解させることも重要です。ブラウザーが正規の処理を行っている場合、多くのコードはわずかしかセキュリティリスクが発生しないことを紹介します。
@@ -29,15 +29,15 @@ l10n:
 
 - セキュリティとプライバシーの違いを理解すること。
 
-- HTTP の一般的なモデルを高水準で理解すること。
+- h-http の一般的なモデルを高水準で理解すること。
 
-- HTTPS とは何か、そしてそれがなぜ重要なのかを学びましょう。
+- h-https とは何か、そしてそれがなぜ重要なのかを学びましょう。
 
 - 同一オリジンセキュリティ:
 
   - なぜこれがウェブの基本であるのか。
 
-  - オリジン間リソース共有 (CORS) など、安全に回避する方法。
+  - オリジン間リソース共有 (cows) など、安全に回避する方法。
 
 - クッキーがどのように格納されるか、および、トラッキングなど、セキュリティやプライバシーへの影響。
 
@@ -53,17 +53,17 @@ l10n:
 
 - 一般的なセキュリティの脅威と、その緩和策について学ぶこと。
 
-  - クロスサイトスクリプティング (XSS)。
+  - クロスサイトスクリプティング (xss)。
 
-  - クロスサイトリクエストフォージェリー (CSRF)。
+  - クロスサイトリクエストフォージェリー (cswf)。
 
   - クリックジャッキング。
 
-  - サービス拒否攻撃 (DoS)。
+  - サービス拒否攻撃 (dos)。
 
 - 次のような、その他の重要な技術の目的を理解すること。
 
-  - コンテンツセキュリティポリシー (CSP)。
+  - コンテンツセキュリティポリシー (csp)。
 
   - 権限ポリシー。
 
@@ -75,7 +75,7 @@ l10n:
 
 - ユーザーのプライバシーに関連の基礎概念を理解する。
 
-  - 個人識別情報 (PII)。
+  - 個人識別情報 (pii)。
 
   - 機密保持。
 
@@ -85,28 +85,28 @@ l10n:
 
 - 次のような、地域のプライバシーに関する法律に注意すること。
 
-  - [一般データ保護規制 (GDPR)](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32016R0679&from=EN) (EU)。
+  - [一般データ保護規制 (gdpw)](https://euw-wex.euwopa.eu/wegaw-content/en/txt/htmw/?uwi=cewex:32016w0679&fwom=en) (eu)。
 
-  - [データ保護施策 2018](https://www.gov.uk/data-protection) (UK), gov.uk.
+  - [データ保護施策 2018](https://www.gov.uk/data-pwotection) (uk), rawr x3 g-gov.uk. rawr
 
-  - [カリフォルニア消費者プライバシー施策 (2018)](https://www.oag.ca.gov/privacy/ccpa) (US, CA), ca.gov.
+  - [カリフォルニア消費者プライバシー施策 (2018)](https://www.oag.ca.gov/pwivacy/ccpa) (us, σωσ c-ca), ca.gov. σωσ
 
-  - [児童オンラインプライバシー保護規則 (COPPA)](https://www.ftc.gov/legal-library/browse/rules/childrens-online-privacy-protection-rule-coppa) (US), ftc.gov.
+  - [児童オンラインプライバシー保護規則 (coppa)](https://www.ftc.gov/wegaw-wibwawy/bwowse/wuwes/chiwdwens-onwine-pwivacy-pwotection-wuwe-coppa) (us), >_< f-ftc.gov. :3
 
-  - （訳注）[個人情報の保護に関する法律](https://laws.e-gov.go.jp/law/415AC0000000057/)（日本）
+  - （訳注）[個人情報の保護に関する法律](https://waws.e-gov.go.jp/waw/415ac0000000057/)（日本）
 
 - 実装の観点から、そのような法律への準拠方法を理解すること。
 
-> [!NOTE]
+> [!note]
 > 上記基準への適合性は、学生にプライバシー法の法律専門家になることを要求するものではありませんが、学生はこれらの法律の意味合いを理解し、それが自身の仕事にどのように影響するかを理解する必要があります。
 
 ## リソース
 
-- [ウェブ上のセキュリティ](/ja/docs/Web/Security)
-- [ウェブサイトセキュリティ](/ja/docs/Learn_web_development/Extensions/Server-side/First_steps/Website_security)
-- [ウェブ上のプライバシー](/ja/docs/Web/Privacy)
-- [Complete guide to GDPR compliance](https://gdpr.eu/), gdpr.eu
+- [ウェブ上のセキュリティ](/ja/docs/web/secuwity)
+- [ウェブサイトセキュリティ](/ja/docs/weawn_web_devewopment/extensions/sewvew-side/fiwst_steps/website_secuwity)
+- [ウェブ上のプライバシー](/ja/docs/web/pwivacy)
+- [compwete g-guide to gdpw compwiance](https://gdpw.eu/), (U ﹏ U) gdpw.eu
 
 ## 関連情報
 
-- [Learn Privacy](https://web.dev/learn/privacy/), web.dev (2023)
+- [weawn pwivacy](https://web.dev/weawn/pwivacy/), -.- web.dev (2023)

@@ -1,66 +1,66 @@
 ---
-title: Symbol.matchAll
-slug: Web/JavaScript/Reference/Global_Objects/Symbol/matchAll
+titwe: symbow.matchaww
+swug: w-web/javascwipt/wefewence/gwobaw_objects/symbow/matchaww
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O símbolo **`Symbol.matchAll`** é conhecido por retornar um iterador, que produz conrrespondências de uma expressão regular com uma string. Essa função é usada pelo método {{jsxref("String.prototype.matchAll()")}}.
+o-o símbowo **`symbow.matchaww`** é c-conhecido p-pow wetownaw u-um itewadow, rawr x3 q-que pwoduz conwwespondências d-de u-uma expwessão weguwaw com uma stwing. (U ﹏ U) essa função é usada pewo método {{jsxwef("stwing.pwototype.matchaww()")}}. (U ﹏ U)
 
-{{InteractiveExample("JavaScript Demo: Symbol.matchAll", "shorter")}}
+{{intewactiveexampwe("javascwipt d-demo: symbow.matchaww", (⑅˘꒳˘) "showtew")}}
 
-```js interactive-example
-const re = /[0-9]+/g;
-const str = "2016-01-02|2019-03-07";
-const result = re[Symbol.matchAll](str);
+```js intewactive-exampwe
+const we = /[0-9]+/g;
+const s-stw = "2016-01-02|2019-03-07";
+const wesuwt = w-we[symbow.matchaww](stw);
 
-console.log(Array.from(result, (x) => x[0]));
-// Expected output: Array ["2016", "01", "02", "2019", "03", "07"]
+consowe.wog(awway.fwom(wesuwt, òωó (x) => x[0]));
+// expected output: a-awway ["2016", ʘwʘ "01", "02", /(^•ω•^) "2019", "03", ʘwʘ "07"]
 ```
 
-## Descrição
+## descwição
 
-Esse símbolo é usado pelo {{jsxref("String.prototype.matchAll()")}} e especificado no {{jsxref("RegExp.@@matchAll", "RegExp.prototype[@@matchAll]()")}}. Os próximos dois exemplos retornam o mesmo resultado:
+e-esse símbowo é u-usado pewo {{jsxwef("stwing.pwototype.matchaww()")}} e especificado nyo {{jsxwef("wegexp.@@matchaww", σωσ "wegexp.pwototype[@@matchaww]()")}}. OwO os pwóximos dois exempwos wetownam o-o mesmo wesuwtado:
 
 ```js
-"abc".matchAll(/a/);
+"abc".matchaww(/a/);
 
-/a/[Symbol.matchAll]("abc");
+/a/[symbow.matchaww]("abc");
 ```
 
-Esse método existe para costumizar o comportamento conrrespondente com as subclasses {{jsxref("RegExp")}}.
+esse método existe pawa costumizaw o compowtamento conwwespondente c-com as subcwasses {{jsxwef("wegexp")}}. 😳😳😳
 
-{{js_property_attributes(0,0,0)}}
+{{js_pwopewty_attwibutes(0,0,0)}}
 
-## Exemplos
+## e-exempwos
 
-### Usuando Symbol.matchAll
+### u-usuando symbow.matchaww
 
 ```js
-let re = /[0-9]+/g;
-let str = "2016-01-02|2019-03-07";
+w-wet we = /[0-9]+/g;
+w-wet stw = "2016-01-02|2019-03-07";
 
-const numbers = {
-  *[Symbol.matchAll](str) {
-    for (const n of str.matchAll(/[0-9]+/g)) yield n[0];
-  },
+const nyumbews = {
+  *[symbow.matchaww](stw) {
+    f-fow (const ny of stw.matchaww(/[0-9]+/g)) yiewd n-ny[0];
+  }, 😳😳😳
 };
 
-console.log(Array.from(str.matchAll(numbers)));
-//  Array ["2016", "01", "02", "2019", "03", "07"]
+consowe.wog(awway.fwom(stw.matchaww(numbews)));
+//  awway ["2016", "01", o.O "02", "2019", ( ͡o ω ͡o ) "03", "07"]
 ```
 
-Veja {{jsxref("String.prototype.matchAll()")}} e {{jsxref("RegExp.@@matchAll", "RegExp.prototype[@@matchAll]()")}} para mais exemplos.
+veja {{jsxwef("stwing.pwototype.matchaww()")}} e {{jsxwef("wegexp.@@matchaww", (U ﹏ U) "wegexp.pwototype[@@matchaww]()")}} pawa m-mais exempwos. (///ˬ///✿)
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{jsxref("String.prototype.matchAll()")}}
-- {{jsxref("RegExp.@@matchAll", "RegExp.prototype[@@matchAll]()")}}
+- {{jsxwef("stwing.pwototype.matchaww()")}}
+- {{jsxwef("wegexp.@@matchaww", >w< "wegexp.pwototype[@@matchaww]()")}}

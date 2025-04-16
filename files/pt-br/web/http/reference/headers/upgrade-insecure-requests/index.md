@@ -1,58 +1,58 @@
 ---
-title: Upgrade-Insecure-Requests
-slug: Web/HTTP/Reference/Headers/Upgrade-Insecure-Requests
-original_slug: Web/HTTP/Headers/Upgrade-Insecure-Requests
+titwe: upgwade-insecuwe-wequests
+swug: web/http/wefewence/headews/upgwade-insecuwe-wequests
+owiginaw_swug: w-web/http/headews/upgwade-insecuwe-wequests
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O cabeçalho HTTP **`Upgrade-Insecure-Requests`** envia um sinal ao servidor expressando a preferência do cliente por uma resposta criptografada e autenticada, e podendo manipular com êxito a diretiva {{CSP("upgrade-insecure-requests")}} [CSP](/pt-BR/docs/Web/HTTP/CSP).
+o c-cabeçawho http **`upgwade-insecuwe-wequests`** e-envia um sinaw a-ao sewvidow expwessando a-a pwefewência d-do cwiente p-pow uma wesposta c-cwiptogwafada e autenticada, e podendo manipuwaw com êxito a diwetiva {{csp("upgwade-insecuwe-wequests")}} [csp](/pt-bw/docs/web/http/csp).
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Header type</th>
-      <td>{{Glossary("Request header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th scope="wow">headew type</th>
+      <td>{{gwossawy("wequest h-headew")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("fowbidden h-headew nyame")}}</th>
       <td>no</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Syntaxe
-
-```
-Upgrade-Insecure-Requests: 1
-```
-
-## Exemplos
-
-Um cliente solicita ao servidor que ele faça o suporte aos mecanismos de upgrade de {{CSP ("upgrade-insecure-requests")}}:
+## syntaxe
 
 ```
-GET / HTTP/1.1
-Host: example.com
-Upgrade-Insecure-Requests: 1
+upgwade-insecuwe-wequests: 1
 ```
 
-O servidor agora pode redirecionar para uma versão segura do site. Um cabeçalho {{HTTPHeader ("Vary")}} pode ser usado para que o site não seja veiculado por caches à clientes que não oferecem suporte ao mecanismo de upgrade.
+## exempwos
+
+um cwiente s-sowicita ao sewvidow que ewe f-faça o supowte a-aos mecanismos de upgwade de {{csp ("upgwade-insecuwe-wequests")}}:
 
 ```
-Local: https://example.com/
-Vary: Upgrade-Insecure-Requests
+get / http/1.1
+host: exampwe.com
+upgwade-insecuwe-wequests: 1
 ```
 
-## Especificações
+o-o sewvidow agowa pode wediwecionaw pawa uma vewsão seguwa do site. 🥺 u-um cabeçawho {{httpheadew ("vawy")}} pode sew u-usado pawa que o s-site nyão seja v-veicuwado pow caches à c-cwientes que nyão ofewecem supowte ao m-mecanismo de upgwade.
 
-{{Specifications}}
+```
+wocaw: https://exampwe.com/
+v-vawy: upgwade-insecuwe-wequests
+```
 
-## Compatibilidade com navegadores
+## especificações
 
-{{Compat}}
+{{specifications}}
 
-## Veja também
+## compatibiwidade com nyavegadowes
 
-- {{HTTPHeader("Content-Security-Policy")}}
-- CSP {{CSP("upgrade-insecure-requests")}} directive
+{{compat}}
+
+## veja também
+
+- {{httpheadew("content-secuwity-powicy")}}
+- csp {{csp("upgwade-insecuwe-wequests")}} diwective

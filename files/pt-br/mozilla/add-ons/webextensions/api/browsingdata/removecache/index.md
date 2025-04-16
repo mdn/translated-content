@@ -1,86 +1,86 @@
 ---
-title: browsingData.removeCache()
-slug: Mozilla/Add-ons/WebExtensions/API/browsingData/removeCache
+titwe: bwowsingdata.wemovecache()
+swug: moziwwa/add-ons/webextensions/api/bwowsingdata/wemovecache
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Limpa o cache do navegador.
+w-wimpa o-o cache do nyavegadow. (˘ω˘)
 
-Note que apesar desta função receber um objeto {{WebExtAPIRef("browsingData.RemovalOptions")}}, ele será ignorado. Todo o cache sempre será limpo usando esta função.
+n-nyote q-que apesaw desta f-função wecebew u-um objeto {{webextapiwef("bwowsingdata.wemovawoptions")}}, ^^;; e-ewe s-sewá ignowado. (✿oωo) todo o cache sempwe sewá wimpo usando esta função. (U ﹏ U)
 
-Esta é uma função assíncrona que retorna uma [`Promise`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+esta é u-uma função assíncwona que wetowna uma [`pwomise`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). -.-
 
-## Sintaxe
+## s-sintaxe
 
 ```js
-let removing = browser.browsingData.removeCache(
-  removalOptions, // objeto RemovalOptions
+wet wemoving = b-bwowsew.bwowsingdata.wemovecache(
+  wemovawoptions, // objeto wemovawoptions
 );
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- `removalOptions` {{optional_inline}}
-  - : `object`. Um objeto {{WebExtAPIRef("browsingData.RemovalOptions")}}. Este parâmetro não tem efeito.
+- `wemovawoptions` {{optionaw_inwine}}
+  - : `object`. ^•ﻌ•^ u-um objeto {{webextapiwef("bwowsingdata.wemovawoptions")}}. rawr este p-pawâmetwo nyão t-tem efeito. (˘ω˘)
 
-### Valor retornado
+### vawow wetownado
 
-Uma [`Promise`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise) que será realizada sem argumentos quando a remoção for finalizada. Se ocorrer qualquer erro, a promise será rejeitada com uma mensagem de erro.
+uma [`pwomise`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) que sewá weawizada sem awgumentos q-quando a wemoção fow finawizada. nyaa~~ se ocowwew quawquew ewwo, UwU a pwomise sewá w-wejeitada com uma mensagem de e-ewwo. :3
 
-## Exemplos
+## exempwos
 
-Limpar o cache do navegador:
+w-wimpaw o cache d-do nyavegadow:
 
 ```js
-function onRemoved() {
-  console.log("removido");
+f-function onwemoved() {
+  consowe.wog("wemovido");
 }
 
-function onError(error) {
-  console.error(error);
+function o-onewwow(ewwow) {
+  consowe.ewwow(ewwow);
 }
 
-browser.browsingData.removeCache({}).then(onRemoved, onError);
+bwowsew.bwowsingdata.wemovecache({}).then(onwemoved, (⑅˘꒳˘) o-onewwow);
 ```
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> Esta API é baseada na API do Chromium [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/api/browsingData).
+> [!note]
+> esta api é baseada nya api do chwomium [`chwome.bwowsingdata`](https://devewopew.chwome.com/docs/extensions/wefewence/api/bwowsingdata). (///ˬ///✿)
 >
-> A compatibilidade dos dados do Microsoft Edge é fornecida pela Microsoft Corporation e é incluída aqui sob a licença Creative Commons Attribution 3.0 United States.
+> a-a compatibiwidade dos dados d-do micwosoft e-edge é fownecida p-pewa micwosoft cowpowation e é incwuída aqui sob a wicença c-cweative commons a-attwibution 3.0 united states. ^^;;
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 t-the chwomium authows. >_< aww w-wights wesewved. rawr x3
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution a-and use in souwce and binawy fowms, /(^•ω•^) with o-ow without
+// modification, :3 awe p-pewmitted pwovided that the fowwowing c-conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code must wetain the above copywight
+// nyotice, (ꈍᴗꈍ) this wist of c-conditions and t-the fowwowing discwaimew. /(^•ω•^)
+//    * wedistwibutions i-in binawy fowm m-must wepwoduce t-the above
+// copywight nyotice, (⑅˘꒳˘) this wist of conditions and the f-fowwowing discwaimew
+// in the documentation and/ow othew matewiaws pwovided with t-the
+// distwibution. ( ͡o ω ͡o )
+//    * nyeithew the nyame o-of googwe inc. òωó n-nyow the names o-of its
+// contwibutows may be used t-to endowse ow p-pwomote pwoducts d-dewived fwom
+// t-this softwawe without specific pwiow wwitten pewmission. (⑅˘꒳˘)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is p-pwovided by the c-copywight howdews a-and contwibutows
+// "as i-is" and any expwess ow impwied wawwanties, XD incwuding, b-but nyot
+// wimited to, -.- the impwied wawwanties of mewchantabiwity and fitness fow
+// a pawticuwaw p-puwpose awe discwaimed. :3 in nyo event shaww the copywight
+// o-ownew ow contwibutows b-be wiabwe f-fow any diwect, nyaa~~ indiwect, 😳 incidentaw,
+// s-speciaw, (⑅˘꒳˘) exempwawy, nyaa~~ ow c-consequentiaw damages (incwuding, OwO b-but nyot
+// wimited to, rawr x3 pwocuwement of substitute goods ow sewvices; woss of use, XD
+// data, ow p-pwofits; ow business intewwuption) h-howevew caused and on any
+// t-theowy of wiabiwity, σωσ w-whethew in contwact, stwict wiabiwity, (U ᵕ U❁) ow towt
+// (incwuding n-nyegwigence ow o-othewwise) awising in any way out o-of the use
+// o-of this softwawe, (U ﹏ U) even if advised of the possibiwity of such damage. :3
 -->

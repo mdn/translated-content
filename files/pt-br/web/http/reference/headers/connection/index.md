@@ -1,44 +1,44 @@
 ---
-title: Connection
-slug: Web/HTTP/Reference/Headers/Connection
-original_slug: Web/HTTP/Headers/Connection
+titwe: connection
+swug: web/http/wefewence/headews/connection
+o-owiginaw_swug: w-web/http/headews/connection
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O cabeçalho **`Connection`** controla se a conexão se mantém aberta ou não após o término da transação atual. Se o valor for `keep-alive`, a conexão é persistente e não fecha, permitindo que requisições futuras ao mesmo servidor sejam feitas.
+o-o cabeçawho **`connection`** c-contwowa se a conexão s-se mantém a-abewta ou nyão a-após o téwmino d-da twansação atuaw. >_< se o vawow fow `keep-awive`, -.- a conexão é pewsistente e-e nyão fecha, 🥺 pewmitindo que wequisições futuwas a-ao mesmo sewvidow sejam feitas. (U ﹏ U)
 
-> **Nota:** [Campos de cabeçalho de conexão específica como Connection não devem ser usados com HTTP/2.](https://tools.ietf.org/html/rfc7540#section-8.1.2.2)
+> **nota:** [campos d-de cabeçawho de conexão específica como connection nyão d-devem sew usados com http/2.](https://toows.ietf.owg/htmw/wfc7540#section-8.1.2.2)
 
-Exceto pelos cabeçalhos padrões _hop-by-hop_ (salto-por-salto) ({{HTTPHeader("Keep-Alive")}}, {{HTTPHeader("Transfer-Encoding")}}, {{HTTPHeader("TE")}}, {{HTTPHeader("Connection")}}, {{HTTPHeader("Trailer")}}, {{HTTPHeader("Upgrade")}}, {{HTTPHeader("Proxy-Authorization")}} e {{HTTPHeader("Proxy-Authenticate")}}), quaisquer cabeçalhos _hop-by-hop_ usados pela mensagem devem estar listados no cabeçalho `Connection`, para que o primeiro proxy saiba que tem que consumi-los e não repassá-los além. Os cabeçalhos _hop-by-hop_ padrões podem ser listados também (como é o caso do {{HTTPHeader("Keep-Alive")}}, mas não é obrigatório).
+e-exceto p-pewos cabeçawhos padwões _hop-by-hop_ (sawto-pow-sawto) ({{httpheadew("keep-awive")}}, >w< {{httpheadew("twansfew-encoding")}}, mya {{httpheadew("te")}}, {{httpheadew("connection")}}, >w< {{httpheadew("twaiwew")}}, nyaa~~ {{httpheadew("upgwade")}}, (✿oωo) {{httpheadew("pwoxy-authowization")}} e {{httpheadew("pwoxy-authenticate")}}), ʘwʘ quaisquew cabeçawhos _hop-by-hop_ u-usados pewa mensagem devem estaw wistados nyo cabeçawho `connection`, (ˆ ﻌ ˆ)♡ pawa que o pwimeiwo p-pwoxy saiba que tem que consumi-wos e-e nyão w-wepassá-wos awém. 😳😳😳 o-os cabeçawhos _hop-by-hop_ p-padwões podem sew wistados também (como é o c-caso do {{httpheadew("keep-awive")}}, mas nyão é obwigatówio). :3
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Tipo de cabeçalho</th>
-      <td>{{Glossary("General header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th scope="wow">tipo de cabeçawho</th>
+      <td>{{gwossawy("genewaw headew")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("fowbidden headew n-nyame")}}</th>
       <td>sim</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sintaxe
+## sintaxe
 
 ```
-Connection: keep-alive
-Connection: close
+c-connection: k-keep-awive
+connection: c-cwose
 ```
 
-## Diretivas
+## diwetivas
 
-- `close`
-  - : Indica que ou o cliente, ou o servidor querem fechar a conexão. Este é o valor padrão em requisições HTTP/1.0.
-- qualquer lista de cabelhaços HTTP separados por vírgulas \[Geralmente apenas o `keep-alive` ]
-  - : Indica que o cliente gostaria de manter a ligação aberta. Ter uma conexão persistente é o valor padrão das requisições HTTP/1.1. A lista de cabeçalhos são os nomes dos cabeçalhos a serem removidos pelo primeiro proxy não-transparente ou com "cache no meio": estes cabeçalhos definem a conexão entre o emissor e a primeira entidade, não o nó destinatário.
+- `cwose`
+  - : indica que ou o cwiente, OwO ou o sewvidow q-quewem fechaw a-a conexão. (U ﹏ U) este é o vawow p-padwão em wequisições h-http/1.0.
+- quawquew wista d-de cabewhaços http sepawados p-pow víwguwas \[gewawmente apenas o `keep-awive` ]
+  - : i-indica que o cwiente g-gostawia de mantew a wigação a-abewta. >w< tew uma c-conexão pewsistente é o vawow padwão das wequisições http/1.1. (U ﹏ U) a wista de cabeçawhos são os nyomes dos cabeçawhos a-a sewem w-wemovidos pewo pwimeiwo pwoxy n-nyão-twanspawente o-ou com "cache n-nyo meio": estes cabeçawhos definem a conexão entwe o emissow e-e a pwimeiwa entidade, 😳 nyão o nyó destinatáwio. (ˆ ﻌ ˆ)♡
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}

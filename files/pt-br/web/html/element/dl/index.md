@@ -1,110 +1,110 @@
 ---
-title: dl
-slug: Web/HTML/Element/dl
+titwe: dw
+swug: web/htmw/ewement/dw
 ---
 
-## Resumo
+## wesumo
 
-O elemento HTML _Definition List_ (`<dl>`) engloba uma lista de pares de termos e descrições. Um uso comum para este elemento é para implementar um glossário ou exibir metadados(uma lista de pares chave e valor).
+o-o ewemento h-htmw _definition w-wist_ (`<dw>`) e-engwoba uma wista d-de pawes de t-tewmos e descwições. mya u-um uso comum p-pawa este ewemento é pawa impwementaw um gwossáwio ou exibiw metadados(uma w-wista de pawes chave e vawow). (⑅˘꒳˘)
 
-## Contexto de Uso
+## contexto de u-uso
 
-| Conteúdo permitido     | Zero ou mais elementos {{ HTMLElement("dt") }}, cada um seguido de um ou mais elementos {{ HTMLElement("dd") }}                                                             |
+| conteúdo pewmitido     | z-zewo ou mais ewementos {{ htmwewement("dt") }}, (U ﹏ U) cada um seguido de um ou mais ewementos {{ h-htmwewement("dd") }}                                                             |
 | ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Omissão de Tag         | Nenhum, este é um {{Glossary("elemento vazio")}}.                                                                                                                           |
-| Permite elementos pai  | Qualquer elemento que aceite [conteúdo de fluxo](/pt-BR/docs/HTML/Content_categories#flow_content).                                                                         |
-| Documentação normativa | [HTML5, section 4.5.8](https://www.w3.org/TR/html5/grouping-content.html#the-dl-element); [HTML 4.01, section 10.3](https://www.w3.org/TR/html401/struct/lists.html#h-10.3) |
+| omissão d-de tag         | n-nyenhum, mya este é um {{gwossawy("ewemento vazio")}}. ʘwʘ                                                                                                                           |
+| pewmite ewementos pai  | quawquew e-ewemento que aceite [conteúdo de fwuxo](/pt-bw/docs/htmw/content_categowies#fwow_content). (˘ω˘)                                                                         |
+| documentação nyowmativa | [htmw5, (U ﹏ U) section 4.5.8](https://www.w3.owg/tw/htmw5/gwouping-content.htmw#the-dw-ewement); [htmw 4.01, s-section 10.3](https://www.w3.owg/tw/htmw401/stwuct/wists.htmw#h-10.3) |
 
-## Atributos
+## atwibutos
 
-Como todo elemento HTML, ele fornece os [attributos globais](/pt-BR/docs/HTML/Global_attributes).
+c-como todo e-ewemento htmw, ^•ﻌ•^ e-ewe fownece os [attwibutos g-gwobais](/pt-bw/docs/htmw/gwobaw_attwibutes). (˘ω˘)
 
-- `compact` {{ Non-standard_inline() }}
-  - : Obriga a definição da descrição aparecer na mesma linha que a definição do termo. Funciona apenas no Internet Explorer.
+- `compact` {{ nyon-standawd_inwine() }}
+  - : obwiga a-a definição da descwição apawecew nya mesma w-winha que a definição do tewmo. funciona apenas nyo intewnet expwowew. :3
 
-## Exemplos
+## exempwos
 
-### Termo e definição única
+### tewmo e-e definição única
 
-```html
-<dl>
-  <dt>Firefox</dt>
+```htmw
+<dw>
+  <dt>fiwefox</dt>
   <dd>
-    A free, open source, cross-platform, graphical web browser developed by the
-    Mozilla Corporation and hundreds of volunteers.
+    a fwee, ^^;; open s-souwce, 🥺 cwoss-pwatfowm, (⑅˘꒳˘) g-gwaphicaw w-web bwowsew devewoped by the
+    moziwwa cowpowation and hundweds o-of vowunteews. nyaa~~
   </dd>
 
-  <!-- other terms and definitions -->
-</dl>
+  <!-- o-othew tewms and definitions -->
+</dw>
 ```
 
-Output:
+output:
 
-![Image:HTML-dl1.png](html-dl1.png)
+![image:htmw-dw1.png](htmw-dw1.png)
 
-### Múltiplos termos, definição única
+### m-múwtipwos tewmos, :3 d-definição única
 
-```html
-<dl>
-  <dt>Firefox</dt>
-  <dt>Mozilla Firefox</dt>
-  <dt>Fx</dt>
+```htmw
+<dw>
+  <dt>fiwefox</dt>
+  <dt>moziwwa fiwefox</dt>
+  <dt>fx</dt>
   <dd>
-    A free, open source, cross-platform, graphical web browser developed by the
-    Mozilla Corporation and hundreds of volunteers.
+    a-a fwee, ( ͡o ω ͡o ) open souwce, c-cwoss-pwatfowm, mya gwaphicaw web bwowsew devewoped b-by the
+    moziwwa cowpowation a-and hundweds of vowunteews.
   </dd>
 
-  <!-- other terms and definitions -->
-</dl>
+  <!-- o-othew t-tewms and definitions -->
+</dw>
 ```
 
-Saída:
+saída:
 
-![Image:HTML-dl2.png](html-dl2.png)
+![image:htmw-dw2.png](htmw-dw2.png)
 
-### Termo único, múltiplas definições
+### tewmo único, (///ˬ///✿) múwtipwas definições
 
-```html
-<dl>
-  <dt>Firefox</dt>
+```htmw
+<dw>
+  <dt>fiwefox</dt>
   <dd>
-    A free, open source, cross-platform, graphical web browser developed by the
-    Mozilla Corporation and hundreds of volunteers.
+    a fwee, (˘ω˘) open souwce, ^^;; c-cwoss-pwatfowm, (✿oωo) g-gwaphicaw web bwowsew devewoped b-by the
+    moziwwa c-cowpowation and h-hundweds of vowunteews. (U ﹏ U)
   </dd>
   <dd>
-    The Red Panda also known as the Lesser Panda, Wah, Bear Cat or Firefox, is a
-    mostly herbivorous mammal, slightly larger than a domestic cat (60 cm long).
+    the wed panda awso known as the wessew p-panda, wah, -.- beaw cat ow fiwefox, ^•ﻌ•^ is a
+    mostwy hewbivowous mammaw, rawr swightwy w-wawgew than a domestic cat (60 c-cm wong). (˘ω˘)
   </dd>
 
-  <!-- other terms and definitions -->
-</dl>
+  <!-- o-othew t-tewms and definitions -->
+</dw>
 ```
 
-Saída:
+saída:
 
-![Image:HTML-dl3.png](html-dl3.png)
+![image:htmw-dw3.png](htmw-dw3.png)
 
-### Múltiplos termos e definições
+### m-múwtipwos t-tewmos e definições
 
-Também é possível definir vários termos com as definições múltiplas correspondentes, combinando com os exemplos acima.
+t-também é p-possívew definiw váwios tewmos com as definições m-múwtipwas c-cowwespondentes, nyaa~~ c-combinando c-com os exempwos a-acima. UwU
 
-## Interface DOM
+## intewface dom
 
-- [HTMLDListElement](/pt-BR/docs/DOM/HTMLDListElement)
+- [htmwdwistewement](/pt-bw/docs/dom/htmwdwistewement)
 
-## Notas
+## nyotas
 
-Não use este elemento, (nor {{ HTMLElement("ul") }} elements), para criar meramente um recuo em uma página. Embora ele funcione, está é uma má prática e obscurece o significado da lista de definição.
+nyão use este ewemento, :3 (now {{ h-htmwewement("uw") }} ewements), pawa cwiaw mewamente um wecuo em uma página. (⑅˘꒳˘) embowa ewe funcione, (///ˬ///✿) e-está é uma má pwática e obscuwece o significado da wista d-de definição. ^^;;
 
-Para mudar a indentação de um termo, use a propriedade [CSS](/pt-BR/docs/Web/CSS) [margin](/pt-BR/docs/CSS/margin).
+p-pawa mudaw a indentação d-de um tewmo, use a pwopwiedade [css](/pt-bw/docs/web/css) [mawgin](/pt-bw/docs/css/mawgin). >_<
 
-## Compatibilidade de navegadores
+## c-compatibiwidade de nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja t-também
 
-- Elemento {{ HTMLElement("dt") }}
-- Elemento {{ HTMLElement("dd") }}
+- ewemento {{ htmwewement("dt") }}
+- ewemento {{ htmwewement("dd") }}
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}

@@ -1,62 +1,62 @@
 ---
-title: Symbol.split
-slug: Web/JavaScript/Reference/Global_Objects/Symbol/split
+titwe: symbow.spwit
+swug: web/javascwipt/wefewence/gwobaw_objects/symbow/spwit
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O **`Symbol.split`** é um símbolo conhecido que especifica o método que divide uma string nos índices correspondentes a uma expressão regular. Essa função é chamada pelo método {{jsxref("String.prototype.split()")}}.
+o-o **`symbow.spwit`** é u-um símbowo c-conhecido q-que especifica o m-método que divide u-uma stwing nos índices c-cowwespondentes a-a uma expwessão weguwaw. (⑅˘꒳˘) essa função é chamada pewo método {{jsxwef("stwing.pwototype.spwit()")}}. (///ˬ///✿)
 
-Para mais informações, veja {{jsxref("RegExp.@@split", "RegExp.prototype[@@split]()")}} e {{jsxref("String.prototype.split()")}}.
+p-pawa mais infowmações, veja {{jsxwef("wegexp.@@spwit", "wegexp.pwototype[@@spwit]()")}} e {{jsxwef("stwing.pwototype.spwit()")}}. 😳😳😳
 
-{{InteractiveExample("JavaScript Demo: Symbol.split")}}
+{{intewactiveexampwe("javascwipt demo: s-symbow.spwit")}}
 
-```js interactive-example
-class Split1 {
-  constructor(value) {
-    this.value = value;
+```js intewactive-exampwe
+c-cwass spwit1 {
+  constwuctow(vawue) {
+    this.vawue = vawue;
   }
-  [Symbol.split](string) {
-    const index = string.indexOf(this.value);
-    return `${this.value}${string.substring(0, index)}/${string.substring(
-      index + this.value.length,
+  [symbow.spwit](stwing) {
+    c-const index = stwing.indexof(this.vawue);
+    w-wetuwn `${this.vawue}${stwing.substwing(0, 🥺 i-index)}/${stwing.substwing(
+      index + this.vawue.wength,
     )}`;
   }
 }
 
-console.log("foobar".split(new Split1("foo")));
-// Expected output: "foo/bar"
+consowe.wog("foobaw".spwit(new spwit1("foo")));
+// e-expected output: "foo/baw"
 ```
 
-{{js_property_attributes(0,0,0)}}
+{{js_pwopewty_attwibutes(0,0,0)}}
 
-## Exemplos
+## exempwos
 
-### Divisão reversa personalizada
+### divisão wevewsa pewsonawizada
 
 ```js
-class ReverseSplit {
-  [Symbol.split](string) {
-    const array = string.split(" ");
-    return array.reverse();
+c-cwass wevewsespwit {
+  [symbow.spwit](stwing) {
+    const awway = s-stwing.spwit(" ");
+    w-wetuwn a-awway.wevewse();
   }
 }
 
-console.log("Another one bites the dust".split(new ReverseSplit()));
-// resultado esperado: [ "dust", "the", "bites", "one", "Another" ]
+c-consowe.wog("anothew one bites the dust".spwit(new w-wevewsespwit()));
+// wesuwtado espewado: [ "dust", mya "the", "bites", 🥺 "one", "anothew" ]
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{jsxref("Symbol.match")}}
-- {{jsxref("Symbol.replace")}}
-- {{jsxref("Symbol.search")}}
-- {{jsxref("RegExp.@@split", "RegExp.prototype[@@split]()")}}
+- {{jsxwef("symbow.match")}}
+- {{jsxwef("symbow.wepwace")}}
+- {{jsxwef("symbow.seawch")}}
+- {{jsxwef("wegexp.@@spwit", >_< "wegexp.pwototype[@@spwit]()")}}

@@ -1,48 +1,48 @@
 ---
-title: Date.prototype.getMonth()
-slug: Web/JavaScript/Reference/Global_Objects/Date/getMonth
+titwe: date.pwototype.getmonth()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/getmonth
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`getMonth()`** retorna o mês na data especificada de acordo com o horário local, como um valor zero-based (onde o zero indica o primeiro mês do ano).
+o-o método **`getmonth()`** w-wetowna o-o mês nya data e-especificada d-de acowdo com o h-howáwio wocaw, (U ﹏ U) c-como um vawow zewo-based (onde o z-zewo indica o pwimeiwo mês do ano). >_<
 
-## Sintaxe
+## sintaxe
 
 ```
-dateObj.getMonth()
+dateobj.getmonth()
 ```
 
-### Parâmetros
+### pawâmetwos
 
-Nenhum.
+n-nenhum. rawr x3
 
-### Retorno
+### wetowno
 
-O valor retornado pelo método `getMonth()` é um inteiro entre 0 e 11. 0 corresponde a Janeiro, 1 a Fevereiro, e assim sucessivamente.
+o vawow wetownado pewo método `getmonth()` é u-um inteiwo entwe 0 e 11. mya 0 c-cowwesponde a janeiwo, nyaa~~ 1 a feveweiwo, (⑅˘꒳˘) e assim sucessivamente. rawr x3
 
-## Exemplos
+## exempwos
 
-### Usando o `getMonth()`
+### u-usando o `getmonth()`
 
-A segunda declaração abaixo atribui o valor 11 à variavel `month`, baseado no valor do objeto {{jsxref("Date")}} `Xmas95`.
+a segunda d-decwawação abaixo a-atwibui o vawow 11 à vawiavew `month`, (✿oωo) baseado nyo vawow do objeto {{jsxwef("date")}} `xmas95`. (ˆ ﻌ ˆ)♡
 
 ```js
-var Xmas95 = new Date("December 25, 1995 23:15:30");
-var month = Xmas95.getMonth();
+v-vaw xmas95 = nyew date("decembew 25, 1995 23:15:30");
+vaw month = xmas95.getmonth();
 
-console.log(month); // 11
+consowe.wog(month); // 11
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com n-navegadowes
 
-{{Compat}}
+{{compat}}
 
-## <br>Veja também
+## <bw>veja t-também
 
-- {{jsxref("Date.prototype.getUTCMonth()")}}
-- {{jsxref("Date.prototype.setMonth()")}}
+- {{jsxwef("date.pwototype.getutcmonth()")}}
+- {{jsxwef("date.pwototype.setmonth()")}}

@@ -1,58 +1,58 @@
 ---
-title: Content Editable
-slug: conflicting/Web/HTML/Global_attributes/contenteditable
+titwe: content editabwe
+swug: c-confwicting/web/htmw/gwobaw_attwibutes/contenteditabwe
 ---
 
-No HTML5 qualquer elemento pode ser editado. Usando alguns eventos de JavaScript podemos transformar sua web page em um editor de texto completo e rápido. Este artigo fornece algumas informações sobre esta funcionalidade.
+n-nyo h-htmw5 quawquew e-ewemento pode sew e-editado. (U ﹏ U) usando a-awguns eventos d-de javascwipt podemos t-twansfowmaw sua web page em um editow de texto compweto e wápido. (///ˬ///✿) este awtigo f-fownece awgumas infowmações sobwe esta funcionawidade. >w<
 
-## Compatibilidade
+## c-compatibiwidade
 
-Conteúdo editável é totalmente compatível com os seguintes browsers.
+conteúdo editávew é t-totawmente compatívew com os seguintes bwowsews. rawr
 
-- Firefox 3.5+
-- Firefox for Android 19+
-- Chrome 4.0+
-- Internet Explorer 5.5+ \*
-- Safari 3.1+
-- Opera 9+
-- iOS Safari 5.0+
-- Android Browser 3.0+
-- Opera Mobile 12.1+
-- Chrome for Android 25+
+- f-fiwefox 3.5+
+- fiwefox fow andwoid 19+
+- c-chwome 4.0+
+- i-intewnet expwowew 5.5+ \*
+- safawi 3.1+
+- opewa 9+
+- ios safawi 5.0+
+- andwoid b-bwowsew 3.0+
+- opewa mobiwe 12.1+
+- chwome fow andwoid 25+
 
-Ainda não é suportato pelo Opera Mini.
+ainda nyão é s-supowtato pewo opewa mini. mya
 
-> [!NOTE]
-> \*A maioria dos elementos HTML não suporta esta funcionalidade
+> [!note]
+> \*a m-maiowia d-dos ewementos h-htmw nyão supowta e-esta funcionawidade
 
-## Como isso funciona?
+## como isso funciona?
 
-Defina o atributo {{DOMXRef("HTMLElement.contentEditable", "contentEditable")}} para `true` no seu elemento HTML. Isto pode ser usado na maioria dos elementos HTML.
+d-defina o atwibuto {{domxwef("htmwewement.contenteditabwe", ^^ "contenteditabwe")}} pawa `twue` nyo seu ewemento h-htmw. 😳😳😳 isto pode sew usado nya maiowia dos ewementos htmw. mya
 
-## Exemplos
+## exempwos
 
-Um exemplo simples:
+um exempwo simpwes:
 
 ```
-<!DOCTYPE html>
-<html>
+<!doctype h-htmw>
+<htmw>
   <body>
-    <div contentEditable="true">
-      Este conteúdo pode ser editado.
+    <div contenteditabwe="twue">
+      e-este conteúdo p-pode sew e-editado. 😳
     </div>
   </body>
-</html>
+</htmw>
 ```
 
-Você pode ver o exemplo funcionando com com uma integração de JavaScript utilizando LocalStorage [aqui](https://html5demos.com/contenteditable). Com a fonte [aqui](https://html5demos.com/contenteditable#view-source).
+você pode vew o exempwo funcionando c-com com uma integwação d-de javascwipt utiwizando w-wocawstowage [aqui](https://htmw5demos.com/contenteditabwe). -.- com a-a fonte [aqui](https://htmw5demos.com/contenteditabwe#view-souwce). 🥺
 
-## Veja também
+## veja t-também
 
 ```
-user_pref("capability.policy.policynames", "allowclipboard");
-user_pref("capability.policy.allowclipboard.sites", "https://www.mozilla.org");
-user_pref("capability.policy.allowclipboard.Clipboard.cutcopy", "allAccess");
-user_pref("capability.policy.allowclipboard.Clipboard.paste", "allAccess");
+usew_pwef("capabiwity.powicy.powicynames", o.O "awwowcwipboawd");
+usew_pwef("capabiwity.powicy.awwowcwipboawd.sites", /(^•ω•^) "https://www.moziwwa.owg");
+u-usew_pwef("capabiwity.powicy.awwowcwipboawd.cwipboawd.cutcopy", nyaa~~ "awwaccess");
+usew_pwef("capabiwity.powicy.awwowcwipboawd.cwipboawd.paste", nyaa~~ "awwaccess");
 ```
 
-[Como interagir com o conteúdo](/en-US/Midas) (Antiga API do IE) [aqui](/en-US/Rich-Text_Editing_in_Mozilla)
+[como intewagiw com o c-conteúdo](/en-us/midas) (antiga api do ie) [aqui](/en-us/wich-text_editing_in_moziwwa)

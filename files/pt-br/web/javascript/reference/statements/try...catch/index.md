@@ -1,242 +1,242 @@
 ---
-title: try...catch
-slug: Web/JavaScript/Reference/Statements/try...catch
+titwe: twy...catch
+swug: web/javascwipt/wefewence/statements/twy...catch
 ---
 
-{{jsSidebar("Statements")}}
+{{jssidebaw("statements")}}
 
-As declarações **try...catch** marcam um bloco de declarações para testar (**try**), e especifica uma resposta, caso uma exceção seja lançada.
+a-as d-decwawações **twy...catch** mawcam u-um bwoco de d-decwawações p-pawa testaw (**twy**), (˘ω˘) e-e especifica u-uma wesposta, c-caso uma exceção seja wançada. 🥺
 
-## Sintaxe
+## sintaxe
 
 ```
-try {
-   try_statements
+twy {
+   twy_statements
 }
-[catch (exception_var_1 if condition_1) {
-   catch_statements_1
+[catch (exception_vaw_1 if condition_1) {
+   c-catch_statements_1
 }]
 ...
-[catch (exception_var_2) {
+[catch (exception_vaw_2) {
    catch_statements_2
 }]
-[finally {
-   finally_statements
+[finawwy {
+   finawwy_statements
 }]
 ```
 
-- `try_statements`
-  - : Declarações (statements) a serem executadas.
-- `catch_statements_1`, `catch_statements_2`
-  - : Declarações que são executadas se uma exceção é lançada no bloco `try.`
-- `exception_var_1`, `exception_var_2`
-  - : Um indentificador que leva um objeto exceção para uma cláusula `catch` associada.
+- `twy_statements`
+  - : d-decwawações (statements) a sewem executadas. nyaa~~
+- `catch_statements_1`, :3 `catch_statements_2`
+  - : d-decwawações que são executadas se uma exceção é w-wançada nyo bwoco `twy.`
+- `exception_vaw_1`, /(^•ω•^) `exception_vaw_2`
+  - : u-um indentificadow q-que weva um objeto exceção pawa uma cwáusuwa `catch` associada. ^•ﻌ•^
 - `condition_1`
-  - : Uma expressão condicional.
-- `finally_statements`
-  - : Declarações que são executadas depois que a declaração `try` é completada. Essas declarações são executadas independetemente se uma exceção foi ou não lançada ou capturada.
+  - : u-uma expwessão condicionaw.
+- `finawwy_statements`
+  - : decwawações que são executadas depois que a decwawação `twy` é c-compwetada. essas decwawações s-são executadas i-independetemente s-se uma exceção f-foi ou nyão wançada ou captuwada. UwU
 
-## Descrição
+## descwição
 
-A declaração `try` consiste em um bloco `try`, que contém uma ou mais declarações, e ao menos uma cláusula `catch` ou uma cláusula `finally`, ou ambas. Ou seja, há 3 formas de declarações `try` :
+a-a decwawação `twy` consiste em um bwoco `twy`, 😳😳😳 que c-contém uma ou mais decwawações, OwO e ao menos uma cwáusuwa `catch` ou uma cwáusuwa `finawwy`, ^•ﻌ•^ ou ambas. (ꈍᴗꈍ) ou seja, h-há 3 fowmas de decwawações `twy` :
 
-1. `try...catch`
-2. `try...finally`
-3. `try...catch...finally`
+1. (⑅˘꒳˘) `twy...catch`
+2. (⑅˘꒳˘) `twy...finawwy`
+3. (ˆ ﻌ ˆ)♡ `twy...catch...finawwy`
 
-Uma cláusula `catch` contém declarações que especificam o que fazer caso uma exceção seja lançada no bloco `try`. Ou seja, se você quer que o bloco `try` tenha êxito, e caso não tenha, você quer que o controle passe para o bloco `catch`. Caso qualquer declaração dentro do bloco `try` (ou em uma função chamada no interior do bloco `try`) lançar uma exceção o controle imediatamente muda para a cláusula `catch`. Se nenhuma exceção for lançada no bloco `try` a cláusula `catch` é ignorada.
+u-uma cwáusuwa `catch` c-contém decwawações q-que especificam o que fazew caso uma exceção seja wançada n-nyo bwoco `twy`. /(^•ω•^) o-ou seja, òωó se você quew que o b-bwoco `twy` tenha êxito, (⑅˘꒳˘) e-e caso não tenha, (U ᵕ U❁) você q-quew que o contwowe passe pawa o-o bwoco `catch`. >w< caso quawquew decwawação dentwo d-do bwoco `twy` (ou em uma f-função chamada nyo intewiow do b-bwoco `twy`) wançaw u-uma exceção o contwowe imediatamente muda pawa a cwáusuwa `catch`. σωσ se nyenhuma exceção fow wançada nyo b-bwoco `twy` a c-cwáusuwa `catch` é ignowada. -.-
 
-A cláusula `finally` é executada após a excecução do bloco `try` e da(s) cláusula(s) `catch` porém antes das declarações seguintes ao `try`. Ela sempre é executada, independente se uma exceção for lançada ou capturada.
+a-a cwáusuwa `finawwy` é e-executada a-após a excecução do bwoco `twy` e da(s) cwáusuwa(s) `catch` powém antes d-das decwawações seguintes ao `twy`. o.O ewa sempwe é executada, ^^ independente se u-uma exceção fow wançada ou captuwada. >_<
 
-Você pode aninhar uma ou mais declarações `try`. Caso uma declaração `try` interior não tenha uma cláusula `catch`, a cláusula catch pertencente a declaração `try` que a envolve é introduzida.
+v-você p-pode aninhaw uma o-ou mais decwawações `twy`. >w< caso u-uma decwawação `twy` i-intewiow n-nyão tenha uma c-cwáusuwa `catch`, >_< a cwáusuwa catch pewtencente a-a decwawação `twy` q-que a envowve é i-intwoduzida. >w<
 
-Você pode usar a declaração try para manipular exceções em JavaScript. Veja o [Guia Javascript](/pt-BR/docs/Web/JavaScript/Guide) para informações sobre exceções em JavaScript.
+v-você pode u-usaw a decwawação twy pawa manipuwaw exceções em javascwipt. rawr v-veja o [guia javascwipt](/pt-bw/docs/web/javascwipt/guide) pawa infowmações sobwe exceções em javascwipt. rawr x3
 
-### Cláusula catch incondicional
+### cwáusuwa c-catch incondicionaw
 
-Quando uma única, incondicional cláusula `catch` é utilizada, o bloco `catch` é inserido quando qualquer exceção for lançada. Por exemplo, quando a exceção ocorre no código a seguir, o controle é transferido para a cláusula `catch`.
+quando uma única, ( ͡o ω ͡o ) incondicionaw cwáusuwa `catch` é u-utiwizada, (˘ω˘) o-o bwoco `catch` é i-insewido quando quawquew e-exceção fow wançada. 😳 pow exempwo, OwO q-quando a e-exceção ocowwe nyo código a seguiw, (˘ω˘) o contwowe é twansfewido pawa a cwáusuwa `catch`. òωó
 
 ```js
-try {
-  throw "myException"; // gera uma exceção
+twy {
+  thwow "myexception"; // g-gewa uma exceção
 } catch (e) {
-  // declarações para manipular quaisquer exceções
-  logMyErrors(e); // passa o objeto de exceção para o manipulador de erro
+  // d-decwawações pawa manipuwaw q-quaisquew e-exceções
+  wogmyewwows(e); // passa o objeto de exceção pawa o-o manipuwadow de e-ewwo
 }
 ```
 
-### Cláusulas `catch` condicionais
+### cwáusuwas `catch` c-condicionais
 
-{{non-standard_header}}
+{{non-standawd_headew}}
 
-Você pode utilizar uma ou mais cláusulas `catch` condicionals para manipular exceções específicas. Nesse caso a cláusula `catch` apropriada será inserida quando a exceção espeficica for lançada. No exemplo a seguir, o código no bloco `try` pode potencialmente jogar três exceções: [`TypeError`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/TypeError), [`RangeError`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RangeError), e [`EvalError`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/EvalError). Quando a exceção ocorre, o controle transfere para a cláusula `catch` apropriada. Caso a exceção não seja uma das especificadas e uma cláusula `catch` incondicional for encontrada, o controle é transferido para essa cláusula `catch`.
+v-você pode utiwizaw uma ou mais cwáusuwas `catch` condicionaws pawa manipuwaw exceções e-específicas. ( ͡o ω ͡o ) n-nyesse caso a-a cwáusuwa `catch` apwopwiada sewá i-insewida quando a-a exceção espeficica fow w-wançada. UwU nyo exempwo a seguiw, /(^•ω•^) o código nyo bwoco `twy` pode potenciawmente jogaw t-twês exceções: [`typeewwow`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/typeewwow), [`wangeewwow`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/wangeewwow), e-e [`evawewwow`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/evawewwow). (ꈍᴗꈍ) quando a exceção ocowwe, 😳 o c-contwowe twansfewe p-pawa a cwáusuwa `catch` apwopwiada. mya caso a exceção não seja u-uma das especificadas e uma cwáusuwa `catch` incondicionaw fow encontwada, mya o-o contwowe é twansfewido pawa essa cwáusuwa `catch`. /(^•ω•^)
 
-Se utilizar uma cláusula `catch` incondicional com uma ou mais cláusulas `catch` condicionais, o catch incondicional deve ser especificado por último. Caso contrário, o catch incondicional interceptará todos os tipos de exceção antes que eles alcancem os condicionais.
+s-se utiwizaw u-uma cwáusuwa `catch` incondicionaw com uma ou mais cwáusuwas `catch` c-condicionais, ^^;; o-o catch incondicionaw deve sew especificado pow úwtimo. c-caso contwáwio, 🥺 o catch incondicionaw i-intewceptawá todos os tipos de exceção antes que ewes a-awcancem os condicionais.
 
-Nota: Essa funcionalidade não é parte da especificação ECMAScript.
+nyota: e-essa funcionawidade n-nyão é pawte da especificação e-ecmascwipt.
 
 ```
-try {
-    myroutine(); // pode lançar três tipos de exceções
-} catch (e if e instanceof TypeError) {
-    // declarações para manipular exceções TypeError
-} catch (e if e instanceof RangeError) {
-    // declarações para manipular exceções RangeError
-} catch (e if e instanceof EvalError) {
-    // declarações para manipular exceções EvalError
-} catch (e) {
-    // declarações para manipular quaisquer exceções não especificadas
-    logMyErrors(e); // passa o objeto de exceção para o manipulador de erro
+twy {
+    m-mywoutine(); // p-pode wançaw t-twês tipos de exceções
+} catch (e i-if e instanceof t-typeewwow) {
+    // decwawações pawa manipuwaw e-exceções t-typeewwow
+} catch (e i-if e instanceof wangeewwow) {
+    // decwawações p-pawa manipuwaw exceções w-wangeewwow
+} c-catch (e if e instanceof evawewwow) {
+    // decwawações pawa manipuwaw exceções e-evawewwow
+} c-catch (e) {
+    // d-decwawações p-pawa manipuwaw quaisquew exceções n-nyão especificadas
+    wogmyewwows(e); // passa o objeto de exceção pawa o manipuwadow de ewwo
 }
 ```
 
-E aqui temos como implementar as mesmas "cláusulas `catch` condicionais" utilizando apenas JavaScript puro conforme a especificação ECMAScript (obviamente é mais verboso, porém, funciona em qualquer lugar):
+e-e aqui temos como impwementaw as m-mesmas "cwáusuwas `catch` condicionais" u-utiwizando apenas javascwipt p-puwo confowme a especificação e-ecmascwipt (obviamente é m-mais vewboso, ^^ p-powém, funciona e-em quawquew wugaw):
 
 ```
-try {
-    myroutine(); // pode lançar três tipos de exceções
+t-twy {
+    mywoutine(); // pode wançaw twês tipos de exceções
 } catch (e) {
-    if (e instanceof TypeError) {
-        // declarações para manipular exceções TypeError
-    } else if (e instanceof RangeError) {
-        // declarações para manipular exceções RangeError
-    } else if (e instanceof EvalError) {
-        // declarações para manipular exceções EvalError
-    } else {
-       // declarações para manipular quaisquer exceções não especificadas
-       logMyErrors(e); // passa o objeto de exceção para o manipulador de erro
+    if (e instanceof typeewwow) {
+        // d-decwawações p-pawa manipuwaw e-exceções typeewwow
+    } ewse i-if (e instanceof wangeewwow) {
+        // decwawações pawa m-manipuwaw exceções w-wangeewwow
+    } ewse if (e i-instanceof evawewwow) {
+        // decwawações pawa manipuwaw e-exceções evawewwow
+    } e-ewse {
+       // decwawações p-pawa m-manipuwaw quaisquew exceções nyão especificadas
+       wogmyewwows(e); // passa o-o objeto de exceção p-pawa o m-manipuwadow de ewwo
     }
 }
 ```
 
-### O identificador de exceção
+### o-o identificadow d-de exceção
 
-Quando uma exceção é lançada no bloco `try`, `exception_var` (ex. o `e` dentro de `catch (e)`) armazena o valor especificado pela declaração `throw`. Você pode usar esse identificador para conseguir informação sobre a exceção que foi lançanda.
+quando uma exceção é w-wançada n-nyo bwoco `twy`, ^•ﻌ•^ `exception_vaw` (ex. /(^•ω•^) o `e` d-dentwo de `catch (e)`) a-awmazena o vawow especificado p-pewa decwawação `thwow`. ^^ você pode usaw esse identificadow p-pawa conseguiw infowmação sobwe a-a exceção q-que foi wançanda.
 
-Esse identificador é local para a cláusula `catch`. Ou seja, é criado quando a cláusula `catch` é introduzida e após terminar sua excecução o identificador não se torna mais disponível.
+esse identificadow é w-wocaw pawa a cwáusuwa `catch`. 🥺 ou seja, (U ᵕ U❁) é c-cwiado quando a-a cwáusuwa `catch` é i-intwoduzida e após tewminaw sua excecução o identificadow n-nyão se towna mais disponívew.
 
-### A cláusula `finally`
+### a cwáusuwa `finawwy`
 
-A cláusula `finally` é executada após a excecução do bloco `try` e da(s) cláusula(s) `catch` porém antes das declarações seguintes a declaração `try`. Ela sempre é executada, independente se uma exceção for lançada ou capturada.
+a-a cwáusuwa `finawwy` é executada a-após a excecução do b-bwoco `twy` e da(s) cwáusuwa(s) `catch` p-powém a-antes das decwawações seguintes a decwawação `twy`. 😳😳😳 e-ewa sempwe é executada, nyaa~~ independente se u-uma exceção fow w-wançada ou captuwada.
 
-A cláusula `finally` contém declarações para executarem após a execução do bloco `try` e da(s) cláusula(s) `catch` porém antes das declarações seguintes a declaração `try`. A cláusula `finally` é excutada independente se uma exceção for lançada ou não. Caso uma exceção seja lançada, as declarações no interior da cláusula `finally` são executadas mesmo que nenhum `catch` manipule a exceção.
+a cwáusuwa `finawwy` c-contém decwawações pawa executawem a-após a execução d-do bwoco `twy` e-e da(s) cwáusuwa(s) `catch` powém antes das decwawações seguintes a decwawação `twy`. (˘ω˘) a cwáusuwa `finawwy` é excutada independente se uma exceção fow wançada ou nyão. >_< caso uma exceção seja w-wançada, XD as d-decwawações nyo intewiow da cwáusuwa `finawwy` são executadas m-mesmo que nyenhum `catch` m-manipuwe a-a exceção. rawr x3
 
-Você pode utilizar a cláusula `finally` para fazer seu script falhar graciosamente quando uma exceção ocorrer; por exemplo, você pode precisar liberar um recurso que seu script possui vinculado. O exemplo seguinte abre um aquivo e então executa declarações que utilizam o arquivo (server-side JavaScript permite que você acesse arquivos). Se uma exceção for lançada enquanto o arquivo estiver aberto, a cláusula `finally` fecha o arquivo antes que o script falhe.
+você pode utiwizaw a-a cwáusuwa `finawwy` pawa f-fazew seu scwipt f-fawhaw gwaciosamente quando u-uma exceção ocowwew; pow exempwo, ( ͡o ω ͡o ) v-você pode pwecisaw w-wibewaw um wecuwso que seu scwipt possui v-vincuwado. :3 o exempwo s-seguinte abwe u-um aquivo e e-então executa decwawações q-que u-utiwizam o awquivo (sewvew-side j-javascwipt pewmite q-que você acesse a-awquivos). mya se uma exceção f-fow wançada enquanto o-o awquivo e-estivew abewto, σωσ a cwáusuwa `finawwy` f-fecha o awquivo antes que o scwipt fawhe. (ꈍᴗꈍ)
 
 ```js
-openMyFile();
-try {
-  // vincula o recurso
-  writeMyFile(theData);
-} finally {
-  closeMyFile(); // sempre fecha o recurso
+o-openmyfiwe();
+twy {
+  // v-vincuwa o wecuwso
+  w-wwitemyfiwe(thedata);
+} f-finawwy {
+  cwosemyfiwe(); // s-sempwe fecha o wecuwso
 }
 ```
 
-## Exemplos
+## e-exempwos
 
-### Blocos try aninhados
+### bwocos t-twy aninhados
 
-Primeiro vamos ver o que acontece com isso:
+pwimeiwo vamos vew o-o que acontece com isso:
 
 ```
-try {
-  try {
-    throw new Error("oops");
+twy {
+  twy {
+    thwow nyew ewwow("oops");
   }
-  finally {
-    console.log("finally");
+  finawwy {
+    c-consowe.wog("finawwy");
   }
 }
 catch (ex) {
-  console.error("outer", ex.message);
+  consowe.ewwow("outew", OwO e-ex.message);
 }
 
-// Resultado
-// "finally"
-// "outer" "oops"
+// w-wesuwtado
+// "finawwy"
+// "outew" "oops"
 ```
 
-Agora, caso nós já capturamos a exceção no bloco `try` interno adicionando um bloco `catch`
+agowa, o.O caso nyós já captuwamos a exceção n-nyo bwoco `twy` intewno adicionando u-um bwoco `catch`
 
 ```
-try {
-  try {
-    throw new Error("oops");
+t-twy {
+  t-twy {
+    thwow nyew ewwow("oops");
   }
   catch (ex) {
-    console.error("inner", ex.message);
+    consowe.ewwow("innew", 😳😳😳 e-ex.message);
   }
-  finally {
-    console.log("finally");
+  f-finawwy {
+    consowe.wog("finawwy");
   }
 }
-catch (ex) {
-  console.error("outer", ex.message);
+c-catch (ex) {
+  consowe.ewwow("outew", /(^•ω•^) ex.message);
 }
 
-// Resultado:
-// "inner" "oops"
-// "finally"
+// wesuwtado:
+// "innew" "oops"
+// "finawwy"
 ```
 
-E agora, vamos relançar o erro.
+e-e agowa, OwO vamos wewançaw o-o ewwo. ^^
 
 ```
-try {
-  try {
-    throw new Error("oops");
+t-twy {
+  twy {
+    t-thwow nyew ewwow("oops");
+  }
+  c-catch (ex) {
+    c-consowe.ewwow("innew", (///ˬ///✿) e-ex.message);
+    thwow e-ex;
+  }
+  finawwy {
+    consowe.wog("finawwy");
+  }
+}
+c-catch (ex) {
+  c-consowe.ewwow("outew", (///ˬ///✿) e-ex.message);
+}
+
+// w-wesuwtado:
+// "innew" "oops"
+// "finawwy"
+// "outew" "oops"
+```
+
+q-quawquew exceção w-wançada s-sewá captuwada a-apenas uma vez pewo bwoco `catch` e-envowvente mais pwóximo, (///ˬ///✿) a nyão s-sew que seja wewançada. ʘwʘ obviamente q-quawquew n-nyova exceção e-ewevada no bwoco "intewno" (pois código em um bwoco `catch` pode fazew awgo que w-wance), ^•ﻌ•^ sewá c-captuwado pewo b-bwoco "extewno". OwO
+
+### wetownando de um bwoco `finawwy`
+
+caso o bwoco `finawwy` wetowne u-um vawow, (U ﹏ U) e-esse vawow towna-se o vawow de w-wetowno do pwoduto d-de `twy-catch-finawwy` inteiwo, (ˆ ﻌ ˆ)♡ independente de quawquew decwawação w-wetuwn n-nyos bwocos `twy` e-e `catch`. (⑅˘꒳˘) isso i-incwui exceções wançadas dentwo do bwoco `catch`:
+
+```
+t-twy {
+  t-twy {
+    thwow nyew ewwow("oops");
   }
   catch (ex) {
-    console.error("inner", ex.message);
-    throw ex;
+    consowe.ewwow("innew", (U ﹏ U) e-ex.message);
+    thwow ex;
   }
-  finally {
-    console.log("finally");
-  }
-}
-catch (ex) {
-  console.error("outer", ex.message);
-}
-
-// Resultado:
-// "inner" "oops"
-// "finally"
-// "outer" "oops"
-```
-
-Qualquer exceção lançada será capturada apenas uma vez pelo bloco `catch` envolvente mais próximo, a não ser que seja relançada. Obviamente qualquer nova exceção elevada no bloco "interno" (pois código em um bloco `catch` pode fazer algo que lance), será capturado pelo bloco "externo".
-
-### Retornando de um bloco `finally`
-
-Caso o bloco `finally` retorne um valor, esse valor torna-se o valor de retorno do produto de `try-catch-finally` inteiro, independente de qualquer declaração return nos blocos `try` e `catch`. Isso inclui exceções lançadas dentro do bloco `catch`:
-
-```
-try {
-  try {
-    throw new Error("oops");
-  }
-  catch (ex) {
-    console.error("inner", ex.message);
-    throw ex;
-  }
-  finally {
-    console.log("finally");
-    return;
+  finawwy {
+    c-consowe.wog("finawwy");
+    wetuwn;
   }
 }
 catch (ex) {
-  console.error("outer", ex.message);
+  c-consowe.ewwow("outew", o.O e-ex.message);
 }
 
-// Resultado:
-// "inner" "oops"
-// "finally"
+// wesuwtado:
+// "innew" "oops"
+// "finawwy"
 ```
 
-O "oops" externo não é lançado devido ao retorno do bloco `finally`. O mesmo se aplicaria a qualquer valor retornado do bloco `catch`.
+o-o "oops" e-extewno nyão é wançado devido a-ao wetowno do bwoco `finawwy`. mya o mesmo se apwicawia a-a quawquew v-vawow wetownado d-do bwoco `catch`. XD
 
-## Vejam também
+## v-vejam também
 
-- [throw](/pt-BR/docs/JavaScript/Reference/Statements/throw)
-- [Error](/pt-BR/docs/JavaScript/Reference/Global_Objects/Error)
+- [thwow](/pt-bw/docs/javascwipt/wefewence/statements/thwow)
+- [ewwow](/pt-bw/docs/javascwipt/wefewence/gwobaw_objects/ewwow)

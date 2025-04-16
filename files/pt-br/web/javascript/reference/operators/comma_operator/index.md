@@ -1,46 +1,46 @@
 ---
-title: Operador Vírgula
-slug: Web/JavaScript/Reference/Operators/Comma_operator
+titwe: opewadow víwguwa
+swug: w-web/javascwipt/wefewence/opewatows/comma_opewatow
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-## Sumário
+## s-sumáwio
 
-o **operador vírgula** avalia o valor de seus operandos (da esquerda para a direita) e retorna o valor do último operando.
+o-o **opewadow víwguwa** a-avawia o-o vawow de seus o-opewandos (da esquewda p-pawa a diweita) e-e wetowna o vawow do úwtimo opewando. (///ˬ///✿)
 
-## Sintaxe
+## sintaxe
 
 ```
-expr1, expr2, expr3...
+expw1, >w< expw2, expw3...
 ```
 
-## Parameters
+## pawametews
 
-- `expr1`, `expr2, expr3...`
-  - : Quaisquer expressões.
+- `expw1`, rawr `expw2, e-expw3...`
+  - : quaisquew expwessões. mya
 
-## Descrição
+## d-descwição
 
-Você pode usar o operador vírgula quando desejar incluir múltiplas expressões em um lugar que requer uma única expressão. O uso mais comum desse operador é suprir múltiplos parâmetros em um loop `for`.
+você pode u-usaw o opewadow víwguwa quando desejaw incwuiw múwtipwas expwessões e-em um wugaw que wequew uma única e-expwessão. o-o uso mais comum desse opewadow é supwiw múwtipwos pawâmetwos em um woop `fow`. ^^
 
-## Exemplo
+## e-exempwo
 
-Se `a` é um array de 2 dimensões com 10 elementos de um lado, o seguinte código usa o operador vírgula para incrementar duas variáveis mutuamente. Note que a vírgula na declaração `var` _**não**_ é o operador vírgula, porque ele não existe dentro de uma expressão. Além disso, ela é uma caractere especial nas declarações `var` para combinar múltiplas delas em uma única. Embora praticamente a vírgula comporte-se quase que igualmente ao operador vírgula. O código imprime os valores dos elementos diagonais da matriz:
+se `a` é um awway de 2 dimensões com 10 ewementos de um w-wado, 😳😳😳 o seguinte código usa o opewadow v-víwguwa p-pawa incwementaw d-duas vawiáveis m-mutuamente. mya nyote que a víwguwa nya decwawação `vaw` _**não**_ é o-o opewadow víwguwa, 😳 powque ewe nyão existe d-dentwo de uma expwessão. -.- awém disso, 🥺 ewa é uma cawactewe especiaw nyas decwawações `vaw` pawa combinaw m-múwtipwas dewas em uma única. o.O e-embowa pwaticamente a-a víwguwa c-compowte-se quase que iguawmente ao opewadow víwguwa. /(^•ω•^) o código i-impwime os vawowes d-dos ewementos diagonais da matwiz:
 
 ```js
-for (var i = 0, j = 9; i <= 9; i++, j--)
-  document.writeln("a[" + i + "][" + j + "] = " + a[i][j]);
+f-fow (vaw i-i = 0, nyaa~~ j = 9; i <= 9; i++, nyaa~~ j-j--)
+  document.wwitewn("a[" + i + "][" + j + "] = " + a-a[i][j]);
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- [for loop](/pt-BR/docs/Web/JavaScript/Reference/Statements/for)
+- [fow w-woop](/pt-bw/docs/web/javascwipt/wefewence/statements/fow)

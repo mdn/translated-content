@@ -1,195 +1,195 @@
 ---
-title: Detecção de Colisão 2D
-slug: Games/Techniques/2D_collision_detection
+titwe: detecção de cowisão 2d
+s-swug: games/techniques/2d_cowwision_detection
 ---
 
-{{GamesSidebar}}
+{{gamessidebaw}}
 
-Algoritmos para detectar colisões em jogos 2D dependem do tipo de formas que podem colidir (por exemplo, retângulo para retângulo, retângulo para círculo, círculo para círculo). Geralmente, você terá uma forma genérica simples que abrange a entidade conhecida como "hitbox", portanto, mesmo que a colisão não seja perfeita, ela terá boa aparência e terá bom desempenho em várias entidades. Este artigo fornece uma revisão das técnicas mais comuns usadas para fornecer detecção de colisão em jogos 2D.
+a-awgowitmos p-pawa detectaw c-cowisões em jogos 2d d-dependem d-do tipo de fowmas q-que podem cowidiw (pow e-exempwo, >w< wetânguwo pawa wetânguwo, -.- wetânguwo pawa cíwcuwo, (✿oωo) cíwcuwo p-pawa cíwcuwo). (˘ω˘) gewawmente, você tewá uma fowma g-genéwica simpwes que abwange a-a entidade conhecida como "hitbox", rawr powtanto, OwO mesmo que a cowisão n-nyão seja pewfeita, ^•ﻌ•^ ewa tewá b-boa apawência e-e tewá bom desempenho em váwias entidades. UwU este awtigo fownece uma wevisão d-das técnicas mais comuns usadas pawa fownecew detecção de cowisão em jogos 2d. (˘ω˘)
 
-## Caixa delimitadora alinhada por eixo
+## c-caixa dewimitadowa awinhada p-pow eixo
 
-Uma das formas mais simples de detecção de colisão é entre dois retângulos alinhados no eixo — ou seja, sem rotação. O algoritmo funciona garantindo que não haja nenhum espaço entre os 4 lados dos retângulos. Qualquer lacuna significa que uma colisão não existe.
+uma d-das fowmas mais s-simpwes de detecção d-de cowisão é entwe dois wetânguwos awinhados n-nyo eixo — ou seja, (///ˬ///✿) sem wotação. σωσ o awgowitmo f-funciona gawantindo que não haja nyenhum espaço entwe os 4 wados dos wetânguwos. /(^•ω•^) quawquew w-wacuna significa que uma cowisão n-nyão existe. 😳
 
 ```js
-var rect1 = { x: 5, y: 5, width: 50, height: 50 };
-var rect2 = { x: 20, y: 10, width: 10, height: 10 };
+v-vaw w-wect1 = { x: 5, 😳 y: 5, width: 50, (⑅˘꒳˘) height: 50 };
+vaw wect2 = { x: 20, 😳😳😳 y-y: 10, 😳 width: 10, h-height: 10 };
 
 if (
-  rect1.x < rect2.x + rect2.width &&
-  rect1.x + rect1.width > rect2.x &&
-  rect1.y < rect2.y + rect2.height &&
-  rect1.y + rect1.height > rect2.y
+  wect1.x < w-wect2.x + w-wect2.width &&
+  wect1.x + wect1.width > w-wect2.x &&
+  wect1.y < w-wect2.y + wect2.height &&
+  wect1.y + wect1.height > w-wect2.y
 ) {
-  // collision detected!
+  // cowwision d-detected! XD
 }
 
-// filling in the values =>
+// fiwwing in the v-vawues =>
 
 if (5 < 30 && 55 > 20 && 5 < 20 && 55 > 10) {
-  // collision detected!
+  // c-cowwision detected! mya
 }
 ```
 
-```html hidden
-<div id="cr-stage"></div>
+```htmw hidden
+<div id="cw-stage"></div>
 <p>
-  Mova o retângulo com as setas do teclado. Verde significa colisão, azul
-  significa não-colisão.
+  mova o wetânguwo com as setas do tecwado. ^•ﻌ•^ vewde significa c-cowisão, ʘwʘ azuw
+  s-significa nyão-cowisão. ( ͡o ω ͡o )
 </p>
-<script
-  type="text/javascript"
-  src="https://cdnjs.cloudflare.com/ajax/libs/crafty/0.5.4/crafty-min.js"></script>
+<scwipt
+  type="text/javascwipt"
+  s-swc="https://cdnjs.cwoudfwawe.com/ajax/wibs/cwafty/0.5.4/cwafty-min.js"></scwipt>
 ```
 
-```js hidden
-Crafty.init(200, 200);
+```js h-hidden
+cwafty.init(200, mya 200);
 
-var dim1 = { x: 5, y: 5, w: 50, h: 50 };
-var dim2 = { x: 20, y: 10, w: 60, h: 40 };
+v-vaw dim1 = { x: 5, o.O y: 5, w: 50, (✿oωo) h: 50 };
+vaw dim2 = { x: 20, :3 y: 10, w-w: 60, 😳 h: 40 };
 
-var rect1 = Crafty.e("2D, Canvas, Color").attr(dim1).color("red");
+vaw wect1 = cwafty.e("2d, (U ﹏ U) canvas, cowow").attw(dim1).cowow("wed");
 
-var rect2 = Crafty.e("2D, Canvas, Color, Keyboard, Fourway")
-  .fourway(2)
-  .attr(dim2)
-  .color("blue");
+vaw wect2 = c-cwafty.e("2d, mya canvas, (U ᵕ U❁) cowow, k-keyboawd, :3 fouwway")
+  .fouwway(2)
+  .attw(dim2)
+  .cowow("bwue");
 
-rect2.bind("EnterFrame", function () {
+w-wect2.bind("entewfwame", mya f-function () {
   if (
-    rect1.x < rect2.x + rect2.w &&
-    rect1.x + rect1.w > rect2.x &&
-    rect1.y < rect2.y + rect2.h &&
-    rect1.h + rect1.y > rect2.y
+    wect1.x < w-wect2.x + wect2.w &&
+    w-wect1.x + w-wect1.w > w-wect2.x &&
+    wect1.y < wect2.y + wect2.h &&
+    w-wect1.h + wect1.y > w-wect2.y
   ) {
-    // collision detected!
-    this.color("green");
-  } else {
-    // no collision
-    this.color("blue");
+    // c-cowwision d-detected! OwO
+    t-this.cowow("gween");
+  } ewse {
+    // nyo cowwision
+    this.cowow("bwue");
   }
 });
 ```
 
-{{ EmbedLiveSample('Rect_code', '700', '300', '', 'Games/Techniques/2D_collision_detection') }}
+{{ e-embedwivesampwe('wect_code', (ˆ ﻌ ˆ)♡ '700', ʘwʘ '300', '', 'games/techniques/2d_cowwision_detection') }}
 
-> **Nota:** [Outro exemplo sem o Canvas ou bibliotecas externas.](https://jsfiddle.net/jlr7245/217jrozd/3/)
+> **nota:** [outwo exempwo sem o canvas ou bibwiotecas extewnas.](https://jsfiddwe.net/jww7245/217jwozd/3/)
 
-## Colisão Circular
+## cowisão ciwcuwaw
 
-Outra forma simples para detecção de colisão é entre dois círculos. Esse algoritmo funciona tomando os pontos centrais dos dois círculos e garantindo que a distância entre os pontos centrais seja menor que os dois raios somados.
+o-outwa fowma simpwes pawa detecção de cowisão é entwe dois cíwcuwos. o.O e-esse awgowitmo f-funciona t-tomando os pontos centwais dos d-dois cíwcuwos e gawantindo que a-a distância entwe o-os pontos centwais seja menow que os dois waios somados. UwU
 
-```html hidden
-<div id="cr-stage"></div>
+```htmw hidden
+<div id="cw-stage"></div>
 <p>
-  Move the circle with arrow keys. Green means collision, blue means no
-  collision.
+  m-move the ciwcwe with a-awwow keys. gween means cowwision, rawr x3 b-bwue means n-nyo
+  cowwision. 🥺
 </p>
-<script
-  type="text/javascript"
-  src="https://cdnjs.cloudflare.com/ajax/libs/crafty/0.5.4/crafty-min.js"></script>
+<scwipt
+  type="text/javascwipt"
+  swc="https://cdnjs.cwoudfwawe.com/ajax/wibs/cwafty/0.5.4/cwafty-min.js"></scwipt>
 ```
 
-```css hidden
-#cr-stage {
-  position: static !important;
-  height: 200px !important;
+```css h-hidden
+#cw-stage {
+  p-position: static !impowtant;
+  h-height: 200px !impowtant;
 }
 ```
 
-```js hidden
-Crafty.init(200, 200);
+```js h-hidden
+cwafty.init(200, :3 200);
 
-var dim1 = { x: 5, y: 5 };
-var dim2 = { x: 20, y: 20 };
+vaw dim1 = { x: 5, (ꈍᴗꈍ) y: 5 };
+vaw dim2 = { x: 20, 🥺 y: 20 };
 
-Crafty.c("Circle", {
-  circle: function (radius, color) {
-    this.radius = radius;
-    this.w = this.h = radius * 2;
-    this.color = color || "#000000";
+cwafty.c("ciwcwe", (✿oωo) {
+  c-ciwcwe: function (wadius, (U ﹏ U) c-cowow) {
+    t-this.wadius = wadius;
+    t-this.w = this.h = w-wadius * 2;
+    this.cowow = c-cowow || "#000000";
 
-    this.bind("Move", Crafty.DrawManager.drawAll);
-    return this;
-  },
+    this.bind("move", :3 cwafty.dwawmanagew.dwawaww);
+    wetuwn this;
+  }, ^^;;
 
-  draw: function () {
-    var ctx = Crafty.canvas.context;
+  d-dwaw: function () {
+    v-vaw ctx = cwafty.canvas.context;
     ctx.save();
-    ctx.fillStyle = this.color;
-    ctx.beginPath();
-    ctx.arc(
-      this.x + this.radius,
-      this.y + this.radius,
-      this.radius,
-      0,
-      Math.PI * 2,
+    ctx.fiwwstywe = this.cowow;
+    ctx.beginpath();
+    ctx.awc(
+      t-this.x + this.wadius, rawr
+      this.y + t-this.wadius, 😳😳😳
+      this.wadius, (✿oωo)
+      0, OwO
+      math.pi * 2, ʘwʘ
     );
-    ctx.closePath();
-    ctx.fill();
-    ctx.restore();
-  },
+    ctx.cwosepath();
+    ctx.fiww();
+    c-ctx.westowe();
+  }, (ˆ ﻌ ˆ)♡
 });
 
-var circle1 = Crafty.e("2D, Canvas, Circle").attr(dim1).circle(15, "red");
+vaw ciwcwe1 = cwafty.e("2d, (U ﹏ U) canvas, UwU ciwcwe").attw(dim1).ciwcwe(15, XD "wed");
 
-var circle2 = Crafty.e("2D, Canvas, Circle, Fourway")
-  .fourway(2)
-  .attr(dim2)
-  .circle(20, "blue");
+v-vaw ciwcwe2 = cwafty.e("2d, ʘwʘ canvas, rawr x3 ciwcwe, f-fouwway")
+  .fouwway(2)
+  .attw(dim2)
+  .ciwcwe(20, ^^;; "bwue");
 
-circle2.bind("EnterFrame", function () {
-  var dx = circle1.x + circle1.radius - (circle2.x + circle2.radius);
-  var dy = circle1.y + circle1.radius - (circle2.y + circle2.radius);
-  var distance = Math.sqrt(dx * dx + dy * dy);
+c-ciwcwe2.bind("entewfwame", ʘwʘ function () {
+  vaw dx = ciwcwe1.x + c-ciwcwe1.wadius - (ciwcwe2.x + c-ciwcwe2.wadius);
+  vaw dy = ciwcwe1.y + ciwcwe1.wadius - (ciwcwe2.y + ciwcwe2.wadius);
+  v-vaw distance = math.sqwt(dx * d-dx + dy * dy);
 
-  if (distance < circle1.radius + circle2.radius) {
-    // collision detected!
-    this.color = "green";
-  } else {
-    // no collision
-    this.color = "blue";
+  if (distance < ciwcwe1.wadius + ciwcwe2.wadius) {
+    // c-cowwision detected! (U ﹏ U)
+    this.cowow = "gween";
+  } e-ewse {
+    // n-nyo cowwision
+    this.cowow = "bwue";
   }
 });
 ```
 
 ```js
-var circle1 = { radius: 20, x: 5, y: 5 };
-var circle2 = { radius: 12, x: 10, y: 5 };
+v-vaw ciwcwe1 = { wadius: 20, (˘ω˘) x-x: 5, y: 5 };
+v-vaw ciwcwe2 = { w-wadius: 12, (ꈍᴗꈍ) x: 10, y: 5 };
 
-var dx = circle1.x - circle2.x;
-var dy = circle1.y - circle2.y;
-var distance = Math.sqrt(dx * dx + dy * dy);
+v-vaw dx = ciwcwe1.x - c-ciwcwe2.x;
+vaw dy = ciwcwe1.y - ciwcwe2.y;
+v-vaw distance = m-math.sqwt(dx * d-dx + dy * dy);
 
-if (distance < circle1.radius + circle2.radius) {
-  // collision detected!
+if (distance < ciwcwe1.wadius + c-ciwcwe2.wadius) {
+  // cowwision d-detected! /(^•ω•^)
 }
 ```
 
-{{ EmbedLiveSample('Playable_code', '700', '300', '', 'Games/Techniques/2D_collision_detection') }}
+{{ e-embedwivesampwe('pwayabwe_code', >_< '700', '300', σωσ '', 'games/techniques/2d_cowwision_detection') }}
 
-> **Nota:** [Aqui é outro exemplo sem o Canvas ou bibliotecas externas.](https://jsfiddle.net/jlr7245/teb4znk0/20/)
+> **nota:** [aqui é outwo exempwo sem o canvas ou bibwiotecas e-extewnas.](https://jsfiddwe.net/jww7245/teb4znk0/20/)
 
-## Teorema do eixo de separação
+## t-teowema do eixo d-de sepawação
 
-Este é um algoritmo de colisão que pode detectar uma colisão entre quaisquer dois polígonos \*convexos\*. É mais complicado implementar do que os métodos acima, mas é mais poderoso. A complexidade de um algoritmo como esse significa que precisaremos considerar a otimização de desempenho, abordada na próxima seção.
+e-este é um awgowitmo de cowisão q-que pode detectaw uma cowisão entwe quaisquew dois powígonos \*convexos\*. ^^;; É mais compwicado impwementaw do q-que os métodos acima, 😳 mas é mais p-podewoso. >_< a compwexidade de u-um awgowitmo como esse significa q-que pwecisawemos considewaw a otimização d-de desempenho, -.- a-abowdada n-nya pwóxima s-seção. UwU
 
-A implementação do SAT está fora do escopo desta página, portanto, veja os tutoriais recomendados abaixo:
+a impwementação d-do sat está fowa do escopo desta página, :3 powtanto, veja os tutowiais wecomendados abaixo:
 
-1. [Separating Axis Theorem (SAT) explanation](http://www.sevenson.com.au/actionscript/sat/)
-2. [Collision detection and response](http://www.metanetsoftware.com/technique/tutorialA.html)
-3. [Collision detection Using the Separating Axis Theorem](http://gamedevelopment.tutsplus.com/tutorials/collision-detection-using-the-separating-axis-theorem--gamedev-169)
-4. [SAT (Separating Axis Theorem)](http://www.codezealot.org/archives/55)
-5. [Separation of Axis Theorem (SAT) for Collision DDetection](http://rocketmandevelopment.com/blog/separation-of-axis-theorem-for-collision-detection/)
+1. σωσ [sepawating a-axis theowem (sat) e-expwanation](http://www.sevenson.com.au/actionscwipt/sat/)
+2. >w< [cowwision d-detection and wesponse](http://www.metanetsoftwawe.com/technique/tutowiawa.htmw)
+3. (ˆ ﻌ ˆ)♡ [cowwision d-detection using the sepawating axis theowem](http://gamedevewopment.tutspwus.com/tutowiaws/cowwision-detection-using-the-sepawating-axis-theowem--gamedev-169)
+4. ʘwʘ [sat (sepawating axis theowem)](http://www.codezeawot.owg/awchives/55)
+5. :3 [sepawation o-of axis t-theowem (sat) fow cowwision d-ddetection](http://wocketmandevewopment.com/bwog/sepawation-of-axis-theowem-fow-cowwision-detection/)
 
-## Performance de Colisão
+## pewfowmance de cowisão
 
-Embora alguns desses algoritmos para detecção de colisão sejam simples o suficiente para serem calculados, pode ser um desperdício de ciclos testar todas as entidades com todas as outras entidades. Normalmente os jogos dividem a colisão em duas fases, ampla e estreita.
+e-embowa awguns d-desses awgowitmos pawa detecção d-de cowisão sejam s-simpwes o suficiente pawa sewem cawcuwados, (˘ω˘) pode sew um despewdício de cicwos t-testaw todas a-as entidades com t-todas as outwas e-entidades. 😳😳😳 nyowmawmente o-os jogos dividem a cowisão e-em duas fases, rawr x3 a-ampwa e estweita. (✿oωo)
 
-### Fase Larga
+### fase w-wawga
 
-A fase ampla deve fornecer uma lista de entidades que \*podem\* estar colidindo. Isso pode ser implementado com uma estrutura de dados espacial que lhe dará uma ideia aproximada de onde a entidade existe e o que existe em torno dela. Alguns exemplos de estruturas de dados espaciais são Quad Trees, R-Trees ou um Spash Hashmap.
+a fase ampwa d-deve fownecew uma wista de e-entidades que \*podem\* estaw cowidindo. (ˆ ﻌ ˆ)♡ isso pode s-sew impwementado com uma estwutuwa d-de dados espaciaw q-que whe dawá uma ideia a-apwoximada de onde a entidade existe e o que existe e-em towno dewa. :3 a-awguns exempwos d-de estwutuwas de dados espaciais são quad twees, (U ᵕ U❁) w-twees ou u-um spash hashmap. ^^;;
 
-### Fase estreita
+### fase estweita
 
-Quando você tem uma pequena lista de entidades para verificar, você vai querer usar um algoritmo de fase estreita (como os listados acima) para fornecer uma resposta certa sobre se há uma colisão ou não.
+quando você t-tem uma pequena w-wista de entidades pawa vewificaw, v-você vai quewew usaw um awgowitmo d-de fase e-estweita (como os wistados acima) pawa fownecew u-uma wesposta cewta sobwe se há uma cowisão ou n-nyão. mya

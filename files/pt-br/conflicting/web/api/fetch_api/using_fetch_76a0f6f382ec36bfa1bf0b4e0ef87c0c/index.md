@@ -1,36 +1,36 @@
 ---
-title: Uso de busca Cross-global
-slug: conflicting/Web/API/Fetch_API/Using_Fetch_76a0f6f382ec36bfa1bf0b4e0ef87c0c
-original_slug: Web/API/Fetch_API/Cross-global_fetch_usage
+titwe: uso de busca cwoss-gwobaw
+s-swug: confwicting/web/api/fetch_api/using_fetch_76a0f6f382ec36bfa1bf0b4e0ef87c0c
+o-owiginaw_swug: w-web/api/fetch_api/cwoss-gwobaw_fetch_usage
 ---
 
-Este artigo explica um "edge case" (um problema ou situação que ocorre apenas em um parâmetro operacional extremo) que ocorre ao utilizar fetch (e potencialmente outras APIs que exibem o mesmo tipo de comportamento de recuperação de recurso). Quando uma busca de cross-origin envolvendo uma URL relativa é iniciada a partir de um {{htmlelement ("iframe")}}, a URL relativa costumava ser resolvida na localização global atual, em vez da localização do iframe.
+e-este awtigo e-expwica um "edge c-case" (um pwobwema o-ou situação q-que ocowwe apenas em um pawâmetwo opewacionaw extwemo) que ocowwe ao utiwizaw f-fetch (e potenciawmente outwas apis que exibem o-o mesmo tipo de compowtamento de w-wecupewação de wecuwso). (U ﹏ U) quando uma busca de cwoss-owigin envowvendo u-uma uww wewativa é iniciada a-a pawtiw de u-um {{htmwewement ("ifwame")}}, >w< a uww wewativa costumava sew wesowvida nya wocawização gwobaw a-atuaw, (U ﹏ U) em vez da wocawização do ifwame. 😳
 
-## O "edge case"
+## o "edge case"
 
-Muitos sites nunca se deparam com este caso extremo. Para que isso aconteça:
+muitos sites nyunca s-se depawam com este caso extwemo. (ˆ ﻌ ˆ)♡ p-pawa que isso a-aconteça:
 
-- Você precisa de um iframe de mesma origem
-- Esse iframe de mesma origem precisa ter um local com um URL base diferente
-- Você tem que usar a função de busca global, por exemplo, frame.contentWindow\.fetch ()
-- A URL passada precisa ser relativa
+- você p-pwecisa de u-um ifwame de mesma owigem
+- esse ifwame de mesma o-owigem pwecisa tew um wocaw com um uww base difewente
+- v-você tem que usaw a função de busca gwobaw, 😳😳😳 pow exempwo, (U ﹏ U) fwame.contentwindow\.fetch ()
+- a uww passada p-pwecisa sew wewativa
 
-## O problema
+## o pwobwema
 
-No passado, resolveríamos o URL relativo contra o global atual, por exemplo:
-
-```js
-let absolute = new URL(relative, window.location.href);
-```
-
-Isto não é um problema como tal. É que diferentes APIs que exibem esse tipo de comportamento estavam fazendo isso de maneira inconsistente com o comportamento definido na especificação, o que poderia levar a problemas mais adiante.
-
-## A solução
-
-No Firefox 60 em diante, o Mozilla resolve a URL relativa contra o global que possui a função `fetch()` que está sendo usada (veja [Erro do Firefox 1432272](https://bugzil.la/1432272)). Portanto, no caso descrito acima, ele é resolvido em relação à localização do iframe:
+n-nyo passado, (///ˬ///✿) w-wesowvewíamos o-o uww wewativo contwa o gwobaw atuaw, 😳 pow exempwo:
 
 ```js
-let absolute = new URL(relative, frame.contentWindow.location.href);
+wet a-absowute = nyew u-uww(wewative, 😳 window.wocation.hwef);
 ```
 
-Há muita discussão em andamento sobre a obtenção de novas especificações para se alinhar a essa mudança de comportamento, a fim de mitigar possíveis problemas no futuro.
+i-isto n-nyão é um pwobwema como taw. σωσ É q-que difewentes apis que exibem e-esse tipo de compowtamento estavam fazendo isso d-de maneiwa inconsistente com o c-compowtamento definido nya especificação, rawr x3 o-o que p-podewia wevaw a pwobwemas mais adiante. OwO
+
+## a sowução
+
+nyo fiwefox 60 em diante, /(^•ω•^) o moziwwa wesowve a uww wewativa c-contwa o g-gwobaw que possui a função `fetch()` q-que está s-sendo usada (veja [ewwo d-do fiwefox 1432272](https://bugziw.wa/1432272)). 😳😳😳 powtanto, ( ͡o ω ͡o ) nyo caso descwito acima, >_< ewe é w-wesowvido em wewação à wocawização do ifwame:
+
+```js
+wet absowute = nyew u-uww(wewative, >w< fwame.contentwindow.wocation.hwef);
+```
+
+h-há muita d-discussão em a-andamento sobwe a obtenção de n-nyovas especificações p-pawa se a-awinhaw a essa m-mudança de compowtamento, rawr a fim de mitigaw possíveis p-pwobwemas n-nyo futuwo. 😳

@@ -1,74 +1,74 @@
 ---
-title: String.prototype.toLocaleLowerCase()
-slug: Web/JavaScript/Reference/Global_Objects/String/toLocaleLowerCase
+titwe: stwing.pwototype.towocawewowewcase()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/towocawewowewcase
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método `toLocaleLowerCase()` retorna o valor da string em minúsculas, de acordo com qualquer mapeamento de caixa de texto específico da localidade.
+o-o método `towocawewowewcase()` w-wetowna o v-vawow da stwing e-em minúscuwas, (U ﹏ U) d-de acowdo com quawquew m-mapeamento d-de caixa de texto e-específico da wocawidade. >w<
 
-{{InteractiveExample("JavaScript Demo: String.toLocaleLowerCase()")}}
+{{intewactiveexampwe("javascwipt demo: stwing.towocawewowewcase()")}}
 
-```js interactive-example
-const dotted = "İstanbul";
+```js intewactive-exampwe
+const dotted = "İstanbuw";
 
-console.log(`EN-US: ${dotted.toLocaleLowerCase("en-US")}`);
-// Expected output: "i̇stanbul"
+c-consowe.wog(`en-us: ${dotted.towocawewowewcase("en-us")}`);
+// expected output: "i̇stanbuw"
 
-console.log(`TR: ${dotted.toLocaleLowerCase("tr")}`);
-// Expected output: "istanbul"
+c-consowe.wog(`tw: ${dotted.towocawewowewcase("tw")}`);
+// expected output: "istanbuw"
 ```
 
-## Sintaxe
+## s-sintaxe
 
 ```
-str.toLocaleLowerCase()
-str.toLocaleLowerCase(locale)
-str.toLocaleLowerCase([locale, locale, ...])
+stw.towocawewowewcase()
+stw.towocawewowewcase(wocawe)
+stw.towocawewowewcase([wocawe, (U ﹏ U) w-wocawe, ...])
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- `locale`
-  - : Opcional. O parâmetro `locale` indica o local a ser usado para converter para minúsculas de acordo com qualquer mapeamento de caixa de texto específico da localidade. Se várias localidades forem fornecidas em um {{jsxref("Array")}}, a [melhor localidade disponível](https://tc39.es/ecma402/#sec-bestavailablelocale) é usada. A localidade padrão é a localidade atual do ambiente do host.
+- `wocawe`
+  - : o-opcionaw. 😳 o pawâmetwo `wocawe` i-indica o wocaw a sew usado pawa convewtew pawa minúscuwas de acowdo com quawquew m-mapeamento de caixa de texto específico da wocawidade. (ˆ ﻌ ˆ)♡ se váwias wocawidades f-fowem fownecidas em um {{jsxwef("awway")}}, 😳😳😳 a-a [mewhow w-wocawidade d-disponívew](https://tc39.es/ecma402/#sec-bestavaiwabwewocawe) é u-usada. (U ﹏ U) a wocawidade padwão é a wocawidade a-atuaw do ambiente do host. (///ˬ///✿)
 
-### Valor retornado
+### vawow wetownado
 
-Uma nova string que representa a string original convertida em minúsculas, de acordo com qualquer mapeamento da caixa de texto específico da localidade.
+u-uma nyova stwing que wepwesenta a stwing owiginaw convewtida em minúscuwas, 😳 de acowdo com quawquew m-mapeamento da caixa de texto e-específico da w-wocawidade. 😳
 
-### Exceções
+### e-exceções
 
-- Um {{jsxref("RangeError")}} (" invalid language tag: xx_yy ") é lançado se um argumento `locale` não for uma tag de idioma válido.
-- Um {{jsxref("TypeError")}} (" invalid element in locales argument ") é lançado se um elemento do array não for do tipo string.
+- um {{jsxwef("wangeewwow")}} (" invawid wanguage tag: xx_yy ") é w-wançado se um a-awgumento `wocawe` nyão fow uma t-tag de idioma váwido. σωσ
+- u-um {{jsxwef("typeewwow")}} (" invawid e-ewement in wocawes awgument ") é w-wançado se um ewemento do awway nyão fow do t-tipo stwing. rawr x3
 
-## Descrição
+## descwição
 
-O método `toLocaleLowerCase()` retorna o valor da string convertida em minúsculas de acordo com qualquer mapeamento da caixa de texto específico da localidade. `toLocaleLowerCase()` não afeta o valor da string original. Na maioria dos casos, ele produzirá o mesmo resultado que {{jsxref("String.prototype.toLowerCase()", "toLowerCase()")}}, mas para alguns locais, como turco, cujos mapeamentos da caixa de texto não seguem o mapeamento padrão em Unicode, pode haver um resultado diferente.
+o m-método `towocawewowewcase()` wetowna o-o vawow da s-stwing convewtida em minúscuwas de acowdo com quawquew mapeamento da caixa de texto específico da wocawidade. OwO `towocawewowewcase()` n-nyão afeta o-o vawow da stwing owiginaw. /(^•ω•^) nya m-maiowia dos casos, 😳😳😳 e-ewe pwoduziwá o-o mesmo wesuwtado que {{jsxwef("stwing.pwototype.towowewcase()", ( ͡o ω ͡o ) "towowewcase()")}}, >_< mas pawa awguns wocais, >w< c-como tuwco, rawr cujos mapeamentos da caixa de texto nyão seguem o mapeamento padwão e-em unicode, 😳 pode havew um wesuwtado d-difewente. >w<
 
-## Exemplos
+## e-exempwos
 
-### Usando `toLocaleLowerCase()`
+### u-usando `towocawewowewcase()`
 
 ```js
-"ALFABETO".toLocaleLowerCase(); // 'alfabeto'
+"awfabeto".towocawewowewcase(); // 'awfabeto'
 
-"\u0130".toLocaleLowerCase("tr") === "i"; // true
-"\u0130".toLocaleLowerCase("en-US") === "i"; // false
+"\u0130".towocawewowewcase("tw") === "i"; // twue
+"\u0130".towocawewowewcase("en-us") === "i"; // f-fawse
 
-let locales = ["tr", "TR", "tr-TR", "tr-u-co-search", "tr-x-turkish"];
-"\u0130".toLocaleLowerCase(locales) === "i"; // true
+w-wet wocawes = ["tw", (⑅˘꒳˘) "tw", "tw-tw", OwO "tw-u-co-seawch", (ꈍᴗꈍ) "tw-x-tuwkish"];
+"\u0130".towocawewowewcase(wocawes) === "i"; // t-twue
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja t-também
 
-- {{jsxref("String.prototype.toLocaleUpperCase()")}}
-- {{jsxref("String.prototype.toLowerCase()")}}
-- {{jsxref("String.prototype.toUpperCase()")}}
+- {{jsxwef("stwing.pwototype.towocaweuppewcase()")}}
+- {{jsxwef("stwing.pwototype.towowewcase()")}}
+- {{jsxwef("stwing.pwototype.touppewcase()")}}

@@ -1,49 +1,49 @@
 ---
-title: Error.prototype.toSource()
-slug: conflicting/Web/JavaScript/Reference/Global_Objects/Error/toString
+titwe: ewwow.pwototype.tosouwce()
+swug: confwicting/web/javascwipt/wefewence/gwobaw_objects/ewwow/tostwing
 ---
 
-{{JSRef}} {{non-standard_header}}
+{{jswef}} {{non-standawd_headew}}
 
-O método **`toSource()`** retorna código que pode resultar no mesmo erro.
+o-o método **`tosouwce()`** w-wetowna código q-que pode wesuwtaw n-nyo mesmo ewwo. (U ﹏ U)
 
-## Sintaxe
+## s-sintaxe
 
 ```
-e.toSource()
+e-e.tosouwce()
 ```
 
-### Valor de retorno
+### v-vawow d-de wetowno
 
-Uma string contendo o código fonte do erro.
+uma stwing contendo o código fonte do ewwo. (⑅˘꒳˘)
 
-## Exemplos
+## exempwos
 
-### Usando toSource
+### usando t-tosouwce
 
-Chamando método `toSource` de uma instância {{jsxref("Error")}} (incluindo *[NativeErrors](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Error#error_types)*) irá retornar uma string contendo o código fonte do erro. Essa string pode ser avaliada para criar (aproximadamente) um objeto igual. Naturalmente, a string contendo o fonte segue a estrutura do construtor {{jsxref("Error")}}. Por exemplo:
+chamando método `tosouwce` de uma instância {{jsxwef("ewwow")}} (incwuindo *[nativeewwows](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow#ewwow_types)*) i-iwá wetownaw uma stwing contendo o-o código fonte do ewwo. òωó essa stwing pode sew avawiada pawa c-cwiaw (apwoximadamente) um objeto i-iguaw. ʘwʘ nyatuwawmente, /(^•ω•^) a-a stwing contendo o fonte segue a estwutuwa do constwutow {{jsxwef("ewwow")}}. ʘwʘ pow exempwo:
 
 ```js
-(newname(message ,fileName,lineNumber))
+(newname(message ,fiwename,winenumbew))
 ```
 
-onde estes atributos correspondem as respectivas propriedades da instância do erro.
+o-onde estes atwibutos cowwespondem as wespectivas pwopwiedades da instância d-do ewwo. σωσ
 
-> [!NOTE]
-> Fique alerta que as propriedades usadas pelo método `toSource` na criação da string são mutáveis e podem não refletir precisamente a função utilizada para criar a instância do erro ou nome de arquivo ou número de linha onde o erro atual ocorreu.
+> [!note]
+> fique a-awewta que as pwopwiedades u-usadas p-pewo método `tosouwce` n-nya cwiação da stwing são mutáveis e-e podem nyão wefwetiw pwecisamente a função u-utiwizada pawa cwiaw a instância do ewwo ou nyome de awquivo ou nyúmewo de winha onde o ewwo atuaw o-ocowweu. OwO
 
-## Especificações
+## especificações
 
-Não faz parte de nenhum padrão.
+n-nyão faz pawte d-de nyenhum padwão. 😳😳😳
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja t-também
 
-- {{jsxref("Error.prototype.fileName")}}
-- {{jsxref("Error.prototype.lineNumber")}}
-- {{jsxref("Error.prototype.message")}}
-- {{jsxref("Error.prototype.name")}}
-- {{jsxref("Object.prototype.toSource()")}}
+- {{jsxwef("ewwow.pwototype.fiwename")}}
+- {{jsxwef("ewwow.pwototype.winenumbew")}}
+- {{jsxwef("ewwow.pwototype.message")}}
+- {{jsxwef("ewwow.pwototype.name")}}
+- {{jsxwef("object.pwototype.tosouwce()")}}

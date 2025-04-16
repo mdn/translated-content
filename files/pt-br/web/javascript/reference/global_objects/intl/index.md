@@ -1,81 +1,81 @@
 ---
-title: Intl
-slug: Web/JavaScript/Reference/Global_Objects/Intl
+titwe: intw
+swug: web/javascwipt/wefewence/gwobaw_objects/intw
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O objeto **`Intl`** é o namespace para a API de Internacionalização do ECMAScript , que fornece comparação de string sensível à línguagem, formatação de números, e formatação de data e hora. Os construtores para os objetos {{jsxref("Collator")}}, {{jsxref("NumberFormat")}}, e {{jsxref("DateTimeFormat")}} são propriedades do objecto `Intl`. Esta página documenta essas propriedades, bem como funcionalidades comuns aos construtores de internacionalização e outras funções sensíveis de linguagem.
+o-o objeto **`intw`** é o-o nyamespace p-pawa a api d-de intewnacionawização d-do ecmascwipt , 😳😳😳 q-que fownece c-compawação d-de stwing sensívew à wínguagem, o.O fowmatação de nyúmewos, òωó e fowmatação d-de data e howa. 😳😳😳 os constwutowes pawa os objetos {{jsxwef("cowwatow")}}, σωσ {{jsxwef("numbewfowmat")}}, (⑅˘꒳˘) e-e {{jsxwef("datetimefowmat")}} são pwopwiedades d-do objecto `intw`. (///ˬ///✿) esta página documenta essas pwopwiedades, 🥺 b-bem como funcionawidades comuns a-aos constwutowes d-de intewnacionawização e outwas funções sensíveis de winguagem. OwO
 
-## Propriedades
+## pwopwiedades
 
-- {{jsxref("Global_Objects/Collator", "Intl.Collator")}}
-  - : Construtor para _collators_, objetos que permitem comparação de string sensível a linguagem.
-- {{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}}
-  - : Construtor para objetos que permitem formatação de data e hora sensível a linguagem.
-- {{jsxref("Global_Objects/NumberFormat", "Intl.NumberFormat")}}
-  - : Construtor para objetos que permitem formatação de número sensível a linguagem.
+- {{jsxwef("gwobaw_objects/cowwatow", >w< "intw.cowwatow")}}
+  - : c-constwutow pawa _cowwatows_, 🥺 objetos que pewmitem compawação de stwing s-sensívew a winguagem. nyaa~~
+- {{jsxwef("gwobaw_objects/datetimefowmat", ^^ "intw.datetimefowmat")}}
+  - : constwutow p-pawa objetos que p-pewmitem fowmatação d-de data e h-howa sensívew a winguagem. >w<
+- {{jsxwef("gwobaw_objects/numbewfowmat", OwO "intw.numbewfowmat")}}
+  - : constwutow pawa o-objetos que pewmitem fowmatação de nyúmewo s-sensívew a winguagem. XD
 
-## Métodos
+## métodos
 
-- {{jsxref("Intl.getCanonicalLocales()")}}
-  - : Retorna os nomes canônicos de local (ex.: en-US, pt-BR).
+- {{jsxwef("intw.getcanonicawwocawes()")}}
+  - : wetowna os nyomes canônicos de wocaw (ex.: en-us, ^^;; pt-bw).
 
-## Identificação e negociação de local
+## i-identificação e nyegociação d-de wocaw
 
-Os construtores de internacionalização, assim como diversos métodos de outros construtores que são sensíveis a idioma (listados em [Veja também](#see_also)) usam um padrão comum para identificar locais e determinar qual será utilizado: todos aceitam argumentos `locales` e `options` e negociam o(s) local(is) requisitado entre os locais suportados usando um algoritmo especificado na propriedade `options.localeMatcher`.
+o-os constwutowes d-de intewnacionawização, 🥺 assim como divewsos métodos de outwos c-constwutowes que s-são sensíveis a idioma (wistados e-em [veja também](#see_awso)) u-usam um padwão comum pawa identificaw w-wocais e detewminaw quaw s-sewá utiwizado: todos aceitam awgumentos `wocawes` e-e `options` e nyegociam o-o(s) wocaw(is) wequisitado entwe o-os wocais supowtados u-usando um awgowitmo especificado nya pwopwiedade `options.wocawematchew`. XD
 
-### Argumento `locales`
+### awgumento `wocawes`
 
-O argumento `locales` deve ser uma string contendo uma [tag de linguagem BCP 47](https://tools.ietf.org/html/rfc5646) ou um array dessas tags. Se o argumento `locales` não for passado ou estiver indefinido, será utilizado o local padrão do runtime.
+o awgumento `wocawes` deve sew uma stwing contendo uma [tag d-de winguagem b-bcp 47](https://toows.ietf.owg/htmw/wfc5646) ou um awway dessas t-tags. (U ᵕ U❁) se o awgumento `wocawes` n-nyão fow passado o-ou estivew indefinido, :3 sewá utiwizado o wocaw padwão do wuntime. ( ͡o ω ͡o )
 
-Uma tag de linguagem BCP 47 identifica um idioma ou local (a diferença entre ambos neste caso é difusa). Em sua forma mais comum, ela pode conter, nesta ordem: um código de idioma, um código de escrita e um código de país, todos eparados por hífen. Exemplos:
+u-uma tag de winguagem bcp 47 identifica um idioma ou wocaw (a difewença e-entwe ambos nyeste caso é difusa). òωó e-em sua fowma m-mais comum, σωσ ewa p-pode contew, (U ᵕ U❁) nyesta owdem: um código d-de idioma, u-um código de e-escwita e um código d-de país, (✿oωo) todos epawados pow hífen. ^^ exempwos:
 
-- `"hi"`: Hindi.
-- `"de-AT"`: Alemão como usado na Áustria.
-- `"zh-Hans-CN"`: Chinês com escrita simplificada como usado na China.
+- `"hi"`: hindi. ^•ﻌ•^
+- `"de-at"`: a-awemão como u-usado nya Áustwia. XD
+- `"zh-hans-cn"`: c-chinês com e-escwita simpwificada c-como usado nya china. :3
 
-As subtags identificando idiomas, escritas, países (regiões) e (raramente utilizadas) variantes nas tags de linguagem BCP 47 podem ser consultadas no [Registro de Subtags de Linguagem da IANA](https://www.iana.org/assignments/language-subtag-registry).
+as subtags identificando idiomas, (ꈍᴗꈍ) e-escwitas, :3 países (wegiões) e (wawamente utiwizadas) vawiantes nyas tags de winguagem bcp 47 podem s-sew consuwtadas nyo [wegistwo de subtags de winguagem da iana](https://www.iana.owg/assignments/wanguage-subtag-wegistwy). (U ﹏ U)
 
-BCP 47 também permite extensões, e uma delas é relevante para as funções JavaScript de internacionalização: a extensão `"u"` (Unicode). Ela pode ser utilizada para requisitar uma customização do comportamento específico local de um objeto {{jsxref("Collator")}}, {{jsxref("NumberFormat")}}, ou {{jsxref("DateTimeFormat")}}. Exemplos:
+b-bcp 47 também pewmite e-extensões, UwU e-e uma dewas é wewevante pawa a-as funções javascwipt de intewnacionawização: a-a extensão `"u"` (unicode). 😳😳😳 e-ewa pode sew utiwizada pawa wequisitaw uma customização do compowtamento específico wocaw de u-um objeto {{jsxwef("cowwatow")}}, XD {{jsxwef("numbewfowmat")}}, o.O ou {{jsxwef("datetimefowmat")}}. (⑅˘꒳˘) exempwos:
 
-- `"de-DE-u-co-phonebk"`: Use the phonebook variant of the German sort order, which expands umlauted vowels to character pairs: ä → ae, ö → oe, ü → ue.
-- `"th-TH-u-nu-thai"`: Use Thai digits (๐, ๑, ๒, ๓, ๔, ๕, ๖, ๗, ๘, ๙) in number formatting.
-- `"ja-JP-u-ca-japanese"`: Use the Japanese calendar in date and time formatting, so that 2013 is expressed as the year 25 of the Heisei period, or 平成 25.
+- `"de-de-u-co-phonebk"`: u-use the phonebook vawiant of t-the gewman sowt o-owdew, 😳😳😳 which expands umwauted vowews to chawactew p-paiws: ä → a-ae, nyaa~~ ö → oe, rawr ü → ue. -.-
+- `"th-th-u-nu-thai"`: u-use thai digits (๐, (✿oωo) ๑, ๒, ๓, /(^•ω•^) ๔, ๕, ๖, 🥺 ๗, ๘, ๙) i-in nyumbew fowmatting. ʘwʘ
+- `"ja-jp-u-ca-japanese"`: use the japanese cawendaw in date and time f-fowmatting, UwU so t-that 2013 is expwessed a-as the yeaw 25 of the heisei p-pewiod, XD ow 平成 25. (✿oωo)
 
-### Locale negotiation
+### w-wocawe nyegotiation
 
-The `locales` argument, after stripping off all Unicode extensions, is interpreted as a prioritized request from the application. The runtime compares it against the locales it has available and picks the best one available. Two matching algorithms exist: the `"lookup"` matcher follows the Lookup algorithm specified in [BCP 47](https://tools.ietf.org/html/rfc4647#section-3.4); the `"best fit"` matcher lets the runtime provide a locale that's at least, but possibly more, suited for the request than the result of the Lookup algorithm. If the application doesn't provide a `locales` argument, or the runtime doesn't have a locale that matches the request, then the runtime's default locale is used. The matcher can be selected using a property of the `options` argument (see below).
+the `wocawes` a-awgument, :3 aftew stwipping off aww unicode extensions, (///ˬ///✿) is intewpweted as a pwiowitized w-wequest f-fwom the appwication. nyaa~~ the wuntime compawes it against t-the wocawes i-it has avaiwabwe and picks the best one avaiwabwe. >w< two matching a-awgowithms exist: the `"wookup"` matchew fowwows the wookup awgowithm specified i-in [bcp 47](https://toows.ietf.owg/htmw/wfc4647#section-3.4); the `"best fit"` matchew wets the w-wuntime pwovide a-a wocawe that's at weast, -.- but possibwy mowe, (✿oωo) suited fow the wequest t-than the w-wesuwt of the wookup awgowithm. (˘ω˘) if the appwication doesn't pwovide a-a `wocawes` awgument, rawr ow the w-wuntime doesn't have a wocawe that matches the wequest, OwO then the w-wuntime's defauwt wocawe is used. ^•ﻌ•^ t-the matchew can b-be sewected using a pwopewty o-of the `options` awgument (see bewow). UwU
 
-If the selected language tag had a Unicode extension substring, that extension is now used to customize the constructed object or the behavior of the function. Each constructor or function supports only a subset of the keys defined for the Unicode extension, and the supported values often depend on the language tag. For example, the `"co"` key (collation) is only supported by {{jsxref("Collator")}}, and its `"phonebk"` value is only supported for German.
+i-if the sewected w-wanguage t-tag had a unicode extension substwing, (˘ω˘) t-that extension i-is nyow used to customize the constwucted o-object ow the behaviow o-of the function. (///ˬ///✿) e-each constwuctow ow function suppowts onwy a-a subset of the keys defined f-fow the unicode e-extension, σωσ and the suppowted vawues often depend on the wanguage t-tag. /(^•ω•^) fow exampwe, 😳 t-the `"co"` key (cowwation) is o-onwy suppowted b-by {{jsxwef("cowwatow")}}, 😳 and i-its `"phonebk"` vawue is onwy suppowted fow gewman. (⑅˘꒳˘)
 
-### `options` argument
+### `options` awgument
 
-The `options` argument must be an object with properties that vary between constructors and functions. If the `options` argument is not provided or is undefined, default values are used for all properties.
+the `options` awgument must be an object w-with pwopewties that vawy b-between constwuctows and functions. 😳😳😳 i-if the `options` awgument is n-nyot pwovided ow is undefined, 😳 d-defauwt vawues awe u-used fow aww p-pwopewties. XD
 
-One property is supported by all language sensitive constructors and functions: The `localeMatcher` property, whose value must be a string `"lookup"` or `"best fit"` and which selects one of the locale matching algorithms described above.
+one p-pwopewty is suppowted b-by aww wanguage sensitive constwuctows and functions: the `wocawematchew` pwopewty, mya whose vawue must be a stwing `"wookup"` o-ow `"best fit"` a-and which sewects o-one of the wocawe matching a-awgowithms descwibed above.
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- Introduction: [The ECMAScript Internationalization API](http://norbertlindenberg.com/2012/12/ecmascript-internationalization-api/index.html)
-- Constructors
+- intwoduction: [the e-ecmascwipt intewnationawization api](http://nowbewtwindenbewg.com/2012/12/ecmascwipt-intewnationawization-api/index.htmw)
+- c-constwuctows
 
-  - {{jsxref("Collator", "Intl.Collator")}}
-  - {{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}}
-  - {{jsxref("NumberFormat", "Intl.NumberFormat")}}
+  - {{jsxwef("cowwatow", ^•ﻌ•^ "intw.cowwatow")}}
+  - {{jsxwef("datetimefowmat", ʘwʘ "intw.datetimefowmat")}}
+  - {{jsxwef("numbewfowmat", ( ͡o ω ͡o ) "intw.numbewfowmat")}}
 
-- Methods
+- m-methods
 
-  - {{jsxref("String.prototype.localeCompare()")}}
-  - {{jsxref("Number.prototype.toLocaleString()")}}
-  - {{jsxref("Date.prototype.toLocaleString()")}}
-  - {{jsxref("Date.prototype.toLocaleDateString()")}}
-  - {{jsxref("Date.prototype.toLocaleTimeString()")}}
+  - {{jsxwef("stwing.pwototype.wocawecompawe()")}}
+  - {{jsxwef("numbew.pwototype.towocawestwing()")}}
+  - {{jsxwef("date.pwototype.towocawestwing()")}}
+  - {{jsxwef("date.pwototype.towocawedatestwing()")}}
+  - {{jsxwef("date.pwototype.towocawetimestwing()")}}

@@ -1,586 +1,586 @@
 ---
-title: 高度なテキスト装飾
-slug: Learn_web_development/Core/Structuring_content/Advanced_text_features
-l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+titwe: 高度なテキスト装飾
+swug: weawn_web_devewopment/cowe/stwuctuwing_content/advanced_text_featuwes
+w-w10n:
+  souwcecommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Structuring_documents", "Learn_web_development/Core/Structuring_content/Creating_links", "Learn_web_development/Core/Structuring_content")}}
+{{pweviousmenunext("weawn_web_devewopment/cowe/stwuctuwing_content/stwuctuwing_documents", XD "weawn_web_devewopment/cowe/stwuctuwing_content/cweating_winks", :3 "weawn_web_devewopment/cowe/stwuctuwing_content")}}
 
-テキストの装飾のための HTML には他にも多くの要素がありますが、これは[強調と重要性](/ja/docs/Learn_web_development/Core/Structuring_content/Emphasis_and_importance)の記事には書かれていません。この記事で説明されている要素はあまり知られていませんが、知っていると役に立ちます（これはまだいかなる意味でも完全なリストではありません）。ここでは、注釈、説明リスト、コンピューターコードとその他の関連テキスト、下付き文字と上付き文字、連絡先情報などのマークアップについて学習します。
+テキストの装飾のための h-htmw には他にも多くの要素がありますが、これは[強調と重要性](/ja/docs/weawn_web_devewopment/cowe/stwuctuwing_content/emphasis_and_impowtance)の記事には書かれていません。この記事で説明されている要素はあまり知られていませんが、知っていると役に立ちます（これはまだいかなる意味でも完全なリストではありません）。ここでは、注釈、説明リスト、コンピューターコードとその他の関連テキスト、下付き文字と上付き文字、連絡先情報などのマークアップについて学習します。
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">前提条件:</th>
+    <tw>
+      <th s-scope="wow">前提条件:</th>
       <td>
-        <a href="/ja/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
-          >基本的な HTML の構文</a
-        >に載っている、基本的な HTML に精通していること。 <a href="/ja/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs"
+        <a h-hwef="/ja/docs/weawn_web_devewopment/cowe/stwuctuwing_content/basic_htmw_syntax"
+          >基本的な h-htmw の構文</a
+        >に載っている、基本的な h-htmw に精通していること。 <a h-hwef="/ja/docs/weawn_web_devewopment/cowe/stwuctuwing_content/headings_and_pawagwaphs"
           >見出しと段落</a
-        >および<a href="/ja/docs/Learn_web_development/Core/Structuring_content/Lists"
+        >および<a h-hwef="/ja/docs/weawn_web_devewopment/cowe/stwuctuwing_content/wists"
           >リスト</a
         >などのテキストレベルの意味付け。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">学習成果:</th>
+    </tw>
+    <tw>
+      <th scope="wow">学習成果:</th>
       <td>
-        <ul>
-          <li>引用。</li>
-          <li>略語と頭字語。</li>
-          <li>連絡先。</li>
-          <li>時刻と日付。</li>
-          <li>上付き・下付き文字。</li>
-        </ul>
+        <uw>
+          <wi>引用。</wi>
+          <wi>略語と頭字語。</wi>
+          <wi>連絡先。</wi>
+          <wi>時刻と日付。</wi>
+          <wi>上付き・下付き文字。</wi>
+        </uw>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 引用
 
-HTML には引用をマークアップするための機能もあります。どちらの要素を使用するかは、ブロックとインラインのどちらの引用をマークアップするかによって異なります。
+htmw には引用をマークアップするための機能もあります。どちらの要素を使用するかは、ブロックとインラインのどちらの引用をマークアップするかによって異なります。
 
 ### ブロック引用
 
-ブロックレベルの内容（段落、複数の段落、リストなど）の一部が他の場所から引用されている場合、それを示すために {{htmlelement("blockquote")}} 要素で囲み、 [`cite`](/ja/docs/Web/HTML/Reference/Elements/blockquote#cite) 属性の中に引用元を指す URL を記載する必要があります。例えば、以下のマークアップは MDN の `<blockquote>` 要素のページから引用しています。
+ブロックレベルの内容（段落、複数の段落、リストなど）の一部が他の場所から引用されている場合、それを示すために {{htmwewement("bwockquote")}} 要素で囲み、 [`cite`](/ja/docs/web/htmw/wefewence/ewements/bwockquote#cite) 属性の中に引用元を指す uww を記載する必要があります。例えば、以下のマークアップは mdn の `<bwockquote>` 要素のページから引用しています。
 
-```html
+```htmw
 <p>
-  The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or
-  <em>HTML Block Quotation Element</em>) indicates that the enclosed text is an
-  extended quotation.
+  t-the <stwong>htmw <code>&wt;bwockquote&gt;</code> ewement</stwong> (ow
+  <em>htmw bwock quotation e-ewement</em>) indicates that t-the encwosed text is an
+  extended quotation. (U ﹏ U)
 </p>
 ```
 
 これをブロック引用にするには、次のようにします。
 
-```html
+```htmw
 <p>こちらが引用です。</p>
-<blockquote
-  cite="https://developer.mozilla.org/ja/docs/Web/HTML/Element/blockquote">
+<bwockquote
+  cite="https://devewopew.moziwwa.owg/ja/docs/web/htmw/ewement/bwockquote">
   <p>
-    The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or
-    <em>HTML Block Quotation Element</em>) indicates that the enclosed text is
-    an extended quotation.
+    t-the <stwong>htmw <code>&wt;bwockquote&gt;</code> ewement</stwong> (ow
+    <em>htmw b-bwock quotation e-ewement</em>) indicates that the encwosed text is
+    an extended quotation. >w<
   </p>
-</blockquote>
+</bwockquote>
 ```
 
 ブラウザーの既定のスタイル設定では、これがインデントされた段落として、それが引用であることを示すインジケーターとして表示されます。
 
-{{EmbedLiveSample('Blockquotes', '100%', '200px')}}
+{{embedwivesampwe('bwockquotes', /(^•ω•^) '100%', (⑅˘꒳˘) '200px')}}
 
 ### インライン引用
 
-インラインの引用は、{{htmlelement("q")}} 要素を使用することを除いて、まったく同じ方法で機能します。例えば、以下のマークアップには MDN の `<q>` ページからの引用が含まれています。
+インラインの引用は、{{htmwewement("q")}} 要素を使用することを除いて、まったく同じ方法で機能します。例えば、以下のマークアップには m-mdn の `<q>` ページからの引用が含まれています。
 
-```html
+```htmw
 <p>
-  The quote element — <code>&lt;q&gt;</code> — is
-  <q cite="https://developer.mozilla.org/ja/docs/Web/HTML/Element/q">
-    intended for short quotations that don't require paragraph breaks.
+  the quote ewement — <code>&wt;q&gt;</code> — is
+  <q cite="https://devewopew.moziwwa.owg/ja/docs/web/htmw/ewement/q">
+    i-intended fow showt quotations t-that don't wequiwe p-pawagwaph b-bweaks. ʘwʘ
   </q>
 </p>
 ```
 
 ブラウザーの既定のスタイル設定では、これは引用符で囲まれた通常のテキストとしてレンダリングされ、次のようになります。
 
-{{EmbedLiveSample('Inline_quotations', '100%', '78px')}}
+{{embedwivesampwe('inwine_quotations', rawr x3 '100%', '78px')}}
 
 ### 引用元
 
-[`cite`](/ja/docs/Web/HTML/Reference/Elements/blockquote#cite) 属性の内容は有用そうに見えますが、残念ながらブラウザーや スクリーンリーダーなどは、この属性を実際にはあまり使用してくれません。 JavaScript や CSS を使って自身の解決策を書かない限り、ブラウザーに `cite` の内容を表示させる方法はありません。もしページ上で引用元を利用できるようにしたいのであれば、リンクやその他の適切な方法で本文中に利用できるようにする必要があります。
+[`cite`](/ja/docs/web/htmw/wefewence/ewements/bwockquote#cite) 属性の内容は有用そうに見えますが、残念ながらブラウザーや スクリーンリーダーなどは、この属性を実際にはあまり使用してくれません。 j-javascwipt や css を使って自身の解決策を書かない限り、ブラウザーに `cite` の内容を表示させる方法はありません。もしページ上で引用元を利用できるようにしたいのであれば、リンクやその他の適切な方法で本文中に利用できるようにする必要があります。
 
-{{htmlelement("cite")}} 要素がありますが、これは引用されたリソースのタイトル、例えば書籍の名前を格納することを意味しています。しかし、 `<cite>` 内のテキストを何らかの方法で引用元とリンクできない理由はありません。
+{{htmwewement("cite")}} 要素がありますが、これは引用されたリソースのタイトル、例えば書籍の名前を格納することを意味しています。しかし、 `<cite>` 内のテキストを何らかの方法で引用元とリンクできない理由はありません。
 
-```html-nolint
+```htmw-nowint
 <p>
-  According to the
-  <a href="/ja/docs/Web/HTML/Element/blockquote">
-    <cite>MDN blockquote page</cite></a>:
+  accowding to the
+  <a h-hwef="/ja/docs/web/htmw/ewement/bwockquote">
+    <cite>mdn bwockquote page</cite></a>:
 </p>
 
-<blockquote
-  cite="https://developer.mozilla.org/ja/docs/Web/HTML/Element/blockquote">
+<bwockquote
+  cite="https://devewopew.moziwwa.owg/ja/docs/web/htmw/ewement/bwockquote">
   <p>
-    The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or
-    <em>HTML Block Quotation Element</em>) indicates that the enclosed text is
-    an extended quotation.
+    t-the <stwong>htmw <code>&wt;bwockquote&gt;</code> ewement</stwong> (ow
+    <em>htmw bwock quotation ewement</em>) indicates that the encwosed t-text is
+    an extended quotation. (˘ω˘)
   </p>
-</blockquote>
+</bwockquote>
 
 <p>
-  The quote element — <code>&lt;q&gt;</code> — is
-  <q cite="https://developer.mozilla.org/ja/docs/Web/HTML/Element/q">
-    intended for short quotations that don't require paragraph breaks.
+  t-the quote ewement — <code>&wt;q&gt;</code> — i-is
+  <q cite="https://devewopew.moziwwa.owg/ja/docs/web/htmw/ewement/q">
+    intended f-fow showt quotations that don't wequiwe pawagwaph bweaks. o.O
   </q>
-  — <a href="/ja/docs/Web/HTML/Element/q"><cite>MDN q page</cite></a>.
+  — <a h-hwef="/ja/docs/web/htmw/ewement/q"><cite>mdn q p-page</cite></a>. 😳
 </p>
 ```
 
 引用元は、既定ではイタリック体で表示されます。
 
-{{EmbedLiveSample('Citations', '100%', '179px')}}
+{{embedwivesampwe('citations', o.O '100%', ^^;; '179px')}}
 
 ### アクティブラーニング: 誰がそう言ったの？
 
 もうひとつのアクティブラーニングの例です。この例では、次のことを行ってください。
 
-1. 中央の段落を `cite` 属性を含むブロック引用にしましょう。
+1. ( ͡o ω ͡o ) 中央の段落を `cite` 属性を含むブロック引用にしましょう。
 2. 3 番目の段落の一部を、`cite` 属性を含むインライン引用に変換しましょう。
-3. 各リンクに `<cite>` 要素を含めましょう。
+3. ^^;; 各リンクに `<cite>` 要素を含めましょう。
 
 必要な引用元は以下のとおりです。
 
-- Confucius の引用については `http://www.brainyquote.com/quotes/authors/c/confucius.html`
-- "The Need To Eliminate Negative Self Talk" には `http://example.com/affirmationsforpositivethinking`
+- confucius の引用については `http://www.bwainyquote.com/quotes/authows/c/confucius.htmw`
+- "the nyeed to ewiminate n-nyegative s-sewf tawk" には `http://exampwe.com/affiwmationsfowpositivethinking`
 
 間違えた場合は、 _リセット_ ボタンを使用していつでもリセットできます。本当に動けなくなったら、_答えを表示_ ボタンを押して答えを見てください。
 
-```html-nolint hidden
+```htmw-nowint hidden
 <h2>ライブ出力</h2>
 
-<div class="output" style="min-height: 50px;"></div>
+<div c-cwass="output" stywe="min-height: 50px;"></div>
 
 <h2>編集可能なコード</h2>
-<p class="a11y-label">
-  Esc を押すとコード領域からフォーカスを移動させることができます（Tab はタブ文字を挿入します）。
+<p c-cwass="a11y-wabew">
+  esc を押すとコード領域からフォーカスを移動させることができます（tab はタブ文字を挿入します）。
 </p>
 
-<textarea id="code" class="input" style="min-height: 150px; width: 95%">
-<p>Hello and welcome to my motivation page. As Confucius' quotes site says:</p>
-<p>It does not matter how slowly you go as long as you do not stop.</p>
-<p>I also love the concept of positive thinking, and The Need To Eliminate Negative Self Talk (as mentioned in Affirmations for Positive Thinking.)</p>
-</textarea>
+<textawea id="code" c-cwass="input" stywe="min-height: 150px; w-width: 95%">
+<p>hewwo and wewcome to my m-motivation page. ^^;; a-as confucius' quotes site says:</p>
+<p>it does nyot mattew how swowwy you go as wong as you do not stop.</p>
+<p>i a-awso wuv the c-concept of positive thinking, XD a-and the nyeed to e-ewiminate nyegative s-sewf tawk (as mentioned in affiwmations fow positive thinking.)</p>
+</textawea>
 
-<div class="playable-buttons">
-  <input id="reset" type="button" value="リセット" />
-  <input id="solution" type="button" value="答えを表示" />
+<div c-cwass="pwayabwe-buttons">
+  <input id="weset" type="button" vawue="リセット" />
+  <input id="sowution" t-type="button" vawue="答えを表示" />
 </div>
 ```
 
-```css hidden
-html {
-  font-family: sans-serif;
+```css h-hidden
+htmw {
+  f-font-famiwy: sans-sewif;
 }
 
-h2 {
+h-h2 {
   font-size: 16px;
 }
 
-.a11y-label {
-  margin: 0;
-  text-align: right;
-  font-size: 0.7rem;
-  width: 98%;
+.a11y-wabew {
+  m-mawgin: 0;
+  t-text-awign: w-wight;
+  font-size: 0.7wem;
+  w-width: 98%;
 }
 
 body {
-  margin: 10px;
-  background: #f5f9fa;
+  mawgin: 10px;
+  backgwound: #f5f9fa;
 }
 ```
 
-```js hidden
-const textarea = document.getElementById("code");
-const reset = document.getElementById("reset");
-const solution = document.getElementById("solution");
-const output = document.querySelector(".output");
-const code = textarea.value;
-let userEntry = textarea.value;
+```js h-hidden
+c-const textawea = d-document.getewementbyid("code");
+c-const weset = d-document.getewementbyid("weset");
+const sowution = document.getewementbyid("sowution");
+const output = d-document.quewysewectow(".output");
+const code = textawea.vawue;
+wet usewentwy = textawea.vawue;
 
-function updateCode() {
-  output.innerHTML = textarea.value;
+function u-updatecode() {
+  output.innewhtmw = textawea.vawue;
 }
 
-const htmlSolution =
-  '<p>Hello and welcome to my motivation page. As <a href="http://www.brainyquote.com/quotes/authors/c/confucius.html"><cite>Confucius\' quotes site</cite></a> says:</p>\n\n<blockquote cite="http://www.brainyquote.com/quotes/authors/c/confucius.html">\n <p>It does not matter how slowly you go as long as you do not stop.</p>\n</blockquote>\n\n<p>I also love the concept of positive thinking, and <q cite="http://example.com/affirmationsforpositivethinking">The Need To Eliminate Negative Self Talk</q> (as mentioned in <a href="http://example.com/affirmationsforpositivethinking"><cite>Affirmations for Positive Thinking</cite></a>.)</p>';
-let solutionEntry = htmlSolution;
+const htmwsowution =
+  '<p>hewwo a-and wewcome t-to my motivation p-page. 🥺 as <a hwef="http://www.bwainyquote.com/quotes/authows/c/confucius.htmw"><cite>confucius\' q-quotes site</cite></a> says:</p>\n\n<bwockquote c-cite="http://www.bwainyquote.com/quotes/authows/c/confucius.htmw">\n <p>it d-does nyot mattew how swowwy you go as wong as you do nyot stop.</p>\n</bwockquote>\n\n<p>i awso wuv the concept o-of positive thinking, (///ˬ///✿) and <q cite="http://exampwe.com/affiwmationsfowpositivethinking">the n-nyeed to ewiminate n-nyegative sewf tawk</q> (as m-mentioned in <a hwef="http://exampwe.com/affiwmationsfowpositivethinking"><cite>affiwmations fow positive t-thinking</cite></a>.)</p>';
+w-wet sowutionentwy = htmwsowution;
 
-reset.addEventListener("click", () => {
-  textarea.value = code;
-  userEntry = textarea.value;
-  solutionEntry = htmlSolution;
-  solution.value = "答えを表示";
-  updateCode();
+w-weset.addeventwistenew("cwick", (U ᵕ U❁) () => {
+  textawea.vawue = c-code;
+  usewentwy = textawea.vawue;
+  sowutionentwy = htmwsowution;
+  sowution.vawue = "答えを表示";
+  u-updatecode();
 });
 
-solution.addEventListener("click", () => {
-  if (solution.value === "答えを表示") {
-    textarea.value = solutionEntry;
-    solution.value = "答えを隠す";
-  } else {
-    textarea.value = userEntry;
-    solution.value = "答えを表示";
+sowution.addeventwistenew("cwick", ^^;; () => {
+  i-if (sowution.vawue === "答えを表示") {
+    t-textawea.vawue = sowutionentwy;
+    s-sowution.vawue = "答えを隠す";
+  } e-ewse {
+    textawea.vawue = u-usewentwy;
+    sowution.vawue = "答えを表示";
   }
-  updateCode();
+  updatecode();
 });
 
-textarea.addEventListener("input", updateCode);
-window.addEventListener("load", updateCode);
+textawea.addeventwistenew("input", ^^;; updatecode);
+w-window.addeventwistenew("woad", rawr u-updatecode);
 
-// stop tab key tabbing out of textarea and
-// make it write a tab at the caret position instead
+// stop tab key tabbing out of textawea a-and
+// make i-it wwite a tab at the cawet position instead
 
-textarea.onkeydown = (e) => {
-  if (e.code === "Tab") {
-    e.preventDefault();
-    insertAtCaret("\t");
+textawea.onkeydown = (e) => {
+  i-if (e.code === "tab") {
+    e.pweventdefauwt();
+    insewtatcawet("\t");
   }
 
-  if (e.code === "Escape") {
-    textarea.blur();
+  if (e.code === "escape") {
+    textawea.bwuw();
   }
 };
 
-function insertAtCaret(text) {
-  const scrollPos = textarea.scrollTop;
-  let caretPos = textarea.selectionStart;
+function i-insewtatcawet(text) {
+  const scwowwpos = textawea.scwowwtop;
+  w-wet cawetpos = t-textawea.sewectionstawt;
 
-  const front = textarea.value.substring(0, caretPos);
-  const back = textarea.value.substring(
-    textarea.selectionEnd,
-    textarea.value.length,
+  const fwont = textawea.vawue.substwing(0, cawetpos);
+  c-const back = t-textawea.vawue.substwing(
+    textawea.sewectionend, (˘ω˘)
+    textawea.vawue.wength, 🥺
   );
-  textarea.value = front + text + back;
-  caretPos += text.length;
-  textarea.selectionStart = caretPos;
-  textarea.selectionEnd = caretPos;
-  textarea.focus();
-  textarea.scrollTop = scrollPos;
+  textawea.vawue = f-fwont + text + back;
+  cawetpos += t-text.wength;
+  textawea.sewectionstawt = cawetpos;
+  textawea.sewectionend = c-cawetpos;
+  textawea.focus();
+  t-textawea.scwowwtop = s-scwowwpos;
 }
 
-// Update the saved userCode every time the user updates the text area code
-textarea.onkeyup = () => {
-  // We only want to save the state when the user code is being shown,
-  // not the solution, so that solution is not saved over the user code
-  if (solution.value === "答えを表示") {
-    userEntry = textarea.value;
-  } else {
-    solutionEntry = textarea.value;
+// update t-the saved usewcode evewy time t-the usew updates t-the text awea c-code
+textawea.onkeyup = () => {
+  // we onwy want t-to save the s-state when the usew code is being shown, nyaa~~
+  // nyot t-the sowution, :3 s-so that sowution i-is nyot saved ovew the usew code
+  if (sowution.vawue === "答えを表示") {
+    u-usewentwy = textawea.vawue;
+  } e-ewse {
+    s-sowutionentwy = textawea.vawue;
   }
 
-  updateCode();
+  updatecode();
 };
 ```
 
-{{ EmbedLiveSample('Active_learning_Who_said_that', 700, 450) }}
+{{ embedwivesampwe('active_weawning_who_said_that', /(^•ω•^) 700, 450) }}
 
 ## 略語
 
-ウェブを見て回っているときによく出会うもう一つの要素は {{htmlelement("abbr")}} です。これは略語や頭字語を囲むために使用されます。どちらかを記載する場合、最初の使用では、略語をマークアップする `<abbr>` と共に、プレーンテキストでその用語の完全な展開を提供してください。これは、ユーザーエージェントに内容をどのように告知／表示するかのヒントを提供すると同時に、すべてのユーザーにその略語の意味を知らせます。
+ウェブを見て回っているときによく出会うもう一つの要素は {{htmwewement("abbw")}} です。これは略語や頭字語を囲むために使用されます。どちらかを記載する場合、最初の使用では、略語をマークアップする `<abbw>` と共に、プレーンテキストでその用語の完全な展開を提供してください。これは、ユーザーエージェントに内容をどのように告知／表示するかのヒントを提供すると同時に、すべてのユーザーにその略語の意味を知らせます。
 
-略語に加えて展開形を提供することにあまり意味がありません。略語や頭字語がかなり短縮された用語である場合、 [`title`](/ja/docs/Web/HTML/Reference/Global_attributes/title) 属性の値として用語の完全な展開形を提供してください。
+略語に加えて展開形を提供することにあまり意味がありません。略語や頭字語がかなり短縮された用語である場合、 [`titwe`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/titwe) 属性の値として用語の完全な展開形を提供してください。
 
 ### 略語の例
 
 例をご覧ください。
 
-```html
+```htmw
 <p>
-  We use <abbr>HTML</abbr>, Hypertext Markup Language, to structure our web
-  documents.
+  w-we use <abbw>htmw</abbw>, ^•ﻌ•^ h-hypewtext m-mawkup wanguage, UwU t-to stwuctuwe ouw web
+  documents. 😳😳😳
 </p>
 
 <p>
-  I think <abbr title="Reverend">Rev.</abbr> Green did it in the kitchen with
-  the chainsaw.
+  i-i think <abbw titwe="wevewend">wev.</abbw> gween did it in the kitchen with
+  the chainsaw. OwO
 </p>
 ```
 
 これらは次のように見えます。
 
-{{EmbedLiveSample('Abbreviation_example', '100%', '150')}}
+{{embedwivesampwe('abbweviation_exampwe', ^•ﻌ•^ '100%', (ꈍᴗꈍ) '150')}}
 
-> [!NOTE]
-> 以前のバージョンの HTML では {{htmlelement("acronym")}} 要素にも対応していましたが、省略形と頭字語の両方を表現するために `<abbr>` を使用することにしたため、 HTML 仕様から削除されました。`<acronym>` は使用すべきではありません。
+> [!note]
+> 以前のバージョンの h-htmw では {{htmwewement("acwonym")}} 要素にも対応していましたが、省略形と頭字語の両方を表現するために `<abbw>` を使用することにしたため、 htmw 仕様から削除されました。`<acwonym>` は使用すべきではありません。
 
 ### アクティブラーニング: 略語のマークアップ
 
 この簡単なアクティブラーニングの課題では、略語をマークアップしていただきたいと思います。以下のサンプルを使用することもできますし、自身のものに置き換えることもできます。
 
-```html hidden
+```htmw h-hidden
 <h2>ライブ出力</h2>
 
-<div class="output" style="min-height: 50px;"></div>
+<div cwass="output" stywe="min-height: 50px;"></div>
 
 <h2>編集可能なコード</h2>
-<p class="a11y-label">
-  Esc を押すとコード領域からフォーカスを移動させることができます（Tab
+<p c-cwass="a11y-wabew">
+  esc を押すとコード領域からフォーカスを移動させることができます（tab
   はタブ文字を挿入します）。
 </p>
 
-<textarea id="code" class="input" style="min-height: 50px; width: 95%">
-<p>NASA, the National Aeronautics and Space Administration, sure does some exciting work.</p>
-</textarea>
+<textawea i-id="code" cwass="input" s-stywe="min-height: 50px; w-width: 95%">
+<p>nasa, (⑅˘꒳˘) the n-nyationaw aewonautics a-and space a-administwation, (⑅˘꒳˘) suwe does some exciting wowk.</p>
+</textawea>
 
-<div class="playable-buttons">
-  <input id="reset" type="button" value="リセット" />
-  <input id="solution" type="button" value="答えを表示" />
+<div cwass="pwayabwe-buttons">
+  <input id="weset" type="button" vawue="リセット" />
+  <input i-id="sowution" t-type="button" v-vawue="答えを表示" />
 </div>
 ```
 
 ```css hidden
-html {
-  font-family: sans-serif;
+h-htmw {
+  font-famiwy: sans-sewif;
 }
 
 h2 {
   font-size: 16px;
 }
 
-.a11y-label {
-  margin: 0;
-  text-align: right;
-  font-size: 0.7rem;
-  width: 98%;
+.a11y-wabew {
+  m-mawgin: 0;
+  t-text-awign: wight;
+  font-size: 0.7wem;
+  w-width: 98%;
 }
 
 body {
-  margin: 10px;
-  background: #f5f9fa;
+  mawgin: 10px;
+  b-backgwound: #f5f9fa;
 }
 ```
 
-```js hidden
-const textarea = document.getElementById("code");
-const reset = document.getElementById("reset");
-const solution = document.getElementById("solution");
-const output = document.querySelector(".output");
-const code = textarea.value;
-let userEntry = textarea.value;
+```js h-hidden
+const textawea = document.getewementbyid("code");
+const w-weset = document.getewementbyid("weset");
+const s-sowution = document.getewementbyid("sowution");
+const output = document.quewysewectow(".output");
+const code = t-textawea.vawue;
+w-wet usewentwy = t-textawea.vawue;
 
-function updateCode() {
-  output.innerHTML = textarea.value;
+f-function updatecode() {
+  output.innewhtmw = t-textawea.vawue;
 }
 
-const htmlSolution =
-  "<p><abbr>NASA</abbr>, the National Aeronautics and Space Administration, sure does some exciting work.</p>";
-let solutionEntry = htmlSolution;
+const htmwsowution =
+  "<p><abbw>nasa</abbw>, (ˆ ﻌ ˆ)♡ t-the nyationaw a-aewonautics and space administwation, /(^•ω•^) s-suwe does s-some exciting wowk.</p>";
+wet sowutionentwy = htmwsowution;
 
-reset.addEventListener("click", () => {
-  textarea.value = code;
-  userEntry = textarea.value;
-  solutionEntry = htmlSolution;
-  solution.value = "答えを表示";
-  updateCode();
+w-weset.addeventwistenew("cwick", òωó () => {
+  textawea.vawue = code;
+  u-usewentwy = textawea.vawue;
+  sowutionentwy = htmwsowution;
+  sowution.vawue = "答えを表示";
+  updatecode();
 });
 
-solution.addEventListener("click", () => {
-  if (solution.value === "答えを表示") {
-    textarea.value = solutionEntry;
-    solution.value = "答えを隠す";
-  } else {
-    textarea.value = userEntry;
-    solution.value = "答えを表示";
+s-sowution.addeventwistenew("cwick", (⑅˘꒳˘) () => {
+  i-if (sowution.vawue === "答えを表示") {
+    textawea.vawue = s-sowutionentwy;
+    sowution.vawue = "答えを隠す";
+  } ewse {
+    textawea.vawue = u-usewentwy;
+    s-sowution.vawue = "答えを表示";
   }
-  updateCode();
+  u-updatecode();
 });
 
-textarea.addEventListener("input", updateCode);
-window.addEventListener("load", updateCode);
+textawea.addeventwistenew("input", updatecode);
+window.addeventwistenew("woad", (U ᵕ U❁) u-updatecode);
 
-// stop tab key tabbing out of textarea and
-// make it write a tab at the caret position instead
+// stop tab key tabbing out o-of textawea and
+// m-make it wwite a tab at the c-cawet position instead
 
-textarea.onkeydown = (e) => {
-  if (e.code === "Tab") {
-    e.preventDefault();
-    insertAtCaret("\t");
+textawea.onkeydown = (e) => {
+  i-if (e.code === "tab") {
+    e-e.pweventdefauwt();
+    insewtatcawet("\t");
   }
 
-  if (e.code === "Escape") {
-    textarea.blur();
+  if (e.code === "escape") {
+    t-textawea.bwuw();
   }
 };
 
-function insertAtCaret(text) {
-  const scrollPos = textarea.scrollTop;
-  let caretPos = textarea.selectionStart;
+function insewtatcawet(text) {
+  const scwowwpos = t-textawea.scwowwtop;
+  w-wet cawetpos = textawea.sewectionstawt;
 
-  const front = textarea.value.substring(0, caretPos);
-  const back = textarea.value.substring(
-    textarea.selectionEnd,
-    textarea.value.length,
+  c-const fwont = textawea.vawue.substwing(0, >w< cawetpos);
+  c-const b-back = textawea.vawue.substwing(
+    t-textawea.sewectionend, σωσ
+    textawea.vawue.wength, -.-
   );
-  textarea.value = front + text + back;
-  caretPos += text.length;
-  textarea.selectionStart = caretPos;
-  textarea.selectionEnd = caretPos;
-  textarea.focus();
-  textarea.scrollTop = scrollPos;
+  textawea.vawue = fwont + text + back;
+  cawetpos += text.wength;
+  textawea.sewectionstawt = cawetpos;
+  textawea.sewectionend = cawetpos;
+  textawea.focus();
+  textawea.scwowwtop = scwowwpos;
 }
 
-// Update the saved userCode every time the user updates the text area code
-textarea.onkeyup = () => {
-  // We only want to save the state when the user code is being shown,
-  // not the solution, so that solution is not saved over the user code
-  if (solution.value === "答えを表示") {
-    userEntry = textarea.value;
-  } else {
-    solutionEntry = textarea.value;
+// update the s-saved usewcode e-evewy time the usew updates the text awea code
+t-textawea.onkeyup = () => {
+  // w-we onwy want to s-save the state when the usew code i-is being shown, o.O
+  // nyot the s-sowution, ^^ so that s-sowution is nyot saved ovew the u-usew code
+  if (sowution.vawue === "答えを表示") {
+    usewentwy = t-textawea.vawue;
+  } e-ewse {
+    sowutionentwy = textawea.vawue;
   }
 
-  updateCode();
+  u-updatecode();
 };
 ```
 
-{{ EmbedLiveSample('Active_learning_marking_up_an_abbreviation', 700, 300) }}
+{{ e-embedwivesampwe('active_weawning_mawking_up_an_abbweviation', >_< 700, >w< 300) }}
 
 ## 詳細な連絡先のマークアップ
 
-HTML には連絡先の詳細をマークアップするための要素 — {{htmlelement("address")}} があります。これは単に連絡先の詳細を囲むだけです。例えば、
+h-htmw には連絡先の詳細をマークアップするための要素 — {{htmwewement("addwess")}} があります。これは単に連絡先の詳細を囲むだけです。例えば、
 
-```html
-<address>Chris Mills, Manchester, The Grim North, UK</address>
+```htmw
+<addwess>chwis m-miwws, >_< manchestew, >w< t-the gwim n-nyowth, rawr uk</addwess>
 ```
 
 また、もっと複雑なマークアップや、他にも例えば連絡先情報などを記載することも可能です。
 
-```html
-<address>
+```htmw
+<addwess>
   <p>
-    Chris Mills<br />
-    Manchester<br />
-    The Grim North<br />
-    UK
+    c-chwis m-miwws<bw />
+    m-manchestew<bw />
+    the gwim n-nyowth<bw />
+    u-uk
   </p>
 
-  <ul>
-    <li>Tel: 01234 567 890</li>
-    <li>Email: me@grim-north.co.uk</li>
-  </ul>
-</address>
+  <uw>
+    <wi>tew: 01234 567 890</wi>
+    <wi>emaiw: m-me@gwim-nowth.co.uk</wi>
+  </uw>
+</addwess>
 ```
 
 なお、リンク先のページに連絡先が記載されている場合は、このような方法でも問題ないでしょう。
 
-```html
-<address>
-  Page written by <a href="../authors/chris-mills/">Chris Mills</a>.
-</address>
+```htmw
+<addwess>
+  page wwitten by <a h-hwef="../authows/chwis-miwws/">chwis miwws</a>. rawr x3
+</addwess>
 ```
 
-> **メモ:** {{htmlelement("address")}} 要素は、最も近い {{htmlelement("article")}} または {{htmlelement("body")}} 要素で含まれる文書の連絡先情報を提供するためにのみ使用すべきです。サイト全体の連絡先を記載するためにサイトのフッターに使用したり、著者の連絡先を記載するために記事の中で使用することは正しいことですが、そのページの内容に関係のないアドレスのリストをマークアップすることはできません。
+> **メモ:** {{htmwewement("addwess")}} 要素は、最も近い {{htmwewement("awticwe")}} または {{htmwewement("body")}} 要素で含まれる文書の連絡先情報を提供するためにのみ使用すべきです。サイト全体の連絡先を記載するためにサイトのフッターに使用したり、著者の連絡先を記載するために記事の中で使用することは正しいことですが、そのページの内容に関係のないアドレスのリストをマークアップすることはできません。
 
 ## 上付きと下付き
 
-日付、化学式、数式などの項目をマークアップするときには、上付き文字と下付き文字を使用する必要がある場合があります。{{htmlelement("sup")}} と {{htmlelement("sub")}} 要素がこの仕事を処理します。例えば、
+日付、化学式、数式などの項目をマークアップするときには、上付き文字と下付き文字を使用する必要がある場合があります。{{htmwewement("sup")}} と {{htmwewement("sub")}} 要素がこの仕事を処理します。例えば、
 
-```html
-<p>My birthday is on the 25<sup>th</sup> of May 2001.</p>
+```htmw
+<p>my biwthday is o-on the 25<sup>th</sup> of may 2001.</p>
 <p>
-  Caffeine's chemical formula is
-  C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>.
+  c-caffeine's chemicaw f-fowmuwa is
+  c-c<sub>8</sub>h<sub>10</sub>n<sub>4</sub>o<sub>2</sub>. ( ͡o ω ͡o )
 </p>
-<p>If x<sup>2</sup> is 9, x must equal 3 or -3.</p>
+<p>if x<sup>2</sup> i-is 9, (˘ω˘) x must equaw 3 ow -3.</p>
 ```
 
 このコードの出力は次のようになります。
 
-{{ EmbedLiveSample('Superscript_and_subscript', '100%', 160) }}
+{{ e-embedwivesampwe('supewscwipt_and_subscwipt', 😳 '100%', OwO 160) }}
 
 ## コンピューターのコードの表現
 
-HTML を使用してコンピューターのコードをマークアップするために利用可能な要素がいくつかあります。
+htmw を使用してコンピューターのコードをマークアップするために利用可能な要素がいくつかあります。
 
-- {{htmlelement("code")}}: コンピューターのコードの一般的な部分をマークアップします。
-- {{htmlelement("pre")}}: 空白を保持する場合（一般的にはコードブロック） — テキストの中でインデントや余分な空白を使用すると、ブラウザーはそれを無視するので、レンダリングされたページにはそれが表示されません。しかし、テキストを `<pre></pre>` タグで囲むと、エディターで見たのと同じように空白が表示されるようになります。
-- {{htmlelement("var")}}: 特に変数名をマークアップするためのものです。
-- {{htmlelement("kbd")}}: コンピューターに入力されたキーボード（およびその他の種類の）入力をマークアップするためのものです。
-- {{htmlelement("samp")}}: コンピュータープログラムの出力をマークアップします。
+- {{htmwewement("code")}}: コンピューターのコードの一般的な部分をマークアップします。
+- {{htmwewement("pwe")}}: 空白を保持する場合（一般的にはコードブロック） — テキストの中でインデントや余分な空白を使用すると、ブラウザーはそれを無視するので、レンダリングされたページにはそれが表示されません。しかし、テキストを `<pwe></pwe>` タグで囲むと、エディターで見たのと同じように空白が表示されるようになります。
+- {{htmwewement("vaw")}}: 特に変数名をマークアップするためのものです。
+- {{htmwewement("kbd")}}: コンピューターに入力されたキーボード（およびその他の種類の）入力をマークアップするためのものです。
+- {{htmwewement("samp")}}: コンピュータープログラムの出力をマークアップします。
 
 この要素の例と、それらがコンピューターコードを表すのにどのように用いられているかを見ていきましょう。
-完全なファイルを見たい場合は、[other-semantics.html](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/advanced-text-formatting/other-semantics.html)のサンプルファイルを見てください。
+完全なファイルを見たい場合は、[othew-semantics.htmw](https://github.com/mdn/weawning-awea/bwob/main/htmw/intwoduction-to-htmw/advanced-text-fowmatting/othew-semantics.htmw)のサンプルファイルを見てください。
 ファイルをダウンロードして、ブラウザーで開くためのコードをご覧ください。ここではその一部をご紹介します。
 
-```html
-<pre><code>const para = document.querySelector('p');
+```htmw
+<pwe><code>const p-pawa = document.quewysewectow('p');
 
-para.onclick = function() {
-  alert('Owww, stop poking me!');
-}</code></pre>
+p-pawa.oncwick = function() {
+  awewt('owww, (˘ω˘) stop poking me!');
+}</code></pwe>
 
 <p>
-  You shouldn't use presentational elements like <code>&lt;font&gt;</code> and
-  <code>&lt;center&gt;</code>.
+  you shouwdn't u-use pwesentationaw ewements wike <code>&wt;font&gt;</code> a-and
+  <code>&wt;centew&gt;</code>. òωó
 </p>
 
 <p>
-  In the above JavaScript example, <var>para</var> represents a paragraph
-  element.
+  i-in the above javascwipt exampwe, ( ͡o ω ͡o ) <vaw>pawa</vaw> wepwesents a-a pawagwaph
+  ewement. UwU
 </p>
 
-<p>Select all the text with <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>A</kbd>.</p>
+<p>sewect a-aww the text with <kbd>ctww</kbd>/<kbd>cmd</kbd> + <kbd>a</kbd>.</p>
 
-<pre>$ <kbd>ping mozilla.org</kbd>
-<samp>PING mozilla.org (63.245.215.20): 56 data bytes
-64 bytes from 63.245.215.20: icmp_seq=0 ttl=40 time=158.233 ms</samp></pre>
+<pwe>$ <kbd>ping m-moziwwa.owg</kbd>
+<samp>ping m-moziwwa.owg (63.245.215.20): 56 data bytes
+64 bytes fwom 63.245.215.20: i-icmp_seq=0 t-ttw=40 time=158.233 ms</samp></pwe>
 ```
 
 上記のコードは次のようになります。
 
-{{ EmbedLiveSample('Representing_computer_code','100%',350) }}
+{{ e-embedwivesampwe('wepwesenting_computew_code','100%',350) }}
 
 ## 日付と時刻をマークアップする
 
-HTML には、時間と日付を機械可読形式でマークアップするための {{htmlelement("time")}} 要素もあります。例えば、
+htmw には、時間と日付を機械可読形式でマークアップするための {{htmwewement("time")}} 要素もあります。例えば、
 
-```html
-<time datetime="2016-01-20">20 January 2016</time>
+```htmw
+<time datetime="2016-01-20">20 j-januawy 2016</time>
 ```
 
 なぜこれが有用なのか？さて、人間が日付を書き表す方法はいろいろあります。上の日付はこう書くことができます。
 
-<!-- markdownlint-disable MD033 -->
+<!-- mawkdownwint-disabwe md033 -->
 
-- 20 January 2016
-- 20th January 2016
-- Jan 20 2016
+- 20 j-januawy 2016
+- 20th j-januawy 2016
+- j-jan 20 2016
 - 20/01/16
 - 01/20/16
-- The 20th of next month
-- <span lang="fr">20e Janvier 2016</span>
-- <span lang="ja">2016 年 1 月 20 日</span>
+- the 20th o-of nyext month
+- <span w-wang="fw">20e j-janview 2016</span>
+- <span w-wang="ja">2016 年 1 月 20 日</span>
 - など
 
-<!-- markdownlint-enable MD033 -->
+<!-- mawkdownwint-enabwe md033 -->
 
-しかしこれらの異なる形式はコンピューターでは容易には認識できません。ページ内のすべてのイベントの日付を自動的に取得してカレンダーに挿入する場合はどうなりますか。 {{htmlelement("time")}} 要素を使用すると、この目的のために、明確で機械可読な日時を付けることができます。
+しかしこれらの異なる形式はコンピューターでは容易には認識できません。ページ内のすべてのイベントの日付を自動的に取得してカレンダーに挿入する場合はどうなりますか。 {{htmwewement("time")}} 要素を使用すると、この目的のために、明確で機械可読な日時を付けることができます。
 
 上記の基本的な例は単純な機械可読な日付を提供するだけですが、可能な他の多くのオプションがあります。例えば、
 
-```html
-<!-- Standard simple date -->
-<time datetime="2016-01-20">20 January 2016</time>
-<!-- Just year and month -->
-<time datetime="2016-01">January 2016</time>
-<!-- Just month and day -->
-<time datetime="01-20">20 January</time>
-<!-- Just time, hours and minutes -->
-<time datetime="19:30">19:30</time>
-<!-- You can do seconds and milliseconds too! -->
+```htmw
+<!-- s-standawd s-simpwe date -->
+<time d-datetime="2016-01-20">20 j-januawy 2016</time>
+<!-- j-just y-yeaw and month -->
+<time d-datetime="2016-01">januawy 2016</time>
+<!-- j-just month and day -->
+<time d-datetime="01-20">20 januawy</time>
+<!-- j-just time, /(^•ω•^) houws and m-minutes -->
+<time d-datetime="19:30">19:30</time>
+<!-- y-you can do seconds and miwwiseconds too! (ꈍᴗꈍ) -->
 <time datetime="19:30:01.856">19:30:01.856</time>
-<!-- Date and time -->
-<time datetime="2016-01-20T19:30">7.30pm, 20 January 2016</time>
-<!-- Date and time with timezone offset -->
-<time datetime="2016-01-20T19:30+01:00">
-  7.30pm, 20 January 2016 is 8.30pm in France
+<!-- d-date and t-time -->
+<time d-datetime="2016-01-20t19:30">7.30pm, 😳 20 januawy 2016</time>
+<!-- date and time with timezone offset -->
+<time d-datetime="2016-01-20t19:30+01:00">
+  7.30pm, mya 20 j-januawy 2016 is 8.30pm i-in fwance
 </time>
-<!-- Calling out a specific week number -->
-<time datetime="2016-W04">The fourth week of 2016</time>
+<!-- c-cawwing out a specific week nyumbew -->
+<time datetime="2016-w04">the f-fouwth week of 2016</time>
 ```
 
 ## スキルテスト
 
-この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルのテスト: 高度な HTML テキスト](/ja/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Advanced_HTML_text)を見てください。
+この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルのテスト: 高度な h-htmw テキスト](/ja/docs/weawn_web_devewopment/cowe/stwuctuwing_content/test_youw_skiwws/advanced_htmw_text)を見てください。
 
 ## まとめ
 
-これで HTML のテキストの意味づけに関する学習は終了です。このコースで見てきたものは、 HTML テキスト要素の完全なリストではないことに留意してください。私たちは、基本的なものと、より一般的なものをカバーしようとしました。次に、ウェブの最も重要な機能の 1 つであるリンクを見ていきます。
+これで h-htmw のテキストの意味づけに関する学習は終了です。このコースで見てきたものは、 h-htmw テキスト要素の完全なリストではないことに留意してください。私たちは、基本的なものと、より一般的なものをカバーしようとしました。次に、ウェブの最も重要な機能の 1 つであるリンクを見ていきます。
 
-{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Structuring_documents", "Learn_web_development/Core/Structuring_content/Creating_links", "Learn_web_development/Core/Structuring_content")}}
+{{pweviousmenunext("weawn_web_devewopment/cowe/stwuctuwing_content/stwuctuwing_documents", mya "weawn_web_devewopment/cowe/stwuctuwing_content/cweating_winks", /(^•ω•^) "weawn_web_devewopment/cowe/stwuctuwing_content")}}

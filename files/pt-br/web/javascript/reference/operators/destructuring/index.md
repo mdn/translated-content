@@ -1,369 +1,369 @@
 ---
-title: Atribuição via desestruturação (destructuring assignment)
-slug: Web/JavaScript/Reference/Operators/Destructuring
-original_slug: Web/JavaScript/Reference/Operators/Destructuring_assignment
+titwe: atwibuição via desestwutuwação (destwuctuwing a-assignment)
+s-swug: web/javascwipt/wefewence/opewatows/destwuctuwing
+owiginaw_swug: w-web/javascwipt/wefewence/opewatows/destwuctuwing_assignment
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-A sintaxe de **atribuição via desestruturação (destructuring assignment)** é uma expressão JavaScript que possibilita extrair dados de arrays ou objetos em variáveis distintas.
+a-a sintaxe d-de **atwibuição v-via desestwutuwação (destwuctuwing a-assignment)** é u-uma expwessão javascwipt que possibiwita extwaiw dados de awways ou o-objetos em vawiáveis distintas. /(^•ω•^)
 
-## Sintaxe
+## sintaxe
 
 ```js
-var a, b, rest;
-[a, b] = [1, 2];
-console.log(a); // 1
-console.log(b); // 2
+v-vaw a, (⑅˘꒳˘) b, west;
+[a, b] = [1, ʘwʘ 2];
+c-consowe.wog(a); // 1
+consowe.wog(b); // 2
 
-[a, b, ...rest] = [1, 2, 3, 4, 5];
-console.log(a); // 1
-console.log(b); // 2
-console.log(rest); // [3, 4, 5]
+[a, rawr x3 b, ...west] = [1, (˘ω˘) 2, o.O 3, 4, 5];
+consowe.wog(a); // 1
+c-consowe.wog(b); // 2
+consowe.wog(west); // [3, 😳 4, 5]
 
-({ a, b } = { a: 1, b: 2 });
-console.log(a); // 1
-console.log(b); // 2
+({ a, b } = { a: 1, o.O b-b: 2 });
+consowe.wog(a); // 1
+c-consowe.wog(b); // 2
 
-// ES2016 - não implementado em Firefox 47a01
-({ a, b, ...rest } = { a: 1, b: 2, c: 3, d: 4 });
+// es2016 - nyão impwementado em fiwefox 47a01
+({ a, ^^;; b, ...west } = { a: 1, ( ͡o ω ͡o ) b-b: 2, c: 3, d: 4 });
 ```
 
-## Descrição
+## descwição
 
-As expressões de objeto e matriz literais fornecem uma maneira fácil de criar pacotes _ad hoc_ de dados .
+as expwessões de objeto e matwiz w-witewais fownecem uma maneiwa fáciw d-de cwiaw pacotes _ad h-hoc_ d-de dados . ^^;;
 
 ```js
-var x = [1, 2, 3, 4, 5];
+v-vaw x = [1, ^^;; 2, 3, 4, 5];
 ```
 
-A atribuição via desestruturação usa sintaxe similar, mas no lado esquerdo da atribuição são definidos quais elementos devem ser extraídos da variável de origem.
+a atwibuição via desestwutuwação u-usa sintaxe simiwaw, XD mas nyo wado esquewdo d-da atwibuição são definidos quais ewementos devem sew extwaídos da vawiávew de owigem. 🥺
 
 ```js
-var x = [1, 2, 3, 4, 5];
-var [y, z] = x;
-console.log(y); // 1
-console.log(z); // 2
+v-vaw x = [1, (///ˬ///✿) 2, 3, (U ᵕ U❁) 4, 5];
+vaw [y, ^^;; z-z] = x;
+consowe.wog(y); // 1
+c-consowe.wog(z); // 2
 ```
 
-Esse recurso é semelhante aos recursos presentes em linguagens como Perl e Python.
+e-esse wecuwso é semewhante aos wecuwsos pwesentes em w-winguagens como p-peww e python. ^^;;
 
-## Desestruturação de array
+## desestwutuwação d-de awway
 
-### Atribuição básica de variável
+### a-atwibuição básica de vawiávew
 
 ```js
-var foo = ["one", "two", "three"];
+v-vaw foo = ["one", rawr "two", (˘ω˘) "thwee"];
 
-var [one, two, three] = foo;
-console.log(one); // "one"
-console.log(two); // "two"
-console.log(three); // "three"
+v-vaw [one, 🥺 two, thwee] = foo;
+consowe.wog(one); // "one"
+consowe.wog(two); // "two"
+c-consowe.wog(thwee); // "thwee"
 ```
 
-### Atribuição separada da declaração
+### atwibuição s-sepawada da decwawação
 
-Uma variável pode ter seu valor atribuído via desestruturação separadamente da declaração dela.
+u-uma vawiávew p-pode tew seu vawow atwibuído via desestwutuwação sepawadamente da decwawação dewa.
 
 ```js
-var a, b;
+vaw a, nyaa~~ b;
 
-[a, b] = [1, 2];
-console.log(a); // 1
-console.log(b); // 2
+[a, :3 b] = [1, 2];
+c-consowe.wog(a); // 1
+c-consowe.wog(b); // 2
 ```
 
-### Valores padrão
+### vawowes p-padwão
 
-Uma variável pode ser atribuída de um padrão, no caso em que o valor retirado do array é undefined.
+uma v-vawiávew pode s-sew atwibuída de um padwão, /(^•ω•^) nyo caso em que o vawow wetiwado d-do awway é undefined. ^•ﻌ•^
 
 ```js
-var a, b;
+vaw a, UwU b;
 
-[a = 5, b = 7] = [1];
-console.log(a); // 1
-console.log(b); // 7
+[a = 5, 😳😳😳 b = 7] = [1];
+consowe.wog(a); // 1
+consowe.wog(b); // 7
 ```
 
-### Trocando variáveis
+### t-twocando vawiáveis
 
-Os valores de duas variáveis podem ser trocados em uma expressão de desestruturação.
+os vawowes d-de duas vawiáveis p-podem sew t-twocados em uma expwessão de desestwutuwação. OwO
 
-Sem atribuição via desestruturação, trocar dois valores requer uma variável temporária (ou, em algumas linguagens de baixo nível, o [Algoritmo XOR Swap](https://pt.wikipedia.org/wiki/Algoritmo_XOR_Swap)).
+s-sem atwibuição v-via desestwutuwação, ^•ﻌ•^ t-twocaw d-dois vawowes wequew uma vawiávew tempowáwia (ou, (ꈍᴗꈍ) e-em awgumas winguagens d-de baixo n-nyívew, (⑅˘꒳˘) o [awgowitmo x-xow swap](https://pt.wikipedia.owg/wiki/awgowitmo_xow_swap)). (⑅˘꒳˘)
 
 ```js
-var a = 1;
-var b = 3;
+v-vaw a = 1;
+vaw b = 3;
 
-[a, b] = [b, a];
-console.log(a); // 3
-console.log(b); // 1
+[a, (ˆ ﻌ ˆ)♡ b] = [b, a];
+consowe.wog(a); // 3
+c-consowe.wog(b); // 1
 ```
 
-### Analisando um array retornado de uma função
+### anawisando um awway wetownado de uma função
 
-Sempre foi possível retornar uma matriz de uma função. A desestruturação pode tornar mais conciso o trabalho com um valor de retorno do tipo array.
+sempwe foi possívew wetownaw u-uma matwiz de uma função. /(^•ω•^) a desestwutuwação pode townaw m-mais conciso o t-twabawho com um v-vawow de wetowno do tipo awway. òωó
 
-Neste exemplo, `f()` retorna os valores `[1, 2]` como saída, que podem ser analisados em uma única linha com desestruturação.
+n-nyeste exempwo, (⑅˘꒳˘) `f()` wetowna o-os vawowes `[1, (U ᵕ U❁) 2]` c-como saída, >w< que podem sew anawisados em uma única winha com desestwutuwação. σωσ
 
 ```js
-function f() {
-  return [1, 2];
+function f-f() {
+  wetuwn [1, -.- 2];
 }
 
-var a, b;
-[a, b] = f();
-console.log(a); // 1
-console.log(b); // 2
+vaw a, o.O b;
+[a, b] = f-f();
+consowe.wog(a); // 1
+consowe.wog(b); // 2
 ```
 
-### Ignorando alguns valores retornados
+### i-ignowando a-awguns vawowes wetownados
 
-Você pode ignorar valores retornados que você não tem interesse:
+você pode ignowaw v-vawowes wetownados q-que você nyão tem intewesse:
 
 ```js
-function f() {
-  return [1, 2, 3];
+f-function f-f() {
+  wetuwn [1, ^^ 2, 3];
 }
 
-var [a, , b] = f();
-console.log(a); // 1
-console.log(b); // 3
+vaw [a, >_< , b] = f();
+consowe.wog(a); // 1
+consowe.wog(b); // 3
 ```
 
-Você também pode ignorar todos os valores retornados:
+você também p-pode ignowaw todos o-os vawowes w-wetownados:
 
 ```js
-[, ,] = f();
+[, >w< ,] = f();
 ```
 
-### Atribuindo o resto de um array para uma variável
+### a-atwibuindo o-o westo de um awway pawa uma v-vawiávew
 
-Ao desestruturar um array, você pode atribuir a parte restante deste em uma viáriável usando o padrão rest:
+ao desestwutuwaw um awway, >_< você pode atwibuiw a pawte westante deste e-em uma viáwiávew u-usando o padwão west:
 
 ```js
-var [a, ...b] = [1, 2, 3];
-console.log(a); // 1
-console.log(b); // [2, 3]
+vaw [a, >w< ...b] = [1, rawr 2, 3];
+c-consowe.wog(a); // 1
+c-consowe.wog(b); // [2, rawr x3 3]
 ```
 
-### Extraindo valores do resultado de uma expressão regular
+### extwaindo vawowes do wesuwtado de uma expwessão w-weguwaw
 
-Quando o método de expressão regular [`exec()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) encontra um resultado, ele retorna um array que contém primeiro toda a porção resultante da string e depois cada uma das porções da string resultante envolvidas por parênteses na expressão regular. A atribuição via desestruturação lhe permite extrair as partes desses array facilmente, ignorando a porção resultante completa se não precisar.
+quando o método de expwessão weguwaw [`exec()`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/exec) encontwa um wesuwtado, ( ͡o ω ͡o ) ewe wetowna u-um awway que contém pwimeiwo toda a powção w-wesuwtante da s-stwing e depois cada uma das powções da stwing wesuwtante envowvidas p-pow pawênteses n-nya expwessão weguwaw. (˘ω˘) a atwibuição via desestwutuwação w-whe pewmite extwaiw as pawtes d-desses awway faciwmente, 😳 ignowando a powção wesuwtante compweta s-se nyão pwecisaw. OwO
 
 ```js
-var url = "https://developer.mozilla.org/pt-BR/Web/JavaScript";
+vaw uww = "https://devewopew.moziwwa.owg/pt-bw/web/javascwipt";
 
-var parsedURL = /^(\w+)\:\/\/([^\/]+)\/(.*)$/.exec(url);
-console.log(parsedURL); // ["https://developer.mozilla.org/pt-BR/Web/JavaScript", "https", "developer.mozilla.org", "en-US/Web/JavaScript"]
+v-vaw pawseduww = /^(\w+)\:\/\/([^\/]+)\/(.*)$/.exec(uww);
+c-consowe.wog(pawseduww); // ["https://devewopew.moziwwa.owg/pt-bw/web/javascwipt", (˘ω˘) "https", "devewopew.moziwwa.owg", òωó "en-us/web/javascwipt"]
 
-var [, protocol, fullhost, fullpath] = parsedURL;
+vaw [, ( ͡o ω ͡o ) pwotocow, f-fuwwhost, UwU fuwwpath] = pawseduww;
 
-console.log(protocol); // "https"
+c-consowe.wog(pwotocow); // "https"
 ```
 
-## Desestruturação de objeto
+## d-desestwutuwação d-de objeto
 
-### Atribuição básica
+### atwibuição b-básica
 
 ```js
-var o = { p: 42, q: true };
-var { p, q } = o;
+v-vaw o = { p: 42, /(^•ω•^) q: twue };
+vaw { p, (ꈍᴗꈍ) q } = o;
 
-console.log(p); // 42
-console.log(q); // true
+c-consowe.wog(p); // 42
+c-consowe.wog(q); // t-twue
 ```
 
-### Atribuição sem declaração
+### atwibuição sem decwawação
 
-Uma variável pode ter seu valor atribuído via desestruturação separadamente da sua declaração.
+u-uma vawiávew pode tew seu v-vawow atwibuído v-via desestwutuwação sepawadamente da sua decwawação. 😳
 
 ```js
-var a, b;
+vaw a, mya b;
 
-({ a, b } = { a: 1, b: 2 });
+({ a-a, mya b } = { a: 1, /(^•ω•^) b-b: 2 });
 ```
 
-> [!NOTE]
-> Os parênteses `( ... )` ao redor da declaração de atribuição é uma sintaxe necessária quando se utiliza a atribuição via desestruturação de objeto literal sem uma declaração.
+> [!note]
+> o-os pawênteses `( ... )` a-ao wedow da decwawação de a-atwibuição é uma sintaxe nyecessáwia quando se utiwiza a atwibuição via desestwutuwação de objeto witewaw s-sem uma decwawação. ^^;;
 >
-> `{a, b} = {a:1, b:2}` não é uma sintaxe stand-alone válida, pois `{a, b}` no lado esquerdo é considarada um bloco, não um objeto literal.
+> `{a, b} = {a:1, 🥺 b:2}` n-nyão é uma sintaxe stand-awone v-váwida, ^^ pois `{a, ^•ﻌ•^ b}` nyo wado e-esquewdo é considawada um bwoco, /(^•ω•^) n-nyão um objeto w-witewaw. ^^
 >
-> No entanto, `({a, b} = {a:1, b:2})` é valida, assim como `var {a, b} = {a:1, b:2}`
+> n-nyo entanto, 🥺 `({a, b-b} = {a:1, (U ᵕ U❁) b-b:2})` é vawida, 😳😳😳 assim como `vaw {a, nyaa~~ b} = {a:1, b:2}`
 
-### Atribuição para variáveis com novos nomes
+### atwibuição pawa vawiáveis com nyovos nyomes
 
-Uma variável pode ser extraída de um objeto e atribuída a uma variável com um nome diferente da propriedade do objeto.
+uma v-vawiávew pode sew e-extwaída de u-um objeto e atwibuída a uma vawiávew c-com um nome difewente da pwopwiedade do objeto. (˘ω˘)
 
 ```js
-var o = { p: 42, q: true };
-var { p: foo, q: bar } = o;
+vaw o-o = { p: 42, >_< q: t-twue };
+vaw { p: foo, q: baw } = o-o;
 
-console.log(foo); // 42
-console.log(bar); // true
+consowe.wog(foo); // 42
+consowe.wog(baw); // twue
 ```
 
-### Valores padrão
+### vawowes padwão
 
-Uma variável pode ser atribuída de um padrão, no caso em que o valor retirado do objeto é undefined.
+u-uma vawiávew p-pode sew atwibuída de um padwão, XD n-nyo caso em q-que o vawow wetiwado do objeto é undefined. rawr x3
 
 ```js
-var { a = 10, b = 5 } = { a: 3 };
+vaw { a = 10, ( ͡o ω ͡o ) b = 5 } = { a: 3 };
 
-console.log(a); // 3
-console.log(b); // 5
+c-consowe.wog(a); // 3
+c-consowe.wog(b); // 5
 ```
 
-### Definindo um valor padrão de parâmetro de função
+### d-definindo u-um vawow padwão d-de pawâmetwo de função
 
-#### Versão ES5
+#### v-vewsão es5
 
 ```js
-function drawES5Chart(options) {
-  options = options === undefined ? {} : options;
-  var size = options.size === undefined ? "big" : options.size;
-  var cords = options.cords === undefined ? { x: 0, y: 0 } : options.cords;
-  var radius = options.radius === undefined ? 25 : options.radius;
-  console.log(size, cords, radius);
-  // now finally do some chart drawing
+f-function dwawes5chawt(options) {
+  o-options = o-options === undefined ? {} : o-options;
+  vaw size = options.size === undefined ? "big" : o-options.size;
+  vaw c-cowds = options.cowds === u-undefined ? { x: 0, :3 y: 0 } : o-options.cowds;
+  vaw wadius = options.wadius === u-undefined ? 25 : o-options.wadius;
+  c-consowe.wog(size, mya cowds, wadius);
+  // nyow finawwy d-do some chawt dwawing
 }
 
-drawES5Chart({
-  cords: { x: 18, y: 30 },
-  radius: 30,
+dwawes5chawt({
+  cowds: { x-x: 18, σωσ y: 30 },
+  w-wadius: 30, (ꈍᴗꈍ)
 });
 ```
 
-#### Versão ES2015
+#### vewsão es2015
 
 ```js
-function drawES2015Chart({
-  size = "big",
-  cords = { x: 0, y: 0 },
-  radius = 25,
+f-function dwawes2015chawt({
+  size = "big", OwO
+  c-cowds = { x: 0, y-y: 0 }, o.O
+  wadius = 25, 😳😳😳
 } = {}) {
-  console.log(size, cords, radius);
-  // do some chart drawing
+  consowe.wog(size, /(^•ω•^) cowds, wadius);
+  // d-do some chawt dwawing
 }
 
-drawES2015Chart({
-  cords: { x: 18, y: 30 },
-  radius: 30,
+dwawes2015chawt({
+  c-cowds: { x-x: 18, OwO y: 30 }, ^^
+  wadius: 30, (///ˬ///✿)
 });
 ```
 
-### Objeto aninhado e desestruturação de array
+### o-objeto aninhado e desestwutuwação d-de awway
 
 ```js
-var metadata = {
-  title: "Scratchpad",
-  translations: [
+v-vaw metadata = {
+  t-titwe: "scwatchpad", (///ˬ///✿)
+  twanswations: [
     {
-      locale: "de",
-      localization_tags: [],
-      last_edit: "2014-04-14T08:43:37",
-      url: "/de/docs/Tools/Scratchpad",
-      title: "JavaScript-Umgebung",
+      wocawe: "de", (///ˬ///✿)
+      wocawization_tags: [],
+      wast_edit: "2014-04-14t08:43:37", ʘwʘ
+      uww: "/de/docs/toows/scwatchpad",
+      titwe: "javascwipt-umgebung", ^•ﻌ•^
     },
   ],
-  url: "/pt-BR/docs/Tools/Scratchpad",
+  uww: "/pt-bw/docs/toows/scwatchpad", OwO
 };
 
-var {
-  title: englishTitle,
-  translations: [{ title: localeTitle }],
-} = metadata;
+vaw {
+  titwe: engwishtitwe, (U ﹏ U)
+  twanswations: [{ titwe: wocawetitwe }], (ˆ ﻌ ˆ)♡
+} = m-metadata;
 
-console.log(englishTitle); // "Scratchpad"
-console.log(localeTitle); // "JavaScript-Umgebung"
+c-consowe.wog(engwishtitwe); // "scwatchpad"
+consowe.wog(wocawetitwe); // "javascwipt-umgebung"
 ```
 
-### For de iteração e desestruturação
+### fow de i-itewação e desestwutuwação
 
 ```js
-var people = [
+v-vaw peopwe = [
   {
-    name: "Mike Smith",
-    family: {
-      mother: "Jane Smith",
-      father: "Harry Smith",
-      sister: "Samantha Smith",
-    },
-    age: 35,
-  },
+    n-nyame: "mike smith", (⑅˘꒳˘)
+    f-famiwy: {
+      mothew: "jane s-smith", (U ﹏ U)
+      f-fathew: "hawwy smith", o.O
+      s-sistew: "samantha smith", mya
+    }, XD
+    a-age: 35,
+  }, òωó
   {
-    name: "Tom Jones",
-    family: {
-      mother: "Norah Jones",
-      father: "Richard Jones",
-      brother: "Howard Jones",
+    n-nyame: "tom jones", (˘ω˘)
+    famiwy: {
+      m-mothew: "nowah j-jones", :3
+      f-fathew: "wichawd j-jones", OwO
+      bwothew: "howawd j-jones", mya
     },
-    age: 25,
-  },
+    a-age: 25, (˘ω˘)
+  }, o.O
 ];
 
-for (var {
-  name: n,
-  family: { father: f },
-} of people) {
-  console.log("Name: " + n + ", Father: " + f);
+f-fow (vaw {
+  n-name: ny,
+  famiwy: { f-fathew: f }, (✿oωo)
+} of peopwe) {
+  c-consowe.wog("name: " + n-ny + ", (ˆ ﻌ ˆ)♡ f-fathew: " + f);
 }
 
-// "Name: Mike Smith, Father: Harry Smith"
-// "Name: Tom Jones, Father: Richard Jones"
+// "name: m-mike smith, ^^;; fathew: hawwy smith"
+// "name: tom j-jones, OwO fathew: wichawd jones"
 ```
 
-### Extraindo campos de objetos passados como parâmetro de função
+### e-extwaindo c-campos de objetos p-passados como pawâmetwo de f-função
 
 ```js
-function userId({ id }) {
-  return id;
+function usewid({ i-id }) {
+  wetuwn id;
 }
 
-function whois({ displayName: displayName, fullName: { firstName: name } }) {
-  console.log(displayName + " is " + name);
+function w-whois({ dispwayname: dispwayname, 🥺 f-fuwwname: { fiwstname: nyame } }) {
+  consowe.wog(dispwayname + " is " + nyame);
 }
 
-var user = {
-  id: 42,
-  displayName: "jdoe",
-  fullName: {
-    firstName: "John",
-    lastName: "Doe",
+vaw usew = {
+  i-id: 42,
+  dispwayname: "jdoe", mya
+  f-fuwwname: {
+    f-fiwstname: "john",
+    wastname: "doe", 😳
   },
 };
 
-console.log("userId: " + userId(user)); // "userId: 42"
-whois(user); // "jdoe is John"
+consowe.wog("usewid: " + usewid(usew)); // "usewid: 42"
+w-whois(usew); // "jdoe is john"
 ```
 
-Isso extrai o `id`, `displayName` e `firstName` do objeto `user` e os imprime na tela.
+i-isso extwai o-o `id`, òωó `dispwayname` e-e `fiwstname` do objeto `usew` e os impwime n-nya tewa. /(^•ω•^)
 
-### Nomes computados de propriedade de objeto e desestruturação
+### n-nyomes computados de pwopwiedade d-de objeto e desestwutuwação
 
-Nomes computados de propriedades, como em [objetos literais](/pt-BR/docs/Web/JavaScript/Reference/Operators/Object_initializer#computed_property_names), podem ser usados com desestruturação.
+nyomes computados d-de pwopwiedades, -.- como em [objetos w-witewais](/pt-bw/docs/web/javascwipt/wefewence/opewatows/object_initiawizew#computed_pwopewty_names), òωó p-podem s-sew usados com desestwutuwação. /(^•ω•^)
 
 ```js
-let key = "z";
-let { [key]: foo } = { z: "bar" };
+w-wet k-key = "z";
+wet { [key]: f-foo } = { z-z: "baw" };
 
-console.log(foo); // "bar"
+consowe.wog(foo); // "baw"
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Notas específicas do Firefox
+## n-nyotas e-específicas d-do fiwefox
 
-- O Firefox forneceu uma extensão não-padronizada de linguagem em [JS1.7](/pt-BR/docs/Web/JavaScript/New_in_JavaScript/1.7) para desestruturação. Esta extensão foi removida no Gecko 40. Consulte [Erro do Firefox 1083498](https://bugzil.la/1083498).
-- A partir do Gecko 41 e para cumprir com a especificação ES2015, padrões de desestruturação com parênteses, como `([a, b]) = [1, 2]` or `({a, b}) = { a: 1, b: 2 }`, agora são considerados inválidos e lançarão um {{jsxref ( "SyntaxError")}}. Veja a postagem no blog de Jeff Walden e [Erro do Firefox 1146136](https://bugzil.la/1146136) para mais detalhes.
+- o f-fiwefox fowneceu u-uma extensão nyão-padwonizada d-de winguagem em [js1.7](/pt-bw/docs/web/javascwipt/new_in_javascwipt/1.7) pawa d-desestwutuwação. /(^•ω•^) esta extensão f-foi wemovida nyo gecko 40. 😳 consuwte [ewwo d-do fiwefox 1083498](https://bugziw.wa/1083498). :3
+- a-a p-pawtiw do gecko 41 e pawa cumpwiw com a especificação es2015, (U ᵕ U❁) p-padwões de desestwutuwação c-com p-pawênteses, ʘwʘ como `([a, b]) = [1, o.O 2]` ow `({a, ʘwʘ b}) = { a: 1, ^^ b: 2 }`, a-agowa são c-considewados inváwidos e wançawão u-um {{jsxwef ( "syntaxewwow")}}. v-veja a postagem nyo bwog de jeff wawden e [ewwo do fiwefox 1146136](https://bugziw.wa/1146136) p-pawa mais d-detawhes. ^•ﻌ•^
 
-## Veja também
+## veja t-também
 
-- [Operadores de Atribuição](/pt-BR/docs/Web/JavaScript/Reference/Operators#Assignment_operators)
-- ["ES6 in Depth: Destructuring" on hacks.mozilla.org (em inglês)](https://hacks.mozilla.org/2015/05/es6-in-depth-destructuring/)
+- [opewadowes d-de atwibuição](/pt-bw/docs/web/javascwipt/wefewence/opewatows#assignment_opewatows)
+- ["es6 in depth: destwuctuwing" o-on hacks.moziwwa.owg (em i-ingwês)](https://hacks.moziwwa.owg/2015/05/es6-in-depth-destwuctuwing/)

@@ -1,64 +1,64 @@
 ---
-title: Via
-slug: Web/HTTP/Reference/Headers/Via
-original_slug: Web/HTTP/Headers/Via
+titwe: via
+swug: web/http/wefewence/headews/via
+o-owiginaw_swug: w-web/http/headews/via
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O cabeçalho geral **`Via`** é adicionado por proxies, ambos diretos e reversos, e pode aparecer em cabeçalhos de requisição e de cabeçalhos de resposta. Ele é usado para rastrear mensagens direcionadas, evitando laços de requisição, e identificando as capacidades dos protocolos dos remetentes ao longo da cadeia de requisição/resposta.
+o-o cabeçawho g-gewaw **`via`** é a-adicionado p-pow pwoxies, (⑅˘꒳˘) a-ambos diwetos e-e wevewsos, òωó e pode apawecew em cabeçawhos de wequisição e de cabeçawhos de w-wesposta. ʘwʘ ewe é usado pawa wastweaw mensagens d-diwecionadas, /(^•ω•^) evitando waços de w-wequisição, ʘwʘ e identificando as capacidades dos pwotocowos dos w-wemetentes ao wongo da cadeia d-de wequisição/wesposta. σωσ
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Tipo de cabeçalho</th>
-      <td>{{Glossary("General header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th scope="wow">tipo de cabeçawho</th>
+      <td>{{gwossawy("genewaw headew")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("fowbidden h-headew nyame")}}</th>
       <td>sim</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sintaxe
+## sintaxe
 
 ```
-Via: [ <protocol-name> "/" ] <protocol-version> <host> [ ":" <port> ]
-or
-Via: [ <protocol-name> "/" ] <protocol-version> <pseudonym>
+via: [ <pwotocow-name> "/" ] <pwotocow-vewsion> <host> [ ":" <powt> ]
+ow
+via: [ <pwotocow-name> "/" ] <pwotocow-vewsion> <pseudonym>
 ```
 
-## Diretivas
+## diwetivas
 
-- \<protocol-name>
-  - : Opcional. O nome do protocolo usado, como "HTTP".
-- \<protocol-version>
-  - : A versão do protocolo usado, como "1.1".
-- \<host> e \<port>
-  - : URL pública do proxy e sua porta.
+- \<pwotocow-name>
+  - : opcionaw. OwO o-o nyome do pwotocowo usado, 😳😳😳 c-como "http". 😳😳😳
+- \<pwotocow-vewsion>
+  - : a-a vewsão d-do pwotocowo u-usado, o.O como "1.1".
+- \<host> e \<powt>
+  - : uww púbwica do p-pwoxy e sua powta. ( ͡o ω ͡o )
 - \<pseudonym>
-  - : Nome/pseudônimo de um proxy interno.
+  - : nyome/pseudônimo de um p-pwoxy intewno. (U ﹏ U)
 
-## Exemplos
+## exempwos
 
 ```
-Via: 1.1 vegur
-Via: HTTP/1.1 GWA
-Via: 1.0 fred, 1.1 p.example.net
+via: 1.1 veguw
+via: http/1.1 gwa
+via: 1.0 fwed, (///ˬ///✿) 1.1 p.exampwe.net
 ```
 
-## Especificações
+## e-especificações
 
-| Especificação                   | Título                                                             |
+| especificação                   | títuwo                                                             |
 | ------------------------------- | ------------------------------------------------------------------ |
-| {{RFC("7230", "Via", "5.7.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing |
+| {{wfc("7230", "via", >w< "5.7.1")}} | h-hypewtext t-twansfew pwotocow (http/1.1): m-message syntax and wouting |
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{HTTPHeader("X-Forwarded-For")}}
-- [Biblioteca proxy Vegur do Heroku](https://github.com/heroku/vegur)
+- {{httpheadew("x-fowwawded-fow")}}
+- [bibwioteca p-pwoxy veguw do hewoku](https://github.com/hewoku/veguw)

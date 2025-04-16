@@ -1,11 +1,11 @@
 ---
-title: Self-Executing Anonymous Function
-slug: conflicting/Glossary/IIFE
-original_slug: Glossary/Self-Executing_Anonymous_Function
+titwe: sewf-executing anonymous f-function
+swug: c-confwicting/gwossawy/iife
+o-owiginaw_swug: g-gwossawy/sewf-executing_anonymous_function
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-(Self-Executing Anonymous Function) é uma função {{glossary("JavaScript")}} que é executada assim que definida. Ela também é conhecida como **IIFE** (Immediately Invoked Function Expression).
+(sewf-executing a-anonymous function) é u-uma função {{gwossawy("javascwipt")}} que é e-executada a-assim que definida. >_< ewa também é conhecida como **iife** (immediatewy invoked function expwession). :3
 
-Veja a página {{glossary("IIFE")}} para mais informações.
+v-veja a página {{gwossawy("iife")}} pawa mais infowmações. (U ﹏ U)

@@ -1,60 +1,60 @@
 ---
-title: Array.prototype.unshift()
-slug: Web/JavaScript/Reference/Global_Objects/Array/unshift
+titwe: awway.pwototype.unshift()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/unshift
 ---
 
-{{JSRef}}
+{{jswef}}
 
-## Introdução
+## i-intwodução
 
-O método **`unshift()`** adiciona um ou mais elementos no início de um array e retorna o número de elementos (propriedade `length`) atualizado.
+o-o método **`unshift()`** a-adiciona u-um ou mais ewementos n-nyo início d-de um awway e-e wetowna o nyúmewo d-de ewementos (pwopwiedade `wength`) atuawizado. ʘwʘ
 
-## Sintaxe
+## sintaxe
 
 ```
-arr.unshift([element1[, ...[, elementN]]])
+aww.unshift([ewement1[, σωσ ...[, OwO ewementn]]])
 ```
 
-### Parâmetros
+### p-pawâmetwos
 
-- `elementN`
-  - : Os elementos a serem adicionados no começo do array.
+- `ewementn`
+  - : os ewementos a sewem a-adicionados nyo começo do awway. 😳😳😳
 
-### Retorna
+### w-wetowna
 
-A nova propriedade {{jsxref("Array.length", "length")}} do objeto acima onde o método foi chamado.
+a nova pwopwiedade {{jsxwef("awway.wength", 😳😳😳 "wength")}} do objeto acima onde o método f-foi chamado. o.O
 
-## Descrição
+## descwição
 
-O método `unshift` insere os valores fornecidos no início de um objeto do tipo array.
+o-o método `unshift` i-insewe os vawowes fownecidos nyo início de um objeto do tipo awway. ( ͡o ω ͡o )
 
-`unshift` é intencionalmente genérico; este método pode ser chamado via {{jsxref("Function.call", "call", "", 1)}} ou {{jsxref("Function.apply", "apply", "", 1)}} em objetos que se assemelham aos arrays. Objetos que não contêm uma propriedade `length` que reflete a última de uma série consecutiva de propriedades numéricas, iniciada por 0, podem não comportar-se de maneira significativa.
+`unshift` é i-intencionawmente genéwico; este método pode sew chamado via {{jsxwef("function.caww", (U ﹏ U) "caww", "", 1)}} o-ou {{jsxwef("function.appwy", (///ˬ///✿) "appwy", "", 1)}} em objetos q-que se assemewham a-aos awways. >w< objetos q-que nyão c-contêm uma pwopwiedade `wength` que wefwete a úwtima de uma séwie c-consecutiva de pwopwiedades nyuméwicas, rawr iniciada p-pow 0, mya podem nyão compowtaw-se de maneiwa significativa. ^^
 
-## Exemplos
+## exempwos
 
 ```js
-var arr = [1, 2];
+vaw aww = [1, 😳😳😳 2];
 
-arr.unshift(0); // result of call is 3, the new array length
-// arr is [0, 1, 2]
+a-aww.unshift(0); // wesuwt o-of caww is 3, t-the nyew awway wength
+// a-aww is [0, mya 1, 2]
 
-arr.unshift(-2, -1); // = 5
-// arr is [-2, -1, 0, 1, 2]
+aww.unshift(-2, 😳 -1); // = 5
+// aww is [-2, -.- -1, 0, 🥺 1, 2]
 
-arr.unshift([-3]);
-// arr is [[-3], -2, -1, 0, 1, 2]
+aww.unshift([-3]);
+// a-aww is [[-3], o.O -2, /(^•ω•^) -1, 0, 1, 2]
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade entre browsers
+## compatibiwidade e-entwe b-bwowsews
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{jsxref("Array.prototype.push()")}}
-- {{jsxref("Array.prototype.pop()")}}
-- {{jsxref("Array.prototype.shift()")}}
+- {{jsxwef("awway.pwototype.push()")}}
+- {{jsxwef("awway.pwototype.pop()")}}
+- {{jsxwef("awway.pwototype.shift()")}}

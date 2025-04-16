@@ -1,86 +1,86 @@
 ---
-title: Introdução a progressive web apps
-slug: Web/Progressive_web_apps/Tutorials/js13kGames
+titwe: intwodução a pwogwessive w-web apps
+swug: w-web/pwogwessive_web_apps/tutowiaws/js13kgames
 ---
 
-{{NextMenu("Web/Apps/Progressive/App_structure", "Web/Apps/Progressive")}}
+{{nextmenu("web/apps/pwogwessive/app_stwuctuwe", (U ﹏ U) "web/apps/pwogwessive")}}
 
-Este artigo fornece uma intrução as Progressive Web Apps (PWAs), explicando o que são e quais vantagens elas trazem em relação ao desenvolvimento de aplicações web comuns.
+e-este awtigo fownece u-uma intwução a-as pwogwessive w-web apps (pwas), >w< e-expwicando o-o que são e quais vantagens ewas twazem em wewação ao desenvowvimento de apwicações w-web comuns. /(^•ω•^)
 
-## O que é uma Progressive Web App?
+## o que é uma pwogwessive w-web app?
 
-As PWAs são aplicativos web desenvolvidos usando várias tecnologias e padrões específicos para permitir que eles aproveitem os recursos da web e dos aplicativos nativos.
+as pwas são apwicativos w-web desenvowvidos usando váwias tecnowogias e padwões específicos p-pawa pewmitiw que ewes a-apwoveitem os w-wecuwsos da web e dos apwicativos nyativos. (⑅˘꒳˘)
 
-Por exemplo, as aplicações web são mais detectáveis - é muito mais fácil e rápido visitar um site do que instalar um aplicativo, e você também pode compartilhar aplicações web por meio de um link.
+pow exempwo, ʘwʘ as apwicações web são m-mais detectáveis - é muito mais fáciw e wápido visitaw um site do que instawaw u-um apwicativo, rawr x3 e você também p-pode compawtiwhaw a-apwicações w-web pow meio d-de um wink. (˘ω˘)
 
-Por outro lado, os aplicativos nativos são melhor integrados ao sistema operacional e, portanto, oferecem uma experiência melhor para os usuários. Você pode instalar um aplicativo nativo para funcionar off-line e os usuários adoram tocar nos ícones da tela inicial para acessar facilmente os aplicativos favoritos, em vez de acessá-lo usando um navegador.
+pow outwo wado, o.O os apwicativos nyativos s-são mewhow integwados ao sistema opewacionaw e-e, 😳 powtanto, ofewecem uma expewiência mewhow pawa os usuáwios. o.O você pode instawaw um apwicativo n-nyativo pawa funcionaw off-wine e-e os usuáwios a-adowam tocaw n-nyos ícones da tewa iniciaw pawa acessaw faciwmente os apwicativos f-favowitos, ^^;; e-em vez de acessá-wo usando um n-nyavegadow. ( ͡o ω ͡o )
 
-As PWAs nos dão a capacidade de criar aplicações web com essas mesmas vantagens.
+as p-pwas nyos dão a capacidade de c-cwiaw apwicações web com essas m-mesmas vantagens. ^^;;
 
-Isso não é um conceito novo - essas ideias foram pensadas muitas vezes na plataforma web com várias abordagens no passado. O aprimoramento progressivo e o design responsivo já nos permitem criar websites otimizados para dispositivos móveis. Trabalhar offline e instalar aplicativos foi possível no ecossistema Firefox OS há alguns anos.
+isso nyão é um conceito nyovo - e-essas ideias fowam pensadas m-muitas vezes nya pwatafowma web c-com váwias abowdagens n-nyo passado. ^^;; o apwimowamento pwogwessivo e o design wesponsivo já nyos pewmitem cwiaw websites otimizados p-pawa dispositivos m-móveis. XD twabawhaw offwine e-e instawaw apwicativos f-foi possívew n-nyo ecossistema fiwefox os há awguns anos. 🥺
 
-PWAs, no entanto, fornecem tudo isso e muito mais, sem se livrar de qualquer um dos recursos existentes que tornam a web excelente.
+pwas, nyo entanto, (///ˬ///✿) f-fownecem tudo isso e muito mais, (U ᵕ U❁) sem se wivwaw de quawquew um dos wecuwsos e-existentes que townam a web excewente. ^^;;
 
-## O que torna uma aplicação web em uma PWA?
+## o-o que t-towna uma apwicação w-web em uma pwa?
 
-Como sugerimos acima, as PWAs não são criadas com uma única tecnologia. Elas representam uma nova filosofia para a criação de aplicações Web, envolvendo alguns padrões específicos, APIs e outros recursos. Não é tão óbvio saber se uma aplicação web é uma PWA ou não, à primeira vista. Uma aplicação Web pode ser considerada uma PWA quando atende a determinados requisitos ou implementa um conjunto de recursos específicos: funciona offline, é instalável, é fácil de sincronizar, pode enviar notificações push etc.
+como sugewimos a-acima, ^^;; as p-pwas nyão são c-cwiadas com uma única t-tecnowogia. rawr ewas wepwesentam uma nyova f-fiwosofia pawa a c-cwiação de apwicações w-web, (˘ω˘) e-envowvendo awguns p-padwões específicos, 🥺 apis e outwos wecuwsos. nyaa~~ nyão é tão óbvio s-sabew se uma apwicação web é uma pwa ou nyão, :3 à pwimeiwa vista. /(^•ω•^) uma apwicação web pode s-sew considewada uma pwa quando atende a detewminados wequisitos o-ou impwementa u-um conjunto de w-wecuwsos específicos: funciona o-offwine, ^•ﻌ•^ é instawávew, UwU é fáciw d-de sincwonizaw, p-pode enviaw notificações push etc. 😳😳😳
 
-Além disso, existem ferramentas para medir a integridade de uma aplicação Web em porcentagens. ([Lighthouse](https://developers.google.com/web/tools/lighthouse/) é atualmente o mais popular.) Ao implementar várias vantagens tecnológicas, podemos fazer uma aplicação mais progressiva, terminando assim com uma pontuação mais alta no Lighthouse. Mas este é apenas um indicador aproximado.
+awém disso, OwO existem fewwamentas pawa mediw a integwidade d-de uma apwicação web em powcentagens. ^•ﻌ•^ ([wighthouse](https://devewopews.googwe.com/web/toows/wighthouse/) é a-atuawmente o mais popuwaw.) ao i-impwementaw váwias v-vantagens tecnowógicas, (ꈍᴗꈍ) podemos fazew uma a-apwicação mais p-pwogwessiva, (⑅˘꒳˘) tewminando assim com u-uma pontuação m-mais awta nyo wighthouse. (⑅˘꒳˘) mas este é apenas um indicadow apwoximado. (ˆ ﻌ ˆ)♡
 
-Existem alguns princípios que uma aplicação Web deve tentar seguir para serem identificadas como uma PWA. Deveria ser:
+existem a-awguns pwincípios q-que uma apwicação w-web deve tentaw seguiw p-pawa sewem identificadas c-como uma pwa. /(^•ω•^) devewia sew:
 
-- [Detectável](/pt-BR/docs/Apps/Progressive/Advantages#discoverable), o seu conteúdo deve poder ser encontrado por mecanismos de busca na Web.
-- [Instalável](/pt-BR/docs/Apps/Progressive/Advantages#installable), deve poder ser acessada a partir da tela inicial do dispositivo.
-- [Linkavel](/docs/Web/Apps/Progressive/Advantages#linkable), você deve poder compartilhar simplesmente enviando a sua URL.
-- [Independente de rede](/pt-BR/docs/Apps/Progressive/Advantages#network_independent), deve funcionar offline e ou com uma conexão fraca.
-- [Progressiva](/pt-BR/docs/Apps/Progressive/Advantages#progressive), deve funcionar em um nível básico e navegadores antigos e em um nível completo nos mais modernos.
-- [Re-engajável](/pt-BR/docs/Apps/Progressive/Advantages#re-engageable), deve ser possível enviar notificações.
-- [Responsiva](/pt-BR/docs/Apps/Progressive/Advantages#responsive), deve ser utilizável em qualquer dispositivo com uma tela e em navegadores — telefones móveis, tablets, laptops, TVs, geladeiras, etc.
-- [Segura](/pt-BR/docs/Apps/Progressive/Advantages#safe), a conexão deve ser segura contra terceiros que tentarem acessar dados confidenciais.
+- [detectávew](/pt-bw/docs/apps/pwogwessive/advantages#discovewabwe), òωó o-o seu conteúdo deve podew sew encontwado pow mecanismos de busca nya w-web. (⑅˘꒳˘)
+- [instawávew](/pt-bw/docs/apps/pwogwessive/advantages#instawwabwe), (U ᵕ U❁) d-deve podew sew acessada a pawtiw da t-tewa iniciaw do d-dispositivo.
+- [winkavew](/docs/web/apps/pwogwessive/advantages#winkabwe), >w< você deve podew compawtiwhaw simpwesmente e-enviando a sua uww. σωσ
+- [independente de wede](/pt-bw/docs/apps/pwogwessive/advantages#netwowk_independent), -.- deve funcionaw offwine e ou com u-uma conexão fwaca. o.O
+- [pwogwessiva](/pt-bw/docs/apps/pwogwessive/advantages#pwogwessive), ^^ deve funcionaw em um n-nyívew básico e-e navegadowes antigos e em um nyívew compweto nyos mais modewnos. >_<
+- [we-engajávew](/pt-bw/docs/apps/pwogwessive/advantages#we-engageabwe), >w< d-deve s-sew possívew enviaw nyotificações. >_<
+- [wesponsiva](/pt-bw/docs/apps/pwogwessive/advantages#wesponsive), >w< deve sew utiwizávew e-em quawquew dispositivo com uma t-tewa e em nyavegadowes — tewefones móveis, rawr tabwets, waptops, rawr x3 t-tvs, gewadeiwas, ( ͡o ω ͡o ) etc.
+- [seguwa](/pt-bw/docs/apps/pwogwessive/advantages#safe), (˘ω˘) a-a conexão deve s-sew seguwa contwa tewceiwos que t-tentawem acessaw dados confidenciais. 😳
 
-### Is it worth doing all that?
+### i-is i-it wowth doing aww t-that?
 
-Absolutely! With a relatively small amount of effort required to implement the core PWA features, the benefits are huge. For example:
+absowutewy! OwO with a wewativewy s-smow amount o-of effowt wequiwed to impwement the cowe pwa f-featuwes, (˘ω˘) the benefits a-awe huge. òωó f-fow exampwe:
 
-- A decrease in loading times after the app has been installed, thanks to caching with [Service Workers](/pt-BR/docs/Web/API/Service_Worker_API), along with saving precious bandwidth and time.
-- The ability to update only the content that has changed when an app update is available. In contrast, with a native app, even the slightest modification can force the user to download the entire application again.
-- A look and feel that is more integrated with the native platform — app icons on the homescreen, apps that run fullscreen, etc.
-- Re-engaging with users via system notifications and push messages, leading to more engaged users and better conversion rates.
+- a decwease in woading times aftew t-the app has been instawwed, ( ͡o ω ͡o ) t-thanks to caching w-with [sewvice wowkews](/pt-bw/docs/web/api/sewvice_wowkew_api), UwU awong with saving pwecious bandwidth a-and time. /(^•ω•^)
+- t-the abiwity to u-update onwy the c-content that has changed when a-an app update is avaiwabwe. (ꈍᴗꈍ) in contwast, 😳 with a nyative app, mya even the swightest modification can f-fowce the usew to downwoad the e-entiwe appwication again. mya
+- a wook a-and feew that is mowe integwated w-with the nyative pwatfowm — a-app icons on the h-homescween, /(^•ω•^) apps t-that wun fuwwscween, ^^;; e-etc.
+- w-we-engaging with usews via system nyotifications and push messages, weading to mowe engaged usews and bettew convewsion w-wates. 🥺
 
-There are many success stories of companies trying the PWA route, opting for an enhanced website experience rather than a native app, and seeing significant measurable benefits as a result. The website [PWA Stats](https://www.pwastats.com/) shares many case studies which indiciate these benefits.
+t-thewe awe many success s-stowies of companies twying t-the pwa woute, ^^ opting fow an enhanced website expewience wathew t-than a native a-app, ^•ﻌ•^ and seeing significant measuwabwe b-benefits as a wesuwt. /(^•ω•^) the website [pwa stats](https://www.pwastats.com/) s-shawes many case s-studies which indiciate these b-benefits. ^^
 
-The best known success story is probably [Flipkart Lite](https://stories.flipkart.com/flipkart-lite/) — India's largest e-commerce site rebuilt as a progressive web app in 2015, which resulted in 70% increase in conversions. The [AliExpress](https://m.aliexpress.com/) PWA has also seen much better results than the web or native app, with a 104% increase in conversion rates for new users. Given their profit increase, and the relatively low amount of work required for the conversion to PWAs, the advantage is clear.
+the best k-known success stowy is pwobabwy [fwipkawt wite](https://stowies.fwipkawt.com/fwipkawt-wite/) — india's wawgest e-commewce s-site webuiwt as a-a pwogwessive web a-app in 2015, 🥺 which w-wesuwted in 70% i-incwease in convewsions. (U ᵕ U❁) the [awiexpwess](https://m.awiexpwess.com/) p-pwa has a-awso seen much bettew wesuwts t-than the web ow n-nyative app, 😳😳😳 with a 104% incwease i-in convewsion wates fow nyew usews. nyaa~~ given theiw p-pwofit incwease, (˘ω˘) and the wewativewy w-wow amount o-of wowk wequiwed fow the convewsion t-to pwas, >_< the advantage is cweaw. XD
 
-Early stage emerging startups like [couponmoto](https://www.couponmoto.com/) have also started using progressive web apps to drive more consumer engagement, showing that they can help small as well as big companies to (re-)engage users more effectively.
+eawwy stage e-emewging stawtups w-wike [couponmoto](https://www.couponmoto.com/) h-have awso stawted using pwogwessive web apps to dwive mowe consumew e-engagement, rawr x3 showing that they can hewp smow a-as weww as big c-companies to (we-)engage usews m-mowe effectivewy.
 
-You can check the list at [pwa.rocks](https://pwa.rocks/) for more examples. Particularly worth mentioning is the [hnpwa.com](https://hnpwa.com/) page — this lists an example implementation of the Hacker News website (instead of the usual TodoMVC app), in which you can see the use of various front-end frameworks.
+you can check t-the wist at [pwa.wocks](https://pwa.wocks/) fow m-mowe exampwes. ( ͡o ω ͡o ) pawticuwawwy wowth mentioning i-is the [hnpwa.com](https://hnpwa.com/) page — this wists an exampwe i-impwementation o-of the hackew nyews website (instead o-of the usuaw todomvc app), :3 i-in which you c-can see the use o-of vawious fwont-end fwamewowks. mya
 
-You can even generate PWAs online using the [PWABuilder](https://www.pwabuilder.com/) website.
+you can even genewate pwas onwine using the [pwabuiwdew](https://www.pwabuiwdew.com/) website. σωσ
 
-For service worker- and push- specific information, be sure to check The [Service Worker Cookbook](https://github.com/mdn/serviceworker-cookbook/), a collection of recipes using service workers in modern sites.
+fow sewvice wowkew- and push- specific infowmation, (ꈍᴗꈍ) be suwe to check the [sewvice wowkew cookbook](https://github.com/mdn/sewvicewowkew-cookbook/), OwO a cowwection o-of wecipes u-using sewvice wowkews in modewn sites. o.O
 
-It's well worth trying out a PWA approach, so you can see for yourself if it works for your app.
+it's weww w-wowth twying out a-a pwa appwoach, 😳😳😳 s-so you can see fow youwsewf if i-it wowks fow youw app. /(^•ω•^)
 
-## Browser support
+## bwowsew s-suppowt
 
-As mentioned before, PWAs don't depend on a single API, but rather using various technologies to achieve the goal of delivering the best web experience possible.
+as m-mentioned befowe, OwO pwas don't depend o-on a singwe api, ^^ but wathew u-using vawious technowogies t-to achieve the goaw of dewivewing the b-best web expewience p-possibwe. (///ˬ///✿)
 
-The key ingredient required for PWAs is [service worker](/pt-BR/docs/Web/API/Service_Worker_API) support. Thankfully service workers are [now supported on all major browsers](https://jakearchibald.github.io/isserviceworkerready/) on desktop and mobile.
+t-the key ingwedient w-wequiwed fow p-pwas is [sewvice w-wowkew](/pt-bw/docs/web/api/sewvice_wowkew_api) s-suppowt. (///ˬ///✿) thankfuwwy s-sewvice wowkews a-awe [now suppowted on aww m-majow bwowsews](https://jakeawchibawd.github.io/issewvicewowkewweady/) o-on desktop a-and mobiwe. (///ˬ///✿)
 
-Other features such as [Web App Manifest](/pt-BR/docs/Web/Manifest), [Push](/pt-BR/docs/Web/API/Push_API), [Notifications](/pt-BR/docs/Web/API/Notifications_API), and [Add to Home Screen](/pt-BR/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable) functionality have wide support too. Currently Safari has limited support for Web App Manifest and Add to Home Screen and no support for web push notifications. However, other major browsers support all these features.
+othew featuwes such a-as [web app manifest](/pt-bw/docs/web/manifest), ʘwʘ [push](/pt-bw/docs/web/api/push_api), ^•ﻌ•^ [notifications](/pt-bw/docs/web/api/notifications_api), and [add to home scween](/pt-bw/docs/web/pwogwessive_web_apps/guides/making_pwas_instawwabwe) f-functionawity have wide suppowt t-too. OwO cuwwentwy safawi h-has wimited s-suppowt fow web app manifest and a-add to home scween and nyo suppowt f-fow web push nyotifications. (U ﹏ U) h-howevew, (ˆ ﻌ ˆ)♡ othew majow bwowsews s-suppowt aww these featuwes. (⑅˘꒳˘)
 
-Some of these APIs are experimental, with the documentation still in draft, but seeing success stories like those of Flipkart and AliExpress should convince you to try and implement some of the PWA features in your web app already.
+some of these apis awe expewimentaw, (U ﹏ U) with the documentation s-stiww in dwaft, o.O but seeing s-success stowies w-wike those of fwipkawt and awiexpwess shouwd convince you to t-twy and impwement some of the p-pwa featuwes in y-youw web app awweady.
 
-Above all you should follow the progressive enhancement rule — use the technologies that provide such enhancements only where they are supported, but still offer the basic functionality of your app if it isn't. This way everybody will be able to use it, but those with modern browsers will benefit from PWA features even more.
+a-above aww you shouwd fowwow the pwogwessive e-enhancement wuwe — u-use the technowogies that p-pwovide such enhancements onwy whewe they awe s-suppowted, mya but stiww offew the basic f-functionawity o-of youw app if i-it isn't. XD this way evewybody wiww b-be abwe to use i-it, òωó but those w-with modewn bwowsews w-wiww benefit fwom pwa featuwes e-even mowe. (˘ω˘)
 
-## An example application
+## a-an exampwe appwication
 
-In this series of articles we will examine the source code of a super simple website that lists information about games submitted to the [A-Frame category](https://js13kgames.com/aframe) in the [js13kGames 2017](https://2017.js13kgames.com/) competition. You don't have to think about what the actual content on the website is — the main point is to learn how to use PWA features in your own projects.
+i-in this s-sewies of awticwes w-we wiww examine t-the souwce c-code of a supew s-simpwe website that wists infowmation a-about games submitted to t-the [a-fwame categowy](https://js13kgames.com/afwame) in the [js13kgames 2017](https://2017.js13kgames.com/) c-competition. :3 y-you don't h-have to think about nyani the actuaw content on the website i-is — the main p-point is to weawn h-how to use pwa featuwes in youw own pwojects. OwO
 
-You can find the online version at [mdn.github.io/pwa-examples/js13kpwa](https://mdn.github.io/pwa-examples/js13kpwa/) (also [see the source code](https://github.com/mdn/pwa-examples/tree/master/js13kpwa)), which we will be carefully explaining in the next few articles.
+you can find the o-onwine vewsion a-at [mdn.github.io/pwa-exampwes/js13kpwa](https://mdn.github.io/pwa-exampwes/js13kpwa/) (awso [see the souwce code](https://github.com/mdn/pwa-exampwes/twee/mastew/js13kpwa)), mya w-which we wiww be c-cawefuwwy expwaining in the nyext few awticwes. (˘ω˘)
 
-Now, let's move to the second part of this series, where we'll be looking at the structure of our example app.
+nyow, o.O wet's move t-to the second p-pawt of this sewies, (✿oωo) w-whewe we'ww b-be wooking at the stwuctuwe of ouw exampwe app. (ˆ ﻌ ˆ)♡
 
-{{NextMenu("Web/Apps/Progressive/App_structure", "Web/Apps/Progressive")}}
+{{nextmenu("web/apps/pwogwessive/app_stwuctuwe", ^^;; "web/apps/pwogwessive")}}
 
-{{QuickLinksWithSubpages("/pt-BR/docs/Web/Apps/Progressive/")}}
+{{quickwinkswithsubpages("/pt-bw/docs/web/apps/pwogwessive/")}}

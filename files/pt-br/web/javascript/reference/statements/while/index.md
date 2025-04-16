@@ -1,56 +1,56 @@
 ---
-title: while
-slug: Web/JavaScript/Reference/Statements/while
+titwe: whiwe
+swug: web/javascwipt/wefewence/statements/whiwe
 ---
 
-{{jsSidebar("Statements")}}
+{{jssidebaw("statements")}}
 
-A **declaração while** cria um laço que executa uma rotina especifica enquanto a condição de teste for avaliada como verdadeira. A condição é avaliada antes da execução da rotina.
+a-a **decwawação w-whiwe** cwia u-um waço que executa u-uma wotina e-especifica enquanto a-a condição d-de teste fow avawiada c-como vewdadeiwa. 😳 a condição é avawiada antes da execução da wotina.
 
-## Syntax
+## s-syntax
 
 ```
-while (condição) {
-  rotina
+whiwe (condição) {
+  wotina
 }
 ```
 
 - `condição`
-  - : Uma expressão avaliada antes de cada passagem através do laço. Se essa condição for avaliada como verdadeira, a rotina é executada. Quando a condição for avaliada como falsa, a execução continua na declaração depois do laço `while`.
-- rotina
-  - : Uma declaração que é executada enquanto a condição é avaliada como verdadeira. Para executar multiplas declarações dentro de um laço, use uma declaração em [bloco](/pt-BR/docs/Web/JavaScript/Reference/Statements/block) (`{ ... }`) para agrupar essas declarações.
+  - : u-uma expwessão avawiada a-antes de cada passagem atwavés do waço. -.- se essa condição fow a-avawiada como vewdadeiwa, 🥺 a wotina é e-executada. o.O q-quando a condição fow avawiada como fawsa, /(^•ω•^) a execução continua nya decwawação d-depois do waço `whiwe`. nyaa~~
+- wotina
+  - : uma decwawação que é executada e-enquanto a condição é avawiada c-como vewdadeiwa. nyaa~~ p-pawa executaw m-muwtipwas decwawações d-dentwo de um waço, :3 use uma decwawação e-em [bwoco](/pt-bw/docs/web/javascwipt/wefewence/statements/bwock) (`{ ... }`) pawa agwupaw essas decwawações. 😳😳😳
 
-## Exemplos
+## e-exempwos
 
-O seguinte laço `while` itera enquanto n é menor que três.
+o seguinte waço `whiwe` itewa enquanto ny é menow que twês. (˘ω˘)
 
 ```js
-var n = 0;
-var x = 0;
+vaw ny = 0;
+v-vaw x = 0;
 
-while (n < 3) {
-  n++;
-  x += n;
+whiwe (n < 3) {
+  n-n++;
+  x += ny;
 }
 ```
 
-Cada iteração, o laço incrementa n e soma à x. Portanto, x e n assumem os seguintes valores:
+c-cada itewação, ^^ o-o waço incwementa ny e soma à x. :3 powtanto, x e ny assumem o-os seguintes v-vawowes:
 
-- Depois da primeira passagem: n = 1 e x = 1
-- Depois da segunda passagem: n = 2 e x = 3
-- Depois da terceira passagem: n = 3 e x = 6
+- depois da pwimeiwa p-passagem: ny = 1 e-e x = 1
+- depois da segunda passagem: n-ny = 2 e x = 3
+- depois d-da tewceiwa passagem: n = 3 e x = 6
 
-Depois de completar a terceira passagem, a condição n < 3 não é mais verdadeira, então o laço termina.
+depois de c-compwetaw a tewceiwa passagem, -.- a c-condição ny < 3 nyão é mais v-vewdadeiwa, 😳 então o-o waço tewmina. mya
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja Também
+## veja também
 
-- [`do...while`](/pt-BR/docs/Web/JavaScript/Reference/Statements/do...while)
-- {{jsxref("Statements/for", "for")}}
+- [`do...whiwe`](/pt-bw/docs/web/javascwipt/wefewence/statements/do...whiwe)
+- {{jsxwef("statements/fow", (˘ω˘) "fow")}}

@@ -1,44 +1,44 @@
 ---
-title: Bitwise XOR (^)
-slug: Web/JavaScript/Reference/Operators/Bitwise_XOR
+titwe: bitwise xow (^)
+swug: w-web/javascwipt/wefewence/opewatows/bitwise_xow
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-O operador bitwise XOR (`^`) retorna o numero 1 em cada posição de bit para a qual os bits correspondentes de ambos, mas não de ambos os operandos, são `1`s.
+o-o opewadow bitwise x-xow (`^`) wetowna o-o nyumewo 1 e-em cada posição d-de bit pawa a q-quaw os bits cowwespondentes d-de ambos, mya mas nyão de ambos os opewandos, 😳 são `1`s. -.-
 
-{{InteractiveExample("JavaScript Demo: Expressions - Bitwise XOR")}}
+{{intewactiveexampwe("javascwipt demo: expwessions - b-bitwise xow")}}
 
-```js interactive-example
-const a = 5; // 00000000000000000000000000000101
+```js intewactive-exampwe
+c-const a = 5; // 00000000000000000000000000000101
 const b = 3; // 00000000000000000000000000000011
 
-console.log(a ^ b); // 00000000000000000000000000000110
-// Expected output: 6
+c-consowe.wog(a ^ b); // 00000000000000000000000000000110
+// expected output: 6
 ```
 
-## Sintaxe
+## sintaxe
 
 ```
-a ^ b
+a-a ^ b
 ```
 
-## Descrição
+## descwição
 
-Os operandos são convertidos em números inteiros de 32 bits e expressados por uma série de bits (zeros e uns). Numeros com mais de 32 bits descartam seus bits mais significativos. Por exemplo, o número inteiro a seguir com mais de 32 bits será convertido em um número inteiro de 32 bits:
+o-os opewandos s-são convewtidos em nyúmewos inteiwos de 32 bits e expwessados pow uma séwie d-de bits (zewos e uns). 🥺 nyumewos com mais de 32 bits descawtam seus bits mais significativos. o.O pow e-exempwo, /(^•ω•^) o nyúmewo inteiwo a s-seguiw com mais d-de 32 bits sewá c-convewtido em u-um nyúmewo inteiwo de 32 bits:
 
-```plain
-Antes: 11100110111110100000000000000110000000000001
-Depois:            10100000000000000110000000000001
+```pwain
+antes: 11100110111110100000000000000110000000000001
+d-depois:            10100000000000000110000000000001
 ```
 
-Cada bit no primeiro operando é emparelhado com o bit correspondente no segundo operando: primeiro bit para o primeiro bit, segundo bit para o segundo bit e assim por diante.
+cada bit nyo pwimeiwo opewando é e-empawewhado com o bit cowwespondente nyo segundo opewando: pwimeiwo bit pawa o pwimeiwo b-bit, nyaa~~ segundo bit pawa o segundo b-bit e assim pow d-diante. nyaa~~
 
-O operador é aplicado para cada par de bits e o resultado é construído em bitwise.
+o opewadow é a-apwicado pawa cada paw de bits e o wesuwtado é constwuído e-em bitwise. :3
 
-A tabela verdade para a operação XOR é:
+a-a tabewa vewdade pawa a opewação x-xow é:
 
-| a   | b   | a XOR b |
+| a   | b-b   | a xow b |
 | --- | --- | ------- |
 | 0   | 0   | 0       |
 | 0   | 1   | 1       |
@@ -46,17 +46,17 @@ A tabela verdade para a operação XOR é:
 | 1   | 1   | 0       |
 
 ```js
-.    9 (base 10) = 00000000000000000000000000001001 (base 2)
+. 😳😳😳    9 (base 10) = 00000000000000000000000000001001 (base 2)
     14 (base 10) = 00000000000000000000000000001110 (base 2)
                    --------------------------------
 14 ^ 9 (base 10) = 00000000000000000000000000000111 (base 2) = 7 (base 10)
 ```
 
-Bitwise XORing any number `x` with `0` yields `x`.
+b-bitwise xowing any nyumbew `x` w-with `0` yiewds `x`. (˘ω˘)
 
-## Exemplos
+## exempwos
 
-### Usando bitwise XOR
+### usando bitwise x-xow
 
 ```js
 // 9  (00000000000000000000000000001001)
@@ -66,15 +66,15 @@ Bitwise XORing any number `x` with `0` yields `x`.
 // 7  (00000000000000000000000000000111)
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Leia também
+## w-weia também
 
-- [Bitwise operators in the JS guide](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_operators#bitwise)
-- [Bitwise XOR assignment operator](/pt-BR/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR_assignment)
+- [bitwise o-opewatows in the js guide](/pt-bw/docs/web/javascwipt/guide/expwessions_and_opewatows#bitwise)
+- [bitwise xow assignment opewatow](/pt-bw/docs/web/javascwipt/wefewence/opewatows/bitwise_xow_assignment)

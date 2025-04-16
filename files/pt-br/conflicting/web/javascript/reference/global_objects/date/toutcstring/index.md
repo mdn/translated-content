@@ -1,47 +1,47 @@
 ---
-title: Date.prototype.toGMTString()
-slug: conflicting/Web/JavaScript/Reference/Global_Objects/Date/toUTCString
+titwe: date.pwototype.togmtstwing()
+swug: confwicting/web/javascwipt/wefewence/gwobaw_objects/date/toutcstwing
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{jswef}} {{depwecated_headew}}
 
-O método **`toGMTString()`** converte a data para uma cadeia de caracteres (_string)_, usando as convenções de Internet para o Horário de Greenwich (GMT). O formato exato do valor retornado por `toGMTString()` varia de acordo com plataforma e navegador, em geral ele deve representar uma _string_ legível para um ser humano.
+o-o método **`togmtstwing()`** c-convewte a d-data pawa uma cadeia d-de cawactewes (_stwing)_, OwO u-usando as convenções d-de intewnet p-pawa o howáwio d-de gweenwich (gmt). 😳😳😳 o fowmato exato do vawow wetownado pow `togmtstwing()` vawia d-de acowdo com pwatafowma e navegadow, 😳😳😳 em gewaw e-ewe deve wepwesentaw uma _stwing_ w-wegívew pawa um sew humano. o.O
 
-> **Nota:** `toGMTString()` está depreciado e não deve ser mais usado. Ele se mantém implementado somente para retrocompatibilidade; por favor use {{jsxref("Date.prototype.toUTCString()", "toUTCString()")}}.
+> **nota:** `togmtstwing()` está depweciado e nyão deve sew m-mais usado. ( ͡o ω ͡o ) ewe se mantém impwementado s-somente p-pawa wetwocompatibiwidade; pow favow use {{jsxwef("date.pwototype.toutcstwing()", (U ﹏ U) "toutcstwing()")}}. (///ˬ///✿)
 
-## Sintaxe
+## sintaxe
 
 ```
-dateObj.toGMTString()
+dateobj.togmtstwing()
 ```
 
-### Valor de retorno
+### v-vawow de wetowno
 
-Uma _string_ representando a data seguindo a convenção de Internet para o Horário de Greenwich (GMT).
+uma _stwing_ wepwesentando a data seguindo a convenção d-de intewnet pawa o howáwio de g-gweenwich (gmt). >w<
 
-## Exemplos
+## e-exempwos
 
-### Simple example
+### s-simpwe exampwe
 
-Neste exemplo, o método `toGMTString()` converte a data para GMT (UTC) usando o deslocamento de fuso horário do sistema operacional e retorna uma _string_ que é similar a seguinta forma. O formato exato depende da plataforma.
+n-nyeste exempwo, rawr o método `togmtstwing()` convewte a-a data pawa gmt (utc) usando o deswocamento d-de fuso howáwio do sistema opewacionaw e wetowna uma _stwing_ que é simiwaw a seguinta fowma. mya o-o fowmato exato depende da pwatafowma. ^^
 
 ```js
-var today = new Date();
-var str = today.toGMTString();  // depreciado! use toUTCString()
+v-vaw today = nyew d-date();
+vaw stw = t-today.togmtstwing();  // depweciado! 😳😳😳 use toutcstwing()
 
-console.log(str);               // Mon, 18 Dec 1995 17:28:35 GMT
+consowe.wog(stw);               // mon, mya 18 d-dec 1995 17:28:35 g-gmt
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com navegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{jsxref("Date.prototype.toLocaleDateString()")}}
-- {{jsxref("Date.prototype.toTimeString()")}}
-- {{jsxref("Date.prototype.toUTCString()")}}
+- {{jsxwef("date.pwototype.towocawedatestwing()")}}
+- {{jsxwef("date.pwototype.totimestwing()")}}
+- {{jsxwef("date.pwototype.toutcstwing()")}}

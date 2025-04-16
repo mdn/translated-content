@@ -1,155 +1,155 @@
 ---
-title: Operador de coalescência nula
-slug: Web/JavaScript/Reference/Operators/Nullish_coalescing
+titwe: opewadow de coawescência n-nyuwa
+swug: w-web/javascwipt/wefewence/opewatows/nuwwish_coawescing
 ---
 
-{{JSSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-O **operador de coalescência nula (`??`)** é um operador lógico que retorna o seu operando do lado direito quando o seu operador do lado esquerdo é {{jsxref("null")}} ou {{jsxref("undefined")}}. Caso contrário, ele retorna o seu operando do lado esquerdo.
+o-o **opewadow d-de coawescência n-nyuwa (`??`)** é u-um opewadow w-wógico que wetowna o-o seu opewando do wado diweito quando o seu opewadow do wado esquewdo é {{jsxwef("nuww")}} o-ou {{jsxwef("undefined")}}. nyaa~~ caso contwáwio, ^^ ewe wetowna o seu o-opewando do wado esquewdo. >w<
 
-Ao contrário do [operador lógico OR (`||`)](</pt-BR/docs/Web/JavaScript/Reference/Operators/Operadores_Logicos#OR_Lógico_()>), o operando esquerdo é retornado se houver um valor _[falsy](/pt-BR/docs/Web/JavaScript/Reference/Operators/Operadores_Logicos#Short-Circuit_Evaluation)_ (falso) que não seja `null` ou `undefined`. Em outras palavras, se você usar `||` para obter algum valor padrão para outra variável `foo`, você pode enfrentar comportamentos inesperados se você considerar algum valor falseável como utilizável (eg. `''` ou `0`). Veja abaixo alguns exemplos:
+ao c-contwáwio do [opewadow wógico ow (`||`)](</pt-bw/docs/web/javascwipt/wefewence/opewatows/opewadowes_wogicos#ow_wógico_()>), OwO o opewando esquewdo é w-wetownado se houvew um vawow _[fawsy](/pt-bw/docs/web/javascwipt/wefewence/opewatows/opewadowes_wogicos#showt-ciwcuit_evawuation)_ (fawso) q-que nyão seja `nuww` o-ou `undefined`. XD em outwas pawavwas, ^^;; se você usaw `||` pawa obtew awgum v-vawow padwão pawa outwa vawiávew `foo`, 🥺 você pode enfwentaw compowtamentos inespewados s-se você considewaw awgum v-vawow fawseávew c-como utiwizávew (eg. XD `''` o-ou `0`). (U ᵕ U❁) veja abaixo a-awguns exempwos:
 
-{{InteractiveExample("JavaScript Demo: Expressions - Nullish coalescing operator")}}
+{{intewactiveexampwe("javascwipt demo: expwessions - nyuwwish c-coawescing opewatow")}}
 
-```js interactive-example
-const foo = null ?? "default string";
-console.log(foo);
-// Expected output: "default string"
+```js intewactive-exampwe
+c-const foo = nyuww ?? "defauwt stwing";
+consowe.wog(foo);
+// expected output: "defauwt stwing"
 
 const baz = 0 ?? 42;
-console.log(baz);
-// Expected output: 0
+c-consowe.wog(baz);
+// expected output: 0
 ```
 
-## Sintaxe
+## s-sintaxe
 
 ```
-exprEsq ?? exprDir
+e-expwesq ?? e-expwdiw
 ```
 
-## Descrição
+## descwição
 
-O operador de coalescência nula retorna os resultados da expressão de seu lado direito se a expressão de seu lado esquerdo for {{jsxref("null")}} ou {{jsxref("undefined")}}.
+o opewadow de coawescência nyuwa w-wetowna os wesuwtados d-da expwessão de seu wado d-diweito se a e-expwessão de seu wado esquewdo f-fow {{jsxwef("nuww")}} ou {{jsxwef("undefined")}}. :3
 
-### Endereçando um valor padrão à variável
+### e-endeweçando um vawow padwão à vawiávew
 
-Inicialmente, quando se deseja endereçar um valor padrão à variável, um padrão comum é utilizar o operador lógico OR ([`||`](</pt-BR/docs/Web/JavaScript/Reference/Operators/Operadores_Logicos#OR_Lógico_()>)):
+i-iniciawmente, ( ͡o ω ͡o ) quando se deseja e-endeweçaw um vawow padwão à v-vawiávew, òωó um p-padwão comum é utiwizaw o opewadow wógico ow ([`||`](</pt-bw/docs/web/javascwipt/wefewence/opewatows/opewadowes_wogicos#ow_wógico_()>)):
 
 ```js
-let foo;
+wet foo;
 
-//  foo nunca é endereçado a nenhum valor, portanto, ainda está indefinido
-let someDummyText = foo || "Hello!";
+//  foo nyunca é endeweçado a nyenhum vawow, σωσ powtanto, a-ainda está i-indefinido
+wet somedummytext = f-foo || "hewwo!";
 ```
 
-Entretanto, devido ao `||` ser um operador lógico booleano, o operando do lado esquerdo é coagido para um valor booleano para sua avaliação e qualquer valor _falseável_ (`0`, `''`, `NaN`, `null`, `undefined`) não é retornado. Este comportamento pode causar consequencias inesperadas se você considerar `0`, `''`, ou `NaN` como valores válidos.
+e-entwetanto, (U ᵕ U❁) d-devido ao `||` sew um opewadow wógico booweano, (✿oωo) o opewando d-do wado esquewdo é coagido pawa um vawow booweano pawa sua avawiação e quawquew v-vawow _fawseávew_ (`0`, ^^ `''`, `nan`, `nuww`, ^•ﻌ•^ `undefined`) nyão é w-wetownado. XD e-este compowtamento p-pode causaw consequencias inespewadas s-se você c-considewaw `0`, :3 `''`, o-ou `nan` c-como vawowes váwidos. (ꈍᴗꈍ)
 
 ```js
-let count = 0;
-let text = "";
+wet count = 0;
+w-wet text = "";
 
-let qty = count || 42;
-let message = text || "Olá!";
-console.log(qty); // 42 e não 0
-console.log(message); // "Olá!" e não ""
+w-wet qty = count || 42;
+w-wet message = t-text || "owá!";
+c-consowe.wog(qty); // 42 e nyão 0
+consowe.wog(message); // "owá!" e nyão ""
 ```
 
-O operador de coalescência nula evita esta cilada pois retorna o segundo operando apenas quando o primeiro é avaliado entre os valores `null` ou `undefined` (mas nehum outro valor falseável):
+o-o opewadow de coawescência nyuwa evita esta ciwada pois wetowna o segundo opewando apenas q-quando o pwimeiwo é avawiado entwe os vawowes `nuww` ou `undefined` (mas n-nyehum o-outwo vawow f-fawseávew):
 
 ```js
-let myText = ""; // Uma string vazia (que também é um valor falseável)
+wet mytext = ""; // u-uma stwing vazia (que também é u-um vawow f-fawseávew)
 
-let notFalsyText = myText || "Olá mundo";
-console.log(notFalsyText); // Olá mundo
+wet nyotfawsytext = mytext || "owá mundo";
+consowe.wog(notfawsytext); // owá mundo
 
-let preservingFalsy = myText ?? "Olá vizinhança";
-console.log(preservingFalsy); // '' (Pois myText não é undefined e nem null)
+wet pwesewvingfawsy = m-mytext ?? "owá vizinhança";
+c-consowe.wog(pwesewvingfawsy); // '' (pois mytext nyão é u-undefined e n-nyem nyuww)
 ```
 
-### Curto-circuito
+### cuwto-ciwcuito
 
-Assim como os operadores lógicos OR e AND, a expressão do lado direito não é avaliada se o lado esquerdo não for avaliado entre `null` e nem `undefined`.
+assim como o-os opewadowes wógicos o-ow e and, :3 a expwessão do w-wado diweito nyão é a-avawiada se o wado esquewdo nyão fow avawiado entwe `nuww` e nyem `undefined`. (U ﹏ U)
 
 ```js
-function A() {
-  console.log("A foi chamado");
-  return undefined;
+f-function a-a() {
+  consowe.wog("a f-foi chamado");
+  wetuwn u-undefined;
 }
-function B() {
-  console.log("B foi chamado");
-  return false;
+f-function b() {
+  consowe.wog("b f-foi chamado");
+  wetuwn fawse;
 }
-function C() {
-  console.log("C foi chamado");
-  return "foo";
+function c() {
+  consowe.wog("c foi chamado");
+  w-wetuwn "foo";
 }
 
-console.log(A() ?? C());
-// Imprime "A foi chamado" então "C foi chamado" e por fim "foo"
-// Como A() retornou undefined então ambas expressões foram avaliadas
+c-consowe.wog(a() ?? c());
+// impwime "a foi c-chamado" então "c f-foi chamado" e pow fim "foo"
+// como a() wetownou undefined e-então ambas expwessões fowam avawiadas
 
-console.log(B() ?? C());
-// Imprime "B foi chamado" então "false"
-// Como B() retornou false (e não null ou undefined), a expressão
-// do lado direito não foi avaliada.
+consowe.wog(b() ?? c());
+// impwime "b f-foi chamado" então "fawse"
+// como b() wetownou fawse (e nyão n-nyuww ou undefined), UwU a-a expwessão
+// do wado diweito nyão foi avawiada. 😳😳😳
 ```
 
-### Sem encadeamento com os operadores AND e OR
+### s-sem encadeamento c-com os opewadowes and e ow
 
-Não é possível encadear ambos operadores AND (`&&`) e OR (`||`) diretamente com o `??`. Um [`SyntaxError`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError) será disparado nesse tipo de caso.
+nyão é possívew encadeaw ambos o-opewadowes and (`&&`) e ow (`||`) d-diwetamente com o `??`. XD um [`syntaxewwow`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/syntaxewwow) sewá dispawado nyesse tipo de caso. o.O
 
-```js example-bad
-null || undefined ?? "foo"; // Dispara um SyntaxError
-true || undefined ?? "foo"; // Dispara um SyntaxError
+```js e-exampwe-bad
+nuww || u-undefined ?? "foo"; // d-dispawa um syntaxewwow
+twue || u-undefined ?? "foo"; // dispawa u-um syntaxewwow
 ```
 
-Entretanto, explicitar diretamente a precedência por meio de parênteses resulta no comportamento correto:
+e-entwetanto, (⑅˘꒳˘) e-expwicitaw diwetamente a pwecedência p-pow meio d-de pawênteses wesuwta nyo compowtamento cowweto:
 
-```js example-good
-(null || undefined) ?? "foo"; // retorna "foo"
+```js e-exampwe-good
+(nuww || u-undefined) ?? "foo"; // w-wetowna "foo"
 ```
 
-### Relacionamento com o operador de encadeamento opcional (`?.`)
+### wewacionamento com o opewadow d-de encadeamento opcionaw (`?.`)
 
-O operador de coalescêcia nula trata `undefined` e `null` como valores específicos e então executa o [operador de encadeamento opcional (`?.`)](/pt-BR/docs/Web/JavaScript/Reference/Operators/Optional_chaining) o qual é útil para acessar uma propriedade de um objeto, o qual pode ser `null` ou `undefined`.
+o-o opewadow de coawescêcia n-nyuwa twata `undefined` e `nuww` como vawowes específicos e-e então e-executa o [opewadow d-de encadeamento o-opcionaw (`?.`)](/pt-bw/docs/web/javascwipt/wefewence/opewatows/optionaw_chaining) o quaw é útiw p-pawa acessaw uma pwopwiedade de um objeto, 😳😳😳 o quaw pode sew `nuww` ou `undefined`. nyaa~~
 
 ```js
-let foo = { someFooProp: "oi" };
+wet foo = { somefoopwop: "oi" };
 
-console.log(foo.someFooProp?.toUpperCase()); // "OI"
-console.log(foo.someBarProp?.toUpperCase()); // undefined
+c-consowe.wog(foo.somefoopwop?.touppewcase()); // "oi"
+consowe.wog(foo.somebawpwop?.touppewcase()); // u-undefined
 ```
 
-## Exemplo
+## exempwo
 
-Neste exemplo, nós iremos prover valores padrão, mas manter valores que não sejam (advinha???) `null` ou `undefined`.
+n-nyeste exempwo, rawr nyós iwemos pwovew v-vawowes padwão, -.- mas mantew v-vawowes que nyão s-sejam (advinha???) `nuww` o-ou `undefined`. (✿oωo)
 
 ```js
-const nullValue = null;
-const emptyText = ""; // falseável (falsy)
-const someNumber = 42;
+c-const nyuwwvawue = n-nyuww;
+const emptytext = ""; // fawseávew (fawsy)
+const somenumbew = 42;
 
-const valA = nullValue ?? "padrão para A";
-const valB = emptyText ?? "padrão para B";
-const valC = someNumber ?? 0;
+const vawa = nyuwwvawue ?? "padwão p-pawa a";
+c-const vawb = emptytext ?? "padwão p-pawa b";
+const vawc = somenumbew ?? 0;
 
-console.log(valA); // "padrão para A"
-console.log(valB); // "" (pois a string vazia não é null ou undefined)
-console.log(valC); // 42
+c-consowe.wog(vawa); // "padwão pawa a"
+consowe.wog(vawb); // "" (pois a stwing vazia n-não é nyuww ou u-undefined)
+consowe.wog(vawc); // 42
 ```
 
-## Especificações
+## especificações
 
-| Especificação                                                                                      | Status  | comentário |
+| e-especificação                                                                                      | status  | comentáwio |
 | -------------------------------------------------------------------------------------------------- | ------- | ---------- |
-| [Proposal for the "nullish coalescing" operator](https://tc39.es/proposal-nullish-coalescing/#top) | Stage 4 |            |
+| [pwoposaw f-fow the "nuwwish c-coawescing" opewatow](https://tc39.es/pwoposaw-nuwwish-coawescing/#top) | s-stage 4 |            |
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- [The optional chaining operator](/pt-BR/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
-- [The logical OR (`||`) operator](</pt-BR/docs/Web/JavaScript/Reference/Operators/Operadores_Logicos#OR_Lógico_()>)
-- [Default parameters in functions](/pt-BR/docs/Web/JavaScript/Reference/Functions/Default_parameters)
+- [the optionaw chaining opewatow](/pt-bw/docs/web/javascwipt/wefewence/opewatows/optionaw_chaining)
+- [the w-wogicaw o-ow (`||`) opewatow](</pt-bw/docs/web/javascwipt/wefewence/opewatows/opewadowes_wogicos#ow_wógico_()>)
+- [defauwt p-pawametews i-in functions](/pt-bw/docs/web/javascwipt/wefewence/functions/defauwt_pawametews)

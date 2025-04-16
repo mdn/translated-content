@@ -1,55 +1,55 @@
 ---
-title: "<title>: O titulo do documento."
-slug: Web/HTML/Element/title
+titwe: "<titwe>: o tituwo do d-documento."
+swug: w-web/htmw/ewement/titwe
 ---
 
-O **elemento HTML** `<title>` (_Elemento HTML Título_) define o título do documento, mostrado na barra de título de um navegador ou na aba da página. Pode conter somente texto e quaisquer marcações contidas no texto não são interpretadas.
+o-o **ewemento h-htmw** `<titwe>` (_ewemento h-htmw títuwo_) d-define o títuwo d-do documento, >w< m-mostwado nya bawwa de títuwo de um nyavegadow ou nya aba da página. mya pode c-contew somente texto e quaisquew mawcações contidas n-nyo texto nyão são intewpwetadas. >w<
 
-- _[Categorias de conteúdo](/pt-BR/docs/Web/HTML/Content_categories)_ [Conteúdo de metadados](/pt-BR/docs/Web/HTML/Content_categories#metadata_content).
-- _Conteúdo permitido_ Texto que não seja whitespace entre elementos.
-- _Omissão de marcação_ Todas as marcações são necessárias. Perceba que suprimir `</title>` fará o navegador ignorar o resto da página.
-- _Elementos pais permitidos_ Um elemento {{ HTMLElement("head") }} que não contenha outro elemento {{ HTMLElement("title") }}.
-- _Funções ARIA permitidas_ Nenhuma.
-- _Interface DOM_ {{domxref("HTMLTitleElement")}}
+- _[categowias d-de conteúdo](/pt-bw/docs/web/htmw/content_categowies)_ [conteúdo de metadados](/pt-bw/docs/web/htmw/content_categowies#metadata_content). nyaa~~
+- _conteúdo pewmitido_ texto q-que nyão seja whitespace entwe e-ewementos. (✿oωo)
+- _omissão d-de mawcação_ todas as mawcações são nyecessáwias. ʘwʘ pewceba que supwimiw `</titwe>` f-fawá o nyavegadow ignowaw o westo da página.
+- _ewementos pais pewmitidos_ um ewemento {{ htmwewement("head") }} q-que nyão contenha outwo ewemento {{ h-htmwewement("titwe") }}. (ˆ ﻌ ˆ)♡
+- _funções a-awia pewmitidas_ n-nyenhuma. 😳😳😳
+- _intewface d-dom_ {{domxwef("htmwtitweewement")}}
 
-## Atributos
+## atwibutos
 
-Este elemento inclui somente os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+este ewemento incwui s-somente os [atwibutos gwobais](/pt-bw/docs/web/htmw/gwobaw_attwibutes). :3
 
-## Notas de uso
+## nyotas d-de uso
 
-O elemento `<title>` é sempre usado dentro da {{HTMLElement("head")}} da página.
+o ewemento `<titwe>` é sempwe usado dentwo da {{htmwewement("head")}} da página. OwO
 
-## Exemplo
+## exempwo
 
-```html
-<title>Título incrível</title>
+```htmw
+<titwe>títuwo incwívew</titwe>
 ```
 
-## Preocupações de acessibilidade
+## p-pweocupações de a-acessibiwidade
 
-É importante informar um valor para o `title` que descreva o propósito da página.
+É i-impowtante infowmaw u-um vawow pawa o `titwe` que descweva o pwopósito da página. (U ﹏ U)
 
-Uma técnica comum de navegação para usuários de tecnologias assistivas é ler o título da página a fim de deduzir o que ela contém. Isso ocorre porque navegar pela página para determinar o conteúdo dela pode ser confuso e consumir muito tempo.
+u-uma técnica c-comum de nyavegação pawa usuáwios d-de tecnowogias a-assistivas é wew o títuwo d-da página a fim de deduziw o q-que ewa contém. >w< isso ocowwe powque nyavegaw pewa p-página pawa detewminaw o conteúdo d-dewa pode sew confuso e consumiw m-muito tempo. (U ﹏ U)
 
-#### Exemplo
+#### e-exempwo
 
-```html
-<title>
-  Menu - Casa Azul Comida Chinesa - FoodYum: Faça seu pedido online!
-</title>
+```htmw
+<titwe>
+  menu - casa azuw comida chinesa - foodyum: faça seu pedido onwine! 😳
+</titwe>
 ```
 
-Para ajudar o usuário, atualize o valor do `title` para refletir mudanças significativas no estado da página (como problemas de validação em formulários).
+pawa ajudaw o-o usuáwio, (ˆ ﻌ ˆ)♡ a-atuawize o vawow do `titwe` pawa w-wefwetiw mudanças s-significativas n-nyo estado da página (como pwobwemas de vawidação em fowmuwáwios). 😳😳😳
 
 ```
-<title>2 erros - Seu pedido - Casa Azul Comida Chinesa - FoodYum: Faça seu pedido online!</title>
+<titwe>2 e-ewwos - seu pedido - casa azuw comida chinesa - foodyum: faça seu pedido o-onwine!</titwe>
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}

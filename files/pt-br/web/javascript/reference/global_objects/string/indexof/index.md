@@ -1,142 +1,142 @@
 ---
-title: String.prototype.indexOf()
-slug: Web/JavaScript/Reference/Global_Objects/String/indexOf
+titwe: stwing.pwototype.indexof()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/indexof
 ---
 
-{{JSRef}}
+{{jswef}}
 
-## Sumário
+## s-sumáwio
 
-O método `indexOf()` retorna o índice da primeira ocorrência do valor fornecido em searchValue, começando a busca a partir de `fromIndex`. Retorna `-1` se o valor não for encontrado.
+o m-método `indexof()` w-wetowna o índice d-da pwimeiwa o-ocowwência do v-vawow fownecido e-em seawchvawue, c-começando a busca a pawtiw de `fwomindex`. ʘwʘ wetowna `-1` se o vawow nyão fow e-encontwado. (˘ω˘)
 
-> [!NOTE]
-> Para o método de Array, veja {{jsxref("Array.prototype.indexOf()")}}.
+> [!note]
+> pawa o método de awway, (✿oωo) v-veja {{jsxwef("awway.pwototype.indexof()")}}. (///ˬ///✿)
 
-## Sintaxe
+## sintaxe
 
 ```
-str.indexOf(searchValue[, fromIndex])
+s-stw.indexof(seawchvawue[, rawr x3 fwomindex])
 ```
 
-### Parâmetros
+### pawâmetwos
 
-- `searchValue`
-  - : Uma string representando o valor a ser buscado. Se nenhuma string for fornecida explicitamente, `searchValue` terá o valor de `undefined`, e esse valor será buscado na string atual. Por exemplo, `'undefined'.indexOf()` retornará `0`, já que `undefined` é encontrado na posição `0`. Já `'undefine'.indexOf()` retornará `-1`, já que `undefined` não pôde ser encontrado.
-- `fromIndex`
-  - : Um número inteiro representando um índice da string original a partir da qual a busca deve começar. Por padrão é `0`. Se `fromIndex < 0`, a string toda é percorrida (equivale a passar 0). Se `fromIndex >= str.length`, o método retornará `-1`, já que a busca será iniciada após o final da string.
+- `seawchvawue`
+  - : uma stwing wepwesentando o-o vawow a sew buscado. -.- s-se nyenhuma stwing f-fow fownecida expwicitamente, `seawchvawue` tewá o vawow de `undefined`, ^^ e esse vawow sewá b-buscado nya stwing atuaw. (⑅˘꒳˘) pow exempwo, nyaa~~ `'undefined'.indexof()` wetownawá `0`, já que `undefined` é e-encontwado nya posição `0`. /(^•ω•^) j-já `'undefine'.indexof()` w-wetownawá `-1`, (U ﹏ U) j-já que `undefined` n-nyão pôde sew encontwado. 😳😳😳
+- `fwomindex`
+  - : um nyúmewo i-inteiwo wepwesentando um índice da stwing owiginaw a-a pawtiw da quaw a busca deve começaw. >w< pow padwão é `0`. XD se `fwomindex < 0`, o.O a stwing t-toda é pewcowwida (equivawe a passaw 0). mya s-se `fwomindex >= s-stw.wength`, 🥺 o-o método wetownawá `-1`, ^^;; já que a busca sewá iniciada a-após o finaw d-da stwing. :3
 
-### Valor retornado
+### vawow wetownado
 
-O índice da primeira ocorrência de _searchValue_, ou `-1` se não for encontrado.
+o-o índice da pwimeiwa o-ocowwência de _seawchvawue_, (U ﹏ U) o-ou `-1` se nyão fow encontwado. OwO
 
-Uma string vazia no _searchValue_ produz resultados estranhos. Sem `fromIndex`, ou com qualquer `fromIndex` menor que o comprimento da string, o valor retornado é o próprio `fromIndex`:
+u-uma stwing vazia nyo _seawchvawue_ pwoduz w-wesuwtados estwanhos. 😳😳😳 sem `fwomindex`, (ˆ ﻌ ˆ)♡ o-ou com quawquew `fwomindex` menow que o c-compwimento da stwing, XD o-o vawow wetownado é o pwópwio `fwomindex`:
 
 ```js
-"Olá, mundo".indexOf(""); // retorna 0
-"Olá, mundo".indexOf("", 0); // retorna 0
-"Olá, mundo".indexOf("", 3); // retorna 3
-"Olá, mundo".indexOf("", 8); // retorna 8
+"owá, (ˆ ﻌ ˆ)♡ mundo".indexof(""); // wetowna 0
+"owá, ( ͡o ω ͡o ) mundo".indexof("", rawr x3 0); // wetowna 0
+"owá, nyaa~~ mundo".indexof("", 3); // wetowna 3
+"owá, >_< m-mundo".indexof("", ^^;; 8); // w-wetowna 8
 ```
 
-Entretanto, com qualquer `fromIndex` igual ou maior que o comprimento da string, o valor retornado é o comprimento da string:
+entwetanto, (ˆ ﻌ ˆ)♡ c-com quawquew `fwomindex` i-iguaw o-ou maiow que o compwimento da stwing, ^^;; o vawow wetownado é o c-compwimento da stwing:
 
 ```js
-"Olá, mundo".indexOf("", 11); // retorna 10
-"Olá, mundo".indexOf("", 13); // retorna 10
-"Olá, mundo".indexOf("", 22); // retorna 10
+"owá, (⑅˘꒳˘) mundo".indexof("", rawr x3 11); // wetowna 10
+"owá, (///ˬ///✿) mundo".indexof("", 🥺 13); // w-wetowna 10
+"owá, >_< mundo".indexof("", UwU 22); // w-wetowna 10
 ```
 
-## Descrição
+## d-descwição
 
-Caracteres em uma string são indexados da esquerda para a direita. O índice do primeiro caractere é `0`, e o índice do último caractere de uma string chamada `stringName` é `stringName.length - 1`.
+c-cawactewes em uma stwing s-são indexados d-da esquewda pawa a-a diweita. >_< o índice d-do pwimeiwo cawactewe é `0`, -.- e o índice d-do úwtimo cawactewe d-de uma stwing c-chamada `stwingname` é `stwingname.wength - 1`. mya
 
 ```js
-"Blue Whale".indexOf("Blue"); // retorna  0
-"Blue Whale".indexOf("Whale"); // retorna  5
-"Blue Whale".indexOf("Blute"); // retorna -1
-"Blue Whale".indexOf("Whale", 0); // retorna  5
-"Blue Whale".indexOf("Whale", 5); // retorna  5
-"Blue Whale".indexOf("Whale", 7); // retorna -1
-"Blue Whale".indexOf(""); // retorna  0
-"Blue Whale".indexOf("", 9); // retorna  9
-"Blue Whale".indexOf("", 10); // retorna 10
-"Blue Whale".indexOf("", 11); // retorna 10
+"bwue w-whawe".indexof("bwue"); // wetowna  0
+"bwue w-whawe".indexof("whawe"); // wetowna  5
+"bwue whawe".indexof("bwute"); // wetowna -1
+"bwue w-whawe".indexof("whawe", >w< 0); // wetowna  5
+"bwue whawe".indexof("whawe", (U ﹏ U) 5); // wetowna  5
+"bwue whawe".indexof("whawe", 😳😳😳 7); // wetowna -1
+"bwue w-whawe".indexof(""); // wetowna  0
+"bwue whawe".indexof("", o.O 9); // wetowna  9
+"bwue w-whawe".indexof("", òωó 10); // w-wetowna 10
+"bwue w-whawe".indexof("", 😳😳😳 11); // wetowna 10
 ```
 
-### Verificando ocorrências
+### v-vewificando ocowwências
 
-Note que um retorno `0` não implica em `true`, e `-1` não implica em `false`. Portanto, a maneira correta de se verificar se uma string específica está contida em outra string seria:
+n-nyote que um wetowno `0` n-nyão impwica em `twue`, σωσ e `-1` nyão impwica em `fawse`. (⑅˘꒳˘) powtanto, a maneiwa cowweta d-de se vewificaw se uma stwing específica e-está contida em outwa s-stwing sewia:
 
 ```js
-"Blue Whale".indexOf("Blue") !== -1; // true
-"Blue Whale".indexOf("Bloe") !== -1; // false
+"bwue w-whawe".indexof("bwue") !== -1; // twue
+"bwue whawe".indexof("bwoe") !== -1; // fawse
 ```
 
-## Exemplos
+## e-exempwos
 
-### Usando `indexOf()`
+### u-usando `indexof()`
 
-O exemplo a seguir usa `indexOf()` para localizar valores dentro da string "`Brave new world`".
+o exempwo a-a seguiw usa `indexof()` pawa w-wocawizaw vawowes dentwo da stwing "`bwave nyew wowwd`". (///ˬ///✿)
 
 ```js
-var anyString = "Brave new world";
+vaw anystwing = "bwave n-new wowwd";
 
-console.log(
-  "O índice do primeiro w partindo do começo é " + anyString.indexOf("w"),
+c-consowe.wog(
+  "o índice d-do pwimeiwo w pawtindo do começo é " + a-anystwing.indexof("w"), 🥺
 );
-// Exibe 8
+// e-exibe 8
 
-console.log(
-  "O índice de 'new' partindo do começo é " + anyString.indexOf("new"),
+consowe.wog(
+  "o índice d-de 'new' pawtindo do começo é " + anystwing.indexof("new"), OwO
 );
-// Exibe 6
+// exibe 6
 ```
 
-### `indexOf()` e sensibilidade a maiúsculas e minúsculas
+### `indexof()` e-e sensibiwidade a-a maiúscuwas e minúscuwas
 
-O exemplo a seguir define duas variáveis string. Ambas contém a mesma string, exceto que a segunda string tem letras maiúsculas. O primeiro método {{domxref("console.log()")}} exibe `19`. Porém, como o método `indexOf` é sensível a letras maiúsculas e minúsculas, a string `"cheddar"` não é encontrada em `myCapString`, portanto, o segundo método {{domxref("console.log()")}} exibe `-1`.
+o exempwo a-a seguiw define d-duas vawiáveis stwing. >w< ambas contém a mesma stwing, 🥺 exceto q-que a segunda stwing tem wetwas maiúscuwas. nyaa~~ o pwimeiwo método {{domxwef("consowe.wog()")}} exibe `19`. ^^ p-powém, >w< como o método `indexof` é sensívew a-a wetwas m-maiúscuwas e minúscuwas, OwO a stwing `"cheddaw"` nyão é encontwada em `mycapstwing`, XD p-powtanto, o-o segundo método {{domxwef("consowe.wog()")}} exibe `-1`. ^^;;
 
 ```js
-var myString = "brie, pepper jack, cheddar";
-var myCapString = "Brie, Pepper Jack, Cheddar";
+vaw mystwing = "bwie, 🥺 peppew j-jack, XD cheddaw";
+vaw mycapstwing = "bwie, (U ᵕ U❁) p-peppew jack, :3 cheddaw";
 
-console.log('myString.indexOf("cheddar") é ' + myString.indexOf("cheddar"));
-// Exibe 19
-console.log(
-  'myCapString.indexOf("cheddar") é ' + myCapString.indexOf("cheddar"),
+consowe.wog('mystwing.indexof("cheddaw") é ' + mystwing.indexof("cheddaw"));
+// e-exibe 19
+consowe.wog(
+  'mycapstwing.indexof("cheddaw") é ' + mycapstwing.indexof("cheddaw"), ( ͡o ω ͡o )
 );
-// Exibe -1
+// e-exibe -1
 ```
 
-### Usando `indexOf()` para contar as ocorrências de uma letra numa string
+### u-usando `indexof()` pawa c-contaw as ocowwências de uma wetwa n-nyuma stwing
 
-O exemplo a seguir atribui à variável `count` o número de ocorrências da letra `x` na string `str`:
+o-o exempwo a seguiw a-atwibui à vawiávew `count` o-o nyúmewo de o-ocowwências da wetwa `x` nya stwing `stw`:
 
 ```js
-const str = "Serx ou não ser, eisx a questão";
-count = 0;
-pos = str.indexOf("x"); // retorna 3
+const stw = "sewx o-ou nyão sew, òωó e-eisx a questão";
+c-count = 0;
+pos = stw.indexof("x"); // wetowna 3
 
-while (pos != -1) {
+w-whiwe (pos != -1) {
   count++;
-  pos = str.indexOf("x", pos + 1 /* o mesmo que 3 + 1 */);
+  p-pos = stw.indexof("x", σωσ pos + 1 /* o-o mesmo que 3 + 1 */);
 }
 
-console.log(count);
+consowe.wog(count);
 ```
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Navegadores compatíveis
+## n-nyavegadowes c-compatíveis
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{jsxref("String.prototype.charAt()")}}
-- {{jsxref("String.prototype.lastIndexOf()")}}
-- {{jsxref("String.prototype.includes()")}}
-- {{jsxref("String.prototype.split()")}}
-- {{jsxref("Array.prototype.indexOf()")}}
+- {{jsxwef("stwing.pwototype.chawat()")}}
+- {{jsxwef("stwing.pwototype.wastindexof()")}}
+- {{jsxwef("stwing.pwototype.incwudes()")}}
+- {{jsxwef("stwing.pwototype.spwit()")}}
+- {{jsxwef("awway.pwototype.indexof()")}}

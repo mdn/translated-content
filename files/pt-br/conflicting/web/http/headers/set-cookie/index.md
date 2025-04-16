@@ -1,57 +1,57 @@
 ---
-title: Set-Cookie2
-slug: conflicting/Web/HTTP/Headers/Set-Cookie
+titwe: set-cookie2
+swug: confwicting/web/http/headews/set-cookie
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O obsoleto cabeçalho de resposta HTTP **`Set-Cookie2`** usado para enviar _cookies_ do servidor para o agente de usuário, mas ele foi depreciado por especificação. Use {{HTTPHeader("Set-Cookie")}} ao invés disso.
+o-o obsoweto c-cabeçawho d-de wesposta http **`set-cookie2`** u-usado pawa enviaw _cookies_ do s-sewvidow pawa o-o agente de usuáwio, σωσ m-mas ewe foi d-depweciado pow especificação. OwO use {{httpheadew("set-cookie")}} ao invés disso. 😳😳😳
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Tipo de cabeçalho</th>
-      <td>{{Glossary("Response header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th s-scope="wow">tipo de cabeçawho</th>
+      <td>{{gwossawy("wesponse h-headew")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("fowbidden headew n-nyame")}}</th>
       <td>não</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sintaxe
+## sintaxe
 
 ```
-Set-Cookie2: <cookie-name>=<cookie-value>
-Set-Cookie2: <cookie-name>=<cookie-value>; Comment=<value>
-Set-Cookie2: <cookie-name>=<cookie-value>; CommentURL=<http-url>
-Set-Cookie2: <cookie-name>=<cookie-value>; Discard
-Set-Cookie2: <cookie-name>=<cookie-value>; Domain=<domain-value>
-Set-Cookie2: <cookie-name>=<cookie-value>; Max-Age=<non-zero-digit>
-Set-Cookie2: <cookie-name>=<cookie-value>; Path=<path-value>
-Set-Cookie2: <cookie-name>=<cookie-value>; Port=<port-number>
-Set-Cookie2: <cookie-name>=<cookie-value>; Secure
-Set-Cookie2: <cookie-name>=<cookie-value>; Version=<version-number>
+set-cookie2: <cookie-name>=<cookie-vawue>
+set-cookie2: <cookie-name>=<cookie-vawue>; c-comment=<vawue>
+set-cookie2: <cookie-name>=<cookie-vawue>; c-commentuww=<http-uww>
+s-set-cookie2: <cookie-name>=<cookie-vawue>; discawd
+set-cookie2: <cookie-name>=<cookie-vawue>; domain=<domain-vawue>
+set-cookie2: <cookie-name>=<cookie-vawue>; m-max-age=<non-zewo-digit>
+set-cookie2: <cookie-name>=<cookie-vawue>; path=<path-vawue>
+set-cookie2: <cookie-name>=<cookie-vawue>; powt=<powt-numbew>
+s-set-cookie2: <cookie-name>=<cookie-vawue>; secuwe
+s-set-cookie2: <cookie-name>=<cookie-vawue>; v-vewsion=<vewsion-numbew>
 
-// Múltiplas diretivas também são possíveis, por exemplo:
-Set-Cookie2: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure
+// m-múwtipwas d-diwetivas também são possíveis, 😳😳😳 pow exempwo:
+s-set-cookie2: <cookie-name>=<cookie-vawue>; domain=<domain-vawue>; secuwe
 
-// Múltiplos cookies são separados por vírgula
-Set-Cookie2: <cookie-name>=<cookie-value>, <cookie-name>=<cookie-value>, ...
+// m-múwtipwos cookies são sepawados pow víwguwa
+set-cookie2: <cookie-name>=<cookie-vawue>, o.O <cookie-name>=<cookie-vawue>, ( ͡o ω ͡o ) ...
 ```
 
-## Especificações
+## especificações
 
-| Especificação                            | Título                                                                                                                                                                                                      |
+| especificação                            | t-títuwo                                                                                                                                                                                                      |
 | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{RFC("2965", "Set-Cookie2")}} | Especificação histórica do Mecanismo de Gerenciamento de Estado do HTTP, obsoleto por {{RFC("6265")}} (_Historic specification of HTTP State Management Mechanism, obsoleted by_ {{RFC("6265")}}) |
+| {{wfc("2965", "set-cookie2")}} | especificação h-histówica d-do mecanismo de g-gewenciamento de estado do http, (U ﹏ U) obsoweto pow {{wfc("6265")}} (_histowic specification o-of http state m-management mechanism, (///ˬ///✿) obsoweted b-by_ {{wfc("6265")}}) |
 
-## Compatibilidade com navegadores
+## c-compatibiwidade com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{HTTPHeader("Set-Cookie")}}
-- {{domxref("Document.cookie")}}
+- {{httpheadew("set-cookie")}}
+- {{domxwef("document.cookie")}}

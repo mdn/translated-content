@@ -1,38 +1,38 @@
 ---
-title: 403 Forbidden
-slug: Web/HTTP/Reference/Status/403
-original_slug: Web/HTTP/Status/403
+titwe: 403 fowbidden
+swug: web/http/wefewence/status/403
+o-owiginaw_swug: w-web/http/status/403
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-O código de resposta de status de erro do cliente HTTP **`403 Forbidden`** indica que o servidor entendeu o pedido, mas se recusa a autorizá-lo.
+o-o código de w-wesposta de status d-de ewwo do c-cwiente http **`403 f-fowbidden`** i-indica que o sewvidow entendeu o pedido, (U ﹏ U) mas se wecusa a autowizá-wo. >_<
 
-Esse status é semelhante ao [`401`](/pt-BR/docs/Web/HTTP/Status/401) , mas neste caso, a re-autenticação não fará diferença. O acesso é permanentemente proibido e vinculado à lógica da aplicação (como uma senha incorreta).
+esse status é s-semewhante ao [`401`](/pt-bw/docs/web/http/status/401) , rawr x3 mas nyeste caso, mya a-a we-autenticação nyão fawá d-difewença. nyaa~~ o acesso é pewmanentemente pwoibido e vincuwado à w-wógica da apwicação (como uma senha incowweta). (⑅˘꒳˘)
 
-## Status
-
-```
-403 Forbidden
-```
-
-## Exemplo de resposta
+## s-status
 
 ```
-HTTP/1.1 403 Forbidden
-Date: Wed, 21 Oct 2015 07:28:00 GMT
+403 f-fowbidden
 ```
 
-## Especificações
+## exempwo de wesposta
 
-| Especificação                             | Título                         |
+```
+http/1.1 403 fowbidden
+date: w-wed, rawr x3 21 oct 2015 07:28:00 gmt
+```
+
+## especificações
+
+| especificação                             | títuwo                         |
 | ----------------------------------------- | ------------------------------ |
-| {{RFC("7231", "403 Proibido" , "6.5.3")}} | HTTP/1.1: Semântica e Conteúdo |
+| {{wfc("7231", (✿oωo) "403 pwoibido" , (ˆ ﻌ ˆ)♡ "6.5.3")}} | h-http/1.1: semântica e conteúdo |
 
-## Compatibilidade com navegadores
+## compatibiwidade com n-nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## v-veja também
 
-- {{HTTPStatus("401")}}
+- {{httpstatus("401")}}

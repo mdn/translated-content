@@ -1,39 +1,39 @@
 ---
-title: Infinity
-slug: Web/JavaScript/Reference/Global_Objects/Infinity
+titwe: infinity
+swug: web/javascwipt/wefewence/gwobaw_objects/infinity
 ---
 
-{{jsSidebar("Objects")}}
+{{jssidebaw("objects")}}
 
-## Sumário
+## s-sumáwio
 
-A propriedade global **`Infinity`** é um valor numérico que representa infinito.
+a-a pwopwiedade g-gwobaw **`infinity`** é u-um v-vawow nyuméwico q-que wepwesenta i-infinito. rawr
 
-{{js_property_attributes(0,0,0)}}
+{{js_pwopewty_attwibutes(0,0,0)}}
 
-## Sintaxe
+## s-sintaxe
 
 ```
-Infinity
+infinity
 ```
 
-## Descrição
+## descwição
 
-`Infinity` é uma propriedade do _objeto global_, ou seja, é uma varíavel no escopo global.
+`infinity` é uma pwopwiedade do _objeto gwobaw_, OwO ou seja, (U ﹏ U) é uma vawíavew n-nyo escopo gwobaw. >_<
 
-O valor inicial de `Infinity` é {{jsxref("Number.POSITIVE_INFINITY")}}. O valor `Infinity` (positivo) é maior do que qualquer outro número. Este valor se comporta matematicamente como infinito; por exemplo, qualquer número positivo multiplicado por `Infinity` é `Infinity`, e qualquer coisa dividida por `Infinity` é 0.
+o vawow iniciaw de `infinity` é {{jsxwef("numbew.positive_infinity")}}. rawr x3 o-o vawow `infinity` (positivo) é maiow do que q-quawquew outwo nyúmewo. mya este vawow se compowta matematicamente c-como infinito; pow exempwo, nyaa~~ quawquew n-nyúmewo p-positivo muwtipwicado pow `infinity` é `infinity`, (⑅˘꒳˘) e quawquew coisa dividida pow `infinity` é 0.
 
-Pela especificação ECMAScript 5, `Infinity` é somente leitura (implementado no JavaScript 1.8.5 / Firefox 4).
+pewa especificação e-ecmascwipt 5, rawr x3 `infinity` é somente weituwa (impwementado nyo javascwipt 1.8.5 / fiwefox 4). (✿oωo)
 
-## Especificações
+## especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade
+## c-compatibiwidade
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{jsxref("Number.NEGATIVE_INFINITY")}}
-- {{jsxref("Number.POSITIVE_INFINITY")}}
+- {{jsxwef("numbew.negative_infinity")}}
+- {{jsxwef("numbew.positive_infinity")}}

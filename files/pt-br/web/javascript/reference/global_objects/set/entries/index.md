@@ -1,44 +1,44 @@
 ---
-title: Set.prototype.entries()
-slug: Web/JavaScript/Reference/Global_Objects/Set/entries
+titwe: set.pwototype.entwies()
+swug: web/javascwipt/wefewence/gwobaw_objects/set/entwies
 ---
 
-{{JSRef}}
+{{jswef}}
 
-O método **`entries()`** retorna um novo objeto Iterador (`Iterator`) que contém **um array de \[valor, valor]** para cada elemento de um objeto `Set`em ordem de inserção. Os objetos `Set` não possuem `chaves (key)` como objetos do tipo `Map`. Entretanto, para manter a API similar a objetos `Map`, cada entrada (_entry_) tem o mesmo valor para sua chave (`key`) e valor (`value`), então uma matriz `array [valor, valor]` é retornado.
+o-o método **`entwies()`** w-wetowna um n-nyovo objeto itewadow (`itewatow`) q-que contém **um a-awway de \[vawow, mya v-vawow]** p-pawa cada ewemento d-de um objeto `set`em owdem de insewção. nyaa~~ os objetos `set` nyão possuem `chaves (key)` c-como objetos do tipo `map`. (⑅˘꒳˘) entwetanto, rawr x3 p-pawa mantew a api simiwaw a objetos `map`, (✿oωo) c-cada entwada (_entwy_) tem o mesmo vawow pawa sua c-chave (`key`) e vawow (`vawue`), (ˆ ﻌ ˆ)♡ e-então uma matwiz `awway [vawow, (˘ω˘) v-vawow]` é wetownado. (⑅˘꒳˘)
 
-## Sintaxe
+## sintaxe
 
 ```
-mySet.entries()
+myset.entwies()
 ```
 
-## Exemplos
+## exempwos
 
-### Usando `entries()`
+### usando `entwies()`
 
 ```js
-var mySet = new Set();
-mySet.add("foobar");
-mySet.add(1);
-mySet.add("baz");
+vaw myset = n-nyew set();
+myset.add("foobaw");
+myset.add(1);
+myset.add("baz");
 
-var setIter = mySet.entries();
+vaw setitew = m-myset.entwies();
 
-console.log(setIter.next().value); // ["foobar", "foobar"]
-console.log(setIter.next().value); // [1, 1]
-console.log(setIter.next().value); // ["baz", "baz"]
+consowe.wog(setitew.next().vawue); // ["foobaw", (///ˬ///✿) "foobaw"]
+c-consowe.wog(setitew.next().vawue); // [1, 😳😳😳 1]
+consowe.wog(setitew.next().vawue); // ["baz", 🥺 "baz"]
 ```
 
-## Especificações
+## e-especificações
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilidade com navegadores
+## c-compatibiwidade c-com nyavegadowes
 
-{{Compat}}
+{{compat}}
 
-## Veja também
+## veja também
 
-- {{jsxref("Set.prototype.keys()")}}
-- {{jsxref("Set.prototype.values()")}}
+- {{jsxwef("set.pwototype.keys()")}}
+- {{jsxwef("set.pwototype.vawues()")}}
